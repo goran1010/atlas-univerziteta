@@ -279,7 +279,9 @@
             "name": "Master program u saradnji sa Microsoftom",
             "cycle": "DRUGI",
             "language": "Bosanski, hrvatski, srpski",
-            "sourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/efsamicrosoftbih-mis.pdf"
+            "sourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/efsamicrosoftbih-mis.pdf",
+            "ects": 120,
+            "durationYears": 2
           },
           {
             "name": "Odsjek Ekonomija",
@@ -309,7 +311,21 @@
             "name": "Zajednički master programi u saradnji sa Ekonomskim fakultetom Sveučilišta u Zagrebu",
             "cycle": "DRUGI",
             "language": "Bosanski, hrvatski, srpski",
-            "sourceUrl": "http://www.efsa.unsa.ba/ef/bs/programi-ii-ciklusa"
+            "sourceUrl": "http://www.efsa.unsa.ba/ef/bs/programi-ii-ciklusa",
+            "ects": null,
+            "durationYears": null,
+            "tracks": [
+              {
+                "name": "60 ECTS",
+                "ects": 60,
+                "durationYears": 1
+              },
+              {
+                "name": "120 ECTS",
+                "ects": 120,
+                "durationYears": 2
+              }
+            ]
           },
           {
             "name": "Joint Master Programme with University of Bolton Islamic Banking",
@@ -5902,6 +5918,13 @@
             "ects": 180,
             "durationYears": 3,
             "lastChecked": "2026-08-27"
+          },
+          {
+            "name": "Geografski informacioni sistemi",
+            "cycle": "PRVI",
+            "durationYears": 4,
+            "ects": 240,
+            "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf"
           }
         ]
       },
@@ -7612,7 +7635,21 @@
           {
             "name": "Zajednički master studij sa Ekonomskim fakultetom Univerziteta u Sarajevu",
             "cycle": "DRUGI",
-            "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+            "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+            "ects": null,
+            "durationYears": null,
+            "tracks": [
+              {
+                "name": "60 ECTS",
+                "ects": 60,
+                "durationYears": 1
+              },
+              {
+                "name": "120 ECTS",
+                "ects": 120,
+                "durationYears": 2
+              }
+            ]
           },
           {
             "name": "Akademski dodiplomski studij",
@@ -8245,7 +8282,9 @@
           {
             "name": "Građevinarstvo",
             "cycle": "TRECI",
-            "sourceUrl": "https://fgag.sum.ba"
+            "sourceUrl": "https://fgag.sum.ba",
+            "ects": 180,
+            "durationYears": 3
           }
         ]
       },
@@ -8364,7 +8403,9 @@
           {
             "name": "Pedagogija",
             "cycle": "TRECI",
-            "sourceUrl": "https://fpmoz.sum.ba"
+            "sourceUrl": "https://fpmoz.sum.ba",
+            "ects": 180,
+            "durationYears": 3
           },
           {
             "name": "Predškolski odgoj",
@@ -8973,7 +9014,9 @@
           {
             "name": "Biomedicina i zdravstvo",
             "cycle": "TRECI",
-            "sourceUrl": "https://mef.sum.ba"
+            "sourceUrl": "https://mef.sum.ba",
+            "ects": 180,
+            "durationYears": 3
           }
         ]
       },
