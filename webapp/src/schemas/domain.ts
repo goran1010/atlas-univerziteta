@@ -15,6 +15,7 @@ const studyCycleSchema = z.enum([
   "TRECI",
   "INTEGRISANI",
   "STRUCNI",
+  "SPECIJALISTICKI",
 ]);
 const subjectTypeSchema = z.enum(["OBAVEZNI", "IZBORNI"]);
 const userRoleSchema = z.enum(["ADMIN", "USER"]);

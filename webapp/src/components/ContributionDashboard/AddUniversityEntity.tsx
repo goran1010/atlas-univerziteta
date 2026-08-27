@@ -51,7 +51,7 @@ const ENTITY_TYPES: EntityType[] = [
 
 const TYPE_OF_CHANGES: TypeOfChange[] = ["CREATE", "UPDATE", "DELETE"];
 
-const CYCLES: Cycle[] = ["PRVI", "DRUGI", "TRECI", "INTEGRISANI", "STRUCNI"];
+const CYCLES: Cycle[] = ["PRVI", "DRUGI", "TRECI", "INTEGRISANI", "STRUCNI", "SPECIJALISTICKI"];
 
 const SUBJECT_TYPES: SubjectType[] = ["OBAVEZNI", "IZBORNI"];
 
