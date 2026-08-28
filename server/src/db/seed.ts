@@ -95,7 +95,14 @@ const trackSeedSchema = z.strictObject({
 
 const studyProgramSeedSchema = z.strictObject({
   name: z.string().trim().min(1),
-  cycle: z.enum(["PRVI", "DRUGI", "TRECI", "INTEGRISANI", "STRUCNI", "SPECIJALISTICKI"]),
+  cycle: z.enum([
+    "PRVI",
+    "DRUGI",
+    "TRECI",
+    "INTEGRISANI",
+    "STRUCNI",
+    "SPECIJALISTICKI",
+  ]),
   durationYears: z.number().int().positive().nullish(),
   ects: z.number().int().positive().nullish(),
   language: optionalTextSchema,

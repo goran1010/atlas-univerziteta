@@ -7,7 +7,13 @@ export type EntityType =
   | "SUBJECT"
   | "TRACK";
 export type TypeOfChange = "CREATE" | "UPDATE" | "DELETE";
-export type Cycle = "PRVI" | "DRUGI" | "TRECI" | "INTEGRISANI" | "STRUCNI" | "SPECIJALISTICKI";
+export type Cycle =
+  | "PRVI"
+  | "DRUGI"
+  | "TRECI"
+  | "INTEGRISANI"
+  | "STRUCNI"
+  | "SPECIJALISTICKI";
 export type SubjectType = "OBAVEZNI" | "IZBORNI";
 export type Entity = "FBIH" | "RS" | "BD";
 
