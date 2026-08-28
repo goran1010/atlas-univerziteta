@@ -17,6 +17,7 @@ function status(_req: Request, res: Response) {
 async function getUniversities(_req: Request, res: Response) {
   const universities = await prisma.university.findMany({
     orderBy: [{ ownership: "asc" }, { name: "asc" }],
+    include: { _count: { select: { faculties: true } } },
   });
   sendSuccess(res, {
     message: "Universities retrieved successfully.",
@@ -44,6 +45,7 @@ async function search(req: Request, res: Response) {
             ...fieldContains("acronym"),
           ],
         },
+        include: { _count: { select: { faculties: true } } },
       }),
       prisma.faculty.findMany({
         where: {

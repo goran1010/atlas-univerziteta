@@ -308,6 +308,12 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                   ? t(`universitiesPage.ownership.JAVNA`)
                   : t(`universitiesPage.ownership.PRIVATNA`)}
               </span>
+              {university._count.faculties > 0 && (
+                <span>
+                  🏛️ {university._count.faculties}{" "}
+                  {t("universitiesPage.facultyCount")}
+                </span>
+              )}
               {university.foundedYear && (
                 <span>
                   {t("universitiesPage.foundedYear")}: {university.foundedYear}

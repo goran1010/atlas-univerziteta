@@ -21,6 +21,7 @@ const baseUniversity: UniversityListItem = {
   authority: undefined,
   sourceUrl: undefined,
   lastChecked: undefined,
+  _count: { faculties: 3 },
 };
 
 function Wrapper({ university = baseUniversity }) {

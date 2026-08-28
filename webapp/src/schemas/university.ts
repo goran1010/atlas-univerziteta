@@ -82,7 +82,12 @@ const facultySchema = z.object({
   studyPrograms: z.array(studyProgramSchema),
 });
 
-const universityListItemSchema = universitySchema;
+const universityListItemSchema = universitySchema.extend({
+  _count: z
+    .object({ faculties: z.number() })
+    .optional()
+    .default({ faculties: 0 }),
+});
 
 const universityDetailSchema = universitySchema.extend({
   faculties: z.array(facultySchema),
