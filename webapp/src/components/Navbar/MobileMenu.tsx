@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { NavLink, useLocation } from "react-router";
 import { Status } from "./Status";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
@@ -6,8 +6,16 @@ import { RootContext } from "../../contextData/RootContext";
 import type { UserData } from "../../types/auth";
 import type { SetIsMenuOpen } from "../../customHooks/useCloseMenu";
 
-const menuItemClass = `block p-2 w-full text-center text-nowrap rounded-lg hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 
+const baseClass = `block p-2 w-full text-center text-nowrap rounded-lg hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2
   focus-visible:ring-(--focus-ring) focus-visible:bg-(--hover-surface)`;
+
+const activeClass = "bg-(--hover-surface) text-(--accent) font-bold";
+
+function menuItemClass({ isActive }: { isActive: boolean }) {
+  return `${baseClass} ${isActive ? activeClass : ""}`;
+}
+
+const HOME_PATHS = ["/", "/search", "/browse"];
 
 interface MobileMenuProps {
   setIsMenuOpen: SetIsMenuOpen;
@@ -16,6 +24,8 @@ interface MobileMenuProps {
 
 function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
   const { t } = use(RootContext);
+  const { pathname } = useLocation();
+  const isHome = HOME_PATHS.includes(pathname);
 
   return (
     <div
@@ -24,18 +34,18 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
     >
       <ul className="flex flex-col items-center">
         <li className="w-full">
-          <Link
-            className={menuItemClass}
-            to="/"
+          <NavLink
+            className={() => `${baseClass} ${isHome ? activeClass : ""}`}
+            to="/search"
             onClick={() => {
               setIsMenuOpen(false);
             }}
           >
             {t("nav.home")}
-          </Link>
+          </NavLink>
         </li>
         <li className="w-full">
-          <Link
+          <NavLink
             className={menuItemClass}
             to="/api-docs"
             onClick={() => {
@@ -43,10 +53,10 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
             }}
           >
             {t("nav.apiDocs")}
-          </Link>
+          </NavLink>
         </li>
         <li className="w-full">
-          <Link
+          <NavLink
             className={menuItemClass}
             to="/about"
             onClick={() => {
@@ -54,12 +64,12 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
             }}
           >
             {t("nav.about")}
-          </Link>
+          </NavLink>
         </li>
 
         {userData && (
           <li className="w-full">
-            <Link
+            <NavLink
               className={menuItemClass}
               to="/improve-data"
               onClick={() => {
@@ -67,12 +77,12 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
               }}
             >
               {t("nav.improveData")}
-            </Link>
+            </NavLink>
           </li>
         )}
         {userData?.role === "ADMIN" && (
           <li className="w-full">
-            <Link
+            <NavLink
               className={menuItemClass}
               to="/admin-dashboard"
               onClick={() => {
@@ -80,7 +90,7 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
               }}
             >
               {t("nav.admin")}
-            </Link>
+            </NavLink>
           </li>
         )}
         <li className={`flex justify-center items-center`}>
