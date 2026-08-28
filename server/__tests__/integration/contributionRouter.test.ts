@@ -52,7 +52,7 @@ async function createUniversity() {
       name: `Test University ${entitySequence.toString()}`,
       city: "Test City",
       entity: "FBIH",
-      ownership: "JAVNA",
+      ownership: "PUBLIC",
     },
   });
 }
@@ -103,7 +103,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
         name: "TestCity University",
         city: "TestCity",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
         ects: 240,
       },
     });
@@ -123,7 +123,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
         name: "TestCity University",
         city: "TestCity",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -152,7 +152,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
           name: "TestCity University",
           city: "TestCity",
           entity: "FBIH",
-          ownership: "JAVNA",
+          ownership: "PUBLIC",
         },
       }),
     );
@@ -435,7 +435,7 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
           name: "Own University",
           city: "City",
           entity: "FBIH",
-          ownership: "JAVNA",
+          ownership: "PUBLIC",
         },
         user: { connect: { id: user.id } },
       },
@@ -448,7 +448,7 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
           name: "Other University",
           city: "City",
           entity: "FBIH",
-          ownership: "JAVNA",
+          ownership: "PUBLIC",
         },
         user: { connect: { id: otherUser.id } },
       },
@@ -516,7 +516,7 @@ describe("Contribution Router - DELETE /users/contribution/pending-changes/unive
           name: "Delete Me",
           city: "City",
           entity: "FBIH",
-          ownership: "JAVNA",
+          ownership: "PUBLIC",
         },
         user: { connect: { id: user.id } },
       },

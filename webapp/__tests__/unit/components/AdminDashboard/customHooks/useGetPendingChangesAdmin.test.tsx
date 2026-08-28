@@ -71,7 +71,7 @@ describe("useGetPendingChangesAdmin", () => {
                 name: "University of Sarajevo",
                 city: "Sarajevo",
                 entity: "FBIH",
-                ownership: "JAVNA",
+                ownership: "PUBLIC",
               },
               userId: "user-1",
               user: { email: "user@example.com", role: "USER" },

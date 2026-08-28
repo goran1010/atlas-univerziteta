@@ -141,7 +141,7 @@
     "publicIntro": "Javni REST endpoint-i su dostupni pod osnovnim URL-om ispod. Ovi endpoint-i ne zahtijevaju autentifikaciju.",
     "fullDocs": "Za kompletnu projektnu dokumentaciju, lokalno postavljanje i smjernice za doprinos, pogledajte",
     "dataObject": "Objekat univerziteta",
-    "dataObjectExample": "{\n  \"id\":          number   - jedinstveni identifikator\n  \"name\":        string   - naziv univerziteta\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"JAVNA\" | \"PRIVATNA\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"_count\":      { \"faculties\": number }  - samo lista\n  \"faculties\":   Faculty[]               - samo detalji\n}",
+    "dataObjectExample": "{\n  \"id\":          number   - jedinstveni identifikator\n  \"name\":        string   - naziv univerziteta\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"_count\":      { \"faculties\": number }  - samo lista\n  \"faculties\":   Faculty[]               - samo detalji\n}",
     "endpoints": "Endpoint-i",
     "endpointsData": {
       "apiStatus": "Provjera statusa API-ja.",
@@ -225,16 +225,16 @@
       "ownership": "Vlasništvo"
     },
     "cycles": {
-      "PRVI": "PRVI - Bachelor",
-      "DRUGI": "DRUGI - Master",
-      "TRECI": "TREĆI - PhD",
-      "INTEGRISANI": "INTEGRISANI - Bachelor+Master",
-      "STRUCNI": "STRUČNI - Professional Bachelor",
-      "SPECIJALISTICKI": "SPECIJALISTIČKI - Specialist"
+      "FIRST": "PRVI - Bachelor",
+      "SECOND": "DRUGI - Master",
+      "THIRD": "TREĆI - PhD",
+      "INTEGRATED": "INTEGRISANI - Bachelor+Master",
+      "VOCATIONAL": "STRUČNI",
+      "SPECIALIST": "SPECIJALISTIČKI - Specialist"
     },
     "subjectTypes": {
-      "OBAVEZNI": "Obavezni",
-      "IZBORNI": "Izborni"
+      "MANDATORY": "Obavezni",
+      "ELECTIVE": "Izborni"
     },
     "entities": {
       "FBIH": "FBIH - Federacija BiH",
@@ -376,12 +376,12 @@
     "subjects": "Predmeti",
     "cycle": "Ciklus",
     "cycles": {
-      "PRVI": "Prvi (Bachelor)",
-      "DRUGI": "Drugi (Master)",
-      "TRECI": "Treći (PhD)",
-      "INTEGRISANI": "Integrisani (Bachelor + Master)",
-      "STRUCNI": "Stručni (Professional Bachelor)",
-      "SPECIJALISTICKI": "Specijalistički (Specialist)"
+      "FIRST": "Prvi (Bachelor)",
+      "SECOND": "Drugi (Master)",
+      "THIRD": "Treći (PhD)",
+      "INTEGRATED": "Integrisani (Bachelor + Master)",
+      "VOCATIONAL": "Stručni",
+      "SPECIALIST": "Specijalistički (Specialist)"
     },
     "ects": "ECTS",
     "durationYears": "godine",
@@ -390,16 +390,16 @@
     "semester": "Semestar",
     "subjectType": "Tip",
     "subjectTypes": {
-      "OBAVEZNI": "Obavezni",
-      "IZBORNI": "Izborni"
+      "MANDATORY": "Obavezni",
+      "ELECTIVE": "Izborni"
     },
     "website": "Web stranica",
     "foundedYear": "Osnovan",
     "viewDetails": "Prikaži detalje",
     "hideDetails": "Sakrij detalje",
     "ownership": {
-      "JAVNA": "Javna",
-      "PRIVATNA": "Privatna"
+      "PUBLIC": "Javna",
+      "PRIVATE": "Privatna"
     }
   }
 }

@@ -83,8 +83,8 @@ const universityCreateDataSchema = z.strictObject({
     error: "Invalid entity - must be FBIH, RS, or BD",
   }),
 
-  ownership: z.enum(["JAVNA", "PRIVATNA"], {
-    error: "Ownership must be JAVNA or PRIVATNA",
+  ownership: z.enum(["PUBLIC", "PRIVATE"], {
+    error: "Ownership must be PUBLIC or PRIVATE",
   }),
 
   acronym: z.string().trim().min(1).optional(),
@@ -109,10 +109,13 @@ const studyProgramCreateDataSchema = z.strictObject({
     error: "Name is required",
   }),
 
-  cycle: z.enum(["PRVI", "DRUGI", "TRECI", "INTEGRISANI", "STRUCNI"], {
-    error:
-      "Invalid study cycle - must be PRVI, DRUGI, TRECI, INTEGRISANI, or STRUCNI",
-  }),
+  cycle: z.enum(
+    ["FIRST", "SECOND", "THIRD", "INTEGRATED", "VOCATIONAL", "SPECIALIST"],
+    {
+      error:
+        "Invalid study cycle - must be FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, or SPECIALIST",
+    },
+  ),
 
   durationYears: durationYearsSchema.optional(),
 
@@ -131,8 +134,8 @@ const subjectCreateDataSchema = z.strictObject({
   ects: ectsSchema.optional(),
 
   type: z
-    .enum(["OBAVEZNI", "IZBORNI"], {
-      error: "Invalid subject type - must be OBAVEZNI or IZBORNI",
+    .enum(["MANDATORY", "ELECTIVE"], {
+      error: "Invalid subject type - must be MANDATORY or ELECTIVE",
     })
     .optional(),
 });
@@ -201,8 +204,8 @@ const universityEditDataSchema = z
       .optional(),
 
     ownership: z
-      .enum(["JAVNA", "PRIVATNA"], {
-        error: "Ownership must be JAVNA or PRIVATNA",
+      .enum(["PUBLIC", "PRIVATE"], {
+        error: "Ownership must be PUBLIC or PRIVATE",
       })
       .optional(),
 
@@ -250,9 +253,12 @@ const studyProgramEditDataSchema = z
       .optional(),
 
     cycle: z
-      .enum(["PRVI", "DRUGI", "TRECI", "INTEGRISANI", "STRUCNI"], {
-        error: "Invalid study cycle",
-      })
+      .enum(
+        ["FIRST", "SECOND", "THIRD", "INTEGRATED", "VOCATIONAL", "SPECIALIST"],
+        {
+          error: "Invalid study cycle",
+        },
+      )
       .optional(),
 
     durationYears: durationYearsSchema.nullable().optional(),
@@ -280,8 +286,8 @@ const subjectEditDataSchema = z
     ects: ectsSchema.nullable().optional(),
 
     type: z
-      .enum(["OBAVEZNI", "IZBORNI"], {
-        error: "Invalid subject type - must be OBAVEZNI or IZBORNI",
+      .enum(["MANDATORY", "ELECTIVE"], {
+        error: "Invalid subject type - must be MANDATORY or ELECTIVE",
       })
       .nullable()
       .optional(),

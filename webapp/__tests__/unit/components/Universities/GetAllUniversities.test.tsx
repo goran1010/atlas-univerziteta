@@ -55,7 +55,7 @@ describe("GetAllUniversities", () => {
             acronym: "UNSA",
             city: "Sarajevo",
             entity: "FBIH",
-            ownership: "JAVNA",
+            ownership: "PUBLIC",
             foundedYear: "1949",
             website: "https://unsa.ba",
           },

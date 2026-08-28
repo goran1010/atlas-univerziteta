@@ -22,7 +22,7 @@ const universityResult = {
   acronym: "SUM",
   city: "Mostar",
   entity: "FBIH",
-  ownership: "PRIVATNA",
+  ownership: "PRIVATE",
   foundedYear: "1977",
   website: "https://sum.ba",
 };
@@ -44,7 +44,7 @@ const studyProgramResult = {
   id: 7,
   name: "Computer Science",
   facultyId: 3,
-  cycle: "PRVI",
+  cycle: "FIRST",
   ects: 180,
   faculty: {
     id: 3,
@@ -65,11 +65,11 @@ const subjectResult = {
   studyProgramId: 7,
   semester: 4,
   ects: 6,
-  type: "OBAVEZNI",
+  type: "MANDATORY",
   studyProgram: {
     id: 7,
     name: "Computer Science",
-    cycle: "PRVI",
+    cycle: "FIRST",
     faculty: {
       id: 3,
       name: "Faculty of Electrical Engineering",

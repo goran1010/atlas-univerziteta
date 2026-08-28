@@ -45,6 +45,28 @@ async function search(req: Request, res: Response) {
       },
     }));
 
+  // Bosnian/Serbian terms and common synonyms mapped to the English enum
+  // values, so search matches in both languages (e.g. "javna" -> PUBLIC).
+  const ENUM_ALIASES: Record<string, string> = {
+    JAVNA: "PUBLIC",
+    PRIVATNA: "PRIVATE",
+    PRVI: "FIRST",
+    BACHELOR: "FIRST",
+    DRUGI: "SECOND",
+    MASTER: "SECOND",
+    TRECI: "THIRD",
+    TREĆI: "THIRD",
+    DOCTORAL: "THIRD",
+    PHD: "THIRD",
+    INTEGRISANI: "INTEGRATED",
+    STRUCNI: "VOCATIONAL",
+    STRUČNI: "VOCATIONAL",
+    SPECIJALISTICKI: "SPECIALIST",
+    SPECIJALISTIČKI: "SPECIALIST",
+    OBAVEZNI: "MANDATORY",
+    IZBORNI: "ELECTIVE",
+  };
+
   // Exact match against an enum (enums don't support `contains`).
   // Returns a condition array: one element if matched, empty otherwise.
   function enumMatch<T extends string>(
@@ -52,21 +74,22 @@ async function search(req: Request, res: Response) {
     values: readonly T[],
   ): Record<string, T>[] {
     const upper = searchTerm.toUpperCase();
-    const match = values.find((v) => v === upper);
+    const candidate = ENUM_ALIASES[upper] ?? upper;
+    const match = values.find((v) => v === candidate);
     return match ? [{ [field]: match }] : [];
   }
 
   const ENTITIES = ["FBIH", "RS", "BD"] as const;
-  const OWNERSHIPS = ["JAVNA", "PRIVATNA"] as const;
+  const OWNERSHIPS = ["PUBLIC", "PRIVATE"] as const;
   const CYCLES = [
-    "PRVI",
-    "DRUGI",
-    "TRECI",
-    "INTEGRISANI",
-    "STRUCNI",
-    "SPECIJALISTICKI",
+    "FIRST",
+    "SECOND",
+    "THIRD",
+    "INTEGRATED",
+    "VOCATIONAL",
+    "SPECIALIST",
   ] as const;
-  const SUBJECT_TYPES = ["OBAVEZNI", "IZBORNI"] as const;
+  const SUBJECT_TYPES = ["MANDATORY", "ELECTIVE"] as const;
 
   const [universities, faculties, studyPrograms, subjects, tracks] =
     await Promise.all([

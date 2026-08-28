@@ -52,15 +52,15 @@ const ENTITY_TYPES: EntityType[] = [
 const TYPE_OF_CHANGES: TypeOfChange[] = ["CREATE", "UPDATE", "DELETE"];
 
 const CYCLES: Cycle[] = [
-  "PRVI",
-  "DRUGI",
-  "TRECI",
-  "INTEGRISANI",
-  "STRUCNI",
-  "SPECIJALISTICKI",
+  "FIRST",
+  "SECOND",
+  "THIRD",
+  "INTEGRATED",
+  "VOCATIONAL",
+  "SPECIALIST",
 ];
 
-const SUBJECT_TYPES: SubjectType[] = ["OBAVEZNI", "IZBORNI"];
+const SUBJECT_TYPES: SubjectType[] = ["MANDATORY", "ELECTIVE"];
 
 const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
 
@@ -267,11 +267,11 @@ function AddUniversityEntity({
                     required={typeOfChange === "CREATE"}
                   >
                     <option value="">-</option>
-                    <option value="JAVNA">
-                      {t("universitiesPage.ownership.JAVNA")}
+                    <option value="PUBLIC">
+                      {t("universitiesPage.ownership.PUBLIC")}
                     </option>
-                    <option value="PRIVATNA">
-                      {t("universitiesPage.ownership.PRIVATNA")}
+                    <option value="PRIVATE">
+                      {t("universitiesPage.ownership.PRIVATE")}
                     </option>
                   </Select>
                 </div>

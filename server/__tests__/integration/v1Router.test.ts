@@ -48,7 +48,7 @@ describe("GET /api/v1/universities", () => {
         name: testUniversityName,
         city: "Sarajevo",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -86,7 +86,7 @@ describe("GET /api/v1/search", () => {
         name: testUniversityName,
         city: "TestSearchCity",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -136,18 +136,18 @@ describe("GET /api/v1/universities/:id", () => {
         name: "Test Integration University By ID",
         city: "Sarajevo",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
         faculties: {
           create: {
             name: "Test Integration Faculty By ID",
             studyPrograms: {
               create: {
                 name: "Test Integration Study Program By ID",
-                cycle: "PRVI",
+                cycle: "FIRST",
                 subjects: {
                   create: {
                     name: "Test Integration Subject By ID",
-                    type: "OBAVEZNI",
+                    type: "MANDATORY",
                   },
                 },
               },
@@ -213,18 +213,18 @@ describe("GET /api/v1/search - related entities", () => {
         name: "Test Integration Unified Search University",
         city: "Sarajevo",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
         faculties: {
           create: {
             name: "Test Integration Unified Search Faculty",
             studyPrograms: {
               create: {
                 name: "Test Integration Unified Search Program",
-                cycle: "PRVI",
+                cycle: "FIRST",
                 subjects: {
                   create: {
                     name: "Test Integration Unified Search Subject",
-                    type: "OBAVEZNI",
+                    type: "MANDATORY",
                   },
                 },
               },
@@ -257,7 +257,7 @@ describe("GET /api/v1/search - related entities", () => {
     const program = studyPrograms.find(
       (sp) => sp["name"] === "Test Integration Unified Search Program",
     );
-    expect(program?.["cycle"]).toBe("PRVI");
+    expect(program?.["cycle"]).toBe("FIRST");
     const programFaculty = getResponseObject(program?.["faculty"]);
     const programUniversity = getResponseObject(programFaculty["university"]);
     expect(programUniversity["id"]).toBe(university.id);
@@ -305,18 +305,18 @@ describe("GET /api/v1/search - diacritic-insensitive matching", () => {
         name: testUniversityName,
         city: "Sarajevo",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
         faculties: {
           create: {
             name: "Test Diacritics Džemal",
             studyPrograms: {
               create: {
                 name: "Test Diacritics Program",
-                cycle: "PRVI",
+                cycle: "FIRST",
                 subjects: {
                   create: {
                     name: "Test Diacritics Racunari",
-                    type: "OBAVEZNI",
+                    type: "MANDATORY",
                   },
                 },
               },

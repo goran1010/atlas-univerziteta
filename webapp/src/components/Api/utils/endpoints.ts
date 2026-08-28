@@ -47,7 +47,7 @@ const apiEndpoints: Endpoint[] = [
   "data": [
     {
       "id": 1, "name": "University of Sarajevo", "acronym": "UNSA",
-      "city": "Sarajevo", "entity": "FBIH", "ownership": "JAVNA",
+      "city": "Sarajevo", "entity": "FBIH", "ownership": "PUBLIC",
       "foundedYear": "1949", "website": "https://unsa.ba",
       "_count": { "faculties": 23 }
     },
@@ -65,13 +65,13 @@ const apiEndpoints: Endpoint[] = [
   "message": "University retrieved successfully.",
   "data": {
     "id": 1, "name": "University of Sarajevo", "acronym": "UNSA",
-    "city": "Sarajevo", "entity": "FBIH", "ownership": "JAVNA",
+    "city": "Sarajevo", "entity": "FBIH", "ownership": "PUBLIC",
     "foundedYear": "1949", "website": "https://unsa.ba",
     "faculties": [
       { "id": 1, "name": "Faculty of Science",
         "city": "Sarajevo", "website": "https://pmf.unsa.ba",
         "studyPrograms": [
-          { "id": 1, "name": "Computer Science", "cycle": "PRVI",
+          { "id": 1, "name": "Computer Science", "cycle": "FIRST",
             "subjects": [ ... ], "tracks": [ ... ]
           }
         ]
@@ -98,7 +98,7 @@ const apiEndpoints: Endpoint[] = [
   "data": {
     "universities": [
       { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA",
-        "city": "Sarajevo", "entity": "FBIH", "ownership": "JAVNA",
+        "city": "Sarajevo", "entity": "FBIH", "ownership": "PUBLIC",
         "_count": { "faculties": 23 }
       }
     ],
@@ -108,7 +108,7 @@ const apiEndpoints: Endpoint[] = [
       }
     ],
     "studyPrograms": [
-      { "id": 1, "name": "Software Engineering", "cycle": "PRVI", "ects": 180,
+      { "id": 1, "name": "Software Engineering", "cycle": "FIRST", "ects": 180,
         "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
           "university": { "id": 1, "name": "University of Sarajevo" }
         }
@@ -125,7 +125,7 @@ const apiEndpoints: Endpoint[] = [
     ],
     "subjects": [
       { "id": 1, "name": "Computer Networks", "semester": 4, "ects": 6,
-        "type": "OBAVEZNI",
+        "type": "MANDATORY",
         "studyProgram": { "id": 1, "name": "Software Engineering",
           "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
             "university": { "id": 1, "name": "University of Sarajevo" }

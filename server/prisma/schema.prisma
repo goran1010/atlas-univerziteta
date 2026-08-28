@@ -64,22 +64,22 @@ enum entity {
 }
 
 enum ownership {
-  JAVNA
-  PRIVATNA
+  PUBLIC
+  PRIVATE
 }
 
 enum studyCycle {
-  PRVI
-  DRUGI
-  TRECI
-  INTEGRISANI
-  STRUCNI
-  SPECIJALISTICKI
+  FIRST
+  SECOND
+  THIRD
+  INTEGRATED
+  VOCATIONAL
+  SPECIALIST
 }
 
 enum subjectType {
-  OBAVEZNI
-  IZBORNI
+  MANDATORY
+  ELECTIVE
 }
 
 model University {

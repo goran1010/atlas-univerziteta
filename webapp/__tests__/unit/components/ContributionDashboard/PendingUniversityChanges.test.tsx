@@ -37,7 +37,7 @@ const pendingChanges: PendingChange[] = [
       name: "University of Sarajevo",
       city: "Sarajevo",
       entity: "FBIH",
-      ownership: "JAVNA",
+      ownership: "PUBLIC",
     },
     targetId: null,
     parentId: null,

@@ -8,20 +8,20 @@ export type EntityType =
   | "TRACK";
 export type TypeOfChange = "CREATE" | "UPDATE" | "DELETE";
 export type Cycle =
-  | "PRVI"
-  | "DRUGI"
-  | "TRECI"
-  | "INTEGRISANI"
-  | "STRUCNI"
-  | "SPECIJALISTICKI";
-export type SubjectType = "OBAVEZNI" | "IZBORNI";
+  | "FIRST"
+  | "SECOND"
+  | "THIRD"
+  | "INTEGRATED"
+  | "VOCATIONAL"
+  | "SPECIALIST";
+export type SubjectType = "MANDATORY" | "ELECTIVE";
 export type Entity = "FBIH" | "RS" | "BD";
 
 export interface ContributionFormDraft {
   name?: string;
   city?: string;
   entity?: Entity;
-  ownership?: "JAVNA" | "PRIVATNA";
+  ownership?: "PUBLIC" | "PRIVATE";
   acronym?: string;
   foundedYear?: string;
   website?: string;

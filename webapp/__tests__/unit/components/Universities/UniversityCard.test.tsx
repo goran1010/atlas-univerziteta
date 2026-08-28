@@ -13,7 +13,7 @@ const baseUniversity: UniversityListItem = {
   acronym: "UNSA",
   city: "Sarajevo",
   entity: "FBIH",
-  ownership: "JAVNA",
+  ownership: "PUBLIC",
   foundedYear: "1949",
   website: "https://unsa.ba",
   accreditationFrom: undefined,
@@ -134,7 +134,7 @@ describe("UniversityCard", () => {
                   id: 21,
                   name: "Computer Science",
                   facultyId: 11,
-                  cycle: "PRVI",
+                  cycle: "FIRST",
                   ects: 180,
                   subjects: [
                     {
@@ -143,7 +143,7 @@ describe("UniversityCard", () => {
                       studyProgramId: 21,
                       semester: 3,
                       ects: 6,
-                      type: "OBAVEZNI",
+                      type: "MANDATORY",
                     },
                   ],
                 },
@@ -261,7 +261,7 @@ describe("UniversityCard", () => {
                     id: 21,
                     name: "Computer Science",
                     facultyId: 11,
-                    cycle: "PRVI",
+                    cycle: "FIRST",
                     subjects: [
                       {
                         id: 31,
@@ -318,7 +318,7 @@ describe("UniversityCard", () => {
         university={{
           ...baseUniversity,
           id: 2,
-          ownership: "PRIVATNA",
+          ownership: "PRIVATE",
         }}
       />,
     );

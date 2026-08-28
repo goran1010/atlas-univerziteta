@@ -8,16 +8,16 @@ const entityTypeSchema = z.enum([
   "TRACK",
 ]);
 const entitySchema = z.enum(["FBIH", "RS", "BD"]);
-const ownershipSchema = z.enum(["JAVNA", "PRIVATNA"]);
+const ownershipSchema = z.enum(["PUBLIC", "PRIVATE"]);
 const studyCycleSchema = z.enum([
-  "PRVI",
-  "DRUGI",
-  "TRECI",
-  "INTEGRISANI",
-  "STRUCNI",
-  "SPECIJALISTICKI",
+  "FIRST",
+  "SECOND",
+  "THIRD",
+  "INTEGRATED",
+  "VOCATIONAL",
+  "SPECIALIST",
 ]);
-const subjectTypeSchema = z.enum(["OBAVEZNI", "IZBORNI"]);
+const subjectTypeSchema = z.enum(["MANDATORY", "ELECTIVE"]);
 const userRoleSchema = z.enum(["ADMIN", "USER"]);
 
 const integerSchema = z.number().int();

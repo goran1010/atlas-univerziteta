@@ -141,7 +141,7 @@
     "publicIntro": "Public REST endpoints are available under the base URL below. These endpoints do not require authentication.",
     "fullDocs": "For full project documentation, local setup, and contributing guidelines, see the",
     "dataObject": "University object",
-    "dataObjectExample": "{\n  \"id\":          number   - unique identifier\n  \"name\":        string   - university name\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"JAVNA\" | \"PRIVATNA\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"_count\":      { \"faculties\": number }  - list endpoint only\n  \"faculties\":   Faculty[]               - detail endpoint only\n}",
+    "dataObjectExample": "{\n  \"id\":          number   - unique identifier\n  \"name\":        string   - university name\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"_count\":      { \"faculties\": number }  - list endpoint only\n  \"faculties\":   Faculty[]               - detail endpoint only\n}",
     "endpoints": "Endpoints",
     "endpointsData": {
       "apiStatus": "Check API status.",
@@ -225,16 +225,16 @@
       "ownership": "Ownership"
     },
     "cycles": {
-      "PRVI": "FIRST - Bachelor",
-      "DRUGI": "SECOND - Master",
-      "TRECI": "THIRD - PhD",
-      "INTEGRISANI": "INTEGRATED - Bachelor+Master",
-      "STRUCNI": "PROFESSIONAL - Professional Bachelor",
-      "SPECIJALISTICKI": "SPECIALIST - Specialist Study"
+      "FIRST": "FIRST - Bachelor",
+      "SECOND": "SECOND - Master",
+      "THIRD": "THIRD - PhD",
+      "INTEGRATED": "INTEGRATED - Bachelor+Master",
+      "VOCATIONAL": "VOCATIONAL",
+      "SPECIALIST": "SPECIALIST - Specialist Study"
     },
     "subjectTypes": {
-      "OBAVEZNI": "Mandatory",
-      "IZBORNI": "Elective"
+      "MANDATORY": "Mandatory",
+      "ELECTIVE": "Elective"
     },
     "entities": {
       "FBIH": "FBIH - Federation of B&H",
@@ -349,7 +349,7 @@
     "title": "Find programs and universities",
     "browseAll": "Browse All",
     "search": "Search",
-    "searchHint": "Search across all data — by name, city, acronym, entity (FBIH/RS/BD), ownership (JAVNA/PRIVATNA), study cycle (PRVI, DRUGI…), language, subject type (OBAVEZNI/IZBORNI), or parent unit name.",
+    "searchHint": "Search across all data — by name, city, acronym, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, subject type (MANDATORY/ELECTIVE), or parent unit name.",
     "searchAllPlaceholder": "Search by name, city, cycle, entity…",
     "universitiesSection": "Universities",
     "facultiesSection": "Faculties",
@@ -376,12 +376,12 @@
     "subjects": "Subjects",
     "cycle": "Cycle",
     "cycles": {
-      "PRVI": "First (Bachelor)",
-      "DRUGI": "Second (Master)",
-      "TRECI": "Third (PhD)",
-      "INTEGRISANI": "Integrated (Bachelor + Master)",
-      "STRUCNI": "Professional (Professional Bachelor)",
-      "SPECIJALISTICKI": "Specialist (Specialist Study)"
+      "FIRST": "First (Bachelor)",
+      "SECOND": "Second (Master)",
+      "THIRD": "Third (PhD)",
+      "INTEGRATED": "Integrated (Bachelor + Master)",
+      "VOCATIONAL": "Vocational",
+      "SPECIALIST": "Specialist (Specialist Study)"
     },
     "ects": "ECTS",
     "durationYears": "years",
@@ -390,16 +390,16 @@
     "semester": "Semester",
     "subjectType": "Type",
     "subjectTypes": {
-      "OBAVEZNI": "Mandatory",
-      "IZBORNI": "Elective"
+      "MANDATORY": "Mandatory",
+      "ELECTIVE": "Elective"
     },
     "website": "Website",
     "foundedYear": "Founded",
     "viewDetails": "View details",
     "hideDetails": "Hide details",
     "ownership": {
-      "JAVNA": "Public",
-      "PRIVATNA": "Private"
+      "PUBLIC": "Public",
+      "PRIVATE": "Private"
     }
   }
 }

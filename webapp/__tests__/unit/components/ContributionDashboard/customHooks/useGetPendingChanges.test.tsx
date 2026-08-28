@@ -75,7 +75,7 @@ describe("useGetPendingChanges", () => {
                 name: "University of Sarajevo",
                 city: "Sarajevo",
                 entity: "FBIH",
-                ownership: "JAVNA",
+                ownership: "PUBLIC",
               },
               userId: "user-1",
               createdAt: "2026-07-25T10:00:00.000Z",

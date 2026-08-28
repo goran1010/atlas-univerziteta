@@ -28,7 +28,7 @@ const universitiesList = [
     acronym: "UNSA",
     city: "Sarajevo",
     entity: "FBIH",
-    ownership: "JAVNA",
+    ownership: "PUBLIC",
   },
 ];
 
@@ -44,7 +44,7 @@ const universityDetail = {
           id: 7,
           name: "Computer Science",
           facultyId: 3,
-          cycle: "PRVI",
+          cycle: "FIRST",
           ects: 180,
           subjects: [
             {
@@ -53,7 +53,7 @@ const universityDetail = {
               studyProgramId: 7,
               semester: 3,
               ects: 6,
-              type: "OBAVEZNI",
+              type: "MANDATORY",
             },
           ],
         },
@@ -327,7 +327,7 @@ describe("AddUniversityEntity", () => {
     await user.type(screen.getByLabelText(/Name/i), "University of Sarajevo");
     await user.type(screen.getByLabelText(/City/i), "Sarajevo");
     await user.selectOptions(screen.getByLabelText(/^Entity$/i), "FBIH");
-    await user.selectOptions(screen.getByLabelText(/Ownership/i), "JAVNA");
+    await user.selectOptions(screen.getByLabelText(/Ownership/i), "PUBLIC");
 
     await user.click(
       screen.getByRole("button", { name: /Submit Suggestion/i }),
@@ -343,7 +343,7 @@ describe("AddUniversityEntity", () => {
       name: "University of Sarajevo",
       city: "Sarajevo",
       entity: "FBIH",
-      ownership: "JAVNA",
+      ownership: "PUBLIC",
     });
     expect(submittedArgs.setPendingChanges).toBe(setPendingChanges);
     expect(typeof submittedArgs.addNotification).toBe("function");
@@ -400,7 +400,7 @@ describe("AddUniversityEntity", () => {
     await user.type(screen.getByLabelText(/ECTS credits/i), "6");
     await user.selectOptions(
       screen.getByLabelText(/Subject type/i),
-      "OBAVEZNI",
+      "MANDATORY",
     );
 
     await user.click(
@@ -416,7 +416,7 @@ describe("AddUniversityEntity", () => {
       name: "Algorithms",
       semester: 3,
       ects: 6,
-      type: "OBAVEZNI",
+      type: "MANDATORY",
     });
     expect(submittedArgs.setPendingChanges).toBe(setPendingChanges);
   });
@@ -439,7 +439,7 @@ describe("AddUniversityEntity", () => {
     await pickFaculty(user);
 
     await user.type(screen.getByLabelText(/Name/i), "Computer Science");
-    await user.selectOptions(screen.getByLabelText(/Cycle/i), "PRVI");
+    await user.selectOptions(screen.getByLabelText(/Cycle/i), "FIRST");
     await user.type(screen.getByLabelText(/Duration/i), "3");
     await user.type(screen.getByLabelText(/ECTS credits/i), "180");
 
@@ -454,7 +454,7 @@ describe("AddUniversityEntity", () => {
     expect(submittedArgs.typeOfChange).toBe("CREATE");
     expect(submittedArgs.data).toMatchObject({
       name: "Computer Science",
-      cycle: "PRVI",
+      cycle: "FIRST",
       durationYears: 3,
       ects: 180,
     });

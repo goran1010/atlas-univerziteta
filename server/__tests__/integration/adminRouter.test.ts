@@ -33,7 +33,7 @@ describe("Admin Router - GET /users/admin/pending-changes", () => {
           name: "Test Admin GET University",
           city: "Test City",
           entity: "FBIH",
-          ownership: "JAVNA",
+          ownership: "PUBLIC",
         },
         createdAt: new Date("2024-01-01T00:00:00.000Z"),
         reviewedAt: null,
@@ -100,7 +100,7 @@ describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
           name: "Test Decline University",
           city: "Test City",
           entity: "FBIH",
-          ownership: "JAVNA",
+          ownership: "PUBLIC",
         },
         createdAt: new Date("2024-01-01T00:00:00.000Z"),
         reviewedAt: null,
@@ -389,7 +389,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
         name: "Test DELETE University",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -447,7 +447,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
           name: "Test Create University",
           city: "Test City",
           entity: "FBIH",
-          ownership: "JAVNA",
+          ownership: "PUBLIC",
         },
         createdAt: new Date("2024-01-01T00:00:00.000Z"),
         reviewedAt: null,
@@ -492,7 +492,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
         name: "Test Update University",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -506,7 +506,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
           name: "Test Approve University Updated",
           city: "Test City Updated",
           entity: "RS",
-          ownership: "PRIVATNA",
+          ownership: "PRIVATE",
         },
         createdAt: new Date("2024-01-01T00:00:00.000Z"),
         reviewedAt: null,
@@ -553,7 +553,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
         name: "Test University for CREATE",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -612,7 +612,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
         name: "Test University for UPDATE",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -679,7 +679,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
         name: "Test University for DELETE",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -744,7 +744,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
         name: "Test University for DELETE",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -759,7 +759,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
     const studyProgram = await prisma.studyProgram.create({
       data: {
         name: "Test Delete Study Program",
-        cycle: "PRVI",
+        cycle: "FIRST",
         facultyId: faculty.id,
       },
     });
@@ -815,7 +815,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
         name: "Test University for CREATE",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -835,7 +835,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
         parentId: faculty.id,
         data: {
           name: "Test Create Study Program",
-          cycle: "PRVI",
+          cycle: "FIRST",
         },
         createdAt: new Date("2024-01-01T00:00:00.000Z"),
         reviewedAt: null,
@@ -881,7 +881,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
         name: "Test University for UPDATE",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -896,7 +896,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
     const studyProgram = await prisma.studyProgram.create({
       data: {
         name: "Test Update Study Program",
-        cycle: "PRVI",
+        cycle: "FIRST",
         facultyId: faculty.id,
       },
     });
@@ -909,7 +909,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
         parentId: faculty.id,
         data: {
           name: "Test Approve Study Program Updated",
-          cycle: "DRUGI",
+          cycle: "SECOND",
           durationYears: 4,
           ects: 240,
         },
@@ -960,7 +960,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for SUBJECT", 
         name: "Test University for DELETE",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -975,7 +975,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for SUBJECT", 
     const studyProgram = await prisma.studyProgram.create({
       data: {
         name: "Test Delete Study Program",
-        cycle: "PRVI",
+        cycle: "FIRST",
         facultyId: faculty.id,
       },
     });
@@ -1040,7 +1040,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for SUBJECT", 
         name: "Test University for CREATE",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -1055,7 +1055,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for SUBJECT", 
     const studyProgram = await prisma.studyProgram.create({
       data: {
         name: "Test Create Study Program",
-        cycle: "PRVI",
+        cycle: "FIRST",
         facultyId: faculty.id,
       },
     });
@@ -1114,7 +1114,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for SUBJECT", 
         name: "Test University for UPDATE",
         city: "Test City",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
     });
 
@@ -1129,7 +1129,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for SUBJECT", 
     const studyProgram = await prisma.studyProgram.create({
       data: {
         name: "Test Update Study Program",
-        cycle: "PRVI",
+        cycle: "FIRST",
         facultyId: faculty.id,
       },
     });
@@ -1151,7 +1151,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for SUBJECT", 
           name: "Test Approve Subject Updated",
           semester: 3,
           ects: 6,
-          type: "OBAVEZNI",
+          type: "MANDATORY",
         },
         createdAt: new Date("2024-01-01T00:00:00.000Z"),
         reviewedAt: null,

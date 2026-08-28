@@ -53,9 +53,7 @@ const universitySeedSchema = z.strictObject({
   acronym: optionalTextSchema,
   city: z.string().trim().min(1),
   entity: z.enum(["FBIH", "RS", "BD"]),
-  ownership: z
-    .enum(["Javna", "Privatna"])
-    .transform((value) => (value === "Javna" ? "JAVNA" : "PRIVATNA")),
+  ownership: z.enum(["PUBLIC", "PRIVATE"]),
   foundedYear: optionalTextSchema,
   website: optionalTextSchema,
   accreditationFrom: optionalDateSchema,
@@ -96,12 +94,12 @@ const trackSeedSchema = z.strictObject({
 const studyProgramSeedSchema = z.strictObject({
   name: z.string().trim().min(1),
   cycle: z.enum([
-    "PRVI",
-    "DRUGI",
-    "TRECI",
-    "INTEGRISANI",
-    "STRUCNI",
-    "SPECIJALISTICKI",
+    "FIRST",
+    "SECOND",
+    "THIRD",
+    "INTEGRATED",
+    "VOCATIONAL",
+    "SPECIALIST",
   ]),
   durationYears: z.number().int().positive().nullish(),
   ects: z.number().int().positive().nullish(),

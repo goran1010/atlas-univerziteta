@@ -42,7 +42,7 @@ function SubjectRow({
         {subject.type && (
           <span
             className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-              subject.type === "OBAVEZNI"
+              subject.type === "MANDATORY"
                 ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
                 : "bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-200"
             }`}
@@ -315,14 +315,14 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               <span>{entityLabel}</span>
               <span
                 className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-                  university.ownership === "JAVNA"
+                  university.ownership === "PUBLIC"
                     ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200"
                     : "bg-(--surface-alt) text-(--text-secondary)"
                 }`}
               >
-                {university.ownership === "JAVNA"
-                  ? t(`universitiesPage.ownership.JAVNA`)
-                  : t(`universitiesPage.ownership.PRIVATNA`)}
+                {university.ownership === "PUBLIC"
+                  ? t(`universitiesPage.ownership.PUBLIC`)
+                  : t(`universitiesPage.ownership.PRIVATE`)}
               </span>
               {university._count.faculties > 0 && (
                 <span>
