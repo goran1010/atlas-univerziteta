@@ -15,6 +15,8 @@ import { FacultyResult } from "./FacultyResult";
 import { StudyProgramResult } from "./StudyProgramResult";
 import { TrackResult } from "./TrackResult";
 import { SubjectResult } from "./SubjectResult";
+import { ResultGroup } from "./ResultGroup";
+import { groupBy } from "./utils/groupBy";
 import { searchAll } from "./utils/search";
 import { searchTermSchema } from "../../schemas/domain";
 
@@ -22,18 +24,27 @@ import type { UnifiedSearchResults } from "../../schemas/university";
 
 function ResultSection({
   heading,
+  count,
   emptyMessage,
   isEmpty,
   children,
 }: {
   heading: string;
+  count: number;
   emptyMessage: string;
   isEmpty: boolean;
   children: ReactNode;
 }) {
   return (
     <section className="w-full flex flex-col gap-2">
-      <h2 className="text-lg font-semibold text-(--text-primary)">{heading}</h2>
+      <h2 className="text-lg font-semibold text-(--text-primary)">
+        {heading}
+        {!isEmpty && (
+          <span className="ml-2 text-sm font-normal text-(--text-muted)">
+            ({count})
+          </span>
+        )}
+      </h2>
       {isEmpty ? (
         <p className="text-(--text-muted)">{emptyMessage}</p>
       ) : (
@@ -100,7 +111,7 @@ function UnifiedSearch() {
       </p>
       <form
         onSubmit={(e) => void handleSearch(e)}
-        className="flex gap-2 w-full max-w-lg"
+        className="flex flex-col sm:flex-row gap-2 w-full max-w-lg"
       >
         <Input
           ref={inputRef}
@@ -111,7 +122,11 @@ function UnifiedSearch() {
           className="flex-1"
           aria-label={t("universitiesPage.search")}
         />
-        <Button type="submit" loading={loading} className="max-w-28">
+        <Button
+          type="submit"
+          loading={loading}
+          className="w-full self-center sm:max-w-28 sm:self-auto"
+        >
           {t("universitiesPage.search")}
         </Button>
       </form>
@@ -121,65 +136,105 @@ function UnifiedSearch() {
       ) : (
         results !== null &&
         (noResultsAtAll ? (
-          <p className="text-(--text-muted)">
-            {t("universitiesPage.noResultsAtAll")}
-          </p>
+          <div className="flex flex-col items-center gap-2 py-8 text-(--text-muted)">
+            <span className="text-4xl" aria-hidden="true">
+              🔍
+            </span>
+            <p>{t("universitiesPage.noResultsAtAll")}</p>
+          </div>
         ) : (
           <>
             <ResultSection
               heading={t("universitiesPage.universitiesSection")}
+              count={results.universities.length}
               emptyMessage={t("universitiesPage.noResults")}
               isEmpty={results.universities.length === 0}
             >
-              <ul className="flex flex-col gap-3 w-full">
-                {results.universities.map((u) => (
-                  <UniversityCard key={u.id} university={u} />
+              <div className="flex flex-col gap-3 w-full">
+                {groupBy(results.universities, (u) =>
+                  t(`universitiesPage.ownership.${u.ownership}`),
+                ).map((g) => (
+                  <ResultGroup key={g.key} label={g.key}>
+                    {g.items.map((u) => (
+                      <UniversityCard key={u.id} university={u} />
+                    ))}
+                  </ResultGroup>
                 ))}
-              </ul>
+              </div>
             </ResultSection>
             <ResultSection
               heading={t("universitiesPage.facultiesSection")}
+              count={results.faculties.length}
               emptyMessage={t("universitiesPage.noFacultyResults")}
               isEmpty={results.faculties.length === 0}
             >
-              <ul className="flex flex-col gap-2 w-full">
-                {results.faculties.map((f) => (
-                  <FacultyResult key={f.id} faculty={f} t={t} />
-                ))}
-              </ul>
+              <div className="flex flex-col gap-3 w-full">
+                {groupBy(results.faculties, (f) => f.university.name).map(
+                  (g) => (
+                    <ResultGroup key={g.key} label={g.key}>
+                      {g.items.map((f) => (
+                        <FacultyResult key={f.id} faculty={f} t={t} />
+                      ))}
+                    </ResultGroup>
+                  ),
+                )}
+              </div>
             </ResultSection>
             <ResultSection
               heading={t("universitiesPage.studyProgramsSection")}
+              count={results.studyPrograms.length}
               emptyMessage={t("universitiesPage.noStudyProgramResults")}
               isEmpty={results.studyPrograms.length === 0}
             >
-              <ul className="flex flex-col gap-2 w-full">
-                {results.studyPrograms.map((p) => (
-                  <StudyProgramResult key={p.id} program={p} t={t} />
+              <div className="flex flex-col gap-3 w-full">
+                {groupBy(results.studyPrograms, (p) =>
+                  t(`universitiesPage.cycles.${p.cycle}`),
+                ).map((g) => (
+                  <ResultGroup key={g.key} label={g.key}>
+                    {g.items.map((p) => (
+                      <StudyProgramResult key={p.id} program={p} t={t} />
+                    ))}
+                  </ResultGroup>
                 ))}
-              </ul>
+              </div>
             </ResultSection>
             <ResultSection
               heading={t("universitiesPage.tracksSection")}
+              count={results.tracks.length}
               emptyMessage={t("universitiesPage.noTrackResults")}
               isEmpty={results.tracks.length === 0}
             >
-              <ul className="flex flex-col gap-2 w-full">
-                {results.tracks.map((tr) => (
-                  <TrackResult key={tr.id} track={tr} t={t} />
-                ))}
-              </ul>
+              <div className="flex flex-col gap-3 w-full">
+                {groupBy(results.tracks, (tr) => tr.studyProgram.name).map(
+                  (g) => (
+                    <ResultGroup key={g.key} label={g.key}>
+                      {g.items.map((tr) => (
+                        <TrackResult key={tr.id} track={tr} t={t} />
+                      ))}
+                    </ResultGroup>
+                  ),
+                )}
+              </div>
             </ResultSection>
             <ResultSection
               heading={t("universitiesPage.subjectsSection")}
+              count={results.subjects.length}
               emptyMessage={t("universitiesPage.noSubjectResults")}
               isEmpty={results.subjects.length === 0}
             >
-              <ul className="flex flex-col gap-2 w-full">
-                {results.subjects.map((s) => (
-                  <SubjectResult key={s.id} subject={s} t={t} />
+              <div className="flex flex-col gap-3 w-full">
+                {groupBy(results.subjects, (s) =>
+                  s.type
+                    ? t(`universitiesPage.subjectTypes.${s.type}`)
+                    : t("universitiesPage.subjectsSection"),
+                ).map((g) => (
+                  <ResultGroup key={g.key} label={g.key}>
+                    {g.items.map((s) => (
+                      <SubjectResult key={s.id} subject={s} t={t} />
+                    ))}
+                  </ResultGroup>
                 ))}
-              </ul>
+              </div>
             </ResultSection>
           </>
         ))

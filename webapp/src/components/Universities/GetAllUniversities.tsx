@@ -2,6 +2,8 @@ import { useEffect, useRef, useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../../utils/Spinner";
 import { UniversityCard } from "./UniversityCard";
+import { ResultGroup } from "./ResultGroup";
+import { groupBy } from "./utils/groupBy";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readErrorMessage } from "../../schemas/api";
 import { universityListResponseSchema } from "../../schemas/university";
@@ -55,18 +57,29 @@ function GetAllUniversities() {
 
   if (!universities.length) {
     return (
-      <p className="text-center text-(--text-muted) py-8">
-        {t("universitiesPage.noResults")}
-      </p>
+      <div className="flex flex-col items-center gap-2 py-8 text-(--text-muted)">
+        <span className="text-4xl" aria-hidden="true">
+          🔍
+        </span>
+        <p>{t("universitiesPage.noResults")}</p>
+      </div>
     );
   }
 
+  const groups = groupBy(universities, (u) =>
+    t(`universitiesPage.ownership.${u.ownership}`),
+  );
+
   return (
-    <ul className="flex flex-col gap-3 w-full">
-      {universities.map((u) => (
-        <UniversityCard key={u.id} university={u} />
+    <div className="flex flex-col gap-4 w-full">
+      {groups.map((group) => (
+        <ResultGroup key={group.key} label={group.key}>
+          {group.items.map((u) => (
+            <UniversityCard key={u.id} university={u} />
+          ))}
+        </ResultGroup>
       ))}
-    </ul>
+    </div>
   );
 }
 

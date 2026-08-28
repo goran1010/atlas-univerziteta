@@ -1,14 +1,15 @@
-import { useState, use } from "react";
+import { use } from "react";
+import { NavLink, Outlet } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
-import { GetAllUniversities } from "./GetAllUniversities";
-import { UnifiedSearch } from "./UnifiedSearch";
 
-const TABS = ["search", "browseAll"];
+const TABS = [
+  { key: "search", to: "/search" },
+  { key: "browseAll", to: "/browse" },
+];
 
 function Universities() {
   const { t } = use(RootContext);
-  const [activeTab, setActiveTab] = useState("search");
 
   return (
     <>
@@ -39,26 +40,24 @@ function Universities() {
         </h1>
         <div className="flex gap-1 justify-center border-b border-(--border-color)">
           {TABS.map((tab) => (
-            <button
-              key={tab}
-              type="button"
-              onClick={() => {
-                setActiveTab(tab);
-              }}
-              className={`px-3 py-2 text-sm font-medium rounded-t-md transition-colors cursor-pointer ${
-                activeTab === tab
-                  ? "border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400"
-                  : "text-(--text-secondary) hover:text-(--text-primary)"
-              }`}
+            <NavLink
+              key={tab.key}
+              to={tab.to}
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium rounded-t-md transition-colors cursor-pointer ${
+                  isActive
+                    ? "border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400"
+                    : "text-(--text-secondary) hover:text-(--text-primary)"
+                }`
+              }
             >
-              {t(`universitiesPage.${tab}`)}
-            </button>
+              {t(`universitiesPage.${tab.key}`)}
+            </NavLink>
           ))}
         </div>
 
         <div className="w-full">
-          {activeTab === "browseAll" && <GetAllUniversities />}
-          {activeTab === "search" && <UnifiedSearch />}
+          <Outlet />
         </div>
       </div>
     </>

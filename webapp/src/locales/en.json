@@ -111,14 +111,14 @@
   "home": {
     "title": "Universities and Study Programs in Bosnia and Herzegovina",
     "heading": "Universities and Study Programs in Bosnia and Herzegovina",
-    "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities - institutions, faculties, study programs, and subjects.",
+    "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities — institutions, faculties, study programs, tracks, and subjects.",
     "summary": "Use UniAtlas Bosnia to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
-    "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, and subjects. Search by name, city, or acronym.",
+    "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, tracks, and subjects. Search by name, city, acronym, entity, ownership, study cycle, and more.",
     "card": {
       "universities": {
         "title": "Universities",
-        "description": "Browse universities, faculties, study programs, and subjects across Bosnia and Herzegovina."
+        "description": "Browse universities, faculties, study programs, tracks, and subjects across Bosnia and Herzegovina."
       }
     },
     "improveHeading": "Improve the Data",
@@ -141,14 +141,14 @@
     "publicIntro": "Public REST endpoints are available under the base URL below. These endpoints do not require authentication.",
     "fullDocs": "For full project documentation, local setup, and contributing guidelines, see the",
     "dataObject": "University object",
-    "dataObjectExample": "{\n  \"id\":          number   - unique identifier\n  \"name\":        string   - university name\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"JAVNA\" | \"PRIVATNA\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"faculties\":   Faculty[]\n}",
+    "dataObjectExample": "{\n  \"id\":          number   - unique identifier\n  \"name\":        string   - university name\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"JAVNA\" | \"PRIVATNA\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"_count\":      { \"faculties\": number }  - list endpoint only\n  \"faculties\":   Faculty[]               - detail endpoint only\n}",
     "endpoints": "Endpoints",
     "endpointsData": {
       "apiStatus": "Check API status.",
       "apiV1Status": "Check API v1 status.",
-      "getAllUniversities": "Retrieve all universities, ordered by name.",
-      "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, subjects).",
-      "search": "Search universities (name, city, acronym), faculties (name, city), study programs, and subjects (name) in a single request (case-insensitive, minimum 2 characters).",
+      "getAllUniversities": "Retrieve all universities, ordered by ownership then name. Includes a faculty count per university.",
+      "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, tracks, and subjects).",
+      "search": "Search across universities, faculties, study programs, tracks, and subjects. Matches name, city, acronym, entity, ownership, study cycle, language, subject type, and parent unit names (case-insensitive, minimum 2 characters).",
       "searchTermParam": "A search term (minimum 2 characters)."
     }
   },
@@ -349,8 +349,8 @@
     "title": "Find programs and universities",
     "browseAll": "Browse All",
     "search": "Search",
-    "searchHint": "Search universities, faculties, study programs, and subjects by name - cities and university acronyms match too.",
-    "searchAllPlaceholder": "Search by name, city, or acronym…",
+    "searchHint": "Search across all data — by name, city, acronym, entity (FBIH/RS/BD), ownership (JAVNA/PRIVATNA), study cycle (PRVI, DRUGI…), language, subject type (OBAVEZNI/IZBORNI), or parent unit name.",
+    "searchAllPlaceholder": "Search by name, city, cycle, entity…",
     "universitiesSection": "Universities",
     "facultiesSection": "Faculties",
     "studyProgramsSection": "Study programs",
@@ -370,6 +370,7 @@
       "BD": "Brčko District"
     },
     "faculties": "Faculties",
+    "facultyCount": "faculties",
     "studyPrograms": "Study Programs",
     "tracks": "Tracks (smjerovi)",
     "subjects": "Subjects",

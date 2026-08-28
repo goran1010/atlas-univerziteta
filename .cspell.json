@@ -73,7 +73,8 @@
     "INTEGRISANI",
     "IZBORNI",
     "STRUCNI",
-    "SPECIJALISTICKI"
+    "SPECIJALISTICKI",
+    "smjer"
   ],
   "ignoreWords": [],
   "import": ["@cspell/cspell-bundled-dicts"]

@@ -21,6 +21,7 @@ const baseUniversity: UniversityListItem = {
   authority: undefined,
   sourceUrl: undefined,
   lastChecked: undefined,
+  _count: { faculties: 3 },
 };
 
 function Wrapper({ university = baseUniversity }) {
@@ -182,12 +183,12 @@ describe("UniversityCard", () => {
     const subjectName = await screen.findByText(/Algorithms/i);
     const semesterText = screen.getByText(/Semester 3/i);
     const ectsText = screen.getByText(/6 ECTS/i);
-    const subjectType = screen.getByText(/Mandatory/i);
+    const subjectTypes = screen.getAllByText(/Mandatory/i);
 
     expect(subjectName).toBeInTheDocument();
     expect(semesterText).toBeInTheDocument();
     expect(ectsText).toBeInTheDocument();
-    expect(subjectType).toBeInTheDocument();
+    expect(subjectTypes.length).toBeGreaterThan(0);
   });
 
   test("shows API error notification when details response is non-ok", async () => {

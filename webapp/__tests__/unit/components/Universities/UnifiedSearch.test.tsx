@@ -159,11 +159,7 @@ describe("UnifiedSearch", () => {
   test("explains which terms are searched", () => {
     render(<Wrapper />);
 
-    expect(
-      screen.getByText(
-        /Search universities, faculties, study programs, and subjects by name/i,
-      ),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Search across all data/i)).toBeInTheDocument();
   });
 
   test("fires a single request and renders all four grouped sections", async () => {
@@ -183,16 +179,16 @@ describe("UnifiedSearch", () => {
     expect(firstCallUrl).toBeTypeOf("string");
     expect(firstCallUrl).toContain("/api/v1/search?searchTerm=sarajevo");
     expect(
-      screen.getByRole("heading", { name: /^Universities$/i }),
+      screen.getByRole("heading", { name: /^Universities/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /^Faculties$/i }),
+      screen.getByRole("heading", { name: /^Faculties/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /^Study programs$/i }),
+      screen.getByRole("heading", { name: /^Study programs/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /^Subjects$/i }),
+      screen.getByRole("heading", { name: /^Subjects/i }),
     ).toBeInTheDocument();
     expect(universityName).toBeInTheDocument();
     expect(

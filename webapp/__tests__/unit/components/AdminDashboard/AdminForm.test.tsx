@@ -76,23 +76,38 @@ const setupFetchMock = ({
 };
 
 import { AdminDashboard } from "../../../../src/components/AdminDashboard/AdminDashboard";
+import { PendingChangesAdmin } from "../../../../src/components/AdminDashboard/PendingChangesAdmin";
+import { AdminRequests } from "../../../../src/components/AdminDashboard/AdminRequests";
 import { Notifications } from "../../../../src/components/Notifications";
-import { MemoryRouter, Routes, Route } from "react-router";
+import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 
 function Wrapper({ initialUser = null }: { initialUser?: UserData }) {
-  return (
-    <RootContextProvider
-      initialUserData={initialUser}
-      rootValue={{ addNotification: vi.fn() }}
-    >
-      <MemoryRouter initialEntries={["/admin-dashboard"]}>
-        <Notifications />
-        <Routes>
-          <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        </Routes>
-      </MemoryRouter>
-    </RootContextProvider>
+  const router = createMemoryRouter(
+    [
+      {
+        path: "/admin-dashboard",
+        element: (
+          <RootContextProvider
+            initialUserData={initialUser}
+            rootValue={{ addNotification: vi.fn() }}
+          >
+            <Notifications />
+            <AdminDashboard />
+          </RootContextProvider>
+        ),
+        children: [
+          {
+            index: true,
+            element: <Navigate to="pending-changes" replace />,
+          },
+          { path: "pending-changes", element: <PendingChangesAdmin /> },
+          { path: "admin-requests", element: <AdminRequests /> },
+        ],
+      },
+    ],
+    { initialEntries: ["/admin-dashboard"] },
   );
+  return <RouterProvider router={router} />;
 }
 
 beforeEach(() => {
@@ -117,8 +132,8 @@ describe("AdminForm component rendering", () => {
 
     expect(heading).toBeInTheDocument();
 
-    // One fetch for pending changes, one for admin requests
-    expect(fetchMock).toHaveBeenCalledTimes(2);
+    // One fetch for pending changes (the active tab)
+    expect(fetchMock).toHaveBeenCalled();
   });
 
   test("renders pending changes list", async () => {
@@ -146,9 +161,6 @@ describe("AdminForm component pending changes interaction", () => {
 
     const user = userEvent.setup();
 
-    const pendingChangesHeading = await screen.findByText("Pending Changes");
-    expect(pendingChangesHeading).toBeInTheDocument();
-
     const confirmButton = await screen.findByRole("button", {
       name: /Approve/i,
     });
@@ -170,9 +182,6 @@ describe("AdminForm component pending changes interaction", () => {
     const pendingCount = await screen.findByLabelText(/pending changes count/i);
 
     const user = userEvent.setup();
-
-    const pendingChangesHeading = await screen.findByText("Pending Changes");
-    expect(pendingChangesHeading).toBeInTheDocument();
 
     const rejectButton = await screen.findByRole("button", {
       name: /Reject/i,

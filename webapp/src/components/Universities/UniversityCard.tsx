@@ -2,6 +2,8 @@ import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Button } from "../sharedComponents/Button";
 import { Spinner } from "../../utils/Spinner";
+import { ResultGroup } from "./ResultGroup";
+import { groupBy } from "./utils/groupBy";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readErrorMessage } from "../../schemas/api";
 import { universityDetailResponseSchema } from "../../schemas/university";
@@ -94,7 +96,7 @@ function StudyProgramRow({
         onClick={() => {
           setOpen((p) => !p);
         }}
-        className="w-full text-left flex justify-between items-center gap-2 py-1 px-2 rounded hover:bg-(--hover-surface) transition-colors"
+        className="w-full text-left flex justify-between items-center gap-2 py-1 px-2 rounded hover:bg-(--hover-surface) transition-colors cursor-pointer"
       >
         <span className="font-medium">{program.name}</span>
         <span className="flex gap-2 items-center text-xs text-(--text-muted) shrink-0">
@@ -147,11 +149,19 @@ function StudyProgramRow({
             </>
           )}
           {program.subjects.length > 0 ? (
-            <ul>
-              {program.subjects.map((s) => (
-                <SubjectRow key={s.id} subject={s} t={t} />
+            <div className="flex flex-col gap-2">
+              {groupBy(program.subjects, (s) =>
+                s.type
+                  ? t(`universitiesPage.subjectTypes.${s.type}`)
+                  : t("universitiesPage.subjectsSection"),
+              ).map((g) => (
+                <ResultGroup key={g.key} label={g.key}>
+                  {g.items.map((s) => (
+                    <SubjectRow key={s.id} subject={s} t={t} />
+                  ))}
+                </ResultGroup>
               ))}
-            </ul>
+            </div>
           ) : (
             <p className="text-xs text-(--text-muted) italic py-1">
               {t("universitiesPage.noSubjects")}
@@ -178,7 +188,7 @@ function FacultyRow({
         onClick={() => {
           setOpen((p) => !p);
         }}
-        className="w-full text-left flex justify-between items-center gap-2 py-1.5 px-2 rounded hover:bg-(--hover-surface) transition-colors font-semibold"
+        className="w-full text-left flex justify-between items-center gap-2 py-1.5 px-2 rounded hover:bg-(--hover-surface) transition-colors font-semibold cursor-pointer"
       >
         <span>{faculty.name}</span>
         <span className="flex gap-2 items-center text-xs text-(--text-muted) shrink-0">
@@ -214,11 +224,17 @@ function FacultyRow({
             </div>
           )}
           {faculty.studyPrograms.length > 0 ? (
-            <ul className="space-y-0.5">
-              {faculty.studyPrograms.map((sp) => (
-                <StudyProgramRow key={sp.id} program={sp} t={t} />
+            <div className="flex flex-col gap-2">
+              {groupBy(faculty.studyPrograms, (sp) =>
+                t(`universitiesPage.cycles.${sp.cycle}`),
+              ).map((g) => (
+                <ResultGroup key={g.key} label={g.key}>
+                  {g.items.map((sp) => (
+                    <StudyProgramRow key={sp.id} program={sp} t={t} />
+                  ))}
+                </ResultGroup>
               ))}
-            </ul>
+            </div>
           ) : (
             <p className="text-xs text-(--text-muted) italic py-1">
               {t("universitiesPage.noStudyPrograms")}
@@ -282,7 +298,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
   const entityLabel = t(`universitiesPage.entities.${university.entity}`);
 
   return (
-    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2)">
+    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) hover:bg-(--hover-surface) transition-colors">
       <div className="p-3 sm:p-4">
         <div className="flex flex-wrap justify-between items-start gap-2">
           <div className="flex-1 min-w-0">
@@ -308,6 +324,12 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                   ? t(`universitiesPage.ownership.JAVNA`)
                   : t(`universitiesPage.ownership.PRIVATNA`)}
               </span>
+              {university._count.faculties > 0 && (
+                <span>
+                  🏛️ {university._count.faculties}{" "}
+                  {t("universitiesPage.facultyCount")}
+                </span>
+              )}
               {university.foundedYear && (
                 <span>
                   {t("universitiesPage.foundedYear")}: {university.foundedYear}

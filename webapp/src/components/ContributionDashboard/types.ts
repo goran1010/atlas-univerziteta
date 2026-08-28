@@ -42,3 +42,11 @@ export interface ContributionFormState {
 }
 
 export type { PendingChange };
+
+export interface ContributionOutletContext {
+  pendingChanges: PendingChange[];
+  setPendingChanges: import("react").Dispatch<
+    import("react").SetStateAction<PendingChange[]>
+  >;
+  loading: boolean;
+}
