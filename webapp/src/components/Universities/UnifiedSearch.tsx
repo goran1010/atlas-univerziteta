@@ -123,7 +123,7 @@ function UnifiedSearch() {
         <Button
           type="submit"
           loading={loading}
-          className="max-w-xs self-center sm:max-w-28 sm:self-auto"
+          className="w-full self-center sm:max-w-28 sm:self-auto"
         >
           {t("universitiesPage.search")}
         </Button>
