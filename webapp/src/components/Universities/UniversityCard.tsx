@@ -2,6 +2,8 @@ import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Button } from "../sharedComponents/Button";
 import { Spinner } from "../../utils/Spinner";
+import { ResultGroup } from "./ResultGroup";
+import { groupBy } from "./utils/groupBy";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readErrorMessage } from "../../schemas/api";
 import { universityDetailResponseSchema } from "../../schemas/university";
@@ -147,11 +149,19 @@ function StudyProgramRow({
             </>
           )}
           {program.subjects.length > 0 ? (
-            <ul>
-              {program.subjects.map((s) => (
-                <SubjectRow key={s.id} subject={s} t={t} />
+            <div className="flex flex-col gap-2">
+              {groupBy(program.subjects, (s) =>
+                s.type
+                  ? t(`universitiesPage.subjectTypes.${s.type}`)
+                  : t("universitiesPage.subjectsSection"),
+              ).map((g) => (
+                <ResultGroup key={g.key} label={g.key}>
+                  {g.items.map((s) => (
+                    <SubjectRow key={s.id} subject={s} t={t} />
+                  ))}
+                </ResultGroup>
               ))}
-            </ul>
+            </div>
           ) : (
             <p className="text-xs text-(--text-muted) italic py-1">
               {t("universitiesPage.noSubjects")}
@@ -214,11 +224,17 @@ function FacultyRow({
             </div>
           )}
           {faculty.studyPrograms.length > 0 ? (
-            <ul className="space-y-0.5">
-              {faculty.studyPrograms.map((sp) => (
-                <StudyProgramRow key={sp.id} program={sp} t={t} />
+            <div className="flex flex-col gap-2">
+              {groupBy(faculty.studyPrograms, (sp) =>
+                t(`universitiesPage.cycles.${sp.cycle}`),
+              ).map((g) => (
+                <ResultGroup key={g.key} label={g.key}>
+                  {g.items.map((sp) => (
+                    <StudyProgramRow key={sp.id} program={sp} t={t} />
+                  ))}
+                </ResultGroup>
               ))}
-            </ul>
+            </div>
           ) : (
             <p className="text-xs text-(--text-muted) italic py-1">
               {t("universitiesPage.noStudyPrograms")}

@@ -80,6 +80,7 @@ async function search(req: Request, res: Response) {
             ...enumMatch("ownership", OWNERSHIPS),
           ],
         },
+        orderBy: [{ ownership: "asc" }, { name: "asc" }],
         include: { _count: { select: { faculties: true } } },
       }),
       prisma.faculty.findMany({
@@ -90,6 +91,7 @@ async function search(req: Request, res: Response) {
             ...relationContains("university", "name"),
           ],
         },
+        orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
         include: {
           university: true,
         },
@@ -103,6 +105,7 @@ async function search(req: Request, res: Response) {
             ...enumMatch("cycle", CYCLES),
           ],
         },
+        orderBy: [{ cycle: "asc" }, { name: "asc" }],
         include: {
           faculty: {
             include: {
@@ -119,6 +122,7 @@ async function search(req: Request, res: Response) {
             ...enumMatch("type", SUBJECT_TYPES),
           ],
         },
+        orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }],
         include: {
           studyProgram: {
             include: {
@@ -138,6 +142,7 @@ async function search(req: Request, res: Response) {
             ...relationContains("studyProgram", "name"),
           ],
         },
+        orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }],
         include: {
           studyProgram: {
             include: {
@@ -182,11 +187,13 @@ async function getUniversityById(req: Request, res: Response) {
     },
     include: {
       faculties: {
+        orderBy: { name: "asc" },
         include: {
           studyPrograms: {
+            orderBy: [{ cycle: "asc" }, { name: "asc" }],
             include: {
-              subjects: true,
-              tracks: true,
+              subjects: { orderBy: [{ semester: "asc" }, { name: "asc" }] },
+              tracks: { orderBy: { name: "asc" } },
             },
           },
         },
