@@ -71,6 +71,7 @@ const facultySeedSchema = z.strictObject({
   name: z.string().trim().min(1),
   city: optionalTextSchema,
   website: optionalTextSchema,
+  isUniversityLevel: z.boolean().optional(),
   sourceUrl: optionalTextSchema,
   lastChecked: optionalDateSchema,
 });
@@ -94,7 +95,14 @@ const trackSeedSchema = z.strictObject({
 
 const studyProgramSeedSchema = z.strictObject({
   name: z.string().trim().min(1),
-  cycle: z.enum(["PRVI", "DRUGI", "TRECI", "INTEGRISANI", "STRUCNI"]),
+  cycle: z.enum([
+    "PRVI",
+    "DRUGI",
+    "TRECI",
+    "INTEGRISANI",
+    "STRUCNI",
+    "SPECIJALISTICKI",
+  ]),
   durationYears: z.number().int().positive().nullish(),
   ects: z.number().int().positive().nullish(),
   language: optionalTextSchema,
@@ -198,6 +206,7 @@ async function main() {
       return group.faculties.map((faculty) => {
         const sourceUrl = faculty.sourceUrl ?? group.sourceUrl ?? null;
         const lastChecked = faculty.lastChecked ?? group.lastChecked ?? null;
+        const isUniversityLevel = faculty.isUniversityLevel ?? false;
 
         return prisma.faculty.upsert({
           where: {
@@ -208,12 +217,14 @@ async function main() {
             universityId,
             city: faculty.city ?? null,
             website: faculty.website ?? null,
+            isUniversityLevel,
             sourceUrl,
             lastChecked,
           },
           update: {
             city: faculty.city ?? null,
             website: faculty.website ?? null,
+            isUniversityLevel,
             sourceUrl,
             lastChecked,
           },

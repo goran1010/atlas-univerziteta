@@ -229,7 +229,8 @@
       "DRUGI": "SECOND - Master",
       "TRECI": "THIRD - PhD",
       "INTEGRISANI": "INTEGRATED - Bachelor+Master",
-      "STRUCNI": "PROFESSIONAL - Professional Bachelor"
+      "STRUCNI": "PROFESSIONAL - Professional Bachelor",
+      "SPECIJALISTICKI": "SPECIALIST - Specialist Study"
     },
     "subjectTypes": {
       "OBAVEZNI": "Mandatory",
@@ -378,7 +379,8 @@
       "DRUGI": "Second (Master)",
       "TRECI": "Third (PhD)",
       "INTEGRISANI": "Integrated (Bachelor + Master)",
-      "STRUCNI": "Professional (Professional Bachelor)"
+      "STRUCNI": "Professional (Professional Bachelor)",
+      "SPECIJALISTICKI": "Specialist (Specialist Study)"
     },
     "ects": "ECTS",
     "durationYears": "years",

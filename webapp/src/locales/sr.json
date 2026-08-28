@@ -229,7 +229,8 @@
       "DRUGI": "DRUGI - Master",
       "TRECI": "TREĆI - PhD",
       "INTEGRISANI": "INTEGRISANI - Bachelor+Master",
-      "STRUCNI": "STRUČNI - Professional Bachelor"
+      "STRUCNI": "STRUČNI - Professional Bachelor",
+      "SPECIJALISTICKI": "SPECIJALISTIČKI - Specialist"
     },
     "subjectTypes": {
       "OBAVEZNI": "Obavezni",
@@ -378,7 +379,8 @@
       "DRUGI": "Drugi (Master)",
       "TRECI": "Treći (PhD)",
       "INTEGRISANI": "Integrisani (Bachelor + Master)",
-      "STRUCNI": "Stručni (Professional Bachelor)"
+      "STRUCNI": "Stručni (Professional Bachelor)",
+      "SPECIJALISTICKI": "Specijalistički (Specialist)"
     },
     "ects": "ECTS",
     "durationYears": "godine",

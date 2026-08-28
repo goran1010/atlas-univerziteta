@@ -133,6 +133,12 @@
         "name": "Veterinarski fakultet",
         "city": "Sarajevo",
         "website": "https://vfs.unsa.ba"
+      },
+      {
+        "name": "Centar za interdisciplinarne studije",
+        "city": "Sarajevo",
+        "isUniversityLevel": true,
+        "website": "https://cis.unsa.ba"
       }
     ]
   },
@@ -344,6 +350,11 @@
         "name": "Pravni fakultet",
         "city": "Mostar",
         "website": "https://pf.unmo.ba"
+      },
+      {
+        "name": "Univerzitetski studiji",
+        "isUniversityLevel": true,
+        "website": "https://www.unmo.ba/univerzitet/studijski-programi/"
       }
     ]
   },
@@ -994,6 +1005,11 @@
         "name": "Fakultet za turizam i hotelijerstvo",
         "city": "Banja Luka",
         "website": null
+      },
+      {
+        "name": "Univerzitetski studiji",
+        "isUniversityLevel": true,
+        "website": "https://univerzitetps.com/studijski-programi/"
       }
     ]
   },

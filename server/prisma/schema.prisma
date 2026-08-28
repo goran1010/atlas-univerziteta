@@ -74,6 +74,7 @@ enum studyCycle {
   TRECI
   INTEGRISANI
   STRUCNI
+  SPECIJALISTICKI
 }
 
 enum subjectType {
@@ -102,15 +103,16 @@ model University {
 }
 
 model Faculty {
-  id            Int            @id @default(autoincrement())
-  name          String
-  universityId  Int
-  university    University     @relation(fields: [universityId], references: [id])
-  city          String?
-  website       String?
-  sourceUrl     String?
-  lastChecked   DateTime?
-  studyPrograms StudyProgram[]
+  id                Int            @id @default(autoincrement())
+  name              String
+  universityId      Int
+  university        University     @relation(fields: [universityId], references: [id])
+  city              String?
+  website           String?
+  isUniversityLevel Boolean        @default(false)
+  sourceUrl         String?
+  lastChecked       DateTime?
+  studyPrograms     StudyProgram[]
 
   @@unique([name, universityId])
   @@map("faculties")

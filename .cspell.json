@@ -72,7 +72,8 @@
     "TRECI",
     "INTEGRISANI",
     "IZBORNI",
-    "STRUCNI"
+    "STRUCNI",
+    "SPECIJALISTICKI"
   ],
   "ignoreWords": [],
   "import": ["@cspell/cspell-bundled-dicts"]
