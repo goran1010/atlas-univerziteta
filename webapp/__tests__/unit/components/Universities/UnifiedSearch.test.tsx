@@ -160,9 +160,7 @@ describe("UnifiedSearch", () => {
     render(<Wrapper />);
 
     expect(
-      screen.getByText(
-        /Search universities, faculties, study programs, and subjects by name/i,
-      ),
+      screen.getByText(/Search across all data/i),
     ).toBeInTheDocument();
   });
 
