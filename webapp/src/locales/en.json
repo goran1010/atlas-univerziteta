@@ -141,14 +141,14 @@
     "publicIntro": "Public REST endpoints are available under the base URL below. These endpoints do not require authentication.",
     "fullDocs": "For full project documentation, local setup, and contributing guidelines, see the",
     "dataObject": "University object",
-    "dataObjectExample": "{\n  \"id\":          number   - unique identifier\n  \"name\":        string   - university name\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"JAVNA\" | \"PRIVATNA\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"faculties\":   Faculty[]\n}",
+    "dataObjectExample": "{\n  \"id\":          number   - unique identifier\n  \"name\":        string   - university name\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"JAVNA\" | \"PRIVATNA\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"_count\":      { \"faculties\": number }  - list endpoint only\n  \"faculties\":   Faculty[]               - detail endpoint only\n}",
     "endpoints": "Endpoints",
     "endpointsData": {
       "apiStatus": "Check API status.",
       "apiV1Status": "Check API v1 status.",
-      "getAllUniversities": "Retrieve all universities, ordered by name.",
-      "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, subjects).",
-      "search": "Search universities (name, city, acronym), faculties (name, city), study programs, and subjects (name) in a single request (case-insensitive, minimum 2 characters).",
+      "getAllUniversities": "Retrieve all universities, ordered by ownership then name. Includes a faculty count per university.",
+      "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, tracks, and subjects).",
+      "search": "Search across universities, faculties, study programs, tracks, and subjects. Matches name, city, acronym, entity, ownership, study cycle, language, subject type, and parent unit names (case-insensitive, minimum 2 characters).",
       "searchTermParam": "A search term (minimum 2 characters)."
     }
   },

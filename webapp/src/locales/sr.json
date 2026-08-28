@@ -141,14 +141,14 @@
     "publicIntro": "Javni REST endpoint-i su dostupni pod osnovnim URL-om ispod. Ovi endpoint-i ne zahtijevaju autentifikaciju.",
     "fullDocs": "Za kompletnu projektnu dokumentaciju, lokalno postavljanje i smjernice za doprinos, pogledajte",
     "dataObject": "Objekat univerziteta",
-    "dataObjectExample": "{\n  \"id\":          number   - jedinstveni identifikator\n  \"name\":        string   - naziv univerziteta\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"JAVNA\" | \"PRIVATNA\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"faculties\":   Faculty[]\n}",
+    "dataObjectExample": "{\n  \"id\":          number   - jedinstveni identifikator\n  \"name\":        string   - naziv univerziteta\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"JAVNA\" | \"PRIVATNA\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"_count\":      { \"faculties\": number }  - samo lista\n  \"faculties\":   Faculty[]               - samo detalji\n}",
     "endpoints": "Endpoint-i",
     "endpointsData": {
       "apiStatus": "Provjera statusa API-ja.",
       "apiV1Status": "Provjera statusa API v1.",
-      "getAllUniversities": "Preuzimanje svih univerziteta, sortiranih po nazivu.",
-      "getUniversityById": "Preuzimanje univerziteta po ID-u s potpunim ugniježđenim detaljima (fakulteti, studijski programi, predmeti).",
-      "search": "Pretraga univerziteta (naziv, grad, akronim), fakulteta (naziv, grad), studijskih programa i predmeta (naziv) u jednom zahtjevu (neosjetljivo na velika/mala slova, najmanje 2 karaktera).",
+      "getAllUniversities": "Preuzimanje svih univerziteta, sortiranih po vlasništvu pa po nazivu. Uključuje broj fakulteta po univerzitetu.",
+      "getUniversityById": "Preuzimanje univerziteta po ID-u s potpunim ugniježđenim detaljima (fakulteti, studijski programi, smjerovi i predmeti).",
+      "search": "Pretraga univerziteta, fakulteta, studijskih programa, smjerova i predmeta. Pretraga po nazivu, gradu, akronimu, entitetu, vlasništvu, ciklusu studija, jeziku, vrsti predmeta i nazivima nadređenih jedinica (neosjetljivo na velika/mala slova, najmanje 2 karaktera).",
       "searchTermParam": "Pojam za pretragu (najmanje 2 karaktera)."
     }
   },

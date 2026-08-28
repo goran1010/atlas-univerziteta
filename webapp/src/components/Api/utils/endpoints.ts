@@ -43,9 +43,14 @@ const apiEndpoints: Endpoint[] = [
     descriptionKey: "api.endpointsData.getAllUniversities",
     params: null,
     successExample: `{
-  "message": "Universities retrieved successfully",
+  "message": "Universities retrieved successfully.",
   "data": [
-    { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA", "city": "Sarajevo", "entity": "FBIH", "ownership": "JAVNA" },
+    {
+      "id": 1, "name": "University of Sarajevo", "acronym": "UNSA",
+      "city": "Sarajevo", "entity": "FBIH", "ownership": "JAVNA",
+      "foundedYear": "1949", "website": "https://unsa.ba",
+      "_count": { "faculties": 23 }
+    },
     ...
   ]
 }`,
@@ -57,12 +62,20 @@ const apiEndpoints: Endpoint[] = [
     descriptionKey: "api.endpointsData.getUniversityById",
     params: null,
     successExample: `{
-  "message": "University retrieved successfully",
+  "message": "University retrieved successfully.",
   "data": {
     "id": 1, "name": "University of Sarajevo", "acronym": "UNSA",
     "city": "Sarajevo", "entity": "FBIH", "ownership": "JAVNA",
+    "foundedYear": "1949", "website": "https://unsa.ba",
     "faculties": [
-      { "id": 1, "name": "Faculty of Science", "studyPrograms": [ ... ] }
+      { "id": 1, "name": "Faculty of Science",
+        "city": "Sarajevo", "website": "https://pmf.unsa.ba",
+        "studyPrograms": [
+          { "id": 1, "name": "Computer Science", "cycle": "PRVI",
+            "subjects": [ ... ], "tracks": [ ... ]
+          }
+        ]
+      }
     ]
   }
 }`,
@@ -84,15 +97,18 @@ const apiEndpoints: Endpoint[] = [
   "message": "Search results retrieved successfully.",
   "data": {
     "universities": [
-      { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA", "city": "Sarajevo" }
+      { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA",
+        "city": "Sarajevo", "entity": "FBIH", "ownership": "JAVNA",
+        "_count": { "faculties": 23 }
+      }
     ],
     "faculties": [
       { "id": 1, "name": "Faculty of Electrical Engineering", "city": "Sarajevo",
-        "university": { "id": 1, "name": "University of Sarajevo" }
+        "university": { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA" }
       }
     ],
     "studyPrograms": [
-      { "id": 1, "name": "Software Engineering", "cycle": "PRVI",
+      { "id": 1, "name": "Software Engineering", "cycle": "PRVI", "ects": 180,
         "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
           "university": { "id": 1, "name": "University of Sarajevo" }
         }
@@ -109,6 +125,7 @@ const apiEndpoints: Endpoint[] = [
     ],
     "subjects": [
       { "id": 1, "name": "Computer Networks", "semester": 4, "ects": 6,
+        "type": "OBAVEZNI",
         "studyProgram": { "id": 1, "name": "Software Engineering",
           "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
             "university": { "id": 1, "name": "University of Sarajevo" }
