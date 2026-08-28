@@ -3,7 +3,7 @@ import type { TrackSearchResult } from "../../schemas/university";
 
 function TrackResult({ track, t }: { track: TrackSearchResult; t: TFunction }) {
   return (
-    <li className="border border-(--border-color) rounded-lg p-3 bg-(--surface-2)">
+    <li className="border border-(--border-color) rounded-lg p-3 bg-(--surface-2) hover:bg-(--hover-surface) transition-colors">
       <p className="font-bold text-(--text-primary)">{track.name}</p>
       <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-sm text-(--text-secondary)">
         {track.durationYears != null && (

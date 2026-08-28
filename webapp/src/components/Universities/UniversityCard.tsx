@@ -94,7 +94,7 @@ function StudyProgramRow({
         onClick={() => {
           setOpen((p) => !p);
         }}
-        className="w-full text-left flex justify-between items-center gap-2 py-1 px-2 rounded hover:bg-(--hover-surface) transition-colors"
+        className="w-full text-left flex justify-between items-center gap-2 py-1 px-2 rounded hover:bg-(--hover-surface) transition-colors cursor-pointer"
       >
         <span className="font-medium">{program.name}</span>
         <span className="flex gap-2 items-center text-xs text-(--text-muted) shrink-0">
@@ -178,7 +178,7 @@ function FacultyRow({
         onClick={() => {
           setOpen((p) => !p);
         }}
-        className="w-full text-left flex justify-between items-center gap-2 py-1.5 px-2 rounded hover:bg-(--hover-surface) transition-colors font-semibold"
+        className="w-full text-left flex justify-between items-center gap-2 py-1.5 px-2 rounded hover:bg-(--hover-surface) transition-colors font-semibold cursor-pointer"
       >
         <span>{faculty.name}</span>
         <span className="flex gap-2 items-center text-xs text-(--text-muted) shrink-0">
@@ -282,7 +282,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
   const entityLabel = t(`universitiesPage.entities.${university.entity}`);
 
   return (
-    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2)">
+    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) hover:bg-(--hover-surface) transition-colors">
       <div className="p-3 sm:p-4">
         <div className="flex flex-wrap justify-between items-start gap-2">
           <div className="flex-1 min-w-0">
