@@ -1,9 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter, Route, Routes } from "react-router";
 import { ContributionDashboard } from "../../../../src/components/ContributionDashboard/ContributionDashboard";
+import { AddDataTab } from "../../../../src/components/ContributionDashboard/AddDataTab";
+import { PendingChangesTab } from "../../../../src/components/ContributionDashboard/PendingChangesTab";
 import { Notifications } from "../../../../src/components/Notifications";
 import userEvent from "@testing-library/user-event";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 
 import type { UserData } from "../../../../src/customHooks/useStatusCheck";
 import type { PendingChange } from "../../../../src/components/ContributionDashboard/customHooks/useGetPendingChanges";
@@ -79,17 +81,36 @@ afterEach(() => {
 
 const user = userEvent.setup();
 
-function Wrapper({ initialUser }: { initialUser: UserData }) {
-  return (
-    <RootContextProvider initialUserData={initialUser}>
-      <MemoryRouter initialEntries={["/improve-data"]}>
-        <Notifications />
-        <Routes>
-          <Route path="/improve-data" element={<ContributionDashboard />} />
-        </Routes>
-      </MemoryRouter>
-    </RootContextProvider>
+function buildRouter(
+  initialUser: UserData,
+  rootValue: Partial<RootContextType> = {},
+) {
+  return createMemoryRouter(
+    [
+      {
+        path: "/improve-data",
+        element: (
+          <RootContextProvider
+            initialUserData={initialUser}
+            rootValue={rootValue}
+          >
+            <Notifications />
+            <ContributionDashboard />
+          </RootContextProvider>
+        ),
+        children: [
+          { index: true, element: <Navigate to="add" replace /> },
+          { path: "add", element: <AddDataTab /> },
+          { path: "pending", element: <PendingChangesTab /> },
+        ],
+      },
+    ],
+    { initialEntries: ["/improve-data"] },
   );
+}
+
+function Wrapper({ initialUser }: { initialUser: UserData }) {
+  return <RouterProvider router={buildRouter(initialUser)} />;
 }
 
 function WrapperWithRootValue({
@@ -99,30 +120,21 @@ function WrapperWithRootValue({
   initialUser: UserData;
   rootValue?: Partial<RootContextType>;
 }) {
-  return (
-    <RootContextProvider initialUserData={initialUser} rootValue={rootValue}>
-      <MemoryRouter initialEntries={["/improve-data"]}>
-        <Notifications />
-        <Routes>
-          <Route path="/improve-data" element={<ContributionDashboard />} />
-        </Routes>
-      </MemoryRouter>
-    </RootContextProvider>
-  );
+  return <RouterProvider router={buildRouter(initialUser, rootValue)} />;
 }
 
 describe("ContributionForm component rendering", () => {
-  test("renders Add new data tab button", async () => {
+  test("renders Add new data tab link", async () => {
     render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
 
-    const tab = await screen.findByRole("button", { name: /Add new data/i });
+    const tab = await screen.findByRole("link", { name: /Add new data/i });
     expect(tab).toBeInTheDocument();
   });
 
-  test("renders Pending changes tab button", async () => {
+  test("renders Pending changes tab link", async () => {
     render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
 
-    const tab = await screen.findByRole("button", { name: /Pending changes/i });
+    const tab = await screen.findByRole("link", { name: /Pending changes/i });
     expect(tab).toBeInTheDocument();
   });
 
@@ -136,7 +148,7 @@ describe("ContributionForm component rendering", () => {
   test("switches to pending changes tab on click", async () => {
     render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
 
-    const tab = await screen.findByRole("button", { name: /Pending changes/i });
+    const tab = await screen.findByRole("link", { name: /Pending changes/i });
     await user.click(tab);
     const noChanges = await screen.findByText(/no pending changes/i);
     expect(noChanges).toBeInTheDocument();
@@ -146,10 +158,10 @@ describe("ContributionForm component rendering", () => {
     setupFetchMock({ pendingChanges: mockPendingChanges });
     render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
 
-    const tab = await screen.findByRole("button", { name: /Pending changes/i });
+    const tab = await screen.findByRole("link", { name: /Pending changes/i });
     await user.click(tab);
 
-    // The count badge appears inside the "Pending changes" tab button
+    // The count badge appears inside the "Pending changes" tab link
     expect(tab).toHaveTextContent("1");
   });
 
@@ -159,7 +171,7 @@ describe("ContributionForm component rendering", () => {
     });
     render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
 
-    const tab = await screen.findByRole("button", { name: /Pending changes/i });
+    const tab = await screen.findByRole("link", { name: /Pending changes/i });
     await user.click(tab);
 
     const alert = await screen.findByRole("alert");
@@ -173,7 +185,7 @@ describe("ContributionForm component rendering", () => {
     render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
 
     await user.click(
-      await screen.findByRole("button", { name: /Pending changes/i }),
+      await screen.findByRole("link", { name: /Pending changes/i }),
     );
 
     expect(
@@ -194,7 +206,7 @@ describe("ContributionForm component rendering", () => {
       />,
     );
 
-    const tab = await screen.findByRole("button", { name: /Pending changes/i });
+    const tab = await screen.findByRole("link", { name: /Pending changes/i });
     await user.click(tab);
 
     expect(screen.queryByRole("alert")).not.toBeInTheDocument();

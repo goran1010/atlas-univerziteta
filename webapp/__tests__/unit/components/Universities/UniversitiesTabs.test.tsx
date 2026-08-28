@@ -1,19 +1,36 @@
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router";
+import { createMemoryRouter, RouterProvider } from "react-router";
 import userEvent from "@testing-library/user-event";
 import { Universities } from "../../../../src/components/Universities/Universities";
+import { UnifiedSearch } from "../../../../src/components/Universities/UnifiedSearch";
+import { GetAllUniversities } from "../../../../src/components/Universities/GetAllUniversities";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { Navigate } from "react-router";
 
 const user = userEvent.setup();
 
-function Wrapper() {
-  return (
-    <RootContextProvider>
-      <MemoryRouter>
-        <Universities />
-      </MemoryRouter>
-    </RootContextProvider>
-  );
+function Wrapper({ initialEntry = "/search" }: { initialEntry?: string }) {
+  const tabRoutes = [
+    {
+      path: "/",
+      element: (
+        <RootContextProvider>
+          <Universities />
+        </RootContextProvider>
+      ),
+      children: [
+        { index: true, element: <Navigate to="search" replace /> },
+        { path: "search", element: <UnifiedSearch /> },
+        { path: "browse", element: <GetAllUniversities /> },
+      ],
+    },
+  ];
+
+  const router = createMemoryRouter(tabRoutes, {
+    initialEntries: [initialEntry],
+  });
+
+  return <RouterProvider router={router} />;
 }
 
 beforeEach(() => {
@@ -29,18 +46,13 @@ afterEach(() => {
 });
 
 describe("Universities page tabs", () => {
-  test("renders all tab buttons", async () => {
+  test("renders all tab links", async () => {
     render(<Wrapper />);
 
     expect(
-      await screen.findByRole("button", { name: /Browse All/i }),
+      await screen.findByRole("link", { name: /Browse All/i }),
     ).toBeInTheDocument();
-    expect(
-      screen.getAllByRole("button", { name: /Search/i })[0],
-    ).toBeInTheDocument();
-    expect(
-      screen.queryByRole("button", { name: /Find Study Programs/i }),
-    ).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /^Search$/i })).toBeInTheDocument();
   });
 
   test("switches tabs and renders tab content", async () => {
@@ -49,7 +61,7 @@ describe("Universities page tabs", () => {
     const searchInput = screen.getByRole("searchbox", { name: /Search/i });
     expect(searchInput).toBeInTheDocument();
 
-    const browseAllTab = screen.getByRole("button", { name: /Browse All/i });
+    const browseAllTab = screen.getByRole("link", { name: /Browse All/i });
     await user.click(browseAllTab);
 
     const emptyMessage = await screen.findByText(/No universities found\./i);

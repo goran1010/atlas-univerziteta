@@ -16,24 +16,21 @@ afterEach(() => {
 
 function Wrapper() {
   const router = createMemoryRouter(routes, {
-    initialEntries: ["/universities"],
+    initialEntries: ["/search"],
   });
   render(<RouterProvider router={router} />);
 }
 
 describe("Universities page", () => {
-  test("renders tab buttons: Search, Browse All", async () => {
+  test("renders tab links: Search, Browse All", async () => {
     Wrapper();
 
-    const BrowseAllButton = await screen.findByRole("button", {
+    const BrowseAllLink = await screen.findByRole("link", {
       name: /Browse All/i,
     });
-    const SearchButton = screen.getAllByRole("button", { name: /Search/i })[0];
+    const SearchLink = screen.getByRole("link", { name: /^Search$/i });
 
-    expect(BrowseAllButton).toBeInTheDocument();
-    expect(SearchButton).toBeInTheDocument();
-    expect(
-      screen.queryByRole("button", { name: /Find Study Programs/i }),
-    ).not.toBeInTheDocument();
+    expect(BrowseAllLink).toBeInTheDocument();
+    expect(SearchLink).toBeInTheDocument();
   });
 });

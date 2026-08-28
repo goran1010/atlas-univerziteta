@@ -1,7 +1,11 @@
-import { PendingChangesAdmin } from "./PendingChangesAdmin";
-import { AdminRequests } from "./AdminRequests";
+import { NavLink, Outlet } from "react-router";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
+
+const TABS = [
+  { key: "pendingChanges", to: "/admin-dashboard/pending-changes" },
+  { key: "adminRequests", to: "/admin-dashboard/admin-requests" },
+];
 
 function AdminForm() {
   const { t } = use(RootContext);
@@ -13,9 +17,25 @@ function AdminForm() {
           {t("admin.dashboardTitle")}
         </h1>
 
-        <PendingChangesAdmin />
+        <div className="flex gap-1 justify-center border-b border-(--border-color)">
+          {TABS.map((tab) => (
+            <NavLink
+              key={tab.key}
+              to={tab.to}
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium rounded-t-md transition-colors cursor-pointer ${
+                  isActive
+                    ? "border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400"
+                    : "text-(--text-secondary) hover:text-(--text-primary)"
+                }`
+              }
+            >
+              {t(`admin.${tab.key}`)}
+            </NavLink>
+          ))}
+        </div>
 
-        <AdminRequests />
+        <Outlet />
       </section>
     </div>
   );

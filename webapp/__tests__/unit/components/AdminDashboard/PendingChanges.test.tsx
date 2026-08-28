@@ -1,9 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter, Routes, Route } from "react-router";
 import { AdminDashboard } from "../../../../src/components/AdminDashboard/AdminDashboard";
+import { PendingChangesAdmin } from "../../../../src/components/AdminDashboard/PendingChangesAdmin";
+import { AdminRequests } from "../../../../src/components/AdminDashboard/AdminRequests";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { SERVER_STATUS } from "../../../../src/utils/serverStatus";
+import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 
 import type { UserData } from "../../../../src/customHooks/useStatusCheck";
 import type { ServerStatus } from "../../../../src/utils/serverStatus";
@@ -92,17 +94,40 @@ const setupFetchMock = ({
   });
 };
 
-function Wrapper({ initialUser = null }: { initialUser?: UserData }) {
-  return (
-    <RootContextProvider initialUserData={initialUser}>
-      <MemoryRouter initialEntries={["/admin-dashboard"]}>
-        <Notifications />
-        <Routes>
-          <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        </Routes>
-      </MemoryRouter>
-    </RootContextProvider>
+function buildRouter(
+  initialUser: UserData,
+  rootValue: Record<string, unknown> = {},
+) {
+  return createMemoryRouter(
+    [
+      {
+        path: "/admin-dashboard",
+        element: (
+          <RootContextProvider
+            initialUserData={initialUser}
+            rootValue={rootValue}
+          >
+            <Notifications />
+            <AdminDashboard />
+          </RootContextProvider>
+        ),
+        children: [
+          {
+            index: true,
+            element: <Navigate to="pending-changes" replace />,
+          },
+          { path: "pending-changes", element: <PendingChangesAdmin /> },
+          { path: "admin-requests", element: <AdminRequests /> },
+        ],
+      },
+    ],
+    { initialEntries: ["/admin-dashboard"] },
   );
+}
+
+function Wrapper({ initialUser = null }: { initialUser?: UserData }) {
+  const router = buildRouter(initialUser ?? { email: "", role: "USER" });
+  return <RouterProvider router={router} />;
 }
 
 function WrapperWithRootValue({
@@ -112,16 +137,11 @@ function WrapperWithRootValue({
   initialUser?: UserData;
   rootValue?: { serverStatus?: ServerStatus };
 }) {
-  return (
-    <RootContextProvider initialUserData={initialUser} rootValue={rootValue}>
-      <MemoryRouter initialEntries={["/admin-dashboard"]}>
-        <Notifications />
-        <Routes>
-          <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        </Routes>
-      </MemoryRouter>
-    </RootContextProvider>
+  const router = buildRouter(
+    initialUser ?? { email: "", role: "USER" },
+    rootValue,
   );
+  return <RouterProvider router={router} />;
 }
 
 beforeEach(() => {
