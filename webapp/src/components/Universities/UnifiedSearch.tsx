@@ -22,18 +22,27 @@ import type { UnifiedSearchResults } from "../../schemas/university";
 
 function ResultSection({
   heading,
+  count,
   emptyMessage,
   isEmpty,
   children,
 }: {
   heading: string;
+  count: number;
   emptyMessage: string;
   isEmpty: boolean;
   children: ReactNode;
 }) {
   return (
     <section className="w-full flex flex-col gap-2">
-      <h2 className="text-lg font-semibold text-(--text-primary)">{heading}</h2>
+      <h2 className="text-lg font-semibold text-(--text-primary)">
+        {heading}
+        {!isEmpty && (
+          <span className="ml-2 text-sm font-normal text-(--text-muted)">
+            ({count})
+          </span>
+        )}
+      </h2>
       {isEmpty ? (
         <p className="text-(--text-muted)">{emptyMessage}</p>
       ) : (
@@ -121,13 +130,17 @@ function UnifiedSearch() {
       ) : (
         results !== null &&
         (noResultsAtAll ? (
-          <p className="text-(--text-muted)">
-            {t("universitiesPage.noResultsAtAll")}
-          </p>
+          <div className="flex flex-col items-center gap-2 py-8 text-(--text-muted)">
+            <span className="text-4xl" aria-hidden="true">
+              🔍
+            </span>
+            <p>{t("universitiesPage.noResultsAtAll")}</p>
+          </div>
         ) : (
           <>
             <ResultSection
               heading={t("universitiesPage.universitiesSection")}
+              count={results.universities.length}
               emptyMessage={t("universitiesPage.noResults")}
               isEmpty={results.universities.length === 0}
             >
@@ -139,6 +152,7 @@ function UnifiedSearch() {
             </ResultSection>
             <ResultSection
               heading={t("universitiesPage.facultiesSection")}
+              count={results.faculties.length}
               emptyMessage={t("universitiesPage.noFacultyResults")}
               isEmpty={results.faculties.length === 0}
             >
@@ -150,6 +164,7 @@ function UnifiedSearch() {
             </ResultSection>
             <ResultSection
               heading={t("universitiesPage.studyProgramsSection")}
+              count={results.studyPrograms.length}
               emptyMessage={t("universitiesPage.noStudyProgramResults")}
               isEmpty={results.studyPrograms.length === 0}
             >
@@ -161,6 +176,7 @@ function UnifiedSearch() {
             </ResultSection>
             <ResultSection
               heading={t("universitiesPage.tracksSection")}
+              count={results.tracks.length}
               emptyMessage={t("universitiesPage.noTrackResults")}
               isEmpty={results.tracks.length === 0}
             >
@@ -172,6 +188,7 @@ function UnifiedSearch() {
             </ResultSection>
             <ResultSection
               heading={t("universitiesPage.subjectsSection")}
+              count={results.subjects.length}
               emptyMessage={t("universitiesPage.noSubjectResults")}
               isEmpty={results.subjects.length === 0}
             >

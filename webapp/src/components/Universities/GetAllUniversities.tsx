@@ -55,9 +55,12 @@ function GetAllUniversities() {
 
   if (!universities.length) {
     return (
-      <p className="text-center text-(--text-muted) py-8">
-        {t("universitiesPage.noResults")}
-      </p>
+      <div className="flex flex-col items-center gap-2 py-8 text-(--text-muted)">
+        <span className="text-4xl" aria-hidden="true">
+          🔍
+        </span>
+        <p>{t("universitiesPage.noResults")}</p>
+      </div>
     );
   }
 

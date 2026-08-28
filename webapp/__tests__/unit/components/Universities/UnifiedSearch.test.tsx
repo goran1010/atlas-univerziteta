@@ -183,16 +183,16 @@ describe("UnifiedSearch", () => {
     expect(firstCallUrl).toBeTypeOf("string");
     expect(firstCallUrl).toContain("/api/v1/search?searchTerm=sarajevo");
     expect(
-      screen.getByRole("heading", { name: /^Universities$/i }),
+      screen.getByRole("heading", { name: /^Universities/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /^Faculties$/i }),
+      screen.getByRole("heading", { name: /^Faculties/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /^Study programs$/i }),
+      screen.getByRole("heading", { name: /^Study programs/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /^Subjects$/i }),
+      screen.getByRole("heading", { name: /^Subjects/i }),
     ).toBeInTheDocument();
     expect(universityName).toBeInTheDocument();
     expect(
