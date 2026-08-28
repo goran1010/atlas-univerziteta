@@ -111,14 +111,14 @@
   "home": {
     "title": "Universities and Study Programs in Bosnia and Herzegovina",
     "heading": "Universities and Study Programs in Bosnia and Herzegovina",
-    "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities - institutions, faculties, study programs, and subjects.",
+    "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities — institutions, faculties, study programs, tracks, and subjects.",
     "summary": "Use UniAtlas Bosnia to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
-    "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, and subjects. Search by name, city, or acronym.",
+    "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, tracks, and subjects. Search by name, city, acronym, entity, ownership, study cycle, and more.",
     "card": {
       "universities": {
         "title": "Universities",
-        "description": "Browse universities, faculties, study programs, and subjects across Bosnia and Herzegovina."
+        "description": "Browse universities, faculties, study programs, tracks, and subjects across Bosnia and Herzegovina."
       }
     },
     "improveHeading": "Improve the Data",

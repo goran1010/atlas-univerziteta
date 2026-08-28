@@ -111,14 +111,14 @@
   "home": {
     "title": "Univerziteti i studijski programi u Bosni i Hercegovini",
     "heading": "Univerziteti i studijski programi u Bosni i Hercegovini",
-    "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o Bosni i Hercegovini. Fokus je na univerzitetima - institucijama, fakultetima, studijskim programima i predmetima.",
+    "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o Bosni i Hercegovini. Fokus je na univerzitetima — institucijama, fakultetima, studijskim programima, smjerovima i predmetima.",
     "summary": "Koristite UniAtlas Bosnia za pregled profila univerziteta, poređenje akademske ponude i pristup strukturiranim javnim podacima kroz jednostavno sučelje ili direktno kroz API.",
     "exploreHeading": "Istražite podatke",
-    "exploreDescription": "Pregledajte univerzitete širom Bosne i Hercegovine. Pogledajte fakultete, studijske programe i predmete. Pretražujte po nazivu, gradu ili akronimu.",
+    "exploreDescription": "Pregledajte univerzitete širom Bosne i Hercegovine. Pogledajte fakultete, studijske programe, smjerove i predmete. Pretražujte po nazivu, gradu, akronimu, entitetu, vlasništvu, ciklusu studija i više.",
     "card": {
       "universities": {
         "title": "Univerziteti",
-        "description": "Pregledajte univerzitete, fakultete, studijske programe i predmete širom Bosne i Hercegovine."
+        "description": "Pregledajte univerzitete, fakultete, studijske programe, smjerove i predmete širom Bosne i Hercegovine."
       }
     },
     "improveHeading": "Unaprijedite podatke",

@@ -33,6 +33,7 @@ The project models higher-education data as a nested academic hierarchy:
 - University
 - Faculty
 - Study program
+- Track (smjer)
 - Subject
 
 Public consumers can browse and query that data through unauthenticated endpoints under `/api/v1`. Authenticated users can submit create, update, and delete suggestions for university-related data, and admins can review those suggestions before they are applied.
@@ -40,8 +41,8 @@ Public consumers can browse and query that data through unauthenticated endpoint
 ## Current features
 
 - Public REST API under `/api` and `/api/v1`
-- University listing with detail responses containing nested faculties, study programs, and subjects
-- Unified search across universities (name, acronym, city), faculties (name, city), study programs, and subjects (name)
+- University listing with faculty counts, and detail responses containing nested faculties, study programs, tracks, and subjects
+- Unified search across universities, faculties, study programs, tracks, and subjects — matching name, city, acronym, entity, ownership, study cycle, language, subject type, and parent unit names
 - Email/password signup with email confirmation before account creation
 - Session-based login/logout with Passport
 - Optional GitHub OAuth login
@@ -189,7 +190,7 @@ Successful responses return `data` and usually a `message`.
 
 ```json
 {
-  "message": "Universities retrieved successfully",
+  "message": "Universities retrieved successfully.",
   "data": [
     {
       "id": 1,
@@ -197,7 +198,10 @@ Successful responses return `data` and usually a `message`.
       "acronym": "UNSA",
       "city": "Sarajevo",
       "entity": "FBIH",
-      "ownership": "JAVNA"
+      "ownership": "JAVNA",
+      "foundedYear": "1949",
+      "website": "https://unsa.ba",
+      "_count": { "faculties": 23 }
     }
   ]
 }
@@ -231,7 +235,7 @@ https://round-leann-goran-jovic-1010-ccad2ae8.koyeb.app
 
 Contribution requests are stored as pending changes. Each record captures:
 
-- the entity type: `UNIVERSITY`, `FACULTY`, `STUDY_PROGRAM`, or `SUBJECT`
+- the entity type: `UNIVERSITY`, `FACULTY`, `STUDY_PROGRAM`, `TRACK`, or `SUBJECT`
 - the change type: `CREATE`, `UPDATE`, or `DELETE`
 - a target ID or parent ID when required
 - the proposed JSON payload for admin review
