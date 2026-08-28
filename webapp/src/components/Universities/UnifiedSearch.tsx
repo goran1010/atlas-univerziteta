@@ -109,7 +109,7 @@ function UnifiedSearch() {
       </p>
       <form
         onSubmit={(e) => void handleSearch(e)}
-        className="flex gap-2 w-full max-w-lg"
+        className="flex flex-col sm:flex-row gap-2 w-full max-w-lg"
       >
         <Input
           ref={inputRef}
@@ -120,7 +120,11 @@ function UnifiedSearch() {
           className="flex-1"
           aria-label={t("universitiesPage.search")}
         />
-        <Button type="submit" loading={loading} className="max-w-28">
+        <Button
+          type="submit"
+          loading={loading}
+          className="max-w-xs self-center sm:max-w-28 sm:self-auto"
+        >
           {t("universitiesPage.search")}
         </Button>
       </form>

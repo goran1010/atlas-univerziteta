@@ -159,9 +159,7 @@ describe("UnifiedSearch", () => {
   test("explains which terms are searched", () => {
     render(<Wrapper />);
 
-    expect(
-      screen.getByText(/Search across all data/i),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Search across all data/i)).toBeInTheDocument();
   });
 
   test("fires a single request and renders all four grouped sections", async () => {
