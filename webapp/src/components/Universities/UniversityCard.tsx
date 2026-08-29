@@ -208,7 +208,11 @@ function FacultyRow({
       </button>
       {open && (
         <div className="ml-4 mt-1 border-l-2 border-indigo-200 dark:border-indigo-700 pl-3">
-          {(faculty.city ?? faculty.website) && (
+          {(faculty.city ??
+            faculty.website ??
+            faculty.address ??
+            faculty.phone ??
+            faculty.email) && (
             <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-(--text-muted) py-1">
               {faculty.city && <span>📍 {faculty.city}</span>}
               {faculty.website && (
@@ -219,6 +223,20 @@ function FacultyRow({
                   className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
                 >
                   {faculty.website}
+                </a>
+              )}
+              {faculty.address && <span>🏠 {faculty.address}</span>}
+              {faculty.phone && (
+                <a href={`tel:${faculty.phone}`} className="hover:underline">
+                  📞 {faculty.phone}
+                </a>
+              )}
+              {faculty.email && (
+                <a
+                  href={`mailto:${faculty.email}`}
+                  className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
+                >
+                  ✉️ {faculty.email}
                 </a>
               )}
             </div>
@@ -345,6 +363,27 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               >
                 {university.website}
               </a>
+            )}
+            {(university.address ?? university.phone ?? university.email) && (
+              <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-(--text-muted) mt-1">
+                {university.address && <span>🏠 {university.address}</span>}
+                {university.phone && (
+                  <a
+                    href={`tel:${university.phone}`}
+                    className="hover:underline"
+                  >
+                    📞 {university.phone}
+                  </a>
+                )}
+                {university.email && (
+                  <a
+                    href={`mailto:${university.email}`}
+                    className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
+                  >
+                    ✉️ {university.email}
+                  </a>
+                )}
+              </div>
             )}
           </div>
           <Button

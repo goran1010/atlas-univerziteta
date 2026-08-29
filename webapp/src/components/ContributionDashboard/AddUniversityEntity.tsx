@@ -294,6 +294,33 @@ function AddUniversityEntity({
                   setDataField("website", e.target.value || undefined);
                 }}
               />
+              <DataField
+                label={t("contribution.dataFields.address")}
+                id="dataAddress"
+                type="text"
+                value={data.address ?? ""}
+                onChange={(e) => {
+                  setDataField("address", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.phone")}
+                id="dataPhone"
+                type="tel"
+                value={data.phone ?? ""}
+                onChange={(e) => {
+                  setDataField("phone", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.email")}
+                id="dataEmail"
+                type="email"
+                value={data.email ?? ""}
+                onChange={(e) => {
+                  setDataField("email", e.target.value || undefined);
+                }}
+              />
             </>
           )}
 
@@ -315,6 +342,33 @@ function AddUniversityEntity({
                 value={data.website ?? ""}
                 onChange={(e) => {
                   setDataField("website", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.address")}
+                id="dataFacultyAddress"
+                type="text"
+                value={data.address ?? ""}
+                onChange={(e) => {
+                  setDataField("address", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.phone")}
+                id="dataFacultyPhone"
+                type="tel"
+                value={data.phone ?? ""}
+                onChange={(e) => {
+                  setDataField("phone", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.email")}
+                id="dataFacultyEmail"
+                type="email"
+                value={data.email ?? ""}
+                onChange={(e) => {
+                  setDataField("email", e.target.value || undefined);
                 }}
               />
             </>

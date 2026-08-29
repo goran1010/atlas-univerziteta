@@ -25,6 +25,9 @@ export interface ContributionFormDraft {
   acronym?: string;
   foundedYear?: string;
   website?: string;
+  address?: string;
+  phone?: string;
+  email?: string;
   cycle?: Cycle;
   durationYears?: number;
   ects?: number;

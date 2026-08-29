@@ -23,12 +23,18 @@ const universityCreateDataSchema = z.strictObject({
   acronym: requiredNameSchema.optional(),
   foundedYear: requiredNameSchema.optional(),
   website: z.url().optional(),
+  address: requiredNameSchema.optional(),
+  phone: requiredNameSchema.optional(),
+  email: z.email().optional(),
 });
 
 const facultyCreateDataSchema = z.strictObject({
   name: requiredNameSchema,
   city: requiredNameSchema.optional(),
   website: z.url().optional(),
+  address: requiredNameSchema.optional(),
+  phone: requiredNameSchema.optional(),
+  email: z.email().optional(),
 });
 
 const studyProgramCreateDataSchema = z.strictObject({
@@ -58,12 +64,18 @@ const universityEditDataSchema = nonEmptyObject({
   acronym: requiredNameSchema.nullable().optional(),
   foundedYear: requiredNameSchema.nullable().optional(),
   website: z.url().nullable().optional(),
+  address: requiredNameSchema.nullable().optional(),
+  phone: requiredNameSchema.nullable().optional(),
+  email: z.email().nullable().optional(),
 });
 
 const facultyEditDataSchema = nonEmptyObject({
   name: optionalNameSchema,
   city: requiredNameSchema.nullable().optional(),
   website: z.url().nullable().optional(),
+  address: requiredNameSchema.nullable().optional(),
+  phone: requiredNameSchema.nullable().optional(),
+  email: z.email().nullable().optional(),
 });
 
 const studyProgramEditDataSchema = nonEmptyObject({

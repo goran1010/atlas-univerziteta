@@ -62,10 +62,16 @@ function buildEntityRows(
       }
       push(t("universitiesPage.foundedYear"), entity.foundedYear);
       push(t("contribution.dataFields.website"), entity.website);
+      push(t("contribution.dataFields.address"), entity.address);
+      push(t("contribution.dataFields.phone"), entity.phone);
+      push(t("contribution.dataFields.email"), entity.email);
       break;
     case "FACULTY":
       push(t("contribution.dataFields.city"), entity.city);
       push(t("contribution.dataFields.website"), entity.website);
+      push(t("contribution.dataFields.address"), entity.address);
+      push(t("contribution.dataFields.phone"), entity.phone);
+      push(t("contribution.dataFields.email"), entity.email);
       break;
     case "STUDY_PROGRAM":
       if (typeof entity.cycle === "string") {

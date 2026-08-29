@@ -39,6 +39,9 @@ function toUniversityCreateInput(
     ...(data.acronym !== undefined && { acronym: data.acronym }),
     ...(data.foundedYear !== undefined && { foundedYear: data.foundedYear }),
     ...(data.website !== undefined && { website: data.website }),
+    ...(data.address !== undefined && { address: data.address }),
+    ...(data.phone !== undefined && { phone: data.phone }),
+    ...(data.email !== undefined && { email: data.email }),
   };
 }
 
@@ -53,6 +56,9 @@ function toUniversityUpdateInput(
     ...(data.acronym !== undefined && { acronym: data.acronym }),
     ...(data.foundedYear !== undefined && { foundedYear: data.foundedYear }),
     ...(data.website !== undefined && { website: data.website }),
+    ...(data.address !== undefined && { address: data.address }),
+    ...(data.phone !== undefined && { phone: data.phone }),
+    ...(data.email !== undefined && { email: data.email }),
   };
 }
 
@@ -65,6 +71,9 @@ function toFacultyCreateInput(
     universityId,
     ...(data.city !== undefined && { city: data.city }),
     ...(data.website !== undefined && { website: data.website }),
+    ...(data.address !== undefined && { address: data.address }),
+    ...(data.phone !== undefined && { phone: data.phone }),
+    ...(data.email !== undefined && { email: data.email }),
   };
 }
 
@@ -75,6 +84,9 @@ function toFacultyUpdateInput(
     ...(data.name !== undefined && { name: data.name }),
     ...(data.city !== undefined && { city: data.city }),
     ...(data.website !== undefined && { website: data.website }),
+    ...(data.address !== undefined && { address: data.address }),
+    ...(data.phone !== undefined && { phone: data.phone }),
+    ...(data.email !== undefined && { email: data.email }),
   };
 }
 

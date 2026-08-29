@@ -91,6 +91,9 @@ model University {
   ownership         ownership
   foundedYear       String?
   website           String?
+  address           String?
+  phone             String?
+  email             String?
   accreditationFrom DateTime?
   accreditationTo   DateTime?
   authority         String?
@@ -109,6 +112,9 @@ model Faculty {
   university        University     @relation(fields: [universityId], references: [id])
   city              String?
   website           String?
+  address           String?
+  phone             String?
+  email             String?
   isUniversityLevel Boolean        @default(false)
   sourceUrl         String?
   lastChecked       DateTime?

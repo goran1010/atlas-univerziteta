@@ -141,7 +141,7 @@
     "publicIntro": "Javni REST endpoint-i su dostupni pod osnovnim URL-om ispod. Ovi endpoint-i ne zahtijevaju autentifikaciju.",
     "fullDocs": "Za kompletnu projektnu dokumentaciju, lokalno postavljanje i smjernice za doprinos, pogledajte",
     "dataObject": "Objekat univerziteta",
-    "dataObjectExample": "{\n  \"id\":          number   - jedinstveni identifikator\n  \"name\":        string   - naziv univerziteta\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"_count\":      { \"faculties\": number }  - samo lista\n  \"faculties\":   Faculty[]               - samo detalji\n}",
+    "dataObjectExample": "{\n  \"id\":          number   - jedinstveni identifikator\n  \"name\":        string   - naziv univerziteta\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }  - samo lista\n  \"faculties\":   Faculty[]               - samo detalji\n}",
     "endpoints": "Endpoint-i",
     "endpointsData": {
       "apiStatus": "Provjera statusa API-ja.",
@@ -221,6 +221,9 @@
       "acronym": "Akronim",
       "foundedYear": "Godina osnivanja",
       "website": "Web stranica",
+      "address": "Adresa",
+      "phone": "Telefon",
+      "email": "Email",
       "sourceUrl": "URL izvora",
       "ownership": "Vlasništvo"
     },

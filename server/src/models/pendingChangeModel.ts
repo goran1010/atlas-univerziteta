@@ -51,6 +51,9 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
               ownership: true,
               foundedYear: true,
               website: true,
+              address: true,
+              phone: true,
+              email: true,
             },
           })
         : [],
@@ -62,6 +65,9 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
               name: true,
               city: true,
               website: true,
+              address: true,
+              phone: true,
+              email: true,
               university: { select: { name: true } },
             },
           })

@@ -201,6 +201,9 @@ Successful responses return `data` and usually a `message`.
       "ownership": "PUBLIC",
       "foundedYear": "1949",
       "website": "https://unsa.ba",
+      "address": "Obala Kulina bana 7/II, 71000 Sarajevo",
+      "phone": "+387 33 565 116",
+      "email": "rektorat@unsa.ba",
       "_count": { "faculties": 23 }
     }
   ]

@@ -92,6 +92,12 @@ const universityCreateDataSchema = z.strictObject({
   foundedYear: z.string().trim().min(1).optional(),
 
   website: z.url({ error: "Invalid URL" }).optional(),
+
+  address: z.string().trim().min(1).optional(),
+
+  phone: z.string().trim().min(1).optional(),
+
+  email: z.email({ error: "Invalid email" }).optional(),
 });
 
 const facultyCreateDataSchema = z.strictObject({
@@ -102,6 +108,12 @@ const facultyCreateDataSchema = z.strictObject({
   city: z.string().trim().optional(),
 
   website: z.url({ error: "Invalid URL" }).optional(),
+
+  address: z.string().trim().min(1).optional(),
+
+  phone: z.string().trim().min(1).optional(),
+
+  email: z.email({ error: "Invalid email" }).optional(),
 });
 
 const studyProgramCreateDataSchema = z.strictObject({
@@ -214,6 +226,12 @@ const universityEditDataSchema = z
     foundedYear: z.string().trim().min(1).nullable().optional(),
 
     website: z.url({ error: "Invalid URL" }).nullable().optional(),
+
+    address: z.string().trim().min(1).nullable().optional(),
+
+    phone: z.string().trim().min(1).nullable().optional(),
+
+    email: z.email({ error: "Invalid email" }).nullable().optional(),
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
@@ -237,6 +255,12 @@ const facultyEditDataSchema = z
       .optional(),
 
     website: z.url({ error: "Invalid URL" }).nullable().optional(),
+
+    address: z.string().trim().min(1).nullable().optional(),
+
+    phone: z.string().trim().min(1).nullable().optional(),
+
+    email: z.email({ error: "Invalid email" }).nullable().optional(),
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",

@@ -33,10 +33,16 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
       );
       push(t("universitiesPage.foundedYear"), entity.data.foundedYear);
       push(t("contribution.dataFields.website"), entity.data.website);
+      push(t("contribution.dataFields.address"), entity.data.address);
+      push(t("contribution.dataFields.phone"), entity.data.phone);
+      push(t("contribution.dataFields.email"), entity.data.email);
       break;
     case "FACULTY":
       push(t("contribution.dataFields.city"), entity.data.city);
       push(t("contribution.dataFields.website"), entity.data.website);
+      push(t("contribution.dataFields.address"), entity.data.address);
+      push(t("contribution.dataFields.phone"), entity.data.phone);
+      push(t("contribution.dataFields.email"), entity.data.email);
       break;
     case "STUDY_PROGRAM":
       push(
