@@ -349,7 +349,7 @@
     "title": "Nađite programe i univerzitete",
     "browseAll": "Pregledaj sve",
     "search": "Pretraži",
-    "searchHint": "Pretražite sve podatke — po nazivu, gradu, akronimu, entitetu (FBIH/RS/BD), vlasništvu (JAVNA/PRIVATNA), ciklusu studija (PRVI, DRUGI…), jeziku, vrsti predmeta (OBAVEZNI/IZBORNI) ili nazivu nadređene jedinice.",
+    "searchHint": "Pretražite sve podatke — po nazivu, gradu, akronimu, entitetu (FBIH/RS/BD), vlasništvu (JAVNI/PRIVATNI), ciklusu studija (PRVI, DRUGI…), jeziku, vrsti predmeta (OBAVEZNI/IZBORNI) ili nazivu nadređene jedinice.",
     "searchAllPlaceholder": "Pretraži po nazivu, gradu, ciklusu, entitetu…",
     "universitiesSection": "Univerziteti",
     "facultiesSection": "Fakulteti",
@@ -398,8 +398,8 @@
     "viewDetails": "Prikaži detalje",
     "hideDetails": "Sakrij detalje",
     "ownership": {
-      "PUBLIC": "Javna",
-      "PRIVATE": "Privatna"
+      "PUBLIC": "Javni",
+      "PRIVATE": "Privatni"
     }
   }
 }

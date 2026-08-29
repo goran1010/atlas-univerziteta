@@ -48,7 +48,9 @@ async function search(req: Request, res: Response) {
   // Bosnian/Serbian terms and common synonyms mapped to the English enum
   // values, so search matches in both languages (e.g. "javna" -> PUBLIC).
   const ENUM_ALIASES: Record<string, string> = {
+    JAVNI: "PUBLIC",
     JAVNA: "PUBLIC",
+    PRIVATNI: "PRIVATE",
     PRIVATNA: "PRIVATE",
     PRVI: "FIRST",
     BACHELOR: "FIRST",
