@@ -13,9 +13,9 @@
   "accreditationTo": "2029-08-29",
   "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Edukacijski fakultet",
@@ -24,9 +24,9 @@
       "address": "Hrasnička cesta 15, 71210 Ilidža",
       "phone": "+387 33 957 300",
       "email": "admission@ius.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Computer Education and Instructional Technology",
@@ -93,9 +93,9 @@
       "address": "Hrasnička cesta 15, 71210 Ilidža",
       "phone": "+387 33 957 305",
       "email": "admission@ius.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Dental Medicine",
@@ -104,7 +104,7 @@
           "sourceUrl": "https://fms.ius.edu.ba/en",
           "ects": 360,
           "durationYears": 6,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Medicine",
@@ -113,7 +113,7 @@
           "sourceUrl": "https://fms.ius.edu.ba/en",
           "ects": 360,
           "durationYears": 6,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -124,9 +124,9 @@
       "address": "Hrasnička cesta 15, 71210 Ilidža",
       "phone": "+387 33 957 400",
       "email": "admission@ius.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Economics",
@@ -241,9 +241,9 @@
       "address": "Hrasnička cesta 15, 71210 Ilidža",
       "phone": "+387 33 957 200",
       "email": "admission@ius.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Architecture",
@@ -406,9 +406,9 @@
       "address": "Hrasnička cesta 15, 71210 Ilidža",
       "phone": "+387 33 957 300",
       "email": "admission@ius.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Cultural Studies",
@@ -507,9 +507,9 @@
       "address": "Hrasnička cesta 15, 71210 Ilidža",
       "phone": "+387 33 957 485",
       "email": "admission@ius.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Law",

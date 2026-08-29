@@ -13,9 +13,9 @@
   "accreditationTo": "2027-04-18",
   "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://hercegovina.edu.ba/hr/o-nama/",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Fakultet društvenih znanosti dr. Milenka Brkića",
@@ -24,9 +24,9 @@
       "address": "Kraljice Mira 3A, 88266 Međugorje",
       "phone": "+387 36 651 828",
       "email": "fdzmb@hercegovina.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Defektologija",
@@ -152,9 +152,9 @@
       "address": "Kneza M. Viševića Humskog bb, 88000 Mostar",
       "phone": "+387 36 650 355",
       "email": "info@hercegovina.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Međunarodni odnosi i diplomacija",
@@ -178,11 +178,11 @@
           "tracks": [
             {
               "name": "Pravo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Međunarodno pravo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             }
           ]
         }

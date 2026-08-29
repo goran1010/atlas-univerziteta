@@ -13,9 +13,9 @@
   "accreditationTo": "2029-08-25",
   "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://www.unsa.ba/org-jedinica",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Akademija likovnih umjetnosti",
@@ -24,9 +24,9 @@
       "address": "Obala Maka Dizdara 3, 71000 Sarajevo",
       "phone": "+387 33 210 369",
       "email": "alu@alu.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Grafika",
@@ -156,9 +156,9 @@
       "address": "Obala Kulina bana 11, 71000 Sarajevo",
       "phone": "+387 33 215 277",
       "email": "asu@asu.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Režija",
@@ -239,9 +239,9 @@
       "address": "Patriotske lige 30, 71000 Sarajevo",
       "phone": "+387 33 226 530",
       "email": "arhitektura@af.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Arhitektura i urbanizam",
@@ -276,9 +276,9 @@
       "address": "Trg oslobođenja - Alija Izetbegović 1, 71000 Sarajevo",
       "phone": "+387 33 275 900",
       "email": "efsa@efsa.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Ekonomija",
@@ -395,7 +395,7 @@
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
           "sourceUrl": "https://www.efsa.unsa.ba/ef/bs/poslovanje-i-informacione-tehnologije",
-          "lastChecked": "2026-08-26"
+          "lastModified": "2026-08-26"
         }
       ]
     },
@@ -406,9 +406,9 @@
       "address": "Zmaja od Bosne bb, 71000 Sarajevo",
       "phone": "+387 33 250 700",
       "email": "etf@etf.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Automatika i elektronika",
@@ -423,7 +423,7 @@
           "cycle": "FIRST",
           "sourceUrl": "http://registar.unsa.ba/",
           "ects": 180,
-          "lastChecked": "2026-08-26"
+          "lastModified": "2026-08-26"
         },
         {
           "name": "Elektroenergetika",
@@ -487,7 +487,7 @@
           "sourceUrl": "https://si.etf.unsa.ba/",
           "ects": 120,
           "durationYears": 2,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Telekomunikacije",
@@ -538,9 +538,9 @@
       "address": "Ćemerlina 54, 71000 Sarajevo",
       "phone": "+387 33 251 000",
       "email": "sekretar@fin.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Islamska teologija",
@@ -615,9 +615,9 @@
       "address": "Skenderija 72, 71000 Sarajevo",
       "phone": "+387 33 203 562",
       "email": "dekanat@fpn.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Međunarodni odnosi i diplomatija",
@@ -764,9 +764,9 @@
       "address": "Patriotske lige 41, 71000 Sarajevo",
       "phone": "+387 33 211 537",
       "email": "dekanat@fasto.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Menadžment u sportu kondiciona priprema sportaša",
@@ -817,9 +817,9 @@
       "address": "Zmaja od Bosne 8, 71000 Sarajevo",
       "phone": "+387 33 561 200",
       "email": "fkn@fkn.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Kriminalistika",
@@ -925,9 +925,9 @@
       "address": "Zmaja od Bosne 8, 71000 Sarajevo",
       "phone": "+387 33 565 200",
       "email": "info@fsk.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Komunikacije",
@@ -1054,9 +1054,9 @@
       "address": "Igmanska 40A, 71320 Vogošća",
       "phone": "+387 33 553 835",
       "email": "fakultet@fu.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Informatika u upravi",
@@ -1134,9 +1134,9 @@
       "address": "Stjepana Tomića 1, 71000 Sarajevo",
       "phone": "+387 33 569 807",
       "email": "info@fzs.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Babičarstvo/Porodiljstvo/Primaljstvo",
@@ -1243,9 +1243,9 @@
       "address": "Zmaja od Bosne 8, 71000 Sarajevo",
       "phone": "+387 33 586 180",
       "email": "farmaceutski.fakultet@ffsa.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Integrirani studij prvog i drugog ciklusa",
@@ -1272,9 +1272,9 @@
       "address": "Franje Račkog 1, 71000 Sarajevo",
       "phone": "+387 33 253 100",
       "email": "dekanat@ff.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Arapski jezik i književnost",
@@ -2945,9 +2945,9 @@
       "address": "Patriotske lige 30, 71000 Sarajevo",
       "phone": "+387 33 278 400",
       "email": "gfsa@gf.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Studij geodezije i geoinformatike",
@@ -3017,9 +3017,9 @@
       "address": "Josipa Štadlera 5, 71000 Sarajevo",
       "phone": "+387 33 533 516",
       "email": "tajnistvo@kbf.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Filozofsko-teološki studij",
@@ -3045,9 +3045,9 @@
       "address": "Vilsonovo šetalište 9, 71000 Sarajevo",
       "phone": "+387 33 729 800",
       "email": "info@mef.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Energetika",
@@ -3258,9 +3258,9 @@
       "address": "Čekaluša 90, 71000 Sarajevo",
       "phone": "+387 33 203 670",
       "email": "medicinski.fakultet@mf.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Medicina",
@@ -3295,9 +3295,9 @@
       "address": "Josipa Štadlera 1/II, 71000 Sarajevo",
       "phone": "+387 33 200 299",
       "email": "info@mas.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Dirigovanje",
@@ -3750,9 +3750,9 @@
       "address": "Skenderija 72, 71000 Sarajevo",
       "phone": "+387 33 214 606",
       "email": "info@pf.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Edukacija i rehabilitacija",
@@ -3835,9 +3835,9 @@
       "address": "Zmaja od Bosne 8, 71000 Sarajevo",
       "phone": "+387 33 225 727",
       "email": "podrska@ppf.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Akvakultura",
@@ -4029,9 +4029,9 @@
       "address": "Obala Kulina bana 7, 71000 Sarajevo",
       "phone": "+387 33 206 350",
       "email": "dekanat@pfsa.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Pravo",
@@ -4066,9 +4066,9 @@
       "address": "Zmaja od Bosne 33-35, 71000 Sarajevo",
       "phone": "+387 33 723 723",
       "email": "pmf@pmf.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Biologija",
@@ -4247,7 +4247,7 @@
           "sourceUrl": "http://registar.unsa.ba/",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Geografija",
@@ -4446,7 +4446,7 @@
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
           "sourceUrl": "https://pmf.unsa.ba/strucni-studij-it/",
-          "lastChecked": "2026-08-26"
+          "lastModified": "2026-08-26"
         },
         {
           "name": "Hemija",
@@ -4454,17 +4454,17 @@
           "durationYears": 4,
           "ects": 240,
           "sourceUrl": "https://rsp.unsa.ba/study-programs",
-          "lastChecked": "2026-08-29",
+          "lastModified": "2026-08-29",
           "tracks": [
             {
               "name": "Opći",
               "sourceUrl": "http://hemija.pmf.unsa.ba/prvi-ciklus-studija/opsti-smjer-2021-2022/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Nastavnički",
               "sourceUrl": "http://hemija.pmf.unsa.ba/prvi-ciklus-studija/nastavnicki-smjer-2021-2022/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         }
@@ -4477,9 +4477,9 @@
       "address": "Bolnička 4a, 71000 Sarajevo",
       "phone": "+387 33 214 249",
       "email": "dentalschool@sf.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "I i II Integrisani studij",
@@ -4506,9 +4506,9 @@
       "address": "Zagrebačka 20, 71000 Sarajevo",
       "phone": "+387 33 812 490",
       "email": "info@sfsa.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Hortikultura",
@@ -4558,9 +4558,9 @@
       "address": "Zmaja od Bosne 90, 71000 Sarajevo",
       "phone": "+387 33 729 100",
       "email": "info@vfs.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://registar.unsa.ba/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Veterinarska medicina",
@@ -4588,7 +4588,7 @@
       "address": "Zmaja od Bosne 8, 71000 Sarajevo",
       "phone": "+387 33 668 685",
       "email": "cis@cis.unsa.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://cis.unsa.ba",
       "studyPrograms": [
         {

@@ -13,9 +13,9 @@
   "accreditationTo": "2026-06-20",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://univerzitetps.com/",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Fakultet pravnih nauka",
@@ -24,9 +24,9 @@
       "address": "Jovana Dučića 23a, 78000 Banja Luka",
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Pravne nauke",
@@ -55,9 +55,9 @@
       "address": "Jovana Dučića 23a, 78000 Banja Luka",
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Ekologija",
@@ -92,9 +92,9 @@
       "address": "Jovana Dučića 23a, 78000 Banja Luka",
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Računarske i informacione tehnologije",
@@ -153,9 +153,9 @@
       "address": "Jovana Dučića 23a, 78000 Banja Luka",
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://univerzitetps.com/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Novinarstvo i komunikologija",
@@ -172,9 +172,9 @@
       "address": "Jovana Dučića 23a, 78000 Banja Luka",
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Poslovne i finansijske studije",
@@ -185,17 +185,17 @@
             {
               "name": "Računovodstvo i revizija",
               "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Porezi, carine i budžet",
               "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Bankarstvo i berzansko poslovanje",
               "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -208,17 +208,17 @@
             {
               "name": "Računovodstvo i revizija",
               "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Porezi, carine i budžet",
               "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Bankarstvo",
               "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -236,15 +236,15 @@
           "tracks": [
             {
               "name": "Računovodstvo i finansije",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Makroekonomija i razvoj",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Menadžment i poslovna ekonomija",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             }
           ]
         }
@@ -257,9 +257,9 @@
       "address": "Jovana Dučića 23a, 78000 Banja Luka",
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Menadžment i marketing",
@@ -288,9 +288,9 @@
       "address": "Jovana Dučića 23a, 78000 Banja Luka",
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Turizam i hotelijerstvo",
@@ -298,15 +298,15 @@
           "tracks": [
             {
               "name": "Turizam",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Hotelijerstvo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Restoraterstvo i Gastronomija",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             }
           ]
         },
@@ -324,11 +324,11 @@
           "tracks": [
             {
               "name": "Hotelijerstvo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Restoraterstvo i Gastronomija",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             }
           ]
         }
@@ -341,7 +341,7 @@
       "address": "Jovana Dučića 23a, 78000 Banja Luka",
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://univerzitetps.com/studijski-programi/",
       "studyPrograms": [
         {

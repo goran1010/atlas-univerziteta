@@ -13,9 +13,9 @@
   "accreditationTo": "2028-11-23",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://apeiron-uni.eu/fakulteti-i-organizacione-jedinice/",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Fakultet filoloških nauka",
@@ -24,9 +24,9 @@
       "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
       "phone": "+387 51 247 920",
       "email": "info@apeiron-edu.eu",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://apeiron-uni.eu",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Ruski jezik",
@@ -52,9 +52,9 @@
       "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
       "phone": "+387 51 247 920",
       "email": "info@apeiron-edu.eu",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://apeiron-uni.eu",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Nastavnička informatika",
@@ -74,12 +74,12 @@
             {
               "name": "Programiranje i softversko inženjerstvo",
               "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Računarska bezbjednost i zaštita informacija",
               "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -97,9 +97,9 @@
       "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
       "phone": "+387 51 247 920",
       "email": "info@apeiron-edu.eu",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://apeiron-uni.eu",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Menadžment bankarstva, finansija i trgovine",
@@ -135,9 +135,9 @@
       "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
       "phone": "+387 51 247 920",
       "email": "info@apeiron-edu.eu",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://apeiron-uni.eu",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Opšte-pravni studijski program",
@@ -158,9 +158,9 @@
       "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
       "phone": "+387 51 247 920",
       "email": "info@apeiron-edu.eu",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://apeiron-uni.eu",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Sport u ciljanim grupama",
@@ -196,9 +196,9 @@
       "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
       "phone": "+387 51 247 920",
       "email": "info@apeiron-edu.eu",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://apeiron-uni.eu",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Menadžment u zdravstvu",
@@ -244,9 +244,9 @@
       "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
       "phone": "+387 51 247 920",
       "email": "info@apeiron-edu.eu",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://apeiron-uni.eu",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Drumski saobraćaj i transport",

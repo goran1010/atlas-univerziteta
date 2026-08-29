@@ -20,7 +20,7 @@ const baseUniversity: UniversityListItem = {
   accreditationTo: undefined,
   authority: undefined,
   sourceUrl: undefined,
-  lastChecked: undefined,
+  lastModified: undefined,
   _count: { faculties: 3 },
 };
 

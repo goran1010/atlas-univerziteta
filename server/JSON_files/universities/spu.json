@@ -13,9 +13,9 @@
   "accreditationTo": "2027-07-04",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://spu.ba/",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Akademija umjetnosti",
@@ -24,9 +24,9 @@
       "address": "Braće Podgornika 8, 78000 Banja Luka",
       "phone": "+387 51 345 910",
       "email": "info@spu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Grafički dizajn",
@@ -79,9 +79,9 @@
       "address": "Braće Podgornika 8, 78000 Banja Luka",
       "phone": "+387 51 345 910",
       "email": "info@spu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Bezbjednost i kriminalistika",
@@ -142,9 +142,9 @@
       "address": "Braće Podgornika 8, 78000 Banja Luka",
       "phone": "+387 51 345 910",
       "email": "info@spu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Ekonomija i menadžment",
@@ -169,9 +169,9 @@
       "address": "Braće Podgornika 8, 78000 Banja Luka",
       "phone": "+387 51 345 910",
       "email": "info@spu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Informacione tehnologije",
@@ -183,12 +183,12 @@
             {
               "name": "Informacioni sistemi",
               "sourceUrl": "https://fit.spu.ba/opis-studijskog-programa/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Računarske mreže i telekomunikacije",
               "sourceUrl": "https://fit.spu.ba/opis-studijskog-programa/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -208,7 +208,7 @@
       "address": "Braće Podgornika 8, 78000 Banja Luka",
       "phone": "+387 51 345 910",
       "email": "info@spu.ba",
-      "lastChecked": "2026-08-29"
+      "lastModified": "2026-08-29"
     },
     {
       "name": "Poreska akademija",
@@ -217,7 +217,7 @@
       "address": "Braće Podgornika 8, 78000 Banja Luka",
       "phone": "+387 51 345 910",
       "email": "info@spu.ba",
-      "lastChecked": "2026-08-29"
+      "lastModified": "2026-08-29"
     },
     {
       "name": "Pravni fakultet",
@@ -226,9 +226,9 @@
       "address": "Braće Podgornika 8, 78000 Banja Luka",
       "phone": "+387 51 345 910",
       "email": "info@spu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Pravne studije",

@@ -93,7 +93,7 @@ model University {
   accreditationTo   DateTime?
   authority         String?
   sourceUrl         String?
-  lastChecked       DateTime?
+  lastModified      DateTime?
   faculties         Faculty[]
 
   @@unique([name, city])
@@ -112,7 +112,7 @@ model Faculty {
   email             String?
   isUniversityLevel Boolean        @default(false)
   sourceUrl         String?
-  lastChecked       DateTime?
+  lastModified      DateTime?
   studyPrograms     StudyProgram[]
 
   @@unique([name, universityId])
@@ -129,7 +129,7 @@ model StudyProgram {
   ects          Int?
   language      String?
   sourceUrl     String?
-  lastChecked   DateTime?
+  lastModified  DateTime?
   tracks        Track[]
 
   @@unique([name, facultyId, cycle])
@@ -144,7 +144,7 @@ model Track {
   ects           Int?
   durationYears  Int?
   sourceUrl      String?
-  lastChecked    DateTime?
+  lastModified   DateTime?
 
   @@unique([name, studyProgramId])
   @@map("tracks")

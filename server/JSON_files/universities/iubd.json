@@ -13,9 +13,9 @@
   "accreditationTo": "2027-09-06",
   "authority": "Vlada Brčko distrikta BiH, Odjel za obrazovanje",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "http://iubd.edu.ba/",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Fakultet za informatiku",
@@ -24,9 +24,9 @@
       "address": "Brezik bb, 76100 Brčko",
       "phone": "+387 49 490 460",
       "email": "internacionalni.univerzitet@gmail.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://iubd.edu.ba/index.php/obavjestenja/421-drugi-upisni-rok-na-iubd-javni-konkurs",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Poslovna informatika",
@@ -121,9 +121,9 @@
       "address": "Brezik bb, 76100 Brčko",
       "phone": "+387 49 490 460",
       "email": "internacionalni.univerzitet@gmail.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://iubd.edu.ba/index.php/obavjestenja/421-drugi-upisni-rok-na-iubd-javni-konkurs",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Poslovni menadžment",
@@ -159,7 +159,7 @@
           "tracks": [
             {
               "name": "Računovodstvo i revizija",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             }
           ]
         },
@@ -184,11 +184,11 @@
           "tracks": [
             {
               "name": "Opšta agronomija",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Zaštita bilja",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             }
           ]
         },
@@ -203,15 +203,15 @@
           "tracks": [
             {
               "name": "Opšte građevinarstvo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Arhitektura i urbanizam",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Geodezija",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             }
           ]
         },
@@ -222,15 +222,15 @@
           "tracks": [
             {
               "name": "Turizam",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Zaštita na radu",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Zaštita od požara",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             }
           ]
         },
@@ -306,9 +306,9 @@
       "address": "Brezik bb, 76100 Brčko",
       "phone": "+387 49 490 460",
       "email": "internacionalni.univerzitet@gmail.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://iubd.edu.ba/index.php/obavjestenja/421-drugi-upisni-rok-na-iubd-javni-konkurs",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Poslovne komunikacije",
@@ -375,9 +375,9 @@
       "address": "Brezik bb, 76100 Brčko",
       "phone": "+387 49 490 460",
       "email": "internacionalni.univerzitet@gmail.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://iubd.edu.ba/index.php/obavjestenja/421-drugi-upisni-rok-na-iubd-javni-konkurs",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Poslovno-civilna bezbjednost",
@@ -427,15 +427,15 @@
           "tracks": [
             {
               "name": "Visoka medicinska sestra",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Visoki radiološki tehničar",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Fizioterapeut",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             }
           ]
         }
@@ -448,9 +448,9 @@
       "address": "Brezik bb, 76100 Brčko",
       "phone": "+387 49 490 460",
       "email": "internacionalni.univerzitet@gmail.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://iubd.edu.ba/index.php/obavjestenja/421-drugi-upisni-rok-na-iubd-javni-konkurs",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Drumski saobraćaj",
@@ -482,9 +482,9 @@
       "address": "Brezik bb, 76100 Brčko",
       "phone": "+387 49 490 460",
       "email": "internacionalni.univerzitet@gmail.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://iubd.edu.ba/index.php/obavjestenja/421-drugi-upisni-rok-na-iubd-javni-konkurs",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Opšte pravo",
@@ -558,9 +558,9 @@
       "address": "Brezik bb, 76100 Brčko",
       "phone": "+387 49 490 460",
       "email": "internacionalni.univerzitet@gmail.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "http://iubd.edu.ba/index.php/obavjestenja/421-drugi-upisni-rok-na-iubd-javni-konkurs",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Razredna nastava",

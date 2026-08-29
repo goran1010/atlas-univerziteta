@@ -13,9 +13,9 @@
   "accreditationTo": "2030-06-18",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://www.ues.rs.ba/en/faculties/",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Akademija likovnih umjetnosti",
@@ -24,9 +24,9 @@
       "address": "Stepe Stepanovića bb, 89101 Trebinje",
       "phone": "+387 59 270 310",
       "email": "dekanat@alutb.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Likovna umjetnost",
@@ -51,9 +51,9 @@
       "address": "Alekse Šantića 3, 71420 Pale",
       "phone": "+387 57 226 651",
       "email": "dekanat@ekofis.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Ekonomski razvoj",
@@ -107,27 +107,27 @@
             {
               "name": "Računovodstvo i revizija",
               "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Ekonomska analiza i politika",
               "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Digitalna transformacija",
               "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Ekonomija i biznis",
               "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Finansije i bankarstvo",
               "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -154,9 +154,9 @@
       "address": "Studentska 11, 76100 Brčko",
       "phone": "+387 49 234 931",
       "email": "dekanat@efb.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Finansijski i bankarski menadžment",
@@ -188,9 +188,9 @@
       "address": "Vuka Karadžića 30, 71123 Istočno Sarajevo",
       "phone": "+387 57 342 788",
       "email": "kontakt@etf.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Automatika i elektronika",
@@ -274,9 +274,9 @@
       "address": "Alekse Šantića 3, 71420 Pale",
       "phone": "+387 57 223 861",
       "email": "dekanat@ffvis.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Fizičko vaspitanje",
@@ -338,9 +338,9 @@
       "address": "Semberskih ratara bb, 76300 Bijeljina",
       "phone": "+387 55 415 200",
       "email": "dekan@fpe.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Digital economy",
@@ -403,9 +403,9 @@
       "address": "Stepe Stepanovića bb, 89101 Trebinje",
       "phone": "+387 59 240 654",
       "email": "fpm@fpm.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Industrijski menadžment",
@@ -451,9 +451,9 @@
       "address": "Alekse Šantića 1, 71420 Pale",
       "phone": "+387 57 227 258",
       "email": "info@ff.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Engleski jezik i književnost",
@@ -716,9 +716,9 @@
       "address": "Vuka Karadžića 30, 71123 Istočno Sarajevo",
       "phone": "+387 57 340 847",
       "email": "dekanat-maf@ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Mašinstvo",
@@ -737,17 +737,17 @@
             {
               "name": "Proizvodno mašinstvo",
               "sourceUrl": "https://www.maf.ues.rs.ba/upis/?pismo=lat",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Mašinske konstrukcije i razvoj proizvoda",
               "sourceUrl": "https://www.maf.ues.rs.ba/upis/?pismo=lat",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Energetsko procesno mašinstvo",
               "sourceUrl": "https://www.maf.ues.rs.ba/upis/?pismo=lat",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         }
@@ -760,9 +760,9 @@
       "address": "Studentska 5, 73300 Foča",
       "phone": "+387 58 210 007",
       "email": "office-mf@ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Specijalna edukacija i rehabilitacija",
@@ -853,9 +853,9 @@
       "address": "Stefana Nemanje 5, 71123 Istočno Sarajevo",
       "phone": "+387 57 342 125",
       "email": "info@mak.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Muzičko-pedagoško teorijski",
@@ -902,9 +902,9 @@
       "address": "Semberskih ratara bb, 76300 Bijeljina",
       "phone": "+387 55 415 400",
       "email": "ucitelj@pfb.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Informatika u obrazovanju",
@@ -974,9 +974,9 @@
       "address": "Vuka Karadžića 30, 71123 Istočno Sarajevo",
       "phone": "+387 57 340 401",
       "email": "office@pof.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Poljoprivreda",
@@ -1028,9 +1028,9 @@
       "website": "http://pravni.ues.rs.ba",
       "address": "Alekse Šantića 3, 71420 Pale",
       "phone": "+387 57 226 609",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Pravo",
@@ -1062,9 +1062,9 @@
       "address": "Ulica 9. maja 6, 73300 Foča",
       "phone": "+387 58 220 060",
       "email": "dekanat@bogoslovski.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Međureligijski studiji i izgradnja mira",
@@ -1110,9 +1110,9 @@
       "address": "Vojvode Mišića 52, 74000 Doboj",
       "phone": "+387 53 200 103",
       "email": "dekanat@sf.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Saobraćaj",
@@ -1124,42 +1124,42 @@
             {
               "name": "Drumski i gradski saobraćaj",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Željeznički saobraćaj",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Logistika",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Motorna vozila",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Telekomunikacije i poštanski saobraćaj",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Saobraćajnice",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Računarske i informacione tehnologije",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Vazdušni saobraćaj",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1173,42 +1173,42 @@
             {
               "name": "Drumski i gradski saobraćaj",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Željeznički saobraćaj",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Logistika",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Motorna vozila",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Telekomunikacije i poštanski saobraćaj",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Saobraćajnice",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Računarske i informacione tehnologije",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Vazdušni saobraćaj",
               "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1228,9 +1228,9 @@
       "address": "Karakaj 34A, 75400 Zvornik",
       "phone": "+387 56 260 190",
       "email": "sekretar@tfzv.ues.rs.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Ekološki monitoring slatkih voda",

@@ -13,9 +13,9 @@
   "accreditationTo": "2031-01-26",
   "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://www.unt.ba/",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Edukacijski fakultet",
@@ -24,9 +24,9 @@
       "address": "Aleja konzula 5, 72270 Travnik",
       "phone": "+387 30 540 876",
       "email": "info@eft.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "B/H/S jezik i književnost",
@@ -97,9 +97,9 @@
       "address": "Azapovići 439, 71250 Kiseljak",
       "phone": "+387 30 878 045",
       "email": "studentska@fmpe.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Finansijski menadžment",
@@ -175,9 +175,9 @@
       "address": "Aleja konzula 5, 72270 Travnik",
       "phone": "+387 30 540 876",
       "email": "info@fts.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Arhitektura",
@@ -218,9 +218,9 @@
       "address": "Slavka Gavrančića 17c, 72270 Travnik",
       "phone": "+387 30 515 770",
       "email": "info@fzf.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Fizioterapija",
@@ -288,7 +288,7 @@
           "durationYears": null,
           "ects": null,
           "sourceUrl": "https://fmpe.edu.ba/wp-content/uploads/2024/07/KONKURS-za-upis-studenata-2024-2025-UNT.pdf",
-          "lastChecked": "2026-08-29"
+          "lastModified": "2026-08-29"
         }
       ]
     },
@@ -299,9 +299,9 @@
       "address": "Azapovići 439, 71250 Kiseljak",
       "phone": "+387 30 870 371",
       "email": "info@pfk.edu.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
-      "studyProgramsLastChecked": "2026-08-24",
+      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Javna uprava",
@@ -337,31 +337,31 @@
           "tracks": [
             {
               "name": "Građansko pravo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Historija države i prava",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Javno pravo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Krivično pravo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Međunarodno pravo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Poslovno pravo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             },
             {
               "name": "Evropsko pravo",
-              "lastChecked": "2026-08-26"
+              "lastModified": "2026-08-26"
             }
           ]
         }

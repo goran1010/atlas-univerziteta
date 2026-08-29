@@ -13,9 +13,9 @@
   "accreditationTo": "2029-07-22",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://www.unibl.org/sr/clanice",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Akademija umjetnosti",
@@ -24,9 +24,9 @@
       "address": "Bulevar vojvode Petra Bojovića 1A, 78000 Banja Luka",
       "phone": "+387 51 348 800",
       "email": "info@au.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Dramske umjetnosti",
@@ -34,7 +34,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Likovne umjetnosti",
@@ -42,7 +42,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Muzička umjetnost",
@@ -50,7 +50,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Dramske umjetnosti",
@@ -79,7 +79,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -90,9 +90,9 @@
       "address": "Bulevar vojvode Petra Bojovića 1A, 78000 Banja Luka",
       "phone": "+387 51 462 543",
       "email": "info@aggf.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Arhitektura i urbanizam",
@@ -100,7 +100,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Energetska efikasnost u zgradarstvu",
@@ -108,7 +108,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Geodezija",
@@ -116,7 +116,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Građevinarstvo",
@@ -124,7 +124,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Arhitektura",
@@ -157,17 +157,17 @@
             {
               "name": "Konstrukcije",
               "sourceUrl": "https://aggf.unibl.org/sr/studijski-programi/studije-prvog-ciklusa/gradjevinarstvo",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Hidrotehnika",
               "sourceUrl": "https://aggf.unibl.org/sr/studijski-programi/studije-prvog-ciklusa/gradjevinarstvo",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Saobraćajnice",
               "sourceUrl": "https://aggf.unibl.org/sr/studijski-programi/studije-prvog-ciklusa/gradjevinarstvo",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -182,7 +182,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Obnovljivi izvori energije i ekološko inženjerstvo",
@@ -190,7 +190,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -201,9 +201,9 @@
       "address": "Majke Jugovića 4, 78000 Banja Luka",
       "phone": "+387 51 430 010",
       "email": "info@ef.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Aktuarstvo",
@@ -211,7 +211,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Finansije i revizija javnog sektora",
@@ -219,7 +219,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Finansije, bankarstvo i osiguranje",
@@ -227,7 +227,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "International master in business and administration",
@@ -235,7 +235,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Menadžment u turizmu i hotelijerstvu",
@@ -243,7 +243,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Međunarodna ekonomija",
@@ -251,7 +251,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Poslovna ekonomija",
@@ -259,7 +259,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Upravljanje kulturnim nasljeđem i kulturnim turizmom",
@@ -267,7 +267,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Ekonomija i poslovno upravljanje",
@@ -279,22 +279,22 @@
             {
               "name": "Finansije, bankarstvo i osiguranje",
               "sourceUrl": "https://ef.unibl.org/dokumenti/96EKF-Nastavni-plan-I-ciklusa-studija-2014-lat.pdf",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Međunarodna ekonomija",
               "sourceUrl": "https://ef.unibl.org/dokumenti/96EKF-Nastavni-plan-I-ciklusa-studija-2014-lat.pdf",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Poslovna ekonomija",
               "sourceUrl": "https://ef.unibl.org/dokumenti/96EKF-Nastavni-plan-I-ciklusa-studija-2014-lat.pdf",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Kvantitativne analize",
               "sourceUrl": "https://ef.unibl.org/dokumenti/96EKF-Nastavni-plan-I-ciklusa-studija-2014-lat.pdf",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -319,7 +319,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -330,9 +330,9 @@
       "address": "Patre 5, 78000 Banja Luka",
       "phone": "+387 51 221 824",
       "email": "info@etf.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Digitalno emitovanje i širokopojasne tehnologije",
@@ -340,7 +340,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Elektroenergetski i industrijski sistemi",
@@ -348,7 +348,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Elektronika i telekomunikacije",
@@ -356,7 +356,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Računarstvo i informatika",
@@ -364,7 +364,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Elektroenergetika i automatika",
@@ -376,12 +376,12 @@
             {
               "name": "Elektroenergetika",
               "sourceUrl": "https://etf.unibl.org/studiranje/1-ciklus/osnovne-informacije/s-udi-s-i-pr-gr-l-r-n-rg-i-i-u-i.html",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Automatika",
               "sourceUrl": "https://etf.unibl.org/studiranje/1-ciklus/osnovne-informacije/s-udi-s-i-pr-gr-l-r-n-rg-i-i-u-i.html",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -402,12 +402,12 @@
             {
               "name": "Softversko inženjerstvo",
               "sourceUrl": "https://etf.unibl.org/studiranje/1-ciklus/osnovne-informacije/s-udi-s-i-pr-gr-r-cun-rs-v-i-inf-r-i.html",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Računarsko inženjerstvo",
               "sourceUrl": "https://etf.unibl.org/studiranje/1-ciklus/osnovne-informacije/s-udi-s-i-pr-gr-r-cun-rs-v-i-inf-r-i.html",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -417,7 +417,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -428,9 +428,9 @@
       "address": "Bulevar vojvode Živojina Mišića 10a, 78000 Banja Luka",
       "phone": "+387 51 333 603",
       "email": "info@fbn.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Bezbjednost i kriminalistika",
@@ -438,7 +438,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Ekološka bezbjednost",
@@ -446,7 +446,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Bezbjednost i kriminalistika",
@@ -464,9 +464,9 @@
       "address": "Bulevar vojvode Petra Bojovića 1A, 78000 Banja Luka",
       "phone": "+387 51 312 611",
       "email": "info@ffvs.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Opšti nastavnički",
@@ -474,7 +474,7 @@
           "sourceUrl": "https://ffvs.unibl.org/studije-2-ciklusa",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-29"
+          "lastModified": "2026-08-29"
         },
         {
           "name": "Sport",
@@ -482,7 +482,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 120,
           "durationYears": 2,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Fizičko vaspitanje i sport",
@@ -507,9 +507,9 @@
       "address": "Bulevar vojvode Petra Bojovića 1A, 78000 Banja Luka",
       "phone": "+387 51 304 001",
       "email": "info@fpn.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Novinarstvo i komunikologija",
@@ -517,17 +517,17 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Novinarske studije",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/drugi-ciklus/master-novinarstva-i-komunikologije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Komunikološke studije",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/drugi-ciklus/master-novinarstva-i-komunikologije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -537,27 +537,27 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Politikološke studije",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/drugi-ciklus/master-politikologije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Međunarodne studije",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/drugi-ciklus/master-politikologije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Lokalna samouprava",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/drugi-ciklus/master-politikologije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Javna uprava i javne politike",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/drugi-ciklus/master-politikologije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -567,7 +567,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Socijalni rad",
@@ -575,7 +575,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Sociologija",
@@ -583,7 +583,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Novinarstvo i komunikologija",
@@ -595,12 +595,12 @@
             {
               "name": "Multimedijalno novinarstvo",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/prvi-ciklus-novi-studijski-programi/novinarstvo-i-komunikologija/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Odnosi s javnošću",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/prvi-ciklus-novi-studijski-programi/novinarstvo-i-komunikologija/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -614,12 +614,12 @@
             {
               "name": "Međunarodni odnosi",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/prvi-ciklus-novi-studijski-programi/politicke-nauke/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Javna administracija",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/prvi-ciklus-novi-studijski-programi/politicke-nauke/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -633,12 +633,12 @@
             {
               "name": "Organizacija, rad i ljudski resursi",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/prvi-ciklus-novi-studijski-programi/primijenjena-sociologija/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Društvena analitika",
               "sourceUrl": "https://fpn.unibl.org/sr/studije/prvi-ciklus-novi-studijski-programi/primijenjena-sociologija/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -655,7 +655,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -666,9 +666,9 @@
       "address": "Bulevar vojvode Petra Bojovića 1A, 78000 Banja Luka",
       "phone": "+387 51 340 120",
       "email": "info@flf.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Engleski jezik i književnost",
@@ -676,7 +676,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Francuski jezik i književnost",
@@ -684,7 +684,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Italijanski jezik i književnost",
@@ -692,7 +692,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Metodika nastave stranih jezika i književnosti",
@@ -700,7 +700,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Njemački jezik i književnost",
@@ -708,7 +708,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Ruski jezik i književnost",
@@ -716,7 +716,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Srpski jezik i književnost",
@@ -724,7 +724,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Engleski jezik i književnost",
@@ -774,7 +774,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -785,9 +785,9 @@
       "address": "Bulevar vojvode Petra Bojovića 1A, 78000 Banja Luka",
       "phone": "+387 51 322 780",
       "email": "info@ff.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Filozofija",
@@ -795,7 +795,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Istorija",
@@ -803,7 +803,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Pedagogija",
@@ -811,7 +811,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Predškolsko vaspitanje",
@@ -819,7 +819,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 120,
           "durationYears": 2,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Psihologija",
@@ -827,7 +827,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 120,
           "durationYears": 2,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Razredna nastava",
@@ -835,7 +835,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Filozofija",
@@ -885,7 +885,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Metodika razredne nastave",
@@ -893,7 +893,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Pedagogija",
@@ -901,7 +901,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -912,9 +912,9 @@
       "address": "Bulevar vojvode Stepe Stepanovića 71, 78000 Banja Luka",
       "phone": "+387 51 433 000",
       "email": "info@mf.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Energetska efikasnost u zgradarstvu",
@@ -922,7 +922,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Energetsko i saobraćajno mašinstvo",
@@ -930,7 +930,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Industrijsko inženjerstvo",
@@ -938,7 +938,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Konstrukciono mašinstvo",
@@ -946,7 +946,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Mehatronika",
@@ -954,7 +954,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Proizvodno mašinstvo",
@@ -962,7 +962,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Zaštita na radu",
@@ -970,7 +970,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Energetsko i saobraćajno mašinstvo",
@@ -1016,9 +1016,9 @@
       "address": "Save Mrkalja 14, 78000 Banja Luka",
       "phone": "+387 51 234 100",
       "email": "info@med.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Master medicinsko laboratorijska dijagnostika",
@@ -1026,7 +1026,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Master zdravstvenih studija",
@@ -1034,7 +1034,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Fizioterapija"
@@ -1125,7 +1125,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -1136,9 +1136,9 @@
       "address": "Bulevar vojvode Petra Bojovića 1A, 78000 Banja Luka",
       "phone": "+387 51 330 901",
       "email": "info@agro.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Agrarna ekonomija i ruralni razvoj",
@@ -1146,7 +1146,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Animalna proizvodnja",
@@ -1154,7 +1154,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Biljne nauke",
@@ -1162,7 +1162,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Očuvanje i održiva upotreba genetičkih resursa",
@@ -1170,7 +1170,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 120,
           "durationYears": 2,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Poljoprivreda",
@@ -1185,7 +1185,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -1196,9 +1196,9 @@
       "address": "Bulevar vojvode Stepe Stepanovića 77, 78000 Banja Luka",
       "phone": "+387 51 339 001",
       "email": "info@pf.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Master studije Pravo",
@@ -1206,52 +1206,52 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Građansko pravo",
               "sourceUrl": "https://pf.unibl.org/studijski-programm19/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Međunarodno pravo",
               "sourceUrl": "https://pf.unibl.org/studijski-programm19/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Krivično pravo",
               "sourceUrl": "https://pf.unibl.org/studijski-programm19/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Poslovno pravo",
               "sourceUrl": "https://pf.unibl.org/studijski-programm19/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Državno pravo",
               "sourceUrl": "https://pf.unibl.org/studijski-programm19/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Upravno pravo",
               "sourceUrl": "https://pf.unibl.org/studijski-programm19/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Radno i socijalno pravo",
               "sourceUrl": "https://pf.unibl.org/studijski-programm19/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Pravno-istorijske studije",
               "sourceUrl": "https://pf.unibl.org/studijski-programm19/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Pravno-ekonomski",
               "sourceUrl": "https://pf.unibl.org/studijski-programm19/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1268,52 +1268,52 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Građansko pravo",
               "sourceUrl": "https://pf.unibl.org/doktorske-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Međunarodno pravo",
               "sourceUrl": "https://pf.unibl.org/doktorske-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Krivično pravo",
               "sourceUrl": "https://pf.unibl.org/doktorske-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Poslovno pravo",
               "sourceUrl": "https://pf.unibl.org/doktorske-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Državno pravo",
               "sourceUrl": "https://pf.unibl.org/doktorske-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Upravno pravo",
               "sourceUrl": "https://pf.unibl.org/doktorske-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Radno i socijalno pravo",
               "sourceUrl": "https://pf.unibl.org/doktorske-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Pravno-istorijske studije",
               "sourceUrl": "https://pf.unibl.org/doktorske-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Pravno-ekonomski",
               "sourceUrl": "https://pf.unibl.org/doktorske-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         }
@@ -1326,9 +1326,9 @@
       "address": "Mladena Stojanovića 2, 78000 Banja Luka",
       "phone": "+387 51 319 142",
       "email": "info@pmf.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Biologija",
@@ -1336,32 +1336,32 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Biohemija",
               "sourceUrl": "https://biologija.pmf.unibl.org/nastavni-plan-i-program/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Metodika nastave biologije",
               "sourceUrl": "https://biologija.pmf.unibl.org/nastavni-plan-i-program/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Sistematika biljaka",
               "sourceUrl": "https://biologija.pmf.unibl.org/nastavni-plan-i-program/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Sistematika životinja",
               "sourceUrl": "https://biologija.pmf.unibl.org/nastavni-plan-i-program/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Fiziologija životinja",
               "sourceUrl": "https://biologija.pmf.unibl.org/nastavni-plan-i-program/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1371,22 +1371,22 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Ekologija biljaka",
               "sourceUrl": "https://ekologijaizzs.pmf.unibl.org/nastavni-plan-i-program-2/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Ekologija životinja",
               "sourceUrl": "https://ekologijaizzs.pmf.unibl.org/nastavni-plan-i-program-2/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Zaštita životne sredine",
               "sourceUrl": "https://ekologijaizzs.pmf.unibl.org/nastavni-plan-i-program-2/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1396,7 +1396,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Geografija",
@@ -1404,7 +1404,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Hemija",
@@ -1412,7 +1412,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Master studij informatike",
@@ -1420,7 +1420,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Matematika i informatika",
@@ -1428,17 +1428,17 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Matematička analiza i primjene",
               "sourceUrl": "https://matinf.pmf.unibl.org/nastava/master-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Algebra i geometrija",
               "sourceUrl": "https://matinf.pmf.unibl.org/nastava/master-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1448,7 +1448,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Tehničko vaspitanje i informatika",
@@ -1456,7 +1456,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Biologija",
@@ -1468,12 +1468,12 @@
             {
               "name": "Opšti",
               "sourceUrl": "https://biologija.pmf.unibl.org/nastavni-plan-i-program/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Nastavni",
               "sourceUrl": "https://biologija.pmf.unibl.org/nastavni-plan-i-program/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1487,12 +1487,12 @@
             {
               "name": "Opšti",
               "sourceUrl": "https://ekologijaizzs.pmf.unibl.org/nastavni-plan-i-program-2/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Nastavni",
               "sourceUrl": "https://ekologijaizzs.pmf.unibl.org/nastavni-plan-i-program-2/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1506,12 +1506,12 @@
             {
               "name": "Opšti",
               "sourceUrl": "https://fizika.pmf.unibl.org/nastavni-smjer-2/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Nastavni",
               "sourceUrl": "https://fizika.pmf.unibl.org/nastavni-smjer-2/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1532,12 +1532,12 @@
             {
               "name": "Opšti",
               "sourceUrl": "https://hemija.pmf.unibl.org/sr/osnovne-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Nastavni",
               "sourceUrl": "https://hemija.pmf.unibl.org/sr/osnovne-studije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1568,7 +1568,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Matematika i informatika",
@@ -1576,7 +1576,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Geografski informacioni sistemi",
@@ -1594,9 +1594,9 @@
       "address": "Aleja kozarskog odreda 1, 79101 Prijedor",
       "phone": "+387 52 241 660",
       "email": "info@rf.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Rudarsko i geološko inženjerstvo",
@@ -1604,7 +1604,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Geološko inženjerstvo",
@@ -1636,9 +1636,9 @@
       "address": "Vojvode Stepe Stepanovića 73, 78000 Banja Luka",
       "phone": "+387 51 434 357",
       "email": "info@tf.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Grafičko inženjerstvo",
@@ -1646,7 +1646,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Hemijsko inženjerstvo",
@@ -1654,22 +1654,22 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Procesno inženjerstvo",
               "sourceUrl": "https://tf.unibl.org/hemijsko-inzenjerstvo/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Ekološko inženjerstvo",
               "sourceUrl": "https://tf.unibl.org/hemijsko-inzenjerstvo/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Hemijske tehnologije",
               "sourceUrl": "https://tf.unibl.org/hemijsko-inzenjerstvo/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1679,7 +1679,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Tekstilno inženjerstvo",
@@ -1687,17 +1687,17 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Odjevna tehnologija",
               "sourceUrl": "https://tf.unibl.org/tekstilno-inzenjerstvo-ii-ciklus/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Obućarska tehnologija",
               "sourceUrl": "https://tf.unibl.org/tekstilno-inzenjerstvo-ii-ciklus/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1725,17 +1725,17 @@
             {
               "name": "Proizvodni",
               "sourceUrl": "https://tf.unibl.org/prehrambene-tehnologije-i-industrijske-biotehnologije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Kontrola kvaliteta i higijenske ispravnosti namirnica",
               "sourceUrl": "https://tf.unibl.org/prehrambene-tehnologije-i-industrijske-biotehnologije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Nutritivni kvalitet hrane i ishrane",
               "sourceUrl": "https://tf.unibl.org/prehrambene-tehnologije-i-industrijske-biotehnologije/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1749,12 +1749,12 @@
             {
               "name": "Odjevna tehnologija i dizajn",
               "sourceUrl": "https://tf.unibl.org/tekstilno-inzenjerstvo/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Obućarska tehnologija i dizajn",
               "sourceUrl": "https://tf.unibl.org/tekstilno-inzenjerstvo/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -1764,7 +1764,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -1775,9 +1775,9 @@
       "address": "Bulevar vojvode Petra Bojovića 1A, 78000 Banja Luka",
       "phone": "+387 51 464 884",
       "email": "info@sf.unibl.org",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Upravljanje šumskim resursima na prirodnim osnovama",
@@ -1823,7 +1823,7 @@
           "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     }

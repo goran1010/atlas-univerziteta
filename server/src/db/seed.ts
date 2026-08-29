@@ -42,7 +42,7 @@ const trackSeedSchema = z.strictObject({
   ects: z.number().int().positive().nullish(),
   durationYears: z.number().int().positive().nullish(),
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalDateSchema,
+  lastModified: optionalDateSchema,
 });
 
 const studyProgramSeedSchema = z.strictObject({
@@ -59,7 +59,7 @@ const studyProgramSeedSchema = z.strictObject({
   ects: z.number().int().positive().nullish(),
   language: optionalTextSchema,
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalDateSchema,
+  lastModified: optionalDateSchema,
   tracks: z.array(trackSeedSchema).min(1).optional(),
 });
 
@@ -72,9 +72,9 @@ const facultySeedSchema = z.strictObject({
   email: optionalTextSchema,
   isUniversityLevel: z.boolean().optional(),
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalDateSchema,
+  lastModified: optionalDateSchema,
   studyProgramsSourceUrl: optionalTextSchema,
-  studyProgramsLastChecked: optionalDateSchema,
+  studyProgramsLastModified: optionalDateSchema,
   studyPrograms: z.array(studyProgramSeedSchema).min(1).optional(),
 });
 
@@ -93,9 +93,9 @@ const universitySeedSchema = z.strictObject({
   accreditationTo: optionalDateSchema,
   authority: optionalTextSchema,
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalDateSchema,
+  lastModified: optionalDateSchema,
   facultiesSourceUrl: optionalTextSchema,
-  facultiesLastChecked: optionalDateSchema,
+  facultiesLastModified: optionalDateSchema,
   faculties: z.array(facultySeedSchema).min(1),
 });
 
@@ -136,7 +136,7 @@ function toUniversityData(
     accreditationTo: university.accreditationTo ?? null,
     authority: university.authority ?? null,
     sourceUrl: university.sourceUrl ?? null,
-    lastChecked: university.lastChecked ?? null,
+    lastModified: university.lastModified ?? null,
   };
 }
 
@@ -181,8 +181,8 @@ async function main() {
 
       return tree.faculties.map((faculty) => {
         const sourceUrl = faculty.sourceUrl ?? tree.facultiesSourceUrl ?? null;
-        const lastChecked =
-          faculty.lastChecked ?? tree.facultiesLastChecked ?? null;
+        const lastModified =
+          faculty.lastModified ?? tree.facultiesLastModified ?? null;
         const isUniversityLevel = faculty.isUniversityLevel ?? false;
 
         return prisma.faculty.upsert({
@@ -199,7 +199,7 @@ async function main() {
             email: faculty.email ?? null,
             isUniversityLevel,
             sourceUrl,
-            lastChecked,
+            lastModified,
           },
           update: {
             city: faculty.city ?? null,
@@ -209,7 +209,7 @@ async function main() {
             email: faculty.email ?? null,
             isUniversityLevel,
             sourceUrl,
-            lastChecked,
+            lastModified,
           },
         });
       });
@@ -249,8 +249,8 @@ async function main() {
         return (faculty.studyPrograms ?? []).map((program) => {
           const sourceUrl =
             program.sourceUrl ?? faculty.studyProgramsSourceUrl ?? null;
-          const lastChecked =
-            program.lastChecked ?? faculty.studyProgramsLastChecked ?? null;
+          const lastModified =
+            program.lastModified ?? faculty.studyProgramsLastModified ?? null;
 
           return prisma.studyProgram.upsert({
             where: {
@@ -268,14 +268,14 @@ async function main() {
               ects: program.ects ?? null,
               language: program.language ?? null,
               sourceUrl,
-              lastChecked,
+              lastModified,
             },
             update: {
               durationYears: program.durationYears ?? null,
               ects: program.ects ?? null,
               language: program.language ?? null,
               sourceUrl,
-              lastChecked,
+              lastModified,
             },
           });
         });
@@ -342,13 +342,13 @@ async function main() {
             ects: track.ects ?? null,
             durationYears: track.durationYears ?? null,
             sourceUrl: track.sourceUrl ?? null,
-            lastChecked: track.lastChecked ?? null,
+            lastModified: track.lastModified ?? null,
           },
           update: {
             ects: track.ects ?? null,
             durationYears: track.durationYears ?? null,
             sourceUrl: track.sourceUrl ?? null,
-            lastChecked: track.lastChecked ?? null,
+            lastModified: track.lastModified ?? null,
           },
         }),
       );

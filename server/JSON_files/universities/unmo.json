@@ -13,9 +13,9 @@
   "accreditationTo": "2028-01-29",
   "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://unmo.ba/univerzitet/fakulteti/",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Agromediteranski fakultet",
@@ -24,9 +24,9 @@
       "address": "Sjeverni logor bb, 88104 Mostar",
       "phone": "+387 36 571 388",
       "email": "af@unmo.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Povrtlarsko-cvjećarski",
@@ -72,9 +72,9 @@
       "address": "Sjeverni logor bb, 88104 Mostar",
       "phone": "+387 36 514 910",
       "email": "ef@unmo.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Poslovna ekonomija",
@@ -137,9 +137,9 @@
       "address": "Sjeverni logor bb, 88104 Mostar",
       "phone": "+387 36 571 559",
       "email": "fhn@unmo.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Bosanski jezik i književnost",
@@ -224,6 +224,14 @@
           "durationYears": 4,
           "ects": 240,
           "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+        },
+        {
+          "name": "Digitalna komunikacija i PR",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": null,
+          "sourceUrl": "https://upisi.unmo.ba/prvi-ciklus/fakultet-humanistickih-nauka/",
+          "lastModified": "2026-08-29"
         }
       ]
     },
@@ -234,9 +242,9 @@
       "address": "Sjeverni logor 12, 88000 Mostar",
       "phone": "+387 36 281 160",
       "email": "info@fit.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Informacijske tehnologije",
@@ -250,14 +258,14 @@
               "ects": 180,
               "durationYears": 3,
               "sourceUrl": "https://fit.ba/pages/40",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Softverski inženjering",
               "ects": 240,
               "durationYears": 4,
               "sourceUrl": "https://fit.ba/pages/41",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         }
@@ -270,9 +278,9 @@
       "address": "Sjeverni logor bb, 88104 Mostar",
       "phone": "+387 36 514 850",
       "email": "gf@unmo.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Konstrukcije",
@@ -308,7 +316,7 @@
           "durationYears": 3,
           "ects": 180,
           "sourceUrl": "https://gf.unmo.ba/studij/i-ciklus/",
-          "lastChecked": "2026-08-29"
+          "lastModified": "2026-08-29"
         }
       ]
     },
@@ -319,9 +327,9 @@
       "address": "Sjeverni logor bb, 88104 Mostar",
       "phone": "+387 36 571 258",
       "email": "mf@unmo.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Dizajn proizvoda",
@@ -374,9 +382,9 @@
       "address": "Sjeverni logor bb, 88104 Mostar",
       "phone": "+387 36 514 203",
       "email": "nf@unmo.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Hemija",
@@ -513,9 +521,9 @@
       "address": "Sjeverni logor bb, 88104 Mostar",
       "phone": "+387 36 514 233",
       "email": "pf@unmo.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Građansko pravo",
@@ -544,7 +552,7 @@
           "durationYears": 3,
           "ects": 180,
           "sourceUrl": "https://pf.unmo.ba/ba/studiranje/i-ciklus/",
-          "lastChecked": "2026-08-29"
+          "lastModified": "2026-08-29"
         }
       ]
     },
@@ -555,7 +563,7 @@
       "address": "Sjeverni logor bb, Univerzitetski kampus, 88104 Mostar",
       "phone": "+387 36 570 727",
       "email": "univerzitet@unmo.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
       "studyPrograms": [
         {

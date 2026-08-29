@@ -30,7 +30,7 @@ const universitySchema = z.object({
   accreditationTo: optionalTextSchema,
   authority: optionalTextSchema,
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalTextSchema,
+  lastModified: optionalTextSchema,
 });
 
 const trackSchema = z.object({
@@ -42,7 +42,7 @@ const trackSchema = z.object({
     .nullish()
     .transform((value) => value ?? undefined),
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalTextSchema,
+  lastModified: optionalTextSchema,
 });
 
 const studyProgramSchema = z.object({
@@ -56,7 +56,7 @@ const studyProgramSchema = z.object({
   ects: ectsSchema.nullish().transform((value) => value ?? undefined),
   language: optionalTextSchema,
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalTextSchema,
+  lastModified: optionalTextSchema,
   tracks: z.array(trackSchema).optional().default([]),
 });
 
@@ -70,7 +70,7 @@ const facultySchema = z.object({
   phone: optionalTextSchema,
   email: optionalTextSchema,
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalTextSchema,
+  lastModified: optionalTextSchema,
   studyPrograms: z.array(studyProgramSchema),
 });
 

@@ -29,7 +29,7 @@ const dummyData: { data: University[] } = {
       authority:
         "Ministry of Education and Science of the Federation of Bosnia and Herzegovina",
       foundedYear: "1949",
-      lastChecked: null,
+      lastModified: null,
       ownership: "PUBLIC",
       sourceUrl: "https://www.unsa.ba/en/university",
       website: "https://www.unsa.ba/en",
@@ -47,7 +47,7 @@ const dummyData: { data: University[] } = {
       accreditationTo: null,
       authority: "Ministry of Education and Culture of the Republika Srpska",
       foundedYear: "1975",
-      lastChecked: null,
+      lastModified: null,
       ownership: "PUBLIC",
       sourceUrl: "https://www.unibl.org/en/university",
       website: "https://www.unibl.org/en",

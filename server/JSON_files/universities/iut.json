@@ -13,9 +13,9 @@
   "accreditationTo": "2030-12-31",
   "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://iu-travnik.com/faculties-institutes/",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Ekološki fakultet",
@@ -24,9 +24,9 @@
       "address": "Bunar bb, Dolac, 72270 Travnik",
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Ekologija i okolinsko upravljanje",
@@ -237,9 +237,9 @@
       "address": "Bunar bb, Dolac, 72270 Travnik",
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Ekonomija, menadžment i biznis",
@@ -730,9 +730,9 @@
       "address": "Bunar bb, Dolac, 72270 Travnik",
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Informacione tehnologije",
@@ -887,9 +887,9 @@
       "address": "Bunar bb, Dolac, 72270 Travnik",
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Arhitektura i urbanizam",
@@ -1956,9 +1956,9 @@
       "address": "Bunar bb, Dolac, 72270 Travnik",
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Novinarstvo",
@@ -2073,9 +2073,9 @@
       "address": "Bunar bb, Dolac, 72270 Travnik",
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Državno i međunarodno javno pravo",
@@ -2314,9 +2314,9 @@
       "address": "Bunar bb, Dolac, 72270 Travnik",
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastChecked": "2026-08-25",
+      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Drumski i gradski saobraćaj",

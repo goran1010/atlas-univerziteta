@@ -13,9 +13,9 @@
   "accreditationTo": "2030-09-11",
   "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Unsko-sanskog kantona",
   "sourceUrl": "https://hea.gov.ba/",
-  "lastChecked": "2026-08-29",
+  "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://unbi.ba/",
-  "facultiesLastChecked": "2026-08-21",
+  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Biotehnički fakultet",
@@ -24,9 +24,9 @@
       "address": "Luke Marjanovića bb, 77000 Bihać",
       "phone": "+387 37 228 059",
       "email": "btf@unbi.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Inženjerstvo u zaštiti okoliša",
@@ -52,27 +52,27 @@
             {
               "name": "Opšti smjer",
               "sourceUrl": "https://btf.unbi.ba/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Agroekologija i ruralni razvoj",
               "sourceUrl": "https://btf.unbi.ba/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Ratarstvo - povrtlarstvo",
               "sourceUrl": "https://btf.unbi.ba/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Organska poljoprivreda",
               "sourceUrl": "https://btf.unbi.ba/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Stočarstvo",
               "sourceUrl": "https://btf.unbi.ba/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -92,9 +92,9 @@
       "address": "Pape Ivana Pavla II 2, 77000 Bihać",
       "phone": "+387 37 222 511",
       "email": "efbi@unbi.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Finansije, računovodstvo i revizija",
@@ -102,7 +102,7 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Menadžment i poduzetništvo",
@@ -110,7 +110,7 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Poslovna ekonomija",
@@ -135,9 +135,9 @@
       "address": "Nositelja hrvatskog trolista 4, 77000 Bihać",
       "phone": "+387 37 227 046",
       "email": "fzs@unbi.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Sanitarno inženjerstvo",
@@ -145,7 +145,7 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Sestrinstvo",
@@ -153,7 +153,7 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Fizikalna terapija",
@@ -185,9 +185,9 @@
       "address": "Žegarska aleja 14, 77000 Bihać",
       "phone": "+387 37 220 162",
       "email": "info@ipf.unbi.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Islamska vjeronauka",
@@ -195,7 +195,7 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Socijalna pedagogija i duhovna skrb",
@@ -203,7 +203,7 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Islamska vjeronauka",
@@ -228,9 +228,9 @@
       "address": "Luke Marjanovića bb, 77000 Bihać",
       "phone": "+387 37 229 850",
       "email": "pfb@unbi.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Engleski jezik i književnost",
@@ -238,7 +238,7 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Biologija i hemija",
@@ -319,9 +319,9 @@
       "address": "Džanića mahala 68, 77000 Bihać",
       "phone": "+387 37 310 990",
       "email": "prf@unbi.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Studij prava",
@@ -329,7 +329,7 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         },
         {
           "name": "Studij prava",
@@ -344,7 +344,7 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-27"
+          "lastModified": "2026-08-27"
         }
       ]
     },
@@ -355,9 +355,9 @@
       "address": "Dr. Irfana Ljubijankića bb, 77000 Bihać",
       "phone": "+387 37 226 271",
       "email": "tfb@unbi.ba",
-      "lastChecked": "2026-08-29",
+      "lastModified": "2026-08-29",
       "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
-      "studyProgramsLastChecked": "2026-08-23",
+      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Master studij TF 4+1",
@@ -365,17 +365,17 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27",
+          "lastModified": "2026-08-27",
           "tracks": [
             {
               "name": "Visokogradnja",
               "sourceUrl": "http://web.tfb.unbi.ba/gradjevinski-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Niskogradnja",
               "sourceUrl": "http://web.tfb.unbi.ba/gradjevinski-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -389,12 +389,12 @@
             {
               "name": "Računarstvo i informatika",
               "sourceUrl": "http://web.tfb.unbi.ba/elektrotehnicki-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Automatika i elektronika",
               "sourceUrl": "http://web.tfb.unbi.ba/elektrotehnicki-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -408,12 +408,12 @@
             {
               "name": "Visokogradnja",
               "sourceUrl": "http://web.tfb.unbi.ba/gradjevinski-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Niskogradnja",
               "sourceUrl": "http://web.tfb.unbi.ba/gradjevinski-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -427,12 +427,12 @@
             {
               "name": "Proizvodno mašinstvo",
               "sourceUrl": "http://web.tfb.unbi.ba/masinski-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Dizajn mašinskih konstrukcija",
               "sourceUrl": "http://web.tfb.unbi.ba/masinski-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -446,12 +446,12 @@
             {
               "name": "Dizajn tekstila i odjeće",
               "sourceUrl": "http://web.tfb.unbi.ba/tekstilni-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Odjevne tehnologije",
               "sourceUrl": "http://web.tfb.unbi.ba/tekstilni-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },
@@ -465,12 +465,12 @@
             {
               "name": "Drvna industrija",
               "sourceUrl": "http://web.tfb.unbi.ba/drvoindustrijski-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             },
             {
               "name": "Šumarstvo",
               "sourceUrl": "http://web.tfb.unbi.ba/drvoindustrijski-odsjek/",
-              "lastChecked": "2026-08-29"
+              "lastModified": "2026-08-29"
             }
           ]
         },

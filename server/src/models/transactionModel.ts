@@ -28,6 +28,7 @@ function toUniversityCreateInput(
   data: UniversityCreateData,
 ): Prisma.UniversityCreateInput {
   return {
+    lastModified: new Date(),
     name: data.name,
     city: data.city,
     entity: data.entity,
@@ -45,6 +46,7 @@ function toUniversityUpdateInput(
   data: UniversityEditData,
 ): Prisma.UniversityUpdateInput {
   return {
+    lastModified: new Date(),
     ...(data.name !== undefined && { name: data.name }),
     ...(data.city !== undefined && { city: data.city }),
     ...(data.entity !== undefined && { entity: data.entity }),
@@ -63,6 +65,7 @@ function toFacultyCreateInput(
   universityId: number,
 ): Prisma.FacultyUncheckedCreateInput {
   return {
+    lastModified: new Date(),
     name: data.name,
     universityId,
     ...(data.city !== undefined && { city: data.city }),
@@ -77,6 +80,7 @@ function toFacultyUpdateInput(
   data: FacultyEditData,
 ): Prisma.FacultyUpdateInput {
   return {
+    lastModified: new Date(),
     ...(data.name !== undefined && { name: data.name }),
     ...(data.city !== undefined && { city: data.city }),
     ...(data.website !== undefined && { website: data.website }),
@@ -91,6 +95,7 @@ function toStudyProgramCreateInput(
   facultyId: number,
 ): Prisma.StudyProgramUncheckedCreateInput {
   return {
+    lastModified: new Date(),
     name: data.name,
     cycle: data.cycle,
     facultyId,
@@ -106,6 +111,7 @@ function toStudyProgramUpdateInput(
   data: StudyProgramEditData,
 ): Prisma.StudyProgramUpdateInput {
   return {
+    lastModified: new Date(),
     ...(data.name !== undefined && { name: data.name }),
     ...(data.cycle !== undefined && { cycle: data.cycle }),
     ...(data.durationYears !== undefined && {
@@ -121,6 +127,7 @@ function toTrackCreateInput(
   studyProgramId: number,
 ): Prisma.TrackUncheckedCreateInput {
   return {
+    lastModified: new Date(),
     name: data.name,
     studyProgramId,
     ...(data.ects !== undefined && { ects: data.ects }),
@@ -132,6 +139,7 @@ function toTrackCreateInput(
 
 function toTrackUpdateInput(data: TrackEditData): Prisma.TrackUpdateInput {
   return {
+    lastModified: new Date(),
     ...(data.name !== undefined && { name: data.name }),
     ...(data.ects !== undefined && { ects: data.ects }),
     ...(data.durationYears !== undefined && {
