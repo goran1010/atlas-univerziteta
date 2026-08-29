@@ -565,7 +565,19 @@
           "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "ects": 120,
           "durationYears": 2,
-          "lastChecked": "2026-08-26"
+          "lastChecked": "2026-08-26",
+          "tracks": [
+            {
+              "name": "Programsko inženjerstvo i informacijski sustavi",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/ra%C4%8Dunarstvo",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Računalni sustavi i mreže",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/ra%C4%8Dunarstvo",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Strojarstvo",
@@ -573,7 +585,29 @@
           "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "ects": 120,
           "durationYears": 2,
-          "lastChecked": "2026-08-26"
+          "lastChecked": "2026-08-26",
+          "tracks": [
+            {
+              "name": "Proizvodno inženjerstvo",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Dizajn konstrukcija",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Industrijsko inženjerstvo i menadžment",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Mehatronika",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Elektrotehnika",
@@ -597,7 +631,29 @@
           "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "ects": 180,
           "durationYears": 3,
-          "lastChecked": "2026-08-26"
+          "lastChecked": "2026-08-26",
+          "tracks": [
+            {
+              "name": "Proizvodno inženjerstvo",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Dizajn konstrukcija",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Industrijsko inženjerstvo i menadžment",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Mehatronika",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         }
       ]
     },

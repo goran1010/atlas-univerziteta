@@ -67,14 +67,21 @@
           "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/"
         },
         {
-          "name": "Programiranje i softversko inženjerstvo",
+          "name": "Inženjering informacionih tehnologija",
           "cycle": "FIRST",
-          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/"
-        },
-        {
-          "name": "Računarska bezbjednost i zaštita informacija",
-          "cycle": "FIRST",
-          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/"
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/",
+          "tracks": [
+            {
+              "name": "Programiranje i softversko inženjerstvo",
+              "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Računarska bezbjednost i zaštita informacija",
+              "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Računarska multimedija i grafika",

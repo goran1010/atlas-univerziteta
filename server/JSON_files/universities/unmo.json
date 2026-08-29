@@ -241,9 +241,25 @@
         {
           "name": "Informacijske tehnologije",
           "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "durationYears": null,
+          "ects": null,
+          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "tracks": [
+            {
+              "name": "Razvoj softvera",
+              "ects": 180,
+              "durationYears": 3,
+              "sourceUrl": "https://fit.ba/pages/40",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Softverski inženjering",
+              "ects": 240,
+              "durationYears": 4,
+              "sourceUrl": "https://fit.ba/pages/41",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         }
       ]
     },

@@ -171,12 +171,66 @@
         {
           "name": "Elektrotehnika i računarstvo",
           "cycle": "SECOND",
-          "sourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/"
+          "sourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "tracks": [
+            {
+              "name": "Automatika i robotika",
+              "sourceUrl": "https://fet.ba/doc/Studijskiprogram-FET-ER-II-2021.pdf",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Elektroenergetske mreže i sistemi",
+              "sourceUrl": "https://fet.ba/doc/Studijskiprogram-FET-ER-II-2021.pdf",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Elektrotehnika i sistemi konverzije energije",
+              "sourceUrl": "https://fet.ba/doc/Studijskiprogram-FET-ER-II-2021.pdf",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Računarstvo i informatika",
+              "sourceUrl": "https://fet.ba/doc/Studijskiprogram-FET-ER-II-2021.pdf",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Telekomunikacije",
+              "sourceUrl": "https://fet.ba/doc/Studijskiprogram-FET-ER-II-2021.pdf",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Elektrotehnika i računarstvo",
           "cycle": "FIRST",
-          "sourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/"
+          "sourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "tracks": [
+            {
+              "name": "Automatika i robotika",
+              "sourceUrl": "https://fet.ba/i-ciklus/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Elektroenergetske mreže i sistemi",
+              "sourceUrl": "https://fet.ba/i-ciklus/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Elektrotehnika i sistemi konverzije energije",
+              "sourceUrl": "https://fet.ba/i-ciklus/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Računarstvo i informatika",
+              "sourceUrl": "https://fet.ba/i-ciklus/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Telekomunikacije",
+              "sourceUrl": "https://fet.ba/i-ciklus/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Tehnički odgoj i informatika",

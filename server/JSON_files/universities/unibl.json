@@ -257,7 +257,29 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija/licencirani-studijski-programi-na-prvom-ciklusu-studija"
+          "sourceUrl": "https://www.unibl.org/sr-lat/studije/vrste-i-nivoi-studija/licencirani-studijski-programi-na-prvom-ciklusu-studija",
+          "tracks": [
+            {
+              "name": "Finansije, bankarstvo i osiguranje",
+              "sourceUrl": "https://ef.unibl.org/dokumenti/96EKF-Nastavni-plan-I-ciklusa-studija-2014-lat.pdf",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Međunarodna ekonomija",
+              "sourceUrl": "https://ef.unibl.org/dokumenti/96EKF-Nastavni-plan-I-ciklusa-studija-2014-lat.pdf",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Poslovna ekonomija",
+              "sourceUrl": "https://ef.unibl.org/dokumenti/96EKF-Nastavni-plan-I-ciklusa-studija-2014-lat.pdf",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Kvantitativne analize",
+              "sourceUrl": "https://ef.unibl.org/dokumenti/96EKF-Nastavni-plan-I-ciklusa-studija-2014-lat.pdf",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Ekonomija i poslovno upravljanje na engleskom jeziku",

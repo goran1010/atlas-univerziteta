@@ -705,7 +705,24 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
+          "tracks": [
+            {
+              "name": "Proizvodno mašinstvo",
+              "sourceUrl": "https://www.maf.ues.rs.ba/upis/?pismo=lat",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Mašinske konstrukcije i razvoj proizvoda",
+              "sourceUrl": "https://www.maf.ues.rs.ba/upis/?pismo=lat",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Energetsko procesno mašinstvo",
+              "sourceUrl": "https://www.maf.ues.rs.ba/upis/?pismo=lat",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         }
       ]
     },
@@ -1075,14 +1092,98 @@
           "cycle": "SECOND",
           "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
           "ects": 60,
-          "durationYears": 1
+          "durationYears": 1,
+          "tracks": [
+            {
+              "name": "Drumski i gradski saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Željeznički saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Logistika",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Motorna vozila",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Telekomunikacije i poštanski saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Saobraćajnice",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Računarske i informacione tehnologije",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Vazdušni saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Saobraćaj",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
+          "tracks": [
+            {
+              "name": "Drumski i gradski saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Željeznički saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Logistika",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Motorna vozila",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Telekomunikacije i poštanski saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Saobraćajnice",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Računarske i informacione tehnologije",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Vazdušni saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Saobraćaj",

@@ -180,13 +180,47 @@
           "name": "Poslovne i finansijske studije",
           "cycle": "FIRST",
           "durationYears": 3,
-          "ects": 180
+          "ects": 180,
+          "tracks": [
+            {
+              "name": "Računovodstvo i revizija",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Porezi, carine i budžet",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Bankarstvo i berzansko poslovanje",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Finansije, bankarstvo i osiguranje",
           "cycle": "FIRST",
           "durationYears": 4,
-          "ects": 240
+          "ects": 240,
+          "tracks": [
+            {
+              "name": "Računovodstvo i revizija",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Porezi, carine i budžet",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Bankarstvo",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Finansijski, bankarski i berzanski menadžment",

@@ -338,42 +338,114 @@
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastChecked": "2026-08-27",
+          "tracks": [
+            {
+              "name": "Visokogradnja",
+              "sourceUrl": "http://web.tfb.unbi.ba/gradjevinski-odsjek/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Niskogradnja",
+              "sourceUrl": "http://web.tfb.unbi.ba/gradjevinski-odsjek/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Elektrotehnički odsjek",
           "cycle": "FIRST",
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 240,
-          "durationYears": 4
+          "durationYears": 4,
+          "tracks": [
+            {
+              "name": "Računarstvo i informatika",
+              "sourceUrl": "http://web.tfb.unbi.ba/elektrotehnicki-odsjek/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Automatika i elektronika",
+              "sourceUrl": "http://web.tfb.unbi.ba/elektrotehnicki-odsjek/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Građevinski odsjek",
           "cycle": "FIRST",
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 240,
-          "durationYears": 4
+          "durationYears": 4,
+          "tracks": [
+            {
+              "name": "Visokogradnja",
+              "sourceUrl": "http://web.tfb.unbi.ba/gradjevinski-odsjek/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Niskogradnja",
+              "sourceUrl": "http://web.tfb.unbi.ba/gradjevinski-odsjek/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Mašinski odsjek",
           "cycle": "FIRST",
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 240,
-          "durationYears": 4
+          "durationYears": 4,
+          "tracks": [
+            {
+              "name": "Proizvodno mašinstvo",
+              "sourceUrl": "http://web.tfb.unbi.ba/masinski-odsjek/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Dizajn mašinskih konstrukcija",
+              "sourceUrl": "http://web.tfb.unbi.ba/masinski-odsjek/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Tekstilni odsjek",
           "cycle": "FIRST",
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 240,
-          "durationYears": 4
+          "durationYears": 4,
+          "tracks": [
+            {
+              "name": "Dizajn tekstila i odjeće",
+              "sourceUrl": "http://web.tfb.unbi.ba/tekstilni-odsjek/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Odjevne tehnologije",
+              "sourceUrl": "http://web.tfb.unbi.ba/tekstilni-odsjek/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Šumarstvo i drvna industrija",
           "cycle": "FIRST",
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 240,
-          "durationYears": 4
+          "durationYears": 4,
+          "tracks": [
+            {
+              "name": "Drvna industrija",
+              "sourceUrl": "http://web.tfb.unbi.ba/drvoindustrijski-odsjek/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Šumarstvo",
+              "sourceUrl": "http://web.tfb.unbi.ba/drvoindustrijski-odsjek/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Elektrotehnika i računarstvo",
