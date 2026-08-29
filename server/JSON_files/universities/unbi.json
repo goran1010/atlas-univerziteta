@@ -47,7 +47,34 @@
           "cycle": "FIRST",
           "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
           "ects": 240,
-          "durationYears": 4
+          "durationYears": 4,
+          "tracks": [
+            {
+              "name": "Opšti smjer",
+              "sourceUrl": "https://btf.unbi.ba/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Agroekologija i ruralni razvoj",
+              "sourceUrl": "https://btf.unbi.ba/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Ratarstvo - povrtlarstvo",
+              "sourceUrl": "https://btf.unbi.ba/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Organska poljoprivreda",
+              "sourceUrl": "https://btf.unbi.ba/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Stočarstvo",
+              "sourceUrl": "https://btf.unbi.ba/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Prehrambena tehnologija",

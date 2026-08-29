@@ -281,6 +281,14 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Dentalna higijena",
+          "cycle": "FIRST",
+          "durationYears": null,
+          "ects": null,
+          "sourceUrl": "https://fmpe.edu.ba/wp-content/uploads/2024/07/KONKURS-za-upis-studenata-2024-2025-UNT.pdf",
+          "lastChecked": "2026-08-29"
         }
       ]
     },

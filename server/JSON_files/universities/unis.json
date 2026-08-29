@@ -102,7 +102,34 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
+          "tracks": [
+            {
+              "name": "Računovodstvo i revizija",
+              "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Ekonomska analiza i politika",
+              "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Digitalna transformacija",
+              "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Ekonomija i biznis",
+              "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Finansije i bankarstvo",
+              "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Turizam i hotelijerstvo",

@@ -82,39 +82,36 @@
       "studyProgramsLastChecked": "2026-08-24",
       "studyPrograms": [
         {
-          "name": "Digitalna ekonomija",
-          "cycle": "SECOND",
-          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
-        },
-        {
           "name": "Financije, računovodstvo i revizija",
-          "cycle": "SECOND",
-          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
-        },
-        {
-          "name": "Marketing menadžment",
-          "cycle": "SECOND",
-          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
-        },
-        {
-          "name": "Menadžment u zdravstvu",
           "cycle": "SECOND",
           "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
         },
         {
           "name": "Poduzetnički menadžment",
           "cycle": "SECOND",
-          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
-        },
-        {
-          "name": "Poduzetništvo i menadžment",
-          "cycle": "SECOND",
-          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
-        },
-        {
-          "name": "Digitalna ekonomija",
-          "cycle": "FIRST",
-          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/",
+          "tracks": [
+            {
+              "name": "Digitalna ekonomija",
+              "sourceUrl": "https://sveuciliste.unvi.edu.ba/fakultet-poslovne-ekonomije/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Marketing menadžment",
+              "sourceUrl": "https://sveuciliste.unvi.edu.ba/fakultet-poslovne-ekonomije/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Menadžment u zdravstvu",
+              "sourceUrl": "https://sveuciliste.unvi.edu.ba/fakultet-poslovne-ekonomije/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Poduzetništvo i menadžment",
+              "sourceUrl": "https://sveuciliste.unvi.edu.ba/fakultet-poslovne-ekonomije/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Financije, računovodstvo i revizija",
@@ -122,19 +119,26 @@
           "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
         },
         {
-          "name": "Marketing menadžment",
-          "cycle": "FIRST",
-          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
-        },
-        {
           "name": "Poduzetnički menadžment",
           "cycle": "FIRST",
-          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
-        },
-        {
-          "name": "Poduzetništvo i menadžment",
-          "cycle": "FIRST",
-          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/",
+          "tracks": [
+            {
+              "name": "Digitalna ekonomija",
+              "sourceUrl": "https://sveuciliste.unvi.edu.ba/fakultet-poslovne-ekonomije/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Marketing menadžment",
+              "sourceUrl": "https://sveuciliste.unvi.edu.ba/fakultet-poslovne-ekonomije/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Poduzetništvo i menadžment",
+              "sourceUrl": "https://sveuciliste.unvi.edu.ba/fakultet-poslovne-ekonomije/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Poslovna informatika",

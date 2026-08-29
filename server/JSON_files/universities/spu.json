@@ -178,7 +178,19 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
+          "tracks": [
+            {
+              "name": "Informacioni sistemi",
+              "sourceUrl": "https://fit.spu.ba/opis-studijskog-programa/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Računarske mreže i telekomunikacije",
+              "sourceUrl": "https://fit.spu.ba/opis-studijskog-programa/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Informacione tehnologije",

@@ -4447,6 +4447,26 @@
           "language": "Bosanski, hrvatski, srpski",
           "sourceUrl": "https://pmf.unsa.ba/strucni-studij-it/",
           "lastChecked": "2026-08-26"
+        },
+        {
+          "name": "Hemija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://rsp.unsa.ba/study-programs",
+          "lastChecked": "2026-08-29",
+          "tracks": [
+            {
+              "name": "Opći",
+              "sourceUrl": "http://hemija.pmf.unsa.ba/prvi-ciklus-studija/opsti-smjer-2021-2022/",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Nastavnički",
+              "sourceUrl": "http://hemija.pmf.unsa.ba/prvi-ciklus-studija/nastavnicki-smjer-2021-2022/",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         }
       ]
     },
