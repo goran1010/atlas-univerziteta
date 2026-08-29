@@ -372,6 +372,14 @@
           "durationYears": 3,
           "ects": 180,
           "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://upisi.unmo.ba/prvi-ciklus/masinski-fakultet/",
+          "lastModified": "2026-08-29"
         }
       ]
     },
@@ -600,6 +608,30 @@
           "durationYears": 4,
           "ects": 240,
           "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "sourceUrl": "https://upisi.unmo.ba/prvi-ciklus/univerzitetski-studiji/",
+          "lastModified": "2026-08-29"
+        },
+        {
+          "name": "Kozmetologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://upisi.unmo.ba/prvi-ciklus/univerzitetski-studiji/",
+          "lastModified": "2026-08-29"
+        },
+        {
+          "name": "Logopedija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://upisi.unmo.ba/prvi-ciklus/univerzitetski-studiji/",
+          "lastModified": "2026-08-29"
         }
       ]
     }
