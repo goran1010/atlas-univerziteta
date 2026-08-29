@@ -2871,14 +2871,14 @@
           ]
         },
         {
-          "name": "Doktorski studij iz književnosti naroda bih",
+          "name": "Doktorski studij iz književnosti naroda Bosne i Hercegovine",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski"
         },
         {
-          "name": "Doktorski studij iz književnosti pod naslovom književnost i kultura",
+          "name": "Doktorski studij Književnost i kultura",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -2924,20 +2924,14 @@
           "language": "Bosanski, hrvatski, srpski i njemački"
         },
         {
-          "name": "Treći ciklus studija- doktorski studij iz lingvistike",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Treći ciklus studija- doktorski studij iz lingvističke bosnistike",
+          "name": "Doktorski studij lingvističke bosnistike",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski"
         },
         {
-          "name": "Treći ciklus studija- doktorski studij književnosti",
+          "name": "Doktorski studij književnosti",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180
