@@ -1,0 +1,274 @@
+{
+  "name": "Univerzitet Sarajevo School of Science and Technology",
+  "acronym": "SSST",
+  "city": "Sarajevo",
+  "entity": "FBIH",
+  "ownership": "PRIVATE",
+  "foundedYear": "2004-05-25",
+  "website": "https://www.ssst.edu.ba",
+  "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+  "phone": "+387 33 975 002",
+  "email": "administration@ssst.edu.ba",
+  "accreditationFrom": "2020-05-02",
+  "accreditationTo": "2030-08-01",
+  "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastChecked": "2026-08-29",
+  "facultiesSourceUrl": "https://www.ssst.edu.ba/",
+  "facultiesLastChecked": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Computer Science",
+      "city": "Sarajevo",
+      "website": "https://ssst.edu.ba/en/department/computer-science/2",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 002",
+      "email": "administration@ssst.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Computer Science",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/computer-science/2"
+        }
+      ]
+    },
+    {
+      "name": "Dentistry",
+      "city": "Sarajevo",
+      "website": "https://ssst.edu.ba/en/department/dentistry/8",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 002",
+      "email": "administration@ssst.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Dentistry",
+          "cycle": "INTEGRATED",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/dentistry/8"
+        }
+      ]
+    },
+    {
+      "name": "Economics and Business",
+      "city": "Sarajevo",
+      "website": "https://ssst.edu.ba/en/department/economics-and-business/5",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 002",
+      "email": "administration@ssst.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "MBA",
+          "cycle": "SECOND",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/economics-and-business/5"
+        },
+        {
+          "name": "Economics and Business",
+          "cycle": "FIRST",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/economics-and-business/5"
+        }
+      ]
+    },
+    {
+      "name": "Foreign Languages",
+      "city": "Sarajevo",
+      "website": "https://ssst.edu.ba/en/department/foreign-languages/11",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 002",
+      "email": "administration@ssst.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "English and Applied Studies",
+          "cycle": "FIRST",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/foreign-languages/11"
+        },
+        {
+          "name": "German Language and Literature",
+          "cycle": "FIRST",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/foreign-languages/11"
+        }
+      ]
+    },
+    {
+      "name": "Game Design and Development",
+      "city": "Sarajevo",
+      "website": "https://ssst.edu.ba/en/department/game-design-and-development/1",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 002",
+      "email": "gaming@ssst.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Game Design and Development",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/game-design-and-development/1"
+        }
+      ]
+    },
+    {
+      "name": "Health Studies",
+      "city": "Sarajevo",
+      "website": "https://ssst.edu.ba/en/department/health-studies/7",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 002",
+      "email": "administration@ssst.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Health Sciences",
+          "cycle": "SECOND",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/health-studies/7"
+        },
+        {
+          "name": "Health Sciences",
+          "cycle": "FIRST",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/health-studies/7"
+        }
+      ]
+    },
+    {
+      "name": "Pharmaco-Economics",
+      "city": "Sarajevo",
+      "website": "https://ssst.edu.ba/en/department/pharmaco-economics/10",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 002",
+      "email": "administration@ssst.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Health Economics and Pharmacoeconomics",
+          "cycle": "SECOND",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/pharmaco-economics/10"
+        }
+      ]
+    },
+    {
+      "name": "Pharmacy",
+      "city": "Sarajevo",
+      "website": "https://ssst.edu.ba/en/department/pharmacy/9",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 002",
+      "email": "administration@ssst.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Pharmacy",
+          "cycle": "INTEGRATED",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/pharmacy/9"
+        }
+      ]
+    },
+    {
+      "name": "Political Science and International Relations",
+      "city": "Sarajevo",
+      "website": "https://ssst.edu.ba/en/department/political-science-and-international-relations/4",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 002",
+      "email": "administration@ssst.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Political Science and International Relations",
+          "cycle": "SECOND",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/political-science-and-international-relations/4"
+        },
+        {
+          "name": "Political Science and International Relations",
+          "cycle": "FIRST",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/political-science-and-international-relations/4"
+        }
+      ]
+    },
+    {
+      "name": "Sarajevo Film Academy",
+      "city": "Sarajevo",
+      "website": "https://sfa.ba",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 060",
+      "email": "info@sfa.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Film Directing",
+          "cycle": "SECOND",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/sarajevo-film-academy/12"
+        },
+        {
+          "name": "Film Directing",
+          "cycle": "FIRST",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/sarajevo-film-academy/12"
+        }
+      ]
+    },
+    {
+      "name": "Sarajevo Medical School",
+      "city": "Sarajevo",
+      "website": "https://ssst.edu.ba/en/department/sarajevo-medical-school/6",
+      "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+      "phone": "+387 33 975 002",
+      "email": "administration@ssst.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Medicine",
+          "cycle": "INTEGRATED",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/sarajevo-medical-school/6"
+        },
+        {
+          "name": "Biomedicine",
+          "cycle": "THIRD",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/pharmaco-economics/10"
+        },
+        {
+          "name": "Clinical Medicine",
+          "cycle": "THIRD",
+          "language": "engleski",
+          "sourceUrl": "https://ssst.edu.ba/en/department/pharmaco-economics/10"
+        }
+      ]
+    }
+  ]
+}

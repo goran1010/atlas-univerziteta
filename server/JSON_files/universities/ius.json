@@ -1,0 +1,533 @@
+{
+  "name": "Internacionalni univerzitet u Sarajevu",
+  "acronym": "IUS",
+  "city": "Sarajevo",
+  "entity": "FBIH",
+  "ownership": "PRIVATE",
+  "foundedYear": "2004-06-23",
+  "website": "https://www.ius.edu.ba",
+  "address": "Hrasnička cesta 15, 71210 Ilidža",
+  "phone": "+387 33 957 101",
+  "email": "info@ius.edu.ba",
+  "accreditationFrom": "2007-08-15",
+  "accreditationTo": "2029-08-29",
+  "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastChecked": "2026-08-29",
+  "facultiesSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini",
+  "facultiesLastChecked": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Edukacijski fakultet",
+      "city": "Sarajevo",
+      "website": "https://fedu.ius.edu.ba",
+      "address": "Hrasnička cesta 15, 71210 Ilidža",
+      "phone": "+387 33 957 300",
+      "email": "admission@ius.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ius.edu.ba",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Computer Education and Instructional Technology",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "English Language and Literature, Teaching",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Turkish Language and Literature, Teaching",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Computer Education and Instructional Technology",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "English Language and Literature, Teaching",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Turkish Language and Literature, Teaching",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "English Language and Literature, Teaching",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet medicinskih nauka",
+      "city": "Sarajevo",
+      "website": "https://fms.ius.edu.ba",
+      "address": "Hrasnička cesta 15, 71210 Ilidža",
+      "phone": "+387 33 957 305",
+      "email": "admission@ius.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ius.edu.ba",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Dental Medicine",
+          "cycle": "INTEGRATED",
+          "language": "engleski",
+          "sourceUrl": "https://fms.ius.edu.ba/en",
+          "ects": 360,
+          "durationYears": 6,
+          "lastChecked": "2026-08-27"
+        },
+        {
+          "name": "Medicine",
+          "cycle": "INTEGRATED",
+          "language": "engleski",
+          "sourceUrl": "https://fms.ius.edu.ba/en",
+          "ects": 360,
+          "durationYears": 6,
+          "lastChecked": "2026-08-27"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet menadžmenta i javne uprave",
+      "city": "Sarajevo",
+      "website": "https://fba.ius.edu.ba",
+      "address": "Hrasnička cesta 15, 71210 Ilidža",
+      "phone": "+387 33 957 400",
+      "email": "admission@ius.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ius.edu.ba",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Economics",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "International Business and Finance",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Management",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Political Science and International Relations",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Economics",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Hospitality and Tourism Management",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "International Business and Finance",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "International Relations and Diplomacy",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Management",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Political Science and International Relations",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Economics",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Management",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Political Science and International Relations",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet prirodnih i tehničkih nauka",
+      "city": "Sarajevo",
+      "website": "https://fens.ius.edu.ba",
+      "address": "Hrasnička cesta 15, 71210 Ilidža",
+      "phone": "+387 33 957 200",
+      "email": "admission@ius.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ius.edu.ba",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Architecture",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Computer Sciences and Engineering",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Electrical and Electronics Engineering",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Genetics and Bioengineering",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Industrial Engineering",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Mechanical Engineering",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Software Engineering",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Architecture",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Artificial Intelligence and Data Engineering",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Computer Sciences and Engineering",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Electrical and Electronics Engineering",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Genetics and Bioengineering",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Mechanical Engineering",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Software Engineering",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Computer Sciences and Engineering",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Electrical and Electronics Engineering",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Genetics and Bioengineering",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Industrial Engineering",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Mechanical Engineering",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet umjetnosti i društvenih nauka",
+      "city": "Sarajevo",
+      "website": "https://fass.ius.edu.ba",
+      "address": "Hrasnička cesta 15, 71210 Ilidža",
+      "phone": "+387 33 957 300",
+      "email": "admission@ius.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ius.edu.ba",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Cultural Studies",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "English Language and Literature",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Psychology",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Visual Arts and Visual Communications Design",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "English Language and Literature",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Media and Communication",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Psychology",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Visual Arts and Visual Communications Design",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Cultural Studies",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "English Language and Literature",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Psychology",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Sarajevo",
+      "website": "https://flw.ius.edu.ba",
+      "address": "Hrasnička cesta 15, 71210 Ilidža",
+      "phone": "+387 33 957 485",
+      "email": "admission@ius.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://ius.edu.ba",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Law",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        },
+        {
+          "name": "Law",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://ius.edu.ba"
+        }
+      ]
+    }
+  ]
+}

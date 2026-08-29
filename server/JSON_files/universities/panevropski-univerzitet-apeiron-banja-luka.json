@@ -1,0 +1,252 @@
+{
+  "name": "Panevropski univerzitet Apeiron Banja Luka",
+  "acronym": null,
+  "city": "Banja Luka",
+  "entity": "RS",
+  "ownership": "PRIVATE",
+  "foundedYear": "2005-10-19",
+  "website": "https://apeiron-uni.eu",
+  "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
+  "phone": "+387 51 247 920",
+  "email": "info@apeiron-edu.eu",
+  "accreditationFrom": "2007-08-15",
+  "accreditationTo": "2028-11-23",
+  "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastChecked": "2026-08-29",
+  "facultiesSourceUrl": "https://apeiron-uni.eu/fakulteti-i-organizacione-jedinice/",
+  "facultiesLastChecked": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Fakultet filoloških nauka",
+      "city": "Banja Luka",
+      "website": "https://apeiron-uni.eu/osnovne-studije/fakultet-filoloskih-nauka/",
+      "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
+      "phone": "+387 51 247 920",
+      "email": "info@apeiron-edu.eu",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://apeiron-uni.eu",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Ruski jezik",
+          "cycle": "SECOND",
+          "sourceUrl": "https://apeiron-uni.eu/master-studije-2-ciklus/"
+        },
+        {
+          "name": "Nastavno-prevodilački studijski program ruskog jezika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-filoloskih-nauka/"
+        },
+        {
+          "name": "Ruski jezik",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-filoloskih-nauka/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet informacionih tehnologija",
+      "city": "Banja Luka",
+      "website": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/",
+      "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
+      "phone": "+387 51 247 920",
+      "email": "info@apeiron-edu.eu",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://apeiron-uni.eu",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Nastavnička informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/"
+        },
+        {
+          "name": "Poslovna informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/"
+        },
+        {
+          "name": "Programiranje i softversko inženjerstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/"
+        },
+        {
+          "name": "Računarska bezbjednost i zaštita informacija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/"
+        },
+        {
+          "name": "Računarska multimedija i grafika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet poslovne ekonomije",
+      "city": "Banja Luka",
+      "website": "https://apeiron-uni.eu/osnovne-studije/fakultet-poslovne-ekonomije/",
+      "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
+      "phone": "+387 51 247 920",
+      "email": "info@apeiron-edu.eu",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://apeiron-uni.eu",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Menadžment bankarstva, finansija i trgovine",
+          "cycle": "SECOND",
+          "sourceUrl": "https://apeiron-uni.eu/master-studije-2-ciklus/"
+        },
+        {
+          "name": "Preduzetnički menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://apeiron-uni.eu/master-studije-2-ciklus/"
+        },
+        {
+          "name": "Menadžment bankarstva, finansija i trgovine",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-poslovne-ekonomije/"
+        },
+        {
+          "name": "Menadžment javne uprave",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-poslovne-ekonomije/"
+        },
+        {
+          "name": "Preduzetnički menadžment",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-poslovne-ekonomije/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet pravnih nauka",
+      "city": "Banja Luka",
+      "website": "https://apeiron-uni.eu/osnovne-studije/fakultet-pravnih-nauka/",
+      "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
+      "phone": "+387 51 247 920",
+      "email": "info@apeiron-edu.eu",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://apeiron-uni.eu",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Opšte-pravni studijski program",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-pravnih-nauka/"
+        },
+        {
+          "name": "Poslovno pravo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-pravnih-nauka/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet sportskih nauka",
+      "city": "Banja Luka",
+      "website": "https://apeiron-uni.eu/osnovne-studije/fakultet-sportskih-nauka/",
+      "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
+      "phone": "+387 51 247 920",
+      "email": "info@apeiron-edu.eu",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://apeiron-uni.eu",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Sport u ciljanim grupama",
+          "cycle": "SECOND",
+          "sourceUrl": "https://apeiron-uni.eu/master-studije-2-ciklus/"
+        },
+        {
+          "name": "Sportski menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://apeiron-uni.eu/master-studije-2-ciklus/"
+        },
+        {
+          "name": "Pedagoško-nastavni studijski program u sportu",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-sportskih-nauka/"
+        },
+        {
+          "name": "Sportski menadžment",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-sportskih-nauka/"
+        },
+        {
+          "name": "Sportski trener",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-sportskih-nauka/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet zdravstvenih nauka",
+      "city": "Banja Luka",
+      "website": "https://apeiron-uni.eu/osnovne-studije/fakultet-zdravstvenih-nauka/",
+      "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
+      "phone": "+387 51 247 920",
+      "email": "info@apeiron-edu.eu",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://apeiron-uni.eu",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Menadžment u zdravstvu",
+          "cycle": "SECOND",
+          "sourceUrl": "https://apeiron-uni.eu/master-studije-2-ciklus/"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "SECOND",
+          "sourceUrl": "https://apeiron-uni.eu/master-studije-2-ciklus/"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://apeiron-uni.eu/master-studije-2-ciklus/"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-zdravstvenih-nauka/"
+        },
+        {
+          "name": "Laboratorijsko-medicinski inženjering",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-zdravstvenih-nauka/"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-zdravstvenih-nauka/"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-zdravstvenih-nauka/"
+        }
+      ]
+    },
+    {
+      "name": "Saobraćajni fakultet",
+      "city": "Banja Luka",
+      "website": "https://apeiron-uni.eu/osnovne-studije/saobracajni-fakultet/",
+      "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
+      "phone": "+387 51 247 920",
+      "email": "info@apeiron-edu.eu",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://apeiron-uni.eu",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Drumski saobraćaj i transport",
+          "cycle": "FIRST",
+          "sourceUrl": "https://apeiron-uni.eu/osnovne-studije/saobracajni-fakultet/"
+        }
+      ]
+    }
+  ]
+}

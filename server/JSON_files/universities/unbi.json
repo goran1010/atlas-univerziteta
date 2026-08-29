@@ -1,0 +1,395 @@
+{
+  "name": "Univerzitet u Bihaću",
+  "acronym": "UNBI",
+  "city": "Bihać",
+  "entity": "FBIH",
+  "ownership": "PUBLIC",
+  "foundedYear": "1997",
+  "website": "https://www.unbi.ba",
+  "address": "Pape Ivana Pavla II 2, 77000 Bihać",
+  "phone": "+387 37 222 022",
+  "email": "kabinetrektora@unbi.ba",
+  "accreditationFrom": "2007-08-15",
+  "accreditationTo": "2030-09-11",
+  "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Unsko-sanskog kantona",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastChecked": "2026-08-29",
+  "facultiesSourceUrl": "https://unbi.ba/",
+  "facultiesLastChecked": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Biotehnički fakultet",
+      "city": "Bihać",
+      "website": "https://btf.unbi.ba",
+      "address": "Luke Marjanovića bb, 77000 Bihać",
+      "phone": "+387 37 228 059",
+      "email": "btf@unbi.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+      "studyProgramsLastChecked": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Inženjerstvo u zaštiti okoliša",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Nutricionizam",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Poljoprivreda",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        }
+      ]
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "city": "Bihać",
+      "website": "https://efbi.unbi.ba",
+      "address": "Pape Ivana Pavla II 2, 77000 Bihać",
+      "phone": "+387 37 222 511",
+      "email": "efbi@unbi.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+      "studyProgramsLastChecked": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Finansije, računovodstvo i revizija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastChecked": "2026-08-27"
+        },
+        {
+          "name": "Menadžment i poduzetništvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastChecked": "2026-08-27"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Stručni studij poslovne ekonomije",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Fakultet zdravstvenih studija",
+      "city": "Bihać",
+      "website": "https://fzs.unbi.ba",
+      "address": "Nositelja hrvatskog trolista 4, 77000 Bihać",
+      "phone": "+387 37 227 046",
+      "email": "fzs@unbi.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+      "studyProgramsLastChecked": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Sanitarno inženjerstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastChecked": "2026-08-27"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastChecked": "2026-08-27"
+        },
+        {
+          "name": "Fizikalna terapija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Sanitarno inženjerstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        }
+      ]
+    },
+    {
+      "name": "Islamski pedagoški fakultet",
+      "city": "Bihać",
+      "website": "https://ipf.unbi.ba",
+      "address": "Žegarska aleja 14, 77000 Bihać",
+      "phone": "+387 37 220 162",
+      "email": "info@ipf.unbi.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+      "studyProgramsLastChecked": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Islamska vjeronauka",
+          "cycle": "SECOND",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastChecked": "2026-08-27"
+        },
+        {
+          "name": "Socijalna pedagogija i duhovna skrb",
+          "cycle": "SECOND",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastChecked": "2026-08-27"
+        },
+        {
+          "name": "Islamska vjeronauka",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Socijalna pedagogija i duhovna skrb",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        }
+      ]
+    },
+    {
+      "name": "Pedagoški fakultet",
+      "city": "Bihać",
+      "website": "https://pfb.unbi.ba",
+      "address": "Luke Marjanovića bb, 77000 Bihać",
+      "phone": "+387 37 229 850",
+      "email": "pfb@unbi.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+      "studyProgramsLastChecked": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastChecked": "2026-08-27"
+        },
+        {
+          "name": "Biologija i hemija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Bosanski jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Likovna kultura",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Matematika i informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Muzička kultura",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Njemački jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Predškolski odgoj",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Tjelesni odgoj i sport",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Bihać",
+      "website": "https://prf.unbi.ba",
+      "address": "Džanića mahala 68, 77000 Bihać",
+      "phone": "+387 37 310 990",
+      "email": "prf@unbi.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+      "studyProgramsLastChecked": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Studij prava",
+          "cycle": "SECOND",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastChecked": "2026-08-27"
+        },
+        {
+          "name": "Studij prava",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Studij prava",
+          "cycle": "THIRD",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastChecked": "2026-08-27"
+        }
+      ]
+    },
+    {
+      "name": "Tehnički fakultet",
+      "city": "Bihać",
+      "website": "http://tfb.unbi.ba",
+      "address": "Dr. Irfana Ljubijankića bb, 77000 Bihać",
+      "phone": "+387 37 226 271",
+      "email": "tfb@unbi.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+      "studyProgramsLastChecked": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Master studij TF 4+1",
+          "cycle": "SECOND",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastChecked": "2026-08-27"
+        },
+        {
+          "name": "Elektrotehnički odsjek",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Građevinski odsjek",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Mašinski odsjek",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Tekstilni odsjek",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Šumarstvo i drvna industrija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf",
+          "ects": 240,
+          "durationYears": 4
+        },
+        {
+          "name": "Elektrotehnika i računarstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf"
+        },
+        {
+          "name": "Savremene proizvodne tehnologije",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://unbi.ba/files/media/pdf/6a3393d48d9220.28685323_Konkurs%20za%20upis%20studenata%20na%20I,%20II%20i%20III%20ciklus%202026_27..pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "name": "Slobomir P Univerzitet",
+  "acronym": "SPU",
+  "city": "Banja Luka",
+  "entity": "RS",
+  "ownership": "PRIVATE",
+  "foundedYear": "2004-12-27",
+  "website": "https://spu.ba",
+  "address": "Braće Podgornika 8, 78000 Banja Luka",
+  "phone": "+387 51 345 910",
+  "email": "info@spu.ba",
+  "accreditationFrom": "2022-07-05",
+  "accreditationTo": "2027-07-04",
+  "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastChecked": "2026-08-29",
+  "facultiesSourceUrl": "https://spu.ba/",
+  "facultiesLastChecked": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Akademija umjetnosti",
+      "city": "Banja Luka",
+      "website": "https://au.spu.ba",
+      "address": "Braće Podgornika 8, 78000 Banja Luka",
+      "phone": "+387 51 345 910",
+      "email": "info@spu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Grafički dizajn",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        },
+        {
+          "name": "Muzika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        },
+        {
+          "name": "Muzička teorija i pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        },
+        {
+          "name": "Muzika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        },
+        {
+          "name": "Muzička teorija i pedagogija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za bezbjednost i zaštitu",
+      "city": "Banja Luka",
+      "website": "https://fbz.spu.ba",
+      "address": "Braće Podgornika 8, 78000 Banja Luka",
+      "phone": "+387 51 345 910",
+      "email": "info@spu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Bezbjednost i kriminalistika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
+          "ects": null,
+          "durationYears": null,
+          "tracks": [
+            {
+              "name": "120 ECTS / 2 godine",
+              "ects": 120,
+              "durationYears": 2
+            },
+            {
+              "name": "60 ECTS / 1 godina",
+              "ects": 60,
+              "durationYears": 1
+            }
+          ]
+        },
+        {
+          "name": "Bezbjednost i kriminalistika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
+          "ects": null,
+          "durationYears": null,
+          "tracks": [
+            {
+              "name": "180 ECTS / 3 godine",
+              "ects": 180,
+              "durationYears": 3
+            },
+            {
+              "name": "240 ECTS / 4 godine",
+              "ects": 240,
+              "durationYears": 4
+            }
+          ]
+        },
+        {
+          "name": "Civilna zaštita",
+          "cycle": "FIRST",
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        },
+        {
+          "name": "Privatna bezbjednost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za ekonomiju i menadžment",
+      "city": "Banja Luka",
+      "website": "https://fem.spu.ba",
+      "address": "Braće Podgornika 8, 78000 Banja Luka",
+      "phone": "+387 51 345 910",
+      "email": "info@spu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Ekonomija i menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        },
+        {
+          "name": "Ekonomija i menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za informacione tehnologije",
+      "city": "Banja Luka",
+      "website": "https://fit.spu.ba",
+      "address": "Braće Podgornika 8, 78000 Banja Luka",
+      "phone": "+387 51 345 910",
+      "email": "info@spu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        },
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Filološki fakultet",
+      "city": "Banja Luka",
+      "website": "https://ff.spu.ba",
+      "address": "Braće Podgornika 8, 78000 Banja Luka",
+      "phone": "+387 51 345 910",
+      "email": "info@spu.ba",
+      "lastChecked": "2026-08-29"
+    },
+    {
+      "name": "Poreska akademija",
+      "city": "Banja Luka",
+      "website": "https://pa.spu.ba",
+      "address": "Braće Podgornika 8, 78000 Banja Luka",
+      "phone": "+387 51 345 910",
+      "email": "info@spu.ba",
+      "lastChecked": "2026-08-29"
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Banja Luka",
+      "website": "https://pf.spu.ba",
+      "address": "Braće Podgornika 8, 78000 Banja Luka",
+      "phone": "+387 51 345 910",
+      "email": "info@spu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Pravne studije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        },
+        {
+          "name": "Pravne studije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://spu.ba/wp-content/uploads/2026/05/%D0%A1%D0%9F%D0%A3-%D0%9A%D0%9E%D0%9D%D0%9A%D0%A3%D0%A0%D0%A1-%D0%A3%D0%9F%D0%98%D0%A1-%D0%A1%D0%A2%D0%A3%D0%94%D0%95%D0%9D%D0%90%D0%A2%D0%90-1.pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "name": "Evropski univerzitet Kallos Tuzla",
+  "acronym": null,
+  "city": "Tuzla",
+  "entity": "FBIH",
+  "ownership": "PRIVATE",
+  "foundedYear": "2015-08-28",
+  "website": "https://eukallos.edu.ba",
+  "address": "XVIII hrvatske brigade 8, 75000 Tuzla",
+  "phone": "+387 35 299 091",
+  "email": "ss@eukallos.edu.ba",
+  "accreditationFrom": "2022-08-16",
+  "accreditationTo": "2027-08-16",
+  "authority": "Ministarstvo obrazovanja i nauke Tuzlanskog kantona",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastChecked": "2026-08-29",
+  "facultiesSourceUrl": "https://eukallos.edu.ba/",
+  "facultiesLastChecked": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Ekonomski fakultet",
+      "city": "Tuzla",
+      "website": "https://ef.eukallos.edu.ba",
+      "address": "XVIII hrvatske brigade 8, 75000 Tuzla",
+      "phone": "+387 35 299 091",
+      "email": "ss@eukallos.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Marketing i trgovina",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Menadžment i preduzetništvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Menadžment javne uprave",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Menadžment turizma i sporta",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Ekonomija - opći smjer",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Računovodstvo i revizija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Turizam i ekologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet političkih nauka",
+      "city": "Tuzla",
+      "website": "https://fpn.eukallos.edu.ba",
+      "address": "XVIII hrvatske brigade 8, 75000 Tuzla",
+      "phone": "+387 35 299 091",
+      "email": "ss@eukallos.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Međunarodni odnosi i diplomatija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Žurnalistika i komunikologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet zdravstvenih nauka",
+      "city": "Tuzla",
+      "website": "https://fzn.eukallos.edu.ba",
+      "address": "XVIII hrvatske brigade 8, 75000 Tuzla",
+      "phone": "+387 35 299 091",
+      "email": "ss@eukallos.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Stomatologija",
+          "cycle": "INTEGRATED",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Fizioterapija i radna terapija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Menadžment u sportu",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Radiologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Sanitarni inžinjering",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Sportski trener",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        }
+      ]
+    },
+    {
+      "name": "Medicinski fakultet",
+      "city": "Tuzla",
+      "website": "https://mf.eukallos.edu.ba",
+      "address": "XVIII hrvatske brigade 8, 75000 Tuzla",
+      "phone": "+387 35 299 091",
+      "email": "ss@eukallos.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Biomedicina i zdravstvo",
+          "cycle": "THIRD",
+          "sourceUrl": "https://eukallos.edu.ba"
+        }
+      ]
+    },
+    {
+      "name": "Pedagoški fakultet",
+      "city": "Tuzla",
+      "website": "https://pdf.eukallos.edu.ba",
+      "address": "XVIII hrvatske brigade 8, 75000 Tuzla",
+      "phone": "+387 35 299 091",
+      "email": "ss@eukallos.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Geografija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Informatika i tehnika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Razredna nastava sa defektologijom",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Razredna nastava sa engleskim jezikom",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Vaspitač predškolskih ustanova",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Tuzla",
+      "website": "https://pf.eukallos.edu.ba",
+      "address": "XVIII hrvatske brigade 8, 75000 Tuzla",
+      "phone": "+387 35 299 091",
+      "email": "ss@eukallos.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Bezbjednost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Forenzika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Opće pravo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        }
+      ]
+    },
+    {
+      "name": "Tehnički fakultet",
+      "city": "Tuzla",
+      "website": "https://tf.eukallos.edu.ba",
+      "address": "XVIII hrvatske brigade 8, 75000 Tuzla",
+      "phone": "+387 35 299 091",
+      "email": "ss@eukallos.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
+      "studyProgramsLastChecked": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Aerodromi/putevi i željeznice",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Bezbjednost u saobraćaju",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Drumski saobraćaj",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Geodezija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Hidrotehnika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Inženjerska informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Konstrukcije",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Menadžment u saobraćaju",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        },
+        {
+          "name": "Poljoprivreda",
+          "cycle": "FIRST",
+          "sourceUrl": "https://eukallos.edu.ba"
+        }
+      ]
+    }
+  ]
+}

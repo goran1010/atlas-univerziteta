@@ -1,0 +1,258 @@
+{
+  "name": "Sveučilište/Univerzitet Vitez",
+  "acronym": "UNVI",
+  "city": "Travnik",
+  "entity": "FBIH",
+  "ownership": "PRIVATE",
+  "foundedYear": "2007-06-29",
+  "website": "https://unvi.edu.ba",
+  "address": "Školska 23, 72270 Travnik",
+  "phone": "+387 30 509 750",
+  "email": "info@unvi.edu.ba",
+  "accreditationFrom": "2007-08-15",
+  "accreditationTo": "2026-06-10",
+  "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastChecked": "2026-08-29",
+  "facultiesSourceUrl": "https://unvi.edu.ba/fakulteti/",
+  "facultiesLastChecked": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Fakultet informacijskih tehnologija",
+      "city": "Travnik",
+      "website": "https://sveuciliste.unvi.edu.ba/fakultet-informacionih-tehnologija/",
+      "address": "Školska 23, 72270 Travnik",
+      "phone": "+387 30 509 750",
+      "email": "info@unvi.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://sveuciliste.unvi.edu.ba/",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Cybersecurity - Kibernetička sigurnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Informacijske tehnologije",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Poslovna informatika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Informacijske tehnologije",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Poslovna informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Softverski inženjering",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Informacijske tehnologije",
+          "cycle": "THIRD",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Poslovna informatika",
+          "cycle": "THIRD",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet poslovne ekonomije",
+      "city": "Travnik",
+      "website": "https://sveuciliste.unvi.edu.ba/fakultet-poslovne-ekonomije/",
+      "address": "Školska 23, 72270 Travnik",
+      "phone": "+387 30 509 750",
+      "email": "info@unvi.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://sveuciliste.unvi.edu.ba/",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Digitalna ekonomija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Financije, računovodstvo i revizija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Marketing menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Menadžment u zdravstvu",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Poduzetnički menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Poduzetništvo i menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Digitalna ekonomija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Financije, računovodstvo i revizija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Marketing menadžment",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Poduzetnički menadžment",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Poduzetništvo i menadžment",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Poslovna informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Financije, računovodstvo i revizija",
+          "cycle": "THIRD",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Poduzetnički menadžment",
+          "cycle": "THIRD",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet zdravstvenih studija",
+      "city": "Travnik",
+      "website": "https://sveuciliste.unvi.edu.ba/fakultet-zdravstvenih-studija/",
+      "address": "Školska 23, 72270 Travnik",
+      "phone": "+387 30 509 750",
+      "email": "info@unvi.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://sveuciliste.unvi.edu.ba/",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapija i radna terapija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Kozmetologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Fizioterapija i radna terapija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Kozmetologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Fizioterapija i radna terapija",
+          "cycle": "THIRD",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "THIRD",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "THIRD",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Travnik",
+      "website": "https://sveuciliste.unvi.edu.ba/pravni-fakultet/",
+      "address": "Školska 23, 72270 Travnik",
+      "phone": "+387 30 509 750",
+      "email": "info@unvi.edu.ba",
+      "lastChecked": "2026-08-29",
+      "studyProgramsSourceUrl": "https://sveuciliste.unvi.edu.ba/",
+      "studyProgramsLastChecked": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Opće pravo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Opće pravo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Sigurnost i kriminalistika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        },
+        {
+          "name": "Opće pravo",
+          "cycle": "THIRD",
+          "sourceUrl": "https://sveuciliste.unvi.edu.ba/"
+        }
+      ]
+    }
+  ]
+}
