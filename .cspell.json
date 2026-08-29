@@ -74,7 +74,17 @@
     "IZBORNI",
     "STRUCNI",
     "SPECIJALISTICKI",
-    "smjer"
+    "smjer",
+    "CREATEDB",
+    "Adresa",
+    "JAVNI",
+    "PRIVATNI",
+    "TREĆI",
+    "STRUČNI",
+    "SPECIJALISTIČKI",
+    "Obala",
+    "Kulina",
+    "bana"
   ],
   "ignoreWords": [],
   "import": ["@cspell/cspell-bundled-dicts"]
