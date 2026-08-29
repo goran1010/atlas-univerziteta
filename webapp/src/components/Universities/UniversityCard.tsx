@@ -315,6 +315,17 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
 
   const entityLabel = t(`universitiesPage.entities.${university.entity}`);
 
+  // Faculties grouped by city (faculty city falls back to the university's);
+  // the university's own city first, the rest alphabetically. Grouped display
+  // only kicks in when there is more than one city.
+  const facultyCityGroups = detailData
+    ? groupBy(detailData.faculties, (f) => f.city ?? university.city).toSorted(
+        (a, b) =>
+          Number(b.key === university.city) -
+            Number(a.key === university.city) || a.key.localeCompare(b.key),
+      )
+    : [];
+
   return (
     <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) hover:bg-(--hover-surface) transition-colors">
       <div className="p-3 sm:p-4">
@@ -409,11 +420,23 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                   {detailData.faculties.length}{" "}
                   {t("universitiesPage.faculties")}
                 </p>
-                <ul className="space-y-1">
-                  {detailData.faculties.map((f) => (
-                    <FacultyRow key={f.id} faculty={f} t={t} />
-                  ))}
-                </ul>
+                {facultyCityGroups.length > 1 ? (
+                  <div className="flex flex-col gap-2">
+                    {facultyCityGroups.map((g) => (
+                      <ResultGroup key={g.key} label={g.key}>
+                        {g.items.map((f) => (
+                          <FacultyRow key={f.id} faculty={f} t={t} />
+                        ))}
+                      </ResultGroup>
+                    ))}
+                  </div>
+                ) : (
+                  <ul className="space-y-1">
+                    {detailData.faculties.map((f) => (
+                      <FacultyRow key={f.id} faculty={f} t={t} />
+                    ))}
+                  </ul>
+                )}
               </>
             ) : (
               <p className="text-sm text-(--text-muted) italic">
