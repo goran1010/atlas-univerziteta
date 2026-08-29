@@ -8,8 +8,6 @@
     "db:deploy_generate": "cd server && npm run db:deploy_generate",
     "db:generate": "cd server && npm run db:generate",
     "db:seed": "cd server && npm run db:seed",
-    "db:test:deploy_generate": "cd server && npm run db:test:deploy_generate",
-    "db:test:seed": "cd server && npm run db:test:seed",
     "dev:all": "concurrently \"npm run dev:server\" \"npm run dev:webapp\"",
     "dev:server": "cd server && npm run dev",
     "dev:webapp": "cd webapp && npm run dev",

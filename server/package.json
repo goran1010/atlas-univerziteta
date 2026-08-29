@@ -12,8 +12,6 @@
     "db:deploy_generate": "npx prisma migrate deploy && npx prisma generate",
     "db:generate": "npx prisma generate",
     "db:seed": "npx prisma db seed",
-    "db:test:deploy_generate": "NODE_ENV=test npx prisma migrate deploy && NODE_ENV=test npx prisma generate",
-    "db:test:seed": "NODE_ENV=test npx prisma db seed",
     "prisma_studio": "npx prisma studio",
     "test": "NODE_ENV=test vitest",
     "start": "node --env-file-if-exists=.env dist/index.js",
