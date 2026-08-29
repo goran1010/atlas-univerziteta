@@ -59,13 +59,12 @@ const studyProgramResult = {
   },
 };
 
-const subjectResult = {
+const trackResult = {
   id: 11,
-  name: "Computer Networks",
+  name: "Software Engineering Track",
   studyProgramId: 7,
-  semester: 4,
-  ects: 6,
-  type: "MANDATORY",
+  ects: 60,
+  durationYears: 1,
   studyProgram: {
     id: 7,
     name: "Computer Science",
@@ -89,7 +88,7 @@ function searchResponse(
     universities: unknown[];
     faculties: unknown[];
     studyPrograms: unknown[];
-    subjects: unknown[];
+    tracks: unknown[];
   }> = {},
 ) {
   return new Response(
@@ -99,7 +98,7 @@ function searchResponse(
         universities: [],
         faculties: [],
         studyPrograms: [],
-        subjects: [],
+        tracks: [],
         ...data,
       },
     }),
@@ -114,7 +113,7 @@ describe("UnifiedSearch", () => {
         universities: [universityResult],
         faculties: [facultyResult],
         studyPrograms: [studyProgramResult],
-        subjects: [subjectResult],
+        tracks: [trackResult],
       }),
     );
   });
@@ -188,14 +187,14 @@ describe("UnifiedSearch", () => {
       screen.getByRole("heading", { name: /^Study programs/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /^Subjects/i }),
+      screen.getByRole("heading", { name: /^Tracks/i }),
     ).toBeInTheDocument();
     expect(universityName).toBeInTheDocument();
     expect(
       screen.getAllByText(/Faculty of Electrical Engineering/i).length,
     ).toBeGreaterThan(0);
     expect(screen.getAllByText(/Computer Science/i).length).toBeGreaterThan(0);
-    expect(screen.getByText(/Computer Networks/i)).toBeInTheDocument();
+    expect(screen.getByText(/Software Engineering Track/i)).toBeInTheDocument();
   });
 
   test("shows the faculty city in faculty results", async () => {
@@ -255,7 +254,7 @@ describe("UnifiedSearch", () => {
 
     expect(screen.getByText(/^No universities found\.$/i)).toBeInTheDocument();
     expect(screen.getByText(/^No faculties found\.$/i)).toBeInTheDocument();
-    expect(screen.getByText(/^No subjects found\.$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^No tracks found\.$/i)).toBeInTheDocument();
   });
 
   test("shows translated error on non-404 non-ok response", async () => {

@@ -9,7 +9,6 @@ const EMPTY_RESULTS: UnifiedSearchResults = {
   faculties: [],
   studyPrograms: [],
   tracks: [],
-  subjects: [],
 };
 
 async function searchAll(term: string): Promise<UnifiedSearchResults> {

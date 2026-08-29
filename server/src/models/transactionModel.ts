@@ -5,8 +5,6 @@ import {
   facultyEditDataSchema,
   studyProgramCreateDataSchema,
   studyProgramEditDataSchema,
-  subjectCreateDataSchema,
-  subjectEditDataSchema,
   trackCreateDataSchema,
   trackEditDataSchema,
   universityCreateDataSchema,
@@ -20,8 +18,6 @@ import type {
   FacultyEditData,
   StudyProgramCreateData,
   StudyProgramEditData,
-  SubjectCreateData,
-  SubjectEditData,
   TrackCreateData,
   TrackEditData,
   UniversityCreateData,
@@ -117,30 +113,6 @@ function toStudyProgramUpdateInput(
     }),
     ...(data.ects !== undefined && { ects: data.ects }),
     ...(data.language !== undefined && { language: data.language }),
-  };
-}
-
-function toSubjectCreateInput(
-  data: SubjectCreateData,
-  studyProgramId: number,
-): Prisma.SubjectUncheckedCreateInput {
-  return {
-    name: data.name,
-    studyProgramId,
-    ...(data.semester !== undefined && { semester: data.semester }),
-    ...(data.ects !== undefined && { ects: data.ects }),
-    ...(data.type !== undefined && { type: data.type }),
-  };
-}
-
-function toSubjectUpdateInput(
-  data: SubjectEditData,
-): Prisma.SubjectUpdateInput {
-  return {
-    ...(data.name !== undefined && { name: data.name }),
-    ...(data.semester !== undefined && { semester: data.semester }),
-    ...(data.ects !== undefined && { ects: data.ects }),
-    ...(data.type !== undefined && { type: data.type }),
   };
 }
 
@@ -328,52 +300,11 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
       return deletePendingChange();
     }
 
-    if (entityType === "TRACK") {
-      if (typeOfChange === "DELETE") {
-        if (targetId === null) return false;
-
-        await tx.track.delete({ where: { id: targetId } });
-        return deletePendingChange();
-      }
-
-      if (typeOfChange === "CREATE") {
-        if (parentId === null) return false;
-
-        const data = parsePendingChangeData(
-          trackCreateDataSchema,
-          pendingChange.data,
-          id,
-        );
-        if (!data) return false;
-
-        await tx.track.create({
-          data: toTrackCreateInput(data, parentId),
-        });
-
-        return deletePendingChange();
-      }
-
-      if (targetId === null) return false;
-
-      const data = parsePendingChangeData(
-        trackEditDataSchema,
-        pendingChange.data,
-        id,
-      );
-      if (!data) return false;
-
-      await tx.track.update({
-        where: { id: targetId },
-        data: toTrackUpdateInput(data),
-      });
-
-      return deletePendingChange();
-    }
-
+    // entityType === "TRACK" is the only remaining case
     if (typeOfChange === "DELETE") {
       if (targetId === null) return false;
 
-      await tx.subject.delete({ where: { id: targetId } });
+      await tx.track.delete({ where: { id: targetId } });
       return deletePendingChange();
     }
 
@@ -381,14 +312,14 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
       if (parentId === null) return false;
 
       const data = parsePendingChangeData(
-        subjectCreateDataSchema,
+        trackCreateDataSchema,
         pendingChange.data,
         id,
       );
       if (!data) return false;
 
-      await tx.subject.create({
-        data: toSubjectCreateInput(data, parentId),
+      await tx.track.create({
+        data: toTrackCreateInput(data, parentId),
       });
 
       return deletePendingChange();
@@ -397,15 +328,15 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
     if (targetId === null) return false;
 
     const data = parsePendingChangeData(
-      subjectEditDataSchema,
+      trackEditDataSchema,
       pendingChange.data,
       id,
     );
     if (!data) return false;
 
-    await tx.subject.update({
+    await tx.track.update({
       where: { id: targetId },
-      data: toSubjectUpdateInput(data),
+      data: toTrackUpdateInput(data),
     });
 
     return deletePendingChange();

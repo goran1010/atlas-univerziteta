@@ -1,11 +1,6 @@
 import type { PendingChange } from "../../schemas/pendingChange";
 
-export type EntityType =
-  | "UNIVERSITY"
-  | "FACULTY"
-  | "STUDY_PROGRAM"
-  | "SUBJECT"
-  | "TRACK";
+export type EntityType = "UNIVERSITY" | "FACULTY" | "STUDY_PROGRAM" | "TRACK";
 export type TypeOfChange = "CREATE" | "UPDATE" | "DELETE";
 export type Cycle =
   | "FIRST"
@@ -14,7 +9,6 @@ export type Cycle =
   | "INTEGRATED"
   | "VOCATIONAL"
   | "SPECIALIST";
-export type SubjectType = "MANDATORY" | "ELECTIVE";
 export type Entity = "FBIH" | "RS" | "BD";
 
 export interface ContributionFormDraft {
@@ -32,8 +26,6 @@ export interface ContributionFormDraft {
   durationYears?: number;
   ects?: number;
   language?: string;
-  semester?: number;
-  type?: SubjectType;
 }
 
 export interface ContributionFormState {

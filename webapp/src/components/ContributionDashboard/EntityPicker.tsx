@@ -16,7 +16,6 @@ import type {
   UniversityDetail,
   UniversityDetailFaculty,
   UniversityDetailStudyProgram,
-  UniversityDetailSubject,
   UniversityDetailTrack,
   UniversityListItem,
 } from "../../schemas/university";
@@ -24,10 +23,7 @@ export type PickedEntity =
   | { type: "UNIVERSITY"; data: UniversityListItem }
   | { type: "FACULTY"; data: UniversityDetailFaculty }
   | { type: "STUDY_PROGRAM"; data: UniversityDetailStudyProgram }
-  | { type: "SUBJECT"; data: UniversityDetailSubject }
   | { type: "TRACK"; data: UniversityDetailTrack };
-
-export type PickerLeafType = "SUBJECT" | "TRACK";
 
 interface LevelSelectProps {
   id: string;
@@ -79,7 +75,6 @@ interface EntityPickerProps {
   depth: number;
   legend: string;
   showSelectedDetails: boolean;
-  leafType?: PickerLeafType;
   onSelect: (id: string) => void;
 }
 
@@ -87,7 +82,6 @@ function EntityPicker({
   depth,
   legend,
   showSelectedDetails,
-  leafType = "SUBJECT",
   onSelect,
 }: EntityPickerProps) {
   const { t, addNotification } = use(RootContext);
@@ -102,7 +96,7 @@ function EntityPicker({
   const [selUniversity, setSelUniversity] = useState("");
   const [selFaculty, setSelFaculty] = useState("");
   const [selProgram, setSelProgram] = useState("");
-  const [selSubject, setSelSubject] = useState("");
+  const [selTrack, setSelTrack] = useState("");
   const [loadingList, setLoadingList] = useState(true);
   const [loadingDetail, setLoadingDetail] = useState(false);
 
@@ -144,7 +138,7 @@ function EntityPicker({
     setSelUniversity(value);
     setSelFaculty("");
     setSelProgram("");
-    setSelSubject("");
+    setSelTrack("");
     setDetail(undefined);
     onSelect(depth === 1 ? value : "");
     if (!value || depth === 1) return;
@@ -182,18 +176,18 @@ function EntityPicker({
   function handleFacultyChange(value: string) {
     setSelFaculty(value);
     setSelProgram("");
-    setSelSubject("");
+    setSelTrack("");
     onSelect(depth === 2 ? value : "");
   }
 
   function handleProgramChange(value: string) {
     setSelProgram(value);
-    setSelSubject("");
+    setSelTrack("");
     onSelect(depth === 3 ? value : "");
   }
 
-  function handleSubjectChange(value: string) {
-    setSelSubject(value);
+  function handleTrackChange(value: string) {
+    setSelTrack(value);
     onSelect(value);
   }
 
@@ -203,10 +197,7 @@ function EntityPicker({
   const selectedProgram = studyPrograms.find(
     (sp) => String(sp.id) === selProgram,
   );
-  const leafOptions =
-    leafType === "TRACK"
-      ? (selectedProgram?.tracks ?? [])
-      : (selectedProgram?.subjects ?? []);
+  const leafOptions = selectedProgram?.tracks ?? [];
 
   let pickedEntity: PickedEntity | undefined;
   if (depth === 1 && selUniversity) {
@@ -218,18 +209,11 @@ function EntityPicker({
   } else if (depth === 3 && selProgram) {
     const program = studyPrograms.find((sp) => String(sp.id) === selProgram);
     if (program) pickedEntity = { type: "STUDY_PROGRAM", data: program };
-  } else if (depth === 4 && selSubject) {
-    if (leafType === "TRACK") {
-      const track = (selectedProgram?.tracks ?? []).find(
-        (tr) => String(tr.id) === selSubject,
-      );
-      if (track) pickedEntity = { type: "TRACK", data: track };
-    } else {
-      const subject = (selectedProgram?.subjects ?? []).find(
-        (s) => String(s.id) === selSubject,
-      );
-      if (subject) pickedEntity = { type: "SUBJECT", data: subject };
-    }
+  } else if (depth === 4 && selTrack) {
+    const track = (selectedProgram?.tracks ?? []).find(
+      (tr) => String(tr.id) === selTrack,
+    );
+    if (track) pickedEntity = { type: "TRACK", data: track };
   }
 
   let deeperLevels: ReactNode = null;
@@ -266,13 +250,13 @@ function EntityPicker({
         {depth >= 4 && (
           <LevelSelect
             id="pickerLeaf"
-            label={t(`contribution.entityTypes.${leafType}`)}
-            value={selSubject}
+            label={t("contribution.entityTypes.TRACK")}
+            value={selTrack}
             disabled={!selProgram}
-            emptyMessage={t(`contribution.picker.noChildren.${leafType}`)}
+            emptyMessage={t("contribution.picker.noChildren.TRACK")}
             placeholder={t("contribution.picker.placeholder")}
             options={leafOptions.map((o) => ({ id: o.id, label: o.name }))}
-            onChange={handleSubjectChange}
+            onChange={handleTrackChange}
           />
         )}
       </>

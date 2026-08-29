@@ -201,7 +201,34 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects"
+          "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+          "tracks": [
+            {
+              "name": "Računovodstvo i financije",
+              "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Marketing",
+              "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Menadžment",
+              "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Poslovna informatika",
+              "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Poslovanje s EU",
+              "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         },
         {
           "name": "Poslovna ekonomija",

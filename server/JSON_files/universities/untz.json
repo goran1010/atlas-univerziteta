@@ -994,7 +994,27 @@
         {
           "name": "Studijski program trećeg ciklusa - doktorskog studija",
           "cycle": "THIRD",
-          "sourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/"
+          "sourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "ects": 180,
+          "durationYears": 3,
+          "lastChecked": "2026-08-29",
+          "tracks": [
+            {
+              "name": "Hemijsko inženjerstvo",
+              "sourceUrl": "https://tf.untz.ba/wp-content/uploads/2023/10/III_ciklus-studija-u-primjeni-od-ak.2023.-2024..pdf",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Inženjerstvo zaštite okoline",
+              "sourceUrl": "https://tf.untz.ba/wp-content/uploads/2023/10/III_ciklus-studija-u-primjeni-od-ak.2023.-2024..pdf",
+              "lastChecked": "2026-08-29"
+            },
+            {
+              "name": "Prehrambeno inženjerstvo",
+              "sourceUrl": "https://tf.untz.ba/wp-content/uploads/2023/10/III_ciklus-studija-u-primjeni-od-ak.2023.-2024..pdf",
+              "lastChecked": "2026-08-29"
+            }
+          ]
         }
       ]
     }

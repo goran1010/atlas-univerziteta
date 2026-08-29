@@ -95,8 +95,8 @@ describe("getPickerDepth", () => {
     ["FACULTY", "UPDATE", 2],
     ["STUDY_PROGRAM", "CREATE", 2],
     ["STUDY_PROGRAM", "DELETE", 3],
-    ["SUBJECT", "CREATE", 3],
-    ["SUBJECT", "UPDATE", 4],
+    ["TRACK", "CREATE", 3],
+    ["TRACK", "UPDATE", 4],
   ] as const)("%s + %s needs depth %i", (entityType, typeOfChange, depth) => {
     expect(getPickerDepth(entityType, typeOfChange)).toBe(depth);
   });

@@ -11,8 +11,6 @@ import {
   facultyEditDataSchema,
   studyProgramCreateDataSchema,
   studyProgramEditDataSchema,
-  subjectCreateDataSchema,
-  subjectEditDataSchema,
   trackCreateDataSchema,
   trackEditDataSchema,
   universityCreateDataSchema,
@@ -54,13 +52,6 @@ const pendingChangeSchema = z.union([
     data: studyProgramCreateDataSchema,
   }),
   pendingChangeBaseSchema.extend({
-    entityType: z.literal("SUBJECT"),
-    typeOfChange: z.literal("CREATE"),
-    targetId: z.null(),
-    parentId: positiveIntegerSchema,
-    data: subjectCreateDataSchema,
-  }),
-  pendingChangeBaseSchema.extend({
     entityType: z.literal("TRACK"),
     typeOfChange: z.literal("CREATE"),
     targetId: z.null(),
@@ -87,13 +78,6 @@ const pendingChangeSchema = z.union([
     targetId: positiveIntegerSchema,
     parentId: z.null(),
     data: studyProgramEditDataSchema,
-  }),
-  pendingChangeBaseSchema.extend({
-    entityType: z.literal("SUBJECT"),
-    typeOfChange: z.literal("UPDATE"),
-    targetId: positiveIntegerSchema,
-    parentId: z.null(),
-    data: subjectEditDataSchema,
   }),
   pendingChangeBaseSchema.extend({
     entityType: z.literal("TRACK"),

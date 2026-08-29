@@ -28,7 +28,6 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
     UNIVERSITY: [],
     FACULTY: [],
     STUDY_PROGRAM: [],
-    SUBJECT: [],
     TRACK: [],
   };
 
@@ -38,105 +37,81 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
     }
   }
 
-  const [universities, faculties, studyPrograms, subjects, tracks] =
-    await Promise.all([
-      targetIds.UNIVERSITY.length > 0
-        ? prisma.university.findMany({
-            where: { id: { in: targetIds.UNIVERSITY } },
-            select: {
-              id: true,
-              name: true,
-              city: true,
-              entity: true,
-              ownership: true,
-              foundedYear: true,
-              website: true,
-              address: true,
-              phone: true,
-              email: true,
-            },
-          })
-        : [],
-      targetIds.FACULTY.length > 0
-        ? prisma.faculty.findMany({
-            where: { id: { in: targetIds.FACULTY } },
-            select: {
-              id: true,
-              name: true,
-              city: true,
-              website: true,
-              address: true,
-              phone: true,
-              email: true,
-              university: { select: { name: true } },
-            },
-          })
-        : [],
-      targetIds.STUDY_PROGRAM.length > 0
-        ? prisma.studyProgram.findMany({
-            where: { id: { in: targetIds.STUDY_PROGRAM } },
-            select: {
-              id: true,
-              name: true,
-              cycle: true,
-              durationYears: true,
-              ects: true,
-              language: true,
-              faculty: {
-                select: {
-                  name: true,
-                  university: { select: { name: true } },
-                },
+  const [universities, faculties, studyPrograms, tracks] = await Promise.all([
+    targetIds.UNIVERSITY.length > 0
+      ? prisma.university.findMany({
+          where: { id: { in: targetIds.UNIVERSITY } },
+          select: {
+            id: true,
+            name: true,
+            city: true,
+            entity: true,
+            ownership: true,
+            foundedYear: true,
+            website: true,
+            address: true,
+            phone: true,
+            email: true,
+          },
+        })
+      : [],
+    targetIds.FACULTY.length > 0
+      ? prisma.faculty.findMany({
+          where: { id: { in: targetIds.FACULTY } },
+          select: {
+            id: true,
+            name: true,
+            city: true,
+            website: true,
+            address: true,
+            phone: true,
+            email: true,
+            university: { select: { name: true } },
+          },
+        })
+      : [],
+    targetIds.STUDY_PROGRAM.length > 0
+      ? prisma.studyProgram.findMany({
+          where: { id: { in: targetIds.STUDY_PROGRAM } },
+          select: {
+            id: true,
+            name: true,
+            cycle: true,
+            durationYears: true,
+            ects: true,
+            language: true,
+            faculty: {
+              select: {
+                name: true,
+                university: { select: { name: true } },
               },
             },
-          })
-        : [],
-      targetIds.SUBJECT.length > 0
-        ? prisma.subject.findMany({
-            where: { id: { in: targetIds.SUBJECT } },
-            select: {
-              id: true,
-              name: true,
-              semester: true,
-              ects: true,
-              type: true,
-              studyProgram: {
-                select: {
-                  name: true,
-                  faculty: {
-                    select: {
-                      name: true,
-                      university: { select: { name: true } },
-                    },
+          },
+        })
+      : [],
+    targetIds.TRACK.length > 0
+      ? prisma.track.findMany({
+          where: { id: { in: targetIds.TRACK } },
+          select: {
+            id: true,
+            name: true,
+            ects: true,
+            durationYears: true,
+            studyProgram: {
+              select: {
+                name: true,
+                faculty: {
+                  select: {
+                    name: true,
+                    university: { select: { name: true } },
                   },
                 },
               },
             },
-          })
-        : [],
-      targetIds.TRACK.length > 0
-        ? prisma.track.findMany({
-            where: { id: { in: targetIds.TRACK } },
-            select: {
-              id: true,
-              name: true,
-              ects: true,
-              durationYears: true,
-              studyProgram: {
-                select: {
-                  name: true,
-                  faculty: {
-                    select: {
-                      name: true,
-                      university: { select: { name: true } },
-                    },
-                  },
-                },
-              },
-            },
-          })
-        : [],
-    ]);
+          },
+        })
+      : [],
+  ]);
 
   // Build maps for currentEntity (strip relation fields from the response)
   const entityMaps: Record<entityType, Map<number, object>> = {
@@ -157,18 +132,6 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
           durationYears: sp.durationYears,
           ects: sp.ects,
           language: sp.language,
-        },
-      ]),
-    ),
-    SUBJECT: new Map(
-      subjects.map((s) => [
-        s.id,
-        {
-          id: s.id,
-          name: s.name,
-          semester: s.semester,
-          ects: s.ects,
-          type: s.type,
         },
       ]),
     ),
@@ -195,12 +158,6 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
         `${sp.faculty.university.name} › ${sp.faculty.name}`,
       ]),
     ),
-    SUBJECT: new Map(
-      subjects.map((s) => [
-        s.id,
-        `${s.studyProgram.faculty.university.name} › ${s.studyProgram.faculty.name} › ${s.studyProgram.name}`,
-      ]),
-    ),
     TRACK: new Map(
       tracks.map((tr) => [
         tr.id,
@@ -213,7 +170,6 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
   // parentId points to the direct parent:
   //   FACULTY CREATE -> parentId = universityId
   //   STUDY_PROGRAM CREATE -> parentId = facultyId
-  //   SUBJECT CREATE -> parentId = studyProgramId
   //   TRACK CREATE -> parentId = studyProgramId
   const createParentIds: Record<
     "UNIVERSITY" | "FACULTY" | "STUDY_PROGRAM",
@@ -230,7 +186,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
         createParentIds.UNIVERSITY.push(pc.parentId);
       } else if (pc.entityType === "STUDY_PROGRAM") {
         createParentIds.FACULTY.push(pc.parentId);
-      } else if (pc.entityType === "SUBJECT" || pc.entityType === "TRACK") {
+      } else if (pc.entityType === "TRACK") {
         createParentIds.STUDY_PROGRAM.push(pc.parentId);
       }
     }
@@ -290,7 +246,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
       return parentUniversityMap.get(pc.parentId) ?? null;
     if (pc.entityType === "STUDY_PROGRAM")
       return parentFacultyMap.get(pc.parentId) ?? null;
-    if (pc.entityType === "SUBJECT" || pc.entityType === "TRACK")
+    if (pc.entityType === "TRACK")
       return parentStudyProgramMap.get(pc.parentId) ?? null;
     return null;
   }

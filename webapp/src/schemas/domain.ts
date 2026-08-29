@@ -4,7 +4,6 @@ const entityTypeSchema = z.enum([
   "UNIVERSITY",
   "FACULTY",
   "STUDY_PROGRAM",
-  "SUBJECT",
   "TRACK",
 ]);
 const entitySchema = z.enum(["FBIH", "RS", "BD"]);
@@ -17,14 +16,12 @@ const studyCycleSchema = z.enum([
   "VOCATIONAL",
   "SPECIALIST",
 ]);
-const subjectTypeSchema = z.enum(["MANDATORY", "ELECTIVE"]);
 const userRoleSchema = z.enum(["ADMIN", "USER"]);
 
 const integerSchema = z.number().int();
 const positiveIntegerSchema = integerSchema.positive();
 const durationYearsSchema = integerSchema.min(1).max(10);
 const ectsSchema = positiveIntegerSchema;
-const semesterSchema = integerSchema.min(1).max(12);
 const searchTermSchema = z
   .string()
   .trim()
@@ -39,9 +36,7 @@ export {
   integerSchema,
   ownershipSchema,
   positiveIntegerSchema,
-  semesterSchema,
   searchTermSchema,
   studyCycleSchema,
-  subjectTypeSchema,
   userRoleSchema,
 };

@@ -144,12 +144,6 @@ describe("GET /api/v1/universities/:id", () => {
               create: {
                 name: "Test Integration Study Program By ID",
                 cycle: "FIRST",
-                subjects: {
-                  create: {
-                    name: "Test Integration Subject By ID",
-                    type: "MANDATORY",
-                  },
-                },
               },
             },
           },
@@ -169,23 +163,12 @@ describe("GET /api/v1/universities/:id", () => {
     expect(data["name"]).toBe(uniInDb.name);
     const faculties = getResponseArray(data["faculties"]);
     const studyPrograms = getResponseArray(faculties[0]?.["studyPrograms"]);
-    const subjects = getResponseArray(studyPrograms[0]?.["subjects"]);
 
     expect(faculties[0]?.["name"]).toBe("Test Integration Faculty By ID");
     expect(studyPrograms[0]?.["name"]).toBe(
       "Test Integration Study Program By ID",
     );
-    expect(subjects[0]?.["name"]).toBe("Test Integration Subject By ID");
 
-    await prisma.subject.deleteMany({
-      where: {
-        studyProgram: {
-          faculty: {
-            universityId: uniInDb.id,
-          },
-        },
-      },
-    });
     await prisma.studyProgram.deleteMany({
       where: { faculty: { universityId: uniInDb.id } },
     });
@@ -207,7 +190,7 @@ describe("GET /api/v1/universities/:id", () => {
 });
 
 describe("GET /api/v1/search - related entities", () => {
-  test("responds with grouped faculties, study programs, and subjects including parent data", async () => {
+  test("responds with grouped faculties and study programs including parent data", async () => {
     const university = await prisma.university.create({
       data: {
         name: "Test Integration Unified Search University",
@@ -221,12 +204,6 @@ describe("GET /api/v1/search - related entities", () => {
               create: {
                 name: "Test Integration Unified Search Program",
                 cycle: "FIRST",
-                subjects: {
-                  create: {
-                    name: "Test Integration Unified Search Subject",
-                    type: "MANDATORY",
-                  },
-                },
               },
             },
           },
@@ -243,7 +220,6 @@ describe("GET /api/v1/search - related entities", () => {
     const universities = getResponseArray(data["universities"]);
     const faculties = getResponseArray(data["faculties"]);
     const studyPrograms = getResponseArray(data["studyPrograms"]);
-    const subjects = getResponseArray(data["subjects"]);
 
     expect(response.status).toBe(200);
     expect(universities.some((u) => u["name"] === university.name)).toBe(true);
@@ -262,19 +238,6 @@ describe("GET /api/v1/search - related entities", () => {
     const programUniversity = getResponseObject(programFaculty["university"]);
     expect(programUniversity["id"]).toBe(university.id);
 
-    const subject = subjects.find(
-      (s) => s["name"] === "Test Integration Unified Search Subject",
-    );
-    const subjectProgram = getResponseObject(subject?.["studyProgram"]);
-    const subjectFaculty = getResponseObject(subjectProgram["faculty"]);
-    const subjectUniversity = getResponseObject(subjectFaculty["university"]);
-    expect(subjectUniversity["id"]).toBe(university.id);
-
-    await prisma.subject.deleteMany({
-      where: {
-        studyProgram: { faculty: { universityId: university.id } },
-      },
-    });
     await prisma.studyProgram.deleteMany({
       where: { faculty: { universityId: university.id } },
     });
@@ -290,7 +253,7 @@ describe("GET /api/v1/search - diacritic-insensitive matching", () => {
       where: { name: testUniversityName },
     });
     for (const u of existing) {
-      await prisma.subject.deleteMany({
+      await prisma.track.deleteMany({
         where: { studyProgram: { faculty: { universityId: u.id } } },
       });
       await prisma.studyProgram.deleteMany({
@@ -313,10 +276,9 @@ describe("GET /api/v1/search - diacritic-insensitive matching", () => {
               create: {
                 name: "Test Diacritics Program",
                 cycle: "FIRST",
-                subjects: {
+                tracks: {
                   create: {
                     name: "Test Diacritics Racunari",
-                    type: "MANDATORY",
                   },
                 },
               },
@@ -350,19 +312,19 @@ describe("GET /api/v1/search - diacritic-insensitive matching", () => {
       true,
     );
 
-    const subjectResponse = await request(app).get(
+    const trackResponse = await request(app).get(
       `/api/v1/search?searchTerm=${encodeURIComponent("računari")}`,
     );
-    const subjectBody = getResponseObject(subjectResponse.body);
-    const subjectData = getResponseObject(subjectBody["data"]);
-    const subjects = getResponseArray(subjectData["subjects"]);
+    const trackBody = getResponseObject(trackResponse.body);
+    const trackData = getResponseObject(trackBody["data"]);
+    const tracks = getResponseArray(trackData["tracks"]);
 
-    expect(subjectResponse.status).toBe(200);
-    expect(subjects.some((s) => s["name"] === "Test Diacritics Racunari")).toBe(
+    expect(trackResponse.status).toBe(200);
+    expect(tracks.some((t) => t["name"] === "Test Diacritics Racunari")).toBe(
       true,
     );
 
-    await prisma.subject.deleteMany({
+    await prisma.track.deleteMany({
       where: {
         studyProgram: { faculty: { universityId: university.id } },
       },

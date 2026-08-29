@@ -13,47 +13,9 @@ import type {
   UniversityDetail,
   UniversityDetailFaculty,
   UniversityDetailStudyProgram,
-  UniversityDetailSubject,
   UniversityDetailTrack,
   UniversityListItem,
 } from "../../schemas/university";
-
-function SubjectRow({
-  subject,
-  t,
-}: {
-  subject: UniversityDetailSubject;
-  t: TFunction;
-}) {
-  return (
-    <li className="flex flex-wrap gap-2 text-sm py-1 border-b border-(--border-color) last:border-0">
-      <span className="font-medium flex-1">{subject.name}</span>
-      <span className="flex gap-2 flex-wrap text-xs text-(--text-muted)">
-        {subject.semester != null && (
-          <span>
-            {t("universitiesPage.semester")} {subject.semester}
-          </span>
-        )}
-        {subject.ects != null && (
-          <span>
-            {subject.ects} {t("universitiesPage.ects")}
-          </span>
-        )}
-        {subject.type && (
-          <span
-            className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-              subject.type === "MANDATORY"
-                ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
-                : "bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-200"
-            }`}
-          >
-            {t(`universitiesPage.subjectTypes.${subject.type}`)}
-          </span>
-        )}
-      </span>
-    </li>
-  );
-}
 
 function TrackRow({
   track,
@@ -147,25 +109,6 @@ function StudyProgramRow({
                 ))}
               </ul>
             </>
-          )}
-          {program.subjects.length > 0 ? (
-            <div className="flex flex-col gap-2">
-              {groupBy(program.subjects, (s) =>
-                s.type
-                  ? t(`universitiesPage.subjectTypes.${s.type}`)
-                  : t("universitiesPage.subjectsSection"),
-              ).map((g) => (
-                <ResultGroup key={g.key} label={g.key}>
-                  {g.items.map((s) => (
-                    <SubjectRow key={s.id} subject={s} t={t} />
-                  ))}
-                </ResultGroup>
-              ))}
-            </div>
-          ) : (
-            <p className="text-xs text-(--text-muted) italic py-1">
-              {t("universitiesPage.noSubjects")}
-            </p>
           )}
         </div>
       )}

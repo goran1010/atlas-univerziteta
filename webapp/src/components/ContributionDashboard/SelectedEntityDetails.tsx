@@ -56,16 +56,6 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
       push(t("contribution.dataFields.ects"), entity.data.ects);
       push(t("contribution.dataFields.language"), entity.data.language);
       break;
-    case "SUBJECT":
-      push(t("contribution.dataFields.semester"), entity.data.semester);
-      push(t("contribution.dataFields.ects"), entity.data.ects);
-      push(
-        t("contribution.dataFields.subjectType"),
-        entity.data.type
-          ? t(`contribution.subjectTypes.${entity.data.type}`)
-          : undefined,
-      );
-      break;
     case "TRACK":
       push(t("contribution.dataFields.ects"), entity.data.ects);
       push(

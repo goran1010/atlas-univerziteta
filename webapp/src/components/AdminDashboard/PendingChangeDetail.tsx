@@ -84,16 +84,6 @@ function buildEntityRows(
       push(t("contribution.dataFields.ects"), entity.ects);
       push(t("contribution.dataFields.language"), entity.language);
       break;
-    case "SUBJECT":
-      push(t("contribution.dataFields.semester"), entity.semester);
-      push(t("contribution.dataFields.ects"), entity.ects);
-      if (typeof entity.type === "string") {
-        push(
-          t("contribution.dataFields.subjectType"),
-          t(`contribution.subjectTypes.${entity.type}`),
-        );
-      }
-      break;
     case "TRACK":
       push(t("contribution.dataFields.ects"), entity.ects);
       push(t("contribution.dataFields.durationYears"), entity.durationYears);

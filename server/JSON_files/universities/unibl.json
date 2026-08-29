@@ -469,12 +469,12 @@
       "studyProgramsLastChecked": "2026-08-23",
       "studyPrograms": [
         {
-          "name": "Opšti - nastavnički",
+          "name": "Opšti nastavnički",
           "cycle": "SECOND",
-          "sourceUrl": "https://unibl.org/uploads/files/upis/2026/Vodic-za-upis-studenata-2026-27-LAT.pdf",
+          "sourceUrl": "https://ffvs.unibl.org/studije-2-ciklusa",
           "ects": 60,
           "durationYears": 1,
-          "lastChecked": "2026-08-27"
+          "lastChecked": "2026-08-29"
         },
         {
           "name": "Sport",

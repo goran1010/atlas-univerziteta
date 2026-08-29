@@ -301,6 +301,14 @@
           "durationYears": 3,
           "ects": 180,
           "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://gf.unmo.ba/studij/i-ciklus/",
+          "lastChecked": "2026-08-29"
         }
       ]
     },
@@ -529,6 +537,14 @@
           "durationYears": 4,
           "ects": 240,
           "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+        },
+        {
+          "name": "Kriminologija i sigurnosne studije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://pf.unmo.ba/ba/studiranje/i-ciklus/",
+          "lastChecked": "2026-08-29"
         }
       ]
     },

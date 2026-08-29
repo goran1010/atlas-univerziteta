@@ -65,8 +65,6 @@ async function search(req: Request, res: Response) {
     STRUČNI: "VOCATIONAL",
     SPECIJALISTICKI: "SPECIALIST",
     SPECIJALISTIČKI: "SPECIALIST",
-    OBAVEZNI: "MANDATORY",
-    IZBORNI: "ELECTIVE",
   };
 
   // Exact match against an enum (enums don't support `contains`).
@@ -91,108 +89,84 @@ async function search(req: Request, res: Response) {
     "VOCATIONAL",
     "SPECIALIST",
   ] as const;
-  const SUBJECT_TYPES = ["MANDATORY", "ELECTIVE"] as const;
 
-  const [universities, faculties, studyPrograms, subjects, tracks] =
-    await Promise.all([
-      prisma.university.findMany({
-        where: {
-          OR: [
-            ...textContains("name"),
-            ...textContains("city"),
-            ...textContains("acronym"),
-            ...enumMatch("entity", ENTITIES),
-            ...enumMatch("ownership", OWNERSHIPS),
-          ],
-        },
-        orderBy: [{ ownership: "asc" }, { name: "asc" }],
-        include: { _count: { select: { faculties: true } } },
-      }),
-      prisma.faculty.findMany({
-        where: {
-          OR: [
-            ...textContains("name"),
-            ...textContains("city"),
-            ...relationContains("university", "name"),
-          ],
-        },
-        orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
-        include: {
-          university: true,
-        },
-      }),
-      prisma.studyProgram.findMany({
-        where: {
-          OR: [
-            ...textContains("name"),
-            ...textContains("language"),
-            ...relationContains("faculty", "name"),
-            ...enumMatch("cycle", CYCLES),
-          ],
-        },
-        orderBy: [{ cycle: "asc" }, { name: "asc" }],
-        include: {
-          faculty: {
-            include: {
-              university: true,
-            },
+  const [universities, faculties, studyPrograms, tracks] = await Promise.all([
+    prisma.university.findMany({
+      where: {
+        OR: [
+          ...textContains("name"),
+          ...textContains("city"),
+          ...textContains("acronym"),
+          ...enumMatch("entity", ENTITIES),
+          ...enumMatch("ownership", OWNERSHIPS),
+        ],
+      },
+      orderBy: [{ ownership: "asc" }, { name: "asc" }],
+      include: { _count: { select: { faculties: true } } },
+    }),
+    prisma.faculty.findMany({
+      where: {
+        OR: [
+          ...textContains("name"),
+          ...textContains("city"),
+          ...relationContains("university", "name"),
+        ],
+      },
+      orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
+      include: {
+        university: true,
+      },
+    }),
+    prisma.studyProgram.findMany({
+      where: {
+        OR: [
+          ...textContains("name"),
+          ...textContains("language"),
+          ...relationContains("faculty", "name"),
+          ...enumMatch("cycle", CYCLES),
+        ],
+      },
+      orderBy: [{ cycle: "asc" }, { name: "asc" }],
+      include: {
+        faculty: {
+          include: {
+            university: true,
           },
         },
-      }),
-      prisma.subject.findMany({
-        where: {
-          OR: [
-            ...textContains("name"),
-            ...relationContains("studyProgram", "name"),
-            ...enumMatch("type", SUBJECT_TYPES),
-          ],
-        },
-        orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }],
-        include: {
-          studyProgram: {
-            include: {
-              faculty: {
-                include: {
-                  university: true,
-                },
+      },
+    }),
+    prisma.track.findMany({
+      where: {
+        OR: [
+          ...textContains("name"),
+          ...relationContains("studyProgram", "name"),
+        ],
+      },
+      orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }],
+      include: {
+        studyProgram: {
+          include: {
+            faculty: {
+              include: {
+                university: true,
               },
             },
           },
         },
-      }),
-      prisma.track.findMany({
-        where: {
-          OR: [
-            ...textContains("name"),
-            ...relationContains("studyProgram", "name"),
-          ],
-        },
-        orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }],
-        include: {
-          studyProgram: {
-            include: {
-              faculty: {
-                include: {
-                  university: true,
-                },
-              },
-            },
-          },
-        },
-      }),
-    ]);
+      },
+    }),
+  ]);
 
   const totalResults =
     universities.length +
     faculties.length +
     studyPrograms.length +
-    subjects.length +
     tracks.length;
 
   if (totalResults > 0) {
     sendSuccess(res, {
       message: "Search results retrieved successfully.",
-      data: { universities, faculties, studyPrograms, tracks, subjects },
+      data: { universities, faculties, studyPrograms, tracks },
     });
     return;
   }
@@ -217,7 +191,6 @@ async function getUniversityById(req: Request, res: Response) {
           studyPrograms: {
             orderBy: [{ cycle: "asc" }, { name: "asc" }],
             include: {
-              subjects: { orderBy: [{ semester: "asc" }, { name: "asc" }] },
               tracks: { orderBy: { name: "asc" } },
             },
           },

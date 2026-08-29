@@ -77,11 +77,6 @@ enum studyCycle {
   SPECIALIST
 }
 
-enum subjectType {
-  MANDATORY
-  ELECTIVE
-}
-
 model University {
   id                Int       @id @default(autoincrement())
   name              String    @unique
@@ -135,7 +130,6 @@ model StudyProgram {
   language      String?
   sourceUrl     String?
   lastChecked   DateTime?
-  subjects      Subject[]
   tracks        Track[]
 
   @@unique([name, facultyId, cycle])
@@ -156,26 +150,10 @@ model Track {
   @@map("tracks")
 }
 
-model Subject {
-  id             Int          @id @default(autoincrement())
-  name           String
-  studyProgramId Int
-  studyProgram   StudyProgram @relation(fields: [studyProgramId], references: [id])
-  semester       Int?
-  ects           Int?
-  type           subjectType?
-  sourceUrl      String?
-  lastChecked    DateTime?
-
-  @@unique([name, studyProgramId])
-  @@map("subjects")
-}
-
 enum entityType {
   UNIVERSITY
   FACULTY
   STUDY_PROGRAM
-  SUBJECT
   TRACK
 }
 
@@ -190,7 +168,7 @@ model PendingChange {
   // CREATE child parent
   // FACULTY -> universityId
   // STUDY_PROGRAM -> facultyId
-  // SUBJECT -> studyProgramId
+  // TRACK -> studyProgramId
   parentId Int?
 
   // proposed data

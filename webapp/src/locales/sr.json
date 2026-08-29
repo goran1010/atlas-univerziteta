@@ -12,7 +12,7 @@
     "notFound": "Stranica nije pronađena"
   },
   "meta": {
-    "home": "Istražite univerzitete, fakultete, studijske programe i predmete u Bosni i Hercegovini kroz besplatan javni skup podataka, pretraživo web sučelje i REST API.",
+    "home": "Istražite univerzitete, fakultete, studijske programe i smjerove u Bosni i Hercegovini kroz besplatan javni skup podataka, pretraživo web sučelje i REST API.",
     "universities": "Istražite univerzitete i studijske programe u Bosni i Hercegovini.",
     "api": "REST API dokumentacija za UniAtlas Bosnia. Pristupite podacima o univerzitetima i studijskim programima programski.",
     "login": "Prijavite se na vaš UniAtlas Bosnia nalog kako biste doprinijeli podacima i pratili vaše prijave.",
@@ -111,14 +111,14 @@
   "home": {
     "title": "Univerziteti i studijski programi u Bosni i Hercegovini",
     "heading": "Univerziteti i studijski programi u Bosni i Hercegovini",
-    "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o Bosni i Hercegovini. Fokus je na univerzitetima — institucijama, fakultetima, studijskim programima, smjerovima i predmetima.",
+    "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o Bosni i Hercegovini. Fokus je na univerzitetima — institucijama, fakultetima, studijskim programima i smjerovima.",
     "summary": "Koristite UniAtlas Bosnia za pregled profila univerziteta, poređenje akademske ponude i pristup strukturiranim javnim podacima kroz jednostavno sučelje ili direktno kroz API.",
     "exploreHeading": "Istražite podatke",
-    "exploreDescription": "Pregledajte univerzitete širom Bosne i Hercegovine. Pogledajte fakultete, studijske programe, smjerove i predmete. Pretražujte po nazivu, gradu, akronimu, entitetu, vlasništvu, ciklusu studija i više.",
+    "exploreDescription": "Pregledajte univerzitete širom Bosne i Hercegovine. Pogledajte fakultete, studijske programe i smjerove. Pretražujte po nazivu, gradu, akronimu, entitetu, vlasništvu, ciklusu studija i više.",
     "card": {
       "universities": {
         "title": "Univerziteti",
-        "description": "Pregledajte univerzitete, fakultete, studijske programe, smjerove i predmete širom Bosne i Hercegovine."
+        "description": "Pregledajte univerzitete, fakultete, studijske programe i smjerove širom Bosne i Hercegovine."
       }
     },
     "improveHeading": "Unaprijedite podatke",
@@ -147,8 +147,8 @@
       "apiStatus": "Provjera statusa API-ja.",
       "apiV1Status": "Provjera statusa API v1.",
       "getAllUniversities": "Preuzimanje svih univerziteta, sortiranih po vlasništvu pa po nazivu. Uključuje broj fakulteta po univerzitetu.",
-      "getUniversityById": "Preuzimanje univerziteta po ID-u s potpunim ugniježđenim detaljima (fakulteti, studijski programi, smjerovi i predmeti).",
-      "search": "Pretraga univerziteta, fakulteta, studijskih programa, smjerova i predmeta. Pretraga po nazivu, gradu, akronimu, entitetu, vlasništvu, ciklusu studija, jeziku, vrsti predmeta i nazivima nadređenih jedinica (neosjetljivo na velika/mala slova, najmanje 2 karaktera).",
+      "getUniversityById": "Preuzimanje univerziteta po ID-u s potpunim ugniježđenim detaljima (fakulteti, studijski programi i smjerovi).",
+      "search": "Pretraga univerziteta, fakulteta, studijskih programa i smjerova. Pretraga po nazivu, gradu, akronimu, entitetu, vlasništvu, ciklusu studija, jeziku i nazivima nadređenih jedinica (neosjetljivo na velika/mala slova, najmanje 2 karaktera).",
       "searchTermParam": "Pojam za pretragu (najmanje 2 karaktera)."
     }
   },
@@ -188,8 +188,7 @@
       "UNIVERSITY": "Univerzitet",
       "FACULTY": "Fakultet",
       "STUDY_PROGRAM": "Studijski program",
-      "TRACK": "Smjer",
-      "SUBJECT": "Predmet"
+      "TRACK": "Smjer"
     },
     "changeTypes": {
       "CREATE": "Kreiranje",
@@ -204,8 +203,7 @@
       "noChildren": {
         "FACULTY": "Nema dostupnih fakulteta",
         "STUDY_PROGRAM": "Nema dostupnih studijskih programa",
-        "TRACK": "Nema dostupnih smjerova",
-        "SUBJECT": "Nema dostupnih predmeta"
+        "TRACK": "Nema dostupnih smjerova"
       }
     },
     "dataFields": {
@@ -216,8 +214,6 @@
       "durationYears": "Trajanje (godine)",
       "ects": "ECTS krediti",
       "language": "Jezik",
-      "semester": "Semestar",
-      "subjectType": "Tip predmeta",
       "acronym": "Akronim",
       "foundedYear": "Godina osnivanja",
       "website": "Web stranica",
@@ -234,10 +230,6 @@
       "INTEGRATED": "INTEGRISANI - Bachelor+Master",
       "VOCATIONAL": "STRUČNI",
       "SPECIALIST": "SPECIJALISTIČKI - Specialist"
-    },
-    "subjectTypes": {
-      "MANDATORY": "Obavezni",
-      "ELECTIVE": "Izborni"
     },
     "entities": {
       "FBIH": "FBIH - Federacija BiH",
@@ -352,18 +344,16 @@
     "title": "Nađite programe i univerzitete",
     "browseAll": "Pregledaj sve",
     "search": "Pretraži",
-    "searchHint": "Pretražite sve podatke — po nazivu, gradu, akronimu, entitetu (FBIH/RS/BD), vlasništvu (JAVNI/PRIVATNI), ciklusu studija (PRVI, DRUGI…), jeziku, vrsti predmeta (OBAVEZNI/IZBORNI) ili nazivu nadređene jedinice.",
+    "searchHint": "Pretražite sve podatke — po nazivu, gradu, akronimu, entitetu (FBIH/RS/BD), vlasništvu (JAVNI/PRIVATNI), ciklusu studija (PRVI, DRUGI…), jeziku ili nazivu nadređene jedinice.",
     "searchAllPlaceholder": "Pretraži po nazivu, gradu, ciklusu, entitetu…",
     "universitiesSection": "Univerziteti",
     "facultiesSection": "Fakulteti",
     "studyProgramsSection": "Studijski programi",
     "tracksSection": "Smjerovi",
-    "subjectsSection": "Predmeti",
     "noResults": "Nisu pronađeni univerziteti.",
     "noFacultyResults": "Nisu pronađeni fakulteti.",
     "noStudyProgramResults": "Nisu pronađeni studijski programi.",
     "noTrackResults": "Nema pronađenih smjerova.",
-    "noSubjectResults": "Nisu pronađeni predmeti.",
     "noResultsAtAll": "Nema rezultata pretrage.",
     "city": "Grad",
     "entity": "Entitet",
@@ -376,7 +366,6 @@
     "facultyCount": "fakulteta",
     "studyPrograms": "Studijski programi",
     "tracks": "Smjerovi",
-    "subjects": "Predmeti",
     "cycle": "Ciklus",
     "cycles": {
       "FIRST": "Prvi (Bachelor)",
@@ -389,13 +378,6 @@
     "ects": "ECTS",
     "durationYears": "godine",
     "noStudyPrograms": "Nema dostupnih studijskih programa.",
-    "noSubjects": "Nema dostupnih predmeta.",
-    "semester": "Semestar",
-    "subjectType": "Tip",
-    "subjectTypes": {
-      "MANDATORY": "Obavezni",
-      "ELECTIVE": "Izborni"
-    },
     "website": "Web stranica",
     "foundedYear": "Osnovan",
     "viewDetails": "Prikaži detalje",

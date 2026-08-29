@@ -30,7 +30,7 @@ vi.mock(
 
 const change: AdminPendingChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",
-  entityType: "SUBJECT",
+  entityType: "TRACK",
   typeOfChange: "DELETE",
   targetId: 1,
   parentId: null,
@@ -79,7 +79,7 @@ describe("PendingChangesAdminRow", () => {
       .closest("form");
     const badge = screen.getByText("Delete");
 
-    expect(screen.getByText("Subject")).toBeInTheDocument();
+    expect(screen.getByText("Track (smjer)")).toBeInTheDocument();
     expect(screen.getByText("johndoe@examplemail.com")).toBeInTheDocument();
     expect(form).toHaveClass("border-l-4");
     expect(form).toHaveClass("border-l-red-500");

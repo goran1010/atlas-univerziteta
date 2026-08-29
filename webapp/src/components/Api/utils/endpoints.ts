@@ -74,7 +74,7 @@ const apiEndpoints: Endpoint[] = [
         "city": "Sarajevo", "website": "https://pmf.unsa.ba",
         "studyPrograms": [
           { "id": 1, "name": "Computer Science", "cycle": "FIRST",
-            "subjects": [ ... ], "tracks": [ ... ]
+            "tracks": [ ... ]
           }
         ]
       }
@@ -118,16 +118,6 @@ const apiEndpoints: Endpoint[] = [
     ],
     "tracks": [
       { "id": 1, "name": "Software Development", "ects": 60,
-        "studyProgram": { "id": 1, "name": "Software Engineering",
-          "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
-            "university": { "id": 1, "name": "University of Sarajevo" }
-          }
-        }
-      }
-    ],
-    "subjects": [
-      { "id": 1, "name": "Computer Networks", "semester": 4, "ects": 6,
-        "type": "MANDATORY",
         "studyProgram": { "id": 1, "name": "Software Engineering",
           "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
             "university": { "id": 1, "name": "University of Sarajevo" }

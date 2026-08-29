@@ -34,15 +34,14 @@ The project models higher-education data as a nested academic hierarchy:
 - Faculty
 - Study program
 - Track (smjer)
-- Subject
 
 Public consumers can browse and query that data through unauthenticated endpoints under `/api/v1`. Authenticated users can submit create, update, and delete suggestions for university-related data, and admins can review those suggestions before they are applied.
 
 ## Current features
 
 - Public REST API under `/api` and `/api/v1`
-- University listing with faculty counts, and detail responses containing nested faculties, study programs, tracks, and subjects
-- Unified search across universities, faculties, study programs, tracks, and subjects — matching name, city, acronym, entity, ownership, study cycle, language, subject type, and parent unit names
+- University listing with faculty counts, and detail responses containing nested faculties, study programs, and tracks
+- Unified search across universities, faculties, study programs, and tracks — matching name, city, acronym, entity, ownership, study cycle, language, and parent unit names
 - Email/password signup with email confirmation before account creation
 - Session-based login/logout with Passport
 - Optional GitHub OAuth login
@@ -238,7 +237,7 @@ https://round-leann-goran-jovic-1010-ccad2ae8.koyeb.app
 
 Contribution requests are stored as pending changes. Each record captures:
 
-- the entity type: `UNIVERSITY`, `FACULTY`, `STUDY_PROGRAM`, `TRACK`, or `SUBJECT`
+- the entity type: `UNIVERSITY`, `FACULTY`, `STUDY_PROGRAM`, or `TRACK`
 - the change type: `CREATE`, `UPDATE`, or `DELETE`
 - a target ID or parent ID when required
 - the proposed JSON payload for admin review

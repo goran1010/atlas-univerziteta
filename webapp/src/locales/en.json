@@ -12,7 +12,7 @@
     "notFound": "Page Not Found"
   },
   "meta": {
-    "home": "Explore universities, faculties, study programs, and subjects in Bosnia and Herzegovina with a free public dataset, searchable web interface, and REST API.",
+    "home": "Explore universities, faculties, study programs, and tracks in Bosnia and Herzegovina with a free public dataset, searchable web interface, and REST API.",
     "universities": "Explore universities and study programs in Bosnia and Herzegovina.",
     "api": "REST API documentation for UniAtlas Bosnia. Access universities and study programs data programmatically.",
     "login": "Log in to your UniAtlas Bosnia account to contribute data and track your submissions.",
@@ -111,14 +111,14 @@
   "home": {
     "title": "Universities and Study Programs in Bosnia and Herzegovina",
     "heading": "Universities and Study Programs in Bosnia and Herzegovina",
-    "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities — institutions, faculties, study programs, tracks, and subjects.",
+    "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities — institutions, faculties, study programs, and tracks.",
     "summary": "Use UniAtlas Bosnia to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
-    "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, tracks, and subjects. Search by name, city, acronym, entity, ownership, study cycle, and more.",
+    "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, and tracks. Search by name, city, acronym, entity, ownership, study cycle, and more.",
     "card": {
       "universities": {
         "title": "Universities",
-        "description": "Browse universities, faculties, study programs, tracks, and subjects across Bosnia and Herzegovina."
+        "description": "Browse universities, faculties, study programs, and tracks across Bosnia and Herzegovina."
       }
     },
     "improveHeading": "Improve the Data",
@@ -147,8 +147,8 @@
       "apiStatus": "Check API status.",
       "apiV1Status": "Check API v1 status.",
       "getAllUniversities": "Retrieve all universities, ordered by ownership then name. Includes a faculty count per university.",
-      "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, tracks, and subjects).",
-      "search": "Search across universities, faculties, study programs, tracks, and subjects. Matches name, city, acronym, entity, ownership, study cycle, language, subject type, and parent unit names (case-insensitive, minimum 2 characters).",
+      "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks).",
+      "search": "Search across universities, faculties, study programs, and tracks. Matches name, city, acronym, entity, ownership, study cycle, language, and parent unit names (case-insensitive, minimum 2 characters).",
       "searchTermParam": "A search term (minimum 2 characters)."
     }
   },
@@ -188,8 +188,7 @@
       "UNIVERSITY": "University",
       "FACULTY": "Faculty",
       "STUDY_PROGRAM": "Study Program",
-      "TRACK": "Track (smjer)",
-      "SUBJECT": "Subject"
+      "TRACK": "Track (smjer)"
     },
     "changeTypes": {
       "CREATE": "Create",
@@ -204,8 +203,7 @@
       "noChildren": {
         "FACULTY": "No faculties available",
         "STUDY_PROGRAM": "No study programs available",
-        "TRACK": "No tracks available",
-        "SUBJECT": "No subjects available"
+        "TRACK": "No tracks available"
       }
     },
     "dataFields": {
@@ -216,8 +214,6 @@
       "durationYears": "Duration (years)",
       "ects": "ECTS credits",
       "language": "Language",
-      "semester": "Semester",
-      "subjectType": "Subject type",
       "acronym": "Acronym",
       "foundedYear": "Founded year",
       "website": "Website",
@@ -234,10 +230,6 @@
       "INTEGRATED": "INTEGRATED - Bachelor+Master",
       "VOCATIONAL": "VOCATIONAL",
       "SPECIALIST": "SPECIALIST - Specialist Study"
-    },
-    "subjectTypes": {
-      "MANDATORY": "Mandatory",
-      "ELECTIVE": "Elective"
     },
     "entities": {
       "FBIH": "FBIH - Federation of B&H",
@@ -352,18 +344,16 @@
     "title": "Find programs and universities",
     "browseAll": "Browse All",
     "search": "Search",
-    "searchHint": "Search across all data — by name, city, acronym, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, subject type (MANDATORY/ELECTIVE), or parent unit name.",
+    "searchHint": "Search across all data — by name, city, acronym, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
     "searchAllPlaceholder": "Search by name, city, cycle, entity…",
     "universitiesSection": "Universities",
     "facultiesSection": "Faculties",
     "studyProgramsSection": "Study programs",
     "tracksSection": "Tracks (smjerovi)",
-    "subjectsSection": "Subjects",
     "noResults": "No universities found.",
     "noFacultyResults": "No faculties found.",
     "noStudyProgramResults": "No study programs found.",
     "noTrackResults": "No tracks found.",
-    "noSubjectResults": "No subjects found.",
     "noResultsAtAll": "No results found.",
     "city": "City",
     "entity": "Entity",
@@ -376,7 +366,6 @@
     "facultyCount": "faculties",
     "studyPrograms": "Study Programs",
     "tracks": "Tracks (smjerovi)",
-    "subjects": "Subjects",
     "cycle": "Cycle",
     "cycles": {
       "FIRST": "First (Bachelor)",
@@ -389,13 +378,6 @@
     "ects": "ECTS",
     "durationYears": "years",
     "noStudyPrograms": "No study programs available.",
-    "noSubjects": "No subjects available.",
-    "semester": "Semester",
-    "subjectType": "Type",
-    "subjectTypes": {
-      "MANDATORY": "Mandatory",
-      "ELECTIVE": "Elective"
-    },
     "website": "Website",
     "foundedYear": "Founded",
     "viewDetails": "View details",
