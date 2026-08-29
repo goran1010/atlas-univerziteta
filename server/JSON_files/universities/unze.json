@@ -1,0 +1,677 @@
+{
+  "name": "Univerzitet u Zenici",
+  "acronym": "UNZE",
+  "city": "Zenica",
+  "entity": "FBIH",
+  "ownership": "PUBLIC",
+  "foundedYear": "2005-11-28",
+  "website": "https://www.unze.ba",
+  "address": "Fakultetska 3, 72000 Zenica",
+  "phone": "+387 32 444 420",
+  "email": "rektorat@unze.ba",
+  "accreditationFrom": "2024-04-18",
+  "accreditationTo": "2029-04-18",
+  "authority": "Ministarstvo za obrazovanje, nauku, kulturu i sport Zeničko-dobojskog kantona",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastModified": "2026-08-29",
+  "facultiesSourceUrl": "https://unze.ba/",
+  "facultiesLastModified": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Ekonomski fakultet",
+      "city": "Zenica",
+      "website": "https://ef.unze.ba",
+      "address": "Fakultetska bb, 72000 Zenica",
+      "phone": "+387 32 460 467",
+      "email": "ef@unze.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unze.ba (site down 2026-08-23; per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Lokalni ekonomski razvoj i politika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://ef.unze.ba/drugi-ciklus/"
+        },
+        {
+          "name": "Menadžment preduzeća",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://ef.unze.ba/drugi-ciklus/"
+        },
+        {
+          "name": "Poslovne i javne finansije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://ef.unze.ba/drugi-ciklus/"
+        },
+        {
+          "name": "Računovodstveni i revizijski menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://ef.unze.ba/drugi-ciklus/"
+        },
+        {
+          "name": "Finansije i računovodstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://ef.unze.ba/prvi-ciklus/"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://ef.unze.ba/prvi-ciklus/"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://unze.ba/svi-konkursi/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet inženjerstva i prirodnih nauka",
+      "city": "Zenica",
+      "website": "https://www.fipn.unze.ba",
+      "address": "Travnička cesta 1, 72000 Zenica",
+      "phone": "+387 32 401 831",
+      "email": "fipn@unze.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unze.ba (site down 2026-08-23; per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Elektrotehnika i informacione tehnologije",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.fipn.unze.ba/novi-studijski-program-na-fakultetu-inzenjerstva-i-prirodnih-nauka/",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Hemijsko inženjerstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.fipn.unze.ba/hemijsko-inzenjerstvo-2/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Inženjerstvo materijala",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.fipn.unze.ba/inzenjerstvo-materijala-2/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Inženjerstvo zaštite na radu i zaštite od požara",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.fipn.unze.ba/zastita-na-radu-i-zastita-od-pozara-2/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Inženjerstvo zaštite okoliša",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.fipn.unze.ba/inzenjerstvo-zastite-okolisa-2/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Metalurško inženjerstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.fipn.unze.ba/metalursko-inzenjerstvo-2/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Doktorski studij iz tehničkih nauka",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.fipn.unze.ba/iii-ciklus-studija/",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Metalurgija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://www.fipn.unze.ba/ii-ciklus-studija/"
+        },
+        {
+          "name": "Inženjerstvo materijala",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://www.fipn.unze.ba/ii-ciklus-studija/"
+        },
+        {
+          "name": "Hemijsko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://www.fipn.unze.ba/ii-ciklus-studija/"
+        }
+      ]
+    },
+    {
+      "name": "Filozofski fakultet",
+      "city": "Zenica",
+      "website": "https://ff.unze.ba",
+      "address": "Zmaja od Bosne 56, 72000 Zenica",
+      "phone": "+387 32 243 574",
+      "email": "tehnicki.sekretar.ff@unze.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unze.ba (site down 2026-08-23; per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Bosanski, hrvatski, srpski jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://ff.unze.ba/ba/studijski-program-bosanski-hrvatski-srpski-jezik-i-knjizevnost-2-ciklus/",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://ff.unze.ba/ba/studijski-program-engleski-jezik-i-knjizevnost-2-ciklus/",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Kulturalni studij",
+          "cycle": "SECOND",
+          "sourceUrl": "https://ff.unze.ba/ba/kulturalni-studij-2-ciklus/",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Matematika i informatika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://ff.unze.ba/ba/studijski-program-matematika-i-informatika-2-ciklus/",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Njemački jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://ff.unze.ba/ba/njemacki-jezik-i-knjizevnost-2-ciklus/",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "SECOND",
+          "sourceUrl": "https://ff.unze.ba/ba/studijski-program-razredna-nastava-2-ciklus/",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Turski jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://ff.unze.ba/studijski-program-turski-jezik-i-knjizevnost-2-ciklus/",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Bosanski, hrvatski, srpski jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://ff.unze.ba/ba/studijski-program-bosanski-hrvatski-srpski-jezik-i-knjizevnost-1-ciklus/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://ff.unze.ba/ba/studijski-program-engleski-jezik-i-knjizevnost-1-ciklus/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Kultura i turizam",
+          "cycle": "FIRST",
+          "sourceUrl": "https://ff.unze.ba/kultura-i-turizam/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Kulturalni studij",
+          "cycle": "FIRST",
+          "sourceUrl": "https://ff.unze.ba/kulturalni-studij-1-ciklus/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Matematika i informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://ff.unze.ba/ba/studijski-program-matematika-i-informatika-1-ciklus/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Njemački jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://ff.unze.ba/ba/njemacki-jezik-i-knjizevnost-1-ciklus/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "sourceUrl": "https://ff.unze.ba/ba/studijski-program-razredna-nastava-1-ciklus/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Tjelesni odgoj i sport",
+          "cycle": "FIRST",
+          "sourceUrl": "https://ff.unze.ba/tjelesni-odgoj-i-sport-1-ciklus/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Turski jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://ff.unze.ba/ba/turski-jezik-i-knjizevnost-1-ciklus/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Doktorski studij Kultura i identitet",
+          "cycle": "THIRD",
+          "sourceUrl": "https://unze.ba/konkurs-natjecaj-za-upis-studenata-u-prvu-godinu-studija-treceg-ciklusa-studijski-program-doktorski-studij-kultura-i-identitet-na-filozofskom-fakultetu-univerziteta-u-zenici-u-akademskoj-2025-2026-g/",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Doktorski studij iz lingvistike",
+          "cycle": "THIRD",
+          "sourceUrl": "https://ff.unze.ba/wp-content/uploads/2024/07/NPP-DSL-final-za-objavu-24-25.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-27"
+        }
+      ]
+    },
+    {
+      "name": "Islamski pedagoški fakultet",
+      "city": "Zenica",
+      "website": "https://ipf.unze.ba",
+      "address": "Prof. Juraja Neidharta 15, 72000 Zenica",
+      "phone": "+387 32 402 919",
+      "email": "info.ipf@unze.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unze.ba (site down 2026-08-23; per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Arapski jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "http://www.ipf.unze.ba/wp-content/uploads/2023/10/NPP-OAJIK-II-ciklus-2021-22.-god.-04.10.2023.-1.pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Islamska vjeronauka",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ipf.unze.ba/master-studij-islamske-vjeronauke/",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Predškolski odgoj i obrazovanje",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ipf.unze.ba/master-studij-predskolskog-odgoja-i-obrazovanja/",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Socijalna pedagogija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ipf.unze.ba/master-studij-socijalne-pedagogije/",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Arapski jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.ipf.unze.ba/odsjek-za-arapski-jezik/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Inkluzivna edukacija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.ipf.unze.ba/odsjek-za-inkluzivnu-edukaciju/",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Islamska vjeronauka",
+          "cycle": "FIRST",
+          "sourceUrl": "https://zdk.ba/sjednicevlade/sjednice2023/25sjednica/25-04_30-06-2023.pdf",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Predškolski odgoj i obrazovanje",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.ipf.unze.ba/master-studij-predskolskog-odgoja-i-obrazovanja/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Socijalna pedagogija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.ipf.unze.ba/odsjek-za-socijalnu-pedagogiju/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Islamska vjeronauka",
+          "cycle": "THIRD",
+          "sourceUrl": "http://www.ipf.unze.ba/wp-content/uploads/2023/10/NPP-za-III-ciklus-na-Odsjeku-za-islamsku-vjeronauku-ak.-2020-21.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Predškolski odgoj i obrazovanje",
+          "cycle": "THIRD",
+          "sourceUrl": "http://www.ipf.unze.ba/wp-content/uploads/2023/10/PROGRAM-DOKTORSKI-SP-2021-22-FINAL.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Socijalna pedagogija",
+          "cycle": "THIRD",
+          "sourceUrl": "http://www.ipf.unze.ba/wp-content/uploads/2023/10/PROGRAM-DOKTORSKI-SP-2021-22-FINAL.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-27"
+        }
+      ]
+    },
+    {
+      "name": "Mašinski fakultet",
+      "city": "Zenica",
+      "website": "https://mf.unze.ba",
+      "address": "Fakultetska 1, 72000 Zenica",
+      "phone": "+387 32 449 120",
+      "email": "mf@unze.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unze.ba (site down 2026-08-23; per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Inženjerska ekologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://mf.unze.ba/wp-content/uploads/2024/02/Nastavni-plan-i-program-II-ciklus_1.pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Inženjerski dizajn proizvoda",
+          "cycle": "SECOND",
+          "sourceUrl": "https://mf.unze.ba/wp-content/uploads/2024/02/Nastavni-plan-i-program-II-ciklus_1.pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://mf.unze.ba/wp-content/uploads/2025/10/FINALNO-NPP-II-ciklus-Mehatronika.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Menadžment proizvodnim tehnologijama",
+          "cycle": "SECOND",
+          "sourceUrl": "https://mf.unze.ba/wp-content/uploads/2024/02/Nastavni-plan-i-program-II-ciklus_1.pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Metrologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://mf.unze.ba/studijski-programi/",
+          "ects": null,
+          "durationYears": null,
+          "tracks": [
+            {
+              "name": "Metrologija (4+1)",
+              "ects": 60,
+              "durationYears": 1,
+              "sourceUrl": "https://mf.unze.ba/wp-content/uploads/2024/03/Elaborat-II-ciklusa-Metrologija-4-1-3-kompletno.pdf"
+            },
+            {
+              "name": "Metrologija (3+2+3)",
+              "ects": 120,
+              "durationYears": 2,
+              "sourceUrl": "https://mf.unze.ba/wp-content/uploads/2024/03/Elaborat-II-ciklusa-Metrologija-323-kompletno.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Održavanje",
+          "cycle": "SECOND",
+          "sourceUrl": "https://mf.unze.ba/wp-content/uploads/2024/02/Nastavni-plan-i-program-II-ciklus_1.pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Dizajn i tehnologije u drvopreradi",
+          "cycle": "FIRST",
+          "sourceUrl": "https://mf.unze.ba/i-ciklus-studija-323/",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Inženjerska ekologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://mf.unze.ba/studijski-programi/"
+        },
+        {
+          "name": "Inženjerska i poslovna informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://mf.unze.ba/i-ciklus-studija-413/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Inženjerski dizajn proizvoda",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://mf.unze.ba/studijski-programi/"
+        },
+        {
+          "name": "Mašinstvo i robotika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://mf.unze.ba/studijski-programi/"
+        },
+        {
+          "name": "Menadžment proizvodnim tehnologijama",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://mf.unze.ba/studijski-programi/"
+        },
+        {
+          "name": "Održavanje",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://mf.unze.ba/studijski-programi/"
+        }
+      ]
+    },
+    {
+      "name": "Medicinski fakultet",
+      "city": "Zenica",
+      "website": "https://medf.unze.ba",
+      "address": "Travnička cesta 1, 72000 Zenica",
+      "phone": "+387 32 444 780",
+      "email": "medical@medf.unze.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unze.ba (site down 2026-08-23; per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Opća medicina",
+          "cycle": "INTEGRATED",
+          "sourceUrl": "https://medf.unze.ba/nastavni-plan-i-program-odsjeka-opca-medicina/",
+          "ects": 360,
+          "durationYears": 6,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Zdravstvena njega",
+          "cycle": "FIRST",
+          "sourceUrl": "https://medf.unze.ba/nastavni-plan-i-program-odsjeka-zdravstvena-njega/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Zdravstvena njega i menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://medf.unze.ba/master-studij/"
+        }
+      ]
+    },
+    {
+      "name": "Politehnički fakultet",
+      "city": "Zenica",
+      "website": "https://ptf.unze.ba",
+      "address": "Fakultetska 1, 72000 Zenica",
+      "phone": "+387 32 206 100",
+      "email": "ptf@unze.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unze.ba (site down 2026-08-23; per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Softversko inženjerstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://zdk.ba/sjednicevlade/sjednice2023/25sjednica/25-04_30-06-2023.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "http://ptf.unze.ba/studijski-programi-gr/",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Proizvodni biznis",
+          "cycle": "FIRST",
+          "sourceUrl": "http://ptf.unze.ba/studijski-programi-pb/",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-27"
+        },
+        {
+          "name": "Softversko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://ptf.unze.ba/studijski-programi-si"
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Zenica",
+      "website": "https://prf.unze.ba",
+      "address": "Fakultetska bb, 72000 Zenica",
+      "phone": "+387 32 460 450",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unze.ba (site down 2026-08-23; per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://prf.unze.ba/i-ciklus-studija/"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://prf.unze.ba/"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://unze.ba/svi-konkursi/"
+        }
+      ]
+    }
+  ]
+}

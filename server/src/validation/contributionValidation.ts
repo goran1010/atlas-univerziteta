@@ -3,7 +3,7 @@ import { z } from "zod";
 import { RequestValidationError } from "../errors/RequestValidationError.js";
 
 const entityTypeSchema = z.enum(
-  ["UNIVERSITY", "FACULTY", "STUDY_PROGRAM", "SUBJECT", "TRACK"],
+  ["UNIVERSITY", "FACULTY", "STUDY_PROGRAM", "TRACK"],
   {
     error: "Invalid entity type",
   },
@@ -56,20 +56,6 @@ const ectsSchema = z
     error: "ECTS must be a positive integer",
   });
 
-const semesterSchema = z
-  .number({
-    error: "Semester must be between 1 and 12",
-  })
-  .int({
-    error: "Semester must be between 1 and 12",
-  })
-  .min(1, {
-    error: "Semester must be between 1 and 12",
-  })
-  .max(12, {
-    error: "Semester must be between 1 and 12",
-  });
-
 const universityCreateDataSchema = z.strictObject({
   name: z.string().trim().min(1, {
     error: "Name is required",
@@ -83,8 +69,8 @@ const universityCreateDataSchema = z.strictObject({
     error: "Invalid entity - must be FBIH, RS, or BD",
   }),
 
-  ownership: z.enum(["JAVNA", "PRIVATNA"], {
-    error: "Ownership must be JAVNA or PRIVATNA",
+  ownership: z.enum(["PUBLIC", "PRIVATE"], {
+    error: "Ownership must be PUBLIC or PRIVATE",
   }),
 
   acronym: z.string().trim().min(1).optional(),
@@ -92,6 +78,12 @@ const universityCreateDataSchema = z.strictObject({
   foundedYear: z.string().trim().min(1).optional(),
 
   website: z.url({ error: "Invalid URL" }).optional(),
+
+  address: z.string().trim().min(1).optional(),
+
+  phone: z.string().trim().min(1).optional(),
+
+  email: z.email({ error: "Invalid email" }).optional(),
 });
 
 const facultyCreateDataSchema = z.strictObject({
@@ -102,6 +94,12 @@ const facultyCreateDataSchema = z.strictObject({
   city: z.string().trim().optional(),
 
   website: z.url({ error: "Invalid URL" }).optional(),
+
+  address: z.string().trim().min(1).optional(),
+
+  phone: z.string().trim().min(1).optional(),
+
+  email: z.email({ error: "Invalid email" }).optional(),
 });
 
 const studyProgramCreateDataSchema = z.strictObject({
@@ -109,32 +107,19 @@ const studyProgramCreateDataSchema = z.strictObject({
     error: "Name is required",
   }),
 
-  cycle: z.enum(["PRVI", "DRUGI", "TRECI", "INTEGRISANI", "STRUCNI"], {
-    error:
-      "Invalid study cycle - must be PRVI, DRUGI, TRECI, INTEGRISANI, or STRUCNI",
-  }),
+  cycle: z.enum(
+    ["FIRST", "SECOND", "THIRD", "INTEGRATED", "VOCATIONAL", "SPECIALIST"],
+    {
+      error:
+        "Invalid study cycle - must be FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, or SPECIALIST",
+    },
+  ),
 
   durationYears: durationYearsSchema.optional(),
 
   ects: ectsSchema.optional(),
 
   language: z.string().trim().min(1).optional(),
-});
-
-const subjectCreateDataSchema = z.strictObject({
-  name: z.string().trim().min(1, {
-    error: "Name is required",
-  }),
-
-  semester: semesterSchema.optional(),
-
-  ects: ectsSchema.optional(),
-
-  type: z
-    .enum(["OBAVEZNI", "IZBORNI"], {
-      error: "Invalid subject type - must be OBAVEZNI or IZBORNI",
-    })
-    .optional(),
 });
 
 const trackCreateDataSchema = z.strictObject({
@@ -163,12 +148,6 @@ const createEntitySchema = z.discriminatedUnion("entityType", [
     entityType: z.literal("STUDY_PROGRAM"),
     parentId: parentIdSchema,
     data: studyProgramCreateDataSchema,
-  }),
-
-  z.strictObject({
-    entityType: z.literal("SUBJECT"),
-    parentId: parentIdSchema,
-    data: subjectCreateDataSchema,
   }),
 
   z.strictObject({
@@ -201,8 +180,8 @@ const universityEditDataSchema = z
       .optional(),
 
     ownership: z
-      .enum(["JAVNA", "PRIVATNA"], {
-        error: "Ownership must be JAVNA or PRIVATNA",
+      .enum(["PUBLIC", "PRIVATE"], {
+        error: "Ownership must be PUBLIC or PRIVATE",
       })
       .optional(),
 
@@ -211,6 +190,12 @@ const universityEditDataSchema = z
     foundedYear: z.string().trim().min(1).nullable().optional(),
 
     website: z.url({ error: "Invalid URL" }).nullable().optional(),
+
+    address: z.string().trim().min(1).nullable().optional(),
+
+    phone: z.string().trim().min(1).nullable().optional(),
+
+    email: z.email({ error: "Invalid email" }).nullable().optional(),
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
@@ -234,6 +219,12 @@ const facultyEditDataSchema = z
       .optional(),
 
     website: z.url({ error: "Invalid URL" }).nullable().optional(),
+
+    address: z.string().trim().min(1).nullable().optional(),
+
+    phone: z.string().trim().min(1).nullable().optional(),
+
+    email: z.email({ error: "Invalid email" }).nullable().optional(),
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
@@ -250,9 +241,12 @@ const studyProgramEditDataSchema = z
       .optional(),
 
     cycle: z
-      .enum(["PRVI", "DRUGI", "TRECI", "INTEGRISANI", "STRUCNI"], {
-        error: "Invalid study cycle",
-      })
+      .enum(
+        ["FIRST", "SECOND", "THIRD", "INTEGRATED", "VOCATIONAL", "SPECIALIST"],
+        {
+          error: "Invalid study cycle",
+        },
+      )
       .optional(),
 
     durationYears: durationYearsSchema.nullable().optional(),
@@ -260,31 +254,6 @@ const studyProgramEditDataSchema = z
     ects: ectsSchema.nullable().optional(),
 
     language: z.string().trim().min(1).nullable().optional(),
-  })
-  .refine((data) => Object.keys(data).length > 0, {
-    error: "At least one field must be provided",
-  });
-
-const subjectEditDataSchema = z
-  .strictObject({
-    name: z
-      .string()
-      .trim()
-      .min(1, {
-        error: "Name cannot be empty if provided",
-      })
-      .optional(),
-
-    semester: semesterSchema.nullable().optional(),
-
-    ects: ectsSchema.nullable().optional(),
-
-    type: z
-      .enum(["OBAVEZNI", "IZBORNI"], {
-        error: "Invalid subject type - must be OBAVEZNI or IZBORNI",
-      })
-      .nullable()
-      .optional(),
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
@@ -325,12 +294,6 @@ const editEntitySchema = z.discriminatedUnion("entityType", [
     entityType: z.literal("STUDY_PROGRAM"),
     targetId: targetIdSchema,
     data: studyProgramEditDataSchema,
-  }),
-
-  z.strictObject({
-    entityType: z.literal("SUBJECT"),
-    targetId: targetIdSchema,
-    data: subjectEditDataSchema,
   }),
 
   z.strictObject({
@@ -408,12 +371,10 @@ export {
   universityCreateDataSchema,
   facultyCreateDataSchema,
   studyProgramCreateDataSchema,
-  subjectCreateDataSchema,
   trackCreateDataSchema,
   universityEditDataSchema,
   facultyEditDataSchema,
   studyProgramEditDataSchema,
-  subjectEditDataSchema,
   trackEditDataSchema,
 };
 
@@ -422,10 +383,8 @@ export type FacultyCreateData = z.infer<typeof facultyCreateDataSchema>;
 export type StudyProgramCreateData = z.infer<
   typeof studyProgramCreateDataSchema
 >;
-export type SubjectCreateData = z.infer<typeof subjectCreateDataSchema>;
 export type TrackCreateData = z.infer<typeof trackCreateDataSchema>;
 export type UniversityEditData = z.infer<typeof universityEditDataSchema>;
 export type FacultyEditData = z.infer<typeof facultyEditDataSchema>;
 export type StudyProgramEditData = z.infer<typeof studyProgramEditDataSchema>;
-export type SubjectEditData = z.infer<typeof subjectEditDataSchema>;
 export type TrackEditData = z.infer<typeof trackEditDataSchema>;

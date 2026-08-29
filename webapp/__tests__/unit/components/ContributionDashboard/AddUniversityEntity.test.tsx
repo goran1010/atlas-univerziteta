@@ -28,7 +28,7 @@ const universitiesList = [
     acronym: "UNSA",
     city: "Sarajevo",
     entity: "FBIH",
-    ownership: "JAVNA",
+    ownership: "PUBLIC",
   },
 ];
 
@@ -44,16 +44,15 @@ const universityDetail = {
           id: 7,
           name: "Computer Science",
           facultyId: 3,
-          cycle: "PRVI",
+          cycle: "FIRST",
           ects: 180,
-          subjects: [
+          tracks: [
             {
               id: 11,
-              name: "Algorithms",
+              name: "Software Track",
               studyProgramId: 7,
-              semester: 3,
-              ects: 6,
-              type: "OBAVEZNI",
+              ects: 60,
+              durationYears: 1,
             },
           ],
         },
@@ -122,10 +121,10 @@ async function pickStudyProgram(user: ReturnType<typeof userEvent.setup>) {
   );
 }
 
-async function pickSubject(user: ReturnType<typeof userEvent.setup>) {
-  await screen.findByRole("option", { name: /Algorithms/i });
+async function pickTrack(user: ReturnType<typeof userEvent.setup>) {
+  await screen.findByRole("option", { name: /Software Track/i });
   await user.selectOptions(
-    screen.getByRole("combobox", { name: /^Subject$/i }),
+    screen.getByRole("combobox", { name: /^Track/i }),
     "11",
   );
 }
@@ -221,7 +220,7 @@ describe("AddUniversityEntity", () => {
     expect(screen.getByLabelText(/ECTS credits/i)).toBeInTheDocument();
   });
 
-  test("renders parent picker and subject fields for create changes", async () => {
+  test("renders parent picker and track fields for create changes", async () => {
     render(
       <Wrapper>
         <AddUniversityEntity setPendingChanges={vi.fn()} />
@@ -232,7 +231,7 @@ describe("AddUniversityEntity", () => {
 
     await user.selectOptions(
       screen.getByRole("combobox", { name: /Entity Type/i }),
-      "SUBJECT",
+      "TRACK",
     );
 
     expect(
@@ -241,9 +240,8 @@ describe("AddUniversityEntity", () => {
     expect(
       screen.getByRole("combobox", { name: /^Study Program$/i }),
     ).toBeInTheDocument();
-    expect(screen.getByLabelText(/Semester/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/ECTS credits/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/Subject type/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/Duration/i)).toBeInTheDocument();
   });
 
   test("shows current data and data fields for update changes", async () => {
@@ -327,7 +325,7 @@ describe("AddUniversityEntity", () => {
     await user.type(screen.getByLabelText(/Name/i), "University of Sarajevo");
     await user.type(screen.getByLabelText(/City/i), "Sarajevo");
     await user.selectOptions(screen.getByLabelText(/^Entity$/i), "FBIH");
-    await user.selectOptions(screen.getByLabelText(/Ownership/i), "JAVNA");
+    await user.selectOptions(screen.getByLabelText(/Ownership/i), "PUBLIC");
 
     await user.click(
       screen.getByRole("button", { name: /Submit Suggestion/i }),
@@ -343,7 +341,7 @@ describe("AddUniversityEntity", () => {
       name: "University of Sarajevo",
       city: "Sarajevo",
       entity: "FBIH",
-      ownership: "JAVNA",
+      ownership: "PUBLIC",
     });
     expect(submittedArgs.setPendingChanges).toBe(setPendingChanges);
     expect(typeof submittedArgs.addNotification).toBe("function");
@@ -367,7 +365,7 @@ describe("AddUniversityEntity", () => {
     );
   });
 
-  test("submits subject data with picked target id on update", async () => {
+  test("submits track data with picked target id on update", async () => {
     const setPendingChanges =
       vi.fn<(value: React.SetStateAction<PendingChange[]>) => void>();
 
@@ -381,7 +379,7 @@ describe("AddUniversityEntity", () => {
 
     await user.selectOptions(
       screen.getByRole("combobox", { name: /Entity Type/i }),
-      "SUBJECT",
+      "TRACK",
     );
     await user.selectOptions(
       screen.getByRole("combobox", { name: /Change/i }),
@@ -391,17 +389,13 @@ describe("AddUniversityEntity", () => {
     await pickUniversity(user);
     await pickFaculty(user);
     await pickStudyProgram(user);
-    await pickSubject(user);
+    await pickTrack(user);
 
     expect(await screen.findByText(/Current data/i)).toBeInTheDocument();
 
-    await user.type(screen.getByLabelText(/Name/i), "Algorithms");
-    await user.type(screen.getByLabelText(/Semester/i), "3");
-    await user.type(screen.getByLabelText(/ECTS credits/i), "6");
-    await user.selectOptions(
-      screen.getByLabelText(/Subject type/i),
-      "OBAVEZNI",
-    );
+    await user.type(screen.getByLabelText(/Name/i), "Software Track");
+    await user.type(screen.getByLabelText(/ECTS credits/i), "60");
+    await user.type(screen.getByLabelText(/Duration/i), "1");
 
     await user.click(
       screen.getByRole("button", { name: /Submit Suggestion/i }),
@@ -409,14 +403,13 @@ describe("AddUniversityEntity", () => {
 
     const submittedArgs = expectSubmitArgs();
 
-    expect(submittedArgs.entityType).toBe("SUBJECT");
+    expect(submittedArgs.entityType).toBe("TRACK");
     expect(submittedArgs.targetId).toBe("11");
     expect(submittedArgs.typeOfChange).toBe("UPDATE");
     expect(submittedArgs.data).toMatchObject({
-      name: "Algorithms",
-      semester: 3,
-      ects: 6,
-      type: "OBAVEZNI",
+      name: "Software Track",
+      ects: 60,
+      durationYears: 1,
     });
     expect(submittedArgs.setPendingChanges).toBe(setPendingChanges);
   });
@@ -439,7 +432,7 @@ describe("AddUniversityEntity", () => {
     await pickFaculty(user);
 
     await user.type(screen.getByLabelText(/Name/i), "Computer Science");
-    await user.selectOptions(screen.getByLabelText(/Cycle/i), "PRVI");
+    await user.selectOptions(screen.getByLabelText(/Cycle/i), "FIRST");
     await user.type(screen.getByLabelText(/Duration/i), "3");
     await user.type(screen.getByLabelText(/ECTS credits/i), "180");
 
@@ -454,7 +447,7 @@ describe("AddUniversityEntity", () => {
     expect(submittedArgs.typeOfChange).toBe("CREATE");
     expect(submittedArgs.data).toMatchObject({
       name: "Computer Science",
-      cycle: "PRVI",
+      cycle: "FIRST",
       durationYears: 3,
       ects: 180,
     });

@@ -34,15 +34,14 @@ The project models higher-education data as a nested academic hierarchy:
 - Faculty
 - Study program
 - Track (smjer)
-- Subject
 
 Public consumers can browse and query that data through unauthenticated endpoints under `/api/v1`. Authenticated users can submit create, update, and delete suggestions for university-related data, and admins can review those suggestions before they are applied.
 
 ## Current features
 
 - Public REST API under `/api` and `/api/v1`
-- University listing with faculty counts, and detail responses containing nested faculties, study programs, tracks, and subjects
-- Unified search across universities, faculties, study programs, tracks, and subjects — matching name, city, acronym, entity, ownership, study cycle, language, subject type, and parent unit names
+- University listing with faculty counts, and detail responses containing nested faculties, study programs, and tracks
+- Unified search across universities, faculties, study programs, and tracks — matching name, city, acronym, entity, ownership, study cycle, language, and parent unit names
 - Email/password signup with email confirmation before account creation
 - Session-based login/logout with Passport
 - Optional GitHub OAuth login
@@ -109,7 +108,7 @@ Then fill in the server values and adjust the webapp server URL if needed.
 The server example file lives at `server/.env.example`.
 
 - `DATABASE_URL`: PostgreSQL connection string for development
-- `TEST_DATABASE_URL`: separate PostgreSQL database for server tests
+- `TEST_DATABASE_URL`: PostgreSQL connection for server tests (credentials/host only — the suite creates and drops its own databases, so the user needs `CREATEDB` rights)
 - `RESEND_API_KEY`: API key for confirmation emails
 - `WEBAPP_URL`: webapp origin allowed by credentialed CORS
 - `SERVER_URL`: public server base URL used in confirmation links
@@ -198,9 +197,12 @@ Successful responses return `data` and usually a `message`.
       "acronym": "UNSA",
       "city": "Sarajevo",
       "entity": "FBIH",
-      "ownership": "JAVNA",
+      "ownership": "PUBLIC",
       "foundedYear": "1949",
       "website": "https://unsa.ba",
+      "address": "Adresa 7/II, 71000 Sarajevo",
+      "phone": "+387 33 565 100",
+      "email": "javnost@unsa.ba",
       "_count": { "faculties": 23 }
     }
   ]
@@ -235,7 +237,7 @@ https://round-leann-goran-jovic-1010-ccad2ae8.koyeb.app
 
 Contribution requests are stored as pending changes. Each record captures:
 
-- the entity type: `UNIVERSITY`, `FACULTY`, `STUDY_PROGRAM`, `TRACK`, or `SUBJECT`
+- the entity type: `UNIVERSITY`, `FACULTY`, `STUDY_PROGRAM`, or `TRACK`
 - the change type: `CREATE`, `UPDATE`, or `DELETE`
 - a target ID or parent ID when required
 - the proposed JSON payload for admin review
@@ -267,7 +269,7 @@ npm run test:coverage:server
 npm run test:coverage:webapp
 ```
 
-Server tests require `TEST_DATABASE_URL` to point to a separate PostgreSQL database. The test setup creates and manages its own template database automatically.
+Server tests require `TEST_DATABASE_URL` with a user that can `CREATEDB`. The database named in the URL is never used — the test setup creates a fresh template database per run (schema via migrations, no seed data) and a clone per test file, dropping them afterwards.
 
 ### Quality checks
 

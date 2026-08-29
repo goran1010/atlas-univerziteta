@@ -1,0 +1,371 @@
+{
+  "name": "Univerzitet u Travniku",
+  "acronym": "UNT",
+  "city": "Travnik",
+  "entity": "FBIH",
+  "ownership": "PRIVATE",
+  "foundedYear": "2007-07-04",
+  "website": "https://www.unt.ba",
+  "address": "Aleja konzula 5, 72270 Travnik",
+  "phone": "+387 30 540 876",
+  "email": "info@unt.ba",
+  "accreditationFrom": "2007-08-15",
+  "accreditationTo": "2031-01-26",
+  "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastModified": "2026-08-29",
+  "facultiesSourceUrl": "https://www.unt.ba/",
+  "facultiesLastModified": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Edukacijski fakultet",
+      "city": "Travnik",
+      "website": "https://web.eft.ba",
+      "address": "Aleja konzula 5, 72270 Travnik",
+      "phone": "+387 30 540 876",
+      "email": "info@eft.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
+      "studyProgramsLastModified": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "B/H/S jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Edukacijski menadžment",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Komunikologija/novinarstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Matematika i informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Opća kineziologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Pedagogija i psihologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Personalni trener",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Predškolski odgoj",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Specijalne namjene",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Sportski menadžment",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        },
+        {
+          "name": "Sportski trener",
+          "cycle": "FIRST",
+          "sourceUrl": "https://www.eft.ba/web/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za menadžment i poslovnu ekonomiju",
+      "city": "Kiseljak",
+      "website": "https://fmpe.edu.ba",
+      "address": "Azapovići 439, 71250 Kiseljak",
+      "phone": "+387 30 878 045",
+      "email": "studentska@fmpe.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
+      "studyProgramsLastModified": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Finansijski menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://fmpe.edu.ba/master-studij/"
+        },
+        {
+          "name": "Opći menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://fmpe.edu.ba/master-studij/"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://fmpe.edu.ba/master-studij/"
+        },
+        {
+          "name": "Poslovna psihologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://fmpe.edu.ba/master-studij/"
+        },
+        {
+          "name": "Zdravstveni menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://fmpe.edu.ba/master-studij/"
+        },
+        {
+          "name": "Bezbjednosni menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+        },
+        {
+          "name": "Menadžment u bankarstvu i osiguranju",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+        },
+        {
+          "name": "Menadžment u turizmu i ugostiteljstvu",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+        },
+        {
+          "name": "Opći menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+        },
+        {
+          "name": "Poslovna informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+        },
+        {
+          "name": "Poslovna psihologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za tehničke studije",
+      "city": "Travnik",
+      "website": "https://fts.edu.ba",
+      "address": "Aleja konzula 5, 72270 Travnik",
+      "phone": "+387 30 540 876",
+      "email": "info@fts.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
+      "studyProgramsLastModified": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Arhitektura",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fts.edu.ba/"
+        },
+        {
+          "name": "Grafički dizajn i multimedija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fts.edu.ba/"
+        },
+        {
+          "name": "Građevina",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fts.edu.ba/"
+        },
+        {
+          "name": "Inženjerska informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fts.edu.ba/"
+        },
+        {
+          "name": "Sigurnost i zaštita na radu i zaštita od požara",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fts.edu.ba/"
+        },
+        {
+          "name": "Tekstilno inženjerstvo i modni dizajn",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fts.edu.ba/"
+        }
+      ]
+    },
+    {
+      "name": "Farmaceutsko-zdravstveni fakultet",
+      "city": "Travnik",
+      "website": "https://fzf.edu.ba",
+      "address": "Slavka Gavrančića 17c, 72270 Travnik",
+      "phone": "+387 30 515 770",
+      "email": "info@fzf.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
+      "studyProgramsLastModified": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Medicinsko-laboratorijska dijagnostika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Radiologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Stomatologija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Medicinsko-laboratorijska dijagnostika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Radiologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Biomedicina i zdravstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "sourceUrl": "https://fzf.edu.ba"
+        },
+        {
+          "name": "Dentalna higijena",
+          "cycle": "FIRST",
+          "durationYears": null,
+          "ects": null,
+          "sourceUrl": "https://fmpe.edu.ba/wp-content/uploads/2024/07/KONKURS-za-upis-studenata-2024-2025-UNT.pdf",
+          "lastModified": "2026-08-29"
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Kiseljak",
+      "website": "https://pfk.edu.ba",
+      "address": "Azapovići 439, 71250 Kiseljak",
+      "phone": "+387 30 870 371",
+      "email": "info@pfk.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
+      "studyProgramsLastModified": "2026-08-24",
+      "studyPrograms": [
+        {
+          "name": "Javna uprava",
+          "cycle": "SECOND",
+          "sourceUrl": "http://pfk.edu.ba/v2/"
+        },
+        {
+          "name": "Opće pravo",
+          "cycle": "SECOND",
+          "sourceUrl": "http://pfk.edu.ba/v2/"
+        },
+        {
+          "name": "Poslovno pravo",
+          "cycle": "SECOND",
+          "sourceUrl": "http://pfk.edu.ba/v2/"
+        },
+        {
+          "name": "Opće pravo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "sourceUrl": "http://pfk.edu.ba/v2/"
+        },
+        {
+          "name": "Poslovno pravo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "sourceUrl": "http://pfk.edu.ba/v2/"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "THIRD",
+          "sourceUrl": "http://pfk.edu.ba/v2/",
+          "tracks": [
+            {
+              "name": "Građansko pravo",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Historija države i prava",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Javno pravo",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Krivično pravo",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Međunarodno pravo",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Poslovno pravo",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Evropsko pravo",
+              "lastModified": "2026-08-26"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

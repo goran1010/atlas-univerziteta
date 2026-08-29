@@ -13,47 +13,9 @@ import type {
   UniversityDetail,
   UniversityDetailFaculty,
   UniversityDetailStudyProgram,
-  UniversityDetailSubject,
   UniversityDetailTrack,
   UniversityListItem,
 } from "../../schemas/university";
-
-function SubjectRow({
-  subject,
-  t,
-}: {
-  subject: UniversityDetailSubject;
-  t: TFunction;
-}) {
-  return (
-    <li className="flex flex-wrap gap-2 text-sm py-1 border-b border-(--border-color) last:border-0">
-      <span className="font-medium flex-1">{subject.name}</span>
-      <span className="flex gap-2 flex-wrap text-xs text-(--text-muted)">
-        {subject.semester != null && (
-          <span>
-            {t("universitiesPage.semester")} {subject.semester}
-          </span>
-        )}
-        {subject.ects != null && (
-          <span>
-            {subject.ects} {t("universitiesPage.ects")}
-          </span>
-        )}
-        {subject.type && (
-          <span
-            className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-              subject.type === "OBAVEZNI"
-                ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
-                : "bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-200"
-            }`}
-          >
-            {t(`universitiesPage.subjectTypes.${subject.type}`)}
-          </span>
-        )}
-      </span>
-    </li>
-  );
-}
 
 function TrackRow({
   track,
@@ -148,25 +110,6 @@ function StudyProgramRow({
               </ul>
             </>
           )}
-          {program.subjects.length > 0 ? (
-            <div className="flex flex-col gap-2">
-              {groupBy(program.subjects, (s) =>
-                s.type
-                  ? t(`universitiesPage.subjectTypes.${s.type}`)
-                  : t("universitiesPage.subjectsSection"),
-              ).map((g) => (
-                <ResultGroup key={g.key} label={g.key}>
-                  {g.items.map((s) => (
-                    <SubjectRow key={s.id} subject={s} t={t} />
-                  ))}
-                </ResultGroup>
-              ))}
-            </div>
-          ) : (
-            <p className="text-xs text-(--text-muted) italic py-1">
-              {t("universitiesPage.noSubjects")}
-            </p>
-          )}
         </div>
       )}
     </li>
@@ -208,7 +151,11 @@ function FacultyRow({
       </button>
       {open && (
         <div className="ml-4 mt-1 border-l-2 border-indigo-200 dark:border-indigo-700 pl-3">
-          {(faculty.city ?? faculty.website) && (
+          {(faculty.city ??
+            faculty.website ??
+            faculty.address ??
+            faculty.phone ??
+            faculty.email) && (
             <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-(--text-muted) py-1">
               {faculty.city && <span>📍 {faculty.city}</span>}
               {faculty.website && (
@@ -219,6 +166,20 @@ function FacultyRow({
                   className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
                 >
                   {faculty.website}
+                </a>
+              )}
+              {faculty.address && <span>🏠 {faculty.address}</span>}
+              {faculty.phone && (
+                <a href={`tel:${faculty.phone}`} className="hover:underline">
+                  📞 {faculty.phone}
+                </a>
+              )}
+              {faculty.email && (
+                <a
+                  href={`mailto:${faculty.email}`}
+                  className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
+                >
+                  ✉️ {faculty.email}
                 </a>
               )}
             </div>
@@ -297,6 +258,17 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
 
   const entityLabel = t(`universitiesPage.entities.${university.entity}`);
 
+  // Faculties grouped by city (faculty city falls back to the university's);
+  // the university's own city first, the rest alphabetically. Grouped display
+  // only kicks in when there is more than one city.
+  const facultyCityGroups = detailData
+    ? groupBy(detailData.faculties, (f) => f.city ?? university.city).toSorted(
+        (a, b) =>
+          Number(b.key === university.city) -
+            Number(a.key === university.city) || a.key.localeCompare(b.key),
+      )
+    : [];
+
   return (
     <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) hover:bg-(--hover-surface) transition-colors">
       <div className="p-3 sm:p-4">
@@ -315,14 +287,14 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               <span>{entityLabel}</span>
               <span
                 className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-                  university.ownership === "JAVNA"
+                  university.ownership === "PUBLIC"
                     ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200"
                     : "bg-(--surface-alt) text-(--text-secondary)"
                 }`}
               >
-                {university.ownership === "JAVNA"
-                  ? t(`universitiesPage.ownership.JAVNA`)
-                  : t(`universitiesPage.ownership.PRIVATNA`)}
+                {university.ownership === "PUBLIC"
+                  ? t(`universitiesPage.ownership.PUBLIC`)
+                  : t(`universitiesPage.ownership.PRIVATE`)}
               </span>
               {university._count.faculties > 0 && (
                 <span>
@@ -345,6 +317,27 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               >
                 {university.website}
               </a>
+            )}
+            {(university.address ?? university.phone ?? university.email) && (
+              <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-(--text-muted) mt-1">
+                {university.address && <span>🏠 {university.address}</span>}
+                {university.phone && (
+                  <a
+                    href={`tel:${university.phone}`}
+                    className="hover:underline"
+                  >
+                    📞 {university.phone}
+                  </a>
+                )}
+                {university.email && (
+                  <a
+                    href={`mailto:${university.email}`}
+                    className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
+                  >
+                    ✉️ {university.email}
+                  </a>
+                )}
+              </div>
             )}
           </div>
           <Button
@@ -370,11 +363,23 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                   {detailData.faculties.length}{" "}
                   {t("universitiesPage.faculties")}
                 </p>
-                <ul className="space-y-1">
-                  {detailData.faculties.map((f) => (
-                    <FacultyRow key={f.id} faculty={f} t={t} />
-                  ))}
-                </ul>
+                {facultyCityGroups.length > 1 ? (
+                  <div className="flex flex-col gap-2">
+                    {facultyCityGroups.map((g) => (
+                      <ResultGroup key={g.key} label={g.key}>
+                        {g.items.map((f) => (
+                          <FacultyRow key={f.id} faculty={f} t={t} />
+                        ))}
+                      </ResultGroup>
+                    ))}
+                  </div>
+                ) : (
+                  <ul className="space-y-1">
+                    {detailData.faculties.map((f) => (
+                      <FacultyRow key={f.id} faculty={f} t={t} />
+                    ))}
+                  </ul>
+                )}
               </>
             ) : (
               <p className="text-sm text-(--text-muted) italic">

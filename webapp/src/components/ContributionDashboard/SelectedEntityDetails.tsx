@@ -33,10 +33,16 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
       );
       push(t("universitiesPage.foundedYear"), entity.data.foundedYear);
       push(t("contribution.dataFields.website"), entity.data.website);
+      push(t("contribution.dataFields.address"), entity.data.address);
+      push(t("contribution.dataFields.phone"), entity.data.phone);
+      push(t("contribution.dataFields.email"), entity.data.email);
       break;
     case "FACULTY":
       push(t("contribution.dataFields.city"), entity.data.city);
       push(t("contribution.dataFields.website"), entity.data.website);
+      push(t("contribution.dataFields.address"), entity.data.address);
+      push(t("contribution.dataFields.phone"), entity.data.phone);
+      push(t("contribution.dataFields.email"), entity.data.email);
       break;
     case "STUDY_PROGRAM":
       push(
@@ -49,16 +55,6 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
       );
       push(t("contribution.dataFields.ects"), entity.data.ects);
       push(t("contribution.dataFields.language"), entity.data.language);
-      break;
-    case "SUBJECT":
-      push(t("contribution.dataFields.semester"), entity.data.semester);
-      push(t("contribution.dataFields.ects"), entity.data.ects);
-      push(
-        t("contribution.dataFields.subjectType"),
-        entity.data.type
-          ? t(`contribution.subjectTypes.${entity.data.type}`)
-          : undefined,
-      );
       break;
     case "TRACK":
       push(t("contribution.dataFields.ects"), entity.data.ects);

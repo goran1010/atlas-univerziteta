@@ -1,0 +1,364 @@
+{
+  "name": "Univerzitet za poslovne studije Banja Luka",
+  "acronym": "UPS",
+  "city": "Banja Luka",
+  "entity": "RS",
+  "ownership": "PRIVATE",
+  "foundedYear": "2005-04-18",
+  "website": "https://univerzitetps.com",
+  "address": "Jovana Dučića 23a, 78000 Banja Luka",
+  "phone": "+387 51 248 300",
+  "email": "ups@univerzitetps.com",
+  "accreditationFrom": "2007-08-15",
+  "accreditationTo": "2026-06-20",
+  "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastModified": "2026-08-29",
+  "facultiesSourceUrl": "https://univerzitetps.com/",
+  "facultiesLastModified": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Fakultet pravnih nauka",
+      "city": "Banja Luka",
+      "website": "https://univerzitetps.com/pravne-nauke/",
+      "address": "Jovana Dučića 23a, 78000 Banja Luka",
+      "phone": "+387 51 248 300",
+      "email": "ups@univerzitetps.com",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Pravne nauke",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240
+        },
+        {
+          "name": "Pravo Evropske unije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180
+        },
+        {
+          "name": "Pravne nauke",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za ekologiju",
+      "city": "Banja Luka",
+      "website": "https://univerzitetps.com/ekologija-2/",
+      "address": "Jovana Dučića 23a, 78000 Banja Luka",
+      "phone": "+387 51 248 300",
+      "email": "ups@univerzitetps.com",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Ekologija",
+          "cycle": "FIRST",
+          "ects": null,
+          "durationYears": null,
+          "tracks": [
+            {
+              "name": "180 ECTS / 3 godine",
+              "ects": 180,
+              "durationYears": 3
+            },
+            {
+              "name": "240 ECTS / 4 godine",
+              "ects": 240,
+              "durationYears": 4
+            }
+          ]
+        },
+        {
+          "name": "Ekologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za informacione tehnologije i dizajn",
+      "city": "Banja Luka",
+      "website": "https://univerzitetps.com/fakultet-za-informacione-tehnologije-i-dizajn/",
+      "address": "Jovana Dučića 23a, 78000 Banja Luka",
+      "phone": "+387 51 248 300",
+      "email": "ups@univerzitetps.com",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Računarske i informacione tehnologije",
+          "cycle": "FIRST",
+          "ects": null,
+          "durationYears": null,
+          "tracks": [
+            {
+              "name": "180 ECTS / 3 godine",
+              "ects": 180,
+              "durationYears": 3
+            },
+            {
+              "name": "240 ECTS / 4 godine",
+              "ects": 240,
+              "durationYears": 4
+            }
+          ]
+        },
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "FIRST",
+          "ects": null,
+          "durationYears": null,
+          "tracks": [
+            {
+              "name": "180 ECTS / 3 godine",
+              "ects": 180,
+              "durationYears": 3
+            },
+            {
+              "name": "240 ECTS / 4 godine",
+              "ects": 240,
+              "durationYears": 4
+            }
+          ]
+        },
+        {
+          "name": "Dizajn",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za novinarstvo i komunikologiju",
+      "city": "Banja Luka",
+      "website": "https://univerzitetps.com/novinarstvo-komunikologija/",
+      "address": "Jovana Dučića 23a, 78000 Banja Luka",
+      "phone": "+387 51 248 300",
+      "email": "ups@univerzitetps.com",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://univerzitetps.com/studijski-programi/",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Novinarstvo i komunikologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za poslovne i finansijske studije",
+      "city": "Banja Luka",
+      "website": "https://univerzitetps.com/poslovne-studije/",
+      "address": "Jovana Dučića 23a, 78000 Banja Luka",
+      "phone": "+387 51 248 300",
+      "email": "ups@univerzitetps.com",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Poslovne i finansijske studije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "tracks": [
+            {
+              "name": "Računovodstvo i revizija",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Porezi, carine i budžet",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Bankarstvo i berzansko poslovanje",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        },
+        {
+          "name": "Finansije, bankarstvo i osiguranje",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "tracks": [
+            {
+              "name": "Računovodstvo i revizija",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Porezi, carine i budžet",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Bankarstvo",
+              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        },
+        {
+          "name": "Finansijski, bankarski i berzanski menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60
+        },
+        {
+          "name": "Ekonomija i finansije",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "tracks": [
+            {
+              "name": "Računovodstvo i finansije",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Makroekonomija i razvoj",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Menadžment i poslovna ekonomija",
+              "lastModified": "2026-08-26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za primijenjenu ekonomiju",
+      "city": "Banja Luka",
+      "website": "https://univerzitetps.com/primjenjena-ekonomija/",
+      "address": "Jovana Dučića 23a, 78000 Banja Luka",
+      "phone": "+387 51 248 300",
+      "email": "ups@univerzitetps.com",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Menadžment i marketing",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180
+        },
+        {
+          "name": "Menadžment i marketing malih i srednjih preduzeća",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240
+        },
+        {
+          "name": "Menadžment i marketing malih i srednjih preduzeća",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za turizam i hotelijerstvo",
+      "city": "Banja Luka",
+      "website": "https://univerzitetps.com/turizam-hotelijerstvo/",
+      "address": "Jovana Dučića 23a, 78000 Banja Luka",
+      "phone": "+387 51 248 300",
+      "email": "ups@univerzitetps.com",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Turizam i hotelijerstvo",
+          "cycle": "FIRST",
+          "tracks": [
+            {
+              "name": "Turizam",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Hotelijerstvo",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Restoraterstvo i Gastronomija",
+              "lastModified": "2026-08-26"
+            }
+          ]
+        },
+        {
+          "name": "Turizam",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60
+        },
+        {
+          "name": "Hotelijerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "tracks": [
+            {
+              "name": "Hotelijerstvo",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Restoraterstvo i Gastronomija",
+              "lastModified": "2026-08-26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Univerzitetski studiji",
+      "isUniversityLevel": true,
+      "website": "https://univerzitetps.com/studijski-programi/",
+      "address": "Jovana Dučića 23a, 78000 Banja Luka",
+      "phone": "+387 51 248 300",
+      "email": "ups@univerzitetps.com",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://univerzitetps.com/studijski-programi/",
+      "studyPrograms": [
+        {
+          "name": "Bankarsko i berzansko poslovanje",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://univerzitetps.com/studijski-programi/"
+        },
+        {
+          "name": "Preduzetništvo i menadžment malih i srednjih preduzeća",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "sourceUrl": "https://univerzitetps.com/studijski-programi/"
+        }
+      ]
+    }
+  ]
+}

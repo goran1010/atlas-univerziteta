@@ -1,0 +1,630 @@
+{
+  "name": "Evropski univerzitet, Brčko distrikt BiH",
+  "acronym": "EUBD",
+  "city": "Brčko",
+  "entity": "BD",
+  "ownership": "PRIVATE",
+  "foundedYear": "2011-12-28",
+  "website": "https://eubd.edu.ba",
+  "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+  "phone": "+387 49 590 605",
+  "email": "info@eubd.edu.ba",
+  "accreditationFrom": "2022-03-07",
+  "accreditationTo": "2027-09-06",
+  "authority": "Vlada Brčko distrikta BiH, Odjel za obrazovanje",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastModified": "2026-08-29",
+  "facultiesSourceUrl": "https://eubd.edu.ba/",
+  "facultiesLastModified": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Ekonomski fakultet",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/ekonomski-fakultet/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Ekonomija - opšti smjer",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Opsti-smjer.pdf"
+        },
+        {
+          "name": "Menadžment i preduzetništvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Menadzment-i-preduzetnistvo.pdf"
+        },
+        {
+          "name": "Turizam i ekologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Turizam-i-ekologija.pdf"
+        },
+        {
+          "name": "Računovodstvo i revizija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Racunovodstvo-i-revizija.pdf"
+        },
+        {
+          "name": "Ekonomija - opšti smjer",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Ekonomija - opšti smjer",
+          "cycle": "THIRD"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet političkih nauka",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/fakultet-politickih-nauka/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Politologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Politologija.pdf"
+        },
+        {
+          "name": "Međunarodni odnosi i diplomatija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Medjunarodni-odnosi-i-diplomatija.pdf"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Socijalni-rad.pdf"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "THIRD"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za medicinu, farmaciju i zdravstvo",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/fakultet-zdravstvenih-nauka/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Sestrinstvo.pdf"
+        },
+        {
+          "name": "Fizioterapija i radna terapija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Fizioterapija-i-radna-terapija.pdf"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Sanitarni-inzenjering.pdf"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Farmacija.pdf"
+        },
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Fakultet-za-medicinu-farmaciju-i-zdravstvo-Medicina.pdf"
+        },
+        {
+          "name": "Stomatologija",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Stomatologija.pdf"
+        },
+        {
+          "name": "Radiologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Radiologija.pdf"
+        },
+        {
+          "name": "Menadžment u sportu",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Menadzment-u-sportu.pdf"
+        },
+        {
+          "name": "Sportski trener",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Sportski-trener.pdf"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Fizioterapija i radna terapija",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Radiologija",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Menadžment u sportu",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Sportski trener",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Fizioterapija i radna terapija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Biomedicina i zdravstvo",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Stomatologija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Radiologija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Menadžment u sportu",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Sportski trener",
+          "cycle": "THIRD"
+        }
+      ]
+    },
+    {
+      "name": "Pedagoški fakultet",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/pedagoski-fakultet/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Informatika i tehnika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Informatika-i-tehnika.pdf"
+        },
+        {
+          "name": "Vaspitač predškolskih ustanova",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Vaspitac-predskolskih-ustanova.pdf"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Razredna-nastava.pdf"
+        },
+        {
+          "name": "Razredna nastava sa engleskim jezikom za osnovne škole",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Razredna-nastava-sa-engleskim-jezikom.pdf"
+        },
+        {
+          "name": "Razredna nastava sa defektologijom",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Razredna-nastava-sa-defektologijom.pdf"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Psihologija.pdf"
+        },
+        {
+          "name": "Historija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Istorija.pdf"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Geografija.pdf"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Matematika-i-fizika.pdf"
+        },
+        {
+          "name": "Informatika i tehnika",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Razredna nastava - pedagogija",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Historija",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Informatika i tehnika",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Razredna nastava - pedagogija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Historija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "THIRD"
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/pravni-fakultet/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Opšte pravo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Opste-pravo.pdf"
+        },
+        {
+          "name": "Bezbjednost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Bezbjednost.pdf"
+        },
+        {
+          "name": "Forenzika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Forenzika.pdf"
+        },
+        {
+          "name": "Opšte pravo",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Forenzika",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Opšte pravo",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Forenzika",
+          "cycle": "THIRD"
+        }
+      ]
+    },
+    {
+      "name": "Tehnički fakultet",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/tehnicki-fakultet/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Arhitektura",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Arhitektura.pdf"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Gradjevinarstvo.pdf"
+        },
+        {
+          "name": "Geodezija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Geodezija.pdf"
+        },
+        {
+          "name": "Poljoprivreda",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Poljoprivreda.pdf"
+        },
+        {
+          "name": "Inženjerska informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Inzenjerska-informatika.pdf"
+        },
+        {
+          "name": "IT menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-IT-menadzment.pdf"
+        },
+        {
+          "name": "Dizajn i multimedija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Multimedija-i-dizajn.pdf"
+        },
+        {
+          "name": "Automatika i robotika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Automatika-i-robotika.pdf"
+        },
+        {
+          "name": "Elektroenergetika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Elektroenergetika.pdf"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Mehatronika.pdf"
+        },
+        {
+          "name": "Industrijsko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Industrijsko-inzenjerstvo.pdf"
+        },
+        {
+          "name": "Drumski saobraćaj",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Drumski-saobracaj.pdf"
+        },
+        {
+          "name": "Bezbjednost u saobraćaju",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Bezbjednost-u-saobracaju.pdf"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Geodezija",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Poljoprivreda",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Inženjerska informatika",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "IT menadžment",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Dizajn i multimedija",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Automatika i robotika",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Elektroenergetika",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Industrijsko inženjerstvo",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Saobraćaj",
+          "cycle": "SECOND"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Geodezija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Poljoprivreda",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Inženjerska informatika",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "IT menadžment",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Dizajn i multimedija",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Automatika i robotika",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Elektroenergetika",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Industrijsko inženjerstvo",
+          "cycle": "THIRD"
+        },
+        {
+          "name": "Saobraćaj",
+          "cycle": "THIRD"
+        }
+      ]
+    }
+  ]
+}

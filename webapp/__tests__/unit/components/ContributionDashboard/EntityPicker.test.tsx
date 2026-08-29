@@ -12,14 +12,14 @@ const universitiesList = [
     acronym: "UNSA",
     city: "Sarajevo",
     entity: "FBIH",
-    ownership: "JAVNA",
+    ownership: "PUBLIC",
   },
   {
     id: 2,
     name: "Empty University",
     city: "Mostar",
     entity: "FBIH",
-    ownership: "PRIVATNA",
+    ownership: "PRIVATE",
   },
 ];
 
@@ -95,8 +95,8 @@ describe("getPickerDepth", () => {
     ["FACULTY", "UPDATE", 2],
     ["STUDY_PROGRAM", "CREATE", 2],
     ["STUDY_PROGRAM", "DELETE", 3],
-    ["SUBJECT", "CREATE", 3],
-    ["SUBJECT", "UPDATE", 4],
+    ["TRACK", "CREATE", 3],
+    ["TRACK", "UPDATE", 4],
   ] as const)("%s + %s needs depth %i", (entityType, typeOfChange, depth) => {
     expect(getPickerDepth(entityType, typeOfChange)).toBe(depth);
   });

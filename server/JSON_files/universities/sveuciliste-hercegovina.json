@@ -1,0 +1,192 @@
+{
+  "name": "Sveučilište Hercegovina",
+  "acronym": null,
+  "city": "Mostar",
+  "entity": "FBIH",
+  "ownership": "PRIVATE",
+  "foundedYear": "2011-05-19",
+  "website": "https://hercegovina.edu.ba",
+  "address": "Kneza M. Viševića Humskog bb, 88000 Mostar",
+  "phone": "+387 36 650 355",
+  "email": "info@hercegovina.edu.ba",
+  "accreditationFrom": "2021-10-18",
+  "accreditationTo": "2027-04-18",
+  "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastModified": "2026-08-29",
+  "facultiesSourceUrl": "https://hercegovina.edu.ba/hr/o-nama/",
+  "facultiesLastModified": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Fakultet društvenih znanosti dr. Milenka Brkića",
+      "city": "Međugorje",
+      "website": null,
+      "address": "Kraljice Mira 3A, 88266 Međugorje",
+      "phone": "+387 36 651 828",
+      "email": "fdzmb@hercegovina.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Defektologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Ekologija i zaštita okoliša",
+          "cycle": "SECOND",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Menadžment i javna uprava",
+          "cycle": "SECOND",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Predškolski odgoj",
+          "cycle": "SECOND",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "SECOND",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Defektologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Ekologija i zaštita okoliša",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Informatika i komunikologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Menadžment i javna uprava",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Predškolski odgoj",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Turizam",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Ekologija i zaštita okoliša",
+          "cycle": "THIRD",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Informatika i organizacija",
+          "cycle": "THIRD",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Menadžment u obrazovanju",
+          "cycle": "THIRD",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Opća psihologija",
+          "cycle": "THIRD",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Opći menadžment",
+          "cycle": "THIRD",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Sociologija religije",
+          "cycle": "THIRD",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Turizam",
+          "cycle": "THIRD",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet međunarodnih odnosa i diplomacije",
+      "city": "Mostar",
+      "website": null,
+      "address": "Kneza M. Viševića Humskog bb, 88000 Mostar",
+      "phone": "+387 36 650 355",
+      "email": "info@hercegovina.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/",
+      "studyProgramsLastModified": "2026-08-25",
+      "studyPrograms": [
+        {
+          "name": "Međunarodni odnosi i diplomacija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Pravo s međunarodnim odnosima",
+          "cycle": "SECOND",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Međunarodni odnosi i diplomacija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/"
+        },
+        {
+          "name": "Pravo s međunarodnim odnosima",
+          "cycle": "FIRST",
+          "sourceUrl": "https://hercegovina.edu.ba/hr/studijski-programi/",
+          "tracks": [
+            {
+              "name": "Pravo",
+              "lastModified": "2026-08-26"
+            },
+            {
+              "name": "Međunarodno pravo",
+              "lastModified": "2026-08-26"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

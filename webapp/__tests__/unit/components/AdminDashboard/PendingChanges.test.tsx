@@ -20,7 +20,7 @@ interface MockChange {
     name: string;
     city?: string;
     entity?: "FBIH" | "RS" | "BD";
-    ownership?: "JAVNA" | "PRIVATNA";
+    ownership?: "PUBLIC" | "PRIVATE";
   };
   createdAt: string;
   user: { email: string; role: "ADMIN" | "USER" };
@@ -178,7 +178,7 @@ describe("PendingChanges Component", () => {
           name: "New University",
           city: "Sarajevo",
           entity: "FBIH",
-          ownership: "JAVNA",
+          ownership: "PUBLIC",
         },
         createdAt: "2026-05-07T10:20:30.000Z",
         user: { email: "janedoe@examplemail.com", role: "USER" },

@@ -5,8 +5,6 @@ import {
   facultyEditDataSchema,
   studyProgramCreateDataSchema,
   studyProgramEditDataSchema,
-  subjectCreateDataSchema,
-  subjectEditDataSchema,
   trackCreateDataSchema,
   trackEditDataSchema,
   universityCreateDataSchema,
@@ -20,8 +18,6 @@ import type {
   FacultyEditData,
   StudyProgramCreateData,
   StudyProgramEditData,
-  SubjectCreateData,
-  SubjectEditData,
   TrackCreateData,
   TrackEditData,
   UniversityCreateData,
@@ -32,6 +28,7 @@ function toUniversityCreateInput(
   data: UniversityCreateData,
 ): Prisma.UniversityCreateInput {
   return {
+    lastModified: new Date(),
     name: data.name,
     city: data.city,
     entity: data.entity,
@@ -39,6 +36,9 @@ function toUniversityCreateInput(
     ...(data.acronym !== undefined && { acronym: data.acronym }),
     ...(data.foundedYear !== undefined && { foundedYear: data.foundedYear }),
     ...(data.website !== undefined && { website: data.website }),
+    ...(data.address !== undefined && { address: data.address }),
+    ...(data.phone !== undefined && { phone: data.phone }),
+    ...(data.email !== undefined && { email: data.email }),
   };
 }
 
@@ -46,6 +46,7 @@ function toUniversityUpdateInput(
   data: UniversityEditData,
 ): Prisma.UniversityUpdateInput {
   return {
+    lastModified: new Date(),
     ...(data.name !== undefined && { name: data.name }),
     ...(data.city !== undefined && { city: data.city }),
     ...(data.entity !== undefined && { entity: data.entity }),
@@ -53,6 +54,9 @@ function toUniversityUpdateInput(
     ...(data.acronym !== undefined && { acronym: data.acronym }),
     ...(data.foundedYear !== undefined && { foundedYear: data.foundedYear }),
     ...(data.website !== undefined && { website: data.website }),
+    ...(data.address !== undefined && { address: data.address }),
+    ...(data.phone !== undefined && { phone: data.phone }),
+    ...(data.email !== undefined && { email: data.email }),
   };
 }
 
@@ -61,10 +65,14 @@ function toFacultyCreateInput(
   universityId: number,
 ): Prisma.FacultyUncheckedCreateInput {
   return {
+    lastModified: new Date(),
     name: data.name,
     universityId,
     ...(data.city !== undefined && { city: data.city }),
     ...(data.website !== undefined && { website: data.website }),
+    ...(data.address !== undefined && { address: data.address }),
+    ...(data.phone !== undefined && { phone: data.phone }),
+    ...(data.email !== undefined && { email: data.email }),
   };
 }
 
@@ -72,9 +80,13 @@ function toFacultyUpdateInput(
   data: FacultyEditData,
 ): Prisma.FacultyUpdateInput {
   return {
+    lastModified: new Date(),
     ...(data.name !== undefined && { name: data.name }),
     ...(data.city !== undefined && { city: data.city }),
     ...(data.website !== undefined && { website: data.website }),
+    ...(data.address !== undefined && { address: data.address }),
+    ...(data.phone !== undefined && { phone: data.phone }),
+    ...(data.email !== undefined && { email: data.email }),
   };
 }
 
@@ -83,6 +95,7 @@ function toStudyProgramCreateInput(
   facultyId: number,
 ): Prisma.StudyProgramUncheckedCreateInput {
   return {
+    lastModified: new Date(),
     name: data.name,
     cycle: data.cycle,
     facultyId,
@@ -98,6 +111,7 @@ function toStudyProgramUpdateInput(
   data: StudyProgramEditData,
 ): Prisma.StudyProgramUpdateInput {
   return {
+    lastModified: new Date(),
     ...(data.name !== undefined && { name: data.name }),
     ...(data.cycle !== undefined && { cycle: data.cycle }),
     ...(data.durationYears !== undefined && {
@@ -108,35 +122,12 @@ function toStudyProgramUpdateInput(
   };
 }
 
-function toSubjectCreateInput(
-  data: SubjectCreateData,
-  studyProgramId: number,
-): Prisma.SubjectUncheckedCreateInput {
-  return {
-    name: data.name,
-    studyProgramId,
-    ...(data.semester !== undefined && { semester: data.semester }),
-    ...(data.ects !== undefined && { ects: data.ects }),
-    ...(data.type !== undefined && { type: data.type }),
-  };
-}
-
-function toSubjectUpdateInput(
-  data: SubjectEditData,
-): Prisma.SubjectUpdateInput {
-  return {
-    ...(data.name !== undefined && { name: data.name }),
-    ...(data.semester !== undefined && { semester: data.semester }),
-    ...(data.ects !== undefined && { ects: data.ects }),
-    ...(data.type !== undefined && { type: data.type }),
-  };
-}
-
 function toTrackCreateInput(
   data: TrackCreateData,
   studyProgramId: number,
 ): Prisma.TrackUncheckedCreateInput {
   return {
+    lastModified: new Date(),
     name: data.name,
     studyProgramId,
     ...(data.ects !== undefined && { ects: data.ects }),
@@ -148,6 +139,7 @@ function toTrackCreateInput(
 
 function toTrackUpdateInput(data: TrackEditData): Prisma.TrackUpdateInput {
   return {
+    lastModified: new Date(),
     ...(data.name !== undefined && { name: data.name }),
     ...(data.ects !== undefined && { ects: data.ects }),
     ...(data.durationYears !== undefined && {
@@ -316,52 +308,11 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
       return deletePendingChange();
     }
 
-    if (entityType === "TRACK") {
-      if (typeOfChange === "DELETE") {
-        if (targetId === null) return false;
-
-        await tx.track.delete({ where: { id: targetId } });
-        return deletePendingChange();
-      }
-
-      if (typeOfChange === "CREATE") {
-        if (parentId === null) return false;
-
-        const data = parsePendingChangeData(
-          trackCreateDataSchema,
-          pendingChange.data,
-          id,
-        );
-        if (!data) return false;
-
-        await tx.track.create({
-          data: toTrackCreateInput(data, parentId),
-        });
-
-        return deletePendingChange();
-      }
-
-      if (targetId === null) return false;
-
-      const data = parsePendingChangeData(
-        trackEditDataSchema,
-        pendingChange.data,
-        id,
-      );
-      if (!data) return false;
-
-      await tx.track.update({
-        where: { id: targetId },
-        data: toTrackUpdateInput(data),
-      });
-
-      return deletePendingChange();
-    }
-
+    // entityType === "TRACK" is the only remaining case
     if (typeOfChange === "DELETE") {
       if (targetId === null) return false;
 
-      await tx.subject.delete({ where: { id: targetId } });
+      await tx.track.delete({ where: { id: targetId } });
       return deletePendingChange();
     }
 
@@ -369,14 +320,14 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
       if (parentId === null) return false;
 
       const data = parsePendingChangeData(
-        subjectCreateDataSchema,
+        trackCreateDataSchema,
         pendingChange.data,
         id,
       );
       if (!data) return false;
 
-      await tx.subject.create({
-        data: toSubjectCreateInput(data, parentId),
+      await tx.track.create({
+        data: toTrackCreateInput(data, parentId),
       });
 
       return deletePendingChange();
@@ -385,15 +336,15 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
     if (targetId === null) return false;
 
     const data = parsePendingChangeData(
-      subjectEditDataSchema,
+      trackEditDataSchema,
       pendingChange.data,
       id,
     );
     if (!data) return false;
 
-    await tx.subject.update({
+    await tx.track.update({
       where: { id: targetId },
-      data: toSubjectUpdateInput(data),
+      data: toTrackUpdateInput(data),
     });
 
     return deletePendingChange();

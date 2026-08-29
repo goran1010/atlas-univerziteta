@@ -64,22 +64,17 @@ enum entity {
 }
 
 enum ownership {
-  JAVNA
-  PRIVATNA
+  PUBLIC
+  PRIVATE
 }
 
 enum studyCycle {
-  PRVI
-  DRUGI
-  TRECI
-  INTEGRISANI
-  STRUCNI
-  SPECIJALISTICKI
-}
-
-enum subjectType {
-  OBAVEZNI
-  IZBORNI
+  FIRST
+  SECOND
+  THIRD
+  INTEGRATED
+  VOCATIONAL
+  SPECIALIST
 }
 
 model University {
@@ -91,11 +86,14 @@ model University {
   ownership         ownership
   foundedYear       String?
   website           String?
+  address           String?
+  phone             String?
+  email             String?
   accreditationFrom DateTime?
   accreditationTo   DateTime?
   authority         String?
   sourceUrl         String?
-  lastChecked       DateTime?
+  lastModified      DateTime?
   faculties         Faculty[]
 
   @@unique([name, city])
@@ -109,9 +107,12 @@ model Faculty {
   university        University     @relation(fields: [universityId], references: [id])
   city              String?
   website           String?
+  address           String?
+  phone             String?
+  email             String?
   isUniversityLevel Boolean        @default(false)
   sourceUrl         String?
-  lastChecked       DateTime?
+  lastModified      DateTime?
   studyPrograms     StudyProgram[]
 
   @@unique([name, universityId])
@@ -128,8 +129,7 @@ model StudyProgram {
   ects          Int?
   language      String?
   sourceUrl     String?
-  lastChecked   DateTime?
-  subjects      Subject[]
+  lastModified  DateTime?
   tracks        Track[]
 
   @@unique([name, facultyId, cycle])
@@ -144,32 +144,16 @@ model Track {
   ects           Int?
   durationYears  Int?
   sourceUrl      String?
-  lastChecked    DateTime?
+  lastModified   DateTime?
 
   @@unique([name, studyProgramId])
   @@map("tracks")
-}
-
-model Subject {
-  id             Int          @id @default(autoincrement())
-  name           String
-  studyProgramId Int
-  studyProgram   StudyProgram @relation(fields: [studyProgramId], references: [id])
-  semester       Int?
-  ects           Int?
-  type           subjectType?
-  sourceUrl      String?
-  lastChecked    DateTime?
-
-  @@unique([name, studyProgramId])
-  @@map("subjects")
 }
 
 enum entityType {
   UNIVERSITY
   FACULTY
   STUDY_PROGRAM
-  SUBJECT
   TRACK
 }
 
@@ -184,7 +168,7 @@ model PendingChange {
   // CREATE child parent
   // FACULTY -> universityId
   // STUDY_PROGRAM -> facultyId
-  // SUBJECT -> studyProgramId
+  // TRACK -> studyProgramId
   parentId Int?
 
   // proposed data

@@ -4,7 +4,6 @@ const ENTITY_LEVELS: Record<EntityType, number> = {
   UNIVERSITY: 1,
   FACULTY: 2,
   STUDY_PROGRAM: 3,
-  SUBJECT: 4,
   TRACK: 4,
 };
 

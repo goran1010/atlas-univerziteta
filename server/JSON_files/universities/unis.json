@@ -1,0 +1,1281 @@
+{
+  "name": "Univerzitet u Istočnom Sarajevu",
+  "acronym": "UNIS",
+  "city": "Istočno Sarajevo",
+  "entity": "RS",
+  "ownership": "PUBLIC",
+  "foundedYear": "1993-12-29",
+  "website": "https://www.ues.rs.ba",
+  "address": "Stefana Nemanje 5, 71123 Istočno Sarajevo",
+  "phone": "+387 57 320 330",
+  "email": "univerzitet@ues.rs.ba",
+  "accreditationFrom": "2007-08-15",
+  "accreditationTo": "2030-06-18",
+  "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastModified": "2026-08-29",
+  "facultiesSourceUrl": "https://www.ues.rs.ba/en/faculties/",
+  "facultiesLastModified": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Akademija likovnih umjetnosti",
+      "city": "Trebinje",
+      "website": "https://alutb.ues.rs.ba",
+      "address": "Stepe Stepanovića bb, 89101 Trebinje",
+      "phone": "+387 59 270 310",
+      "email": "dekanat@alutb.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Likovna umjetnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Likovna umjetnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        }
+      ]
+    },
+    {
+      "name": "Ekonomski fakultet Pale",
+      "city": "Pale",
+      "website": "https://ekofis.ues.rs.ba",
+      "address": "Alekse Šantića 3, 71420 Pale",
+      "phone": "+387 57 226 651",
+      "email": "dekanat@ekofis.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Ekonomski razvoj",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Finansije",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Kvantitativna ekonomija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Makroekonomija, reforme i biznis",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Poslovno upravljanje",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Turizam i hotelijerstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
+          "tracks": [
+            {
+              "name": "Računovodstvo i revizija",
+              "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Ekonomska analiza i politika",
+              "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Digitalna transformacija",
+              "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Ekonomija i biznis",
+              "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Finansije i bankarstvo",
+              "sourceUrl": "https://izaberi.ues.rs.ba/fakultet.php?id=4",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        },
+        {
+          "name": "Turizam i hotelijerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Ekonomski fakultet Brčko",
+      "city": "Brčko",
+      "website": "https://efb.ues.rs.ba",
+      "address": "Studentska 11, 76100 Brčko",
+      "phone": "+387 49 234 931",
+      "email": "dekanat@efb.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Finansijski i bankarski menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Marketing i menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        }
+      ]
+    },
+    {
+      "name": "Elektrotehnički fakultet",
+      "city": "Istočno Sarajevo",
+      "website": "http://etf.ues.rs.ba",
+      "address": "Vuka Karadžića 30, 71123 Istočno Sarajevo",
+      "phone": "+387 57 342 788",
+      "email": "kontakt@etf.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Automatika i elektronika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Elektroenergetika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Obnovljivi izvori energije i pametne elekroenergetske mreže",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Računarska tehnika i informatika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Automatics and Electronics",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Automatika i elektronika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Computer Science and Informatics",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Electroenergetics",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Elektroenergetika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Računarstvo i informatika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet fizičkog vaspitanja i sporta",
+      "city": "Pale",
+      "website": "https://ffvis.ues.rs.ba",
+      "address": "Alekse Šantića 3, 71420 Pale",
+      "phone": "+387 57 223 861",
+      "email": "dekanat@ffvis.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Fizičko vaspitanje",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Physical education",
+          "cycle": "SECOND",
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Sport",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 120,
+          "durationYears": 2
+        },
+        {
+          "name": "Sports",
+          "cycle": "SECOND",
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 120,
+          "durationYears": 2
+        },
+        {
+          "name": "Fizičko vaspitanje",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Sport",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Fizičko vaspitanje",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Fakultet poslovne ekonomije",
+      "city": "Bijeljina",
+      "website": "http://fpe.ues.rs.ba",
+      "address": "Semberskih ratara bb, 76300 Bijeljina",
+      "phone": "+387 55 415 200",
+      "email": "dekan@fpe.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Digital economy",
+          "cycle": "SECOND",
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Digitalna ekonomija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Finance, banking and insurance",
+          "cycle": "SECOND",
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Finansije, bankarstvo i osiguranje",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "International economy",
+          "cycle": "SECOND",
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Međunarodna ekonomija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za proizvodnju i menadžment",
+      "city": "Trebinje",
+      "website": "https://fpm.ues.rs.ba",
+      "address": "Stepe Stepanovića bb, 89101 Trebinje",
+      "phone": "+387 59 240 654",
+      "email": "fpm@fpm.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Industrijski menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Industrijsko inženjerstvo za energetiku",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Industrijski menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Industrijsko inženjerstvo za energetiku",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Inženjerstvo informacionih sistema i tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        }
+      ]
+    },
+    {
+      "name": "Filozofski fakultet",
+      "city": "Pale",
+      "website": "https://ff.ues.rs.ba",
+      "address": "Alekse Šantića 1, 71420 Pale",
+      "phone": "+387 57 227 258",
+      "email": "info@ff.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Geografija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Istorija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Kineski jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Matematika i računarstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Njemački jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Novinarstvo-komunikologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Opšta književnost i bibliotekarstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Politička analitika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Ruski i srpski jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Srpski jezik i književnost",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Istorija i arheologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Kineski i engleski jezik i književnosti",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Matematika, informatika i fizika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Njemački jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Novinarstvo i odnosi sa javnošću",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Opšta književnost i bibliotekarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Opšta književnost i teatrologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Politikologija i međunarodni odnosi",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Ruski jezik i književnost i međunarodni politički odnosi",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Srpski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Filologija",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        },
+        {
+          "name": "Istorija ratova, ratnih zločina i genocida u XX vijeku",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        },
+        {
+          "name": "Matematika",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Mašinski fakultet",
+      "city": "Istočno Sarajevo",
+      "website": "https://maf.ues.rs.ba",
+      "address": "Vuka Karadžića 30, 71123 Istočno Sarajevo",
+      "phone": "+387 57 340 847",
+      "email": "dekanat-maf@ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Mašinstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Mašinstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
+          "tracks": [
+            {
+              "name": "Proizvodno mašinstvo",
+              "sourceUrl": "https://www.maf.ues.rs.ba/upis/?pismo=lat",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Mašinske konstrukcije i razvoj proizvoda",
+              "sourceUrl": "https://www.maf.ues.rs.ba/upis/?pismo=lat",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Energetsko procesno mašinstvo",
+              "sourceUrl": "https://www.maf.ues.rs.ba/upis/?pismo=lat",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Medicinski fakultet",
+      "city": "Foča",
+      "website": "https://mef.ues.rs.ba",
+      "address": "Studentska 5, 73300 Foča",
+      "phone": "+387 58 210 007",
+      "email": "office-mf@ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Specijalna edukacija i rehabilitacija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Zdravstvena njega",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Dentistry",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Health care",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Medicine",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Specijalna edukacija i rehabilitacija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Stomatologija",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Zdravstvena njega",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Bioinžinjering i medicinska informatika",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        },
+        {
+          "name": "Biomedicinska istraživanja",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Muzička akademija",
+      "city": "Istočno Sarajevo",
+      "website": "https://mak.ues.rs.ba",
+      "address": "Stefana Nemanje 5, 71123 Istočno Sarajevo",
+      "phone": "+387 57 342 125",
+      "email": "info@mak.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Muzičko-pedagoško teorijski",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Vokalno-instrumentalni",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Muzičko-pedagoško teorijski",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Vokalno-instrumentalni",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Vokalno-instrumentalni nastava na ruskom jeziku",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "ruski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        }
+      ]
+    },
+    {
+      "name": "Pedagoški fakultet",
+      "city": "Bijeljina",
+      "website": "https://pfb.ues.rs.ba",
+      "address": "Semberskih ratara bb, 76300 Bijeljina",
+      "phone": "+387 55 415 400",
+      "email": "ucitelj@pfb.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Informatika u obrazovanju",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/"
+        },
+        {
+          "name": "Predškolsko vaspitanje i obrazovanje",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": null,
+          "durationYears": null,
+          "tracks": [
+            {
+              "name": "120 ECTS",
+              "ects": 120,
+              "durationYears": 2
+            },
+            {
+              "name": "60 ECTS",
+              "ects": 60,
+              "durationYears": 1
+            }
+          ]
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Predškolsko obrazovanje",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Tehničko obrazovanje i informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Metodika razredne nastave",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Poljoprivredni fakultet",
+      "city": "Istočno Sarajevo",
+      "website": "https://pof.ues.rs.ba",
+      "address": "Vuka Karadžića 30, 71123 Istočno Sarajevo",
+      "phone": "+387 57 340 401",
+      "email": "office@pof.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Poljoprivreda",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Šumarstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Agromediteranska proizvodnja",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Poljoprivreda",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Šumarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Upravljanje prehrambenim lancem",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Pale",
+      "website": "http://pravni.ues.rs.ba",
+      "address": "Alekse Šantića 3, 71420 Pale",
+      "phone": "+387 57 226 609",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Pravoslavni bogoslovski fakultet",
+      "city": "Foča",
+      "website": "https://bogoslovski.ues.rs.ba",
+      "address": "Ulica 9. maja 6, 73300 Foča",
+      "phone": "+387 58 220 060",
+      "email": "dekanat@bogoslovski.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Međureligijski studiji i izgradnja mira",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Teologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Bogoslovsko-pastirski",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Pravoslavna teologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Teologija",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Saobraćajni fakultet",
+      "city": "Doboj",
+      "website": "https://sf.ues.rs.ba",
+      "address": "Vojvode Mišića 52, 74000 Doboj",
+      "phone": "+387 53 200 103",
+      "email": "dekanat@sf.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Saobraćaj",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1,
+          "tracks": [
+            {
+              "name": "Drumski i gradski saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Željeznički saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Logistika",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Motorna vozila",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Telekomunikacije i poštanski saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Saobraćajnice",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Računarske i informacione tehnologije",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Vazdušni saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        },
+        {
+          "name": "Saobraćaj",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
+          "tracks": [
+            {
+              "name": "Drumski i gradski saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Željeznički saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Logistika",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Motorna vozila",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Telekomunikacije i poštanski saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Saobraćajnice",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Računarske i informacione tehnologije",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Vazdušni saobraćaj",
+              "sourceUrl": "https://sf.ues.rs.ba/lat/?page_id=228",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        },
+        {
+          "name": "Saobraćaj",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Tehnološki fakultet",
+      "city": "Zvornik",
+      "website": "https://tfzv.ues.rs.ba",
+      "address": "Karakaj 34A, 75400 Zvornik",
+      "phone": "+387 56 260 190",
+      "email": "sekretar@tfzv.ues.rs.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Ekološki monitoring slatkih voda",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Hemijsko inženjerstvo i tehnologija",
+          "cycle": "SECOND",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
+          "ects": 60,
+          "durationYears": 1
+        },
+        {
+          "name": "Biologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Chemical engineering and technology",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "engleski",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Hemijsko inženjerstvo i tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/"
+        },
+        {
+          "name": "Hemijsko inženjerstvo i tehnologija",
+          "cycle": "THIRD",
+          "sourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-3/",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    }
+  ]
+}

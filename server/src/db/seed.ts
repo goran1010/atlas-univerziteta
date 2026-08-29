@@ -20,26 +20,15 @@ if (!connectionString) {
 const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });
 
-const universitiesFilePath = path.resolve(
+const universitiesDirPath = path.resolve(
   __dirname,
-  "../../JSON_files/universities.json",
+  "../../JSON_files/universities",
 );
 
-const facultiesFilePath = path.resolve(
-  __dirname,
-  "../../JSON_files/faculties.json",
-);
-
-const studyProgramsFilePath = path.resolve(
-  __dirname,
-  "../../JSON_files/studyPrograms.json",
-);
-
-const universitiesJsonData = fs.readFileSync(universitiesFilePath, "utf-8");
-
-const facultiesJsonData = fs.readFileSync(facultiesFilePath, "utf-8");
-
-const studyProgramsJsonData = fs.readFileSync(studyProgramsFilePath, "utf-8");
+const universityFileNames = fs
+  .readdirSync(universitiesDirPath)
+  .filter((fileName) => fileName.endsWith(".json"))
+  .sort();
 
 const optionalTextSchema = z.string().trim().min(1).nullish();
 
@@ -48,85 +37,89 @@ const optionalDateSchema = z.iso
   .transform((value) => new Date(value))
   .nullish();
 
-const universitySeedSchema = z.strictObject({
-  name: z.string().trim().min(1),
-  acronym: optionalTextSchema,
-  city: z.string().trim().min(1),
-  entity: z.enum(["FBIH", "RS", "BD"]),
-  ownership: z
-    .enum(["Javna", "Privatna"])
-    .transform((value) => (value === "Javna" ? "JAVNA" : "PRIVATNA")),
-  foundedYear: optionalTextSchema,
-  website: optionalTextSchema,
-  accreditationFrom: optionalDateSchema,
-  accreditationTo: optionalDateSchema,
-  authority: optionalTextSchema,
-  sourceUrl: optionalTextSchema,
-  lastChecked: optionalDateSchema,
-});
-
-const universitiesSeedSchema = z.array(universitySeedSchema);
-
-const facultySeedSchema = z.strictObject({
-  name: z.string().trim().min(1),
-  city: optionalTextSchema,
-  website: optionalTextSchema,
-  isUniversityLevel: z.boolean().optional(),
-  sourceUrl: optionalTextSchema,
-  lastChecked: optionalDateSchema,
-});
-
-const facultyGroupSeedSchema = z.strictObject({
-  university: z.string().trim().min(1),
-  sourceUrl: optionalTextSchema,
-  lastChecked: optionalDateSchema,
-  faculties: z.array(facultySeedSchema).min(1),
-});
-
-const facultiesSeedSchema = z.array(facultyGroupSeedSchema);
-
 const trackSeedSchema = z.strictObject({
   name: z.string().trim().min(1),
   ects: z.number().int().positive().nullish(),
   durationYears: z.number().int().positive().nullish(),
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalDateSchema,
+  lastModified: optionalDateSchema,
 });
 
 const studyProgramSeedSchema = z.strictObject({
   name: z.string().trim().min(1),
   cycle: z.enum([
-    "PRVI",
-    "DRUGI",
-    "TRECI",
-    "INTEGRISANI",
-    "STRUCNI",
-    "SPECIJALISTICKI",
+    "FIRST",
+    "SECOND",
+    "THIRD",
+    "INTEGRATED",
+    "VOCATIONAL",
+    "SPECIALIST",
   ]),
   durationYears: z.number().int().positive().nullish(),
   ects: z.number().int().positive().nullish(),
   language: optionalTextSchema,
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalDateSchema,
+  lastModified: optionalDateSchema,
   tracks: z.array(trackSeedSchema).min(1).optional(),
 });
 
-const studyProgramFacultySeedSchema = z.strictObject({
-  faculty: z.string().trim().min(1),
+const facultySeedSchema = z.strictObject({
+  name: z.string().trim().min(1),
+  city: optionalTextSchema,
+  website: optionalTextSchema,
+  address: optionalTextSchema,
+  phone: optionalTextSchema,
+  email: optionalTextSchema,
+  isUniversityLevel: z.boolean().optional(),
   sourceUrl: optionalTextSchema,
-  lastChecked: optionalDateSchema,
-  studyPrograms: z.array(studyProgramSeedSchema).min(1),
+  lastModified: optionalDateSchema,
+  studyProgramsSourceUrl: optionalTextSchema,
+  studyProgramsLastModified: optionalDateSchema,
+  studyPrograms: z.array(studyProgramSeedSchema).min(1).optional(),
 });
 
-const studyProgramGroupSeedSchema = z.strictObject({
-  university: z.string().trim().min(1),
-  faculties: z.array(studyProgramFacultySeedSchema).min(1),
+const universitySeedSchema = z.strictObject({
+  name: z.string().trim().min(1),
+  acronym: optionalTextSchema,
+  city: z.string().trim().min(1),
+  entity: z.enum(["FBIH", "RS", "BD"]),
+  ownership: z.enum(["PUBLIC", "PRIVATE"]),
+  foundedYear: optionalTextSchema,
+  website: optionalTextSchema,
+  address: optionalTextSchema,
+  phone: optionalTextSchema,
+  email: optionalTextSchema,
+  accreditationFrom: optionalDateSchema,
+  accreditationTo: optionalDateSchema,
+  authority: optionalTextSchema,
+  sourceUrl: optionalTextSchema,
+  lastModified: optionalDateSchema,
+  facultiesSourceUrl: optionalTextSchema,
+  facultiesLastModified: optionalDateSchema,
+  faculties: z.array(facultySeedSchema).min(1),
 });
 
-const studyProgramsSeedSchema = z.array(studyProgramGroupSeedSchema);
+type UniversitySeed = z.infer<typeof universitySeedSchema>;
+
+function parseUniversityFile(fileName: string): UniversitySeed {
+  const jsonData = fs.readFileSync(
+    path.join(universitiesDirPath, fileName),
+    "utf-8",
+  );
+
+  const raw = JSON.parse(jsonData) as unknown;
+
+  try {
+    return universitySeedSchema.parse(raw);
+  } catch (error) {
+    throw new Error(`Invalid university seed file: ${fileName}`, {
+      cause: error,
+    });
+  }
+}
 
 function toUniversityData(
-  university: z.infer<typeof universitySeedSchema>,
+  university: UniversitySeed,
 ): UniversityCreateManyInput {
   return {
     name: university.name,
@@ -136,27 +129,26 @@ function toUniversityData(
     ownership: university.ownership,
     foundedYear: university.foundedYear ?? null,
     website: university.website ?? null,
+    address: university.address ?? null,
+    phone: university.phone ?? null,
+    email: university.email ?? null,
     accreditationFrom: university.accreditationFrom ?? null,
     accreditationTo: university.accreditationTo ?? null,
     authority: university.authority ?? null,
     sourceUrl: university.sourceUrl ?? null,
-    lastChecked: university.lastChecked ?? null,
+    lastModified: university.lastModified ?? null,
   };
 }
 
 async function main() {
   try {
+    const universityTrees = universityFileNames.map(parseUniversityFile);
+
     // eslint-disable-next-line no-console
     console.log("Seeding universities...");
 
-    const rawUniversities = JSON.parse(universitiesJsonData) as unknown;
-
-    const universities = universitiesSeedSchema
-      .parse(rawUniversities)
-      .map(toUniversityData);
-
     const upsertedUniversities = await Promise.all(
-      universities.map((data) =>
+      universityTrees.map(toUniversityData).map((data) =>
         prisma.university.upsert({
           where: { name: data.name },
           create: data,
@@ -173,10 +165,6 @@ async function main() {
     // eslint-disable-next-line no-console
     console.log("Seeding faculties...");
 
-    const rawFaculties = JSON.parse(facultiesJsonData) as unknown;
-
-    const facultyGroups = facultiesSeedSchema.parse(rawFaculties);
-
     const universityIdByName = new Map(
       upsertedUniversities.map((university) => [
         university.name,
@@ -184,28 +172,17 @@ async function main() {
       ]),
     );
 
-    const unknownUniversities = facultyGroups
-      .map((group) => group.university)
-      .filter((name) => !universityIdByName.has(name));
-
-    if (unknownUniversities.length > 0) {
-      throw new Error(
-        `Unknown universities in faculties.json: ${unknownUniversities.join(", ")}`,
-      );
-    }
-
-    const facultyUpserts = facultyGroups.flatMap((group) => {
-      const universityId = universityIdByName.get(group.university);
+    const facultyUpserts = universityTrees.flatMap((tree) => {
+      const universityId = universityIdByName.get(tree.name);
 
       if (universityId === undefined) {
-        throw new Error(
-          `Unknown university in faculties.json: ${group.university}`,
-        );
+        throw new Error(`Unknown university: ${tree.name}`);
       }
 
-      return group.faculties.map((faculty) => {
-        const sourceUrl = faculty.sourceUrl ?? group.sourceUrl ?? null;
-        const lastChecked = faculty.lastChecked ?? group.lastChecked ?? null;
+      return tree.faculties.map((faculty) => {
+        const sourceUrl = faculty.sourceUrl ?? tree.facultiesSourceUrl ?? null;
+        const lastModified =
+          faculty.lastModified ?? tree.facultiesLastModified ?? null;
         const isUniversityLevel = faculty.isUniversityLevel ?? false;
 
         return prisma.faculty.upsert({
@@ -217,16 +194,22 @@ async function main() {
             universityId,
             city: faculty.city ?? null,
             website: faculty.website ?? null,
+            address: faculty.address ?? null,
+            phone: faculty.phone ?? null,
+            email: faculty.email ?? null,
             isUniversityLevel,
             sourceUrl,
-            lastChecked,
+            lastModified,
           },
           update: {
             city: faculty.city ?? null,
             website: faculty.website ?? null,
+            address: faculty.address ?? null,
+            phone: faculty.phone ?? null,
+            email: faculty.email ?? null,
             isUniversityLevel,
             sourceUrl,
-            lastChecked,
+            lastModified,
           },
         });
       });
@@ -240,10 +223,6 @@ async function main() {
     // eslint-disable-next-line no-console
     console.log("Seeding study programs...");
 
-    const rawStudyPrograms = JSON.parse(studyProgramsJsonData) as unknown;
-
-    const studyProgramGroups = studyProgramsSeedSchema.parse(rawStudyPrograms);
-
     const facultyIdByUniversityAndName = new Map(
       upsertedFaculties.map((faculty) => [
         `${faculty.universityId.toString()}:${faculty.name}`,
@@ -251,64 +230,27 @@ async function main() {
       ]),
     );
 
-    const unknownStudyProgramUniversities = studyProgramGroups
-      .map((group) => group.university)
-      .filter((name) => !universityIdByName.has(name));
-
-    if (unknownStudyProgramUniversities.length > 0) {
-      throw new Error(
-        `Unknown universities in studyPrograms.json: ${unknownStudyProgramUniversities.join(", ")}`,
-      );
-    }
-
-    const unknownStudyProgramFaculties = studyProgramGroups.flatMap((group) => {
-      const universityId = universityIdByName.get(group.university);
+    const studyProgramUpserts = universityTrees.flatMap((tree) => {
+      const universityId = universityIdByName.get(tree.name);
 
       if (universityId === undefined) {
-        return [];
+        throw new Error(`Unknown university: ${tree.name}`);
       }
 
-      return group.faculties
-        .map((facultyGroup) => facultyGroup.faculty)
-        .filter(
-          (facultyName) =>
-            !facultyIdByUniversityAndName.has(
-              `${universityId.toString()}:${facultyName}`,
-            ),
-        )
-        .map((facultyName) => `${facultyName} (${group.university})`);
-    });
-
-    if (unknownStudyProgramFaculties.length > 0) {
-      throw new Error(
-        `Unknown faculties in studyPrograms.json: ${unknownStudyProgramFaculties.join(", ")}`,
-      );
-    }
-
-    const studyProgramUpserts = studyProgramGroups.flatMap((group) => {
-      const universityId = universityIdByName.get(group.university);
-
-      if (universityId === undefined) {
-        throw new Error(
-          `Unknown university in studyPrograms.json: ${group.university}`,
-        );
-      }
-
-      return group.faculties.flatMap((facultyGroup) => {
+      return tree.faculties.flatMap((faculty) => {
         const facultyId = facultyIdByUniversityAndName.get(
-          `${universityId.toString()}:${facultyGroup.faculty}`,
+          `${universityId.toString()}:${faculty.name}`,
         );
 
         if (facultyId === undefined) {
-          throw new Error(
-            `Unknown faculty in studyPrograms.json: ${facultyGroup.faculty} (${group.university})`,
-          );
+          throw new Error(`Unknown faculty: ${faculty.name} (${tree.name})`);
         }
 
-        return facultyGroup.studyPrograms.map((program) => {
-          const sourceUrl = program.sourceUrl ?? facultyGroup.sourceUrl ?? null;
-          const lastChecked =
-            program.lastChecked ?? facultyGroup.lastChecked ?? null;
+        return (faculty.studyPrograms ?? []).map((program) => {
+          const sourceUrl =
+            program.sourceUrl ?? faculty.studyProgramsSourceUrl ?? null;
+          const lastModified =
+            program.lastModified ?? faculty.studyProgramsLastModified ?? null;
 
           return prisma.studyProgram.upsert({
             where: {
@@ -326,14 +268,14 @@ async function main() {
               ects: program.ects ?? null,
               language: program.language ?? null,
               sourceUrl,
-              lastChecked,
+              lastModified,
             },
             update: {
               durationYears: program.durationYears ?? null,
               ects: program.ects ?? null,
               language: program.language ?? null,
               sourceUrl,
-              lastChecked,
+              lastModified,
             },
           });
         });
@@ -351,23 +293,23 @@ async function main() {
     console.log("Seeding tracks...");
 
     const tracksByProgramKey = new Map(
-      studyProgramGroups.flatMap((group) => {
-        const universityId = universityIdByName.get(group.university);
+      universityTrees.flatMap((tree) => {
+        const universityId = universityIdByName.get(tree.name);
 
         if (universityId === undefined) {
           return [];
         }
 
-        return group.faculties.flatMap((facultyGroup) => {
+        return tree.faculties.flatMap((faculty) => {
           const facultyId = facultyIdByUniversityAndName.get(
-            `${universityId.toString()}:${facultyGroup.faculty}`,
+            `${universityId.toString()}:${faculty.name}`,
           );
 
           if (facultyId === undefined) {
             return [];
           }
 
-          return facultyGroup.studyPrograms
+          return (faculty.studyPrograms ?? [])
             .filter((program) => program.tracks !== undefined)
             .map(
               (program) =>
@@ -400,13 +342,13 @@ async function main() {
             ects: track.ects ?? null,
             durationYears: track.durationYears ?? null,
             sourceUrl: track.sourceUrl ?? null,
-            lastChecked: track.lastChecked ?? null,
+            lastModified: track.lastModified ?? null,
           },
           update: {
             ects: track.ects ?? null,
             durationYears: track.durationYears ?? null,
             sourceUrl: track.sourceUrl ?? null,
-            lastChecked: track.lastChecked ?? null,
+            lastModified: track.lastModified ?? null,
           },
         }),
       );

@@ -14,7 +14,6 @@ import type {
   Cycle,
   Entity,
   EntityType,
-  SubjectType,
   TypeOfChange,
   PendingChange,
 } from "./types";
@@ -46,21 +45,18 @@ const ENTITY_TYPES: EntityType[] = [
   "FACULTY",
   "STUDY_PROGRAM",
   "TRACK",
-  "SUBJECT",
 ];
 
 const TYPE_OF_CHANGES: TypeOfChange[] = ["CREATE", "UPDATE", "DELETE"];
 
 const CYCLES: Cycle[] = [
-  "PRVI",
-  "DRUGI",
-  "TRECI",
-  "INTEGRISANI",
-  "STRUCNI",
-  "SPECIJALISTICKI",
+  "FIRST",
+  "SECOND",
+  "THIRD",
+  "INTEGRATED",
+  "VOCATIONAL",
+  "SPECIALIST",
 ];
-
-const SUBJECT_TYPES: SubjectType[] = ["OBAVEZNI", "IZBORNI"];
 
 const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
 
@@ -183,7 +179,6 @@ function AddUniversityEntity({
         <EntityPicker
           key={`${entityType}-${typeOfChange}-${String(pickerResetKey)}`}
           depth={getPickerDepth(entityType, typeOfChange)}
-          leafType={entityType === "TRACK" ? "TRACK" : "SUBJECT"}
           legend={
             needsParent
               ? t("contribution.picker.parent")
@@ -267,11 +262,11 @@ function AddUniversityEntity({
                     required={typeOfChange === "CREATE"}
                   >
                     <option value="">-</option>
-                    <option value="JAVNA">
-                      {t("universitiesPage.ownership.JAVNA")}
+                    <option value="PUBLIC">
+                      {t("universitiesPage.ownership.PUBLIC")}
                     </option>
-                    <option value="PRIVATNA">
-                      {t("universitiesPage.ownership.PRIVATNA")}
+                    <option value="PRIVATE">
+                      {t("universitiesPage.ownership.PRIVATE")}
                     </option>
                   </Select>
                 </div>
@@ -292,6 +287,33 @@ function AddUniversityEntity({
                 value={data.website ?? ""}
                 onChange={(e) => {
                   setDataField("website", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.address")}
+                id="dataAddress"
+                type="text"
+                value={data.address ?? ""}
+                onChange={(e) => {
+                  setDataField("address", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.phone")}
+                id="dataPhone"
+                type="tel"
+                value={data.phone ?? ""}
+                onChange={(e) => {
+                  setDataField("phone", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.email")}
+                id="dataEmail"
+                type="email"
+                value={data.email ?? ""}
+                onChange={(e) => {
+                  setDataField("email", e.target.value || undefined);
                 }}
               />
             </>
@@ -315,6 +337,33 @@ function AddUniversityEntity({
                 value={data.website ?? ""}
                 onChange={(e) => {
                   setDataField("website", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.address")}
+                id="dataFacultyAddress"
+                type="text"
+                value={data.address ?? ""}
+                onChange={(e) => {
+                  setDataField("address", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.phone")}
+                id="dataFacultyPhone"
+                type="tel"
+                value={data.phone ?? ""}
+                onChange={(e) => {
+                  setDataField("phone", e.target.value || undefined);
+                }}
+              />
+              <DataField
+                label={t("contribution.dataFields.email")}
+                id="dataFacultyEmail"
+                type="email"
+                value={data.email ?? ""}
+                onChange={(e) => {
+                  setDataField("email", e.target.value || undefined);
                 }}
               />
             </>
@@ -410,57 +459,6 @@ function AddUniversityEntity({
                   );
                 }}
               />
-            </>
-          )}
-
-          {entityType === "SUBJECT" && (
-            <>
-              <DataField
-                label={t("contribution.dataFields.semester")}
-                id="dataSemester"
-                type="number"
-                min={1}
-                max={12}
-                value={data.semester ?? ""}
-                onChange={(e) => {
-                  setDataField(
-                    "semester",
-                    e.target.value === "" ? undefined : Number(e.target.value),
-                  );
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.ects")}
-                id="dataSubjectEcts"
-                type="number"
-                min={1}
-                value={data.ects ?? ""}
-                onChange={(e) => {
-                  setDataField(
-                    "ects",
-                    e.target.value === "" ? undefined : Number(e.target.value),
-                  );
-                }}
-              />
-              <div className="flex flex-col gap-1">
-                <Label htmlFor="dataSubjectType">
-                  {t("contribution.dataFields.subjectType")}
-                </Label>
-                <Select
-                  id="dataSubjectType"
-                  value={data.type ?? ""}
-                  onChange={(e) => {
-                    setDataField("type", e.target.value);
-                  }}
-                >
-                  <option value="">-</option>
-                  {SUBJECT_TYPES.map((st) => (
-                    <option key={st} value={st}>
-                      {t(`contribution.subjectTypes.${st}`)}
-                    </option>
-                  ))}
-                </Select>
-              </div>
             </>
           )}
         </fieldset>

@@ -1,0 +1,1169 @@
+{
+  "name": "Sveučilište u Mostaru",
+  "acronym": "SUM",
+  "city": "Mostar",
+  "entity": "FBIH",
+  "ownership": "PUBLIC",
+  "foundedYear": "1992",
+  "website": "https://www.sum.ba",
+  "address": "Trg hrvatskih velikana 1, 88000 Mostar",
+  "phone": "+387 36 337 070",
+  "email": "mail@sum.ba",
+  "accreditationFrom": "2024-02-26",
+  "accreditationTo": "2028-02-26",
+  "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
+  "sourceUrl": "https://hea.gov.ba/",
+  "lastModified": "2026-08-29",
+  "facultiesSourceUrl": "https://www.sum.ba/clanice/sastavnice",
+  "facultiesLastModified": "2026-08-21",
+  "faculties": [
+    {
+      "name": "Agronomski i prehrambeno-tehnološki fakultet",
+      "city": "Mostar",
+      "website": "https://aptf.sum.ba",
+      "address": "Biskupa Čule bb, 88000 Mostar",
+      "phone": "+387 36 337 100",
+      "email": "aptf@sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Agroekonomika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Animalne znanosti",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Biljne znanosti",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Fitomedicina",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Nutricionizam",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Prehrambeno inženjerstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Vinogradarstvo i vinarstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Agronomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://aptf.sum.ba"
+        },
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "sourceUrl": "https://aptf.sum.ba"
+        }
+      ]
+    },
+    {
+      "name": "Akademija likovnih umjetnosti",
+      "city": "Široki Brijeg",
+      "website": "https://alu.sum.ba",
+      "address": "Kardinala Stepinca 16, 88220 Široki Brijeg",
+      "phone": "+387 39 708 578",
+      "email": "alu@sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Grafika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Kiparstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Režija i montaža",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Scenarij",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Slikarstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Grafika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Kiparstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Slikarstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        }
+      ]
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "city": "Mostar",
+      "website": "https://ef.sum.ba",
+      "address": "Matice hrvatske bb, 88000 Mostar",
+      "phone": "+387 36 355 100",
+      "email": "dekanat@ef.sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+          "tracks": [
+            {
+              "name": "Računovodstvo i financije",
+              "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Marketing",
+              "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Menadžment",
+              "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Poslovna informatika",
+              "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Poslovanje s EU",
+              "sourceUrl": "https://ef.sum.ba/hr/pe-240-ects",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet građevinarstva, arhitekture i geodezije",
+      "city": "Mostar",
+      "website": "https://fgag.sum.ba",
+      "address": "Matice hrvatske bb, 88000 Mostar",
+      "phone": "+387 36 355 000",
+      "email": "fgag@sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Građevinarstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Arhitektura i urbanizam",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Geodezija i geoinformatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "THIRD",
+          "sourceUrl": "https://fgag.sum.ba",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Fakultet prirodoslovno-matematičkih i odgojnih znanosti",
+      "city": "Mostar",
+      "website": "https://fpmoz.sum.ba",
+      "address": "Matice hrvatske bb, 88000 Mostar",
+      "phone": "+387 36 355 455",
+      "email": "maticni.ured@fpmoz.sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Biologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Edukacijska rehabilitacija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Glazbena pedagogija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Kemija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Kineziologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Predškolski odgoj",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "sourceUrl": "https://fpmoz.sum.ba",
+          "ects": null,
+          "durationYears": null,
+          "tracks": [
+            {
+              "name": "Trogodišnji studij",
+              "ects": 180,
+              "durationYears": 3
+            },
+            {
+              "name": "Četverogodišnji studij",
+              "ects": 240,
+              "durationYears": 4
+            }
+          ]
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "THIRD",
+          "sourceUrl": "https://fpmoz.sum.ba",
+          "ects": 180,
+          "durationYears": 3
+        },
+        {
+          "name": "Predškolski odgoj",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Kineziologija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Glazbena umjetnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Biologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Edukacijska rehabilitacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Kemija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Glazbena pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Glazbena umjetnost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Kineziologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Predškolski odgoj",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "SECOND",
+          "durationYears": null,
+          "ects": null,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26",
+          "tracks": [
+            {
+              "name": "Jednogodišnji studij",
+              "ects": 60,
+              "durationYears": 1
+            },
+            {
+              "name": "Dvogodišnji studij",
+              "ects": 120,
+              "durationYears": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultet strojarstva, računarstva i elektrotehnike",
+      "city": "Mostar",
+      "website": "https://fsre.sum.ba",
+      "address": "Matice hrvatske bb, 88000 Mostar",
+      "phone": "+387 36 337 001",
+      "email": "fsre@sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Elektrotehnika",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26",
+          "tracks": [
+            {
+              "name": "Programsko inženjerstvo i informacijski sustavi",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/ra%C4%8Dunarstvo",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Računalni sustavi i mreže",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/ra%C4%8Dunarstvo",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26",
+          "tracks": [
+            {
+              "name": "Proizvodno inženjerstvo",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Dizajn konstrukcija",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Industrijsko inženjerstvo i menadžment",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Mehatronika",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26",
+          "tracks": [
+            {
+              "name": "Proizvodno inženjerstvo",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Dizajn konstrukcija",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Industrijsko inženjerstvo i menadžment",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Mehatronika",
+              "sourceUrl": "https://sites.google.com/fsre.sum.ba/fsre-upisi-2021/strojarstvo",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultet zdravstvenih studija",
+      "city": "Mostar",
+      "website": "https://fzs.sum.ba",
+      "address": "Zrinskog Frankopana 34, 88000 Mostar",
+      "phone": "+387 36 337 050",
+      "email": "fzs@fzs.sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Primaljstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Radiološka tehnologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Sanitarno inženjerstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Klinička fizioterapija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Klinička zdravstvena njega",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Primaljstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Radiološka tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Sanitarno inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Zdravstvene znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        }
+      ]
+    },
+    {
+      "name": "Farmaceutski fakultet",
+      "city": "Mostar",
+      "website": "https://farf.sum.ba",
+      "address": "Matice hrvatske bb, 88000 Mostar",
+      "phone": "+387 36 312 791",
+      "email": "farf@sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 300,
+          "durationYears": 5,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Kozmetologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Laboratorijska biomedicina",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Farmaceutske znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        }
+      ]
+    },
+    {
+      "name": "Filozofski fakultet",
+      "city": "Mostar",
+      "website": "https://ff.sum.ba",
+      "address": "Matice hrvatske 11, 88000 Mostar",
+      "phone": "+387 36 355 400",
+      "email": "ff@sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Arheologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Hrvatski jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Informacijske znanosti",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Latinski jezik i rimska književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Logopedija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Njemački jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Novinarstvo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Odnosi s javnošću",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Povijest",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Povijest umjetnosti",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Sigurnosne i međunarodne studije",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Talijanski jezik i književnost",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Interdisciplinarni doktorski studij",
+          "cycle": "THIRD",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Informacijske znanosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Logopedija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Novinarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Njemački jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Odnosi s javnošću",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "lastModified": "2026-08-26"
+        }
+      ]
+    },
+    {
+      "name": "Medicinski fakultet",
+      "city": "Mostar",
+      "website": "https://mef.sum.ba",
+      "address": "Bijeli Brijeg bb, 88000 Mostar",
+      "phone": "+387 36 335 600",
+      "email": "mef@sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 360,
+          "durationYears": 6,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Medical Studies in English",
+          "cycle": "INTEGRATED",
+          "language": "engleski",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 360,
+          "durationYears": 6,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 360,
+          "durationYears": 6,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Biomedicina i zdravstvo",
+          "cycle": "THIRD",
+          "sourceUrl": "https://mef.sum.ba",
+          "ects": 180,
+          "durationYears": 3
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Mostar",
+      "website": "https://pf.sum.ba",
+      "address": "Matice hrvatske bb, 88000 Mostar",
+      "phone": "+387 36 337 150",
+      "email": "pf@sum.ba",
+      "lastModified": "2026-08-29",
+      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsLastModified": "2026-08-23",
+      "studyPrograms": [
+        {
+          "name": "Kriminalistika i sigurnosni menadžment",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 120,
+          "durationYears": 2,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 60,
+          "durationYears": 1,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Kriminalistika i sigurnosni menadžment",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-26"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "sourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
+          "ects": 240,
+          "durationYears": 4,
+          "lastModified": "2026-08-26"
+        }
+      ]
+    }
+  ]
+}

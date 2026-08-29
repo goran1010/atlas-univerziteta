@@ -91,7 +91,7 @@ describe("contributionController", () => {
           name: "TestCity University",
           city: "TestCity",
           entity: "FBIH",
-          ownership: "JAVNA",
+          ownership: "PUBLIC",
         },
       },
     } as Request;

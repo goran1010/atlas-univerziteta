@@ -66,7 +66,7 @@ describe("PendingUniversityChangesRow", () => {
               name: "University of Sarajevo",
               city: "Sarajevo",
               entity: "FBIH",
-              ownership: "JAVNA",
+              ownership: "PUBLIC",
             },
           }}
           index={0}

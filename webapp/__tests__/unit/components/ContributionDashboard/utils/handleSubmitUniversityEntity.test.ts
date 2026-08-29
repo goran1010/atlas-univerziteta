@@ -31,7 +31,7 @@ const baseArgs = {
     name: "University of Sarajevo",
     city: "Sarajevo",
     entity: "FBIH",
-    ownership: "JAVNA",
+    ownership: "PUBLIC",
   },
   setPendingChanges: vi.fn(),
   addNotification: vi.fn(),
@@ -122,7 +122,7 @@ describe("handleSubmitUniversityEntity", () => {
         name: "University of Sarajevo",
         city: "Sarajevo",
         entity: "FBIH",
-        ownership: "JAVNA",
+        ownership: "PUBLIC",
       },
       createdAt: new Date(),
       user: { email: "submitter@email.com", role: "USER" },
@@ -247,7 +247,7 @@ describe("handleSubmitUniversityEntity", () => {
       createSuccessResponse(
         {
           id: "1",
-          entityType: "SUBJECT",
+          entityType: "TRACK",
           typeOfChange: "DELETE",
           targetId: 42,
           parentId: null,
@@ -265,7 +265,7 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      entityType: "SUBJECT",
+      entityType: "TRACK",
       targetId: "42",
       typeOfChange: "DELETE",
       data: {},
@@ -276,7 +276,7 @@ describe("handleSubmitUniversityEntity", () => {
       expect.objectContaining({
         method: "DELETE",
         body: JSON.stringify({
-          entityType: "SUBJECT",
+          entityType: "TRACK",
           targetId: 42,
         }),
       }),

@@ -14,7 +14,6 @@ import { UniversityCard } from "./UniversityCard";
 import { FacultyResult } from "./FacultyResult";
 import { StudyProgramResult } from "./StudyProgramResult";
 import { TrackResult } from "./TrackResult";
-import { SubjectResult } from "./SubjectResult";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
 import { searchAll } from "./utils/search";
@@ -101,8 +100,7 @@ function UnifiedSearch() {
     results.universities.length === 0 &&
     results.faculties.length === 0 &&
     results.studyPrograms.length === 0 &&
-    results.tracks.length === 0 &&
-    results.subjects.length === 0;
+    results.tracks.length === 0;
 
   return (
     <div className="flex flex-col gap-4 w-full items-center justify-center">
@@ -214,26 +212,6 @@ function UnifiedSearch() {
                     </ResultGroup>
                   ),
                 )}
-              </div>
-            </ResultSection>
-            <ResultSection
-              heading={t("universitiesPage.subjectsSection")}
-              count={results.subjects.length}
-              emptyMessage={t("universitiesPage.noSubjectResults")}
-              isEmpty={results.subjects.length === 0}
-            >
-              <div className="flex flex-col gap-3 w-full">
-                {groupBy(results.subjects, (s) =>
-                  s.type
-                    ? t(`universitiesPage.subjectTypes.${s.type}`)
-                    : t("universitiesPage.subjectsSection"),
-                ).map((g) => (
-                  <ResultGroup key={g.key} label={g.key}>
-                    {g.items.map((s) => (
-                      <SubjectResult key={s.id} subject={s} t={t} />
-                    ))}
-                  </ResultGroup>
-                ))}
               </div>
             </ResultSection>
           </>

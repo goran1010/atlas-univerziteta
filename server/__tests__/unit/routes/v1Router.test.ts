@@ -21,13 +21,16 @@ const dummyData: { data: University[] } = {
       city: "Sarajevo",
       acronym: "UNSA",
       entity: "FBIH",
+      address: null,
+      phone: null,
+      email: null,
       accreditationFrom: null,
       accreditationTo: null,
       authority:
         "Ministry of Education and Science of the Federation of Bosnia and Herzegovina",
       foundedYear: "1949",
-      lastChecked: null,
-      ownership: "JAVNA",
+      lastModified: null,
+      ownership: "PUBLIC",
       sourceUrl: "https://www.unsa.ba/en/university",
       website: "https://www.unsa.ba/en",
     },
@@ -37,12 +40,15 @@ const dummyData: { data: University[] } = {
       city: "Banja Luka",
       acronym: "UNIBL",
       entity: "RS",
+      address: null,
+      phone: null,
+      email: null,
       accreditationFrom: null,
       accreditationTo: null,
       authority: "Ministry of Education and Culture of the Republika Srpska",
       foundedYear: "1975",
-      lastChecked: null,
-      ownership: "JAVNA",
+      lastModified: null,
+      ownership: "PUBLIC",
       sourceUrl: "https://www.unibl.org/en/university",
       website: "https://www.unibl.org/en",
     },
@@ -98,28 +104,6 @@ vi.spyOn(prisma.faculty, "findMany").mockImplementation((args) => {
         f.city.toLowerCase().includes(normalizedTerm),
     ),
   ) as ReturnType<typeof prisma.faculty.findMany>;
-});
-
-vi.spyOn(prisma.subject, "findMany").mockImplementation((args) => {
-  const normalizedTerm =
-    (
-      args?.where as
-        | {
-            OR?: {
-              name?: { contains?: string };
-            }[];
-          }
-        | undefined
-    )?.OR?.[0]?.name?.contains?.toLowerCase() ?? "";
-
-  const dummySubjects = [
-    { id: 1, name: "Computer Networks" },
-    { id: 2, name: "Mathematics 1" },
-  ];
-
-  return Promise.resolve(
-    dummySubjects.filter((s) => s.name.toLowerCase().includes(normalizedTerm)),
-  ) as ReturnType<typeof prisma.subject.findMany>;
 });
 
 type FindUniqueUniversityImplementation = (
@@ -237,10 +221,9 @@ describe("GET /api/v1/search", () => {
       "Faculty of Electrical Engineering",
     ]);
     expect(data["studyPrograms"]).toEqual([]);
-    expect(data["subjects"]).toEqual([]);
   });
 
-  test("responds with status 200 and study programs and subjects for searchTerm=Computer", async () => {
+  test("responds with status 200 and study programs for searchTerm=Computer", async () => {
     vi.spyOn(prisma.university, "findMany").mockImplementation(
       mockUniversitySearch,
     );
@@ -250,7 +233,6 @@ describe("GET /api/v1/search", () => {
     const responseBody = getResponseObject(response.body);
     const data = getResponseObject(responseBody["data"]);
     const studyPrograms = getNamedItems(data["studyPrograms"]);
-    const subjects = getNamedItems(data["subjects"]);
 
     expect(response.status).toBe(200);
     expect(data["universities"]).toEqual([]);
@@ -259,7 +241,6 @@ describe("GET /api/v1/search", () => {
       "Computer Science",
       "Computer Engineering",
     ]);
-    expect(subjects.map((s) => s.name)).toEqual(["Computer Networks"]);
   });
 
   test("responds with status 404 for searchTerm=non-existent-anything", async () => {

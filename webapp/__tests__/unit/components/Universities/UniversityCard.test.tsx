@@ -13,14 +13,17 @@ const baseUniversity: UniversityListItem = {
   acronym: "UNSA",
   city: "Sarajevo",
   entity: "FBIH",
-  ownership: "JAVNA",
+  ownership: "PUBLIC",
   foundedYear: "1949",
   website: "https://unsa.ba",
+  address: undefined,
+  phone: undefined,
+  email: undefined,
   accreditationFrom: undefined,
   accreditationTo: undefined,
   authority: undefined,
   sourceUrl: undefined,
-  lastChecked: undefined,
+  lastModified: undefined,
   _count: { faculties: 3 },
 };
 
@@ -118,7 +121,7 @@ describe("UniversityCard", () => {
     expect(cachedDetails).toBeInTheDocument();
   });
 
-  test("expands nested faculty, study program and subject rows", async () => {
+  test("expands nested faculty, study program and track rows", async () => {
     const mockResponse = new Response(
       JSON.stringify({
         message: "University retrieved successfully.",
@@ -134,16 +137,15 @@ describe("UniversityCard", () => {
                   id: 21,
                   name: "Computer Science",
                   facultyId: 11,
-                  cycle: "PRVI",
+                  cycle: "FIRST",
                   ects: 180,
-                  subjects: [
+                  tracks: [
                     {
                       id: 31,
-                      name: "Algorithms",
+                      name: "Software Track",
                       studyProgramId: 21,
-                      semester: 3,
-                      ects: 6,
-                      type: "OBAVEZNI",
+                      ects: 60,
+                      durationYears: 1,
                     },
                   ],
                 },
@@ -180,15 +182,13 @@ describe("UniversityCard", () => {
     });
     await user.click(studyProgramButton);
 
-    const subjectName = await screen.findByText(/Algorithms/i);
-    const semesterText = screen.getByText(/Semester 3/i);
-    const ectsText = screen.getByText(/6 ECTS/i);
-    const subjectTypes = screen.getAllByText(/Mandatory/i);
+    const trackName = await screen.findByText(/Software Track/i);
+    const durationText = screen.getByText(/1 years/i);
+    const ectsText = screen.getByText(/60 ECTS/i);
 
-    expect(subjectName).toBeInTheDocument();
-    expect(semesterText).toBeInTheDocument();
+    expect(trackName).toBeInTheDocument();
+    expect(durationText).toBeInTheDocument();
     expect(ectsText).toBeInTheDocument();
-    expect(subjectTypes.length).toBeGreaterThan(0);
   });
 
   test("shows API error notification when details response is non-ok", async () => {
@@ -261,13 +261,13 @@ describe("UniversityCard", () => {
                     id: 21,
                     name: "Computer Science",
                     facultyId: 11,
-                    cycle: "PRVI",
-                    subjects: [
+                    cycle: "FIRST",
+                    tracks: [
                       {
                         id: 31,
-                        name: "Algorithms",
+                        name: "Software Track",
                         studyProgramId: 21,
-                        semester: 0,
+                        ects: 0,
                       },
                     ],
                   },
@@ -318,7 +318,7 @@ describe("UniversityCard", () => {
         university={{
           ...baseUniversity,
           id: 2,
-          ownership: "PRIVATNA",
+          ownership: "PRIVATE",
         }}
       />,
     );
