@@ -68,7 +68,7 @@ const apiEndpoints: Endpoint[] = [
     "city": "Sarajevo", "entity": "FBIH", "ownership": "PUBLIC",
     "foundedYear": "1949", "website": "https://unsa.ba",
     "address": "Obala Kulina bana 7/II, 71000 Sarajevo",
-    "phone": "+387 33 565 116", "email": "rektorat@unsa.ba",
+    "phone": "+387 33 565 100", "email": "javnost@unsa.ba",
     "faculties": [
       { "id": 1, "name": "Faculty of Science",
         "city": "Sarajevo", "website": "https://pmf.unsa.ba",

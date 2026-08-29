@@ -7,11 +7,14 @@
     "ownership": "PUBLIC",
     "foundedYear": "1949",
     "website": "https://www.unsa.ba",
+    "address": "Obala Kulina bana 7/II, 71000 Sarajevo",
+    "phone": "+387 33 565 100",
+    "email": "javnost@unsa.ba",
     "accreditationFrom": "2007-08-15",
     "accreditationTo": "2029-08-25",
     "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-05-26"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Univerzitet u Banjoj Luci",
@@ -21,11 +24,14 @@
     "ownership": "PUBLIC",
     "foundedYear": "1975-09-25",
     "website": "https://www.unibl.org",
+    "address": "Bulevar vojvode Petra Bojovića 1A, 78000 Banja Luka",
+    "phone": "+387 51 321 171",
+    "email": "info@unibl.org",
     "accreditationFrom": "2007-08-15",
     "accreditationTo": "2029-07-22",
     "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-05-26"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Univerzitet u Tuzli",
@@ -35,11 +41,14 @@
     "ownership": "PUBLIC",
     "foundedYear": "1976",
     "website": "https://www.untz.ba",
+    "address": "Dr. Tihomila Markovića 1, 75000 Tuzla",
+    "phone": "+387 35 300 500",
+    "email": "rektorat@untz.ba",
     "accreditationFrom": "2007-08-15",
     "accreditationTo": "2033-03-19",
     "authority": "Ministarstvo obrazovanja i nauke Tuzlanskog kantona",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-05-26"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Univerzitet Džemal Bijedić",
@@ -49,11 +58,14 @@
     "ownership": "PUBLIC",
     "foundedYear": "1977",
     "website": "https://www.unmo.ba",
+    "address": "Sjeverni logor bb, Univerzitetski kampus, 88104 Mostar",
+    "phone": "+387 36 570 727",
+    "email": "univerzitet@unmo.ba",
     "accreditationFrom": "2024-01-29",
     "accreditationTo": "2028-01-29",
     "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-05-26"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Sveučilište u Mostaru",
@@ -63,11 +75,14 @@
     "ownership": "PUBLIC",
     "foundedYear": "1992",
     "website": "https://www.sum.ba",
+    "address": "Trg hrvatskih velikana 1, 88000 Mostar",
+    "phone": "+387 36 337 070",
+    "email": "mail@sum.ba",
     "accreditationFrom": "2024-02-26",
     "accreditationTo": "2028-02-26",
     "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Univerzitet u Istočnom Sarajevu",
@@ -77,11 +92,14 @@
     "ownership": "PUBLIC",
     "foundedYear": "1993-12-29",
     "website": "https://www.ues.rs.ba",
+    "address": "Stefana Nemanje 5, 71123 Istočno Sarajevo",
+    "phone": "+387 57 320 330",
+    "email": "univerzitet@ues.rs.ba",
     "accreditationFrom": "2007-08-15",
     "accreditationTo": "2030-06-18",
     "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Univerzitet u Bihaću",
@@ -91,11 +109,14 @@
     "ownership": "PUBLIC",
     "foundedYear": "1997",
     "website": "https://www.unbi.ba",
+    "address": "Pape Ivana Pavla II 2, 77000 Bihać",
+    "phone": "+387 37 222 022",
+    "email": "kabinetrektora@unbi.ba",
     "accreditationFrom": "2007-08-15",
     "accreditationTo": "2030-09-11",
     "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Unsko-sanskog kantona",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-05-26"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Univerzitet u Zenici",
@@ -105,11 +126,14 @@
     "ownership": "PUBLIC",
     "foundedYear": "2005-11-28",
     "website": "https://www.unze.ba",
+    "address": "Fakultetska 3, 72000 Zenica",
+    "phone": "+387 32 444 420",
+    "email": "rektorat@unze.ba",
     "accreditationFrom": "2024-04-18",
     "accreditationTo": "2029-04-18",
     "authority": "Ministarstvo za obrazovanje, nauku, kulturu i sport Zeničko-dobojskog kantona",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-05-26"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Internacionalni univerzitet u Sarajevu",
@@ -119,11 +143,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2004-06-23",
     "website": "https://www.ius.edu.ba",
+    "address": "Hrasnička cesta 15, 71210 Ilidža",
+    "phone": "+387 33 957 101",
+    "email": "info@ius.edu.ba",
     "accreditationFrom": "2007-08-15",
     "accreditationTo": "2029-08-29",
     "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-05-26"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Internacionalni Burč univerzitet",
@@ -133,11 +160,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "1999-01-07",
     "website": "https://www.ibu.edu.ba",
+    "address": "Francuske revolucije bb, 71210 Ilidža",
+    "phone": "+387 33 944 400",
+    "email": "info@ibu.edu.ba",
     "accreditationFrom": "2025-02-14",
     "accreditationTo": "2030-02-14",
     "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-05-26"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Univerzitet Sarajevo School of Science and Technology",
@@ -147,11 +177,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2004-05-25",
     "website": "https://www.ssst.edu.ba",
+    "address": "Hrasnička cesta 3a, 71000 Sarajevo",
+    "phone": "+387 33 975 002",
+    "email": "administration@ssst.edu.ba",
     "accreditationFrom": "2020-05-02",
     "accreditationTo": "2030-08-01",
     "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-05-26"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Univerzitet u Travniku",
@@ -161,11 +194,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2007-07-04",
     "website": "https://www.unt.ba",
+    "address": "Aleja konzula 5, 72270 Travnik",
+    "phone": "+387 30 540 876",
+    "email": "info@unt.ba",
     "accreditationFrom": "2007-08-15",
     "accreditationTo": "2031-01-26",
     "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Sveučilište/Univerzitet Vitez",
@@ -175,11 +211,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2007-06-29",
     "website": "https://unvi.edu.ba",
+    "address": "Školska 23, 72270 Travnik",
+    "phone": "+387 30 509 750",
+    "email": "info@unvi.edu.ba",
     "accreditationFrom": "2007-08-15",
     "accreditationTo": "2026-06-10",
     "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Internacionalni univerzitet Travnik",
@@ -189,11 +228,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2010-03-05",
     "website": "https://iu-travnik.com",
+    "address": "Bunar bb, Dolac, 72270 Travnik",
+    "phone": "+387 30 509 682",
+    "email": "studentska@iu-travnik.com",
     "accreditationFrom": "2016-05-23",
     "accreditationTo": "2030-12-31",
     "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Sveučilište Hercegovina",
@@ -203,11 +245,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2011-05-19",
     "website": "https://hercegovina.edu.ba",
+    "address": "Kneza M. Viševića Humskog bb, 88000 Mostar",
+    "phone": "+387 36 650 355",
+    "email": "info@hercegovina.edu.ba",
     "accreditationFrom": "2021-10-18",
     "accreditationTo": "2027-04-18",
     "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Evropski univerzitet Kallos Tuzla",
@@ -217,11 +262,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2015-08-28",
     "website": "https://eukallos.edu.ba",
+    "address": "XVIII hrvatske brigade 8, 75000 Tuzla",
+    "phone": "+387 35 299 091",
+    "email": "ss@eukallos.edu.ba",
     "accreditationFrom": "2022-08-16",
     "accreditationTo": "2027-08-16",
     "authority": "Ministarstvo obrazovanja i nauke Tuzlanskog kantona",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Panevropski univerzitet Apeiron Banja Luka",
@@ -231,11 +279,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2005-10-19",
     "website": "https://apeiron-uni.eu",
+    "address": "Vojvode Pere Krece 13, 78102 Banja Luka",
+    "phone": "+387 51 247 920",
+    "email": "info@apeiron-edu.eu",
     "accreditationFrom": "2007-08-15",
     "accreditationTo": "2028-11-23",
     "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Slobomir P Univerzitet",
@@ -245,11 +296,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2004-12-27",
     "website": "https://spu.ba",
+    "address": "Braće Podgornika 8, 78000 Banja Luka",
+    "phone": "+387 51 345 910",
+    "email": "info@spu.ba",
     "accreditationFrom": "2022-07-05",
     "accreditationTo": "2027-07-04",
     "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-26"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Univerzitet za poslovne studije Banja Luka",
@@ -259,11 +313,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2005-04-18",
     "website": "https://univerzitetps.com",
+    "address": "Jovana Dučića 23a, 78000 Banja Luka",
+    "phone": "+387 51 248 300",
+    "email": "ups@univerzitetps.com",
     "accreditationFrom": "2007-08-15",
     "accreditationTo": "2026-06-20",
     "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Univerzitet Bijeljina",
@@ -273,11 +330,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2012-10-05",
     "website": "https://www.ubn.rs.ba",
+    "address": "Pavlovića put 24, 76300 Bijeljina",
+    "phone": "+387 55 350 150",
+    "email": "info@ubn.rs.ba",
     "accreditationFrom": "2021-07-28",
     "accreditationTo": "2026-07-28",
     "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Evropski univerzitet, Brčko distrikt BiH",
@@ -287,11 +347,14 @@
     "ownership": "PRIVATE",
     "foundedYear": "2011-12-28",
     "website": "https://eubd.edu.ba",
+    "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+    "phone": "+387 49 590 605",
+    "email": "info@eubd.edu.ba",
     "accreditationFrom": "2022-03-07",
     "accreditationTo": "2027-09-06",
     "authority": "Vlada Brčko distrikta BiH, Odjel za obrazovanje",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   },
   {
     "name": "Internacionalni univerzitet, Brčko distrikt BiH",
@@ -301,10 +364,13 @@
     "ownership": "PRIVATE",
     "foundedYear": "2012-01-11",
     "website": "http://iubd.edu.ba",
+    "address": "Brezik bb, 76100 Brčko",
+    "phone": "+387 49 490 460",
+    "email": "internacionalni.univerzitet@gmail.com",
     "accreditationFrom": "2022-03-07",
     "accreditationTo": "2027-09-06",
     "authority": "Vlada Brčko distrikta BiH, Odjel za obrazovanje",
     "sourceUrl": "https://hea.gov.ba/",
-    "lastChecked": "2026-08-21"
+    "lastChecked": "2026-08-29"
   }
 ]
