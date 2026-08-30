@@ -17,6 +17,7 @@ import { TrackResult } from "./TrackResult";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
 import { searchAll } from "./utils/search";
+import { isServerNotReadyError } from "../../utils/serverStatus";
 import { searchTermSchema } from "../../schemas/domain";
 
 import type { UnifiedSearchResults } from "../../schemas/university";
@@ -54,7 +55,7 @@ function ResultSection({
 }
 
 function UnifiedSearch() {
-  const { t, addNotification } = use(RootContext);
+  const { t, addNotification, serverStatus } = use(RootContext);
   const [results, setResults] = useState<UnifiedSearchResults | null>(null);
   const [loading, setLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -84,8 +85,11 @@ function UnifiedSearch() {
     const term = searchTerm.data;
     try {
       setLoading(true);
-      setResults(await searchAll(term));
-    } catch {
+      setResults(await searchAll(term, serverStatus));
+    } catch (error) {
+      if (isServerNotReadyError(error)) {
+        return;
+      }
       addNotification({
         type: "error",
         message: t("messages.universities.searchError"),

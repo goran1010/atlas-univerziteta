@@ -6,6 +6,8 @@ import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readErrorMessage } from "../../schemas/api";
+import { guardedFetch } from "../../utils/guardedFetch";
+import { isServerNotReadyError } from "../../utils/serverStatus";
 import { universityDetailResponseSchema } from "../../schemas/university";
 
 import type { TFunction } from "../../types/i18n";
@@ -208,7 +210,7 @@ function FacultyRow({
 }
 
 function UniversityCard({ university }: { university: UniversityListItem }) {
-  const { t, addNotification } = use(RootContext);
+  const { t, addNotification, serverStatus } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<UniversityDetail>();
   const [loadingDetail, setLoadingDetail] = useState(false);
@@ -224,12 +226,13 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
     }
     try {
       setLoadingDetail(true);
-      const res = await fetch(
+      const res = await guardedFetch(
         `${SERVER_URL}/api/v1/universities/${university.id.toString()}`,
         {
           method: "GET",
           mode: "cors",
         },
+        { serverStatus },
       );
 
       if (res.ok) {
@@ -246,7 +249,10 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
           message: t("messages.universities.detailsError"),
         });
       }
-    } catch {
+    } catch (error) {
+      if (isServerNotReadyError(error)) {
+        return;
+      }
       addNotification({
         type: "error",
         message: t("messages.universities.detailsError"),
