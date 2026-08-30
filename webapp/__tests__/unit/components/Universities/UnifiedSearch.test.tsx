@@ -213,7 +213,7 @@ describe("UnifiedSearch", () => {
 
     await screen.findByText(/Faculty of Electrical Engineering/i);
 
-    expect(screen.getByText(/City: Sarajevo/i)).toBeInTheDocument();
+    expect(screen.getByText(/📍\s*Sarajevo/i)).toBeInTheDocument();
   });
 
   test("renders combined no results message on 404", async () => {
