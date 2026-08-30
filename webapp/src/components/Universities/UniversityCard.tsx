@@ -166,7 +166,16 @@ function FacultyRow({
                   {faculty.website}
                 </a>
               )}
-              {faculty.address && <span>🏠 {faculty.address}</span>}
+              {faculty.address && (
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(faculty.address)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  🏠 {faculty.address}
+                </a>
+              )}
               {faculty.phone && (
                 <a href={`tel:${faculty.phone}`} className="hover:underline">
                   📞 {faculty.phone}
@@ -286,7 +295,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
             </h3>
             <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-sm text-(--text-secondary)">
               <span>📍 {university.city}</span>
-              <span>{entityLabel}</span>
+              <span>🏷️ {entityLabel}</span>
               <span
                 className={`px-1.5 py-0.5 rounded text-xs font-medium ${
                   university.ownership === "PUBLIC"
@@ -305,42 +314,47 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                 </span>
               )}
               {university.foundedYear && (
-                <span>
-                  {t("universitiesPage.foundedYear")}: {university.foundedYear}
-                </span>
+                <span>📅 {university.foundedYear}</span>
               )}
             </div>
-            {university.website && (
-              <a
-                href={university.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-blue-600 dark:text-blue-400 hover:underline mt-1 inline-block truncate max-w-xs"
-              >
-                {university.website}
-              </a>
-            )}
-            {(university.address ?? university.phone ?? university.email) && (
-              <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-(--text-muted) mt-1">
-                {university.address && <span>🏠 {university.address}</span>}
-                {university.phone && (
-                  <a
-                    href={`tel:${university.phone}`}
-                    className="hover:underline"
-                  >
-                    📞 {university.phone}
-                  </a>
-                )}
-                {university.email && (
-                  <a
-                    href={`mailto:${university.email}`}
-                    className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
-                  >
-                    ✉️ {university.email}
-                  </a>
-                )}
-              </div>
-            )}
+            <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-(--text-muted) mt-1">
+              {university.website && (
+                <a
+                  href={university.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
+                >
+                  🌐 {university.website}
+                </a>
+              )}
+              {university.address && (
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(university.address)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  🏠 {university.address}
+                </a>
+              )}
+              {university.phone && (
+                <a
+                  href={`tel:${university.phone}`}
+                  className="hover:underline"
+                >
+                  📞 {university.phone}
+                </a>
+              )}
+              {university.email && (
+                <a
+                  href={`mailto:${university.email}`}
+                  className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
+                >
+                  ✉️ {university.email}
+                </a>
+              )}
+            </div>
           </div>
           <Button
             variant="secondary"

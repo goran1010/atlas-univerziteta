@@ -13,18 +13,15 @@ function StudyProgramResult({
       <p className="font-bold text-(--text-primary)">{program.name}</p>
       {program.ects != null && (
         <p className="mt-1 text-sm text-(--text-secondary)">
-          {program.ects} {t("universitiesPage.ects")}
+          🎓 {program.ects} {t("universitiesPage.ects")}
         </p>
       )}
       <p className="text-sm text-(--text-muted) mt-1">
-        {program.faculty.name}
-
-        <span className="text-(--text-muted)">
-          {" - "}
-          {program.faculty.university.name}
-          {program.faculty.university.acronym &&
-            ` (${program.faculty.university.acronym})`}
-        </span>
+        🏛️ {program.faculty.name}
+        {" - "}
+        {program.faculty.university.name}
+        {program.faculty.university.acronym &&
+          ` (${program.faculty.university.acronym})`}
       </p>
     </li>
   );
