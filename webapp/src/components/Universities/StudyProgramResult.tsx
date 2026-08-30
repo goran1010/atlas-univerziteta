@@ -11,14 +11,11 @@ function StudyProgramResult({
   return (
     <li className="border border-(--border-color) rounded-lg p-3 bg-(--surface-2) hover:bg-(--hover-surface) transition-colors">
       <p className="font-bold text-(--text-primary)">{program.name}</p>
-      <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-sm text-(--text-secondary)">
-        <span>{t(`universitiesPage.cycles.${program.cycle}`)}</span>
-        {program.ects != null && (
-          <span>
-            {program.ects} {t("universitiesPage.ects")}
-          </span>
-        )}
-      </div>
+      {program.ects != null && (
+        <p className="mt-1 text-sm text-(--text-secondary)">
+          {program.ects} {t("universitiesPage.ects")}
+        </p>
+      )}
       <p className="text-sm text-(--text-muted) mt-1">
         {program.faculty.name}
 

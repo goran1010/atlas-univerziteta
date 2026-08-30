@@ -18,15 +18,11 @@ function TrackResult({ track, t }: { track: TrackSearchResult; t: TFunction }) {
         )}
       </div>
       <p className="text-sm text-(--text-muted) mt-1">
-        {track.studyProgram.name}
-        <span className="text-(--text-muted)">
-          {" - "}
-          {track.studyProgram.faculty.name}
-          {", "}
-          {track.studyProgram.faculty.university.name}
-          {track.studyProgram.faculty.university.acronym &&
-            ` (${track.studyProgram.faculty.university.acronym})`}
-        </span>
+        {track.studyProgram.faculty.name}
+        {" - "}
+        {track.studyProgram.faculty.university.name}
+        {track.studyProgram.faculty.university.acronym &&
+          ` (${track.studyProgram.faculty.university.acronym})`}
       </p>
     </li>
   );

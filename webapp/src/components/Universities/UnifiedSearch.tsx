@@ -175,7 +175,7 @@ function UnifiedSearch() {
                   (g) => (
                     <ResultGroup key={g.key} label={g.key}>
                       {g.items.map((f) => (
-                        <FacultyResult key={f.id} faculty={f} t={t} />
+                        <FacultyResult key={f.id} faculty={f} />
                       ))}
                     </ResultGroup>
                   ),

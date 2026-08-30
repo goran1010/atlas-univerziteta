@@ -64,9 +64,6 @@ function StudyProgramRow({
       >
         <span className="font-medium">{program.name}</span>
         <span className="flex gap-2 items-center text-xs text-(--text-muted) shrink-0">
-          <span className="hidden sm:inline">
-            {t(`universitiesPage.cycles.${program.cycle}`)}
-          </span>
           {program.ects != null && (
             <span>
               {program.ects} {t("universitiesPage.ects")}
@@ -83,7 +80,6 @@ function StudyProgramRow({
       {open && (
         <div className="ml-4 mt-1 mb-2 border-l-2 border-(--border-color) pl-3">
           <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-(--text-muted) py-1">
-            <span>{t(`universitiesPage.cycles.${program.cycle}`)}</span>
             {program.durationYears != null && (
               <span>
                 {program.durationYears} {t("universitiesPage.durationYears")}
