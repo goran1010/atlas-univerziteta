@@ -78,12 +78,12 @@
   --app-bg: linear-gradient(180deg, #f2f7ff 0%, #f8fafc 40%, #eef4ff 100%);
   --text-primary: #0f172a;
   --text-secondary: #334155;
-  --text-muted: #64748b;
-  --surface-1: rgba(255, 255, 255, 0.85);
-  --surface-2: rgba(255, 255, 255, 0.92);
+  --text-muted: #475569;
+  --surface-1: rgba(255, 255, 255, 0.92);
+  --surface-2: rgba(255, 255, 255, 0.97);
   --surface-3: #e6edf8;
-  --surface-alt: #f1f5f9;
-  --border-color: rgba(59, 130, 246, 0.35);
+  --surface-alt: #e8eef6;
+  --border-color: rgba(59, 130, 246, 0.45);
   --border-strong: #94a3b8;
   --hover-surface: rgba(59, 130, 246, 0.14);
   --accent: #2563eb;

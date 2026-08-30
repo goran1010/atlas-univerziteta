@@ -65,7 +65,7 @@ describe("UniversityCard", () => {
     const universityName = screen.getByText(/University of Sarajevo/i);
     const cityText = screen.getByText(/^📍\s*Sarajevo$/i);
     const entityText = screen.getByText(/Federation of B&H/i);
-    const foundedText = screen.getByText(/Founded: 1949/i);
+    const foundedText = screen.getByText(/📅\s*1949/i);
     const websiteLink = screen.getByRole("link", {
       name: /https:\/\/unsa\.ba/i,
     });
@@ -172,15 +172,26 @@ describe("UniversityCard", () => {
     const facultiesTitle = await screen.findByText(/1 Faculties/i);
     expect(facultiesTitle).toBeInTheDocument();
 
-    const facultyButton = screen.getByRole("button", {
-      name: /Faculty of Electrical Engineering/i,
-    });
-    await user.click(facultyButton);
+    // Faculty name is now plain text; its "View details" button is a sibling
+    expect(
+      screen.getByText(/Faculty of Electrical Engineering/i),
+    ).toBeInTheDocument();
 
-    const studyProgramButton = await screen.findByRole("button", {
-      name: /Computer Science/i,
+    // University button is now "Hide details"; the faculty has the only "View details"
+    const facultyViewButton = screen.getByRole("button", {
+      name: /View details/i,
     });
-    await user.click(studyProgramButton);
+    await user.click(facultyViewButton);
+
+    // Study program details (name, duration, ECTS) are shown immediately
+    const programName = await screen.findByText(/Computer Science/i);
+    expect(programName).toBeInTheDocument();
+
+    // Study program's "View details" expands its tracks
+    const studyProgramViewButton = screen.getByRole("button", {
+      name: /View details/i,
+    });
+    await user.click(studyProgramViewButton);
 
     const trackName = await screen.findByText(/Software Track/i);
     const durationText = screen.getByText(/1 years/i);

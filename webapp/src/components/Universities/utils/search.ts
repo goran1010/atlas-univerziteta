@@ -1,8 +1,10 @@
 import { SERVER_URL } from "../../../utils/envConfig";
 import { readErrorMessage } from "../../../schemas/api";
 import { unifiedSearchResponseSchema } from "../../../schemas/university";
+import { guardedFetch } from "../../../utils/guardedFetch";
 
 import type { UnifiedSearchResults } from "../../../schemas/university";
+import type { ServerStatus } from "../../../utils/serverStatus";
 
 const EMPTY_RESULTS: UnifiedSearchResults = {
   universities: [],
@@ -11,10 +13,14 @@ const EMPTY_RESULTS: UnifiedSearchResults = {
   tracks: [],
 };
 
-async function searchAll(term: string): Promise<UnifiedSearchResults> {
-  const res = await fetch(
+async function searchAll(
+  term: string,
+  serverStatus: ServerStatus,
+): Promise<UnifiedSearchResults> {
+  const res = await guardedFetch(
     `${SERVER_URL}/api/v1/search?searchTerm=${encodeURIComponent(term)}`,
     { method: "GET", mode: "cors" },
+    { serverStatus },
   );
 
   if (res.ok) {
