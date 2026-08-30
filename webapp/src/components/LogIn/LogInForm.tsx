@@ -1,5 +1,7 @@
-import { checkLoginFormClickValidity } from "./utils/checkLoginFormClickValidity";
-import { checkLoginFormValidity } from "./utils/checkLoginFormValidity";
+import {
+  checkLoginFieldValidity,
+  checkLoginFormValidity,
+} from "./utils/loginValidation";
 import { useRef, useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { useNavigate } from "react-router";
@@ -17,6 +19,7 @@ interface LogInFormProps {
 function LogInForm({ loading, setLoading }: LogInFormProps) {
   const navigate = useNavigate();
   const { setUserData, addNotification, t, serverStatus } = use(RootContext);
+  const ctx = { addNotification, setLoading, t, serverStatus };
 
   const [inputFields, setInputFields] = useState({
     email: "",
@@ -27,7 +30,7 @@ function LogInForm({ loading, setLoading }: LogInFormProps) {
   const passwordInput = useRef<HTMLInputElement>(null);
 
   function handleInputFields(e: ChangeEvent<HTMLInputElement>) {
-    checkLoginFormValidity(
+    checkLoginFieldValidity(
       e.target.name,
       emailInput.current,
       passwordInput.current,
@@ -39,16 +42,7 @@ function LogInForm({ loading, setLoading }: LogInFormProps) {
   return (
     <form
       onSubmit={(e) =>
-        void handleSubmitLogIn(
-          e,
-          inputFields,
-          setUserData,
-          addNotification,
-          setLoading,
-          navigate,
-          t,
-          serverStatus,
-        )
+        void handleSubmitLogIn(e, inputFields, setUserData, navigate, ctx)
       }
       className="flex flex-col gap-3"
     >
@@ -79,7 +73,7 @@ function LogInForm({ loading, setLoading }: LogInFormProps) {
       <div>
         <Button
           onClick={() => {
-            checkLoginFormClickValidity(
+            checkLoginFormValidity(
               emailInput.current,
               passwordInput.current,
               t,

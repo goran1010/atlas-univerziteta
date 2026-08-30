@@ -1,5 +1,7 @@
-import { checkFormValidity } from "./utils/checkFormValidity";
-import { checkFormValidityClick } from "./utils/checkFormValidityClick";
+import {
+  checkSignupFieldValidity,
+  checkSignupFormValidity,
+} from "./utils/signupValidation";
 import { handleSignUpSubmit } from "./utils/handleSignUpSubmit";
 import { useState, useRef, use } from "react";
 import { useNavigate } from "react-router";
@@ -17,6 +19,7 @@ interface SignUpFormProps {
 function SignUpForm({ loading, setLoading }: SignUpFormProps) {
   const navigate = useNavigate();
   const { addNotification, t, serverStatus } = use(RootContext);
+  const ctx = { addNotification, setLoading, t, serverStatus };
 
   const passwordRef = useRef<HTMLInputElement>(null);
   const confirmPasswordRef = useRef<HTMLInputElement>(null);
@@ -29,11 +32,11 @@ function SignUpForm({ loading, setLoading }: SignUpFormProps) {
   });
 
   function handleInputFields(e: ChangeEvent<HTMLInputElement>) {
-    checkFormValidity(
+    checkSignupFieldValidity(
       e.target.name,
+      emailRef.current,
       passwordRef.current,
       confirmPasswordRef.current,
-      emailRef.current,
       t,
     );
 
@@ -43,17 +46,7 @@ function SignUpForm({ loading, setLoading }: SignUpFormProps) {
   return (
     <form
       className="flex flex-col gap-3"
-      onSubmit={(e) =>
-        void handleSignUpSubmit(
-          e,
-          setLoading,
-          inputFields,
-          addNotification,
-          navigate,
-          t,
-          serverStatus,
-        )
-      }
+      onSubmit={(e) => void handleSignUpSubmit(e, inputFields, navigate, ctx)}
     >
       <div>
         <Label htmlFor="email">{t("form.email")}</Label>
@@ -94,10 +87,10 @@ function SignUpForm({ loading, setLoading }: SignUpFormProps) {
       <div>
         <Button
           onClick={() => {
-            checkFormValidityClick(
+            checkSignupFormValidity(
+              emailRef.current,
               passwordRef.current,
               confirmPasswordRef.current,
-              emailRef.current,
               t,
             );
           }}

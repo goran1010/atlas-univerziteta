@@ -6,10 +6,15 @@ import { LogIn } from "../../../src/components/LogIn/LogIn";
 import { Notifications } from "../../../src/components/Notifications";
 import { RootContextProvider } from "../../utils/rootContextProvider";
 
-vi.mock("../../../src/utils/getCsrfToken", () => ({
-  getCsrfToken: () => Promise.resolve("mocked-csrf-token"),
-  clearCsrfToken: () => vi.fn(),
-}));
+vi.mock("../../../src/utils/getCsrfToken", async (importOriginal) => {
+  const actual =
+    await importOriginal<typeof import("../../../src/utils/getCsrfToken")>();
+  return {
+    ...actual,
+    getCsrfToken: () => Promise.resolve("mocked-csrf-token"),
+    clearCsrfToken: vi.fn(),
+  };
+});
 
 const user = userEvent.setup();
 
