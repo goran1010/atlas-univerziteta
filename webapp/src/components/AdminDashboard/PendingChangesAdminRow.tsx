@@ -10,7 +10,7 @@ import {
 import { PendingChangeDetail } from "./PendingChangeDetail";
 
 import type { Notification } from "../../types/notification";
-import type { TypeOfChange } from "../ContributionDashboard/types";
+import type { TypeOfChange } from "../../schemas/domain";
 import type { AdminPendingChange } from "../../schemas/pendingChange";
 
 const ROW_ACCENT: Record<TypeOfChange, string> = {

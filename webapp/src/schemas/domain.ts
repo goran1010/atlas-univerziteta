@@ -16,6 +16,7 @@ const studyCycleSchema = z.enum([
   "VOCATIONAL",
   "SPECIALIST",
 ]);
+const typeOfChangeSchema = z.enum(["CREATE", "UPDATE", "DELETE"]);
 const userRoleSchema = z.enum(["ADMIN", "USER"]);
 
 const integerSchema = z.number().int();
@@ -28,6 +29,13 @@ const searchTermSchema = z
   .min(2, { error: "validation.search.minLength" })
   .max(100, { error: "validation.search.maxLength" });
 
+export type Entity = z.infer<typeof entitySchema>;
+export type EntityType = z.infer<typeof entityTypeSchema>;
+export type Ownership = z.infer<typeof ownershipSchema>;
+export type StudyCycle = z.infer<typeof studyCycleSchema>;
+export type TypeOfChange = z.infer<typeof typeOfChangeSchema>;
+export type UserRole = z.infer<typeof userRoleSchema>;
+
 export {
   durationYearsSchema,
   ectsSchema,
@@ -38,5 +46,6 @@ export {
   positiveIntegerSchema,
   searchTermSchema,
   studyCycleSchema,
+  typeOfChangeSchema,
   userRoleSchema,
 };

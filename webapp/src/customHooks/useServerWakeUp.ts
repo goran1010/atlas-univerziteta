@@ -12,7 +12,7 @@ import type {
   AddNotification,
   RemoveNotification,
 } from "../types/notification";
-import type { TFunction } from "./useLanguage";
+import type { TFunction } from "../types/i18n";
 
 interface UseServerWakeUp {
   addNotification: AddNotification;

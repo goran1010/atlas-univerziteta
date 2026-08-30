@@ -3,7 +3,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { PendingUniversityChangesRow } from "./PendingUniversityChangesRow";
 import { Spinner } from "../../utils/Spinner";
 
-import type { PendingChange } from "./types";
+import type { PendingChange } from "../../schemas/pendingChange";
 
 interface PendingUniversityChangesProps {
   pendingChanges: PendingChange[];

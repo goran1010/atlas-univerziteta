@@ -1,4 +1,4 @@
-import type { EntityType, TypeOfChange } from "../types";
+import type { EntityType, TypeOfChange } from "../../../schemas/domain";
 
 const ENTITY_LEVELS: Record<EntityType, number> = {
   UNIVERSITY: 1,

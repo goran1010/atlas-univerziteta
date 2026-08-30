@@ -9,4 +9,4 @@ export interface Notification {
 }
 
 export type AddNotification = (notification: Notification) => void;
-export type RemoveNotification = (id: string) => void;
+export type RemoveNotification = (id: string | undefined) => void;

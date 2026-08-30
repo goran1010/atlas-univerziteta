@@ -2,7 +2,7 @@ import { actionSuccessResponseSchema } from "../../../schemas/api";
 import { apiMutation } from "../../../utils/apiMutation";
 
 import type { RequestContext } from "../../../utils/apiMutation";
-import type { PendingChange } from "../types";
+import type { PendingChange } from "../../../schemas/pendingChange";
 import type { Dispatch, SetStateAction } from "react";
 
 async function handleDiscardUniversityChange(

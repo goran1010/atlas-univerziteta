@@ -4,7 +4,7 @@ import { Button } from "../sharedComponents/Button";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
-import type { PendingChange } from "./types";
+import type { PendingChange } from "../../schemas/pendingChange";
 
 interface BadgeStyles {
   CREATE: string;

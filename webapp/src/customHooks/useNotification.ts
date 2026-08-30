@@ -67,9 +67,3 @@ function useNotification() {
 }
 
 export { useNotification };
-export type {
-  AddNotification,
-  Notification,
-  RemoveNotification,
-  TypeNotification,
-} from "../types/notification";

@@ -8,7 +8,7 @@ import { RootContextProvider } from "../../../utils/rootContextProvider";
 
 import { CsrfTokenError } from "../../../../src/utils/getCsrfToken";
 
-import type { UserData } from "../../../../src/customHooks/useStatusCheck";
+import type { UserData } from "../../../../src/types/auth";
 
 let getCsrfTokenMock: () => Promise<string> = () =>
   Promise.resolve("mocked-csrf-token");

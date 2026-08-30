@@ -7,7 +7,7 @@ import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { SERVER_STATUS } from "../../../../src/utils/serverStatus";
 import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 
-import type { UserData } from "../../../../src/customHooks/useStatusCheck";
+import type { UserData } from "../../../../src/types/auth";
 import type { ServerStatus } from "../../../../src/utils/serverStatus";
 
 interface MockChange {

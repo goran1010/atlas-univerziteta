@@ -9,14 +9,13 @@ import { getPickerDepth } from "./utils/getPickerDepth";
 import { handleSubmitUniversityEntity } from "./utils/handleSubmitUniversityEntity";
 
 import type {
-  ContributionFormDraft,
-  ContributionFormState,
-  Cycle,
   Entity,
   EntityType,
+  StudyCycle,
   TypeOfChange,
-  PendingChange,
-} from "./types";
+} from "../../schemas/domain";
+import type { PendingChange } from "../../schemas/pendingChange";
+import type { ContributionFormDraft, ContributionFormState } from "./types";
 import type { Dispatch, SetStateAction, SubmitEvent } from "react";
 
 interface DataFieldProps {
@@ -49,7 +48,7 @@ const ENTITY_TYPES: EntityType[] = [
 
 const TYPE_OF_CHANGES: TypeOfChange[] = ["CREATE", "UPDATE", "DELETE"];
 
-const CYCLES: Cycle[] = [
+const CYCLES: StudyCycle[] = [
   "FIRST",
   "SECOND",
   "THIRD",

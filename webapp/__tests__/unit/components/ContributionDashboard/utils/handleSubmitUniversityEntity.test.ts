@@ -4,7 +4,7 @@ import {
 } from "../../../../../src/utils/serverStatus";
 import type { SetStateAction } from "react";
 import { CsrfTokenError } from "../../../../../src/utils/getCsrfToken";
-import type { PendingChange } from "../../../../../src/components/ContributionDashboard/types";
+import type { PendingChange } from "../../../../../src/schemas/pendingChange";
 import type { GuardedFetch } from "../../../../../src/utils/guardedFetch";
 import type { HandleSubmitUniversityEntityParams } from "../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
 

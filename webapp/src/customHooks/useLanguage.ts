@@ -59,4 +59,3 @@ function useLanguage() {
 }
 
 export { useLanguage };
-export type { Language, SetLanguage, TFunction } from "../types/i18n";

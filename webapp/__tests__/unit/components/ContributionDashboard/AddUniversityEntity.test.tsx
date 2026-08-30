@@ -4,7 +4,7 @@ import { AddUniversityEntity } from "../../../../src/components/ContributionDash
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
 import type { ReactElement } from "react";
-import type { PendingChange } from "../../../../src/components/ContributionDashboard/types";
+import type { PendingChange } from "../../../../src/schemas/pendingChange";
 import type { HandleSubmitUniversityEntityParams } from "../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
 
 const handleSubmitUniversityEntityMock =

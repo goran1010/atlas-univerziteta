@@ -3,14 +3,16 @@ import { pendingChangeResponseSchema } from "../../../schemas/pendingChange";
 import { apiMutation } from "../../../utils/apiMutation";
 
 import type { RequestContext } from "../../../utils/apiMutation";
-import type { ContributionFormDraft, PendingChange } from "../types";
+import type { TypeOfChange } from "../../../schemas/domain";
+import type { PendingChange } from "../../../schemas/pendingChange";
+import type { ContributionFormDraft } from "../types";
 import type { Dispatch, SetStateAction } from "react";
 
 export interface HandleSubmitUniversityEntityParams {
   entityType: string;
   parentId?: string;
   targetId?: string;
-  typeOfChange: "CREATE" | "UPDATE" | "DELETE";
+  typeOfChange: TypeOfChange;
   data: ContributionFormDraft;
   setPendingChanges: Dispatch<SetStateAction<PendingChange[]>>;
   setFormState: (formState: {
