@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "typecheck": "tsc -b",
+    "typecheck": "tsc --noEmit -b",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
