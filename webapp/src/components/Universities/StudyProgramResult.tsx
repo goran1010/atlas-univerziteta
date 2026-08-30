@@ -1,3 +1,6 @@
+import { ResultCard } from "./ResultCard";
+import { FacultyBreadcrumb } from "./FacultyBreadcrumb";
+
 import type { TFunction } from "../../types/i18n";
 import type { StudyProgramSearchResult } from "../../schemas/university";
 
@@ -9,21 +12,15 @@ function StudyProgramResult({
   t: TFunction;
 }) {
   return (
-    <li className="border border-(--border-color) rounded-lg p-3 bg-(--surface-2) hover:bg-(--hover-surface) transition-colors">
+    <ResultCard>
       <p className="font-bold text-(--text-primary)">{program.name}</p>
       {program.ects != null && (
         <p className="mt-1 text-sm text-(--text-secondary)">
           🎓 {program.ects} {t("universitiesPage.ects")}
         </p>
       )}
-      <p className="text-sm text-(--text-muted) mt-1">
-        🏛️ {program.faculty.name}
-        {" - "}
-        {program.faculty.university.name}
-        {program.faculty.university.acronym &&
-          ` (${program.faculty.university.acronym})`}
-      </p>
-    </li>
+      <FacultyBreadcrumb faculty={program.faculty} />
+    </ResultCard>
   );
 }
 

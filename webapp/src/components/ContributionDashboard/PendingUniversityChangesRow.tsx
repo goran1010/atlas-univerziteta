@@ -1,6 +1,7 @@
 import { useState, use, type Dispatch, type SetStateAction } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Button } from "../sharedComponents/Button";
+import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
 import type { PendingChange } from "./types";
@@ -66,18 +67,13 @@ function PendingUniversityChangesRow({
         </div>
 
         <div className="flex justify-end items-center gap-2">
-          <Button
-            variant="secondary"
+          <DetailsToggleButton
+            expanded={expanded}
             className="px-2 py-1 text-xs"
             onClick={() => {
               setExpanded((prev) => !prev);
             }}
-          >
-            {expanded ? "▲" : "▼"}{" "}
-            {expanded
-              ? t("universitiesPage.hideDetails")
-              : t("universitiesPage.viewDetails")}
-          </Button>
+          />
           <Button
             variant="danger"
             className="px-2 py-1 text-xs"
@@ -100,13 +96,7 @@ function PendingUniversityChangesRow({
           entityType={change.entityType}
           typeOfChange={change.typeOfChange}
           data={change.data}
-          currentEntity={
-            change.currentEntity != null &&
-            typeof change.currentEntity === "object" &&
-            !Array.isArray(change.currentEntity)
-              ? change.currentEntity
-              : null
-          }
+          currentEntity={change.currentEntity ?? null}
         />
       )}
     </li>

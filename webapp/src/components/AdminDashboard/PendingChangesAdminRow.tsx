@@ -1,5 +1,6 @@
 import { memo, type Dispatch, type SetStateAction } from "react";
 import { Button } from "../sharedComponents/Button";
+import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import {
@@ -11,6 +12,19 @@ import { PendingChangeDetail } from "./PendingChangeDetail";
 import type { Notification } from "../../types/notification";
 import type { TypeOfChange } from "../ContributionDashboard/types";
 import type { AdminPendingChange } from "../../schemas/pendingChange";
+
+const ROW_ACCENT: Record<TypeOfChange, string> = {
+  CREATE: "border-l-4 border-l-green-500 dark:border-l-green-400",
+  UPDATE: "border-l-4 border-l-blue-500 dark:border-l-blue-400",
+  DELETE: "border-l-4 border-l-red-500 dark:border-l-red-400",
+};
+
+const BADGE: Record<TypeOfChange, string> = {
+  CREATE:
+    "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300",
+  UPDATE: "bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300",
+  DELETE: "bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300",
+};
 
 interface PendingChangesAdminRowProps {
   data: AdminPendingChange;
@@ -31,44 +45,13 @@ const PendingChangesAdminRow = memo(
     const { t, serverStatus } = use(RootContext);
     const ctx = { addNotification, setLoading, t, serverStatus };
 
-    const getChangeTypeStyles = (type: TypeOfChange) => {
-      switch (type.toLowerCase()) {
-        case "create":
-          return "border-l-4 border-l-green-500 dark:border-l-green-400";
-        case "update":
-          return "border-l-4 border-l-blue-500 dark:border-l-blue-400";
-        case "delete":
-          return "border-l-4 border-l-red-500 dark:border-l-red-400";
-        default:
-          return "";
-      }
-    };
-
-    const getChangeTypeBadgeStyles = (type: TypeOfChange) => {
-      switch (type.toLowerCase()) {
-        case "create":
-          return "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300";
-        case "update":
-          return "bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300";
-        case "delete":
-          return "bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300";
-        default:
-          return "bg-(--surface-alt) text-(--text-secondary)";
-      }
-    };
-
-    const currentEntity =
-      data.currentEntity != null &&
-      typeof data.currentEntity === "object" &&
-      !Array.isArray(data.currentEntity)
-        ? data.currentEntity
-        : null;
+    const currentEntity = data.currentEntity ?? null;
 
     return (
       <form
-        className={`rounded-md transition-colors hover:bg-(--hover-surface) ${getChangeTypeStyles(
-          data.typeOfChange,
-        )} ${index % 2 === 0 ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
+        className={`rounded-md transition-colors hover:bg-(--hover-surface) ${
+          ROW_ACCENT[data.typeOfChange]
+        } ${index % 2 === 0 ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
       >
         {data.parentContext && (
           <p className="text-xs text-(--text-muted) px-2 py-1 text-center truncate">
@@ -81,9 +64,9 @@ const PendingChangesAdminRow = memo(
               {t("contribution.change")}
             </span>
             <span
-              className={`px-2 py-1 rounded-md text-xs font-semibold capitalize ${getChangeTypeBadgeStyles(
-                data.typeOfChange,
-              )}`}
+              className={`px-2 py-1 rounded-md text-xs font-semibold capitalize ${
+                BADGE[data.typeOfChange]
+              }`}
             >
               {t(`contribution.changeTypes.${data.typeOfChange}`)}
             </span>
@@ -105,19 +88,13 @@ const PendingChangesAdminRow = memo(
         </div>
 
         <div className="flex justify-center items-center gap-2 p-1">
-          <Button
-            variant="secondary"
+          <DetailsToggleButton
+            expanded={expanded}
             className="px-3 py-1.5 text-xs sm:max-w-30"
             onClick={() => {
               setExpanded((prev) => !prev);
             }}
-            type="button"
-          >
-            {expanded ? "▲" : "▼"}{" "}
-            {expanded
-              ? t("universitiesPage.hideDetails")
-              : t("universitiesPage.viewDetails")}
-          </Button>
+          />
           <Button
             variant="success"
             className="px-3 py-2 text-sm sm:max-w-25"
