@@ -322,10 +322,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                 </a>
               )}
               {university.phone && (
-                <a
-                  href={`tel:${university.phone}`}
-                  className="hover:underline"
-                >
+                <a href={`tel:${university.phone}`} className="hover:underline">
                   📞 {university.phone}
                 </a>
               )}
