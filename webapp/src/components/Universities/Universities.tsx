@@ -34,7 +34,7 @@ function Universities() {
         <meta name="twitter:description" content={t("meta.universities")} />
       </Helmet>
 
-      <div className="w-full mx-auto px-2 sm:px-4 flex flex-col gap-2">
+      <div className="w-full mx-auto px-1 sm:px-4 flex flex-col gap-2">
         <h1 className="text-center text-(--text-secondary)">
           {t("universitiesPage.title")}
         </h1>

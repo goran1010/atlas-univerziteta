@@ -60,7 +60,7 @@ function StudyProgramRow({
         onClick={() => {
           setOpen((p) => !p);
         }}
-        className="w-full text-left flex justify-between items-center gap-2 py-1 px-2 rounded hover:bg-(--hover-surface) transition-colors cursor-pointer"
+        className="w-full text-left flex justify-between items-center gap-2 py-1 px-1 sm:px-2 rounded hover:bg-(--hover-surface) transition-colors cursor-pointer"
       >
         <span className="font-medium">{program.name}</span>
         <span className="flex gap-2 items-center text-xs text-(--text-muted) shrink-0">
@@ -78,7 +78,7 @@ function StudyProgramRow({
         </span>
       </button>
       {open && (
-        <div className="ml-4 mt-1 mb-2 border-l-2 border-(--border-color) pl-3">
+        <div className="ml-1 sm:ml-4 mt-1 mb-2 border-l-2 border-(--border-color) pl-2 sm:pl-3">
           <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-(--text-muted) py-1">
             {program.durationYears != null && (
               <span>
@@ -129,7 +129,7 @@ function FacultyRow({
         onClick={() => {
           setOpen((p) => !p);
         }}
-        className="w-full text-left flex justify-between items-center gap-2 py-1.5 px-2 rounded hover:bg-(--hover-surface) transition-colors font-semibold cursor-pointer"
+        className="w-full text-left flex justify-between items-center gap-2 py-1.5 px-1 sm:px-2 rounded hover:bg-(--hover-surface) transition-colors font-semibold cursor-pointer"
       >
         <span>{faculty.name}</span>
         <span className="flex gap-2 items-center text-xs text-(--text-muted) shrink-0">
@@ -148,7 +148,7 @@ function FacultyRow({
         </span>
       </button>
       {open && (
-        <div className="ml-4 mt-1 border-l-2 border-indigo-200 dark:border-indigo-700 pl-3">
+        <div className="ml-1 sm:ml-4 mt-1 border-l-2 border-indigo-200 dark:border-indigo-700 pl-2 sm:pl-3">
           {(faculty.city ??
             faculty.website ??
             faculty.address ??
@@ -282,9 +282,9 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
 
   return (
     <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) hover:bg-(--hover-surface) transition-colors">
-      <div className="p-3 sm:p-4">
-        <div className="flex flex-wrap justify-between items-start gap-2">
-          <div className="flex-1 min-w-0">
+      <div className="p-2 sm:p-4">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+          <div className="min-w-0">
             <h3 className="font-bold text-base text-(--text-primary) leading-snug">
               {university.name}
               {university.acronym && (
@@ -293,7 +293,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                 </span>
               )}
             </h3>
-            <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-sm text-(--text-secondary)">
+            <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
               <span>📍 {university.city}</span>
               <span>🏷️ {entityLabel}</span>
               <span
@@ -317,7 +317,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                 <span>📅 {university.foundedYear}</span>
               )}
             </div>
-            <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-(--text-muted) mt-1">
+            <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-1">
               {university.website && (
                 <a
                   href={university.website}
@@ -358,7 +358,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
           </div>
           <Button
             variant="secondary"
-            className="px-3 py-1.5 text-xs shrink-0 max-w-36"
+            className="w-full sm:w-auto px-3 py-1.5 text-xs shrink-0 sm:max-w-36"
             onClick={() => {
               void handleExpand();
             }}

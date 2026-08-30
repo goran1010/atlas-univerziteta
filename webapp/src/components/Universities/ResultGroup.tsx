@@ -12,7 +12,7 @@ function ResultGroup({
   children: ReactNode;
 }) {
   return (
-    <div className="relative mt-2 border border-(--border-color)/30 rounded-xl p-3 pt-4 bg-(--surface-1)/40">
+    <div className="relative mt-2 border border-(--border-color)/30 rounded-xl p-1.5 pt-3 sm:p-3 sm:pt-4 bg-(--surface-1)/40">
       <span className="absolute -top-2.5 left-3 px-2 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wide rounded bg-blue-100 text-(--accent) leading-tight border border-(--border-color)/40 dark:bg-blue-950">
         {label}
       </span>
