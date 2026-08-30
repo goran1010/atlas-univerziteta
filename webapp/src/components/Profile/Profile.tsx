@@ -15,6 +15,13 @@ function Profile() {
   const [loading, setLoading] = useState(false);
   const [adminRequestLoading, setAdminRequestLoading] = useState(false);
   const navigate = useNavigate();
+  const adminRequestCtx = {
+    addNotification,
+    setLoading: setAdminRequestLoading,
+    t,
+    serverStatus,
+  };
+  const logoutCtx = { addNotification, setLoading, t, serverStatus };
 
   useEffect(() => {
     if (!userData) {
@@ -75,10 +82,7 @@ function Profile() {
                     onClick={() =>
                       void handleCancelAdminRequest(
                         setUserData,
-                        addNotification,
-                        setAdminRequestLoading,
-                        t,
-                        serverStatus,
+                        adminRequestCtx,
                       )
                     }
                     variant="warning"
@@ -92,13 +96,7 @@ function Profile() {
               ) : (
                 <Button
                   onClick={() =>
-                    void handleRequestAdmin(
-                      setUserData,
-                      addNotification,
-                      setAdminRequestLoading,
-                      t,
-                      serverStatus,
-                    )
+                    void handleRequestAdmin(setUserData, adminRequestCtx)
                   }
                   variant="secondary"
                   className="px-6 py-3 font-semibold"
@@ -113,14 +111,7 @@ function Profile() {
           <div className="flex flex-col gap-2 w-full max-w-sm">
             <Button
               onClick={() =>
-                void handleLogout(
-                  addNotification,
-                  navigate,
-                  setUserData,
-                  setLoading,
-                  t,
-                  serverStatus,
-                )
+                void handleLogout(navigate, setUserData, logoutCtx)
               }
               variant="danger"
               className="px-6 py-3 font-semibold"

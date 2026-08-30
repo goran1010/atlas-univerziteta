@@ -1,7 +1,7 @@
 import { SERVER_URL } from "../../../utils/envConfig";
 import { readErrorMessage } from "../../../schemas/api";
 import { loginResponseSchema } from "../../../schemas/auth";
-import { getCsrfToken, clearCsrfToken } from "../../utils/getCsrfToken";
+import { getCsrfToken, clearCsrfToken } from "../../../utils/getCsrfToken";
 import { guardedFetch } from "../../../utils/guardedFetch";
 import { isServerNotReadyError } from "../../../utils/serverStatus";
 import type { SubmitEvent } from "react";

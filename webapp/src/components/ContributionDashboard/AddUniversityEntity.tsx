@@ -123,14 +123,11 @@ function AddUniversityEntity({
       typeOfChange,
       data,
       setPendingChanges,
-      addNotification,
-      setLoading,
       setFormState: () => {
         setFormState(INIT_FORM);
         setPickerResetKey((prev) => prev + 1);
       },
-      t,
-      serverStatus,
+      ctx: { addNotification, setLoading, t, serverStatus },
     });
   }
 

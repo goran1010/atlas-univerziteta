@@ -2,8 +2,10 @@ import { memo, type Dispatch, type SetStateAction } from "react";
 import { Button } from "../sharedComponents/Button";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
-import { handleConfirm } from "./utils/handleConfirm";
-import { handleDecline } from "./utils/handleDecline";
+import {
+  handleApprovePendingChange,
+  handleDeclinePendingChange,
+} from "./utils/adminActions";
 import { PendingChangeDetail } from "./PendingChangeDetail";
 
 import type { Notification } from "../../types/notification";
@@ -27,6 +29,7 @@ const PendingChangesAdminRow = memo(
     const [loading, setLoading] = useState(false);
     const [expanded, setExpanded] = useState(false);
     const { t, serverStatus } = use(RootContext);
+    const ctx = { addNotification, setLoading, t, serverStatus };
 
     const getChangeTypeStyles = (type: TypeOfChange) => {
       switch (type.toLowerCase()) {
@@ -119,14 +122,7 @@ const PendingChangesAdminRow = memo(
             variant="success"
             className="px-3 py-2 text-sm sm:max-w-25"
             onClick={() => {
-              void handleConfirm(
-                data,
-                setPendingChanges,
-                addNotification,
-                setLoading,
-                t,
-                serverStatus,
-              );
+              void handleApprovePendingChange(data, setPendingChanges, ctx);
             }}
             type="button"
             loading={loading}
@@ -137,14 +133,7 @@ const PendingChangesAdminRow = memo(
             variant="danger"
             className="px-3 py-2 text-sm sm:max-w-25"
             onClick={() => {
-              void handleDecline(
-                data,
-                setPendingChanges,
-                addNotification,
-                setLoading,
-                t,
-                serverStatus,
-              );
+              void handleDeclinePendingChange(data, setPendingChanges, ctx);
             }}
             type="button"
             loading={loading}

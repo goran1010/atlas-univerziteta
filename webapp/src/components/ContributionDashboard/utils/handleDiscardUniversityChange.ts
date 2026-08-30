@@ -1,91 +1,30 @@
-import { SERVER_URL } from "../../../utils/envConfig";
-import {
-  actionSuccessResponseSchema,
-  readErrorMessage,
-} from "../../../schemas/api";
-import { getCsrfToken } from "../../utils/getCsrfToken";
-import { guardedFetch } from "../../../utils/guardedFetch";
-import { isServerNotReadyError } from "../../../utils/serverStatus";
+import { actionSuccessResponseSchema } from "../../../schemas/api";
+import { apiMutation } from "../../../utils/apiMutation";
 
-import type { ServerStatus } from "../../../utils/serverStatus";
-import type { TFunction } from "../../../types/i18n";
-import type { AddNotification } from "../../../types/notification";
-import type { PendingChange } from "../customHooks/useGetPendingChanges";
+import type { RequestContext } from "../../../utils/apiMutation";
+import type { PendingChange } from "../types";
 import type { Dispatch, SetStateAction } from "react";
 
-interface HandleDiscardUniversityChangeParams {
-  changeId: string;
-  setPendingChanges: Dispatch<SetStateAction<PendingChange[]>>;
-  addNotification: AddNotification;
-  setLoading: (loading: boolean) => void;
-  t: TFunction;
-  serverStatus: ServerStatus;
-}
+async function handleDiscardUniversityChange(
+  changeId: string,
+  setPendingChanges: Dispatch<SetStateAction<PendingChange[]>>,
+  ctx: RequestContext,
+) {
+  const result = await apiMutation(
+    {
+      path: "/users/contribution/pending-changes/universities",
+      method: "DELETE",
+      body: { id: changeId },
+      responseSchema: actionSuccessResponseSchema,
+      successMessageKey: "messages.universities.deleteSuccess",
+      errorMessageKey: "messages.universities.deleteError",
+      logLabel: "discard pending change",
+    },
+    ctx,
+  );
+  if (!result) return;
 
-async function handleDiscardUniversityChange({
-  changeId,
-  setPendingChanges,
-  addNotification,
-  setLoading,
-  t,
-  serverStatus,
-}: HandleDiscardUniversityChangeParams) {
-  try {
-    setLoading(true);
-    const csrfToken = await getCsrfToken({ serverStatus, addNotification, t });
-
-    if (!csrfToken) {
-      addNotification({
-        type: "error",
-        message: t("messages.csrfTokenFailed"),
-      });
-      return;
-    }
-
-    const response = await guardedFetch(
-      `${SERVER_URL}/users/contribution/pending-changes/universities`,
-      {
-        method: "DELETE",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-          "x-csrf-token": csrfToken,
-        },
-        body: JSON.stringify({ id: changeId }),
-        credentials: "include",
-      },
-      { serverStatus },
-    );
-
-    if (response.ok) {
-      actionSuccessResponseSchema.parse(await response.json());
-      setPendingChanges((prev) => prev.filter((c) => c.id !== changeId));
-      addNotification({
-        type: "success",
-        message: t("messages.universities.deleteSuccess"),
-      });
-      return;
-    }
-    const serverMessage = readErrorMessage(await response.json());
-    if (serverMessage) {
-      console.warn("Failed to discard pending change:", serverMessage);
-    }
-    addNotification({
-      type: "error",
-      message: t("messages.universities.deleteError"),
-    });
-  } catch (err) {
-    if (isServerNotReadyError(err)) {
-      return;
-    }
-    addNotification({
-      type: "error",
-      message: t("messages.universities.deleteError"),
-    });
-    console.error("Error discarding pending change:", err);
-  } finally {
-    setLoading(false);
-  }
+  setPendingChanges((prev) => prev.filter((c) => c.id !== changeId));
 }
 
 export { handleDiscardUniversityChange };

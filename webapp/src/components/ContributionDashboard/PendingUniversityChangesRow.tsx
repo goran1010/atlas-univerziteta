@@ -3,7 +3,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { Button } from "../sharedComponents/Button";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
-import type { PendingChange } from "./customHooks/useGetPendingChanges";
+import type { PendingChange } from "./types";
 
 interface BadgeStyles {
   CREATE: string;
@@ -30,6 +30,7 @@ function PendingUniversityChangesRow({
 }: PendingUniversityChangesRowProps) {
   const { t, addNotification, serverStatus } = use(RootContext);
   const [loading, setLoading] = useState(false);
+  const ctx = { addNotification, setLoading, t, serverStatus };
   const [expanded, setExpanded] = useState(false);
 
   const isEven = index % 2 === 0;
@@ -82,14 +83,11 @@ function PendingUniversityChangesRow({
             className="px-2 py-1 text-xs"
             loading={loading}
             onClick={() =>
-              void handleDiscardUniversityChange({
-                changeId: change.id,
+              void handleDiscardUniversityChange(
+                change.id,
                 setPendingChanges,
-                addNotification,
-                setLoading,
-                t,
-                serverStatus,
-              })
+                ctx,
+              )
             }
           >
             {t("contribution.deleteChange")}

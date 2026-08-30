@@ -1,15 +1,16 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { useGetPendingChangesAdmin } from "../../../../../src/components/AdminDashboard/customHooks/useGetPendingChangesAdmin";
-import { RootContextProvider } from "../../../../utils/rootContextProvider";
-import { guardedFetch } from "../../../../../src/utils/guardedFetch";
+import { useFetchList } from "../../../src/customHooks/useFetchList";
+import { RootContextProvider } from "../../utils/rootContextProvider";
+import { guardedFetch } from "../../../src/utils/guardedFetch";
+import { adminPendingChangesResponseSchema } from "../../../src/schemas/pendingChange";
 import {
   SERVER_STATUS,
   ServerNotReadyError,
-} from "../../../../../src/utils/serverStatus";
+} from "../../../src/utils/serverStatus";
 
-import type { RootContextType } from "../../../../../src/contextData/RootContext";
+import type { RootContextType } from "../../../src/contextData/RootContext";
 
-vi.mock("../../../../../src/utils/guardedFetch", () => ({
+vi.mock("../../../src/utils/guardedFetch", () => ({
   guardedFetch: vi.fn(),
 }));
 
@@ -18,29 +19,39 @@ const identityTranslate = (key: string) => key;
 
 interface HookProbeProps {
   setLoading: (loading: boolean) => void;
+  enabled?: boolean;
 }
 
-function HookProbe({ setLoading }: HookProbeProps) {
-  const { pendingChanges } = useGetPendingChangesAdmin(
+function HookProbe({ setLoading, enabled }: HookProbeProps) {
+  const [items] = useFetchList({
+    path: "/users/admin/pending-changes",
+    responseSchema: adminPendingChangesResponseSchema,
+    successMessageKey: "messages.pendingChanges.loadSuccess",
+    errorMessageKey: "messages.pendingChanges.fetchError",
+    logLabel: "fetch pending changes",
     setLoading,
-    identityTranslate,
-  );
+    enabled,
+  });
 
-  return <output data-testid="pending-count">{pendingChanges.length}</output>;
+  return <output data-testid="item-count">{items.length}</output>;
 }
 
 function Wrapper({
   addNotification,
   setLoading,
   serverStatus = SERVER_STATUS.LIVE,
+  enabled,
 }: {
   addNotification: RootContextType["addNotification"];
   setLoading: (loading: boolean) => void;
   serverStatus?: RootContextType["serverStatus"];
+  enabled?: boolean;
 }) {
   return (
-    <RootContextProvider rootValue={{ addNotification, serverStatus }}>
-      <HookProbe setLoading={setLoading} />
+    <RootContextProvider
+      rootValue={{ addNotification, serverStatus, t: identityTranslate }}
+    >
+      <HookProbe setLoading={setLoading} enabled={enabled} />
     </RootContextProvider>
   );
 }
@@ -53,8 +64,8 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-describe("useGetPendingChangesAdmin", () => {
-  test("stores validated pending changes from a successful response", async () => {
+describe("useFetchList", () => {
+  test("stores validated items from a successful response", async () => {
     const addNotification = vi.fn();
     mockedGuardedFetch.mockResolvedValue(
       new Response(
@@ -86,15 +97,20 @@ describe("useGetPendingChangesAdmin", () => {
     render(<Wrapper addNotification={addNotification} setLoading={vi.fn()} />);
 
     await waitFor(() => {
-      expect(screen.getByTestId("pending-count")).toHaveTextContent("1");
+      expect(screen.getByTestId("item-count")).toHaveTextContent("1");
     });
+    expect(mockedGuardedFetch).toHaveBeenCalledWith(
+      expect.stringContaining("/users/admin/pending-changes"),
+      expect.objectContaining({ method: "GET", credentials: "include" }),
+      expect.objectContaining({ serverStatus: SERVER_STATUS.LIVE }),
+    );
     expect(addNotification).toHaveBeenCalledWith({
       type: "success",
       message: "messages.pendingChanges.loadSuccess",
     });
   });
 
-  test("rejects legacy pending data that contains account fields", async () => {
+  test("rejects data that does not match the schema", async () => {
     const addNotification = vi.fn();
     mockedGuardedFetch.mockResolvedValue(
       new Response(
@@ -117,6 +133,9 @@ describe("useGetPendingChangesAdmin", () => {
         { headers: { "Content-Type": "application/json" } },
       ),
     );
+    const consoleErrorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => undefined);
 
     render(<Wrapper addNotification={addNotification} setLoading={vi.fn()} />);
 
@@ -126,10 +145,11 @@ describe("useGetPendingChangesAdmin", () => {
         message: "messages.pendingChanges.fetchError",
       });
     });
-    expect(screen.getByTestId("pending-count")).toHaveTextContent("0");
+    expect(screen.getByTestId("item-count")).toHaveTextContent("0");
+    expect(consoleErrorSpy).toHaveBeenCalled();
   });
 
-  test("uses a translated error message when pending changes cannot be fetched", async () => {
+  test("uses the translated error message when the request fails", async () => {
     const addNotification = vi.fn();
     const setLoading = vi.fn();
     mockedGuardedFetch.mockResolvedValue(
@@ -148,7 +168,6 @@ describe("useGetPendingChangesAdmin", () => {
         message: "messages.pendingChanges.fetchError",
       });
     });
-
     expect(setLoading).toHaveBeenLastCalledWith(false);
   });
 
@@ -166,7 +185,7 @@ describe("useGetPendingChangesAdmin", () => {
         message: "messages.pendingChanges.fetchError",
       });
     });
-    expect(screen.getByTestId("pending-count")).toHaveTextContent("0");
+    expect(screen.getByTestId("item-count")).toHaveTextContent("0");
   });
 
   test("does not notify when the server is not ready", async () => {
@@ -186,7 +205,6 @@ describe("useGetPendingChangesAdmin", () => {
     await waitFor(() => {
       expect(setLoading).toHaveBeenLastCalledWith(false);
     });
-
     expect(addNotification).not.toHaveBeenCalled();
     expect(consoleErrorSpy).not.toHaveBeenCalled();
   });
@@ -204,5 +222,17 @@ describe("useGetPendingChangesAdmin", () => {
 
     expect(mockedGuardedFetch).not.toHaveBeenCalled();
     expect(addNotification).not.toHaveBeenCalled();
+  });
+
+  test("does not fetch when disabled", () => {
+    render(
+      <Wrapper
+        addNotification={vi.fn()}
+        setLoading={vi.fn()}
+        enabled={false}
+      />,
+    );
+
+    expect(mockedGuardedFetch).not.toHaveBeenCalled();
   });
 });

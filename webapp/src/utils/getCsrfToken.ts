@@ -1,11 +1,22 @@
-import { SERVER_URL } from "../../utils/envConfig";
-import { csrfTokenResponseSchema } from "../../schemas/auth";
-import { guardedFetch } from "../../utils/guardedFetch";
-import { isServerNotReadyError } from "../../utils/serverStatus";
+import { SERVER_URL } from "./envConfig";
+import { csrfTokenResponseSchema } from "../schemas/auth";
+import { guardedFetch } from "./guardedFetch";
+import { isServerNotReadyError } from "./serverStatus";
 
-import type { ServerStatus } from "../../utils/serverStatus";
-import type { AddNotification } from "../../types/notification";
-import type { TFunction } from "../../types/i18n";
+import type { ServerStatus } from "./serverStatus";
+import type { AddNotification } from "../types/notification";
+import type { TFunction } from "../types/i18n";
+
+class CsrfTokenError extends Error {
+  constructor(cause: unknown) {
+    super("Failed to fetch CSRF token", { cause });
+    this.name = "CsrfTokenError";
+  }
+}
+
+function isCsrfTokenError(error: unknown): error is CsrfTokenError {
+  return error instanceof CsrfTokenError;
+}
 
 let cachedToken: string | null = null;
 
@@ -46,7 +57,7 @@ async function getCsrfToken({
       message: t("messages.csrfTokenFailed"),
     });
     console.error("Error fetching CSRF token:", error);
-    throw new Error("Failed to fetch CSRF token", { cause: error });
+    throw new CsrfTokenError(error);
   }
 }
 
@@ -54,4 +65,4 @@ function clearCsrfToken() {
   cachedToken = null;
 }
 
-export { getCsrfToken, clearCsrfToken };
+export { getCsrfToken, clearCsrfToken, CsrfTokenError, isCsrfTokenError };

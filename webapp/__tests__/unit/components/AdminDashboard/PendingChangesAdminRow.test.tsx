@@ -7,26 +7,19 @@ import type { ReactElement } from "react";
 import type { AdminPendingChange } from "../../../../src/schemas/pendingChange";
 import type { ServerStatus } from "../../../../src/utils/serverStatus";
 
-const handleConfirmMock = vi.fn<(...args: unknown[]) => undefined>();
-const handleDeclineMock = vi.fn<(...args: unknown[]) => undefined>();
+const handleApprovePendingChangeMock =
+  vi.fn<(...args: unknown[]) => undefined>();
+const handleDeclinePendingChangeMock =
+  vi.fn<(...args: unknown[]) => undefined>();
 
-vi.mock(
-  "../../../../src/components/AdminDashboard/utils/handleConfirm",
-  () => ({
-    handleConfirm: (...args: unknown[]) => {
-      handleConfirmMock(...args);
-    },
-  }),
-);
-
-vi.mock(
-  "../../../../src/components/AdminDashboard/utils/handleDecline",
-  () => ({
-    handleDecline: (...args: unknown[]) => {
-      handleDeclineMock(...args);
-    },
-  }),
-);
+vi.mock("../../../../src/components/AdminDashboard/utils/adminActions", () => ({
+  handleApprovePendingChange: (...args: unknown[]) => {
+    handleApprovePendingChangeMock(...args);
+  },
+  handleDeclinePendingChange: (...args: unknown[]) => {
+    handleDeclinePendingChangeMock(...args);
+  },
+}));
 
 const change: AdminPendingChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",
@@ -53,8 +46,8 @@ function Wrapper({ children }: { children: ReactElement }) {
 
 beforeEach(() => {
   localStorage.setItem("language", "en");
-  handleConfirmMock.mockReset();
-  handleDeclineMock.mockReset();
+  handleApprovePendingChangeMock.mockReset();
+  handleDeclinePendingChangeMock.mockReset();
 });
 
 afterEach(() => {
@@ -136,21 +129,21 @@ describe("PendingChangesAdminRow", () => {
     await user.click(approveButton);
     await user.click(rejectButton);
 
-    expect(handleConfirmMock).toHaveBeenCalledWith(
+    expect(handleApprovePendingChangeMock).toHaveBeenCalledWith(
       change,
       setPendingChanges,
-      addNotification,
-      expect.any(Function),
-      expect.any(Function),
-      SERVER_STATUS.LIVE,
+      expect.objectContaining({
+        addNotification,
+        serverStatus: SERVER_STATUS.LIVE,
+      }),
     );
-    expect(handleDeclineMock).toHaveBeenCalledWith(
+    expect(handleDeclinePendingChangeMock).toHaveBeenCalledWith(
       change,
       setPendingChanges,
-      addNotification,
-      expect.any(Function),
-      expect.any(Function),
-      SERVER_STATUS.LIVE,
+      expect.objectContaining({
+        addNotification,
+        serverStatus: SERVER_STATUS.LIVE,
+      }),
     );
     expect(approveButton.closest("form")).toHaveClass("bg-(--surface-alt)");
   });

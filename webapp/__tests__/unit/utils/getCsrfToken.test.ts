@@ -1,4 +1,4 @@
-import type { ServerStatus } from "../../../../src/utils/serverStatus";
+import type { ServerStatus } from "../../../src/utils/serverStatus";
 
 beforeEach(() => {
   vi.resetModules();
@@ -22,8 +22,7 @@ describe("getCsrfToken", () => {
       { status: 200 },
     );
     fetchSpy.mockResolvedValue(mockResponse);
-    const { getCsrfToken } =
-      await import("../../../../src/components/utils/getCsrfToken");
+    const { getCsrfToken } = await import("../../../src/utils/getCsrfToken");
     const result = await getCsrfToken({
       serverStatus,
       addNotification: () => vi.fn(),
@@ -44,8 +43,7 @@ describe("getCsrfToken", () => {
     );
     fetchSpy.mockResolvedValue(mockResponse);
 
-    const { getCsrfToken } =
-      await import("../../../../src/components/utils/getCsrfToken");
+    const { getCsrfToken } = await import("../../../src/utils/getCsrfToken");
 
     await getCsrfToken({
       serverStatus,
@@ -63,8 +61,7 @@ describe("getCsrfToken", () => {
     const fetchSpy = vi.spyOn(globalThis, "fetch");
     fetchSpy.mockRejectedValue(new Error("Network failure"));
     vi.spyOn(console, "error").mockImplementation(() => vi.fn());
-    const { getCsrfToken } =
-      await import("../../../../src/components/utils/getCsrfToken");
+    const { getCsrfToken } = await import("../../../src/utils/getCsrfToken");
 
     await expect(
       getCsrfToken({
@@ -82,8 +79,7 @@ describe("getCsrfToken", () => {
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => vi.fn());
-    const { getCsrfToken } =
-      await import("../../../../src/components/utils/getCsrfToken");
+    const { getCsrfToken } = await import("../../../src/utils/getCsrfToken");
 
     await expect(
       getCsrfToken({
@@ -103,10 +99,9 @@ describe("getCsrfToken", () => {
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => vi.fn());
-    const { getCsrfToken } =
-      await import("../../../../src/components/utils/getCsrfToken");
+    const { getCsrfToken } = await import("../../../src/utils/getCsrfToken");
     const { ServerNotReadyError } =
-      await import("../../../../src/utils/serverStatus");
+      await import("../../../src/utils/serverStatus");
 
     const notReadyError = await getCsrfToken({
       serverStatus: "waking",
@@ -126,8 +121,7 @@ describe("getCsrfToken", () => {
       }),
     );
     vi.spyOn(console, "error").mockImplementation(() => vi.fn());
-    const { getCsrfToken } =
-      await import("../../../../src/components/utils/getCsrfToken");
+    const { getCsrfToken } = await import("../../../src/utils/getCsrfToken");
 
     await expect(
       getCsrfToken({
@@ -154,7 +148,7 @@ describe("clearCsrfToken", () => {
       ),
     );
     const { getCsrfToken, clearCsrfToken } =
-      await import("../../../../src/components/utils/getCsrfToken");
+      await import("../../../src/utils/getCsrfToken");
 
     await getCsrfToken({
       serverStatus,

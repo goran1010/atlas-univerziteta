@@ -1,95 +1,33 @@
-import { SERVER_URL } from "../../../utils/envConfig";
-import {
-  actionSuccessResponseSchema,
-  readErrorMessage,
-} from "../../../schemas/api";
-import { getCsrfToken, clearCsrfToken } from "../../utils/getCsrfToken";
-import { guardedFetch } from "../../../utils/guardedFetch";
-import { isServerNotReadyError } from "../../../utils/serverStatus";
+import { actionSuccessResponseSchema } from "../../../schemas/api";
+import { clearCsrfToken } from "../../../utils/getCsrfToken";
+import { apiMutation } from "../../../utils/apiMutation";
 
-import type { AddNotification } from "../../../types/notification";
+import type { RequestContext } from "../../../utils/apiMutation";
 import type { UserData } from "../../../types/auth";
-import type { TFunction } from "../../../types/i18n";
-import type { ServerStatus } from "../../../utils/serverStatus";
 import type { NavigateFunction } from "react-router";
 
-type HandleLogout = (
-  addNotification: AddNotification,
+async function handleLogout(
   navigate: NavigateFunction,
   setUserData: (data: UserData) => void,
-  setLoading: (loading: boolean) => void,
-  t: TFunction,
-  serverStatus: ServerStatus,
-) => Promise<void>;
-
-const handleLogout: HandleLogout = async function (
-  addNotification,
-  navigate,
-  setUserData,
-  setLoading,
-  t,
-  serverStatus,
+  ctx: RequestContext,
 ) {
-  try {
-    setLoading(true);
-    const csrfToken = await getCsrfToken({
-      serverStatus,
-      addNotification,
-      t,
-    });
-    if (!csrfToken) {
-      addNotification({
-        type: "error",
-        message: t("messages.csrfTokenFailed"),
-      });
-      return;
-    }
+  const result = await apiMutation(
+    {
+      path: "/users/logout",
+      method: "POST",
+      responseSchema: actionSuccessResponseSchema,
+      successMessageKey: "messages.auth.logoutSuccess",
+      errorMessageKey: "messages.auth.logoutFailed",
+      caughtErrorMessageKey: "messages.auth.logoutError",
+      logLabel: "log out",
+    },
+    ctx,
+  );
+  if (!result) return;
 
-    const response = await guardedFetch(
-      `${SERVER_URL}/users/logout`,
-      {
-        mode: "cors",
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-          "x-csrf-token": csrfToken,
-        },
-      },
-      { serverStatus },
-    );
-
-    if (response.ok) {
-      actionSuccessResponseSchema.parse(await response.json());
-      addNotification({
-        type: "success",
-        message: t("messages.auth.logoutSuccess"),
-      });
-      setUserData(null);
-      clearCsrfToken();
-      void navigate("/");
-      return;
-    }
-    const serverMessage = readErrorMessage(await response.json());
-    if (serverMessage) {
-      console.warn("Logout request failed:", serverMessage);
-    }
-    addNotification({
-      type: "error",
-      message: t("messages.auth.logoutFailed"),
-    });
-  } catch (err) {
-    if (isServerNotReadyError(err)) {
-      return;
-    }
-    addNotification({
-      type: "error",
-      message: t("messages.auth.logoutError"),
-    });
-    console.error("Error logging out:", err);
-  } finally {
-    setLoading(false);
-  }
-};
+  setUserData(null);
+  clearCsrfToken();
+  void navigate("/");
+}
 
 export { handleLogout };

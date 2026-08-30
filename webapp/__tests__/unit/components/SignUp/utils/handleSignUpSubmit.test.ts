@@ -8,7 +8,7 @@ const guardedFetchMock =
     (url: unknown, options: unknown, context: unknown) => Promise<Response>
   >();
 
-vi.mock("../../../../../src/components/utils/getCsrfToken", () => ({
+vi.mock("../../../../../src/utils/getCsrfToken", () => ({
   getCsrfToken: (args: unknown) => getCsrfTokenMock(args),
 }));
 

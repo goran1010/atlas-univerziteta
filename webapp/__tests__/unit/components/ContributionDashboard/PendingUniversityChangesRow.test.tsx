@@ -4,7 +4,7 @@ import { PendingUniversityChangesRow } from "../../../../src/components/Contribu
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
 import type { ReactElement } from "react";
-import type { PendingChange } from "../../../../src/components/ContributionDashboard/customHooks/useGetPendingChanges";
+import type { PendingChange } from "../../../../src/components/ContributionDashboard/types";
 
 const change: PendingChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",

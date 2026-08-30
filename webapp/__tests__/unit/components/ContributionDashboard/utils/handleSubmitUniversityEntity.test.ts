@@ -2,18 +2,22 @@ import {
   SERVER_STATUS,
   ServerNotReadyError,
 } from "../../../../../src/utils/serverStatus";
-import type { ServerStatus } from "../../../../../src/utils/serverStatus";
 import type { SetStateAction } from "react";
-import type { PendingChange } from "../../../../../src/components/ContributionDashboard/customHooks/useGetPendingChanges";
+import { CsrfTokenError } from "../../../../../src/utils/getCsrfToken";
+import type { PendingChange } from "../../../../../src/components/ContributionDashboard/types";
 import type { GuardedFetch } from "../../../../../src/utils/guardedFetch";
 import type { HandleSubmitUniversityEntityParams } from "../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
 
-const getCsrfTokenMock = vi.fn<(args: unknown) => Promise<string | null>>();
+const getCsrfTokenMock = vi.fn<(args: unknown) => Promise<string>>();
 const guardedFetchMock = vi.fn<GuardedFetch>();
 
-vi.mock("../../../../../src/components/utils/getCsrfToken", () => ({
-  getCsrfToken: (args: unknown) => getCsrfTokenMock(args),
-}));
+vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
+  const actual =
+    await importOriginal<
+      typeof import("../../../../../src/utils/getCsrfToken")
+    >();
+  return { ...actual, getCsrfToken: (args: unknown) => getCsrfTokenMock(args) };
+});
 
 vi.mock("../../../../../src/utils/guardedFetch", () => ({
   guardedFetch: (...args: Parameters<GuardedFetch>) =>
@@ -34,11 +38,13 @@ const baseArgs = {
     ownership: "PUBLIC",
   },
   setPendingChanges: vi.fn(),
-  addNotification: vi.fn(),
-  setLoading: vi.fn(),
   setFormState: vi.fn(),
-  t,
-  serverStatus: "live" as ServerStatus,
+  ctx: {
+    addNotification: vi.fn(),
+    setLoading: vi.fn(),
+    t,
+    serverStatus: "live",
+  },
 } satisfies HandleSubmitUniversityEntityParams;
 
 function createSuccessResponse(
@@ -154,9 +160,8 @@ describe("handleSubmitUniversityEntity", () => {
     await handleSubmitUniversityEntity({
       ...baseArgs,
       setPendingChanges,
-      addNotification,
-      setLoading,
       setFormState,
+      ctx: { addNotification, setLoading, t, serverStatus: "live" },
     });
 
     expect(guardedFetchMock).toHaveBeenCalledWith(
@@ -284,8 +289,10 @@ describe("handleSubmitUniversityEntity", () => {
     );
   });
 
-  test("shows an error notification when the csrf token is missing", async () => {
-    getCsrfTokenMock.mockResolvedValue(null);
+  test("does not notify again when fetching the csrf token fails", async () => {
+    getCsrfTokenMock.mockRejectedValue(
+      new CsrfTokenError(new Error("token endpoint down")),
+    );
 
     const { handleSubmitUniversityEntity } =
       await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
@@ -294,15 +301,11 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      addNotification,
-      setLoading,
+      ctx: { addNotification, setLoading, t, serverStatus: "live" },
     });
 
     expect(guardedFetchMock).not.toHaveBeenCalled();
-    expect(addNotification).toHaveBeenCalledWith({
-      type: "error",
-      message: "messages.csrfTokenFailed",
-    });
+    expect(addNotification).not.toHaveBeenCalled();
     expect(setLoading).toHaveBeenLastCalledWith(false);
   });
 
@@ -318,7 +321,7 @@ describe("handleSubmitUniversityEntity", () => {
       targetId: "not-a-number",
       typeOfChange: "UPDATE",
       data: { name: "Updated Faculty" },
-      addNotification,
+      ctx: { addNotification, setLoading: vi.fn(), t, serverStatus: "live" },
     });
 
     expect(getCsrfTokenMock).not.toHaveBeenCalled();
@@ -351,7 +354,7 @@ describe("handleSubmitUniversityEntity", () => {
     await handleSubmitUniversityEntity({
       ...baseArgs,
       setPendingChanges,
-      addNotification,
+      ctx: { addNotification, setLoading: vi.fn(), t, serverStatus: "live" },
     });
 
     expect(setPendingChanges).not.toHaveBeenCalled();
@@ -372,7 +375,7 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      addNotification,
+      ctx: { addNotification, setLoading: vi.fn(), t, serverStatus: "live" },
     });
 
     expect(addNotification).toHaveBeenCalledWith({
@@ -395,7 +398,7 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      addNotification,
+      ctx: { addNotification, setLoading: vi.fn(), t, serverStatus: "live" },
     });
 
     expect(addNotification).toHaveBeenCalledWith({
@@ -403,7 +406,7 @@ describe("handleSubmitUniversityEntity", () => {
       message: "messages.universities.addError",
     });
     expect(consoleErrorSpy).toHaveBeenCalledWith(
-      "Error submitting university entity:",
+      "Error trying to submit university change:",
       requestError,
     );
   });
@@ -424,8 +427,7 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      addNotification,
-      setLoading,
+      ctx: { addNotification, setLoading, t, serverStatus: "live" },
     });
 
     expect(addNotification).not.toHaveBeenCalled();

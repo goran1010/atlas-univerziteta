@@ -8,7 +8,7 @@ import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 
 import type { UserData } from "../../../../src/customHooks/useStatusCheck";
-import type { PendingChange } from "../../../../src/components/ContributionDashboard/customHooks/useGetPendingChanges";
+import type { PendingChange } from "../../../../src/components/ContributionDashboard/types";
 import type { RootContextType } from "../../../../src/contextData/RootContext";
 
 const mockPendingChanges: PendingChange[] = [

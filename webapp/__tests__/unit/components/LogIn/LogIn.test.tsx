@@ -6,7 +6,7 @@ import { About } from "../../../../src/components/About/About";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-vi.mock("../../../../src/components/utils/getCsrfToken", () => ({
+vi.mock("../../../../src/utils/getCsrfToken", () => ({
   getCsrfToken: () => Promise.resolve("mocked-csrf-token"),
   clearCsrfToken: () => vi.fn(),
 }));
