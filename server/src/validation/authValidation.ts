@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { RequestValidationError } from "../errors/RequestValidationError.js";
+import { parseRequest } from "./parseRequest.js";
 
 const emailSchema = z
   .string()
@@ -42,33 +42,15 @@ const loginSchema = z.object({
 });
 
 function signup(input: unknown) {
-  const result = signupSchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(signupSchema, input);
 }
 
 function confirmToken(input: unknown) {
-  const result = confirmTokenSchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(confirmTokenSchema, input);
 }
 
 function login(input: unknown) {
-  const result = loginSchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(loginSchema, input);
 }
 
 export { signup, confirmToken, login };

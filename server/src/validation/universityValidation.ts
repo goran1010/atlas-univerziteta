@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { RequestValidationError } from "../errors/RequestValidationError.js";
+import { parseRequest } from "./parseRequest.js";
 
 const getUniversityByIdParamsSchema = z.strictObject({
   id: z
@@ -19,13 +19,7 @@ const getUniversityByIdParamsSchema = z.strictObject({
 });
 
 function getUniversityById(input: unknown) {
-  const result = getUniversityByIdParamsSchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(getUniversityByIdParamsSchema, input);
 }
 
 const searchQuerySchema = z.strictObject({
@@ -41,13 +35,7 @@ const searchQuerySchema = z.strictObject({
 });
 
 function searchQuery(input: unknown) {
-  const result = searchQuerySchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(searchQuerySchema, input);
 }
 
 export { getUniversityById, searchQuery };
