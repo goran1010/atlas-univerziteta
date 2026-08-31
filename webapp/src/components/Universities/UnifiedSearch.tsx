@@ -7,7 +7,6 @@ import {
   type SubmitEvent,
 } from "react";
 import { RootContext } from "../../contextData/RootContext";
-import { Input } from "../sharedComponents/Input";
 import { Button } from "../sharedComponents/Button";
 import { Spinner } from "../../utils/Spinner";
 import { UniversityCard } from "./UniversityCard";
@@ -157,11 +156,11 @@ function UnifiedSearch() {
         onSubmit={(e) => void handleSearch(e)}
         className="flex flex-col sm:flex-row gap-2 w-full max-w-lg"
       >
-        <div className="relative flex-1">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-muted) pointer-events-none">
+        <div className="flex flex-1 items-center gap-2 px-3 rounded-md shadow-sm bg-(--surface-2) border border-(--border-input) [box-shadow:inset_0_1px_0_rgba(255,255,255,0.28)] transition duration-150 focus-within:border-(--accent) focus-within:ring-2 focus-within:ring-(--focus-ring) has-user-invalid:border-red-500">
+          <span className="text-(--text-muted)" aria-hidden="true">
             <SearchIcon />
           </span>
-          <Input
+          <input
             ref={inputRef}
             type="search"
             value={searchInput}
@@ -172,19 +171,19 @@ function UnifiedSearch() {
             required
             minLength={2}
             maxLength={100}
-            className="pl-9 pr-9"
+            className="flex-1 min-w-0 py-2 bg-transparent text-(--text-primary) placeholder:text-(--text-secondary) focus:outline-none sm:text-sm"
             aria-label={t("universitiesPage.search")}
           />
-          {searchInput !== "" && (
-            <button
-              type="button"
-              aria-label={t("universitiesPage.clearSearch")}
-              onClick={handleClear}
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded cursor-pointer text-(--text-secondary) hover:text-(--text-primary) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
-            >
-              <ClearIcon />
-            </button>
-          )}
+          <button
+            type="button"
+            aria-label={t("universitiesPage.clearSearch")}
+            onClick={handleClear}
+            className={`p-1 rounded cursor-pointer text-(--text-secondary) hover:text-(--text-primary) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) ${
+              searchInput === "" ? "invisible" : "visible"
+            }`}
+          >
+            <ClearIcon />
+          </button>
         </div>
         <Button
           type="submit"
