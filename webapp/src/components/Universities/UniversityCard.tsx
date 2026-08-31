@@ -88,14 +88,14 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
       <div className="p-2 sm:p-4">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
           <div className="min-w-0">
-            <h3 className="font-bold text-base text-(--text-primary) leading-snug">
+            <h2 className="font-bold text-base text-(--text-primary) leading-snug">
               {university.name}
               {university.acronym && (
                 <span className="ml-2 text-sm font-normal text-(--text-muted)">
                   ({university.acronym})
                 </span>
               )}
-            </h3>
+            </h2>
             <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
               <span>
                 <span aria-hidden="true">📍</span> {university.city}
