@@ -6,6 +6,17 @@ import * as contributionValidation from "../validation/contributionValidation.js
 import type { Request, Response } from "express";
 import type { entityType } from "../generated/prisma/enums.js";
 
+function requireUser(req: Request, res: Response) {
+  if (!req.user) {
+    sendError(res, {
+      status: 401,
+      message: "Authentication required: log in and try again.",
+    });
+    return null;
+  }
+  return req.user;
+}
+
 async function entityExists(entityType: entityType, id: number) {
   switch (entityType) {
     case "UNIVERSITY":
@@ -33,13 +44,8 @@ async function parentEntityExists(entityType: entityType, parentId: number) {
 }
 
 async function createEntity(req: Request, res: Response) {
-  if (!req.user) {
-    sendError(res, {
-      status: 401,
-      message: "Authentication required: log in and try again.",
-    });
-    return;
-  }
+  const user = requireUser(req, res);
+  if (!user) return;
 
   const contribution = contributionValidation.createEntity(req.body);
   const { entityType, data } = contribution;
@@ -61,7 +67,7 @@ async function createEntity(req: Request, res: Response) {
       data: {
         user: {
           connect: {
-            id: req.user.id,
+            id: user.id,
           },
         },
         entityType,
@@ -87,13 +93,8 @@ async function createEntity(req: Request, res: Response) {
 }
 
 async function editEntity(req: Request, res: Response) {
-  if (!req.user) {
-    sendError(res, {
-      status: 401,
-      message: "Authentication required: log in and try again.",
-    });
-    return;
-  }
+  const user = requireUser(req, res);
+  if (!user) return;
   const { entityType, targetId, data } = contributionValidation.editEntity(
     req.body,
   );
@@ -111,7 +112,7 @@ async function editEntity(req: Request, res: Response) {
       data: {
         user: {
           connect: {
-            id: req.user.id,
+            id: user.id,
           },
         },
 
@@ -137,13 +138,8 @@ async function editEntity(req: Request, res: Response) {
 }
 
 async function deleteEntity(req: Request, res: Response) {
-  if (!req.user) {
-    sendError(res, {
-      status: 401,
-      message: "Authentication required: log in and try again.",
-    });
-    return;
-  }
+  const user = requireUser(req, res);
+  if (!user) return;
   const { entityType, targetId } = contributionValidation.deleteEntity(
     req.body,
   );
@@ -161,7 +157,7 @@ async function deleteEntity(req: Request, res: Response) {
       data: {
         user: {
           connect: {
-            id: req.user.id,
+            id: user.id,
           },
         },
         entityType,
@@ -186,14 +182,9 @@ async function deleteEntity(req: Request, res: Response) {
 }
 
 async function getPendingChanges(req: Request, res: Response) {
-  if (!req.user) {
-    sendError(res, {
-      status: 401,
-      message: "Authentication required: log in and try again.",
-    });
-    return;
-  }
-  const { id } = req.user;
+  const user = requireUser(req, res);
+  if (!user) return;
+  const { id } = user;
   const pendingChanges = await prisma.pendingChange.findMany({
     where: { userId: id },
   });
@@ -207,14 +198,9 @@ async function getPendingChanges(req: Request, res: Response) {
 }
 
 async function deletePendingChange(req: Request, res: Response) {
-  if (!req.user) {
-    sendError(res, {
-      status: 401,
-      message: "Authentication required: log in and try again.",
-    });
-    return;
-  }
-  const { id } = req.user;
+  const user = requireUser(req, res);
+  if (!user) return;
+  const { id } = user;
   const { id: pendingChangeId } = contributionValidation.deletePendingChange(
     req.body,
   );

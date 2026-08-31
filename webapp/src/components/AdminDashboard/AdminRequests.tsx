@@ -1,10 +1,13 @@
-import { useGetAdminRequests } from "./customHooks/useGetAdminRequests";
+import { useFetchList } from "../../customHooks/useFetchList";
 import { use, useState } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../../utils/Spinner";
 import { Button } from "../sharedComponents/Button";
-import { handleApproveAdminRequest } from "./utils/handleApproveAdminRequest";
-import { handleDeclineAdminRequest } from "./utils/handleDeclineAdminRequest";
+import {
+  handleApproveAdminRequest,
+  handleDeclineAdminRequest,
+} from "./utils/adminActions";
+import { adminRequestsResponseSchema } from "../../schemas/adminRequest";
 
 import type { RootContextType } from "../../contextData/RootContext";
 import type { AdminRequest } from "../../schemas/adminRequest";
@@ -29,6 +32,7 @@ function AdminRequestRow({
 }: AdminRequestRowProps) {
   const [loading, setLoading] = useState(false);
   const { t, serverStatus } = use(RootContext);
+  const ctx = { addNotification, setLoading, t, serverStatus };
 
   return (
     <li
@@ -58,14 +62,7 @@ function AdminRequestRow({
           variant="success"
           className="px-3 py-2 text-sm sm:max-w-25"
           onClick={() => {
-            void handleApproveAdminRequest(
-              adminRequest,
-              setAdminRequests,
-              addNotification,
-              setLoading,
-              t,
-              serverStatus,
-            );
+            void handleApproveAdminRequest(adminRequest, setAdminRequests, ctx);
           }}
           type="button"
           loading={loading}
@@ -76,14 +73,7 @@ function AdminRequestRow({
           variant="danger"
           className="px-3 py-2 text-sm sm:max-w-25"
           onClick={() => {
-            void handleDeclineAdminRequest(
-              adminRequest,
-              setAdminRequests,
-              addNotification,
-              setLoading,
-              t,
-              serverStatus,
-            );
+            void handleDeclineAdminRequest(adminRequest, setAdminRequests, ctx);
           }}
           type="button"
           loading={loading}
@@ -99,10 +89,13 @@ function AdminRequests() {
   const [loading, setLoading] = useState(true);
 
   const { addNotification, t } = use<RootContextType>(RootContext);
-  const { adminRequests, setAdminRequests } = useGetAdminRequests(
+  const [adminRequests, setAdminRequests] = useFetchList({
+    path: "/users/admin/admin-requests",
+    responseSchema: adminRequestsResponseSchema,
+    errorMessageKey: "messages.adminRequest.fetchError",
+    logLabel: "fetch admin requests",
     setLoading,
-    t,
-  );
+  });
 
   if (loading) {
     return <Spinner />;

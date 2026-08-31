@@ -7,8 +7,8 @@ import userEvent from "@testing-library/user-event";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 
-import type { UserData } from "../../../../src/customHooks/useStatusCheck";
-import type { PendingChange } from "../../../../src/components/ContributionDashboard/customHooks/useGetPendingChanges";
+import type { UserData } from "../../../../src/types/auth";
+import type { PendingChange } from "../../../../src/schemas/pendingChange";
 import type { RootContextType } from "../../../../src/contextData/RootContext";
 
 const mockPendingChanges: PendingChange[] = [

@@ -328,8 +328,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
       await prisma.user.delete({ where: { id: userInDb.id } });
     },
   );
-
-  test.each(["FACULTY", "STUDY_PROGRAM", "TRACK"])(
+  const enums = ["FACULTY", "STUDY_PROGRAM", "TRACK"] as const;
+  test.each(enums)(
     "Responds with status 404 if stored pending change parent id is null for CREATE change type for entity type %s",
     async (entityType) => {
       const userInput = createNewUserInput({ role: "ADMIN" });
@@ -343,7 +343,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
       const pendingChange = await prisma.pendingChange.create({
         data: {
-          // @ts-expect-error - Testing only 3 of 4 entity types, so this is fine
           entityType,
           typeOfChange: "CREATE",
           targetId: null,

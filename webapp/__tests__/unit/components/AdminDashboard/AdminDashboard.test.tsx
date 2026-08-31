@@ -4,7 +4,7 @@ import { Notifications } from "../../../../src/components/Notifications";
 import { MemoryRouter, Routes, Route } from "react-router";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { UserData } from "../../../../src/customHooks/useStatusCheck";
+import type { UserData } from "../../../../src/types/auth";
 
 beforeEach(() => {
   vi.spyOn(globalThis, "fetch").mockResolvedValue(
@@ -58,7 +58,7 @@ describe("AdminDashboard component", () => {
     );
     expect(paragraphElement).toBeInTheDocument();
     expect(
-      screen.queryByRole("heading", { name: /Admin Dashboard/i }),
+      screen.queryByRole("heading", { name: "Admin Dashboard" }),
     ).not.toBeInTheDocument();
   });
 

@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router";
 import { Status } from "../../../../src/components/Navbar/Status";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { UserData } from "../../../../src/customHooks/useStatusCheck";
+import type { UserData } from "../../../../src/types/auth";
 import type { SetIsMenuOpen } from "../../../../src/customHooks/useCloseMenu";
 
 interface WrapperProps {

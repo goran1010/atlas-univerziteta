@@ -1,26 +1,42 @@
+import { handleLogout } from "../../../../../src/components/Profile/utils/handleLogout";
+import {
+  clearCsrfToken,
+  getCsrfToken,
+} from "../../../../../src/utils/getCsrfToken";
+import { guardedFetch } from "../../../../../src/utils/guardedFetch";
 import { ServerNotReadyError } from "../../../../../src/utils/serverStatus";
 
-const getCsrfTokenMock = vi.fn<(args: unknown) => Promise<string | null>>();
-const guardedFetchMock =
-  vi.fn<
-    (url: unknown, options: unknown, context: unknown) => Promise<Response>
-  >();
+import type { RequestContext } from "../../../../../src/utils/apiMutation";
 
-vi.mock("../../../../../src/components/utils/getCsrfToken", () => ({
-  getCsrfToken: (args: unknown) => getCsrfTokenMock(args),
-  clearCsrfToken: vi.fn(),
-}));
+vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
+  const actual =
+    await importOriginal<
+      typeof import("../../../../../src/utils/getCsrfToken")
+    >();
+  return { ...actual, getCsrfToken: vi.fn(), clearCsrfToken: vi.fn() };
+});
 
 vi.mock("../../../../../src/utils/guardedFetch", () => ({
-  guardedFetch: (url: unknown, options: unknown, context: unknown) =>
-    guardedFetchMock(url, options, context),
+  guardedFetch: vi.fn(),
 }));
 
-const t = (key: string) => key;
+const mockedGetCsrfToken = vi.mocked(getCsrfToken);
+const mockedClearCsrfToken = vi.mocked(clearCsrfToken);
+const mockedGuardedFetch = vi.mocked(guardedFetch);
+
+function createCtx(): RequestContext {
+  return {
+    addNotification: vi.fn(),
+    setLoading: vi.fn(),
+    t: (key: string) => key,
+    serverStatus: "live",
+  };
+}
 
 beforeEach(() => {
-  getCsrfTokenMock.mockReset();
-  guardedFetchMock.mockReset();
+  mockedGetCsrfToken.mockReset();
+  mockedClearCsrfToken.mockReset();
+  mockedGuardedFetch.mockReset();
 });
 
 afterEach(() => {
@@ -28,28 +44,43 @@ afterEach(() => {
 });
 
 describe("handleLogout", () => {
+  test("clears the session, navigates home and notifies", async () => {
+    mockedGetCsrfToken.mockResolvedValue("csrf-token");
+    mockedGuardedFetch.mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve({ message: "Logged out." }),
+    } as Response);
+    const ctx = createCtx();
+    const navigate = vi.fn();
+    const setUserData = vi.fn();
+
+    await handleLogout(navigate, setUserData, ctx);
+
+    expect(mockedGuardedFetch).toHaveBeenCalledWith(
+      expect.stringContaining("/users/logout"),
+      expect.objectContaining({ method: "POST" }),
+      expect.objectContaining({ serverStatus: "live" }),
+    );
+    expect(setUserData).toHaveBeenCalledWith(null);
+    expect(mockedClearCsrfToken).toHaveBeenCalled();
+    expect(navigate).toHaveBeenCalledWith("/");
+    expect(ctx.addNotification).toHaveBeenCalledWith({
+      type: "success",
+      message: "messages.auth.logoutSuccess",
+    });
+  });
+
   test("does not notify when the server is not ready", async () => {
-    getCsrfTokenMock.mockRejectedValue(new ServerNotReadyError("waking"));
+    mockedGetCsrfToken.mockRejectedValue(new ServerNotReadyError("waking"));
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => undefined);
+    const ctx = createCtx();
 
-    const { handleLogout } =
-      await import("../../../../../src/components/Profile/utils/handleLogout");
-    const addNotification = vi.fn();
-    const setLoading = vi.fn();
+    await handleLogout(vi.fn(), vi.fn(), ctx);
 
-    await handleLogout(
-      addNotification,
-      vi.fn(),
-      vi.fn(),
-      setLoading,
-      t,
-      "live",
-    );
-
-    expect(addNotification).not.toHaveBeenCalled();
+    expect(ctx.addNotification).not.toHaveBeenCalled();
     expect(consoleErrorSpy).not.toHaveBeenCalled();
-    expect(setLoading).toHaveBeenLastCalledWith(false);
+    expect(ctx.setLoading).toHaveBeenLastCalledWith(false);
   });
 });

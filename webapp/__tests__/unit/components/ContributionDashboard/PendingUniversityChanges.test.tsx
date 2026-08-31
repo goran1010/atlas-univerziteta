@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { PendingUniversityChanges } from "../../../../src/components/ContributionDashboard/PendingUniversityChanges";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { PendingChange } from "../../../../src/components/ContributionDashboard/customHooks/useGetPendingChanges";
+import type { PendingChange } from "../../../../src/schemas/pendingChange";
 
 const PendingUniversityChangesRowMock = vi.fn();
 

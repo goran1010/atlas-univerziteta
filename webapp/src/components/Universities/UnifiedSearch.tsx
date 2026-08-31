@@ -7,7 +7,6 @@ import {
   type SubmitEvent,
 } from "react";
 import { RootContext } from "../../contextData/RootContext";
-import { Input } from "../sharedComponents/Input";
 import { Button } from "../sharedComponents/Button";
 import { Spinner } from "../../utils/Spinner";
 import { UniversityCard } from "./UniversityCard";
@@ -54,10 +53,49 @@ function ResultSection({
   );
 }
 
+function SearchIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  );
+}
+
+function ClearIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}
+
 function UnifiedSearch() {
   const { t, addNotification, serverStatus } = use(RootContext);
   const [results, setResults] = useState<UnifiedSearchResults | null>(null);
   const [loading, setLoading] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Auto-focus the search input only on devices with a precise pointer
@@ -68,11 +106,14 @@ function UnifiedSearch() {
     }
   }, []);
 
+  function handleClear() {
+    setSearchInput("");
+    inputRef.current?.focus();
+  }
+
   async function handleSearch(e: SubmitEvent) {
     e.preventDefault();
-    const searchTerm = searchTermSchema.safeParse(
-      inputRef.current?.value ?? "",
-    );
+    const searchTerm = searchTermSchema.safeParse(searchInput);
     if (!searchTerm.success) {
       addNotification({
         type: "error",
@@ -115,15 +156,35 @@ function UnifiedSearch() {
         onSubmit={(e) => void handleSearch(e)}
         className="flex flex-col sm:flex-row gap-2 w-full max-w-lg"
       >
-        <Input
-          ref={inputRef}
-          type="search"
-          placeholder={t("universitiesPage.searchAllPlaceholder")}
-          minLength={2}
-          maxLength={100}
-          className="flex-1"
-          aria-label={t("universitiesPage.search")}
-        />
+        <div className="flex flex-1 items-center gap-2 px-3 rounded-md shadow-sm bg-(--surface-2) border border-(--border-input) [box-shadow:inset_0_1px_0_rgba(255,255,255,0.28)] transition duration-150 focus-within:border-(--accent) focus-within:ring-2 focus-within:ring-(--focus-ring) has-user-invalid:border-red-500">
+          <span className="text-(--text-muted)" aria-hidden="true">
+            <SearchIcon />
+          </span>
+          <input
+            ref={inputRef}
+            type="search"
+            value={searchInput}
+            onChange={(e) => {
+              setSearchInput(e.target.value);
+            }}
+            placeholder={t("universitiesPage.searchAllPlaceholder")}
+            required
+            minLength={2}
+            maxLength={100}
+            className="flex-1 min-w-0 py-2 bg-transparent text-(--text-primary) placeholder:text-(--text-secondary) focus:outline-none sm:text-sm"
+            aria-label={t("universitiesPage.search")}
+          />
+          <button
+            type="button"
+            aria-label={t("universitiesPage.clearSearch")}
+            onClick={handleClear}
+            className={`p-1 rounded cursor-pointer text-(--text-secondary) hover:text-(--text-primary) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) ${
+              searchInput === "" ? "invisible" : "visible"
+            }`}
+          >
+            <ClearIcon />
+          </button>
+        </div>
         <Button
           type="submit"
           loading={loading}

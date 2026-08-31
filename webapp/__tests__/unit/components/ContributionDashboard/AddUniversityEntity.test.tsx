@@ -4,7 +4,7 @@ import { AddUniversityEntity } from "../../../../src/components/ContributionDash
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
 import type { ReactElement } from "react";
-import type { PendingChange } from "../../../../src/components/ContributionDashboard/customHooks/useGetPendingChanges";
+import type { PendingChange } from "../../../../src/schemas/pendingChange";
 import type { HandleSubmitUniversityEntityParams } from "../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
 
 const handleSubmitUniversityEntityMock =
@@ -154,7 +154,7 @@ describe("AddUniversityEntity", () => {
 
     expect(screen.getByLabelText(/Name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/City/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/^Entity$/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/^Entity( \*)?$/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Ownership/i)).toBeInTheDocument();
     expect(
       screen.getByRole("button", { name: /Submit Suggestion/i }),
@@ -324,7 +324,7 @@ describe("AddUniversityEntity", () => {
     );
     await user.type(screen.getByLabelText(/Name/i), "University of Sarajevo");
     await user.type(screen.getByLabelText(/City/i), "Sarajevo");
-    await user.selectOptions(screen.getByLabelText(/^Entity$/i), "FBIH");
+    await user.selectOptions(screen.getByLabelText(/^Entity( \*)?$/i), "FBIH");
     await user.selectOptions(screen.getByLabelText(/Ownership/i), "PUBLIC");
 
     await user.click(
@@ -344,11 +344,11 @@ describe("AddUniversityEntity", () => {
       ownership: "PUBLIC",
     });
     expect(submittedArgs.setPendingChanges).toBe(setPendingChanges);
-    expect(typeof submittedArgs.addNotification).toBe("function");
-    expect(typeof submittedArgs.setLoading).toBe("function");
     expect(typeof submittedArgs.setFormState).toBe("function");
-    expect(typeof submittedArgs.t).toBe("function");
-    expect(submittedArgs.serverStatus).toBe("live");
+    expect(typeof submittedArgs.ctx.addNotification).toBe("function");
+    expect(typeof submittedArgs.ctx.setLoading).toBe("function");
+    expect(typeof submittedArgs.ctx.t).toBe("function");
+    expect(submittedArgs.ctx.serverStatus).toBe("live");
 
     act(() => {
       submittedArgs.setFormState({

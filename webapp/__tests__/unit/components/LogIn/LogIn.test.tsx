@@ -6,10 +6,15 @@ import { About } from "../../../../src/components/About/About";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-vi.mock("../../../../src/components/utils/getCsrfToken", () => ({
-  getCsrfToken: () => Promise.resolve("mocked-csrf-token"),
-  clearCsrfToken: () => vi.fn(),
-}));
+vi.mock("../../../../src/utils/getCsrfToken", async (importOriginal) => {
+  const actual =
+    await importOriginal<typeof import("../../../../src/utils/getCsrfToken")>();
+  return {
+    ...actual,
+    getCsrfToken: () => Promise.resolve("mocked-csrf-token"),
+    clearCsrfToken: vi.fn(),
+  };
+});
 
 const user = userEvent.setup();
 
@@ -22,7 +27,7 @@ interface FormElements {
 function createFormElements(): FormElements {
   return {
     emailField: screen.getByLabelText(/Email/i),
-    passwordField: screen.getByLabelText("Password"),
+    passwordField: screen.getByLabelText(/^Password/),
     logInButton: screen.getByRole("button", { name: "Log in" }),
   };
 }

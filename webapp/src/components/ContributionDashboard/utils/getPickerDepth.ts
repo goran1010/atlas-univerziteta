@@ -1,4 +1,4 @@
-import type { EntityType, TypeOfChange } from "../types";
+import type { EntityType, TypeOfChange } from "../../../schemas/domain";
 
 const ENTITY_LEVELS: Record<EntityType, number> = {
   UNIVERSITY: 1,
@@ -7,6 +7,9 @@ const ENTITY_LEVELS: Record<EntityType, number> = {
   TRACK: 4,
 };
 
+// Depth = how many cascading selects the picker shows. UPDATE/DELETE drill
+// down to the entity itself; CREATE stops one level up, at the parent the
+// new entity goes under.
 function getPickerDepth(
   entityType: EntityType,
   typeOfChange: TypeOfChange,

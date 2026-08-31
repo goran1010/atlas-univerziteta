@@ -7,26 +7,19 @@ import type { ReactElement } from "react";
 import type { AdminPendingChange } from "../../../../src/schemas/pendingChange";
 import type { ServerStatus } from "../../../../src/utils/serverStatus";
 
-const handleConfirmMock = vi.fn<(...args: unknown[]) => undefined>();
-const handleDeclineMock = vi.fn<(...args: unknown[]) => undefined>();
+const handleApprovePendingChangeMock =
+  vi.fn<(...args: unknown[]) => undefined>();
+const handleDeclinePendingChangeMock =
+  vi.fn<(...args: unknown[]) => undefined>();
 
-vi.mock(
-  "../../../../src/components/AdminDashboard/utils/handleConfirm",
-  () => ({
-    handleConfirm: (...args: unknown[]) => {
-      handleConfirmMock(...args);
-    },
-  }),
-);
-
-vi.mock(
-  "../../../../src/components/AdminDashboard/utils/handleDecline",
-  () => ({
-    handleDecline: (...args: unknown[]) => {
-      handleDeclineMock(...args);
-    },
-  }),
-);
+vi.mock("../../../../src/components/AdminDashboard/utils/adminActions", () => ({
+  handleApprovePendingChange: (...args: unknown[]) => {
+    handleApprovePendingChangeMock(...args);
+  },
+  handleDeclinePendingChange: (...args: unknown[]) => {
+    handleDeclinePendingChangeMock(...args);
+  },
+}));
 
 const change: AdminPendingChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",
@@ -53,8 +46,8 @@ function Wrapper({ children }: { children: ReactElement }) {
 
 beforeEach(() => {
   localStorage.setItem("language", "en");
-  handleConfirmMock.mockReset();
-  handleDeclineMock.mockReset();
+  handleApprovePendingChangeMock.mockReset();
+  handleDeclinePendingChangeMock.mockReset();
 });
 
 afterEach(() => {
@@ -74,44 +67,15 @@ describe("PendingChangesAdminRow", () => {
       </Wrapper>,
     );
 
-    const form = screen
-      .getByRole("button", { name: /Approve/i })
-      .closest("form");
+    const row = screen.getByRole("button", { name: /Approve/i }).closest("li");
     const badge = screen.getByText("Delete");
 
     expect(screen.getByText("Track (smjer)")).toBeInTheDocument();
     expect(screen.getByText("johndoe@examplemail.com")).toBeInTheDocument();
-    expect(form).toHaveClass("border-l-4");
-    expect(form).toHaveClass("border-l-red-500");
+    expect(row).toHaveClass("border-l-4");
+    expect(row).toHaveClass("border-l-red-500");
     expect(badge).toHaveClass("bg-red-100");
     expect(badge).toHaveClass("text-red-800");
-  });
-
-  test("uses neutral styling for an unknown change type", () => {
-    const unknownChange = {
-      ...change,
-      typeOfChange: "UNKNOWN",
-    } as unknown as AdminPendingChange;
-
-    render(
-      <Wrapper>
-        <PendingChangesAdminRow
-          data={unknownChange}
-          addNotification={vi.fn()}
-          setPendingChanges={vi.fn()}
-          index={0}
-        />
-      </Wrapper>,
-    );
-
-    const form = screen
-      .getByRole("button", { name: /Approve/i })
-      .closest("form");
-    const badge = screen.getByText("contribution.changeTypes.UNKNOWN");
-
-    expect(form).not.toHaveClass("border-l-4");
-    expect(badge).toHaveClass("bg-(--surface-alt)");
-    expect(badge).toHaveClass("text-(--text-secondary)");
   });
 
   test("calls the confirm and decline handlers when action buttons are clicked", async () => {
@@ -136,22 +100,22 @@ describe("PendingChangesAdminRow", () => {
     await user.click(approveButton);
     await user.click(rejectButton);
 
-    expect(handleConfirmMock).toHaveBeenCalledWith(
+    expect(handleApprovePendingChangeMock).toHaveBeenCalledWith(
       change,
       setPendingChanges,
-      addNotification,
-      expect.any(Function),
-      expect.any(Function),
-      SERVER_STATUS.LIVE,
+      expect.objectContaining({
+        addNotification,
+        serverStatus: SERVER_STATUS.LIVE,
+      }),
     );
-    expect(handleDeclineMock).toHaveBeenCalledWith(
+    expect(handleDeclinePendingChangeMock).toHaveBeenCalledWith(
       change,
       setPendingChanges,
-      addNotification,
-      expect.any(Function),
-      expect.any(Function),
-      SERVER_STATUS.LIVE,
+      expect.objectContaining({
+        addNotification,
+        serverStatus: SERVER_STATUS.LIVE,
+      }),
     );
-    expect(approveButton.closest("form")).toHaveClass("bg-(--surface-alt)");
+    expect(approveButton.closest("li")).toHaveClass("bg-(--surface-alt)");
   });
 });

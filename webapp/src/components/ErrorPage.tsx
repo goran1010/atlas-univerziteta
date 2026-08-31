@@ -12,7 +12,9 @@ function ErrorPage() {
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <main className="flex flex-col items-center gap-4 justify-center h-screen text-(--text-primary)">
-        <p className="text-2xl text-(--text-primary)">{t("error.notFound")}</p>
+        <h1 className="text-2xl font-normal text-(--text-primary)">
+          {t("error.notFound")}
+        </h1>
         <Link to="/" className="text-blue-500 underline text-2xl">
           {t("error.goHome")}
         </Link>

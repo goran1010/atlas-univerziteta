@@ -1,4 +1,5 @@
-import { useGetPendingChangesAdmin } from "./customHooks/useGetPendingChangesAdmin";
+import { useFetchList } from "../../customHooks/useFetchList";
+import { adminPendingChangesResponseSchema } from "../../schemas/pendingChange";
 import { use, useState } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../../utils/Spinner";
@@ -12,10 +13,14 @@ function PendingChangesAdmin() {
   const [loading, setLoading] = useState(true);
 
   const { addNotification, t } = use<RootContextType>(RootContext);
-  const { pendingChanges, setPendingChanges } = useGetPendingChangesAdmin(
+  const [pendingChanges, setPendingChanges] = useFetchList({
+    path: "/users/admin/pending-changes",
+    responseSchema: adminPendingChangesResponseSchema,
+    successMessageKey: "messages.pendingChanges.loadSuccess",
+    errorMessageKey: "messages.pendingChanges.fetchError",
+    logLabel: "fetch pending changes",
     setLoading,
-    t,
-  );
+  });
 
   if (loading) {
     return <Spinner />;

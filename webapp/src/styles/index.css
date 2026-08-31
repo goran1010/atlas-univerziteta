@@ -1,3 +1,5 @@
+/* Theme is class-driven (.dark on <html>) rather than prefers-color-scheme,
+   so the switcher can offer light / dark / system. */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @import "tailwindcss";
@@ -88,9 +90,12 @@
   --hover-surface: rgba(59, 130, 246, 0.14);
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
+  --accent-text: #1d4ed8;
+  --accent-text-hover: #1e40af;
   --accent-disabled: #93c5fd;
   --disabled-text: #dbeafe;
-  --focus-ring: rgba(37, 99, 235, 0.45);
+  --border-input: #64748b;
+  --focus-ring: rgba(37, 99, 235, 0.85);
   --card-shadow: 0 16px 42px rgba(15, 23, 42, 0.12);
   --card-shadow-soft: 0 10px 24px rgba(15, 23, 42, 0.08);
   --card-shadow-strong: 0 22px 54px rgba(15, 23, 42, 0.18);
@@ -100,34 +105,35 @@
   color-scheme: dark;
   --app-bg: linear-gradient(180deg, #020817 0%, #081328 42%, #111827 100%);
   --text-primary: #e2e8f0;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
   --surface-1: rgba(15, 23, 42, 0.74);
   --surface-2: rgba(15, 23, 42, 0.92);
   --surface-3: #1f2937;
   --surface-alt: rgba(30, 41, 59, 0.8);
   --border-color: rgba(148, 163, 184, 0.33);
   --border-strong: #4b5563;
-  --hover-surface: rgba(96, 165, 250, 0.2);
+  --hover-surface: rgba(96, 165, 250, 0.13);
   --accent: #2563eb;
-  --accent-hover: #60a5fa;
+  --accent-hover: #1d4ed8;
+  --accent-text: #60a5fa;
+  --accent-text-hover: #93c5fd;
   --accent-disabled: #1e3a8a;
   --disabled-text: #64748b;
+  --border-input: #64748b;
   --focus-ring: rgba(147, 197, 253, 0.52);
   --card-shadow: 0 20px 44px rgba(2, 6, 23, 0.48);
   --card-shadow-soft: 0 12px 28px rgba(2, 6, 23, 0.36);
   --card-shadow-strong: 0 28px 64px rgba(2, 6, 23, 0.6);
 }
-/* ------------------------------------------------------------------------------------------------ */
 
-/* Base styles using @layer base to override default styles */
 @layer base {
   main a {
-    color: var(--accent);
+    color: var(--accent-text);
     text-decoration-color: transparent;
   }
   main a:hover {
-    color: var(--accent-hover);
+    color: var(--accent-text-hover);
     text-decoration-color: currentColor;
   }
 
@@ -140,6 +146,11 @@
     color: var(--text-primary);
     min-height: 100vh;
     min-height: 100dvh;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   #root {
@@ -168,15 +179,13 @@
       sans-serif;
   }
 }
-/* ------------------------------------------------------------------------------------------------ */
 
 /* Component styles using @layer components to create new components using existing tailwind styles */
 /* @layer components { */
 /* .btn {
     @apply rounded bg-blue-600 px-4 py-2 font-semibold text-white;
-  } */
-/* } */
-/* ------------------------------------------------------------------------------------------------ */
+    } 
+} */
 
 /* Utility styles using @layer utilities for creating new classes from vanilla css */
 /* @layer utilities {

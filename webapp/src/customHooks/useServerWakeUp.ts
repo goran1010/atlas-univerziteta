@@ -12,7 +12,7 @@ import type {
   AddNotification,
   RemoveNotification,
 } from "../types/notification";
-import type { TFunction } from "./useLanguage";
+import type { TFunction } from "../types/i18n";
 
 interface UseServerWakeUp {
   addNotification: AddNotification;
@@ -20,6 +20,8 @@ interface UseServerWakeUp {
   t: TFunction;
 }
 
+// The free-tier backend sleeps when idle; this hook pings it until it
+// responds and drives the app-wide server status.
 function useServerWakeUp({
   addNotification,
   removeNotification,

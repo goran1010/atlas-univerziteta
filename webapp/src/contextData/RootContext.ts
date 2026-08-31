@@ -1,6 +1,26 @@
 import { createContext } from "react";
 
-import type { RootContextType } from "./types";
+import type { Dispatch, SetStateAction } from "react";
+import type { UserData } from "../types/auth";
+import type { Language, SetLanguage, TFunction } from "../types/i18n";
+import type {
+  AddNotification,
+  Notification,
+  RemoveNotification,
+} from "../types/notification";
+import type { ServerStatus } from "../utils/serverStatus";
+
+interface RootContextType {
+  language: Language;
+  setLanguage: SetLanguage;
+  t: TFunction;
+  notifications: Notification[];
+  addNotification: AddNotification;
+  removeNotification: RemoveNotification;
+  userData: UserData;
+  setUserData: Dispatch<SetStateAction<UserData>>;
+  serverStatus: ServerStatus;
+}
 
 const RootContext = createContext<RootContextType>({
   language: "en",
@@ -15,4 +35,4 @@ const RootContext = createContext<RootContextType>({
 });
 
 export { RootContext };
-export type { RootContextType } from "./types";
+export type { RootContextType };

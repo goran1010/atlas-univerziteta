@@ -8,9 +8,6 @@ import type { AddNotification } from "../types/notification";
 import type { ServerStatus } from "../utils/serverStatus";
 import type { UserData } from "../types/auth";
 
-export type { UserData } from "../types/auth";
-export type Message = string | null;
-
 function useStatusCheck(
   addNotification: AddNotification,
   t: (key: string) => string,

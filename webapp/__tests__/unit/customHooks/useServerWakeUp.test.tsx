@@ -1,7 +1,7 @@
 import { act, render, screen } from "@testing-library/react";
 import { useServerWakeUp } from "../../../src/customHooks/useServerWakeUp";
 
-import type { Notification } from "../../../src/customHooks/useNotification";
+import type { Notification } from "../../../src/types/notification";
 
 async function flushMicrotasks() {
   await Promise.resolve();
@@ -24,7 +24,7 @@ const identityTranslate = (key: string) => key;
 
 interface ServerWakeUpProbeProps {
   setLongWait: (notification: Notification) => void;
-  setServerIsDown: (id: string) => void;
+  setServerIsDown: (id: string | undefined) => void;
 }
 
 function ServerWakeUpProbe({

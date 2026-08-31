@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { RequestValidationError } from "../errors/RequestValidationError.js";
+import { parseRequest } from "./parseRequest.js";
 
 const entityTypeSchema = z.enum(
   ["UNIVERSITY", "FACULTY", "STUDY_PROGRAM", "TRACK"],
@@ -324,43 +324,19 @@ const deletePendingChangeSchema = z.strictObject({
 });
 
 function createEntity(input: unknown) {
-  const result = createEntitySchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(createEntitySchema, input);
 }
 
 function editEntity(input: unknown) {
-  const result = editEntitySchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(editEntitySchema, input);
 }
 
 function deleteEntity(input: unknown) {
-  const result = deleteEntitySchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(deleteEntitySchema, input);
 }
 
 function deletePendingChange(input: unknown) {
-  const result = deletePendingChangeSchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(deletePendingChangeSchema, input);
 }
 
 export {

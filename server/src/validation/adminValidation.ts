@@ -1,28 +1,16 @@
 import { z } from "zod";
-import { RequestValidationError } from "../errors/RequestValidationError.js";
+import { parseRequest } from "./parseRequest.js";
 
 const pendingChangeSchema = z.strictObject({
   id: z.uuid({ message: "Pending change ID must be a valid UUID" }),
 });
 
 function declinePendingChange(input: unknown) {
-  const result = pendingChangeSchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(pendingChangeSchema, input);
 }
 
 function approvePendingChange(input: unknown) {
-  const result = pendingChangeSchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(pendingChangeSchema, input);
 }
 
 const adminRequestSchema = z.strictObject({
@@ -30,23 +18,11 @@ const adminRequestSchema = z.strictObject({
 });
 
 function approveAdminRequest(input: unknown) {
-  const result = adminRequestSchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(adminRequestSchema, input);
 }
 
 function declineAdminRequest(input: unknown) {
-  const result = adminRequestSchema.safeParse(input);
-
-  if (!result.success) {
-    throw new RequestValidationError(result.error);
-  }
-
-  return result.data;
+  return parseRequest(adminRequestSchema, input);
 }
 
 export {

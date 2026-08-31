@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { ThemeSwitcher } from "../../../../src/components/Navbar/ThemeSwitcher";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { AddNotification } from "../../../../src/customHooks/useNotification";
+import type { AddNotification } from "../../../../src/types/notification";
 import type { SetMode } from "../../../../src/customHooks/useTheme";
 
 interface WrapperProps {

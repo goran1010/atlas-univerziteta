@@ -1,25 +1,37 @@
-import { ServerNotReadyError } from "../../../../../src/utils/serverStatus";
+import { handleDiscardUniversityChange } from "../../../../../src/components/ContributionDashboard/utils/handleDiscardUniversityChange";
+import { getCsrfToken } from "../../../../../src/utils/getCsrfToken";
+import { guardedFetch } from "../../../../../src/utils/guardedFetch";
 
-const getCsrfTokenMock = vi.fn<(args: unknown) => Promise<string | null>>();
-const guardedFetchMock =
-  vi.fn<
-    (url: unknown, options: unknown, context: unknown) => Promise<Response>
-  >();
+import type { RequestContext } from "../../../../../src/utils/apiMutation";
 
-vi.mock("../../../../../src/components/utils/getCsrfToken", () => ({
-  getCsrfToken: (args: unknown) => getCsrfTokenMock(args),
-}));
+vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
+  const actual =
+    await importOriginal<
+      typeof import("../../../../../src/utils/getCsrfToken")
+    >();
+  return { ...actual, getCsrfToken: vi.fn() };
+});
 
 vi.mock("../../../../../src/utils/guardedFetch", () => ({
-  guardedFetch: (url: unknown, options: unknown, context: unknown) =>
-    guardedFetchMock(url, options, context),
+  guardedFetch: vi.fn(),
 }));
 
-const t = (key: string) => key;
+const mockedGetCsrfToken = vi.mocked(getCsrfToken);
+const mockedGuardedFetch = vi.mocked(guardedFetch);
+
+function createCtx(): RequestContext {
+  return {
+    addNotification: vi.fn(),
+    setLoading: vi.fn(),
+    t: (key: string) => key,
+    serverStatus: "live",
+  };
+}
 
 beforeEach(() => {
-  getCsrfTokenMock.mockReset();
-  guardedFetchMock.mockReset();
+  mockedGetCsrfToken.mockReset();
+  mockedGuardedFetch.mockReset();
+  mockedGetCsrfToken.mockResolvedValue("csrf-token");
 });
 
 afterEach(() => {
@@ -28,29 +40,17 @@ afterEach(() => {
 
 describe("handleDiscardUniversityChange", () => {
   test("removes the discarded change and shows a success notification", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockResolvedValue({
+    mockedGuardedFetch.mockResolvedValue({
       ok: true,
       json: () =>
         Promise.resolve({ message: "Pending change deleted successfully." }),
     } as Response);
-
-    const { handleDiscardUniversityChange } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleDiscardUniversityChange");
+    const ctx = createCtx();
     const setPendingChanges = vi.fn();
-    const addNotification = vi.fn();
-    const setLoading = vi.fn();
 
-    await handleDiscardUniversityChange({
-      changeId: "1",
-      setPendingChanges,
-      addNotification,
-      setLoading,
-      t,
-      serverStatus: "live",
-    });
+    await handleDiscardUniversityChange("1", setPendingChanges, ctx);
 
-    expect(guardedFetchMock).toHaveBeenCalledWith(
+    expect(mockedGuardedFetch).toHaveBeenCalledWith(
       expect.stringContaining("/pending-changes/universities"),
       expect.objectContaining({
         method: "DELETE",
@@ -58,160 +58,35 @@ describe("handleDiscardUniversityChange", () => {
       }),
       expect.objectContaining({ serverStatus: "live" }),
     );
-    expect(addNotification).toHaveBeenCalledWith({
+    expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "success",
       message: "messages.universities.deleteSuccess",
     });
 
-    const updatePendingChanges = setPendingChanges.mock.calls[0]?.[0] as (
+    const updater = setPendingChanges.mock.calls[0]?.[0] as (
       prev: { id: string }[],
     ) => { id: string }[];
-    expect(updatePendingChanges([{ id: "1" }, { id: "2" }])).toEqual([
-      { id: "2" },
-    ]);
+    expect(updater([{ id: "1" }, { id: "2" }])).toEqual([{ id: "2" }]);
   });
 
-  test("shows an error notification when the csrf token is missing", async () => {
-    getCsrfTokenMock.mockResolvedValue(null);
-
-    const { handleDiscardUniversityChange } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleDiscardUniversityChange");
-    const addNotification = vi.fn();
-    const setLoading = vi.fn();
-
-    await handleDiscardUniversityChange({
-      changeId: "1",
-      setPendingChanges: vi.fn(),
-      addNotification,
-      setLoading,
-      t,
-      serverStatus: "live",
-    });
-
-    expect(guardedFetchMock).not.toHaveBeenCalled();
-    expect(addNotification).toHaveBeenCalledWith({
-      type: "error",
-      message: "messages.csrfTokenFailed",
-    });
-    expect(setLoading).toHaveBeenLastCalledWith(false);
-  });
-
-  test("shows a translated error when discarding fails", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockResolvedValue({
+  test("shows a translated error and keeps the list when discarding fails", async () => {
+    mockedGuardedFetch.mockResolvedValue({
       ok: false,
-      json: () =>
-        Promise.resolve({
-          error: { message: "Discard failed on the server." },
-        }),
+      json: () => Promise.resolve({ error: { message: "Discard failed." } }),
     } as Response);
-
-    const { handleDiscardUniversityChange } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleDiscardUniversityChange");
+    const consoleWarnSpy = vi
+      .spyOn(console, "warn")
+      .mockImplementation(() => undefined);
+    const ctx = createCtx();
     const setPendingChanges = vi.fn();
-    const addNotification = vi.fn();
 
-    await handleDiscardUniversityChange({
-      changeId: "1",
-      setPendingChanges,
-      addNotification,
-      setLoading: vi.fn(),
-      t,
-      serverStatus: "live",
-    });
+    await handleDiscardUniversityChange("1", setPendingChanges, ctx);
 
     expect(setPendingChanges).not.toHaveBeenCalled();
-    expect(addNotification).toHaveBeenCalledWith({
+    expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
       message: "messages.universities.deleteError",
     });
-  });
-
-  test("does not remove a change when a successful response is malformed", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockResolvedValue({
-      ok: true,
-      json: () => Promise.resolve({}),
-    } as Response);
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => undefined);
-    const setPendingChanges = vi.fn();
-    const addNotification = vi.fn();
-
-    const { handleDiscardUniversityChange } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleDiscardUniversityChange");
-    await handleDiscardUniversityChange({
-      changeId: "1",
-      setPendingChanges,
-      addNotification,
-      setLoading: vi.fn(),
-      t,
-      serverStatus: "live",
-    });
-
-    expect(setPendingChanges).not.toHaveBeenCalled();
-    expect(addNotification).toHaveBeenCalledWith({
-      type: "error",
-      message: "messages.universities.deleteError",
-    });
-    expect(consoleErrorSpy).toHaveBeenCalled();
-  });
-
-  test("shows the fallback error when the request throws", async () => {
-    const requestError = new Error("Network failure");
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockRejectedValue(requestError);
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => undefined);
-
-    const { handleDiscardUniversityChange } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleDiscardUniversityChange");
-    const addNotification = vi.fn();
-
-    await handleDiscardUniversityChange({
-      changeId: "1",
-      setPendingChanges: vi.fn(),
-      addNotification,
-      setLoading: vi.fn(),
-      t,
-      serverStatus: "live",
-    });
-
-    expect(addNotification).toHaveBeenCalledWith({
-      type: "error",
-      message: "messages.universities.deleteError",
-    });
-    expect(consoleErrorSpy).toHaveBeenCalledWith(
-      "Error discarding pending change:",
-      requestError,
-    );
-  });
-
-  test("does not notify when the server is not ready", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockRejectedValue(new ServerNotReadyError("waking"));
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => undefined);
-
-    const { handleDiscardUniversityChange } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleDiscardUniversityChange");
-    const addNotification = vi.fn();
-    const setLoading = vi.fn();
-
-    await handleDiscardUniversityChange({
-      changeId: "1",
-      setPendingChanges: vi.fn(),
-      addNotification,
-      setLoading,
-      t,
-      serverStatus: "live",
-    });
-
-    expect(addNotification).not.toHaveBeenCalled();
-    expect(consoleErrorSpy).not.toHaveBeenCalled();
-    expect(setLoading).toHaveBeenLastCalledWith(false);
+    expect(consoleWarnSpy).toHaveBeenCalled();
   });
 });

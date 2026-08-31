@@ -3,8 +3,8 @@ import userEvent from "@testing-library/user-event";
 import { LanguageSwitcher } from "../../../../src/components/Navbar/LanguageSwitcher";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { AddNotification } from "../../../../src/customHooks/useNotification";
-import type { SetLanguage } from "../../../../src/customHooks/useLanguage";
+import type { AddNotification } from "../../../../src/types/notification";
+import type { SetLanguage } from "../../../../src/types/i18n";
 import type { Language } from "../../../../src/types/i18n";
 
 afterEach(() => {

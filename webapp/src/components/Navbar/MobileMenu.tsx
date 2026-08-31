@@ -9,7 +9,7 @@ import type { SetIsMenuOpen } from "../../customHooks/useCloseMenu";
 const baseClass = `block p-2 w-full text-center text-nowrap rounded-lg hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2
   focus-visible:ring-(--focus-ring) focus-visible:bg-(--hover-surface)`;
 
-const activeClass = "bg-(--hover-surface) text-(--accent) font-bold";
+const activeClass = "bg-(--hover-surface) text-(--accent-text) font-bold";
 
 function menuItemClass({ isActive }: { isActive: boolean }) {
   return `${baseClass} ${isActive ? activeClass : ""}`;

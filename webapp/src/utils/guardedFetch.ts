@@ -14,6 +14,9 @@ export type GuardedFetch = (
   guard: Guard,
 ) => Promise<Response>;
 
+// The free-tier backend sleeps when idle. While it is waking (or down),
+// requests would only pile up timeouts - callers treat ServerNotReadyError
+// as "wait until the status banner clears".
 const guardedFetch: GuardedFetch = (url, options, guard) => {
   const { serverStatus } = guard;
   const shouldBlock =

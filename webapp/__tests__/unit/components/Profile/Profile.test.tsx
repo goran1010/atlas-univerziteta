@@ -6,19 +6,27 @@ import { LogIn } from "../../../../src/components/LogIn/LogIn";
 import userEvent from "@testing-library/user-event";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { UserData } from "../../../../src/customHooks/useStatusCheck";
+import { CsrfTokenError } from "../../../../src/utils/getCsrfToken";
 
-let getCsrfTokenMock: string | null = "mocked-csrf-token";
+import type { UserData } from "../../../../src/types/auth";
 
-vi.mock("../../../../src/components/utils/getCsrfToken", () => ({
-  getCsrfToken: () => getCsrfTokenMock,
-  clearCsrfToken: () => vi.fn(),
-}));
+let getCsrfTokenMock: () => Promise<string> = () =>
+  Promise.resolve("mocked-csrf-token");
+
+vi.mock("../../../../src/utils/getCsrfToken", async (importOriginal) => {
+  const actual =
+    await importOriginal<typeof import("../../../../src/utils/getCsrfToken")>();
+  return {
+    ...actual,
+    getCsrfToken: () => getCsrfTokenMock(),
+    clearCsrfToken: vi.fn(),
+  };
+});
 
 const user = userEvent.setup();
 
 beforeEach(() => {
-  getCsrfTokenMock = "mocked-csrf-token";
+  getCsrfTokenMock = () => Promise.resolve("mocked-csrf-token");
   const mockResponse = new Response(
     JSON.stringify({
       message: "User logged out successfully",
@@ -110,18 +118,22 @@ describe("Profile Component", () => {
 });
 
 describe("Profile Component handle logout", () => {
-  test("handles logout failure due to missing CSRF token", async () => {
-    getCsrfTokenMock = null;
+  test("stays on the profile when fetching the csrf token fails", async () => {
+    const fetchSpy = vi.spyOn(globalThis, "fetch");
+    getCsrfTokenMock = () =>
+      Promise.reject(new CsrfTokenError(new Error("token endpoint down")));
+
     render(
       <Wrapper initialUser={{ email: "testuser@example.com", role: "USER" }} />,
     );
 
     await clickLogout();
 
-    const notificationElement = await screen.findByText(
-      /Failed to retrieve CSRF token./i,
-    );
-    expect(notificationElement).toBeInTheDocument();
+    const headingElement = await screen.findByRole("heading", {
+      name: /My Profile/i,
+    });
+    expect(headingElement).toBeInTheDocument();
+    expect(fetchSpy).not.toHaveBeenCalled();
   });
 
   test("handles logout failure due to server error", async () => {

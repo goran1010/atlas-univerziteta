@@ -1,117 +1,42 @@
-import { SERVER_URL } from "../../../utils/envConfig";
-import { readErrorMessage } from "../../../schemas/api";
 import { loginResponseSchema } from "../../../schemas/auth";
-import { getCsrfToken, clearCsrfToken } from "../../utils/getCsrfToken";
-import { guardedFetch } from "../../../utils/guardedFetch";
-import { isServerNotReadyError } from "../../../utils/serverStatus";
+import { apiMutation } from "../../../utils/apiMutation";
+import { clearCsrfToken } from "../../../utils/getCsrfToken";
+
 import type { SubmitEvent } from "react";
 import type { NavigateFunction } from "react-router";
-import type { AddNotification } from "../../../types/notification";
-import type { TFunction } from "../../../types/i18n";
-import type { ServerStatus } from "../../../utils/serverStatus";
+import type { RequestContext } from "../../../utils/apiMutation";
 import type { UserData } from "../../../types/auth";
 
-type HandleLogInSubmit = (
+async function handleSubmitLogIn(
   e: SubmitEvent<HTMLFormElement>,
-  inputFields: {
-    email: string;
-    password: string;
-  },
+  inputFields: { email: string; password: string },
   setUserData: (data: UserData) => void,
-  addNotification: AddNotification,
-  setLoading: (loading: boolean) => void,
   navigate: NavigateFunction,
-  t: TFunction,
-  serverStatus: ServerStatus,
-) => Promise<void>;
-
-async function getErrorMessage(response: Response) {
-  try {
-    return readErrorMessage(await response.json());
-  } catch {
-    return null;
-  }
-}
-
-const handleSubmitLogIn: HandleLogInSubmit = async function (
-  e,
-  inputFields,
-  setUserData,
-  addNotification,
-  setLoading,
-  navigate,
-  t,
-  serverStatus,
+  ctx: RequestContext,
 ) {
-  try {
-    e.preventDefault();
+  e.preventDefault();
 
-    setLoading(true);
-
-    const csrfToken = await getCsrfToken({
-      serverStatus,
-      addNotification,
-      t,
-    });
-
-    if (!csrfToken) {
-      addNotification({
-        type: "error",
-        message: t("messages.csrfTokenFailed"),
-      });
-      return;
-    }
-
-    const response = await guardedFetch(
-      `${SERVER_URL}/auth/login`,
-      {
-        mode: "cors",
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "x-csrf-token": csrfToken,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: inputFields.email,
-          password: inputFields.password,
-        }),
+  const result = await apiMutation(
+    {
+      path: "/auth/login",
+      method: "POST",
+      body: {
+        email: inputFields.email,
+        password: inputFields.password,
       },
-      { serverStatus },
-    );
+      responseSchema: loginResponseSchema,
+      successMessageKey: "messages.auth.loginSuccess",
+      errorMessageKey: "messages.auth.loginFailed",
+      caughtErrorMessageKey: "messages.auth.loginError",
+      logLabel: "log in",
+    },
+    ctx,
+  );
+  if (!result) return;
 
-    if (!response.ok) {
-      const serverMessage = await getErrorMessage(response);
-      if (serverMessage) {
-        console.warn("Login request failed:", serverMessage);
-      }
-      addNotification({
-        type: "error",
-        message: t("messages.auth.loginFailed"),
-      });
-      return;
-    }
-    const result = loginResponseSchema.parse(await response.json());
-    addNotification({
-      type: "success",
-      message: t("messages.auth.loginSuccess"),
-    });
-    setUserData(result.data);
-
-    clearCsrfToken();
-    void navigate("/");
-  } catch (err) {
-    if (isServerNotReadyError(err)) {
-      return;
-    }
-    addNotification({
-      type: "error",
-      message: t("messages.auth.loginError"),
-    });
-    console.error(err);
-  } finally {
-    setLoading(false);
-  }
-};
+  setUserData(result.data);
+  clearCsrfToken();
+  void navigate("/");
+}
 
 export { handleSubmitLogIn };

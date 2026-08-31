@@ -96,7 +96,8 @@
     "approve": "Approve",
     "reject": "Reject",
     "addData": "Add data",
-    "closeForm": "Close form"
+    "closeForm": "Close form",
+    "requiredHint": "Fields marked with * are required."
   },
   "profile": {
     "title": "My Profile",
@@ -385,6 +386,7 @@
     "ownership": {
       "PUBLIC": "Public",
       "PRIVATE": "Private"
-    }
+    },
+    "clearSearch": "Clear search"
   }
 }

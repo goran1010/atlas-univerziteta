@@ -31,13 +31,11 @@ async function search(req: Request, res: Response) {
   // Match any accent variant of the term (e.g. "dzemal" also finds "Džemal").
   const variants = expandSearchTerm(searchTerm);
 
-  // Case-insensitive contains on a direct text field.
   const textContains = (field: string) =>
     variants.map((variant) => ({
       [field]: { contains: variant, mode: "insensitive" as const },
     }));
 
-  // Case-insensitive contains on a text field through a relation.
   const relationContains = (relation: string, field: string) =>
     variants.map((variant) => ({
       [relation]: {

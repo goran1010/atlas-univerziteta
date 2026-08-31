@@ -8,10 +8,17 @@ const guardedFetchMock =
     (url: unknown, options: unknown, context: unknown) => Promise<Response>
   >();
 
-vi.mock("../../../../../src/components/utils/getCsrfToken", () => ({
-  getCsrfToken: (args: unknown) => getCsrfTokenMock(args),
-  clearCsrfToken: vi.fn(),
-}));
+vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
+  const actual =
+    await importOriginal<
+      typeof import("../../../../../src/utils/getCsrfToken")
+    >();
+  return {
+    ...actual,
+    getCsrfToken: (args: unknown) => getCsrfTokenMock(args),
+    clearCsrfToken: vi.fn(),
+  };
+});
 
 vi.mock("../../../../../src/utils/guardedFetch", () => ({
   guardedFetch: (url: unknown, options: unknown, context: unknown) =>
@@ -48,11 +55,8 @@ describe("handleSubmitLogIn", () => {
       submitEvent,
       { email: "user@example.com", password: "password123" },
       vi.fn(),
-      addNotification,
-      setLoading,
       vi.fn(),
-      t,
-      "live",
+      { addNotification, setLoading, t, serverStatus: "live" },
     );
 
     expect(addNotification).not.toHaveBeenCalled();

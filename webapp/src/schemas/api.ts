@@ -16,8 +16,17 @@ function readErrorMessage(payload: unknown): string | null {
   return result.success ? result.data.error.message : null;
 }
 
+async function readResponseError(response: Response): Promise<string | null> {
+  try {
+    return readErrorMessage(await response.json());
+  } catch {
+    return null;
+  }
+}
+
 export {
   actionSuccessResponseSchema,
   apiErrorResponseSchema,
   readErrorMessage,
+  readResponseError,
 };

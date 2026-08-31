@@ -1,42 +1,83 @@
-import { SERVER_URL } from "../../../utils/envConfig";
-import { readErrorMessage } from "../../../schemas/api";
 import { contributionSubmissionSchema } from "../../../schemas/contribution";
-import { pendingChangeResponseSchema } from "../../../schemas/pendingChange";
-import { getCsrfToken } from "../../utils/getCsrfToken";
-import { guardedFetch } from "../../../utils/guardedFetch";
-import { isServerNotReadyError } from "../../../utils/serverStatus";
 
-import type { ServerStatus } from "../../../utils/serverStatus";
-import type { TFunction } from "../../../types/i18n";
-import type { AddNotification } from "../../../types/notification";
-import type { ContributionFormDraft, PendingChange } from "../types";
+import type { z } from "zod";
+import { pendingChangeResponseSchema } from "../../../schemas/pendingChange";
+import { apiMutation } from "../../../utils/apiMutation";
+
+import type { RequestContext } from "../../../utils/apiMutation";
+import type { TypeOfChange } from "../../../schemas/domain";
+import type { PendingChange } from "../../../schemas/pendingChange";
+import type { ContributionFormDraft } from "../types";
 import type { Dispatch, SetStateAction } from "react";
 
 export interface HandleSubmitUniversityEntityParams {
   entityType: string;
   parentId?: string;
   targetId?: string;
-  typeOfChange: "CREATE" | "UPDATE" | "DELETE";
+  typeOfChange: TypeOfChange;
   data: ContributionFormDraft;
   setPendingChanges: Dispatch<SetStateAction<PendingChange[]>>;
-  addNotification: AddNotification;
-  setLoading: (loading: boolean) => void;
   setFormState: (formState: {
     entityType: string;
     parentId?: string;
     targetId?: string;
     data: ContributionFormDraft;
   }) => void;
-  t: TFunction;
-  serverStatus: ServerStatus;
+  ctx: RequestContext;
 }
 
-async function getErrorMessage(response: Response) {
-  try {
-    return readErrorMessage(await response.json());
-  } catch {
-    return null;
+type ContributionSubmission = z.infer<typeof contributionSubmissionSchema>;
+
+function buildSubmissionInput({
+  entityType,
+  parentId,
+  targetId,
+  typeOfChange,
+  data,
+}: {
+  entityType: string;
+  parentId?: string;
+  targetId?: string;
+  typeOfChange: TypeOfChange;
+  data: ContributionFormDraft;
+}) {
+  if (typeOfChange === "CREATE" && entityType === "UNIVERSITY") {
+    return { entityType, typeOfChange, data };
   }
+  if (typeOfChange === "CREATE") {
+    return { entityType, typeOfChange, parentId, data };
+  }
+  if (typeOfChange === "UPDATE") {
+    return { entityType, typeOfChange, targetId, data };
+  }
+  return { entityType, typeOfChange, targetId };
+}
+
+const METHOD_FOR_CHANGE = {
+  CREATE: "POST",
+  UPDATE: "PUT",
+  DELETE: "DELETE",
+} as const;
+
+function buildRequestBody(submission: ContributionSubmission) {
+  if (submission.typeOfChange === "CREATE") {
+    if ("parentId" in submission) {
+      return {
+        entityType: submission.entityType,
+        parentId: submission.parentId,
+        data: submission.data,
+      };
+    }
+    return { entityType: submission.entityType, data: submission.data };
+  }
+  if (submission.typeOfChange === "UPDATE") {
+    return {
+      entityType: submission.entityType,
+      targetId: submission.targetId,
+      data: submission.data,
+    };
+  }
+  return { entityType: submission.entityType, targetId: submission.targetId };
 }
 
 async function handleSubmitUniversityEntity({
@@ -46,106 +87,44 @@ async function handleSubmitUniversityEntity({
   typeOfChange,
   data,
   setPendingChanges,
-  addNotification,
-  setLoading,
   setFormState,
-  t,
-  serverStatus,
+  ctx,
 }: HandleSubmitUniversityEntityParams) {
-  try {
-    setLoading(true);
-
-    const submissionInput =
-      typeOfChange === "CREATE" && entityType === "UNIVERSITY"
-        ? { entityType, typeOfChange, data }
-        : typeOfChange === "CREATE"
-          ? { entityType, typeOfChange, parentId, data }
-          : typeOfChange === "UPDATE"
-            ? { entityType, typeOfChange, targetId, data }
-            : { entityType, typeOfChange, targetId };
-    const submission = contributionSubmissionSchema.parse(submissionInput);
-
-    const csrfToken = await getCsrfToken({ serverStatus, addNotification, t });
-
-    if (!csrfToken) {
-      addNotification({
-        type: "error",
-        message: t("messages.csrfTokenFailed"),
-      });
-      return;
-    }
-
-    const method =
-      submission.typeOfChange === "CREATE"
-        ? "POST"
-        : submission.typeOfChange === "UPDATE"
-          ? "PUT"
-          : "DELETE";
-    const body =
-      submission.typeOfChange === "CREATE"
-        ? "parentId" in submission
-          ? {
-              entityType: submission.entityType,
-              parentId: submission.parentId,
-              data: submission.data,
-            }
-          : { entityType: submission.entityType, data: submission.data }
-        : submission.typeOfChange === "UPDATE"
-          ? {
-              entityType: submission.entityType,
-              targetId: submission.targetId,
-              data: submission.data,
-            }
-          : {
-              entityType: submission.entityType,
-              targetId: submission.targetId,
-            };
-
-    const response = await guardedFetch(
-      `${SERVER_URL}/users/contribution/universities`,
-      {
-        method,
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-          "x-csrf-token": csrfToken,
-        },
-        body: JSON.stringify(body),
-        credentials: "include",
-      },
-      { serverStatus },
-    );
-
-    if (response.ok) {
-      const result = pendingChangeResponseSchema.parse(await response.json());
-      setPendingChanges((prev) => [result.data, ...prev]);
-      addNotification({
-        type: "success",
-        message: t("messages.universities.addSuccess"),
-      });
-      setFormState({ entityType: "", parentId: "", targetId: "", data: {} });
-      return;
-    }
-    const serverMessage = await getErrorMessage(response);
-    if (serverMessage) {
-      console.warn("Failed to submit university change:", serverMessage);
-    }
-    addNotification({
+  const parsed = contributionSubmissionSchema.safeParse(
+    buildSubmissionInput({
+      entityType,
+      parentId,
+      targetId,
+      typeOfChange,
+      data,
+    }),
+  );
+  if (!parsed.success) {
+    ctx.addNotification({
       type: "error",
-      message: t("messages.universities.addError"),
+      message: ctx.t("messages.universities.addError"),
     });
-  } catch (err) {
-    if (isServerNotReadyError(err)) {
-      return;
-    }
-    addNotification({
-      type: "error",
-      message: t("messages.universities.addError"),
-    });
-    console.error("Error submitting university entity:", err);
-  } finally {
-    setLoading(false);
+    console.error("Error submitting university entity:", parsed.error);
+    return;
   }
+  const submission = parsed.data;
+
+  const result = await apiMutation(
+    {
+      path: "/users/contribution/universities",
+      method: METHOD_FOR_CHANGE[submission.typeOfChange],
+      body: buildRequestBody(submission),
+      responseSchema: pendingChangeResponseSchema,
+      successMessageKey: "messages.universities.addSuccess",
+      errorMessageKey: "messages.universities.addError",
+      logLabel: "submit university change",
+    },
+    ctx,
+  );
+  if (!result) return;
+
+  setPendingChanges((prev) => [result.data, ...prev]);
+  setFormState({ entityType: "", parentId: "", targetId: "", data: {} });
 }
 
 export { handleSubmitUniversityEntity };

@@ -1,7 +1,8 @@
 import { useState, use } from "react";
 import { NavLink, Outlet } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
-import { useGetPendingChanges } from "./customHooks/useGetPendingChanges";
+import { useFetchList } from "../../customHooks/useFetchList";
+import { pendingChangesResponseSchema } from "../../schemas/pendingChange";
 
 import type { ContributionOutletContext } from "./types";
 
@@ -13,10 +14,14 @@ const TABS = [
 function ContributionForm() {
   const { t } = use(RootContext);
   const [loading, setLoading] = useState(false);
-  const { pendingChanges, setPendingChanges } = useGetPendingChanges(
+  const [pendingChanges, setPendingChanges] = useFetchList({
+    path: "/users/contribution/pending-changes/universities",
+    responseSchema: pendingChangesResponseSchema,
+    successMessageKey: "messages.pendingChanges.loadSuccess",
+    errorMessageKey: "messages.pendingChanges.fetchError",
+    logLabel: "fetch pending changes",
     setLoading,
-    t,
-  );
+  });
 
   const outletContext: ContributionOutletContext = {
     pendingChanges,

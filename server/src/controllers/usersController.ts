@@ -46,7 +46,7 @@ function logout(req: Request, res: Response) {
       res.clearCookie("sessionId", {
         // Must set clearCookie options to match cookie set options, otherwise browser will not clear cookies
         maxAge: NUMBER_OF_DAYS * 24 * 60 * 60 * 1000,
-        sameSite: IS_PRODUCTION ? "none" : "lax",
+        sameSite: "strict",
         secure: IS_PRODUCTION,
         httpOnly: true,
         path: "/",

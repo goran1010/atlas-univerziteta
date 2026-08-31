@@ -1,28 +1,25 @@
+import type { Dispatch, SetStateAction } from "react";
+import type {
+  Entity,
+  EntityType,
+  Ownership,
+  StudyCycle,
+  TypeOfChange,
+} from "../../schemas/domain";
 import type { PendingChange } from "../../schemas/pendingChange";
-
-export type EntityType = "UNIVERSITY" | "FACULTY" | "STUDY_PROGRAM" | "TRACK";
-export type TypeOfChange = "CREATE" | "UPDATE" | "DELETE";
-export type Cycle =
-  | "FIRST"
-  | "SECOND"
-  | "THIRD"
-  | "INTEGRATED"
-  | "VOCATIONAL"
-  | "SPECIALIST";
-export type Entity = "FBIH" | "RS" | "BD";
 
 export interface ContributionFormDraft {
   name?: string;
   city?: string;
   entity?: Entity;
-  ownership?: "PUBLIC" | "PRIVATE";
+  ownership?: Ownership;
   acronym?: string;
   foundedYear?: string;
   website?: string;
   address?: string;
   phone?: string;
   email?: string;
-  cycle?: Cycle;
+  cycle?: StudyCycle;
   durationYears?: number;
   ects?: number;
   language?: string;
@@ -36,12 +33,8 @@ export interface ContributionFormState {
   data: ContributionFormDraft;
 }
 
-export type { PendingChange };
-
 export interface ContributionOutletContext {
   pendingChanges: PendingChange[];
-  setPendingChanges: import("react").Dispatch<
-    import("react").SetStateAction<PendingChange[]>
-  >;
+  setPendingChanges: Dispatch<SetStateAction<PendingChange[]>>;
   loading: boolean;
 }

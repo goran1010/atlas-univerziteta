@@ -20,7 +20,7 @@ describe("Input", () => {
     expect(input.className).not.toMatch(/\)\[box-shadow/);
     expect(input.className).not.toContain("focus:border-(--accent)focus:");
     expect(input.className).not.toContain("alloweddisabled");
-    expect(input).toHaveClass("border-(--border-color)");
+    expect(input).toHaveClass("border-(--border-input)");
     expect(input).toHaveClass("disabled:opacity-85");
   });
 });

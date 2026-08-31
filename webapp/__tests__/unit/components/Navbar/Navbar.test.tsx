@@ -7,7 +7,7 @@ import userEvent from "@testing-library/user-event";
 import { useCloseMenu } from "../../../../src/customHooks/useCloseMenu";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { UserData } from "../../../../src/customHooks/useStatusCheck";
+import type { UserData } from "../../../../src/types/auth";
 
 function createUser(role: Role = "ADMIN"): UserData {
   return {

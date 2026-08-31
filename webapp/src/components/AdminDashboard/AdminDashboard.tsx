@@ -15,9 +15,9 @@ function AdminDashboard() {
         </Helmet>
         <div className="relative min-h-full w-full flex items-center justify-center p-3">
           <div className="w-full p-4 md:p-6 flex flex-col gap-4 bg-(--surface-2) text-(--text-primary) border border-(--border-color) rounded-2xl shadow-(--card-shadow) backdrop-blur-sm">
-            <p className="text-center text-(--text-secondary)">
+            <h1 className="text-center text-(--text-secondary)">
               {userData ? t("admin.needAdmin") : t("admin.needLoginAndAdmin")}
-            </p>
+            </h1>
           </div>
         </div>
       </>
