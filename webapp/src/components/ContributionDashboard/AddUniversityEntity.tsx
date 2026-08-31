@@ -112,7 +112,7 @@ function AddUniversityEntity({
   }
 
   const needsParent = typeOfChange === "CREATE" && entityType !== "UNIVERSITY";
-  const needsTarget = typeOfChange !== "CREATE" && entityType;
+  const needsTarget = typeOfChange !== "CREATE";
   const needsDataFields = typeOfChange !== "DELETE";
 
   async function handleSubmit(e: SubmitEvent<HTMLFormElement>) {

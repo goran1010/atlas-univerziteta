@@ -55,6 +55,17 @@ function LanguageIcon({ language }: { language: Language }) {
   }
 }
 
+function getLabelKey(language: Language): string {
+  switch (language) {
+    case "system":
+      return "language.system";
+    case "en":
+      return "language.english";
+    case "sr":
+      return "language.bcs";
+  }
+}
+
 function getNotificationKey(language: Language): string {
   switch (language) {
     case "system":
@@ -87,12 +98,7 @@ function LanguageSwitcher({
     });
   }
 
-  const fullLabel =
-    language === "system"
-      ? t("language.system")
-      : language === "en"
-        ? t("language.english")
-        : t("language.bcs");
+  const fullLabel = t(getLabelKey(language));
 
   return (
     <button

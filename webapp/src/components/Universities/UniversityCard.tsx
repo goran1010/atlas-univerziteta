@@ -72,14 +72,18 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
 
   const entityLabel = t(`universitiesPage.entities.${university.entity}`);
 
-  // Faculties grouped by city (faculty city falls back to the university's);
-  // the university's own city first, the rest alphabetically. Grouped display
-  // only kicks in when there is more than one city.
+  // The university's own city first, the rest alphabetically. Grouped
+  // display only kicks in when there is more than one city.
+  function compareCityGroups(a: { key: string }, b: { key: string }) {
+    const aIsHomeCity = a.key === university.city;
+    const bIsHomeCity = b.key === university.city;
+    if (aIsHomeCity !== bIsHomeCity) return aIsHomeCity ? -1 : 1;
+    return a.key.localeCompare(b.key);
+  }
+
   const facultyCityGroups = detailData
     ? groupBy(detailData.faculties, (f) => f.city ?? university.city).toSorted(
-        (a, b) =>
-          Number(b.key === university.city) -
-            Number(a.key === university.city) || a.key.localeCompare(b.key),
+        compareCityGroups,
       )
     : [];
 
