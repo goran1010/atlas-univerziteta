@@ -32,7 +32,7 @@ function Button({
     update:
       "bg-blue-600 text-blue-50 shadow-[0_8px_16px_rgba(37,99,235,0.22)] enabled:hover:bg-blue-700 disabled:bg-blue-300 disabled:text-blue-100",
     warning:
-      "bg-amber-600 text-amber-50 shadow-[0_8px_16px_rgba(202,138,4,0.2)] enabled:hover:bg-amber-700 disabled:bg-amber-500 disabled:text-amber-100",
+      "bg-amber-700 text-amber-50 shadow-[0_8px_16px_rgba(202,138,4,0.2)] enabled:hover:bg-amber-800 disabled:bg-amber-500 disabled:text-amber-100",
   };
 
   const variantClass = variantClasses[variant] || variantClasses.primary;
