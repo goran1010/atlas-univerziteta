@@ -27,7 +27,7 @@ interface FormElements {
 function createFormElements(): FormElements {
   return {
     emailField: screen.getByLabelText(/Email/i),
-    passwordField: screen.getByLabelText("Password"),
+    passwordField: screen.getByLabelText(/^Password/),
     logInButton: screen.getByRole("button", { name: "Log in" }),
   };
 }

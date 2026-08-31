@@ -154,7 +154,7 @@ describe("AddUniversityEntity", () => {
 
     expect(screen.getByLabelText(/Name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/City/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/^Entity$/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/^Entity( \*)?$/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Ownership/i)).toBeInTheDocument();
     expect(
       screen.getByRole("button", { name: /Submit Suggestion/i }),
@@ -324,7 +324,7 @@ describe("AddUniversityEntity", () => {
     );
     await user.type(screen.getByLabelText(/Name/i), "University of Sarajevo");
     await user.type(screen.getByLabelText(/City/i), "Sarajevo");
-    await user.selectOptions(screen.getByLabelText(/^Entity$/i), "FBIH");
+    await user.selectOptions(screen.getByLabelText(/^Entity( \*)?$/i), "FBIH");
     await user.selectOptions(screen.getByLabelText(/Ownership/i), "PUBLIC");
 
     await user.click(

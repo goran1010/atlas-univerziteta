@@ -148,6 +148,11 @@
     min-height: 100dvh;
   }
 
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
   #root {
     min-height: 100vh;
     min-height: 100dvh;

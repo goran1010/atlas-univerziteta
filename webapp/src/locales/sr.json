@@ -96,7 +96,8 @@
     "approve": "Odobri",
     "reject": "Odbij",
     "addData": "Dodaj podatke",
-    "closeForm": "Zatvori formu"
+    "closeForm": "Zatvori formu",
+    "requiredHint": "Polja označena sa * su obavezna."
   },
   "profile": {
     "title": "Moj profil",
@@ -385,6 +386,7 @@
     "ownership": {
       "PUBLIC": "Javni",
       "PRIVATE": "Privatni"
-    }
+    },
+    "clearSearch": "Obriši pretragu"
   }
 }

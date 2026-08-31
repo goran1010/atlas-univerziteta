@@ -49,7 +49,7 @@ afterEach(() => {
 function createFormElements() {
   return {
     emailField: screen.getByLabelText<HTMLInputElement>(/Email/i),
-    passwordField: screen.getByLabelText<HTMLInputElement>("Password"),
+    passwordField: screen.getByLabelText<HTMLInputElement>(/^Password/),
     confirmPasswordField:
       screen.getByLabelText<HTMLInputElement>(/Confirm Password/i),
     signUpButton: screen.getByRole<HTMLButtonElement>("button", {

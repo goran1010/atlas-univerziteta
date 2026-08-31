@@ -46,8 +46,11 @@ function LogInForm({ loading, setLoading }: LogInFormProps) {
       }
       className="flex flex-col gap-3"
     >
+      <p className="text-xs text-(--text-muted)">{t("form.requiredHint")}</p>
       <div>
-        <Label htmlFor="email">{t("form.email")}</Label>
+        <Label htmlFor="email" required>
+          {t("form.email")}
+        </Label>
         <Input
           value={inputFields.email}
           ref={emailInput}
@@ -56,10 +59,13 @@ function LogInForm({ loading, setLoading }: LogInFormProps) {
           name="email"
           id="email"
           autoComplete="email"
+          required
         />
       </div>
       <div>
-        <Label htmlFor="password">{t("form.password")}</Label>
+        <Label htmlFor="password" required>
+          {t("form.password")}
+        </Label>
         <Input
           ref={passwordInput}
           value={inputFields.password}
@@ -68,6 +74,7 @@ function LogInForm({ loading, setLoading }: LogInFormProps) {
           name="password"
           id="password"
           autoComplete="current-password"
+          required
         />
       </div>
       <div>

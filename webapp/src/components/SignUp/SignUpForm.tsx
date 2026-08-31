@@ -48,8 +48,11 @@ function SignUpForm({ loading, setLoading }: SignUpFormProps) {
       className="flex flex-col gap-3"
       onSubmit={(e) => void handleSignUpSubmit(e, inputFields, navigate, ctx)}
     >
+      <p className="text-xs text-(--text-muted)">{t("form.requiredHint")}</p>
       <div>
-        <Label htmlFor="email">{t("form.email")}</Label>
+        <Label htmlFor="email" required>
+          {t("form.email")}
+        </Label>
         <Input
           ref={emailRef}
           value={inputFields.email}
@@ -58,10 +61,13 @@ function SignUpForm({ loading, setLoading }: SignUpFormProps) {
           name="email"
           id="email"
           autoComplete="email"
+          required
         />
       </div>
       <div>
-        <Label htmlFor="password">{t("form.password")}</Label>
+        <Label htmlFor="password" required>
+          {t("form.password")}
+        </Label>
         <Input
           ref={passwordRef}
           value={inputFields.password}
@@ -70,10 +76,13 @@ function SignUpForm({ loading, setLoading }: SignUpFormProps) {
           name="password"
           id="password"
           autoComplete="new-password"
+          required
         />
       </div>
       <div>
-        <Label htmlFor="confirm-password">{t("form.confirmPassword")}</Label>
+        <Label htmlFor="confirm-password" required>
+          {t("form.confirmPassword")}
+        </Label>
         <Input
           ref={confirmPasswordRef}
           value={inputFields["confirm-password"]}
@@ -82,6 +91,7 @@ function SignUpForm({ loading, setLoading }: SignUpFormProps) {
           name="confirm-password"
           id="confirm-password"
           autoComplete="new-password"
+          required
         />
       </div>
       <div>

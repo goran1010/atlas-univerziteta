@@ -60,11 +60,13 @@ const CYCLES: StudyCycle[] = [
 const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
 
 function DataField(props: DataFieldProps) {
-  const { label, id } = props;
+  const { label, ...inputProps } = props;
   return (
     <div className="flex flex-col gap-1">
-      <Label htmlFor={id}>{label}</Label>
-      <Input {...props} />
+      <Label htmlFor={props.id} required={props.required}>
+        {label}
+      </Label>
+      <Input {...inputProps} />
     </div>
   );
 }
@@ -135,8 +137,13 @@ function AddUniversityEntity({
       onSubmit={(e) => void handleSubmit(e)}
       className="flex flex-col gap-4 w-full max-w-lg"
     >
+      <p className="text-xs text-center text-(--text-muted)">
+        {t("form.requiredHint")}
+      </p>
       <div className="flex flex-col gap-1 items-center">
-        <Label htmlFor="entityType">{t("contribution.entityType")}</Label>
+        <Label htmlFor="entityType" required>
+          {t("contribution.entityType")}
+        </Label>
         <Select
           id="entityType"
           name="entityType"
@@ -154,7 +161,9 @@ function AddUniversityEntity({
         </Select>
       </div>
       <div className="flex flex-col gap-1 items-center">
-        <Label htmlFor="typeOfChange">{t("contribution.change")}</Label>
+        <Label htmlFor="typeOfChange" required>
+          {t("contribution.change")}
+        </Label>
         <Select
           id="typeOfChange"
           name="typeOfChange"
@@ -226,7 +235,11 @@ function AddUniversityEntity({
               />
               <div className="flex flex-col gap-1 self-center">
                 <div className="flex flex-col gap-1">
-                  <Label htmlFor="dataEntity" className="text-center">
+                  <Label
+                    htmlFor="dataEntity"
+                    className="text-center"
+                    required={typeOfChange === "CREATE"}
+                  >
                     {t("contribution.dataFields.entity")}
                   </Label>
                   <Select
@@ -246,7 +259,11 @@ function AddUniversityEntity({
                   </Select>
                 </div>
                 <div className="flex flex-col gap-1">
-                  <Label htmlFor="dataOwnership" className="text-center">
+                  <Label
+                    htmlFor="dataOwnership"
+                    className="text-center"
+                    required={typeOfChange === "CREATE"}
+                  >
                     {t("contribution.dataFields.ownership")}
                   </Label>
                   <Select
@@ -368,7 +385,7 @@ function AddUniversityEntity({
           {entityType === "STUDY_PROGRAM" && (
             <>
               <div className="flex flex-col gap-1">
-                <Label htmlFor="dataCycle">
+                <Label htmlFor="dataCycle" required={typeOfChange === "CREATE"}>
                   {t("contribution.dataFields.cycle")}
                 </Label>
                 <Select

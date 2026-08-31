@@ -49,7 +49,9 @@ function LevelSelect({
   const isEmpty = !disabled && options.length === 0;
   return (
     <div className="flex flex-col gap-1 items-center">
-      <Label htmlFor={id}>{label}</Label>
+      <Label htmlFor={id} required={!disabled && !isEmpty}>
+        {label}
+      </Label>
       <Select
         id={id}
         name={id}

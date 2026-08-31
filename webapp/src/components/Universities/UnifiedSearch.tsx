@@ -54,10 +54,49 @@ function ResultSection({
   );
 }
 
+function SearchIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  );
+}
+
+function ClearIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}
+
 function UnifiedSearch() {
   const { t, addNotification, serverStatus } = use(RootContext);
   const [results, setResults] = useState<UnifiedSearchResults | null>(null);
   const [loading, setLoading] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Auto-focus the search input only on devices with a precise pointer
@@ -68,11 +107,14 @@ function UnifiedSearch() {
     }
   }, []);
 
+  function handleClear() {
+    setSearchInput("");
+    inputRef.current?.focus();
+  }
+
   async function handleSearch(e: SubmitEvent) {
     e.preventDefault();
-    const searchTerm = searchTermSchema.safeParse(
-      inputRef.current?.value ?? "",
-    );
+    const searchTerm = searchTermSchema.safeParse(searchInput);
     if (!searchTerm.success) {
       addNotification({
         type: "error",
@@ -115,15 +157,35 @@ function UnifiedSearch() {
         onSubmit={(e) => void handleSearch(e)}
         className="flex flex-col sm:flex-row gap-2 w-full max-w-lg"
       >
-        <Input
-          ref={inputRef}
-          type="search"
-          placeholder={t("universitiesPage.searchAllPlaceholder")}
-          minLength={2}
-          maxLength={100}
-          className="flex-1"
-          aria-label={t("universitiesPage.search")}
-        />
+        <div className="relative flex-1">
+          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-muted) pointer-events-none">
+            <SearchIcon />
+          </span>
+          <Input
+            ref={inputRef}
+            type="search"
+            value={searchInput}
+            onChange={(e) => {
+              setSearchInput(e.target.value);
+            }}
+            placeholder={t("universitiesPage.searchAllPlaceholder")}
+            required
+            minLength={2}
+            maxLength={100}
+            className="pl-9 pr-9"
+            aria-label={t("universitiesPage.search")}
+          />
+          {searchInput !== "" && (
+            <button
+              type="button"
+              aria-label={t("universitiesPage.clearSearch")}
+              onClick={handleClear}
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded cursor-pointer text-(--text-secondary) hover:text-(--text-primary) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+            >
+              <ClearIcon />
+            </button>
+          )}
+        </div>
         <Button
           type="submit"
           loading={loading}
