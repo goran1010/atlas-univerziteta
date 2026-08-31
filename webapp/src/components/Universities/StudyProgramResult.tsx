@@ -16,7 +16,8 @@ function StudyProgramResult({
       <p className="font-bold text-(--text-primary)">{program.name}</p>
       {program.ects != null && (
         <p className="mt-1 text-sm text-(--text-secondary)">
-          🎓 {program.ects} {t("universitiesPage.ects")}
+          <span aria-hidden="true">🎓</span> {program.ects}{" "}
+          {t("universitiesPage.ects")}
         </p>
       )}
       <FacultyBreadcrumb faculty={program.faculty} />

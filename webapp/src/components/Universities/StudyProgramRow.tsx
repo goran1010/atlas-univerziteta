@@ -23,18 +23,25 @@ function StudyProgramRow({
           <div className="flex flex-wrap gap-x-1.5 sm:gap-x-3 items-center text-xs text-(--text-muted) mt-0.5">
             {program.durationYears != null && (
               <span>
-                🕐 {program.durationYears} {t("universitiesPage.durationYears")}
+                <span aria-hidden="true">🕐</span> {program.durationYears}{" "}
+                {t("universitiesPage.durationYears")}
               </span>
             )}
             {program.ects != null && (
               <span>
-                🎓 {program.ects} {t("universitiesPage.ects")}
+                <span aria-hidden="true">🎓</span> {program.ects}{" "}
+                {t("universitiesPage.ects")}
               </span>
             )}
-            {program.language && <span>🗣️ {program.language}</span>}
+            {program.language && (
+              <span>
+                <span aria-hidden="true">🗣️</span> {program.language}
+              </span>
+            )}
             {hasTracks && (
               <span>
-                📋 {program.tracks.length} {t("universitiesPage.tracks")}
+                <span aria-hidden="true">📋</span> {program.tracks.length}{" "}
+                {t("universitiesPage.tracks")}
               </span>
             )}
           </div>

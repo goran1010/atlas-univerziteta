@@ -11,12 +11,14 @@ function TrackResult({ track, t }: { track: TrackSearchResult; t: TFunction }) {
       <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-sm text-(--text-secondary)">
         {track.durationYears != null && (
           <span>
-            🕐 {track.durationYears} {t("universitiesPage.durationYears")}
+            <span aria-hidden="true">🕐</span> {track.durationYears}{" "}
+            {t("universitiesPage.durationYears")}
           </span>
         )}
         {track.ects != null && (
           <span>
-            🎓 {track.ects} {t("universitiesPage.ects")}
+            <span aria-hidden="true">🎓</span> {track.ects}{" "}
+            {t("universitiesPage.ects")}
           </span>
         )}
       </div>

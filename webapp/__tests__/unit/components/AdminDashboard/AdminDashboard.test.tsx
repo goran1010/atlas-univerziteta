@@ -58,7 +58,7 @@ describe("AdminDashboard component", () => {
     );
     expect(paragraphElement).toBeInTheDocument();
     expect(
-      screen.queryByRole("heading", { name: /Admin Dashboard/i }),
+      screen.queryByRole("heading", { name: "Admin Dashboard" }),
     ).not.toBeInTheDocument();
   });
 

@@ -8,7 +8,7 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
       <p className="font-bold text-(--text-primary)">{faculty.name}</p>
       {faculty.city && (
         <p className="text-sm text-(--text-secondary) mt-1">
-          📍 {faculty.city}
+          <span aria-hidden="true">📍</span> {faculty.city}
         </p>
       )}
     </ResultCard>

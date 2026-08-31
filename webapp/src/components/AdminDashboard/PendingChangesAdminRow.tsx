@@ -48,7 +48,7 @@ const PendingChangesAdminRow = memo(
     const currentEntity = data.currentEntity ?? null;
 
     return (
-      <form
+      <li
         className={`rounded-md transition-colors hover:bg-(--hover-surface) ${
           ROW_ACCENT[data.typeOfChange]
         } ${index % 2 === 0 ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
@@ -127,7 +127,7 @@ const PendingChangesAdminRow = memo(
             currentEntity={currentEntity}
           />
         )}
-      </form>
+      </li>
     );
   },
 );

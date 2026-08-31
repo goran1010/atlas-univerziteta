@@ -25,7 +25,8 @@ function FacultyRow({
           <div className="flex flex-wrap gap-x-1.5 sm:gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
             {faculty.studyPrograms.length > 0 && (
               <span>
-                🎓 {faculty.studyPrograms.length}{" "}
+                <span aria-hidden="true">🎓</span>{" "}
+                {faculty.studyPrograms.length}{" "}
                 {t("universitiesPage.studyPrograms")}
               </span>
             )}

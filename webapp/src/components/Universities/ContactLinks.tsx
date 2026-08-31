@@ -1,4 +1,3 @@
-/** Website / address / phone / email links for a university or faculty. */
 function ContactLinks({
   website,
   address,
@@ -19,7 +18,7 @@ function ContactLinks({
           rel="noopener noreferrer"
           className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
         >
-          🌐 {website}
+          <span aria-hidden="true">🌐</span> {website}
         </a>
       )}
       {address && (
@@ -29,12 +28,12 @@ function ContactLinks({
           rel="noopener noreferrer"
           className="hover:underline"
         >
-          🏠 {address}
+          <span aria-hidden="true">🏠</span> {address}
         </a>
       )}
       {phone && (
         <a href={`tel:${phone}`} className="hover:underline">
-          📞 {phone}
+          <span aria-hidden="true">📞</span> {phone}
         </a>
       )}
       {email && (
@@ -42,7 +41,7 @@ function ContactLinks({
           href={`mailto:${email}`}
           className="text-blue-600 dark:text-blue-400 hover:underline truncate max-w-xs"
         >
-          ✉️ {email}
+          <span aria-hidden="true">✉️</span> {email}
         </a>
       )}
     </>

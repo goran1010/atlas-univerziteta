@@ -67,15 +67,13 @@ describe("PendingChangesAdminRow", () => {
       </Wrapper>,
     );
 
-    const form = screen
-      .getByRole("button", { name: /Approve/i })
-      .closest("form");
+    const row = screen.getByRole("button", { name: /Approve/i }).closest("li");
     const badge = screen.getByText("Delete");
 
     expect(screen.getByText("Track (smjer)")).toBeInTheDocument();
     expect(screen.getByText("johndoe@examplemail.com")).toBeInTheDocument();
-    expect(form).toHaveClass("border-l-4");
-    expect(form).toHaveClass("border-l-red-500");
+    expect(row).toHaveClass("border-l-4");
+    expect(row).toHaveClass("border-l-red-500");
     expect(badge).toHaveClass("bg-red-100");
     expect(badge).toHaveClass("text-red-800");
   });
@@ -118,6 +116,6 @@ describe("PendingChangesAdminRow", () => {
         serverStatus: SERVER_STATUS.LIVE,
       }),
     );
-    expect(approveButton.closest("form")).toHaveClass("bg-(--surface-alt)");
+    expect(approveButton.closest("li")).toHaveClass("bg-(--surface-alt)");
   });
 });

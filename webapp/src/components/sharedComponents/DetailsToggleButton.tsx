@@ -23,8 +23,9 @@ function DetailsToggleButton({
       className={className}
       onClick={onClick}
       loading={loading}
+      aria-expanded={expanded}
     >
-      {expanded ? "▲" : "▼"}{" "}
+      <span aria-hidden="true">{expanded ? "▲" : "▼"}</span>{" "}
       {expanded
         ? t("universitiesPage.hideDetails")
         : t("universitiesPage.viewDetails")}

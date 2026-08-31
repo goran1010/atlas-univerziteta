@@ -97,8 +97,12 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               )}
             </h3>
             <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
-              <span>📍 {university.city}</span>
-              <span>🏷️ {entityLabel}</span>
+              <span>
+                <span aria-hidden="true">📍</span> {university.city}
+              </span>
+              <span>
+                <span aria-hidden="true">🏷️</span> {entityLabel}
+              </span>
               <span
                 className={`px-1.5 py-0.5 rounded text-xs font-medium ${
                   university.ownership === "PUBLIC"
@@ -112,12 +116,15 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               </span>
               {university._count.faculties > 0 && (
                 <span>
-                  🏛️ {university._count.faculties}{" "}
+                  <span aria-hidden="true">🏛️</span>{" "}
+                  {university._count.faculties}{" "}
                   {t("universitiesPage.facultyCount")}
                 </span>
               )}
               {university.foundedYear && (
-                <span>📅 {university.foundedYear}</span>
+                <span>
+                  <span aria-hidden="true">📅</span> {university.foundedYear}
+                </span>
               )}
             </div>
             <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-1">

@@ -63,9 +63,9 @@ describe("UniversityCard", () => {
     render(<Wrapper />);
 
     const universityName = screen.getByText(/University of Sarajevo/i);
-    const cityText = screen.getByText(/^📍\s*Sarajevo$/i);
+    const cityText = screen.getByText("Sarajevo");
     const entityText = screen.getByText(/Federation of B&H/i);
-    const foundedText = screen.getByText(/📅\s*1949/i);
+    const foundedText = screen.getByText("1949");
     const websiteLink = screen.getByRole("link", {
       name: /https:\/\/unsa\.ba/i,
     });

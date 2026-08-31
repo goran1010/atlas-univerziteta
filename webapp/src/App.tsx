@@ -11,6 +11,7 @@ import { useLanguage } from "./customHooks/useLanguage";
 import { HelmetProvider } from "react-helmet-async";
 import { RootContext } from "./contextData/RootContext";
 import { SkipNavbarLink } from "./components/utils/SkipNavbarLink";
+import { RouteAnnouncer } from "./components/utils/RouteAnnouncer";
 
 function App() {
   const closeMenu = useCloseMenu();
@@ -47,6 +48,7 @@ function App() {
       <HelmetProvider>
         <>
           <ScrollToTop />
+          <RouteAnnouncer />
           <SkipNavbarLink t={t} />
           <Navbar closeMenu={closeMenu} />
           <Notifications />
