@@ -33,7 +33,6 @@ app.set("trust proxy", 1);
 
 app.use(rateLimiter.global);
 
-// Log every request made to the server
 app.use((req, _res, next) => {
   logger.info(
     `${req.method} method to ${req.originalUrl} from ${String(req.ip)}`,
@@ -47,7 +46,6 @@ app.use(compression());
 // Public routes
 app.use("/health", cors(), healthRouter);
 app.use("/api", cors(), rateLimiter.api, apiRouter);
-// -----------------
 
 app.use(
   cors({

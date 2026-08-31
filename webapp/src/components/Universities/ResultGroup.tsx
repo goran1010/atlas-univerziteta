@@ -1,9 +1,5 @@
 import type { ReactNode } from "react";
 
-/**
- * Visual wrapper for a group of result cards — a bordered container
- * with a label chip in the top-left corner.
- */
 function ResultGroup({
   label,
   children,

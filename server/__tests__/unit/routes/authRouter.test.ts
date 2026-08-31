@@ -70,7 +70,6 @@ vi.mock("../../src/auth/isAuthenticated.js", () => ({
 beforeEach(() => {
   vi.clearAllMocks();
   vi.restoreAllMocks();
-  // Set default behavior
   isAuthenticatedMock.mockImplementation((req, res, next) => {
     if (req.user) {
       next();

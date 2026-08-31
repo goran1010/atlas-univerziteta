@@ -124,9 +124,7 @@
   --card-shadow-soft: 0 12px 28px rgba(2, 6, 23, 0.36);
   --card-shadow-strong: 0 28px 64px rgba(2, 6, 23, 0.6);
 }
-/* ------------------------------------------------------------------------------------------------ */
 
-/* Base styles using @layer base to override default styles */
 @layer base {
   main a {
     color: var(--accent-text);
@@ -179,15 +177,13 @@
       sans-serif;
   }
 }
-/* ------------------------------------------------------------------------------------------------ */
 
 /* Component styles using @layer components to create new components using existing tailwind styles */
 /* @layer components { */
 /* .btn {
     @apply rounded bg-blue-600 px-4 py-2 font-semibold text-white;
-  } */
-/* } */
-/* ------------------------------------------------------------------------------------------------ */
+    } 
+} */
 
 /* Utility styles using @layer utilities for creating new classes from vanilla css */
 /* @layer utilities {
