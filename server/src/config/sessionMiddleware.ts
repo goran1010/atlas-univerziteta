@@ -13,7 +13,7 @@ const sessionMiddleware = expressSession({
   // controller (usersController.ts) - a mismatch can leave the cookie behind.
   cookie: {
     maxAge: NUMBER_OF_DAYS * 24 * 60 * 60 * 1000,
-    sameSite: "lax",
+    sameSite: "strict",
     secure: IS_PRODUCTION,
     httpOnly: true,
     path: "/",
