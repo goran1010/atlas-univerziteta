@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router";
 
-/**
- * Announces the new page title to screen readers after client-side
- * navigation - SPAs get no automatic announcement on route change.
- */
+// Announces the new page title to screen readers after client-side
+// navigation - SPAs get no automatic announcement on route change.
 function RouteAnnouncer() {
   const { pathname } = useLocation();
   const [announcement, setAnnouncement] = useState("");

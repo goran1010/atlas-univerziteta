@@ -27,11 +27,9 @@ interface ApiMutationConfig<Schema extends z.ZodType> {
   logLabel: string;
 }
 
-/**
- * Sends an authorized mutation to the API: toggles loading, fetches the CSRF
- * token, performs the request and shows a success or error notification.
- * Returns the parsed response on success, or null after any handled failure.
- */
+// Sends an authorized mutation to the API: toggles loading, fetches the CSRF
+// token, performs the request and shows a success or error notification.
+// Returns the parsed response on success, or null after any handled failure.
 async function apiMutation<Schema extends z.ZodType>(
   {
     path,

@@ -51,6 +51,7 @@ function Button({
       >
         {loading && <Spinner />}
       </div>
+      {/* invisible, not unmounted - the button keeps its width while loading */}
       <span className={loading ? "invisible" : "visible"}>{children}</span>
     </button>
   );

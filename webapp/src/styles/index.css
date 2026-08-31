@@ -1,3 +1,5 @@
+/* Theme is class-driven (.dark on <html>) rather than prefers-color-scheme,
+   so the switcher can offer light / dark / system. */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @import "tailwindcss";

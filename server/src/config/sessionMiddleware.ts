@@ -9,6 +9,8 @@ const IS_PRODUCTION = env.NODE_ENV === "production";
 const sessionMiddleware = expressSession({
   name: "sessionId",
   proxy: IS_PRODUCTION,
+  // Cookie options must stay in sync with res.clearCookie() in the logout
+  // controller (usersController.ts) - a mismatch can leave the cookie behind.
   cookie: {
     maxAge: NUMBER_OF_DAYS * 24 * 60 * 60 * 1000,
     sameSite: "lax",

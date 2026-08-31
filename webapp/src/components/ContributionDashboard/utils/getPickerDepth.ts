@@ -7,6 +7,9 @@ const ENTITY_LEVELS: Record<EntityType, number> = {
   TRACK: 4,
 };
 
+// Depth = how many cascading selects the picker shows. UPDATE/DELETE drill
+// down to the entity itself; CREATE stops one level up, at the parent the
+// new entity goes under.
 function getPickerDepth(
   entityType: EntityType,
   typeOfChange: TypeOfChange,

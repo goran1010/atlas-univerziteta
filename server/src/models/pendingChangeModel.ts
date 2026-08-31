@@ -9,18 +9,16 @@ interface PendingChangeWithTarget {
   parentId: number | null;
 }
 
-/**
- * For UPDATE/DELETE pending changes, batch-fetch the current entity data
- * from the corresponding table so the reviewer (admin or contributor)
- * can see what is being changed or removed.
- *
- * Also resolves the parent hierarchy context for non-UNIVERSITY entities
- * so reviewers can see where an entity sits in the academic tree
- * (e.g. "University of Sarajevo > Faculty of Law").
- *
- * Returns the same array with `currentEntity` and `parentContext`
- * attached to each item.
- */
+// For UPDATE/DELETE pending changes, batch-fetch the current entity data
+// from the corresponding table so the reviewer (admin or contributor)
+// can see what is being changed or removed.
+//
+// Also resolves the parent hierarchy context for non-UNIVERSITY entities
+// so reviewers can see where an entity sits in the academic tree
+// (e.g. "University of Sarajevo > Faculty of Law").
+//
+// Returns the same array with `currentEntity` and `parentContext`
+// attached to each item.
 async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
   pendingChanges: T[],
 ) {

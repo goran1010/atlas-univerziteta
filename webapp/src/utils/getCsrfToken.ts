@@ -18,6 +18,9 @@ function isCsrfTokenError(error: unknown): error is CsrfTokenError {
   return error instanceof CsrfTokenError;
 }
 
+// The server keeps the CSRF token stable for the lifetime of the session,
+// so it is fetched once and cached. Logging in or out regenerates the
+// session and invalidates the token - those flows call clearCsrfToken().
 let cachedToken: string | null = null;
 
 async function getCsrfToken({

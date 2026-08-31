@@ -20,6 +20,8 @@ interface UseServerWakeUp {
   t: TFunction;
 }
 
+// The free-tier backend sleeps when idle; this hook pings it until it
+// responds and drives the app-wide server status.
 function useServerWakeUp({
   addNotification,
   removeNotification,
