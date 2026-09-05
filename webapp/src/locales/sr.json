@@ -393,8 +393,9 @@
     "noStudyPrograms": "Nema dostupnih studijskih programa.",
     "website": "Web stranica",
     "foundedYear": "Osnovan",
-    "viewDetails": "Prikaži detalje",
-    "hideDetails": "Sakrij detalje",
+    "expand": "Proširi",
+    "collapse": "Skupi",
+    "viewInfo": "Pogledaj info",
     "ownership": {
       "PUBLIC": "Javni",
       "PRIVATE": "Privatni"

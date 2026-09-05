@@ -104,7 +104,7 @@ const PendingChangesAdminRow = memo(
               setDialogOpen(true);
             }}
           >
-            {t("universitiesPage.viewDetails")}
+            {t("universitiesPage.viewInfo")}
           </Button>
           <Button
             variant="success"

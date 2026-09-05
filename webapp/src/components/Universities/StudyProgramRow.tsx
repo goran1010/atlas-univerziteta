@@ -1,20 +1,37 @@
 import { useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
+import { Button } from "../sharedComponents/Button";
+import { Dialog } from "../sharedComponents/Dialog";
+import { EntityDetailContent } from "./TrackDetailDialog";
 import { tCount } from "../../utils/pluralize";
 import { TrackRow } from "./TrackRow";
 
 import type { TFunction } from "../../types/i18n";
-import type { UniversityDetailStudyProgram } from "../../schemas/university";
+import type {
+  UniversityDetail,
+  UniversityDetailFaculty,
+  UniversityDetailStudyProgram,
+} from "../../schemas/university";
 
 function StudyProgramRow({
   program,
   t,
+  university,
+  faculty,
 }: {
   program: UniversityDetailStudyProgram;
   t: TFunction;
+  university?: UniversityDetail;
+  faculty?: UniversityDetailFaculty;
 }) {
   const [open, setOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
   const hasTracks = program.tracks.length > 0;
+
+  const ancestors =
+    university && faculty
+      ? { university, faculty, studyProgram: program }
+      : undefined;
 
   return (
     <li className="text-sm">
@@ -50,7 +67,7 @@ function StudyProgramRow({
             )}
           </div>
         </div>
-        {hasTracks && (
+        {hasTracks ? (
           <DetailsToggleButton
             expanded={open}
             className="w-full sm:w-auto px-2 sm:px-3 py-1.5 text-xs shrink-0 sm:max-w-36"
@@ -58,7 +75,16 @@ function StudyProgramRow({
               setOpen((p) => !p);
             }}
           />
-        )}
+        ) : ancestors ? (
+          <Button
+            className="w-full sm:w-auto px-2 sm:px-3 py-1.5 text-xs shrink-0 sm:max-w-36"
+            onClick={() => {
+              setDialogOpen(true);
+            }}
+          >
+            {t("universitiesPage.viewInfo")}
+          </Button>
+        ) : null}
       </div>
       {open && hasTracks && (
         <div className="ml-0.5 sm:ml-4 mt-1 mb-2 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
@@ -70,10 +96,21 @@ function StudyProgramRow({
           </p>
           <ul>
             {program.tracks.map((tr) => (
-              <TrackRow key={tr.id} track={tr} t={t} />
+              <TrackRow key={tr.id} track={tr} t={t} ancestors={ancestors} />
             ))}
           </ul>
         </div>
+      )}
+      {!hasTracks && ancestors && (
+        <Dialog
+          open={dialogOpen}
+          onClose={() => {
+            setDialogOpen(false);
+          }}
+          title={program.name}
+        >
+          <EntityDetailContent ancestors={ancestors} />
+        </Dialog>
       )}
     </li>
   );

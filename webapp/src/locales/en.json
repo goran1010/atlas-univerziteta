@@ -393,8 +393,9 @@
     "noStudyPrograms": "No study programs available.",
     "website": "Website",
     "foundedYear": "Founded",
-    "viewDetails": "View details",
-    "hideDetails": "Hide details",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "viewInfo": "View info",
     "ownership": {
       "PUBLIC": "Public",
       "PRIVATE": "Private"

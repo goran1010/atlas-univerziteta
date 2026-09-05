@@ -169,7 +169,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                       {facultyCityGroups.map((g) => (
                         <ResultGroup key={g.key} label={g.key}>
                           {g.items.map((f) => (
-                            <FacultyRow key={f.id} faculty={f} t={t} />
+                            <FacultyRow key={f.id} faculty={f} t={t} university={detailData} />
                           ))}
                         </ResultGroup>
                       ))}
@@ -177,7 +177,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                   ) : (
                     <ul className="space-y-1">
                       {detailData.faculties.map((f) => (
-                        <FacultyRow key={f.id} faculty={f} t={t} />
+                        <FacultyRow key={f.id} faculty={f} t={t} university={detailData} />
                       ))}
                     </ul>
                   )}

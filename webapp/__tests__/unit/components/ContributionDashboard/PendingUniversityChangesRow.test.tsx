@@ -51,7 +51,7 @@ describe("PendingUniversityChangesRow", () => {
     expect(screen.getByText(/University/i)).toBeInTheDocument();
     expect(badge).toHaveClass("bg-red-100");
     expect(
-      screen.getByRole("button", { name: /View details/i }),
+      screen.getByRole("button", { name: /View info/i }),
     ).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Delete/i })).toBeInTheDocument();
   });
@@ -79,7 +79,7 @@ describe("PendingUniversityChangesRow", () => {
     );
 
     const detailButton = screen.getByRole("button", {
-      name: /View details/i,
+      name: /View info/i,
     });
     await userEvent.click(detailButton);
 
