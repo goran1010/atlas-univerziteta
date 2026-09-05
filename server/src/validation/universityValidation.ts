@@ -1,25 +1,24 @@
 import { z } from "zod";
 import { parseRequest } from "./parseRequest.js";
 
-const getUniversityByIdParamsSchema = z.strictObject({
-  id: z
-    .string()
-    .trim()
-    .transform(Number)
-    .pipe(
-      z
-        .number()
-        .int({
-          error: "University ID must be an integer.",
-        })
-        .positive({
-          error: "University ID must be positive.",
-        }),
-    ),
-});
+const positiveIdParam = z
+  .string()
+  .trim()
+  .transform(Number)
+  .pipe(z.number().int().positive());
+
+const idParamsSchema = z.strictObject({ id: positiveIdParam });
 
 function getUniversityById(input: unknown) {
-  return parseRequest(getUniversityByIdParamsSchema, input);
+  return parseRequest(idParamsSchema, input);
+}
+
+function getFacultyById(input: unknown) {
+  return parseRequest(idParamsSchema, input);
+}
+
+function getStudyProgramById(input: unknown) {
+  return parseRequest(idParamsSchema, input);
 }
 
 const searchQuerySchema = z.strictObject({
@@ -38,4 +37,4 @@ function searchQuery(input: unknown) {
   return parseRequest(searchQuerySchema, input);
 }
 
-export { getUniversityById, searchQuery };
+export { getUniversityById, getFacultyById, getStudyProgramById, searchQuery };

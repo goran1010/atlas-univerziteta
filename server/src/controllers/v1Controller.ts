@@ -209,4 +209,64 @@ async function getUniversityById(req: Request, res: Response) {
   });
 }
 
-export { status, getUniversities, search, getUniversityById };
+async function getFacultyById(req: Request, res: Response) {
+  const { id } = universityValidation.getFacultyById(req.params);
+
+  const faculty = await prisma.faculty.findUnique({
+    where: { id },
+    include: {
+      university: true,
+      studyPrograms: {
+        orderBy: [{ cycle: "asc" }, { name: "asc" }],
+        include: {
+          tracks: { orderBy: { name: "asc" } },
+        },
+      },
+    },
+  });
+  if (!faculty) {
+    sendError(res, {
+      status: 404,
+      message: "Faculty not found.",
+    });
+    return;
+  }
+  sendSuccess(res, {
+    message: "Faculty retrieved successfully.",
+    data: faculty,
+  });
+}
+
+async function getStudyProgramById(req: Request, res: Response) {
+  const { id } = universityValidation.getStudyProgramById(req.params);
+
+  const studyProgram = await prisma.studyProgram.findUnique({
+    where: { id },
+    include: {
+      faculty: {
+        include: { university: true },
+      },
+      tracks: { orderBy: { name: "asc" } },
+    },
+  });
+  if (!studyProgram) {
+    sendError(res, {
+      status: 404,
+      message: "Study program not found.",
+    });
+    return;
+  }
+  sendSuccess(res, {
+    message: "Study program retrieved successfully.",
+    data: studyProgram,
+  });
+}
+
+export {
+  status,
+  getUniversities,
+  search,
+  getUniversityById,
+  getFacultyById,
+  getStudyProgramById,
+};

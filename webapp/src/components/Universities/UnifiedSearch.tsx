@@ -34,20 +34,39 @@ function ResultSection({
   isEmpty: boolean;
   children: ReactNode;
 }) {
+  const [collapsed, setCollapsed] = useState(false);
+
   return (
     <section className="w-full flex flex-col gap-2">
-      <h2 className="text-lg font-semibold text-(--text-primary)">
-        {heading}
+      <button
+        type="button"
+        onClick={() => {
+          if (!isEmpty) setCollapsed((prev) => !prev);
+        }}
+        className={`flex items-center gap-2 text-left w-full ${isEmpty ? "" : "cursor-pointer"}`}
+      >
         {!isEmpty && (
-          <span className="ml-2 text-sm font-normal text-(--text-muted)">
-            ({count})
+          <span
+            className="text-xs text-(--text-muted) transition-transform"
+            style={{ transform: collapsed ? "rotate(-90deg)" : "rotate(0deg)" }}
+            aria-hidden="true"
+          >
+            ▼
           </span>
         )}
-      </h2>
+        <h2 className="text-lg font-semibold text-(--text-primary)">
+          {heading}
+          {!isEmpty && (
+            <span className="ml-2 text-sm font-normal text-(--text-muted)">
+              ({count})
+            </span>
+          )}
+        </h2>
+      </button>
       {isEmpty ? (
         <p className="text-(--text-muted)">{emptyMessage}</p>
       ) : (
-        children
+        !collapsed && children
       )}
     </section>
   );
