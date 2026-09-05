@@ -21,7 +21,7 @@ function getStudyProgramById(input: unknown) {
   return parseRequest(idParamsSchema, input);
 }
 
-const searchQuerySchema = z.strictObject({
+const searchQuerySchema = z.object({
   searchTerm: z
     .string()
     .trim()
@@ -31,6 +31,18 @@ const searchQuerySchema = z.strictObject({
     .max(100, {
       message: "Search term must not exceed 100 characters.",
     }),
+  entity: z.enum(["FBIH", "RS", "BD"]).optional(),
+  ownership: z.enum(["PUBLIC", "PRIVATE"]).optional(),
+  cycle: z
+    .enum([
+      "FIRST",
+      "SECOND",
+      "THIRD",
+      "INTEGRATED",
+      "VOCATIONAL",
+      "SPECIALIST",
+    ])
+    .optional(),
 });
 
 function searchQuery(input: unknown) {

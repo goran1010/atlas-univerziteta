@@ -404,6 +404,12 @@
       "PUBLIC": "Javni univerziteti",
       "PRIVATE": "Privatni univerziteti"
     },
-    "clearSearch": "Obriši pretragu"
+    "clearSearch": "Obriši pretragu",
+    "filters": "Filteri",
+    "clearFilters": "Obriši filtere",
+    "filterEntity": "Entitet",
+    "filterOwnership": "Vlasništvo",
+    "filterCycle": "Ciklus studija",
+    "all": "Svi"
   }
 }

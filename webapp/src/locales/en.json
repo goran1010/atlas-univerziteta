@@ -404,6 +404,12 @@
       "PUBLIC": "Public universities",
       "PRIVATE": "Private universities"
     },
-    "clearSearch": "Clear search"
+    "clearSearch": "Clear search",
+    "filters": "Filters",
+    "clearFilters": "Clear filters",
+    "filterEntity": "Entity",
+    "filterOwnership": "Ownership",
+    "filterCycle": "Study cycle",
+    "all": "All"
   }
 }

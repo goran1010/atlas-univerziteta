@@ -100,6 +100,8 @@ const searchResultUniversitySchema = z.object({
   name: z.string().min(1),
   acronym: optionalTextSchema,
   city: z.string().min(1),
+  entity: entitySchema,
+  ownership: ownershipSchema,
 });
 
 const studyProgramSearchResultSchema = z.object({
