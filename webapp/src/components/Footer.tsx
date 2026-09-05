@@ -12,14 +12,14 @@ function Footer() {
           href="https://github.com/goran1010"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1.5 text-sm font-medium hover:underline"
+          className="flex items-center gap-1.5 text-sm font-medium"
         >
           <GitHubIcon />
           {t("footer.name")}
         </a>
         <a
           href={`mailto:${t("footer.email")}`}
-          className="flex items-center gap-1.5 text-sm font-medium hover:underline"
+          className="flex items-center gap-1.5 text-sm font-medium"
         >
           <EnvelopeIcon />
           {t("footer.email")}

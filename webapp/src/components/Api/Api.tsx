@@ -4,6 +4,7 @@ import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
 import { PUBLIC_API_URL, SITE_URL } from "../../utils/envConfig";
+import { GitHubIcon } from "../sharedComponents/icons";
 
 function Api() {
   const { t } = use(RootContext);
@@ -48,7 +49,9 @@ function Api() {
               href="https://github.com/goran1010/uniatlas-bosnia"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 align-middle"
             >
+              <GitHubIcon size={14} />
               GitHub README
             </a>
             .
