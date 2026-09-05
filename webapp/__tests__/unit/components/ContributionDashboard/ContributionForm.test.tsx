@@ -166,6 +166,7 @@ describe("ContributionForm component rendering", () => {
   });
 
   test("shows an error notification when pending changes fail to load", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     setupFetchMock({
       error: "Error fetching pending changes.",
     });
@@ -181,6 +182,7 @@ describe("ContributionForm component rendering", () => {
   });
 
   test("rejects a malformed successful pending changes response", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => vi.fn());
     setupFetchMock({ pendingData: [{ id: "invalid-pending-change" }] });
     render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
 

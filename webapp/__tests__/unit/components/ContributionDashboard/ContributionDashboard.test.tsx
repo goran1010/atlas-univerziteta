@@ -20,6 +20,8 @@ function Wrapper({ initialUser }: { initialUser: UserData }) {
 }
 
 describe("render ContributionDashboard component", () => {
+  vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+
   test("render message if user doesn't exist", async () => {
     render(<Wrapper initialUser={null} />);
 

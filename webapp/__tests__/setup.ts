@@ -21,6 +21,9 @@ Object.defineProperty(window, "matchMedia", {
   value: vi.fn().mockImplementation(() => media),
 });
 
+// jsdom doesn't implement scrollTo; stub it to silence the warnings.
+window.scrollTo = vi.fn() as typeof window.scrollTo;
+
 afterEach(() => {
   cleanup();
 });

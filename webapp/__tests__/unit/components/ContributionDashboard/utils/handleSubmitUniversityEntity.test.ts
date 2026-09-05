@@ -310,6 +310,7 @@ describe("handleSubmitUniversityEntity", () => {
   });
 
   test("does not request a CSRF token or submit an invalid target ID", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => vi.fn());
     const addNotification = vi.fn();
 
     const { handleSubmitUniversityEntity } =

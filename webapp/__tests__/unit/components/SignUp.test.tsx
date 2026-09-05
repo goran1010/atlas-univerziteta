@@ -251,6 +251,7 @@ describe("SignUp Form Validation on Create button click", () => {
 
 describe("SignUp Form Submit", () => {
   test("shows a translated error after clicking Create with an existing email", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     const mockResponse = new Response(
       JSON.stringify({
         error: {
@@ -356,6 +357,7 @@ describe("SignUp Form Submit", () => {
   });
 
   test("shows fallback registration failed message when backend error payload is missing", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     const mockResponse = new Response(null, {
       status: 400,
       statusText: "Bad Request",

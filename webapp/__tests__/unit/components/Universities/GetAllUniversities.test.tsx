@@ -16,6 +16,8 @@ function Wrapper() {
 }
 
 describe("GetAllUniversities", () => {
+  vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+
   beforeEach(() => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       new Response(

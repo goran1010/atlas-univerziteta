@@ -107,6 +107,8 @@ function searchResponse(
 }
 
 describe("UnifiedSearch", () => {
+  vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+
   beforeEach(() => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       searchResponse({
