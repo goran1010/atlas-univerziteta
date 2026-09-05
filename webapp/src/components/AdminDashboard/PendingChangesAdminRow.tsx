@@ -1,6 +1,6 @@
 import { memo, type Dispatch, type SetStateAction } from "react";
 import { Button } from "../sharedComponents/Button";
-import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
+import { Dialog } from "../sharedComponents/Dialog";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import {
@@ -41,11 +41,21 @@ const PendingChangesAdminRow = memo(
     index,
   }: PendingChangesAdminRowProps) => {
     const [loading, setLoading] = useState(false);
-    const [expanded, setExpanded] = useState(false);
+    const [dialogOpen, setDialogOpen] = useState(false);
     const { t, serverStatus } = use(RootContext);
     const ctx = { addNotification, setLoading, t, serverStatus };
 
     const currentEntity = data.currentEntity ?? null;
+
+    async function handleApprove() {
+      await handleApprovePendingChange(data, setPendingChanges, ctx);
+      setDialogOpen(false);
+    }
+
+    async function handleDecline() {
+      await handleDeclinePendingChange(data, setPendingChanges, ctx);
+      setDialogOpen(false);
+    }
 
     return (
       <li
@@ -87,20 +97,19 @@ const PendingChangesAdminRow = memo(
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-2 p-1">
-          <DetailsToggleButton
-            expanded={expanded}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 p-1">
+          <Button
             className="px-3 py-1.5 text-xs sm:max-w-30"
             onClick={() => {
-              setExpanded((prev) => !prev);
+              setDialogOpen(true);
             }}
-          />
+          >
+            {t("universitiesPage.viewDetails")}
+          </Button>
           <Button
             variant="success"
-            className="px-3 py-2 text-sm sm:max-w-25"
-            onClick={() => {
-              void handleApprovePendingChange(data, setPendingChanges, ctx);
-            }}
+            className="px-3 py-1.5 text-xs sm:max-w-25"
+            onClick={() => void handleApprove()}
             type="button"
             loading={loading}
           >
@@ -108,10 +117,8 @@ const PendingChangesAdminRow = memo(
           </Button>
           <Button
             variant="danger"
-            className="px-3 py-2 text-sm sm:max-w-25"
-            onClick={() => {
-              void handleDeclinePendingChange(data, setPendingChanges, ctx);
-            }}
+            className="px-3 py-1.5 text-xs sm:max-w-25"
+            onClick={() => void handleDecline()}
             type="button"
             loading={loading}
           >
@@ -119,14 +126,42 @@ const PendingChangesAdminRow = memo(
           </Button>
         </div>
 
-        {expanded && (
+        <Dialog
+          open={dialogOpen}
+          onClose={() => {
+            setDialogOpen(false);
+          }}
+          title={`${t(`contribution.changeTypes.${data.typeOfChange}`)} ${t(`contribution.entityTypes.${data.entityType}`)} - ${data.user.email}`}
+          footer={
+            <>
+              <Button
+                variant="success"
+                className="sm:w-auto"
+                onClick={() => void handleApprove()}
+                type="button"
+                loading={loading}
+              >
+                {t("form.approve")}
+              </Button>
+              <Button
+                variant="danger"
+                className="sm:w-auto"
+                onClick={() => void handleDecline()}
+                type="button"
+                loading={loading}
+              >
+                {t("form.reject")}
+              </Button>
+            </>
+          }
+        >
           <PendingChangeDetail
             entityType={data.entityType}
             typeOfChange={data.typeOfChange}
             data={data.data}
             currentEntity={currentEntity}
           />
-        )}
+        </Dialog>
       </li>
     );
   },

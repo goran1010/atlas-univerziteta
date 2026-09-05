@@ -73,7 +73,7 @@ function PendingUniversityChangesRow({
 
         <div className="flex flex-col sm:flex-row justify-end items-center gap-2">
           <Button
-            className="px-2 py-1 text-xs"
+            className="px-3 py-1.5 text-xs"
             onClick={() => {
               setDialogOpen(true);
             }}
@@ -82,7 +82,7 @@ function PendingUniversityChangesRow({
           </Button>
           <Button
             variant="danger"
-            className="px-2 py-1 text-xs"
+            className="px-3 py-1.5 text-xs"
             loading={loading}
             onClick={() => void handleDelete()}
           >
