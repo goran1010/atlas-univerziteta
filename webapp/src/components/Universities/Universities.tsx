@@ -1,12 +1,13 @@
-import { use } from "react";
+import { use, type ReactNode } from "react";
 import { NavLink, Outlet } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../../utils/envConfig";
+import { SearchIcon, ListIcon } from "../sharedComponents/icons";
 
-const TABS = [
-  { key: "search", to: "/search" },
-  { key: "browseAll", to: "/browse" },
+const TABS: { key: string; to: string; icon: ReactNode }[] = [
+  { key: "search", to: "/search", icon: <SearchIcon size={14} /> },
+  { key: "browseAll", to: "/browse", icon: <ListIcon size={14} /> },
 ];
 
 function Universities() {
@@ -45,13 +46,14 @@ function Universities() {
               key={tab.key}
               to={tab.to}
               className={({ isActive }) =>
-                `px-3 py-2 text-sm font-medium rounded-t-md transition-colors cursor-pointer ${
+                `flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-t-md transition-colors cursor-pointer ${
                   isActive
                     ? "border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400"
                     : "text-(--text-secondary) hover:text-(--text-primary)"
                 }`
               }
             >
+              {tab.icon}
               {t(`universitiesPage.${tab.key}`)}
             </NavLink>
           ))}
