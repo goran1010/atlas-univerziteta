@@ -10,12 +10,10 @@ function TrackResult({ track, t }: { track: TrackSearchResult; t: TFunction }) {
     <ResultCard>
       <p className="font-bold text-(--text-primary)">{track.name}</p>
       <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-sm text-(--text-secondary)">
-        {track.studyProgram.cycle && (
-          <span>
-            <span aria-hidden="true">📚</span>{" "}
-            {t(`universitiesPage.cycles.${track.studyProgram.cycle}`)}
-          </span>
-        )}
+        <span>
+          <span aria-hidden="true">📚</span>{" "}
+          {t(`universitiesPage.cycles.${track.studyProgram.cycle}`)}
+        </span>
         {track.durationYears != null && (
           <span>
             <span aria-hidden="true">🕐</span> {track.durationYears}{" "}

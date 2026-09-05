@@ -10,7 +10,10 @@ import { StudyProgramRow } from "./StudyProgramRow";
 import { groupBy } from "./utils/groupBy";
 
 import type { TFunction } from "../../types/i18n";
-import type { UniversityDetail, UniversityDetailFaculty } from "../../schemas/university";
+import type {
+  UniversityDetail,
+  UniversityDetailFaculty,
+} from "../../schemas/university";
 
 function FacultyRow({
   faculty,
@@ -38,7 +41,11 @@ function FacultyRow({
                 <span className="font-bold text-blue-600 dark:text-blue-400">
                   {faculty.studyPrograms.length}
                 </span>{" "}
-                {tCount(t, "universitiesPage.studyProgramCount", faculty.studyPrograms.length)}
+                {tCount(
+                  t,
+                  "universitiesPage.studyProgramCount",
+                  faculty.studyPrograms.length,
+                )}
               </span>
             )}
             <ContactLinks
@@ -74,7 +81,11 @@ function FacultyRow({
             <span className="text-blue-600 dark:text-blue-400">
               {faculty.studyPrograms.length}
             </span>{" "}
-            {tCount(t, "universitiesPage.studyProgramCount", faculty.studyPrograms.length)}
+            {tCount(
+              t,
+              "universitiesPage.studyProgramCount",
+              faculty.studyPrograms.length,
+            )}
           </p>
           <div className="flex flex-col gap-2">
             {groupBy(faculty.studyPrograms, (sp) =>
@@ -82,7 +93,13 @@ function FacultyRow({
             ).map((g) => (
               <ResultGroup key={g.key} label={g.key}>
                 {g.items.map((sp) => (
-                  <StudyProgramRow key={sp.id} program={sp} t={t} university={university} faculty={faculty} />
+                  <StudyProgramRow
+                    key={sp.id}
+                    program={sp}
+                    t={t}
+                    university={university}
+                    faculty={faculty}
+                  />
                 ))}
               </ResultGroup>
             ))}

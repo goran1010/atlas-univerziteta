@@ -15,14 +15,8 @@ function About() {
         <title>{pageTitle}</title>
         <meta name="description" content={t("meta.home")} />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href={`${SITE_URL}/about`}
-        />
-        <meta
-          property="og:url"
-          content={`${SITE_URL}/about`}
-        />
+        <link rel="canonical" href={`${SITE_URL}/about`} />
+        <meta property="og:url" content={`${SITE_URL}/about`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={t("meta.home")} />
         <meta name="twitter:title" content={pageTitle} />

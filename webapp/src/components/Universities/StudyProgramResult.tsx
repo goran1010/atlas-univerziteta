@@ -107,7 +107,11 @@ function StudyProgramResult({
                 <span className="text-blue-600 dark:text-blue-400">
                   {detailData.tracks.length}
                 </span>{" "}
-                {tCount(t, "universitiesPage.trackCount", detailData.tracks.length)}
+                {tCount(
+                  t,
+                  "universitiesPage.trackCount",
+                  detailData.tracks.length,
+                )}
               </p>
               <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
                 <ul>

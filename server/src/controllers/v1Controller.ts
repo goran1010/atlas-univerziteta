@@ -141,9 +141,7 @@ async function search(req: Request, res: Response) {
           },
           ...(cycle ? [{ cycle }] : []),
           ...(entity ? [{ faculty: { university: { entity } } }] : []),
-          ...(ownership
-            ? [{ faculty: { university: { ownership } } }]
-            : []),
+          ...(ownership ? [{ faculty: { university: { ownership } } }] : []),
         ],
       },
       orderBy: [{ cycle: "asc" }, { name: "asc" }],

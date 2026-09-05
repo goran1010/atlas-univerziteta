@@ -15,14 +15,8 @@ function Api() {
         <title>{`${t("title.api")} | ${t("title.app")}`}</title>
         <meta name="description" content={t("meta.api")} />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href={`${SITE_URL}/api-docs`}
-        />
-        <meta
-          property="og:url"
-          content={`${SITE_URL}/api-docs`}
-        />
+        <link rel="canonical" href={`${SITE_URL}/api-docs`} />
+        <meta property="og:url" content={`${SITE_URL}/api-docs`} />
         <meta
           property="og:title"
           content={`${t("title.api")} | ${t("title.app")}`}

@@ -42,7 +42,11 @@ function StudyProgramRow({
             {program.durationYears != null && (
               <span>
                 <span aria-hidden="true">🕐</span> {program.durationYears}{" "}
-                {tCount(t, "universitiesPage.durationYears", program.durationYears)}
+                {tCount(
+                  t,
+                  "universitiesPage.durationYears",
+                  program.durationYears,
+                )}
               </span>
             )}
             {program.ects != null && (
@@ -62,7 +66,11 @@ function StudyProgramRow({
                 <span className="font-bold text-blue-600 dark:text-blue-400">
                   {program.tracks.length}
                 </span>{" "}
-                {tCount(t, "universitiesPage.trackCount", program.tracks.length)}
+                {tCount(
+                  t,
+                  "universitiesPage.trackCount",
+                  program.tracks.length,
+                )}
               </span>
             )}
           </div>

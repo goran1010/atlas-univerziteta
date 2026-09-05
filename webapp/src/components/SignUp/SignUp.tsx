@@ -29,14 +29,8 @@ function SignUp() {
         <title>{`${t("title.signup")} | ${t("title.app")}`}</title>
         <meta name="description" content={t("meta.signup")} />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href={`${SITE_URL}/signup`}
-        />
-        <meta
-          property="og:url"
-          content={`${SITE_URL}/signup`}
-        />
+        <link rel="canonical" href={`${SITE_URL}/signup`} />
+        <meta property="og:url" content={`${SITE_URL}/signup`} />
         <meta
           property="og:title"
           content={`${t("title.signup")} | ${t("title.app")}`}

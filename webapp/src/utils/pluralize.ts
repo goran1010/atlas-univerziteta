@@ -8,7 +8,12 @@ function slavicPluralForm(count: number): PluralForm {
   const lastTwoDigits = abs % 100;
 
   if (lastDigit === 1 && lastTwoDigits !== 11) return "one";
-  if (lastDigit >= 2 && lastDigit <= 4 && (lastTwoDigits < 12 || lastTwoDigits > 14)) return "few";
+  if (
+    lastDigit >= 2 &&
+    lastDigit <= 4 &&
+    (lastTwoDigits < 12 || lastTwoDigits > 14)
+  )
+    return "few";
   return "other";
 }
 

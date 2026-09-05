@@ -46,9 +46,7 @@ function UniversitySection({ university }: { university: UniversityDetail }) {
           <span aria-hidden="true">🏷️</span>{" "}
           {t(`universitiesPage.entities.${university.entity}`)}
         </span>
-        <span>
-          {t(`universitiesPage.ownership.${university.ownership}`)}
-        </span>
+        <span>{t(`universitiesPage.ownership.${university.ownership}`)}</span>
       </div>
       <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-(--text-muted)">
         <ContactLinks
@@ -79,10 +77,17 @@ function FacultySection({ faculty }: { faculty: UniversityDetailFaculty }) {
   );
 }
 
-function StudyProgramSection({ program }: { program: UniversityDetailStudyProgram }) {
+function StudyProgramSection({
+  program,
+}: {
+  program: UniversityDetailStudyProgram;
+}) {
   const { t } = use(RootContext);
   return (
-    <DetailSection icon="📚" title={t("contribution.entityTypes.STUDY_PROGRAM")}>
+    <DetailSection
+      icon="📚"
+      title={t("contribution.entityTypes.STUDY_PROGRAM")}
+    >
       <p className="font-semibold">{program.name}</p>
       <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-(--text-muted)">
         <span>{t(`universitiesPage.cycles.${program.cycle}`)}</span>
@@ -142,7 +147,9 @@ function EntityDetailContent({
     <div className="flex flex-col gap-3">
       <UniversitySection university={ancestors.university} />
       {ancestors.faculty && <FacultySection faculty={ancestors.faculty} />}
-      {ancestors.studyProgram && <StudyProgramSection program={ancestors.studyProgram} />}
+      {ancestors.studyProgram && (
+        <StudyProgramSection program={ancestors.studyProgram} />
+      )}
       {track && <TrackSection track={track} />}
     </div>
   );

@@ -14,7 +14,10 @@ import { isServerNotReadyError } from "../../utils/serverStatus";
 import { facultyDetailResponseSchema } from "../../schemas/university";
 import { tCount } from "../../utils/pluralize";
 
-import type { FacultySearchResult, FacultyDetail } from "../../schemas/university";
+import type {
+  FacultySearchResult,
+  FacultyDetail,
+} from "../../schemas/university";
 
 function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
   const { t, addNotification, serverStatus } = use(RootContext);
@@ -70,8 +73,7 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
           <p className="font-bold text-(--text-primary)">{faculty.name}</p>
           <p className="text-sm text-(--text-muted) mt-0.5">
             <span aria-hidden="true">🏛️</span> {faculty.university.name}
-            {faculty.university.acronym &&
-              ` (${faculty.university.acronym})`}
+            {faculty.university.acronym && ` (${faculty.university.acronym})`}
           </p>
           {faculty.city && (
             <p className="text-sm text-(--text-secondary) mt-0.5">
@@ -99,7 +101,11 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
                 <span className="text-blue-600 dark:text-blue-400">
                   {detailData.studyPrograms.length}
                 </span>{" "}
-                {tCount(t, "universitiesPage.studyProgramCount", detailData.studyPrograms.length)}
+                {tCount(
+                  t,
+                  "universitiesPage.studyProgramCount",
+                  detailData.studyPrograms.length,
+                )}
               </p>
               <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
                 <div className="flex flex-col gap-2">

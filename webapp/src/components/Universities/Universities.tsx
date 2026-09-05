@@ -20,10 +20,7 @@ function Universities() {
         <meta name="description" content={t("meta.universities")} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${SITE_URL}/`} />
-        <meta
-          property="og:url"
-          content={`${SITE_URL}/`}
-        />
+        <meta property="og:url" content={`${SITE_URL}/`} />
         <meta
           property="og:title"
           content={`${t("title.universities")} | ${t("title.app")}`}

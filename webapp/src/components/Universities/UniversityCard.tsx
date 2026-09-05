@@ -125,7 +125,11 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                   <span className="font-bold text-blue-600 dark:text-blue-400">
                     {university._count.faculties}
                   </span>{" "}
-                  {tCount(t, "universitiesPage.facultyCount", university._count.faculties)}
+                  {tCount(
+                    t,
+                    "universitiesPage.facultyCount",
+                    university._count.faculties,
+                  )}
                 </span>
               )}
               {university.foundedYear && (
@@ -161,7 +165,11 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                   <span className="text-blue-600 dark:text-blue-400">
                     {detailData.faculties.length}
                   </span>{" "}
-                  {tCount(t, "universitiesPage.facultyCount", detailData.faculties.length)}
+                  {tCount(
+                    t,
+                    "universitiesPage.facultyCount",
+                    detailData.faculties.length,
+                  )}
                 </p>
                 <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
                   {facultyCityGroups.length > 1 ? (
@@ -169,7 +177,12 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                       {facultyCityGroups.map((g) => (
                         <ResultGroup key={g.key} label={g.key}>
                           {g.items.map((f) => (
-                            <FacultyRow key={f.id} faculty={f} t={t} university={detailData} />
+                            <FacultyRow
+                              key={f.id}
+                              faculty={f}
+                              t={t}
+                              university={detailData}
+                            />
                           ))}
                         </ResultGroup>
                       ))}
@@ -177,7 +190,12 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                   ) : (
                     <ul className="space-y-1">
                       {detailData.faculties.map((f) => (
-                        <FacultyRow key={f.id} faculty={f} t={t} university={detailData} />
+                        <FacultyRow
+                          key={f.id}
+                          faculty={f}
+                          t={t}
+                          university={detailData}
+                        />
                       ))}
                     </ul>
                   )}

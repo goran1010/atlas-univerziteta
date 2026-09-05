@@ -44,14 +44,8 @@ function LogIn() {
         <title>{`${t("title.login")} | ${t("title.app")}`}</title>
         <meta name="description" content={t("meta.login")} />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href={`${SITE_URL}/login`}
-        />
-        <meta
-          property="og:url"
-          content={`${SITE_URL}/login`}
-        />
+        <link rel="canonical" href={`${SITE_URL}/login`} />
+        <meta property="og:url" content={`${SITE_URL}/login`} />
         <meta
           property="og:title"
           content={`${t("title.login")} | ${t("title.app")}`}

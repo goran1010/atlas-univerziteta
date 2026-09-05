@@ -129,8 +129,7 @@ function mockUniversitySearch(
     | undefined;
 
   const orClause = where?.AND?.[0]?.OR ?? where?.OR;
-  const normalizedTerm =
-    orClause?.[0]?.name?.contains?.toLowerCase() ?? "";
+  const normalizedTerm = orClause?.[0]?.name?.contains?.toLowerCase() ?? "";
 
   return Promise.resolve(
     dummyData.data.filter(

@@ -98,11 +98,9 @@ async function loadStrategies() {
   await import("../../../src/config/passport.js");
 
   const localStrategy = passportMock.use.mock.calls[0]?.[0] as
-    | MockLocalStrategy
-    | undefined;
+    MockLocalStrategy | undefined;
   const githubStrategy = passportMock.use.mock.calls[1]?.[0] as
-    | MockGitHubStrategy
-    | undefined;
+    MockGitHubStrategy | undefined;
 
   if (!localStrategy || !githubStrategy) {
     throw new Error(

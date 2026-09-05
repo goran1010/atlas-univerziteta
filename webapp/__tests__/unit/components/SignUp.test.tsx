@@ -19,10 +19,7 @@ vi.mock("../../../src/utils/getCsrfToken", async (importOriginal) => {
 const user = userEvent.setup();
 
 type Element =
-  | "emailField"
-  | "passwordField"
-  | "confirmPasswordField"
-  | "signUpButton";
+  "emailField" | "passwordField" | "confirmPasswordField" | "signUpButton";
 
 beforeEach(() => {
   function Wrapper() {

@@ -146,8 +146,7 @@ describe("handleSubmitUniversityEntity", () => {
     const { handleSubmitUniversityEntity } =
       await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
     let updatePendingChanges:
-      | ((prev: PendingChange[]) => PendingChange[])
-      | undefined;
+      ((prev: PendingChange[]) => PendingChange[]) | undefined;
     const setPendingChanges = (updater: SetStateAction<PendingChange[]>) => {
       if (typeof updater === "function") {
         updatePendingChanges = updater;
