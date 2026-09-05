@@ -202,7 +202,9 @@ function UnifiedSearch() {
           </span>
           <select
             value={entityFilter}
-            onChange={(e) => { setEntityFilter(e.target.value as Entity | ""); }}
+            onChange={(e) => {
+              setEntityFilter(e.target.value as Entity | "");
+            }}
             className="text-xs px-2 py-1.5 rounded-md bg-(--surface-2) border border-(--border-color) text-(--text-primary) cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
           >
             <option value="">{t("universitiesPage.all")}</option>
@@ -219,8 +221,9 @@ function UnifiedSearch() {
           </span>
           <select
             value={ownershipFilter}
-            onChange={(e) => { setOwnershipFilter(e.target.value as Ownership | ""); }
-            }
+            onChange={(e) => {
+              setOwnershipFilter(e.target.value as Ownership | "");
+            }}
             className="text-xs px-2 py-1.5 rounded-md bg-(--surface-2) border border-(--border-color) text-(--text-primary) cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
           >
             <option value="">{t("universitiesPage.all")}</option>
@@ -237,7 +240,9 @@ function UnifiedSearch() {
           </span>
           <select
             value={cycleFilter}
-            onChange={(e) => { setCycleFilter(e.target.value as StudyCycle | ""); }}
+            onChange={(e) => {
+              setCycleFilter(e.target.value as StudyCycle | "");
+            }}
             className="text-xs px-2 py-1.5 rounded-md bg-(--surface-2) border border-(--border-color) text-(--text-primary) cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
           >
             <option value="">{t("universitiesPage.all")}</option>

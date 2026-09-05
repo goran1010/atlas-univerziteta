@@ -173,8 +173,7 @@ describe("UniversityCard", () => {
 
     const facultiesTitle = await screen.findByText(
       (_content, element) =>
-        element?.tagName === "P" &&
-        /1\s+faculty/i.test(element.textContent),
+        element?.tagName === "P" && /1\s+faculty/i.test(element.textContent),
     );
     expect(facultiesTitle).toBeInTheDocument();
 
