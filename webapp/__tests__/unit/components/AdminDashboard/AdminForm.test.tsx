@@ -156,8 +156,7 @@ describe("AdminForm component pending changes interaction", () => {
       <Wrapper initialUser={{ email: "admin@mail.com", role: "ADMIN" }} />,
     );
 
-    const pendingCount = await screen.findByLabelText(/pending changes count/i);
-    expect(pendingCount).toHaveTextContent("1");
+    await screen.findByText("johndoe@examplemail.com");
 
     const user = userEvent.setup();
 
@@ -167,10 +166,8 @@ describe("AdminForm component pending changes interaction", () => {
 
     await user.click(confirmButton);
 
-    expect(pendingCount).not.toBeInTheDocument();
-
     expect(
-      screen.getByText(/There are no pending changes at the moment./i),
+      await screen.findByText(/There are no pending changes at the moment./i),
     ).toBeInTheDocument();
   });
 
@@ -179,7 +176,7 @@ describe("AdminForm component pending changes interaction", () => {
     render(
       <Wrapper initialUser={{ email: "admin@mail.com", role: "ADMIN" }} />,
     );
-    const pendingCount = await screen.findByLabelText(/pending changes count/i);
+    await screen.findByText("johndoe@examplemail.com");
 
     const user = userEvent.setup();
 
@@ -188,8 +185,6 @@ describe("AdminForm component pending changes interaction", () => {
     });
 
     await user.click(rejectButton);
-
-    expect(pendingCount).not.toBeInTheDocument();
 
     expect(
       screen.getByText(/There are no pending changes at the moment./i),

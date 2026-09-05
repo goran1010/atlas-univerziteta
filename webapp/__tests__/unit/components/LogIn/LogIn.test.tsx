@@ -242,6 +242,7 @@ describe("LogIn for validation on button click", () => {
 
 describe("LogIn Form Submit", () => {
   test("shows a translated error after submitting wrong email or password", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     const mockErrorResponse = new Response(
       JSON.stringify({
         error: {
@@ -338,6 +339,7 @@ describe("LogIn Form Submit", () => {
   });
 
   test("shows fallback login failed message when backend error payload is missing", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     const mockedResponse = new Response(JSON.stringify({}), {
       status: 400,
       headers: { "Content-Type": "application/json" },

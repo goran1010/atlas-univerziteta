@@ -1,19 +1,37 @@
 import { useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
+import { Button } from "../sharedComponents/Button";
+import { Dialog } from "../sharedComponents/Dialog";
+import { EntityDetailContent } from "./TrackDetailDialog";
+import { tCount } from "../../utils/pluralize";
 import { TrackRow } from "./TrackRow";
 
 import type { TFunction } from "../../types/i18n";
-import type { UniversityDetailStudyProgram } from "../../schemas/university";
+import type {
+  UniversityDetail,
+  UniversityDetailFaculty,
+  UniversityDetailStudyProgram,
+} from "../../schemas/university";
 
 function StudyProgramRow({
   program,
   t,
+  university,
+  faculty,
 }: {
   program: UniversityDetailStudyProgram;
   t: TFunction;
+  university?: UniversityDetail;
+  faculty?: UniversityDetailFaculty;
 }) {
   const [open, setOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
   const hasTracks = program.tracks.length > 0;
+
+  const ancestors =
+    university && faculty
+      ? { university, faculty, studyProgram: program }
+      : undefined;
 
   return (
     <li className="text-sm">
@@ -24,7 +42,11 @@ function StudyProgramRow({
             {program.durationYears != null && (
               <span>
                 <span aria-hidden="true">🕐</span> {program.durationYears}{" "}
-                {t("universitiesPage.durationYears")}
+                {tCount(
+                  t,
+                  "universitiesPage.durationYears",
+                  program.durationYears,
+                )}
               </span>
             )}
             {program.ects != null && (
@@ -40,13 +62,20 @@ function StudyProgramRow({
             )}
             {hasTracks && (
               <span>
-                <span aria-hidden="true">📋</span> {program.tracks.length}{" "}
-                {t("universitiesPage.tracks")}
+                <span aria-hidden="true">📋</span>{" "}
+                <span className="font-bold text-blue-600 dark:text-blue-400">
+                  {program.tracks.length}
+                </span>{" "}
+                {tCount(
+                  t,
+                  "universitiesPage.trackCount",
+                  program.tracks.length,
+                )}
               </span>
             )}
           </div>
         </div>
-        {hasTracks && (
+        {hasTracks ? (
           <DetailsToggleButton
             expanded={open}
             className="w-full sm:w-auto px-2 sm:px-3 py-1.5 text-xs shrink-0 sm:max-w-36"
@@ -54,16 +83,42 @@ function StudyProgramRow({
               setOpen((p) => !p);
             }}
           />
-        )}
+        ) : ancestors ? (
+          <Button
+            className="w-full sm:w-auto px-2 sm:px-3 py-1.5 text-xs shrink-0 sm:max-w-36"
+            onClick={() => {
+              setDialogOpen(true);
+            }}
+          >
+            {t("universitiesPage.viewInfo")}
+          </Button>
+        ) : null}
       </div>
       {open && hasTracks && (
         <div className="ml-0.5 sm:ml-4 mt-1 mb-2 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
+          <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-1">
+            <span className="text-blue-600 dark:text-blue-400">
+              {program.tracks.length}
+            </span>{" "}
+            {tCount(t, "universitiesPage.trackCount", program.tracks.length)}
+          </p>
           <ul>
             {program.tracks.map((tr) => (
-              <TrackRow key={tr.id} track={tr} t={t} />
+              <TrackRow key={tr.id} track={tr} t={t} ancestors={ancestors} />
             ))}
           </ul>
         </div>
+      )}
+      {!hasTracks && ancestors && (
+        <Dialog
+          open={dialogOpen}
+          onClose={() => {
+            setDialogOpen(false);
+          }}
+          title={program.name}
+        >
+          <EntityDetailContent ancestors={ancestors} />
+        </Dialog>
       )}
     </li>
   );

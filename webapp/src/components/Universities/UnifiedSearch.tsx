@@ -20,6 +20,7 @@ import { isServerNotReadyError } from "../../utils/serverStatus";
 import { searchTermSchema } from "../../schemas/domain";
 
 import type { UnifiedSearchResults } from "../../schemas/university";
+import type { Entity, Ownership, StudyCycle } from "../../schemas/domain";
 
 function ResultSection({
   heading,
@@ -34,20 +35,39 @@ function ResultSection({
   isEmpty: boolean;
   children: ReactNode;
 }) {
+  const [collapsed, setCollapsed] = useState(false);
+
   return (
     <section className="w-full flex flex-col gap-2">
-      <h2 className="text-lg font-semibold text-(--text-primary)">
-        {heading}
+      <button
+        type="button"
+        onClick={() => {
+          if (!isEmpty) setCollapsed((prev) => !prev);
+        }}
+        className={`flex items-center gap-2 text-left w-full ${isEmpty ? "" : "cursor-pointer"}`}
+      >
         {!isEmpty && (
-          <span className="ml-2 text-sm font-normal text-(--text-muted)">
-            ({count})
+          <span
+            className="text-xs text-(--text-muted) transition-transform"
+            style={{ transform: collapsed ? "rotate(-90deg)" : "rotate(0deg)" }}
+            aria-hidden="true"
+          >
+            ▼
           </span>
         )}
-      </h2>
+        <h2 className="text-lg font-semibold text-(--text-primary)">
+          {heading}
+          {!isEmpty && (
+            <span className="ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold align-middle bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200">
+              {count}
+            </span>
+          )}
+        </h2>
+      </button>
       {isEmpty ? (
         <p className="text-(--text-muted)">{emptyMessage}</p>
       ) : (
-        children
+        !collapsed && children
       )}
     </section>
   );
@@ -91,12 +111,29 @@ function ClearIcon() {
   );
 }
 
+const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
+const OWNERSHIPS: Ownership[] = ["PUBLIC", "PRIVATE"];
+const CYCLES: StudyCycle[] = [
+  "FIRST",
+  "SECOND",
+  "THIRD",
+  "INTEGRATED",
+  "VOCATIONAL",
+  "SPECIALIST",
+];
+
 function UnifiedSearch() {
   const { t, addNotification, serverStatus } = use(RootContext);
   const [results, setResults] = useState<UnifiedSearchResults | null>(null);
   const [loading, setLoading] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const [entityFilter, setEntityFilter] = useState<Entity | "">("");
+  const [ownershipFilter, setOwnershipFilter] = useState<Ownership | "">("");
+  const [cycleFilter, setCycleFilter] = useState<StudyCycle | "">("");
+  const hasFilters =
+    entityFilter !== "" || ownershipFilter !== "" || cycleFilter !== "";
 
   // Auto-focus the search input only on devices with a precise pointer
   // (mouse/trackpad) so mobile users don't get the keyboard popping up.
@@ -126,7 +163,13 @@ function UnifiedSearch() {
     const term = searchTerm.data;
     try {
       setLoading(true);
-      setResults(await searchAll(term, serverStatus));
+      setResults(
+        await searchAll(term, serverStatus, {
+          entity: entityFilter || undefined,
+          ownership: ownershipFilter || undefined,
+          cycle: cycleFilter || undefined,
+        }),
+      );
     } catch (error) {
       if (isServerNotReadyError(error)) {
         return;
@@ -152,6 +195,77 @@ function UnifiedSearch() {
       <p className="text-sm text-center text-(--text-secondary) max-w-lg">
         {t("universitiesPage.searchHint")}
       </p>
+      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-end gap-2 w-full max-w-lg">
+        <label className="flex flex-col gap-0.5 flex-1 min-w-0">
+          <span className="text-xs font-semibold text-(--text-muted)">
+            {t("universitiesPage.filterEntity")}
+          </span>
+          <select
+            value={entityFilter}
+            onChange={(e) => {
+              setEntityFilter(e.target.value as Entity | "");
+            }}
+            className="text-xs px-2 py-1.5 rounded-md bg-(--surface-2) border border-(--border-color) text-(--text-primary) cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
+            <option value="">{t("universitiesPage.all")}</option>
+            {ENTITIES.map((e) => (
+              <option key={e} value={e}>
+                {t(`universitiesPage.entities.${e}`)}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="flex flex-col gap-0.5 flex-1 min-w-0">
+          <span className="text-xs font-semibold text-(--text-muted)">
+            {t("universitiesPage.filterOwnership")}
+          </span>
+          <select
+            value={ownershipFilter}
+            onChange={(e) => {
+              setOwnershipFilter(e.target.value as Ownership | "");
+            }}
+            className="text-xs px-2 py-1.5 rounded-md bg-(--surface-2) border border-(--border-color) text-(--text-primary) cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
+            <option value="">{t("universitiesPage.all")}</option>
+            {OWNERSHIPS.map((o) => (
+              <option key={o} value={o}>
+                {t(`universitiesPage.ownership.${o}`)}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="flex flex-col gap-0.5 flex-1 min-w-0">
+          <span className="text-xs font-semibold text-(--text-muted)">
+            {t("universitiesPage.filterCycle")}
+          </span>
+          <select
+            value={cycleFilter}
+            onChange={(e) => {
+              setCycleFilter(e.target.value as StudyCycle | "");
+            }}
+            className="text-xs px-2 py-1.5 rounded-md bg-(--surface-2) border border-(--border-color) text-(--text-primary) cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
+            <option value="">{t("universitiesPage.all")}</option>
+            {CYCLES.map((c) => (
+              <option key={c} value={c}>
+                {t(`universitiesPage.cycles.${c}`)}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+      <Button
+        variant="danger"
+        disabled={!hasFilters}
+        className="text-xs px-3 py-1.5 sm:w-auto"
+        onClick={() => {
+          setEntityFilter("");
+          setOwnershipFilter("");
+          setCycleFilter("");
+        }}
+      >
+        {t("universitiesPage.clearFilters")}
+      </Button>
       <form
         onSubmit={(e) => void handleSearch(e)}
         className="flex flex-col sm:flex-row gap-2 w-full max-w-lg"

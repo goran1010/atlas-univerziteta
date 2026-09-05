@@ -41,6 +41,8 @@ function Wrapper({ university = baseUniversity }) {
 }
 
 describe("UniversityCard", () => {
+  vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+
   beforeEach(() => {
     const mockResponse = new Response(
       JSON.stringify({
@@ -94,7 +96,7 @@ describe("UniversityCard", () => {
     const user = userEvent.setup();
 
     const viewDetailsButton = screen.getByRole("button", {
-      name: /View details/i,
+      name: /Expand/i,
     });
 
     await user.click(viewDetailsButton);
@@ -104,14 +106,14 @@ describe("UniversityCard", () => {
     expect(fetch).toHaveBeenCalledTimes(1);
 
     const hideDetailsButton = screen.getByRole("button", {
-      name: /Hide details/i,
+      name: /Collapse/i,
     });
     await user.click(hideDetailsButton);
 
     expect(screen.queryByText(/Faculties: -/i)).not.toBeInTheDocument();
 
     const showCachedDetailsButton = screen.getByRole("button", {
-      name: /View details/i,
+      name: /Expand/i,
     });
     await user.click(showCachedDetailsButton);
 
@@ -165,11 +167,14 @@ describe("UniversityCard", () => {
     const user = userEvent.setup();
 
     const viewDetailsButton = screen.getByRole("button", {
-      name: /View details/i,
+      name: /Expand/i,
     });
     await user.click(viewDetailsButton);
 
-    const facultiesTitle = await screen.findByText(/1 Faculties/i);
+    const facultiesTitle = await screen.findByText(
+      (_content, element) =>
+        element?.tagName === "P" && /1\s+faculty/i.test(element.textContent),
+    );
     expect(facultiesTitle).toBeInTheDocument();
 
     // Faculty name is now plain text; its "View details" button is a sibling
@@ -179,7 +184,7 @@ describe("UniversityCard", () => {
 
     // University button is now "Hide details"; the faculty has the only "View details"
     const facultyViewButton = screen.getByRole("button", {
-      name: /View details/i,
+      name: /Expand/i,
     });
     await user.click(facultyViewButton);
 
@@ -189,12 +194,12 @@ describe("UniversityCard", () => {
 
     // Study program's "View details" expands its tracks
     const studyProgramViewButton = screen.getByRole("button", {
-      name: /View details/i,
+      name: /Expand/i,
     });
     await user.click(studyProgramViewButton);
 
     const trackName = await screen.findByText(/Software Track/i);
-    const durationText = screen.getByText(/1 years/i);
+    const durationText = screen.getByText(/1 year\b/i);
     const ectsText = screen.getByText(/60 ECTS/i);
 
     expect(trackName).toBeInTheDocument();
@@ -216,7 +221,7 @@ describe("UniversityCard", () => {
     const user = userEvent.setup();
 
     const viewDetailsButton = screen.getByRole("button", {
-      name: /View details/i,
+      name: /Expand/i,
     });
     await user.click(viewDetailsButton);
 
@@ -245,14 +250,14 @@ describe("UniversityCard", () => {
     render(<Wrapper />);
     const user = userEvent.setup();
 
-    await user.click(screen.getByRole("button", { name: /View details/i }));
+    await user.click(screen.getByRole("button", { name: /Expand/i }));
 
     const errorMessage = await screen.findByText(
       /Failed to load university details\./i,
     );
 
     expect(errorMessage).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /View details/i })).toBeVisible();
+    expect(screen.getByRole("button", { name: /Expand/i })).toBeVisible();
   });
 
   test("rejects an out-of-range academic value in a successful details response", async () => {
@@ -297,7 +302,7 @@ describe("UniversityCard", () => {
     render(<Wrapper />);
     const user = userEvent.setup();
 
-    await user.click(screen.getByRole("button", { name: /View details/i }));
+    await user.click(screen.getByRole("button", { name: /Expand/i }));
 
     expect(
       await screen.findByText(/Failed to load university details\./i),
@@ -311,7 +316,7 @@ describe("UniversityCard", () => {
     const user = userEvent.setup();
 
     const viewDetailsButton = screen.getByRole("button", {
-      name: /View details/i,
+      name: /Expand/i,
     });
     await user.click(viewDetailsButton);
 

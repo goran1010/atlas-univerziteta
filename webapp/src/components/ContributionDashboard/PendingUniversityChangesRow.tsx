@@ -1,7 +1,7 @@
 import { useState, use, type Dispatch, type SetStateAction } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Button } from "../sharedComponents/Button";
-import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
+import { Dialog } from "../sharedComponents/Dialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
 import type { PendingChange } from "../../schemas/pendingChange";
@@ -32,7 +32,12 @@ function PendingUniversityChangesRow({
   const { t, addNotification, serverStatus } = use(RootContext);
   const [loading, setLoading] = useState(false);
   const ctx = { addNotification, setLoading, t, serverStatus };
-  const [expanded, setExpanded] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  async function handleDelete() {
+    await handleDiscardUniversityChange(change.id, setPendingChanges, ctx);
+    setDialogOpen(false);
+  }
 
   const isEven = index % 2 === 0;
 
@@ -66,39 +71,50 @@ function PendingUniversityChangesRow({
           </span>
         </div>
 
-        <div className="flex justify-end items-center gap-2">
-          <DetailsToggleButton
-            expanded={expanded}
-            className="px-2 py-1 text-xs"
+        <div className="flex flex-col sm:flex-row justify-end items-center gap-2">
+          <Button
+            className="px-3 py-1.5 text-xs"
             onClick={() => {
-              setExpanded((prev) => !prev);
+              setDialogOpen(true);
             }}
-          />
+          >
+            {t("universitiesPage.viewInfo")}
+          </Button>
           <Button
             variant="danger"
-            className="px-2 py-1 text-xs"
+            className="px-3 py-1.5 text-xs"
             loading={loading}
-            onClick={() =>
-              void handleDiscardUniversityChange(
-                change.id,
-                setPendingChanges,
-                ctx,
-              )
-            }
+            onClick={() => void handleDelete()}
           >
             {t("contribution.deleteChange")}
           </Button>
         </div>
       </div>
 
-      {expanded && (
+      <Dialog
+        open={dialogOpen}
+        onClose={() => {
+          setDialogOpen(false);
+        }}
+        title={`${t(`contribution.changeTypes.${change.typeOfChange}`)} ${t(`contribution.entityTypes.${change.entityType}`)}`}
+        footer={
+          <Button
+            variant="danger"
+            className="sm:w-auto"
+            loading={loading}
+            onClick={() => void handleDelete()}
+          >
+            {t("contribution.deleteChange")}
+          </Button>
+        }
+      >
         <PendingChangeDetail
           entityType={change.entityType}
           typeOfChange={change.typeOfChange}
           data={change.data}
           currentEntity={change.currentEntity ?? null}
         />
-      )}
+      </Dialog>
     </li>
   );
 }

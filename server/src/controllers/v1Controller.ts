@@ -26,7 +26,8 @@ async function getUniversities(_req: Request, res: Response) {
 }
 
 async function search(req: Request, res: Response) {
-  const { searchTerm } = universityValidation.searchQuery(req.query);
+  const { searchTerm, entity, ownership, cycle } =
+    universityValidation.searchQuery(req.query);
 
   // Match any accent variant of the term (e.g. "dzemal" also finds "Džemal").
   const variants = expandSearchTerm(searchTerm);
@@ -91,12 +92,18 @@ async function search(req: Request, res: Response) {
   const [universities, faculties, studyPrograms, tracks] = await Promise.all([
     prisma.university.findMany({
       where: {
-        OR: [
-          ...textContains("name"),
-          ...textContains("city"),
-          ...textContains("acronym"),
-          ...enumMatch("entity", ENTITIES),
-          ...enumMatch("ownership", OWNERSHIPS),
+        AND: [
+          {
+            OR: [
+              ...textContains("name"),
+              ...textContains("city"),
+              ...textContains("acronym"),
+              ...enumMatch("entity", ENTITIES),
+              ...enumMatch("ownership", OWNERSHIPS),
+            ],
+          },
+          ...(entity ? [{ entity }] : []),
+          ...(ownership ? [{ ownership }] : []),
         ],
       },
       orderBy: [{ ownership: "asc" }, { name: "asc" }],
@@ -104,10 +111,16 @@ async function search(req: Request, res: Response) {
     }),
     prisma.faculty.findMany({
       where: {
-        OR: [
-          ...textContains("name"),
-          ...textContains("city"),
-          ...relationContains("university", "name"),
+        AND: [
+          {
+            OR: [
+              ...textContains("name"),
+              ...textContains("city"),
+              ...relationContains("university", "name"),
+            ],
+          },
+          ...(entity ? [{ university: { entity } }] : []),
+          ...(ownership ? [{ university: { ownership } }] : []),
         ],
       },
       orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
@@ -117,11 +130,18 @@ async function search(req: Request, res: Response) {
     }),
     prisma.studyProgram.findMany({
       where: {
-        OR: [
-          ...textContains("name"),
-          ...textContains("language"),
-          ...relationContains("faculty", "name"),
-          ...enumMatch("cycle", CYCLES),
+        AND: [
+          {
+            OR: [
+              ...textContains("name"),
+              ...textContains("language"),
+              ...relationContains("faculty", "name"),
+              ...enumMatch("cycle", CYCLES),
+            ],
+          },
+          ...(cycle ? [{ cycle }] : []),
+          ...(entity ? [{ faculty: { university: { entity } } }] : []),
+          ...(ownership ? [{ faculty: { university: { ownership } } }] : []),
         ],
       },
       orderBy: [{ cycle: "asc" }, { name: "asc" }],
@@ -135,9 +155,26 @@ async function search(req: Request, res: Response) {
     }),
     prisma.track.findMany({
       where: {
-        OR: [
-          ...textContains("name"),
-          ...relationContains("studyProgram", "name"),
+        AND: [
+          {
+            OR: [
+              ...textContains("name"),
+              ...relationContains("studyProgram", "name"),
+            ],
+          },
+          ...(cycle ? [{ studyProgram: { cycle } }] : []),
+          ...(entity
+            ? [{ studyProgram: { faculty: { university: { entity } } } }]
+            : []),
+          ...(ownership
+            ? [
+                {
+                  studyProgram: {
+                    faculty: { university: { ownership } },
+                  },
+                },
+              ]
+            : []),
         ],
       },
       orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }],
@@ -209,4 +246,64 @@ async function getUniversityById(req: Request, res: Response) {
   });
 }
 
-export { status, getUniversities, search, getUniversityById };
+async function getFacultyById(req: Request, res: Response) {
+  const { id } = universityValidation.getFacultyById(req.params);
+
+  const faculty = await prisma.faculty.findUnique({
+    where: { id },
+    include: {
+      university: true,
+      studyPrograms: {
+        orderBy: [{ cycle: "asc" }, { name: "asc" }],
+        include: {
+          tracks: { orderBy: { name: "asc" } },
+        },
+      },
+    },
+  });
+  if (!faculty) {
+    sendError(res, {
+      status: 404,
+      message: "Faculty not found.",
+    });
+    return;
+  }
+  sendSuccess(res, {
+    message: "Faculty retrieved successfully.",
+    data: faculty,
+  });
+}
+
+async function getStudyProgramById(req: Request, res: Response) {
+  const { id } = universityValidation.getStudyProgramById(req.params);
+
+  const studyProgram = await prisma.studyProgram.findUnique({
+    where: { id },
+    include: {
+      faculty: {
+        include: { university: true },
+      },
+      tracks: { orderBy: { name: "asc" } },
+    },
+  });
+  if (!studyProgram) {
+    sendError(res, {
+      status: 404,
+      message: "Study program not found.",
+    });
+    return;
+  }
+  sendSuccess(res, {
+    message: "Study program retrieved successfully.",
+    data: studyProgram,
+  });
+}
+
+export {
+  status,
+  getUniversities,
+  search,
+  getUniversityById,
+  getFacultyById,
+  getStudyProgramById,
+};

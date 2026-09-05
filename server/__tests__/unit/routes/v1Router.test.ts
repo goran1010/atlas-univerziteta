@@ -56,16 +56,14 @@ const dummyData: { data: University[] } = {
 };
 
 vi.spyOn(prisma.studyProgram, "findMany").mockImplementation((args) => {
-  const normalizedTerm =
-    (
-      args?.where as
-        | {
-            OR?: {
-              name?: { contains?: string };
-            }[];
-          }
-        | undefined
-    )?.OR?.[0]?.name?.contains?.toLowerCase() ?? "";
+  const where = args?.where as
+    | {
+        AND?: { OR?: { name?: { contains?: string } }[] }[];
+        OR?: { name?: { contains?: string } }[];
+      }
+    | undefined;
+  const orClause = where?.AND?.[0]?.OR ?? where?.OR;
+  const normalizedTerm = orClause?.[0]?.name?.contains?.toLowerCase() ?? "";
 
   const dummyStudyPrograms = [
     { id: 1, name: "Computer Science" },
@@ -80,17 +78,14 @@ vi.spyOn(prisma.studyProgram, "findMany").mockImplementation((args) => {
 });
 
 vi.spyOn(prisma.faculty, "findMany").mockImplementation((args) => {
-  const normalizedTerm =
-    (
-      args?.where as
-        | {
-            OR?: {
-              name?: { contains?: string };
-              city?: { contains?: string };
-            }[];
-          }
-        | undefined
-    )?.OR?.[0]?.name?.contains?.toLowerCase() ?? "";
+  const where = args?.where as
+    | {
+        AND?: { OR?: { name?: { contains?: string } }[] }[];
+        OR?: { name?: { contains?: string } }[];
+      }
+    | undefined;
+  const orClause = where?.AND?.[0]?.OR ?? where?.OR;
+  const normalizedTerm = orClause?.[0]?.name?.contains?.toLowerCase() ?? "";
 
   const dummyFaculties = [
     { id: 1, name: "Faculty of Electrical Engineering", city: "Sarajevo" },
@@ -126,18 +121,15 @@ vi.spyOn(prisma.university, "findUnique").mockImplementation(
 function mockUniversitySearch(
   args?: UniversityFindManyArgs,
 ): ReturnType<typeof prisma.university.findMany> {
-  const normalizedTerm =
-    (
-      args?.where as
-        | {
-            OR?: {
-              name?: { contains?: string };
-              city?: { contains?: string };
-              acronym?: { contains?: string };
-            }[];
-          }
-        | undefined
-    )?.OR?.[0]?.name?.contains?.toLowerCase() ?? "";
+  const where = args?.where as
+    | {
+        AND?: { OR?: { name?: { contains?: string } }[] }[];
+        OR?: { name?: { contains?: string } }[];
+      }
+    | undefined;
+
+  const orClause = where?.AND?.[0]?.OR ?? where?.OR;
+  const normalizedTerm = orClause?.[0]?.name?.contains?.toLowerCase() ?? "";
 
   return Promise.resolve(
     dummyData.data.filter(

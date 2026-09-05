@@ -13,12 +13,24 @@ const EMPTY_RESULTS: UnifiedSearchResults = {
   tracks: [],
 };
 
+interface SearchFilters {
+  entity?: string;
+  ownership?: string;
+  cycle?: string;
+}
+
 async function searchAll(
   term: string,
   serverStatus: ServerStatus,
+  filters?: SearchFilters,
 ): Promise<UnifiedSearchResults> {
+  const params = new URLSearchParams({ searchTerm: term });
+  if (filters?.entity) params.set("entity", filters.entity);
+  if (filters?.ownership) params.set("ownership", filters.ownership);
+  if (filters?.cycle) params.set("cycle", filters.cycle);
+
   const res = await guardedFetch(
-    `${SERVER_URL}/api/v1/search?searchTerm=${encodeURIComponent(term)}`,
+    `${SERVER_URL}/api/v1/search?${params.toString()}`,
     { method: "GET", mode: "cors" },
     { serverStatus },
   );

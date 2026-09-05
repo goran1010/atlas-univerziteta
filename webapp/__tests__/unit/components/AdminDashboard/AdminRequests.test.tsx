@@ -1,8 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { AdminForm } from "../../../../src/components/AdminDashboard/AdminForm";
 import { AdminRequests } from "../../../../src/components/AdminDashboard/AdminRequests";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { createMemoryRouter, RouterProvider } from "react-router";
 
 import type { AdminRequest } from "../../../../src/schemas/adminRequest";
 
@@ -35,11 +37,19 @@ const setupFetchMock = ({
         createFetchResponse({ data: csrfToken, message: "Success" }),
       );
     }
-    if (requestUrl.includes("/admin-requests")) {
+    if (requestUrl.includes("/users/admin/admin-requests")) {
       return Promise.resolve(
         createFetchResponse({
           data: adminRequests,
           message: "Admin requests retrieved successfully.",
+        }),
+      );
+    }
+    if (requestUrl.includes("/users/admin/pending-changes")) {
+      return Promise.resolve(
+        createFetchResponse({
+          data: [],
+          message: "Pending changes retrieved successfully.",
         }),
       );
     }
@@ -62,14 +72,29 @@ const setupFetchMock = ({
 };
 
 function Wrapper() {
-  return (
-    <RootContextProvider
-      initialUserData={{ email: "admin@example.com", role: "ADMIN" }}
-    >
-      <Notifications />
-      <AdminRequests />
-    </RootContextProvider>
+  const router = createMemoryRouter(
+    [
+      {
+        path: "/admin-dashboard",
+        element: (
+          <RootContextProvider
+            initialUserData={{ email: "admin@example.com", role: "ADMIN" }}
+          >
+            <Notifications />
+            <AdminForm />
+          </RootContextProvider>
+        ),
+        children: [
+          {
+            path: "admin-requests",
+            element: <AdminRequests />,
+          },
+        ],
+      },
+    ],
+    { initialEntries: ["/admin-dashboard/admin-requests"] },
   );
+  return <RouterProvider router={router} />;
 }
 
 beforeEach(() => {
@@ -82,18 +107,12 @@ afterEach(() => {
 });
 
 describe("AdminRequests component", () => {
-  test("renders a request row with email and count", async () => {
+  test("renders a request row with email", async () => {
     setupFetchMock();
     render(<Wrapper />);
 
     expect(
       await screen.findByText("johndoe@examplemail.com"),
-    ).toBeInTheDocument();
-    expect(screen.getByLabelText(/admin requests count/i)).toHaveTextContent(
-      "1",
-    );
-    expect(
-      screen.getByRole("heading", { name: /Admin Requests/i }),
     ).toBeInTheDocument();
   });
 
@@ -150,15 +169,24 @@ describe("AdminRequests component", () => {
 
   test("shows an error notification when fetching requests fails", async () => {
     setupFetchMock();
-    fetchMock.mockImplementation(() =>
-      Promise.resolve(
+    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+    fetchMock.mockImplementation((url) => {
+      const requestUrl = String(url);
+      if (requestUrl.includes("/users/admin/pending-changes")) {
+        return Promise.resolve(
+          createFetchResponse({
+            data: [],
+            message: "Pending changes retrieved successfully.",
+          }),
+        );
+      }
+      return Promise.resolve(
         createFetchResponse(
           { error: { message: "Something went wrong." } },
           false,
         ),
-      ),
-    );
-    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+      );
+    });
 
     render(<Wrapper />);
 

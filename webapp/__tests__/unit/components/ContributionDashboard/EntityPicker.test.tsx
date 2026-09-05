@@ -103,6 +103,8 @@ describe("getPickerDepth", () => {
 });
 
 describe("EntityPicker", () => {
+  vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+
   test("reports the university id at depth 1", async () => {
     const onSelect = renderPicker(1);
     const user = userEvent.setup();

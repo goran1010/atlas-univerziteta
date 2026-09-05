@@ -130,11 +130,36 @@
 @layer base {
   main a {
     color: var(--accent-text);
-    text-decoration-color: transparent;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
   }
   main a:hover {
     color: var(--accent-text-hover);
-    text-decoration-color: currentColor;
+    text-decoration-thickness: 2px;
+  }
+  footer a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  footer a:hover {
+    text-decoration-thickness: 2px;
+  }
+  a[target="_blank"]::after {
+    content: " (opens in new tab)";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  main a[class*="rounded"] {
+    text-decoration: none;
   }
 
   html {

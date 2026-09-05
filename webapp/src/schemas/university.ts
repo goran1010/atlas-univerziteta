@@ -100,6 +100,8 @@ const searchResultUniversitySchema = z.object({
   name: z.string().min(1),
   acronym: optionalTextSchema,
   city: z.string().min(1),
+  entity: entitySchema,
+  ownership: ownershipSchema,
 });
 
 const studyProgramSearchResultSchema = z.object({
@@ -156,6 +158,30 @@ const unifiedSearchResponseSchema = z.object({
   }),
 });
 
+const facultyDetailSchema = facultySchema.extend({
+  university: universitySchema,
+});
+
+const facultyDetailResponseSchema = z.object({
+  message: z.string(),
+  data: facultyDetailSchema,
+});
+
+const studyProgramDetailSchema = studyProgramSchema.extend({
+  faculty: z.object({
+    id: positiveIntegerSchema,
+    name: z.string().min(1),
+    university: universitySchema,
+  }),
+});
+
+const studyProgramDetailResponseSchema = z.object({
+  message: z.string(),
+  data: studyProgramDetailSchema,
+});
+
+export type FacultyDetail = z.infer<typeof facultyDetailSchema>;
+export type StudyProgramDetail = z.infer<typeof studyProgramDetailSchema>;
 export type UniversityDetail = z.infer<typeof universityDetailSchema>;
 export type UniversityListItem = z.infer<typeof universityListItemSchema>;
 export type UniversityDetailFaculty = UniversityDetail["faculties"][number];
@@ -175,4 +201,6 @@ export {
   unifiedSearchResponseSchema,
   universityDetailResponseSchema,
   universityListResponseSchema,
+  facultyDetailResponseSchema,
+  studyProgramDetailResponseSchema,
 };

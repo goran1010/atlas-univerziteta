@@ -2,6 +2,7 @@ import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Spinner } from "../../utils/Spinner";
+import { tCount } from "../../utils/pluralize";
 import { ContactLinks } from "./ContactLinks";
 import { FacultyRow } from "./FacultyRow";
 import { ResultGroup } from "./ResultGroup";
@@ -121,8 +122,14 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               {university._count.faculties > 0 && (
                 <span>
                   <span aria-hidden="true">🏛️</span>{" "}
-                  {university._count.faculties}{" "}
-                  {t("universitiesPage.facultyCount")}
+                  <span className="font-bold text-blue-600 dark:text-blue-400">
+                    {university._count.faculties}
+                  </span>{" "}
+                  {tCount(
+                    t,
+                    "universitiesPage.facultyCount",
+                    university._count.faculties,
+                  )}
                 </span>
               )}
               {university.foundedYear && (
@@ -155,8 +162,14 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
             {detailData.faculties.length > 0 ? (
               <>
                 <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">
-                  {detailData.faculties.length}{" "}
-                  {t("universitiesPage.faculties")}
+                  <span className="text-blue-600 dark:text-blue-400">
+                    {detailData.faculties.length}
+                  </span>{" "}
+                  {tCount(
+                    t,
+                    "universitiesPage.facultyCount",
+                    detailData.faculties.length,
+                  )}
                 </p>
                 <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
                   {facultyCityGroups.length > 1 ? (
@@ -164,7 +177,12 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                       {facultyCityGroups.map((g) => (
                         <ResultGroup key={g.key} label={g.key}>
                           {g.items.map((f) => (
-                            <FacultyRow key={f.id} faculty={f} t={t} />
+                            <FacultyRow
+                              key={f.id}
+                              faculty={f}
+                              t={t}
+                              university={detailData}
+                            />
                           ))}
                         </ResultGroup>
                       ))}
@@ -172,7 +190,12 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                   ) : (
                     <ul className="space-y-1">
                       {detailData.faculties.map((f) => (
-                        <FacultyRow key={f.id} faculty={f} t={t} />
+                        <FacultyRow
+                          key={f.id}
+                          faculty={f}
+                          t={t}
+                          university={detailData}
+                        />
                       ))}
                     </ul>
                   )}

@@ -16,6 +16,8 @@ function Wrapper() {
 }
 
 describe("GetAllUniversities", () => {
+  vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+
   beforeEach(() => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       new Response(
@@ -71,7 +73,7 @@ describe("GetAllUniversities", () => {
     render(<Wrapper />);
 
     const universityName = await screen.findByText(/University of Sarajevo/i);
-    const detailsButton = screen.getByRole("button", { name: /View details/i });
+    const detailsButton = screen.getByRole("button", { name: /Expand/i });
 
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(universityName).toBeInTheDocument();

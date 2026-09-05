@@ -115,7 +115,7 @@ function DataCard({ heading, rows }: { heading: string; rows: DetailRow[] }) {
                 >
                   {row.label}
                 </th>
-                <td className="py-1.5 text-(--text-primary) wrap-break-word">
+                <td className="py-1.5 text-(--text-primary) text-right wrap-break-word">
                   {row.value}
                 </td>
               </tr>

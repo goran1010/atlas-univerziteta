@@ -150,6 +150,7 @@ describe("useFetchList", () => {
   });
 
   test("uses the translated error message when the request fails", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     const addNotification = vi.fn();
     const setLoading = vi.fn();
     mockedGuardedFetch.mockResolvedValue(

@@ -8,10 +8,11 @@ import { useNotification } from "./customHooks/useNotification";
 import { useServerWakeUp } from "./customHooks/useServerWakeUp";
 import { useCloseMenu } from "./customHooks/useCloseMenu";
 import { useLanguage } from "./customHooks/useLanguage";
-import { HelmetProvider } from "react-helmet-async";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { RootContext } from "./contextData/RootContext";
 import { SkipNavbarLink } from "./components/utils/SkipNavbarLink";
 import { RouteAnnouncer } from "./components/utils/RouteAnnouncer";
+import { SITE_URL } from "./utils/envConfig";
 
 function App() {
   const closeMenu = useCloseMenu();
@@ -46,6 +47,19 @@ function App() {
       }}
     >
       <HelmetProvider>
+        <Helmet>
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="UniAtlas Bosnia" />
+          <meta
+            property="og:image"
+            content={`${SITE_URL}/images/og-image-home.png`}
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:image"
+            content={`${SITE_URL}/images/og-image-home.png`}
+          />
+        </Helmet>
         <>
           <ScrollToTop />
           <RouteAnnouncer />

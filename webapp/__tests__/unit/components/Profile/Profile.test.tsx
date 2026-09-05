@@ -137,6 +137,7 @@ describe("Profile Component handle logout", () => {
   });
 
   test("handles logout failure due to server error", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     const fetchSpy = vi.spyOn(globalThis, "fetch");
     const mockErrorResponse = new Response(
       JSON.stringify({

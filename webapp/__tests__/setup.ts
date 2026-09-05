@@ -21,6 +21,11 @@ Object.defineProperty(window, "matchMedia", {
   value: vi.fn().mockImplementation(() => media),
 });
 
+// jsdom doesn't implement scrollTo or the <dialog> API; stub them.
+window.scrollTo = vi.fn() as typeof window.scrollTo;
+HTMLDialogElement.prototype.showModal = vi.fn();
+HTMLDialogElement.prototype.close = vi.fn();
+
 afterEach(() => {
   cleanup();
 });

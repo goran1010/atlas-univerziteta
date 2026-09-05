@@ -10,10 +10,7 @@ const server = app.listen(env.PORT, (error) => {
 let shuttingDown = false;
 
 type GracefulShutdownSignal =
-  | "SIGTERM"
-  | "SIGINT"
-  | "uncaughtException"
-  | "unhandledRejection";
+  "SIGTERM" | "SIGINT" | "uncaughtException" | "unhandledRejection";
 
 function gracefulShutdown(signal: GracefulShutdownSignal, exitCode = 0) {
   if (shuttingDown) {

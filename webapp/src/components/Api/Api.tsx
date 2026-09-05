@@ -3,7 +3,8 @@ import { apiEndpoints } from "./utils/endpoints";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
-import { PUBLIC_API_URL } from "../../utils/envConfig";
+import { PUBLIC_API_URL, SITE_URL } from "../../utils/envConfig";
+import { GitHubIcon } from "../sharedComponents/icons";
 
 function Api() {
   const { t } = use(RootContext);
@@ -14,14 +15,8 @@ function Api() {
         <title>{`${t("title.api")} | ${t("title.app")}`}</title>
         <meta name="description" content={t("meta.api")} />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://uniatlas-bosnia.netlify.app/api-docs"
-        />
-        <meta
-          property="og:url"
-          content="https://uniatlas-bosnia.netlify.app/api-docs"
-        />
+        <link rel="canonical" href={`${SITE_URL}/api-docs`} />
+        <meta property="og:url" content={`${SITE_URL}/api-docs`} />
         <meta
           property="og:title"
           content={`${t("title.api")} | ${t("title.app")}`}
@@ -48,7 +43,9 @@ function Api() {
               href="https://github.com/goran1010/uniatlas-bosnia"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 align-middle"
             >
+              <GitHubIcon size={14} />
               GitHub README
             </a>
             .

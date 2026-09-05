@@ -1,28 +1,27 @@
 import { z } from "zod";
 import { parseRequest } from "./parseRequest.js";
 
-const getUniversityByIdParamsSchema = z.strictObject({
-  id: z
-    .string()
-    .trim()
-    .transform(Number)
-    .pipe(
-      z
-        .number()
-        .int({
-          error: "University ID must be an integer.",
-        })
-        .positive({
-          error: "University ID must be positive.",
-        }),
-    ),
-});
+const positiveIdParam = z
+  .string()
+  .trim()
+  .transform(Number)
+  .pipe(z.number().int().positive());
+
+const idParamsSchema = z.strictObject({ id: positiveIdParam });
 
 function getUniversityById(input: unknown) {
-  return parseRequest(getUniversityByIdParamsSchema, input);
+  return parseRequest(idParamsSchema, input);
 }
 
-const searchQuerySchema = z.strictObject({
+function getFacultyById(input: unknown) {
+  return parseRequest(idParamsSchema, input);
+}
+
+function getStudyProgramById(input: unknown) {
+  return parseRequest(idParamsSchema, input);
+}
+
+const searchQuerySchema = z.object({
   searchTerm: z
     .string()
     .trim()
@@ -32,10 +31,22 @@ const searchQuerySchema = z.strictObject({
     .max(100, {
       message: "Search term must not exceed 100 characters.",
     }),
+  entity: z.enum(["FBIH", "RS", "BD"]).optional(),
+  ownership: z.enum(["PUBLIC", "PRIVATE"]).optional(),
+  cycle: z
+    .enum([
+      "FIRST",
+      "SECOND",
+      "THIRD",
+      "INTEGRATED",
+      "VOCATIONAL",
+      "SPECIALIST",
+    ])
+    .optional(),
 });
 
 function searchQuery(input: unknown) {
   return parseRequest(searchQuerySchema, input);
 }
 
-export { getUniversityById, searchQuery };
+export { getUniversityById, getFacultyById, getStudyProgramById, searchQuery };

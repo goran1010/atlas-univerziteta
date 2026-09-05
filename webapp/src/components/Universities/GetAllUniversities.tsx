@@ -73,13 +73,18 @@ function GetAllUniversities() {
   }
 
   const groups = groupBy(universities, (u) =>
-    t(`universitiesPage.ownership.${u.ownership}`),
+    t(`universitiesPage.ownershipGroup.${u.ownership}`),
   );
 
   return (
     <div className="flex flex-col gap-4 w-full">
       {groups.map((group) => (
-        <ResultGroup key={group.key} label={group.key}>
+        <ResultGroup
+          key={group.key}
+          label={group.key}
+          collapsible
+          count={group.items.length}
+        >
           {group.items.map((u) => (
             <UniversityCard key={u.id} university={u} />
           ))}

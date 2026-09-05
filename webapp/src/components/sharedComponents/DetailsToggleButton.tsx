@@ -26,9 +26,7 @@ function DetailsToggleButton({
       aria-expanded={expanded}
     >
       <span aria-hidden="true">{expanded ? "▲" : "▼"}</span>{" "}
-      {expanded
-        ? t("universitiesPage.hideDetails")
-        : t("universitiesPage.viewDetails")}
+      {expanded ? t("universitiesPage.collapse") : t("universitiesPage.expand")}
     </Button>
   );
 }

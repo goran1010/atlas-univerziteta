@@ -146,8 +146,7 @@ describe("handleSubmitUniversityEntity", () => {
     const { handleSubmitUniversityEntity } =
       await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
     let updatePendingChanges:
-      | ((prev: PendingChange[]) => PendingChange[])
-      | undefined;
+      ((prev: PendingChange[]) => PendingChange[]) | undefined;
     const setPendingChanges = (updater: SetStateAction<PendingChange[]>) => {
       if (typeof updater === "function") {
         updatePendingChanges = updater;
@@ -310,6 +309,7 @@ describe("handleSubmitUniversityEntity", () => {
   });
 
   test("does not request a CSRF token or submit an invalid target ID", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => vi.fn());
     const addNotification = vi.fn();
 
     const { handleSubmitUniversityEntity } =

@@ -37,6 +37,8 @@ const facultyResult = {
     name: "University of Sarajevo",
     acronym: "UNSA",
     city: "Sarajevo",
+    entity: "FBIH",
+    ownership: "PUBLIC",
   },
 };
 
@@ -55,6 +57,8 @@ const studyProgramResult = {
       name: "University of Sarajevo",
       acronym: "UNSA",
       city: "Sarajevo",
+      entity: "FBIH",
+      ownership: "PUBLIC",
     },
   },
 };
@@ -78,6 +82,8 @@ const trackResult = {
         name: "University of Sarajevo",
         acronym: "UNSA",
         city: "Sarajevo",
+        entity: "FBIH",
+        ownership: "PUBLIC",
       },
     },
   },
@@ -107,6 +113,8 @@ function searchResponse(
 }
 
 describe("UnifiedSearch", () => {
+  vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+
   beforeEach(() => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       searchResponse({
