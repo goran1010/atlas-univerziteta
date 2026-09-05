@@ -1,3 +1,5 @@
+import { tCount } from "../../utils/pluralize";
+
 import type { TFunction } from "../../types/i18n";
 import type { UniversityDetailTrack } from "../../schemas/university";
 
@@ -14,7 +16,8 @@ function TrackRow({
       <span className="flex gap-2 flex-wrap text-xs text-(--text-muted)">
         {track.durationYears != null && (
           <span>
-            {track.durationYears} {t("universitiesPage.durationYears")}
+            {track.durationYears}{" "}
+            {tCount(t, "universitiesPage.durationYears", track.durationYears)}
           </span>
         )}
         {track.ects != null && (

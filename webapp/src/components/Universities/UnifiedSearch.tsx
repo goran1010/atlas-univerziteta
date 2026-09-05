@@ -57,8 +57,8 @@ function ResultSection({
         <h2 className="text-lg font-semibold text-(--text-primary)">
           {heading}
           {!isEmpty && (
-            <span className="ml-2 text-sm font-normal text-(--text-muted)">
-              ({count})
+            <span className="ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold align-middle bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200">
+              {count}
             </span>
           )}
         </h2>

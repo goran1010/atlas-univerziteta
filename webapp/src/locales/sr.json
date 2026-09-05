@@ -365,8 +365,17 @@
     },
     "faculties": "Fakulteti",
     "facultyCount": "fakulteta",
+    "facultyCount_one": "fakultet",
+    "facultyCount_few": "fakulteta",
+    "facultyCount_other": "fakulteta",
     "studyPrograms": "Studijski programi",
+    "studyProgramCount_one": "studijski program",
+    "studyProgramCount_few": "studijska programa",
+    "studyProgramCount_other": "studijskih programa",
     "tracks": "Smjerovi",
+    "trackCount_one": "smjer",
+    "trackCount_few": "smjera",
+    "trackCount_other": "smjerova",
     "cycle": "Ciklus",
     "cycles": {
       "FIRST": "Prvi (Bachelor)",
@@ -378,6 +387,9 @@
     },
     "ects": "ECTS",
     "durationYears": "godine",
+    "durationYears_one": "godina",
+    "durationYears_few": "godine",
+    "durationYears_other": "godina",
     "noStudyPrograms": "Nema dostupnih studijskih programa.",
     "website": "Web stranica",
     "foundedYear": "Osnovan",
@@ -386,6 +398,10 @@
     "ownership": {
       "PUBLIC": "Javni",
       "PRIVATE": "Privatni"
+    },
+    "ownershipGroup": {
+      "PUBLIC": "Javni univerziteti",
+      "PRIVATE": "Privatni univerziteti"
     },
     "clearSearch": "Obriši pretragu"
   }

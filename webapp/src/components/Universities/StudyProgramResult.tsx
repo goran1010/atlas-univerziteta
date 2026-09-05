@@ -10,6 +10,7 @@ import { guardedFetch } from "../../utils/guardedFetch";
 import { readErrorMessage } from "../../schemas/api";
 import { isServerNotReadyError } from "../../utils/serverStatus";
 import { studyProgramDetailResponseSchema } from "../../schemas/university";
+import { tCount } from "../../utils/pluralize";
 
 import type { TFunction } from "../../types/i18n";
 import type {
@@ -103,7 +104,10 @@ function StudyProgramResult({
           {detailData.tracks.length > 0 ? (
             <>
               <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">
-                {detailData.tracks.length} {t("universitiesPage.tracks")}
+                <span className="text-blue-600 dark:text-blue-400">
+                  {detailData.tracks.length}
+                </span>{" "}
+                {tCount(t, "universitiesPage.trackCount", detailData.tracks.length)}
               </p>
               <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
                 <ul>

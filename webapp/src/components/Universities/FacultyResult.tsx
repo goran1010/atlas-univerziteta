@@ -12,6 +12,7 @@ import { guardedFetch } from "../../utils/guardedFetch";
 import { readErrorMessage } from "../../schemas/api";
 import { isServerNotReadyError } from "../../utils/serverStatus";
 import { facultyDetailResponseSchema } from "../../schemas/university";
+import { tCount } from "../../utils/pluralize";
 
 import type { FacultySearchResult, FacultyDetail } from "../../schemas/university";
 
@@ -95,8 +96,10 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
           {detailData.studyPrograms.length > 0 ? (
             <>
               <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">
-                {detailData.studyPrograms.length}{" "}
-                {t("universitiesPage.studyPrograms")}
+                <span className="text-blue-600 dark:text-blue-400">
+                  {detailData.studyPrograms.length}
+                </span>{" "}
+                {tCount(t, "universitiesPage.studyProgramCount", detailData.studyPrograms.length)}
               </p>
               <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
                 <div className="flex flex-col gap-2">

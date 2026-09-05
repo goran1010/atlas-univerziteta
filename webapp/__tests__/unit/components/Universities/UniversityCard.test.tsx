@@ -171,7 +171,10 @@ describe("UniversityCard", () => {
     });
     await user.click(viewDetailsButton);
 
-    const facultiesTitle = await screen.findByText(/1 Faculties/i);
+    const facultiesTitle = await screen.findByText(
+      (_content, element) =>
+        element?.tagName === "P" && /1\s+faculty/i.test(element.textContent ?? ""),
+    );
     expect(facultiesTitle).toBeInTheDocument();
 
     // Faculty name is now plain text; its "View details" button is a sibling
@@ -196,7 +199,7 @@ describe("UniversityCard", () => {
     await user.click(studyProgramViewButton);
 
     const trackName = await screen.findByText(/Software Track/i);
-    const durationText = screen.getByText(/1 years/i);
+    const durationText = screen.getByText(/1 year\b/i);
     const ectsText = screen.getByText(/60 ECTS/i);
 
     expect(trackName).toBeInTheDocument();

@@ -1,5 +1,6 @@
 import { ResultCard } from "./ResultCard";
 import { FacultyBreadcrumb } from "./FacultyBreadcrumb";
+import { tCount } from "../../utils/pluralize";
 
 import type { TFunction } from "../../types/i18n";
 import type { TrackSearchResult } from "../../schemas/university";
@@ -18,7 +19,7 @@ function TrackResult({ track, t }: { track: TrackSearchResult; t: TFunction }) {
         {track.durationYears != null && (
           <span>
             <span aria-hidden="true">🕐</span> {track.durationYears}{" "}
-            {t("universitiesPage.durationYears")}
+            {tCount(t, "universitiesPage.durationYears", track.durationYears)}
           </span>
         )}
         {track.ects != null && (

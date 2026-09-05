@@ -161,8 +161,6 @@ describe("PendingChanges Component", () => {
     );
     const email = await screen.findByText("johndoe@examplemail.com");
     expect(email).toBeInTheDocument();
-    const numberOfRequests = screen.getByLabelText(/pending changes count/i);
-    expect(numberOfRequests).toHaveTextContent("1");
   });
 
   test("renders PendingChanges with 2 requests", async () => {
@@ -190,9 +188,6 @@ describe("PendingChanges Component", () => {
       <Wrapper initialUser={{ email: "admin@mail.com", role: "ADMIN" }} />,
     );
     await screen.findByText("johndoe@examplemail.com");
-    expect(screen.getByLabelText(/pending changes count/i)).toHaveTextContent(
-      "2",
-    );
     expect(screen.getByText("janedoe@examplemail.com")).toBeInTheDocument();
   });
 

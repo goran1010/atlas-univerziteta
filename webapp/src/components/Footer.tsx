@@ -7,7 +7,7 @@ function Footer() {
 
   return (
     <footer className="w-full flex justify-between items-center font-bold px-3 py-2 text-(--text-primary) border-t border-(--border-color) backdrop-blur">
-      <address className="not-italic w-full flex justify-between items-center">
+      <address className="not-italic w-full flex flex-col sm:flex-row justify-between items-center gap-1">
         <a
           href="https://github.com/goran1010"
           target="_blank"

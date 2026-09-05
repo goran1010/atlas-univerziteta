@@ -365,8 +365,17 @@
     },
     "faculties": "Faculties",
     "facultyCount": "faculties",
+    "facultyCount_one": "faculty",
+    "facultyCount_few": "faculties",
+    "facultyCount_other": "faculties",
     "studyPrograms": "Study Programs",
+    "studyProgramCount_one": "study program",
+    "studyProgramCount_few": "study programs",
+    "studyProgramCount_other": "study programs",
     "tracks": "Tracks (smjerovi)",
+    "trackCount_one": "track",
+    "trackCount_few": "tracks",
+    "trackCount_other": "tracks",
     "cycle": "Cycle",
     "cycles": {
       "FIRST": "First (Bachelor)",
@@ -378,6 +387,9 @@
     },
     "ects": "ECTS",
     "durationYears": "years",
+    "durationYears_one": "year",
+    "durationYears_few": "years",
+    "durationYears_other": "years",
     "noStudyPrograms": "No study programs available.",
     "website": "Website",
     "foundedYear": "Founded",
@@ -386,6 +398,10 @@
     "ownership": {
       "PUBLIC": "Public",
       "PRIVATE": "Private"
+    },
+    "ownershipGroup": {
+      "PUBLIC": "Public universities",
+      "PRIVATE": "Private universities"
     },
     "clearSearch": "Clear search"
   }

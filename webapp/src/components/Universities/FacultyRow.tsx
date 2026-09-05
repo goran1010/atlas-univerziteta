@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
+import { tCount } from "../../utils/pluralize";
 import { ContactLinks } from "./ContactLinks";
 import { ResultGroup } from "./ResultGroup";
 import { StudyProgramRow } from "./StudyProgramRow";
@@ -26,8 +27,10 @@ function FacultyRow({
             {faculty.studyPrograms.length > 0 && (
               <span>
                 <span aria-hidden="true">🎓</span>{" "}
-                {faculty.studyPrograms.length}{" "}
-                {t("universitiesPage.studyPrograms")}
+                <span className="font-bold text-blue-600 dark:text-blue-400">
+                  {faculty.studyPrograms.length}
+                </span>{" "}
+                {tCount(t, "universitiesPage.studyProgramCount", faculty.studyPrograms.length)}
               </span>
             )}
             <ContactLinks
@@ -50,6 +53,12 @@ function FacultyRow({
       </div>
       {open && faculty.studyPrograms.length > 0 && (
         <div className="ml-0.5 sm:ml-4 mt-1 border-l-2 border-indigo-200 dark:border-indigo-700 pl-1.5 sm:pl-3">
+          <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-1">
+            <span className="text-blue-600 dark:text-blue-400">
+              {faculty.studyPrograms.length}
+            </span>{" "}
+            {tCount(t, "universitiesPage.studyProgramCount", faculty.studyPrograms.length)}
+          </p>
           <div className="flex flex-col gap-2">
             {groupBy(faculty.studyPrograms, (sp) =>
               t(`universitiesPage.cycles.${sp.cycle}`),
