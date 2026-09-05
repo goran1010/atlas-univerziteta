@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
+import { SITE_URL } from "../../utils/envConfig";
 
 function About() {
   const { t, userData } = use(RootContext);
@@ -15,11 +16,11 @@ function About() {
         <meta name="robots" content="index, follow" />
         <link
           rel="canonical"
-          href="https://uniatlas-bosnia.netlify.app/about"
+          href={`${SITE_URL}/about`}
         />
         <meta
           property="og:url"
-          content="https://uniatlas-bosnia.netlify.app/about"
+          content={`${SITE_URL}/about`}
         />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={t("meta.home")} />

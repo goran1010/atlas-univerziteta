@@ -2,6 +2,7 @@ import { use } from "react";
 import { NavLink, Outlet } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
+import { SITE_URL } from "../../utils/envConfig";
 
 const TABS = [
   { key: "search", to: "/search" },
@@ -17,10 +18,10 @@ function Universities() {
         <title>{`${t("title.universities")} | ${t("title.app")}`}</title>
         <meta name="description" content={t("meta.universities")} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://uniatlas-bosnia.netlify.app/" />
+        <link rel="canonical" href={`${SITE_URL}/`} />
         <meta
           property="og:url"
-          content="https://uniatlas-bosnia.netlify.app/"
+          content={`${SITE_URL}/`}
         />
         <meta
           property="og:title"

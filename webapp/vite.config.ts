@@ -5,7 +5,12 @@ import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import babel from "@rolldown/plugin-babel";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig(({ mode }) => ({
+const DEFAULT_SITE_URL = "https://uniatlas-bosnia.netlify.app";
+
+export default defineConfig(({ mode }) => {
+  process.env.VITE_SITE_URL ??= DEFAULT_SITE_URL;
+
+  return {
   plugins: [
     react(),
 
@@ -31,4 +36,5 @@ export default defineConfig(({ mode }) => ({
       ],
     },
   },
-}));
+};
+});

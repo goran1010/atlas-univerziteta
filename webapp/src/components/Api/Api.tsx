@@ -3,7 +3,7 @@ import { apiEndpoints } from "./utils/endpoints";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
-import { PUBLIC_API_URL } from "../../utils/envConfig";
+import { PUBLIC_API_URL, SITE_URL } from "../../utils/envConfig";
 
 function Api() {
   const { t } = use(RootContext);
@@ -16,11 +16,11 @@ function Api() {
         <meta name="robots" content="index, follow" />
         <link
           rel="canonical"
-          href="https://uniatlas-bosnia.netlify.app/api-docs"
+          href={`${SITE_URL}/api-docs`}
         />
         <meta
           property="og:url"
-          content="https://uniatlas-bosnia.netlify.app/api-docs"
+          content={`${SITE_URL}/api-docs`}
         />
         <meta
           property="og:title"

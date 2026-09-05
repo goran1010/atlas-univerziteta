@@ -2,9 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>uniatlas-bosnia</title>
+    <title>UniAtlas Bosnia</title>
+    <meta
+      name="description"
+      content="Explore universities, faculties, study programs, and tracks in Bosnia and Herzegovina with a free public dataset, searchable web interface, and REST API."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="UniAtlas Bosnia" />
+    <meta property="og:title" content="UniAtlas Bosnia" />
+    <meta
+      property="og:description"
+      content="Explore universities, faculties, study programs, and tracks in Bosnia and Herzegovina with a free public dataset, searchable web interface, and REST API."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta
+      property="og:image"
+      content="%VITE_SITE_URL%/images/og-image-home.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="UniAtlas Bosnia" />
+    <meta
+      name="twitter:description"
+      content="Explore universities, faculties, study programs, and tracks in Bosnia and Herzegovina with a free public dataset, searchable web interface, and REST API."
+    />
+    <meta
+      name="twitter:image"
+      content="%VITE_SITE_URL%/images/og-image-home.png"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+
+    <!-- Preload primary font weights to avoid render-blocking loads -->
+    <link
+      rel="preload"
+      href="/fonts/roboto-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/roboto-latin-700-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
   </head>
   <body>
     <div id="root"></div>

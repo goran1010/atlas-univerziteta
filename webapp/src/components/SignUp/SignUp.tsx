@@ -6,6 +6,7 @@ import { SignUpForm } from "./SignUpForm";
 import { GitHubLoginLink } from "../sharedComponents/GitHubLoginLink";
 import { DividerOr } from "../sharedComponents/DividerOr";
 import { Helmet } from "react-helmet-async";
+import { SITE_URL } from "../../utils/envConfig";
 
 function SignUp() {
   const [loading, setLoading] = useState(false);
@@ -30,11 +31,11 @@ function SignUp() {
         <meta name="robots" content="index, follow" />
         <link
           rel="canonical"
-          href="https://uniatlas-bosnia.netlify.app/signup"
+          href={`${SITE_URL}/signup`}
         />
         <meta
           property="og:url"
-          content="https://uniatlas-bosnia.netlify.app/signup"
+          content={`${SITE_URL}/signup`}
         />
         <meta
           property="og:title"

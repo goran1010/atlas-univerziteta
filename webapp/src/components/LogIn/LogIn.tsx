@@ -6,6 +6,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { GitHubLoginLink } from "../sharedComponents/GitHubLoginLink";
 import { DividerOr } from "../sharedComponents/DividerOr";
 import { Helmet } from "react-helmet-async";
+import { SITE_URL } from "../../utils/envConfig";
 
 function LogIn() {
   const [loading, setLoading] = useState(false);
@@ -45,11 +46,11 @@ function LogIn() {
         <meta name="robots" content="index, follow" />
         <link
           rel="canonical"
-          href="https://uniatlas-bosnia.netlify.app/login"
+          href={`${SITE_URL}/login`}
         />
         <meta
           property="og:url"
-          content="https://uniatlas-bosnia.netlify.app/login"
+          content={`${SITE_URL}/login`}
         />
         <meta
           property="og:title"
