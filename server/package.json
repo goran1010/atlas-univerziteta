@@ -67,5 +67,10 @@
     "pino": "^10.3.1",
     "resend": "^6.12.4",
     "zod": "^4.4.3"
+  },
+  "allowScripts": {
+    "@prisma/engines@7.10.0": true,
+    "esbuild@0.28.2": true,
+    "prisma@7.10.0": true
   }
 }
