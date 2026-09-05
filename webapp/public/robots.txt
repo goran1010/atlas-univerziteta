@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /admin-dashboard
-Disallow: /contributor-dashboard
+Disallow: /improve-data
+Disallow: /profile
 
 Sitemap: https://uniatlas-bosnia.netlify.app/sitemap.xml
-
