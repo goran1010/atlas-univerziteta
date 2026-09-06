@@ -1,13 +1,25 @@
 import { Resend } from "resend";
 import { env } from "../config/env.js";
-
-const resend = new Resend(env.RESEND_API_KEY);
+import { logger } from "../utils/logger.js";
 
 async function sendConfirmationEmail(
   userEmail: string,
   confirmationLink: string,
 ) {
+  if (env.NODE_ENV !== "production") {
+    logger.info(
+      { to: userEmail, confirmationLink },
+      "Dev mode - skipping email send. Click the link to confirm:",
+    );
+    return { success: true, messageId: null };
+  }
+
+  // NOTE: The sender "onboarding@resend.dev" is Resend's shared test domain.
+  // It can only deliver to the email address associated with the Resend
+  // account. To send to any user, verify a custom domain in Resend and
+  // update the "from" address (e.g. "noreply@yourdomain.com").
   try {
+    const resend = new Resend(env.RESEND_API_KEY);
     const email = await resend.emails.send({
       from: "UniAtlas Bosnia <onboarding@resend.dev>",
       to: [userEmail],
@@ -17,8 +29,8 @@ async function sendConfirmationEmail(
           <h2 style="color: #333;">Welcome!</h2>
           <p>Thank you for registering. Please confirm your email address by clicking the button below:</p>
           <div style="text-align: center; margin: 30px 0;">
-            <a href="${confirmationLink}" 
-               style="background-color: #007bff; color: white; padding: 12px 30px; 
+            <a href="${confirmationLink}"
+               style="background-color: #007bff; color: white; padding: 12px 30px;
                       text-decoration: none; border-radius: 5px; display: inline-block;">
               Confirm Email
             </a>
@@ -36,7 +48,7 @@ async function sendConfirmationEmail(
 
     return { success: true, messageId: email.data };
   } catch (error: unknown) {
-    console.error("Error sending email:", error);
+    logger.error(error, "Error sending confirmation email");
     if (error instanceof Error) {
       return { success: false, error: error.message };
     }

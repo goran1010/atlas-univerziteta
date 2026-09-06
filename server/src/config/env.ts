@@ -3,7 +3,7 @@ class Env {
   public readonly WEBAPP_URL: string;
   public readonly SERVER_URL: string;
   public readonly PORT: number;
-  public readonly RESEND_API_KEY: string;
+  public readonly RESEND_API_KEY: string | undefined;
   public readonly COOKIE_SECRET: string;
   public NODE_ENV: "development" | "test" | "production";
   public readonly GITHUB_CLIENT_ID: string;
@@ -19,7 +19,10 @@ class Env {
     this.SERVER_URL = Env.#getEnv("SERVER_URL");
     this.PORT = Env.#getNumberEnv("PORT");
 
-    this.RESEND_API_KEY = Env.#getEnv("RESEND_API_KEY");
+    this.RESEND_API_KEY =
+      this.NODE_ENV === "production"
+        ? Env.#getEnv("RESEND_API_KEY")
+        : process.env["RESEND_API_KEY"];
     this.COOKIE_SECRET = Env.#getEnv("COOKIE_SECRET");
 
     this.GITHUB_CLIENT_ID = Env.#getEnv("GITHUB_CLIENT_ID");
