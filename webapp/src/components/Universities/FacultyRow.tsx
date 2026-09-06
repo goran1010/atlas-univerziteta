@@ -34,20 +34,20 @@ function FacultyRow({
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2 py-1.5 px-0.5 sm:px-2">
         <div className="min-w-0">
           <p className="font-semibold">{faculty.name}</p>
-          <div className="flex flex-wrap gap-x-1.5 sm:gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
-            {hasStudyPrograms && (
-              <span>
-                <span aria-hidden="true">🎓</span>{" "}
-                <span className="font-bold text-blue-600 dark:text-blue-400">
-                  {faculty.studyPrograms.length}
-                </span>{" "}
-                {tCount(
-                  t,
-                  "universitiesPage.studyProgramCount",
-                  faculty.studyPrograms.length,
-                )}
-              </span>
-            )}
+          {hasStudyPrograms && (
+            <p className="text-xs text-(--text-muted) mt-0.5">
+              <span aria-hidden="true">🎓</span>{" "}
+              <span className="font-bold text-blue-600 dark:text-blue-400">
+                {faculty.studyPrograms.length}
+              </span>{" "}
+              {tCount(
+                t,
+                "universitiesPage.studyProgramCount",
+                faculty.studyPrograms.length,
+              )}
+            </p>
+          )}
+          <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
             <ContactLinks
               website={faculty.website}
               address={faculty.address}

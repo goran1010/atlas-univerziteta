@@ -74,12 +74,19 @@ async function clickLogout() {
 }
 
 describe("Profile Component", () => {
-  test("renders profile component when user is not logged in", async () => {
+  test("renders access denied card when user is not logged in", async () => {
     render(<Wrapper />);
-    const paragraphElement = await screen.findByText(
-      /You need to be logged in. Redirected to the login page./i,
+    const message = await screen.findByText(
+      /You need to be logged in to view your profile./i,
     );
-    expect(paragraphElement).toBeInTheDocument();
+    expect(message).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Log In/i })).toHaveAttribute(
+      "href",
+      "/login",
+    );
+    expect(
+      screen.getByRole("link", { name: /Go to Home Page/i }),
+    ).toHaveAttribute("href", "/");
   });
 
   test("renders profile component when user is logged in", async () => {
@@ -205,9 +212,9 @@ describe("Profile Component handle logout", () => {
     );
     expect(notificationElement).toBeInTheDocument();
 
-    const logIn = await screen.findByRole("heading", { name: /Log In/i });
+    const homePage = await screen.findByText(/Home Page/i);
 
-    expect(logIn).toBeInTheDocument();
+    expect(homePage).toBeInTheDocument();
     expect(logoutButton).not.toBeInTheDocument();
   });
 

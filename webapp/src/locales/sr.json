@@ -103,7 +103,7 @@
     "title": "Moj profil",
     "emailAddress": "Email adresa",
     "currentRole": "Trenutna uloga",
-    "needLogin": "Morate biti prijavljeni. Preusmereni ste na stranicu za prijavu.",
+    "needLogin": "Morate biti prijavljeni da biste vidjeli svoj profil.",
     "logout": "Odjavi se",
     "requestAdmin": "Zatraži admin pristup",
     "adminRequestPending": "Zahtjev za admin pristup je na čekanju",
@@ -411,5 +411,9 @@
     "filterOwnership": "Vlasništvo",
     "filterCycle": "Ciklus studija",
     "all": "Svi"
+  },
+  "access": {
+    "goToLogin": "Prijavi se",
+    "goHome": "Idi na početnu stranicu"
   }
 }

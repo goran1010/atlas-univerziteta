@@ -1,5 +1,5 @@
 import { use, type ReactNode } from "react";
-import { NavLink, Outlet } from "react-router";
+import { NavLink, Outlet, useLocation } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../../utils/envConfig";
@@ -12,6 +12,10 @@ const TABS: { key: string; to: string; icon: ReactNode }[] = [
 
 function Universities() {
   const { t } = use(RootContext);
+  const { pathname } = useLocation();
+  // /search is the default tab (root redirects there), so its canonical is "/".
+  // /browse gets its own canonical so crawlers don't merge the two pages.
+  const canonicalPath = pathname === "/browse" ? "/browse" : "/";
 
   return (
     <>
@@ -19,8 +23,8 @@ function Universities() {
         <title>{`${t("title.universities")} | ${t("title.app")}`}</title>
         <meta name="description" content={t("meta.universities")} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`${SITE_URL}/`} />
-        <meta property="og:url" content={`${SITE_URL}/`} />
+        <link rel="canonical" href={`${SITE_URL}${canonicalPath}`} />
+        <meta property="og:url" content={`${SITE_URL}${canonicalPath}`} />
         <meta
           property="og:title"
           content={`${t("title.universities")} | ${t("title.app")}`}

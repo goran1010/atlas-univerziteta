@@ -103,7 +103,7 @@
     "title": "My Profile",
     "emailAddress": "Email Address",
     "currentRole": "Current Role",
-    "needLogin": "You need to be logged in. Redirected to the login page.",
+    "needLogin": "You need to be logged in to view your profile.",
     "logout": "Log out",
     "requestAdmin": "Request admin access",
     "adminRequestPending": "Admin request pending",
@@ -411,5 +411,9 @@
     "filterOwnership": "Ownership",
     "filterCycle": "Study cycle",
     "all": "All"
+  },
+  "access": {
+    "goToLogin": "Log In",
+    "goHome": "Go to Home Page"
   }
 }
