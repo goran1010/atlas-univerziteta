@@ -13,14 +13,26 @@ import { SERVER_STATUS } from "../../utils/serverStatus";
 
 import type { ChangeEvent } from "react";
 interface LogInFormProps {
-  loading: boolean;
-  setLoading: (loading: boolean) => void;
+  disabled: boolean;
+  onLoadingChange: (loading: boolean) => void;
 }
 
-function LogInForm({ loading, setLoading }: LogInFormProps) {
+function LogInForm({ disabled, onLoadingChange }: LogInFormProps) {
   const navigate = useNavigate();
   const { setUserData, addNotification, t, serverStatus } = use(RootContext);
-  const ctx = { addNotification, setLoading, t, serverStatus };
+  const [loading, setLoading] = useState(false);
+
+  function handleSetLoading(value: boolean) {
+    setLoading(value);
+    onLoadingChange(value);
+  }
+
+  const ctx = {
+    addNotification,
+    setLoading: handleSetLoading,
+    t,
+    serverStatus,
+  };
 
   const [inputFields, setInputFields] = useState({
     email: "",
@@ -89,7 +101,7 @@ function LogInForm({ loading, setLoading }: LogInFormProps) {
           }}
           type="submit"
           loading={loading}
-          disabled={serverStatus !== SERVER_STATUS.LIVE}
+          disabled={disabled || serverStatus !== SERVER_STATUS.LIVE}
           className="text-white"
         >
           {t("auth.login.heading")}

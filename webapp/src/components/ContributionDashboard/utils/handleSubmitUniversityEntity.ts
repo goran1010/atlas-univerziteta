@@ -6,9 +6,7 @@ import { apiMutation } from "../../../utils/apiMutation";
 
 import type { RequestContext } from "../../../utils/apiMutation";
 import type { TypeOfChange } from "../../../schemas/domain";
-import type { PendingChange } from "../../../schemas/pendingChange";
 import type { ContributionFormDraft } from "../types";
-import type { Dispatch, SetStateAction } from "react";
 
 export interface HandleSubmitUniversityEntityParams {
   entityType: string;
@@ -16,13 +14,7 @@ export interface HandleSubmitUniversityEntityParams {
   targetId?: string;
   typeOfChange: TypeOfChange;
   data: ContributionFormDraft;
-  setPendingChanges: Dispatch<SetStateAction<PendingChange[]>>;
-  setFormState: (formState: {
-    entityType: string;
-    parentId?: string;
-    targetId?: string;
-    data: ContributionFormDraft;
-  }) => void;
+  onSuccess: () => void;
   ctx: RequestContext;
 }
 
@@ -86,8 +78,7 @@ async function handleSubmitUniversityEntity({
   targetId,
   typeOfChange,
   data,
-  setPendingChanges,
-  setFormState,
+  onSuccess,
   ctx,
 }: HandleSubmitUniversityEntityParams) {
   const parsed = contributionSubmissionSchema.safeParse(
@@ -123,8 +114,7 @@ async function handleSubmitUniversityEntity({
   );
   if (!result) return;
 
-  setPendingChanges((prev) => [result.data, ...prev]);
-  setFormState({ entityType: "", parentId: "", targetId: "", data: {} });
+  onSuccess();
 }
 
 export { handleSubmitUniversityEntity };

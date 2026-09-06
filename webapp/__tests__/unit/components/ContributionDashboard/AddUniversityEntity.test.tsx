@@ -4,7 +4,6 @@ import { AddUniversityEntity } from "../../../../src/components/ContributionDash
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
 import type { ReactElement } from "react";
-import type { PendingChange } from "../../../../src/schemas/pendingChange";
 import type { HandleSubmitUniversityEntityParams } from "../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
 
 const handleSubmitUniversityEntityMock =
@@ -143,7 +142,7 @@ describe("AddUniversityEntity", () => {
   test("renders university create fields when university is selected", async () => {
     render(
       <Wrapper>
-        <AddUniversityEntity setPendingChanges={vi.fn()} />
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
       </Wrapper>,
     );
 
@@ -165,7 +164,7 @@ describe("AddUniversityEntity", () => {
   test("renders the entity picker and hides data fields for delete changes", async () => {
     render(
       <Wrapper>
-        <AddUniversityEntity setPendingChanges={vi.fn()} />
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
       </Wrapper>,
     );
 
@@ -195,7 +194,7 @@ describe("AddUniversityEntity", () => {
   test("renders parent picker and study program fields for create changes", async () => {
     render(
       <Wrapper>
-        <AddUniversityEntity setPendingChanges={vi.fn()} />
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
       </Wrapper>,
     );
 
@@ -223,7 +222,7 @@ describe("AddUniversityEntity", () => {
   test("renders parent picker and track fields for create changes", async () => {
     render(
       <Wrapper>
-        <AddUniversityEntity setPendingChanges={vi.fn()} />
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
       </Wrapper>,
     );
 
@@ -247,7 +246,7 @@ describe("AddUniversityEntity", () => {
   test("shows current data and data fields for update changes", async () => {
     render(
       <Wrapper>
-        <AddUniversityEntity setPendingChanges={vi.fn()} />
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
       </Wrapper>,
     );
 
@@ -275,7 +274,7 @@ describe("AddUniversityEntity", () => {
   test("resets the picker when entity type changes", async () => {
     render(
       <Wrapper>
-        <AddUniversityEntity setPendingChanges={vi.fn()} />
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
       </Wrapper>,
     );
 
@@ -307,12 +306,11 @@ describe("AddUniversityEntity", () => {
   });
 
   test("submits the selected entity data through the handler", async () => {
-    const setPendingChanges =
-      vi.fn<(value: React.SetStateAction<PendingChange[]>) => void>();
+    const refetchPendingChanges = vi.fn();
 
     render(
       <Wrapper>
-        <AddUniversityEntity setPendingChanges={setPendingChanges} />
+        <AddUniversityEntity refetchPendingChanges={refetchPendingChanges} />
       </Wrapper>,
     );
 
@@ -343,20 +341,14 @@ describe("AddUniversityEntity", () => {
       entity: "FBIH",
       ownership: "PUBLIC",
     });
-    expect(submittedArgs.setPendingChanges).toBe(setPendingChanges);
-    expect(typeof submittedArgs.setFormState).toBe("function");
+    expect(typeof submittedArgs.onSuccess).toBe("function");
     expect(typeof submittedArgs.ctx.addNotification).toBe("function");
     expect(typeof submittedArgs.ctx.setLoading).toBe("function");
     expect(typeof submittedArgs.ctx.t).toBe("function");
     expect(submittedArgs.ctx.serverStatus).toBe("live");
 
     act(() => {
-      submittedArgs.setFormState({
-        entityType: "UNIVERSITY",
-        parentId: undefined,
-        targetId: undefined,
-        data: {},
-      });
+      submittedArgs.onSuccess();
     });
 
     expect(screen.getByLabelText(/Name/i)).toHaveValue("");
@@ -366,12 +358,11 @@ describe("AddUniversityEntity", () => {
   });
 
   test("submits track data with picked target id on update", async () => {
-    const setPendingChanges =
-      vi.fn<(value: React.SetStateAction<PendingChange[]>) => void>();
+    const refetchPendingChanges = vi.fn();
 
     render(
       <Wrapper>
-        <AddUniversityEntity setPendingChanges={setPendingChanges} />
+        <AddUniversityEntity refetchPendingChanges={refetchPendingChanges} />
       </Wrapper>,
     );
 
@@ -411,13 +402,13 @@ describe("AddUniversityEntity", () => {
       ects: 60,
       durationYears: 1,
     });
-    expect(submittedArgs.setPendingChanges).toBe(setPendingChanges);
+    expect(typeof submittedArgs.onSuccess).toBe("function");
   });
 
   test("submits study program data with picked parent id", async () => {
     render(
       <Wrapper>
-        <AddUniversityEntity setPendingChanges={vi.fn()} />
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
       </Wrapper>,
     );
 

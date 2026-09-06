@@ -16,6 +16,7 @@ interface UseFetchListOptions<Item> {
   logLabel: string;
   setLoading: (loading: boolean) => void;
   enabled?: boolean;
+  refetchKey?: number;
 }
 
 function useFetchList<Item>({
@@ -26,6 +27,7 @@ function useFetchList<Item>({
   logLabel,
   setLoading,
   enabled = true,
+  refetchKey = 0,
 }: UseFetchListOptions<Item>): [Item[], Dispatch<SetStateAction<Item[]>>] {
   const { addNotification, serverStatus, t } = use(RootContext);
   const [items, setItems] = useState<Item[]>([]);
@@ -100,6 +102,7 @@ function useFetchList<Item>({
     errorMessageKey,
     logLabel,
     path,
+    refetchKey,
     responseSchema,
     serverStatus,
     setLoading,

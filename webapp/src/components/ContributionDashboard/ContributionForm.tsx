@@ -1,4 +1,4 @@
-import { useState, use } from "react";
+import { useState, useCallback, use } from "react";
 import { NavLink, Outlet } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { useFetchList } from "../../customHooks/useFetchList";
@@ -14,6 +14,7 @@ const TABS = [
 function ContributionForm() {
   const { t } = use(RootContext);
   const [loading, setLoading] = useState(false);
+  const [refetchKey, setRefetchKey] = useState(0);
   const [pendingChanges, setPendingChanges] = useFetchList({
     path: "/users/contribution/pending-changes/universities",
     responseSchema: pendingChangesResponseSchema,
@@ -21,12 +22,18 @@ function ContributionForm() {
     errorMessageKey: "messages.pendingChanges.fetchError",
     logLabel: "fetch pending changes",
     setLoading,
+    refetchKey,
   });
+
+  const refetchPendingChanges = useCallback(() => {
+    setRefetchKey((prev) => prev + 1);
+  }, []);
 
   const outletContext: ContributionOutletContext = {
     pendingChanges,
     setPendingChanges,
     loading,
+    refetchPendingChanges,
   };
 
   return (

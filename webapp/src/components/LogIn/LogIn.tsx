@@ -62,9 +62,9 @@ function LogIn() {
           <h1 className="text-3xl text-center font-bold">
             {t("auth.login.heading")}
           </h1>
-          <LogInForm setLoading={setLoading} loading={loading} />
+          <LogInForm disabled={loading} onLoadingChange={setLoading} />
           <DividerOr />
-          <GitHubLoginLink setLoading={setLoading} loading={loading} />
+          <GitHubLoginLink disabled={loading} onLoadingChange={setLoading} />
           <DividerOr />
           <div className="relative">
             <p className="text-center">

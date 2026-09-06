@@ -15,9 +15,8 @@ import type {
   StudyCycle,
   TypeOfChange,
 } from "../../schemas/domain";
-import type { PendingChange } from "../../schemas/pendingChange";
 import type { ContributionFormDraft, ContributionFormState } from "./types";
-import type { Dispatch, SetStateAction, SubmitEvent } from "react";
+import type { SubmitEvent } from "react";
 
 interface DataFieldProps {
   label: string;
@@ -73,9 +72,9 @@ function DataField(props: DataFieldProps) {
 }
 
 function AddUniversityEntity({
-  setPendingChanges,
+  refetchPendingChanges,
 }: {
-  setPendingChanges: Dispatch<SetStateAction<PendingChange[]>>;
+  refetchPendingChanges: () => void;
 }) {
   const { t, addNotification, serverStatus } = use(RootContext);
   const [formState, setFormState] = useState(INIT_FORM);
@@ -124,10 +123,10 @@ function AddUniversityEntity({
       targetId,
       typeOfChange,
       data,
-      setPendingChanges,
-      setFormState: () => {
+      onSuccess: () => {
         setFormState(INIT_FORM);
         setPickerResetKey((prev) => prev + 1);
+        refetchPendingChanges();
       },
       ctx: { addNotification, setLoading, t, serverStatus },
     });
