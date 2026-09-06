@@ -43,6 +43,12 @@ app.use((req, _res, next) => {
 app.use(helmet());
 app.use(compression());
 
+app.use((req, res, next) => {
+  setTimeout(() => {
+    next();
+  }, 4000);
+});
+
 // Public routes
 app.use("/health", cors(), healthRouter);
 app.use("/api", cors(), rateLimiter.api, apiRouter);

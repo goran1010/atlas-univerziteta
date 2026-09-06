@@ -8,7 +8,7 @@ import { Spinner } from "../../utils/Spinner";
 import { SERVER_URL } from "../../utils/envConfig";
 import { guardedFetch } from "../../utils/guardedFetch";
 import { readErrorMessage } from "../../schemas/api";
-import { isServerNotReadyError } from "../../utils/serverStatus";
+import { SERVER_STATUS, isServerNotReadyError } from "../../utils/serverStatus";
 import { studyProgramDetailResponseSchema } from "../../schemas/university";
 import { tCount } from "../../utils/pluralize";
 
@@ -96,6 +96,7 @@ function StudyProgramResult({
           onClick={() => {
             void handleExpand();
           }}
+          disabled={serverStatus !== SERVER_STATUS.LIVE}
           loading={loadingDetail}
         />
       </div>

@@ -16,7 +16,7 @@ import { TrackResult } from "./TrackResult";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
 import { searchAll } from "./utils/search";
-import { isServerNotReadyError } from "../../utils/serverStatus";
+import { SERVER_STATUS, isServerNotReadyError } from "../../utils/serverStatus";
 import { searchTermSchema } from "../../schemas/domain";
 
 import type { UnifiedSearchResults } from "../../schemas/university";
@@ -302,6 +302,7 @@ function UnifiedSearch() {
         <Button
           type="submit"
           loading={loading}
+          disabled={serverStatus !== SERVER_STATUS.LIVE}
           className="w-full self-center sm:max-w-28 sm:self-auto"
         >
           {t("universitiesPage.search")}

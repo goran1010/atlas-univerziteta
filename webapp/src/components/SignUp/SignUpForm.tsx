@@ -9,6 +9,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { Button } from "../sharedComponents/Button";
 import { Input } from "../sharedComponents/Input";
 import { Label } from "../sharedComponents/Label";
+import { SERVER_STATUS } from "../../utils/serverStatus";
 import type { ChangeEvent } from "react";
 
 interface SignUpFormProps {
@@ -106,6 +107,7 @@ function SignUpForm({ loading, setLoading }: SignUpFormProps) {
           }}
           type="submit"
           loading={loading}
+          disabled={serverStatus !== SERVER_STATUS.LIVE}
           className="text-white"
         >
           {t("form.create")}

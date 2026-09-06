@@ -6,6 +6,7 @@ interface DetailsToggleButtonProps {
   expanded: boolean;
   onClick: () => void;
   loading?: boolean;
+  disabled?: boolean;
   className?: string;
 }
 
@@ -13,6 +14,7 @@ function DetailsToggleButton({
   expanded,
   onClick,
   loading,
+  disabled,
   className,
 }: DetailsToggleButtonProps) {
   const { t } = use(RootContext);
@@ -23,6 +25,7 @@ function DetailsToggleButton({
       className={className}
       onClick={onClick}
       loading={loading}
+      disabled={disabled}
       aria-expanded={expanded}
     >
       <span aria-hidden="true">{expanded ? "▲" : "▼"}</span>{" "}

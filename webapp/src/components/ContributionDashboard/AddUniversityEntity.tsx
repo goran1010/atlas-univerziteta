@@ -7,6 +7,7 @@ import { Button } from "../sharedComponents/Button";
 import { EntityPicker } from "./EntityPicker";
 import { getPickerDepth } from "./utils/getPickerDepth";
 import { handleSubmitUniversityEntity } from "./utils/handleSubmitUniversityEntity";
+import { SERVER_STATUS } from "../../utils/serverStatus";
 
 import type {
   Entity,
@@ -476,7 +477,12 @@ function AddUniversityEntity({
           )}
         </fieldset>
       )}
-      <Button type="submit" loading={loading} className="max-w-xs self-center">
+      <Button
+        type="submit"
+        loading={loading}
+        disabled={serverStatus !== SERVER_STATUS.LIVE}
+        className="max-w-xs self-center"
+      >
         {t("contribution.submitSuggestion")}
       </Button>
     </form>
