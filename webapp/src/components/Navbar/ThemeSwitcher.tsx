@@ -1,9 +1,9 @@
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { useTheme } from "../../customHooks/useTheme";
+import { THEMES } from "../../utils/theme";
 
-import type { SetMode } from "../../customHooks/useTheme";
-
-const themeOrder = ["system", "light", "dark"] as const;
+import type { Theme } from "../../utils/theme";
 
 function SunIcon() {
   return (
@@ -69,7 +69,7 @@ function MonitorIcon() {
   );
 }
 
-function getThemeIcon(theme: string) {
+function getThemeIcon(theme: Theme) {
   switch (theme) {
     case "light":
       return <SunIcon />;
@@ -80,29 +80,22 @@ function getThemeIcon(theme: string) {
   }
 }
 
-function ThemeSwitcher({
-  setMode,
-  theme,
-}: {
-  setMode: SetMode;
-  theme: string;
-}) {
+function ThemeSwitcher() {
   const { addNotification, t } = use(RootContext);
+  const { theme, setTheme } = useTheme();
 
   function handleThemeToggle() {
-    const currentIndex = themeOrder.indexOf(
-      theme as (typeof themeOrder)[number],
-    );
-    const nextTheme = themeOrder[(currentIndex + 1) % themeOrder.length];
+    const currentIndex = THEMES.indexOf(theme);
+    const nextTheme = THEMES[(currentIndex + 1) % THEMES.length];
 
-    setMode(nextTheme);
+    setTheme(nextTheme);
     addNotification({
       type: "info",
       message: t(`theme.switched.${nextTheme}`),
     });
   }
 
-  const themeLabel = t(`theme.${theme === "system" ? "system" : theme}`);
+  const themeLabel = t(`theme.${theme}`);
 
   return (
     <button

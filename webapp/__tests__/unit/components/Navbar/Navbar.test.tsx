@@ -6,6 +6,7 @@ import { Navbar } from "../../../../src/components/Navbar/Navbar";
 import userEvent from "@testing-library/user-event";
 import { useCloseMenu } from "../../../../src/customHooks/useCloseMenu";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { ThemeProvider } from "../../../../src/contextData/ThemeProvider";
 
 import type { UserData } from "../../../../src/types/auth";
 
@@ -161,9 +162,11 @@ function NavbarWrapper({
   const closeMenu = useCloseMenu();
   return (
     <RootContextProvider rootValue={{ userData, setUserData: vi.fn() }}>
-      <MemoryRouter>
-        <Navbar closeMenu={closeMenu} />
-      </MemoryRouter>
+      <ThemeProvider>
+        <MemoryRouter>
+          <Navbar closeMenu={closeMenu} />
+        </MemoryRouter>
+      </ThemeProvider>
     </RootContextProvider>
   );
 }
