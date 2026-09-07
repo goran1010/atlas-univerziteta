@@ -117,7 +117,7 @@ function Notifications() {
                   removeNotification(notification.id);
                 }}
                 aria-label={t("notifications.dismiss")}
-                className="absolute top-0 right-1 text-sm font-semibold text-current cursor-pointer"
+                className="absolute top-0 right-1 text-sm font-semibold text-current cursor-pointer transition-transform active:scale-90"
               >
                 <XIcon />
               </button>

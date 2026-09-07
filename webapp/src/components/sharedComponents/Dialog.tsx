@@ -43,7 +43,7 @@ function Dialog({ open, onClose, title, children, footer }: DialogProps) {
           type="button"
           onClick={onClose}
           aria-label="Close"
-          className="p-1 rounded-md cursor-pointer text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          className="p-1 rounded-md cursor-pointer transition-transform active:scale-90 text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
         >
           <svg
             width="16"

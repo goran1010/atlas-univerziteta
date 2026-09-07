@@ -22,7 +22,7 @@ function ResultGroup({
           onClick={() => {
             setCollapsed((prev) => !prev);
           }}
-          className="absolute -top-2.5 left-3 px-2 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wide rounded bg-(--surface-alt) text-(--accent-text) leading-tight border border-(--border-color)/40 cursor-pointer flex items-center gap-1"
+          className="absolute -top-2.5 left-3 px-2 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wide rounded bg-(--surface-alt) text-(--accent-text) leading-tight border border-(--border-color)/40 cursor-pointer flex items-center gap-1 transition-transform active:scale-[0.97]"
         >
           <span
             className="text-[0.6rem] transition-transform"
