@@ -112,7 +112,7 @@
   "home": {
     "title": "Universities and Study Programs in Bosnia and Herzegovina",
     "heading": "Universities and Study Programs in Bosnia and Herzegovina",
-    "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities — institutions, faculties, study programs, and tracks.",
+    "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities - institutions, faculties, study programs, and tracks.",
     "summary": "Use UniAtlas Bosnia to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
     "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, and tracks. Search by name, city, acronym, entity, ownership, study cycle, and more.",
@@ -257,7 +257,7 @@
     "entityDeleted": "Entity no longer exists"
   },
   "error": {
-    "notFound": "There is nothing here, sorry.",
+    "notFound": "There is nothing here.",
     "goHome": "Go to Home Page",
     "pageTitle": "Page Not Found"
   },
@@ -345,7 +345,7 @@
     "title": "Find programs and universities",
     "browseAll": "Browse All",
     "search": "Search",
-    "searchHint": "Search across all data — by name, city, acronym, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
+    "searchHint": "Search across all data - by name, city, acronym, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
     "searchAllPlaceholder": "Search by name, city, cycle, entity…",
     "universitiesSection": "Universities",
     "facultiesSection": "Faculties",

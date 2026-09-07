@@ -79,7 +79,10 @@ async function apiMutation<Schema extends z.ZodType>(
     }
     addNotification({
       type: "error",
-      message: t(errorMessageKey),
+      message:
+        response.status === 429 && serverMessage
+          ? serverMessage
+          : t(errorMessageKey),
     });
     return null;
   } catch (error) {

@@ -25,9 +25,7 @@ async function getGoHomeLink() {
 describe("ErrorPage component", () => {
   test("renders error message", async () => {
     renderErrorPage();
-    const errorMessage = await screen.findByText(
-      /There is nothing here, sorry./i,
-    );
+    const errorMessage = await screen.findByText(/There is nothing here./i);
     expect(errorMessage).toBeInTheDocument();
   });
 
