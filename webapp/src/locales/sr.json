@@ -65,11 +65,10 @@
   },
   "auth": {
     "or": "ILI",
-    "pageSuffix": "stranicu.",
     "continueWithGithub": "Nastavi preko GitHub-a",
     "login": {
       "linkText": "Prijava",
-      "noAccountPrefix": "Nemate nalog ? Idite na",
+      "noAccountPrefix": "Nemate nalog?",
       "heading": "Prijava",
       "githubFailed": "GitHub prijava nije uspjela. Pokušajte ponovo.",
       "alreadyLoggedIn": "Već ste prijavljeni. Preusmereni ste na početnu stranicu.",
@@ -77,7 +76,7 @@
     },
     "signup": {
       "linkText": "Registracija",
-      "haveAccountPrefix": "Već imate nalog ? Vratite se na",
+      "haveAccountPrefix": "Već imate nalog?",
       "heading": "Kreirajte svoj nalog",
       "blockedWhileLoggedIn": "Ne možete se registrovati dok ste prijavljeni. Preusmereni ste na početnu stranicu.",
       "haveAccount": "Već imate nalog ? Vratite se na stranicu Prijava."

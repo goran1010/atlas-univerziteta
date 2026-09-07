@@ -1,4 +1,5 @@
-import { Link, useSearchParams } from "react-router";
+import { LinkButton } from "../sharedComponents/LinkButton";
+import { useSearchParams } from "react-router";
 import { useState, use, useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
 import { LogInForm } from "./LogInForm";
@@ -66,14 +67,11 @@ function LogIn() {
           <DividerOr />
           <GitHubLoginLink disabled={loading} onLoadingChange={setLoading} />
           <DividerOr />
-          <div className="relative">
-            <p className="text-center">
-              {t("auth.login.noAccountPrefix")}{" "}
-              <Link className="hover:underline font-bold" to={"/signup"}>
-                {t("auth.signup.linkText")}
-              </Link>{" "}
-              {t("auth.pageSuffix")}
-            </p>
+          <div className="flex flex-col items-center gap-2">
+            <p>{t("auth.login.noAccountPrefix")}</p>
+            <LinkButton to="/signup" className="w-full sm:w-auto sm:min-w-48">
+              {t("auth.signup.linkText")}
+            </LinkButton>
           </div>
         </div>
       </div>

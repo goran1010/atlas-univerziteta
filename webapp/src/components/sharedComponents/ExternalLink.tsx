@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
 
 const baseClassName =
-  "underline underline-offset-3 decoration-1 hover:decoration-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) rounded-sm";
+  "font-bold underline underline-offset-3 decoration-1 hover:decoration-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) rounded-sm";
 
 function ExternalLink({
   href,

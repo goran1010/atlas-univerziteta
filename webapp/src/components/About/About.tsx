@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
@@ -50,14 +50,9 @@ function About() {
           </h2>
           <p>{t("home.exploreDescription")}</p>
           <div className="flex flex-wrap gap-3 justify-center items-center">
-            <Link
-              to="/"
-              className="border rounded-lg px-4 py-2 transition-colors font-medium w-full text-center text-(--text-primary) sm:w-auto
-              hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)
-              focus-visible:bg-(--hover-surface)"
-            >
+            <LinkButton to="/" className="w-full sm:w-auto">
               {t("home.card.universities.title")}
-            </Link>
+            </LinkButton>
           </div>
         </section>
 
@@ -73,19 +68,13 @@ function About() {
           </ol>
           <div className="flex flex-wrap gap-3 justify-center items-center">
             {userData ? (
-              <Link
-                to="/improve-data"
-                className="border rounded-lg px-4 py-2 transition-colors font-medium w-full text-center text-(--text-primary) sm:w-auto hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:bg-(--hover-surface)"
-              >
+              <LinkButton to="/improve-data" className="w-full sm:w-auto">
                 {t("home.improveContribute")}
-              </Link>
+              </LinkButton>
             ) : (
-              <Link
-                to="/signup"
-                className="border rounded-lg px-4 py-2 transition-colors font-medium w-full text-center text-(--text-primary) sm:w-auto hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:bg-(--hover-surface)"
-              >
+              <LinkButton to="/signup" className="w-full sm:w-auto">
                 {t("home.improveSignUp")}
-              </Link>
+              </LinkButton>
             )}
           </div>
         </section>
@@ -97,12 +86,9 @@ function About() {
           <p>{t("home.forDevsDescription")}</p>
           <p className="text-sm text-(--text-muted)">{t("home.forDevsNote")}</p>
           <div className="flex flex-wrap gap-3 justify-center items-center">
-            <Link
-              to="/api-docs"
-              className="border rounded-lg px-4 py-2 transition-colors font-medium w-full text-center text-(--text-primary) sm:w-auto hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:bg-(--hover-surface)"
-            >
+            <LinkButton to="/api-docs" className="w-full sm:w-auto">
               {t("home.forDevsCta")}
-            </Link>
+            </LinkButton>
             <ExternalLink
               href="https://github.com/goran1010/uniatlas-bosnia"
               className="inline-flex items-center justify-center gap-1.5"

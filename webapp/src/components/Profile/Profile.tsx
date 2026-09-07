@@ -1,6 +1,7 @@
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { RootContext } from "../../contextData/RootContext";
 import { use, useState } from "react";
-import { useNavigate, Link } from "react-router";
+import { useNavigate } from "react-router";
 import { handleLogout } from "./utils/handleLogout";
 import {
   handleRequestAdmin,
@@ -35,18 +36,8 @@ function Profile() {
             {t("profile.needLogin")}
           </h1>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link
-              to="/login"
-              className="border rounded-lg px-4 py-2 transition-colors font-medium text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
-            >
-              {t("access.goToLogin")}
-            </Link>
-            <Link
-              to="/"
-              className="border rounded-lg px-4 py-2 transition-colors font-medium text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
-            >
-              {t("access.goHome")}
-            </Link>
+            <LinkButton to="/login">{t("access.goToLogin")}</LinkButton>
+            <LinkButton to="/">{t("access.goHome")}</LinkButton>
           </div>
         </section>
       </>

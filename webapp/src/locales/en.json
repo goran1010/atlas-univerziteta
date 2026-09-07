@@ -65,11 +65,10 @@
   },
   "auth": {
     "or": "OR",
-    "pageSuffix": "page.",
     "continueWithGithub": "Continue with GitHub",
     "login": {
       "linkText": "Log In",
-      "noAccountPrefix": "Don't have an account ? Go to the",
+      "noAccountPrefix": "Don't have an account?",
       "heading": "Log in",
       "githubFailed": "GitHub login failed. Please try again.",
       "alreadyLoggedIn": "You are already logged in. Redirected to the home page.",
@@ -77,7 +76,7 @@
     },
     "signup": {
       "linkText": "Sign Up",
-      "haveAccountPrefix": "Already have an account ? Go back to the",
+      "haveAccountPrefix": "Already have an account?",
       "heading": "Create your account",
       "blockedWhileLoggedIn": "You can't sign up while logged in. Redirected to the home page.",
       "haveAccount": "Already have an account ? Go back to the Log In page."

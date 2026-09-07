@@ -11,7 +11,7 @@ function Footer() {
       <address className="not-italic w-full flex flex-col sm:flex-row justify-between items-center gap-1">
         <ExternalLink
           href="https://github.com/goran1010"
-          className="flex items-center gap-1.5 text-sm font-medium"
+          className="flex items-center gap-1.5 text-sm"
         >
           <GitHubIcon />
           {t("footer.name")}
@@ -19,7 +19,7 @@ function Footer() {
         <ExternalLink
           href={`mailto:${t("footer.email")}`}
           newTab={false}
-          className="flex items-center gap-1.5 text-sm font-medium"
+          className="flex items-center gap-1.5 text-sm"
         >
           <EnvelopeIcon />
           {t("footer.email")}
