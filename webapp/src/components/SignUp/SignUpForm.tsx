@@ -9,17 +9,30 @@ import { RootContext } from "../../contextData/RootContext";
 import { Button } from "../sharedComponents/Button";
 import { Input } from "../sharedComponents/Input";
 import { Label } from "../sharedComponents/Label";
+import { SERVER_STATUS } from "../../utils/serverStatus";
 import type { ChangeEvent } from "react";
 
 interface SignUpFormProps {
-  loading: boolean;
-  setLoading: (loading: boolean) => void;
+  disabled: boolean;
+  onLoadingChange: (loading: boolean) => void;
 }
 
-function SignUpForm({ loading, setLoading }: SignUpFormProps) {
+function SignUpForm({ disabled, onLoadingChange }: SignUpFormProps) {
   const navigate = useNavigate();
   const { addNotification, t, serverStatus } = use(RootContext);
-  const ctx = { addNotification, setLoading, t, serverStatus };
+  const [loading, setLoading] = useState(false);
+
+  function handleSetLoading(value: boolean) {
+    setLoading(value);
+    onLoadingChange(value);
+  }
+
+  const ctx = {
+    addNotification,
+    setLoading: handleSetLoading,
+    t,
+    serverStatus,
+  };
 
   const passwordRef = useRef<HTMLInputElement>(null);
   const confirmPasswordRef = useRef<HTMLInputElement>(null);
@@ -106,6 +119,7 @@ function SignUpForm({ loading, setLoading }: SignUpFormProps) {
           }}
           type="submit"
           loading={loading}
+          disabled={disabled || serverStatus !== SERVER_STATUS.LIVE}
           className="text-white"
         >
           {t("form.create")}

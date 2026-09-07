@@ -1,6 +1,6 @@
 import { RootContext } from "../../contextData/RootContext";
-import { use, useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import { use, useState } from "react";
+import { useNavigate, Link } from "react-router";
 import { handleLogout } from "./utils/handleLogout";
 import {
   handleRequestAdmin,
@@ -23,16 +23,35 @@ function Profile() {
   };
   const logoutCtx = { addNotification, setLoading, t, serverStatus };
 
-  useEffect(() => {
-    if (!userData) {
-      addNotification({
-        type: "warning",
-        message: t("profile.needLogin"),
-      });
-      void navigate("/login");
-      return;
-    }
-  }, [userData, navigate, addNotification, t]);
+  if (!userData) {
+    return (
+      <>
+        <Helmet>
+          <title>{`${t("title.profile")} | ${t("title.app")}`}</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
+        <section className="relative h-full w-full flex flex-col items-center justify-center gap-4 p-3 bg-(--surface-2) text-(--text-primary) border border-(--border-color) rounded-2xl shadow-(--card-shadow) backdrop-blur-sm">
+          <h1 className="text-center text-(--text-secondary)">
+            {t("profile.needLogin")}
+          </h1>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Link
+              to="/login"
+              className="border rounded-lg px-4 py-2 transition-colors font-medium text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+            >
+              {t("access.goToLogin")}
+            </Link>
+            <Link
+              to="/"
+              className="border rounded-lg px-4 py-2 transition-colors font-medium text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+            >
+              {t("access.goHome")}
+            </Link>
+          </div>
+        </section>
+      </>
+    );
+  }
 
   return (
     <div className="flex flex-col flex-1 justify-center items-center h-full w-full">
@@ -52,7 +71,7 @@ function Profile() {
               <dt className="block text-sm font-semibold uppercase tracking-wide text-(--text-secondary)">
                 {t("profile.emailAddress")}
               </dt>
-              <dd className="text-lg font-bold">{userData?.email}</dd>
+              <dd className="text-lg font-bold">{userData.email}</dd>
             </div>
             <div>
               <dt className="block text-sm font-semibold uppercase tracking-wide text-(--text-secondary)">
@@ -61,19 +80,19 @@ function Profile() {
               <dd className="flex items-center justify-center">
                 <span
                   className={`items-center px-4 py-2 rounded-full text-sm font-bold ${
-                    userData?.role === "ADMIN"
+                    userData.role === "ADMIN"
                       ? "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200"
                       : "bg-slate-200 text-slate-900 dark:bg-slate-700 dark:text-slate-100"
                   }`}
                 >
-                  {userData?.role}
+                  {userData.role}
                 </span>
               </dd>
             </div>
           </dl>
-          {userData?.role !== "ADMIN" && (
+          {userData.role !== "ADMIN" && (
             <div className="flex flex-col gap-2 w-full max-w-sm">
-              {userData?.adminRequestedAt ? (
+              {userData.adminRequestedAt ? (
                 <>
                   <span className="px-4 py-2 rounded-full text-sm font-bold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">
                     {t("profile.adminRequestPending")}

@@ -15,6 +15,12 @@ Contributions of any kind are welcome - bug fixes, new features, data, documenta
 5. Make your changes, write tests where appropriate, and ensure the full test suite passes (`npm run test:all`)
 6. Open a pull request referencing any related issues
 
+## Email Confirmation in Development
+
+In development and test modes, the server skips sending real emails and logs the confirmation link to the console instead. You can click it directly to confirm the account - no `RESEND_API_KEY` needed.
+
+In production, emails are sent via [Resend](https://resend.com). The current sender (`onboarding@resend.dev`) is Resend's shared test domain and can only deliver to the Resend account owner's email. To send to any user, verify a custom domain in the Resend dashboard and update the `from` address in `server/src/email/confirmationEmail.ts`.
+
 ## Guidelines
 
 - Never commit secrets, API keys, or `.env` files

@@ -95,20 +95,10 @@ describe("PendingChangesAdminRow", () => {
 
     const user = userEvent.setup();
     const approveButton = screen.getByRole("button", { name: /Approve/i });
-    const rejectButton = screen.getByRole("button", { name: /Reject/i });
 
     await user.click(approveButton);
-    await user.click(rejectButton);
 
     expect(handleApprovePendingChangeMock).toHaveBeenCalledWith(
-      change,
-      setPendingChanges,
-      expect.objectContaining({
-        addNotification,
-        serverStatus: SERVER_STATUS.LIVE,
-      }),
-    );
-    expect(handleDeclinePendingChangeMock).toHaveBeenCalledWith(
       change,
       setPendingChanges,
       expect.objectContaining({

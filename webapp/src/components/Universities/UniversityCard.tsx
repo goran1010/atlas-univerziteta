@@ -10,7 +10,7 @@ import { groupBy } from "./utils/groupBy";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readErrorMessage } from "../../schemas/api";
 import { guardedFetch } from "../../utils/guardedFetch";
-import { isServerNotReadyError } from "../../utils/serverStatus";
+import { SERVER_STATUS, isServerNotReadyError } from "../../utils/serverStatus";
 import { universityDetailResponseSchema } from "../../schemas/university";
 
 import type {
@@ -153,6 +153,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
             onClick={() => {
               void handleExpand();
             }}
+            disabled={serverStatus !== SERVER_STATUS.LIVE}
             loading={loadingDetail}
           />
         </div>

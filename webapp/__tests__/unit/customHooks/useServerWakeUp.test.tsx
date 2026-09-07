@@ -79,7 +79,7 @@ describe("useServerWakeUp", () => {
     );
   });
 
-  test("clears long wait and never shows the banner when server responds ok", async () => {
+  test("skips the waking banner when server responds before the grace period", async () => {
     const fetchSpy = vi
       .spyOn(globalThis, "fetch")
       .mockResolvedValue(mockedResponse);
@@ -99,7 +99,6 @@ describe("useServerWakeUp", () => {
 
     expect(fetchSpy).toHaveBeenCalledTimes(1);
     expect(setLongWait).not.toHaveBeenCalled();
-
     expect(setServerIsDown).toHaveBeenCalledWith("server-status");
     expect(screen.getByTestId("server-wake-up-probe")).toHaveTextContent(
       "live",

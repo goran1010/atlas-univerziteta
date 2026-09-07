@@ -3,6 +3,7 @@ import { useOutletContext } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../../utils/Spinner";
 import { Button } from "../sharedComponents/Button";
+import { SERVER_STATUS } from "../../utils/serverStatus";
 import {
   handleApproveAdminRequest,
   handleDeclineAdminRequest,
@@ -26,8 +27,16 @@ function AdminRequestRow({
   setAdminRequests,
   index,
 }: AdminRequestRowProps) {
-  const [loading, setLoading] = useState(false);
+  const [activeAction, setActiveAction] = useState<
+    "approve" | "decline" | null
+  >(null);
   const { t, serverStatus } = use(RootContext);
+  const loading = activeAction !== null;
+
+  function setLoading(value: boolean) {
+    if (!value) setActiveAction(null);
+  }
+
   const ctx = { addNotification, setLoading, t, serverStatus };
 
   return (
@@ -58,10 +67,12 @@ function AdminRequestRow({
           variant="success"
           className="px-3 py-2 text-sm sm:max-w-25"
           onClick={() => {
+            setActiveAction("approve");
             void handleApproveAdminRequest(adminRequest, setAdminRequests, ctx);
           }}
           type="button"
-          loading={loading}
+          loading={activeAction === "approve"}
+          disabled={loading || serverStatus !== SERVER_STATUS.LIVE}
         >
           {t("form.approve")}
         </Button>
@@ -69,10 +80,12 @@ function AdminRequestRow({
           variant="danger"
           className="px-3 py-2 text-sm sm:max-w-25"
           onClick={() => {
+            setActiveAction("decline");
             void handleDeclineAdminRequest(adminRequest, setAdminRequests, ctx);
           }}
           type="button"
-          loading={loading}
+          loading={activeAction === "decline"}
+          disabled={loading || serverStatus !== SERVER_STATUS.LIVE}
         >
           {t("form.reject")}
         </Button>

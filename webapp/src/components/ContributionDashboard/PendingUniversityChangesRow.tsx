@@ -4,6 +4,7 @@ import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
+import { SERVER_STATUS } from "../../utils/serverStatus";
 import type { PendingChange } from "../../schemas/pendingChange";
 
 interface BadgeStyles {
@@ -84,6 +85,7 @@ function PendingUniversityChangesRow({
             variant="danger"
             className="px-3 py-1.5 text-xs"
             loading={loading}
+            disabled={serverStatus !== SERVER_STATUS.LIVE}
             onClick={() => void handleDelete()}
           >
             {t("contribution.deleteChange")}
@@ -102,6 +104,7 @@ function PendingUniversityChangesRow({
             variant="danger"
             className="sm:w-auto"
             loading={loading}
+            disabled={serverStatus !== SERVER_STATUS.LIVE}
             onClick={() => void handleDelete()}
           >
             {t("contribution.deleteChange")}

@@ -8,6 +8,7 @@ import {
   handleDeclinePendingChange,
 } from "./utils/adminActions";
 import { PendingChangeDetail } from "./PendingChangeDetail";
+import { SERVER_STATUS } from "../../utils/serverStatus";
 
 import type { Notification } from "../../types/notification";
 import type { TypeOfChange } from "../../schemas/domain";
@@ -40,19 +41,29 @@ const PendingChangesAdminRow = memo(
     setPendingChanges,
     index,
   }: PendingChangesAdminRowProps) => {
-    const [loading, setLoading] = useState(false);
+    const [activeAction, setActiveAction] = useState<
+      "approve" | "decline" | null
+    >(null);
     const [dialogOpen, setDialogOpen] = useState(false);
     const { t, serverStatus } = use(RootContext);
+    const loading = activeAction !== null;
+
+    function setLoading(value: boolean) {
+      if (!value) setActiveAction(null);
+    }
+
     const ctx = { addNotification, setLoading, t, serverStatus };
 
     const currentEntity = data.currentEntity ?? null;
 
     async function handleApprove() {
+      setActiveAction("approve");
       await handleApprovePendingChange(data, setPendingChanges, ctx);
       setDialogOpen(false);
     }
 
     async function handleDecline() {
+      setActiveAction("decline");
       await handleDeclinePendingChange(data, setPendingChanges, ctx);
       setDialogOpen(false);
     }
@@ -111,7 +122,8 @@ const PendingChangesAdminRow = memo(
             className="px-3 py-1.5 text-xs sm:max-w-25"
             onClick={() => void handleApprove()}
             type="button"
-            loading={loading}
+            loading={activeAction === "approve"}
+            disabled={loading || serverStatus !== SERVER_STATUS.LIVE}
           >
             {t("form.approve")}
           </Button>
@@ -120,7 +132,8 @@ const PendingChangesAdminRow = memo(
             className="px-3 py-1.5 text-xs sm:max-w-25"
             onClick={() => void handleDecline()}
             type="button"
-            loading={loading}
+            loading={activeAction === "decline"}
+            disabled={loading || serverStatus !== SERVER_STATUS.LIVE}
           >
             {t("form.reject")}
           </Button>
@@ -139,7 +152,8 @@ const PendingChangesAdminRow = memo(
                 className="sm:w-auto"
                 onClick={() => void handleApprove()}
                 type="button"
-                loading={loading}
+                loading={activeAction === "approve"}
+                disabled={loading || serverStatus !== SERVER_STATUS.LIVE}
               >
                 {t("form.approve")}
               </Button>
@@ -148,7 +162,8 @@ const PendingChangesAdminRow = memo(
                 className="sm:w-auto"
                 onClick={() => void handleDecline()}
                 type="button"
-                loading={loading}
+                loading={activeAction === "decline"}
+                disabled={loading || serverStatus !== SERVER_STATUS.LIVE}
               >
                 {t("form.reject")}
               </Button>

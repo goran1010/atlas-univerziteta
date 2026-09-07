@@ -2,7 +2,6 @@ import {
   SERVER_STATUS,
   ServerNotReadyError,
 } from "../../../../../src/utils/serverStatus";
-import type { SetStateAction } from "react";
 import { CsrfTokenError } from "../../../../../src/utils/getCsrfToken";
 import type { PendingChange } from "../../../../../src/schemas/pendingChange";
 import type { GuardedFetch } from "../../../../../src/utils/guardedFetch";
@@ -37,8 +36,7 @@ const baseArgs = {
     entity: "FBIH",
     ownership: "PUBLIC",
   },
-  setPendingChanges: vi.fn(),
-  setFormState: vi.fn(),
+  onSuccess: vi.fn(),
   ctx: {
     addNotification: vi.fn(),
     setLoading: vi.fn(),
@@ -117,49 +115,39 @@ describe("handleSubmitUniversityEntity", () => {
     );
   });
 
-  test("submits a create request and prepends the pending change", async () => {
-    const pendingChange: PendingChange = {
-      id: "1",
-      entityType: "UNIVERSITY",
-      typeOfChange: "CREATE",
-      targetId: null,
-      parentId: null,
-      data: {
-        name: "University of Sarajevo",
-        city: "Sarajevo",
-        entity: "FBIH",
-        ownership: "PUBLIC",
-      },
-      createdAt: new Date(),
-      user: { email: "submitter@email.com", role: "USER" },
-      userId: "user-1",
-    };
-
+  test("submits a create request and calls onSuccess", async () => {
     getCsrfTokenMock.mockResolvedValue("csrf-token");
     guardedFetchMock.mockResolvedValue(
       createSuccessResponse(
-        pendingChange,
+        {
+          id: "1",
+          entityType: "UNIVERSITY",
+          typeOfChange: "CREATE",
+          targetId: null,
+          parentId: null,
+          data: {
+            name: "University of Sarajevo",
+            city: "Sarajevo",
+            entity: "FBIH",
+            ownership: "PUBLIC",
+          },
+          createdAt: new Date(),
+          user: { email: "submitter@email.com", role: "USER" },
+          userId: "user-1",
+        },
         "Pending change created successfully.",
       ),
     );
 
     const { handleSubmitUniversityEntity } =
       await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
-    let updatePendingChanges:
-      ((prev: PendingChange[]) => PendingChange[]) | undefined;
-    const setPendingChanges = (updater: SetStateAction<PendingChange[]>) => {
-      if (typeof updater === "function") {
-        updatePendingChanges = updater;
-      }
-    };
     const addNotification = vi.fn();
     const setLoading = vi.fn();
-    const setFormState = vi.fn();
+    const onSuccess = vi.fn();
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      setPendingChanges,
-      setFormState,
+      onSuccess,
       ctx: { addNotification, setLoading, t, serverStatus: "live" },
     });
 
@@ -180,25 +168,7 @@ describe("handleSubmitUniversityEntity", () => {
       type: "success",
       message: "messages.universities.addSuccess",
     });
-    expect(setFormState).toHaveBeenCalledWith({
-      entityType: "",
-      parentId: "",
-      targetId: "",
-      data: {},
-    });
-
-    expect(typeof updatePendingChanges).toBe("function");
-
-    const existingPendingChange: PendingChange = {
-      ...pendingChange,
-      id: "existing",
-    };
-
-    expect(
-      (updatePendingChanges as (prev: PendingChange[]) => PendingChange[])([
-        existingPendingChange,
-      ]),
-    ).toEqual([pendingChange, existingPendingChange]);
+    expect(onSuccess).toHaveBeenCalledOnce();
   });
 
   test("uses PUT and target id for updates", async () => {
@@ -332,7 +302,7 @@ describe("handleSubmitUniversityEntity", () => {
     });
   });
 
-  test("does not add a change when a successful response has invalid data", async () => {
+  test("does not call onSuccess when a successful response has invalid data", async () => {
     getCsrfTokenMock.mockResolvedValue("csrf-token");
     guardedFetchMock.mockResolvedValue({
       ok: true,
@@ -342,7 +312,7 @@ describe("handleSubmitUniversityEntity", () => {
           data: { id: "pending-change-1" },
         }),
     } as Response);
-    const setPendingChanges = vi.fn();
+    const onSuccess = vi.fn();
     const addNotification = vi.fn();
     const consoleErrorSpy = vi
       .spyOn(console, "error")
@@ -353,11 +323,11 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      setPendingChanges,
+      onSuccess,
       ctx: { addNotification, setLoading: vi.fn(), t, serverStatus: "live" },
     });
 
-    expect(setPendingChanges).not.toHaveBeenCalled();
+    expect(onSuccess).not.toHaveBeenCalled();
     expect(addNotification).toHaveBeenCalledWith({
       type: "error",
       message: "messages.universities.addError",

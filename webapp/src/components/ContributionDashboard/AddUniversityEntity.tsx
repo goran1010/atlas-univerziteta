@@ -7,6 +7,7 @@ import { Button } from "../sharedComponents/Button";
 import { EntityPicker } from "./EntityPicker";
 import { getPickerDepth } from "./utils/getPickerDepth";
 import { handleSubmitUniversityEntity } from "./utils/handleSubmitUniversityEntity";
+import { SERVER_STATUS } from "../../utils/serverStatus";
 
 import type {
   Entity,
@@ -14,9 +15,8 @@ import type {
   StudyCycle,
   TypeOfChange,
 } from "../../schemas/domain";
-import type { PendingChange } from "../../schemas/pendingChange";
 import type { ContributionFormDraft, ContributionFormState } from "./types";
-import type { Dispatch, SetStateAction, SubmitEvent } from "react";
+import type { SubmitEvent } from "react";
 
 interface DataFieldProps {
   label: string;
@@ -72,9 +72,9 @@ function DataField(props: DataFieldProps) {
 }
 
 function AddUniversityEntity({
-  setPendingChanges,
+  refetchPendingChanges,
 }: {
-  setPendingChanges: Dispatch<SetStateAction<PendingChange[]>>;
+  refetchPendingChanges: () => void;
 }) {
   const { t, addNotification, serverStatus } = use(RootContext);
   const [formState, setFormState] = useState(INIT_FORM);
@@ -123,10 +123,10 @@ function AddUniversityEntity({
       targetId,
       typeOfChange,
       data,
-      setPendingChanges,
-      setFormState: () => {
+      onSuccess: () => {
         setFormState(INIT_FORM);
         setPickerResetKey((prev) => prev + 1);
+        refetchPendingChanges();
       },
       ctx: { addNotification, setLoading, t, serverStatus },
     });
@@ -476,7 +476,12 @@ function AddUniversityEntity({
           )}
         </fieldset>
       )}
-      <Button type="submit" loading={loading} className="max-w-xs self-center">
+      <Button
+        type="submit"
+        loading={loading}
+        disabled={serverStatus !== SERVER_STATUS.LIVE}
+        className="max-w-xs self-center"
+      >
         {t("contribution.submitSuggestion")}
       </Button>
     </form>

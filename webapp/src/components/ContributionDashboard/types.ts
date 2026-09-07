@@ -37,4 +37,5 @@ export interface ContributionOutletContext {
   pendingChanges: PendingChange[];
   setPendingChanges: Dispatch<SetStateAction<PendingChange[]>>;
   loading: boolean;
+  refetchPendingChanges: () => void;
 }

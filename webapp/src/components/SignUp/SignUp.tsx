@@ -49,11 +49,11 @@ function SignUp() {
               {t("auth.signup.heading")}
             </h1>
           </div>
-          <SignUpForm setLoading={setLoading} loading={loading} />
+          <SignUpForm disabled={loading} onLoadingChange={setLoading} />
 
           <DividerOr />
 
-          <GitHubLoginLink setLoading={setLoading} loading={loading} />
+          <GitHubLoginLink disabled={loading} onLoadingChange={setLoading} />
 
           <DividerOr />
 

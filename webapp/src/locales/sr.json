@@ -103,7 +103,7 @@
     "title": "Moj profil",
     "emailAddress": "Email adresa",
     "currentRole": "Trenutna uloga",
-    "needLogin": "Morate biti prijavljeni. Preusmereni ste na stranicu za prijavu.",
+    "needLogin": "Morate biti prijavljeni da biste vidjeli svoj profil.",
     "logout": "Odjavi se",
     "requestAdmin": "Zatraži admin pristup",
     "adminRequestPending": "Zahtjev za admin pristup je na čekanju",
@@ -112,7 +112,7 @@
   "home": {
     "title": "Univerziteti i studijski programi u Bosni i Hercegovini",
     "heading": "Univerziteti i studijski programi u Bosni i Hercegovini",
-    "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o Bosni i Hercegovini. Fokus je na univerzitetima — institucijama, fakultetima, studijskim programima i smjerovima.",
+    "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o Bosni i Hercegovini. Fokus je na univerzitetima - institucijama, fakultetima, studijskim programima i smjerovima.",
     "summary": "Koristite UniAtlas Bosnia za pregled profila univerziteta, poređenje akademske ponude i pristup strukturiranim javnim podacima kroz jednostavno sučelje ili direktno kroz API.",
     "exploreHeading": "Istražite podatke",
     "exploreDescription": "Pregledajte univerzitete širom Bosne i Hercegovine. Pogledajte fakultete, studijske programe i smjerove. Pretražujte po nazivu, gradu, akronimu, entitetu, vlasništvu, ciklusu studija i više.",
@@ -257,7 +257,7 @@
     "entityDeleted": "Entitet više ne postoji"
   },
   "error": {
-    "notFound": "Ovdje nema ničega, izvinite.",
+    "notFound": "Ovdje nema ničega.",
     "goHome": "Idi na početnu stranicu",
     "pageTitle": "Stranica nije pronađena"
   },
@@ -345,7 +345,7 @@
     "title": "Nađite programe i univerzitete",
     "browseAll": "Pregledaj sve",
     "search": "Pretraži",
-    "searchHint": "Pretražite sve podatke — po nazivu, gradu, akronimu, entitetu (FBIH/RS/BD), vlasništvu (JAVNI/PRIVATNI), ciklusu studija (PRVI, DRUGI…), jeziku ili nazivu nadređene jedinice.",
+    "searchHint": "Pretražite sve podatke - po nazivu, gradu, akronimu, entitetu (FBIH/RS/BD), vlasništvu (JAVNI/PRIVATNI), ciklusu studija (PRVI, DRUGI…), jeziku ili nazivu nadređene jedinice.",
     "searchAllPlaceholder": "Pretraži po nazivu, gradu, ciklusu, entitetu…",
     "universitiesSection": "Univerziteti",
     "facultiesSection": "Fakulteti",
@@ -411,5 +411,9 @@
     "filterOwnership": "Vlasništvo",
     "filterCycle": "Ciklus studija",
     "all": "Svi"
+  },
+  "access": {
+    "goToLogin": "Prijavi se",
+    "goHome": "Idi na početnu stranicu"
   }
 }

@@ -6,6 +6,7 @@ import {
 import { SERVER_URL } from "../utils/envConfig";
 const ALLOWED_ATTEMPTS = 60;
 const DELAY_BETWEEN_ATTEMPTS = 1000;
+const NOTIFICATION_GRACE_PERIOD = 1000;
 
 import { type ServerStatus } from "../utils/serverStatus";
 import type {
@@ -43,7 +44,7 @@ function useServerWakeUp({
     let retryTimeoutId: number;
     let isCancelled = false;
 
-    function scheduleRetry() {
+    function showWakingNotification() {
       addNotification({
         id: SERVER_STATUS_NOTIFICATION_ID,
         type: "warning",
@@ -51,6 +52,10 @@ function useServerWakeUp({
         duration: null,
         persistent: true,
       });
+    }
+
+    function scheduleRetry() {
+      showWakingNotification();
       retryTimeoutId = setTimeout(() => {
         currentNumberOfAttempts++;
         void checkServer();
@@ -90,6 +95,7 @@ function useServerWakeUp({
         }
 
         setServerStatus(SERVER_STATUS.LIVE);
+        clearTimeout(notificationTimeoutId);
         removeNotification(SERVER_STATUS_NOTIFICATION_ID);
       } catch (err) {
         console.error(err);
@@ -97,11 +103,17 @@ function useServerWakeUp({
       }
     }
 
+    const notificationTimeoutId = setTimeout(
+      showWakingNotification,
+      NOTIFICATION_GRACE_PERIOD,
+    );
+
     void checkServer();
 
     return () => {
       isCancelled = true;
       clearTimeout(retryTimeoutId);
+      clearTimeout(notificationTimeoutId);
       removeNotification(SERVER_STATUS_NOTIFICATION_ID);
     };
   }, [addNotification, removeNotification]);
