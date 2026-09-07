@@ -415,5 +415,8 @@
   "access": {
     "goToLogin": "Prijavi se",
     "goHome": "Idi na početnu stranicu"
+  },
+  "links": {
+    "opensInNewTab": "(otvara se u novoj kartici)"
   }
 }

@@ -415,5 +415,8 @@
   "access": {
     "goToLogin": "Log In",
     "goHome": "Go to Home Page"
+  },
+  "links": {
+    "opensInNewTab": "(opens in new tab)"
   }
 }

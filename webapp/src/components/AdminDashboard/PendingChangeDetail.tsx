@@ -1,5 +1,6 @@
 import { use, type ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { ExternalLink } from "../sharedComponents/ExternalLink";
 
 import type { TFunction } from "../../types/i18n";
 
@@ -26,14 +27,9 @@ function buildEntityRows(
       rows.push({
         label,
         value: (
-          <a
-            href={raw}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-(--accent) hover:text-(--accent-hover) hover:underline break-all"
-          >
+          <ExternalLink href={raw} className="break-all">
             {raw}
-          </a>
+          </ExternalLink>
         ),
       });
       return;

@@ -4,6 +4,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../../utils/envConfig";
 import { GitHubIcon } from "../sharedComponents/icons";
+import { ExternalLink } from "../sharedComponents/ExternalLink";
 
 function About() {
   const { t, userData } = use(RootContext);
@@ -32,15 +33,13 @@ function About() {
           <p>{t("home.summary")}</p>
           <p className="text-sm text-(--text-muted)">
             {t("home.openSource")}{" "}
-            <a
+            <ExternalLink
               href="https://github.com/goran1010/uniatlas-bosnia"
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-1 align-middle"
             >
               <GitHubIcon size={14} />
               {t("home.github")}
-            </a>
+            </ExternalLink>
             .
           </p>
         </header>
@@ -104,15 +103,13 @@ function About() {
             >
               {t("home.forDevsCta")}
             </Link>
-            <a
+            <ExternalLink
               href="https://github.com/goran1010/uniatlas-bosnia"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border rounded-lg px-4 py-2 transition-colors font-medium w-full text-center text-(--text-primary) sm:w-auto hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) focus-visible:bg-(--hover-surface) inline-flex items-center justify-center gap-1.5"
+              className="inline-flex items-center justify-center gap-1.5"
             >
               <GitHubIcon />
               {t("home.forDevsGithub")}
-            </a>
+            </ExternalLink>
           </div>
         </section>
       </div>
