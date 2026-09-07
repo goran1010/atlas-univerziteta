@@ -27,8 +27,8 @@ function LanguageIcon({ language }: { language: Language }) {
       return (
         <span className="inline-flex gap-0.5">
           <Flag src="/images/flags/ba.svg" alt="" />
-          <Flag src="/images/flags/hr.svg" alt="" />
-          <Flag src="/images/flags/rs.svg" alt="" />
+          <Flag src="/images/flags/hr.png" alt="" />
+          <Flag src="/images/flags/rs.png" alt="" />
         </span>
       );
     default:

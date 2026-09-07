@@ -25,12 +25,12 @@ function Button({
   ...props
 }: ButtonProps) {
   const variantClasses = {
-    primary: `border-2 border-(--accent)/60 text-(--text-primary) tracking-[0.01em] enabled:hover:bg-(--accent)/10 enabled:active:scale-[0.98] ${DISABLED}`,
-    secondary: `bg-(--surface-1) text-(--text-primary) border-2 border-(--border-color) shadow-(--card-shadow-soft) enabled:hover:bg-(--hover-surface) enabled:hover:shadow-(--card-shadow) enabled:active:scale-[0.98] ${DISABLED}`,
-    success: `border-2 border-green-600/60 dark:border-green-400/50 text-(--text-primary) enabled:hover:bg-green-600/10 ${DISABLED}`,
-    danger: `border-2 border-red-600/60 dark:border-red-400/50 text-(--text-primary) enabled:hover:bg-red-600/10 ${DISABLED}`,
-    update: `border-2 border-yellow-500/60 dark:border-yellow-400/50 text-(--text-primary) enabled:hover:bg-yellow-500/10 ${DISABLED}`,
-    warning: `border-2 border-amber-600/60 dark:border-amber-400/50 text-(--text-primary) enabled:hover:bg-amber-600/10 ${DISABLED}`,
+    primary: `bg-(--accent) text-slate-50 tracking-[0.01em] enabled:hover:bg-(--accent-hover) enabled:hover:shadow-[0_10px_20px_rgba(37,99,235,0.25)] enabled:active:scale-[0.98] ${DISABLED}`,
+    secondary: `bg-(--surface-1) text-(--text-primary) border border-(--border-color) shadow-(--card-shadow-soft) enabled:hover:bg-(--hover-surface) enabled:hover:shadow-(--card-shadow) enabled:active:scale-[0.98] ${DISABLED}`,
+    success: `bg-green-700 text-green-50 shadow-[0_8px_16px_rgba(21,128,61,0.22)] enabled:hover:bg-green-800 ${DISABLED}`,
+    danger: `bg-red-700 text-red-50 shadow-[0_8px_16px_rgba(185,28,28,0.22)] enabled:hover:bg-red-800 ${DISABLED}`,
+    update: `bg-yellow-500 text-yellow-950 shadow-[0_8px_16px_rgba(202,138,4,0.22)] enabled:hover:bg-yellow-600 ${DISABLED}`,
+    warning: `bg-amber-700 text-amber-50 shadow-[0_8px_16px_rgba(202,138,4,0.2)] enabled:hover:bg-amber-800 ${DISABLED}`,
     ghost: `text-(--text-secondary) enabled:hover:text-(--text-primary) enabled:hover:bg-(--hover-surface) ${DISABLED}`,
   };
 
