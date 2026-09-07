@@ -14,7 +14,7 @@ function ResultGroup({
   const [collapsed, setCollapsed] = useState(false);
 
   return (
-    <div className="relative mt-2 border border-(--border-color)/30 rounded-xl p-1 pt-3 sm:p-3 sm:pt-4 bg-(--surface-1)/40">
+    <div className="relative mt-2 border border-(--border-color)/30 rounded-xl overflow-x-clip p-1 pt-3 sm:p-3 sm:pt-4 bg-(--surface-1)/40">
       {collapsible ? (
         <button
           type="button"
