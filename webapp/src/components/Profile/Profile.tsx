@@ -95,7 +95,7 @@ function Profile() {
                         adminRequestCtx,
                       )
                     }
-                    variant="warning"
+                    variant="update"
                     className="px-6 py-3 font-semibold"
                     type="button"
                     loading={adminRequestLoading}
@@ -108,7 +108,7 @@ function Profile() {
                   onClick={() =>
                     void handleRequestAdmin(setUserData, adminRequestCtx)
                   }
-                  variant="secondary"
+                  variant="success"
                   className="px-6 py-3 font-semibold"
                   type="button"
                   loading={adminRequestLoading}

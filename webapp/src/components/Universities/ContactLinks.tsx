@@ -1,3 +1,9 @@
+import {
+  EnvelopeIcon,
+  GlobeIcon,
+  HomeIcon,
+  PhoneIcon,
+} from "../sharedComponents/icons";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 
 const touchTarget = "inline-block py-1";
@@ -20,7 +26,7 @@ function ContactLinks({
           href={website}
           className={`truncate max-w-xs ${touchTarget}`}
         >
-          <span aria-hidden="true">🌐</span> {website}
+          <GlobeIcon /> {website}
         </ExternalLink>
       )}
       {address && (
@@ -28,7 +34,7 @@ function ContactLinks({
           href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
           className={touchTarget}
         >
-          <span aria-hidden="true">🏠</span> {address}
+          <HomeIcon /> {address}
         </ExternalLink>
       )}
       {phone && (
@@ -37,7 +43,7 @@ function ContactLinks({
           newTab={false}
           className={touchTarget}
         >
-          <span aria-hidden="true">📞</span> {phone}
+          <PhoneIcon /> {phone}
         </ExternalLink>
       )}
       {email && (
@@ -46,7 +52,7 @@ function ContactLinks({
           newTab={false}
           className={`truncate max-w-xs ${touchTarget}`}
         >
-          <span aria-hidden="true">✉️</span> {email}
+          <EnvelopeIcon size="1em" /> {email}
         </ExternalLink>
       )}
     </>

@@ -1,3 +1,9 @@
+import {
+  AwardIcon,
+  ClipboardListIcon,
+  ClockIcon,
+  SpeechIcon,
+} from "../sharedComponents/icons";
 import { useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
@@ -35,13 +41,27 @@ function StudyProgramRow({
 
   return (
     <li className="text-sm">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-0.5 sm:gap-2 py-1 px-0.5 sm:px-2">
+      <div
+        onClick={(e) => {
+          if ((e.target as HTMLElement).closest("a, button")) return;
+          if (hasTracks) {
+            setOpen((p) => !p);
+          } else if (ancestors) {
+            setDialogOpen(true);
+          }
+        }}
+        className={`flex flex-col sm:flex-row sm:justify-between sm:items-center gap-0.5 sm:gap-2 py-1 px-0.5 sm:px-2 rounded-md transition-colors ${
+          hasTracks || ancestors
+            ? "cursor-pointer hover:bg-(--hover-surface)"
+            : ""
+        }`}
+      >
         <div className="min-w-0">
           <span className="font-medium">{program.name}</span>
           <div className="flex flex-wrap gap-x-1.5 sm:gap-x-3 items-center text-xs text-(--text-muted) mt-0.5">
             {program.durationYears != null && (
               <span>
-                <span aria-hidden="true">🕐</span> {program.durationYears}{" "}
+                <ClockIcon /> {program.durationYears}{" "}
                 {tCount(
                   t,
                   "universitiesPage.durationYears",
@@ -51,18 +71,17 @@ function StudyProgramRow({
             )}
             {program.ects != null && (
               <span>
-                <span aria-hidden="true">🎓</span> {program.ects}{" "}
-                {t("universitiesPage.ects")}
+                <AwardIcon /> {program.ects} {t("universitiesPage.ects")}
               </span>
             )}
             {program.language && (
               <span>
-                <span aria-hidden="true">🗣️</span> {program.language}
+                <SpeechIcon /> {program.language}
               </span>
             )}
             {hasTracks && (
               <span>
-                <span aria-hidden="true">📋</span>{" "}
+                <ClipboardListIcon />{" "}
                 <span className="font-bold text-blue-600 dark:text-blue-400">
                   {program.tracks.length}
                 </span>{" "}

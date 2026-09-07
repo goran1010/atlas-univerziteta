@@ -49,10 +49,10 @@ function createNotification(type: TypeNotification): Notification {
 }
 
 const notificationCases: [TypeNotification, "status" | "alert", string][] = [
-  ["success", "status", "bg-green-100"],
-  ["error", "alert", "bg-red-100"],
-  ["warning", "alert", "bg-yellow-100"],
-  ["info", "status", "bg-sky-100"],
+  ["success", "status", "border-l-green-600"],
+  ["error", "alert", "border-l-red-600"],
+  ["warning", "alert", "border-l-amber-500"],
+  ["info", "status", "border-l-sky-600"],
 ];
 
 describe("Notifications", () => {

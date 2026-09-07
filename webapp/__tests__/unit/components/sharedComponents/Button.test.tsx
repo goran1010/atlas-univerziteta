@@ -8,7 +8,7 @@ describe("Button", () => {
     const button = screen.getByRole("button", { name: "Save" });
 
     expect(button).toHaveAttribute("type", "button");
-    expect(button).toHaveClass("bg-(--accent)");
+    expect(button).toHaveClass("border-(--accent)/60");
   });
 
   test("uses the supplied variant", () => {
@@ -16,7 +16,7 @@ describe("Button", () => {
 
     const button = screen.getByRole("button", { name: "Delete" });
 
-    expect(button).toHaveClass("bg-red-700");
-    expect(button).not.toHaveClass("bg-(--accent)");
+    expect(button).toHaveClass("border-red-600/60");
+    expect(button).not.toHaveClass("border-(--accent)/60");
   });
 });

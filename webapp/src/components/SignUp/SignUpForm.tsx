@@ -109,6 +109,7 @@ function SignUpForm({ disabled, onLoadingChange }: SignUpFormProps) {
       </div>
       <div>
         <Button
+          variant="success"
           onClick={() => {
             checkSignupFormValidity(
               emailRef.current,
@@ -120,7 +121,6 @@ function SignUpForm({ disabled, onLoadingChange }: SignUpFormProps) {
           type="submit"
           loading={loading}
           disabled={disabled || serverStatus !== SERVER_STATUS.LIVE}
-          className="text-white"
         >
           {t("form.create")}
         </Button>

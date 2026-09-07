@@ -1,3 +1,4 @@
+import { ChevronDownIcon } from "../sharedComponents/icons";
 import { useState, type ReactNode } from "react";
 
 function ResultGroup({
@@ -21,24 +22,24 @@ function ResultGroup({
           onClick={() => {
             setCollapsed((prev) => !prev);
           }}
-          className="absolute -top-2.5 left-3 px-2 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wide rounded bg-blue-100 text-(--accent-text) leading-tight border border-(--border-color)/40 dark:bg-blue-950 cursor-pointer flex items-center gap-1"
+          className="absolute -top-2.5 left-3 px-2 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wide rounded bg-(--surface-alt) text-(--accent-text) leading-tight border border-(--border-color)/40 cursor-pointer flex items-center gap-1"
         >
           <span
             className="text-[0.6rem] transition-transform"
             style={{ transform: collapsed ? "rotate(-90deg)" : "rotate(0deg)" }}
             aria-hidden="true"
           >
-            ▼
+            <ChevronDownIcon />
           </span>
           {label}
           {count != null && (
-            <span className="px-1 rounded-full bg-blue-200 text-blue-800 dark:bg-blue-800 dark:text-blue-200">
+            <span className="px-1 rounded-full bg-(--hover-surface) text-(--accent-text)">
               {count}
             </span>
           )}
         </button>
       ) : (
-        <span className="absolute -top-2.5 left-3 px-2 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wide rounded bg-blue-100 text-(--accent-text) leading-tight border border-(--border-color)/40 dark:bg-blue-950">
+        <span className="absolute -top-2.5 left-3 px-2 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wide rounded bg-(--surface-alt) text-(--accent-text) leading-tight border border-(--border-color)/40">
           {label}
         </span>
       )}

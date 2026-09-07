@@ -1,3 +1,4 @@
+import { XIcon } from "./sharedComponents/icons";
 import { use, useEffect, useRef } from "react";
 import { RootContext } from "../contextData/RootContext";
 import type { TypeNotification } from "../types/notification";
@@ -5,14 +6,14 @@ import type { TypeNotification } from "../types/notification";
 function getNotificationStyles(type: TypeNotification) {
   switch (type) {
     case "success":
-      return "bg-green-100 text-green-900 border border-green-300";
+      return "border-l-green-600 dark:border-l-green-400";
     case "error":
-      return "bg-red-100 text-red-900 border border-red-300";
+      return "border-l-red-600 dark:border-l-red-400";
     case "warning":
-      return "bg-yellow-100 text-amber-900 border border-amber-300";
+      return "border-l-amber-500 dark:border-l-amber-400";
     case "info":
     default:
-      return "bg-sky-100 text-sky-900 border border-sky-300";
+      return "border-l-sky-600 dark:border-l-sky-400";
   }
 }
 
@@ -104,7 +105,7 @@ function Notifications() {
             <div
               role={getNotificationRole(notification.type)}
               aria-atomic="true"
-              className={`relative px-4 py-3 rounded-lg shadow-lg w-full flex flex-col justify-center items-center ${getNotificationStyles(
+              className={`relative px-4 py-3 rounded-lg w-full flex flex-col justify-center items-center bg-white/65 dark:bg-slate-900/65 text-(--text-primary) border border-(--border-color) border-l-4 shadow-(--card-shadow) backdrop-blur ${getNotificationStyles(
                 notification.type,
               )}`}
             >
@@ -118,7 +119,7 @@ function Notifications() {
                 aria-label={t("notifications.dismiss")}
                 className="absolute top-0 right-1 text-sm font-semibold text-current cursor-pointer"
               >
-                ✖
+                <XIcon />
               </button>
             </div>
           </li>

@@ -478,6 +478,13 @@ function AddUniversityEntity({
       )}
       <Button
         type="submit"
+        variant={
+          typeOfChange === "CREATE"
+            ? "success"
+            : typeOfChange === "UPDATE"
+              ? "update"
+              : "danger"
+        }
         loading={loading}
         disabled={serverStatus !== SERVER_STATUS.LIVE}
         className="max-w-xs self-center"

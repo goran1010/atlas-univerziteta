@@ -92,6 +92,7 @@ function LogInForm({ disabled, onLoadingChange }: LogInFormProps) {
       </div>
       <div>
         <Button
+          variant="success"
           onClick={() => {
             checkLoginFormValidity(
               emailInput.current,
@@ -102,7 +103,6 @@ function LogInForm({ disabled, onLoadingChange }: LogInFormProps) {
           type="submit"
           loading={loading}
           disabled={disabled || serverStatus !== SERVER_STATUS.LIVE}
-          className="text-white"
         >
           {t("auth.login.heading")}
         </Button>

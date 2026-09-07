@@ -1,3 +1,4 @@
+import { SearchIcon, ChevronDownIcon, XIcon } from "../sharedComponents/icons";
 import {
   useState,
   use,
@@ -47,18 +48,16 @@ function ResultSection({
         className={`flex items-center gap-2 text-left w-full ${isEmpty ? "" : "cursor-pointer"}`}
       >
         {!isEmpty && (
-          <span
-            className="text-xs text-(--text-muted) transition-transform"
-            style={{ transform: collapsed ? "rotate(-90deg)" : "rotate(0deg)" }}
-            aria-hidden="true"
-          >
-            ▼
-          </span>
+          <ChevronDownIcon
+            className={`text-xs text-(--text-muted) transition-transform ${
+              collapsed ? "-rotate-90" : ""
+            }`}
+          />
         )}
         <h2 className="text-lg font-semibold text-(--text-primary)">
           {heading}
           {!isEmpty && (
-            <span className="ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold align-middle bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200">
+            <span className="ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold align-middle bg-(--hover-surface) text-(--accent-text)">
               {count}
             </span>
           )}
@@ -70,44 +69,6 @@ function ResultSection({
         !collapsed && children
       )}
     </section>
-  );
-}
-
-function SearchIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <circle cx="11" cy="11" r="8" />
-      <line x1="21" y1="21" x2="16.65" y2="16.65" />
-    </svg>
-  );
-}
-
-function ClearIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <line x1="18" y1="6" x2="6" y2="18" />
-      <line x1="6" y1="6" x2="18" y2="18" />
-    </svg>
   );
 }
 
@@ -296,7 +257,7 @@ function UnifiedSearch() {
               searchInput === "" ? "invisible" : "visible"
             }`}
           >
-            <ClearIcon />
+            <XIcon />
           </button>
         </div>
         <Button
@@ -315,9 +276,7 @@ function UnifiedSearch() {
         results !== null &&
         (noResultsAtAll ? (
           <div className="flex flex-col items-center gap-2 py-8 text-(--text-muted)">
-            <span className="text-4xl" aria-hidden="true">
-              🔍
-            </span>
+            <SearchIcon size={36} />
             <p>{t("universitiesPage.noResultsAtAll")}</p>
           </div>
         ) : (
