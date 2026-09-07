@@ -5,6 +5,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { Helmet } from "react-helmet-async";
 import { PUBLIC_API_URL, SITE_URL } from "../../utils/envConfig";
 import { GitHubIcon } from "../sharedComponents/icons";
+import { ExternalLink } from "../sharedComponents/ExternalLink";
 
 function Api() {
   const { t } = use(RootContext);
@@ -39,15 +40,13 @@ function Api() {
           </pre>
           <p className="mt-2 text-sm text-(--text-muted)">
             {t("api.fullDocs")}{" "}
-            <a
+            <ExternalLink
               href="https://github.com/goran1010/uniatlas-bosnia"
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-1 align-middle"
             >
               <GitHubIcon size={14} />
               GitHub README
-            </a>
+            </ExternalLink>
             .
           </p>
         </header>

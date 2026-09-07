@@ -1,3 +1,4 @@
+import { LandmarkIcon, MapPinIcon } from "../sharedComponents/icons";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { ResultCard } from "./ResultCard";
@@ -68,16 +69,22 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
 
   return (
     <ResultCard>
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+      <div
+        onClick={(e) => {
+          if ((e.target as HTMLElement).closest("a, button")) return;
+          void handleExpand();
+        }}
+        className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 rounded-md transition-colors cursor-pointer hover:bg-(--hover-surface)"
+      >
         <div className="min-w-0">
           <p className="font-bold text-(--text-primary)">{faculty.name}</p>
           <p className="text-sm text-(--text-muted) mt-0.5">
-            <span aria-hidden="true">🏛️</span> {faculty.university.name}
+            <LandmarkIcon /> {faculty.university.name}
             {faculty.university.acronym && ` (${faculty.university.acronym})`}
           </p>
           {faculty.city && (
             <p className="text-sm text-(--text-secondary) mt-0.5">
-              <span aria-hidden="true">📍</span> {faculty.city}
+              <MapPinIcon /> {faculty.city}
             </p>
           )}
           <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">

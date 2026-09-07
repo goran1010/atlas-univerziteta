@@ -1,3 +1,9 @@
+import {
+  BuildingIcon,
+  CalendarIcon,
+  MapPinIcon,
+  TagIcon,
+} from "../sharedComponents/icons";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
@@ -91,7 +97,13 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
   return (
     <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) hover:bg-(--hover-surface) transition-colors">
       <div className="p-2 sm:p-4">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+        <div
+          onClick={(e) => {
+            if ((e.target as HTMLElement).closest("a, button")) return;
+            void handleExpand();
+          }}
+          className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 cursor-pointer"
+        >
           <div className="min-w-0">
             <h2 className="font-bold text-base text-(--text-primary) leading-snug">
               {university.name}
@@ -103,10 +115,10 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
             </h2>
             <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
               <span>
-                <span aria-hidden="true">📍</span> {university.city}
+                <MapPinIcon /> {university.city}
               </span>
               <span>
-                <span aria-hidden="true">🏷️</span> {entityLabel}
+                <TagIcon /> {entityLabel}
               </span>
               <span
                 className={`px-1.5 py-0.5 rounded text-xs font-medium ${
@@ -121,7 +133,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               </span>
               {university._count.faculties > 0 && (
                 <span>
-                  <span aria-hidden="true">🏛️</span>{" "}
+                  <BuildingIcon />{" "}
                   <span className="font-bold text-blue-600 dark:text-blue-400">
                     {university._count.faculties}
                   </span>{" "}
@@ -134,7 +146,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               )}
               {university.foundedYear && (
                 <span>
-                  <span aria-hidden="true">📅</span> {university.foundedYear}
+                  <CalendarIcon /> {university.foundedYear}
                 </span>
               )}
             </div>

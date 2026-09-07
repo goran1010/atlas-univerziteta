@@ -1,3 +1,4 @@
+import { BookOpenIcon } from "../sharedComponents/icons";
 import { useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
@@ -31,12 +32,26 @@ function FacultyRow({
 
   return (
     <li className="text-sm">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2 py-1.5 px-0.5 sm:px-2">
+      <div
+        onClick={(e) => {
+          if ((e.target as HTMLElement).closest("a, button")) return;
+          if (hasStudyPrograms) {
+            setOpen((p) => !p);
+          } else if (ancestors) {
+            setDialogOpen(true);
+          }
+        }}
+        className={`flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2 py-1.5 px-0.5 sm:px-2 rounded-md transition-colors ${
+          hasStudyPrograms || ancestors
+            ? "cursor-pointer hover:bg-(--hover-surface)"
+            : ""
+        }`}
+      >
         <div className="min-w-0">
           <p className="font-semibold">{faculty.name}</p>
           {hasStudyPrograms && (
             <p className="text-xs text-(--text-muted) mt-0.5">
-              <span aria-hidden="true">🎓</span>{" "}
+              <BookOpenIcon />{" "}
               <span className="font-bold text-blue-600 dark:text-blue-400">
                 {faculty.studyPrograms.length}
               </span>{" "}

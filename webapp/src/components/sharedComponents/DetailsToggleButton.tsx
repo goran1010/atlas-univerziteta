@@ -1,3 +1,4 @@
+import { ChevronDownIcon } from "./icons";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Button } from "./Button";
@@ -21,14 +22,16 @@ function DetailsToggleButton({
 
   return (
     <Button
-      variant="secondary"
+      variant="ghost"
       className={className}
       onClick={onClick}
       loading={loading}
       disabled={disabled}
       aria-expanded={expanded}
     >
-      <span aria-hidden="true">{expanded ? "▲" : "▼"}</span>{" "}
+      <ChevronDownIcon
+        className={`transition-transform ${expanded ? "rotate-180" : ""}`}
+      />{" "}
       {expanded ? t("universitiesPage.collapse") : t("universitiesPage.expand")}
     </Button>
   );

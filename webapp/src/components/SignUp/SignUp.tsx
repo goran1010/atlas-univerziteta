@@ -1,7 +1,7 @@
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { useState, useEffect, use } from "react";
 import { useNavigate } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
-import { Link } from "react-router";
 import { SignUpForm } from "./SignUpForm";
 import { GitHubLoginLink } from "../sharedComponents/GitHubLoginLink";
 import { DividerOr } from "../sharedComponents/DividerOr";
@@ -57,14 +57,11 @@ function SignUp() {
 
           <DividerOr />
 
-          <div className="relative">
-            <p className="text-center">
-              {t("auth.signup.haveAccountPrefix")}{" "}
-              <Link className="hover:underline font-bold" to={"/login"}>
-                {t("auth.login.linkText")}
-              </Link>{" "}
-              {t("auth.pageSuffix")}
-            </p>
+          <div className="flex flex-col items-center gap-2">
+            <p>{t("auth.signup.haveAccountPrefix")}</p>
+            <LinkButton to="/login" className="w-full sm:w-auto sm:min-w-48">
+              {t("auth.login.linkText")}
+            </LinkButton>
           </div>
         </div>
       </div>

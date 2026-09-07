@@ -1,3 +1,9 @@
+import {
+  AwardIcon,
+  BookOpenIcon,
+  ClockIcon,
+  GraduationCapIcon,
+} from "../sharedComponents/icons";
 import { ResultCard } from "./ResultCard";
 import { FacultyBreadcrumb } from "./FacultyBreadcrumb";
 import { tCount } from "../../utils/pluralize";
@@ -11,24 +17,23 @@ function TrackResult({ track, t }: { track: TrackSearchResult; t: TFunction }) {
       <p className="font-bold text-(--text-primary)">{track.name}</p>
       <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-sm text-(--text-secondary)">
         <span>
-          <span aria-hidden="true">📚</span>{" "}
+          <GraduationCapIcon />{" "}
           {t(`universitiesPage.cycles.${track.studyProgram.cycle}`)}
         </span>
         {track.durationYears != null && (
           <span>
-            <span aria-hidden="true">🕐</span> {track.durationYears}{" "}
+            <ClockIcon /> {track.durationYears}{" "}
             {tCount(t, "universitiesPage.durationYears", track.durationYears)}
           </span>
         )}
         {track.ects != null && (
           <span>
-            <span aria-hidden="true">🎓</span> {track.ects}{" "}
-            {t("universitiesPage.ects")}
+            <AwardIcon /> {track.ects} {t("universitiesPage.ects")}
           </span>
         )}
       </div>
       <p className="text-sm text-(--text-muted) mt-0.5">
-        <span aria-hidden="true">📋</span> {track.studyProgram.name}
+        <BookOpenIcon /> {track.studyProgram.name}
       </p>
       <FacultyBreadcrumb faculty={track.studyProgram.faculty} />
     </ResultCard>

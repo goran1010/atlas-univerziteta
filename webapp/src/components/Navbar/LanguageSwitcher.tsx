@@ -1,34 +1,24 @@
 import { use } from "react";
+import { GlobeIcon } from "../sharedComponents/icons";
 import { RootContext } from "../../contextData/RootContext";
 
 import type { Language, SetLanguage } from "../../types/i18n";
 
 const languageOrder: Language[] = ["system", "en", "sr"];
 
-function GlobeIcon() {
-  return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <circle cx="12" cy="12" r="10" />
-      <line x1="2" y1="12" x2="22" y2="12" />
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-    </svg>
-  );
-}
-
-function Flag({ src, alt }: { src: string; alt: string }) {
+function Flag({
+  src,
+  srcSet,
+  alt,
+}: {
+  src: string;
+  srcSet?: string;
+  alt: string;
+}) {
   return (
     <img
       src={src}
+      srcSet={srcSet}
       alt={alt}
       width="20"
       height="15"
@@ -46,12 +36,20 @@ function LanguageIcon({ language }: { language: Language }) {
       return (
         <span className="inline-flex gap-0.5">
           <Flag src="/images/flags/ba.svg" alt="" />
-          <Flag src="/images/flags/hr.svg" alt="" />
-          <Flag src="/images/flags/rs.svg" alt="" />
+          <Flag
+            src="/images/flags/hr.png"
+            srcSet="/images/flags/hr.png 1x, /images/flags/hr@2x.png 2x"
+            alt=""
+          />
+          <Flag
+            src="/images/flags/rs.png"
+            srcSet="/images/flags/rs.png 1x, /images/flags/rs@2x.png 2x"
+            alt=""
+          />
         </span>
       );
     default:
-      return <GlobeIcon />;
+      return <GlobeIcon className="text-lg" />;
   }
 }
 

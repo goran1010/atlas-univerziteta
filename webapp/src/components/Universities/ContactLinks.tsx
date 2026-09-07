@@ -1,4 +1,12 @@
-const touchTarget = "inline-block py-1 hover:underline";
+import {
+  EnvelopeIcon,
+  GlobeIcon,
+  HomeIcon,
+  PhoneIcon,
+} from "../sharedComponents/icons";
+import { ExternalLink } from "../sharedComponents/ExternalLink";
+
+const touchTarget = "inline-block py-1";
 
 function ContactLinks({
   website,
@@ -14,37 +22,38 @@ function ContactLinks({
   return (
     <>
       {website && (
-        <a
+        <ExternalLink
           href={website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`text-blue-600 dark:text-blue-400 truncate max-w-xs ${touchTarget}`}
+          className={`truncate max-w-xs ${touchTarget}`}
         >
-          <span aria-hidden="true">🌐</span> {website}
-        </a>
+          <GlobeIcon /> {website}
+        </ExternalLink>
       )}
       {address && (
-        <a
+        <ExternalLink
           href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
-          target="_blank"
-          rel="noopener noreferrer"
           className={touchTarget}
         >
-          <span aria-hidden="true">🏠</span> {address}
-        </a>
+          <HomeIcon /> {address}
+        </ExternalLink>
       )}
       {phone && (
-        <a href={`tel:${phone}`} className={touchTarget}>
-          <span aria-hidden="true">📞</span> {phone}
-        </a>
+        <ExternalLink
+          href={`tel:${phone}`}
+          newTab={false}
+          className={touchTarget}
+        >
+          <PhoneIcon /> {phone}
+        </ExternalLink>
       )}
       {email && (
-        <a
+        <ExternalLink
           href={`mailto:${email}`}
-          className={`text-blue-600 dark:text-blue-400 truncate max-w-xs ${touchTarget}`}
+          newTab={false}
+          className={`truncate max-w-xs ${touchTarget}`}
         >
-          <span aria-hidden="true">✉️</span> {email}
-        </a>
+          <EnvelopeIcon size="1em" /> {email}
+        </ExternalLink>
       )}
     </>
   );

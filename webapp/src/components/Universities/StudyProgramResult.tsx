@@ -1,3 +1,4 @@
+import { AwardIcon, GraduationCapIcon } from "../sharedComponents/icons";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { ResultCard } from "./ResultCard";
@@ -73,18 +74,23 @@ function StudyProgramResult({
 
   return (
     <ResultCard>
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+      <div
+        onClick={(e) => {
+          if ((e.target as HTMLElement).closest("a, button")) return;
+          void handleExpand();
+        }}
+        className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 rounded-md transition-colors cursor-pointer hover:bg-(--hover-surface)"
+      >
         <div className="min-w-0">
           <p className="font-bold text-(--text-primary)">{program.name}</p>
           <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5 text-sm text-(--text-secondary)">
             <span>
-              <span aria-hidden="true">📚</span>{" "}
+              <GraduationCapIcon />{" "}
               {t(`universitiesPage.cycles.${program.cycle}`)}
             </span>
             {program.ects != null && (
               <span>
-                <span aria-hidden="true">🎓</span> {program.ects}{" "}
-                {t("universitiesPage.ects")}
+                <AwardIcon /> {program.ects} {t("universitiesPage.ects")}
               </span>
             )}
           </div>

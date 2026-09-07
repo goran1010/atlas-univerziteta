@@ -1,3 +1,4 @@
+import { SearchIcon } from "../sharedComponents/icons";
 import { useEffect, useRef, useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../../utils/Spinner";
@@ -64,9 +65,7 @@ function GetAllUniversities() {
   if (!universities.length) {
     return (
       <div className="flex flex-col items-center gap-2 py-8 text-(--text-muted)">
-        <span className="text-4xl" aria-hidden="true">
-          🔍
-        </span>
+        <SearchIcon size={36} />
         <p>{t("universitiesPage.noResults")}</p>
       </div>
     );

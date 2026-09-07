@@ -1,5 +1,5 @@
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { use } from "react";
-import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { AdminForm } from "./AdminForm";
 import { Helmet } from "react-helmet-async";
@@ -20,19 +20,9 @@ function AdminDashboard() {
           </h1>
           <div className="flex flex-wrap gap-3 justify-center">
             {!userData && (
-              <Link
-                to="/login"
-                className="border rounded-lg px-4 py-2 transition-colors font-medium text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
-              >
-                {t("access.goToLogin")}
-              </Link>
+              <LinkButton to="/login">{t("access.goToLogin")}</LinkButton>
             )}
-            <Link
-              to="/"
-              className="border rounded-lg px-4 py-2 transition-colors font-medium text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
-            >
-              {t("access.goHome")}
-            </Link>
+            <LinkButton to="/">{t("access.goHome")}</LinkButton>
           </div>
         </section>
       </>

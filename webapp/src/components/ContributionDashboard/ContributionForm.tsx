@@ -49,7 +49,7 @@ function ContributionForm() {
             className={({ isActive }) =>
               `relative px-3 py-2 text-sm font-medium rounded-t-md transition-colors cursor-pointer ${
                 isActive
-                  ? "border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400"
+                  ? "border-b-2 border-(--accent-text) text-(--accent-text)"
                   : "text-(--text-secondary) hover:text-(--text-primary)"
               }`
             }

@@ -1,4 +1,16 @@
+import {
+  AwardIcon,
+  ClockIcon,
+  MapPinIcon,
+  SpeechIcon,
+  TagIcon,
+  LandmarkIcon,
+  BuildingIcon,
+  BookOpenIcon,
+  ClipboardListIcon,
+} from "../sharedComponents/icons";
 import { use } from "react";
+import type { ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { ContactLinks } from "./ContactLinks";
 import { tCount } from "../../utils/pluralize";
@@ -16,7 +28,7 @@ function DetailSection({
   title,
   children,
 }: {
-  icon: string;
+  icon: ReactNode;
   title: string;
   children: React.ReactNode;
 }) {
@@ -33,18 +45,20 @@ function DetailSection({
 function UniversitySection({ university }: { university: UniversityDetail }) {
   const { t } = use(RootContext);
   return (
-    <DetailSection icon="🏫" title={t("contribution.entityTypes.UNIVERSITY")}>
+    <DetailSection
+      icon={<LandmarkIcon />}
+      title={t("contribution.entityTypes.UNIVERSITY")}
+    >
       <p className="font-semibold">{university.name}</p>
       {university.acronym && (
         <p className="text-xs text-(--text-muted)">({university.acronym})</p>
       )}
       <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-(--text-muted)">
         <span>
-          <span aria-hidden="true">📍</span> {university.city}
+          <MapPinIcon /> {university.city}
         </span>
         <span>
-          <span aria-hidden="true">🏷️</span>{" "}
-          {t(`universitiesPage.entities.${university.entity}`)}
+          <TagIcon /> {t(`universitiesPage.entities.${university.entity}`)}
         </span>
         <span>{t(`universitiesPage.ownership.${university.ownership}`)}</span>
       </div>
@@ -63,7 +77,10 @@ function UniversitySection({ university }: { university: UniversityDetail }) {
 function FacultySection({ faculty }: { faculty: UniversityDetailFaculty }) {
   const { t } = use(RootContext);
   return (
-    <DetailSection icon="🏛️" title={t("contribution.entityTypes.FACULTY")}>
+    <DetailSection
+      icon={<BuildingIcon />}
+      title={t("contribution.entityTypes.FACULTY")}
+    >
       <p className="font-semibold">{faculty.name}</p>
       <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-(--text-muted)">
         <ContactLinks
@@ -85,7 +102,7 @@ function StudyProgramSection({
   const { t } = use(RootContext);
   return (
     <DetailSection
-      icon="📚"
+      icon={<BookOpenIcon />}
       title={t("contribution.entityTypes.STUDY_PROGRAM")}
     >
       <p className="font-semibold">{program.name}</p>
@@ -93,19 +110,18 @@ function StudyProgramSection({
         <span>{t(`universitiesPage.cycles.${program.cycle}`)}</span>
         {program.durationYears != null && (
           <span>
-            <span aria-hidden="true">🕐</span> {program.durationYears}{" "}
+            <ClockIcon /> {program.durationYears}{" "}
             {tCount(t, "universitiesPage.durationYears", program.durationYears)}
           </span>
         )}
         {program.ects != null && (
           <span>
-            <span aria-hidden="true">🎓</span> {program.ects}{" "}
-            {t("universitiesPage.ects")}
+            <AwardIcon /> {program.ects} {t("universitiesPage.ects")}
           </span>
         )}
         {program.language && (
           <span>
-            <span aria-hidden="true">🗣️</span> {program.language}
+            <SpeechIcon /> {program.language}
           </span>
         )}
       </div>
@@ -116,19 +132,21 @@ function StudyProgramSection({
 function TrackSection({ track }: { track: UniversityDetailTrack }) {
   const { t } = use(RootContext);
   return (
-    <DetailSection icon="📋" title={t("contribution.entityTypes.TRACK")}>
+    <DetailSection
+      icon={<ClipboardListIcon />}
+      title={t("contribution.entityTypes.TRACK")}
+    >
       <p className="font-semibold">{track.name}</p>
       <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-(--text-muted)">
         {track.durationYears != null && (
           <span>
-            <span aria-hidden="true">🕐</span> {track.durationYears}{" "}
+            <ClockIcon /> {track.durationYears}{" "}
             {tCount(t, "universitiesPage.durationYears", track.durationYears)}
           </span>
         )}
         {track.ects != null && (
           <span>
-            <span aria-hidden="true">🎓</span> {track.ects}{" "}
-            {t("universitiesPage.ects")}
+            <AwardIcon /> {track.ects} {t("universitiesPage.ects")}
           </span>
         )}
       </div>
