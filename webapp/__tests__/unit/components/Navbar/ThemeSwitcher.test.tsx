@@ -1,60 +1,58 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { ThemeSwitcher } from "../../../../src/components/Navbar/ThemeSwitcher";
+import { ThemeProvider } from "../../../../src/contextData/ThemeProvider";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
 import type { AddNotification } from "../../../../src/types/notification";
-import type { SetMode } from "../../../../src/customHooks/useTheme";
 
-interface WrapperProps {
-  addNotification: AddNotification;
-  setMode: SetMode;
-  theme: string;
-}
+beforeEach(() => {
+  localStorage.clear();
+  document.documentElement.classList.remove("dark");
+});
 
-function Wrapper({ addNotification, setMode, theme }: WrapperProps) {
-  return (
+function renderSwitcher(addNotification: AddNotification) {
+  return render(
     <RootContextProvider
       rootValue={{
         addNotification,
         removeNotification: vi.fn(),
       }}
     >
-      <ThemeSwitcher setMode={setMode} theme={theme} />
-    </RootContextProvider>
+      <ThemeProvider>
+        <ThemeSwitcher />
+      </ThemeProvider>
+    </RootContextProvider>,
   );
 }
 
 describe("ThemeSwitcher", () => {
   test.each([
     {
-      currentTheme: "system",
-      expectedNextMode: "light",
+      storedTheme: null,
+      expectedNextTheme: "light",
+      expectedStored: "light",
       expectedMessage: "Switched to light theme",
     },
     {
-      currentTheme: "light",
-      expectedNextMode: "dark",
+      storedTheme: "light",
+      expectedNextTheme: "dark",
+      expectedStored: "dark",
       expectedMessage: "Switched to dark theme",
     },
     {
-      currentTheme: "dark",
-      expectedNextMode: "system",
+      storedTheme: "dark",
+      expectedNextTheme: "system",
+      expectedStored: null,
       expectedMessage: "Switched to system theme",
     },
   ])(
-    "cycles from $currentTheme to $expectedNextMode on click",
-    async ({ currentTheme, expectedNextMode, expectedMessage }) => {
+    "cycles from $storedTheme to $expectedNextTheme on click",
+    async ({ storedTheme, expectedStored, expectedMessage }) => {
+      if (storedTheme !== null) localStorage.setItem("theme", storedTheme);
       const addNotification = vi.fn();
-      const setMode = vi.fn();
 
-      render(
-        <Wrapper
-          addNotification={addNotification}
-          setMode={setMode}
-          theme={currentTheme}
-        />,
-      );
+      renderSwitcher(addNotification);
 
       const themeButton = screen.getByRole("button", {
         name: /Toggle theme/i,
@@ -63,7 +61,7 @@ describe("ThemeSwitcher", () => {
       expect(themeButton).toBeInTheDocument();
       await userEvent.click(themeButton);
 
-      expect(setMode).toHaveBeenCalledWith(expectedNextMode);
+      expect(localStorage.getItem("theme")).toBe(expectedStored);
       expect(addNotification).toHaveBeenCalledWith({
         type: "info",
         message: expectedMessage,

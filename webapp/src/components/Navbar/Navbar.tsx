@@ -1,6 +1,5 @@
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
-import { useTheme } from "../../customHooks/useTheme";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { MobileMenu } from "./MobileMenu";
 import { StandardMenu } from "./StandardMenu";
@@ -10,7 +9,6 @@ import { type UseCloseMenu } from "../../customHooks/useCloseMenu";
 
 function Navbar({ closeMenu }: { closeMenu: UseCloseMenu }) {
   const { navRef, isMenuOpen, setIsMenuOpen } = closeMenu;
-  const { theme, setMode } = useTheme();
   const { userData, language, setLanguage, t } = use(RootContext);
 
   return (
@@ -53,7 +51,7 @@ function Navbar({ closeMenu }: { closeMenu: UseCloseMenu }) {
       )}
 
       <div className="flex items-center gap-1 sm:gap-2 flex-1 justify-center md:justify-between">
-        <ThemeSwitcher setMode={setMode} theme={theme} />
+        <ThemeSwitcher />
         <StandardMenu setIsMenuOpen={setIsMenuOpen} userData={userData} />
         <LanguageSwitcher setLanguage={setLanguage} language={language} />
       </div>

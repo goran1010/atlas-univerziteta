@@ -70,6 +70,25 @@
       type="font/woff2"
       crossorigin
     />
+
+    <!-- Apply the theme before first paint to avoid a flash of the wrong
+         theme. Mirrors src/utils/theme.ts - keep the two in sync. -->
+    <script>
+      (() => {
+        let theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (error) {
+          console.warn("Could not read theme from localStorage:", error);
+        }
+        if (theme !== "dark" && theme !== "light") theme = "system";
+        const dark =
+          theme === "dark" ||
+          (theme === "system" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

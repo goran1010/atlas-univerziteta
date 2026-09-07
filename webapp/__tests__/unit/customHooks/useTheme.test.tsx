@@ -1,5 +1,6 @@
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { ThemeProvider } from "../../../src/contextData/ThemeProvider";
 import { useTheme } from "../../../src/customHooks/useTheme";
 
 beforeEach(() => {
@@ -12,15 +13,16 @@ afterEach(() => {
 });
 
 function ThemeProbe() {
-  const { theme, setMode } = useTheme();
+  const { theme, resolvedTheme, setTheme } = useTheme();
 
   return (
     <div>
       <span data-testid="theme-value">{theme}</span>
+      <span data-testid="resolved-theme-value">{resolvedTheme}</span>
       <button
         type="button"
         onClick={() => {
-          setMode("dark");
+          setTheme("dark");
         }}
       >
         Set Dark
@@ -28,7 +30,7 @@ function ThemeProbe() {
       <button
         type="button"
         onClick={() => {
-          setMode("light");
+          setTheme("light");
         }}
       >
         Set Light
@@ -36,7 +38,7 @@ function ThemeProbe() {
       <button
         type="button"
         onClick={() => {
-          setMode("system");
+          setTheme("system");
         }}
       >
         Set System
@@ -45,18 +47,29 @@ function ThemeProbe() {
   );
 }
 
+function renderProbe() {
+  return render(
+    <ThemeProvider>
+      <ThemeProbe />
+    </ThemeProvider>,
+  );
+}
+
 describe("useTheme", () => {
   test("loads dark theme from localStorage and applies dark class", () => {
     localStorage.setItem("theme", "dark");
 
-    render(<ThemeProbe />);
+    renderProbe();
 
     expect(screen.getByTestId("theme-value")).toHaveTextContent("dark");
+    expect(screen.getByTestId("resolved-theme-value")).toHaveTextContent(
+      "dark",
+    );
     expect(document.documentElement).toHaveClass("dark");
   });
 
   test("sets light mode and writes to localStorage", async () => {
-    render(<ThemeProbe />);
+    renderProbe();
 
     const lightButton = screen.getByRole("button", { name: /Set Light/i });
 
@@ -64,12 +77,15 @@ describe("useTheme", () => {
     await userEvent.click(lightButton);
 
     expect(screen.getByTestId("theme-value")).toHaveTextContent("light");
+    expect(screen.getByTestId("resolved-theme-value")).toHaveTextContent(
+      "light",
+    );
     expect(localStorage.getItem("theme")).toBe("light");
     expect(document.documentElement).not.toHaveClass("dark");
   });
 
   test("sets system mode and clears localStorage", async () => {
-    render(<ThemeProbe />);
+    renderProbe();
 
     const systemButton = screen.getByRole("button", { name: /Set System/i });
 
@@ -99,7 +115,7 @@ describe("useTheme", () => {
       media as unknown as MediaQueryList,
     );
 
-    const { unmount } = render(<ThemeProbe />);
+    const { unmount } = renderProbe();
 
     expect(addEventListener).toHaveBeenCalledWith(
       "change",
@@ -107,9 +123,14 @@ describe("useTheme", () => {
     );
 
     media.matches = true;
-    changeListener?.(new Event("change"));
+    act(() => {
+      changeListener?.(new Event("change"));
+    });
 
     expect(document.documentElement).toHaveClass("dark");
+    expect(screen.getByTestId("resolved-theme-value")).toHaveTextContent(
+      "dark",
+    );
 
     unmount();
 

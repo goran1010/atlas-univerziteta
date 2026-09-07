@@ -1,22 +1,9 @@
-import { useEffect } from "react";
 import { Link } from "react-router";
 import { useLanguage } from "../customHooks/useLanguage";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-function useApplyTheme() {
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    const isDark = saved === "dark" || (saved !== "light" && prefersDark);
-    document.documentElement.classList.toggle("dark", isDark);
-  }, []);
-}
-
 function ErrorPage() {
   const { t } = useLanguage();
-  useApplyTheme();
   console.warn("Page not found.");
   return (
     <HelmetProvider>
