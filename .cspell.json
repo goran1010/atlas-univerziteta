@@ -84,8 +84,11 @@
     "SPECIJALISTIČKI",
     "Obala",
     "Kulina",
-    "bana"
+    "bana",
+    "EBADCSRFTOKEN"
   ],
   "ignoreWords": [],
-  "import": ["@cspell/cspell-bundled-dicts"]
+  "import": [
+    "@cspell/cspell-bundled-dicts"
+  ]
 }
