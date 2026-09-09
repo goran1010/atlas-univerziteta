@@ -68,13 +68,31 @@ app.use("/users", rateLimiter.users, csrfSynchronisedProtection, usersRouter);
 app.use((_req, res) => {
   sendError(res, {
     status: 404,
+    code: "NOT_FOUND",
     message: "Route not found: check the URL and HTTP method.",
   });
 });
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
+// Errors created via the http-errors package (csrf-sync, body parsing, ...).
+// A 4xx status means the request was at fault and the message is safe to send.
+interface ClientHttpError extends Error {
+  status: number;
+  code?: unknown;
+}
+
+function isClientHttpError(error: unknown): error is ClientHttpError {
+  if (!(error instanceof Error)) return false;
+  const status = (error as Partial<ClientHttpError>).status;
+  return typeof status === "number" && status >= 400 && status < 500;
+}
+
+// eslint-disable-next-line
+app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   if (error instanceof RequestValidationError) {
+    logger.warn(
+      { issues: error.issues, method: req.method, url: req.originalUrl },
+      "Request validation failed.",
+    );
     sendError(res, {
       status: error.status,
       code: error.code,
@@ -84,7 +102,26 @@ app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
     return;
   }
 
-  logger.error(error);
+  if (isClientHttpError(error)) {
+    logger.warn(
+      { err: error, method: req.method, url: req.originalUrl },
+      "Request failed with a client error.",
+    );
+    sendError(res, {
+      status: error.status,
+      code:
+        error.code === "EBADCSRFTOKEN"
+          ? "CSRF_TOKEN_INVALID"
+          : "REQUEST_FAILED",
+      message: error.message,
+    });
+    return;
+  }
+
+  logger.error(
+    { err: error, method: req.method, url: req.originalUrl },
+    "Unhandled error.",
+  );
 
   sendError(res, {
     status: 500,

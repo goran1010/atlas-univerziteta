@@ -195,6 +195,7 @@ describe("POST /auth/signup", () => {
 
     const responseData = {
       error: {
+        code: "SIGNUP_FAILED",
         message: "Signup failed: check your input and try again.",
       },
     };
@@ -216,6 +217,7 @@ describe("GET /auth/confirm/:token", () => {
       status: 404,
       body: {
         error: {
+          code: "NOT_FOUND",
           message: "Route not found: check the URL and HTTP method.",
         },
       },
@@ -233,6 +235,7 @@ describe("GET /auth/confirm/:token", () => {
       status: 400,
       body: {
         error: {
+          code: "CONFIRMATION_TOKEN_INVALID",
           message:
             "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
         },

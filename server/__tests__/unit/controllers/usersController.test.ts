@@ -1,6 +1,7 @@
 import { describe, test, expect, vi, beforeEach, afterEach } from "vitest";
 
 import * as usersController from "../../../src/controllers/usersController.js";
+import { logger } from "../../../src/utils/logger.js";
 
 import type { Request, Response } from "express";
 
@@ -19,8 +20,8 @@ describe("usersController.logout", () => {
     const jsonMock = vi.fn();
     const clearCookieMock = vi.fn();
     const destroyMock = vi.fn();
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
+    const loggerErrorSpy = vi
+      .spyOn(logger, "error")
       .mockImplementation(() => undefined);
 
     const req = {
@@ -40,12 +41,13 @@ describe("usersController.logout", () => {
 
     usersController.logout(req, res);
 
-    expect(consoleErrorSpy).toHaveBeenCalledWith(logoutError);
+    expect(loggerErrorSpy).toHaveBeenCalledWith(logoutError, "Logout failed.");
     expect(destroyMock).not.toHaveBeenCalled();
     expect(clearCookieMock).not.toHaveBeenCalled();
     expect(statusMock).toHaveBeenCalledWith(500);
     expect(jsonMock).toHaveBeenCalledWith({
       error: {
+        code: "LOGOUT_FAILED",
         message: "Logout failed: try again.",
       },
     });
@@ -56,8 +58,8 @@ describe("usersController.logout", () => {
     const statusMock = vi.fn().mockReturnThis();
     const jsonMock = vi.fn();
     const clearCookieMock = vi.fn();
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
+    const loggerErrorSpy = vi
+      .spyOn(logger, "error")
       .mockImplementation(() => undefined);
 
     const req = {
@@ -79,10 +81,14 @@ describe("usersController.logout", () => {
 
     usersController.logout(req, res);
 
-    expect(consoleErrorSpy).toHaveBeenCalledWith(destroyError);
+    expect(loggerErrorSpy).toHaveBeenCalledWith(
+      destroyError,
+      "Session destroy failed during logout.",
+    );
     expect(statusMock).toHaveBeenCalledWith(500);
     expect(jsonMock).toHaveBeenCalledWith({
       error: {
+        code: "LOGOUT_FAILED",
         message: "Logout failed: try again.",
       },
     });

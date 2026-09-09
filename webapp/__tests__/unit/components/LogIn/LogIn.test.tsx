@@ -263,7 +263,9 @@ describe("LogIn Form Submit", () => {
       password: "Password123",
     });
 
-    const errorMessage = await screen.findByText(/^Login failed\.$/i);
+    const errorMessage = await screen.findByText(
+      /^Login failed\. Check your email and password, then try again\.$/i,
+    );
 
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(errorMessage).toBeInTheDocument();
@@ -308,7 +310,9 @@ describe("LogIn Form Submit", () => {
     });
 
     expect(
-      await screen.findByText(/^An error occurred while logging in\.$/i),
+      await screen.findByText(
+        /^Something went wrong during login\. Try again in a moment\.$/i,
+      ),
     ).toBeInTheDocument();
     expect(
       screen.queryByText(/Universities and Study Programs/i),
@@ -331,7 +335,7 @@ describe("LogIn Form Submit", () => {
     });
 
     const networkErrorMessage = await screen.findByText(
-      /An error occurred while logging in/i,
+      /Something went wrong during login/i,
     );
     expect(networkErrorMessage).toBeInTheDocument();
 
@@ -352,7 +356,9 @@ describe("LogIn Form Submit", () => {
       password: "Password123",
     });
 
-    const fallbackError = await screen.findByText(/^Login failed\.$/i);
+    const fallbackError = await screen.findByText(
+      /^Login failed\. Check your email and password, then try again\.$/i,
+    );
 
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fallbackError).toBeInTheDocument();

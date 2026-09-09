@@ -122,6 +122,32 @@ describe("apiMutation", () => {
     });
   });
 
+  test("maps a known error code to its shared notification message", async () => {
+    mockedGuardedFetch.mockResolvedValue({
+      ok: false,
+      json: () =>
+        Promise.resolve({
+          error: { code: "RATE_LIMITED", message: "Too many requests." },
+        }),
+    } as Response);
+    const consoleWarnSpy = vi
+      .spyOn(console, "warn")
+      .mockImplementation(() => undefined);
+    const ctx = createCtx();
+
+    const result = await apiMutation(createConfig(), ctx);
+
+    expect(result).toBeNull();
+    expect(consoleWarnSpy).toHaveBeenCalledWith(
+      "Failed to run example action:",
+      "Too many requests.",
+    );
+    expect(ctx.addNotification).toHaveBeenCalledWith({
+      type: "error",
+      message: "messages.apiError.rateLimited",
+    });
+  });
+
   test("still notifies when a failed response has a non-JSON body", async () => {
     mockedGuardedFetch.mockResolvedValue({
       ok: false,

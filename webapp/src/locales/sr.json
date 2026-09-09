@@ -288,56 +288,64 @@
     }
   },
   "messages": {
-    "csrfTokenFailed": "Neuspjelo preuzimanje CSRF tokena.",
+    "apiError": {
+      "rateLimited": "Previše zahtjeva. Sačekajte 15 minuta, pa pokušajte ponovo.",
+      "authRequired": "Morate biti prijavljeni za ovu radnju. Prijavite se i pokušajte ponovo.",
+      "forbidden": "Nemate dozvolu za ovu radnju.",
+      "csrfInvalid": "Sigurnosna provjera sesije nije uspjela. Osvježite stranicu i pokušajte ponovo.",
+      "alreadyLoggedIn": "Već ste prijavljeni.",
+      "alreadyAdmin": "Već imate admin ulogu."
+    },
+    "csrfTokenFailed": "Nije moguće uspostaviti sigurnu sesiju. Osvježite stranicu i pokušajte ponovo.",
     "pendingChanges": {
       "loadSuccess": "Izmjene na čekanju su učitane.",
-      "loadFailed": "Neuspjelo učitavanje izmjena na čekanju.",
-      "fetchError": "Greška pri preuzimanju izmjena na čekanju."
+      "loadFailed": "Nije moguće učitati izmjene na čekanju. Provjerite konekciju i pokušajte ponovo.",
+      "fetchError": "Došlo je do greške pri učitavanju izmjena na čekanju. Osvježite stranicu i pokušajte ponovo."
     },
     "loginStatus": {
       "success": "Uspješno ste prijavljeni.",
-      "error": "Došlo je do greške tokom prijave."
+      "error": "Nije moguće provjeriti status prijave. Osvježite stranicu i pokušajte ponovo."
     },
     "auth": {
-      "loginFailed": "Prijava nije uspjela.",
-      "loginError": "Došlo je do greške tokom prijave.",
+      "loginFailed": "Prijava nije uspjela. Provjerite email i lozinku, pa pokušajte ponovo.",
+      "loginError": "Došlo je do greške tokom prijave. Pokušajte ponovo za koji trenutak.",
       "loginSuccess": "Uspješno ste prijavljeni.",
-      "registrationFailed": "Registracija nije uspjela.",
-      "registrationError": "Došlo je do greške tokom registracije.",
+      "registrationFailed": "Registracija nije uspjela. Provjerite podatke, pa pokušajte ponovo.",
+      "registrationError": "Došlo je do greške tokom registracije. Pokušajte ponovo za koji trenutak.",
       "registrationSuccess": "Registracija je uspješna. Provjerite email.",
-      "logoutFailed": "Odjava nije uspjela.",
-      "logoutError": "Došlo je do greške tokom odjave.",
+      "logoutFailed": "Odjava nije uspjela. Pokušajte ponovo.",
+      "logoutError": "Došlo je do greške tokom odjave. Pokušajte ponovo za koji trenutak.",
       "logoutSuccess": "Uspješno ste odjavljeni."
     },
     "admin": {
       "approveSuccess": "Izmjena na čekanju je odobrena.",
-      "approveFailed": "Neuspjelo odobravanje izmjene na čekanju.",
-      "approveError": "Greška pri odobravanju izmjene na čekanju za {{email}}.",
+      "approveFailed": "Nije moguće odobriti izmjenu na čekanju. Osvježite listu i pokušajte ponovo.",
+      "approveError": "Došlo je do greške pri odobravanju izmjene na čekanju. Pokušajte ponovo.",
       "declineSuccess": "Zahtjev je odbijen.",
-      "declineFailed": "Neuspjelo odbijanje zahtjeva.",
-      "declineError": "Greška pri odbijanju zahtjeva korisnika {{email}}."
+      "declineFailed": "Nije moguće odbiti izmjenu na čekanju. Osvježite listu i pokušajte ponovo.",
+      "declineError": "Došlo je do greške pri odbijanju izmjene na čekanju. Pokušajte ponovo."
     },
     "universities": {
-      "loadError": "Neuspjelo učitavanje univerziteta.",
-      "searchError": "Pretraga nije uspjela.",
-      "detailsError": "Neuspjelo učitavanje detalja univerziteta.",
+      "loadError": "Nije moguće učitati univerzitete. Provjerite konekciju i pokušajte ponovo.",
+      "searchError": "Pretraga nije uspjela. Pokušajte ponovo za koji trenutak.",
+      "detailsError": "Nije moguće učitati detalje. Pokušajte ponovo za koji trenutak.",
       "addSuccess": "Prijedlog je poslan.",
-      "addFailed": "Slanje prijedloga nije uspjelo.",
-      "addError": "Greška pri slanju prijedloga.",
+      "addFailed": "Nije moguće poslati prijedlog. Provjerite unos, pa pokušajte ponovo.",
+      "addError": "Došlo je do greške pri slanju prijedloga. Pokušajte ponovo.",
       "deleteSuccess": "Izmjena na čekanju je odbačena.",
-      "deleteFailed": "Brisanje prijedloga nije uspjelo.",
-      "deleteError": "Greška pri brisanju prijedloga."
+      "deleteFailed": "Nije moguće odbaciti izmjenu na čekanju. Osvježite listu i pokušajte ponovo.",
+      "deleteError": "Došlo je do greške pri odbacivanju izmjene na čekanju. Pokušajte ponovo."
     },
     "adminRequest": {
       "requestSuccess": "Admin pristup je zatražen. Admin će pregledati zahtjev.",
-      "requestError": "Greška pri traženju admin pristupa.",
+      "requestError": "Došlo je do greške pri traženju admin pristupa. Pokušajte ponovo.",
       "cancelSuccess": "Zahtjev za admin pristup je otkazan.",
-      "cancelError": "Greška pri otkazivanju zahtjeva za admin pristup.",
-      "fetchError": "Greška pri dohvatanju zahtjeva za admin pristup.",
+      "cancelError": "Došlo je do greške pri otkazivanju zahtjeva za admin pristup. Pokušajte ponovo.",
+      "fetchError": "Nije moguće učitati zahtjeve za admin pristup. Osvježite stranicu i pokušajte ponovo.",
       "approveSuccess": "Zahtjev za admin pristup je odobren.",
-      "approveError": "Greška pri odobravanju zahtjeva za admin pristup.",
+      "approveError": "Došlo je do greške pri odobravanju zahtjeva za admin pristup. Pokušajte ponovo.",
       "declineSuccess": "Zahtjev za admin pristup je odbijen.",
-      "declineError": "Greška pri odbijanju zahtjeva za admin pristup."
+      "declineError": "Došlo je do greške pri odbijanju zahtjeva za admin pristup. Pokušajte ponovo."
     }
   },
   "universitiesPage": {

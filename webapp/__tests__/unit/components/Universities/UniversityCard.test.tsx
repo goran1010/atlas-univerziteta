@@ -226,7 +226,7 @@ describe("UniversityCard", () => {
     await user.click(viewDetailsButton);
 
     const apiErrorMessage = await screen.findByText(
-      /Failed to load university details\./i,
+      /Could not load the details\. Try again in a moment\./i,
     );
 
     expect(fetch).toHaveBeenCalledTimes(1);
@@ -253,7 +253,7 @@ describe("UniversityCard", () => {
     await user.click(screen.getByRole("button", { name: /Expand/i }));
 
     const errorMessage = await screen.findByText(
-      /Failed to load university details\./i,
+      /Could not load the details\. Try again in a moment\./i,
     );
 
     expect(errorMessage).toBeInTheDocument();
@@ -305,7 +305,9 @@ describe("UniversityCard", () => {
     await user.click(screen.getByRole("button", { name: /Expand/i }));
 
     expect(
-      await screen.findByText(/Failed to load university details\./i),
+      await screen.findByText(
+        /Could not load the details\. Try again in a moment\./i,
+      ),
     ).toBeInTheDocument();
   });
 
@@ -321,7 +323,7 @@ describe("UniversityCard", () => {
     await user.click(viewDetailsButton);
 
     const fallbackError = await screen.findByText(
-      /Failed to load university details\./i,
+      /Could not load the details\. Try again in a moment\./i,
     );
 
     expect(fetch).toHaveBeenCalledTimes(1);

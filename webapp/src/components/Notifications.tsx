@@ -94,7 +94,7 @@ function Notifications() {
 
   return (
     <aside
-      className="fixed top-18 right-4 z-20 w-[min(92vw,24rem)] select-none opacity-90 hover:opacity-100 transition-opacity"
+      className="fixed top-18 right-4 z-20 w-[min(92vw,24rem)] select-none"
       aria-label={t("notifications.title")}
       aria-live="polite"
       aria-relevant="additions text"
@@ -105,7 +105,7 @@ function Notifications() {
             <div
               role={getNotificationRole(notification.type)}
               aria-atomic="true"
-              className={`relative px-4 py-3 rounded-lg w-full flex flex-col justify-center items-center bg-white/65 dark:bg-slate-900/65 text-(--text-primary) border border-(--border-color) border-l-4 shadow-(--card-shadow) backdrop-blur ${getNotificationStyles(
+              className={`relative px-4 py-3 rounded-lg w-full flex flex-col justify-center items-center bg-(--surface-1) text-(--text-primary) border border-(--border-color) border-l-4 shadow-(--card-shadow) backdrop-blur ${getNotificationStyles(
                 notification.type,
               )}`}
             >

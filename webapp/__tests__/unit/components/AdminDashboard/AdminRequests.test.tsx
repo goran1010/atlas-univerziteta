@@ -191,7 +191,7 @@ describe("AdminRequests component", () => {
     render(<Wrapper />);
 
     expect(
-      await screen.findByText(/Error fetching admin requests./i),
+      await screen.findByText(/Could not load admin requests./i),
     ).toBeInTheDocument();
   });
 });

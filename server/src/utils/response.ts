@@ -1,10 +1,27 @@
 import type { Response } from "express";
 import type { ApiValidationIssue } from "../errors/RequestValidationError.js";
 
+type ErrorCode =
+  | "VALIDATION_ERROR"
+  | "AUTH_REQUIRED"
+  | "FORBIDDEN"
+  | "ALREADY_LOGGED_IN"
+  | "ALREADY_ADMIN"
+  | "NOT_FOUND"
+  | "RATE_LIMITED"
+  | "SIGNUP_FAILED"
+  | "LOGIN_FAILED"
+  | "EMAIL_NOT_SENT"
+  | "CONFIRMATION_TOKEN_INVALID"
+  | "LOGOUT_FAILED"
+  | "CSRF_TOKEN_INVALID"
+  | "REQUEST_FAILED"
+  | "INTERNAL_SERVER_ERROR";
+
 interface ErrorOptions {
   status?: number;
   message?: string;
-  code?: string;
+  code: ErrorCode;
   issues?: ApiValidationIssue[];
 }
 
@@ -26,16 +43,11 @@ function sendSuccess(
 
 function sendError(
   res: Response,
-  {
-    status = 500,
-    message = "Request failed.",
-    code,
-    issues,
-  }: ErrorOptions = {},
+  { status = 500, message = "Request failed.", code, issues }: ErrorOptions,
 ) {
   return res.status(status).json({
     error: {
-      ...(code !== undefined && { code }),
+      code,
       message,
       ...(issues !== undefined && { issues }),
     },

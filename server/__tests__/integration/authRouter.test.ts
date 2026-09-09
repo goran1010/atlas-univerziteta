@@ -1,6 +1,7 @@
 import request from "supertest";
 import { describe, test, expect, vi, beforeEach, afterEach } from "vitest";
 import { app } from "../../src/app.js";
+import { logger } from "../../src/utils/logger.js";
 import { createNewUserInput } from "../utils/createNewUserInput.js";
 import { emailConfirmHTML } from "../../src/utils/emailConfirmHTML.js";
 import { prisma } from "../../src/db/prisma.js";
@@ -129,6 +130,7 @@ describe("Auth Router - POST /auth/signup", () => {
     expect(response.status).toBe(500);
     expect(response.body).toEqual({
       error: {
+        code: "EMAIL_NOT_SENT",
         message:
           "Signup failed: confirmation email was not sent. Check your email address and try again.",
       },
@@ -136,17 +138,18 @@ describe("Auth Router - POST /auth/signup", () => {
     expect(pendingUsers).toHaveLength(0);
   });
 
-  test("responds with status 400 when signup processing throws unexpectedly", async () => {
+  test("responds with status 500 when signup processing throws unexpectedly", async () => {
     const newUser = createNewUserInput();
-    vi.spyOn(console, "error").mockImplementation(() => undefined);
+    vi.spyOn(logger, "error").mockImplementation(() => undefined);
     vi.spyOn(bcrypt, "hash").mockRejectedValueOnce(new Error("hash failed"));
 
     const response = await request(app).post("/auth/signup").send(newUser);
 
-    expect(response.status).toBe(400);
+    expect(response.status).toBe(500);
     expect(response.body).toEqual({
       error: {
-        message: "Signup failed: check your input and try again.",
+        code: "INTERNAL_SERVER_ERROR",
+        message: "Server error: please try again later.",
       },
     });
   });
@@ -161,6 +164,7 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
     expect(response.status).toBe(400);
     expect(response.body).toEqual({
       error: {
+        code: "CONFIRMATION_TOKEN_INVALID",
         message:
           "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
       },
@@ -200,6 +204,7 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
     expect(response.status).toBe(400);
     expect(response.body).toEqual({
       error: {
+        code: "CONFIRMATION_TOKEN_INVALID",
         message: "Token expired. Please sign up again.",
       },
     });
@@ -208,7 +213,7 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
 
   test("responds with status 500 when confirmation processing fails unexpectedly", async () => {
     const { token } = await signUpAndGetPendingToken();
-    vi.spyOn(console, "error").mockImplementation(() => undefined);
+    vi.spyOn(logger, "error").mockImplementation(() => undefined);
     vi.spyOn(prisma.user, "create").mockRejectedValueOnce(
       new Error("create failed"),
     );
@@ -218,8 +223,8 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
     expect(response.status).toBe(500);
     expect(response.body).toEqual({
       error: {
-        message:
-          "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
+        code: "INTERNAL_SERVER_ERROR",
+        message: "Server error: please try again later.",
       },
     });
   });
@@ -258,6 +263,7 @@ describe("Auth Router - POST /auth/login", () => {
     expect(response.status).toBe(401);
     expect(response.body).toEqual({
       error: {
+        code: "LOGIN_FAILED",
         message:
           "Login failed: Incorrect email or password. Check your credentials and try again.",
       },

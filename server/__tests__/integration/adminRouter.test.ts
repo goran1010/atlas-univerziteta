@@ -149,7 +149,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
     expect(response.status).toBe(404);
     expect(response.body).toEqual(
       expect.objectContaining({
-        error: { message: "Pending change not found." },
+        error: { code: "NOT_FOUND", message: "Pending change not found." },
       }),
     );
 
@@ -1057,7 +1057,7 @@ describe("Admin Router - POST /users/admin/approve-admin-request", () => {
     expect(response.status).toBe(404);
     expect(response.body).toEqual(
       expect.objectContaining({
-        error: { message: "Admin request not found." },
+        error: { code: "NOT_FOUND", message: "Admin request not found." },
       }),
     );
   });

@@ -271,7 +271,7 @@ describe("SignUp Form Submit", () => {
     expect(fetch).toHaveBeenCalledTimes(1);
 
     const registrationFailedMessage = await screen.findByText(
-      /Registration failed\./i,
+      /Registration failed\. Check your details, then try again\./i,
     );
     expect(registrationFailedMessage).toBeInTheDocument();
   });
@@ -322,7 +322,9 @@ describe("SignUp Form Submit", () => {
     });
 
     expect(
-      await screen.findByText(/^An error occurred during registration\.$/i),
+      await screen.findByText(
+        /^Something went wrong during registration\. Try again in a moment\.$/i,
+      ),
     ).toBeInTheDocument();
     expect(
       screen.queryByRole("button", { name: /Log In/i }),
@@ -346,7 +348,7 @@ describe("SignUp Form Submit", () => {
     });
 
     const networkErrorMessage = await screen.findByText(
-      /An error occurred during registration/i,
+      /Something went wrong during registration/i,
     );
     expect(networkErrorMessage).toBeInTheDocument();
 
@@ -367,7 +369,9 @@ describe("SignUp Form Submit", () => {
       confirmPassword: "Password123",
     });
 
-    const fallbackError = await screen.findByText("Registration failed.");
+    const fallbackError = await screen.findByText(
+      "Registration failed. Check your details, then try again.",
+    );
 
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fallbackError).toBeInTheDocument();

@@ -282,7 +282,9 @@ describe("UnifiedSearch", () => {
     );
     await user.click(screen.getByRole("button", { name: /^Search$/i }));
 
-    const apiErrorMessage = await screen.findByText(/^Search failed\.$/i);
+    const apiErrorMessage = await screen.findByText(
+      /^Search did not complete\. Try again in a moment\.$/i,
+    );
 
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(apiErrorMessage).toBeInTheDocument();
@@ -300,7 +302,9 @@ describe("UnifiedSearch", () => {
     );
     await user.click(screen.getByRole("button", { name: /^Search$/i }));
 
-    const fallbackMessage = await screen.findByText(/^Search failed\.$/i);
+    const fallbackMessage = await screen.findByText(
+      /^Search did not complete\. Try again in a moment\.$/i,
+    );
 
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fallbackMessage).toBeInTheDocument();
@@ -323,7 +327,11 @@ describe("UnifiedSearch", () => {
     );
     await user.click(screen.getByRole("button", { name: /^Search$/i }));
 
-    expect(await screen.findByText(/^Search failed\.$/i)).toBeInTheDocument();
+    expect(
+      await screen.findByText(
+        /^Search did not complete\. Try again in a moment\.$/i,
+      ),
+    ).toBeInTheDocument();
   });
 
   function mediaQueryList(matches: boolean): MediaQueryList {

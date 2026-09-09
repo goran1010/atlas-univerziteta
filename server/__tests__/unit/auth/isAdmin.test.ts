@@ -32,6 +32,7 @@ describe("isAdmin", () => {
     expect(statusMock).toHaveBeenCalledWith(401);
     expect(jsonMock).toHaveBeenCalledWith({
       error: {
+        code: "AUTH_REQUIRED",
         message: "Unauthorized: user not authenticated.",
       },
     });
@@ -64,6 +65,7 @@ describe("isAdmin", () => {
     expect(statusMock).toHaveBeenCalledWith(403);
     expect(jsonMock).toHaveBeenCalledWith({
       error: {
+        code: "FORBIDDEN",
         message: "Access denied: admin role is required.",
       },
     });

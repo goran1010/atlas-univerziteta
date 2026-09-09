@@ -167,7 +167,9 @@ describe("EntityPicker", () => {
     renderPicker(1);
 
     expect(
-      await screen.findByText(/Failed to load universities\./i),
+      await screen.findByText(
+        /Could not load universities\. Check your connection and try again\./i,
+      ),
     ).toBeInTheDocument();
   });
 });

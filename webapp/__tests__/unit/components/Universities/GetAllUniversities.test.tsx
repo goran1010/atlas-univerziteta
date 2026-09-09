@@ -83,7 +83,10 @@ describe("GetAllUniversities", () => {
   test("shows API error notification for non-ok response", async () => {
     const mockResponse = new Response(
       JSON.stringify({
-        error: { message: "Failed to load universities." },
+        error: {
+          message:
+            "Could not load universities. Check your connection and try again.",
+        },
       }),
       {
         status: 500,
@@ -95,7 +98,7 @@ describe("GetAllUniversities", () => {
     render(<Wrapper />);
 
     const errorMessage = await screen.findByText(
-      /Failed to load universities\./i,
+      /Could not load universities\. Check your connection and try again\./i,
     );
 
     expect(fetch).toHaveBeenCalledTimes(1);
@@ -108,7 +111,7 @@ describe("GetAllUniversities", () => {
     render(<Wrapper />);
 
     const fallbackMessage = await screen.findByText(
-      /Failed to load universities\./i,
+      /Could not load universities\. Check your connection and try again\./i,
     );
 
     expect(fetch).toHaveBeenCalledTimes(1);
@@ -129,7 +132,7 @@ describe("GetAllUniversities", () => {
     render(<Wrapper />);
 
     const fallbackMessage = await screen.findByText(
-      /Failed to load universities\./i,
+      /Could not load universities\. Check your connection and try again\./i,
     );
 
     expect(fallbackMessage).toBeInTheDocument();

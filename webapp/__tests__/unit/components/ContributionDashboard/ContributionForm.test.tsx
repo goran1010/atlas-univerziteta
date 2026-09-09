@@ -168,7 +168,8 @@ describe("ContributionForm component rendering", () => {
   test("shows an error notification when pending changes fail to load", async () => {
     vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     setupFetchMock({
-      error: "Error fetching pending changes.",
+      error:
+        "Something went wrong while loading pending changes. Refresh the page and try again.",
     });
     render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
 
@@ -177,7 +178,9 @@ describe("ContributionForm component rendering", () => {
 
     const alert = await screen.findByRole("alert");
 
-    expect(alert).toHaveTextContent(/Error fetching pending changes\./i);
+    expect(alert).toHaveTextContent(
+      /Something went wrong while loading pending changes\. Refresh the page and try again\./i,
+    );
     expect(screen.getByText(/no pending changes/i)).toBeInTheDocument();
   });
 
@@ -191,7 +194,9 @@ describe("ContributionForm component rendering", () => {
     );
 
     expect(
-      await screen.findByText(/^Error fetching pending changes\.$/i),
+      await screen.findByText(
+        /^Something went wrong while loading pending changes\. Refresh the page and try again\.$/i,
+      ),
     ).toBeInTheDocument();
     expect(screen.getByText(/no pending changes/i)).toBeInTheDocument();
   });

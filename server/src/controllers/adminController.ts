@@ -46,6 +46,7 @@ async function approvePendingChange(req: Request, res: Response) {
   if (!wasApplied) {
     sendError(res, {
       status: 404,
+      code: "NOT_FOUND",
       message: "Pending change not found.",
     });
     return;
@@ -88,6 +89,7 @@ async function approveAdminRequest(req: Request, res: Response) {
   if (count === 0) {
     sendError(res, {
       status: 404,
+      code: "NOT_FOUND",
       message: "Admin request not found.",
     });
     return;
@@ -109,6 +111,7 @@ async function declineAdminRequest(req: Request, res: Response) {
   if (count === 0) {
     sendError(res, {
       status: 404,
+      code: "NOT_FOUND",
       message: "Admin request not found.",
     });
     return;

@@ -46,6 +46,7 @@ describe("isAuthenticated", () => {
     expect(statusMock).toHaveBeenCalledWith(401);
     expect(jsonMock).toHaveBeenCalledWith({
       error: {
+        code: "AUTH_REQUIRED",
         message: "Authentication required: log in and try again.",
       },
     });

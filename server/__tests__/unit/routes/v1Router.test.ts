@@ -246,6 +246,7 @@ describe("GET /api/v1/search", () => {
       status: 404,
       body: {
         error: {
+          code: "NOT_FOUND",
           message: "No results found matching your search.",
         },
       },
@@ -316,6 +317,7 @@ describe("GET /api/v1/universities/:id", () => {
       status: 404,
       body: {
         error: {
+          code: "NOT_FOUND",
           message: "University not found.",
         },
       },

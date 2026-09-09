@@ -208,6 +208,7 @@ async function search(req: Request, res: Response) {
 
   sendError(res, {
     status: 404,
+    code: "NOT_FOUND",
     message: "No results found matching your search.",
   });
 }
@@ -236,6 +237,7 @@ async function getUniversityById(req: Request, res: Response) {
   if (!university) {
     sendError(res, {
       status: 404,
+      code: "NOT_FOUND",
       message: "University not found.",
     });
     return;
@@ -264,6 +266,7 @@ async function getFacultyById(req: Request, res: Response) {
   if (!faculty) {
     sendError(res, {
       status: 404,
+      code: "NOT_FOUND",
       message: "Faculty not found.",
     });
     return;
@@ -289,6 +292,7 @@ async function getStudyProgramById(req: Request, res: Response) {
   if (!studyProgram) {
     sendError(res, {
       status: 404,
+      code: "NOT_FOUND",
       message: "Study program not found.",
     });
     return;

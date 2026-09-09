@@ -6,7 +6,8 @@ import { UniversityCard } from "./UniversityCard";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
 import { SERVER_URL } from "../../utils/envConfig";
-import { readErrorMessage } from "../../schemas/api";
+import { readApiError } from "../../schemas/api";
+import { notificationMessageKey } from "../../utils/apiError";
 import { guardedFetch } from "../../utils/guardedFetch";
 import { isServerNotReadyError } from "../../utils/serverStatus";
 import { universityListResponseSchema } from "../../schemas/university";
@@ -36,13 +37,18 @@ function GetAllUniversities() {
           const result = universityListResponseSchema.parse(await res.json());
           setUniversities(result.data);
         } else {
-          const serverMessage = readErrorMessage(await res.json());
-          if (serverMessage) {
-            console.warn("Failed to load universities:", serverMessage);
+          const serverError = readApiError(await res.json());
+          if (serverError) {
+            console.warn("Failed to load universities:", serverError.message);
           }
           addNotification({
             type: "error",
-            message: tRef.current("messages.universities.loadError"),
+            message: tRef.current(
+              notificationMessageKey(
+                serverError?.code,
+                "messages.universities.loadError",
+              ),
+            ),
           });
         }
       } catch (error) {

@@ -49,147 +49,132 @@ function getAuthenticationMessage(info: unknown): string {
 async function signup(req: Request, res: Response) {
   const { email, password } = authValidation.signup(req.body);
 
-  try {
-    const existingUser = await prisma.user.findUnique({
-      where: {
-        email,
-      },
-    });
+  const existingUser = await prisma.user.findUnique({
+    where: {
+      email,
+    },
+  });
 
-    if (existingUser) {
-      sendError(res, {
-        status: 400,
-        message: "Signup failed: check your input and try again.",
-      });
-      return;
-    }
-
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    const confirmationToken = crypto.randomBytes(32).toString("hex");
-
-    const confirmationLink = `${env.SERVER_URL}/auth/confirm/${confirmationToken}`;
-
-    const existingPending = await prisma.pendingUser.findMany({
-      where: {
-        email,
-      },
-    });
-
-    if (existingPending.length > 0) {
-      await prisma.pendingUser.updateMany({
-        where: {
-          email,
-        },
-        data: {
-          password: hashedPassword,
-          token: confirmationToken,
-          expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
-        },
-      });
-    } else {
-      await prisma.pendingUser.create({
-        data: {
-          email,
-          password: hashedPassword,
-          token: confirmationToken,
-          expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
-        },
-      });
-    }
-
-    const result = await sendConfirmationEmail(email, confirmationLink);
-
-    if (result.success) {
-      sendSuccess(res, {
-        status: 201,
-        data: {
-          email,
-        },
-        message: "Registration successful! Check your email.",
-      });
-      return;
-    }
-
-    await prisma.pendingUser.deleteMany({
-      where: {
-        email,
-      },
-    });
-
-    sendError(res, {
-      status: 500,
-      message:
-        "Signup failed: confirmation email was not sent. Check your email address and try again.",
-    });
-  } catch (error: unknown) {
-    console.error(error);
-
+  if (existingUser) {
     sendError(res, {
       status: 400,
+      code: "SIGNUP_FAILED",
       message: "Signup failed: check your input and try again.",
     });
+    return;
   }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  const confirmationToken = crypto.randomBytes(32).toString("hex");
+
+  const confirmationLink = `${env.SERVER_URL}/auth/confirm/${confirmationToken}`;
+
+  const existingPending = await prisma.pendingUser.findMany({
+    where: {
+      email,
+    },
+  });
+
+  if (existingPending.length > 0) {
+    await prisma.pendingUser.updateMany({
+      where: {
+        email,
+      },
+      data: {
+        password: hashedPassword,
+        token: confirmationToken,
+        expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
+      },
+    });
+  } else {
+    await prisma.pendingUser.create({
+      data: {
+        email,
+        password: hashedPassword,
+        token: confirmationToken,
+        expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
+      },
+    });
+  }
+
+  const result = await sendConfirmationEmail(email, confirmationLink);
+
+  if (result.success) {
+    sendSuccess(res, {
+      status: 201,
+      data: {
+        email,
+      },
+      message: "Registration successful! Check your email.",
+    });
+    return;
+  }
+
+  await prisma.pendingUser.deleteMany({
+    where: {
+      email,
+    },
+  });
+
+  sendError(res, {
+    status: 500,
+    code: "EMAIL_NOT_SENT",
+    message:
+      "Signup failed: confirmation email was not sent. Check your email address and try again.",
+  });
 }
 
 async function confirmEmail(req: Request, res: Response) {
   const { token } = authValidation.confirmToken(req.params);
 
-  try {
-    const pendingUsers = await prisma.pendingUser.findMany({
-      where: {
-        token,
-      },
+  const pendingUsers = await prisma.pendingUser.findMany({
+    where: {
+      token,
+    },
+  });
+
+  const pendingUser = pendingUsers[0];
+
+  if (!pendingUser) {
+    sendError(res, {
+      status: 400,
+      code: "CONFIRMATION_TOKEN_INVALID",
+      message:
+        "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
     });
+    return;
+  }
 
-    const pendingUser = pendingUsers[0];
-
-    if (!pendingUser) {
-      sendError(res, {
-        status: 400,
-        message:
-          "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
-      });
-      return;
-    }
-
-    if (pendingUser.expiresAt < new Date()) {
-      await prisma.pendingUser.delete({
-        where: {
-          id: pendingUser.id,
-        },
-      });
-
-      sendError(res, {
-        status: 400,
-        message: "Token expired. Please sign up again.",
-      });
-      return;
-    }
-
-    await prisma.user.create({
-      data: {
-        email: pendingUser.email,
-        password: pendingUser.password,
-      },
-    });
-
+  if (pendingUser.expiresAt < new Date()) {
     await prisma.pendingUser.delete({
       where: {
         id: pendingUser.id,
       },
     });
 
-    res.send(emailConfirmHTML());
-  } catch (error: unknown) {
-    console.error(error);
-
     sendError(res, {
-      status: 500,
-      message:
-        "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
+      status: 400,
+      code: "CONFIRMATION_TOKEN_INVALID",
+      message: "Token expired. Please sign up again.",
     });
+    return;
   }
+
+  await prisma.user.create({
+    data: {
+      email: pendingUser.email,
+      password: pendingUser.password,
+    },
+  });
+
+  await prisma.pendingUser.delete({
+    where: {
+      id: pendingUser.id,
+    },
+  });
+
+  res.send(emailConfirmHTML());
 }
 
 function login(req: Request, res: Response, next: NextFunction) {
@@ -213,6 +198,7 @@ function login(req: Request, res: Response, next: NextFunction) {
 
           sendError(res, {
             status: 401,
+            code: "LOGIN_FAILED",
             message: `Login failed: ${loginReason}. Check your credentials and try again.`,
           });
           return;
