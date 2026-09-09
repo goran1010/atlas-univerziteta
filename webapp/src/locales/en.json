@@ -296,56 +296,56 @@
       "alreadyLoggedIn": "You are already logged in.",
       "alreadyAdmin": "You already have the admin role."
     },
-    "csrfTokenFailed": "Failed to retrieve CSRF token.",
+    "csrfTokenFailed": "Could not start a secure session. Refresh the page and try again.",
     "pendingChanges": {
       "loadSuccess": "Pending changes loaded.",
-      "loadFailed": "Failed to load pending changes.",
-      "fetchError": "Error fetching pending changes."
+      "loadFailed": "Could not load pending changes. Check your connection and try again.",
+      "fetchError": "Something went wrong while loading pending changes. Refresh the page and try again."
     },
     "loginStatus": {
       "success": "Successfully logged in.",
-      "error": "An error occurred while logging in."
+      "error": "Could not check your login status. Refresh the page and try again."
     },
     "auth": {
-      "loginFailed": "Login failed.",
-      "loginError": "An error occurred while logging in.",
+      "loginFailed": "Login failed. Check your email and password, then try again.",
+      "loginError": "Something went wrong during login. Try again in a moment.",
       "loginSuccess": "Successfully logged in.",
-      "registrationFailed": "Registration failed.",
-      "registrationError": "An error occurred during registration.",
+      "registrationFailed": "Registration failed. Check your details, then try again.",
+      "registrationError": "Something went wrong during registration. Try again in a moment.",
       "registrationSuccess": "Registration successful! Check your email.",
-      "logoutFailed": "Logout failed.",
-      "logoutError": "An error occurred while logging out.",
+      "logoutFailed": "Logout did not complete. Try again.",
+      "logoutError": "Something went wrong during logout. Try again in a moment.",
       "logoutSuccess": "Successfully logged out."
     },
     "admin": {
       "approveSuccess": "Pending change approved.",
-      "approveFailed": "Failed to approve pending change.",
-      "approveError": "Error approving pending change.",
+      "approveFailed": "Could not approve the pending change. Refresh the list and try again.",
+      "approveError": "Something went wrong while approving the pending change. Try again.",
       "declineSuccess": "Pending change declined.",
-      "declineFailed": "Failed to decline request.",
-      "declineError": "Error declining request."
+      "declineFailed": "Could not decline the pending change. Refresh the list and try again.",
+      "declineError": "Something went wrong while declining the pending change. Try again."
     },
     "universities": {
-      "loadError": "Failed to load universities.",
-      "searchError": "Search failed.",
-      "detailsError": "Failed to load university details.",
+      "loadError": "Could not load universities. Check your connection and try again.",
+      "searchError": "Search did not complete. Try again in a moment.",
+      "detailsError": "Could not load the details. Try again in a moment.",
       "addSuccess": "Suggestion submitted.",
-      "addFailed": "Failed to submit suggestion.",
-      "addError": "Error submitting suggestion.",
+      "addFailed": "Could not submit the suggestion. Check your input, then try again.",
+      "addError": "Something went wrong while submitting the suggestion. Try again.",
       "deleteSuccess": "Pending change discarded.",
-      "deleteFailed": "Failed to delete pending change.",
-      "deleteError": "Error deleting pending change."
+      "deleteFailed": "Could not discard the pending change. Refresh the list and try again.",
+      "deleteError": "Something went wrong while discarding the pending change. Try again."
     },
     "adminRequest": {
       "requestSuccess": "Admin access requested. An admin will review it.",
-      "requestError": "Error requesting admin access.",
+      "requestError": "Something went wrong while requesting admin access. Try again.",
       "cancelSuccess": "Admin request cancelled.",
-      "cancelError": "Error cancelling admin request.",
-      "fetchError": "Error fetching admin requests.",
+      "cancelError": "Something went wrong while cancelling the admin request. Try again.",
+      "fetchError": "Could not load admin requests. Refresh the page and try again.",
       "approveSuccess": "Admin request approved.",
-      "approveError": "Error approving admin request.",
+      "approveError": "Something went wrong while approving the admin request. Try again.",
       "declineSuccess": "Admin request declined.",
-      "declineError": "Error declining admin request."
+      "declineError": "Something went wrong while declining the admin request. Try again."
     }
   },
   "universitiesPage": {

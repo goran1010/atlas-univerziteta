@@ -236,7 +236,7 @@ describe("PendingChanges Component", () => {
     );
 
     const errorMessage = await screen.findByText(
-      /Error fetching pending changes\./i,
+      /Something went wrong while loading pending changes\. Refresh the page and try again\./i,
     );
 
     expect(errorMessage).toBeInTheDocument();

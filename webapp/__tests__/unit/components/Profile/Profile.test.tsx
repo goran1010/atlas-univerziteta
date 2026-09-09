@@ -148,7 +148,9 @@ describe("Profile Component handle logout", () => {
     const fetchSpy = vi.spyOn(globalThis, "fetch");
     const mockErrorResponse = new Response(
       JSON.stringify({
-        error: { message: "An error occurred while logging out." },
+        error: {
+          message: "Something went wrong during logout. Try again in a moment.",
+        },
       }),
       {
         status: 500,
@@ -163,7 +165,9 @@ describe("Profile Component handle logout", () => {
 
     await clickLogout();
 
-    const notificationElement = await screen.findByText("Logout failed.");
+    const notificationElement = await screen.findByText(
+      "Logout did not complete. Try again.",
+    );
     expect(notificationElement).toBeInTheDocument();
   });
 
@@ -182,7 +186,7 @@ describe("Profile Component handle logout", () => {
     await clickLogout();
 
     const notificationElement = await screen.findByText(
-      /An error occurred while logging out./i,
+      /Something went wrong during logout./i,
     );
     expect(notificationElement).toBeInTheDocument();
     expect(consoleErrorSpy).toHaveBeenCalled();
@@ -233,7 +237,9 @@ describe("Profile Component handle logout", () => {
     await clickLogout();
 
     expect(
-      await screen.findByText(/^An error occurred while logging out\.$/i),
+      await screen.findByText(
+        /^Something went wrong during logout\. Try again in a moment\.$/i,
+      ),
     ).toBeInTheDocument();
     expect(
       screen.getByRole("heading", { name: /My Profile/i }),
@@ -353,7 +359,9 @@ describe("Profile Component admin request", () => {
     );
 
     expect(
-      await screen.findByText(/Error requesting admin access./i),
+      await screen.findByText(
+        /Something went wrong while requesting admin access./i,
+      ),
     ).toBeInTheDocument();
     expect(
       screen.getByRole("button", { name: /Request admin access/i }),

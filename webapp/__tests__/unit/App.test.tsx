@@ -36,7 +36,7 @@ describe("App", () => {
     render(<RouterProvider router={router} />);
 
     const errorNotification = await screen.findByText(
-      "An error occurred while logging in.",
+      "Could not check your login status. Refresh the page and try again.",
     );
 
     expect(globalThis.fetch).toHaveBeenCalledWith(
