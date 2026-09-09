@@ -7,6 +7,7 @@ import { prisma } from "../db/prisma.js";
 import { sendConfirmationEmail } from "../email/confirmationEmail.js";
 import { emailConfirmHTML } from "../utils/emailConfirmHTML.js";
 import { sendError, sendSuccess } from "../utils/response.js";
+import { logger } from "../utils/logger.js";
 import * as authValidation from "../validation/authValidation.js";
 
 import type { NextFunction, Request, Response } from "express";
@@ -123,7 +124,7 @@ async function signup(req: Request, res: Response) {
         "Signup failed: confirmation email was not sent. Check your email address and try again.",
     });
   } catch (error: unknown) {
-    console.error(error);
+    logger.error(error);
 
     sendError(res, {
       status: 400,
@@ -182,7 +183,7 @@ async function confirmEmail(req: Request, res: Response) {
 
     res.send(emailConfirmHTML());
   } catch (error: unknown) {
-    console.error(error);
+    logger.error(error);
 
     sendError(res, {
       status: 500,

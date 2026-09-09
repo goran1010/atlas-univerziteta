@@ -1,10 +1,10 @@
 import { app } from "./app.js";
 import { env } from "./config/env.js";
+import { logger } from "./utils/logger.js";
 
 const server = app.listen(env.PORT, (error) => {
   if (error) throw error;
-  // eslint-disable-next-line no-console
-  console.log(`App started at port: ${env.PORT.toString()}`);
+  logger.info(`App started at port: ${env.PORT.toString()}`);
 });
 
 let shuttingDown = false;
@@ -18,15 +18,15 @@ function gracefulShutdown(signal: GracefulShutdownSignal, exitCode = 0) {
   }
 
   shuttingDown = true;
-  console.warn(`${signal} received. Shutting down gracefully...`);
+  logger.warn(`${signal} received. Shutting down gracefully...`);
 
   server.close(() => {
-    console.warn("Process terminated");
+    logger.warn("Process terminated");
     process.exit(exitCode);
   });
 
   setTimeout(() => {
-    console.error("Forced shutdown due to timeout");
+    logger.error("Forced shutdown due to timeout");
     process.exit(1);
   }, 10000).unref();
 }
@@ -40,11 +40,11 @@ process.on("SIGINT", () => {
 });
 
 process.on("uncaughtException", (error) => {
-  console.error("Uncaught exception:", error);
+  logger.fatal(error, "Uncaught exception");
   gracefulShutdown("uncaughtException", 1);
 });
 
 process.on("unhandledRejection", (reason) => {
-  console.error("Unhandled rejection:", reason);
+  logger.fatal({ reason }, "Unhandled rejection");
   gracefulShutdown("unhandledRejection", 1);
 });

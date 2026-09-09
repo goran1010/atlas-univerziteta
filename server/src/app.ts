@@ -72,9 +72,13 @@ app.use((_req, res) => {
   });
 });
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
+// eslint-disable-next-line
+app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   if (error instanceof RequestValidationError) {
+    logger.warn(
+      { issues: error.issues, method: req.method, url: req.originalUrl },
+      "Request validation failed.",
+    );
     sendError(res, {
       status: error.status,
       code: error.code,
@@ -84,7 +88,10 @@ app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
     return;
   }
 
-  logger.error(error);
+  logger.error(
+    { err: error, method: req.method, url: req.originalUrl },
+    "Unhandled error.",
+  );
 
   sendError(res, {
     status: 500,

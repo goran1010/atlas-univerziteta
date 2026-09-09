@@ -1,6 +1,7 @@
 import { prisma } from "../db/prisma.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 import { env } from "../config/env.js";
+import { logger } from "../utils/logger.js";
 
 import type { Request, Response } from "express";
 
@@ -25,7 +26,7 @@ function me(req: Request, res: Response) {
 function logout(req: Request, res: Response) {
   req.logout((err) => {
     if (err) {
-      console.error(err);
+      logger.error(err, "Logout failed.");
       sendError(res, {
         status: 500,
         message: "Logout failed: try again.",
@@ -35,7 +36,7 @@ function logout(req: Request, res: Response) {
 
     req.session.destroy((err) => {
       if (err) {
-        console.error(err);
+        logger.error(err, "Session destroy failed during logout.");
         sendError(res, {
           status: 500,
           message: "Logout failed: try again.",
