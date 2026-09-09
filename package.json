@@ -2,7 +2,7 @@
   "name": "uniatlas-bosnia",
   "private": true,
   "scripts": {
-    "install:all": "npm install && cd server && npm install && cd ../webapp && npm install",
+    "install:all": "npm install && cd server && npm install && cd ../webapp && npm install && cd ../e2e && npm install",
     "db:migrate_dev": "cd server && npm run db:migrate_dev",
     "db:reset": "cd server && npm run db:reset",
     "db:deploy_generate": "cd server && npm run db:deploy_generate",
@@ -14,6 +14,8 @@
     "test:all": "npm run test:server -- run && npm run test:webapp -- run",
     "test:server": "cd server && npm run test",
     "test:webapp": "cd webapp && npm run test",
+    "test:e2e": "cd e2e && npm test",
+    "test:e2e:ui": "cd e2e && npm run test:ui",
     "test:coverage:all": "concurrently \"cd server && npx vitest --coverage run\" \"cd webapp && npx vitest --coverage run\"",
     "test:coverage:server": "cd server && npx vitest --coverage",
     "test:coverage:webapp": "cd webapp && npx vitest --coverage",
