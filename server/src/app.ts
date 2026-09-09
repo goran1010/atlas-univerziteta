@@ -72,6 +72,19 @@ app.use((_req, res) => {
   });
 });
 
+// Errors created via the http-errors package (csrf-sync, body parsing, ...).
+// A 4xx status means the request was at fault and the message is safe to send.
+interface ClientHttpError extends Error {
+  status: number;
+  code?: unknown;
+}
+
+function isClientHttpError(error: unknown): error is ClientHttpError {
+  if (!(error instanceof Error)) return false;
+  const status = (error as Partial<ClientHttpError>).status;
+  return typeof status === "number" && status >= 400 && status < 500;
+}
+
 // eslint-disable-next-line
 app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   if (error instanceof RequestValidationError) {
@@ -84,6 +97,19 @@ app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
       code: error.code,
       message: error.message,
       issues: error.issues,
+    });
+    return;
+  }
+
+  if (isClientHttpError(error)) {
+    logger.warn(
+      { err: error, method: req.method, url: req.originalUrl },
+      "Request failed with a client error.",
+    );
+    sendError(res, {
+      status: error.status,
+      ...(typeof error.code === "string" && { code: error.code }),
+      message: error.message,
     });
     return;
   }
