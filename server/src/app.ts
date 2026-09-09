@@ -68,6 +68,7 @@ app.use("/users", rateLimiter.users, csrfSynchronisedProtection, usersRouter);
 app.use((_req, res) => {
   sendError(res, {
     status: 404,
+    code: "NOT_FOUND",
     message: "Route not found: check the URL and HTTP method.",
   });
 });
@@ -108,7 +109,10 @@ app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
     );
     sendError(res, {
       status: error.status,
-      ...(typeof error.code === "string" && { code: error.code }),
+      code:
+        error.code === "EBADCSRFTOKEN"
+          ? "CSRF_TOKEN_INVALID"
+          : "REQUEST_FAILED",
       message: error.message,
     });
     return;

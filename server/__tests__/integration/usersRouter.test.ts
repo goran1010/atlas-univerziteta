@@ -95,7 +95,10 @@ describe("usersRouter - POST /users/request-admin", () => {
     expect(response.status).toBe(400);
     expect(response.body).toEqual(
       expect.objectContaining({
-        error: { message: "You already have the admin role." },
+        error: {
+          code: "ALREADY_ADMIN",
+          message: "You already have the admin role.",
+        },
       }),
     );
 

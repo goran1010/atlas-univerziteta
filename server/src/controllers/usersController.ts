@@ -29,6 +29,7 @@ function logout(req: Request, res: Response) {
       logger.error(err, "Logout failed.");
       sendError(res, {
         status: 500,
+        code: "LOGOUT_FAILED",
         message: "Logout failed: try again.",
       });
       return;
@@ -39,6 +40,7 @@ function logout(req: Request, res: Response) {
         logger.error(err, "Session destroy failed during logout.");
         sendError(res, {
           status: 500,
+          code: "LOGOUT_FAILED",
           message: "Logout failed: try again.",
         });
         return;
@@ -63,6 +65,7 @@ async function requestAdmin(req: Request, res: Response) {
   if (!req.user) {
     sendError(res, {
       status: 401,
+      code: "AUTH_REQUIRED",
       message: "You must be logged in to request admin access.",
     });
     return;
@@ -71,6 +74,7 @@ async function requestAdmin(req: Request, res: Response) {
   if (req.user.role === "ADMIN") {
     sendError(res, {
       status: 400,
+      code: "ALREADY_ADMIN",
       message: "You already have the admin role.",
     });
     return;
@@ -91,6 +95,7 @@ async function cancelAdminRequest(req: Request, res: Response) {
   if (!req.user) {
     sendError(res, {
       status: 401,
+      code: "AUTH_REQUIRED",
       message: "You must be logged in to cancel an admin request.",
     });
     return;

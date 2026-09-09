@@ -82,7 +82,7 @@ const apiEndpoints: Endpoint[] = [
   }
 }`,
     errorExample: `// 404
-{ "error": { "message": "University not found." } }`,
+{ "error": { "code": "NOT_FOUND", "message": "University not found." } }`,
   },
   {
     method: "GET",
@@ -128,10 +128,10 @@ const apiEndpoints: Endpoint[] = [
   }
 }`,
     errorExample: `// 404 - no match found
-{ "error": { "message": "No results found matching your search." } }
+{ "error": { "code": "NOT_FOUND", "message": "No results found matching your search." } }
 
 // 400 - invalid searchTerm
-{ "error": { "message": "Request validation failed." } }`,
+{ "error": { "code": "VALIDATION_ERROR", "message": "Request validation failed.", "issues": [...] } }`,
   },
 ];
 

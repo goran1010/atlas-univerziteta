@@ -43,6 +43,7 @@ describe("app", () => {
       status: 404,
       body: {
         error: {
+          code: "NOT_FOUND",
           message: "Route not found: check the URL and HTTP method.",
         },
       },

@@ -130,6 +130,7 @@ describe("Auth Router - POST /auth/signup", () => {
     expect(response.status).toBe(500);
     expect(response.body).toEqual({
       error: {
+        code: "EMAIL_NOT_SENT",
         message:
           "Signup failed: confirmation email was not sent. Check your email address and try again.",
       },
@@ -163,6 +164,7 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
     expect(response.status).toBe(400);
     expect(response.body).toEqual({
       error: {
+        code: "CONFIRMATION_TOKEN_INVALID",
         message:
           "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
       },
@@ -202,6 +204,7 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
     expect(response.status).toBe(400);
     expect(response.body).toEqual({
       error: {
+        code: "CONFIRMATION_TOKEN_INVALID",
         message: "Token expired. Please sign up again.",
       },
     });
@@ -260,6 +263,7 @@ describe("Auth Router - POST /auth/login", () => {
     expect(response.status).toBe(401);
     expect(response.body).toEqual({
       error: {
+        code: "LOGIN_FAILED",
         message:
           "Login failed: Incorrect email or password. Check your credentials and try again.",
       },

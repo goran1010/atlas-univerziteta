@@ -33,7 +33,7 @@ describe("CSRF Router", () => {
     expect(response.status).toBe(403);
     expect(response.body).toEqual({
       error: {
-        code: "EBADCSRFTOKEN",
+        code: "CSRF_TOKEN_INVALID",
         message: "invalid csrf token",
       },
     });

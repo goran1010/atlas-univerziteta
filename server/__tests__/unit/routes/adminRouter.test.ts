@@ -90,6 +90,7 @@ describe("Admin Router - GET /users/admin//pending-changes", () => {
       status: 403,
       body: {
         error: {
+          code: "FORBIDDEN",
           message: "Access denied: admin role is required.",
         },
       },
@@ -185,6 +186,7 @@ describe("Admin Router - DELETE /decline-pending-change", () => {
       status: 403,
       body: {
         error: {
+          code: "FORBIDDEN",
           message: "Access denied: admin role is required.",
         },
       },
@@ -271,6 +273,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
       status: 403,
       body: {
         error: {
+          code: "FORBIDDEN",
           message: "Access denied: admin role is required.",
         },
       },

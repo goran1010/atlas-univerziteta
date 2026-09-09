@@ -47,6 +47,7 @@ describe("usersController.logout", () => {
     expect(statusMock).toHaveBeenCalledWith(500);
     expect(jsonMock).toHaveBeenCalledWith({
       error: {
+        code: "LOGOUT_FAILED",
         message: "Logout failed: try again.",
       },
     });
@@ -87,6 +88,7 @@ describe("usersController.logout", () => {
     expect(statusMock).toHaveBeenCalledWith(500);
     expect(jsonMock).toHaveBeenCalledWith({
       error: {
+        code: "LOGOUT_FAILED",
         message: "Logout failed: try again.",
       },
     });

@@ -58,6 +58,7 @@ async function signup(req: Request, res: Response) {
   if (existingUser) {
     sendError(res, {
       status: 400,
+      code: "SIGNUP_FAILED",
       message: "Signup failed: check your input and try again.",
     });
     return;
@@ -118,6 +119,7 @@ async function signup(req: Request, res: Response) {
 
   sendError(res, {
     status: 500,
+    code: "EMAIL_NOT_SENT",
     message:
       "Signup failed: confirmation email was not sent. Check your email address and try again.",
   });
@@ -137,6 +139,7 @@ async function confirmEmail(req: Request, res: Response) {
   if (!pendingUser) {
     sendError(res, {
       status: 400,
+      code: "CONFIRMATION_TOKEN_INVALID",
       message:
         "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
     });
@@ -152,6 +155,7 @@ async function confirmEmail(req: Request, res: Response) {
 
     sendError(res, {
       status: 400,
+      code: "CONFIRMATION_TOKEN_INVALID",
       message: "Token expired. Please sign up again.",
     });
     return;
@@ -194,6 +198,7 @@ function login(req: Request, res: Response, next: NextFunction) {
 
           sendError(res, {
             status: 401,
+            code: "LOGIN_FAILED",
             message: `Login failed: ${loginReason}. Check your credentials and try again.`,
           });
           return;

@@ -10,6 +10,7 @@ function isNotAuthenticated(req: Request, res: Response, next: NextFunction) {
 
   sendError(res, {
     status: 403,
+    code: "ALREADY_LOGGED_IN",
     message: "Already logged in: log out first.",
   });
 }

@@ -46,6 +46,7 @@ describe("isNotAuthenticated", () => {
     expect(statusMock).toHaveBeenCalledWith(403);
     expect(jsonMock).toHaveBeenCalledWith({
       error: {
+        code: "ALREADY_LOGGED_IN",
         message: "Already logged in: log out first.",
       },
     });

@@ -9,6 +9,7 @@ function requireUser(req: Request, res: Response) {
   if (!req.user) {
     sendError(res, {
       status: 401,
+      code: "AUTH_REQUIRED",
       message: "Authentication required: log in and try again.",
     });
     return null;
@@ -53,6 +54,7 @@ async function createEntity(req: Request, res: Response) {
   if (parentId !== null && !(await parentEntityExists(entityType, parentId))) {
     sendError(res, {
       status: 404,
+      code: "NOT_FOUND",
       message: "Parent entity not found.",
     });
     return;
@@ -90,6 +92,7 @@ async function editEntity(req: Request, res: Response) {
   if (!(await entityExists(entityType, targetId))) {
     sendError(res, {
       status: 404,
+      code: "NOT_FOUND",
       message: "Target entity not found.",
     });
     return;
@@ -127,6 +130,7 @@ async function deleteEntity(req: Request, res: Response) {
   if (!(await entityExists(entityType, targetId))) {
     sendError(res, {
       status: 404,
+      code: "NOT_FOUND",
       message: "Target entity not found.",
     });
     return;
@@ -184,6 +188,7 @@ async function deletePendingChange(req: Request, res: Response) {
   if (pendingChange.length === 0) {
     sendError(res, {
       status: 404,
+      code: "NOT_FOUND",
       message: "Pending change not found.",
     });
     return;

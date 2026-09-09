@@ -11,6 +11,7 @@ function isAuthenticated(req: Request, res: Response, next: NextFunction) {
 
     sendError(res, {
       status: 401,
+      code: "AUTH_REQUIRED",
       message: "Authentication required: log in and try again.",
     });
   } catch (err) {

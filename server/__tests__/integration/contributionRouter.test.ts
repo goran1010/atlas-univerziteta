@@ -78,6 +78,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     expect(response.status).toBe(401);
     expect(response.body).toEqual({
       error: {
+        code: "AUTH_REQUIRED",
         message: "Authentication required: log in and try again.",
       },
     });
@@ -169,7 +170,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
 
     expect(response.status).toBe(404);
     expect(response.body).toEqual({
-      error: { message: "Parent entity not found." },
+      error: { code: "NOT_FOUND", message: "Parent entity not found." },
     });
   });
 
@@ -194,6 +195,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     expect(response.status).toBe(401);
     expect(response.body).toEqual({
       error: {
+        code: "AUTH_REQUIRED",
         message: "Authentication required: log in and try again.",
       },
     });
@@ -328,7 +330,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
 
     expect(response.status).toBe(404);
     expect(response.body).toEqual({
-      error: { message: "Target entity not found." },
+      error: { code: "NOT_FOUND", message: "Target entity not found." },
     });
   });
 });
@@ -342,6 +344,7 @@ describe("Contribution Router - DELETE /users/contribution/universities", () => 
     expect(response.status).toBe(401);
     expect(response.body).toEqual({
       error: {
+        code: "AUTH_REQUIRED",
         message: "Authentication required: log in and try again.",
       },
     });
@@ -400,7 +403,7 @@ describe("Contribution Router - DELETE /users/contribution/universities", () => 
 
     expect(response.status).toBe(404);
     expect(response.body).toEqual({
-      error: { message: "Target entity not found." },
+      error: { code: "NOT_FOUND", message: "Target entity not found." },
     });
   });
 });
@@ -414,6 +417,7 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
     expect(response.status).toBe(401);
     expect(response.body).toEqual({
       error: {
+        code: "AUTH_REQUIRED",
         message: "Authentication required: log in and try again.",
       },
     });
@@ -486,6 +490,7 @@ describe("Contribution Router - DELETE /users/contribution/pending-changes/unive
     expect(response.status).toBe(401);
     expect(response.body).toEqual({
       error: {
+        code: "AUTH_REQUIRED",
         message: "Authentication required: log in and try again.",
       },
     });
@@ -501,6 +506,7 @@ describe("Contribution Router - DELETE /users/contribution/pending-changes/unive
     expect(response.status).toBe(404);
     expect(response.body).toEqual({
       error: {
+        code: "NOT_FOUND",
         message: "Pending change not found.",
       },
     });

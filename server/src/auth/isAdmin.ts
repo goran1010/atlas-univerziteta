@@ -7,6 +7,7 @@ function isAdmin(req: Request, res: Response, next: NextFunction) {
     if (!req.user) {
       sendError(res, {
         status: 401,
+        code: "AUTH_REQUIRED",
         message: "Unauthorized: user not authenticated.",
       });
       return;
@@ -18,6 +19,7 @@ function isAdmin(req: Request, res: Response, next: NextFunction) {
 
     sendError(res, {
       status: 403,
+      code: "FORBIDDEN",
       message: "Access denied: admin role is required.",
     });
   } catch (err) {
