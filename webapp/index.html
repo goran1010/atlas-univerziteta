@@ -55,12 +55,26 @@
       href="/images/apple-touch-icon.png"
     />
 
-    <!-- Preload primary font weights to avoid render-blocking loads.
-         latin-ext included: both locales use accented characters on nearly
-         every page, and lazy-loading it flashes them in the fallback font. -->
+    <!-- Preload every font subset/weight in use so no text flashes in the
+         fallback font. latin-ext included: both locales use accented
+         characters on nearly every page. -->
     <link
       rel="preload"
       href="/fonts/roboto-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/roboto-latin-500-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/roboto-latin-600-normal.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -75,6 +89,20 @@
     <link
       rel="preload"
       href="/fonts/roboto-latin-ext-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/roboto-latin-ext-500-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/roboto-latin-ext-600-normal.woff2"
       as="font"
       type="font/woff2"
       crossorigin
