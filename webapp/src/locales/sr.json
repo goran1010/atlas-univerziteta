@@ -288,6 +288,14 @@
     }
   },
   "messages": {
+    "apiError": {
+      "rateLimited": "Previše zahtjeva. Sačekajte 15 minuta, pa pokušajte ponovo.",
+      "authRequired": "Morate biti prijavljeni za ovu radnju. Prijavite se i pokušajte ponovo.",
+      "forbidden": "Nemate dozvolu za ovu radnju.",
+      "csrfInvalid": "Sigurnosna provjera sesije nije uspjela. Osvježite stranicu i pokušajte ponovo.",
+      "alreadyLoggedIn": "Već ste prijavljeni.",
+      "alreadyAdmin": "Već imate admin ulogu."
+    },
     "csrfTokenFailed": "Neuspjelo preuzimanje CSRF tokena.",
     "pendingChanges": {
       "loadSuccess": "Izmjene na čekanju su učitane.",

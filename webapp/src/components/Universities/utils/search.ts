@@ -1,5 +1,5 @@
 import { SERVER_URL } from "../../../utils/envConfig";
-import { readErrorMessage } from "../../../schemas/api";
+import { readApiError } from "../../../schemas/api";
 import { unifiedSearchResponseSchema } from "../../../schemas/university";
 import { guardedFetch } from "../../../utils/guardedFetch";
 
@@ -42,11 +42,21 @@ async function searchAll(
   if (res.status === 404) {
     return EMPTY_RESULTS;
   }
-  const serverMessage = readErrorMessage(await res.json());
-  if (serverMessage) {
-    console.warn("Search failed:", serverMessage);
+  const serverError = readApiError(await res.json());
+  if (serverError) {
+    console.warn("Search failed:", serverError.message);
   }
-  throw new Error("Search failed");
+  throw new SearchFailedError(serverError?.code);
 }
 
-export { searchAll };
+class SearchFailedError extends Error {
+  readonly code?: string;
+
+  constructor(code?: string) {
+    super("Search failed");
+    this.name = "SearchFailedError";
+    this.code = code;
+  }
+}
+
+export { searchAll, SearchFailedError };

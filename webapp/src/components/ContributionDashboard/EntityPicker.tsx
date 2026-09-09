@@ -5,7 +5,8 @@ import { Label } from "../sharedComponents/Label";
 import { Spinner } from "../../utils/Spinner";
 import { SelectedEntityDetails } from "./SelectedEntityDetails";
 import { SERVER_URL } from "../../utils/envConfig";
-import { readErrorMessage } from "../../schemas/api";
+import { readApiError } from "../../schemas/api";
+import { notificationMessageKey } from "../../utils/apiError";
 import {
   universityDetailResponseSchema,
   universityListResponseSchema,
@@ -115,13 +116,18 @@ function EntityPicker({
           const result = universityListResponseSchema.parse(await res.json());
           setUniversities(result.data);
         } else {
-          const serverMessage = readErrorMessage(await res.json());
-          if (serverMessage) {
-            console.warn("Failed to load universities:", serverMessage);
+          const serverError = readApiError(await res.json());
+          if (serverError) {
+            console.warn("Failed to load universities:", serverError.message);
           }
           addNotification({
             type: "error",
-            message: tRef.current("messages.universities.loadError"),
+            message: tRef.current(
+              notificationMessageKey(
+                serverError?.code,
+                "messages.universities.loadError",
+              ),
+            ),
           });
         }
       } catch {
@@ -156,13 +162,21 @@ function EntityPicker({
         const result = universityDetailResponseSchema.parse(await res.json());
         setDetail(result.data);
       } else {
-        const serverMessage = readErrorMessage(await res.json());
-        if (serverMessage) {
-          console.warn("Failed to load university details:", serverMessage);
+        const serverError = readApiError(await res.json());
+        if (serverError) {
+          console.warn(
+            "Failed to load university details:",
+            serverError.message,
+          );
         }
         addNotification({
           type: "error",
-          message: t("messages.universities.detailsError"),
+          message: t(
+            notificationMessageKey(
+              serverError?.code,
+              "messages.universities.detailsError",
+            ),
+          ),
         });
       }
     } catch {

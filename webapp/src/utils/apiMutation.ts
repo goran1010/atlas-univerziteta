@@ -1,5 +1,6 @@
 import { SERVER_URL } from "./envConfig";
 import { readResponseError } from "../schemas/api";
+import { notificationMessageKey } from "./apiError";
 import { getCsrfToken, isCsrfTokenError } from "./getCsrfToken";
 import { guardedFetch } from "./guardedFetch";
 import { isServerNotReadyError } from "./serverStatus";
@@ -73,16 +74,13 @@ async function apiMutation<Schema extends z.ZodType>(
       return result;
     }
 
-    const serverMessage = await readResponseError(response);
-    if (serverMessage) {
-      console.warn(`Failed to ${logLabel}:`, serverMessage);
+    const serverError = await readResponseError(response);
+    if (serverError) {
+      console.warn(`Failed to ${logLabel}:`, serverError.message);
     }
     addNotification({
       type: "error",
-      message:
-        response.status === 429 && serverMessage
-          ? serverMessage
-          : t(errorMessageKey),
+      message: t(notificationMessageKey(serverError?.code, errorMessageKey)),
     });
     return null;
   } catch (error) {

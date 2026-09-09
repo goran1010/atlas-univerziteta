@@ -16,8 +16,9 @@ import { StudyProgramResult } from "./StudyProgramResult";
 import { TrackResult } from "./TrackResult";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
-import { searchAll } from "./utils/search";
+import { searchAll, SearchFailedError } from "./utils/search";
 import { SERVER_STATUS, isServerNotReadyError } from "../../utils/serverStatus";
+import { notificationMessageKey } from "../../utils/apiError";
 import { searchTermSchema } from "../../schemas/domain";
 
 import type { UnifiedSearchResults } from "../../schemas/university";
@@ -137,7 +138,12 @@ function UnifiedSearch() {
       }
       addNotification({
         type: "error",
-        message: t("messages.universities.searchError"),
+        message: t(
+          notificationMessageKey(
+            error instanceof SearchFailedError ? error.code : undefined,
+            "messages.universities.searchError",
+          ),
+        ),
       });
     } finally {
       setLoading(false);

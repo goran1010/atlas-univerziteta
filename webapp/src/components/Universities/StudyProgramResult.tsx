@@ -8,7 +8,8 @@ import { TrackRow } from "./TrackRow";
 import { Spinner } from "../../utils/Spinner";
 import { SERVER_URL } from "../../utils/envConfig";
 import { guardedFetch } from "../../utils/guardedFetch";
-import { readErrorMessage } from "../../schemas/api";
+import { readApiError } from "../../schemas/api";
+import { notificationMessageKey } from "../../utils/apiError";
 import { SERVER_STATUS, isServerNotReadyError } from "../../utils/serverStatus";
 import { studyProgramDetailResponseSchema } from "../../schemas/university";
 import { tCount } from "../../utils/pluralize";
@@ -52,13 +53,21 @@ function StudyProgramResult({
         setDetailData(result.data);
         setExpanded(true);
       } else {
-        const serverMessage = readErrorMessage(await res.json());
-        if (serverMessage) {
-          console.warn("Failed to load study program details:", serverMessage);
+        const serverError = readApiError(await res.json());
+        if (serverError) {
+          console.warn(
+            "Failed to load study program details:",
+            serverError.message,
+          );
         }
         addNotification({
           type: "error",
-          message: t("messages.universities.detailsError"),
+          message: t(
+            notificationMessageKey(
+              serverError?.code,
+              "messages.universities.detailsError",
+            ),
+          ),
         });
       }
     } catch (error) {

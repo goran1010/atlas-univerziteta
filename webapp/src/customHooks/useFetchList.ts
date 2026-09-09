@@ -3,6 +3,7 @@ import { RootContext } from "../contextData/RootContext";
 import { SERVER_URL } from "../utils/envConfig";
 import { guardedFetch } from "../utils/guardedFetch";
 import { readResponseError } from "../schemas/api";
+import { notificationMessageKey } from "../utils/apiError";
 import { SERVER_STATUS, isServerNotReadyError } from "../utils/serverStatus";
 
 import type { Dispatch, SetStateAction } from "react";
@@ -74,13 +75,15 @@ function useFetchList<Item>({
           return;
         }
 
-        const serverMessage = await readResponseError(response);
-        if (serverMessage) {
-          console.warn(`Failed to ${logLabel}:`, serverMessage);
+        const serverError = await readResponseError(response);
+        if (serverError) {
+          console.warn(`Failed to ${logLabel}:`, serverError.message);
         }
         addNotification({
           type: "error",
-          message: tRef.current(errorMessageKey),
+          message: tRef.current(
+            notificationMessageKey(serverError?.code, errorMessageKey),
+          ),
         });
       } catch (error) {
         if (isServerNotReadyError(error)) {

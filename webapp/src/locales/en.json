@@ -288,6 +288,14 @@
     }
   },
   "messages": {
+    "apiError": {
+      "rateLimited": "Too many requests. Please wait 15 minutes, then try again.",
+      "authRequired": "You need to be logged in for this. Log in and try again.",
+      "forbidden": "You do not have permission for this action.",
+      "csrfInvalid": "Your session security check failed. Refresh the page and try again.",
+      "alreadyLoggedIn": "You are already logged in.",
+      "alreadyAdmin": "You already have the admin role."
+    },
     "csrfTokenFailed": "Failed to retrieve CSRF token.",
     "pendingChanges": {
       "loadSuccess": "Pending changes loaded.",
