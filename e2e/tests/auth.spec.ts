@@ -52,3 +52,26 @@ test("login with wrong credentials shows an error", async ({ page }) => {
 
   await expect(page.getByRole("alert")).toBeVisible();
 });
+
+test("GitHub login hands off to GitHub's OAuth authorize page", async ({
+  page,
+}) => {
+  // never let the test leave the app - stub every github.com request
+  await page.route("https://github.com/**", (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: "text/html",
+      body: "<title>github stub</title>",
+    }),
+  );
+
+  await page.goto("/login");
+  const authorizeRequest = page.waitForRequest((request) =>
+    request.url().startsWith("https://github.com/login/oauth/authorize"),
+  );
+  await page.getByRole("link", { name: "Continue with GitHub" }).click();
+
+  const url = new URL((await authorizeRequest).url());
+  expect(url.searchParams.get("client_id")).toBeTruthy();
+  expect(url.searchParams.get("response_type")).toBe("code");
+});

@@ -1,11 +1,9 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { join } from "node:path";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const distDir = join(__dirname, "..", "dist");
+const distDir = join(import.meta.dirname, "..", "dist");
 
-const localeFile = join(__dirname, "..", "src", "locales", "en.json");
+const localeFile = join(import.meta.dirname, "..", "src", "locales", "en.json");
 const locale = JSON.parse(readFileSync(localeFile, "utf-8"));
 
 function t(path) {
