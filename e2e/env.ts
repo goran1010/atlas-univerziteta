@@ -7,6 +7,24 @@ export const E2E_WEBAPP_URL = "http://localhost:5273";
 
 const E2E_DB_NAME = "uniatlas_e2e";
 
+export const E2E_USER = {
+  email: "e2e-user@example.com",
+  password: "E2e_test_password_123",
+};
+export const E2E_ADMIN = {
+  email: "e2e-admin@example.com",
+  password: "E2e_test_password_123",
+};
+
+export const USER_STORAGE_STATE = path.resolve(
+  import.meta.dirname,
+  ".auth/user.json",
+);
+export const ADMIN_STORAGE_STATE = path.resolve(
+  import.meta.dirname,
+  ".auth/admin.json",
+);
+
 export function e2eDatabaseUrl(): string {
   const fromEnv = process.env.E2E_DATABASE_URL;
   if (fromEnv) return fromEnv;
