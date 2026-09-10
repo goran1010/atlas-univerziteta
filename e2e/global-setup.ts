@@ -1,7 +1,7 @@
 import { execSync } from "node:child_process";
 import path from "node:path";
 import pg from "pg";
-import { e2eDatabaseUrl } from "./env";
+import { E2E_SERVER_URL, E2E_WEBAPP_URL, e2eDatabaseUrl } from "./env";
 
 export default async function globalSetup() {
   const dbUrl = e2eDatabaseUrl();
@@ -22,7 +22,16 @@ export default async function globalSetup() {
   await client.end();
 
   const serverDir = path.resolve(import.meta.dirname, "../server");
-  const env = { ...process.env, DATABASE_URL: dbUrl, NODE_ENV: "development" };
+  // the seed script imports the server's env validation, which requires more
+  // than the database URL - provide the same values the webServer entries use
+  const env = {
+    ...process.env,
+    DATABASE_URL: dbUrl,
+    NODE_ENV: "development",
+    PORT: "3100",
+    SERVER_URL: E2E_SERVER_URL,
+    WEBAPP_URL: E2E_WEBAPP_URL,
+  };
 
   execSync("npx prisma migrate reset --force", {
     cwd: serverDir,
