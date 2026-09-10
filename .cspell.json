@@ -89,7 +89,8 @@
     "EBADCSRFTOKEN",
     "datname",
     "WCAG",
-    "browsable"
+    "browsable",
+    "Testograd"
   ],
   "ignoreWords": [],
   "import": [

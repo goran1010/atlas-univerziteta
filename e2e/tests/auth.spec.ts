@@ -46,7 +46,7 @@ test("login with wrong credentials shows an error", async ({ page }) => {
   await page.goto("/login");
   await page
     .getByRole("textbox", { name: "Email" })
-    .fill(uniqueEmail("nouser"));
+    .fill(uniqueEmail("no-user"));
   await page.getByRole("textbox", { name: "Password" }).fill(PASSWORD);
   await page.getByRole("button", { name: "Log in" }).click();
 
