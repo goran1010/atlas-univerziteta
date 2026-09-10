@@ -21,6 +21,7 @@ function Spinner() {
           className="border-3 border-(--border-color) border-t-3 border-t-(--accent) rounded-full h-12 aspect-square max-h-[70%] mx-auto"
           style={{ animation: "spin 1s linear infinite" }}
         />
+        <span className="sr-only">{t("loading")}</span>
       </div>
     </>
   );
