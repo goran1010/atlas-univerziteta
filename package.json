@@ -11,7 +11,7 @@
     "dev:all": "concurrently \"npm run dev:server\" \"npm run dev:webapp\"",
     "dev:server": "cd server && npm run dev",
     "dev:webapp": "cd webapp && npm run dev",
-    "test:all": "npm run test:server -- run && npm run test:webapp -- run",
+    "test:all": "npm run test:server -- run && npm run test:webapp -- run && npm run test:e2e",
     "test:server": "cd server && npm run test",
     "test:webapp": "cd webapp && npm run test",
     "test:e2e": "cd e2e && npm test",
@@ -42,7 +42,7 @@
     "url": "git+https://github.com/goran1010/uniatlas-bosnia.git"
   },
   "keywords": [],
-  "author": "Goran Jović",
+  "author": "Goran Jovi\u0107",
   "license": "AGPL-3.0-only",
   "bugs": {
     "url": "https://github.com/goran1010/uniatlas-bosnia/issues"
