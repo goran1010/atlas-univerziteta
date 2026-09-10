@@ -6,6 +6,7 @@
     "webapp/__tests__/**/*.{ts,tsx,md}",
     "server/src/**/*.{ts,md}",
     "server/__tests__/**/*.{ts,md}",
+    "e2e/**/*.ts",
     "README.md",
     "CONTRIBUTING.md",
     "LICENSE.md"
@@ -85,7 +86,11 @@
     "Obala",
     "Kulina",
     "bana",
-    "EBADCSRFTOKEN"
+    "EBADCSRFTOKEN",
+    "datname",
+    "WCAG",
+    "browsable",
+    "Testograd"
   ],
   "ignoreWords": [],
   "import": [

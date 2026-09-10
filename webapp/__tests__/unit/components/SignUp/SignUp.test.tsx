@@ -1,14 +1,14 @@
-import { SignUp } from "../../../src/components/SignUp/SignUp";
+import { SignUp } from "../../../../src/components/SignUp/SignUp";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes, Route } from "react-router";
 import userEvent from "@testing-library/user-event";
-import { LogIn } from "../../../src/components/LogIn/LogIn";
-import { Notifications } from "../../../src/components/Notifications";
-import { RootContextProvider } from "../../utils/rootContextProvider";
+import { LogIn } from "../../../../src/components/LogIn/LogIn";
+import { Notifications } from "../../../../src/components/Notifications";
+import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-vi.mock("../../../src/utils/getCsrfToken", async (importOriginal) => {
+vi.mock("../../../../src/utils/getCsrfToken", async (importOriginal) => {
   const actual =
-    await importOriginal<typeof import("../../../src/utils/getCsrfToken")>();
+    await importOriginal<typeof import("../../../../src/utils/getCsrfToken")>();
   return {
     ...actual,
     getCsrfToken: () => Promise.resolve("mocked-csrf-token"),

@@ -37,6 +37,9 @@ jobs:
       - name: Lint server
         run: npm run lint:server
 
+      - name: Lint e2e
+        run: npm run lint:e2e
+
   type_check:
     runs-on: ubuntu-latest
     name: Run type-check
@@ -62,3 +65,6 @@ jobs:
 
       - name: Type check server
         run: npm run typecheck:server
+
+      - name: Type check e2e
+        run: npm run typecheck:e2e

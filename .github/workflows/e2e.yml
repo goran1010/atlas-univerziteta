@@ -1,0 +1,87 @@
+name: E2E CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    name: Run Playwright e2e and a11y tests
+
+    services:
+      postgres:
+        image: postgres:16
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_password
+          POSTGRES_DB: postgres
+        options: >-
+          --health-cmd="pg_isready -U test_user -d postgres"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    env:
+      E2E_DATABASE_URL: postgresql://test_user:test_password@localhost:5432/uniatlas_e2e
+      DATABASE_URL: postgresql://test_user:test_password@localhost:5432/uniatlas_e2e
+      COOKIE_SECRET: "123456789"
+      RESEND_API_KEY: random_text_for_ci
+      GITHUB_CLIENT_ID: random_text_for_ci
+      GITHUB_CLIENT_SECRET: random_text_for_ci
+      GITHUB_CALLBACK_URL: random_text_for_ci
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: "**/package-lock.json"
+
+      - name: Install dependencies
+        run: npm run install:all
+
+      - name: Generate Prisma client
+        run: npm run db:generate
+
+      - name: Get Playwright version
+        id: playwright-version
+        run: echo "version=$(node -p "require('./e2e/node_modules/@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
+
+      - name: Install Playwright browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: cd e2e && npx playwright install --with-deps chromium
+
+      - name: Install Playwright system dependencies
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: cd e2e && npx playwright install-deps chromium
+
+      - name: Run e2e and a11y tests
+        run: npm run test:e2e
+
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: e2e/playwright-report/
+          retention-days: 7

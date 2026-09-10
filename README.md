@@ -41,7 +41,7 @@ Public consumers can browse and query that data through unauthenticated endpoint
 
 - Public REST API under `/api` and `/api/v1`
 - University listing with faculty counts, and detail responses containing nested faculties, study programs, and tracks
-- Unified search across universities, faculties, study programs, and tracks — matching name, city, acronym, entity, ownership, study cycle, language, and parent unit names
+- Unified search across universities, faculties, study programs, and tracks - matching name, city, acronym, entity, ownership, study cycle, language, and parent unit names
 - Email/password signup with email confirmation before account creation
 - Session-based login/logout with Passport
 - Optional GitHub OAuth login
@@ -108,7 +108,7 @@ Then fill in the server values and adjust the webapp server URL if needed.
 The server example file lives at `server/.env.example`.
 
 - `DATABASE_URL`: PostgreSQL connection string for development
-- `TEST_DATABASE_URL`: PostgreSQL connection for server tests (credentials/host only — the suite creates and drops its own databases, so the user needs `CREATEDB` rights)
+- `TEST_DATABASE_URL`: PostgreSQL connection for server tests (credentials/host only - the suite creates and drops its own databases, so the user needs `CREATEDB` rights)
 - `RESEND_API_KEY`: API key for confirmation emails
 - `WEBAPP_URL`: webapp origin allowed by credentialed CORS
 - `SERVER_URL`: public server base URL used in confirmation links
@@ -269,7 +269,20 @@ npm run test:coverage:server
 npm run test:coverage:webapp
 ```
 
-Server tests require `TEST_DATABASE_URL` with a user that can `CREATEDB`. The database named in the URL is never used — the test setup creates a fresh template database per run (schema via migrations, no seed data) and a clone per test file, dropping them afterwards.
+Server tests require `TEST_DATABASE_URL` with a user that can `CREATEDB`. The database named in the URL is never used - the test setup creates a fresh template database per run (schema via migrations, no seed data) and a clone per test file, dropping them afterwards.
+
+### E2E and accessibility tests
+
+Playwright drives the real stack (server + webapp) in Chromium, and axe-core scans every public page for WCAG 2.1 A/AA violations:
+
+```bash
+npm run test:e2e
+npm run test:e2e:ui
+```
+
+First run only: install the browser with `npm run install:browsers`.
+
+The suite is self-contained - it boots both apps on dedicated ports (server `3100`, webapp `5273`) and resets + seeds its own `uniatlas_e2e` database (derived from `DATABASE_URL` in `server/.env`, or `E2E_DATABASE_URL` if set), so dev servers and dev data are never touched. On failure, screenshots and traces land in `e2e/test-results/` and a browsable report in `e2e/playwright-report/` (`npm run report` from `e2e/` opens it).
 
 ### Quality checks
 
