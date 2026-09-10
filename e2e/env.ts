@@ -19,7 +19,7 @@ export function e2eDatabaseUrl(): string {
   }
 
   const parsed = parseEnv(fs.readFileSync(serverEnvPath, "utf8"));
-  const devUrl = parsed["DATABASE_URL"];
+  const devUrl = parsed.DATABASE_URL;
   if (!devUrl) {
     throw new Error(
       "server/.env has no DATABASE_URL to derive the e2e database from",

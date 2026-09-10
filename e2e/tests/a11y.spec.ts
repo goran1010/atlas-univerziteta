@@ -12,7 +12,7 @@ function formatViolations(violations: Violations): string {
       const nodes = v.nodes
         .map((n) => `    - ${n.target.join(" ")}`)
         .join("\n");
-      return `${v.id} (impact: ${v.impact})\n  ${v.help}\n  ${v.helpUrl}\n  failing nodes:\n${nodes}`;
+      return `${v.id} (impact: ${v.impact ?? "unknown"})\n  ${v.help}\n  ${v.helpUrl}\n  failing nodes:\n${nodes}`;
     })
     .join("\n\n");
 }
