@@ -62,3 +62,6 @@ jobs:
 
       - name: Type check server
         run: npm run typecheck:server
+
+      - name: Type check e2e
+        run: npm run typecheck:e2e

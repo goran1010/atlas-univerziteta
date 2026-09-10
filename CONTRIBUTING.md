@@ -11,7 +11,8 @@ Contributions of any kind are welcome - bug fixes, new features, data, documenta
    - Copy `webapp/.env.example` to `webapp/.env` and update `VITE_SERVER_URL` if needed
 4. Set up the databases:
    - Run `npm run db:deploy_generate` to initialize the development database
-   - Server tests need no database setup — the suite creates its own temporary databases from `TEST_DATABASE_URL` (the user just needs `CREATEDB` rights)
+   - Server tests need no database setup - the suite creates its own temporary databases from `TEST_DATABASE_URL` (the user just needs `CREATEDB` rights)
+   - E2E tests need no database setup either - the suite creates, resets, and seeds its own `uniatlas_e2e` database; just install the browser once with `npm run install:browsers`
 5. Make your changes, write tests where appropriate, and ensure the full test suite passes (`npm run test:all`)
 6. Open a pull request referencing any related issues
 

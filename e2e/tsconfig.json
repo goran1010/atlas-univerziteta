@@ -6,14 +6,7 @@
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
-  "include": [
-    "playwright.config.ts",
-    "global-setup.ts",
-    "env.ts",
-    "tests"
-  ]
+  "include": ["playwright.config.ts", "global-setup.ts", "env.ts", "tests"]
 }

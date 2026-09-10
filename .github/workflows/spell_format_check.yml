@@ -32,6 +32,9 @@ jobs:
       - name: Check server formatting
         run: npm run format:check:server
 
+      - name: Check e2e formatting
+        run: npm run format:check:e2e
+
   spell:
     runs-on: ubuntu-latest
     name: Run spell check

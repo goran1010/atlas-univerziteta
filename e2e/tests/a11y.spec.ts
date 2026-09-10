@@ -18,9 +18,7 @@ function formatViolations(violations: Violations): string {
 }
 
 async function expectNoViolations(page: Page) {
-  const results = await new AxeBuilder({ page })
-    .withTags(WCAG_TAGS)
-    .analyze();
+  const results = await new AxeBuilder({ page }).withTags(WCAG_TAGS).analyze();
   expect(formatViolations(results.violations)).toBe("");
 }
 

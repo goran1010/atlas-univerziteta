@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "install:all": "npm install && cd server && npm install && cd ../webapp && npm install && cd ../e2e && npm install",
+    "install:browsers": "cd e2e && npx playwright install chromium",
     "db:migrate_dev": "cd server && npm run db:migrate_dev",
     "db:reset": "cd server && npm run db:reset",
     "db:deploy_generate": "cd server && npm run db:deploy_generate",
@@ -21,18 +22,21 @@
     "test:coverage:webapp": "cd webapp && npx vitest --coverage",
     "prisma_studio": "cd server && npm run prisma_studio --",
     "remove_merged": "git branch --merged | grep -Ev '(^\\*|main)' | xargs git branch -d && git fetch -p",
-    "format:all": "npm run format:server && npm run format:webapp",
+    "format:all": "npm run format:server && npm run format:webapp && npm run format:e2e",
     "format:server": "cd server && npm run format",
     "format:webapp": "cd webapp && npm run format",
-    "format:check:all": "npm run format:check:server && npm run format:check:webapp",
+    "format:e2e": "cd e2e && npm run format",
+    "format:check:all": "npm run format:check:server && npm run format:check:webapp && npm run format:check:e2e",
     "format:check:server": "cd server && npm run format:check",
     "format:check:webapp": "cd webapp && npm run format:check",
+    "format:check:e2e": "cd e2e && npm run format:check",
     "lint:all": "npm run lint:server && npm run lint:webapp",
     "lint:server": "cd server && npm run lint",
     "lint:webapp": "cd webapp && npm run lint",
-    "typecheck:all": "npm run typecheck:server && npm run typecheck:webapp",
+    "typecheck:all": "npm run typecheck:server && npm run typecheck:webapp && npm run typecheck:e2e",
     "typecheck:server": "cd server && npm run typecheck",
     "typecheck:webapp": "cd webapp && npm run typecheck",
+    "typecheck:e2e": "cd e2e && npm run typecheck",
     "build:all": "npm run build:server && npm run build:webapp",
     "build:server": "cd server && npm run build",
     "build:webapp": "cd webapp && npm run build"
@@ -42,7 +46,7 @@
     "url": "git+https://github.com/goran1010/uniatlas-bosnia.git"
   },
   "keywords": [],
-  "author": "Goran Jovi\u0107",
+  "author": "Goran Jović",
   "license": "AGPL-3.0-only",
   "bugs": {
     "url": "https://github.com/goran1010/uniatlas-bosnia/issues"
