@@ -63,6 +63,22 @@ describe("env config", () => {
     );
   });
 
+  test("defaults RESEND_FROM_EMAIL to onboarding@resend.dev", async () => {
+    delete process.env["RESEND_FROM_EMAIL"];
+    vi.resetModules();
+
+    const { env } = await import("../../../src/config/env.js");
+    expect(env.RESEND_FROM_EMAIL).toBe("onboarding@resend.dev");
+  });
+
+  test("uses RESEND_FROM_EMAIL when set", async () => {
+    process.env["RESEND_FROM_EMAIL"] = "noreply@atlasuniverziteta.ba";
+    vi.resetModules();
+
+    const { env } = await import("../../../src/config/env.js");
+    expect(env.RESEND_FROM_EMAIL).toBe("noreply@atlasuniverziteta.ba");
+  });
+
   test("throws if NODE_ENV is invalid", async () => {
     process.env["NODE_ENV"] = "staging";
     vi.resetModules();
