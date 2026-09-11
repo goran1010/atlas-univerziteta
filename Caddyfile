@@ -1,0 +1,19 @@
+# {$DOMAIN} is replaced by the DOMAIN environment variable at runtime.
+# Caddy automatically gets a Let's Encrypt HTTPS certificate for this
+# domain - no manual cert setup, no renewal cron jobs.
+{$DOMAIN} {
+	# API requests: forward /server/* to the Node.js container.
+	# `uri strip_prefix /server` removes the /server prefix before
+	# forwarding, so /server/api/universities hits the server as
+	# /api/universities.
+	handle_path /server/* {
+		reverse_proxy server:3000
+	}
+
+	# Everything else: serve the pre-built webapp static files.
+	handle {
+		root * /srv/webapp
+		try_files {path} /index.html
+		file_server
+	}
+}
