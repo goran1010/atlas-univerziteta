@@ -23,6 +23,7 @@ function Dialog({ open, onClose, title, children, footer }: DialogProps) {
   }, [open]);
 
   function handleBackdropClick(e: MouseEvent<HTMLDialogElement>) {
+    e.stopPropagation();
     if (e.target === dialogRef.current) {
       onClose();
     }
