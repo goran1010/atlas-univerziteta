@@ -19,7 +19,7 @@ In-app API docs: <https://atlasuniverziteta.com/api-docs>
 - [Database setup](#database-setup)
 - [API overview](#api-overview)
 - [Testing and quality checks](#testing-and-quality-checks)
-- [Deployment notes](#deployment-notes)
+- [Deployment](#deployment)
 - [Built with](#built-with)
 - [Contributing](#contributing)
 - [Authors](#authors)
@@ -292,12 +292,15 @@ npm run typecheck:all
 npm run format:check:all
 ```
 
-## Deployment notes
+## Deployment
 
-- Server: any Node.js host that can run Prisma migrations against PostgreSQL
-- Webapp: Netlify, using `webapp/netlify.toml` to proxy `/server/*` to the server
-- Cookies: the proxy keeps auth requests first-party in production
-- Public API consumers can call the server directly without the Netlify proxy
+- **Webapp:** Netlify (auto-deploys on push to `main`), serves static files via CDN
+- **API + Database:** VPS with Docker Compose (Caddy, Node.js server, PostgreSQL)
+- **Proxy:** Netlify proxies `/server/*` to the API, keeping cookies first-party
+- **HTTPS:** Automatic via Let's Encrypt (Caddy) and Netlify
+- **Email:** Resend with a verified custom domain
+
+See `.env.production.example` for the VPS environment variable reference and `docker-compose.yml` for the container setup.
 
 ## Built with
 
