@@ -14,4 +14,4 @@ export const PUBLIC_API_URL =
 export const SITE_URL =
   typeof VITE_SITE_URL === "string" && VITE_SITE_URL !== ""
     ? VITE_SITE_URL
-    : "https://uniatlas-bosnia.netlify.app";
+    : "https://atlasuniverziteta.com";

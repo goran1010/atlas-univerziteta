@@ -34,7 +34,7 @@ function About() {
           <p className="text-sm text-(--text-muted)">
             {t("home.openSource")}{" "}
             <ExternalLink
-              href="https://github.com/goran1010/uniatlas-bosnia"
+              href="https://github.com/goran1010/atlas-univerziteta"
               className="inline-flex items-center gap-1 align-middle"
             >
               <GitHubIcon size={14} />
@@ -90,7 +90,7 @@ function About() {
               {t("home.forDevsCta")}
             </LinkButton>
             <ExternalLink
-              href="https://github.com/goran1010/uniatlas-bosnia"
+              href="https://github.com/goran1010/atlas-univerziteta"
               className="inline-flex items-center justify-center gap-1.5"
             >
               <GitHubIcon />
