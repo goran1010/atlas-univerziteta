@@ -34,10 +34,11 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 COPY prisma ./prisma/
+COPY prisma.config.ts ./
 
-# `npm ci --omit=dev` installs ONLY production dependencies.
-# No TypeScript, no vitest, no eslint - just what the server needs to run.
-RUN npm ci --omit=dev
+# Install production dependencies plus prisma CLI (a devDependency, but
+# needed at runtime for `prisma migrate deploy` on container startup).
+RUN npm ci --omit=dev && npm install prisma
 
 # Copy the compiled JavaScript from the build stage.
 # This is the key multi-stage trick: COPY --from=build pulls files from
