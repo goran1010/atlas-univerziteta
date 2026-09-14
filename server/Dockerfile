@@ -15,7 +15,12 @@ COPY prisma ./prisma/
 RUN npm ci
 
 COPY . .
-RUN npm run build
+
+# Generate the Prisma client (needs the schema, not a database) and
+# compile TypeScript. We skip `prisma migrate deploy` here because
+# there's no database during the build - migrations run at container
+# startup instead (see CMD below).
+RUN npx prisma generate && npx tsc --build tsconfig.build.json
 
 # --- Stage 2: "production" ---
 # Start fresh from a clean Node image. Only copy what we need to run.

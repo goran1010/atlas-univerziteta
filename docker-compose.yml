@@ -1,25 +1,18 @@
 services:
-  # --- Caddy: web server, reverse proxy, automatic HTTPS ---
-  # Caddy is the entry point for all traffic. It serves the webapp's
-  # static files and forwards /server/* requests to the API container.
+  # --- Caddy: reverse proxy + automatic HTTPS ---
+  # Caddy is the entry point for API traffic. It terminates TLS and
+  # forwards requests to the Node.js server container.
+  # The webapp is hosted separately on Netlify.
   caddy:
     image: caddy:2
     restart: unless-stopped
     ports:
-      # These are the only ports exposed to the internet.
-      # 80 is needed for Caddy to do the HTTPS certificate challenge.
       - "80:80"
       - "443:443"
     volumes:
-      # Mount the Caddyfile config from the repo.
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      # Caddy stores its HTTPS certificates here. A named volume
-      # persists across container restarts so it doesn't re-request
-      # certs every time.
       - caddy_data:/data
       - caddy_config:/config
-      # The pre-built webapp static files.
-      - ./webapp/dist:/srv/webapp:ro
     environment:
       - DOMAIN=${DOMAIN}
 
@@ -35,8 +28,8 @@ services:
         condition: service_healthy
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
-      - WEBAPP_URL=https://${DOMAIN}
-      - SERVER_URL=https://${DOMAIN}/server
+      - WEBAPP_URL=https://${WEBAPP_DOMAIN}
+      - SERVER_URL=https://${DOMAIN}
       - PORT=3000
       - RESEND_API_KEY=${RESEND_API_KEY}
       - RESEND_FROM_EMAIL=${RESEND_FROM_EMAIL}
@@ -44,7 +37,7 @@ services:
       - NODE_ENV=production
       - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
       - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
-      - GITHUB_CALLBACK_URL=https://${DOMAIN}/server/auth/github/callback
+      - GITHUB_CALLBACK_URL=https://${DOMAIN}/auth/github/callback
 
   # --- PostgreSQL database ---
   # Uses the official Postgres image. Data is stored in a named volume
@@ -64,8 +57,6 @@ services:
       timeout: 5s
       retries: 5
 
-# Named volumes - Docker manages the actual storage location on the host.
-# `docker compose down` preserves them; `docker compose down -v` deletes them.
 volumes:
   pgdata:
   caddy_data:
