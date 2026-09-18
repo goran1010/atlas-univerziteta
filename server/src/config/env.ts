@@ -4,6 +4,7 @@ class Env {
   public readonly SERVER_URL: string;
   public readonly PORT: number;
   public readonly RESEND_API_KEY: string | undefined;
+  public readonly RESEND_FROM_EMAIL: string;
   public readonly COOKIE_SECRET: string;
   public NODE_ENV: "development" | "test" | "production";
   public readonly GITHUB_CLIENT_ID: string;
@@ -23,6 +24,8 @@ class Env {
       this.NODE_ENV === "production"
         ? Env.#getEnv("RESEND_API_KEY")
         : process.env["RESEND_API_KEY"];
+    this.RESEND_FROM_EMAIL =
+      process.env["RESEND_FROM_EMAIL"] ?? "onboarding@resend.dev";
     this.COOKIE_SECRET = Env.#getEnv("COOKIE_SECRET");
 
     this.GITHUB_CLIENT_ID = Env.#getEnv("GITHUB_CLIENT_ID");

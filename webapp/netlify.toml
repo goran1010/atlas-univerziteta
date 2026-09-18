@@ -7,7 +7,7 @@
 
 [[redirects]]
   from = "/server/*"
-  to = "https://round-leann-goran-jovic-1010-ccad2ae8.koyeb.app/:splat"
+  to = "https://api.atlasuniverziteta.com/:splat"
   status = 200
   force = true
 

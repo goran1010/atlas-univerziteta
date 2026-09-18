@@ -41,7 +41,7 @@ function Api() {
           <p className="mt-2 text-sm text-(--text-muted)">
             {t("api.fullDocs")}{" "}
             <ExternalLink
-              href="https://github.com/goran1010/uniatlas-bosnia"
+              href="https://github.com/goran1010/atlas-univerziteta"
               className="inline-flex items-center gap-1 align-middle"
             >
               <GitHubIcon size={14} />

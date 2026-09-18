@@ -14,14 +14,10 @@ async function sendConfirmationEmail(
     return { success: true, messageId: null };
   }
 
-  // NOTE: The sender "onboarding@resend.dev" is Resend's shared test domain.
-  // It can only deliver to the email address associated with the Resend
-  // account. To send to any user, verify a custom domain in Resend and
-  // update the "from" address (e.g. "noreply@yourdomain.com").
   try {
     const resend = new Resend(env.RESEND_API_KEY);
     const email = await resend.emails.send({
-      from: "UniAtlas Bosnia <onboarding@resend.dev>",
+      from: `Atlas Univerziteta <${env.RESEND_FROM_EMAIL}>`,
       to: [userEmail],
       subject: "Confirm Your Email Address",
       html: `

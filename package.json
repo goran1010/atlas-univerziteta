@@ -1,5 +1,5 @@
 {
-  "name": "uniatlas-bosnia",
+  "name": "atlas-univerziteta",
   "private": true,
   "scripts": {
     "install:all": "npm install && cd server && npm install && cd ../webapp && npm install && cd ../e2e && npm install",
@@ -44,15 +44,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goran1010/uniatlas-bosnia.git"
+    "url": "git+https://github.com/goran1010/atlas-univerziteta.git"
   },
   "keywords": [],
   "author": "Goran Jović",
   "license": "AGPL-3.0-only",
   "bugs": {
-    "url": "https://github.com/goran1010/uniatlas-bosnia/issues"
+    "url": "https://github.com/goran1010/atlas-univerziteta/issues"
   },
-  "homepage": "https://github.com/goran1010/uniatlas-bosnia#readme",
+  "homepage": "https://github.com/goran1010/atlas-univerziteta#readme",
   "dependencies": {
     "concurrently": "^9.2.1"
   },

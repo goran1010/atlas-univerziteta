@@ -5,7 +5,7 @@ import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import babel from "@rolldown/plugin-babel";
 import tailwindcss from "@tailwindcss/vite";
 
-const DEFAULT_SITE_URL = "https://uniatlas-bosnia.netlify.app";
+const DEFAULT_SITE_URL = "https://atlasuniverziteta.com";
 
 export default defineConfig(({ mode }) => {
   process.env.VITE_SITE_URL ??= DEFAULT_SITE_URL;

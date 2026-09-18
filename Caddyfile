@@ -1,0 +1,6 @@
+# Caddy reverse-proxies API traffic to the Node.js server container.
+# The webapp is hosted on Netlify separately - Caddy only handles the API.
+# Automatic HTTPS via Let's Encrypt for the API subdomain.
+{$DOMAIN} {
+	reverse_proxy server:3000
+}

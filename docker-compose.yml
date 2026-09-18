@@ -1,0 +1,63 @@
+services:
+  # --- Caddy: reverse proxy + automatic HTTPS ---
+  # Caddy is the entry point for API traffic. It terminates TLS and
+  # forwards requests to the Node.js server container.
+  # The webapp is hosted separately on Netlify.
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      - DOMAIN=${DOMAIN}
+
+  # --- Server: the Node.js API ---
+  # Built from the Dockerfile in ./server.
+  # Not exposed to the internet directly - only Caddy can reach it
+  # via the internal Docker network at hostname "server".
+  server:
+    build: ./server
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      - WEBAPP_URL=https://${WEBAPP_DOMAIN}
+      - SERVER_URL=https://${DOMAIN}
+      - PORT=3000
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - RESEND_FROM_EMAIL=${RESEND_FROM_EMAIL}
+      - COOKIE_SECRET=${COOKIE_SECRET}
+      - NODE_ENV=production
+      - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
+      - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
+      - GITHUB_CALLBACK_URL=https://${DOMAIN}/auth/github/callback
+
+  # --- PostgreSQL database ---
+  # Uses the official Postgres image. Data is stored in a named volume
+  # so it survives container restarts and rebuilds.
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
+  caddy_data:
+  caddy_config:

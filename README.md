@@ -2,11 +2,11 @@
 
 An open-source monorepo for Bosnia and Herzegovina higher-education data. It combines a public REST API, an authenticated contribution workflow, and a React webapp for browsing universities and managing data suggestions.
 
-Live webapp: <https://uniatlas-bosnia.netlify.app/>
+Live webapp: <https://atlasuniverziteta.com/>
 
-Live server REST API: <https://round-leann-goran-jovic-1010-ccad2ae8.koyeb.app/api>
+Live server REST API: <https://api.atlasuniverziteta.com/api>
 
-In-app API docs: <https://uniatlas-bosnia.netlify.app/api-docs>
+In-app API docs: <https://atlasuniverziteta.com/api-docs>
 
 ![UniAtlas Bosnia](./webapp/public/images/og-image-home.png)
 
@@ -19,7 +19,7 @@ In-app API docs: <https://uniatlas-bosnia.netlify.app/api-docs>
 - [Database setup](#database-setup)
 - [API overview](#api-overview)
 - [Testing and quality checks](#testing-and-quality-checks)
-- [Deployment notes](#deployment-notes)
+- [Deployment](#deployment)
 - [Built with](#built-with)
 - [Contributing](#contributing)
 - [Authors](#authors)
@@ -82,8 +82,8 @@ Create GitHub OAuth credentials at <https://github.com/settings/developers> if y
 Clone the repository:
 
 ```bash
-git clone https://github.com/goran1010/uniatlas-bosnia.git
-cd uniatlas-bosnia
+git clone https://github.com/goran1010/atlas-univerziteta.git
+cd atlas-univerziteta
 ```
 
 Install root, server, and webapp dependencies:
@@ -128,7 +128,7 @@ http://localhost:3000/auth/github/callback
 Production callback example with the Netlify proxy:
 
 ```text
-https://yoursite.netlify.app/server/auth/github/callback
+https://api.atlasuniverziteta.com/auth/github/callback
 ```
 
 ### Webapp envs
@@ -224,7 +224,7 @@ Errors return an `error.message` payload.
 Base URL:
 
 ```text
-https://round-leann-goran-jovic-1010-ccad2ae8.koyeb.app
+https://api.atlasuniverziteta.com
 ```
 
 - `GET /api`
@@ -292,12 +292,15 @@ npm run typecheck:all
 npm run format:check:all
 ```
 
-## Deployment notes
+## Deployment
 
-- Server: any Node.js host that can run Prisma migrations against PostgreSQL
-- Webapp: Netlify, using `webapp/netlify.toml` to proxy `/server/*` to the server
-- Cookies: the proxy keeps auth requests first-party in production
-- Public API consumers can call the server directly without the Netlify proxy
+- **Webapp:** Netlify (auto-deploys on push to `main`), serves static files via CDN
+- **API + Database:** VPS with Docker Compose (Caddy, Node.js server, PostgreSQL)
+- **Proxy:** Netlify proxies `/server/*` to the API, keeping cookies first-party
+- **HTTPS:** Automatic via Let's Encrypt (Caddy) and Netlify
+- **Email:** Resend with a verified custom domain
+
+See `.env.production.example` for the VPS environment variable reference and `docker-compose.yml` for the container setup.
 
 ## Built with
 
@@ -334,7 +337,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines. Code chang
 
 - Goran Jović - [@goran1010](https://github.com/goran1010)
 
-See also the list of [contributors](https://github.com/goran1010/uniatlas-bosnia/contributors).
+See also the list of [contributors](https://github.com/goran1010/atlas-univerziteta/contributors).
 
 ## License
 

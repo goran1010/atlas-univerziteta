@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Discussions
-    url: https://github.com/goran1010/uniatlas-bosnia/discussions
+    url: https://github.com/goran1010/atlas-univerziteta/discussions
     about: Ask questions and discuss ideas with the community
   - name: Documentation
-    url: https://github.com/goran1010/uniatlas-bosnia/blob/main/README.md
+    url: https://github.com/goran1010/atlas-univerziteta/blob/main/README.md
     about: Read the project documentation
