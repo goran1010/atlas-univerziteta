@@ -72,11 +72,11 @@ describe("env config", () => {
   });
 
   test("uses RESEND_FROM_EMAIL when set", async () => {
-    process.env["RESEND_FROM_EMAIL"] = "noreply@atlasuniverziteta.ba";
+    process.env["RESEND_FROM_EMAIL"] = "noreply@atlasuniverziteta.com";
     vi.resetModules();
 
     const { env } = await import("../../../src/config/env.js");
-    expect(env.RESEND_FROM_EMAIL).toBe("noreply@atlasuniverziteta.ba");
+    expect(env.RESEND_FROM_EMAIL).toBe("noreply@atlasuniverziteta.com");
   });
 
   test("throws if NODE_ENV is invalid", async () => {
