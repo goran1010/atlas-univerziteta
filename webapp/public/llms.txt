@@ -4,12 +4,12 @@ UniAtlas Bosnia is a free, open-source directory of universities, faculties, stu
 
 ## Public pages
 
-- [Home](https://uniatlas-bosnia.netlify.app/)
-- [Universities](https://uniatlas-bosnia.netlify.app/universities)
-- [API Docs](https://uniatlas-bosnia.netlify.app/api-docs)
+- [Home](https://atlasuniverziteta.com/)
+- [Universities](https://atlasuniverziteta.com/universities)
+- [API Docs](https://atlasuniverziteta.com/api-docs)
 
 ## API access
 
-- [All universities endpoint](https://round-leann-goran-jovic-1010-ccad2ae8.koyeb.app/api/v1/universities)
-- [University by id endpoint](https://round-leann-goran-jovic-1010-ccad2ae8.koyeb.app/api/v1/universities/1)
-- [Unified search endpoint (universities, faculties, study programs, subjects)](https://round-leann-goran-jovic-1010-ccad2ae8.koyeb.app/api/v1/search?searchTerm=sarajevo)
+- [All universities endpoint](https://api.atlasuniverziteta.com/api/v1/universities)
+- [University by id endpoint](https://api.atlasuniverziteta.com/api/v1/universities/1)
+- [Unified search endpoint (universities, faculties, study programs, subjects)](https://api.atlasuniverziteta.com/api/v1/search?searchTerm=sarajevo)

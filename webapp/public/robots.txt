@@ -3,4 +3,4 @@ Disallow: /admin-dashboard
 Disallow: /improve-data
 Disallow: /profile
 
-Sitemap: https://uniatlas-bosnia.netlify.app/sitemap.xml
+Sitemap: https://atlasuniverziteta.com/sitemap.xml
