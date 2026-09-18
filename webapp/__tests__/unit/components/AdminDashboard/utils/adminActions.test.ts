@@ -5,7 +5,6 @@ import {
   handleDeclineAdminRequest,
 } from "../../../../../src/components/AdminDashboard/utils/adminActions";
 import { getCsrfToken } from "../../../../../src/utils/getCsrfToken";
-import { guardedFetch } from "../../../../../src/utils/guardedFetch";
 
 import type { RequestContext } from "../../../../../src/utils/apiMutation";
 import type { AdminPendingChange } from "../../../../../src/schemas/pendingChange";
@@ -19,12 +18,8 @@ vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
   return { ...actual, getCsrfToken: vi.fn() };
 });
 
-vi.mock("../../../../../src/utils/guardedFetch", () => ({
-  guardedFetch: vi.fn(),
-}));
-
 const mockedGetCsrfToken = vi.mocked(getCsrfToken);
-const mockedGuardedFetch = vi.mocked(guardedFetch);
+const fetchMock = vi.fn();
 
 const change: AdminPendingChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",
@@ -50,18 +45,18 @@ function createCtx(): RequestContext {
     addNotification: vi.fn(),
     setLoading: vi.fn(),
     t: (key: string) => key,
-    serverStatus: "live",
   };
 }
 
 beforeEach(() => {
   mockedGetCsrfToken.mockReset();
-  mockedGuardedFetch.mockReset();
+  fetchMock.mockReset();
   mockedGetCsrfToken.mockResolvedValue("csrf-token");
-  mockedGuardedFetch.mockResolvedValue({
+  fetchMock.mockResolvedValue({
     ok: true,
     json: () => Promise.resolve({ message: "Done." }),
-  } as Response);
+  });
+  vi.spyOn(globalThis, "fetch").mockImplementation(fetchMock);
 });
 
 afterEach(() => {
@@ -75,13 +70,12 @@ describe("handleApprovePendingChange", () => {
 
     await handleApprovePendingChange(change, setPendingChanges, ctx);
 
-    expect(mockedGuardedFetch).toHaveBeenCalledWith(
+    expect(fetchMock).toHaveBeenCalledWith(
       expect.stringContaining("/users/admin/approve-pending-change"),
       expect.objectContaining({
         method: "POST",
         body: JSON.stringify({ id: change.id }),
       }),
-      expect.objectContaining({ serverStatus: "live" }),
     );
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "success",
@@ -96,10 +90,10 @@ describe("handleApprovePendingChange", () => {
   });
 
   test("shows a translated error and keeps the list when approval fails", async () => {
-    mockedGuardedFetch.mockResolvedValue({
+    fetchMock.mockResolvedValue({
       ok: false,
       json: () => Promise.resolve({ error: { message: "Approval failed." } }),
-    } as Response);
+    });
     const consoleWarnSpy = vi
       .spyOn(console, "warn")
       .mockImplementation(() => undefined);
@@ -124,13 +118,12 @@ describe("handleDeclinePendingChange", () => {
 
     await handleDeclinePendingChange(change, setPendingChanges, ctx);
 
-    expect(mockedGuardedFetch).toHaveBeenCalledWith(
+    expect(fetchMock).toHaveBeenCalledWith(
       expect.stringContaining("/users/admin/decline-pending-change"),
       expect.objectContaining({
         method: "DELETE",
         body: JSON.stringify({ id: change.id }),
       }),
-      expect.objectContaining({ serverStatus: "live" }),
     );
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "success",
@@ -152,13 +145,12 @@ describe("handleApproveAdminRequest", () => {
 
     await handleApproveAdminRequest(adminRequest, setAdminRequests, ctx);
 
-    expect(mockedGuardedFetch).toHaveBeenCalledWith(
+    expect(fetchMock).toHaveBeenCalledWith(
       expect.stringContaining("/users/admin/approve-admin-request"),
       expect.objectContaining({
         method: "POST",
         body: JSON.stringify({ id: adminRequest.id }),
       }),
-      expect.objectContaining({ serverStatus: "live" }),
     );
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "success",
@@ -180,13 +172,12 @@ describe("handleDeclineAdminRequest", () => {
 
     await handleDeclineAdminRequest(adminRequest, setAdminRequests, ctx);
 
-    expect(mockedGuardedFetch).toHaveBeenCalledWith(
+    expect(fetchMock).toHaveBeenCalledWith(
       expect.stringContaining("/users/admin/decline-admin-request"),
       expect.objectContaining({
         method: "DELETE",
         body: JSON.stringify({ id: adminRequest.id }),
       }),
-      expect.objectContaining({ serverStatus: "live" }),
     );
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "success",

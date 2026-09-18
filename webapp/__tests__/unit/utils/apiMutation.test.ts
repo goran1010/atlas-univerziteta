@@ -2,8 +2,6 @@ import { z } from "zod";
 import { apiMutation } from "../../../src/utils/apiMutation";
 import { CsrfTokenError } from "../../../src/utils/getCsrfToken";
 import { getCsrfToken } from "../../../src/utils/getCsrfToken";
-import { guardedFetch } from "../../../src/utils/guardedFetch";
-import { ServerNotReadyError } from "../../../src/utils/serverStatus";
 
 import type { RequestContext } from "../../../src/utils/apiMutation";
 
@@ -13,12 +11,9 @@ vi.mock("../../../src/utils/getCsrfToken", async (importOriginal) => {
   return { ...actual, getCsrfToken: vi.fn() };
 });
 
-vi.mock("../../../src/utils/guardedFetch", () => ({
-  guardedFetch: vi.fn(),
-}));
-
 const mockedGetCsrfToken = vi.mocked(getCsrfToken);
-const mockedGuardedFetch = vi.mocked(guardedFetch);
+
+const fetchMock = vi.fn();
 
 const responseSchema = z.object({ message: z.string() });
 
@@ -40,14 +35,14 @@ function createCtx(): RequestContext {
     addNotification: vi.fn(),
     setLoading: vi.fn(),
     t: (key: string) => key,
-    serverStatus: "live",
   };
 }
 
 beforeEach(() => {
   mockedGetCsrfToken.mockReset();
-  mockedGuardedFetch.mockReset();
+  fetchMock.mockReset();
   mockedGetCsrfToken.mockResolvedValue("csrf-token");
+  vi.spyOn(globalThis, "fetch").mockImplementation(fetchMock);
 });
 
 afterEach(() => {
@@ -56,15 +51,15 @@ afterEach(() => {
 
 describe("apiMutation", () => {
   test("sends the request, notifies and returns the parsed result", async () => {
-    mockedGuardedFetch.mockResolvedValue({
+    fetchMock.mockResolvedValue({
       ok: true,
       json: () => Promise.resolve({ message: "Done." }),
-    } as Response);
+    });
     const ctx = createCtx();
 
     const result = await apiMutation(createConfig(), ctx);
 
-    expect(mockedGuardedFetch).toHaveBeenCalledWith(
+    expect(fetchMock).toHaveBeenCalledWith(
       expect.stringContaining("/example-path"),
       expect.objectContaining({
         method: "POST",
@@ -75,7 +70,6 @@ describe("apiMutation", () => {
         body: JSON.stringify({ id: "change-1" }),
         credentials: "include",
       }),
-      expect.objectContaining({ serverStatus: "live" }),
     );
     expect(result).toEqual({ message: "Done." });
     expect(ctx.addNotification).toHaveBeenCalledWith({
@@ -87,23 +81,23 @@ describe("apiMutation", () => {
   });
 
   test("omits the body when the config has none", async () => {
-    mockedGuardedFetch.mockResolvedValue({
+    fetchMock.mockResolvedValue({
       ok: true,
       json: () => Promise.resolve({ message: "Done." }),
-    } as Response);
+    });
 
     await apiMutation(createConfig({ body: undefined }), createCtx());
 
-    const [, options] = mockedGuardedFetch.mock.calls[0] ?? [];
+    const [, options] = (fetchMock.mock.calls[0] ?? []) as [string, RequestInit];
     expect(options).not.toHaveProperty("body");
   });
 
   test("notifies with the error message on a failed response", async () => {
-    mockedGuardedFetch.mockResolvedValue({
+    fetchMock.mockResolvedValue({
       ok: false,
       json: () =>
         Promise.resolve({ error: { message: "Rejected on the server." } }),
-    } as Response);
+    });
     const consoleWarnSpy = vi
       .spyOn(console, "warn")
       .mockImplementation(() => undefined);
@@ -123,13 +117,13 @@ describe("apiMutation", () => {
   });
 
   test("maps a known error code to its shared notification message", async () => {
-    mockedGuardedFetch.mockResolvedValue({
+    fetchMock.mockResolvedValue({
       ok: false,
       json: () =>
         Promise.resolve({
           error: { code: "RATE_LIMITED", message: "Too many requests." },
         }),
-    } as Response);
+    });
     const consoleWarnSpy = vi
       .spyOn(console, "warn")
       .mockImplementation(() => undefined);
@@ -149,10 +143,10 @@ describe("apiMutation", () => {
   });
 
   test("still notifies when a failed response has a non-JSON body", async () => {
-    mockedGuardedFetch.mockResolvedValue({
+    fetchMock.mockResolvedValue({
       ok: false,
       json: () => Promise.reject(new Error("invalid JSON")),
-    } as Response);
+    });
     const ctx = createCtx();
 
     await apiMutation(createConfig(), ctx);
@@ -165,10 +159,10 @@ describe("apiMutation", () => {
   });
 
   test("returns null when a successful response is malformed", async () => {
-    mockedGuardedFetch.mockResolvedValue({
+    fetchMock.mockResolvedValue({
       ok: true,
       json: () => Promise.resolve({}),
-    } as Response);
+    });
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => undefined);
@@ -186,7 +180,7 @@ describe("apiMutation", () => {
 
   test("uses the caught-error message when the request throws", async () => {
     const requestError = new Error("Network failure");
-    mockedGuardedFetch.mockRejectedValue(requestError);
+    fetchMock.mockRejectedValue(requestError);
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => undefined);
@@ -207,21 +201,6 @@ describe("apiMutation", () => {
     );
   });
 
-  test("does not notify when the server is not ready", async () => {
-    mockedGuardedFetch.mockRejectedValue(new ServerNotReadyError("waking"));
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => undefined);
-    const ctx = createCtx();
-
-    const result = await apiMutation(createConfig(), ctx);
-
-    expect(result).toBeNull();
-    expect(ctx.addNotification).not.toHaveBeenCalled();
-    expect(consoleErrorSpy).not.toHaveBeenCalled();
-    expect(ctx.setLoading).toHaveBeenLastCalledWith(false);
-  });
-
   test("does not notify again when fetching the csrf token fails", async () => {
     mockedGetCsrfToken.mockRejectedValue(
       new CsrfTokenError(new Error("token endpoint down")),
@@ -231,7 +210,7 @@ describe("apiMutation", () => {
     const result = await apiMutation(createConfig(), ctx);
 
     expect(result).toBeNull();
-    expect(mockedGuardedFetch).not.toHaveBeenCalled();
+    expect(fetchMock).not.toHaveBeenCalled();
     expect(ctx.addNotification).not.toHaveBeenCalled();
     expect(ctx.setLoading).toHaveBeenLastCalledWith(false);
   });

@@ -7,10 +7,8 @@ import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { TrackRow } from "./TrackRow";
 import { Spinner } from "../../utils/Spinner";
 import { SERVER_URL } from "../../utils/envConfig";
-import { guardedFetch } from "../../utils/guardedFetch";
 import { readApiError } from "../../schemas/api";
 import { notificationMessageKey } from "../../utils/apiError";
-import { SERVER_STATUS, isServerNotReadyError } from "../../utils/serverStatus";
 import { studyProgramDetailResponseSchema } from "../../schemas/university";
 import { tCount } from "../../utils/pluralize";
 
@@ -27,7 +25,7 @@ function StudyProgramResult({
   program: StudyProgramSearchResult;
   t: TFunction;
 }) {
-  const { addNotification, serverStatus } = use(RootContext);
+  const { addNotification } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<StudyProgramDetail>();
   const [loadingDetail, setLoadingDetail] = useState(false);
@@ -43,13 +41,14 @@ function StudyProgramResult({
     }
     try {
       setLoadingDetail(true);
-      const res = await guardedFetch(
+      const res = await fetch(
         `${SERVER_URL}/api/v1/study-programs/${program.id.toString()}`,
         { method: "GET", mode: "cors" },
-        { serverStatus },
       );
       if (res.ok) {
-        const result = studyProgramDetailResponseSchema.parse(await res.json());
+        const result = studyProgramDetailResponseSchema.parse(
+          await res.json(),
+        );
         setDetailData(result.data);
         setExpanded(true);
       } else {
@@ -71,7 +70,7 @@ function StudyProgramResult({
         });
       }
     } catch (error) {
-      if (isServerNotReadyError(error)) return;
+      console.error("Error loading study program details:", error);
       addNotification({
         type: "error",
         message: t("messages.universities.detailsError"),
@@ -111,7 +110,6 @@ function StudyProgramResult({
           onClick={() => {
             void handleExpand();
           }}
-          disabled={serverStatus !== SERVER_STATUS.LIVE}
           loading={loadingDetail}
         />
       </div>

@@ -4,7 +4,6 @@ import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
-import { SERVER_STATUS } from "../../utils/serverStatus";
 import type { PendingChange } from "../../schemas/pendingChange";
 
 interface BadgeStyles {
@@ -30,9 +29,9 @@ function PendingUniversityChangesRow({
   index,
   setPendingChanges,
 }: PendingUniversityChangesRowProps) {
-  const { t, addNotification, serverStatus } = use(RootContext);
+  const { t, addNotification } = use(RootContext);
   const [loading, setLoading] = useState(false);
-  const ctx = { addNotification, setLoading, t, serverStatus };
+  const ctx = { addNotification, setLoading, t };
   const [dialogOpen, setDialogOpen] = useState(false);
 
   async function handleDelete() {
@@ -85,7 +84,6 @@ function PendingUniversityChangesRow({
             variant="danger"
             className="px-3 py-1.5 text-xs"
             loading={loading}
-            disabled={serverStatus !== SERVER_STATUS.LIVE}
             onClick={() => void handleDelete()}
           >
             {t("contribution.deleteChange")}
@@ -104,7 +102,6 @@ function PendingUniversityChangesRow({
             variant="danger"
             className="sm:w-auto"
             loading={loading}
-            disabled={serverStatus !== SERVER_STATUS.LIVE}
             onClick={() => void handleDelete()}
           >
             {t("contribution.deleteChange")}

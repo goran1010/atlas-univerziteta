@@ -1,10 +1,8 @@
 import { use, useEffect, useRef, useState } from "react";
 import { RootContext } from "../contextData/RootContext";
 import { SERVER_URL } from "../utils/envConfig";
-import { guardedFetch } from "../utils/guardedFetch";
 import { readResponseError } from "../schemas/api";
 import { notificationMessageKey } from "../utils/apiError";
-import { SERVER_STATUS, isServerNotReadyError } from "../utils/serverStatus";
 
 import type { Dispatch, SetStateAction } from "react";
 import type { ZodType } from "zod";
@@ -30,7 +28,7 @@ function useFetchList<Item>({
   enabled = true,
   refetchKey = 0,
 }: UseFetchListOptions<Item>): [Item[], Dispatch<SetStateAction<Item[]>>] {
-  const { addNotification, serverStatus, t } = use(RootContext);
+  const { addNotification, t } = use(RootContext);
   const [items, setItems] = useState<Item[]>([]);
 
   // notifications should use the language active when the fetch settles,
@@ -42,26 +40,18 @@ function useFetchList<Item>({
 
   useEffect(() => {
     if (!enabled) return;
-    if (serverStatus !== SERVER_STATUS.LIVE) {
-      setLoading(false);
-      return;
-    }
     const fetchItems = async () => {
       try {
         setLoading(true);
 
-        const response = await guardedFetch(
-          `${SERVER_URL}${path}`,
-          {
-            method: "GET",
-            mode: "cors",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            credentials: "include",
+        const response = await fetch(`${SERVER_URL}${path}`, {
+          method: "GET",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
           },
-          { serverStatus },
-        );
+          credentials: "include",
+        });
 
         if (response.ok) {
           const result = responseSchema.parse(await response.json());
@@ -86,9 +76,6 @@ function useFetchList<Item>({
           ),
         });
       } catch (error) {
-        if (isServerNotReadyError(error)) {
-          return;
-        }
         console.error(`Error trying to ${logLabel}:`, error);
         addNotification({
           type: "error",
@@ -107,7 +94,6 @@ function useFetchList<Item>({
     path,
     refetchKey,
     responseSchema,
-    serverStatus,
     setLoading,
     successMessageKey,
   ]);

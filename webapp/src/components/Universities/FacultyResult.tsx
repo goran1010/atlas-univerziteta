@@ -9,10 +9,8 @@ import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
 import { Spinner } from "../../utils/Spinner";
 import { SERVER_URL } from "../../utils/envConfig";
-import { guardedFetch } from "../../utils/guardedFetch";
 import { readApiError } from "../../schemas/api";
 import { notificationMessageKey } from "../../utils/apiError";
-import { SERVER_STATUS, isServerNotReadyError } from "../../utils/serverStatus";
 import { facultyDetailResponseSchema } from "../../schemas/university";
 import { tCount } from "../../utils/pluralize";
 
@@ -22,7 +20,7 @@ import type {
 } from "../../schemas/university";
 
 function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
-  const { t, addNotification, serverStatus } = use(RootContext);
+  const { t, addNotification } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<FacultyDetail>();
   const [loadingDetail, setLoadingDetail] = useState(false);
@@ -38,10 +36,9 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
     }
     try {
       setLoadingDetail(true);
-      const res = await guardedFetch(
+      const res = await fetch(
         `${SERVER_URL}/api/v1/faculties/${faculty.id.toString()}`,
         { method: "GET", mode: "cors" },
-        { serverStatus },
       );
       if (res.ok) {
         const result = facultyDetailResponseSchema.parse(await res.json());
@@ -63,7 +60,7 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
         });
       }
     } catch (error) {
-      if (isServerNotReadyError(error)) return;
+      console.error("Error loading faculty details:", error);
       addNotification({
         type: "error",
         message: t("messages.universities.detailsError"),
@@ -103,7 +100,6 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
           onClick={() => {
             void handleExpand();
           }}
-          disabled={serverStatus !== SERVER_STATUS.LIVE}
           loading={loadingDetail}
         />
       </div>

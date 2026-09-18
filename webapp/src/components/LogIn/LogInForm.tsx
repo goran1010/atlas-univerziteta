@@ -9,7 +9,6 @@ import { handleSubmitLogIn } from "./utils/handleSubmitLogIn";
 import { Button } from "../sharedComponents/Button";
 import { Input } from "../sharedComponents/Input";
 import { Label } from "../sharedComponents/Label";
-import { SERVER_STATUS } from "../../utils/serverStatus";
 
 import type { ChangeEvent } from "react";
 interface LogInFormProps {
@@ -19,7 +18,7 @@ interface LogInFormProps {
 
 function LogInForm({ disabled, onLoadingChange }: LogInFormProps) {
   const navigate = useNavigate();
-  const { setUserData, addNotification, t, serverStatus } = use(RootContext);
+  const { setUserData, addNotification, t } = use(RootContext);
   const [loading, setLoading] = useState(false);
 
   function handleSetLoading(value: boolean) {
@@ -31,7 +30,6 @@ function LogInForm({ disabled, onLoadingChange }: LogInFormProps) {
     addNotification,
     setLoading: handleSetLoading,
     t,
-    serverStatus,
   };
 
   const [inputFields, setInputFields] = useState({
@@ -102,7 +100,7 @@ function LogInForm({ disabled, onLoadingChange }: LogInFormProps) {
           }}
           type="submit"
           loading={loading}
-          disabled={disabled || serverStatus !== SERVER_STATUS.LIVE}
+          disabled={disabled}
         >
           {t("auth.login.heading")}
         </Button>

@@ -17,7 +17,6 @@ import { TrackResult } from "./TrackResult";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
 import { searchAll, SearchFailedError } from "./utils/search";
-import { SERVER_STATUS, isServerNotReadyError } from "../../utils/serverStatus";
 import { notificationMessageKey } from "../../utils/apiError";
 import { searchTermSchema } from "../../schemas/domain";
 
@@ -85,7 +84,7 @@ const CYCLES: StudyCycle[] = [
 ];
 
 function UnifiedSearch() {
-  const { t, addNotification, serverStatus } = use(RootContext);
+  const { t, addNotification } = use(RootContext);
   const [results, setResults] = useState<UnifiedSearchResults | null>(null);
   const [loading, setLoading] = useState(false);
   const [searchInput, setSearchInput] = useState("");
@@ -126,16 +125,13 @@ function UnifiedSearch() {
     try {
       setLoading(true);
       setResults(
-        await searchAll(term, serverStatus, {
+        await searchAll(term, {
           entity: entityFilter || undefined,
           ownership: ownershipFilter || undefined,
           cycle: cycleFilter || undefined,
         }),
       );
     } catch (error) {
-      if (isServerNotReadyError(error)) {
-        return;
-      }
       addNotification({
         type: "error",
         message: t(
@@ -269,7 +265,6 @@ function UnifiedSearch() {
         <Button
           type="submit"
           loading={loading}
-          disabled={serverStatus !== SERVER_STATUS.LIVE}
           className="w-full self-center sm:max-w-28 sm:self-auto"
         >
           {t("universitiesPage.search")}

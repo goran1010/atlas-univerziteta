@@ -21,7 +21,6 @@ function RootContextProbe() {
       <output data-testid="user">
         {context.userData ? context.userData.email : "null"}
       </output>
-      <output data-testid="server-status">{context.serverStatus}</output>
     </div>
   );
 }
@@ -34,6 +33,5 @@ describe("RootContext", () => {
     expect(screen.getByTestId("translation")).toHaveTextContent("test.key");
     expect(screen.getByTestId("notification-count")).toHaveTextContent("0");
     expect(screen.getByTestId("user")).toHaveTextContent("null");
-    expect(screen.getByTestId("server-status")).toHaveTextContent("live");
   });
 });

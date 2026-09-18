@@ -260,10 +260,6 @@
     "goHome": "Go to Home Page",
     "pageTitle": "Page Not Found"
   },
-  "longWait": {
-    "unreachable": "Server can't be reached after multiple attempts. Please try again later.",
-    "wakingUp": "Getting response from the server is taking longer than expected (server might be waking up). Please wait..."
-  },
   "footer": {
     "name": "Goran Jović",
     "email": "goran1010jovic@gmail.com"

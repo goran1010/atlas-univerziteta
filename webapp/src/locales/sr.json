@@ -260,10 +260,6 @@
     "goHome": "Idi na početnu stranicu",
     "pageTitle": "Stranica nije pronađena"
   },
-  "longWait": {
-    "unreachable": "Server nije dostupan ni nakon više pokušaja. Pokušajte ponovo kasnije.",
-    "wakingUp": "Odgovor servera traje duže nego očekivano (server se možda pokreće). Sačekajte..."
-  },
   "footer": {
     "name": "Goran Jović",
     "email": "goran1010jovic@gmail.com"

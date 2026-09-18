@@ -1,17 +1,13 @@
 import { useEffect, useState, useRef } from "react";
-import { guardedFetch } from "../utils/guardedFetch";
 import { SERVER_URL } from "../utils/envConfig";
 import { currentUserResponseSchema } from "../schemas/auth";
-import { SERVER_STATUS, isServerNotReadyError } from "../utils/serverStatus";
 
 import type { AddNotification } from "../types/notification";
-import type { ServerStatus } from "../utils/serverStatus";
 import type { UserData } from "../types/auth";
 
 function useStatusCheck(
   addNotification: AddNotification,
   t: (key: string) => string,
-  serverStatus: ServerStatus,
 ) {
   const [userData, setUserData] = useState<UserData>(null);
   const tRef = useRef(t);
@@ -21,25 +17,17 @@ function useStatusCheck(
   }, [t]);
 
   useEffect(() => {
-    if (serverStatus !== SERVER_STATUS.LIVE) {
-      return;
-    }
-
     let isCancelled = false;
     const abortController = new AbortController();
 
     async function checkLogin() {
       try {
-        const response = await guardedFetch(
-          `${SERVER_URL}/users/me`,
-          {
-            mode: "cors",
-            method: "GET",
-            credentials: "include",
-            signal: abortController.signal,
-          },
-          { serverStatus },
-        );
+        const response = await fetch(`${SERVER_URL}/users/me`, {
+          mode: "cors",
+          method: "GET",
+          credentials: "include",
+          signal: abortController.signal,
+        });
 
         if (!response.ok) {
           const message = tRef.current("messages.loginStatus.error");
@@ -69,7 +57,7 @@ function useStatusCheck(
 
         setUserData(result.data);
       } catch (err) {
-        if (isCancelled || isServerNotReadyError(err)) {
+        if (isCancelled) {
           return;
         }
 
@@ -88,7 +76,7 @@ function useStatusCheck(
       isCancelled = true;
       abortController.abort();
     };
-  }, [addNotification, serverStatus]);
+  }, [addNotification]);
 
   return { userData, setUserData };
 }

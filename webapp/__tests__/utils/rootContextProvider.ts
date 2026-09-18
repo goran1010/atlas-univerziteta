@@ -3,7 +3,6 @@ import { RootContext } from "../../src/contextData/RootContext";
 import type { RootContextType } from "../../src/contextData/RootContext";
 import { useLanguage } from "../../src/customHooks/useLanguage";
 import { useNotification } from "../../src/customHooks/useNotification";
-import { SERVER_STATUS } from "../../src/utils/serverStatus";
 import type { UserData } from "../../src/types/auth";
 
 interface RootContextProviderProps {
@@ -31,7 +30,6 @@ function RootContextProvider({
     removeNotification,
     userData,
     setUserData,
-    serverStatus: SERVER_STATUS.LIVE,
     ...rootValue,
   };
 

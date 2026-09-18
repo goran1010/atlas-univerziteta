@@ -26,7 +26,6 @@ function createContextValue({
     removeNotification,
     userData: null,
     setUserData: vi.fn(),
-    serverStatus: "live",
   };
 }
 

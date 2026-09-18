@@ -9,7 +9,6 @@ import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 
 import type { UserData } from "../../../../src/types/auth";
 import type { PendingChange } from "../../../../src/schemas/pendingChange";
-import type { RootContextType } from "../../../../src/contextData/RootContext";
 
 const mockPendingChanges: PendingChange[] = [
   {
@@ -24,10 +23,6 @@ const mockPendingChanges: PendingChange[] = [
     userId: "058d1adc-58e4-4f31-8021-64e37e7d0dd0",
   },
 ];
-
-const wakingRootValue: Partial<RootContextType> = {
-  serverStatus: "waking",
-};
 
 function createFetchResponse(payload: Record<string, unknown>, status = 200) {
   return new Response(JSON.stringify(payload), {
@@ -81,19 +76,13 @@ afterEach(() => {
 
 const user = userEvent.setup();
 
-function buildRouter(
-  initialUser: UserData,
-  rootValue: Partial<RootContextType> = {},
-) {
+function buildRouter(initialUser: UserData) {
   return createMemoryRouter(
     [
       {
         path: "/improve-data",
         element: (
-          <RootContextProvider
-            initialUserData={initialUser}
-            rootValue={rootValue}
-          >
+          <RootContextProvider initialUserData={initialUser}>
             <Notifications />
             <ContributionDashboard />
           </RootContextProvider>
@@ -111,16 +100,6 @@ function buildRouter(
 
 function Wrapper({ initialUser }: { initialUser: UserData }) {
   return <RouterProvider router={buildRouter(initialUser)} />;
-}
-
-function WrapperWithRootValue({
-  initialUser,
-  rootValue = {},
-}: {
-  initialUser: UserData;
-  rootValue?: Partial<RootContextType>;
-}) {
-  return <RouterProvider router={buildRouter(initialUser, rootValue)} />;
 }
 
 describe("ContributionForm component rendering", () => {
@@ -199,26 +178,5 @@ describe("ContributionForm component rendering", () => {
       ),
     ).toBeInTheDocument();
     expect(screen.getByText(/no pending changes/i)).toBeInTheDocument();
-  });
-
-  test("does not fetch pending changes when the server is waking up", async () => {
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => undefined);
-
-    render(
-      <WrapperWithRootValue
-        initialUser={{ email: "some@email.com", role: "USER" }}
-        rootValue={wakingRootValue}
-      />,
-    );
-
-    const tab = await screen.findByRole("link", { name: /Pending changes/i });
-    await user.click(tab);
-
-    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
-    expect(fetchMock).not.toHaveBeenCalled();
-
-    consoleErrorSpy.mockRestore();
   });
 });

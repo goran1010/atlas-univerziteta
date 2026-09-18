@@ -1,20 +1,10 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { useFetchList } from "../../../src/customHooks/useFetchList";
 import { RootContextProvider } from "../../utils/rootContextProvider";
-import { guardedFetch } from "../../../src/utils/guardedFetch";
 import { adminPendingChangesResponseSchema } from "../../../src/schemas/pendingChange";
-import {
-  SERVER_STATUS,
-  ServerNotReadyError,
-} from "../../../src/utils/serverStatus";
 
 import type { RootContextType } from "../../../src/contextData/RootContext";
 
-vi.mock("../../../src/utils/guardedFetch", () => ({
-  guardedFetch: vi.fn(),
-}));
-
-const mockedGuardedFetch = vi.mocked(guardedFetch);
 const identityTranslate = (key: string) => key;
 
 interface HookProbeProps {
@@ -39,25 +29,26 @@ function HookProbe({ setLoading, enabled }: HookProbeProps) {
 function Wrapper({
   addNotification,
   setLoading,
-  serverStatus = SERVER_STATUS.LIVE,
   enabled,
 }: {
   addNotification: RootContextType["addNotification"];
   setLoading: (loading: boolean) => void;
-  serverStatus?: RootContextType["serverStatus"];
   enabled?: boolean;
 }) {
   return (
     <RootContextProvider
-      rootValue={{ addNotification, serverStatus, t: identityTranslate }}
+      rootValue={{ addNotification, t: identityTranslate }}
     >
       <HookProbe setLoading={setLoading} enabled={enabled} />
     </RootContextProvider>
   );
 }
 
+const fetchMock = vi.fn();
+
 beforeEach(() => {
-  mockedGuardedFetch.mockReset();
+  fetchMock.mockReset();
+  vi.spyOn(globalThis, "fetch").mockImplementation(fetchMock);
 });
 
 afterEach(() => {
@@ -67,7 +58,7 @@ afterEach(() => {
 describe("useFetchList", () => {
   test("stores validated items from a successful response", async () => {
     const addNotification = vi.fn();
-    mockedGuardedFetch.mockResolvedValue(
+    fetchMock.mockResolvedValue(
       new Response(
         JSON.stringify({
           message: "Pending changes retrieved successfully.",
@@ -99,10 +90,9 @@ describe("useFetchList", () => {
     await waitFor(() => {
       expect(screen.getByTestId("item-count")).toHaveTextContent("1");
     });
-    expect(mockedGuardedFetch).toHaveBeenCalledWith(
+    expect(fetchMock).toHaveBeenCalledWith(
       expect.stringContaining("/users/admin/pending-changes"),
       expect.objectContaining({ method: "GET", credentials: "include" }),
-      expect.objectContaining({ serverStatus: SERVER_STATUS.LIVE }),
     );
     expect(addNotification).toHaveBeenCalledWith({
       type: "success",
@@ -112,7 +102,7 @@ describe("useFetchList", () => {
 
   test("rejects data that does not match the schema", async () => {
     const addNotification = vi.fn();
-    mockedGuardedFetch.mockResolvedValue(
+    fetchMock.mockResolvedValue(
       new Response(
         JSON.stringify({
           message: "Pending changes retrieved successfully.",
@@ -153,7 +143,7 @@ describe("useFetchList", () => {
     vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     const addNotification = vi.fn();
     const setLoading = vi.fn();
-    mockedGuardedFetch.mockResolvedValue(
+    fetchMock.mockResolvedValue(
       new Response(JSON.stringify({ error: { message: "Access denied" } }), {
         status: 403,
       }),
@@ -174,7 +164,7 @@ describe("useFetchList", () => {
 
   test("uses the fallback error message when the API error body is invalid", async () => {
     const addNotification = vi.fn();
-    mockedGuardedFetch.mockResolvedValue(
+    fetchMock.mockResolvedValue(
       new Response("not valid JSON", { status: 500 }),
     );
 
@@ -189,42 +179,6 @@ describe("useFetchList", () => {
     expect(screen.getByTestId("item-count")).toHaveTextContent("0");
   });
 
-  test("does not notify when the server is not ready", async () => {
-    const addNotification = vi.fn();
-    const setLoading = vi.fn();
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => undefined);
-    mockedGuardedFetch.mockRejectedValue(
-      new ServerNotReadyError(SERVER_STATUS.WAKING),
-    );
-
-    render(
-      <Wrapper addNotification={addNotification} setLoading={setLoading} />,
-    );
-
-    await waitFor(() => {
-      expect(setLoading).toHaveBeenLastCalledWith(false);
-    });
-    expect(addNotification).not.toHaveBeenCalled();
-    expect(consoleErrorSpy).not.toHaveBeenCalled();
-  });
-
-  test("does not fetch until the server is live", () => {
-    const addNotification = vi.fn();
-
-    render(
-      <Wrapper
-        addNotification={addNotification}
-        setLoading={vi.fn()}
-        serverStatus={SERVER_STATUS.WAKING}
-      />,
-    );
-
-    expect(mockedGuardedFetch).not.toHaveBeenCalled();
-    expect(addNotification).not.toHaveBeenCalled();
-  });
-
   test("does not fetch when disabled", () => {
     render(
       <Wrapper
@@ -234,6 +188,6 @@ describe("useFetchList", () => {
       />,
     );
 
-    expect(mockedGuardedFetch).not.toHaveBeenCalled();
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 });

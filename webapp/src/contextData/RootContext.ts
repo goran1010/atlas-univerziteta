@@ -8,7 +8,6 @@ import type {
   Notification,
   RemoveNotification,
 } from "../types/notification";
-import type { ServerStatus } from "../utils/serverStatus";
 
 interface RootContextType {
   language: Language;
@@ -19,7 +18,6 @@ interface RootContextType {
   removeNotification: RemoveNotification;
   userData: UserData;
   setUserData: Dispatch<SetStateAction<UserData>>;
-  serverStatus: ServerStatus;
 }
 
 const RootContext = createContext<RootContextType>({
@@ -31,7 +29,6 @@ const RootContext = createContext<RootContextType>({
   removeNotification: (prop) => prop,
   userData: null,
   setUserData: (prop) => prop,
-  serverStatus: "live",
 });
 
 export { RootContext };
