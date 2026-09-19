@@ -11,8 +11,7 @@ import { Button } from "../sharedComponents/Button";
 import { Helmet } from "react-helmet-async";
 
 function Profile() {
-  const { userData, setUserData, t, serverStatus, addNotification } =
-    use(RootContext);
+  const { userData, setUserData, t, addNotification } = use(RootContext);
   const [loading, setLoading] = useState(false);
   const [adminRequestLoading, setAdminRequestLoading] = useState(false);
   const navigate = useNavigate();
@@ -20,9 +19,8 @@ function Profile() {
     addNotification,
     setLoading: setAdminRequestLoading,
     t,
-    serverStatus,
   };
-  const logoutCtx = { addNotification, setLoading, t, serverStatus };
+  const logoutCtx = { addNotification, setLoading, t };
 
   if (!userData) {
     return (

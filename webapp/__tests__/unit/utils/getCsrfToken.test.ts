@@ -1,5 +1,3 @@
-import type { ServerStatus } from "../../../src/utils/serverStatus";
-
 beforeEach(() => {
   vi.resetModules();
 });
@@ -8,8 +6,6 @@ afterEach(() => {
   vi.restoreAllMocks();
   vi.unstubAllEnvs();
 });
-
-const serverStatus: ServerStatus = "live";
 
 describe("getCsrfToken", () => {
   test("returns the CSRF token when response is ok", async () => {
@@ -24,7 +20,6 @@ describe("getCsrfToken", () => {
     fetchSpy.mockResolvedValue(mockResponse);
     const { getCsrfToken } = await import("../../../src/utils/getCsrfToken");
     const result = await getCsrfToken({
-      serverStatus,
       addNotification: () => vi.fn(),
       t: (key) => key,
     });
@@ -46,7 +41,6 @@ describe("getCsrfToken", () => {
     const { getCsrfToken } = await import("../../../src/utils/getCsrfToken");
 
     await getCsrfToken({
-      serverStatus,
       addNotification: () => vi.fn(),
       t: (key) => key,
     });
@@ -65,7 +59,6 @@ describe("getCsrfToken", () => {
 
     await expect(
       getCsrfToken({
-        serverStatus,
         addNotification: () => vi.fn(),
         t: (key) => key,
       }),
@@ -83,7 +76,6 @@ describe("getCsrfToken", () => {
 
     await expect(
       getCsrfToken({
-        serverStatus,
         addNotification: () => vi.fn(),
         t: (key) => key,
       }),
@@ -92,26 +84,6 @@ describe("getCsrfToken", () => {
       "Error fetching CSRF token:",
       networkError,
     );
-  });
-
-  test("rethrows the original error without notifying when the server is not ready", async () => {
-    const addNotification = vi.fn();
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => vi.fn());
-    const { getCsrfToken } = await import("../../../src/utils/getCsrfToken");
-    const { ServerNotReadyError } =
-      await import("../../../src/utils/serverStatus");
-
-    const notReadyError = await getCsrfToken({
-      serverStatus: "waking",
-      addNotification,
-      t: (key) => key,
-    }).catch((error: unknown) => error);
-
-    expect(notReadyError).toBeInstanceOf(ServerNotReadyError);
-    expect(addNotification).not.toHaveBeenCalled();
-    expect(consoleErrorSpy).not.toHaveBeenCalled();
   });
 
   test("throws when a successful response has an invalid payload", async () => {
@@ -125,7 +97,6 @@ describe("getCsrfToken", () => {
 
     await expect(
       getCsrfToken({
-        serverStatus,
         addNotification: () => vi.fn(),
         t: (key) => key,
       }),
@@ -151,7 +122,6 @@ describe("clearCsrfToken", () => {
       await import("../../../src/utils/getCsrfToken");
 
     await getCsrfToken({
-      serverStatus,
       addNotification: () => vi.fn(),
       t: (key) => key,
     });
@@ -159,7 +129,6 @@ describe("clearCsrfToken", () => {
     clearCsrfToken();
 
     await getCsrfToken({
-      serverStatus,
       addNotification: () => vi.fn(),
       t: (key) => key,
     });

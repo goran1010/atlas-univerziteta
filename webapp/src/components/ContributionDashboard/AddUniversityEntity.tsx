@@ -7,8 +7,6 @@ import { Button } from "../sharedComponents/Button";
 import { EntityPicker } from "./EntityPicker";
 import { getPickerDepth } from "./utils/getPickerDepth";
 import { handleSubmitUniversityEntity } from "./utils/handleSubmitUniversityEntity";
-import { SERVER_STATUS } from "../../utils/serverStatus";
-
 import type {
   Entity,
   EntityType,
@@ -76,7 +74,7 @@ function AddUniversityEntity({
 }: {
   refetchPendingChanges: () => void;
 }) {
-  const { t, addNotification, serverStatus } = use(RootContext);
+  const { t, addNotification } = use(RootContext);
   const [formState, setFormState] = useState(INIT_FORM);
   const [loading, setLoading] = useState(false);
   const [pickerResetKey, setPickerResetKey] = useState(0);
@@ -128,7 +126,7 @@ function AddUniversityEntity({
         setPickerResetKey((prev) => prev + 1);
         refetchPendingChanges();
       },
-      ctx: { addNotification, setLoading, t, serverStatus },
+      ctx: { addNotification, setLoading, t },
     });
   }
 
@@ -486,7 +484,6 @@ function AddUniversityEntity({
               : "danger"
         }
         loading={loading}
-        disabled={serverStatus !== SERVER_STATUS.LIVE}
         className="max-w-xs self-center"
       >
         {t("contribution.submitSuggestion")}

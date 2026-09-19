@@ -28,7 +28,7 @@ import { authRouter } from "./routes/authRouter.js";
 import { usersRouter } from "./routes/usersRouter.js";
 import { healthRouter } from "./routes/healthRouter.js";
 
-// Trust first proxy (required for Koyeb)
+// Trust first proxy (Caddy reverse proxy)
 app.set("trust proxy", 1);
 
 app.use(rateLimiter.global);

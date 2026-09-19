@@ -3,7 +3,6 @@ import { useOutletContext } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../../utils/Spinner";
 import { Button } from "../sharedComponents/Button";
-import { SERVER_STATUS } from "../../utils/serverStatus";
 import {
   handleApproveAdminRequest,
   handleDeclineAdminRequest,
@@ -30,14 +29,14 @@ function AdminRequestRow({
   const [activeAction, setActiveAction] = useState<
     "approve" | "decline" | null
   >(null);
-  const { t, serverStatus } = use(RootContext);
+  const { t } = use(RootContext);
   const loading = activeAction !== null;
 
   function setLoading(value: boolean) {
     if (!value) setActiveAction(null);
   }
 
-  const ctx = { addNotification, setLoading, t, serverStatus };
+  const ctx = { addNotification, setLoading, t };
 
   return (
     <li
@@ -72,7 +71,7 @@ function AdminRequestRow({
           }}
           type="button"
           loading={activeAction === "approve"}
-          disabled={loading || serverStatus !== SERVER_STATUS.LIVE}
+          disabled={loading}
         >
           {t("form.approve")}
         </Button>
@@ -85,7 +84,7 @@ function AdminRequestRow({
           }}
           type="button"
           loading={activeAction === "decline"}
-          disabled={loading || serverStatus !== SERVER_STATUS.LIVE}
+          disabled={loading}
         >
           {t("form.reject")}
         </Button>

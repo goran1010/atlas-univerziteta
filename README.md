@@ -125,10 +125,10 @@ Local callback example:
 http://localhost:3000/auth/github/callback
 ```
 
-Production callback example with the Netlify proxy:
+Production callback URL:
 
 ```text
-https://api.atlasuniverziteta.com/auth/github/callback
+https://atlasuniverziteta.com/server/auth/github/callback
 ```
 
 ### Webapp envs

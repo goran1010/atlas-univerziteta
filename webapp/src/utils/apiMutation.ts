@@ -2,11 +2,8 @@ import { SERVER_URL } from "./envConfig";
 import { readResponseError } from "../schemas/api";
 import { notificationMessageKey } from "./apiError";
 import { getCsrfToken, isCsrfTokenError } from "./getCsrfToken";
-import { guardedFetch } from "./guardedFetch";
-import { isServerNotReadyError } from "./serverStatus";
 
 import type { z } from "zod";
-import type { ServerStatus } from "./serverStatus";
 import type { TFunction } from "../types/i18n";
 import type { AddNotification } from "../types/notification";
 
@@ -14,7 +11,6 @@ interface RequestContext {
   addNotification: AddNotification;
   setLoading: (loading: boolean) => void;
   t: TFunction;
-  serverStatus: ServerStatus;
 }
 
 interface ApiMutationConfig<Schema extends z.ZodType> {
@@ -42,11 +38,11 @@ async function apiMutation<Schema extends z.ZodType>(
     caughtErrorMessageKey = errorMessageKey,
     logLabel,
   }: ApiMutationConfig<Schema>,
-  { addNotification, setLoading, t, serverStatus }: RequestContext,
+  { addNotification, setLoading, t }: RequestContext,
 ): Promise<z.output<Schema> | null> {
   try {
     setLoading(true);
-    const csrfToken = await getCsrfToken({ serverStatus, addNotification, t });
+    const csrfToken = await getCsrfToken({ addNotification, t });
 
     const options: RequestInit = {
       method,
@@ -61,9 +57,7 @@ async function apiMutation<Schema extends z.ZodType>(
       options.body = JSON.stringify(body);
     }
 
-    const response = await guardedFetch(`${SERVER_URL}${path}`, options, {
-      serverStatus,
-    });
+    const response = await fetch(`${SERVER_URL}${path}`, options);
 
     if (response.ok) {
       const result = responseSchema.parse(await response.json());
@@ -84,8 +78,7 @@ async function apiMutation<Schema extends z.ZodType>(
     });
     return null;
   } catch (error) {
-    // both already produced a user-facing notification (or must stay silent)
-    if (isServerNotReadyError(error) || isCsrfTokenError(error)) {
+    if (isCsrfTokenError(error)) {
       return null;
     }
     addNotification({

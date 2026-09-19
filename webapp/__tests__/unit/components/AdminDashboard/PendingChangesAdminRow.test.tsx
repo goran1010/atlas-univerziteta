@@ -2,10 +2,8 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { PendingChangesAdminRow } from "../../../../src/components/AdminDashboard/PendingChangesAdminRow";
-import { SERVER_STATUS } from "../../../../src/utils/serverStatus";
 import type { ReactElement } from "react";
 import type { AdminPendingChange } from "../../../../src/schemas/pendingChange";
-import type { ServerStatus } from "../../../../src/utils/serverStatus";
 
 const handleApprovePendingChangeMock =
   vi.fn<(...args: unknown[]) => undefined>();
@@ -35,13 +33,7 @@ const change: AdminPendingChange = {
 };
 
 function Wrapper({ children }: { children: ReactElement }) {
-  return (
-    <RootContextProvider
-      rootValue={{ serverStatus: SERVER_STATUS.LIVE as ServerStatus }}
-    >
-      {children}
-    </RootContextProvider>
-  );
+  return <RootContextProvider>{children}</RootContextProvider>;
 }
 
 beforeEach(() => {
@@ -103,7 +95,6 @@ describe("PendingChangesAdminRow", () => {
       setPendingChanges,
       expect.objectContaining({
         addNotification,
-        serverStatus: SERVER_STATUS.LIVE,
       }),
     );
     expect(approveButton.closest("li")).toHaveClass("bg-(--surface-alt)");

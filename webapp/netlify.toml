@@ -6,6 +6,12 @@
     Content-Security-Policy-Report-Only = "require-trusted-types-for 'script'"
 
 [[redirects]]
+  from = "https://atlas-univerziteta.netlify.app/*"
+  to = "https://atlasuniverziteta.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/server/*"
   to = "https://api.atlasuniverziteta.com/:splat"
   status = 200

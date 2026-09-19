@@ -1,10 +1,8 @@
 import { SERVER_URL } from "../../../utils/envConfig";
 import { readApiError } from "../../../schemas/api";
 import { unifiedSearchResponseSchema } from "../../../schemas/university";
-import { guardedFetch } from "../../../utils/guardedFetch";
 
 import type { UnifiedSearchResults } from "../../../schemas/university";
-import type { ServerStatus } from "../../../utils/serverStatus";
 
 const EMPTY_RESULTS: UnifiedSearchResults = {
   universities: [],
@@ -21,7 +19,6 @@ interface SearchFilters {
 
 async function searchAll(
   term: string,
-  serverStatus: ServerStatus,
   filters?: SearchFilters,
 ): Promise<UnifiedSearchResults> {
   const params = new URLSearchParams({ searchTerm: term });
@@ -29,11 +26,10 @@ async function searchAll(
   if (filters?.ownership) params.set("ownership", filters.ownership);
   if (filters?.cycle) params.set("cycle", filters.cycle);
 
-  const res = await guardedFetch(
-    `${SERVER_URL}/api/v1/search?${params.toString()}`,
-    { method: "GET", mode: "cors" },
-    { serverStatus },
-  );
+  const res = await fetch(`${SERVER_URL}/api/v1/search?${params.toString()}`, {
+    method: "GET",
+    mode: "cors",
+  });
 
   if (res.ok) {
     const result = unifiedSearchResponseSchema.parse(await res.json());

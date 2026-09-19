@@ -1,9 +1,6 @@
 import { SERVER_URL } from "./envConfig";
 import { csrfTokenResponseSchema } from "../schemas/auth";
-import { guardedFetch } from "./guardedFetch";
-import { isServerNotReadyError } from "./serverStatus";
 
-import type { ServerStatus } from "./serverStatus";
 import type { AddNotification } from "../types/notification";
 import type { TFunction } from "../types/i18n";
 
@@ -24,11 +21,9 @@ function isCsrfTokenError(error: unknown): error is CsrfTokenError {
 let cachedToken: string | null = null;
 
 async function getCsrfToken({
-  serverStatus,
   addNotification,
   t,
 }: {
-  serverStatus: ServerStatus;
   addNotification: AddNotification;
   t: TFunction;
 }): Promise<string> {
@@ -37,14 +32,10 @@ async function getCsrfToken({
       return cachedToken;
     }
 
-    const csrfResponse = await guardedFetch(
-      `${SERVER_URL}/csrf-token`,
-      {
-        mode: "cors",
-        credentials: "include",
-      },
-      { serverStatus },
-    );
+    const csrfResponse = await fetch(`${SERVER_URL}/csrf-token`, {
+      mode: "cors",
+      credentials: "include",
+    });
     const { data: csrfToken } = csrfTokenResponseSchema.parse(
       await csrfResponse.json(),
     );
@@ -52,9 +43,6 @@ async function getCsrfToken({
 
     return csrfToken;
   } catch (error) {
-    if (isServerNotReadyError(error)) {
-      throw error;
-    }
     addNotification({
       type: "error",
       message: t("messages.csrfTokenFailed"),

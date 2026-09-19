@@ -4,7 +4,6 @@ import { RootContext } from "../../contextData/RootContext";
 import type { MouseEvent } from "react";
 import { SERVER_URL } from "../../utils/envConfig";
 import { GitHubIcon } from "./icons";
-import { SERVER_STATUS } from "../../utils/serverStatus";
 
 interface GitHubLoginLinkProps {
   disabled: boolean;
@@ -12,9 +11,9 @@ interface GitHubLoginLinkProps {
 }
 
 function GitHubLoginLink({ disabled, onLoadingChange }: GitHubLoginLinkProps) {
-  const { t, serverStatus } = use(RootContext);
+  const { t } = use(RootContext);
   const [loading, setLoading] = useState(false);
-  const isDisabled = disabled || loading || serverStatus !== SERVER_STATUS.LIVE;
+  const isDisabled = disabled || loading;
 
   function handleClick(e: MouseEvent<HTMLAnchorElement>) {
     if (isDisabled) {

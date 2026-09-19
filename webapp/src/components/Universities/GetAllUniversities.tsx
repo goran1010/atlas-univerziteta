@@ -8,13 +8,11 @@ import { groupBy } from "./utils/groupBy";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";
 import { notificationMessageKey } from "../../utils/apiError";
-import { guardedFetch } from "../../utils/guardedFetch";
-import { isServerNotReadyError } from "../../utils/serverStatus";
 import { universityListResponseSchema } from "../../schemas/university";
 import type { UniversityListItem } from "../../schemas/university";
 
 function GetAllUniversities() {
-  const { t, addNotification, serverStatus } = use(RootContext);
+  const { t, addNotification } = use(RootContext);
   const [universities, setUniversities] = useState<UniversityListItem[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -27,11 +25,10 @@ function GetAllUniversities() {
     async function fetchUniversities() {
       try {
         setLoading(true);
-        const res = await guardedFetch(
-          `${SERVER_URL}/api/v1/universities`,
-          { method: "GET", mode: "cors" },
-          { serverStatus },
-        );
+        const res = await fetch(`${SERVER_URL}/api/v1/universities`, {
+          method: "GET",
+          mode: "cors",
+        });
 
         if (res.ok) {
           const result = universityListResponseSchema.parse(await res.json());
@@ -52,9 +49,7 @@ function GetAllUniversities() {
           });
         }
       } catch (error) {
-        if (isServerNotReadyError(error)) {
-          return;
-        }
+        console.error("Error loading universities:", error);
         addNotification({
           type: "error",
           message: tRef.current("messages.universities.loadError"),
@@ -64,7 +59,7 @@ function GetAllUniversities() {
       }
     }
     void fetchUniversities();
-  }, [addNotification, serverStatus]);
+  }, [addNotification]);
 
   if (loading) return <Spinner />;
 

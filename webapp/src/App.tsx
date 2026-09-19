@@ -5,7 +5,6 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import { useStatusCheck } from "./customHooks/useStatusCheck";
 import { Notifications } from "./components/Notifications";
 import { useNotification } from "./customHooks/useNotification";
-import { useServerWakeUp } from "./customHooks/useServerWakeUp";
 import { useCloseMenu } from "./customHooks/useCloseMenu";
 import { useLanguage } from "./customHooks/useLanguage";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -20,17 +19,8 @@ function App() {
   const { notifications, addNotification, removeNotification } =
     useNotification();
   const { language, setLanguage, t } = useLanguage();
-  const serverStatus = useServerWakeUp({
-    addNotification,
-    removeNotification,
-    t,
-  });
 
-  const { userData, setUserData } = useStatusCheck(
-    addNotification,
-    t,
-    serverStatus,
-  );
+  const { userData, setUserData } = useStatusCheck(addNotification, t);
 
   return (
     <RootContext
@@ -43,7 +33,6 @@ function App() {
         removeNotification,
         userData,
         setUserData,
-        serverStatus,
       }}
     >
       <HelmetProvider>
@@ -62,8 +51,11 @@ function App() {
         </Helmet>
         <>
           <ScrollToTop />
+
+          {/* A11y: Accessibility features like route announcer and skip link */}
           <RouteAnnouncer />
           <SkipNavbarLink t={t} />
+
           <Navbar closeMenu={closeMenu} />
           <Notifications />
           <main

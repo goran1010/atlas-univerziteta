@@ -345,7 +345,6 @@ describe("AddUniversityEntity", () => {
     expect(typeof submittedArgs.ctx.addNotification).toBe("function");
     expect(typeof submittedArgs.ctx.setLoading).toBe("function");
     expect(typeof submittedArgs.ctx.t).toBe("function");
-    expect(submittedArgs.ctx.serverStatus).toBe("live");
 
     act(() => {
       submittedArgs.onSuccess();

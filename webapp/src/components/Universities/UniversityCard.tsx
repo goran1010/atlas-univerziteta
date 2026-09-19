@@ -16,8 +16,6 @@ import { groupBy } from "./utils/groupBy";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";
 import { notificationMessageKey } from "../../utils/apiError";
-import { guardedFetch } from "../../utils/guardedFetch";
-import { SERVER_STATUS, isServerNotReadyError } from "../../utils/serverStatus";
 import { universityDetailResponseSchema } from "../../schemas/university";
 
 import type {
@@ -26,7 +24,7 @@ import type {
 } from "../../schemas/university";
 
 function UniversityCard({ university }: { university: UniversityListItem }) {
-  const { t, addNotification, serverStatus } = use(RootContext);
+  const { t, addNotification } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<UniversityDetail>();
   const [loadingDetail, setLoadingDetail] = useState(false);
@@ -42,13 +40,12 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
     }
     try {
       setLoadingDetail(true);
-      const res = await guardedFetch(
+      const res = await fetch(
         `${SERVER_URL}/api/v1/universities/${university.id.toString()}`,
         {
           method: "GET",
           mode: "cors",
         },
-        { serverStatus },
       );
 
       if (res.ok) {
@@ -74,9 +71,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
         });
       }
     } catch (error) {
-      if (isServerNotReadyError(error)) {
-        return;
-      }
+      console.error("Error loading university details:", error);
       addNotification({
         type: "error",
         message: t("messages.universities.detailsError"),
@@ -174,7 +169,6 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
             onClick={() => {
               void handleExpand();
             }}
-            disabled={serverStatus !== SERVER_STATUS.LIVE}
             loading={loadingDetail}
           />
         </div>

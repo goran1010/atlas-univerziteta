@@ -1,14 +1,9 @@
-import {
-  SERVER_STATUS,
-  ServerNotReadyError,
-} from "../../../../../src/utils/serverStatus";
 import { CsrfTokenError } from "../../../../../src/utils/getCsrfToken";
 import type { PendingChange } from "../../../../../src/schemas/pendingChange";
-import type { GuardedFetch } from "../../../../../src/utils/guardedFetch";
 import type { HandleSubmitUniversityEntityParams } from "../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
 
 const getCsrfTokenMock = vi.fn<(args: unknown) => Promise<string>>();
-const guardedFetchMock = vi.fn<GuardedFetch>();
+const fetchMock = vi.fn();
 
 vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
   const actual =
@@ -17,11 +12,6 @@ vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
     >();
   return { ...actual, getCsrfToken: (args: unknown) => getCsrfTokenMock(args) };
 });
-
-vi.mock("../../../../../src/utils/guardedFetch", () => ({
-  guardedFetch: (...args: Parameters<GuardedFetch>) =>
-    guardedFetchMock(...args),
-}));
 
 const t = (key: string) => key;
 
@@ -41,7 +31,6 @@ const baseArgs = {
     addNotification: vi.fn(),
     setLoading: vi.fn(),
     t,
-    serverStatus: "live",
   },
 } satisfies HandleSubmitUniversityEntityParams;
 
@@ -64,7 +53,8 @@ function createErrorResponse(error: Record<string, unknown>) {
 
 beforeEach(() => {
   getCsrfTokenMock.mockReset();
-  guardedFetchMock.mockReset();
+  fetchMock.mockReset();
+  vi.spyOn(globalThis, "fetch").mockImplementation(fetchMock);
 });
 
 afterEach(() => {
@@ -74,7 +64,7 @@ afterEach(() => {
 describe("handleSubmitUniversityEntity", () => {
   test("uses POST with numeric parent id for create under parent entity", async () => {
     getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockResolvedValue(
+    fetchMock.mockResolvedValue(
       createSuccessResponse(
         {
           id: "1",
@@ -101,7 +91,7 @@ describe("handleSubmitUniversityEntity", () => {
       data: { name: "Faculty of Law" },
     });
 
-    expect(guardedFetchMock).toHaveBeenCalledWith(
+    expect(fetchMock).toHaveBeenCalledWith(
       expect.any(String),
       expect.objectContaining({
         method: "POST",
@@ -111,13 +101,12 @@ describe("handleSubmitUniversityEntity", () => {
           data: { name: "Faculty of Law" },
         }),
       }),
-      expect.any(Object),
     );
   });
 
   test("submits a create request and calls onSuccess", async () => {
     getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockResolvedValue(
+    fetchMock.mockResolvedValue(
       createSuccessResponse(
         {
           id: "1",
@@ -148,10 +137,10 @@ describe("handleSubmitUniversityEntity", () => {
     await handleSubmitUniversityEntity({
       ...baseArgs,
       onSuccess,
-      ctx: { addNotification, setLoading, t, serverStatus: "live" },
+      ctx: { addNotification, setLoading, t },
     });
 
-    expect(guardedFetchMock).toHaveBeenCalledWith(
+    expect(fetchMock).toHaveBeenCalledWith(
       expect.stringContaining("/users/contribution/universities"),
       expect.objectContaining({
         method: "POST",
@@ -160,7 +149,6 @@ describe("handleSubmitUniversityEntity", () => {
           "x-csrf-token": "csrf-token",
         },
       }),
-      expect.objectContaining({ serverStatus: SERVER_STATUS.LIVE }),
     );
     expect(setLoading).toHaveBeenNthCalledWith(1, true);
     expect(setLoading).toHaveBeenLastCalledWith(false);
@@ -173,7 +161,7 @@ describe("handleSubmitUniversityEntity", () => {
 
   test("uses PUT and target id for updates", async () => {
     getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockResolvedValue(
+    fetchMock.mockResolvedValue(
       createSuccessResponse(
         {
           id: "1",
@@ -201,7 +189,7 @@ describe("handleSubmitUniversityEntity", () => {
       data: { name: "Updated Faculty" },
     });
 
-    expect(guardedFetchMock).toHaveBeenCalledWith(
+    expect(fetchMock).toHaveBeenCalledWith(
       expect.any(String),
       expect.objectContaining({
         method: "PUT",
@@ -211,13 +199,12 @@ describe("handleSubmitUniversityEntity", () => {
           data: { name: "Updated Faculty" },
         }),
       }),
-      expect.any(Object),
     );
   });
 
   test("uses DELETE and target id for delete changes", async () => {
     getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockResolvedValue(
+    fetchMock.mockResolvedValue(
       createSuccessResponse(
         {
           id: "1",
@@ -245,7 +232,7 @@ describe("handleSubmitUniversityEntity", () => {
       data: {},
     });
 
-    expect(guardedFetchMock).toHaveBeenCalledWith(
+    expect(fetchMock).toHaveBeenCalledWith(
       expect.any(String),
       expect.objectContaining({
         method: "DELETE",
@@ -254,7 +241,6 @@ describe("handleSubmitUniversityEntity", () => {
           targetId: 42,
         }),
       }),
-      expect.any(Object),
     );
   });
 
@@ -270,10 +256,10 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      ctx: { addNotification, setLoading, t, serverStatus: "live" },
+      ctx: { addNotification, setLoading, t },
     });
 
-    expect(guardedFetchMock).not.toHaveBeenCalled();
+    expect(fetchMock).not.toHaveBeenCalled();
     expect(addNotification).not.toHaveBeenCalled();
     expect(setLoading).toHaveBeenLastCalledWith(false);
   });
@@ -291,11 +277,11 @@ describe("handleSubmitUniversityEntity", () => {
       targetId: "not-a-number",
       typeOfChange: "UPDATE",
       data: { name: "Updated Faculty" },
-      ctx: { addNotification, setLoading: vi.fn(), t, serverStatus: "live" },
+      ctx: { addNotification, setLoading: vi.fn(), t },
     });
 
     expect(getCsrfTokenMock).not.toHaveBeenCalled();
-    expect(guardedFetchMock).not.toHaveBeenCalled();
+    expect(fetchMock).not.toHaveBeenCalled();
     expect(addNotification).toHaveBeenCalledWith({
       type: "error",
       message: "messages.universities.addError",
@@ -304,14 +290,14 @@ describe("handleSubmitUniversityEntity", () => {
 
   test("does not call onSuccess when a successful response has invalid data", async () => {
     getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockResolvedValue({
+    fetchMock.mockResolvedValue({
       ok: true,
       json: () =>
         Promise.resolve({
           message: "Suggestion submitted.",
           data: { id: "pending-change-1" },
         }),
-    } as Response);
+    });
     const onSuccess = vi.fn();
     const addNotification = vi.fn();
     const consoleErrorSpy = vi
@@ -324,7 +310,7 @@ describe("handleSubmitUniversityEntity", () => {
     await handleSubmitUniversityEntity({
       ...baseArgs,
       onSuccess,
-      ctx: { addNotification, setLoading: vi.fn(), t, serverStatus: "live" },
+      ctx: { addNotification, setLoading: vi.fn(), t },
     });
 
     expect(onSuccess).not.toHaveBeenCalled();
@@ -337,7 +323,7 @@ describe("handleSubmitUniversityEntity", () => {
 
   test("falls back to the generic add error when the backend error payload is missing", async () => {
     getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockResolvedValue(createErrorResponse({}));
+    fetchMock.mockResolvedValue(createErrorResponse({}));
 
     const { handleSubmitUniversityEntity } =
       await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
@@ -345,7 +331,7 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      ctx: { addNotification, setLoading: vi.fn(), t, serverStatus: "live" },
+      ctx: { addNotification, setLoading: vi.fn(), t },
     });
 
     expect(addNotification).toHaveBeenCalledWith({
@@ -357,7 +343,7 @@ describe("handleSubmitUniversityEntity", () => {
   test("shows the fallback error when the request throws", async () => {
     const requestError = new Error("Network failure");
     getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockRejectedValue(requestError);
+    fetchMock.mockRejectedValue(requestError);
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => undefined);
@@ -368,7 +354,7 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      ctx: { addNotification, setLoading: vi.fn(), t, serverStatus: "live" },
+      ctx: { addNotification, setLoading: vi.fn(), t },
     });
 
     expect(addNotification).toHaveBeenCalledWith({
@@ -379,29 +365,5 @@ describe("handleSubmitUniversityEntity", () => {
       "Error trying to submit university change:",
       requestError,
     );
-  });
-
-  test("does not notify when the server is not ready", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
-    guardedFetchMock.mockRejectedValue(
-      new ServerNotReadyError(SERVER_STATUS.WAKING),
-    );
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => undefined);
-
-    const { handleSubmitUniversityEntity } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
-    const addNotification = vi.fn();
-    const setLoading = vi.fn();
-
-    await handleSubmitUniversityEntity({
-      ...baseArgs,
-      ctx: { addNotification, setLoading, t, serverStatus: "live" },
-    });
-
-    expect(addNotification).not.toHaveBeenCalled();
-    expect(consoleErrorSpy).not.toHaveBeenCalled();
-    expect(setLoading).toHaveBeenLastCalledWith(false);
   });
 });

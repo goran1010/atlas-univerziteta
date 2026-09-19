@@ -4,11 +4,9 @@ import { PendingChangesAdmin } from "../../../../src/components/AdminDashboard/P
 import { AdminRequests } from "../../../../src/components/AdminDashboard/AdminRequests";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
-import { SERVER_STATUS } from "../../../../src/utils/serverStatus";
 import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 
 import type { UserData } from "../../../../src/types/auth";
-import type { ServerStatus } from "../../../../src/utils/serverStatus";
 
 interface MockChange {
   id: string;
@@ -94,19 +92,13 @@ const setupFetchMock = ({
   });
 };
 
-function buildRouter(
-  initialUser: UserData,
-  rootValue: Record<string, unknown> = {},
-) {
+function buildRouter(initialUser: UserData) {
   return createMemoryRouter(
     [
       {
         path: "/admin-dashboard",
         element: (
-          <RootContextProvider
-            initialUserData={initialUser}
-            rootValue={rootValue}
-          >
+          <RootContextProvider initialUserData={initialUser}>
             <Notifications />
             <AdminDashboard />
           </RootContextProvider>
@@ -127,20 +119,6 @@ function buildRouter(
 
 function Wrapper({ initialUser = null }: { initialUser?: UserData }) {
   const router = buildRouter(initialUser ?? { email: "", role: "USER" });
-  return <RouterProvider router={router} />;
-}
-
-function WrapperWithRootValue({
-  initialUser = null,
-  rootValue = {},
-}: {
-  initialUser?: UserData;
-  rootValue?: { serverStatus?: ServerStatus };
-}) {
-  const router = buildRouter(
-    initialUser ?? { email: "", role: "USER" },
-    rootValue,
-  );
   return <RouterProvider router={router} />;
 }
 
@@ -245,20 +223,5 @@ describe("PendingChanges Component", () => {
     ).toBeInTheDocument();
 
     consoleErrorSpy.mockRestore();
-  });
-
-  test("shows the no pending changes state when the server is waking up", async () => {
-    render(
-      <WrapperWithRootValue
-        initialUser={{ email: "admin@mail.com", role: "ADMIN" }}
-        rootValue={{ serverStatus: SERVER_STATUS.WAKING as ServerStatus }}
-      />,
-    );
-
-    expect(
-      await screen.findByText(/There are no pending changes at the moment\./i),
-    ).toBeInTheDocument();
-    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
-    expect(fetchMock).not.toHaveBeenCalled();
   });
 });
