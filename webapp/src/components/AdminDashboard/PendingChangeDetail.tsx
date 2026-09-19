@@ -2,7 +2,7 @@ import { use, type ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 
-import type { TFunction } from "../../types/i18n";
+import type { TFunction } from "../../types";
 
 interface DetailRow {
   label: string;

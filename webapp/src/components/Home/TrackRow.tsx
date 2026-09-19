@@ -2,9 +2,9 @@ import { useState } from "react";
 import { tCount } from "../../utils/pluralize";
 import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
-import { EntityDetailContent } from "./TrackDetailDialog";
+import { EntityDetailContent } from "./EntityDetailContent";
 
-import type { TFunction } from "../../types/i18n";
+import type { TFunction } from "../../types";
 import type { UniversityDetailTrack } from "../../schemas/university";
 import type { EntityAncestors } from "./types";
 

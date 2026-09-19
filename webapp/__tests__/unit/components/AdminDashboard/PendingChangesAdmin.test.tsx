@@ -6,7 +6,7 @@ import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 
-import type { UserData } from "../../../../src/types/auth";
+import type { UserData } from "../../../../src/types";
 
 interface MockChange {
   id: string;

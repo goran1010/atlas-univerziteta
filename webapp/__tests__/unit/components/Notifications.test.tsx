@@ -2,10 +2,7 @@ import { act, fireEvent, render, screen } from "@testing-library/react";
 import { Notifications } from "../../../src/components/Notifications";
 import { RootContext } from "../../../src/contextData/RootContext";
 
-import type {
-  Notification,
-  TypeNotification,
-} from "../../../src/types/notification";
+import type { Notification, TypeNotification } from "../../../src/types";
 import type { RootContextType } from "../../../src/contextData/RootContext";
 
 interface WrapperProps {

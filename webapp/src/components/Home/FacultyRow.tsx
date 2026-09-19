@@ -3,14 +3,14 @@ import { useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
-import { EntityDetailContent } from "./TrackDetailDialog";
+import { EntityDetailContent } from "./EntityDetailContent";
 import { tCount } from "../../utils/pluralize";
 import { ContactLinks } from "./ContactLinks";
 import { ResultGroup } from "./ResultGroup";
 import { StudyProgramRow } from "./StudyProgramRow";
 import { groupBy } from "./utils/groupBy";
 
-import type { TFunction } from "../../types/i18n";
+import type { TFunction } from "../../types";
 import type {
   UniversityDetail,
   UniversityDetailFaculty,

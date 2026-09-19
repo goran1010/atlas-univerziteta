@@ -1,8 +1,8 @@
 import { SERVER_URL } from "./envConfig";
 import { csrfTokenResponseSchema } from "../schemas/auth";
 
-import type { AddNotification } from "../types/notification";
-import type { TFunction } from "../types/i18n";
+import type { AddNotification } from "../types";
+import type { TFunction } from "../types";
 
 class CsrfTokenError extends Error {
   constructor(cause: unknown) {

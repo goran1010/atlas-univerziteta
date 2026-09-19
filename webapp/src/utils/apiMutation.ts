@@ -4,8 +4,8 @@ import { notificationMessageKey } from "./apiError";
 import { getCsrfToken, isCsrfTokenError } from "./getCsrfToken";
 
 import type { z } from "zod";
-import type { TFunction } from "../types/i18n";
-import type { AddNotification } from "../types/notification";
+import type { TFunction } from "../types";
+import type { AddNotification } from "../types";
 
 interface RequestContext {
   addNotification: AddNotification;

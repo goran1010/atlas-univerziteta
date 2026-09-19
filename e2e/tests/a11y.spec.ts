@@ -29,10 +29,6 @@ const ROUTES: { path: string; ready: (page: Page) => Locator }[] = [
       p.getByRole("heading", { name: "Find programs and universities" }),
   },
   {
-    path: "/browse",
-    ready: (p) => p.getByRole("main").getByRole("listitem").first(),
-  },
-  {
     path: "/about",
     ready: (p) =>
       p.getByRole("heading", {

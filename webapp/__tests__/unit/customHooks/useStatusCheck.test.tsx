@@ -1,7 +1,7 @@
 import { act, render, screen } from "@testing-library/react";
 import { useStatusCheck } from "../../../src/customHooks/useStatusCheck";
 
-import type { Notification } from "../../../src/types/notification";
+import type { Notification } from "../../../src/types";
 
 const identityTranslate = (key: string) => key;
 

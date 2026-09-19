@@ -22,13 +22,14 @@ test.describe("search page", () => {
   });
 });
 
-test.describe("browse page", () => {
-  test("lists universities from the database", async ({ page }) => {
-    await page.goto("/browse");
+test.describe("default browse view", () => {
+  test("lists universities on the search page by default", async ({ page }) => {
+    await page.goto("/search");
     await expect(
       page.getByRole("main").getByRole("listitem").first(),
     ).toBeVisible();
   });
+
 });
 
 test.describe("static pages", () => {

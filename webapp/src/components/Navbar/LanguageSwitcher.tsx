@@ -2,7 +2,7 @@ import { use } from "react";
 import { GlobeIcon } from "../sharedComponents/icons";
 import { RootContext } from "../../contextData/RootContext";
 
-import type { Language, SetLanguage } from "../../types/i18n";
+import type { Language, SetLanguage } from "../../types";
 
 const languageOrder: Language[] = ["system", "en", "sr"];
 

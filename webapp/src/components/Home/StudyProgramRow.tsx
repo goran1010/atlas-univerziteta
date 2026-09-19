@@ -8,11 +8,11 @@ import { useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
-import { EntityDetailContent } from "./TrackDetailDialog";
+import { EntityDetailContent } from "./EntityDetailContent";
 import { tCount } from "../../utils/pluralize";
 import { TrackRow } from "./TrackRow";
 
-import type { TFunction } from "../../types/i18n";
+import type { TFunction } from "../../types";
 import type {
   UniversityDetail,
   UniversityDetailFaculty,

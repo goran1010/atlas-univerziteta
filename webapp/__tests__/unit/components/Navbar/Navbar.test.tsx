@@ -8,7 +8,7 @@ import { useCloseMenu } from "../../../../src/customHooks/useCloseMenu";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { ThemeProvider } from "../../../../src/contextData/ThemeProvider";
 
-import type { UserData } from "../../../../src/types/auth";
+import type { UserData } from "../../../../src/types";
 
 function createUser(role: Role = "ADMIN"): UserData {
   return {

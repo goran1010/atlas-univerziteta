@@ -1,33 +1,28 @@
-import { AwardIcon, GraduationCapIcon } from "../sharedComponents/icons";
+import { LandmarkIcon, MapPinIcon } from "../sharedComponents/icons";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { ResultCard } from "./ResultCard";
-import { FacultyBreadcrumb } from "./FacultyBreadcrumb";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
-import { TrackRow } from "./TrackRow";
-import { Spinner } from "../../utils/Spinner";
+import { ContactLinks } from "./ContactLinks";
+import { StudyProgramRow } from "./StudyProgramRow";
+import { ResultGroup } from "./ResultGroup";
+import { groupBy } from "./utils/groupBy";
+import { Spinner } from "../sharedComponents/Spinner";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";
 import { notificationMessageKey } from "../../utils/apiError";
-import { studyProgramDetailResponseSchema } from "../../schemas/university";
+import { facultyDetailResponseSchema } from "../../schemas/university";
 import { tCount } from "../../utils/pluralize";
 
-import type { TFunction } from "../../types/i18n";
 import type {
-  StudyProgramSearchResult,
-  StudyProgramDetail,
+  FacultySearchResult,
+  FacultyDetail,
 } from "../../schemas/university";
 
-function StudyProgramResult({
-  program,
-  t,
-}: {
-  program: StudyProgramSearchResult;
-  t: TFunction;
-}) {
-  const { addNotification } = use(RootContext);
+function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
+  const { t, addNotification } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
-  const [detailData, setDetailData] = useState<StudyProgramDetail>();
+  const [detailData, setDetailData] = useState<FacultyDetail>();
   const [loadingDetail, setLoadingDetail] = useState(false);
 
   async function handleExpand() {
@@ -42,20 +37,17 @@ function StudyProgramResult({
     try {
       setLoadingDetail(true);
       const res = await fetch(
-        `${SERVER_URL}/api/v1/study-programs/${program.id.toString()}`,
+        `${SERVER_URL}/api/v1/faculties/${faculty.id.toString()}`,
         { method: "GET", mode: "cors" },
       );
       if (res.ok) {
-        const result = studyProgramDetailResponseSchema.parse(await res.json());
+        const result = facultyDetailResponseSchema.parse(await res.json());
         setDetailData(result.data);
         setExpanded(true);
       } else {
         const serverError = readApiError(await res.json());
         if (serverError) {
-          console.warn(
-            "Failed to load study program details:",
-            serverError.message,
-          );
+          console.warn("Failed to load faculty details:", serverError.message);
         }
         addNotification({
           type: "error",
@@ -68,7 +60,7 @@ function StudyProgramResult({
         });
       }
     } catch (error) {
-      console.error("Error loading study program details:", error);
+      console.error("Error loading faculty details:", error);
       addNotification({
         type: "error",
         message: t("messages.universities.detailsError"),
@@ -88,19 +80,19 @@ function StudyProgramResult({
         className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 rounded-md transition-colors cursor-pointer hover:bg-(--hover-surface)"
       >
         <div className="min-w-0">
-          <p className="font-bold text-(--text-primary)">{program.name}</p>
-          <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5 text-sm text-(--text-secondary)">
-            <span>
-              <GraduationCapIcon />{" "}
-              {t(`universitiesPage.cycles.${program.cycle}`)}
-            </span>
-            {program.ects != null && (
-              <span>
-                <AwardIcon /> {program.ects} {t("universitiesPage.ects")}
-              </span>
-            )}
+          <p className="font-bold text-(--text-primary)">{faculty.name}</p>
+          <p className="text-sm text-(--text-muted) mt-0.5">
+            <LandmarkIcon /> {faculty.university.name}
+            {faculty.university.acronym && ` (${faculty.university.acronym})`}
+          </p>
+          {faculty.city && (
+            <p className="text-sm text-(--text-secondary) mt-0.5">
+              <MapPinIcon /> {faculty.city}
+            </p>
+          )}
+          <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
+            <ContactLinks website={faculty.website} />
           </div>
-          <FacultyBreadcrumb faculty={program.faculty} />
         </div>
         <DetailsToggleButton
           expanded={expanded}
@@ -113,29 +105,35 @@ function StudyProgramResult({
       </div>
       {expanded && detailData && (
         <div className="mt-3 border-t border-(--border-color) pt-3">
-          {detailData.tracks.length > 0 ? (
+          {detailData.studyPrograms.length > 0 ? (
             <>
               <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">
                 <span className="text-blue-600 dark:text-blue-400">
-                  {detailData.tracks.length}
+                  {detailData.studyPrograms.length}
                 </span>{" "}
                 {tCount(
                   t,
-                  "universitiesPage.trackCount",
-                  detailData.tracks.length,
+                  "universitiesPage.studyProgramCount",
+                  detailData.studyPrograms.length,
                 )}
               </p>
               <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
-                <ul>
-                  {detailData.tracks.map((tr) => (
-                    <TrackRow key={tr.id} track={tr} t={t} />
+                <div className="flex flex-col gap-2">
+                  {groupBy(detailData.studyPrograms, (sp) =>
+                    t(`universitiesPage.cycles.${sp.cycle}`),
+                  ).map((g) => (
+                    <ResultGroup key={g.key} label={g.key}>
+                      {g.items.map((sp) => (
+                        <StudyProgramRow key={sp.id} program={sp} t={t} />
+                      ))}
+                    </ResultGroup>
                   ))}
-                </ul>
+                </div>
               </div>
             </>
           ) : (
             <p className="text-sm text-(--text-muted) italic">
-              {t("universitiesPage.tracks")}: -
+              {t("universitiesPage.studyPrograms")}: -
             </p>
           )}
         </div>
@@ -145,4 +143,4 @@ function StudyProgramResult({
   );
 }
 
-export { StudyProgramResult };
+export { FacultyResult };

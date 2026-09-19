@@ -2,9 +2,9 @@ import {
   emailSchema,
   getSignupPasswordValidationKey,
 } from "../../../schemas/auth";
-import { applyValidity } from "../../utils/formValidation";
+import { applyValidity } from "../../../utils/formValidation";
 
-import type { TFunction } from "../../../types/i18n";
+import type { TFunction } from "../../../types";
 
 function checkSignupFieldValidity(
   fieldName: string,

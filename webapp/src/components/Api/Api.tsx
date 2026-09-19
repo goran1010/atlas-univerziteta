@@ -1,4 +1,4 @@
-import { EndpointCard } from "./EndPointCard";
+import { EndpointCard } from "./EndpointCard";
 import { apiEndpoints } from "./utils/endpoints";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";

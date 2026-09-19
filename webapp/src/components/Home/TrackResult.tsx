@@ -8,7 +8,7 @@ import { ResultCard } from "./ResultCard";
 import { FacultyBreadcrumb } from "./FacultyBreadcrumb";
 import { tCount } from "../../utils/pluralize";
 
-import type { TFunction } from "../../types/i18n";
+import type { TFunction } from "../../types";
 import type { TrackSearchResult } from "../../schemas/university";
 
 function TrackResult({ track, t }: { track: TrackSearchResult; t: TFunction }) {

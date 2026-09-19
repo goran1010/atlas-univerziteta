@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import userEvent from "@testing-library/user-event";
-import { UniversityCard } from "../../../../src/components/Universities/UniversityCard";
+import { UniversityCard } from "../../../../src/components/Home/UniversityCard";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 

@@ -4,7 +4,7 @@ import { Notifications } from "../../../../src/components/Notifications";
 import { MemoryRouter, Routes, Route } from "react-router";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { UserData } from "../../../../src/types/auth";
+import type { UserData } from "../../../../src/types";
 
 beforeEach(() => {
   vi.spyOn(globalThis, "fetch").mockResolvedValue(

@@ -1,4 +1,4 @@
-import type { TFunction } from "../../types/i18n";
+import type { TFunction } from "../types";
 
 function applyValidity(
   input: HTMLInputElement,

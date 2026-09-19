@@ -3,7 +3,7 @@ import { Status } from "./Status";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 
-import type { UserData } from "../../types/auth";
+import type { UserData } from "../../types";
 import type { SetIsMenuOpen } from "../../customHooks/useCloseMenu";
 
 const baseClass = `block p-2 w-full text-center text-nowrap rounded-lg hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2
@@ -15,7 +15,7 @@ function menuItemClass({ isActive }: { isActive: boolean }) {
   return `${baseClass} ${isActive ? activeClass : ""}`;
 }
 
-const HOME_PATHS = ["/", "/search", "/browse"];
+const HOME_PATHS = ["/", "/search"];
 
 interface MobileMenuProps {
   setIsMenuOpen: SetIsMenuOpen;

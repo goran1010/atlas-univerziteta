@@ -7,7 +7,7 @@ import {
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
-import { Spinner } from "../../utils/Spinner";
+import { Spinner } from "../sharedComponents/Spinner";
 import { tCount } from "../../utils/pluralize";
 import { ContactLinks } from "./ContactLinks";
 import { FacultyRow } from "./FacultyRow";

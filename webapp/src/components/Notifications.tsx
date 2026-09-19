@@ -1,7 +1,7 @@
 import { XIcon } from "./sharedComponents/icons";
 import { use, useEffect, useRef } from "react";
 import { RootContext } from "../contextData/RootContext";
-import type { TypeNotification } from "../types/notification";
+import type { TypeNotification } from "../types";
 
 function getNotificationStyles(type: TypeNotification) {
   switch (type) {

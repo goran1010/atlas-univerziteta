@@ -1,13 +1,13 @@
 import { createContext } from "react";
 
 import type { Dispatch, SetStateAction } from "react";
-import type { UserData } from "../types/auth";
-import type { Language, SetLanguage, TFunction } from "../types/i18n";
+import type { UserData } from "../types";
+import type { Language, SetLanguage, TFunction } from "../types";
 import type {
   AddNotification,
   Notification,
   RemoveNotification,
-} from "../types/notification";
+} from "../types";
 
 interface RootContextType {
   language: Language;
