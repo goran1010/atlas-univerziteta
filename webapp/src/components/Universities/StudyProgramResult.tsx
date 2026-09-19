@@ -46,9 +46,7 @@ function StudyProgramResult({
         { method: "GET", mode: "cors" },
       );
       if (res.ok) {
-        const result = studyProgramDetailResponseSchema.parse(
-          await res.json(),
-        );
+        const result = studyProgramDetailResponseSchema.parse(await res.json());
         setDetailData(result.data);
         setExpanded(true);
       } else {

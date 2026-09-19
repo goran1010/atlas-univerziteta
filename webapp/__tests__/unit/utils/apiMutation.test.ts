@@ -88,7 +88,10 @@ describe("apiMutation", () => {
 
     await apiMutation(createConfig({ body: undefined }), createCtx());
 
-    const [, options] = (fetchMock.mock.calls[0] ?? []) as [string, RequestInit];
+    const [, options] = (fetchMock.mock.calls[0] ?? []) as [
+      string,
+      RequestInit,
+    ];
     expect(options).not.toHaveProperty("body");
   });
 

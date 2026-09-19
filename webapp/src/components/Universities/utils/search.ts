@@ -26,10 +26,10 @@ async function searchAll(
   if (filters?.ownership) params.set("ownership", filters.ownership);
   if (filters?.cycle) params.set("cycle", filters.cycle);
 
-  const res = await fetch(
-    `${SERVER_URL}/api/v1/search?${params.toString()}`,
-    { method: "GET", mode: "cors" },
-  );
+  const res = await fetch(`${SERVER_URL}/api/v1/search?${params.toString()}`, {
+    method: "GET",
+    mode: "cors",
+  });
 
   if (res.ok) {
     const result = unifiedSearchResponseSchema.parse(await res.json());

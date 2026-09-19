@@ -33,11 +33,7 @@ const change: AdminPendingChange = {
 };
 
 function Wrapper({ children }: { children: ReactElement }) {
-  return (
-    <RootContextProvider>
-      {children}
-    </RootContextProvider>
-  );
+  return <RootContextProvider>{children}</RootContextProvider>;
 }
 
 beforeEach(() => {

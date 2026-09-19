@@ -36,9 +36,7 @@ function Wrapper({
   enabled?: boolean;
 }) {
   return (
-    <RootContextProvider
-      rootValue={{ addNotification, t: identityTranslate }}
-    >
+    <RootContextProvider rootValue={{ addNotification, t: identityTranslate }}>
       <HookProbe setLoading={setLoading} enabled={enabled} />
     </RootContextProvider>
   );
