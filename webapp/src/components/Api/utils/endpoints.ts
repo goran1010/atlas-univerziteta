@@ -14,6 +14,9 @@ export interface Endpoint {
   errorExample?: string | null;
 }
 
+const notFoundError = (entity: string) =>
+  `// 404\n{ "error": { "code": "NOT_FOUND", "message": "${entity} not found." } }`;
+
 const apiEndpoints: Endpoint[] = [
   {
     method: "GET",
@@ -81,8 +84,122 @@ const apiEndpoints: Endpoint[] = [
     ]
   }
 }`,
-    errorExample: `// 404
-{ "error": { "code": "NOT_FOUND", "message": "University not found." } }`,
+    errorExample: notFoundError("University"),
+  },
+  {
+    method: "GET",
+    path: "/api/v1/faculties",
+    descriptionKey: "api.endpointsData.getAllFaculties",
+    params: null,
+    successExample: `{
+  "message": "Faculties retrieved successfully.",
+  "data": [
+    {
+      "id": 1, "name": "Faculty of Electrical Engineering",
+      "city": "Sarajevo", "website": "https://etf.unsa.ba",
+      "university": { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA" }
+    },
+    ...
+  ]
+}`,
+    errorExample: null,
+  },
+  {
+    method: "GET",
+    path: "/api/v1/faculties/:id",
+    descriptionKey: "api.endpointsData.getFacultyById",
+    params: null,
+    successExample: `{
+  "message": "Faculty retrieved successfully.",
+  "data": {
+    "id": 1, "name": "Faculty of Electrical Engineering",
+    "city": "Sarajevo", "website": "https://etf.unsa.ba",
+    "university": { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA" },
+    "studyPrograms": [
+      { "id": 1, "name": "Computer Science", "cycle": "FIRST",
+        "tracks": [ ... ]
+      }
+    ]
+  }
+}`,
+    errorExample: notFoundError("Faculty"),
+  },
+  {
+    method: "GET",
+    path: "/api/v1/study-programs",
+    descriptionKey: "api.endpointsData.getAllStudyPrograms",
+    params: null,
+    successExample: `{
+  "message": "Study programs retrieved successfully.",
+  "data": [
+    {
+      "id": 1, "name": "Software Engineering", "cycle": "FIRST", "ects": 180,
+      "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
+        "university": { "id": 1, "name": "University of Sarajevo" }
+      }
+    },
+    ...
+  ]
+}`,
+    errorExample: null,
+  },
+  {
+    method: "GET",
+    path: "/api/v1/study-programs/:id",
+    descriptionKey: "api.endpointsData.getStudyProgramById",
+    params: null,
+    successExample: `{
+  "message": "Study program retrieved successfully.",
+  "data": {
+    "id": 1, "name": "Software Engineering", "cycle": "FIRST", "ects": 180,
+    "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
+      "university": { "id": 1, "name": "University of Sarajevo" }
+    },
+    "tracks": [
+      { "id": 1, "name": "Software Development", "ects": 60 }
+    ]
+  }
+}`,
+    errorExample: notFoundError("Study program"),
+  },
+  {
+    method: "GET",
+    path: "/api/v1/tracks",
+    descriptionKey: "api.endpointsData.getAllTracks",
+    params: null,
+    successExample: `{
+  "message": "Tracks retrieved successfully.",
+  "data": [
+    {
+      "id": 1, "name": "Software Development", "ects": 60,
+      "studyProgram": { "id": 1, "name": "Software Engineering",
+        "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
+          "university": { "id": 1, "name": "University of Sarajevo" }
+        }
+      }
+    },
+    ...
+  ]
+}`,
+    errorExample: null,
+  },
+  {
+    method: "GET",
+    path: "/api/v1/tracks/:id",
+    descriptionKey: "api.endpointsData.getTrackById",
+    params: null,
+    successExample: `{
+  "message": "Track retrieved successfully.",
+  "data": {
+    "id": 1, "name": "Software Development", "ects": 60,
+    "studyProgram": { "id": 1, "name": "Software Engineering",
+      "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
+        "university": { "id": 1, "name": "University of Sarajevo" }
+      }
+    }
+  }
+}`,
+    errorExample: notFoundError("Track"),
   },
   {
     method: "GET",
@@ -91,46 +208,38 @@ const apiEndpoints: Endpoint[] = [
     params: [
       {
         name: "searchTerm",
-        required: true,
+        required: false,
         descriptionKey: "api.endpointsData.searchTermParam",
+      },
+      {
+        name: "entity",
+        required: false,
+        descriptionKey: "api.endpointsData.entityParam",
+      },
+      {
+        name: "ownership",
+        required: false,
+        descriptionKey: "api.endpointsData.ownershipParam",
+      },
+      {
+        name: "cycle",
+        required: false,
+        descriptionKey: "api.endpointsData.cycleParam",
       },
     ],
     successExample: `{
   "message": "Search results retrieved successfully.",
   "data": {
-    "universities": [
-      { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA",
-        "city": "Sarajevo", "entity": "FBIH", "ownership": "PUBLIC",
-        "_count": { "faculties": 23 }
-      }
-    ],
-    "faculties": [
-      { "id": 1, "name": "Faculty of Electrical Engineering", "city": "Sarajevo",
-        "university": { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA" }
-      }
-    ],
-    "studyPrograms": [
-      { "id": 1, "name": "Software Engineering", "cycle": "FIRST", "ects": 180,
-        "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
-          "university": { "id": 1, "name": "University of Sarajevo" }
-        }
-      }
-    ],
-    "tracks": [
-      { "id": 1, "name": "Software Development", "ects": 60,
-        "studyProgram": { "id": 1, "name": "Software Engineering",
-          "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
-            "university": { "id": 1, "name": "University of Sarajevo" }
-          }
-        }
-      }
-    ]
+    "universities": [ ... ],
+    "faculties": [ ... ],
+    "studyPrograms": [ ... ],
+    "tracks": [ ... ]
   }
 }`,
     errorExample: `// 404 - no match found
 { "error": { "code": "NOT_FOUND", "message": "No results found matching your search." } }
 
-// 400 - invalid searchTerm
+// 400 - no search term and no filters provided
 { "error": { "code": "VALIDATION_ERROR", "message": "Request validation failed.", "issues": [...] } }`,
   },
 ];

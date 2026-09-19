@@ -255,7 +255,7 @@ describe("GET /api/v1/search", () => {
     expect(response).toEqual(expect.objectContaining(expectedResponse));
   });
 
-  test("responds with status 400 for missing searchTerm", async () => {
+  test("responds with status 400 when no search term and no filters", async () => {
     const response = await request(app).get("/api/v1/search");
     const responseBody = getResponseObject(response.body);
     const error = getResponseObject(responseBody["error"]);
@@ -263,9 +263,6 @@ describe("GET /api/v1/search", () => {
     expect(response.status).toBe(400);
     expect(error["code"]).toBe("VALIDATION_ERROR");
     expect(error["message"]).toBe("Request validation failed.");
-    expect(error["issues"]).toEqual(
-      expect.arrayContaining([expect.objectContaining({ path: "searchTerm" })]),
-    );
   });
 
   test("responds with status 400 when searchTerm exceeds 100 characters", async () => {

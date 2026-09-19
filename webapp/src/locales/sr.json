@@ -148,8 +148,17 @@
       "apiV1Status": "Provjera statusa API v1.",
       "getAllUniversities": "Preuzimanje svih univerziteta, sortiranih po vlasništvu pa po nazivu. Uključuje broj fakulteta po univerzitetu.",
       "getUniversityById": "Preuzimanje univerziteta po ID-u s potpunim ugniježđenim detaljima (fakulteti, studijski programi i smjerovi).",
-      "search": "Pretraga univerziteta, fakulteta, studijskih programa i smjerova. Pretraga po nazivu, gradu, akronimu, entitetu, vlasništvu, ciklusu studija, jeziku i nazivima nadređenih jedinica (neosjetljivo na velika/mala slova, najmanje 2 karaktera).",
-      "searchTermParam": "Pojam za pretragu (najmanje 2 karaktera)."
+      "search": "Pretraga univerziteta, fakulteta, studijskih programa i smjerova. Navedite pojam za pretragu (min 2 karaktera) i/ili barem jedan filter. Pretražuje po nazivu, gradu, akronimu i nazivima nadređenih jedinica (neosjetljivo na velika/mala slova i dijakritike).",
+      "searchTermParam": "Tekst za pretragu (2-100 karaktera). Opciono ako je naveden barem jedan filter.",
+      "getAllFaculties": "Preuzimanje svih fakulteta, sortiranih po nazivu univerziteta pa po nazivu fakulteta. Uključuje nadređeni univerzitet.",
+      "getFacultyById": "Preuzimanje fakulteta po ID-u s ugniježđenim studijskim programima i smjerovima, te nadređenim univerzitetom.",
+      "getAllStudyPrograms": "Preuzimanje svih studijskih programa, sortiranih po ciklusu pa po nazivu. Uključuje nadređeni fakultet i univerzitet.",
+      "getStudyProgramById": "Preuzimanje studijskog programa po ID-u s njegovim smjerovima, nadređenim fakultetom i univerzitetom.",
+      "getAllTracks": "Preuzimanje svih smjerova, sortiranih po nazivu studijskog programa pa po nazivu smjera. Uključuje cjelokupni lanac nadređenih jedinica.",
+      "getTrackById": "Preuzimanje smjera po ID-u s nadređenim studijskim programom, fakultetom i univerzitetom.",
+      "entityParam": "Filtriranje po entitetu: FBIH, RS ili BD.",
+      "ownershipParam": "Filtriranje po vlasništvu: PUBLIC ili PRIVATE.",
+      "cycleParam": "Filtriranje po ciklusu studija. Prihvata višestruke vrijednosti (npr. cycle=FIRST&cycle=SECOND). Vrijednosti: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST."
     }
   },
   "endpoint": {

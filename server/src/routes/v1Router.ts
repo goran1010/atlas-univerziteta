@@ -9,9 +9,17 @@ v1Router.get("/universities", universityController.getUniversities);
 
 v1Router.get("/universities/:id", universityController.getUniversityById);
 
+v1Router.get("/faculties", universityController.getFaculties);
+
 v1Router.get("/faculties/:id", universityController.getFacultyById);
 
+v1Router.get("/study-programs", universityController.getStudyPrograms);
+
 v1Router.get("/study-programs/:id", universityController.getStudyProgramById);
+
+v1Router.get("/tracks", universityController.getTracks);
+
+v1Router.get("/tracks/:id", universityController.getTrackById);
 
 v1Router.get("/search", universityController.search);
 
