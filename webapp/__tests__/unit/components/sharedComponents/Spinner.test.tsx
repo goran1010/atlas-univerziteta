@@ -1,6 +1,6 @@
-import { Spinner } from "../../../src/utils/Spinner";
+import { Spinner } from "../../../../src/components/sharedComponents/Spinner";
 import { render, screen } from "@testing-library/react";
-import { RootContextProvider } from "../../utils/rootContextProvider";
+import { RootContextProvider } from "../../../utils/rootContextProvider";
 
 describe("Spinner component", () => {
   test("renders the spinner correctly", () => {

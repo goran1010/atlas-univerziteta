@@ -4,17 +4,25 @@ import {
   ClockIcon,
   GraduationCapIcon,
 } from "../sharedComponents/icons";
+import { Link } from "react-router";
 import { ResultCard } from "./ResultCard";
 import { FacultyBreadcrumb } from "./FacultyBreadcrumb";
 import { tCount } from "../../utils/pluralize";
 
-import type { TFunction } from "../../types/i18n";
+import type { TFunction } from "../../types";
 import type { TrackSearchResult } from "../../schemas/university";
 
 function TrackResult({ track, t }: { track: TrackSearchResult; t: TFunction }) {
   return (
     <ResultCard>
-      <p className="font-bold text-(--text-primary)">{track.name}</p>
+      <p className="font-bold">
+        <Link
+          to={`/faculties/${track.studyProgram.faculty.id.toString()}`}
+          className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        >
+          {track.name}
+        </Link>
+      </p>
       <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-sm text-(--text-secondary)">
         <span>
           <GraduationCapIcon />{" "}

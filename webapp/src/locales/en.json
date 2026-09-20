@@ -148,8 +148,17 @@
       "apiV1Status": "Check API v1 status.",
       "getAllUniversities": "Retrieve all universities, ordered by ownership then name. Includes a faculty count per university.",
       "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks).",
-      "search": "Search across universities, faculties, study programs, and tracks. Matches name, city, acronym, entity, ownership, study cycle, language, and parent unit names (case-insensitive, minimum 2 characters).",
-      "searchTermParam": "A search term (minimum 2 characters)."
+      "search": "Search across universities, faculties, study programs, and tracks. Provide a search term (min 2 characters) and/or at least one filter. Matches name, city, acronym, and parent unit names (case-insensitive, diacritic-insensitive).",
+      "searchTermParam": "Text to search for (2-100 characters). Optional if at least one filter is provided.",
+      "getAllFaculties": "Retrieve all faculties, ordered by university name then faculty name. Includes the parent university.",
+      "getFacultyById": "Retrieve a faculty by ID with nested study programs and tracks, plus the parent university.",
+      "getAllStudyPrograms": "Retrieve all study programs, ordered by cycle then name. Includes the parent faculty and university.",
+      "getStudyProgramById": "Retrieve a study program by ID with its tracks, parent faculty, and university.",
+      "getAllTracks": "Retrieve all tracks, ordered by study program name then track name. Includes the full parent chain.",
+      "getTrackById": "Retrieve a track by ID with its parent study program, faculty, and university.",
+      "entityParam": "Filter by entity: FBIH, RS, or BD.",
+      "ownershipParam": "Filter by ownership: PUBLIC or PRIVATE.",
+      "cycleParam": "Filter by study cycle. Accepts multiple values (e.g. cycle=FIRST&cycle=SECOND). Values: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST."
     }
   },
   "endpoint": {
@@ -413,7 +422,11 @@
     "filterEntity": "Entity",
     "filterOwnership": "Ownership",
     "filterCycle": "Study cycle",
-    "all": "All"
+    "all": "All",
+    "openFullPage": "Open full page",
+    "shareLink": "Share link",
+    "linkCopied": "Link copied to clipboard.",
+    "linkCopyFailed": "Could not copy link."
   },
   "access": {
     "goToLogin": "Log In",

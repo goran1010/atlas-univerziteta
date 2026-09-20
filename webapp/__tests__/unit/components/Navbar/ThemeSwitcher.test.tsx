@@ -4,7 +4,7 @@ import { ThemeSwitcher } from "../../../../src/components/Navbar/ThemeSwitcher";
 import { ThemeProvider } from "../../../../src/contextData/ThemeProvider";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { AddNotification } from "../../../../src/types/notification";
+import type { AddNotification } from "../../../../src/types";
 
 beforeEach(() => {
   localStorage.clear();

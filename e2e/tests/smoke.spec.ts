@@ -9,25 +9,27 @@ test.describe("search page", () => {
     ).toBeVisible();
   });
 
-  test("searching returns results", async ({ page }) => {
+  test("shows Browse All button on initial load", async ({ page }) => {
     await page.goto("/search");
-    await page.getByRole("searchbox", { name: "Search" }).fill("univerzitet");
-    await page.getByRole("button", { name: "Search", exact: true }).click();
     await expect(
-      page.getByRole("heading", { name: "Universities", level: 2 }),
+      page.getByRole("button", { name: /Browse All/i }),
     ).toBeVisible();
+  });
+
+  test("Browse All loads universities", async ({ page }) => {
+    await page.goto("/search");
+    await page.getByRole("button", { name: /Browse All/i }).click();
     await expect(
       page.getByRole("main").getByRole("listitem").first(),
     ).toBeVisible();
   });
-});
 
-test.describe("browse page", () => {
-  test("lists universities from the database", async ({ page }) => {
-    await page.goto("/browse");
+  test("realtime search returns results", async ({ page }) => {
+    await page.goto("/search");
+    await page.getByRole("searchbox", { name: "Search" }).fill("univerzitet");
     await expect(
       page.getByRole("main").getByRole("listitem").first(),
-    ).toBeVisible();
+    ).toBeVisible({ timeout: 5000 });
   });
 });
 

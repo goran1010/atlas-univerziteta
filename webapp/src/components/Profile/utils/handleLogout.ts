@@ -3,7 +3,7 @@ import { clearCsrfToken } from "../../../utils/getCsrfToken";
 import { apiMutation } from "../../../utils/apiMutation";
 
 import type { RequestContext } from "../../../utils/apiMutation";
-import type { UserData } from "../../../types/auth";
+import type { UserData } from "../../../types";
 import type { NavigateFunction } from "react-router";
 
 async function handleLogout(

@@ -5,10 +5,18 @@ interface DialogProps {
   onClose: () => void;
   title: string;
   children: ReactNode;
+  headerActions?: ReactNode;
   footer?: ReactNode;
 }
 
-function Dialog({ open, onClose, title, children, footer }: DialogProps) {
+function Dialog({
+  open,
+  onClose,
+  title,
+  children,
+  headerActions,
+  footer,
+}: DialogProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -36,31 +44,34 @@ function Dialog({ open, onClose, title, children, footer }: DialogProps) {
       ref={dialogRef}
       onClose={onClose}
       onClick={handleBackdropClick}
-      className="m-auto backdrop:bg-black/50 backdrop:backdrop-blur-sm rounded-2xl border border-(--border-color) bg-(--surface-2) text-(--text-primary) shadow-(--card-shadow) p-0 w-[min(95vw,40rem)] max-h-[85vh] overflow-y-auto"
+      className="m-auto backdrop:bg-black/50 backdrop:backdrop-blur-sm backdrop:cursor-pointer rounded-2xl border border-(--border-color) bg-(--surface-2) text-(--text-primary) shadow-(--card-shadow) p-0 w-[min(95vw,40rem)] max-h-[85vh] overflow-y-auto cursor-default"
     >
       <div className="sticky top-0 flex items-center justify-between p-3 border-b border-(--border-color) bg-(--surface-2) z-10">
-        <h2 className="text-sm font-semibold">{title}</h2>
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close"
-          className="p-1 rounded-md cursor-pointer transition-transform active:scale-90 text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
-        >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
+        <h2 className="text-sm font-semibold min-w-0 truncate">{title}</h2>
+        <div className="flex items-center gap-1 shrink-0">
+          {headerActions}
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className="p-1 rounded-md cursor-pointer transition-transform active:scale-90 text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
           >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
       </div>
       <div className="p-3">{children}</div>
       {footer && (

@@ -1,16 +1,16 @@
 import { use, useState } from "react";
 import { useOutletContext } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
-import { Spinner } from "../../utils/Spinner";
+import { Spinner } from "../sharedComponents/Spinner";
 import { Button } from "../sharedComponents/Button";
 import {
   handleApproveAdminRequest,
   handleDeclineAdminRequest,
 } from "./utils/adminActions";
 
-import type { AdminOutletContext } from "./AdminForm";
+import type { AdminOutletContext } from "./types";
 import type { AdminRequest } from "../../schemas/adminRequest";
-import type { Notification } from "../../types/notification";
+import type { Notification } from "../../types";
 import type { Dispatch, SetStateAction } from "react";
 
 interface AdminRequestRowProps {

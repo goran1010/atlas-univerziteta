@@ -3,7 +3,7 @@ import { RootContext } from "../../src/contextData/RootContext";
 import type { RootContextType } from "../../src/contextData/RootContext";
 import { useLanguage } from "../../src/customHooks/useLanguage";
 import { useNotification } from "../../src/customHooks/useNotification";
-import type { UserData } from "../../src/types/auth";
+import type { UserData } from "../../src/types";
 
 interface RootContextProviderProps {
   children: ReactNode;

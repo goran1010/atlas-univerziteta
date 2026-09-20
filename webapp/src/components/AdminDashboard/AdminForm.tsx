@@ -5,18 +5,7 @@ import { useFetchList } from "../../customHooks/useFetchList";
 import { adminPendingChangesResponseSchema } from "../../schemas/pendingChange";
 import { adminRequestsResponseSchema } from "../../schemas/adminRequest";
 
-import type { AdminPendingChange } from "../../schemas/pendingChange";
-import type { AdminRequest } from "../../schemas/adminRequest";
-import type { Dispatch, SetStateAction } from "react";
-
-export interface AdminOutletContext {
-  pendingChanges: AdminPendingChange[];
-  setPendingChanges: Dispatch<SetStateAction<AdminPendingChange[]>>;
-  pendingLoading: boolean;
-  adminRequests: AdminRequest[];
-  setAdminRequests: Dispatch<SetStateAction<AdminRequest[]>>;
-  requestsLoading: boolean;
-}
+import type { AdminOutletContext } from "./types";
 
 function AdminForm() {
   const { t } = use(RootContext);

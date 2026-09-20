@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { Select } from "../sharedComponents/Select";
 import { Label } from "../sharedComponents/Label";
-import { Spinner } from "../../utils/Spinner";
+import { Spinner } from "../sharedComponents/Spinner";
 import { SelectedEntityDetails } from "./SelectedEntityDetails";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";

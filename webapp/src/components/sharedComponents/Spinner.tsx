@@ -1,8 +1,10 @@
 import { use } from "react";
-import { RootContext } from "../contextData/RootContext";
+import { RootContext } from "../../contextData/RootContext";
 
-function Spinner() {
+function Spinner({ size = "md" }: { size?: "sm" | "md" }) {
   const { t } = use(RootContext);
+
+  const sizeClass = size === "sm" ? "h-4" : "h-12 max-h-[70%]";
 
   return (
     <>
@@ -15,10 +17,14 @@ function Spinner() {
       <div
         role="status"
         aria-label={t("loading")}
-        className="w-full h-full flex justify-center items-center"
+        className={
+          size === "sm"
+            ? "inline-flex items-center"
+            : "w-full h-full flex justify-center items-center"
+        }
       >
         <div
-          className="border-3 border-(--border-color) border-t-3 border-t-(--accent) rounded-full h-12 aspect-square max-h-[70%] mx-auto"
+          className={`border-3 border-(--border-color) border-t-3 border-t-(--accent) rounded-full aspect-square ${sizeClass}`}
           style={{ animation: "spin 1s linear infinite" }}
         />
         <span className="sr-only">{t("loading")}</span>

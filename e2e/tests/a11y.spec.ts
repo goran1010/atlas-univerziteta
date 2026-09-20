@@ -29,10 +29,6 @@ const ROUTES: { path: string; ready: (page: Page) => Locator }[] = [
       p.getByRole("heading", { name: "Find programs and universities" }),
   },
   {
-    path: "/browse",
-    ready: (p) => p.getByRole("main").getByRole("listitem").first(),
-  },
-  {
     path: "/about",
     ready: (p) =>
       p.getByRole("heading", {
@@ -64,9 +60,8 @@ for (const { path, ready } of ROUTES) {
 test("search results have no detectable a11y violations", async ({ page }) => {
   await page.goto("/search");
   await page.getByRole("searchbox", { name: "Search" }).fill("univerzitet");
-  await page.getByRole("button", { name: "Search", exact: true }).click();
   await expect(
     page.getByRole("main").getByRole("listitem").first(),
-  ).toBeVisible();
+  ).toBeVisible({ timeout: 5000 });
   await expectNoViolations(page);
 });

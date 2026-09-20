@@ -2,8 +2,8 @@ import { useEffect, useState, useRef } from "react";
 import { SERVER_URL } from "../utils/envConfig";
 import { currentUserResponseSchema } from "../schemas/auth";
 
-import type { AddNotification } from "../types/notification";
-import type { UserData } from "../types/auth";
+import type { AddNotification } from "../types";
+import type { UserData } from "../types";
 
 function useStatusCheck(
   addNotification: AddNotification,

@@ -85,7 +85,7 @@ describe("PendingUniversityChanges", () => {
       </Wrapper>,
     );
 
-    expect(screen.getByText(/Loading\.\.\./i)).toBeInTheDocument();
+    expect(screen.getByRole("status")).toBeInTheDocument();
   });
 
   test("renders no pending changes message", () => {

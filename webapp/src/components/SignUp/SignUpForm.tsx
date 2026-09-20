@@ -107,6 +107,7 @@ function SignUpForm({ disabled, onLoadingChange }: SignUpFormProps) {
       </div>
       <div>
         <Button
+          className="w-full"
           variant="success"
           onClick={() => {
             checkSignupFormValidity(

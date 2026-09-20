@@ -2,7 +2,7 @@ import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 
 import type { PickedEntity } from "./EntityPicker";
-import type { TFunction } from "../../types/i18n";
+import type { TFunction } from "../../types";
 
 interface DetailRow {
   label: string;

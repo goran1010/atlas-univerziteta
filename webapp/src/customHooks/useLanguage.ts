@@ -3,7 +3,7 @@ import en from "../locales/en.json";
 import sr from "../locales/sr.json";
 import { setSystemLanguage } from "../utils/setInitialLanguage";
 import type { SystemLanguage } from "../utils/setInitialLanguage";
-import type { Language, TFunction } from "../types/i18n";
+import type { Language, TFunction } from "../types";
 
 type TranslationValue = string | TranslationMap;
 

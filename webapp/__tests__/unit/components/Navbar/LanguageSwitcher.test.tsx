@@ -3,9 +3,9 @@ import userEvent from "@testing-library/user-event";
 import { LanguageSwitcher } from "../../../../src/components/Navbar/LanguageSwitcher";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { AddNotification } from "../../../../src/types/notification";
-import type { SetLanguage } from "../../../../src/types/i18n";
-import type { Language } from "../../../../src/types/i18n";
+import type { AddNotification } from "../../../../src/types";
+import type { SetLanguage } from "../../../../src/types";
+import type { Language } from "../../../../src/types";
 
 afterEach(() => {
   vi.restoreAllMocks();

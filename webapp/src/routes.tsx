@@ -2,9 +2,10 @@ import { Navigate } from "react-router";
 import { App } from "./App";
 import { ErrorPage } from "./components/ErrorPage";
 import { About } from "./components/About/About";
-import { Universities } from "./components/Universities/Universities";
-import { UnifiedSearch } from "./components/Universities/UnifiedSearch";
-import { GetAllUniversities } from "./components/Universities/GetAllUniversities";
+import { HomeLayout } from "./components/Home/HomeLayout";
+import { UnifiedSearch } from "./components/Home/UnifiedSearch";
+import { UniversityDetailPage } from "./components/Home/UniversityDetailPage";
+import { FacultyDetailPage } from "./components/Home/FacultyDetailPage";
 import { LogIn } from "./components/LogIn/LogIn";
 import { SignUp } from "./components/SignUp/SignUp";
 import { ContributionDashboard } from "./components/ContributionDashboard/ContributionDashboard";
@@ -23,11 +24,10 @@ const routes = [
     errorElement: <ErrorPage />,
     children: [
       {
-        element: <Universities />,
+        element: <HomeLayout />,
         children: [
           { index: true, element: <Navigate to="search" replace /> },
           { path: "search", element: <UnifiedSearch /> },
-          { path: "browse", element: <GetAllUniversities /> },
         ],
       },
       {
@@ -35,8 +35,12 @@ const routes = [
         path: "home",
       },
       {
-        element: <Navigate to="/search" replace />,
-        path: "universities",
+        element: <UniversityDetailPage />,
+        path: "universities/:id",
+      },
+      {
+        element: <FacultyDetailPage />,
+        path: "faculties/:id",
       },
       {
         element: <About />,

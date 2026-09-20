@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import type { Notification } from "../types/notification";
+import type { Notification } from "../types";
 
 const MAX_NOTIFICATIONS = 5;
 

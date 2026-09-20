@@ -1,18 +1,19 @@
 import { AwardIcon, GraduationCapIcon } from "../sharedComponents/icons";
 import { useState, use } from "react";
+import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { ResultCard } from "./ResultCard";
 import { FacultyBreadcrumb } from "./FacultyBreadcrumb";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { TrackRow } from "./TrackRow";
-import { Spinner } from "../../utils/Spinner";
+import { Spinner } from "../sharedComponents/Spinner";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";
 import { notificationMessageKey } from "../../utils/apiError";
 import { studyProgramDetailResponseSchema } from "../../schemas/university";
 import { tCount } from "../../utils/pluralize";
 
-import type { TFunction } from "../../types/i18n";
+import type { TFunction } from "../../types";
 import type {
   StudyProgramSearchResult,
   StudyProgramDetail,
@@ -85,26 +86,33 @@ function StudyProgramResult({
           if ((e.target as HTMLElement).closest("a, button")) return;
           void handleExpand();
         }}
-        className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 rounded-md transition-colors cursor-pointer hover:bg-(--hover-surface)"
+        className="cursor-pointer"
       >
-        <div className="min-w-0">
-          <p className="font-bold text-(--text-primary)">{program.name}</p>
-          <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5 text-sm text-(--text-secondary)">
+        <p className="font-bold">
+          <Link
+            to={`/faculties/${program.faculty.id.toString()}`}
+            className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
+            {program.name}
+          </Link>
+        </p>
+        <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5 text-sm text-(--text-secondary)">
+          <span>
+            <GraduationCapIcon />{" "}
+            {t(`universitiesPage.cycles.${program.cycle}`)}
+          </span>
+          {program.ects != null && (
             <span>
-              <GraduationCapIcon />{" "}
-              {t(`universitiesPage.cycles.${program.cycle}`)}
+              <AwardIcon /> {program.ects} {t("universitiesPage.ects")}
             </span>
-            {program.ects != null && (
-              <span>
-                <AwardIcon /> {program.ects} {t("universitiesPage.ects")}
-              </span>
-            )}
-          </div>
-          <FacultyBreadcrumb faculty={program.faculty} />
+          )}
         </div>
+        <FacultyBreadcrumb faculty={program.faculty} />
+      </div>
+      <div className="flex justify-center mt-2">
         <DetailsToggleButton
           expanded={expanded}
-          className="w-full sm:w-auto px-3 py-1.5 text-xs shrink-0 sm:max-w-36"
+          className="px-3 py-1.5 text-xs"
           onClick={() => {
             void handleExpand();
           }}
@@ -112,7 +120,12 @@ function StudyProgramResult({
         />
       </div>
       {expanded && detailData && (
-        <div className="mt-3 border-t border-(--border-color) pt-3">
+        <div
+          className="mt-3 border-t border-(--border-color) pt-3"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           {detailData.tracks.length > 0 ? (
             <>
               <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">

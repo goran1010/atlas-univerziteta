@@ -4,7 +4,7 @@ import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 
 import type { SetIsMenuOpen } from "../../customHooks/useCloseMenu";
-import type { UserData } from "../../types/auth";
+import type { UserData } from "../../types";
 
 interface StandardMenuProps {
   setIsMenuOpen: SetIsMenuOpen;
@@ -20,7 +20,7 @@ function menuLinkClass({ isActive }: { isActive: boolean }) {
   return `${baseClass} ${isActive ? activeClass : ""}`;
 }
 
-const HOME_PATHS = ["/", "/search", "/browse"];
+const HOME_PATHS = ["/", "/search"];
 
 function StandardMenu({ setIsMenuOpen, userData }: StandardMenuProps) {
   const { t } = use(RootContext);

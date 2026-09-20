@@ -1,4 +1,4 @@
-import { Spinner } from "../../utils/Spinner";
+import { Spinner } from "../sharedComponents/Spinner";
 import { use, useState } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import type { MouseEvent } from "react";

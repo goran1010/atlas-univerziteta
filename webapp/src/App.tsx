@@ -9,8 +9,8 @@ import { useCloseMenu } from "./customHooks/useCloseMenu";
 import { useLanguage } from "./customHooks/useLanguage";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { RootContext } from "./contextData/RootContext";
-import { SkipNavbarLink } from "./components/utils/SkipNavbarLink";
-import { RouteAnnouncer } from "./components/utils/RouteAnnouncer";
+import { SkipNavbarLink } from "./components/SkipNavbarLink";
+import { RouteAnnouncer } from "./components/RouteAnnouncer";
 import { SITE_URL } from "./utils/envConfig";
 
 function App() {

@@ -4,7 +4,7 @@ import { ContributionDashboard } from "../../../../src/components/ContributionDa
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { UserData } from "../../../../src/types/auth";
+import type { UserData } from "../../../../src/types";
 
 function Wrapper({ initialUser }: { initialUser: UserData }) {
   return (

@@ -5,7 +5,7 @@ import { clearCsrfToken } from "../../../utils/getCsrfToken";
 import type { SubmitEvent } from "react";
 import type { NavigateFunction } from "react-router";
 import type { RequestContext } from "../../../utils/apiMutation";
-import type { UserData } from "../../../types/auth";
+import type { UserData } from "../../../types";
 
 async function handleSubmitLogIn(
   e: SubmitEvent<HTMLFormElement>,

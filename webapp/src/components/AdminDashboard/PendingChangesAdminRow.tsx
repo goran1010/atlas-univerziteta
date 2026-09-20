@@ -8,7 +8,7 @@ import {
   handleDeclinePendingChange,
 } from "./utils/adminActions";
 import { PendingChangeDetail } from "./PendingChangeDetail";
-import type { Notification } from "../../types/notification";
+import type { Notification } from "../../types";
 import type { TypeOfChange } from "../../schemas/domain";
 import type { AdminPendingChange } from "../../schemas/pendingChange";
 
