@@ -106,6 +106,28 @@ describe("Render LogIn Component", () => {
     expect(githubFailed).toBeInTheDocument();
   });
 
+  test("shows the no-verified-email notification for error=github_no_email", async () => {
+    function WrapperWithGithubNoEmail() {
+      return (
+        <RootContextProvider>
+          <MemoryRouter initialEntries={["/login?error=github_no_email"]}>
+            <Notifications />
+            <Routes>
+              <Route path="/" element={<About />} />
+              <Route path="/login" element={<LogIn />} />
+            </Routes>
+          </MemoryRouter>
+        </RootContextProvider>
+      );
+    }
+
+    render(<WrapperWithGithubNoEmail />);
+
+    const githubNoEmail = await screen.findByText(/no verified email/i);
+
+    expect(githubNoEmail).toBeInTheDocument();
+  });
+
   test("redirects to home and warns when user is already logged in", async () => {
     function WrapperWithUser() {
       return (

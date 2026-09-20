@@ -5,7 +5,7 @@ import type { DoneCallback } from "passport";
 
 interface MockGitHubProfile {
   id: string | number;
-  emails?: { value: string }[];
+  emails?: { value: string; primary?: boolean; verified?: boolean }[];
 }
 
 type GitHubVerifyFunction = (
@@ -190,7 +190,7 @@ describe("passport config", () => {
     expect(usersModelMock.create).not.toHaveBeenCalled();
   });
 
-  test("GitHubStrategy returns auth error when profile has no public email", async () => {
+  test("GitHubStrategy returns auth error when profile has no email", async () => {
     const { githubVerify } = await loadStrategies();
     const done = vi.fn();
 
@@ -198,9 +198,71 @@ describe("passport config", () => {
 
     await githubVerify("token", "refresh", { id: 123, emails: [] }, done);
 
-    expect(done).toHaveBeenCalledWith(null, false);
+    expect(done).toHaveBeenCalledWith(null, false, {
+      message: "no_verified_email",
+    });
     expect(usersModelMock.update).not.toHaveBeenCalled();
     expect(usersModelMock.create).not.toHaveBeenCalled();
+  });
+
+  test("GitHubStrategy returns auth error when no email is verified", async () => {
+    const { githubVerify } = await loadStrategies();
+    const done = vi.fn();
+
+    usersModelMock.findUnique.mockResolvedValueOnce(null);
+
+    await githubVerify(
+      "token",
+      "refresh",
+      {
+        id: 123,
+        emails: [{ value: "unverified@example.com", primary: true }],
+      },
+      done,
+    );
+
+    expect(done).toHaveBeenCalledWith(null, false, {
+      message: "no_verified_email",
+    });
+    expect(usersModelMock.update).not.toHaveBeenCalled();
+    expect(usersModelMock.create).not.toHaveBeenCalled();
+  });
+
+  test("GitHubStrategy falls back to a verified email when the primary is unverified", async () => {
+    const { githubVerify } = await loadStrategies();
+    const done = vi.fn();
+    const createdUser = {
+      id: 11,
+      email: "verified@example.com",
+      githubId: "777",
+    };
+
+    usersModelMock.findUnique
+      .mockResolvedValueOnce(null)
+      .mockResolvedValueOnce(null);
+    usersModelMock.create.mockResolvedValue(createdUser);
+
+    await githubVerify(
+      "token",
+      "refresh",
+      {
+        id: "777",
+        emails: [
+          { value: "unverified@example.com", primary: true },
+          { value: "verified@example.com", verified: true },
+        ],
+      },
+      done,
+    );
+    await flushMicrotasks();
+
+    expect(usersModelMock.create).toHaveBeenCalledWith({
+      data: {
+        email: "verified@example.com",
+        githubId: "777",
+      },
+    });
+    expect(done).toHaveBeenCalledWith(null, createdUser);
   });
 
   test("GitHubStrategy links githubId to existing email user", async () => {
@@ -221,7 +283,12 @@ describe("passport config", () => {
     await githubVerify(
       "token",
       "refresh",
-      { id: "123", emails: [{ value: "github-user@example.com" }] },
+      {
+        id: "123",
+        emails: [
+          { value: "github-user@example.com", primary: true, verified: true },
+        ],
+      },
       done,
     );
     await flushMicrotasks();
@@ -256,7 +323,12 @@ describe("passport config", () => {
     await githubVerify(
       "token",
       "refresh",
-      { id: "555", emails: [{ value: "new-github@example.com" }] },
+      {
+        id: "555",
+        emails: [
+          { value: "new-github@example.com", primary: true, verified: true },
+        ],
+      },
       done,
     );
     await flushMicrotasks();

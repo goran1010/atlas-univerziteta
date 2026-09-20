@@ -71,6 +71,7 @@
       "noAccountPrefix": "Nemate nalog?",
       "heading": "Prijava",
       "githubFailed": "GitHub prijava nije uspjela. Pokušajte ponovo.",
+      "githubNoEmail": "GitHub prijava nije uspjela: GitHub nalog nema potvrđenu email adresu. Potvrdite email adresu na GitHub-u i pokušajte ponovo.",
       "alreadyLoggedIn": "Već ste prijavljeni. Preusmereni ste na početnu stranicu.",
       "noAccount": "Nemate nalog ? Idite na stranicu Registracija."
     },

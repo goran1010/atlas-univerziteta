@@ -274,22 +274,7 @@ describe("GET /auth/confirm/:token", () => {
 
     const token = crypto.randomBytes(32).toString("hex");
 
-    vi.spyOn(prisma.user, "findUnique").mockResolvedValueOnce({
-      id: "existing-user-id",
-      email: "test_user@example.com",
-      password: "hashed-password",
-      role: "USER",
-      githubId: null,
-      adminRequestedAt: null,
-    });
-    vi.spyOn(prisma.user, "update").mockResolvedValueOnce({
-      id: "existing-user-id",
-      email: "test_user@example.com",
-      password: "hashed-password",
-      role: "USER",
-      githubId: null,
-      adminRequestedAt: null,
-    });
+    vi.spyOn(prisma.user, "findUnique").mockResolvedValueOnce(null);
 
     const response = await request(app).get(`/auth/confirm/${token}`);
     const expectedResponse = {

@@ -55,7 +55,9 @@ async function signup(req: Request, res: Response) {
     },
   });
 
-  if (existingUser) {
+  // A GitHub-first account has no password; signing up with its email is
+  // allowed and attaches a password once the address is confirmed.
+  if (existingUser?.password) {
     sendError(res, {
       status: 400,
       code: "SIGNUP_FAILED",
@@ -161,12 +163,45 @@ async function confirmEmail(req: Request, res: Response) {
     return;
   }
 
-  await prisma.user.create({
-    data: {
+  const existingUser = await prisma.user.findUnique({
+    where: {
       email: pendingUser.email,
-      password: pendingUser.password,
     },
   });
+
+  if (existingUser?.password) {
+    await prisma.pendingUser.delete({
+      where: {
+        id: pendingUser.id,
+      },
+    });
+
+    sendError(res, {
+      status: 400,
+      code: "CONFIRMATION_TOKEN_INVALID",
+      message:
+        "Email confirmation failed: this email is already registered. Log in instead.",
+    });
+    return;
+  }
+
+  if (existingUser) {
+    await prisma.user.update({
+      where: {
+        id: existingUser.id,
+      },
+      data: {
+        password: pendingUser.password,
+      },
+    });
+  } else {
+    await prisma.user.create({
+      data: {
+        email: pendingUser.email,
+        password: pendingUser.password,
+      },
+    });
+  }
 
   await prisma.pendingUser.delete({
     where: {
@@ -239,14 +274,22 @@ function githubCallback(req: Request, res: Response, next: NextFunction) {
   getPassportMiddleware(
     passport.authenticate(
       "github",
-      (error: unknown, user: Express.User | false | null | undefined) => {
+      (
+        error: unknown,
+        user: Express.User | false | null | undefined,
+        info: unknown,
+      ) => {
         if (error) {
           next(error);
           return;
         }
 
         if (!user) {
-          res.redirect(`${env.WEBAPP_URL}/login?error=github`);
+          const reason =
+            getAuthenticationMessage(info) === "no_verified_email"
+              ? "github_no_email"
+              : "github";
+          res.redirect(`${env.WEBAPP_URL}/login?error=${reason}`);
           return;
         }
 

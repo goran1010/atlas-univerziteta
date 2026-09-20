@@ -15,10 +15,15 @@ function LogIn() {
   const { t, addNotification, userData } = use(RootContext);
 
   useEffect(() => {
-    if (searchParams.get("error") === "github") {
+    const loginError = searchParams.get("error");
+    if (loginError === "github" || loginError === "github_no_email") {
       addNotification({
         type: "error",
-        message: t("auth.login.githubFailed"),
+        message: t(
+          loginError === "github_no_email"
+            ? "auth.login.githubNoEmail"
+            : "auth.login.githubFailed",
+        ),
       });
     }
   }, [searchParams, addNotification, t]);

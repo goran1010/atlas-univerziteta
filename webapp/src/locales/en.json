@@ -71,6 +71,7 @@
       "noAccountPrefix": "Don't have an account?",
       "heading": "Log in",
       "githubFailed": "GitHub login failed. Please try again.",
+      "githubNoEmail": "GitHub login failed: your GitHub account has no verified email address. Verify your email on GitHub and try again.",
       "alreadyLoggedIn": "You are already logged in. Redirected to the home page.",
       "noAccount": "Don't have an account ? Go to the Sign Up page."
     },

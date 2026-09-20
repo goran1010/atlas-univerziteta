@@ -115,6 +115,63 @@ describe("Auth Router - POST /auth/signup", () => {
     ).resolves.toBe(false);
   });
 
+  test("responds with status 400 when the email already has a password account", async () => {
+    const existing = createNewUserInput();
+    await prisma.user.create({
+      data: {
+        email: existing.email,
+        password: await bcrypt.hash(existing.password, 10),
+      },
+    });
+
+    const response = await request(app)
+      .post("/auth/signup")
+      .send(createNewUserInput({ email: existing.email }));
+    const responseBody = getResponseObject(response.body);
+
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["message"]).toBe(
+      "Signup failed: check your input and try again.",
+    );
+  });
+
+  test("allows signup for a GitHub-only account and attaches the password on confirmation", async () => {
+    const githubOnly = createNewUserInput();
+    const createdUser = await prisma.user.create({
+      data: {
+        email: githubOnly.email,
+        githubId: `github_${githubOnly.id}`,
+      },
+    });
+
+    const { newUser, token } = await signUpAndGetPendingToken(githubOnly.email);
+
+    const confirmResponse = await request(app).get(`/auth/confirm/${token}`);
+    expect(confirmResponse.status).toBe(200);
+
+    const users = await prisma.user.findMany({
+      where: { email: githubOnly.email },
+    });
+    expect(users).toHaveLength(1);
+    const user = users[0];
+    if (!user?.password) {
+      throw new Error("Expected the confirmed user to have a password.");
+    }
+    expect(user.id).toBe(createdUser.id);
+    expect(user.githubId).toBe(createdUser.githubId);
+    await expect(bcrypt.compare(newUser.password, user.password)).resolves.toBe(
+      true,
+    );
+
+    const loginResponse = await request
+      .agent(app)
+      .post("/auth/login")
+      .send({ email: newUser.email, password: newUser.password });
+    expect(loginResponse.status).toBe(200);
+  });
+
   test("responds with status 500 and removes pending signup when confirmation email sending fails", async () => {
     const newUser = createNewUserInput();
     vi.mocked(sendConfirmationEmail).mockResolvedValueOnce({
@@ -209,6 +266,65 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
       },
     });
     expect(pendingUserInDb).toBeNull();
+  });
+
+  test("attaches the password when a GitHub account claimed the email after signup", async () => {
+    const { newUser, token } = await signUpAndGetPendingToken();
+
+    const githubUser = await prisma.user.create({
+      data: {
+        email: newUser.email,
+        githubId: `github_${newUser.id}`,
+      },
+    });
+
+    const confirmResponse = await request(app).get(`/auth/confirm/${token}`);
+    expect(confirmResponse.status).toBe(200);
+
+    const users = await prisma.user.findMany({
+      where: { email: newUser.email },
+    });
+    expect(users).toHaveLength(1);
+    const user = users[0];
+    if (!user?.password) {
+      throw new Error("Expected the confirmed user to have a password.");
+    }
+    expect(user.id).toBe(githubUser.id);
+    await expect(bcrypt.compare(newUser.password, user.password)).resolves.toBe(
+      true,
+    );
+  });
+
+  test("responds with status 400 and consumes the token when the email gained a password account after signup", async () => {
+    const { newUser, token } = await signUpAndGetPendingToken();
+
+    const otherPassword = await bcrypt.hash("other_password_456", 10);
+    await prisma.user.create({
+      data: {
+        email: newUser.email,
+        password: otherPassword,
+      },
+    });
+
+    const confirmResponse = await request(app).get(`/auth/confirm/${token}`);
+    const responseBody = getResponseObject(confirmResponse.body);
+
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(confirmResponse.status).toBe(400);
+    expect(error["message"]).toBe(
+      "Email confirmation failed: this email is already registered. Log in instead.",
+    );
+
+    const pendingUsers = await prisma.pendingUser.findMany({
+      where: { email: newUser.email },
+    });
+    expect(pendingUsers).toHaveLength(0);
+
+    const user = await prisma.user.findUnique({
+      where: { email: newUser.email },
+    });
+    expect(user?.password).toBe(otherPassword);
   });
 
   test("responds with status 500 when confirmation processing fails unexpectedly", async () => {
