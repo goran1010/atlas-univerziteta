@@ -85,7 +85,7 @@ function FacultyDetailPage() {
     );
   }
 
-  const programsByCoycle = groupBy(faculty.studyPrograms, (sp) =>
+  const programsByCycle = groupBy(faculty.studyPrograms, (sp) =>
     t(`universitiesPage.cycles.${sp.cycle}`),
   );
 
@@ -158,7 +158,7 @@ function FacultyDetailPage() {
             </h2>
             {faculty.studyPrograms.length > 0 ? (
               <div className="flex flex-col gap-4">
-                {programsByCoycle.map((group) => (
+                {programsByCycle.map((group) => (
                   <ResultGroup
                     key={group.key}
                     label={group.key}

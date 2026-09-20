@@ -51,25 +51,25 @@ function Dialog({
         <div className="flex items-center gap-1 shrink-0">
           {headerActions}
           <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close"
-          className="p-1 rounded-md cursor-pointer transition-transform active:scale-90 text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
-        >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className="p-1 rounded-md cursor-pointer transition-transform active:scale-90 text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
           >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
           </button>
         </div>
       </div>

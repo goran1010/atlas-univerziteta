@@ -275,7 +275,7 @@ describe("UnifiedSearch", () => {
 
     await user.type(
       screen.getByRole("searchbox", { name: /Search/i }),
-      "xyznotfound",
+      "no-match-term",
     );
 
     act(() => {
