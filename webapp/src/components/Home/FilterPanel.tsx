@@ -119,7 +119,7 @@ function FilterPanel({
   cycleFilters: StudyCycle[];
   filtersOpen: boolean;
   onToggleFilters: () => void;
-  onFilterChange: (key: string, value: string | string[] | null) => void;
+  onFilterChange: (key: "entity" | "ownership", value: string | null) => void;
   onCycleChange: (value: string, checked: boolean) => void;
   t: (key: string) => string;
 }) {

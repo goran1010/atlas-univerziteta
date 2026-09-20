@@ -83,7 +83,8 @@ function StudyProgramResult({
     <ResultCard>
       <div
         onClick={(e) => {
-          if ((e.target as HTMLElement).closest("a, button")) return;
+          if (e.target instanceof Element && e.target.closest("a, button"))
+            return;
           void handleExpand();
         }}
         className="cursor-pointer"

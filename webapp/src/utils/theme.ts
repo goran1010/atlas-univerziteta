@@ -5,7 +5,7 @@ const THEME_STORAGE_KEY = "theme";
 const THEMES = ["system", "light", "dark"] as const;
 
 function isTheme(value: unknown): value is Theme {
-  return THEMES.includes(value as Theme);
+  return THEMES.some((theme) => theme === value);
 }
 
 /* The inline script in index.html mirrors this logic for the pre-paint

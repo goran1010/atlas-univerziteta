@@ -29,7 +29,8 @@ function FacultyRow({
     <li className="text-sm">
       <div
         onClick={(e) => {
-          if ((e.target as HTMLElement).closest("a, button")) return;
+          if (e.target instanceof Element && e.target.closest("a, button"))
+            return;
           if (hasStudyPrograms) setOpen((p) => !p);
         }}
         className={`py-1.5 px-0.5 sm:px-2 rounded-md transition-colors ${

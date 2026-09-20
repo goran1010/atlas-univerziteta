@@ -108,7 +108,8 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
       <div
         className="p-2 sm:p-4"
         onClick={(e) => {
-          if ((e.target as HTMLElement).closest("a, button")) return;
+          if (e.target instanceof Element && e.target.closest("a, button"))
+            return;
           void handleExpand();
         }}
       >

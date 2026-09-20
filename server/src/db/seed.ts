@@ -107,7 +107,7 @@ function parseUniversityFile(fileName: string): UniversitySeed {
     "utf-8",
   );
 
-  const raw = JSON.parse(jsonData) as unknown;
+  const raw: unknown = JSON.parse(jsonData);
 
   try {
     return universitySeedSchema.parse(raw);

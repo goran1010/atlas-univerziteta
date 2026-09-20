@@ -1,6 +1,14 @@
 import { defineConfig, devices } from "@playwright/test";
 import { E2E_SERVER_URL, E2E_WEBAPP_URL, e2eDatabaseUrl } from "./env";
 
+function definedProcessEnv(): Record<string, string> {
+  const env: Record<string, string> = {};
+  for (const [key, value] of Object.entries(process.env)) {
+    if (value !== undefined) env[key] = value;
+  }
+  return env;
+}
+
 export default defineConfig({
   testDir: "./tests",
   globalSetup: "./global-setup.ts",
@@ -30,7 +38,7 @@ export default defineConfig({
       reuseExistingServer: !process.env.CI,
       timeout: 60_000,
       env: {
-        ...(process.env as Record<string, string>),
+        ...definedProcessEnv(),
         DATABASE_URL: e2eDatabaseUrl(),
         PORT: "3100",
         SERVER_URL: E2E_SERVER_URL,
@@ -44,7 +52,7 @@ export default defineConfig({
       reuseExistingServer: !process.env.CI,
       timeout: 60_000,
       env: {
-        ...(process.env as Record<string, string>),
+        ...definedProcessEnv(),
         VITE_SERVER_URL: E2E_SERVER_URL,
       },
     },

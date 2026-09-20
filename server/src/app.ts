@@ -80,8 +80,8 @@ interface ClientHttpError extends Error {
 }
 
 function isClientHttpError(error: unknown): error is ClientHttpError {
-  if (!(error instanceof Error)) return false;
-  const status = (error as Partial<ClientHttpError>).status;
+  if (!(error instanceof Error) || !("status" in error)) return false;
+  const { status } = error;
   return typeof status === "number" && status >= 400 && status < 500;
 }
 

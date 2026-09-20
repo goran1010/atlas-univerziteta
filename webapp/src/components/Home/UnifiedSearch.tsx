@@ -16,9 +16,15 @@ import {
 } from "./utils/search";
 import { notificationMessageKey } from "../../utils/apiError";
 
+import {
+  entitySchema,
+  ownershipSchema,
+  studyCycleSchema,
+} from "../../schemas/domain";
+
 import type { UnifiedSearchResults } from "../../schemas/university";
 import type { UniversityListItem } from "../../schemas/university";
-import type { Entity, Ownership, StudyCycle } from "../../schemas/domain";
+import type { StudyCycle } from "../../schemas/domain";
 
 const SEARCH_DEBOUNCE_MS = 400;
 
@@ -44,10 +50,17 @@ function UnifiedSearch() {
   });
 
   const searchInput = searchParams.get("q") ?? "";
-  const entityFilter = (searchParams.get("entity") ?? "") as Entity | "";
-  const ownershipFilter = (searchParams.get("ownership") ?? "") as
-    Ownership | "";
-  const cycleFilters = searchParams.getAll("cycle") as StudyCycle[];
+  const entityParsed = entitySchema.safeParse(searchParams.get("entity"));
+  const entityFilter = entityParsed.success ? entityParsed.data : "";
+  const ownershipParsed = ownershipSchema.safeParse(
+    searchParams.get("ownership"),
+  );
+  const ownershipFilter = ownershipParsed.success ? ownershipParsed.data : "";
+  const cycleFilters = searchParams
+    .getAll("cycle")
+    .filter(
+      (value): value is StudyCycle => studyCycleSchema.safeParse(value).success,
+    );
 
   const hasFilters =
     entityFilter !== "" || ownershipFilter !== "" || cycleFilters.length > 0;
@@ -146,21 +159,21 @@ function UnifiedSearch() {
         cycle,
       });
     },
-    [executeSearch, loadDefaultBrowse],
+    [executeSearch],
   );
 
   useEffect(() => {
     if (initialLoadDone.current) return;
     initialLoadDone.current = true;
 
-    const q = searchParams.get("q") ?? "";
-    const entity = searchParams.get("entity") ?? "";
-    const ownership = searchParams.get("ownership") ?? "";
-    const cycle = searchParams.getAll("cycle");
-    const hasAnyParam = q.trim() || entity || ownership || cycle.length > 0;
+    const hasAnyParam =
+      searchInput.trim() ||
+      entityFilter ||
+      ownershipFilter ||
+      cycleFilters.length > 0;
 
     if (hasAnyParam) {
-      triggerSearch(q, entity, ownership, cycle); // eslint-disable-line react-hooks/set-state-in-effect
+      triggerSearch(searchInput, entityFilter, ownershipFilter, cycleFilters); // eslint-disable-line react-hooks/set-state-in-effect
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps
   }, []);
@@ -179,24 +192,24 @@ function UnifiedSearch() {
     }, SEARCH_DEBOUNCE_MS);
   }
 
-  function handleFilterChange(key: string, value: string | string[] | null) {
+  function handleFilterChange(
+    key: "entity" | "ownership",
+    value: string | null,
+  ) {
     updateParams({ [key]: value });
 
-    const nextEntity =
-      key === "entity" ? ((value as string | null) ?? "") : entityFilter;
-    const nextOwnership =
-      key === "ownership" ? ((value as string | null) ?? "") : ownershipFilter;
-    const nextCycle =
-      key === "cycle" ? ((value as string[] | null) ?? []) : cycleFilters;
+    const nextEntity = key === "entity" ? (value ?? "") : entityFilter;
+    const nextOwnership = key === "ownership" ? (value ?? "") : ownershipFilter;
 
-    triggerSearch(searchInput, nextEntity, nextOwnership, nextCycle);
+    triggerSearch(searchInput, nextEntity, nextOwnership, cycleFilters);
   }
 
   function handleCycleChange(value: string, checked: boolean) {
     const next = checked
       ? [...cycleFilters, value]
       : cycleFilters.filter((c) => c !== value);
-    handleFilterChange("cycle", next);
+    updateParams({ cycle: next });
+    triggerSearch(searchInput, entityFilter, ownershipFilter, next);
   }
 
   function handleClear() {
