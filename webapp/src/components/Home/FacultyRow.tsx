@@ -9,19 +9,14 @@ import { StudyProgramRow } from "./StudyProgramRow";
 import { groupBy } from "./utils/groupBy";
 
 import type { TFunction } from "../../types";
-import type {
-  UniversityDetail,
-  UniversityDetailFaculty,
-} from "../../schemas/university";
+import type { UniversityDetailFaculty } from "../../schemas/university";
 
 function FacultyRow({
   faculty,
   t,
-  university,
 }: {
   faculty: UniversityDetailFaculty;
   t: TFunction;
-  university?: UniversityDetail;
 }) {
   const [open, setOpen] = useState(false);
   const hasStudyPrograms = faculty.studyPrograms.length > 0;
@@ -106,8 +101,6 @@ function FacultyRow({
                     key={sp.id}
                     program={sp}
                     t={t}
-                    university={university}
-                    faculty={faculty}
                   />
                 ))}
               </ResultGroup>

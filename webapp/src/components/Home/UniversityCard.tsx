@@ -215,7 +215,6 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                               key={f.id}
                               faculty={f}
                               t={t}
-                              university={detailData}
                             />
                           ))}
                         </ResultGroup>
@@ -228,7 +227,6 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
                           key={f.id}
                           faculty={f}
                           t={t}
-                          university={detailData}
                         />
                       ))}
                     </ul>
