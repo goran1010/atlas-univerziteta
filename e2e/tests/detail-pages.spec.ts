@@ -75,8 +75,9 @@ test.describe("detail pages", () => {
     page,
   }) => {
     await page.goto("/search?ownership=PUBLIC");
+    // filter-only search returns a large payload; slow under parallel workers
     await expect(
       page.getByRole("main").getByRole("listitem").first(),
-    ).toBeVisible({ timeout: 5000 });
+    ).toBeVisible({ timeout: 15000 });
   });
 });

@@ -47,7 +47,6 @@ test("contribution approval round-trip", async ({ browser }) => {
 
   await adminPage.goto("/search");
   await adminPage.getByRole("searchbox", { name: "Search" }).fill(suffix);
-  await adminPage.getByRole("button", { name: "Search", exact: true }).click();
   await expect(adminPage.getByText(universityName)).toBeVisible();
   await adminContext.close();
 });
