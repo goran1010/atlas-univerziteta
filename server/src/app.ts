@@ -24,6 +24,7 @@ import { logger } from "./utils/logger.js";
 import { sendError } from "./utils/response.js";
 
 import { apiRouter } from "./routes/apiRouter.js";
+import * as apiController from "./controllers/apiController.js";
 import { authRouter } from "./routes/authRouter.js";
 import { usersRouter } from "./routes/usersRouter.js";
 import { healthRouter } from "./routes/healthRouter.js";
@@ -44,6 +45,7 @@ app.use(helmet());
 app.use(compression());
 
 // Public routes
+app.get("/", cors(), apiController.root);
 app.use("/health", cors(), healthRouter);
 app.use("/api", cors(), rateLimiter.api, apiRouter);
 
