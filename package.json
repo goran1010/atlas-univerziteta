@@ -30,6 +30,7 @@
     "format:check:server": "cd server && npm run format:check",
     "format:check:webapp": "cd webapp && npm run format:check",
     "format:check:e2e": "cd e2e && npm run format:check",
+    "spell": "cspell --no-progress --config .cspell.json",
     "lint:all": "npm run lint:server && npm run lint:webapp && npm run lint:e2e",
     "lint:server": "cd server && npm run lint",
     "lint:webapp": "cd webapp && npm run lint",
@@ -57,6 +58,9 @@
     "concurrently": "^9.2.1"
   },
   "devDependencies": {
+    "@cspell/dict-hr-hr": "^3.1.2",
+    "@cspell/dict-sr-latn": "^1.0.8",
+    "cspell": "^10.3.3",
     "pino-pretty": "^13.1.3"
   }
 }

@@ -39,8 +39,18 @@ jobs:
     runs-on: ubuntu-latest
     name: Run spell check
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v6
 
-      - uses: streetsidesoftware/cspell-action@v8
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v6
         with:
-          config: ".cspell.json"
+          node-version: 24
+          cache: npm
+
+      # root install only - cspell and its dictionaries are root devDependencies
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run spell check
+        run: npm run spell
