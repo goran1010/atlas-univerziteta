@@ -422,7 +422,11 @@
     "filterEntity": "Entitet",
     "filterOwnership": "Vlasništvo",
     "filterCycle": "Ciklus studija",
-    "all": "Svi"
+    "all": "Svi",
+    "openFullPage": "Otvori cijelu stranicu",
+    "shareLink": "Podijeli link",
+    "linkCopied": "Link kopiran u clipboard.",
+    "linkCopyFailed": "Nije moguće kopirati link."
   },
   "access": {
     "goToLogin": "Prijavi se",

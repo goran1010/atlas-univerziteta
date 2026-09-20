@@ -5,10 +5,18 @@ interface DialogProps {
   onClose: () => void;
   title: string;
   children: ReactNode;
+  headerActions?: ReactNode;
   footer?: ReactNode;
 }
 
-function Dialog({ open, onClose, title, children, footer }: DialogProps) {
+function Dialog({
+  open,
+  onClose,
+  title,
+  children,
+  headerActions,
+  footer,
+}: DialogProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -36,11 +44,13 @@ function Dialog({ open, onClose, title, children, footer }: DialogProps) {
       ref={dialogRef}
       onClose={onClose}
       onClick={handleBackdropClick}
-      className="m-auto backdrop:bg-black/50 backdrop:backdrop-blur-sm rounded-2xl border border-(--border-color) bg-(--surface-2) text-(--text-primary) shadow-(--card-shadow) p-0 w-[min(95vw,40rem)] max-h-[85vh] overflow-y-auto"
+      className="m-auto backdrop:bg-black/50 backdrop:backdrop-blur-sm backdrop:cursor-pointer rounded-2xl border border-(--border-color) bg-(--surface-2) text-(--text-primary) shadow-(--card-shadow) p-0 w-[min(95vw,40rem)] max-h-[85vh] overflow-y-auto cursor-default"
     >
       <div className="sticky top-0 flex items-center justify-between p-3 border-b border-(--border-color) bg-(--surface-2) z-10">
-        <h2 className="text-sm font-semibold">{title}</h2>
-        <button
+        <h2 className="text-sm font-semibold min-w-0 truncate">{title}</h2>
+        <div className="flex items-center gap-1 shrink-0">
+          {headerActions}
+          <button
           type="button"
           onClick={onClose}
           aria-label="Close"
@@ -60,7 +70,8 @@ function Dialog({ open, onClose, title, children, footer }: DialogProps) {
             <line x1="18" y1="6" x2="6" y2="18" />
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
-        </button>
+          </button>
+        </div>
       </div>
       <div className="p-3">{children}</div>
       {footer && (

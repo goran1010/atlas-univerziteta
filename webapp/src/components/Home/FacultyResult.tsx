@@ -4,8 +4,10 @@ import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { ResultCard } from "./ResultCard";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
-import { LinkButton } from "../sharedComponents/LinkButton";
+import { Button } from "../sharedComponents/Button";
+import { Dialog } from "../sharedComponents/Dialog";
 import { ContactLinks } from "./ContactLinks";
+import { ShareButton } from "./ShareButton";
 import { StudyProgramRow } from "./StudyProgramRow";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
@@ -26,6 +28,7 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<FacultyDetail>();
   const [loadingDetail, setLoadingDetail] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   async function handleExpand() {
     if (expanded) {
@@ -84,7 +87,7 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
         <p className="font-bold">
           <Link
             to={`/faculties/${faculty.id.toString()}`}
-            className="text-(--text-primary) hover:text-(--accent-text) transition-colors underline-offset-2 hover:underline"
+            className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             {faculty.name}
           </Link>
@@ -103,12 +106,15 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
         </div>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
-        <LinkButton
-          to={`/faculties/${faculty.id.toString()}`}
-          className="px-3 py-1.5 text-xs border-(--border-color) bg-(--surface-1) shadow-(--card-shadow-soft)"
+        <Button
+          variant="secondary"
+          className="px-3 py-1.5 text-xs"
+          onClick={() => {
+            setDialogOpen(true);
+          }}
         >
           {t("universitiesPage.viewInfo")}
-        </LinkButton>
+        </Button>
         <DetailsToggleButton
           expanded={expanded}
           className="px-3 py-1.5 text-xs"
@@ -118,6 +124,42 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
           loading={loadingDetail}
         />
       </div>
+      <Dialog
+        open={dialogOpen}
+        onClose={() => {
+          setDialogOpen(false);
+        }}
+        title={faculty.name}
+        headerActions={
+          <ShareButton
+            url={`/faculties/${faculty.id.toString()}`}
+            t={t}
+            addNotification={addNotification}
+          />
+        }
+      >
+        <div className="flex flex-col gap-3">
+          {faculty.city && (
+            <p className="text-sm text-(--text-secondary)">
+              <MapPinIcon /> {faculty.city}
+            </p>
+          )}
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
+            <ContactLinks website={faculty.website} />
+          </div>
+          <div className="flex justify-center">
+            <Link
+              to={`/faculties/${faculty.id.toString()}`}
+              className="inline-flex items-center justify-center border border-(--border-color) rounded-lg px-4 py-2 text-sm font-medium text-(--text-primary) hover:bg-(--hover-surface) transition-colors"
+              onClick={() => {
+                setDialogOpen(false);
+              }}
+            >
+              {t("universitiesPage.openFullPage")}
+            </Link>
+          </div>
+        </div>
+      </Dialog>
       {expanded && detailData && (
         <div
           className="mt-3 border-t border-(--border-color) pt-3"

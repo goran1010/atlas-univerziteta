@@ -5,7 +5,6 @@ import { RootContext } from "../../contextData/RootContext";
 import { ResultCard } from "./ResultCard";
 import { FacultyBreadcrumb } from "./FacultyBreadcrumb";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
-import { LinkButton } from "../sharedComponents/LinkButton";
 import { TrackRow } from "./TrackRow";
 import { Spinner } from "../sharedComponents/Spinner";
 import { SERVER_URL } from "../../utils/envConfig";
@@ -92,7 +91,7 @@ function StudyProgramResult({
         <p className="font-bold">
           <Link
             to={`/faculties/${program.faculty.id.toString()}`}
-            className="text-(--text-primary) hover:text-(--accent-text) transition-colors underline-offset-2 hover:underline"
+            className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             {program.name}
           </Link>
@@ -110,13 +109,7 @@ function StudyProgramResult({
         </div>
         <FacultyBreadcrumb faculty={program.faculty} />
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
-        <LinkButton
-          to={`/faculties/${program.faculty.id.toString()}`}
-          className="px-3 py-1.5 text-xs border-(--border-color) bg-(--surface-1) shadow-(--card-shadow-soft)"
-        >
-          {t("universitiesPage.viewInfo")}
-        </LinkButton>
+      <div className="flex justify-center mt-2">
         <DetailsToggleButton
           expanded={expanded}
           className="px-3 py-1.5 text-xs"

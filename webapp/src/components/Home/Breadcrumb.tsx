@@ -16,7 +16,7 @@ function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
             {item.to ? (
               <Link
                 to={item.to}
-                className="hover:text-(--accent-text) transition-colors underline underline-offset-2"
+                className="underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 {item.label}
               </Link>

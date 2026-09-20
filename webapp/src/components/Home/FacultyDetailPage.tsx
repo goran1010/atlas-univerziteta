@@ -120,7 +120,7 @@ function FacultyDetailPage() {
             <p className="text-sm text-(--text-secondary) mt-1">
               <Link
                 to={`/universities/${faculty.university.id.toString()}`}
-                className="hover:text-(--accent-text) transition-colors underline-offset-2 hover:underline"
+                className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 {faculty.university.name}
                 {faculty.university.acronym &&

@@ -422,7 +422,11 @@
     "filterEntity": "Entity",
     "filterOwnership": "Ownership",
     "filterCycle": "Study cycle",
-    "all": "All"
+    "all": "All",
+    "openFullPage": "Open full page",
+    "shareLink": "Share link",
+    "linkCopied": "Link copied to clipboard.",
+    "linkCopyFailed": "Could not copy link."
   },
   "access": {
     "goToLogin": "Log In",

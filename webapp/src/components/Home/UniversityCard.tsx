@@ -8,11 +8,13 @@ import { useState, use } from "react";
 import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
-import { LinkButton } from "../sharedComponents/LinkButton";
+import { Button } from "../sharedComponents/Button";
+import { Dialog } from "../sharedComponents/Dialog";
 import { Spinner } from "../sharedComponents/Spinner";
 import { tCount } from "../../utils/pluralize";
 import { ContactLinks } from "./ContactLinks";
 import { FacultyRow } from "./FacultyRow";
+import { ShareButton } from "./ShareButton";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
 import { SERVER_URL } from "../../utils/envConfig";
@@ -30,6 +32,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<UniversityDetail>();
   const [loadingDetail, setLoadingDetail] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   async function handleExpand() {
     if (expanded) {
@@ -113,7 +116,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
           <h2 className="font-bold text-base leading-snug">
             <Link
               to={`/universities/${university.id.toString()}`}
-              className="text-(--text-primary) hover:text-(--accent-text) transition-colors underline-offset-2 hover:underline"
+              className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               {university.name}
             </Link>
@@ -170,12 +173,15 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
-          <LinkButton
-            to={`/universities/${university.id.toString()}`}
-            className="px-3 py-1.5 text-xs border-(--border-color) bg-(--surface-1) shadow-(--card-shadow-soft)"
+          <Button
+            variant="secondary"
+            className="px-3 py-1.5 text-xs"
+            onClick={() => {
+              setDialogOpen(true);
+            }}
           >
             {t("universitiesPage.viewInfo")}
-          </LinkButton>
+          </Button>
           <DetailsToggleButton
             expanded={expanded}
             className="px-3 py-1.5 text-xs"
@@ -185,6 +191,75 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
             loading={loadingDetail}
           />
         </div>
+        <Dialog
+          open={dialogOpen}
+          onClose={() => {
+            setDialogOpen(false);
+          }}
+          title={university.name}
+          headerActions={
+            <ShareButton
+              url={`/universities/${university.id.toString()}`}
+              t={t}
+              addNotification={addNotification}
+            />
+          }
+        >
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-secondary)">
+              <span>
+                <MapPinIcon /> {university.city}
+              </span>
+              <span>
+                <TagIcon /> {entityLabel}
+              </span>
+              <span
+                className={`px-1.5 py-0.5 rounded text-xs font-medium ${
+                  university.ownership === "PUBLIC"
+                    ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200"
+                    : "bg-(--surface-alt) text-(--text-secondary)"
+                }`}
+              >
+                {t(`universitiesPage.ownership.${university.ownership}`)}
+              </span>
+              {university.foundedYear && (
+                <span>
+                  <CalendarIcon /> {university.foundedYear}
+                </span>
+              )}
+            </div>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
+              <ContactLinks
+                website={university.website}
+                address={university.address}
+                phone={university.phone}
+                email={university.email}
+              />
+            </div>
+            <p className="text-sm text-(--text-muted)">
+              <BuildingIcon />{" "}
+              <span className="font-bold text-blue-600 dark:text-blue-400">
+                {university._count.faculties}
+              </span>{" "}
+              {tCount(
+                t,
+                "universitiesPage.facultyCount",
+                university._count.faculties,
+              )}
+            </p>
+            <div className="flex justify-center">
+              <Link
+                to={`/universities/${university.id.toString()}`}
+                className="inline-flex items-center justify-center border border-(--border-color) rounded-lg px-4 py-2 text-sm font-medium text-(--text-primary) hover:bg-(--hover-surface) transition-colors"
+                onClick={() => {
+                  setDialogOpen(false);
+                }}
+              >
+                {t("universitiesPage.openFullPage")}
+              </Link>
+            </div>
+          </div>
+        </Dialog>
 
         {expanded && detailData && (
           <div

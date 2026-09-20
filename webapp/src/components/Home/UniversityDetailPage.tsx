@@ -167,7 +167,7 @@ function UniversityDetailPage() {
                   >
                     <Link
                       to={`/faculties/${faculty.id.toString()}`}
-                      className="font-semibold text-(--text-primary) hover:text-(--accent-text) transition-colors underline-offset-2 hover:underline"
+                      className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       {faculty.name}
                     </Link>
