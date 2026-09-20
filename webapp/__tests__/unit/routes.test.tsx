@@ -55,18 +55,15 @@ describe("Loading components when visiting an address", () => {
     expect(heading).not.toBeNull();
   });
 
-  test.each(["/home"])(
-    "redirects %s to the home page",
-    async (route) => {
-      renderRoute(route);
+  test.each(["/home"])("redirects %s to the home page", async (route) => {
+    renderRoute(route);
 
-      const heading = await screen.findByRole("heading", {
-        name: /Find programs and universities/i,
-        level: 1,
-      });
-      expect(heading).not.toBeNull();
-    },
-  );
+    const heading = await screen.findByRole("heading", {
+      name: /Find programs and universities/i,
+      level: 1,
+    });
+    expect(heading).not.toBeNull();
+  });
 
   test("visit about page", async () => {
     renderRoute("/about");

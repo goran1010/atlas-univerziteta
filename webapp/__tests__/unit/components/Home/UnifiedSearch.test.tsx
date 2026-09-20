@@ -182,15 +182,14 @@ describe("UnifiedSearch", () => {
   });
 
   test("debounced search triggers after typing and renders results", async () => {
-    vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(
-        searchResponse({
-          universities: [universityResult],
-          faculties: [facultyResult],
-          studyPrograms: [studyProgramResult],
-          tracks: [trackResult],
-        }),
-      );
+    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
+      searchResponse({
+        universities: [universityResult],
+        faculties: [facultyResult],
+        studyPrograms: [studyProgramResult],
+        tracks: [trackResult],
+      }),
+    );
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
@@ -239,8 +238,9 @@ describe("UnifiedSearch", () => {
   });
 
   test("shows the faculty city in faculty results", async () => {
-    vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(searchResponse({ faculties: [facultyResult] }));
+    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
+      searchResponse({ faculties: [facultyResult] }),
+    );
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
@@ -261,13 +261,12 @@ describe("UnifiedSearch", () => {
   });
 
   test("renders combined no results message on 404", async () => {
-    vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(
-        new Response(JSON.stringify({ error: { message: "Not found" } }), {
-          status: 404,
-          headers: { "Content-Type": "application/json" },
-        }),
-      );
+    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
+      new Response(JSON.stringify({ error: { message: "Not found" } }), {
+        status: 404,
+        headers: { "Content-Type": "application/json" },
+      }),
+    );
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
@@ -288,13 +287,12 @@ describe("UnifiedSearch", () => {
   });
 
   test("shows translated error on non-404 non-ok response", async () => {
-    vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(
-        new Response(
-          JSON.stringify({ error: { message: "Search exploded." } }),
-          { status: 500, headers: { "Content-Type": "application/json" } },
-        ),
-      );
+    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
+      new Response(JSON.stringify({ error: { message: "Search exploded." } }), {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      }),
+    );
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
@@ -317,8 +315,7 @@ describe("UnifiedSearch", () => {
   });
 
   test("shows fallback message on thrown request", async () => {
-    vi.spyOn(globalThis, "fetch")
-      .mockRejectedValueOnce(new Error("network"));
+    vi.spyOn(globalThis, "fetch").mockRejectedValueOnce(new Error("network"));
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
@@ -341,15 +338,14 @@ describe("UnifiedSearch", () => {
   });
 
   test("shows error notification when a successful response has an invalid payload", async () => {
-    vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(
-        new Response(
-          JSON.stringify({
-            message: "Search results retrieved successfully.",
-          }),
-          { status: 200, headers: { "Content-Type": "application/json" } },
-        ),
-      );
+    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
+      new Response(
+        JSON.stringify({
+          message: "Search results retrieved successfully.",
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } },
+      ),
+    );
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);

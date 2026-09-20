@@ -56,7 +56,7 @@ const searchQuerySchema = z
       ),
   })
   .refine(
-    (data) => data.searchTerm || data.entity || data.ownership || data.cycle,
+    (data) => data.searchTerm ?? data.entity ?? data.ownership ?? data.cycle,
     {
       message:
         "Provide a search term or at least one filter (entity, ownership, cycle).",
