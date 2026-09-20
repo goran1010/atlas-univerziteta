@@ -36,7 +36,7 @@ function Button({
 
   const variantClass = variantClasses[variant] || variantClasses.primary;
   const baseClassName =
-    "w-full relative inline-flex items-center justify-center rounded-md p-2 text-sm font-semibold cursor-pointer transition-all duration-150 enabled:active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)";
+    "relative inline-flex items-center justify-center rounded-md p-2 text-sm font-semibold cursor-pointer transition-all duration-150 enabled:active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)";
 
   return (
     <button

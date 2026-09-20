@@ -1,4 +1,5 @@
-import { useState, type ReactNode } from "react";
+import { useState, use, type ReactNode } from "react";
+import { RootContext } from "../../contextData/RootContext";
 import { ChevronDownIcon, SearchIcon } from "../sharedComponents/icons";
 import { UniversityCard } from "./UniversityCard";
 import { FacultyResult } from "./FacultyResult";
@@ -23,23 +24,11 @@ function ResultSection({
   children: ReactNode;
 }) {
   const [collapsed, setCollapsed] = useState(false);
+  const { t } = use(RootContext);
 
   return (
-    <section className="w-full flex flex-col gap-2">
-      <button
-        type="button"
-        onClick={() => {
-          if (!isEmpty) setCollapsed((prev) => !prev);
-        }}
-        className={`flex items-center gap-2 text-left w-full ${isEmpty ? "" : "cursor-pointer"}`}
-      >
-        {!isEmpty && (
-          <ChevronDownIcon
-            className={`text-xs text-(--text-muted) transition-transform ${
-              collapsed ? "-rotate-90" : ""
-            }`}
-          />
-        )}
+    <section className="w-full flex flex-col gap-2 border border-(--border-color) rounded-lg p-3">
+      <div className="flex items-center justify-between w-full">
         <h2 className="text-lg font-semibold text-(--text-primary)">
           {heading}
           {!isEmpty && (
@@ -48,7 +37,23 @@ function ResultSection({
             </span>
           )}
         </h2>
-      </button>
+        {!isEmpty && (
+          <button
+            type="button"
+            onClick={() => {
+              setCollapsed((prev) => !prev);
+            }}
+            className="flex items-center gap-1 px-2 py-1 text-xs font-medium text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--hover-surface) rounded-md cursor-pointer transition-colors"
+          >
+            <ChevronDownIcon
+              className={`text-[10px] transition-transform ${collapsed ? "-rotate-90" : ""}`}
+            />
+            {collapsed
+              ? t("universitiesPage.expand")
+              : t("universitiesPage.collapse")}
+          </button>
+        )}
+      </div>
       {isEmpty ? (
         <p className="text-(--text-muted)">{emptyMessage}</p>
       ) : (

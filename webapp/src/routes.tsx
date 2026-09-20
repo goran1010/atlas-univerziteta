@@ -4,6 +4,8 @@ import { ErrorPage } from "./components/ErrorPage";
 import { About } from "./components/About/About";
 import { HomeLayout } from "./components/Home/HomeLayout";
 import { UnifiedSearch } from "./components/Home/UnifiedSearch";
+import { UniversityDetailPage } from "./components/Home/UniversityDetailPage";
+import { FacultyDetailPage } from "./components/Home/FacultyDetailPage";
 import { LogIn } from "./components/LogIn/LogIn";
 import { SignUp } from "./components/SignUp/SignUp";
 import { ContributionDashboard } from "./components/ContributionDashboard/ContributionDashboard";
@@ -33,8 +35,12 @@ const routes = [
         path: "home",
       },
       {
-        element: <Navigate to="/search" replace />,
-        path: "universities",
+        element: <UniversityDetailPage />,
+        path: "universities/:id",
+      },
+      {
+        element: <FacultyDetailPage />,
+        path: "faculties/:id",
       },
       {
         element: <About />,

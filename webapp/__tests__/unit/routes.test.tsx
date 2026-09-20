@@ -55,7 +55,7 @@ describe("Loading components when visiting an address", () => {
     expect(heading).not.toBeNull();
   });
 
-  test.each(["/universities", "/home"])(
+  test.each(["/home"])(
     "redirects %s to the home page",
     async (route) => {
       renderRoute(route);

@@ -1,9 +1,11 @@
 import { AwardIcon, GraduationCapIcon } from "../sharedComponents/icons";
 import { useState, use } from "react";
+import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { ResultCard } from "./ResultCard";
 import { FacultyBreadcrumb } from "./FacultyBreadcrumb";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { TrackRow } from "./TrackRow";
 import { Spinner } from "../sharedComponents/Spinner";
 import { SERVER_URL } from "../../utils/envConfig";
@@ -85,26 +87,39 @@ function StudyProgramResult({
           if ((e.target as HTMLElement).closest("a, button")) return;
           void handleExpand();
         }}
-        className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 rounded-md transition-colors cursor-pointer hover:bg-(--hover-surface)"
+        className="cursor-pointer"
       >
-        <div className="min-w-0">
-          <p className="font-bold text-(--text-primary)">{program.name}</p>
-          <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5 text-sm text-(--text-secondary)">
+        <p className="font-bold">
+          <Link
+            to={`/faculties/${program.faculty.id.toString()}`}
+            className="text-(--text-primary) hover:text-(--accent-text) transition-colors underline-offset-2 hover:underline"
+          >
+            {program.name}
+          </Link>
+        </p>
+        <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5 text-sm text-(--text-secondary)">
+          <span>
+            <GraduationCapIcon />{" "}
+            {t(`universitiesPage.cycles.${program.cycle}`)}
+          </span>
+          {program.ects != null && (
             <span>
-              <GraduationCapIcon />{" "}
-              {t(`universitiesPage.cycles.${program.cycle}`)}
+              <AwardIcon /> {program.ects} {t("universitiesPage.ects")}
             </span>
-            {program.ects != null && (
-              <span>
-                <AwardIcon /> {program.ects} {t("universitiesPage.ects")}
-              </span>
-            )}
-          </div>
-          <FacultyBreadcrumb faculty={program.faculty} />
+          )}
         </div>
+        <FacultyBreadcrumb faculty={program.faculty} />
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
+        <LinkButton
+          to={`/faculties/${program.faculty.id.toString()}`}
+          className="px-3 py-1.5 text-xs border-(--border-color) bg-(--surface-1) shadow-(--card-shadow-soft)"
+        >
+          {t("universitiesPage.viewInfo")}
+        </LinkButton>
         <DetailsToggleButton
           expanded={expanded}
-          className="w-full sm:w-auto px-3 py-1.5 text-xs shrink-0 sm:max-w-36"
+          className="px-3 py-1.5 text-xs"
           onClick={() => {
             void handleExpand();
           }}
@@ -112,7 +127,12 @@ function StudyProgramResult({
         />
       </div>
       {expanded && detailData && (
-        <div className="mt-3 border-t border-(--border-color) pt-3">
+        <div
+          className="mt-3 border-t border-(--border-color) pt-3"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           {detailData.tracks.length > 0 ? (
             <>
               <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">

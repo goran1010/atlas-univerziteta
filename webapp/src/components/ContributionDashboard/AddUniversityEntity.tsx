@@ -484,7 +484,7 @@ function AddUniversityEntity({
               : "danger"
         }
         loading={loading}
-        className="max-w-xs self-center"
+        className="w-full max-w-xs self-center"
       >
         {t("contribution.submitSuggestion")}
       </Button>

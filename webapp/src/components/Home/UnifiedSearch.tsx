@@ -136,7 +136,7 @@ function UnifiedSearch() {
       if (hasText && trimmed.length < 2) return;
 
       if (!hasText && !hasAnyFilter) {
-        void loadDefaultBrowse();
+        setView({ kind: "idle" });
         return;
       }
 
@@ -161,8 +161,6 @@ function UnifiedSearch() {
 
     if (hasAnyParam) {
       triggerSearch(q, entity, ownership, cycle); // eslint-disable-line react-hooks/set-state-in-effect
-    } else {
-      void loadDefaultBrowse();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps
   }, []);
@@ -211,7 +209,7 @@ function UnifiedSearch() {
   function handleClearAll() {
     clearTimeout(debounceRef.current);
     setSearchParams(new URLSearchParams(), { replace: true });
-    void loadDefaultBrowse();
+    setView({ kind: "idle" });
   }
 
   return (
@@ -276,6 +274,16 @@ function UnifiedSearch() {
 
       {loading && view.kind === "idle" ? (
         <Spinner />
+      ) : view.kind === "idle" ? (
+        <Button
+          variant="secondary"
+          className="px-6 py-2.5"
+          onClick={() => {
+            void loadDefaultBrowse();
+          }}
+        >
+          {t("universitiesPage.browseAll")}
+        </Button>
       ) : view.kind === "browse" ? (
         view.universities.length === 0 ? (
           <div className="flex flex-col items-center gap-2 py-8 text-(--text-muted)">
@@ -300,9 +308,9 @@ function UnifiedSearch() {
             ))}
           </div>
         )
-      ) : view.kind === "search" ? (
+      ) : (
         <SearchResults results={view.results} t={t} />
-      ) : null}
+      )}
     </div>
   );
 }

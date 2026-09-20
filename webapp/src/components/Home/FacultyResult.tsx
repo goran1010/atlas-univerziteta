@@ -1,8 +1,10 @@
 import { LandmarkIcon, MapPinIcon } from "../sharedComponents/icons";
 import { useState, use } from "react";
+import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { ResultCard } from "./ResultCard";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { ContactLinks } from "./ContactLinks";
 import { StudyProgramRow } from "./StudyProgramRow";
 import { ResultGroup } from "./ResultGroup";
@@ -77,26 +79,39 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
           if ((e.target as HTMLElement).closest("a, button")) return;
           void handleExpand();
         }}
-        className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 rounded-md transition-colors cursor-pointer hover:bg-(--hover-surface)"
+        className="cursor-pointer"
       >
-        <div className="min-w-0">
-          <p className="font-bold text-(--text-primary)">{faculty.name}</p>
-          <p className="text-sm text-(--text-muted) mt-0.5">
-            <LandmarkIcon /> {faculty.university.name}
-            {faculty.university.acronym && ` (${faculty.university.acronym})`}
+        <p className="font-bold">
+          <Link
+            to={`/faculties/${faculty.id.toString()}`}
+            className="text-(--text-primary) hover:text-(--accent-text) transition-colors underline-offset-2 hover:underline"
+          >
+            {faculty.name}
+          </Link>
+        </p>
+        <p className="text-sm text-(--text-muted) mt-0.5">
+          <LandmarkIcon /> {faculty.university.name}
+          {faculty.university.acronym && ` (${faculty.university.acronym})`}
+        </p>
+        {faculty.city && (
+          <p className="text-sm text-(--text-secondary) mt-0.5">
+            <MapPinIcon /> {faculty.city}
           </p>
-          {faculty.city && (
-            <p className="text-sm text-(--text-secondary) mt-0.5">
-              <MapPinIcon /> {faculty.city}
-            </p>
-          )}
-          <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
-            <ContactLinks website={faculty.website} />
-          </div>
+        )}
+        <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
+          <ContactLinks website={faculty.website} />
         </div>
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
+        <LinkButton
+          to={`/faculties/${faculty.id.toString()}`}
+          className="px-3 py-1.5 text-xs border-(--border-color) bg-(--surface-1) shadow-(--card-shadow-soft)"
+        >
+          {t("universitiesPage.viewInfo")}
+        </LinkButton>
         <DetailsToggleButton
           expanded={expanded}
-          className="w-full sm:w-auto px-3 py-1.5 text-xs shrink-0 sm:max-w-36"
+          className="px-3 py-1.5 text-xs"
           onClick={() => {
             void handleExpand();
           }}
@@ -104,7 +119,12 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
         />
       </div>
       {expanded && detailData && (
-        <div className="mt-3 border-t border-(--border-color) pt-3">
+        <div
+          className="mt-3 border-t border-(--border-color) pt-3"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           {detailData.studyPrograms.length > 0 ? (
             <>
               <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">

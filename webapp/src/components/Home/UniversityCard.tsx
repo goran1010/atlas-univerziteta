@@ -5,8 +5,10 @@ import {
   TagIcon,
 } from "../sharedComponents/icons";
 import { useState, use } from "react";
+import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { Spinner } from "../sharedComponents/Spinner";
 import { tCount } from "../../utils/pluralize";
 import { ContactLinks } from "./ContactLinks";
@@ -99,73 +101,84 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
     : [];
 
   return (
-    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) hover:bg-(--hover-surface) transition-colors">
-      <div className="p-2 sm:p-4">
-        <div
-          onClick={(e) => {
-            if ((e.target as HTMLElement).closest("a, button")) return;
-            void handleExpand();
-          }}
-          className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 cursor-pointer"
-        >
-          <div className="min-w-0">
-            <h2 className="font-bold text-base text-(--text-primary) leading-snug">
+    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) hover:bg-(--hover-surface) transition-colors cursor-pointer">
+      <div
+        className="p-2 sm:p-4"
+        onClick={(e) => {
+          if ((e.target as HTMLElement).closest("a, button")) return;
+          void handleExpand();
+        }}
+      >
+        <div>
+          <h2 className="font-bold text-base leading-snug">
+            <Link
+              to={`/universities/${university.id.toString()}`}
+              className="text-(--text-primary) hover:text-(--accent-text) transition-colors underline-offset-2 hover:underline"
+            >
               {university.name}
-              {university.acronym && (
-                <span className="ml-2 text-sm font-normal text-(--text-muted)">
-                  ({university.acronym})
-                </span>
-              )}
-            </h2>
-            <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
+            </Link>
+            {university.acronym && (
+              <span className="ml-2 text-sm font-normal text-(--text-muted)">
+                ({university.acronym})
+              </span>
+            )}
+          </h2>
+          <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
+            <span>
+              <MapPinIcon /> {university.city}
+            </span>
+            <span>
+              <TagIcon /> {entityLabel}
+            </span>
+            <span
+              className={`px-1.5 py-0.5 rounded text-xs font-medium ${
+                university.ownership === "PUBLIC"
+                  ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200"
+                  : "bg-(--surface-alt) text-(--text-secondary)"
+              }`}
+            >
+              {university.ownership === "PUBLIC"
+                ? t(`universitiesPage.ownership.PUBLIC`)
+                : t(`universitiesPage.ownership.PRIVATE`)}
+            </span>
+            {university._count.faculties > 0 && (
               <span>
-                <MapPinIcon /> {university.city}
+                <BuildingIcon />{" "}
+                <span className="font-bold text-blue-600 dark:text-blue-400">
+                  {university._count.faculties}
+                </span>{" "}
+                {tCount(
+                  t,
+                  "universitiesPage.facultyCount",
+                  university._count.faculties,
+                )}
               </span>
+            )}
+            {university.foundedYear && (
               <span>
-                <TagIcon /> {entityLabel}
+                <CalendarIcon /> {university.foundedYear}
               </span>
-              <span
-                className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-                  university.ownership === "PUBLIC"
-                    ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200"
-                    : "bg-(--surface-alt) text-(--text-secondary)"
-                }`}
-              >
-                {university.ownership === "PUBLIC"
-                  ? t(`universitiesPage.ownership.PUBLIC`)
-                  : t(`universitiesPage.ownership.PRIVATE`)}
-              </span>
-              {university._count.faculties > 0 && (
-                <span>
-                  <BuildingIcon />{" "}
-                  <span className="font-bold text-blue-600 dark:text-blue-400">
-                    {university._count.faculties}
-                  </span>{" "}
-                  {tCount(
-                    t,
-                    "universitiesPage.facultyCount",
-                    university._count.faculties,
-                  )}
-                </span>
-              )}
-              {university.foundedYear && (
-                <span>
-                  <CalendarIcon /> {university.foundedYear}
-                </span>
-              )}
-            </div>
-            <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-1">
-              <ContactLinks
-                website={university.website}
-                address={university.address}
-                phone={university.phone}
-                email={university.email}
-              />
-            </div>
+            )}
           </div>
+          <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-1">
+            <ContactLinks
+              website={university.website}
+              address={university.address}
+              phone={university.phone}
+              email={university.email}
+            />
+          </div>
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
+          <LinkButton
+            to={`/universities/${university.id.toString()}`}
+            className="px-3 py-1.5 text-xs border-(--border-color) bg-(--surface-1) shadow-(--card-shadow-soft)"
+          >
+            {t("universitiesPage.viewInfo")}
+          </LinkButton>
           <DetailsToggleButton
             expanded={expanded}
-            className="w-full sm:w-auto px-3 py-1.5 text-xs shrink-0 sm:max-w-36"
+            className="px-3 py-1.5 text-xs"
             onClick={() => {
               void handleExpand();
             }}
@@ -174,7 +187,12 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
         </div>
 
         {expanded && detailData && (
-          <div className="mt-3 border-t border-(--border-color) pt-3">
+          <div
+            className="mt-3 border-t border-(--border-color) pt-3"
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
             {detailData.faculties.length > 0 ? (
               <>
                 <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">

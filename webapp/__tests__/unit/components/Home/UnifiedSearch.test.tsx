@@ -156,10 +156,17 @@ describe("UnifiedSearch", () => {
     vi.restoreAllMocks();
   });
 
-  test("loads universities on mount and shows default browse view", async () => {
+  test("shows Browse All button on initial visit, clicking it loads universities", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(browseResponse());
 
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
+
+    const browseButton = screen.getByRole("button", { name: /Browse All/i });
+    expect(browseButton).toBeInTheDocument();
+    expect(fetch).not.toHaveBeenCalled();
+
+    await user.click(browseButton);
 
     expect(
       await screen.findByText(/University of Mostar/i),
@@ -176,7 +183,6 @@ describe("UnifiedSearch", () => {
 
   test("debounced search triggers after typing and renders results", async () => {
     vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(browseResponse())
       .mockResolvedValueOnce(
         searchResponse({
           universities: [universityResult],
@@ -189,7 +195,7 @@ describe("UnifiedSearch", () => {
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
 
-    await screen.findByText(/University of Mostar/i);
+    screen.getByRole("button", { name: /Browse All/i });
 
     await user.type(
       screen.getByRole("searchbox", { name: /Search/i }),
@@ -202,7 +208,7 @@ describe("UnifiedSearch", () => {
 
     await screen.findByRole("heading", { name: /^Universities/i });
 
-    expect(fetch).toHaveBeenCalledTimes(2);
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(
       screen.getByRole("heading", { name: /^Faculties/i }),
     ).toBeInTheDocument();
@@ -221,7 +227,7 @@ describe("UnifiedSearch", () => {
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
 
-    await screen.findByText(/University of Mostar/i);
+    screen.getByRole("button", { name: /Browse All/i });
 
     await user.type(screen.getByRole("searchbox", { name: /Search/i }), "a");
 
@@ -229,18 +235,17 @@ describe("UnifiedSearch", () => {
       vi.advanceTimersByTime(500);
     });
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).not.toHaveBeenCalled();
   });
 
   test("shows the faculty city in faculty results", async () => {
     vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(browseResponse())
       .mockResolvedValueOnce(searchResponse({ faculties: [facultyResult] }));
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
 
-    await screen.findByText(/University of Mostar/i);
+    screen.getByRole("button", { name: /Browse All/i });
 
     await user.type(
       screen.getByRole("searchbox", { name: /Search/i }),
@@ -257,7 +262,6 @@ describe("UnifiedSearch", () => {
 
   test("renders combined no results message on 404", async () => {
     vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(browseResponse())
       .mockResolvedValueOnce(
         new Response(JSON.stringify({ error: { message: "Not found" } }), {
           status: 404,
@@ -268,7 +272,7 @@ describe("UnifiedSearch", () => {
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
 
-    await screen.findByText(/University of Mostar/i);
+    screen.getByRole("button", { name: /Browse All/i });
 
     await user.type(
       screen.getByRole("searchbox", { name: /Search/i }),
@@ -285,7 +289,6 @@ describe("UnifiedSearch", () => {
 
   test("shows translated error on non-404 non-ok response", async () => {
     vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(browseResponse())
       .mockResolvedValueOnce(
         new Response(
           JSON.stringify({ error: { message: "Search exploded." } }),
@@ -296,7 +299,7 @@ describe("UnifiedSearch", () => {
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
 
-    await screen.findByText(/University of Mostar/i);
+    screen.getByRole("button", { name: /Browse All/i });
 
     await user.type(
       screen.getByRole("searchbox", { name: /Search/i }),
@@ -315,13 +318,12 @@ describe("UnifiedSearch", () => {
 
   test("shows fallback message on thrown request", async () => {
     vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(browseResponse())
       .mockRejectedValueOnce(new Error("network"));
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
 
-    await screen.findByText(/University of Mostar/i);
+    screen.getByRole("button", { name: /Browse All/i });
 
     await user.type(
       screen.getByRole("searchbox", { name: /Search/i }),
@@ -340,7 +342,6 @@ describe("UnifiedSearch", () => {
 
   test("shows error notification when a successful response has an invalid payload", async () => {
     vi.spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(browseResponse())
       .mockResolvedValueOnce(
         new Response(
           JSON.stringify({
@@ -353,7 +354,7 @@ describe("UnifiedSearch", () => {
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
 
-    await screen.findByText(/University of Mostar/i);
+    screen.getByRole("button", { name: /Browse All/i });
 
     await user.type(
       screen.getByRole("searchbox", { name: /Search/i }),

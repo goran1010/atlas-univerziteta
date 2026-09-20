@@ -90,6 +90,7 @@ function LogInForm({ disabled, onLoadingChange }: LogInFormProps) {
       </div>
       <div>
         <Button
+          className="w-full"
           variant="success"
           onClick={() => {
             checkLoginFormValidity(

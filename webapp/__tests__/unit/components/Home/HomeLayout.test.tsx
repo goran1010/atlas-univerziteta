@@ -60,10 +60,12 @@ describe("Universities page", () => {
     ).toBeInTheDocument();
   });
 
-  test("loads universities on initial visit", async () => {
+  test("shows Browse All button on initial visit", () => {
     render(<Wrapper />);
 
-    await screen.findByText(/No universities found\./i);
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(
+      screen.getByRole("button", { name: /Browse All/i }),
+    ).toBeInTheDocument();
+    expect(fetch).not.toHaveBeenCalled();
   });
 });
