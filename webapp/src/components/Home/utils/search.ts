@@ -8,13 +8,6 @@ import {
 import type { UnifiedSearchResults } from "../../../schemas/university";
 import type { UniversityListItem } from "../../../schemas/university";
 
-const EMPTY_RESULTS: UnifiedSearchResults = {
-  universities: [],
-  faculties: [],
-  studyPrograms: [],
-  tracks: [],
-};
-
 interface SearchFilters {
   entity?: string;
   ownership?: string;
@@ -43,9 +36,6 @@ async function searchAll(
   if (res.ok) {
     const result = unifiedSearchResponseSchema.parse(await res.json());
     return result.data;
-  }
-  if (res.status === 404) {
-    return EMPTY_RESULTS;
   }
   const serverError = readApiError(await res.json());
   if (serverError) {

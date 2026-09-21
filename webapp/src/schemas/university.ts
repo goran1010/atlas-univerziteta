@@ -155,6 +155,14 @@ const unifiedSearchResponseSchema = z.object({
     faculties: z.array(facultySearchResultSchema),
     studyPrograms: z.array(studyProgramSearchResultSchema),
     tracks: z.array(trackSearchResultSchema).optional().default([]),
+    totals: z
+      .object({
+        universities: z.number().int().nonnegative(),
+        faculties: z.number().int().nonnegative(),
+        studyPrograms: z.number().int().nonnegative(),
+        tracks: z.number().int().nonnegative(),
+      })
+      .optional(),
   }),
 });
 

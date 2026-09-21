@@ -260,12 +260,23 @@ describe("UnifiedSearch", () => {
     expect(screen.getByText("Sarajevo")).toBeInTheDocument();
   });
 
-  test("renders combined no results message on 404", async () => {
+  test("renders combined no results message when nothing matches", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
-      new Response(JSON.stringify({ error: { message: "Not found" } }), {
-        status: 404,
-        headers: { "Content-Type": "application/json" },
-      }),
+      new Response(
+        JSON.stringify({
+          message: "Search results retrieved successfully.",
+          data: {
+            universities: [],
+            faculties: [],
+            studyPrograms: [],
+            tracks: [],
+          },
+        }),
+        {
+          status: 200,
+          headers: { "Content-Type": "application/json" },
+        },
+      ),
     );
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });

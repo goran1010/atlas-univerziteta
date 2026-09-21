@@ -34,6 +34,13 @@ const studyCycleEnum = z.enum([
   "SPECIALIST",
 ]);
 
+const searchTypeEnum = z.enum([
+  "university",
+  "faculty",
+  "studyProgram",
+  "track",
+]);
+
 const searchQuerySchema = z
   .object({
     searchTerm: z
@@ -54,12 +61,23 @@ const searchQuerySchema = z
       .transform((val) =>
         val === undefined ? undefined : Array.isArray(val) ? val : [val],
       ),
+    type: z
+      .union([searchTypeEnum, z.array(searchTypeEnum).min(1)])
+      .optional()
+      .transform((val) =>
+        val === undefined ? undefined : Array.isArray(val) ? val : [val],
+      ),
   })
   .refine(
-    (data) => data.searchTerm ?? data.entity ?? data.ownership ?? data.cycle,
+    (data) =>
+      data.searchTerm ??
+      data.entity ??
+      data.ownership ??
+      data.cycle ??
+      data.type,
     {
       message:
-        "Provide a search term or at least one filter (entity, ownership, cycle).",
+        "Provide a search term or at least one filter (entity, ownership, cycle, type).",
     },
   );
 
