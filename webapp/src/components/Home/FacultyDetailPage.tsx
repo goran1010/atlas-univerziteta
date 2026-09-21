@@ -12,6 +12,7 @@ import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
 import { Button } from "../sharedComponents/Button";
 import { ResultGroup } from "./ResultGroup";
+import { TrackList } from "./TrackList";
 import { groupBy } from "./utils/groupBy";
 import { tCount } from "../../utils/pluralize";
 import { SERVER_URL } from "../../utils/envConfig";
@@ -222,49 +223,11 @@ function FacultyDetailPage() {
                             </span>
                           )}
                         </div>
-                        {sp.tracks.length > 0 && (
-                          <div className="mt-2 ml-2 sm:ml-4 border-l-2 border-(--border-color) pl-2 sm:pl-3">
-                            <p className="text-xs font-semibold text-(--text-muted) mb-1">
-                              {sp.tracks.length}{" "}
-                              {tCount(
-                                t,
-                                "universitiesPage.trackCount",
-                                sp.tracks.length,
-                              )}
-                            </p>
-                            <ul className="flex flex-col gap-1">
-                              {sp.tracks.map((tr) => (
-                                <li
-                                  key={tr.id}
-                                  className={`text-sm text-(--text-secondary) flex flex-wrap gap-x-2 ${
-                                    String(tr.id) === highlightedTrackId
-                                      ? "bg-(--hover-surface) rounded-md px-1.5 py-0.5 ring-1 ring-(--accent)"
-                                      : ""
-                                  }`}
-                                >
-                                  <span className="text-(--text-primary)">
-                                    {tr.name}
-                                  </span>
-                                  {tr.ects != null && (
-                                    <span className="text-xs text-(--text-muted)">
-                                      {tr.ects} {t("universitiesPage.ects")}
-                                    </span>
-                                  )}
-                                  {tr.durationYears != null && (
-                                    <span className="text-xs text-(--text-muted)">
-                                      {tr.durationYears}{" "}
-                                      {tCount(
-                                        t,
-                                        "universitiesPage.durationYears",
-                                        tr.durationYears,
-                                      )}
-                                    </span>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
+                        <TrackList
+                          tracks={sp.tracks}
+                          t={t}
+                          highlightedTrackId={highlightedTrackId}
+                        />
                       </li>
                     ))}
                   </ResultGroup>

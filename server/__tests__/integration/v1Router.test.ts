@@ -703,8 +703,13 @@ describe("GET /api/v1/search - diacritic-insensitive matching", () => {
     const programs = getResponseArray(trackData["studyPrograms"]);
 
     expect(trackResponse.status).toBe(200);
+    const matchedProgram = programs.find(
+      (sp) => sp["name"] === "Test Diacritics Program",
+    );
+    expect(matchedProgram).toBeDefined();
+    const inlineTracks = getResponseArray(matchedProgram?.["tracks"]);
     expect(
-      programs.some((sp) => sp["name"] === "Test Diacritics Program"),
+      inlineTracks.some((tr) => tr["name"] === "Test Diacritics Racunari"),
     ).toBe(true);
 
     await prisma.track.deleteMany({

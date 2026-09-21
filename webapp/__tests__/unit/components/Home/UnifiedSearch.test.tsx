@@ -69,6 +69,7 @@ const studyProgramResult = {
   facultyId: 3,
   cycle: "FIRST",
   ects: 180,
+  tracks: [{ id: 70, name: "Software Engineering Track", ects: 180 }],
   faculty: {
     id: 3,
     name: "Faculty of Electrical Engineering",
@@ -216,6 +217,8 @@ describe("UnifiedSearch", () => {
     expect(
       screen.queryByRole("heading", { name: /^Tracks/i }),
     ).not.toBeInTheDocument();
+    // tracks render inline on the program card instead
+    expect(screen.getByText(/Software Engineering Track/i)).toBeInTheDocument();
   });
 
   test("ranks direct-match sections first and hints context-only matches", async () => {

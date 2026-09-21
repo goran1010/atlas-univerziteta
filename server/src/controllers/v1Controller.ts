@@ -340,7 +340,15 @@ async function search(req: Request, res: Response) {
                       university: true,
                     },
                   },
-                  _count: { select: { tracks: true } },
+                  tracks: {
+                    select: {
+                      id: true,
+                      name: true,
+                      ects: true,
+                      durationYears: true,
+                    },
+                    orderBy: { name: "asc" },
+                  },
                 },
               }),
           },

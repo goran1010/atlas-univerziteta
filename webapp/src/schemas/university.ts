@@ -114,7 +114,19 @@ const studyProgramSearchResultSchema = z.object({
   durationYears: durationYearsSchema
     .nullish()
     .transform((value) => value ?? undefined),
-  _count: z.object({ tracks: integerSchema.nonnegative() }).optional(),
+  tracks: z
+    .array(
+      z.object({
+        id: positiveIntegerSchema,
+        name: z.string().min(1),
+        ects: ectsSchema.nullish().transform((value) => value ?? undefined),
+        durationYears: durationYearsSchema
+          .nullish()
+          .transform((value) => value ?? undefined),
+      }),
+    )
+    .optional()
+    .default([]),
   faculty: z.object({
     id: positiveIntegerSchema,
     name: z.string().min(1),
