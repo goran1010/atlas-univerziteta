@@ -269,12 +269,15 @@ describe("GET /api/v1/search", () => {
           universities: [],
           faculties: [],
           studyPrograms: [],
-          tracks: [],
           totals: {
             universities: 0,
             faculties: 0,
             studyPrograms: 0,
-            tracks: 0,
+          },
+          direct: {
+            universities: 0,
+            faculties: 0,
+            studyPrograms: 0,
           },
         },
       },
@@ -283,14 +286,20 @@ describe("GET /api/v1/search", () => {
     expect(response).toEqual(expect.objectContaining(expectedResponse));
   });
 
-  test("responds with status 400 when no search term and no filters", async () => {
+  test("responds with status 200 and capped browse when no search term and no filters", async () => {
+    vi.spyOn(prisma.university, "findMany").mockImplementation(
+      mockUniversitySearch,
+    );
     const response = await request(app).get("/api/v1/search");
     const responseBody = getResponseObject(response.body);
-    const error = getResponseObject(responseBody["error"]);
 
-    expect(response.status).toBe(400);
-    expect(error["code"]).toBe("VALIDATION_ERROR");
-    expect(error["message"]).toBe("Request validation failed.");
+    expect(response.status).toBe(200);
+    expect(responseBody["message"]).toBe(
+      "Search results retrieved successfully.",
+    );
+    const data = getResponseObject(responseBody["data"]);
+    expect(Array.isArray(data["universities"])).toBe(true);
+    expect(data["totals"]).toBeDefined();
   });
 
   test("responds with status 400 when searchTerm exceeds 100 characters", async () => {

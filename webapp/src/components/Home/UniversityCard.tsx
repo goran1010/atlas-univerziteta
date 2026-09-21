@@ -27,7 +27,13 @@ import type {
   UniversityListItem,
 } from "../../schemas/university";
 
-function UniversityCard({ university }: { university: UniversityListItem }) {
+function UniversityCard({
+  university,
+  contextHint,
+}: {
+  university: UniversityListItem;
+  contextHint?: string;
+}) {
   const hasFaculties = university._count.faculties > 0;
   const { t, addNotification } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
@@ -177,6 +183,11 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               email={university.email}
             />
           </div>
+          {contextHint && (
+            <p className="text-xs italic text-(--text-muted) mt-1">
+              {contextHint}
+            </p>
+          )}
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
           <Button

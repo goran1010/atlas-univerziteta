@@ -98,12 +98,11 @@ function CheckboxOption({
   );
 }
 
-const TYPES: SearchType[] = ["university", "faculty", "studyProgram", "track"];
+const TYPES: SearchType[] = ["university", "faculty", "studyProgram"];
 const TYPE_LABEL_KEYS: Record<SearchType, string> = {
   university: "universitiesPage.universitiesSection",
   faculty: "universitiesPage.facultiesSection",
   studyProgram: "universitiesPage.studyProgramsSection",
-  track: "universitiesPage.tracksSection",
 };
 const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
 const OWNERSHIPS: Ownership[] = ["PUBLIC", "PRIVATE"];

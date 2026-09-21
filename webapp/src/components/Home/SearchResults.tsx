@@ -5,7 +5,6 @@ import { Button } from "../sharedComponents/Button";
 import { UniversityCard } from "./UniversityCard";
 import { FacultyResult } from "./FacultyResult";
 import { StudyProgramResult } from "./StudyProgramResult";
-import { TrackResult } from "./TrackResult";
 import { ResultGroup } from "./ResultGroup";
 import { CollapseToggle } from "./CollapseToggle";
 import { groupBy } from "./utils/groupBy";
@@ -17,20 +16,27 @@ import type { SearchType } from "../../schemas/domain";
 // full single-type listing stays scannable
 const COLLAPSE_GROUPS_ABOVE = 50;
 
+// browsing keeps the hierarchy order; a term search ranks sections with
+// direct (own-field) matches first, most specific first
+const BROWSE_ORDER: SearchType[] = ["university", "faculty", "studyProgram"];
+const SEARCH_ORDER: SearchType[] = ["studyProgram", "faculty", "university"];
+
 function ResultSection({
   heading,
   total,
   shown,
+  defaultCollapsed = false,
   onShowAll,
   children,
 }: {
   heading: string;
   total: number;
   shown: number;
+  defaultCollapsed?: boolean;
   onShowAll?: () => void;
   children: ReactNode;
 }) {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(defaultCollapsed);
   const { t } = use(RootContext);
 
   return (
@@ -80,18 +86,19 @@ function ResultSection({
 
 function SearchResults({
   results,
+  hadTerm = false,
   t,
   onShowAll,
 }: {
   results: UnifiedSearchResults;
+  hadTerm?: boolean;
   t: (key: string) => string;
   onShowAll?: (type: SearchType) => void;
 }) {
   const noResultsAtAll =
     results.universities.length === 0 &&
     results.faculties.length === 0 &&
-    results.studyPrograms.length === 0 &&
-    results.tracks.length === 0;
+    results.studyPrograms.length === 0;
 
   if (noResultsAtAll) {
     return (
@@ -102,137 +109,152 @@ function SearchResults({
     );
   }
 
-  const universitiesTotal =
-    results.totals?.universities ?? results.universities.length;
-  const facultiesTotal = results.totals?.faculties ?? results.faculties.length;
-  const studyProgramsTotal =
-    results.totals?.studyPrograms ?? results.studyPrograms.length;
-  const tracksTotal = results.totals?.tracks ?? results.tracks.length;
+  // items arrive own-field matches first; everything past `direct` only
+  // matched through related data and gets an explanatory hint
+  const contextHintFor = (type: SearchType, index: number, direct: number) =>
+    hadTerm && index >= direct
+      ? t(`universitiesPage.contextMatch.${type}`)
+      : undefined;
+
+  const sectionData = {
+    university: {
+      shown: results.universities.length,
+      total: results.totals?.universities ?? results.universities.length,
+      direct: results.direct?.universities ?? results.universities.length,
+    },
+    faculty: {
+      shown: results.faculties.length,
+      total: results.totals?.faculties ?? results.faculties.length,
+      direct: results.direct?.faculties ?? results.faculties.length,
+    },
+    studyProgram: {
+      shown: results.studyPrograms.length,
+      total: results.totals?.studyPrograms ?? results.studyPrograms.length,
+      direct: results.direct?.studyPrograms ?? results.studyPrograms.length,
+    },
+  } satisfies Record<
+    SearchType,
+    { shown: number; total: number; direct: number }
+  >;
 
   const groupsCollapsed = (shown: number) => shown > COLLAPSE_GROUPS_ABOVE;
 
+  function renderSectionBody(type: SearchType): ReactNode {
+    const { shown, direct } = sectionData[type];
+    switch (type) {
+      case "university":
+        return groupBy(
+          results.universities.map((item, index) => ({
+            item,
+            hint: contextHintFor(type, index, direct),
+          })),
+          (entry) => t(`universitiesPage.ownership.${entry.item.ownership}`),
+        ).map((g) => (
+          <ResultGroup
+            key={g.key}
+            label={g.key}
+            collapsible
+            count={g.items.length}
+            defaultCollapsed={groupsCollapsed(shown)}
+          >
+            {g.items.map(({ item, hint }) => (
+              <UniversityCard
+                key={item.id}
+                university={item}
+                contextHint={hint}
+              />
+            ))}
+          </ResultGroup>
+        ));
+      case "faculty":
+        return groupBy(
+          results.faculties.map((item, index) => ({
+            item,
+            hint: contextHintFor(type, index, direct),
+          })),
+          (entry) => entry.item.university.name,
+        ).map((g) => (
+          <ResultGroup
+            key={g.key}
+            label={g.key}
+            collapsible
+            count={g.items.length}
+            defaultCollapsed={groupsCollapsed(shown)}
+          >
+            {g.items.map(({ item, hint }) => (
+              <FacultyResult key={item.id} faculty={item} contextHint={hint} />
+            ))}
+          </ResultGroup>
+        ));
+      case "studyProgram":
+        return groupBy(
+          results.studyPrograms.map((item, index) => ({
+            item,
+            hint: contextHintFor(type, index, direct),
+          })),
+          (entry) => t(`universitiesPage.cycles.${entry.item.cycle}`),
+        ).map((g) => (
+          <ResultGroup
+            key={g.key}
+            label={g.key}
+            collapsible
+            count={g.items.length}
+            defaultCollapsed={groupsCollapsed(shown)}
+          >
+            {g.items.map(({ item, hint }) => (
+              <StudyProgramResult
+                key={item.id}
+                program={item}
+                t={t}
+                contextHint={hint}
+              />
+            ))}
+          </ResultGroup>
+        ));
+    }
+  }
+
+  const HEADING_KEYS: Record<SearchType, string> = {
+    university: "universitiesPage.universitiesSection",
+    faculty: "universitiesPage.facultiesSection",
+    studyProgram: "universitiesPage.studyProgramsSection",
+  };
+
+  const baseOrder = hadTerm ? SEARCH_ORDER : BROWSE_ORDER;
+  const visibleTypes = baseOrder.filter((type) => sectionData[type].shown > 0);
+  const orderedTypes = hadTerm
+    ? [
+        ...visibleTypes.filter((type) => sectionData[type].direct > 0),
+        ...visibleTypes.filter((type) => sectionData[type].direct === 0),
+      ]
+    : visibleTypes;
+
   return (
     <>
-      {results.universities.length > 0 && (
-        <ResultSection
-          heading={t("universitiesPage.universitiesSection")}
-          total={universitiesTotal}
-          shown={results.universities.length}
-          onShowAll={
-            onShowAll &&
-            (() => {
-              onShowAll("university");
-            })
-          }
-        >
-          <div className="flex flex-col gap-3 w-full">
-            {groupBy(results.universities, (u) =>
-              t(`universitiesPage.ownership.${u.ownership}`),
-            ).map((g) => (
-              <ResultGroup
-                key={g.key}
-                label={g.key}
-                collapsible
-                count={g.items.length}
-                defaultCollapsed={groupsCollapsed(results.universities.length)}
-              >
-                {g.items.map((u) => (
-                  <UniversityCard key={u.id} university={u} />
-                ))}
-              </ResultGroup>
-            ))}
-          </div>
-        </ResultSection>
-      )}
-      {results.faculties.length > 0 && (
-        <ResultSection
-          heading={t("universitiesPage.facultiesSection")}
-          total={facultiesTotal}
-          shown={results.faculties.length}
-          onShowAll={
-            onShowAll &&
-            (() => {
-              onShowAll("faculty");
-            })
-          }
-        >
-          <div className="flex flex-col gap-3 w-full">
-            {groupBy(results.faculties, (f) => f.university.name).map((g) => (
-              <ResultGroup
-                key={g.key}
-                label={g.key}
-                collapsible
-                count={g.items.length}
-                defaultCollapsed={groupsCollapsed(results.faculties.length)}
-              >
-                {g.items.map((f) => (
-                  <FacultyResult key={f.id} faculty={f} />
-                ))}
-              </ResultGroup>
-            ))}
-          </div>
-        </ResultSection>
-      )}
-      {results.studyPrograms.length > 0 && (
-        <ResultSection
-          heading={t("universitiesPage.studyProgramsSection")}
-          total={studyProgramsTotal}
-          shown={results.studyPrograms.length}
-          onShowAll={
-            onShowAll &&
-            (() => {
-              onShowAll("studyProgram");
-            })
-          }
-        >
-          <div className="flex flex-col gap-3 w-full">
-            {groupBy(results.studyPrograms, (p) =>
-              t(`universitiesPage.cycles.${p.cycle}`),
-            ).map((g) => (
-              <ResultGroup
-                key={g.key}
-                label={g.key}
-                collapsible
-                count={g.items.length}
-                defaultCollapsed={groupsCollapsed(results.studyPrograms.length)}
-              >
-                {g.items.map((p) => (
-                  <StudyProgramResult key={p.id} program={p} t={t} />
-                ))}
-              </ResultGroup>
-            ))}
-          </div>
-        </ResultSection>
-      )}
-      {results.tracks.length > 0 && (
-        <ResultSection
-          heading={t("universitiesPage.tracksSection")}
-          total={tracksTotal}
-          shown={results.tracks.length}
-          onShowAll={
-            onShowAll &&
-            (() => {
-              onShowAll("track");
-            })
-          }
-        >
-          <div className="flex flex-col gap-3 w-full">
-            {groupBy(results.tracks, (tr) => tr.studyProgram.name).map((g) => (
-              <ResultGroup
-                key={g.key}
-                label={g.key}
-                collapsible
-                count={g.items.length}
-                defaultCollapsed={groupsCollapsed(results.tracks.length)}
-              >
-                {g.items.map((tr) => (
-                  <TrackResult key={tr.id} track={tr} t={t} />
-                ))}
-              </ResultGroup>
-            ))}
-          </div>
-        </ResultSection>
-      )}
+      {orderedTypes.map((type) => {
+        const { shown, total, direct } = sectionData[type];
+        const contextOnly = hadTerm && direct === 0;
+        return (
+          <ResultSection
+            // remount when the band changes so defaultCollapsed reapplies
+            key={`${type}:${contextOnly.toString()}`}
+            heading={t(HEADING_KEYS[type])}
+            total={total}
+            shown={shown}
+            defaultCollapsed={contextOnly}
+            onShowAll={
+              onShowAll &&
+              (() => {
+                onShowAll(type);
+              })
+            }
+          >
+            <div className="flex flex-col gap-3 w-full">
+              {renderSectionBody(type)}
+            </div>
+          </ResultSection>
+        );
+      })}
     </>
   );
 }

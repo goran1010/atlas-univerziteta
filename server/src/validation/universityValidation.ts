@@ -34,52 +34,34 @@ const studyCycleEnum = z.enum([
   "SPECIALIST",
 ]);
 
-const searchTypeEnum = z.enum([
-  "university",
-  "faculty",
-  "studyProgram",
-  "track",
-]);
+const searchTypeEnum = z.enum(["university", "faculty", "studyProgram"]);
 
-const searchQuerySchema = z
-  .object({
-    searchTerm: z
-      .string()
-      .trim()
-      .min(2, {
-        message: "Search term must be at least 2 characters.",
-      })
-      .max(100, {
-        message: "Search term must not exceed 100 characters.",
-      })
-      .optional(),
-    entity: z.enum(["FBIH", "RS", "BD"]).optional(),
-    ownership: z.enum(["PUBLIC", "PRIVATE"]).optional(),
-    cycle: z
-      .union([studyCycleEnum, z.array(studyCycleEnum).min(1)])
-      .optional()
-      .transform((val) =>
-        val === undefined ? undefined : Array.isArray(val) ? val : [val],
-      ),
-    type: z
-      .union([searchTypeEnum, z.array(searchTypeEnum).min(1)])
-      .optional()
-      .transform((val) =>
-        val === undefined ? undefined : Array.isArray(val) ? val : [val],
-      ),
-  })
-  .refine(
-    (data) =>
-      data.searchTerm ??
-      data.entity ??
-      data.ownership ??
-      data.cycle ??
-      data.type,
-    {
-      message:
-        "Provide a search term or at least one filter (entity, ownership, cycle, type).",
-    },
-  );
+const searchQuerySchema = z.object({
+  searchTerm: z
+    .string()
+    .trim()
+    .min(2, {
+      message: "Search term must be at least 2 characters.",
+    })
+    .max(100, {
+      message: "Search term must not exceed 100 characters.",
+    })
+    .optional(),
+  entity: z.enum(["FBIH", "RS", "BD"]).optional(),
+  ownership: z.enum(["PUBLIC", "PRIVATE"]).optional(),
+  cycle: z
+    .union([studyCycleEnum, z.array(studyCycleEnum).min(1)])
+    .optional()
+    .transform((val) =>
+      val === undefined ? undefined : Array.isArray(val) ? val : [val],
+    ),
+  type: z
+    .union([searchTypeEnum, z.array(searchTypeEnum).min(1)])
+    .optional()
+    .transform((val) =>
+      val === undefined ? undefined : Array.isArray(val) ? val : [val],
+    ),
+});
 
 function searchQuery(input: unknown) {
   return parseRequest(searchQuerySchema, input);

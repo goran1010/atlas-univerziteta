@@ -26,9 +26,11 @@ import type {
 function StudyProgramResult({
   program,
   t,
+  contextHint,
 }: {
   program: StudyProgramSearchResult;
   t: TFunction;
+  contextHint?: string;
 }) {
   const { addNotification } = use(RootContext);
   const hasTracks = (program._count?.tracks ?? 0) > 0;
@@ -124,6 +126,11 @@ function StudyProgramResult({
           )}
         </div>
         <FacultyBreadcrumb faculty={program.faculty} />
+        {contextHint && (
+          <p className="text-xs italic text-(--text-muted) mt-1">
+            {contextHint}
+          </p>
+        )}
       </div>
       {hasTracks && (
         <div className="flex justify-center mt-2">

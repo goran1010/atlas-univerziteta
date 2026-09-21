@@ -23,7 +23,13 @@ import type {
   FacultyDetail,
 } from "../../schemas/university";
 
-function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
+function FacultyResult({
+  faculty,
+  contextHint,
+}: {
+  faculty: FacultySearchResult;
+  contextHint?: string;
+}) {
   const hasPrograms = (faculty._count?.studyPrograms ?? 0) > 0;
   const { t, addNotification } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
@@ -106,6 +112,11 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
         <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
           <ContactLinks website={faculty.website} />
         </div>
+        {contextHint && (
+          <p className="text-xs italic text-(--text-muted) mt-1">
+            {contextHint}
+          </p>
+        )}
       </div>
       <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
         <Button

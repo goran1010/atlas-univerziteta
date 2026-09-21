@@ -22,7 +22,8 @@ import type { SearchType, StudyCycle } from "../../schemas/domain";
 const SEARCH_DEBOUNCE_MS = 400;
 
 type ViewState =
-  { kind: "idle" } | { kind: "search"; results: UnifiedSearchResults };
+  | { kind: "idle" }
+  | { kind: "search"; results: UnifiedSearchResults; hadTerm: boolean };
 
 function UnifiedSearch() {
   const { t, addNotification } = use(RootContext);
@@ -58,6 +59,7 @@ function UnifiedSearch() {
     .filter(
       (value): value is SearchType => searchTypeSchema.safeParse(value).success,
     );
+  const browseAll = searchParams.get("browse") === "all";
 
   const hasFilters =
     entityFilter !== "" ||
@@ -103,7 +105,7 @@ function UnifiedSearch() {
           cycle: filters.cycle?.length ? filters.cycle : undefined,
           type: filters.type?.length ? filters.type : undefined,
         });
-        setView({ kind: "search", results });
+        setView({ kind: "search", results, hadTerm: term !== undefined });
       } catch (error) {
         addNotification({
           type: "error",
@@ -128,6 +130,7 @@ function UnifiedSearch() {
       ownership: string,
       cycle: string[],
       types: string[],
+      browse = false,
     ) => {
       const trimmed = term.trim();
       const hasText = trimmed.length > 0;
@@ -139,16 +142,20 @@ function UnifiedSearch() {
 
       if (hasText && trimmed.length < 2) return;
 
-      if (!hasText && !hasAnyFilter) {
+      if (!hasText && !hasAnyFilter && !browse) {
         setView({ kind: "idle" });
         return;
       }
+
+      // a bare Browse All shows universities only (their cards drill down);
+      // the type filter state stays empty so typing searches everything
+      const browseOnly = !hasText && !hasAnyFilter && browse;
 
       void executeSearch(hasText ? trimmed : undefined, {
         entity: entity || undefined,
         ownership: ownership || undefined,
         cycle,
-        type: types,
+        type: browseOnly ? ["university"] : types,
       });
     },
     [executeSearch],
@@ -163,7 +170,8 @@ function UnifiedSearch() {
       entityFilter ||
       ownershipFilter ||
       cycleFilters.length > 0 ||
-      typeFilters.length > 0;
+      typeFilters.length > 0 ||
+      browseAll;
 
     if (hasAnyParam) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -173,6 +181,7 @@ function UnifiedSearch() {
         ownershipFilter,
         cycleFilters,
         typeFilters,
+        browseAll,
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps
@@ -194,6 +203,7 @@ function UnifiedSearch() {
         ownershipFilter,
         cycleFilters,
         typeFilters,
+        browseAll,
       );
     }, SEARCH_DEBOUNCE_MS);
   }
@@ -213,6 +223,7 @@ function UnifiedSearch() {
       nextOwnership,
       cycleFilters,
       typeFilters,
+      browseAll,
     );
   }
 
@@ -227,6 +238,7 @@ function UnifiedSearch() {
       ownershipFilter,
       next,
       typeFilters,
+      browseAll,
     );
   }
 
@@ -241,20 +253,47 @@ function UnifiedSearch() {
       ownershipFilter,
       cycleFilters,
       next,
+      browseAll,
     );
   }
 
   function handleShowAll(type: SearchType) {
     updateParams({ type });
-    triggerSearch(searchInput, entityFilter, ownershipFilter, cycleFilters, [
-      type,
-    ]);
+    // open the panel so the applied type filter is visible, not hidden state
+    setFiltersOpen(true);
+    triggerSearch(
+      searchInput,
+      entityFilter,
+      ownershipFilter,
+      cycleFilters,
+      [type],
+      browseAll,
+    );
+  }
+
+  function handleBrowseAll() {
+    updateParams({ browse: "all" });
+    triggerSearch(
+      searchInput,
+      entityFilter,
+      ownershipFilter,
+      cycleFilters,
+      typeFilters,
+      true,
+    );
   }
 
   function handleClear() {
     updateParams({ q: null });
     clearTimeout(debounceRef.current);
-    triggerSearch("", entityFilter, ownershipFilter, cycleFilters, typeFilters);
+    triggerSearch(
+      "",
+      entityFilter,
+      ownershipFilter,
+      cycleFilters,
+      typeFilters,
+      browseAll,
+    );
     inputRef.current?.focus();
   }
 
@@ -332,14 +371,17 @@ function UnifiedSearch() {
         <Button
           variant="secondary"
           className="px-6 py-2.5"
-          onClick={() => {
-            handleShowAll("university");
-          }}
+          onClick={handleBrowseAll}
         >
           {t("universitiesPage.browseAll")}
         </Button>
       ) : (
-        <SearchResults results={view.results} t={t} onShowAll={handleShowAll} />
+        <SearchResults
+          results={view.results}
+          hadTerm={view.hadTerm}
+          t={t}
+          onShowAll={handleShowAll}
+        />
       )}
     </div>
   );

@@ -130,12 +130,15 @@ describe("GET /api/v1/search", () => {
           universities: [],
           faculties: [],
           studyPrograms: [],
-          tracks: [],
           totals: {
             universities: 0,
             faculties: 0,
             studyPrograms: 0,
-            tracks: 0,
+          },
+          direct: {
+            universities: 0,
+            faculties: 0,
+            studyPrograms: 0,
           },
         },
       },
@@ -379,14 +382,14 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
     await cleanup();
   });
 
-  test("caps federated sections at 20 with true totals; single type is uncapped", async () => {
+  test("caps federated sections at 25 with true totals; single type is uncapped", async () => {
     const marker = "CapTestUni";
     const cleanup = () =>
       prisma.university.deleteMany({ where: { name: { contains: marker } } });
     await cleanup();
 
     await prisma.university.createMany({
-      data: Array.from({ length: 23 }, (_, i) => ({
+      data: Array.from({ length: 28 }, (_, i) => ({
         name: `${marker} ${String(i).padStart(2, "0")}`,
         city: "TestGrad",
         entity: "FBIH" as const,
@@ -400,9 +403,9 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
     const federatedData = getResponseObject(
       getResponseObject(federated.body)["data"],
     );
-    expect(getResponseArray(federatedData["universities"])).toHaveLength(20);
+    expect(getResponseArray(federatedData["universities"])).toHaveLength(25);
     const totals = getResponseObject(federatedData["totals"]);
-    expect(totals["universities"]).toBe(23);
+    expect(totals["universities"]).toBe(28);
 
     const singleType = await request(app).get(
       `/api/v1/search?searchTerm=${marker}&type=university`,
@@ -410,7 +413,7 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
     const singleTypeData = getResponseObject(
       getResponseObject(singleType.body)["data"],
     );
-    expect(getResponseArray(singleTypeData["universities"])).toHaveLength(23);
+    expect(getResponseArray(singleTypeData["universities"])).toHaveLength(28);
 
     await cleanup();
   });
@@ -466,16 +469,30 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
   });
 });
 
+describe("GET /api/v1/search - empty browse", () => {
+  test("returns capped sections with totals when no term or filters given", async () => {
+    const response = await request(app).get("/api/v1/search");
+    const responseBody = getResponseObject(response.body);
+    const data = getResponseObject(responseBody["data"]);
+
+    expect(response.status).toBe(200);
+    for (const key of ["universities", "faculties", "studyPrograms"]) {
+      expect(getResponseArray(data[key]).length).toBeLessThanOrEqual(25);
+    }
+    expect(data["totals"]).toBeDefined();
+    expect(data["direct"]).toBeDefined();
+  });
+});
+
 describe("GET /api/v1/search - type filter", () => {
   test("returns only the requested entity types", async () => {
     const response = await request(app).get(
-      "/api/v1/search?searchTerm=univerzitet&type=university&type=track",
+      "/api/v1/search?searchTerm=univerzitet&type=university&type=faculty",
     );
     const responseBody = getResponseObject(response.body);
     const data = getResponseObject(responseBody["data"]);
 
     expect(response.status).toBe(200);
-    expect(getResponseArray(data["faculties"])).toHaveLength(0);
     expect(getResponseArray(data["studyPrograms"])).toHaveLength(0);
   });
 
@@ -490,7 +507,6 @@ describe("GET /api/v1/search - type filter", () => {
     ).toBeGreaterThanOrEqual(0);
     expect(getResponseArray(data["faculties"])).toHaveLength(0);
     expect(getResponseArray(data["studyPrograms"])).toHaveLength(0);
-    expect(getResponseArray(data["tracks"])).toHaveLength(0);
   });
 });
 
@@ -677,17 +693,19 @@ describe("GET /api/v1/search - diacritic-insensitive matching", () => {
       true,
     );
 
+    // track names are no longer a standalone section; the search surfaces
+    // the parent study program through downward matching instead
     const trackResponse = await request(app).get(
       `/api/v1/search?searchTerm=${encodeURIComponent("računari")}`,
     );
     const trackBody = getResponseObject(trackResponse.body);
     const trackData = getResponseObject(trackBody["data"]);
-    const tracks = getResponseArray(trackData["tracks"]);
+    const programs = getResponseArray(trackData["studyPrograms"]);
 
     expect(trackResponse.status).toBe(200);
-    expect(tracks.some((t) => t["name"] === "Test Diacritics Racunari")).toBe(
-      true,
-    );
+    expect(
+      programs.some((sp) => sp["name"] === "Test Diacritics Program"),
+    ).toBe(true);
 
     await prisma.track.deleteMany({
       where: {

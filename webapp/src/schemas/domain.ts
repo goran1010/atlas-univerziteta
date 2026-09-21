@@ -17,12 +17,7 @@ const studyCycleSchema = z.enum([
   "SPECIALIST",
 ]);
 const typeOfChangeSchema = z.enum(["CREATE", "UPDATE", "DELETE"]);
-const searchTypeSchema = z.enum([
-  "university",
-  "faculty",
-  "studyProgram",
-  "track",
-]);
+const searchTypeSchema = z.enum(["university", "faculty", "studyProgram"]);
 const userRoleSchema = z.enum(["ADMIN", "USER"]);
 
 const integerSchema = z.number().int();

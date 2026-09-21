@@ -62,7 +62,7 @@ const CYCLES = [
 
 // In the combined (federated) view each section is capped and reports its
 // true total; a request for exactly one type returns everything.
-const FEDERATED_SECTION_LIMIT = 20;
+const FEDERATED_SECTION_LIMIT = 25;
 
 type WhereClause = Record<string, unknown>;
 
@@ -185,19 +185,6 @@ function studyProgramFullMatch(token: SearchToken): WhereClause[] {
   ];
 }
 
-function trackFullMatch(token: SearchToken): WhereClause[] {
-  return [
-    ...trackOwnMatch(token),
-    ...studyProgramOwnMatch(token).map((clause) => ({ studyProgram: clause })),
-    ...facultyOwnMatch(token).map((clause) => ({
-      studyProgram: { faculty: clause },
-    })),
-    ...universityOwnMatch(token).map((clause) => ({
-      studyProgram: { faculty: { university: clause } },
-    })),
-  ];
-}
-
 // Every token must match (AND across tokens, OR across fields per token).
 function tokenWhere(
   tokens: SearchToken[],
@@ -221,25 +208,27 @@ async function searchSection<Item extends { id: number }>(
   fullMatcher: (token: SearchToken) => WhereClause[],
   filters: WhereClause[],
   limit: number | undefined,
-): Promise<{ items: Item[]; total: number }> {
+): Promise<{ items: Item[]; total: number; direct: number }> {
   const fullWhere = { AND: [...tokenWhere(tokens, fullMatcher), ...filters] };
 
-  if (limit === undefined || tokens.length === 0) {
+  if (tokens.length === 0) {
     const items = await query.findMany(fullWhere, limit);
     const total =
       limit === undefined ? items.length : await query.count(fullWhere);
-    return { items, total };
+    return { items, total, direct: items.length };
   }
 
   const [total, ownItems] = await Promise.all([
-    query.count(fullWhere),
+    limit === undefined ? undefined : query.count(fullWhere),
     query.findMany(
       { AND: [...tokenWhere(tokens, ownMatcher), ...filters] },
       limit,
     ),
   ]);
 
-  if (ownItems.length >= limit) return { items: ownItems, total };
+  if (limit !== undefined && ownItems.length >= limit) {
+    return { items: ownItems, total: total ?? ownItems.length, direct: limit };
+  }
 
   const contextItems = await query.findMany(
     {
@@ -249,10 +238,11 @@ async function searchSection<Item extends { id: number }>(
         { id: { notIn: ownItems.map((item) => item.id) } },
       ],
     },
-    limit - ownItems.length,
+    limit === undefined ? undefined : limit - ownItems.length,
   );
 
-  return { items: [...ownItems, ...contextItems], total };
+  const items = [...ownItems, ...contextItems];
+  return { items, total: total ?? items.length, direct: ownItems.length };
 }
 
 async function search(req: Request, res: Response) {
@@ -265,8 +255,8 @@ async function search(req: Request, res: Response) {
     universities: [],
     faculties: [],
     studyPrograms: [],
-    tracks: [],
-    totals: { universities: 0, faculties: 0, studyPrograms: 0, tracks: 0 },
+    totals: { universities: 0, faculties: 0, studyPrograms: 0 },
+    direct: { universities: 0, faculties: 0, studyPrograms: 0 },
   };
 
   // A term made up entirely of dropped words can match nothing.
@@ -278,16 +268,16 @@ async function search(req: Request, res: Response) {
     return;
   }
 
-  const wanted = (kind: "university" | "faculty" | "studyProgram" | "track") =>
+  const wanted = (kind: "university" | "faculty" | "studyProgram") =>
     type === undefined || type.includes(kind);
 
   const limit = type?.length === 1 ? undefined : FEDERATED_SECTION_LIMIT;
 
   const cycleFilter = cycle ? { in: cycle } : undefined;
 
-  const emptySection = { items: [], total: 0 };
+  const emptySection = { items: [], total: 0, direct: 0 };
 
-  const [universities, faculties, studyPrograms, tracks] = await Promise.all([
+  const [universities, faculties, studyPrograms] = await Promise.all([
     wanted("university")
       ? searchSection(
           {
@@ -365,49 +355,6 @@ async function search(req: Request, res: Response) {
           limit,
         )
       : emptySection,
-    wanted("track")
-      ? searchSection(
-          {
-            count: (where) => prisma.track.count({ where }),
-            findMany: (where, take) =>
-              prisma.track.findMany({
-                where,
-                ...(take === undefined ? {} : { take }),
-                orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }],
-                include: {
-                  studyProgram: {
-                    include: {
-                      faculty: {
-                        include: {
-                          university: true,
-                        },
-                      },
-                    },
-                  },
-                },
-              }),
-          },
-          tokens,
-          trackOwnMatch,
-          trackFullMatch,
-          [
-            ...(cycleFilter ? [{ studyProgram: { cycle: cycleFilter } }] : []),
-            ...(entity
-              ? [{ studyProgram: { faculty: { university: { entity } } } }]
-              : []),
-            ...(ownership
-              ? [
-                  {
-                    studyProgram: {
-                      faculty: { university: { ownership } },
-                    },
-                  },
-                ]
-              : []),
-          ],
-          limit,
-        )
-      : emptySection,
   ]);
 
   sendSuccess(res, {
@@ -416,12 +363,17 @@ async function search(req: Request, res: Response) {
       universities: universities.items,
       faculties: faculties.items,
       studyPrograms: studyPrograms.items,
-      tracks: tracks.items,
       totals: {
         universities: universities.total,
         faculties: faculties.total,
         studyPrograms: studyPrograms.total,
-        tracks: tracks.total,
+      },
+      // items are ordered own-field matches first; these counts mark the
+      // split so the client can flag context-only matches and rank sections
+      direct: {
+        universities: universities.direct,
+        faculties: faculties.direct,
+        studyPrograms: studyPrograms.direct,
       },
     },
   });
