@@ -1,17 +1,14 @@
 import { SERVER_URL } from "../../../utils/envConfig";
 import { readApiError } from "../../../schemas/api";
-import {
-  unifiedSearchResponseSchema,
-  universityListResponseSchema,
-} from "../../../schemas/university";
+import { unifiedSearchResponseSchema } from "../../../schemas/university";
 
 import type { UnifiedSearchResults } from "../../../schemas/university";
-import type { UniversityListItem } from "../../../schemas/university";
 
 interface SearchFilters {
   entity?: string;
   ownership?: string;
   cycle?: string[];
+  type?: string[];
 }
 
 async function searchAll(
@@ -25,6 +22,11 @@ async function searchAll(
   if (filters?.cycle) {
     for (const c of filters.cycle) {
       params.append("cycle", c);
+    }
+  }
+  if (filters?.type) {
+    for (const type of filters.type) {
+      params.append("type", type);
     }
   }
 
@@ -44,23 +46,6 @@ async function searchAll(
   throw new SearchFailedError(serverError?.code);
 }
 
-async function fetchAllUniversities(): Promise<UniversityListItem[]> {
-  const res = await fetch(`${SERVER_URL}/api/v1/universities`, {
-    method: "GET",
-    mode: "cors",
-  });
-
-  if (res.ok) {
-    const result = universityListResponseSchema.parse(await res.json());
-    return result.data;
-  }
-  const serverError = readApiError(await res.json());
-  if (serverError) {
-    console.warn("Failed to load universities:", serverError.message);
-  }
-  throw new SearchFailedError(serverError?.code);
-}
-
 class SearchFailedError extends Error {
   readonly code?: string;
 
@@ -71,4 +56,4 @@ class SearchFailedError extends Error {
   }
 }
 
-export { searchAll, fetchAllUniversities, SearchFailedError };
+export { searchAll, SearchFailedError };

@@ -1,4 +1,4 @@
-import { render, screen, act } from "@testing-library/react";
+import { render, screen, act, waitFor } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import userEvent from "@testing-library/user-event";
 import { UnifiedSearch } from "../../../../src/components/Home/UnifiedSearch";
@@ -126,6 +126,7 @@ function searchResponse(
     faculties: unknown[];
     studyPrograms: unknown[];
     tracks: unknown[];
+    totals: Record<string, number>;
   }> = {},
 ) {
   return new Response(
@@ -157,7 +158,9 @@ describe("UnifiedSearch", () => {
   });
 
   test("shows Browse All button on initial visit, clicking it loads universities", async () => {
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(browseResponse());
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      searchResponse({ universities: [universityListItem] }),
+    );
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
@@ -218,6 +221,41 @@ describe("UnifiedSearch", () => {
       screen.getByRole("heading", { name: /^Tracks/i }),
     ).toBeInTheDocument();
     expect(screen.getByText(/Software Engineering Track/i)).toBeInTheDocument();
+  });
+
+  test("capped section offers Show all and re-queries with the type filter", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      searchResponse({
+        universities: [universityListItem],
+        totals: { universities: 25, faculties: 0, studyPrograms: 0, tracks: 0 },
+      }),
+    );
+
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    render(<Wrapper />);
+
+    await user.type(
+      screen.getByRole("searchbox", { name: /Search/i }),
+      "univerzitet",
+    );
+
+    act(() => {
+      vi.advanceTimersByTime(500);
+    });
+
+    const showAll = await screen.findByRole("button", {
+      name: /Show all \(25\)/i,
+    });
+    await user.click(showAll);
+
+    await waitFor(() => {
+      expect(fetch).toHaveBeenCalledTimes(2);
+    });
+    const secondCallArg = vi.mocked(fetch).mock.calls[1]?.[0];
+    if (typeof secondCallArg !== "string") {
+      throw new Error("Expected the search to be fetched by URL string.");
+    }
+    expect(secondCallArg).toContain("type=university");
   });
 
   test("does not trigger search for short input (1 char)", async () => {

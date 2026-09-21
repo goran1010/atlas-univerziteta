@@ -321,6 +321,7 @@ async function search(req: Request, res: Response) {
                 orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
                 include: {
                   university: true,
+                  _count: { select: { studyPrograms: true } },
                 },
               }),
           },
@@ -349,6 +350,7 @@ async function search(req: Request, res: Response) {
                       university: true,
                     },
                   },
+                  _count: { select: { tracks: true } },
                 },
               }),
           },

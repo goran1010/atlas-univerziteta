@@ -1,5 +1,5 @@
 import { useState, useEffect, use } from "react";
-import { useParams, Link } from "react-router";
+import { useParams, useSearchParams, Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import {
@@ -10,6 +10,7 @@ import {
 } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
+import { Button } from "../sharedComponents/Button";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
 import { tCount } from "../../utils/pluralize";
@@ -24,6 +25,7 @@ import type { FacultyDetail } from "../../schemas/university";
 
 function FacultyDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { t, addNotification } = use(RootContext);
   const [faculty, setFaculty] = useState<FacultyDetail>();
   const [loading, setLoading] = useState(true);
@@ -85,7 +87,17 @@ function FacultyDetailPage() {
     );
   }
 
-  const programsByCycle = groupBy(faculty.studyPrograms, (sp) =>
+  // Arriving from a search result focuses the page on that program (and
+  // highlights the clicked track); the URL keeps the view shareable.
+  const focusedProgram = faculty.studyPrograms.find(
+    (sp) => String(sp.id) === searchParams.get("program"),
+  );
+  const highlightedTrackId = searchParams.get("track");
+  const visiblePrograms = focusedProgram
+    ? [focusedProgram]
+    : faculty.studyPrograms;
+
+  const programsByCycle = groupBy(visiblePrograms, (sp) =>
     t(`universitiesPage.cycles.${sp.cycle}`),
   );
 
@@ -145,17 +157,31 @@ function FacultyDetailPage() {
           </div>
 
           <div className="border-t border-(--border-color) pt-4">
-            <h2 className="text-lg font-semibold text-(--text-primary) mb-3">
-              <GraduationCapIcon />{" "}
-              <span className="text-blue-600 dark:text-blue-400">
-                {faculty.studyPrograms.length}
-              </span>{" "}
-              {tCount(
-                t,
-                "universitiesPage.studyProgramCount",
-                faculty.studyPrograms.length,
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <h2 className="text-lg font-semibold text-(--text-primary)">
+                <GraduationCapIcon />{" "}
+                <span className="text-blue-600 dark:text-blue-400">
+                  {visiblePrograms.length}
+                </span>{" "}
+                {tCount(
+                  t,
+                  "universitiesPage.studyProgramCount",
+                  visiblePrograms.length,
+                )}
+              </h2>
+              {focusedProgram && (
+                <Button
+                  variant="secondary"
+                  className="px-3 py-1.5 text-xs"
+                  onClick={() => {
+                    setSearchParams(new URLSearchParams(), { replace: true });
+                  }}
+                >
+                  {t("universitiesPage.showAllPrograms")} (
+                  {faculty.studyPrograms.length})
+                </Button>
               )}
-            </h2>
+            </div>
             {faculty.studyPrograms.length > 0 ? (
               <div className="flex flex-col gap-4">
                 {programsByCycle.map((group) => (
@@ -210,7 +236,11 @@ function FacultyDetailPage() {
                               {sp.tracks.map((tr) => (
                                 <li
                                   key={tr.id}
-                                  className="text-sm text-(--text-secondary) flex flex-wrap gap-x-2"
+                                  className={`text-sm text-(--text-secondary) flex flex-wrap gap-x-2 ${
+                                    String(tr.id) === highlightedTrackId
+                                      ? "bg-(--hover-surface) rounded-md px-1.5 py-0.5 ring-1 ring-(--accent)"
+                                      : ""
+                                  }`}
                                 >
                                   <span className="text-(--text-primary)">
                                     {tr.name}

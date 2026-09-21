@@ -4,6 +4,7 @@ import {
   durationYearsSchema,
   ectsSchema,
   entitySchema,
+  integerSchema,
   ownershipSchema,
   positiveIntegerSchema,
   studyCycleSchema,
@@ -110,6 +111,10 @@ const studyProgramSearchResultSchema = z.object({
   facultyId: positiveIntegerSchema,
   cycle: studyCycleSchema,
   ects: ectsSchema.nullish().transform((value) => value ?? undefined),
+  durationYears: durationYearsSchema
+    .nullish()
+    .transform((value) => value ?? undefined),
+  _count: z.object({ tracks: integerSchema.nonnegative() }).optional(),
   faculty: z.object({
     id: positiveIntegerSchema,
     name: z.string().min(1),
@@ -124,6 +129,7 @@ const facultySearchResultSchema = z.object({
   universityId: positiveIntegerSchema,
   city: optionalTextSchema,
   website: optionalTextSchema,
+  _count: z.object({ studyPrograms: integerSchema.nonnegative() }).optional(),
   university: searchResultUniversitySchema,
 });
 

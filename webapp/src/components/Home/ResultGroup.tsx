@@ -1,19 +1,21 @@
-import { ChevronDownIcon } from "../sharedComponents/icons";
 import { useState, use, type ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { CollapseToggle } from "./CollapseToggle";
 
 function ResultGroup({
   label,
   children,
   collapsible = false,
+  defaultCollapsed = false,
   count,
 }: {
   label: string;
   children: ReactNode;
   collapsible?: boolean;
+  defaultCollapsed?: boolean;
   count?: number;
 }) {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(defaultCollapsed);
   const { t } = use(RootContext);
 
   return (
@@ -28,20 +30,14 @@ function ResultGroup({
           )}
         </span>
         {collapsible && (
-          <button
-            type="button"
+          <CollapseToggle
+            collapsed={collapsed}
             onClick={() => {
               setCollapsed((prev) => !prev);
             }}
-            className="flex items-center gap-1 px-2 py-0.5 text-[0.7rem] font-medium rounded bg-(--surface-alt) text-(--text-secondary) hover:text-(--text-primary) border border-(--border-color)/40 cursor-pointer transition-colors leading-tight"
-          >
-            <ChevronDownIcon
-              className={`text-[10px] transition-transform ${collapsed ? "-rotate-90" : ""}`}
-            />
-            {collapsed
-              ? t("universitiesPage.expand")
-              : t("universitiesPage.collapse")}
-          </button>
+            t={t}
+            className="bg-(--surface-1)"
+          />
         )}
       </div>
       {!collapsed && (

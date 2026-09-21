@@ -24,6 +24,7 @@ import type {
 } from "../../schemas/university";
 
 function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
+  const hasPrograms = (faculty._count?.studyPrograms ?? 0) > 0;
   const { t, addNotification } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<FacultyDetail>();
@@ -81,9 +82,9 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
         onClick={(e) => {
           if (e.target instanceof Element && e.target.closest("a, button"))
             return;
-          void handleExpand();
+          if (hasPrograms) void handleExpand();
         }}
-        className="cursor-pointer"
+        className={hasPrograms ? "cursor-pointer" : ""}
       >
         <p className="font-bold">
           <Link
@@ -116,14 +117,16 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
         >
           {t("universitiesPage.viewInfo")}
         </Button>
-        <DetailsToggleButton
-          expanded={expanded}
-          className="px-3 py-1.5 text-xs"
-          onClick={() => {
-            void handleExpand();
-          }}
-          loading={loadingDetail}
-        />
+        {hasPrograms && (
+          <DetailsToggleButton
+            expanded={expanded}
+            className="px-3 py-1.5 text-xs"
+            onClick={() => {
+              void handleExpand();
+            }}
+            loading={loadingDetail}
+          />
+        )}
       </div>
       <Dialog
         open={dialogOpen}

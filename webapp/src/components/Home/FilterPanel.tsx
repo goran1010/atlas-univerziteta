@@ -1,7 +1,12 @@
 import { useState, type ReactNode } from "react";
 import { ChevronDownIcon } from "../sharedComponents/icons";
 
-import type { Entity, Ownership, StudyCycle } from "../../schemas/domain";
+import type {
+  Entity,
+  Ownership,
+  SearchType,
+  StudyCycle,
+} from "../../schemas/domain";
 
 function FilterSection({
   label,
@@ -93,6 +98,13 @@ function CheckboxOption({
   );
 }
 
+const TYPES: SearchType[] = ["university", "faculty", "studyProgram", "track"];
+const TYPE_LABEL_KEYS: Record<SearchType, string> = {
+  university: "universitiesPage.universitiesSection",
+  faculty: "universitiesPage.facultiesSection",
+  studyProgram: "universitiesPage.studyProgramsSection",
+  track: "universitiesPage.tracksSection",
+};
 const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
 const OWNERSHIPS: Ownership[] = ["PUBLIC", "PRIVATE"];
 const CYCLES: StudyCycle[] = [
@@ -108,24 +120,31 @@ function FilterPanel({
   entityFilter,
   ownershipFilter,
   cycleFilters,
+  typeFilters,
   filtersOpen,
   onToggleFilters,
   onFilterChange,
   onCycleChange,
+  onTypeChange,
   t,
 }: {
   entityFilter: Entity | "";
   ownershipFilter: Ownership | "";
   cycleFilters: StudyCycle[];
+  typeFilters: SearchType[];
   filtersOpen: boolean;
   onToggleFilters: () => void;
   onFilterChange: (key: "entity" | "ownership", value: string | null) => void;
   onCycleChange: (value: string, checked: boolean) => void;
+  onTypeChange: (value: string, checked: boolean) => void;
   t: (key: string) => string;
 }) {
-  const activeCount = [entityFilter, ownershipFilter, ...cycleFilters].filter(
-    Boolean,
-  ).length;
+  const activeCount = [
+    entityFilter,
+    ownershipFilter,
+    ...cycleFilters,
+    ...typeFilters,
+  ].filter(Boolean).length;
 
   return (
     <div className="w-full max-w-lg border border-(--border-color) rounded-lg">
@@ -147,7 +166,18 @@ function FilterPanel({
         />
       </button>
       {filtersOpen && (
-        <div className="px-4 pb-3 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-(--border-color) pt-3">
+        <div className="px-4 pb-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 border-t border-(--border-color) pt-3">
+          <FilterSection label={t("universitiesPage.filterType")}>
+            {TYPES.map((type) => (
+              <CheckboxOption
+                key={type}
+                value={type}
+                label={t(TYPE_LABEL_KEYS[type])}
+                checked={typeFilters.includes(type)}
+                onChange={onTypeChange}
+              />
+            ))}
+          </FilterSection>
           <FilterSection label={t("universitiesPage.filterEntity")}>
             {ENTITIES.map((e) => (
               <RadioOption

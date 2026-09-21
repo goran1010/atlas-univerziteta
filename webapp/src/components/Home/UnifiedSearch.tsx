@@ -4,34 +4,25 @@ import { useSearchParams } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Button } from "../sharedComponents/Button";
 import { Spinner } from "../sharedComponents/Spinner";
-import { UniversityCard } from "./UniversityCard";
-import { ResultGroup } from "./ResultGroup";
 import { FilterPanel } from "./FilterPanel";
 import { SearchResults } from "./SearchResults";
-import { groupBy } from "./utils/groupBy";
-import {
-  searchAll,
-  fetchAllUniversities,
-  SearchFailedError,
-} from "./utils/search";
+import { searchAll, SearchFailedError } from "./utils/search";
 import { notificationMessageKey } from "../../utils/apiError";
 
 import {
   entitySchema,
   ownershipSchema,
+  searchTypeSchema,
   studyCycleSchema,
 } from "../../schemas/domain";
 
 import type { UnifiedSearchResults } from "../../schemas/university";
-import type { UniversityListItem } from "../../schemas/university";
-import type { StudyCycle } from "../../schemas/domain";
+import type { SearchType, StudyCycle } from "../../schemas/domain";
 
 const SEARCH_DEBOUNCE_MS = 400;
 
 type ViewState =
-  | { kind: "idle" }
-  | { kind: "browse"; universities: UniversityListItem[] }
-  | { kind: "search"; results: UnifiedSearchResults };
+  { kind: "idle" } | { kind: "search"; results: UnifiedSearchResults };
 
 function UnifiedSearch() {
   const { t, addNotification } = use(RootContext);
@@ -46,7 +37,8 @@ function UnifiedSearch() {
     const hasEntity = params.has("entity");
     const hasOwnership = params.has("ownership");
     const hasCycle = params.getAll("cycle").length > 0;
-    return hasEntity || hasOwnership || hasCycle;
+    const hasType = params.getAll("type").length > 0;
+    return hasEntity || hasOwnership || hasCycle || hasType;
   });
 
   const searchInput = searchParams.get("q") ?? "";
@@ -61,9 +53,17 @@ function UnifiedSearch() {
     .filter(
       (value): value is StudyCycle => studyCycleSchema.safeParse(value).success,
     );
+  const typeFilters = searchParams
+    .getAll("type")
+    .filter(
+      (value): value is SearchType => searchTypeSchema.safeParse(value).success,
+    );
 
   const hasFilters =
-    entityFilter !== "" || ownershipFilter !== "" || cycleFilters.length > 0;
+    entityFilter !== "" ||
+    ownershipFilter !== "" ||
+    cycleFilters.length > 0 ||
+    typeFilters.length > 0;
   const hasSearchTerm = searchInput.trim().length > 0;
 
   function updateParams(updates: Record<string, string | string[] | null>) {
@@ -92,6 +92,7 @@ function UnifiedSearch() {
         entity?: string;
         ownership?: string;
         cycle?: string[];
+        type?: string[];
       },
     ) => {
       try {
@@ -100,6 +101,7 @@ function UnifiedSearch() {
           entity: filters.entity ?? undefined,
           ownership: filters.ownership ?? undefined,
           cycle: filters.cycle?.length ? filters.cycle : undefined,
+          type: filters.type?.length ? filters.type : undefined,
         });
         setView({ kind: "search", results });
       } catch (error) {
@@ -119,32 +121,21 @@ function UnifiedSearch() {
     [addNotification, t],
   );
 
-  const loadDefaultBrowse = useCallback(async () => {
-    try {
-      setLoading(true);
-      const universities = await fetchAllUniversities();
-      setView({ kind: "browse", universities });
-    } catch (error) {
-      addNotification({
-        type: "error",
-        message: t(
-          notificationMessageKey(
-            error instanceof SearchFailedError ? error.code : undefined,
-            "messages.universities.loadError",
-          ),
-        ),
-      });
-    } finally {
-      setLoading(false);
-    }
-  }, [addNotification, t]);
-
   const triggerSearch = useCallback(
-    (term: string, entity: string, ownership: string, cycle: string[]) => {
+    (
+      term: string,
+      entity: string,
+      ownership: string,
+      cycle: string[],
+      types: string[],
+    ) => {
       const trimmed = term.trim();
       const hasText = trimmed.length > 0;
       const hasAnyFilter =
-        entity !== "" || ownership !== "" || cycle.length > 0;
+        entity !== "" ||
+        ownership !== "" ||
+        cycle.length > 0 ||
+        types.length > 0;
 
       if (hasText && trimmed.length < 2) return;
 
@@ -157,6 +148,7 @@ function UnifiedSearch() {
         entity: entity || undefined,
         ownership: ownership || undefined,
         cycle,
+        type: types,
       });
     },
     [executeSearch],
@@ -170,10 +162,18 @@ function UnifiedSearch() {
       searchInput.trim() ||
       entityFilter ||
       ownershipFilter ||
-      cycleFilters.length > 0;
+      cycleFilters.length > 0 ||
+      typeFilters.length > 0;
 
     if (hasAnyParam) {
-      triggerSearch(searchInput, entityFilter, ownershipFilter, cycleFilters); // eslint-disable-line react-hooks/set-state-in-effect
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      triggerSearch(
+        searchInput,
+        entityFilter,
+        ownershipFilter,
+        cycleFilters,
+        typeFilters,
+      );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps
   }, []);
@@ -188,7 +188,13 @@ function UnifiedSearch() {
     updateParams({ q: value || null });
     clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
-      triggerSearch(value, entityFilter, ownershipFilter, cycleFilters);
+      triggerSearch(
+        value,
+        entityFilter,
+        ownershipFilter,
+        cycleFilters,
+        typeFilters,
+      );
     }, SEARCH_DEBOUNCE_MS);
   }
 
@@ -201,7 +207,13 @@ function UnifiedSearch() {
     const nextEntity = key === "entity" ? (value ?? "") : entityFilter;
     const nextOwnership = key === "ownership" ? (value ?? "") : ownershipFilter;
 
-    triggerSearch(searchInput, nextEntity, nextOwnership, cycleFilters);
+    triggerSearch(
+      searchInput,
+      nextEntity,
+      nextOwnership,
+      cycleFilters,
+      typeFilters,
+    );
   }
 
   function handleCycleChange(value: string, checked: boolean) {
@@ -209,13 +221,40 @@ function UnifiedSearch() {
       ? [...cycleFilters, value]
       : cycleFilters.filter((c) => c !== value);
     updateParams({ cycle: next });
-    triggerSearch(searchInput, entityFilter, ownershipFilter, next);
+    triggerSearch(
+      searchInput,
+      entityFilter,
+      ownershipFilter,
+      next,
+      typeFilters,
+    );
+  }
+
+  function handleTypeChange(value: string, checked: boolean) {
+    const next = checked
+      ? [...typeFilters, value]
+      : typeFilters.filter((type) => type !== value);
+    updateParams({ type: next });
+    triggerSearch(
+      searchInput,
+      entityFilter,
+      ownershipFilter,
+      cycleFilters,
+      next,
+    );
+  }
+
+  function handleShowAll(type: SearchType) {
+    updateParams({ type });
+    triggerSearch(searchInput, entityFilter, ownershipFilter, cycleFilters, [
+      type,
+    ]);
   }
 
   function handleClear() {
     updateParams({ q: null });
     clearTimeout(debounceRef.current);
-    triggerSearch("", entityFilter, ownershipFilter, cycleFilters);
+    triggerSearch("", entityFilter, ownershipFilter, cycleFilters, typeFilters);
     inputRef.current?.focus();
   }
 
@@ -266,22 +305,24 @@ function UnifiedSearch() {
         entityFilter={entityFilter}
         ownershipFilter={ownershipFilter}
         cycleFilters={cycleFilters}
+        typeFilters={typeFilters}
         filtersOpen={filtersOpen}
         onToggleFilters={() => {
           setFiltersOpen((prev) => !prev);
         }}
         onFilterChange={handleFilterChange}
         onCycleChange={handleCycleChange}
+        onTypeChange={handleTypeChange}
         t={t}
       />
 
-      {(hasFilters || hasSearchTerm) && (
+      {(hasFilters || hasSearchTerm || view.kind !== "idle") && (
         <Button
           variant="danger"
           className="text-xs px-3 py-1.5 sm:w-auto"
           onClick={handleClearAll}
         >
-          {t("universitiesPage.clearFilters")}
+          {t("universitiesPage.resetSearch")}
         </Button>
       )}
 
@@ -292,37 +333,13 @@ function UnifiedSearch() {
           variant="secondary"
           className="px-6 py-2.5"
           onClick={() => {
-            void loadDefaultBrowse();
+            handleShowAll("university");
           }}
         >
           {t("universitiesPage.browseAll")}
         </Button>
-      ) : view.kind === "browse" ? (
-        view.universities.length === 0 ? (
-          <div className="flex flex-col items-center gap-2 py-8 text-(--text-muted)">
-            <SearchIcon size={36} />
-            <p>{t("universitiesPage.noResults")}</p>
-          </div>
-        ) : (
-          <div className="flex flex-col gap-4 w-full">
-            {groupBy(view.universities, (u) =>
-              t(`universitiesPage.ownershipGroup.${u.ownership}`),
-            ).map((group) => (
-              <ResultGroup
-                key={group.key}
-                label={group.key}
-                collapsible
-                count={group.items.length}
-              >
-                {group.items.map((u) => (
-                  <UniversityCard key={u.id} university={u} />
-                ))}
-              </ResultGroup>
-            ))}
-          </div>
-        )
       ) : (
-        <SearchResults results={view.results} t={t} />
+        <SearchResults results={view.results} t={t} onShowAll={handleShowAll} />
       )}
     </div>
   );

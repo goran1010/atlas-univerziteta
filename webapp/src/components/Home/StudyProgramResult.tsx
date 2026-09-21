@@ -1,4 +1,8 @@
-import { AwardIcon, GraduationCapIcon } from "../sharedComponents/icons";
+import {
+  AwardIcon,
+  ClockIcon,
+  GraduationCapIcon,
+} from "../sharedComponents/icons";
 import { useState, use } from "react";
 import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
@@ -27,6 +31,7 @@ function StudyProgramResult({
   t: TFunction;
 }) {
   const { addNotification } = use(RootContext);
+  const hasTracks = (program._count?.tracks ?? 0) > 0;
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<StudyProgramDetail>();
   const [loadingDetail, setLoadingDetail] = useState(false);
@@ -85,13 +90,13 @@ function StudyProgramResult({
         onClick={(e) => {
           if (e.target instanceof Element && e.target.closest("a, button"))
             return;
-          void handleExpand();
+          if (hasTracks) void handleExpand();
         }}
-        className="cursor-pointer"
+        className={hasTracks ? "cursor-pointer" : ""}
       >
         <p className="font-bold">
           <Link
-            to={`/faculties/${program.faculty.id.toString()}`}
+            to={`/faculties/${program.faculty.id.toString()}?program=${program.id.toString()}`}
             className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             {program.name}
@@ -107,19 +112,31 @@ function StudyProgramResult({
               <AwardIcon /> {program.ects} {t("universitiesPage.ects")}
             </span>
           )}
+          {program.durationYears != null && (
+            <span>
+              <ClockIcon /> {program.durationYears}{" "}
+              {tCount(
+                t,
+                "universitiesPage.durationYears",
+                program.durationYears,
+              )}
+            </span>
+          )}
         </div>
         <FacultyBreadcrumb faculty={program.faculty} />
       </div>
-      <div className="flex justify-center mt-2">
-        <DetailsToggleButton
-          expanded={expanded}
-          className="px-3 py-1.5 text-xs"
-          onClick={() => {
-            void handleExpand();
-          }}
-          loading={loadingDetail}
-        />
-      </div>
+      {hasTracks && (
+        <div className="flex justify-center mt-2">
+          <DetailsToggleButton
+            expanded={expanded}
+            className="px-3 py-1.5 text-xs"
+            onClick={() => {
+              void handleExpand();
+            }}
+            loading={loadingDetail}
+          />
+        </div>
+      )}
       {expanded && detailData && (
         <div
           className="mt-3 border-t border-(--border-color) pt-3"

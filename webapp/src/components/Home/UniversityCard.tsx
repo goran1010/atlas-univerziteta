@@ -28,6 +28,7 @@ import type {
 } from "../../schemas/university";
 
 function UniversityCard({ university }: { university: UniversityListItem }) {
+  const hasFaculties = university._count.faculties > 0;
   const { t, addNotification } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<UniversityDetail>();
@@ -104,13 +105,17 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
     : [];
 
   return (
-    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) hover:bg-(--hover-surface) transition-colors cursor-pointer">
+    <li
+      className={`border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) transition-colors ${
+        hasFaculties ? "cursor-pointer hover:bg-(--hover-surface)" : ""
+      }`}
+    >
       <div
         className="p-2 sm:p-4"
         onClick={(e) => {
           if (e.target instanceof Element && e.target.closest("a, button"))
             return;
-          void handleExpand();
+          if (hasFaculties) void handleExpand();
         }}
       >
         <div>
@@ -183,14 +188,16 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
           >
             {t("universitiesPage.viewInfo")}
           </Button>
-          <DetailsToggleButton
-            expanded={expanded}
-            className="px-3 py-1.5 text-xs"
-            onClick={() => {
-              void handleExpand();
-            }}
-            loading={loadingDetail}
-          />
+          {hasFaculties && (
+            <DetailsToggleButton
+              expanded={expanded}
+              className="px-3 py-1.5 text-xs"
+              onClick={() => {
+                void handleExpand();
+              }}
+              loading={loadingDetail}
+            />
+          )}
         </div>
         <Dialog
           open={dialogOpen}

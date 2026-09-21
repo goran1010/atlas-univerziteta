@@ -17,7 +17,7 @@ function TrackResult({ track, t }: { track: TrackSearchResult; t: TFunction }) {
     <ResultCard>
       <p className="font-bold">
         <Link
-          to={`/faculties/${track.studyProgram.faculty.id.toString()}`}
+          to={`/faculties/${track.studyProgram.faculty.id.toString()}?program=${track.studyProgram.id.toString()}&track=${track.id.toString()}`}
           className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
           {track.name}
