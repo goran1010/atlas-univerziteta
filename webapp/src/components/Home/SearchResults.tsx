@@ -8,6 +8,7 @@ import { StudyProgramResult } from "./StudyProgramResult";
 import { ResultGroup } from "./ResultGroup";
 import { CollapseToggle } from "./CollapseToggle";
 import { groupBy } from "./utils/groupBy";
+import { cycleRank } from "./utils/cycleOrder";
 
 import type { UnifiedSearchResults } from "../../schemas/university";
 import type { SearchType } from "../../schemas/domain";
@@ -188,10 +189,14 @@ function SearchResults({
         ));
       case "studyProgram":
         return groupBy(
-          results.studyPrograms.map((item, index) => ({
-            item,
-            hint: contextHintFor(type, index, direct),
-          })),
+          results.studyPrograms
+            .map((item, index) => ({
+              item,
+              hint: contextHintFor(type, index, direct),
+            }))
+            .toSorted(
+              (a, b) => cycleRank(a.item.cycle) - cycleRank(b.item.cycle),
+            ),
           (entry) => t(`universitiesPage.cycles.${entry.item.cycle}`),
         ).map((g) => (
           <ResultGroup

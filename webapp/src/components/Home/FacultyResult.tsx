@@ -11,6 +11,7 @@ import { ShareButton } from "./ShareButton";
 import { StudyProgramRow } from "./StudyProgramRow";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
+import { byCycleDisplayOrder } from "./utils/cycleOrder";
 import { Spinner } from "../sharedComponents/Spinner";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";
@@ -196,8 +197,9 @@ function FacultyResult({
               </p>
               <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
                 <div className="flex flex-col gap-2">
-                  {groupBy(detailData.studyPrograms, (sp) =>
-                    t(`universitiesPage.cycles.${sp.cycle}`),
+                  {groupBy(
+                    byCycleDisplayOrder(detailData.studyPrograms),
+                    (sp) => t(`universitiesPage.cycles.${sp.cycle}`),
                   ).map((g) => (
                     <ResultGroup key={g.key} label={g.key}>
                       {g.items.map((sp) => (

@@ -14,6 +14,7 @@ import { Button } from "../sharedComponents/Button";
 import { ResultGroup } from "./ResultGroup";
 import { TrackList } from "./TrackList";
 import { groupBy } from "./utils/groupBy";
+import { byCycleDisplayOrder } from "./utils/cycleOrder";
 import { tCount } from "../../utils/pluralize";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";
@@ -98,7 +99,7 @@ function FacultyDetailPage() {
     ? [focusedProgram]
     : faculty.studyPrograms;
 
-  const programsByCycle = groupBy(visiblePrograms, (sp) =>
+  const programsByCycle = groupBy(byCycleDisplayOrder(visiblePrograms), (sp) =>
     t(`universitiesPage.cycles.${sp.cycle}`),
   );
 

@@ -9,6 +9,7 @@ import { ContactLinks } from "./ContactLinks";
 import { ShareButton } from "./ShareButton";
 import { ResultGroup } from "./ResultGroup";
 import { StudyProgramRow } from "./StudyProgramRow";
+import { byCycleDisplayOrder } from "./utils/cycleOrder";
 import { groupBy } from "./utils/groupBy";
 
 import type { TFunction } from "../../types";
@@ -152,7 +153,7 @@ function FacultyRow({
             )}
           </p>
           <div className="flex flex-col gap-2">
-            {groupBy(faculty.studyPrograms, (sp) =>
+            {groupBy(byCycleDisplayOrder(faculty.studyPrograms), (sp) =>
               t(`universitiesPage.cycles.${sp.cycle}`),
             ).map((g) => (
               <ResultGroup key={g.key} label={g.key}>

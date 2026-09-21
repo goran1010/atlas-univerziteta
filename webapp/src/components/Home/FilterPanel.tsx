@@ -107,10 +107,10 @@ const TYPE_LABEL_KEYS: Record<SearchType, string> = {
 const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
 const OWNERSHIPS: Ownership[] = ["PUBLIC", "PRIVATE"];
 const CYCLES: StudyCycle[] = [
+  "INTEGRATED",
   "FIRST",
   "SECOND",
   "THIRD",
-  "INTEGRATED",
   "VOCATIONAL",
   "SPECIALIST",
 ];
