@@ -234,19 +234,26 @@ function SearchResults({
       ]
     : visibleTypes;
 
+  // when the words of a query spread across the hierarchy (e.g. a program
+  // name plus a city), no section has all-words own-field matches - still
+  // keep the top section open instead of presenting a fully collapsed page
+  const allContextOnly =
+    hadTerm && orderedTypes.every((type) => sectionData[type].direct === 0);
+
   return (
     <>
-      {orderedTypes.map((type) => {
+      {orderedTypes.map((type, index) => {
         const { shown, total, direct } = sectionData[type];
         const contextOnly = hadTerm && direct === 0;
+        const startCollapsed = contextOnly && !(allContextOnly && index === 0);
         return (
           <ResultSection
             // remount when the band changes so defaultCollapsed reapplies
-            key={`${type}:${contextOnly.toString()}`}
+            key={`${type}:${startCollapsed.toString()}`}
             heading={t(HEADING_KEYS[type])}
             total={total}
             shown={shown}
-            defaultCollapsed={contextOnly}
+            defaultCollapsed={startCollapsed}
             onShowAll={
               onShowAll &&
               (() => {

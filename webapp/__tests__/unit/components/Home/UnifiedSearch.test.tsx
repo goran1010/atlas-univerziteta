@@ -258,6 +258,34 @@ describe("UnifiedSearch", () => {
     ).toBeInTheDocument();
   });
 
+  test("keeps the first section expanded when every section is context-only", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      searchResponse({
+        universities: [universityListItem],
+        studyPrograms: [studyProgramResult],
+        totals: { universities: 1, faculties: 0, studyPrograms: 1 },
+        direct: { universities: 0, faculties: 0, studyPrograms: 0 },
+      }),
+    );
+
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    render(<Wrapper />);
+
+    await user.type(
+      screen.getByRole("searchbox", { name: /Search/i }),
+      "medicina javni sar",
+    );
+
+    act(() => {
+      vi.advanceTimersByTime(500);
+    });
+
+    // programs rank first; their content stays visible despite direct = 0
+    expect(await screen.findByText(/Computer Science/i)).toBeInTheDocument();
+    // the second context-only section still starts collapsed
+    expect(screen.queryByText(/University of Mostar/i)).not.toBeInTheDocument();
+  });
+
   test("capped section offers Show all and re-queries with the type filter", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       searchResponse({
