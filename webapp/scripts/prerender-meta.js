@@ -14,7 +14,7 @@ function t(path) {
 const APP_NAME = t("title.app");
 
 // every title follows "Page | App"; image names refer to
-// public/images/<name> and fall back to the default og image when the
+// public/images/og-images/<name> and fall back to the default og image when the
 // screenshot has not been added yet
 const routes = [
   {
@@ -54,7 +54,13 @@ const routes = [
   },
 ];
 
-const imagesDir = join(import.meta.dirname, "..", "public", "images");
+const imagesDir = join(
+  import.meta.dirname,
+  "..",
+  "public",
+  "images",
+  "og-images",
+);
 
 const indexHtml = readFileSync(join(distDir, "index.html"), "utf-8");
 

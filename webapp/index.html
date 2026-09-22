@@ -20,7 +20,7 @@
     <meta property="og:url" content="%VITE_SITE_URL%/" />
     <meta
       property="og:image"
-      content="%VITE_SITE_URL%/images/og-image-home.png"
+      content="%VITE_SITE_URL%/images/og-images/og-image-home.png"
     />
 
     <!-- Twitter Card -->
@@ -32,26 +32,29 @@
     />
     <meta
       name="twitter:image"
-      content="%VITE_SITE_URL%/images/og-image-home.png"
+      content="%VITE_SITE_URL%/images/og-images/og-image-home.png"
     />
 
-    <!-- Favicons -->
+    <!-- Favicons: SVG listed last - Firefox picks the last rel="icon",
+         Chromium scores by size and treats SVG as any-size -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/images/favicon-32x32.png"
+      href="/images/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/images/favicon-16x16.png"
+      href="/images/favicons/favicon-16x16.png"
     />
+    <link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/images/apple-touch-icon.png"
+      href="/images/favicons/apple-touch-icon.png"
     />
 
     <!-- Preload every font subset/weight in use so no text flashes in the
