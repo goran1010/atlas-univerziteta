@@ -69,6 +69,10 @@ passport.use(
       callbackURL: env.GITHUB_CALLBACK_URL,
       scope: ["user:email"],
       allRawEmails: true,
+      // login-CSRF protection: any truthy value makes passport-oauth2 store
+      // a random nonce in the session on /auth/github and verify it on the
+      // callback ("true" is not assignable - @types narrows state to string)
+      state: "session-nonce",
     },
     (
       _accessToken: string,

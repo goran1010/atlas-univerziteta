@@ -338,6 +338,38 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
   });
 });
 
+describe("Auth Router - GET /auth/github OAuth state", () => {
+  test("the GitHub authorization redirect carries a state nonce", async () => {
+    const response = await request(app).get("/auth/github");
+
+    expect(response.status).toBe(302);
+    const location = response.headers["location"] ?? "";
+    expect(location).toContain("github.com/login/oauth/authorize");
+    expect(location).toMatch(/[?&]state=[^&]+/);
+  });
+
+  test("a callback with a mismatched state fails without reaching GitHub", async () => {
+    const agent = request.agent(app);
+    await agent.get("/auth/github");
+
+    const response = await agent.get(
+      "/auth/github/callback?code=fake-code&state=wrong-state",
+    );
+
+    expect(response.status).toBe(302);
+    expect(response.headers["location"]).toContain("/login?error=github");
+  });
+
+  test("a callback without a session fails without reaching GitHub", async () => {
+    const response = await request(app).get(
+      "/auth/github/callback?code=fake-code&state=any-state",
+    );
+
+    expect(response.status).toBe(302);
+    expect(response.headers["location"]).toContain("/login?error=github");
+  });
+});
+
 describe("Auth Router - POST /auth/login", () => {
   test("responds with status 200 and access token if login is successful", async () => {
     const agent = request.agent(app);
