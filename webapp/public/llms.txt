@@ -1,15 +1,19 @@
-# UniAtlas Bosnia
+# Atlas Univerziteta
 
-UniAtlas Bosnia is a free, open-source directory of universities, faculties, study programs, and subjects in Bosnia and Herzegovina. The site provides a searchable web interface and a public REST API.
+Atlas Univerziteta is a free, open-source directory of universities, faculties, study programs, and tracks in Bosnia and Herzegovina. The site provides a searchable web interface and a public REST API.
 
 ## Public pages
 
 - [Home](https://atlasuniverziteta.com/)
-- [Universities](https://atlasuniverziteta.com/universities)
+- [Search](https://atlasuniverziteta.com/search)
+- [About](https://atlasuniverziteta.com/about)
 - [API Docs](https://atlasuniverziteta.com/api-docs)
 
 ## API access
 
+- [API root and discovery](https://api.atlasuniverziteta.com/)
 - [All universities endpoint](https://api.atlasuniverziteta.com/api/v1/universities)
 - [University by id endpoint](https://api.atlasuniverziteta.com/api/v1/universities/1)
-- [Unified search endpoint (universities, faculties, study programs, subjects)](https://api.atlasuniverziteta.com/api/v1/search?searchTerm=sarajevo)
+- [Unified search endpoint (universities, faculties, study programs; supports searchTerm, entity, ownership, cycle and type filters)](https://api.atlasuniverziteta.com/api/v1/search?searchTerm=sarajevo)
+
+The search matches names, cities, acronyms, ECTS/duration values, and related unit names, case- and diacritic-insensitively, with tolerance for Bosnian/Croatian/Serbian inflected word forms.

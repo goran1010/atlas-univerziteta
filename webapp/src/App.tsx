@@ -39,7 +39,7 @@ function App() {
       <HelmetProvider>
         <Helmet>
           <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="UniAtlas Bosnia" />
+          <meta property="og:site_name" content="Atlas Univerziteta" />
           <meta
             property="og:image"
             content={`${SITE_URL}/images/og-image-home.png`}

@@ -95,6 +95,18 @@ function UniversityDetailPage() {
           content={`${university.name} - ${university.city}, ${entityLabel}`}
         />
         <link rel="canonical" href={`${SITE_URL}/universities/${id ?? ""}`} />
+        <meta
+          property="og:title"
+          content={`${university.name} | ${t("title.app")}`}
+        />
+        <meta
+          property="og:description"
+          content={`${university.name} - ${university.city}, ${entityLabel}`}
+        />
+        <meta
+          property="og:url"
+          content={`${SITE_URL}/universities/${id ?? ""}`}
+        />
       </Helmet>
 
       <div className="w-full mx-auto px-1 sm:px-4 py-4">
