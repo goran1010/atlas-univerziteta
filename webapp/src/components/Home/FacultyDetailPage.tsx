@@ -203,7 +203,12 @@ function FacultyDetailPage() {
                         className="border border-(--border-color) rounded-lg p-3 bg-(--surface-2)"
                       >
                         <p className="font-semibold text-(--text-primary)">
-                          {sp.name}
+                          <Link
+                            to={`/faculties/${id ?? ""}?program=${sp.id.toString()}`}
+                            className="underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                          >
+                            {sp.name}
+                          </Link>
                         </p>
                         <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
                           {sp.ects != null && (

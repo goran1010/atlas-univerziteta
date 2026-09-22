@@ -7,14 +7,16 @@ const baseClassName =
 function LinkButton({
   to,
   className = "",
+  onClick,
   children,
 }: {
   to: string;
   className?: string;
+  onClick?: () => void;
   children: ReactNode;
 }) {
   return (
-    <Link to={to} className={`${baseClassName} ${className}`}>
+    <Link to={to} className={`${baseClassName} ${className}`} onClick={onClick}>
       {children}
     </Link>
   );

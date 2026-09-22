@@ -128,11 +128,11 @@
     "improveStep2": "Go to the Improve Data page and submit your suggestion",
     "improveStep3": "Admins review submissions and apply approved changes to the live dataset",
     "improveContribute": "Improve Data",
-    "improveSignUp": "Create an Account",
+    "improveSignUp": "Create an account",
     "forDevsHeading": "For Developers",
     "forDevsDescription": "UniAtlas Bosnia exposes a free, unauthenticated REST API. Fetch all universities, search by name, city, or acronym, retrieve full detail for a single university, or search study programs across all institutions.",
     "forDevsNote": "No authentication required for public endpoints.",
-    "forDevsCta": "View API Docs",
+    "forDevsCta": "View API docs",
     "forDevsGithub": "View on GitHub",
     "openSource": "This is an open-source project. View the source code, setup instructions, and contribute on",
     "github": "GitHub"
@@ -246,7 +246,7 @@
       "RS": "RS - Republika Srpska",
       "BD": "BD - Brčko District"
     },
-    "submitSuggestion": "Submit Suggestion",
+    "submitSuggestion": "Submit suggestion",
     "deleteChange": "Delete"
   },
   "admin": {
@@ -356,7 +356,7 @@
   },
   "universitiesPage": {
     "title": "Find programs and universities",
-    "browseAll": "Browse All",
+    "browseAll": "Browse all",
     "search": "Search",
     "searchHint": "Search across all data - by name, city, acronym, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
     "searchAllPlaceholder": "Search by name, city, cycle, entity…",

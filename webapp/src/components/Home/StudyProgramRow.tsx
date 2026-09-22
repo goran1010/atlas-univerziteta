@@ -1,4 +1,5 @@
 import { AwardIcon, ClockIcon, SpeechIcon } from "../sharedComponents/icons";
+import { Link } from "react-router";
 import { tCount } from "../../utils/pluralize";
 import { TrackList } from "./TrackList";
 
@@ -7,9 +8,11 @@ import type { UniversityDetailStudyProgram } from "../../schemas/university";
 
 function StudyProgramRow({
   program,
+  facultyId,
   t,
 }: {
   program: UniversityDetailStudyProgram;
+  facultyId: number;
   t: TFunction;
 }) {
   const hasTracks = program.tracks.length > 0;
@@ -18,7 +21,12 @@ function StudyProgramRow({
     <li className="text-sm">
       <div className="py-1 px-0.5 sm:px-2 rounded-md">
         <div className="min-w-0">
-          <span className="font-medium">{program.name}</span>
+          <Link
+            to={`/faculties/${facultyId.toString()}?program=${program.id.toString()}`}
+            className="font-medium underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
+            {program.name}
+          </Link>
           <div className="flex flex-wrap gap-x-1.5 sm:gap-x-3 items-center text-xs text-(--text-muted) mt-0.5">
             {program.durationYears != null && (
               <span>

@@ -51,7 +51,7 @@ const ENUM_ALIASES: Record<string, string> = {
   STRUČN: "VOCATIONAL",
   SPECIJALISTICK: "SPECIALIST",
   SPECIJALISTIČK: "SPECIALIST",
-};
+} as const;
 
 const ENTITIES = ["FBIH", "RS", "BD"] as const;
 const OWNERSHIPS = ["PUBLIC", "PRIVATE"] as const;

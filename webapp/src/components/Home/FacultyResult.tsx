@@ -5,6 +5,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { ResultCard } from "./ResultCard";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { Dialog } from "../sharedComponents/Dialog";
 import { ContactLinks } from "./ContactLinks";
 import { ShareButton } from "./ShareButton";
@@ -91,7 +92,11 @@ function FacultyResult({
             return;
           if (hasPrograms) void handleExpand();
         }}
-        className={hasPrograms ? "cursor-pointer" : ""}
+        className={
+          hasPrograms
+            ? "cursor-pointer hover:bg-(--hover-surface) rounded-md transition-colors"
+            : ""
+        }
       >
         <p className="font-bold">
           <Link
@@ -160,15 +165,15 @@ function FacultyResult({
             <ContactLinks website={faculty.website} />
           </div>
           <div className="flex justify-center">
-            <Link
+            <LinkButton
               to={`/faculties/${faculty.id.toString()}`}
-              className="inline-flex items-center justify-center border border-(--border-color) rounded-lg px-4 py-2 text-sm font-medium text-(--text-primary) hover:bg-(--hover-surface) transition-colors"
+              className="text-sm"
               onClick={() => {
                 setDialogOpen(false);
               }}
             >
               {t("universitiesPage.openFullPage")}
-            </Link>
+            </LinkButton>
           </div>
         </div>
       </Dialog>
@@ -199,7 +204,12 @@ function FacultyResult({
                   ).map((g) => (
                     <ResultGroup key={g.key} label={g.key}>
                       {g.items.map((sp) => (
-                        <StudyProgramRow key={sp.id} program={sp} t={t} />
+                        <StudyProgramRow
+                          key={sp.id}
+                          program={sp}
+                          facultyId={faculty.id}
+                          t={t}
+                        />
                       ))}
                     </ResultGroup>
                   ))}

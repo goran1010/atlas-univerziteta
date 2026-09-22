@@ -9,6 +9,7 @@ import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { Dialog } from "../sharedComponents/Dialog";
 import { Spinner } from "../sharedComponents/Spinner";
 import { tCount } from "../../utils/pluralize";
@@ -263,15 +264,15 @@ function UniversityCard({
               )}
             </p>
             <div className="flex justify-center">
-              <Link
+              <LinkButton
                 to={`/universities/${university.id.toString()}`}
-                className="inline-flex items-center justify-center border border-(--border-color) rounded-lg px-4 py-2 text-sm font-medium text-(--text-primary) hover:bg-(--hover-surface) transition-colors"
+                className="text-sm"
                 onClick={() => {
                   setDialogOpen(false);
                 }}
               >
                 {t("universitiesPage.openFullPage")}
-              </Link>
+              </LinkButton>
             </div>
           </div>
         </Dialog>
