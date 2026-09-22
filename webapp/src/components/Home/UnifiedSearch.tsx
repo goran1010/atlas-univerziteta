@@ -42,7 +42,12 @@ function UnifiedSearch() {
     return hasEntity || hasOwnership || hasCycle || hasType;
   });
 
-  const searchInput = searchParams.get("q") ?? "";
+  // local state backs the input: deriving it from the URL would re-render
+  // the field through an async router update on every keystroke, jumping the
+  // cursor to the end and breaking mobile autocorrect
+  const [searchInput, setSearchInput] = useState(
+    () => searchParams.get("q") ?? "",
+  );
   const entityParsed = entitySchema.safeParse(searchParams.get("entity"));
   const entityFilter = entityParsed.success ? entityParsed.data : "";
   const ownershipParsed = ownershipSchema.safeParse(
@@ -193,10 +198,20 @@ function UnifiedSearch() {
     }
   }, []);
 
+  // reflect external URL changes (e.g. nav links) into the input, but never
+  // while the user is typing in it - that would recreate the cursor jump
+  const urlQuery = searchParams.get("q") ?? "";
+  useEffect(() => {
+    if (document.activeElement === inputRef.current) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect, react-x/set-state-in-effect
+    setSearchInput(urlQuery);
+  }, [urlQuery]);
+
   function handleInputChange(value: string) {
-    updateParams({ q: value || null });
+    setSearchInput(value);
     clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
+      updateParams({ q: value || null });
       triggerSearch(
         value,
         entityFilter,
@@ -284,6 +299,7 @@ function UnifiedSearch() {
   }
 
   function handleClear() {
+    setSearchInput("");
     updateParams({ q: null });
     clearTimeout(debounceRef.current);
     triggerSearch(
@@ -298,6 +314,7 @@ function UnifiedSearch() {
   }
 
   function handleClearAll() {
+    setSearchInput("");
     clearTimeout(debounceRef.current);
     setSearchParams(new URLSearchParams(), { replace: true });
     setView({ kind: "idle" });
