@@ -28,25 +28,29 @@ async function getUniversities(_req: Request, res: Response) {
 }
 
 // Bosnian/Serbian terms and common synonyms mapped to the English enum
-// values, so search matches in both languages (e.g. "javna" -> PUBLIC).
+// values, so search matches in both languages. Local words are keyed by
+// their STEM so every gender/case form matches (javna/javni/javno -> JAVN);
+// words the stemmer leaves alone (prvi, master) are keyed as typed.
 const ENUM_ALIASES: Record<string, string> = {
-  JAVNI: "PUBLIC",
-  JAVNA: "PUBLIC",
-  PRIVATNI: "PRIVATE",
-  PRIVATNA: "PRIVATE",
+  JAVN: "PUBLIC",
+  PRIVATN: "PRIVATE",
   PRVI: "FIRST",
   BACHELOR: "FIRST",
+  DRUG: "SECOND",
   DRUGI: "SECOND",
   MASTER: "SECOND",
+  TREC: "THIRD",
+  TREĆ: "THIRD",
   TRECI: "THIRD",
   TREĆI: "THIRD",
   DOCTORAL: "THIRD",
   PHD: "THIRD",
+  INTEGRISAN: "INTEGRATED",
   INTEGRISANI: "INTEGRATED",
-  STRUCNI: "VOCATIONAL",
-  STRUČNI: "VOCATIONAL",
-  SPECIJALISTICKI: "SPECIALIST",
-  SPECIJALISTIČKI: "SPECIALIST",
+  STRUCN: "VOCATIONAL",
+  STRUČN: "VOCATIONAL",
+  SPECIJALISTICK: "SPECIALIST",
+  SPECIJALISTIČK: "SPECIALIST",
 };
 
 const ENTITIES = ["FBIH", "RS", "BD"] as const;
@@ -76,11 +80,14 @@ function enumMatch(
   field: string,
   values: readonly string[],
   word: string,
+  stem: string,
 ): WhereClause[] {
-  const upper = word.toUpperCase();
-  const candidate = ENUM_ALIASES[upper] ?? upper;
-  const match = values.find((value) => value === candidate);
-  return match ? [{ [field]: match }] : [];
+  for (const form of [word.toUpperCase(), stem.toUpperCase()]) {
+    const candidate = ENUM_ALIASES[form] ?? form;
+    const match = values.find((value) => value === candidate);
+    if (match) return [{ [field]: match }];
+  }
+  return [];
 }
 
 // Every entity is searchable through its own fields, its ancestors and its
@@ -98,8 +105,8 @@ function universityOwnMatch(token: SearchToken): WhereClause[] {
     ...containsAny(token.variants, "name"),
     ...containsAny(token.variants, "city"),
     ...containsAny(token.variants, "acronym"),
-    ...enumMatch("entity", ENTITIES, token.word),
-    ...enumMatch("ownership", OWNERSHIPS, token.word),
+    ...enumMatch("entity", ENTITIES, token.word, token.stem),
+    ...enumMatch("ownership", OWNERSHIPS, token.word, token.stem),
   ];
 }
 
@@ -126,7 +133,7 @@ function studyProgramOwnMatch(token: SearchToken): WhereClause[] {
   return [
     ...containsAny(token.variants, "name"),
     ...containsAny(token.variants, "language"),
-    ...enumMatch("cycle", CYCLES, token.word),
+    ...enumMatch("cycle", CYCLES, token.word, token.stem),
   ];
 }
 

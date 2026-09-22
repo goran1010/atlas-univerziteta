@@ -1,5 +1,6 @@
 import {
   expandSearchTerm,
+  stemWord,
   tokenizeSearchTerm,
 } from "../../../src/utils/searchVariants.js";
 import { describe, test, expect } from "vitest";
@@ -53,16 +54,48 @@ describe("expandSearchTerm", () => {
   });
 });
 
+describe("stemWord", () => {
+  test("strips case and gender endings", () => {
+    expect(stemWord("medicina")).toBe("medicin");
+    expect(stemWord("medicine")).toBe("medicin");
+    expect(stemWord("medicini")).toBe("medicin");
+    expect(stemWord("medicinom")).toBe("medicin");
+    expect(stemWord("javnog")).toBe("javn");
+    expect(stemWord("javnim")).toBe("javn");
+    expect(stemWord("sarajevu")).toBe("sarajev");
+  });
+
+  test("falls back to a shorter suffix when the stem would get too short", () => {
+    // "ija" would leave "srb"; the plain "a" keeps a usable stem
+    expect(stemWord("srbija")).toBe("srbij");
+  });
+
+  test("leaves short words and unknown endings alone", () => {
+    expect(stemWord("Luka")).toBe("luka");
+    expect(stemWord("prvi")).toBe("prvi");
+    expect(stemWord("master")).toBe("master");
+  });
+});
+
 describe("tokenizeSearchTerm", () => {
-  test("splits on whitespace and expands each text word", () => {
+  test("splits on whitespace and expands each text word's stem", () => {
     const tokens = tokenizeSearchTerm("Banja  Luka");
 
     expect(tokens).toHaveLength(2);
-    expect(tokens[0]).toMatchObject({ kind: "text", word: "Banja" });
-    expect(tokens[1]).toMatchObject({ kind: "text", word: "Luka" });
+    expect(tokens[0]).toMatchObject({
+      kind: "text",
+      word: "Banja",
+      stem: "banj",
+    });
+    // "luk" would fall below the minimum stem length, so Luka stays whole
+    expect(tokens[1]).toMatchObject({
+      kind: "text",
+      word: "Luka",
+      stem: "luka",
+    });
     const first = tokens[0];
     if (first?.kind !== "text") throw new Error("expected a text token");
-    expect(first.variants).toContain("banja");
+    expect(first.variants).toContain("banj");
   });
 
   test("drops text words shorter than two characters", () => {

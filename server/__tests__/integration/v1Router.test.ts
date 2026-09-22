@@ -484,6 +484,75 @@ describe("GET /api/v1/search - empty browse", () => {
   });
 });
 
+describe("GET /api/v1/search - inflected terms", () => {
+  test("declined forms find base and derived names, and enum stems apply", async () => {
+    const marker = "StemTestMed";
+    const cleanup = async () => {
+      await prisma.studyProgram.deleteMany({
+        where: { name: { contains: marker } },
+      });
+      await prisma.faculty.deleteMany({
+        where: { name: { contains: marker } },
+      });
+      await prisma.university.deleteMany({
+        where: { name: { contains: marker } },
+      });
+    };
+    await cleanup();
+
+    await prisma.university.create({
+      data: {
+        name: `Univerzitet ${marker}`,
+        city: "TestGrad",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: {
+          create: {
+            name: `Medicinski fakultet ${marker}`,
+            studyPrograms: {
+              create: { name: `Medicina ${marker}`, cycle: "INTEGRATED" },
+            },
+          },
+        },
+      },
+    });
+
+    // each declined query form must find both the noun and the adjective name
+    for (const form of ["medicina", "medicine", "medicini"]) {
+      const response = await request(app).get(
+        `/api/v1/search?searchTerm=${form}%20${marker}`,
+      );
+      const data = getResponseObject(getResponseObject(response.body)["data"]);
+      const programs = getResponseArray(data["studyPrograms"]);
+      const faculties = getResponseArray(data["faculties"]);
+
+      expect(response.status).toBe(200);
+      expect(
+        programs.some((sp) => sp["name"] === `Medicina ${marker}`),
+        `programs for "${form}"`,
+      ).toBe(true);
+      expect(
+        faculties.some((f) => f["name"] === `Medicinski fakultet ${marker}`),
+        `faculties for "${form}"`,
+      ).toBe(true);
+    }
+
+    // gender/case forms of "javna" reach the ownership enum via the stem
+    const enumResponse = await request(app).get(
+      `/api/v1/search?searchTerm=javno%20${marker}&type=university`,
+    );
+    const enumData = getResponseObject(
+      getResponseObject(enumResponse.body)["data"],
+    );
+    const universities = getResponseArray(enumData["universities"]);
+    expect(
+      universities.some((u) => u["name"] === `Univerzitet ${marker}`),
+    ).toBe(true);
+
+    await cleanup();
+  });
+});
+
 describe("GET /api/v1/search - type filter", () => {
   test("returns only the requested entity types", async () => {
     const response = await request(app).get(

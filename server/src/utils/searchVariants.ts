@@ -38,10 +38,54 @@ function expandSearchTerm(term: string): string[] {
 }
 
 type SearchToken =
-  | { kind: "text"; word: string; variants: string[] }
+  | { kind: "text"; word: string; stem: string; variants: string[] }
   | { kind: "ects"; value: number }
   | { kind: "duration"; value: number }
   | { kind: "number"; value: number };
+
+// BCS case/gender endings, longest first - the first suffix that leaves a
+// stem of at least MIN_STEM_LENGTH is stripped. Substring search then makes
+// the stem match every inflected form in the data ("medicin" is contained in
+// medicina/medicine/medicini/Medicinski), so only the query needs stemming.
+const INFLECTION_SUFFIXES = [
+  "ijima",
+  "ijama",
+  "ima",
+  "ama",
+  "oga",
+  "ega",
+  "ome",
+  "emu",
+  "iju",
+  "ije",
+  "ija",
+  "om",
+  "em",
+  "og",
+  "eg",
+  "oj",
+  "ih",
+  "im",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+];
+const MIN_STEM_LENGTH = 4;
+
+function stemWord(word: string): string {
+  const lower = word.toLowerCase();
+  for (const suffix of INFLECTION_SUFFIXES) {
+    if (
+      lower.length - suffix.length >= MIN_STEM_LENGTH &&
+      lower.endsWith(suffix)
+    ) {
+      return lower.slice(0, -suffix.length);
+    }
+  }
+  return lower;
+}
 
 const ECTS_UNITS = new Set(["ects", "espb"]);
 const DURATION_UNITS = new Set([
@@ -85,11 +129,12 @@ function tokenizeSearchTerm(term: string): SearchToken[] {
     if (ECTS_UNITS.has(lower) || DURATION_UNITS.has(lower)) continue;
     if (word.length < 2) continue;
 
-    tokens.push({ kind: "text", word, variants: expandSearchTerm(word) });
+    const stem = stemWord(word);
+    tokens.push({ kind: "text", word, stem, variants: expandSearchTerm(stem) });
   }
 
   return tokens;
 }
 
-export { expandSearchTerm, tokenizeSearchTerm };
+export { expandSearchTerm, stemWord, tokenizeSearchTerm };
 export type { SearchToken };
