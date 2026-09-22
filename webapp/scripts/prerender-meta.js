@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
 const distDir = join(import.meta.dirname, "..", "dist");
@@ -12,44 +12,48 @@ function t(path) {
 
 const APP_NAME = t("title.app");
 
+// every title follows "Page | App"; image names refer to
+// public/images/<name> and fall back to the default og image when the
+// screenshot has not been added yet
 const routes = [
   {
     path: "search",
     title: `${t("title.universities")} | ${APP_NAME}`,
     description: t("meta.universities"),
-    url: "/",
-  },
-  {
-    path: "browse",
-    title: `${t("title.universities")} | ${APP_NAME}`,
-    description: t("meta.universities"),
-    url: "/",
+    url: "/search",
+    image: "og-image-search.png",
   },
   {
     path: "about",
-    title: `${t("home.title")} | ${APP_NAME}`,
+    title: `${t("title.about")} | ${APP_NAME}`,
     description: t("meta.home"),
     url: "/about",
+    image: "og-image-about.png",
   },
   {
     path: "api-docs",
     title: `${t("title.api")} | ${APP_NAME}`,
     description: t("meta.api"),
     url: "/api-docs",
+    image: "og-image-api-docs.png",
   },
   {
     path: "login",
     title: `${t("title.login")} | ${APP_NAME}`,
     description: t("meta.login"),
     url: "/login",
+    image: "og-image-login.png",
   },
   {
     path: "signup",
     title: `${t("title.signup")} | ${APP_NAME}`,
     description: t("meta.signup"),
     url: "/signup",
+    image: "og-image-signup.png",
   },
 ];
+
+const imagesDir = join(import.meta.dirname, "..", "public", "images");
 
 const indexHtml = readFileSync(join(distDir, "index.html"), "utf-8");
 
@@ -94,6 +98,10 @@ for (const route of routes) {
     /(<meta\s+property="og:url"\s+content=")(https?:\/\/[^/]+)(\/?)(")/,
     `$1$2${route.url}$4`,
   );
+
+  if (route.image && existsSync(join(imagesDir, route.image))) {
+    html = html.replaceAll("og-image-home.png", route.image);
+  }
 
   const outDir = join(distDir, route.path);
   mkdirSync(outDir, { recursive: true });

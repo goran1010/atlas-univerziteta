@@ -2,14 +2,15 @@
   "title": {
     "app": "Atlas Univerziteta",
     "home": "Početna",
-    "api": "API dokumentacija za univerzitete u Bosni i Hercegovini",
-    "universities": "Univerziteti u Bosni i Hercegovini",
+    "api": "API dokumentacija",
+    "universities": "Pretraga",
     "contribute": "Poboljšaj podatke",
     "admin": "Admin",
     "profile": "Moj profil",
     "login": "Prijava",
     "signup": "Registracija",
-    "notFound": "Stranica nije pronađena"
+    "notFound": "Stranica nije pronađena",
+    "about": "O projektu"
   },
   "meta": {
     "home": "Istražite univerzitete, fakultete, studijske programe i smjerove u Bosni i Hercegovini kroz besplatan javni skup podataka, pretraživo web sučelje i REST API.",

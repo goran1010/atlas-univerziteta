@@ -2,14 +2,15 @@
   "title": {
     "app": "Atlas Univerziteta",
     "home": "Home",
-    "api": "Bosnia and Herzegovina Universities API Docs",
-    "universities": "Universities in Bosnia and Herzegovina",
-    "contribute": "Improve Data",
-    "admin": "Admin Dashboard",
-    "profile": "My Profile",
-    "login": "Log In",
-    "signup": "Sign Up",
-    "notFound": "Page Not Found"
+    "api": "API docs",
+    "universities": "Search",
+    "contribute": "Improve data",
+    "admin": "Admin dashboard",
+    "profile": "My profile",
+    "login": "Log in",
+    "signup": "Sign up",
+    "notFound": "Page not found",
+    "about": "About"
   },
   "meta": {
     "home": "Explore universities, faculties, study programs, and tracks in Bosnia and Herzegovina with a free public dataset, searchable web interface, and REST API.",
