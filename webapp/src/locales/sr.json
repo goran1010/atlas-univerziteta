@@ -300,16 +300,15 @@
       "forbidden": "Nemate dozvolu za ovu radnju.",
       "csrfInvalid": "Sigurnosna provjera sesije nije uspjela. Osvježite stranicu i pokušajte ponovo.",
       "alreadyLoggedIn": "Već ste prijavljeni.",
-      "alreadyAdmin": "Već imate admin ulogu."
+      "alreadyAdmin": "Već imate admin ulogu.",
+      "emailNotSent": "Email za potvrdu nije poslan. Provjerite email adresu i pokušajte ponovo."
     },
     "csrfTokenFailed": "Nije moguće uspostaviti sigurnu sesiju. Osvježite stranicu i pokušajte ponovo.",
     "pendingChanges": {
-      "loadSuccess": "Izmjene na čekanju su učitane.",
       "loadFailed": "Nije moguće učitati izmjene na čekanju. Provjerite konekciju i pokušajte ponovo.",
       "fetchError": "Došlo je do greške pri učitavanju izmjena na čekanju. Osvježite stranicu i pokušajte ponovo."
     },
     "loginStatus": {
-      "success": "Uspješno ste prijavljeni.",
       "error": "Nije moguće provjeriti status prijave. Osvježite stranicu i pokušajte ponovo."
     },
     "auth": {
@@ -321,7 +320,8 @@
       "registrationSuccess": "Registracija je uspješna. Provjerite email.",
       "logoutFailed": "Odjava nije uspjela. Pokušajte ponovo.",
       "logoutError": "Došlo je do greške tokom odjave. Pokušajte ponovo za koji trenutak.",
-      "logoutSuccess": "Uspješno ste odjavljeni."
+      "logoutSuccess": "Uspješno ste odjavljeni.",
+      "githubLoginSuccess": "Uspješno ste se prijavili preko GitHub-a."
     },
     "admin": {
       "approveSuccess": "Izmjena na čekanju je odobrena.",

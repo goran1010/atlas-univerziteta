@@ -5,7 +5,10 @@ import { passport } from "../config/passport.js";
 import { env } from "../config/env.js";
 import { prisma } from "../db/prisma.js";
 import { sendConfirmationEmail } from "../email/confirmationEmail.js";
-import { emailConfirmHTML } from "../utils/emailConfirmHTML.js";
+import {
+  emailConfirmHTML,
+  emailConfirmErrorHTML,
+} from "../utils/emailConfirmHTML.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 import * as authValidation from "../validation/authValidation.js";
 
@@ -139,12 +142,13 @@ async function confirmEmail(req: Request, res: Response) {
   const pendingUser = pendingUsers[0];
 
   if (!pendingUser) {
-    sendError(res, {
-      status: 400,
-      code: "CONFIRMATION_TOKEN_INVALID",
-      message:
-        "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
-    });
+    res
+      .status(400)
+      .send(
+        emailConfirmErrorHTML(
+          "The confirmation link is invalid or expired. Request a new confirmation email.",
+        ),
+      );
     return;
   }
 
@@ -155,11 +159,9 @@ async function confirmEmail(req: Request, res: Response) {
       },
     });
 
-    sendError(res, {
-      status: 400,
-      code: "CONFIRMATION_TOKEN_INVALID",
-      message: "Token expired. Please sign up again.",
-    });
+    res
+      .status(400)
+      .send(emailConfirmErrorHTML("The link expired. Please sign up again."));
     return;
   }
 
@@ -176,12 +178,13 @@ async function confirmEmail(req: Request, res: Response) {
       },
     });
 
-    sendError(res, {
-      status: 400,
-      code: "CONFIRMATION_TOKEN_INVALID",
-      message:
-        "Email confirmation failed: this email is already registered. Log in instead.",
-    });
+    res
+      .status(400)
+      .send(
+        emailConfirmErrorHTML(
+          "This email is already registered. Log in instead.",
+        ),
+      );
     return;
   }
 
@@ -311,7 +314,7 @@ function githubCallback(req: Request, res: Response, next: NextFunction) {
                 return;
               }
 
-              res.redirect(env.WEBAPP_URL);
+              res.redirect(`${env.WEBAPP_URL}/?login=github`);
             });
           });
         });

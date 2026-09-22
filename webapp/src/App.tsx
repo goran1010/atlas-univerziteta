@@ -11,6 +11,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { RootContext } from "./contextData/RootContext";
 import { SkipNavbarLink } from "./components/SkipNavbarLink";
 import { RouteAnnouncer } from "./components/RouteAnnouncer";
+import { GithubLoginNotice } from "./components/GithubLoginNotice";
 import { SITE_URL } from "./utils/envConfig";
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
 
           {/* A11y: Accessibility features like route announcer and skip link */}
           <RouteAnnouncer />
+          <GithubLoginNotice />
           <SkipNavbarLink t={t} />
 
           <Navbar closeMenu={closeMenu} />

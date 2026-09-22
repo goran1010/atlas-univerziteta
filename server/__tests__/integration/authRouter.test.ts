@@ -219,13 +219,11 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
     );
 
     expect(response.status).toBe(400);
-    expect(response.body).toEqual({
-      error: {
-        code: "CONFIRMATION_TOKEN_INVALID",
-        message:
-          "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
-      },
-    });
+    // confirmation links open in a browser, so errors are HTML pages
+    expect(response.headers["content-type"]).toContain("text/html");
+    expect(response.text).toContain(
+      "The confirmation link is invalid or expired.",
+    );
   });
 
   test("responds with status 200 and Email confirmed successfully message if token is valid", async () => {
@@ -259,12 +257,8 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
     });
 
     expect(response.status).toBe(400);
-    expect(response.body).toEqual({
-      error: {
-        code: "CONFIRMATION_TOKEN_INVALID",
-        message: "Token expired. Please sign up again.",
-      },
-    });
+    expect(response.headers["content-type"]).toContain("text/html");
+    expect(response.text).toContain("The link expired. Please sign up again.");
     expect(pendingUserInDb).toBeNull();
   });
 
@@ -307,13 +301,11 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
     });
 
     const confirmResponse = await request(app).get(`/auth/confirm/${token}`);
-    const responseBody = getResponseObject(confirmResponse.body);
-
-    const error = getResponseObject(responseBody["error"]);
 
     expect(confirmResponse.status).toBe(400);
-    expect(error["message"]).toBe(
-      "Email confirmation failed: this email is already registered. Log in instead.",
+    expect(confirmResponse.headers["content-type"]).toContain("text/html");
+    expect(confirmResponse.text).toContain(
+      "This email is already registered. Log in instead.",
     );
 
     const pendingUsers = await prisma.pendingUser.findMany({

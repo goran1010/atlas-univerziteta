@@ -10,6 +10,7 @@ import {
 } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
+import { ShareButton } from "./ShareButton";
 import { tCount } from "../../utils/pluralize";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";
@@ -106,14 +107,17 @@ function UniversityDetailPage() {
 
         <div className="flex flex-col gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-(--text-primary)">
-              {university.name}
-              {university.acronym && (
-                <span className="ml-2 text-lg font-normal text-(--text-muted)">
-                  ({university.acronym})
-                </span>
-              )}
-            </h1>
+            <div className="flex items-start justify-between gap-2">
+              <h1 className="text-2xl font-bold text-(--text-primary)">
+                {university.name}
+                {university.acronym && (
+                  <span className="ml-2 text-lg font-normal text-(--text-muted)">
+                    ({university.acronym})
+                  </span>
+                )}
+              </h1>
+              <ShareButton url={`/universities/${id ?? ""}`} />
+            </div>
             <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm text-(--text-secondary)">
               <span>
                 <MapPinIcon /> {university.city}

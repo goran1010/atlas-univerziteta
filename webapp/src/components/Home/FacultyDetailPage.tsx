@@ -10,6 +10,7 @@ import {
 } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
+import { ShareButton } from "./ShareButton";
 import { Button } from "../sharedComponents/Button";
 import { ResultGroup } from "./ResultGroup";
 import { TrackList } from "./TrackList";
@@ -128,9 +129,12 @@ function FacultyDetailPage() {
 
         <div className="flex flex-col gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-(--text-primary)">
-              {faculty.name}
-            </h1>
+            <div className="flex items-start justify-between gap-2">
+              <h1 className="text-2xl font-bold text-(--text-primary)">
+                {faculty.name}
+              </h1>
+              <ShareButton url={`/faculties/${id ?? ""}`} />
+            </div>
             <p className="text-sm text-(--text-secondary) mt-1">
               <Link
                 to={`/universities/${faculty.university.id.toString()}`}

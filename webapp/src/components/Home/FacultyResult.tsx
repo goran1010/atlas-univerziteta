@@ -147,11 +147,7 @@ function FacultyResult({
         }}
         title={faculty.name}
         headerActions={
-          <ShareButton
-            url={`/faculties/${faculty.id.toString()}`}
-            t={t}
-            addNotification={addNotification}
-          />
+          <ShareButton url={`/faculties/${faculty.id.toString()}`} />
         }
       >
         <div className="flex flex-col gap-3">

@@ -15,7 +15,6 @@ function AdminForm() {
   const [pendingChanges, setPendingChanges] = useFetchList({
     path: "/users/admin/pending-changes",
     responseSchema: adminPendingChangesResponseSchema,
-    successMessageKey: "messages.pendingChanges.loadSuccess",
     errorMessageKey: "messages.pendingChanges.fetchError",
     logLabel: "fetch pending changes",
     setLoading: setPendingLoading,

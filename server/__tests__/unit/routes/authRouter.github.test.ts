@@ -127,7 +127,9 @@ describe("Auth Router - GET /auth/github/callback", () => {
     const response = await request(app).get("/auth/github/callback");
 
     expect(response.status).toBe(302);
-    expect(response.headers["location"]).toBe(env.WEBAPP_URL);
+    expect(response.headers["location"]).toBe(
+      `${env.WEBAPP_URL}/?login=github`,
+    );
 
     expect(authenticateMock).toHaveBeenCalledWith(
       "github",

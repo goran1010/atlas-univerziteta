@@ -300,16 +300,15 @@
       "forbidden": "You do not have permission for this action.",
       "csrfInvalid": "Your session security check failed. Refresh the page and try again.",
       "alreadyLoggedIn": "You are already logged in.",
-      "alreadyAdmin": "You already have the admin role."
+      "alreadyAdmin": "You already have the admin role.",
+      "emailNotSent": "Confirmation email could not be sent. Check the email address and try again."
     },
     "csrfTokenFailed": "Could not start a secure session. Refresh the page and try again.",
     "pendingChanges": {
-      "loadSuccess": "Pending changes loaded.",
       "loadFailed": "Could not load pending changes. Check your connection and try again.",
       "fetchError": "Something went wrong while loading pending changes. Refresh the page and try again."
     },
     "loginStatus": {
-      "success": "Successfully logged in.",
       "error": "Could not check your login status. Refresh the page and try again."
     },
     "auth": {
@@ -321,7 +320,8 @@
       "registrationSuccess": "Registration successful! Check your email.",
       "logoutFailed": "Logout did not complete. Try again.",
       "logoutError": "Something went wrong during logout. Try again in a moment.",
-      "logoutSuccess": "Successfully logged out."
+      "logoutSuccess": "Successfully logged out.",
+      "githubLoginSuccess": "Successfully logged in with GitHub."
     },
     "admin": {
       "approveSuccess": "Pending change approved.",

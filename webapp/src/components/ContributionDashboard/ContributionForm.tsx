@@ -18,7 +18,6 @@ function ContributionForm() {
   const [pendingChanges, setPendingChanges] = useFetchList({
     path: "/users/contribution/pending-changes/universities",
     responseSchema: pendingChangesResponseSchema,
-    successMessageKey: "messages.pendingChanges.loadSuccess",
     errorMessageKey: "messages.pendingChanges.fetchError",
     logLabel: "fetch pending changes",
     setLoading,

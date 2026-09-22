@@ -217,11 +217,7 @@ function UniversityCard({
           }}
           title={university.name}
           headerActions={
-            <ShareButton
-              url={`/universities/${university.id.toString()}`}
-              t={t}
-              addNotification={addNotification}
-            />
+            <ShareButton url={`/universities/${university.id.toString()}`} />
           }
         >
           <div className="flex flex-col gap-3">

@@ -50,11 +50,6 @@ function useStatusCheck(
           return;
         }
 
-        addNotification({
-          type: "success",
-          message: tRef.current("messages.loginStatus.success"),
-        });
-
         setUserData(result.data);
       } catch (err) {
         if (isCancelled) {

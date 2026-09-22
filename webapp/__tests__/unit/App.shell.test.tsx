@@ -55,20 +55,6 @@ function renderRoot() {
   render(<RouterProvider router={router} />);
 }
 
-async function expectNotificationAndLink({
-  notificationText,
-  linkName,
-}: {
-  notificationText: RegExp;
-  linkName: RegExp;
-}) {
-  const notification = await screen.findByText(notificationText);
-  const link = await screen.findByRole("link", { name: linkName });
-
-  expect(notification).toBeInTheDocument();
-  expect(link).toBeInTheDocument();
-}
-
 describe("Root component", () => {
   test("renders home page heading if server is live", async () => {
     renderRoot();
@@ -135,10 +121,9 @@ describe("Root component", () => {
 
     renderRoot();
 
-    await expectNotificationAndLink({
-      notificationText: /Successfully logged in./i,
-      linkName: /Profile/i,
-    });
+    // a passive status check no longer notifies; the link is the signal
+    const profileLink = await screen.findByRole("link", { name: /Profile/i });
+    expect(profileLink).toBeInTheDocument();
   });
 
   test("renders Log In link when user is not logged in", async () => {

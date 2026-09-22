@@ -11,7 +11,6 @@ interface UseFetchListOptions<Item> {
   path: string;
   responseSchema: ZodType<{ data: Item[] }>;
   errorMessageKey: string;
-  successMessageKey?: string;
   logLabel: string;
   setLoading: (loading: boolean) => void;
   enabled?: boolean;
@@ -22,7 +21,6 @@ function useFetchList<Item>({
   path,
   responseSchema,
   errorMessageKey,
-  successMessageKey,
   logLabel,
   setLoading,
   enabled = true,
@@ -56,12 +54,6 @@ function useFetchList<Item>({
         if (response.ok) {
           const result = responseSchema.parse(await response.json());
           setItems(result.data);
-          if (successMessageKey) {
-            addNotification({
-              type: "success",
-              message: tRef.current(successMessageKey),
-            });
-          }
           return;
         }
 
@@ -95,7 +87,6 @@ function useFetchList<Item>({
     refetchKey,
     responseSchema,
     setLoading,
-    successMessageKey,
   ]);
 
   return [items, setItems];

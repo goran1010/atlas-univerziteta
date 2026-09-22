@@ -28,7 +28,7 @@ afterEach(() => {
 });
 
 describe("useStatusCheck", () => {
-  test("uses the default success message when the response message is null", async () => {
+  test("sets user data without notifying on a successful status check", async () => {
     const addNotification = vi.fn(() => "notification-id");
     const response = new Response(
       JSON.stringify({
@@ -45,13 +45,10 @@ describe("useStatusCheck", () => {
       await vi.advanceTimersByTimeAsync(100);
     });
 
-    expect(addNotification).toHaveBeenCalledWith({
-      type: "success",
-      message: "messages.loginStatus.success",
-    });
     expect(screen.getByTestId("user-email")).toHaveTextContent(
       "user@example.com",
     );
+    expect(addNotification).not.toHaveBeenCalled();
   });
 
   test("does not notify after unmounting while an OK response is pending", async () => {
