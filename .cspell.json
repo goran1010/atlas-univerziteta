@@ -8,8 +8,8 @@
     "server/__tests__/**/*.{ts,md}",
     "e2e/**/*.ts",
     "README.md",
-    "CONTRIBUTING.md",
-    "LICENSE.md"
+    "LICENSE.md",
+    "docs/**/*.md"
   ],
   "ignorePaths": [
     "**/node_modules/**",
@@ -19,6 +19,7 @@
   ],
   "userWords": [
     "alloweddisabled",
+    "atlasuniverziteta",
     "autofocuses",
     "banj",
     "browsable",
@@ -29,6 +30,7 @@
     "dorde",
     "EBADCSRFTOKEN",
     "ects",
+    "emailom",
     "ESPB",
     "espb",
     "FBIH",
@@ -36,6 +38,9 @@
     "ijima",
     "JAVN",
     "javn",
+    "PRERENDER",
+    "prerender",
+    "prerendered",
     "PRIVATN",
     "quixo",
     "sarajev",

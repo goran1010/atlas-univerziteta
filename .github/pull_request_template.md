@@ -1,4 +1,4 @@
-<!-- Thank you for taking the time to contribute to UniAtlas Bosnia. In order to get this pull request (PR) merged in a reasonable amount of time, you must complete this entire template. -->
+<!-- Thank you for taking the time to contribute to Atlas Univerziteta. In order to get this pull request (PR) merged in a reasonable amount of time, you must complete this entire template. -->
 
 ## Description
 <!-- Brief description of what this PR does. -->
@@ -8,7 +8,7 @@
 
 Please check all items to confirm you understand the requirements. -->
 
-- [ ] I have read and followed the [CONTRIBUTING.md](../CONTRIBUTING.md) guidelines
+- [ ] I have read and followed the [CONTRIBUTING.md](../docs/CONTRIBUTING.md) guidelines
 - [ ] The `Description` section summarizes the reason for this PR
 - [ ] The `This PR` section has a bullet point list describing the changes in this PR
 - [ ] If this PR addresses an open issue, it is linked in the `Issue` section
