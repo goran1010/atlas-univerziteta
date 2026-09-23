@@ -13,10 +13,6 @@ const signupPasswordMinLengthSchema = z.string().trim().min(6);
 
 const signupPasswordRequiresNumberSchema = z.string().trim().regex(/\d/);
 
-const signupPasswordSchema = signupPasswordAllowedCharactersSchema
-  .pipe(signupPasswordMinLengthSchema)
-  .pipe(signupPasswordRequiresNumberSchema);
-
 const loginPasswordSchema = z.string().trim().min(1);
 
 function getSignupPasswordValidationKey(password: string) {
@@ -34,21 +30,6 @@ function getSignupPasswordValidationKey(password: string) {
 
   return null;
 }
-
-const signupRequestSchema = z
-  .object({
-    email: emailSchema,
-    password: signupPasswordSchema,
-    "confirm-password": z.string().trim(),
-  })
-  .refine((data) => data.password === data["confirm-password"], {
-    path: ["confirm-password"],
-  });
-
-const loginRequestSchema = z.object({
-  email: emailSchema,
-  password: loginPasswordSchema,
-});
 
 const signupResponseSchema = z.object({
   message: z.string(),
@@ -84,14 +65,8 @@ const csrfTokenResponseSchema = z.object({
 
 export {
   emailSchema,
-  signupPasswordAllowedCharactersSchema,
-  signupPasswordMinLengthSchema,
-  signupPasswordRequiresNumberSchema,
-  signupPasswordSchema,
   loginPasswordSchema,
   getSignupPasswordValidationKey,
-  signupRequestSchema,
-  loginRequestSchema,
   signupResponseSchema,
   loginResponseSchema,
   currentUserResponseSchema,

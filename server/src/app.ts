@@ -87,7 +87,7 @@ function isClientHttpError(error: unknown): error is ClientHttpError {
   return typeof status === "number" && status >= 400 && status < 500;
 }
 
-// eslint-disable-next-line
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- express only treats 4-arg middleware as an error handler, so _next must stay
 app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   if (error instanceof RequestValidationError) {
     logger.warn(

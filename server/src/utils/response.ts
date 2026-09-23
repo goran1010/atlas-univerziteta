@@ -29,7 +29,7 @@ interface Options {
   status?: number;
 }
 
-export interface SuccessOptions extends Options {
+interface SuccessOptions extends Options {
   data?: unknown;
   message?: string | null;
 }

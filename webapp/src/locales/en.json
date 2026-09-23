@@ -160,7 +160,8 @@
       "getTrackById": "Retrieve a track by ID with its parent study program, faculty, and university.",
       "entityParam": "Filter by entity: FBIH, RS, or BD.",
       "ownershipParam": "Filter by ownership: PUBLIC or PRIVATE.",
-      "cycleParam": "Filter by study cycle. Accepts multiple values (e.g. cycle=FIRST&cycle=SECOND). Values: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST."
+      "cycleParam": "Filter by study cycle. Accepts multiple values (e.g. cycle=FIRST&cycle=SECOND). Values: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
+      "typeParam": "Result type filter: university, faculty, or studyProgram. Repeatable. With exactly one type the section is returned uncapped; otherwise sections are capped with true totals."
     }
   },
   "endpoint": {

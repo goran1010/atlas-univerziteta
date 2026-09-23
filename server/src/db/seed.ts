@@ -1,3 +1,4 @@
+/* eslint-disable no-console -- CLI seed script: console output is its interface */
 import fs from "node:fs";
 import path from "node:path";
 import { PrismaPg } from "@prisma/adapter-pg";
@@ -143,8 +144,6 @@ function toUniversityData(
 async function main() {
   try {
     const universityTrees = universityFileNames.map(parseUniversityFile);
-
-    // eslint-disable-next-line no-console
     console.log("Seeding universities...");
 
     const upsertedUniversities = await Promise.all(
@@ -156,13 +155,9 @@ async function main() {
         }),
       ),
     );
-
-    // eslint-disable-next-line no-console
     console.log(
       `Upserted ${upsertedUniversities.length.toString()} universities.`,
     );
-
-    // eslint-disable-next-line no-console
     console.log("Seeding faculties...");
 
     const universityIdByName = new Map(
@@ -216,11 +211,7 @@ async function main() {
     });
 
     const upsertedFaculties = await Promise.all(facultyUpserts);
-
-    // eslint-disable-next-line no-console
     console.log(`Upserted ${upsertedFaculties.length.toString()} faculties.`);
-
-    // eslint-disable-next-line no-console
     console.log("Seeding study programs...");
 
     const facultyIdByUniversityAndName = new Map(
@@ -283,13 +274,9 @@ async function main() {
     });
 
     const upsertedStudyPrograms = await Promise.all(studyProgramUpserts);
-
-    // eslint-disable-next-line no-console
     console.log(
       `Upserted ${upsertedStudyPrograms.length.toString()} study programs.`,
     );
-
-    // eslint-disable-next-line no-console
     console.log("Seeding tracks...");
 
     const tracksByProgramKey = new Map(
@@ -355,8 +342,6 @@ async function main() {
     });
 
     const upsertedTracks = await Promise.all(trackUpserts);
-
-    // eslint-disable-next-line no-console
     console.log(`Upserted ${upsertedTracks.length.toString()} tracks.`);
   } catch (error: unknown) {
     console.error("Error seeding database:", error);

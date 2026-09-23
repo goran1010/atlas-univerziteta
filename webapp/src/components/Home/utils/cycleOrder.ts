@@ -19,4 +19,4 @@ function byCycleDisplayOrder<T extends { cycle: StudyCycle }>(items: T[]): T[] {
   return items.toSorted((a, b) => cycleRank(a.cycle) - cycleRank(b.cycle));
 }
 
-export { CYCLE_DISPLAY_ORDER, byCycleDisplayOrder, cycleRank };
+export { byCycleDisplayOrder, cycleRank };

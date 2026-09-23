@@ -14,7 +14,6 @@ function asUnknown(value: unknown): unknown {
 describe("Admin Router - GET /users/admin/pending-changes", () => {
   test("Responds with status 200 and all pending changes if role ADMIN", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -81,7 +80,6 @@ describe("Admin Router - GET /users/admin/pending-changes", () => {
 describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
   test("Responds with status 200 if role ADMIN", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -129,7 +127,6 @@ describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
 describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   test("Responds with status 404 if pending change does not exist", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -158,7 +155,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
   test("Responds with status 404 if stored pending change data is invalid for its entity type", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -204,7 +200,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
   test("Responds with status 404 if stored pending change data is not a record", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -251,7 +246,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
     "Responds with status 404 if stored pending change target id is null for a DELETE change type for entity type %s",
     async (entityType) => {
       const userInput = createNewUserInput({ role: "ADMIN" });
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { ["confirm-password"]: confirmPassword, ...userRequested } =
         userInput;
 
@@ -292,7 +286,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
     "Responds with status 404 if stored pending change target id is null for UPDATE change type for entity type %s",
     async (entityType) => {
       const userInput = createNewUserInput({ role: "ADMIN" });
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { ["confirm-password"]: confirmPassword, ...userRequested } =
         userInput;
 
@@ -333,7 +326,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
     "Responds with status 404 if stored pending change parent id is null for CREATE change type for entity type %s",
     async (entityType) => {
       const userInput = createNewUserInput({ role: "ADMIN" });
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { ["confirm-password"]: confirmPassword, ...userRequested } =
         userInput;
 
@@ -374,7 +366,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY", () => {
   test("Responds with status 200 and message if a pending change is approved successfully DELETE", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -427,7 +418,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
 
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -477,7 +467,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -538,7 +527,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
 describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", () => {
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -597,7 +585,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -664,7 +651,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
 
   test("Responds with status 200 and message if a pending change is approved successfully for DELETE", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -729,7 +715,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
 describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROGRAM", () => {
   test("Responds with status 200 and message if a pending change is approved successfully DELETE", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -800,7 +785,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
 
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -866,7 +850,6 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
     const userInput = createNewUserInput({ role: "ADMIN" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: confirmPassword, ...userRequested } =
       userInput;
 
@@ -945,14 +928,12 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
 describe("Admin Router - GET /users/admin/admin-requests", () => {
   test("Responds with status 200 and only users with an active request", async () => {
     const requestingInput = createNewUserInput();
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: _cp1, ...requestingData } = requestingInput;
     const requestingUser = await prisma.user.create({
       data: { ...requestingData, adminRequestedAt: new Date() },
     });
 
     const silentInput = createNewUserInput();
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: _cp2, ...silentData } = silentInput;
     const silentUser = await prisma.user.create({ data: silentData });
 
@@ -1017,7 +998,6 @@ describe("Admin Router - POST /users/admin/approve-admin-request", () => {
   test("Responds with status 200, promotes the user, and clears the request", async () => {
     // The approve/decline endpoints validate the id as a UUID
     const requestingInput = createNewUserInput({ id: crypto.randomUUID() });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: _cp, ...requestingData } = requestingInput;
     const requestingUser = await prisma.user.create({
       data: { ...requestingData, adminRequestedAt: new Date() },
@@ -1078,7 +1058,6 @@ describe("Admin Router - DELETE /users/admin/decline-admin-request", () => {
   test("Responds with status 200, keeps the USER role, and clears the request", async () => {
     // The approve/decline endpoints validate the id as a UUID
     const requestingInput = createNewUserInput({ id: crypto.randomUUID() });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ["confirm-password"]: _cp, ...requestingData } = requestingInput;
     const requestingUser = await prisma.user.create({
       data: { ...requestingData, adminRequestedAt: new Date() },

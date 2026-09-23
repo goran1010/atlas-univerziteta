@@ -24,21 +24,15 @@ const integerSchema = z.number().int();
 const positiveIntegerSchema = integerSchema.positive();
 const durationYearsSchema = integerSchema.min(1).max(10);
 const ectsSchema = positiveIntegerSchema;
-const searchTermSchema = z
-  .string()
-  .trim()
-  .min(2, { error: "validation.search.minLength" })
-  .max(100, { error: "validation.search.maxLength" });
-
 export type Entity = z.infer<typeof entitySchema>;
 export type EntityType = z.infer<typeof entityTypeSchema>;
 export type Ownership = z.infer<typeof ownershipSchema>;
 export type StudyCycle = z.infer<typeof studyCycleSchema>;
 export type TypeOfChange = z.infer<typeof typeOfChangeSchema>;
-export type UserRole = z.infer<typeof userRoleSchema>;
 export type SearchType = z.infer<typeof searchTypeSchema>;
 
 export {
+  typeOfChangeSchema,
   durationYearsSchema,
   ectsSchema,
   entitySchema,
@@ -46,9 +40,7 @@ export {
   integerSchema,
   ownershipSchema,
   positiveIntegerSchema,
-  searchTermSchema,
   searchTypeSchema,
   studyCycleSchema,
-  typeOfChangeSchema,
   userRoleSchema,
 };

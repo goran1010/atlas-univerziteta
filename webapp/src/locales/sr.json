@@ -160,7 +160,8 @@
       "getTrackById": "Preuzimanje smjera po ID-u s nadređenim studijskim programom, fakultetom i univerzitetom.",
       "entityParam": "Filtriranje po entitetu: FBIH, RS ili BD.",
       "ownershipParam": "Filtriranje po vlasništvu: PUBLIC ili PRIVATE.",
-      "cycleParam": "Filtriranje po ciklusu studija. Prihvata višestruke vrijednosti (npr. cycle=FIRST&cycle=SECOND). Vrijednosti: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST."
+      "cycleParam": "Filtriranje po ciklusu studija. Prihvata višestruke vrijednosti (npr. cycle=FIRST&cycle=SECOND). Vrijednosti: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
+      "typeParam": "Filter tipa rezultata: university, faculty ili studyProgram. Može se ponoviti. Sa tačno jednim tipom sekcija se vraća bez ograničenja; inače su sekcije ograničene uz prave ukupne brojeve."
     }
   },
   "endpoint": {

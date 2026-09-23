@@ -186,7 +186,7 @@ function useUnifiedSearch() {
       browseAll;
 
     if (hasAnyParam) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- deliberate one-time search for a deep-linked URL
       triggerSearch(
         searchInput,
         entityFilter,
@@ -196,7 +196,7 @@ function useUnifiedSearch() {
         browseAll,
       );
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps -- mount-only by design; later param changes go through the handlers
   }, []);
 
   useEffect(() => {
@@ -210,7 +210,7 @@ function useUnifiedSearch() {
   const urlQuery = searchParams.get("q") ?? "";
   useEffect(() => {
     if (document.activeElement === inputRef.current) return;
-    // eslint-disable-next-line react-x/set-state-in-effect
+    // eslint-disable-next-line react-x/set-state-in-effect -- syncing external URL changes into the input is the effect's purpose
     setSearchInput(urlQuery);
   }, [urlQuery]);
 

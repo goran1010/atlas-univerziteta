@@ -177,21 +177,7 @@ const facultyDetailResponseSchema = z.object({
   data: facultyDetailSchema,
 });
 
-const studyProgramDetailSchema = studyProgramSchema.extend({
-  faculty: z.object({
-    id: positiveIntegerSchema,
-    name: z.string().min(1),
-    university: universitySchema,
-  }),
-});
-
-const studyProgramDetailResponseSchema = z.object({
-  message: z.string(),
-  data: studyProgramDetailSchema,
-});
-
 export type FacultyDetail = z.infer<typeof facultyDetailSchema>;
-export type StudyProgramDetail = z.infer<typeof studyProgramDetailSchema>;
 export type UniversityDetail = z.infer<typeof universityDetailSchema>;
 export type UniversityListItem = z.infer<typeof universityListItemSchema>;
 export type UniversityDetailFaculty = UniversityDetail["faculties"][number];
@@ -211,5 +197,4 @@ export {
   universityDetailResponseSchema,
   universityListResponseSchema,
   facultyDetailResponseSchema,
-  studyProgramDetailResponseSchema,
 };

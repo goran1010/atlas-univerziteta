@@ -226,6 +226,11 @@ const apiEndpoints: Endpoint[] = [
         required: false,
         descriptionKey: "api.endpointsData.cycleParam",
       },
+      {
+        name: "type",
+        required: false,
+        descriptionKey: "api.endpointsData.typeParam",
+      },
     ],
     successExample: `{
   "message": "Search results retrieved successfully.",
@@ -233,13 +238,13 @@ const apiEndpoints: Endpoint[] = [
     "universities": [ ... ],
     "faculties": [ ... ],
     "studyPrograms": [ ... ],
-    "tracks": [ ... ]
+    "totals": { "universities": 4, "faculties": 20, "studyPrograms": 221 },
+    "direct": { "universities": 4, "faculties": 20, "studyPrograms": 0 }
   }
 }`,
-    errorExample: `// 404 - no match found
-{ "error": { "code": "NOT_FOUND", "message": "No results found matching your search." } }
+    errorExample: `// no matches is NOT an error - a 200 with empty arrays and zero totals
 
-// 400 - no search term and no filters provided
+// 400 - invalid parameter (e.g. searchTerm of 1 character, unknown type value)
 { "error": { "code": "VALIDATION_ERROR", "message": "Request validation failed.", "issues": [...] } }`,
   },
 ];

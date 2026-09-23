@@ -151,7 +151,9 @@ function apiBaseUrl() {
     candidates.push(parsed.PRERENDER_API_URL, parsed.VITE_SERVER_URL);
   }
   const absolute = candidates.find(
-    (value) => typeof value === "string" && /^https?:\/\//.test(value),
+    (value) =>
+      typeof value === "string" &&
+      (value.startsWith("http://") || value.startsWith("https://")),
   );
   return absolute ? absolute.replace(/\/+$/, "") : null;
 }

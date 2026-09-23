@@ -112,13 +112,11 @@ function UniversityCard({
     : [];
 
   return (
-    <li
-      className={`border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) transition-colors ${
-        hasFaculties ? "cursor-pointer hover:bg-(--hover-surface)" : ""
-      }`}
-    >
+    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2)">
       <div
-        className="p-2 sm:p-4"
+        className={`p-2 sm:p-4 transition-colors ${
+          hasFaculties ? "cursor-pointer hover:bg-(--hover-surface)" : ""
+        }`}
         onClick={(e) => {
           if (e.target instanceof Element && e.target.closest("a, button"))
             return;
@@ -276,55 +274,49 @@ function UniversityCard({
             </div>
           </div>
         </Dialog>
-
-        {expanded && detailData && (
-          <div
-            className="mt-3 border-t border-(--border-color) pt-3"
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-          >
-            {detailData.faculties.length > 0 ? (
-              <>
-                <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">
-                  <span className="text-blue-600 dark:text-blue-400">
-                    {detailData.faculties.length}
-                  </span>{" "}
-                  {tCount(
-                    t,
-                    "universitiesPage.facultyCount",
-                    detailData.faculties.length,
-                  )}
-                </p>
-                <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
-                  {facultyCityGroups.length > 1 ? (
-                    <div className="flex flex-col gap-2">
-                      {facultyCityGroups.map((g) => (
-                        <ResultGroup key={g.key} label={g.key}>
-                          {g.items.map((f) => (
-                            <FacultyRow key={f.id} faculty={f} t={t} />
-                          ))}
-                        </ResultGroup>
-                      ))}
-                    </div>
-                  ) : (
-                    <ul className="space-y-1">
-                      {detailData.faculties.map((f) => (
-                        <FacultyRow key={f.id} faculty={f} t={t} />
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </>
-            ) : (
-              <p className="text-sm text-(--text-muted) italic">
-                {t("universitiesPage.faculties")}: -
-              </p>
-            )}
-          </div>
-        )}
-        {loadingDetail && <Spinner />}
       </div>
+      {expanded && detailData && (
+        <div className="border-t border-(--border-color) p-2 pt-3 sm:p-4 sm:pt-3">
+          {detailData.faculties.length > 0 ? (
+            <>
+              <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">
+                <span className="text-blue-600 dark:text-blue-400">
+                  {detailData.faculties.length}
+                </span>{" "}
+                {tCount(
+                  t,
+                  "universitiesPage.facultyCount",
+                  detailData.faculties.length,
+                )}
+              </p>
+              <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
+                {facultyCityGroups.length > 1 ? (
+                  <div className="flex flex-col gap-2">
+                    {facultyCityGroups.map((g) => (
+                      <ResultGroup key={g.key} label={g.key}>
+                        {g.items.map((f) => (
+                          <FacultyRow key={f.id} faculty={f} t={t} />
+                        ))}
+                      </ResultGroup>
+                    ))}
+                  </div>
+                ) : (
+                  <ul className="space-y-1">
+                    {detailData.faculties.map((f) => (
+                      <FacultyRow key={f.id} faculty={f} t={t} />
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </>
+          ) : (
+            <p className="text-sm text-(--text-muted) italic">
+              {t("universitiesPage.faculties")}: -
+            </p>
+          )}
+        </div>
+      )}
+      {loadingDetail && <Spinner />}
     </li>
   );
 }
