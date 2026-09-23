@@ -1,9 +1,9 @@
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
-import { Input } from "../sharedComponents/Input";
 import { Select } from "../sharedComponents/Select";
 import { Label } from "../sharedComponents/Label";
 import { Button } from "../sharedComponents/Button";
+import { DataField } from "./DataField";
 import { EntityPicker } from "./EntityPicker";
 import { getPickerDepth } from "./utils/getPickerDepth";
 import { handleSubmitUniversityEntity } from "./utils/handleSubmitUniversityEntity";
@@ -15,19 +15,6 @@ import type {
 } from "../../schemas/domain";
 import type { ContributionFormDraft, ContributionFormState } from "./types";
 import type { SubmitEvent } from "react";
-
-interface DataFieldProps {
-  label: string;
-  id: string;
-  type: string;
-  min?: number;
-  max?: number;
-  required?: boolean;
-  value: string | number;
-  onChange: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-  ) => void;
-}
 
 const INIT_FORM: ContributionFormState = {
   entityType: "UNIVERSITY",
@@ -56,18 +43,6 @@ const CYCLES: StudyCycle[] = [
 ];
 
 const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
-
-function DataField(props: DataFieldProps) {
-  const { label, ...inputProps } = props;
-  return (
-    <div className="flex flex-col gap-1">
-      <Label htmlFor={props.id} required={props.required}>
-        {label}
-      </Label>
-      <Input {...inputProps} />
-    </div>
-  );
-}
 
 function AddUniversityEntity({
   refetchPendingChanges,
