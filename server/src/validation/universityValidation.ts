@@ -36,6 +36,13 @@ const studyCycleEnum = z.enum([
 
 const searchTypeEnum = z.enum(["university", "faculty", "studyProgram"]);
 
+// repeatable query params arrive as a single value or an array depending on
+// how many times they appear in the URL - normalize to an array
+function toArray<T>(value: T | T[] | undefined): T[] | undefined {
+  if (value === undefined) return undefined;
+  return Array.isArray(value) ? value : [value];
+}
+
 const searchQuerySchema = z.object({
   searchTerm: z
     .string()
@@ -52,15 +59,11 @@ const searchQuerySchema = z.object({
   cycle: z
     .union([studyCycleEnum, z.array(studyCycleEnum).min(1)])
     .optional()
-    .transform((val) =>
-      val === undefined ? undefined : Array.isArray(val) ? val : [val],
-    ),
+    .transform(toArray),
   type: z
     .union([searchTypeEnum, z.array(searchTypeEnum).min(1)])
     .optional()
-    .transform((val) =>
-      val === undefined ? undefined : Array.isArray(val) ? val : [val],
-    ),
+    .transform(toArray),
 });
 
 function searchQuery(input: unknown) {
