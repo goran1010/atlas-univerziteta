@@ -1,24 +1,14 @@
 import { SERVER_URL } from "../../../utils/envConfig";
 import { readApiError } from "../../../schemas/api";
-import {
-  unifiedSearchResponseSchema,
-  universityListResponseSchema,
-} from "../../../schemas/university";
+import { unifiedSearchResponseSchema } from "../../../schemas/university";
 
 import type { UnifiedSearchResults } from "../../../schemas/university";
-import type { UniversityListItem } from "../../../schemas/university";
-
-const EMPTY_RESULTS: UnifiedSearchResults = {
-  universities: [],
-  faculties: [],
-  studyPrograms: [],
-  tracks: [],
-};
 
 interface SearchFilters {
   entity?: string;
   ownership?: string;
   cycle?: string[];
+  type?: string[];
 }
 
 async function searchAll(
@@ -34,6 +24,11 @@ async function searchAll(
       params.append("cycle", c);
     }
   }
+  if (filters?.type) {
+    for (const type of filters.type) {
+      params.append("type", type);
+    }
+  }
 
   const res = await fetch(`${SERVER_URL}/api/v1/search?${params.toString()}`, {
     method: "GET",
@@ -44,29 +39,9 @@ async function searchAll(
     const result = unifiedSearchResponseSchema.parse(await res.json());
     return result.data;
   }
-  if (res.status === 404) {
-    return EMPTY_RESULTS;
-  }
   const serverError = readApiError(await res.json());
   if (serverError) {
     console.warn("Search failed:", serverError.message);
-  }
-  throw new SearchFailedError(serverError?.code);
-}
-
-async function fetchAllUniversities(): Promise<UniversityListItem[]> {
-  const res = await fetch(`${SERVER_URL}/api/v1/universities`, {
-    method: "GET",
-    mode: "cors",
-  });
-
-  if (res.ok) {
-    const result = universityListResponseSchema.parse(await res.json());
-    return result.data;
-  }
-  const serverError = readApiError(await res.json());
-  if (serverError) {
-    console.warn("Failed to load universities:", serverError.message);
   }
   throw new SearchFailedError(serverError?.code);
 }
@@ -81,4 +56,4 @@ class SearchFailedError extends Error {
   }
 }
 
-export { searchAll, fetchAllUniversities, SearchFailedError };
+export { searchAll, SearchFailedError };

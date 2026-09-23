@@ -1,4 +1,4 @@
-import { render, screen, act } from "@testing-library/react";
+import { render, screen, act, waitFor } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import userEvent from "@testing-library/user-event";
 import { UnifiedSearch } from "../../../../src/components/Home/UnifiedSearch";
@@ -69,6 +69,7 @@ const studyProgramResult = {
   facultyId: 3,
   cycle: "FIRST",
   ects: 180,
+  tracks: [{ id: 70, name: "Software Engineering Track", ects: 180 }],
   faculty: {
     id: 3,
     name: "Faculty of Electrical Engineering",
@@ -80,32 +81,6 @@ const studyProgramResult = {
       city: "Sarajevo",
       entity: "FBIH",
       ownership: "PUBLIC",
-    },
-  },
-};
-
-const trackResult = {
-  id: 11,
-  name: "Software Engineering Track",
-  studyProgramId: 7,
-  ects: 60,
-  durationYears: 1,
-  studyProgram: {
-    id: 7,
-    name: "Computer Science",
-    cycle: "FIRST",
-    faculty: {
-      id: 3,
-      name: "Faculty of Electrical Engineering",
-      universityId: 1,
-      university: {
-        id: 1,
-        name: "University of Sarajevo",
-        acronym: "UNSA",
-        city: "Sarajevo",
-        entity: "FBIH",
-        ownership: "PUBLIC",
-      },
     },
   },
 };
@@ -125,7 +100,8 @@ function searchResponse(
     universities: unknown[];
     faculties: unknown[];
     studyPrograms: unknown[];
-    tracks: unknown[];
+    totals: Record<string, number>;
+    direct: Record<string, number>;
   }> = {},
 ) {
   return new Response(
@@ -135,7 +111,6 @@ function searchResponse(
         universities: [],
         faculties: [],
         studyPrograms: [],
-        tracks: [],
         ...data,
       },
     }),
@@ -157,7 +132,9 @@ describe("UnifiedSearch", () => {
   });
 
   test("shows Browse All button on initial visit, clicking it loads universities", async () => {
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(browseResponse());
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      searchResponse({ universities: [universityListItem] }),
+    );
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     render(<Wrapper />);
@@ -172,6 +149,30 @@ describe("UnifiedSearch", () => {
       await screen.findByText(/University of Mostar/i),
     ).toBeInTheDocument();
     expect(fetch).toHaveBeenCalledTimes(1);
+    const browseCallArg = vi.mocked(fetch).mock.calls[0]?.[0];
+    if (typeof browseCallArg !== "string") {
+      throw new Error("Expected the search to be fetched by URL string.");
+    }
+    // browsing shows universities only...
+    expect(browseCallArg).toContain("type=university");
+
+    await user.type(
+      screen.getByRole("searchbox", { name: /Search/i }),
+      "sarajevo",
+    );
+    act(() => {
+      vi.advanceTimersByTime(500);
+    });
+
+    await waitFor(() => {
+      expect(fetch).toHaveBeenCalledTimes(2);
+    });
+    const termCallArg = vi.mocked(fetch).mock.calls[1]?.[0];
+    if (typeof termCallArg !== "string") {
+      throw new Error("Expected the search to be fetched by URL string.");
+    }
+    // ...but must not stick as a filter once the user types a term
+    expect(termCallArg).not.toContain("type=");
   });
 
   test("explains which terms are searched", () => {
@@ -187,7 +188,6 @@ describe("UnifiedSearch", () => {
         universities: [universityResult],
         faculties: [facultyResult],
         studyPrograms: [studyProgramResult],
-        tracks: [trackResult],
       }),
     );
 
@@ -215,9 +215,110 @@ describe("UnifiedSearch", () => {
       screen.getByRole("heading", { name: /^Study programs/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /^Tracks/i }),
-    ).toBeInTheDocument();
+      screen.queryByRole("heading", { name: /^Tracks/i }),
+    ).not.toBeInTheDocument();
+    // tracks render inline on the program card instead
     expect(screen.getByText(/Software Engineering Track/i)).toBeInTheDocument();
+  });
+
+  test("ranks direct-match sections first and hints context-only matches", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      searchResponse({
+        universities: [universityListItem],
+        studyPrograms: [studyProgramResult],
+        totals: { universities: 1, faculties: 0, studyPrograms: 1, tracks: 0 },
+        direct: { universities: 0, faculties: 0, studyPrograms: 1, tracks: 0 },
+      }),
+    );
+
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    render(<Wrapper />);
+
+    await user.type(
+      screen.getByRole("searchbox", { name: /Search/i }),
+      "medicina",
+    );
+
+    act(() => {
+      vi.advanceTimersByTime(500);
+    });
+
+    await screen.findByRole("heading", { name: /^Study programs/i });
+    const headings = screen.getAllByRole("heading", { level: 2 });
+    expect(headings[0]?.textContent).toMatch(/Study programs/);
+    expect(headings[1]?.textContent).toMatch(/Universities/);
+
+    // the context-only universities section starts collapsed
+    expect(screen.queryByText(/University of Mostar/i)).not.toBeInTheDocument();
+    const expandButtons = screen.getAllByRole("button", { name: "Expand" });
+    await user.click(expandButtons[expandButtons.length - 1]);
+
+    expect(
+      await screen.findByText(/Matched through its faculties/i),
+    ).toBeInTheDocument();
+  });
+
+  test("keeps the first section expanded when every section is context-only", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      searchResponse({
+        universities: [universityListItem],
+        studyPrograms: [studyProgramResult],
+        totals: { universities: 1, faculties: 0, studyPrograms: 1 },
+        direct: { universities: 0, faculties: 0, studyPrograms: 0 },
+      }),
+    );
+
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    render(<Wrapper />);
+
+    await user.type(
+      screen.getByRole("searchbox", { name: /Search/i }),
+      "medicina javni sar",
+    );
+
+    act(() => {
+      vi.advanceTimersByTime(500);
+    });
+
+    // programs rank first; their content stays visible despite direct = 0
+    expect(await screen.findByText(/Computer Science/i)).toBeInTheDocument();
+    // the second context-only section still starts collapsed
+    expect(screen.queryByText(/University of Mostar/i)).not.toBeInTheDocument();
+  });
+
+  test("capped section offers Show all and re-queries with the type filter", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      searchResponse({
+        universities: [universityListItem],
+        totals: { universities: 25, faculties: 0, studyPrograms: 0, tracks: 0 },
+      }),
+    );
+
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    render(<Wrapper />);
+
+    await user.type(
+      screen.getByRole("searchbox", { name: /Search/i }),
+      "univerzitet",
+    );
+
+    act(() => {
+      vi.advanceTimersByTime(500);
+    });
+
+    const showAll = await screen.findByRole("button", {
+      name: /Show all \(25\)/i,
+    });
+    await user.click(showAll);
+
+    await waitFor(() => {
+      expect(fetch).toHaveBeenCalledTimes(2);
+    });
+    const secondCallArg = vi.mocked(fetch).mock.calls[1]?.[0];
+    if (typeof secondCallArg !== "string") {
+      throw new Error("Expected the search to be fetched by URL string.");
+    }
+    expect(secondCallArg).toContain("type=university");
   });
 
   test("does not trigger search for short input (1 char)", async () => {
@@ -260,12 +361,23 @@ describe("UnifiedSearch", () => {
     expect(screen.getByText("Sarajevo")).toBeInTheDocument();
   });
 
-  test("renders combined no results message on 404", async () => {
+  test("renders combined no results message when nothing matches", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
-      new Response(JSON.stringify({ error: { message: "Not found" } }), {
-        status: 404,
-        headers: { "Content-Type": "application/json" },
-      }),
+      new Response(
+        JSON.stringify({
+          message: "Search results retrieved successfully.",
+          data: {
+            universities: [],
+            faculties: [],
+            studyPrograms: [],
+            tracks: [],
+          },
+        }),
+        {
+          status: 200,
+          headers: { "Content-Type": "application/json" },
+        },
+      ),
     );
 
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });

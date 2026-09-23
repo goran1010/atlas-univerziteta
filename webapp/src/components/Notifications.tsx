@@ -90,11 +90,33 @@ function Notifications() {
     };
   }, []);
 
+  // The popover attribute is applied imperatively: where the API exists it
+  // puts notifications in the browser top layer (above native <dialog>
+  // backdrops), re-promoted on every render so the newest toast wins; where
+  // it does not (jsdom, older browsers) the aside stays a plain fixed box.
+  function promoteToTopLayer(element: HTMLElement | null) {
+    if (!element || typeof element.showPopover !== "function") return;
+    element.setAttribute("popover", "manual");
+    try {
+      element.hidePopover();
+    } catch {
+      // not currently shown
+    }
+    try {
+      element.showPopover();
+    } catch {
+      // already shown or not connected yet
+    }
+  }
+
   if (!notifications.length) return null;
 
   return (
     <aside
-      className="fixed top-18 right-4 z-20 w-[min(92vw,24rem)] select-none"
+      // manual popover: notifications join the browser top layer, otherwise
+      // they render behind the backdrop of open native <dialog> modals
+      ref={promoteToTopLayer}
+      className="fixed top-18 right-4 bottom-auto left-auto m-0 p-0 border-0 bg-transparent z-20 w-[min(92vw,24rem)] select-none"
       aria-label={t("notifications.title")}
       aria-live="polite"
       aria-relevant="additions text"

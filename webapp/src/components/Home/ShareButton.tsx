@@ -1,27 +1,21 @@
+import { use } from "react";
+import { RootContext } from "../../contextData/RootContext";
 import { SITE_URL } from "../../utils/envConfig";
 
-import type { TFunction } from "../../types";
-import type { AddNotification } from "../../types";
+function ShareButton({ url }: { url: string }) {
+  // context-sourced so no call site can forget the copy notification
+  const { t, addNotification } = use(RootContext);
 
-function ShareButton({
-  url,
-  t,
-  addNotification,
-}: {
-  url: string;
-  t: TFunction;
-  addNotification?: AddNotification;
-}) {
   async function handleShare() {
     const fullUrl = `${SITE_URL}${url}`;
     try {
       await navigator.clipboard.writeText(fullUrl);
-      addNotification?.({
+      addNotification({
         type: "success",
         message: t("universitiesPage.linkCopied"),
       });
     } catch {
-      addNotification?.({
+      addNotification({
         type: "error",
         message: t("universitiesPage.linkCopyFailed"),
       });

@@ -10,6 +10,7 @@ import {
 } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
+import { ShareButton } from "./ShareButton";
 import { tCount } from "../../utils/pluralize";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";
@@ -94,6 +95,18 @@ function UniversityDetailPage() {
           content={`${university.name} - ${university.city}, ${entityLabel}`}
         />
         <link rel="canonical" href={`${SITE_URL}/universities/${id ?? ""}`} />
+        <meta
+          property="og:title"
+          content={`${university.name} | ${t("title.app")}`}
+        />
+        <meta
+          property="og:description"
+          content={`${university.name} - ${university.city}, ${entityLabel}`}
+        />
+        <meta
+          property="og:url"
+          content={`${SITE_URL}/universities/${id ?? ""}`}
+        />
       </Helmet>
 
       <div className="w-full mx-auto px-1 sm:px-4 py-4">
@@ -106,14 +119,17 @@ function UniversityDetailPage() {
 
         <div className="flex flex-col gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-(--text-primary)">
-              {university.name}
-              {university.acronym && (
-                <span className="ml-2 text-lg font-normal text-(--text-muted)">
-                  ({university.acronym})
-                </span>
-              )}
-            </h1>
+            <div className="flex items-start justify-between gap-2">
+              <h1 className="text-2xl font-bold text-(--text-primary)">
+                {university.name}
+                {university.acronym && (
+                  <span className="ml-2 text-lg font-normal text-(--text-muted)">
+                    ({university.acronym})
+                  </span>
+                )}
+              </h1>
+              <ShareButton url={`/universities/${id ?? ""}`} />
+            </div>
             <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm text-(--text-secondary)">
               <span>
                 <MapPinIcon /> {university.city}

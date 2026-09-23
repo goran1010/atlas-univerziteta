@@ -7,12 +7,16 @@ import { prisma } from "../db/prisma.js";
 import { sanitizeUser } from "../utils/sanitizeUser.js";
 import { env } from "./env.js";
 
-import type { DoneCallback } from "passport";
-
 interface GitHubProfile {
   id: string;
-  emails?: { value: string }[];
+  emails?: { value: string; primary?: boolean; verified?: boolean }[];
 }
+
+type GitHubDoneCallback = (
+  error: unknown,
+  user?: Express.User | false,
+  info?: { message: string },
+) => void;
 
 function runAsync(operation: () => Promise<void>): void {
   void operation();
@@ -64,12 +68,17 @@ passport.use(
       clientSecret: env.GITHUB_CLIENT_SECRET,
       callbackURL: env.GITHUB_CALLBACK_URL,
       scope: ["user:email"],
+      allRawEmails: true,
+      // login-CSRF protection: any truthy value makes passport-oauth2 store
+      // a random nonce in the session on /auth/github and verify it on the
+      // callback ("true" is not assignable - @types narrows state to string)
+      state: "session-nonce",
     },
     (
       _accessToken: string,
       _refreshToken: string,
       profile: GitHubProfile,
-      done: DoneCallback,
+      done: GitHubDoneCallback,
     ) => {
       runAsync(async () => {
         try {
@@ -84,12 +93,19 @@ passport.use(
             return;
           }
 
-          const primaryEmail = profile.emails?.[0]?.value;
+          const emails = profile.emails ?? [];
+          // Only trust addresses GitHub has verified - linking by an
+          // unverified email would let it claim someone else's account.
+          const verifiedEmail =
+            emails.find((email) => email.primary && email.verified) ??
+            emails.find((email) => email.verified);
 
-          if (!primaryEmail) {
-            done(null, false);
+          if (!verifiedEmail) {
+            done(null, false, { message: "no_verified_email" });
             return;
           }
+
+          const primaryEmail = verifiedEmail.value;
 
           const emailUser = await prisma.user.findUnique({
             where: {

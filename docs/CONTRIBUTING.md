@@ -1,4 +1,4 @@
-# Contributing to UniAtlas Bosnia
+# Contributing to Atlas Univerziteta
 
 Contributions of any kind are welcome - bug fixes, new features, data, documentation, or tests.
 
@@ -33,7 +33,7 @@ In production, emails are sent via [Resend](https://resend.com). The current sen
 
 ## In-App Data Contributions
 
-If you want to contribute data through the UniAtlas Bosnia app (instead of opening a code PR), use the current workflow below:
+If you want to contribute data through the Atlas Univerziteta app (instead of opening a code PR), use the current workflow below:
 
 1. Create an account and confirm your email.
 2. Log in and open `/improve-data`.

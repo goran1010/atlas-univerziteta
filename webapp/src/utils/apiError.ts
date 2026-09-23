@@ -7,6 +7,7 @@ const CODE_MESSAGE_KEYS: Record<string, string> = {
   CSRF_TOKEN_INVALID: "messages.apiError.csrfInvalid",
   ALREADY_LOGGED_IN: "messages.apiError.alreadyLoggedIn",
   ALREADY_ADMIN: "messages.apiError.alreadyAdmin",
+  EMAIL_NOT_SENT: "messages.apiError.emailNotSent",
 };
 
 function notificationMessageKey(

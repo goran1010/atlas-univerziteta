@@ -3,12 +3,14 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { Dialog } from "../sharedComponents/Dialog";
 import { tCount } from "../../utils/pluralize";
 import { ContactLinks } from "./ContactLinks";
 import { ShareButton } from "./ShareButton";
 import { ResultGroup } from "./ResultGroup";
 import { StudyProgramRow } from "./StudyProgramRow";
+import { byCycleDisplayOrder } from "./utils/cycleOrder";
 import { groupBy } from "./utils/groupBy";
 
 import type { TFunction } from "../../types";
@@ -29,7 +31,8 @@ function FacultyRow({
     <li className="text-sm">
       <div
         onClick={(e) => {
-          if ((e.target as HTMLElement).closest("a, button")) return;
+          if (e.target instanceof Element && e.target.closest("a, button"))
+            return;
           if (hasStudyPrograms) setOpen((p) => !p);
         }}
         className={`py-1.5 px-0.5 sm:px-2 rounded-md transition-colors ${
@@ -37,7 +40,14 @@ function FacultyRow({
         }`}
       >
         <div className="min-w-0">
-          <p className="font-semibold">{faculty.name}</p>
+          <p className="font-semibold">
+            <Link
+              to={`/faculties/${faculty.id.toString()}`}
+              className="underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              {faculty.name}
+            </Link>
+          </p>
           {hasStudyPrograms && (
             <p className="text-xs text-(--text-muted) mt-0.5">
               <BookOpenIcon />{" "}
@@ -88,7 +98,7 @@ function FacultyRow({
         }}
         title={faculty.name}
         headerActions={
-          <ShareButton url={`/faculties/${faculty.id.toString()}`} t={t} />
+          <ShareButton url={`/faculties/${faculty.id.toString()}`} />
         }
       >
         <div className="flex flex-col gap-3">
@@ -121,15 +131,15 @@ function FacultyRow({
             />
           </div>
           <div className="flex justify-center">
-            <Link
+            <LinkButton
               to={`/faculties/${faculty.id.toString()}`}
-              className="inline-flex items-center justify-center border border-(--border-color) rounded-lg px-4 py-2 text-sm font-medium text-(--text-primary) hover:bg-(--hover-surface) transition-colors"
+              className="text-sm"
               onClick={() => {
                 setDialogOpen(false);
               }}
             >
               {t("universitiesPage.openFullPage")}
-            </Link>
+            </LinkButton>
           </div>
         </div>
       </Dialog>
@@ -151,12 +161,17 @@ function FacultyRow({
             )}
           </p>
           <div className="flex flex-col gap-2">
-            {groupBy(faculty.studyPrograms, (sp) =>
+            {groupBy(byCycleDisplayOrder(faculty.studyPrograms), (sp) =>
               t(`universitiesPage.cycles.${sp.cycle}`),
             ).map((g) => (
               <ResultGroup key={g.key} label={g.key}>
                 {g.items.map((sp) => (
-                  <StudyProgramRow key={sp.id} program={sp} t={t} />
+                  <StudyProgramRow
+                    key={sp.id}
+                    program={sp}
+                    facultyId={faculty.id}
+                    t={t}
+                  />
                 ))}
               </ResultGroup>
             ))}

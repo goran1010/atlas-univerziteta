@@ -1,348 +1,107 @@
-# UniAtlas Bosnia
+# Atlas Univerziteta
 
-An open-source monorepo for Bosnia and Herzegovina higher-education data. It combines a public REST API, an authenticated contribution workflow, and a React webapp for browsing universities and managing data suggestions.
+**English** | [Bosanski / Hrvatski / Srpski](#bosanski--hrvatski--srpski)
 
-Live webapp: <https://atlasuniverziteta.com/>
+An open-source directory of higher-education data for Bosnia and Herzegovina: a public REST API, a searchable webapp, and an authenticated contribution workflow with admin moderation.
 
-Live server REST API: <https://api.atlasuniverziteta.com/api>
+- Live webapp: <https://atlasuniverziteta.com/>
+- Live REST API: <https://api.atlasuniverziteta.com/>
+- In-app API docs: <https://atlasuniverziteta.com/api-docs>
 
-In-app API docs: <https://atlasuniverziteta.com/api-docs>
+![Atlas Univerziteta](./webapp/public/images/og-images/og-image-home.png)
 
-![UniAtlas Bosnia](./webapp/public/images/og-image-home.png)
+The data is modeled as a nested academic hierarchy: university, its faculties, and their study programs - each program carrying its tracks (smjerovi) as part of its data.
 
-## Table of contents
+## Features
 
-- [Project overview](#project-overview)
-- [Current features](#current-features)
-- [Getting started](#getting-started)
-- [Environment variables](#environment-variables)
-- [Database setup](#database-setup)
-- [API overview](#api-overview)
-- [Testing and quality checks](#testing-and-quality-checks)
-- [Deployment](#deployment)
-- [Built with](#built-with)
-- [Contributing](#contributing)
-- [Authors](#authors)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+- Public REST API under `/api/v1` - no authentication required
+- Unified search across universities, faculties, and study programs: multi-word queries where every word must match somewhere in the entity's hierarchy, case- and diacritic-insensitive, tolerant of Bosnian/Croatian/Serbian inflected forms, with ECTS/duration/founding-year matching and local-language filter words (e.g. "javna" finds public universities)
+- Relevance-ranked, grouped results with per-type filters, counts, and capped sections
+- Detail pages for universities and faculties with shareable links and per-page social previews
+- Email/password signup with confirmation emails, session login, and optional GitHub OAuth (with account linking either way)
+- Authenticated suggestions for creating, updating, or deleting data, reviewed by admins before applying
+- CSRF protection, Zod validation on both ends, WCAG-checked UI in English and the local language
 
-## Project overview
-
-The project models higher-education data as a nested academic hierarchy:
-
-- University
-- Faculty
-- Study program
-- Track (smjer)
-
-Public consumers can browse and query that data through unauthenticated endpoints under `/api/v1`. Authenticated users can submit create, update, and delete suggestions for university-related data, and admins can review those suggestions before they are applied.
-
-## Current features
-
-- Public REST API under `/api` and `/api/v1`
-- University listing with faculty counts, and detail responses containing nested faculties, study programs, and tracks
-- Unified search across universities, faculties, study programs, and tracks - matching name, city, acronym, entity, ownership, study cycle, language, and parent unit names
-- Email/password signup with email confirmation before account creation
-- Session-based login/logout with Passport
-- Optional GitHub OAuth login
-- Authenticated contribution flow for university data suggestions
-- Per-user pending-change listing and deletion
-- Admin moderation endpoints for approving or declining pending changes
-- CSRF protection for protected auth and user routes
-- Zod request validation and webapp API-response validation
-- Netlify proxy support for first-party session cookies in production
-
-## Getting started
-
-### Prerequisites
-
-Install the following locally:
-
-- Node.js 24.x
-- npm
-- PostgreSQL
-
-Verify the toolchain:
-
-```bash
-node --version
-npm --version
-psql --version
-```
-
-You will also need:
-
-- a Resend API key for signup confirmation emails
-- GitHub OAuth credentials if you want GitHub login enabled
-
-Create GitHub OAuth credentials at <https://github.com/settings/developers> if you plan to use the GitHub sign-in flow.
-
-### Installation
-
-Clone the repository:
+## Quick start
 
 ```bash
 git clone https://github.com/goran1010/atlas-univerziteta.git
 cd atlas-univerziteta
-```
-
-Install root, server, and webapp dependencies:
-
-```bash
 npm run install:all
-```
-
-Create local environment files:
-
-```bash
-cp server/.env.example server/.env
-cp webapp/.env.example webapp/.env
-```
-
-Then fill in the server values and adjust the webapp server URL if needed.
-
-## Environment variables
-
-### Server envs
-
-The server example file lives at `server/.env.example`.
-
-- `DATABASE_URL`: PostgreSQL connection string for development
-- `TEST_DATABASE_URL`: PostgreSQL connection for server tests (credentials/host only - the suite creates and drops its own databases, so the user needs `CREATEDB` rights)
-- `RESEND_API_KEY`: API key for confirmation emails
-- `WEBAPP_URL`: webapp origin allowed by credentialed CORS
-- `SERVER_URL`: public server base URL used in confirmation links
-- `PORT`: server port, usually `3000`
-- `COOKIE_SECRET`: session secret
-- `NODE_ENV`: runtime mode, usually `development`
-- `GITHUB_CLIENT_ID`: optional GitHub OAuth client ID
-- `GITHUB_CLIENT_SECRET`: optional GitHub OAuth client secret
-- `GITHUB_CALLBACK_URL`: GitHub OAuth callback URL
-
-Local callback example:
-
-```text
-http://localhost:3000/auth/github/callback
-```
-
-Production callback URL:
-
-```text
-https://atlasuniverziteta.com/server/auth/github/callback
-```
-
-### Webapp envs
-
-The webapp example file lives at `webapp/.env.example`.
-
-- `VITE_SERVER_URL`: server base URL used by the React app
-
-Typical local value:
-
-```text
-http://localhost:3000
-```
-
-Typical Netlify production value:
-
-```text
-/server
-```
-
-## Database setup
-
-Run development migrations and generate the Prisma client:
-
-```bash
-npm run db:deploy_generate
-```
-
-Seed the database if needed:
-
-```bash
-npm run db:seed
-```
-
-Start both services:
-
-```bash
+cp server/.env.example server/.env && cp webapp/.env.example webapp/.env
+npm run db:deploy_generate && npm run db:seed
 npm run dev:all
 ```
 
-Or start them separately:
+Requires Node.js 24.x and PostgreSQL. Full instructions, environment variables, and testing: [docs/SETUP.md](./docs/SETUP.md). Hosting layout and share-preview builds: [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md).
 
-```bash
-npm run dev:server
-npm run dev:webapp
-```
+## API in brief
 
-Local defaults:
-
-- server: `http://localhost:3000`
-- webapp: `http://localhost:5173`
-
-## API overview
-
-### Response shape
-
-Successful responses return `data` and usually a `message`.
-
-```json
-{
-  "message": "Universities retrieved successfully.",
-  "data": [
-    {
-      "id": 1,
-      "name": "University of Sarajevo",
-      "acronym": "UNSA",
-      "city": "Sarajevo",
-      "entity": "FBIH",
-      "ownership": "PUBLIC",
-      "foundedYear": "1949",
-      "website": "https://unsa.ba",
-      "address": "Adresa 7/II, 71000 Sarajevo",
-      "phone": "+387 33 565 100",
-      "email": "javnost@unsa.ba",
-      "_count": { "faculties": 23 }
-    }
-  ]
-}
-```
-
-Errors return an `error.message` payload.
-
-```json
-{
-  "error": {
-    "message": "Validation failed: Search term must have at least 2 characters."
-  }
-}
-```
-
-### Public endpoints
-
-Base URL:
+Base URL: `https://api.atlasuniverziteta.com`
 
 ```text
-https://api.atlasuniverziteta.com
+GET /                     service index
+GET /api/v1/universities        also /universities/:id
+GET /api/v1/faculties           also /faculties/:id
+GET /api/v1/study-programs      also /study-programs/:id
+GET /api/v1/tracks              also /tracks/:id
+GET /api/v1/search?searchTerm=&entity=&ownership=&cycle=&type=
 ```
 
-- `GET /api`
-- `GET /api/v1`
-- `GET /api/v1/universities`
-- `GET /api/v1/universities/:id`
-- `GET /api/v1/search?searchTerm=`
+Responses return `{ "message", "data" }`; errors return `{ "error": { "code", "message" } }`. Interactive documentation with examples lives at [atlasuniverziteta.com/api-docs](https://atlasuniverziteta.com/api-docs).
 
-### Contribution workflow
-
-Contribution requests are stored as pending changes. Each record captures:
-
-- the entity type: `UNIVERSITY`, `FACULTY`, `STUDY_PROGRAM`, or `TRACK`
-- the change type: `CREATE`, `UPDATE`, or `DELETE`
-- a target ID or parent ID when required
-- the proposed JSON payload for admin review
-
-Successful email confirmation currently ends with a rendered confirmation page, while session-based login and logout return JSON responses.
-
-## Testing and quality checks
-
-### Tests
-
-Run all tests:
+## Testing
 
 ```bash
-npm run test:all
+npm run test:all   # server + webapp unit/integration + Playwright e2e with axe accessibility scans
 ```
 
-Run service-specific suites:
-
-```bash
-npm run test:server
-npm run test:webapp
-```
-
-Run coverage:
-
-```bash
-npm run test:coverage:all
-npm run test:coverage:server
-npm run test:coverage:webapp
-```
-
-Server tests require `TEST_DATABASE_URL` with a user that can `CREATEDB`. The database named in the URL is never used - the test setup creates a fresh template database per run (schema via migrations, no seed data) and a clone per test file, dropping them afterwards.
-
-### E2E and accessibility tests
-
-Playwright drives the real stack (server + webapp) in Chromium, and axe-core scans every public page for WCAG 2.1 A/AA violations:
-
-```bash
-npm run test:e2e
-npm run test:e2e:ui
-```
-
-First run only: install the browser with `npm run install:browsers`.
-
-The suite is self-contained - it boots both apps on dedicated ports (server `3100`, webapp `5273`) and resets + seeds its own `uniatlas_e2e` database (derived from `DATABASE_URL` in `server/.env`, or `E2E_DATABASE_URL` if set), so dev servers and dev data are never touched. On failure, screenshots and traces land in `e2e/test-results/` and a browsable report in `e2e/playwright-report/` (`npm run report` from `e2e/` opens it).
-
-### Quality checks
-
-```bash
-npm run lint:all
-npm run typecheck:all
-npm run format:check:all
-```
-
-## Deployment
-
-- **Webapp:** Netlify (auto-deploys on push to `main`), serves static files via CDN
-- **API + Database:** VPS with Docker Compose (Caddy, Node.js server, PostgreSQL)
-- **Proxy:** Netlify proxies `/server/*` to the API, keeping cookies first-party
-- **HTTPS:** Automatic via Let's Encrypt (Caddy) and Netlify
-- **Email:** Resend with a verified custom domain
-
-See `.env.production.example` for the VPS environment variable reference and `docker-compose.yml` for the container setup.
-
-## Built with
-
-### Server
-
-- Express
-- Prisma
-- PostgreSQL
-- Zod
-- PassportJS
-- express-session
-- csrf-sync
-- Helmet
-- Pino
-- Resend
-- Vitest
-- Supertest
-
-### Webapp
-
-- React
-- Vite
-- React Router
-- Tailwind CSS
-- React Helmet Async
-- Vitest
-- React Testing Library
+Details in [docs/SETUP.md](./docs/SETUP.md#testing).
 
 ## Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines. Code changes, documentation updates, bug reports, and data-quality improvements are all welcome.
-
-## Authors
-
-- Goran Jović - [@goran1010](https://github.com/goran1010)
-
-See also the list of [contributors](https://github.com/goran1010/atlas-univerziteta/contributors).
+See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) - code, documentation, bug reports, and data-quality improvements are all welcome. Data suggestions can also be submitted in-app under "Improve data".
 
 ## License
 
-This project is licensed under the GNU Affero General Public License v3.0. See [LICENSE.md](./LICENSE.md).
+GNU Affero General Public License v3.0 - see [LICENSE.md](./LICENSE.md).
 
-## Acknowledgments
+University data sourced from [Agencija za razvoj visokog obrazovanja i osiguranje kvaliteta BiH (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu).
 
-- General university data sourced from [Agencija za razvoj visokog obrazovanja i osiguranje kvaliteta Bosne i Hercegovine (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu)
+Author: Goran Jović - [@goran1010](https://github.com/goran1010) · [contributors](https://github.com/goran1010/atlas-univerziteta/contributors)
+
+---
+
+## Bosanski / Hrvatski / Srpski
+
+[English](#atlas-univerziteta) | **Bosanski / Hrvatski / Srpski**
+
+Atlas Univerziteta je projekat otvorenog koda sa podacima o visokom obrazovanju u Bosni i Hercegovini: javni REST API, web aplikacija sa pretragom i sistem prijedloga izmjena uz administratorsku provjeru.
+
+- Web aplikacija: <https://atlasuniverziteta.com/>
+- REST API: <https://api.atlasuniverziteta.com/>
+- API dokumentacija: <https://atlasuniverziteta.com/api-docs>
+
+![Atlas Univerziteta - početna stranica](./webapp/public/images/og-images/og-image-home-sr.png)
+
+Podaci prate akademsku hijerarhiju: univerzitet, njegovi fakulteti i njihovi studijski programi - svaki program nosi svoje smjerove kao dio svojih podataka.
+
+### Mogućnosti
+
+- Javni REST API pod `/api/v1` - bez prijave i bez ključeva
+- Objedinjena pretraga univerziteta, fakulteta i studijskih programa: više riječi odjednom (svaka riječ se traži kroz cijelu hijerarhiju), neosjetljiva na velika/mala slova i dijakritike, prepoznaje padeže i rodove (medicina/medicine/medicini, javna/javni/javno), kao i ECTS bodove, trajanje i godinu osnivanja
+- Rezultati rangirani po relevantnosti i grupisani po tipu, uz filtere, brojače i ograničene sekcije sa "Prikaži sve"
+- Stranice sa detaljima univerziteta i fakulteta, sa linkovima za dijeljenje i ispravnim pregledima na društvenim mrežama
+- Registracija uz potvrdu emailom, prijava sesijom i opciona GitHub prijava (sa povezivanjem naloga u oba smjera)
+- Prijavljeni korisnici predlažu dodavanje, izmjenu ili brisanje podataka; administratori pregledaju prijedloge prije primjene
+- CSRF zaštita, validacija podataka na obje strane, pristupačnost provjerena po WCAG standardu, interfejs na engleskom i našem jeziku
+
+### Pokretanje
+
+Komande su iste kao u [engleskom dijelu](#quick-start) - potrebni su Node.js 24.x i PostgreSQL. Detaljna uputstva se nalaze u [docs/SETUP.md](./docs/SETUP.md) (na engleskom).
+
+### Doprinos projektu
+
+Pogledajte [CONTRIBUTING.md](./docs/CONTRIBUTING.md). Prijedloge podataka možete slati i direktno kroz aplikaciju, pod "Poboljšaj podatke". Podaci o univerzitetima preuzeti su od [Agencije za razvoj visokog obrazovanja i osiguranje kvaliteta BiH (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu).
+
+Licenca: GNU Affero General Public License v3.0 - [LICENSE.md](./LICENSE.md).

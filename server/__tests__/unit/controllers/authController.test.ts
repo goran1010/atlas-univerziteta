@@ -43,6 +43,7 @@ type LocalAuthCallback = (
 type GithubAuthCallback = (
   err: unknown,
   user: Express.User | false | null,
+  info?: unknown,
 ) => void;
 
 function createMockResponse() {
@@ -222,6 +223,33 @@ describe("authController", () => {
 
     expect(redirectMock).toHaveBeenCalledWith(
       `${env.WEBAPP_URL}/login?error=github`,
+    );
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  test("githubCallback redirects with github_no_email when no verified email is available", () => {
+    const req = {
+      session: {
+        regenerate: vi.fn(),
+        save: vi.fn(),
+      },
+      logIn: vi.fn(),
+    } as unknown as Request;
+    const { res, redirectMock } = createMockResponse();
+    const next = vi.fn();
+
+    authenticateMock.mockImplementation(
+      (_strategy: string, callback?: GithubAuthCallback) => {
+        return () => {
+          callback?.(null, null, { message: "no_verified_email" });
+        };
+      },
+    );
+
+    githubCallback(req, res, next);
+
+    expect(redirectMock).toHaveBeenCalledWith(
+      `${env.WEBAPP_URL}/login?error=github_no_email`,
     );
     expect(next).not.toHaveBeenCalled();
   });

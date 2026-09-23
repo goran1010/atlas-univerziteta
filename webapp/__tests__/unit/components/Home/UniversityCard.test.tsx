@@ -192,12 +192,7 @@ describe("UniversityCard", () => {
     const programName = await screen.findByText(/Computer Science/i);
     expect(programName).toBeInTheDocument();
 
-    // Study program's "View details" expands its tracks
-    const studyProgramViewButton = screen.getByRole("button", {
-      name: /Expand/i,
-    });
-    await user.click(studyProgramViewButton);
-
+    // tracks render inline with the study program, no further expand
     const trackName = await screen.findByText(/Software Track/i);
     const durationText = screen.getByText(/1 year\b/i);
     const ectsText = screen.getByText(/60 ECTS/i);

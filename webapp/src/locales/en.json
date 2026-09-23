@@ -1,22 +1,23 @@
 {
   "title": {
-    "app": "UniAtlas Bosnia",
+    "app": "Atlas Univerziteta",
     "home": "Home",
-    "api": "Bosnia and Herzegovina Universities API Docs",
-    "universities": "Universities in Bosnia and Herzegovina",
-    "contribute": "Improve Data",
-    "admin": "Admin Dashboard",
-    "profile": "My Profile",
-    "login": "Log In",
-    "signup": "Sign Up",
-    "notFound": "Page Not Found"
+    "api": "API docs",
+    "universities": "Search",
+    "contribute": "Improve data",
+    "admin": "Admin dashboard",
+    "profile": "My profile",
+    "login": "Log in",
+    "signup": "Sign up",
+    "notFound": "Page not found",
+    "about": "About"
   },
   "meta": {
     "home": "Explore universities, faculties, study programs, and tracks in Bosnia and Herzegovina with a free public dataset, searchable web interface, and REST API.",
     "universities": "Explore universities and study programs in Bosnia and Herzegovina.",
-    "api": "REST API documentation for UniAtlas Bosnia. Access universities and study programs data programmatically.",
-    "login": "Log in to your UniAtlas Bosnia account to contribute data and track your submissions.",
-    "signup": "Create a free UniAtlas Bosnia account to start contributing university data."
+    "api": "REST API documentation for Atlas Univerziteta. Access universities and study programs data programmatically.",
+    "login": "Log in to your Atlas Univerziteta account to contribute data and track your submissions.",
+    "signup": "Create a free Atlas Univerziteta account to start contributing university data."
   },
   "nav": {
     "home": "Home",
@@ -71,6 +72,7 @@
       "noAccountPrefix": "Don't have an account?",
       "heading": "Log in",
       "githubFailed": "GitHub login failed. Please try again.",
+      "githubNoEmail": "GitHub login failed: your GitHub account has no verified email address. Verify your email on GitHub and try again.",
       "alreadyLoggedIn": "You are already logged in. Redirected to the home page.",
       "noAccount": "Don't have an account ? Go to the Sign Up page."
     },
@@ -112,7 +114,7 @@
     "title": "Universities and Study Programs in Bosnia and Herzegovina",
     "heading": "Universities and Study Programs in Bosnia and Herzegovina",
     "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities - institutions, faculties, study programs, and tracks.",
-    "summary": "Use UniAtlas Bosnia to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
+    "summary": "Use Atlas Univerziteta to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
     "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, and tracks. Search by name, city, acronym, entity, ownership, study cycle, and more.",
     "card": {
@@ -127,11 +129,11 @@
     "improveStep2": "Go to the Improve Data page and submit your suggestion",
     "improveStep3": "Admins review submissions and apply approved changes to the live dataset",
     "improveContribute": "Improve Data",
-    "improveSignUp": "Create an Account",
+    "improveSignUp": "Create an account",
     "forDevsHeading": "For Developers",
-    "forDevsDescription": "UniAtlas Bosnia exposes a free, unauthenticated REST API. Fetch all universities, search by name, city, or acronym, retrieve full detail for a single university, or search study programs across all institutions.",
+    "forDevsDescription": "Atlas Univerziteta exposes a free, unauthenticated REST API. Fetch all universities, search by name, city, or acronym, retrieve full detail for a single university, or search study programs across all institutions.",
     "forDevsNote": "No authentication required for public endpoints.",
-    "forDevsCta": "View API Docs",
+    "forDevsCta": "View API docs",
     "forDevsGithub": "View on GitHub",
     "openSource": "This is an open-source project. View the source code, setup instructions, and contribute on",
     "github": "GitHub"
@@ -148,7 +150,7 @@
       "apiV1Status": "Check API v1 status.",
       "getAllUniversities": "Retrieve all universities, ordered by ownership then name. Includes a faculty count per university.",
       "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks).",
-      "search": "Search across universities, faculties, study programs, and tracks. Provide a search term (min 2 characters) and/or at least one filter. Matches name, city, acronym, and parent unit names (case-insensitive, diacritic-insensitive).",
+      "search": "Search across universities, faculties, and study programs (track names match through their study program). Optional search term (min 2 characters) and filters; with neither, returns a capped listing of everything. Matches name, city, acronym, ECTS/duration, and related unit names (case-insensitive, diacritic-insensitive).",
       "searchTermParam": "Text to search for (2-100 characters). Optional if at least one filter is provided.",
       "getAllFaculties": "Retrieve all faculties, ordered by university name then faculty name. Includes the parent university.",
       "getFacultyById": "Retrieve a faculty by ID with nested study programs and tracks, plus the parent university.",
@@ -158,7 +160,8 @@
       "getTrackById": "Retrieve a track by ID with its parent study program, faculty, and university.",
       "entityParam": "Filter by entity: FBIH, RS, or BD.",
       "ownershipParam": "Filter by ownership: PUBLIC or PRIVATE.",
-      "cycleParam": "Filter by study cycle. Accepts multiple values (e.g. cycle=FIRST&cycle=SECOND). Values: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST."
+      "cycleParam": "Filter by study cycle. Accepts multiple values (e.g. cycle=FIRST&cycle=SECOND). Values: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
+      "typeParam": "Result type filter: university, faculty, or studyProgram. Repeatable. With exactly one type the section is returned uncapped; otherwise sections are capped with true totals."
     }
   },
   "endpoint": {
@@ -245,7 +248,7 @@
       "RS": "RS - Republika Srpska",
       "BD": "BD - Brčko District"
     },
-    "submitSuggestion": "Submit Suggestion",
+    "submitSuggestion": "Submit suggestion",
     "deleteChange": "Delete"
   },
   "admin": {
@@ -299,16 +302,15 @@
       "forbidden": "You do not have permission for this action.",
       "csrfInvalid": "Your session security check failed. Refresh the page and try again.",
       "alreadyLoggedIn": "You are already logged in.",
-      "alreadyAdmin": "You already have the admin role."
+      "alreadyAdmin": "You already have the admin role.",
+      "emailNotSent": "Confirmation email could not be sent. Check the email address and try again."
     },
     "csrfTokenFailed": "Could not start a secure session. Refresh the page and try again.",
     "pendingChanges": {
-      "loadSuccess": "Pending changes loaded.",
       "loadFailed": "Could not load pending changes. Check your connection and try again.",
       "fetchError": "Something went wrong while loading pending changes. Refresh the page and try again."
     },
     "loginStatus": {
-      "success": "Successfully logged in.",
       "error": "Could not check your login status. Refresh the page and try again."
     },
     "auth": {
@@ -320,7 +322,8 @@
       "registrationSuccess": "Registration successful! Check your email.",
       "logoutFailed": "Logout did not complete. Try again.",
       "logoutError": "Something went wrong during logout. Try again in a moment.",
-      "logoutSuccess": "Successfully logged out."
+      "logoutSuccess": "Successfully logged out.",
+      "githubLoginSuccess": "Successfully logged in with GitHub."
     },
     "admin": {
       "approveSuccess": "Pending change approved.",
@@ -355,18 +358,16 @@
   },
   "universitiesPage": {
     "title": "Find programs and universities",
-    "browseAll": "Browse All",
+    "browseAll": "Browse all",
     "search": "Search",
     "searchHint": "Search across all data - by name, city, acronym, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
     "searchAllPlaceholder": "Search by name, city, cycle, entity…",
     "universitiesSection": "Universities",
     "facultiesSection": "Faculties",
     "studyProgramsSection": "Study programs",
-    "tracksSection": "Tracks (smjerovi)",
     "noResults": "No universities found.",
     "noFacultyResults": "No faculties found.",
     "noStudyProgramResults": "No study programs found.",
-    "noTrackResults": "No tracks found.",
     "noResultsAtAll": "No results found.",
     "city": "City",
     "entity": "Entity",
@@ -418,7 +419,17 @@
     },
     "clearSearch": "Clear search",
     "filters": "Filters",
-    "clearFilters": "Clear filters",
+    "resetSearch": "Reset search",
+    "filterType": "Type",
+    "showAll": "Show all",
+    "contextMatch": {
+      "university": "Matched through its faculties or study programs",
+      "faculty": "Matched through its university or study programs",
+      "studyProgram": "Matched through its faculty, university, or tracks"
+    },
+    "showingFirst": "Showing first",
+    "showingOf": "of",
+    "showAllPrograms": "Show all study programs",
     "filterEntity": "Entity",
     "filterOwnership": "Ownership",
     "filterCycle": "Study cycle",

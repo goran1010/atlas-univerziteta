@@ -28,6 +28,11 @@ await _createClient.end();
 
 const _testDbUrl = new URL(env.TEST_DATABASE_URL);
 _testDbUrl.pathname = `/${dbName}`;
+// Every vitest fork gets its own Prisma pool; the default size
+// (2 * CPUs + 1 per fork) collectively exceeds postgres max_connections
+// and starves workers once a request runs many queries in parallel.
+_testDbUrl.searchParams.set("connection_limit", "5");
+_testDbUrl.searchParams.set("pool_timeout", "30");
 env.TEST_DATABASE_URL = _testDbUrl.toString();
 
 afterAll(async () => {

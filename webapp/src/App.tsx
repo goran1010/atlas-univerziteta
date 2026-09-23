@@ -11,6 +11,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { RootContext } from "./contextData/RootContext";
 import { SkipNavbarLink } from "./components/SkipNavbarLink";
 import { RouteAnnouncer } from "./components/RouteAnnouncer";
+import { GithubLoginNotice } from "./components/GithubLoginNotice";
 import { SITE_URL } from "./utils/envConfig";
 
 function App() {
@@ -38,15 +39,15 @@ function App() {
       <HelmetProvider>
         <Helmet>
           <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="UniAtlas Bosnia" />
+          <meta property="og:site_name" content="Atlas Univerziteta" />
           <meta
             property="og:image"
-            content={`${SITE_URL}/images/og-image-home.png`}
+            content={`${SITE_URL}/images/og-images/og-image-home.png`}
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta
             name="twitter:image"
-            content={`${SITE_URL}/images/og-image-home.png`}
+            content={`${SITE_URL}/images/og-images/og-image-home.png`}
           />
         </Helmet>
         <>
@@ -54,6 +55,7 @@ function App() {
 
           {/* A11y: Accessibility features like route announcer and skip link */}
           <RouteAnnouncer />
+          <GithubLoginNotice />
           <SkipNavbarLink t={t} />
 
           <Navbar closeMenu={closeMenu} />

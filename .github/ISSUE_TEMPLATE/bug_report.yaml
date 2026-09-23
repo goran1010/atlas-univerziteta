@@ -19,7 +19,7 @@ body:
       options:
         - label: This is not a duplicate of an existing issue (please check our [open issues list](https://github.com/goran1010/atlas-univerziteta/issues))
           required: true
-        - label: I have read and understand the [Contributing Guidelines](https://github.com/goran1010/atlas-univerziteta/blob/main/CONTRIBUTING.md)
+        - label: I have read and understand the [Contributing Guidelines](https://github.com/goran1010/atlas-univerziteta/blob/main/docs/CONTRIBUTING.md)
           required: true
 
   - type: textarea

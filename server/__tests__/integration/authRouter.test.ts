@@ -115,6 +115,63 @@ describe("Auth Router - POST /auth/signup", () => {
     ).resolves.toBe(false);
   });
 
+  test("responds with status 400 when the email already has a password account", async () => {
+    const existing = createNewUserInput();
+    await prisma.user.create({
+      data: {
+        email: existing.email,
+        password: await bcrypt.hash(existing.password, 10),
+      },
+    });
+
+    const response = await request(app)
+      .post("/auth/signup")
+      .send(createNewUserInput({ email: existing.email }));
+    const responseBody = getResponseObject(response.body);
+
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["message"]).toBe(
+      "Signup failed: check your input and try again.",
+    );
+  });
+
+  test("allows signup for a GitHub-only account and attaches the password on confirmation", async () => {
+    const githubOnly = createNewUserInput();
+    const createdUser = await prisma.user.create({
+      data: {
+        email: githubOnly.email,
+        githubId: `github_${githubOnly.id}`,
+      },
+    });
+
+    const { newUser, token } = await signUpAndGetPendingToken(githubOnly.email);
+
+    const confirmResponse = await request(app).get(`/auth/confirm/${token}`);
+    expect(confirmResponse.status).toBe(200);
+
+    const users = await prisma.user.findMany({
+      where: { email: githubOnly.email },
+    });
+    expect(users).toHaveLength(1);
+    const user = users[0];
+    if (!user?.password) {
+      throw new Error("Expected the confirmed user to have a password.");
+    }
+    expect(user.id).toBe(createdUser.id);
+    expect(user.githubId).toBe(createdUser.githubId);
+    await expect(bcrypt.compare(newUser.password, user.password)).resolves.toBe(
+      true,
+    );
+
+    const loginResponse = await request
+      .agent(app)
+      .post("/auth/login")
+      .send({ email: newUser.email, password: newUser.password });
+    expect(loginResponse.status).toBe(200);
+  });
+
   test("responds with status 500 and removes pending signup when confirmation email sending fails", async () => {
     const newUser = createNewUserInput();
     vi.mocked(sendConfirmationEmail).mockResolvedValueOnce({
@@ -162,13 +219,11 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
     );
 
     expect(response.status).toBe(400);
-    expect(response.body).toEqual({
-      error: {
-        code: "CONFIRMATION_TOKEN_INVALID",
-        message:
-          "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
-      },
-    });
+    // confirmation links open in a browser, so errors are HTML pages
+    expect(response.headers["content-type"]).toContain("text/html");
+    expect(response.text).toContain(
+      "The confirmation link is invalid or expired.",
+    );
   });
 
   test("responds with status 200 and Email confirmed successfully message if token is valid", async () => {
@@ -202,13 +257,66 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
     });
 
     expect(response.status).toBe(400);
-    expect(response.body).toEqual({
-      error: {
-        code: "CONFIRMATION_TOKEN_INVALID",
-        message: "Token expired. Please sign up again.",
+    expect(response.headers["content-type"]).toContain("text/html");
+    expect(response.text).toContain("The link expired. Please sign up again.");
+    expect(pendingUserInDb).toBeNull();
+  });
+
+  test("attaches the password when a GitHub account claimed the email after signup", async () => {
+    const { newUser, token } = await signUpAndGetPendingToken();
+
+    const githubUser = await prisma.user.create({
+      data: {
+        email: newUser.email,
+        githubId: `github_${newUser.id}`,
       },
     });
-    expect(pendingUserInDb).toBeNull();
+
+    const confirmResponse = await request(app).get(`/auth/confirm/${token}`);
+    expect(confirmResponse.status).toBe(200);
+
+    const users = await prisma.user.findMany({
+      where: { email: newUser.email },
+    });
+    expect(users).toHaveLength(1);
+    const user = users[0];
+    if (!user?.password) {
+      throw new Error("Expected the confirmed user to have a password.");
+    }
+    expect(user.id).toBe(githubUser.id);
+    await expect(bcrypt.compare(newUser.password, user.password)).resolves.toBe(
+      true,
+    );
+  });
+
+  test("responds with status 400 and consumes the token when the email gained a password account after signup", async () => {
+    const { newUser, token } = await signUpAndGetPendingToken();
+
+    const otherPassword = await bcrypt.hash("other_password_456", 10);
+    await prisma.user.create({
+      data: {
+        email: newUser.email,
+        password: otherPassword,
+      },
+    });
+
+    const confirmResponse = await request(app).get(`/auth/confirm/${token}`);
+
+    expect(confirmResponse.status).toBe(400);
+    expect(confirmResponse.headers["content-type"]).toContain("text/html");
+    expect(confirmResponse.text).toContain(
+      "This email is already registered. Log in instead.",
+    );
+
+    const pendingUsers = await prisma.pendingUser.findMany({
+      where: { email: newUser.email },
+    });
+    expect(pendingUsers).toHaveLength(0);
+
+    const user = await prisma.user.findUnique({
+      where: { email: newUser.email },
+    });
+    expect(user?.password).toBe(otherPassword);
   });
 
   test("responds with status 500 when confirmation processing fails unexpectedly", async () => {
@@ -227,6 +335,38 @@ describe("Auth Router - GET /auth/confirm/:token", () => {
         message: "Server error: please try again later.",
       },
     });
+  });
+});
+
+describe("Auth Router - GET /auth/github OAuth state", () => {
+  test("the GitHub authorization redirect carries a state nonce", async () => {
+    const response = await request(app).get("/auth/github");
+
+    expect(response.status).toBe(302);
+    const location = response.headers["location"] ?? "";
+    expect(location).toContain("github.com/login/oauth/authorize");
+    expect(location).toMatch(/[?&]state=[^&]+/);
+  });
+
+  test("a callback with a mismatched state fails without reaching GitHub", async () => {
+    const agent = request.agent(app);
+    await agent.get("/auth/github");
+
+    const response = await agent.get(
+      "/auth/github/callback?code=fake-code&state=wrong-state",
+    );
+
+    expect(response.status).toBe(302);
+    expect(response.headers["location"]).toContain("/login?error=github");
+  });
+
+  test("a callback without a session fails without reaching GitHub", async () => {
+    const response = await request(app).get(
+      "/auth/github/callback?code=fake-code&state=any-state",
+    );
+
+    expect(response.status).toBe(302);
+    expect(response.headers["location"]).toContain("/login?error=github");
   });
 });
 

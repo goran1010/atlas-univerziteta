@@ -71,12 +71,43 @@ test.describe("detail pages", () => {
     await expect(breadcrumb.getByRole("link").first()).toBeVisible();
   });
 
+  test("program search result opens the faculty page focused on that program", async ({
+    page,
+  }) => {
+    await page.goto("/search?type=studyProgram");
+    // large sections render their groups collapsed by default
+    const expandFirstGroup = page
+      .getByRole("button", { name: "Expand" })
+      .first();
+    await expect(expandFirstGroup).toBeVisible({ timeout: 15000 });
+    await expandFirstGroup.click();
+    const firstProgramLink = page
+      .getByRole("main")
+      .getByRole("listitem")
+      .first()
+      .getByRole("link")
+      .first();
+    await expect(firstProgramLink).toBeVisible({ timeout: 15000 });
+    await firstProgramLink.click();
+
+    await expect(page).toHaveURL(/\/faculties\/\d+\?program=\d+$/);
+    const showAll = page.getByRole("button", {
+      name: /Show all study programs/,
+    });
+    await expect(showAll).toBeVisible();
+
+    await showAll.click();
+    await expect(showAll).toBeHidden();
+    await expect(page).toHaveURL(/\/faculties\/\d+$/);
+  });
+
   test("URL deep-link with filters loads filtered results", async ({
     page,
   }) => {
     await page.goto("/search?ownership=PUBLIC");
+    // filter-only search returns a large payload; slow under parallel workers
     await expect(
       page.getByRole("main").getByRole("listitem").first(),
-    ).toBeVisible({ timeout: 5000 });
+    ).toBeVisible({ timeout: 15000 });
   });
 });

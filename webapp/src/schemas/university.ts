@@ -4,6 +4,7 @@ import {
   durationYearsSchema,
   ectsSchema,
   entitySchema,
+  integerSchema,
   ownershipSchema,
   positiveIntegerSchema,
   studyCycleSchema,
@@ -110,6 +111,22 @@ const studyProgramSearchResultSchema = z.object({
   facultyId: positiveIntegerSchema,
   cycle: studyCycleSchema,
   ects: ectsSchema.nullish().transform((value) => value ?? undefined),
+  durationYears: durationYearsSchema
+    .nullish()
+    .transform((value) => value ?? undefined),
+  tracks: z
+    .array(
+      z.object({
+        id: positiveIntegerSchema,
+        name: z.string().min(1),
+        ects: ectsSchema.nullish().transform((value) => value ?? undefined),
+        durationYears: durationYearsSchema
+          .nullish()
+          .transform((value) => value ?? undefined),
+      }),
+    )
+    .optional()
+    .default([]),
   faculty: z.object({
     id: positiveIntegerSchema,
     name: z.string().min(1),
@@ -124,28 +141,8 @@ const facultySearchResultSchema = z.object({
   universityId: positiveIntegerSchema,
   city: optionalTextSchema,
   website: optionalTextSchema,
+  _count: z.object({ studyPrograms: integerSchema.nonnegative() }).optional(),
   university: searchResultUniversitySchema,
-});
-
-const trackSearchResultSchema = z.object({
-  id: positiveIntegerSchema,
-  name: z.string().min(1),
-  studyProgramId: positiveIntegerSchema,
-  ects: ectsSchema.nullish().transform((value) => value ?? undefined),
-  durationYears: durationYearsSchema
-    .nullish()
-    .transform((value) => value ?? undefined),
-  studyProgram: z.object({
-    id: positiveIntegerSchema,
-    name: z.string().min(1),
-    cycle: studyCycleSchema,
-    faculty: z.object({
-      id: positiveIntegerSchema,
-      name: z.string().min(1),
-      universityId: positiveIntegerSchema,
-      university: searchResultUniversitySchema,
-    }),
-  }),
 });
 
 const unifiedSearchResponseSchema = z.object({
@@ -154,7 +151,20 @@ const unifiedSearchResponseSchema = z.object({
     universities: z.array(universityListItemSchema),
     faculties: z.array(facultySearchResultSchema),
     studyPrograms: z.array(studyProgramSearchResultSchema),
-    tracks: z.array(trackSearchResultSchema).optional().default([]),
+    totals: z
+      .object({
+        universities: z.number().int().nonnegative(),
+        faculties: z.number().int().nonnegative(),
+        studyPrograms: z.number().int().nonnegative(),
+      })
+      .optional(),
+    direct: z
+      .object({
+        universities: z.number().int().nonnegative(),
+        faculties: z.number().int().nonnegative(),
+        studyPrograms: z.number().int().nonnegative(),
+      })
+      .optional(),
   }),
 });
 
@@ -167,21 +177,7 @@ const facultyDetailResponseSchema = z.object({
   data: facultyDetailSchema,
 });
 
-const studyProgramDetailSchema = studyProgramSchema.extend({
-  faculty: z.object({
-    id: positiveIntegerSchema,
-    name: z.string().min(1),
-    university: universitySchema,
-  }),
-});
-
-const studyProgramDetailResponseSchema = z.object({
-  message: z.string(),
-  data: studyProgramDetailSchema,
-});
-
 export type FacultyDetail = z.infer<typeof facultyDetailSchema>;
-export type StudyProgramDetail = z.infer<typeof studyProgramDetailSchema>;
 export type UniversityDetail = z.infer<typeof universityDetailSchema>;
 export type UniversityListItem = z.infer<typeof universityListItemSchema>;
 export type UniversityDetailFaculty = UniversityDetail["faculties"][number];
@@ -193,7 +189,6 @@ export type StudyProgramSearchResult = z.infer<
   typeof studyProgramSearchResultSchema
 >;
 export type FacultySearchResult = z.infer<typeof facultySearchResultSchema>;
-export type TrackSearchResult = z.infer<typeof trackSearchResultSchema>;
 export type UnifiedSearchResults = z.infer<
   typeof unifiedSearchResponseSchema
 >["data"];
@@ -202,5 +197,4 @@ export {
   universityDetailResponseSchema,
   universityListResponseSchema,
   facultyDetailResponseSchema,
-  studyProgramDetailResponseSchema,
 };

@@ -23,6 +23,11 @@ export default defineConfig([
     ],
     rules: {
       "no-console": ["warn", { allow: ["error", "warn"] }],
+      // destructuring to omit a property is deliberate
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { ignoreRestSiblings: true },
+      ],
     },
     languageOptions: {
       globals: globals.node,

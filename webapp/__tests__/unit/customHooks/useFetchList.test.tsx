@@ -16,7 +16,6 @@ function HookProbe({ setLoading, enabled }: HookProbeProps) {
   const [items] = useFetchList({
     path: "/users/admin/pending-changes",
     responseSchema: adminPendingChangesResponseSchema,
-    successMessageKey: "messages.pendingChanges.loadSuccess",
     errorMessageKey: "messages.pendingChanges.fetchError",
     logLabel: "fetch pending changes",
     setLoading,
@@ -92,10 +91,8 @@ describe("useFetchList", () => {
       expect.stringContaining("/users/admin/pending-changes"),
       expect.objectContaining({ method: "GET", credentials: "include" }),
     );
-    expect(addNotification).toHaveBeenCalledWith({
-      type: "success",
-      message: "messages.pendingChanges.loadSuccess",
-    });
+    // passive loads are their own confirmation - no success toast
+    expect(addNotification).not.toHaveBeenCalled();
   });
 
   test("rejects data that does not match the schema", async () => {

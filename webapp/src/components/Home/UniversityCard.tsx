@@ -9,6 +9,7 @@ import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { Dialog } from "../sharedComponents/Dialog";
 import { Spinner } from "../sharedComponents/Spinner";
 import { tCount } from "../../utils/pluralize";
@@ -27,7 +28,14 @@ import type {
   UniversityListItem,
 } from "../../schemas/university";
 
-function UniversityCard({ university }: { university: UniversityListItem }) {
+function UniversityCard({
+  university,
+  contextHint,
+}: {
+  university: UniversityListItem;
+  contextHint?: string;
+}) {
+  const hasFaculties = university._count.faculties > 0;
   const { t, addNotification } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<UniversityDetail>();
@@ -104,12 +112,15 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
     : [];
 
   return (
-    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) hover:bg-(--hover-surface) transition-colors cursor-pointer">
+    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2)">
       <div
-        className="p-2 sm:p-4"
+        className={`p-2 sm:p-4 transition-colors ${
+          hasFaculties ? "cursor-pointer hover:bg-(--hover-surface)" : ""
+        }`}
         onClick={(e) => {
-          if ((e.target as HTMLElement).closest("a, button")) return;
-          void handleExpand();
+          if (e.target instanceof Element && e.target.closest("a, button"))
+            return;
+          if (hasFaculties) void handleExpand();
         }}
       >
         <div>
@@ -171,6 +182,11 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               email={university.email}
             />
           </div>
+          {contextHint && (
+            <p className="text-xs italic text-(--text-muted) mt-1">
+              {contextHint}
+            </p>
+          )}
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
           <Button
@@ -182,14 +198,16 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
           >
             {t("universitiesPage.viewInfo")}
           </Button>
-          <DetailsToggleButton
-            expanded={expanded}
-            className="px-3 py-1.5 text-xs"
-            onClick={() => {
-              void handleExpand();
-            }}
-            loading={loadingDetail}
-          />
+          {hasFaculties && (
+            <DetailsToggleButton
+              expanded={expanded}
+              className="px-3 py-1.5 text-xs"
+              onClick={() => {
+                void handleExpand();
+              }}
+              loading={loadingDetail}
+            />
+          )}
         </div>
         <Dialog
           open={dialogOpen}
@@ -198,11 +216,7 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
           }}
           title={university.name}
           headerActions={
-            <ShareButton
-              url={`/universities/${university.id.toString()}`}
-              t={t}
-              addNotification={addNotification}
-            />
+            <ShareButton url={`/universities/${university.id.toString()}`} />
           }
         >
           <div className="flex flex-col gap-3">
@@ -248,67 +262,61 @@ function UniversityCard({ university }: { university: UniversityListItem }) {
               )}
             </p>
             <div className="flex justify-center">
-              <Link
+              <LinkButton
                 to={`/universities/${university.id.toString()}`}
-                className="inline-flex items-center justify-center border border-(--border-color) rounded-lg px-4 py-2 text-sm font-medium text-(--text-primary) hover:bg-(--hover-surface) transition-colors"
+                className="text-sm"
                 onClick={() => {
                   setDialogOpen(false);
                 }}
               >
                 {t("universitiesPage.openFullPage")}
-              </Link>
+              </LinkButton>
             </div>
           </div>
         </Dialog>
-
-        {expanded && detailData && (
-          <div
-            className="mt-3 border-t border-(--border-color) pt-3"
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-          >
-            {detailData.faculties.length > 0 ? (
-              <>
-                <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">
-                  <span className="text-blue-600 dark:text-blue-400">
-                    {detailData.faculties.length}
-                  </span>{" "}
-                  {tCount(
-                    t,
-                    "universitiesPage.facultyCount",
-                    detailData.faculties.length,
-                  )}
-                </p>
-                <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
-                  {facultyCityGroups.length > 1 ? (
-                    <div className="flex flex-col gap-2">
-                      {facultyCityGroups.map((g) => (
-                        <ResultGroup key={g.key} label={g.key}>
-                          {g.items.map((f) => (
-                            <FacultyRow key={f.id} faculty={f} t={t} />
-                          ))}
-                        </ResultGroup>
-                      ))}
-                    </div>
-                  ) : (
-                    <ul className="space-y-1">
-                      {detailData.faculties.map((f) => (
-                        <FacultyRow key={f.id} faculty={f} t={t} />
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </>
-            ) : (
-              <p className="text-sm text-(--text-muted) italic">
-                {t("universitiesPage.faculties")}: -
-              </p>
-            )}
-          </div>
-        )}
-        {loadingDetail && <Spinner />}
       </div>
+      {expanded && detailData && (
+        <div className="border-t border-(--border-color) p-2 pt-3 sm:p-4 sm:pt-3">
+          {detailData.faculties.length > 0 ? (
+            <>
+              <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">
+                <span className="text-blue-600 dark:text-blue-400">
+                  {detailData.faculties.length}
+                </span>{" "}
+                {tCount(
+                  t,
+                  "universitiesPage.facultyCount",
+                  detailData.faculties.length,
+                )}
+              </p>
+              <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
+                {facultyCityGroups.length > 1 ? (
+                  <div className="flex flex-col gap-2">
+                    {facultyCityGroups.map((g) => (
+                      <ResultGroup key={g.key} label={g.key}>
+                        {g.items.map((f) => (
+                          <FacultyRow key={f.id} faculty={f} t={t} />
+                        ))}
+                      </ResultGroup>
+                    ))}
+                  </div>
+                ) : (
+                  <ul className="space-y-1">
+                    {detailData.faculties.map((f) => (
+                      <FacultyRow key={f.id} faculty={f} t={t} />
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </>
+          ) : (
+            <p className="text-sm text-(--text-muted) italic">
+              {t("universitiesPage.faculties")}: -
+            </p>
+          )}
+        </div>
+      )}
+      {loadingDetail && <Spinner />}
     </li>
   );
 }

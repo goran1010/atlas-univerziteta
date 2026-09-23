@@ -1,5 +1,5 @@
 import { useState, useEffect, use } from "react";
-import { useParams, Link } from "react-router";
+import { useParams, useSearchParams, Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import {
@@ -10,8 +10,12 @@ import {
 } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
+import { ShareButton } from "./ShareButton";
+import { Button } from "../sharedComponents/Button";
 import { ResultGroup } from "./ResultGroup";
+import { TrackList } from "./TrackList";
 import { groupBy } from "./utils/groupBy";
+import { byCycleDisplayOrder } from "./utils/cycleOrder";
 import { tCount } from "../../utils/pluralize";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";
@@ -24,6 +28,7 @@ import type { FacultyDetail } from "../../schemas/university";
 
 function FacultyDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { t, addNotification } = use(RootContext);
   const [faculty, setFaculty] = useState<FacultyDetail>();
   const [loading, setLoading] = useState(true);
@@ -85,7 +90,17 @@ function FacultyDetailPage() {
     );
   }
 
-  const programsByCycle = groupBy(faculty.studyPrograms, (sp) =>
+  // Arriving from a search result focuses the page on that program (and
+  // highlights the clicked track); the URL keeps the view shareable.
+  const focusedProgram = faculty.studyPrograms.find(
+    (sp) => String(sp.id) === searchParams.get("program"),
+  );
+  const highlightedTrackId = searchParams.get("track");
+  const visiblePrograms = focusedProgram
+    ? [focusedProgram]
+    : faculty.studyPrograms;
+
+  const programsByCycle = groupBy(byCycleDisplayOrder(visiblePrograms), (sp) =>
     t(`universitiesPage.cycles.${sp.cycle}`),
   );
 
@@ -98,6 +113,15 @@ function FacultyDetailPage() {
           content={`${faculty.name} - ${faculty.university.name}`}
         />
         <link rel="canonical" href={`${SITE_URL}/faculties/${id ?? ""}`} />
+        <meta
+          property="og:title"
+          content={`${faculty.name} | ${t("title.app")}`}
+        />
+        <meta
+          property="og:description"
+          content={`${faculty.name} - ${faculty.university.name}`}
+        />
+        <meta property="og:url" content={`${SITE_URL}/faculties/${id ?? ""}`} />
       </Helmet>
 
       <div className="w-full mx-auto px-1 sm:px-4 py-4">
@@ -114,9 +138,12 @@ function FacultyDetailPage() {
 
         <div className="flex flex-col gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-(--text-primary)">
-              {faculty.name}
-            </h1>
+            <div className="flex items-start justify-between gap-2">
+              <h1 className="text-2xl font-bold text-(--text-primary)">
+                {faculty.name}
+              </h1>
+              <ShareButton url={`/faculties/${id ?? ""}`} />
+            </div>
             <p className="text-sm text-(--text-secondary) mt-1">
               <Link
                 to={`/universities/${faculty.university.id.toString()}`}
@@ -145,17 +172,31 @@ function FacultyDetailPage() {
           </div>
 
           <div className="border-t border-(--border-color) pt-4">
-            <h2 className="text-lg font-semibold text-(--text-primary) mb-3">
-              <GraduationCapIcon />{" "}
-              <span className="text-blue-600 dark:text-blue-400">
-                {faculty.studyPrograms.length}
-              </span>{" "}
-              {tCount(
-                t,
-                "universitiesPage.studyProgramCount",
-                faculty.studyPrograms.length,
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <h2 className="text-lg font-semibold text-(--text-primary)">
+                <GraduationCapIcon />{" "}
+                <span className="text-blue-600 dark:text-blue-400">
+                  {visiblePrograms.length}
+                </span>{" "}
+                {tCount(
+                  t,
+                  "universitiesPage.studyProgramCount",
+                  visiblePrograms.length,
+                )}
+              </h2>
+              {focusedProgram && (
+                <Button
+                  variant="secondary"
+                  className="px-3 py-1.5 text-xs"
+                  onClick={() => {
+                    setSearchParams(new URLSearchParams(), { replace: true });
+                  }}
+                >
+                  {t("universitiesPage.showAllPrograms")} (
+                  {faculty.studyPrograms.length})
+                </Button>
               )}
-            </h2>
+            </div>
             {faculty.studyPrograms.length > 0 ? (
               <div className="flex flex-col gap-4">
                 {programsByCycle.map((group) => (
@@ -171,7 +212,12 @@ function FacultyDetailPage() {
                         className="border border-(--border-color) rounded-lg p-3 bg-(--surface-2)"
                       >
                         <p className="font-semibold text-(--text-primary)">
-                          {sp.name}
+                          <Link
+                            to={`/faculties/${id ?? ""}?program=${sp.id.toString()}`}
+                            className="underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                          >
+                            {sp.name}
+                          </Link>
                         </p>
                         <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
                           {sp.ects != null && (
@@ -196,45 +242,11 @@ function FacultyDetailPage() {
                             </span>
                           )}
                         </div>
-                        {sp.tracks.length > 0 && (
-                          <div className="mt-2 ml-2 sm:ml-4 border-l-2 border-(--border-color) pl-2 sm:pl-3">
-                            <p className="text-xs font-semibold text-(--text-muted) mb-1">
-                              {sp.tracks.length}{" "}
-                              {tCount(
-                                t,
-                                "universitiesPage.trackCount",
-                                sp.tracks.length,
-                              )}
-                            </p>
-                            <ul className="flex flex-col gap-1">
-                              {sp.tracks.map((tr) => (
-                                <li
-                                  key={tr.id}
-                                  className="text-sm text-(--text-secondary) flex flex-wrap gap-x-2"
-                                >
-                                  <span className="text-(--text-primary)">
-                                    {tr.name}
-                                  </span>
-                                  {tr.ects != null && (
-                                    <span className="text-xs text-(--text-muted)">
-                                      {tr.ects} {t("universitiesPage.ects")}
-                                    </span>
-                                  )}
-                                  {tr.durationYears != null && (
-                                    <span className="text-xs text-(--text-muted)">
-                                      {tr.durationYears}{" "}
-                                      {tCount(
-                                        t,
-                                        "universitiesPage.durationYears",
-                                        tr.durationYears,
-                                      )}
-                                    </span>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
+                        <TrackList
+                          tracks={sp.tracks}
+                          t={t}
+                          highlightedTrackId={highlightedTrackId}
+                        />
                       </li>
                     ))}
                   </ResultGroup>

@@ -13,7 +13,10 @@ const sessionMiddleware = expressSession({
   // controller (usersController.ts) - a mismatch can leave the cookie behind.
   cookie: {
     maxAge: NUMBER_OF_DAYS * 24 * 60 * 60 * 1000,
-    sameSite: "strict",
+    // "lax" (not "strict"): the OAuth state check needs the cookie on the
+    // top-level redirect back from GitHub; mutations stay CSRF-protected by
+    // the csrf-sync tokens
+    sameSite: "lax",
     secure: IS_PRODUCTION,
     httpOnly: true,
     path: "/",

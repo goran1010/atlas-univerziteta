@@ -5,12 +5,14 @@ import { RootContext } from "../../contextData/RootContext";
 import { ResultCard } from "./ResultCard";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
+import { LinkButton } from "../sharedComponents/LinkButton";
 import { Dialog } from "../sharedComponents/Dialog";
 import { ContactLinks } from "./ContactLinks";
 import { ShareButton } from "./ShareButton";
 import { StudyProgramRow } from "./StudyProgramRow";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
+import { byCycleDisplayOrder } from "./utils/cycleOrder";
 import { Spinner } from "../sharedComponents/Spinner";
 import { SERVER_URL } from "../../utils/envConfig";
 import { readApiError } from "../../schemas/api";
@@ -23,7 +25,14 @@ import type {
   FacultyDetail,
 } from "../../schemas/university";
 
-function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
+function FacultyResult({
+  faculty,
+  contextHint,
+}: {
+  faculty: FacultySearchResult;
+  contextHint?: string;
+}) {
+  const hasPrograms = (faculty._count?.studyPrograms ?? 0) > 0;
   const { t, addNotification } = use(RootContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<FacultyDetail>();
@@ -79,10 +88,15 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
     <ResultCard>
       <div
         onClick={(e) => {
-          if ((e.target as HTMLElement).closest("a, button")) return;
-          void handleExpand();
+          if (e.target instanceof Element && e.target.closest("a, button"))
+            return;
+          if (hasPrograms) void handleExpand();
         }}
-        className="cursor-pointer"
+        className={
+          hasPrograms
+            ? "cursor-pointer hover:bg-(--hover-surface) rounded-md transition-colors"
+            : ""
+        }
       >
         <p className="font-bold">
           <Link
@@ -104,6 +118,11 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
         <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
           <ContactLinks website={faculty.website} />
         </div>
+        {contextHint && (
+          <p className="text-xs italic text-(--text-muted) mt-1">
+            {contextHint}
+          </p>
+        )}
       </div>
       <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
         <Button
@@ -115,14 +134,16 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
         >
           {t("universitiesPage.viewInfo")}
         </Button>
-        <DetailsToggleButton
-          expanded={expanded}
-          className="px-3 py-1.5 text-xs"
-          onClick={() => {
-            void handleExpand();
-          }}
-          loading={loadingDetail}
-        />
+        {hasPrograms && (
+          <DetailsToggleButton
+            expanded={expanded}
+            className="px-3 py-1.5 text-xs"
+            onClick={() => {
+              void handleExpand();
+            }}
+            loading={loadingDetail}
+          />
+        )}
       </div>
       <Dialog
         open={dialogOpen}
@@ -131,11 +152,7 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
         }}
         title={faculty.name}
         headerActions={
-          <ShareButton
-            url={`/faculties/${faculty.id.toString()}`}
-            t={t}
-            addNotification={addNotification}
-          />
+          <ShareButton url={`/faculties/${faculty.id.toString()}`} />
         }
       >
         <div className="flex flex-col gap-3">
@@ -148,15 +165,15 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
             <ContactLinks website={faculty.website} />
           </div>
           <div className="flex justify-center">
-            <Link
+            <LinkButton
               to={`/faculties/${faculty.id.toString()}`}
-              className="inline-flex items-center justify-center border border-(--border-color) rounded-lg px-4 py-2 text-sm font-medium text-(--text-primary) hover:bg-(--hover-surface) transition-colors"
+              className="text-sm"
               onClick={() => {
                 setDialogOpen(false);
               }}
             >
               {t("universitiesPage.openFullPage")}
-            </Link>
+            </LinkButton>
           </div>
         </div>
       </Dialog>
@@ -181,12 +198,18 @@ function FacultyResult({ faculty }: { faculty: FacultySearchResult }) {
               </p>
               <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
                 <div className="flex flex-col gap-2">
-                  {groupBy(detailData.studyPrograms, (sp) =>
-                    t(`universitiesPage.cycles.${sp.cycle}`),
+                  {groupBy(
+                    byCycleDisplayOrder(detailData.studyPrograms),
+                    (sp) => t(`universitiesPage.cycles.${sp.cycle}`),
                   ).map((g) => (
                     <ResultGroup key={g.key} label={g.key}>
                       {g.items.map((sp) => (
-                        <StudyProgramRow key={sp.id} program={sp} t={t} />
+                        <StudyProgramRow
+                          key={sp.id}
+                          program={sp}
+                          facultyId={faculty.id}
+                          t={t}
+                        />
                       ))}
                     </ResultGroup>
                   ))}

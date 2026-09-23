@@ -231,18 +231,12 @@ describe("GET /auth/confirm/:token", () => {
     vi.spyOn(prisma.pendingUser, "findMany").mockResolvedValueOnce([]);
 
     const response = await request(app).get("/auth/confirm/12345");
-    const expectedResponse = {
-      status: 400,
-      body: {
-        error: {
-          code: "CONFIRMATION_TOKEN_INVALID",
-          message:
-            "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
-        },
-      },
-    };
 
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
+    expect(response.status).toBe(400);
+    expect(response.headers["content-type"]).toContain("text/html");
+    expect(response.text).toContain(
+      "The confirmation link is invalid or expired.",
+    );
   });
 
   test("responds with status 200 and HTML for valid token", async () => {
@@ -274,22 +268,7 @@ describe("GET /auth/confirm/:token", () => {
 
     const token = crypto.randomBytes(32).toString("hex");
 
-    vi.spyOn(prisma.user, "findUnique").mockResolvedValueOnce({
-      id: "existing-user-id",
-      email: "test_user@example.com",
-      password: "hashed-password",
-      role: "USER",
-      githubId: null,
-      adminRequestedAt: null,
-    });
-    vi.spyOn(prisma.user, "update").mockResolvedValueOnce({
-      id: "existing-user-id",
-      email: "test_user@example.com",
-      password: "hashed-password",
-      role: "USER",
-      githubId: null,
-      adminRequestedAt: null,
-    });
+    vi.spyOn(prisma.user, "findUnique").mockResolvedValueOnce(null);
 
     const response = await request(app).get(`/auth/confirm/${token}`);
     const expectedResponse = {

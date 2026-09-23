@@ -41,68 +41,6 @@ function EnvelopeIcon({
   );
 }
 
-function ListIcon({ size = 16 }: { size?: number }) {
-  return (
-    <svg
-      height={size}
-      width={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <line x1="8" y1="6" x2="21" y2="6" />
-      <line x1="8" y1="12" x2="21" y2="12" />
-      <line x1="8" y1="18" x2="21" y2="18" />
-      <line x1="3" y1="6" x2="3.01" y2="6" />
-      <line x1="3" y1="12" x2="3.01" y2="12" />
-      <line x1="3" y1="18" x2="3.01" y2="18" />
-    </svg>
-  );
-}
-
-function UserIcon({ size = 16 }: { size?: number }) {
-  return (
-    <svg
-      height={size}
-      width={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <circle cx="12" cy="8" r="4" />
-      <path d="M20 21a8 8 0 0 0-16 0" />
-    </svg>
-  );
-}
-
-function LogInIcon({ size = 16 }: { size?: number }) {
-  return (
-    <svg
-      height={size}
-      width={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-      <polyline points="10 17 15 12 10 7" />
-      <line x1="15" y1="12" x2="3" y2="12" />
-    </svg>
-  );
-}
-
 function SearchIcon({ size = 16 }: { size?: number }) {
   return (
     <svg
@@ -326,27 +264,6 @@ function SpeechIcon({ className = "" }: { className?: string }) {
   );
 }
 
-function ClipboardListIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      height="1em"
-      width="1em"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      className={`inline align-[-0.125em] ${className}`}
-    >
-      <rect x="8" y="2" width="8" height="4" rx="1" />
-      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-      <path d="M12 11h4M12 16h4M8 11h.01M8 16h.01" />
-    </svg>
-  );
-}
-
 function BookOpenIcon({ className = "" }: { className?: string }) {
   return (
     <svg
@@ -449,12 +366,8 @@ function ChevronDownIcon({ className = "" }: { className?: string }) {
 }
 
 export {
-  GITHUB_ICON_PATH,
   GitHubIcon,
   EnvelopeIcon,
-  ListIcon,
-  UserIcon,
-  LogInIcon,
   SearchIcon,
   LandmarkIcon,
   BuildingIcon,
@@ -466,7 +379,6 @@ export {
   AwardIcon,
   ClockIcon,
   SpeechIcon,
-  ClipboardListIcon,
   BookOpenIcon,
   TagIcon,
   CalendarIcon,

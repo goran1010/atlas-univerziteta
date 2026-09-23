@@ -10,7 +10,10 @@ interface DetailRow {
 }
 
 function isUrl(value: unknown): value is string {
-  return typeof value === "string" && /^https?:\/\//.test(value);
+  return (
+    typeof value === "string" &&
+    (value.startsWith("http://") || value.startsWith("https://"))
+  );
 }
 
 function buildEntityRows(

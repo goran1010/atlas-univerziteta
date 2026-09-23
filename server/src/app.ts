@@ -24,6 +24,7 @@ import { logger } from "./utils/logger.js";
 import { sendError } from "./utils/response.js";
 
 import { apiRouter } from "./routes/apiRouter.js";
+import * as apiController from "./controllers/apiController.js";
 import { authRouter } from "./routes/authRouter.js";
 import { usersRouter } from "./routes/usersRouter.js";
 import { healthRouter } from "./routes/healthRouter.js";
@@ -44,6 +45,7 @@ app.use(helmet());
 app.use(compression());
 
 // Public routes
+app.get("/", cors(), apiController.root);
 app.use("/health", cors(), healthRouter);
 app.use("/api", cors(), rateLimiter.api, apiRouter);
 
@@ -80,12 +82,12 @@ interface ClientHttpError extends Error {
 }
 
 function isClientHttpError(error: unknown): error is ClientHttpError {
-  if (!(error instanceof Error)) return false;
-  const status = (error as Partial<ClientHttpError>).status;
+  if (!(error instanceof Error) || !("status" in error)) return false;
+  const { status } = error;
   return typeof status === "number" && status >= 400 && status < 500;
 }
 
-// eslint-disable-next-line
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- express only treats 4-arg middleware as an error handler, so _next must stay
 app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   if (error instanceof RequestValidationError) {
     logger.warn(

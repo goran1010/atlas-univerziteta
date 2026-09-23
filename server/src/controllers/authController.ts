@@ -5,7 +5,10 @@ import { passport } from "../config/passport.js";
 import { env } from "../config/env.js";
 import { prisma } from "../db/prisma.js";
 import { sendConfirmationEmail } from "../email/confirmationEmail.js";
-import { emailConfirmHTML } from "../utils/emailConfirmHTML.js";
+import {
+  emailConfirmHTML,
+  emailConfirmErrorHTML,
+} from "../utils/emailConfirmHTML.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 import * as authValidation from "../validation/authValidation.js";
 
@@ -55,7 +58,9 @@ async function signup(req: Request, res: Response) {
     },
   });
 
-  if (existingUser) {
+  // A GitHub-first account has no password; signing up with its email is
+  // allowed and attaches a password once the address is confirmed.
+  if (existingUser?.password) {
     sendError(res, {
       status: 400,
       code: "SIGNUP_FAILED",
@@ -137,12 +142,13 @@ async function confirmEmail(req: Request, res: Response) {
   const pendingUser = pendingUsers[0];
 
   if (!pendingUser) {
-    sendError(res, {
-      status: 400,
-      code: "CONFIRMATION_TOKEN_INVALID",
-      message:
-        "Email confirmation failed: token is invalid or expired. Request a new confirmation email.",
-    });
+    res
+      .status(400)
+      .send(
+        emailConfirmErrorHTML(
+          "The confirmation link is invalid or expired. Request a new confirmation email.",
+        ),
+      );
     return;
   }
 
@@ -153,20 +159,52 @@ async function confirmEmail(req: Request, res: Response) {
       },
     });
 
-    sendError(res, {
-      status: 400,
-      code: "CONFIRMATION_TOKEN_INVALID",
-      message: "Token expired. Please sign up again.",
-    });
+    res
+      .status(400)
+      .send(emailConfirmErrorHTML("The link expired. Please sign up again."));
     return;
   }
 
-  await prisma.user.create({
-    data: {
+  const existingUser = await prisma.user.findUnique({
+    where: {
       email: pendingUser.email,
-      password: pendingUser.password,
     },
   });
+
+  if (existingUser?.password) {
+    await prisma.pendingUser.delete({
+      where: {
+        id: pendingUser.id,
+      },
+    });
+
+    res
+      .status(400)
+      .send(
+        emailConfirmErrorHTML(
+          "This email is already registered. Log in instead.",
+        ),
+      );
+    return;
+  }
+
+  if (existingUser) {
+    await prisma.user.update({
+      where: {
+        id: existingUser.id,
+      },
+      data: {
+        password: pendingUser.password,
+      },
+    });
+  } else {
+    await prisma.user.create({
+      data: {
+        email: pendingUser.email,
+        password: pendingUser.password,
+      },
+    });
+  }
 
   await prisma.pendingUser.delete({
     where: {
@@ -239,14 +277,22 @@ function githubCallback(req: Request, res: Response, next: NextFunction) {
   getPassportMiddleware(
     passport.authenticate(
       "github",
-      (error: unknown, user: Express.User | false | null | undefined) => {
+      (
+        error: unknown,
+        user: Express.User | false | null | undefined,
+        info: unknown,
+      ) => {
         if (error) {
           next(error);
           return;
         }
 
         if (!user) {
-          res.redirect(`${env.WEBAPP_URL}/login?error=github`);
+          const reason =
+            getAuthenticationMessage(info) === "no_verified_email"
+              ? "github_no_email"
+              : "github";
+          res.redirect(`${env.WEBAPP_URL}/login?error=${reason}`);
           return;
         }
 
@@ -268,7 +314,7 @@ function githubCallback(req: Request, res: Response, next: NextFunction) {
                 return;
               }
 
-              res.redirect(env.WEBAPP_URL);
+              res.redirect(`${env.WEBAPP_URL}/?login=github`);
             });
           });
         });

@@ -1,40 +1,32 @@
-import {
-  AwardIcon,
-  ClipboardListIcon,
-  ClockIcon,
-  SpeechIcon,
-} from "../sharedComponents/icons";
-import { useState } from "react";
-import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
+import { AwardIcon, ClockIcon, SpeechIcon } from "../sharedComponents/icons";
+import { Link } from "react-router";
 import { tCount } from "../../utils/pluralize";
-import { TrackRow } from "./TrackRow";
+import { TrackList } from "./TrackList";
 
 import type { TFunction } from "../../types";
 import type { UniversityDetailStudyProgram } from "../../schemas/university";
 
 function StudyProgramRow({
   program,
+  facultyId,
   t,
 }: {
   program: UniversityDetailStudyProgram;
+  facultyId: number;
   t: TFunction;
 }) {
-  const [open, setOpen] = useState(false);
   const hasTracks = program.tracks.length > 0;
 
   return (
     <li className="text-sm">
-      <div
-        onClick={(e) => {
-          if ((e.target as HTMLElement).closest("a, button")) return;
-          if (hasTracks) setOpen((p) => !p);
-        }}
-        className={`py-1 px-0.5 sm:px-2 rounded-md transition-colors ${
-          hasTracks ? "cursor-pointer hover:bg-(--hover-surface)" : ""
-        }`}
-      >
+      <div className="py-1 px-0.5 sm:px-2 rounded-md">
         <div className="min-w-0">
-          <span className="font-medium">{program.name}</span>
+          <Link
+            to={`/faculties/${facultyId.toString()}?program=${program.id.toString()}`}
+            className="font-medium underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
+            {program.name}
+          </Link>
           <div className="flex flex-wrap gap-x-1.5 sm:gap-x-3 items-center text-xs text-(--text-muted) mt-0.5">
             {program.durationYears != null && (
               <span>
@@ -56,51 +48,12 @@ function StudyProgramRow({
                 <SpeechIcon /> {program.language}
               </span>
             )}
-            {hasTracks && (
-              <span>
-                <ClipboardListIcon />{" "}
-                <span className="font-bold text-blue-600 dark:text-blue-400">
-                  {program.tracks.length}
-                </span>{" "}
-                {tCount(
-                  t,
-                  "universitiesPage.trackCount",
-                  program.tracks.length,
-                )}
-              </span>
-            )}
           </div>
         </div>
-        {hasTracks && (
-          <div className="flex justify-center mt-1.5">
-            <DetailsToggleButton
-              expanded={open}
-              className="px-3 py-1.5 text-xs"
-              onClick={() => {
-                setOpen((p) => !p);
-              }}
-            />
-          </div>
-        )}
       </div>
-      {open && hasTracks && (
-        <div
-          className="ml-0.5 sm:ml-4 mt-1 mb-2 border-l-2 border-(--border-color) pl-1.5 sm:pl-3"
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
-        >
-          <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-1">
-            <span className="text-blue-600 dark:text-blue-400">
-              {program.tracks.length}
-            </span>{" "}
-            {tCount(t, "universitiesPage.trackCount", program.tracks.length)}
-          </p>
-          <ul>
-            {program.tracks.map((tr) => (
-              <TrackRow key={tr.id} track={tr} t={t} />
-            ))}
-          </ul>
+      {hasTracks && (
+        <div className="ml-0.5 sm:ml-4 mb-2">
+          <TrackList tracks={program.tracks} t={t} />
         </div>
       )}
     </li>

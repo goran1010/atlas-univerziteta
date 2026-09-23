@@ -8,7 +8,7 @@ import { ExternalLink } from "../sharedComponents/ExternalLink";
 
 function About() {
   const { t, userData } = use(RootContext);
-  const pageTitle = `${t("home.title")} | ${t("title.app")}`;
+  const pageTitle = `${t("title.about")} | ${t("title.app")}`;
 
   return (
     <>

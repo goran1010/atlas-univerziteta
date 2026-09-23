@@ -58,10 +58,15 @@ const dummyData: { data: University[] } = {
 vi.spyOn(prisma.studyProgram, "findMany").mockImplementation((args) => {
   const where = args?.where as
     | {
-        AND?: { OR?: { name?: { contains?: string } }[] }[];
+        AND?: {
+          OR?: { name?: { contains?: string } }[];
+          id?: { notIn?: number[] };
+        }[];
         OR?: { name?: { contains?: string } }[];
       }
     | undefined;
+  const excludedIds =
+    where?.AND?.find((clause) => clause.id?.notIn)?.id?.notIn ?? [];
   const orClause = where?.AND?.[0]?.OR ?? where?.OR;
   const normalizedTerm = orClause?.[0]?.name?.contains?.toLowerCase() ?? "";
 
@@ -71,8 +76,10 @@ vi.spyOn(prisma.studyProgram, "findMany").mockImplementation((args) => {
   ];
 
   return Promise.resolve(
-    dummyStudyPrograms.filter((sp) =>
-      sp.name.toLowerCase().includes(normalizedTerm),
+    dummyStudyPrograms.filter(
+      (sp) =>
+        sp.name.toLowerCase().includes(normalizedTerm) &&
+        !excludedIds.includes(sp.id),
     ),
   ) as ReturnType<typeof prisma.studyProgram.findMany>;
 });
@@ -80,10 +87,15 @@ vi.spyOn(prisma.studyProgram, "findMany").mockImplementation((args) => {
 vi.spyOn(prisma.faculty, "findMany").mockImplementation((args) => {
   const where = args?.where as
     | {
-        AND?: { OR?: { name?: { contains?: string } }[] }[];
+        AND?: {
+          OR?: { name?: { contains?: string } }[];
+          id?: { notIn?: number[] };
+        }[];
         OR?: { name?: { contains?: string } }[];
       }
     | undefined;
+  const excludedIds =
+    where?.AND?.find((clause) => clause.id?.notIn)?.id?.notIn ?? [];
   const orClause = where?.AND?.[0]?.OR ?? where?.OR;
   const normalizedTerm = orClause?.[0]?.name?.contains?.toLowerCase() ?? "";
 
@@ -95,8 +107,9 @@ vi.spyOn(prisma.faculty, "findMany").mockImplementation((args) => {
   return Promise.resolve(
     dummyFaculties.filter(
       (f) =>
-        f.name.toLowerCase().includes(normalizedTerm) ||
-        f.city.toLowerCase().includes(normalizedTerm),
+        (f.name.toLowerCase().includes(normalizedTerm) ||
+          f.city.toLowerCase().includes(normalizedTerm)) &&
+        !excludedIds.includes(f.id),
     ),
   ) as ReturnType<typeof prisma.faculty.findMany>;
 });
@@ -123,10 +136,15 @@ function mockUniversitySearch(
 ): ReturnType<typeof prisma.university.findMany> {
   const where = args?.where as
     | {
-        AND?: { OR?: { name?: { contains?: string } }[] }[];
+        AND?: {
+          OR?: { name?: { contains?: string } }[];
+          id?: { notIn?: number[] };
+        }[];
         OR?: { name?: { contains?: string } }[];
       }
     | undefined;
+  const excludedIds =
+    where?.AND?.find((clause) => clause.id?.notIn)?.id?.notIn ?? [];
 
   const orClause = where?.AND?.[0]?.OR ?? where?.OR;
   const normalizedTerm = orClause?.[0]?.name?.contains?.toLowerCase() ?? "";
@@ -134,9 +152,10 @@ function mockUniversitySearch(
   return Promise.resolve(
     dummyData.data.filter(
       (u) =>
-        u.name.toLowerCase().includes(normalizedTerm) ||
-        u.city.toLowerCase().includes(normalizedTerm) ||
-        u.acronym?.toLowerCase().includes(normalizedTerm),
+        (u.name.toLowerCase().includes(normalizedTerm) ||
+          u.city.toLowerCase().includes(normalizedTerm) ||
+          u.acronym?.toLowerCase().includes(normalizedTerm)) &&
+        !excludedIds.includes(u.id),
     ),
   ) as ReturnType<typeof prisma.university.findMany>;
 }
@@ -235,7 +254,7 @@ describe("GET /api/v1/search", () => {
     ]);
   });
 
-  test("responds with status 404 for searchTerm=non-existent-anything", async () => {
+  test("responds with status 200 and empty groups for searchTerm=non-existent-anything", async () => {
     vi.spyOn(prisma.university, "findMany").mockImplementation(
       mockUniversitySearch,
     );
@@ -243,11 +262,23 @@ describe("GET /api/v1/search", () => {
       "/api/v1/search?searchTerm=non-existent-anything",
     );
     const expectedResponse = {
-      status: 404,
+      status: 200,
       body: {
-        error: {
-          code: "NOT_FOUND",
-          message: "No results found matching your search.",
+        message: "Search results retrieved successfully.",
+        data: {
+          universities: [],
+          faculties: [],
+          studyPrograms: [],
+          totals: {
+            universities: 0,
+            faculties: 0,
+            studyPrograms: 0,
+          },
+          direct: {
+            universities: 0,
+            faculties: 0,
+            studyPrograms: 0,
+          },
         },
       },
     };
@@ -255,14 +286,20 @@ describe("GET /api/v1/search", () => {
     expect(response).toEqual(expect.objectContaining(expectedResponse));
   });
 
-  test("responds with status 400 when no search term and no filters", async () => {
+  test("responds with status 200 and capped browse when no search term and no filters", async () => {
+    vi.spyOn(prisma.university, "findMany").mockImplementation(
+      mockUniversitySearch,
+    );
     const response = await request(app).get("/api/v1/search");
     const responseBody = getResponseObject(response.body);
-    const error = getResponseObject(responseBody["error"]);
 
-    expect(response.status).toBe(400);
-    expect(error["code"]).toBe("VALIDATION_ERROR");
-    expect(error["message"]).toBe("Request validation failed.");
+    expect(response.status).toBe(200);
+    expect(responseBody["message"]).toBe(
+      "Search results retrieved successfully.",
+    );
+    const data = getResponseObject(responseBody["data"]);
+    expect(Array.isArray(data["universities"])).toBe(true);
+    expect(data["totals"]).toBeDefined();
   });
 
   test("responds with status 400 when searchTerm exceeds 100 characters", async () => {

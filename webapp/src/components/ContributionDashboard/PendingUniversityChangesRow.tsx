@@ -73,6 +73,7 @@ function PendingUniversityChangesRow({
 
         <div className="flex flex-col sm:flex-row justify-end items-center gap-2">
           <Button
+            variant="secondary"
             className="px-3 py-1.5 text-xs"
             onClick={() => {
               setDialogOpen(true);
