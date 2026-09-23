@@ -1,6 +1,6 @@
 # Atlas Univerziteta
 
-Atlas Univerziteta is a free, open-source directory of universities, faculties, study programs, and tracks in Bosnia and Herzegovina. The site provides a searchable web interface and a public REST API.
+Atlas Univerziteta is a free, open-source directory of universities, faculties, and study programs (with their tracks) in Bosnia and Herzegovina. The site provides a searchable web interface and a public REST API.
 
 ## Public pages
 

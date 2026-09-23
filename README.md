@@ -10,7 +10,7 @@ An open-source directory of higher-education data for Bosnia and Herzegovina: a 
 
 ![Atlas Univerziteta](./webapp/public/images/og-images/og-image-home.png)
 
-The data is modeled as a nested academic hierarchy: university → faculty → study program → track (smjer).
+The data is modeled as a nested academic hierarchy: university, its faculties, and their study programs - each program carrying its tracks (smjerovi) as part of its data.
 
 ## Features
 
@@ -82,7 +82,9 @@ Atlas Univerziteta je projekat otvorenog koda sa podacima o visokom obrazovanju 
 - REST API: <https://api.atlasuniverziteta.com/>
 - API dokumentacija: <https://atlasuniverziteta.com/api-docs>
 
-Podaci prate akademsku hijerarhiju: univerzitet → fakultet → studijski program → smjer.
+![Atlas Univerziteta - početna stranica](./webapp/public/images/og-images/og-image-home-sr.png)
+
+Podaci prate akademsku hijerarhiju: univerzitet, njegovi fakulteti i njihovi studijski programi - svaki program nosi svoje smjerove kao dio svojih podataka.
 
 ### Mogućnosti
 
