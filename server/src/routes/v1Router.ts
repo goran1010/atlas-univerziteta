@@ -2,6 +2,7 @@ import { Router } from "express";
 const v1Router = Router();
 
 import * as universityController from "../controllers/v1Controller.js";
+import * as searchController from "../controllers/searchController.js";
 
 v1Router.get("/", universityController.status);
 
@@ -21,6 +22,6 @@ v1Router.get("/tracks", universityController.getTracks);
 
 v1Router.get("/tracks/:id", universityController.getTrackById);
 
-v1Router.get("/search", universityController.search);
+v1Router.get("/search", searchController.search);
 
 export { v1Router };
