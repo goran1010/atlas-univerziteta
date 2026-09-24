@@ -97,10 +97,9 @@ jobs:
       RESEND_API_KEY: random_text_for_ci
       GITHUB_CLIENT_ID: random_text_for_ci
       GITHUB_CLIENT_SECRET: random_text_for_ci
-      GITHUB_CALLBACK_URL: random_text_for_ci
       GOOGLE_CLIENT_ID: random_text_for_ci
       GOOGLE_CLIENT_SECRET: random_text_for_ci
-      GOOGLE_CALLBACK_URL: random_text_for_ci
+      BETTER_AUTH_SECRET: random_text_for_ci_at_least_32_chars
 
     steps:
       - name: Checkout
@@ -151,10 +150,9 @@ jobs:
       RESEND_API_KEY: random_text_for_ci
       GITHUB_CLIENT_ID: random_text_for_ci
       GITHUB_CLIENT_SECRET: random_text_for_ci
-      GITHUB_CALLBACK_URL: random_text_for_ci
       GOOGLE_CLIENT_ID: random_text_for_ci
       GOOGLE_CLIENT_SECRET: random_text_for_ci
-      GOOGLE_CALLBACK_URL: random_text_for_ci
+      BETTER_AUTH_SECRET: random_text_for_ci_at_least_32_chars
 
     steps:
       - name: Checkout
