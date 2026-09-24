@@ -75,3 +75,25 @@ test("GitHub login hands off to GitHub's OAuth authorize page", async ({
   expect(url.searchParams.get("client_id")).toBeTruthy();
   expect(url.searchParams.get("response_type")).toBe("code");
 });
+
+test("Google login hands off to Google's OAuth authorize page", async ({
+  page,
+}) => {
+  await page.route("https://accounts.google.com/**", (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: "text/html",
+      body: "<title>google stub</title>",
+    }),
+  );
+
+  await page.goto("/login");
+  const authorizeRequest = page.waitForRequest((request) =>
+    request.url().startsWith("https://accounts.google.com/o/oauth2"),
+  );
+  await page.getByRole("link", { name: "Continue with Google" }).click();
+
+  const url = new URL((await authorizeRequest).url());
+  expect(url.searchParams.get("client_id")).toBeTruthy();
+  expect(url.searchParams.get("response_type")).toBe("code");
+});
