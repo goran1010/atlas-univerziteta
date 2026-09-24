@@ -12,6 +12,20 @@ const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
   },
+  user: {
+    additionalFields: {
+      role: {
+        type: "string",
+        defaultValue: "USER",
+        input: false,
+      },
+      adminRequestedAt: {
+        type: "string",
+        required: false,
+        input: false,
+      },
+    },
+  },
   socialProviders: {
     github: {
       clientId: env.GITHUB_CLIENT_ID,

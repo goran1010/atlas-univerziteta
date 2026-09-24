@@ -1,15 +1,16 @@
+import { fromNodeHeaders } from "better-auth/node";
 import { prisma } from "../db/prisma.js";
+import { auth } from "../config/auth.js";
 import { sendError, sendSuccess } from "../utils/response.js";
-import { env } from "../config/env.js";
-import { logger } from "../utils/logger.js";
 
 import type { Request, Response } from "express";
 
-const IS_PRODUCTION = env.NODE_ENV === "production";
-const NUMBER_OF_DAYS = 30;
+async function me(req: Request, res: Response) {
+  const session = await auth.api.getSession({
+    headers: fromNodeHeaders(req.headers),
+  });
 
-function me(req: Request, res: Response) {
-  if (!req.user) {
+  if (!session) {
     sendSuccess(res, {
       message: "No user logged in",
       data: null,
@@ -19,45 +20,13 @@ function me(req: Request, res: Response) {
 
   sendSuccess(res, {
     message: "User info retrieved",
-    data: req.user,
+    data: session.user,
   });
 }
 
-function logout(req: Request, res: Response) {
-  req.logout((err) => {
-    if (err) {
-      logger.error(err, "Logout failed.");
-      sendError(res, {
-        status: 500,
-        code: "LOGOUT_FAILED",
-        message: "Logout failed: try again.",
-      });
-      return;
-    }
-
-    req.session.destroy((err) => {
-      if (err) {
-        logger.error(err, "Session destroy failed during logout.");
-        sendError(res, {
-          status: 500,
-          code: "LOGOUT_FAILED",
-          message: "Logout failed: try again.",
-        });
-        return;
-      }
-
-      res.clearCookie("sessionId", {
-        // Must set clearCookie options to match cookie set options, otherwise browser will not clear cookies
-        maxAge: NUMBER_OF_DAYS * 24 * 60 * 60 * 1000,
-        sameSite: "lax",
-        secure: IS_PRODUCTION,
-        httpOnly: true,
-        path: "/",
-      });
-      sendSuccess(res, {
-        message: "User logged out successfully",
-      });
-    });
+function logout(_req: Request, res: Response) {
+  sendSuccess(res, {
+    message: "User logged out successfully",
   });
 }
 

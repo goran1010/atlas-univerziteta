@@ -1,10 +1,21 @@
+import { fromNodeHeaders } from "better-auth/node";
+import { auth } from "../config/auth.js";
 import { sendError } from "../utils/response.js";
 
 import type { Request, Response, NextFunction } from "express";
 
-function isAuthenticated(req: Request, res: Response, next: NextFunction) {
+async function isAuthenticated(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
   try {
-    if (req.user) {
+    const session = await auth.api.getSession({
+      headers: fromNodeHeaders(req.headers),
+    });
+
+    if (session) {
+      req.user = session.user;
       next();
       return;
     }
