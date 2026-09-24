@@ -14,6 +14,7 @@ describe("sanitizeUser", () => {
       password: "secret",
       email: "testuser@example.com",
       githubId: "123456",
+      googleId: null,
       adminRequestedAt: null,
     };
     const sanitizedUser = sanitizeUser(user);
@@ -36,6 +37,7 @@ describe("sanitizeUsers", () => {
         password: "secret1",
         email: "user1@example.com",
         githubId: "123456",
+        googleId: null,
         role: "USER",
         adminRequestedAt: null,
       },
@@ -44,6 +46,7 @@ describe("sanitizeUsers", () => {
         password: "secret2",
         email: "user2@example.com",
         githubId: "654321",
+        googleId: null,
         role: "ADMIN",
         adminRequestedAt: null,
       },

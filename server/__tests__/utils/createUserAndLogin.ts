@@ -7,6 +7,7 @@ interface CreateNewUserInputOptions {
   password?: string;
   role?: "USER" | "ADMIN";
   githubId?: string | null;
+  googleId?: string | null;
   "confirm-password"?: string;
 }
 

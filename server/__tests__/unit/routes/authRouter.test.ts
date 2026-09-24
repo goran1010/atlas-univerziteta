@@ -190,6 +190,7 @@ describe("POST /auth/signup", () => {
       password: "hashed-password",
       role: "USER",
       githubId: null,
+      googleId: null,
       adminRequestedAt: null,
     });
 
@@ -263,6 +264,7 @@ describe("GET /auth/confirm/:token", () => {
       password: "hashed-password",
       role: "USER",
       githubId: null,
+      googleId: null,
       adminRequestedAt: null,
     });
 

@@ -34,6 +34,7 @@ model User {
   email            String          @unique
   password         String?
   githubId         String?         @unique
+  googleId         String?         @unique
   role             role            @default(USER)
   adminRequestedAt DateTime?
   pendingChanges   PendingChange[]

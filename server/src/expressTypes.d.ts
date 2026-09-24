@@ -7,6 +7,7 @@ declare global {
       email: PrismaUser["email"];
       role: PrismaUser["role"];
       githubId: PrismaUser["githubId"];
+      googleId: PrismaUser["googleId"];
       adminRequestedAt: PrismaUser["adminRequestedAt"];
     }
   }

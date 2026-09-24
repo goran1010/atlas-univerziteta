@@ -82,6 +82,7 @@ describe("Admin Router - GET /users/admin//pending-changes", () => {
       email: "user1@example.com",
       role: "USER",
       githubId: null,
+      googleId: null,
       adminRequestedAt: null,
     };
 
@@ -116,6 +117,7 @@ describe("Admin Router - GET /users/admin//pending-changes", () => {
           email: "admin1@example.com",
           role: "ADMIN",
           githubId: null,
+      googleId: null,
           adminRequestedAt: null,
         },
       },
@@ -130,6 +132,7 @@ describe("Admin Router - GET /users/admin//pending-changes", () => {
       email: "admin1@example.com",
       role: "ADMIN",
       githubId: null,
+      googleId: null,
       adminRequestedAt: null,
     };
 
@@ -176,6 +179,7 @@ describe("Admin Router - DELETE /decline-pending-change", () => {
       email: "user1@example.com",
       role: "USER",
       githubId: null,
+      googleId: null,
       adminRequestedAt: null,
     };
 
@@ -211,6 +215,7 @@ describe("Admin Router - DELETE /decline-pending-change", () => {
         email: "admin1@example.com",
         role: "ADMIN",
         githubId: null,
+      googleId: null,
         adminRequestedAt: null,
       },
     };
@@ -223,6 +228,7 @@ describe("Admin Router - DELETE /decline-pending-change", () => {
       email: "admin1@example.com",
       role: "ADMIN",
       githubId: null,
+      googleId: null,
       adminRequestedAt: null,
     };
 
@@ -263,6 +269,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
       email: "user1@example.com",
       role: "USER",
       githubId: null,
+      googleId: null,
       adminRequestedAt: null,
     };
 
@@ -288,6 +295,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
       email: "user1@example.com",
       role: "ADMIN",
       githubId: null,
+      googleId: null,
       adminRequestedAt: null,
     };
 
@@ -314,6 +322,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
       email: "user1@example.com",
       role: "ADMIN",
       githubId: null,
+      googleId: null,
       adminRequestedAt: null,
     };
 

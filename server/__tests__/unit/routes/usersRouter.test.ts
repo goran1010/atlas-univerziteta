@@ -58,6 +58,7 @@ describe("GET /me", () => {
       email: "test@example.com",
       role: "USER",
       githubId: null,
+      googleId: null,
       adminRequestedAt: null,
     };
 
