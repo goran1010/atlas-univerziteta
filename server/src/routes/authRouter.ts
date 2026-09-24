@@ -30,4 +30,7 @@ authRouter.post(
 authRouter.get("/github", authController.githubLogin);
 authRouter.get("/github/callback", authController.githubCallback);
 
+authRouter.get("/google", authController.googleLogin);
+authRouter.get("/google/callback", authController.googleCallback);
+
 export { authRouter };

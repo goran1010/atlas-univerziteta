@@ -10,6 +10,9 @@ class Env {
   public readonly GITHUB_CLIENT_ID: string;
   public readonly GITHUB_CLIENT_SECRET: string;
   public readonly GITHUB_CALLBACK_URL: string;
+  public readonly GOOGLE_CLIENT_ID: string;
+  public readonly GOOGLE_CLIENT_SECRET: string;
+  public readonly GOOGLE_CALLBACK_URL: string;
   public TEST_DATABASE_URL?: string | undefined;
 
   constructor() {
@@ -31,6 +34,10 @@ class Env {
     this.GITHUB_CLIENT_ID = Env.#getEnv("GITHUB_CLIENT_ID");
     this.GITHUB_CLIENT_SECRET = Env.#getEnv("GITHUB_CLIENT_SECRET");
     this.GITHUB_CALLBACK_URL = Env.#getEnv("GITHUB_CALLBACK_URL");
+
+    this.GOOGLE_CLIENT_ID = Env.#getEnv("GOOGLE_CLIENT_ID");
+    this.GOOGLE_CLIENT_SECRET = Env.#getEnv("GOOGLE_CLIENT_SECRET");
+    this.GOOGLE_CALLBACK_URL = Env.#getEnv("GOOGLE_CALLBACK_URL");
 
     this.TEST_DATABASE_URL = Env.#getTestEnv("TEST_DATABASE_URL");
   }

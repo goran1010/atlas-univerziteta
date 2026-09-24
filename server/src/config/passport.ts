@@ -1,5 +1,9 @@
 import passport from "passport";
 import { Strategy as GitHubStrategy } from "passport-github2";
+import {
+  Strategy as GoogleStrategy,
+  type Profile as GoogleProfile,
+} from "passport-google-oauth20";
 import { Strategy as LocalStrategy } from "passport-local";
 import bcrypt from "bcryptjs";
 
@@ -12,7 +16,7 @@ interface GitHubProfile {
   emails?: { value: string; primary?: boolean; verified?: boolean }[];
 }
 
-type GitHubDoneCallback = (
+type OAuthDoneCallback = (
   error: unknown,
   user?: Express.User | false,
   info?: { message: string },
@@ -78,7 +82,7 @@ passport.use(
       _accessToken: string,
       _refreshToken: string,
       profile: GitHubProfile,
-      done: GitHubDoneCallback,
+      done: OAuthDoneCallback,
     ) => {
       runAsync(async () => {
         try {
@@ -131,6 +135,80 @@ passport.use(
             data: {
               email: primaryEmail,
               githubId: profile.id,
+            },
+          });
+
+          done(null, sanitizeUser(createdUser));
+        } catch (error: unknown) {
+          done(error);
+        }
+      });
+    },
+  ),
+);
+
+passport.use(
+  new GoogleStrategy(
+    {
+      clientID: env.GOOGLE_CLIENT_ID,
+      clientSecret: env.GOOGLE_CLIENT_SECRET,
+      callbackURL: env.GOOGLE_CALLBACK_URL,
+      scope: ["email"],
+      state: true,
+    },
+    (
+      _accessToken: string,
+      _refreshToken: string,
+      profile: GoogleProfile,
+      done: OAuthDoneCallback,
+    ) => {
+      runAsync(async () => {
+        try {
+          const googleUser = await prisma.user.findUnique({
+            where: {
+              googleId: profile.id,
+            },
+          });
+
+          if (googleUser) {
+            done(null, sanitizeUser(googleUser));
+            return;
+          }
+
+          const emails = profile.emails ?? [];
+          const verifiedEmail = emails.find((email) => email.verified);
+
+          if (!verifiedEmail) {
+            done(null, false, { message: "no_verified_email" });
+            return;
+          }
+
+          const primaryEmail = verifiedEmail.value;
+
+          const emailUser = await prisma.user.findUnique({
+            where: {
+              email: primaryEmail,
+            },
+          });
+
+          if (emailUser) {
+            const updatedUser = await prisma.user.update({
+              where: {
+                id: emailUser.id,
+              },
+              data: {
+                googleId: profile.id,
+              },
+            });
+
+            done(null, sanitizeUser(updatedUser));
+            return;
+          }
+
+          const createdUser = await prisma.user.create({
+            data: {
+              email: primaryEmail,
+              googleId: profile.id,
             },
           });
 

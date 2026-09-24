@@ -323,4 +323,70 @@ function githubCallback(req: Request, res: Response, next: NextFunction) {
   )(req, res, next);
 }
 
-export { signup, confirmEmail, login, githubLogin, githubCallback };
+function googleLogin(req: Request, res: Response, next: NextFunction) {
+  getPassportMiddleware(
+    passport.authenticate("google", {
+      scope: ["email"],
+    }),
+  )(req, res, next);
+}
+
+function googleCallback(req: Request, res: Response, next: NextFunction) {
+  getPassportMiddleware(
+    passport.authenticate(
+      "google",
+      (
+        error: unknown,
+        user: Express.User | false | null | undefined,
+        info: unknown,
+      ) => {
+        if (error) {
+          next(error);
+          return;
+        }
+
+        if (!user) {
+          const reason =
+            getAuthenticationMessage(info) === "no_verified_email"
+              ? "google_no_email"
+              : "google";
+          res.redirect(`${env.WEBAPP_URL}/login?error=${reason}`);
+          return;
+        }
+
+        req.session.regenerate((regenerateError) => {
+          if (regenerateError) {
+            next(regenerateError);
+            return;
+          }
+
+          req.logIn(user, (loginError) => {
+            if (loginError) {
+              next(loginError);
+              return;
+            }
+
+            req.session.save((saveError) => {
+              if (saveError) {
+                next(saveError);
+                return;
+              }
+
+              res.redirect(`${env.WEBAPP_URL}/?login=google`);
+            });
+          });
+        });
+      },
+    ),
+  )(req, res, next);
+}
+
+export {
+  signup,
+  confirmEmail,
+  login,
+  githubLogin,
+  githubCallback,
+  googleLogin,
+  googleCallback,
+};
