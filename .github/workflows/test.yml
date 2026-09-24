@@ -42,6 +42,9 @@ jobs:
       GITHUB_CLIENT_ID: random_text_for_ci,
       GITHUB_CLIENT_SECRET: random_text_for_ci,
       GITHUB_CALLBACK_URL: random_text_for_ci,
+      GOOGLE_CLIENT_ID: random_text_for_ci
+      GOOGLE_CLIENT_SECRET: random_text_for_ci
+      GOOGLE_CALLBACK_URL: random_text_for_ci
 
     steps:
       - name: Checkout
