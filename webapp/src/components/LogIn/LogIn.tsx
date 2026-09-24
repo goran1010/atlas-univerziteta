@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 import { LogInForm } from "./LogInForm";
 import { RootContext } from "../../contextData/RootContext";
 import { GitHubLoginLink } from "../sharedComponents/GitHubLoginLink";
+import { GoogleLoginLink } from "../sharedComponents/GoogleLoginLink";
 import { DividerOr } from "../sharedComponents/DividerOr";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../../utils/envConfig";
@@ -16,15 +17,15 @@ function LogIn() {
 
   useEffect(() => {
     const loginError = searchParams.get("error");
-    if (loginError === "github" || loginError === "github_no_email") {
-      addNotification({
-        type: "error",
-        message: t(
-          loginError === "github_no_email"
-            ? "auth.login.githubNoEmail"
-            : "auth.login.githubFailed",
-        ),
-      });
+    const errorMessages: Record<string, string> = {
+      github: "auth.login.githubFailed",
+      github_no_email: "auth.login.githubNoEmail",
+      google: "auth.login.googleFailed",
+      google_no_email: "auth.login.googleNoEmail",
+    };
+    const messageKey = loginError ? errorMessages[loginError] : undefined;
+    if (messageKey) {
+      addNotification({ type: "error", message: t(messageKey) });
     }
   }, [searchParams, addNotification, t]);
 
@@ -70,7 +71,10 @@ function LogIn() {
           </h1>
           <LogInForm disabled={loading} onLoadingChange={setLoading} />
           <DividerOr />
-          <GitHubLoginLink disabled={loading} onLoadingChange={setLoading} />
+          <div className="flex flex-col gap-2">
+            <GitHubLoginLink disabled={loading} onLoadingChange={setLoading} />
+            <GoogleLoginLink disabled={loading} onLoadingChange={setLoading} />
+          </div>
           <DividerOr />
           <div className="flex flex-col items-center gap-2">
             <p>{t("auth.login.noAccountPrefix")}</p>

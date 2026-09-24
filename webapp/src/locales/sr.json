@@ -67,12 +67,15 @@
   "auth": {
     "or": "ILI",
     "continueWithGithub": "Nastavi preko GitHub-a",
+    "continueWithGoogle": "Nastavi preko Google-a",
     "login": {
       "linkText": "Prijava",
       "noAccountPrefix": "Nemate nalog?",
       "heading": "Prijava",
       "githubFailed": "GitHub prijava nije uspjela. Pokušajte ponovo.",
       "githubNoEmail": "GitHub prijava nije uspjela: GitHub nalog nema potvrđenu email adresu. Potvrdite email adresu na GitHub-u i pokušajte ponovo.",
+      "googleFailed": "Google prijava nije uspjela. Pokušajte ponovo.",
+      "googleNoEmail": "Google prijava nije uspjela: Google nalog nema potvrđenu email adresu.",
       "alreadyLoggedIn": "Već ste prijavljeni. Preusmereni ste na početnu stranicu.",
       "noAccount": "Nemate nalog ? Idite na stranicu Registracija."
     },
@@ -323,7 +326,8 @@
       "logoutFailed": "Odjava nije uspjela. Pokušajte ponovo.",
       "logoutError": "Došlo je do greške tokom odjave. Pokušajte ponovo za koji trenutak.",
       "logoutSuccess": "Uspješno ste odjavljeni.",
-      "githubLoginSuccess": "Uspješno ste se prijavili preko GitHub-a."
+      "githubLoginSuccess": "Uspješno ste se prijavili preko GitHub-a.",
+      "googleLoginSuccess": "Uspješno ste se prijavili preko Google-a."
     },
     "admin": {
       "approveSuccess": "Izmjena na čekanju je odobrena.",

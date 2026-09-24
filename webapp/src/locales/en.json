@@ -67,12 +67,15 @@
   "auth": {
     "or": "OR",
     "continueWithGithub": "Continue with GitHub",
+    "continueWithGoogle": "Continue with Google",
     "login": {
       "linkText": "Log In",
       "noAccountPrefix": "Don't have an account?",
       "heading": "Log in",
       "githubFailed": "GitHub login failed. Please try again.",
       "githubNoEmail": "GitHub login failed: your GitHub account has no verified email address. Verify your email on GitHub and try again.",
+      "googleFailed": "Google login failed. Please try again.",
+      "googleNoEmail": "Google login failed: your Google account has no verified email address.",
       "alreadyLoggedIn": "You are already logged in. Redirected to the home page.",
       "noAccount": "Don't have an account ? Go to the Sign Up page."
     },
@@ -323,7 +326,8 @@
       "logoutFailed": "Logout did not complete. Try again.",
       "logoutError": "Something went wrong during logout. Try again in a moment.",
       "logoutSuccess": "Successfully logged out.",
-      "githubLoginSuccess": "Successfully logged in with GitHub."
+      "githubLoginSuccess": "Successfully logged in with GitHub.",
+      "googleLoginSuccess": "Successfully logged in with Google."
     },
     "admin": {
       "approveSuccess": "Pending change approved.",
