@@ -38,6 +38,9 @@ services:
       - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
       - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
       - GITHUB_CALLBACK_URL=https://${WEBAPP_DOMAIN}/server/auth/github/callback
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - GOOGLE_CALLBACK_URL=https://${WEBAPP_DOMAIN}/server/auth/google/callback
 
   # --- PostgreSQL database ---
   # Uses the official Postgres image. Data is stored in a named volume
