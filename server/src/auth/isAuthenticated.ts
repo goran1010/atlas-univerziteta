@@ -15,7 +15,7 @@ async function isAuthenticated(
     });
 
     if (session) {
-      req.user = session.user;
+      req.authSession = session;
       next();
       return;
     }

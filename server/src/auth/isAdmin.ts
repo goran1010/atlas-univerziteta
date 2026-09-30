@@ -19,9 +19,9 @@ async function isAdmin(req: Request, res: Response, next: NextFunction) {
       return;
     }
 
-    req.user = session.user;
+    req.authSession = session;
 
-    if (req.user.role === "ADMIN") {
+    if (session.user.role === "ADMIN") {
       next();
       return;
     }

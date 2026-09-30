@@ -31,7 +31,9 @@ function logout(_req: Request, res: Response) {
 }
 
 async function requestAdmin(req: Request, res: Response) {
-  if (!req.user) {
+  const user = req.authSession?.user;
+
+  if (!user) {
     sendError(res, {
       status: 401,
       code: "AUTH_REQUIRED",
@@ -40,7 +42,7 @@ async function requestAdmin(req: Request, res: Response) {
     return;
   }
 
-  if (req.user.role === "ADMIN") {
+  if (user.role === "ADMIN") {
     sendError(res, {
       status: 400,
       code: "ALREADY_ADMIN",
@@ -50,7 +52,7 @@ async function requestAdmin(req: Request, res: Response) {
   }
 
   const { adminRequestedAt } = await prisma.user.update({
-    where: { id: req.user.id },
+    where: { id: user.id },
     data: { adminRequestedAt: new Date() },
   });
 
@@ -61,7 +63,9 @@ async function requestAdmin(req: Request, res: Response) {
 }
 
 async function cancelAdminRequest(req: Request, res: Response) {
-  if (!req.user) {
+  const user = req.authSession?.user;
+
+  if (!user) {
     sendError(res, {
       status: 401,
       code: "AUTH_REQUIRED",
@@ -71,7 +75,7 @@ async function cancelAdminRequest(req: Request, res: Response) {
   }
 
   await prisma.user.update({
-    where: { id: req.user.id },
+    where: { id: user.id },
     data: { adminRequestedAt: null },
   });
 

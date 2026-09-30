@@ -5,16 +5,10 @@ import * as contributionValidation from "../validation/contributionValidation.js
 import type { Request, Response } from "express";
 import type { entityType } from "../generated/prisma/enums.js";
 
-function requireUser(req: Request, res: Response) {
-  if (!req.user) {
-    sendError(res, {
-      status: 401,
-      code: "AUTH_REQUIRED",
-      message: "Authentication required: log in and try again.",
-    });
-    return null;
-  }
-  return req.user;
+function getSessionUser(req: Request) {
+  const user = req.authSession?.user;
+  if (!user) throw new Error("No session - isAuthenticated middleware missing");
+  return user;
 }
 
 async function entityExists(entityType: entityType, id: number) {
@@ -44,8 +38,7 @@ async function parentEntityExists(entityType: entityType, parentId: number) {
 }
 
 async function createEntity(req: Request, res: Response) {
-  const user = requireUser(req, res);
-  if (!user) return;
+  const user = getSessionUser(req);
 
   const contribution = contributionValidation.createEntity(req.body);
   const { entityType, data } = contribution;
@@ -83,8 +76,7 @@ async function createEntity(req: Request, res: Response) {
 }
 
 async function editEntity(req: Request, res: Response) {
-  const user = requireUser(req, res);
-  if (!user) return;
+  const user = getSessionUser(req);
   const { entityType, targetId, data } = contributionValidation.editEntity(
     req.body,
   );
@@ -121,8 +113,7 @@ async function editEntity(req: Request, res: Response) {
 }
 
 async function deleteEntity(req: Request, res: Response) {
-  const user = requireUser(req, res);
-  if (!user) return;
+  const user = getSessionUser(req);
   const { entityType, targetId } = contributionValidation.deleteEntity(
     req.body,
   );
@@ -158,9 +149,7 @@ async function deleteEntity(req: Request, res: Response) {
 }
 
 async function getPendingChanges(req: Request, res: Response) {
-  const user = requireUser(req, res);
-  if (!user) return;
-  const { id } = user;
+  const { id } = getSessionUser(req);
   const pendingChanges = await prisma.pendingChange.findMany({
     where: { userId: id },
   });
@@ -174,9 +163,7 @@ async function getPendingChanges(req: Request, res: Response) {
 }
 
 async function deletePendingChange(req: Request, res: Response) {
-  const user = requireUser(req, res);
-  if (!user) return;
-  const { id } = user;
+  const { id } = getSessionUser(req);
   const { id: pendingChangeId } = contributionValidation.deletePendingChange(
     req.body,
   );

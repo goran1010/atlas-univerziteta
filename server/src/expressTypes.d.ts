@@ -1,15 +1,13 @@
+import type { auth } from "./config/auth.js";
+
+type AuthSession = NonNullable<
+  Awaited<ReturnType<typeof auth.api.getSession>>
+>;
+
 declare global {
   namespace Express {
-    interface User {
-      id: string;
-      name: string;
-      email: string;
-      emailVerified: boolean;
-      image?: string | null | undefined;
-      role: string;
-      adminRequestedAt?: string | null | undefined;
-      createdAt: Date;
-      updatedAt: Date;
+    interface Request {
+      authSession?: AuthSession | undefined;
     }
   }
 }
