@@ -28,6 +28,8 @@ async function handleSignUpSubmit(
       email: inputFields.email,
       password: inputFields.password,
       name: inputFields.email.split("@")[0] ?? inputFields.email,
+      // where the email verification link lands, instead of the server root
+      callbackURL: `${window.location.origin}/login`,
     });
 
     if (error) {

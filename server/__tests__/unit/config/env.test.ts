@@ -9,10 +9,11 @@ function setRequiredEnv() {
   process.env["PORT"] = "3000";
   process.env["RESEND_API_KEY"] = "resend-key";
   process.env["COOKIE_SECRET"] = "cookie-secret";
+  process.env["BETTER_AUTH_SECRET"] = "better-auth-secret";
   process.env["GITHUB_CLIENT_ID"] = "github-client-id";
   process.env["GITHUB_CLIENT_SECRET"] = "github-client-secret";
-  process.env["GITHUB_CALLBACK_URL"] =
-    "http://localhost:3000/auth/github/callback";
+  process.env["GOOGLE_CLIENT_ID"] = "google-client-id";
+  process.env["GOOGLE_CLIENT_SECRET"] = "google-client-secret";
 }
 
 beforeEach(() => {
@@ -77,6 +78,25 @@ describe("env config", () => {
 
     const { env } = await import("../../../src/config/env.js");
     expect(env.RESEND_FROM_EMAIL).toBe("noreply@atlasuniverziteta.com");
+  });
+
+  test("defaults OAUTH_CALLBACK_BASE_URL to SERVER_URL", async () => {
+    delete process.env["OAUTH_CALLBACK_BASE_URL"];
+    vi.resetModules();
+
+    const { env } = await import("../../../src/config/env.js");
+    expect(env.OAUTH_CALLBACK_BASE_URL).toBe("http://localhost:3000");
+  });
+
+  test("uses OAUTH_CALLBACK_BASE_URL when set", async () => {
+    process.env["OAUTH_CALLBACK_BASE_URL"] =
+      "https://atlasuniverziteta.com/server";
+    vi.resetModules();
+
+    const { env } = await import("../../../src/config/env.js");
+    expect(env.OAUTH_CALLBACK_BASE_URL).toBe(
+      "https://atlasuniverziteta.com/server",
+    );
   });
 
   test("throws if NODE_ENV is invalid", async () => {

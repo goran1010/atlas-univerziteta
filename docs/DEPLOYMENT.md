@@ -8,7 +8,7 @@
 
 See `.env.production.example` for the VPS environment variable reference and `docker-compose.yml` for the container setup.
 
-BetterAuth handles OAuth callback URLs automatically based on the server's base URL. Update the authorized redirect URIs in your GitHub and Google OAuth app settings to match:
+OAuth callbacks go through the Netlify `/server` proxy (set by `OAUTH_CALLBACK_BASE_URL` in `docker-compose.yml`), so the OAuth state and session cookies stay on the webapp domain. Register these redirect URIs in the GitHub and Google OAuth app settings:
 
 ```text
 https://atlasuniverziteta.com/server/api/auth/callback/github

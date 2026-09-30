@@ -41,7 +41,9 @@ Fill in the server values and adjust the webapp server URL if needed.
 - `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET`: optional GitHub OAuth settings
 - `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`: optional Google OAuth settings
 
-BetterAuth handles OAuth callback URLs automatically - no callback URL env vars needed.
+- `OAUTH_CALLBACK_BASE_URL`: optional base for OAuth callbacks, defaults to `SERVER_URL`
+
+Local OAuth callback URLs to register with GitHub and Google: `http://localhost:3000/api/auth/callback/github` and `http://localhost:3000/api/auth/callback/google`.
 
 ### Webapp (`webapp/.env.example`)
 

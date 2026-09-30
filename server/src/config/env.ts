@@ -2,6 +2,7 @@ class Env {
   public readonly DATABASE_URL: string;
   public readonly WEBAPP_URL: string;
   public readonly SERVER_URL: string;
+  public readonly OAUTH_CALLBACK_BASE_URL: string;
   public readonly PORT: number;
   public readonly RESEND_API_KEY: string | undefined;
   public readonly RESEND_FROM_EMAIL: string;
@@ -20,6 +21,11 @@ class Env {
     this.DATABASE_URL = Env.#getEnv("DATABASE_URL");
     this.WEBAPP_URL = Env.#getEnv("WEBAPP_URL");
     this.SERVER_URL = Env.#getEnv("SERVER_URL");
+    // Where the browser reaches the server for OAuth callbacks. In production
+    // that is the Netlify /server proxy, so the state and session cookies stay
+    // on the webapp domain.
+    this.OAUTH_CALLBACK_BASE_URL =
+      process.env["OAUTH_CALLBACK_BASE_URL"] ?? this.SERVER_URL;
     this.PORT = Env.#getNumberEnv("PORT");
 
     this.RESEND_API_KEY =
