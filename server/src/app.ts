@@ -5,6 +5,11 @@ import { toNodeHandler } from "better-auth/node";
 import { env } from "./config/env.js";
 import { auth } from "./config/auth.js";
 
+const credentialedCors = cors({
+  origin: env.WEBAPP_URL,
+  credentials: true,
+});
+
 import { RequestValidationError } from "./errors/RequestValidationError.js";
 
 import type { Request, Response, NextFunction } from "express";
@@ -40,10 +45,7 @@ app.use(compression());
 
 // BetterAuth needs credentialed CORS (not the wildcard "*" from the public /api
 // routes) and must read the raw body before express.json() consumes it.
-app.use(
-  "/api/auth",
-  cors({ origin: env.WEBAPP_URL, credentials: true }),
-);
+app.use("/api/auth", credentialedCors);
 app.all("/api/auth/*splat", toNodeHandler(auth));
 
 // Public routes (wildcard CORS - open data)
@@ -51,16 +53,8 @@ app.get("/", cors(), apiController.root);
 app.use("/health", cors(), healthRouter);
 app.use("/api", cors(), rateLimiter.api, apiRouter);
 
-// Credentialed CORS for authenticated routes below
-app.use(
-  cors({
-    origin: env.WEBAPP_URL,
-    credentials: true,
-  }),
-);
-
+app.use(credentialedCors);
 app.use(express.json());
-
 app.use("/users", rateLimiter.users, usersRouter);
 
 app.use((_req, res) => {

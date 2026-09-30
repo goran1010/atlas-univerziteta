@@ -16,8 +16,8 @@ const auth = betterAuth({
   },
   emailVerification: {
     sendOnSignUp: true,
-    sendVerificationEmail: ({ user, url }) => {
-      void sendConfirmationEmail(user.email, url);
+    sendVerificationEmail: async ({ user, url }) => {
+      await sendConfirmationEmail(user.email, url);
     },
   },
   account: {
