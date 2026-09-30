@@ -78,7 +78,15 @@ function Wrapper() {
         path: "/admin-dashboard",
         element: (
           <RootContextProvider
-            initialUserData={{ id: "test-id", name: "test", email: "admin@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }}
+            initialUserData={{
+              id: "test-id",
+              name: "test",
+              email: "admin@example.com",
+              emailVerified: true,
+              createdAt: new Date(),
+              updatedAt: new Date(),
+              role: "ADMIN",
+            }}
           >
             <Notifications />
             <AdminForm />

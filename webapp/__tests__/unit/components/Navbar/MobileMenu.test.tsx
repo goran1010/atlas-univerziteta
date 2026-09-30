@@ -46,7 +46,15 @@ describe("MobileMenu", () => {
   test("renders improve data link for authenticated user", () => {
     render(
       <Wrapper
-        userData={{ id: "test-id", name: "test", email: "user@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }}
+        userData={{
+          id: "test-id",
+          name: "test",
+          email: "user@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
         setIsMenuOpen={vi.fn()}
       />,
     );
@@ -62,7 +70,15 @@ describe("MobileMenu", () => {
   test("renders admin link for authenticated admin", () => {
     render(
       <Wrapper
-        userData={{ id: "test-id", name: "test", email: "admin@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }}
+        userData={{
+          id: "test-id",
+          name: "test",
+          email: "admin@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
         setIsMenuOpen={vi.fn()}
       />,
     );
@@ -79,7 +95,15 @@ describe("MobileMenu", () => {
 
     render(
       <Wrapper
-        userData={{ id: "test-id", name: "test", email: "admin@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }}
+        userData={{
+          id: "test-id",
+          name: "test",
+          email: "admin@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
         setIsMenuOpen={setIsMenuOpen}
       />,
     );

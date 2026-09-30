@@ -8,7 +8,7 @@ import { authClient } from "../../src/utils/authClient";
 vi.mock("../../src/utils/authClient", () => ({
   authClient: {
     getSession: vi.fn(),
-    signIn: { social: vi.fn().mockReturnValue(new Promise(() => {})) },
+    signIn: { social: vi.fn().mockReturnValue(new Promise(() => undefined)) },
     signOut: vi.fn(),
   },
 }));
@@ -17,7 +17,7 @@ beforeEach(() => {
   vi.mocked(authClient.getSession).mockResolvedValue({
     data: null,
     error: null,
-  } as never);
+  });
   const fetchSpy = vi.spyOn(globalThis, "fetch");
   vi.spyOn(console, "error").mockImplementation(() => vi.fn());
 
@@ -92,7 +92,7 @@ describe("Root component", () => {
         session: {},
       },
       error: null,
-    } as never);
+    });
 
     renderRoot();
 

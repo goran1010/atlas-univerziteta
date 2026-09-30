@@ -56,7 +56,10 @@ vi.mock("../../../src/auth/isAdmin.js", () => {
     isAdmin: (req: Request, res: Response, next: NextFunction) => {
       if (!mockedUser) {
         res.status(401).json({
-          error: { code: "AUTH_REQUIRED", message: "Unauthorized: user not authenticated." },
+          error: {
+            code: "AUTH_REQUIRED",
+            message: "Unauthorized: user not authenticated.",
+          },
         });
         return;
       }
@@ -69,7 +72,10 @@ vi.mock("../../../src/auth/isAdmin.js", () => {
       }
 
       res.status(403).json({
-        error: { code: "FORBIDDEN", message: "Access denied: admin role is required." },
+        error: {
+          code: "FORBIDDEN",
+          message: "Access denied: admin role is required.",
+        },
       });
     },
   };
@@ -142,11 +148,11 @@ describe("Admin Router - GET /users/admin//pending-changes", () => {
         user: {
           id: "1",
           name: "test-user",
-      emailVerified: true,
-      image: null,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-      email: "admin1@example.com",
+          emailVerified: true,
+          image: null,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          email: "admin1@example.com",
           role: "ADMIN",
           adminRequestedAt: null,
         },
@@ -254,11 +260,11 @@ describe("Admin Router - DELETE /decline-pending-change", () => {
       user: {
         id: "1",
         name: "test-user",
-      emailVerified: true,
-      image: null,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-      email: "admin1@example.com",
+        emailVerified: true,
+        image: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        email: "admin1@example.com",
         role: "ADMIN",
         adminRequestedAt: null,
       },

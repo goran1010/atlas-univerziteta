@@ -13,7 +13,15 @@ const mockChanges = [
     targetId: 1,
     parentId: null,
     data: { name: "University of Divičani", city: "Divičani" },
-    user: { id: "test-id", name: "test", email: "johndoe@examplemail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
+    user: {
+      id: "test-id",
+      name: "test",
+      email: "johndoe@examplemail.com",
+      emailVerified: true,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      role: "USER",
+    },
     userId: "058d1adc-58e4-4f31-8021-64e37e7d0dd0",
   },
 ];
@@ -123,7 +131,17 @@ describe("AdminForm component rendering", () => {
   test("renders AdminForm component's heading", async () => {
     setupFetchMock();
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "admin@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "admin@mail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
+      />,
     );
 
     const heading = await screen.findByRole("heading", {
@@ -140,7 +158,17 @@ describe("AdminForm component rendering", () => {
     setupFetchMock({ pendingRequests: mockChanges });
 
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "admin@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "admin@mail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
+      />,
     );
 
     const email = await screen.findByText(/johndoe@examplemail.com/i);
@@ -153,7 +181,17 @@ describe("AdminForm component pending changes interaction", () => {
   test("updates pending changes list when a pending request is approved", async () => {
     setupFetchMock({ pendingRequests: mockChanges });
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "admin@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "admin@mail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
+      />,
     );
 
     await screen.findByText("johndoe@examplemail.com");
@@ -174,7 +212,17 @@ describe("AdminForm component pending changes interaction", () => {
   test("removes pending request from the list when declined", async () => {
     setupFetchMock({ pendingRequests: mockChanges });
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "admin@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "admin@mail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
+      />,
     );
     await screen.findByText("johndoe@examplemail.com");
 

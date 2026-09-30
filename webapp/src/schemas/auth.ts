@@ -29,8 +29,4 @@ function getSignupPasswordValidationKey(password: string) {
   return null;
 }
 
-export {
-  emailSchema,
-  loginPasswordSchema,
-  getSignupPasswordValidationKey,
-};
+export { emailSchema, loginPasswordSchema, getSignupPasswordValidationKey };

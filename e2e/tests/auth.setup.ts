@@ -48,10 +48,9 @@ setup("provision regular user", async ({ page }) => {
 
 setup("provision admin", async ({ page }) => {
   await signUpAndVerify(page, E2E_ADMIN);
-  await queryE2eDb(
-    'UPDATE "user" SET role = \'ADMIN\' WHERE email = $1',
-    [E2E_ADMIN.email],
-  );
+  await queryE2eDb("UPDATE \"user\" SET role = 'ADMIN' WHERE email = $1", [
+    E2E_ADMIN.email,
+  ]);
   await logIn(page, E2E_ADMIN);
   await page.context().storageState({ path: ADMIN_STORAGE_STATE });
 });

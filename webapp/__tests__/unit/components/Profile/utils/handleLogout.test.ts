@@ -1,23 +1,18 @@
 import { handleLogout } from "../../../../../src/components/Profile/utils/handleLogout";
+import type { AddNotification } from "../../../../../src/types";
 
 const signOutMock = vi.fn();
 
 vi.mock("../../../../../src/utils/authClient", () => ({
   authClient: {
-    signOut: (...args: unknown[]) => signOutMock(...args),
+    signOut: (...args: unknown[]): unknown => signOutMock(...args),
   },
 }));
 
-interface LogoutContext {
-  addNotification: ReturnType<typeof vi.fn>;
-  setLoading: ReturnType<typeof vi.fn>;
-  t: (key: string) => string;
-}
-
-function createCtx(): LogoutContext {
+function createCtx() {
   return {
-    addNotification: vi.fn(),
-    setLoading: vi.fn(),
+    addNotification: vi.fn<AddNotification>(),
+    setLoading: vi.fn<(loading: boolean) => void>(),
     t: (key: string) => key,
   };
 }

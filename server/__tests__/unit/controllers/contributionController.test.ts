@@ -31,9 +31,7 @@ vi.mock("../../../src/db/prisma.js", () => ({
 import {
   createEntity,
   deleteEntity,
-  deletePendingChange,
   editEntity,
-  getPendingChanges,
 } from "../../../src/controllers/contributionController.js";
 import { RequestValidationError } from "../../../src/errors/RequestValidationError.js";
 
@@ -97,7 +95,6 @@ describe("contributionController", () => {
     expect(jsonMock).not.toHaveBeenCalled();
   });
 
-
   test("editEntity throws a validation error when contribution data is invalid", async () => {
     const req = {
       authSession: { user: { id: "1" } },
@@ -129,7 +126,6 @@ describe("contributionController", () => {
     expect(jsonMock).not.toHaveBeenCalled();
   });
 
-
   test("deleteEntity rejects when pending change creation fails", async () => {
     const failure = new Error("delete failed");
     const req = {
@@ -145,6 +141,4 @@ describe("contributionController", () => {
     expect(statusMock).not.toHaveBeenCalled();
     expect(jsonMock).not.toHaveBeenCalled();
   });
-
-
 });

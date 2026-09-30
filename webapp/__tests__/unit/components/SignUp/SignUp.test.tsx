@@ -11,10 +11,10 @@ const signUpEmailMock = vi.fn();
 vi.mock("../../../../src/utils/authClient", () => ({
   authClient: {
     signUp: {
-      email: (...args: unknown[]) => signUpEmailMock(...args),
+      email: (...args: unknown[]): unknown => signUpEmailMock(...args),
     },
     signIn: {
-      social: vi.fn().mockReturnValue(new Promise(() => {})),
+      social: vi.fn().mockReturnValue(new Promise(() => undefined)),
     },
   },
 }));
@@ -98,7 +98,15 @@ describe("Render SignUp Component", () => {
     function WrapperWithUser() {
       return (
         <RootContextProvider
-          initialUserData={{ id: "test-id", name: "test", email: "user@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }}
+          initialUserData={{
+            id: "test-id",
+            name: "test",
+            email: "user@mail.com",
+            emailVerified: true,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+            role: "USER",
+          }}
         >
           <MemoryRouter initialEntries={["/signup"]}>
             <Notifications />
@@ -282,9 +290,7 @@ describe("SignUp Form Submit", () => {
       confirmPassword: "Password123",
     });
 
-    const successMessage = await screen.findByText(
-      /Registration successful/i,
-    );
+    const successMessage = await screen.findByText(/Registration successful/i);
     expect(successMessage).toBeInTheDocument();
   });
 

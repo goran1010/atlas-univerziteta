@@ -22,7 +22,7 @@ const pendingChangeUserSchema = z
     email: z.email(),
     role: userRoleSchema,
   })
-  .passthrough();
+  .loose();
 
 const pendingChangeBaseSchema = z.object({
   id: z.string().min(1),

@@ -15,7 +15,7 @@ vi.mock("../../../../src/utils/authClient", () => ({
     getSession: vi.fn().mockResolvedValue({ data: null, error: null }),
     signIn: {
       email: vi.fn(),
-      social: vi.fn().mockReturnValue(new Promise(() => {})),
+      social: vi.fn().mockReturnValue(new Promise(() => undefined)),
     },
     signOut: vi.fn().mockResolvedValue({ error: null }),
   },
@@ -88,7 +88,17 @@ describe("Profile Component", () => {
 
   test("renders profile component when user is logged in", async () => {
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "testuser@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
     );
     const headingElement = await screen.findByRole("heading", {
       name: /My Profile/i,
@@ -135,10 +145,20 @@ describe("Profile Component handle logout", () => {
   test("handles logout failure due to server error", async () => {
     vi.mocked(authClient.signOut).mockResolvedValueOnce({
       error: { message: "Server error" },
-    } as never);
+    });
 
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "testuser@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
     );
 
     await clickLogout();
@@ -155,7 +175,17 @@ describe("Profile Component handle logout", () => {
     );
 
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "testuser@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
     );
 
     await clickLogout();
@@ -169,10 +199,20 @@ describe("Profile Component handle logout", () => {
   test("handles logout correctly", async () => {
     vi.mocked(authClient.signOut).mockResolvedValueOnce({
       error: null,
-    } as never);
+    });
 
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "testuser@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
     );
     const logoutButton = await clickLogout();
 
@@ -190,18 +230,26 @@ describe("Profile Component handle logout", () => {
   test("stays on profile when logout returns error", async () => {
     vi.mocked(authClient.signOut).mockResolvedValueOnce({
       error: { message: "Failed" },
-    } as never);
+    });
 
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "testuser@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
     );
 
     await clickLogout();
 
     expect(
-      await screen.findByText(
-        /Logout did not complete/i,
-      ),
+      await screen.findByText(/Logout did not complete/i),
     ).toBeInTheDocument();
     expect(
       screen.getByRole("heading", { name: /My Profile/i }),
@@ -212,7 +260,17 @@ describe("Profile Component handle logout", () => {
 describe("Profile Component admin request", () => {
   test("shows the request button for a USER without an active request", async () => {
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "testuser@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
     );
 
     expect(
@@ -236,7 +294,17 @@ describe("Profile Component admin request", () => {
     );
 
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "testuser@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
     );
 
     await user.click(
@@ -317,7 +385,17 @@ describe("Profile Component admin request", () => {
     vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
 
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "testuser@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
     );
 
     await user.click(
@@ -336,7 +414,17 @@ describe("Profile Component admin request", () => {
 
   test("does not show admin request controls for an ADMIN", async () => {
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "admin@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "admin@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
+      />,
     );
 
     await screen.findByRole("heading", { name: /My Profile/i });

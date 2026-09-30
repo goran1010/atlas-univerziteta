@@ -12,8 +12,8 @@ const signInSocialMock = vi.fn();
 vi.mock("../../../../src/utils/authClient", () => ({
   authClient: {
     signIn: {
-      email: (...args: unknown[]) => signInEmailMock(...args),
-      social: (...args: unknown[]) => signInSocialMock(...args),
+      email: (...args: unknown[]): unknown => signInEmailMock(...args),
+      social: (...args: unknown[]): unknown => signInSocialMock(...args),
     },
   },
 }));
@@ -114,7 +114,15 @@ describe("Render LogIn Component", () => {
     function WrapperWithUser() {
       return (
         <RootContextProvider
-          initialUserData={{ id: "test-id", name: "test", email: "user@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }}
+          initialUserData={{
+            id: "test-id",
+            name: "test",
+            email: "user@mail.com",
+            emailVerified: true,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+            role: "USER",
+          }}
         >
           <MemoryRouter initialEntries={["/login"]}>
             <Notifications />
@@ -142,7 +150,7 @@ describe("Render LogIn Component", () => {
 
 describe("GitHub login", () => {
   test("starts loading when the GitHub login button is clicked", async () => {
-    signInSocialMock.mockReturnValue(new Promise(() => {}));
+    signInSocialMock.mockReturnValue(new Promise(() => undefined));
     const githubLoginButton = screen.getByRole("button", {
       name: "Continue with GitHub",
     });
@@ -156,7 +164,7 @@ describe("GitHub login", () => {
   });
 
   test("prevents a repeated GitHub login click while loading", async () => {
-    signInSocialMock.mockReturnValue(new Promise(() => {}));
+    signInSocialMock.mockReturnValue(new Promise(() => undefined));
     const githubLoginButton = screen.getByRole("button", {
       name: "Continue with GitHub",
     });
@@ -261,7 +269,15 @@ describe("LogIn Form Submit", () => {
   test("Redirects to Home on successful form submit", async () => {
     signInEmailMock.mockResolvedValue({
       data: {
-        user: { id: "test-id", name: "test", email: "new@user.com", emailVerified: true, role: "USER", createdAt: new Date(), updatedAt: new Date() },
+        user: {
+          id: "test-id",
+          name: "test",
+          email: "new@user.com",
+          emailVerified: true,
+          role: "USER",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       },
       error: null,
     });

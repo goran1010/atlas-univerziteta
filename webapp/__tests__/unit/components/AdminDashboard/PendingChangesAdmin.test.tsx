@@ -34,7 +34,15 @@ const mockChanges: MockChange[] = [
     parentId: null,
     data: { name: "Faculty of Engineering" },
     createdAt: "2026-05-06T07:34:01.967Z",
-    user: { id: "test-id", name: "test", email: "johndoe@examplemail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
+    user: {
+      id: "test-id",
+      name: "test",
+      email: "johndoe@examplemail.com",
+      emailVerified: true,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      role: "USER",
+    },
     userId: "058d1adc-58e4-4f31-8021-64e37e7d0dd0",
   },
 ];
@@ -118,7 +126,17 @@ function buildRouter(initialUser: UserData) {
 }
 
 function Wrapper({ initialUser = null }: { initialUser?: UserData }) {
-  const router = buildRouter(initialUser ?? { id: "test-id", name: "test", email: "", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" });
+  const router = buildRouter(
+    initialUser ?? {
+      id: "test-id",
+      name: "test",
+      email: "",
+      emailVerified: true,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      role: "USER",
+    },
+  );
   return <RouterProvider router={router} />;
 }
 
@@ -135,7 +153,17 @@ describe("PendingChanges Component", () => {
   test("renders PendingChanges with 1 request", async () => {
     setupFetchMock();
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "admin@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "admin@mail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
+      />,
     );
     const email = await screen.findByText("johndoe@examplemail.com");
     expect(email).toBeInTheDocument();
@@ -157,13 +185,31 @@ describe("PendingChanges Component", () => {
           ownership: "PUBLIC",
         },
         createdAt: "2026-05-07T10:20:30.000Z",
-        user: { id: "test-id", name: "test", email: "janedoe@examplemail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
+        user: {
+          id: "test-id",
+          name: "test",
+          email: "janedoe@examplemail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        },
         userId: "12345678-90ab-cdef-1234-567890abcdef",
       },
     ];
     setupFetchMock({ pendingRequests: mockChangesMore });
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "admin@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "admin@mail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
+      />,
     );
     await screen.findByText("johndoe@examplemail.com");
     expect(screen.getByText("janedoe@examplemail.com")).toBeInTheDocument();
@@ -183,7 +229,17 @@ describe("PendingChanges Component", () => {
       return Promise.reject(new Error("Network error"));
     });
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "admin@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "admin@mail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
+      />,
     );
     const pendingMessage = await screen.findByText(
       /There are no pending changes at the moment./i,
@@ -210,7 +266,17 @@ describe("PendingChanges Component", () => {
     });
 
     render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "admin@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "ADMIN" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "admin@mail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
+      />,
     );
 
     const errorMessage = await screen.findByText(

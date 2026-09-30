@@ -38,20 +38,26 @@ app.use((req, _res, next) => {
 app.use(helmet());
 app.use(compression());
 
-// Public routes
+// BetterAuth needs credentialed CORS (not the wildcard "*" from the public /api
+// routes) and must read the raw body before express.json() consumes it.
+app.use(
+  "/api/auth",
+  cors({ origin: env.WEBAPP_URL, credentials: true }),
+);
+app.all("/api/auth/*splat", toNodeHandler(auth));
+
+// Public routes (wildcard CORS - open data)
 app.get("/", cors(), apiController.root);
 app.use("/health", cors(), healthRouter);
 app.use("/api", cors(), rateLimiter.api, apiRouter);
 
+// Credentialed CORS for authenticated routes below
 app.use(
   cors({
     origin: env.WEBAPP_URL,
     credentials: true,
   }),
 );
-
-// BetterAuth reads the raw request body, so it must be before express.json()
-app.all("/api/auth/*splat", toNodeHandler(auth));
 
 app.use(express.json());
 

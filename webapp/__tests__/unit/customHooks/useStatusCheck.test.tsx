@@ -7,7 +7,7 @@ const getSessionMock = vi.fn();
 
 vi.mock("../../../src/utils/authClient", () => ({
   authClient: {
-    getSession: (...args: unknown[]) => getSessionMock(...args),
+    getSession: (...args: unknown[]): unknown => getSessionMock(...args),
   },
 }));
 
@@ -86,7 +86,10 @@ describe("useStatusCheck", () => {
     const addNotification = vi.fn(() => "notification-id");
     let resolveSession!: (value: unknown) => void;
     getSessionMock.mockImplementation(
-      () => new Promise((resolve) => { resolveSession = resolve; }),
+      () =>
+        new Promise((resolve) => {
+          resolveSession = resolve;
+        }),
     );
 
     const { unmount } = render(

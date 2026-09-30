@@ -23,8 +23,7 @@ function asUnknown(value: unknown): unknown {
 describe("Admin Router - GET /users/admin/pending-changes", () => {
   test("Responds with status 200 and all pending changes if role ADMIN", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -89,8 +88,7 @@ describe("Admin Router - GET /users/admin/pending-changes", () => {
 describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
   test("Responds with status 200 if role ADMIN", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -136,8 +134,7 @@ describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
 describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   test("Responds with status 404 if pending change does not exist", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -164,8 +161,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
   test("Responds with status 404 if stored pending change data is invalid for its entity type", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -209,8 +205,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
   test("Responds with status 404 if stored pending change data is not a record", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -255,8 +250,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
     "Responds with status 404 if stored pending change target id is null for a DELETE change type for entity type %s",
     async (entityType) => {
       const userInput = createDbUserData({ role: "ADMIN" });
-      const userRequested =
-        userInput;
+      const userRequested = userInput;
 
       const userInDb = await prisma.user.create({
         data: userRequested,
@@ -295,8 +289,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
     "Responds with status 404 if stored pending change target id is null for UPDATE change type for entity type %s",
     async (entityType) => {
       const userInput = createDbUserData({ role: "ADMIN" });
-      const userRequested =
-        userInput;
+      const userRequested = userInput;
 
       const userInDb = await prisma.user.create({
         data: userRequested,
@@ -335,8 +328,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
     "Responds with status 404 if stored pending change parent id is null for CREATE change type for entity type %s",
     async (entityType) => {
       const userInput = createDbUserData({ role: "ADMIN" });
-      const userRequested =
-        userInput;
+      const userRequested = userInput;
 
       const userInDb = await prisma.user.create({
         data: userRequested,
@@ -375,8 +367,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY", () => {
   test("Responds with status 200 and message if a pending change is approved successfully DELETE", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -427,8 +418,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
 
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -476,8 +466,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -536,8 +525,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
 describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", () => {
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -594,8 +582,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -660,8 +647,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
 
   test("Responds with status 200 and message if a pending change is approved successfully for DELETE", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -724,8 +710,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
 describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROGRAM", () => {
   test("Responds with status 200 and message if a pending change is approved successfully DELETE", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -794,8 +779,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
 
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -859,8 +843,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
     const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested =
-      userInput;
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,

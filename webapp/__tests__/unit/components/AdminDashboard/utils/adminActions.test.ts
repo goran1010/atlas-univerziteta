@@ -19,7 +19,15 @@ const change: AdminPendingChange = {
   parentId: null,
   data: { name: "Updated faculty" },
   userId: "user-1",
-  user: { id: "test-id", name: "test", email: "johndoe@examplemail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
+  user: {
+    id: "test-id",
+    name: "test",
+    email: "johndoe@examplemail.com",
+    emailVerified: true,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    role: "USER",
+  },
   createdAt: new Date(),
   currentEntity: null,
 };

@@ -6,7 +6,7 @@ const getSessionMock = vi.fn();
 vi.mock("../../../src/config/auth.js", () => ({
   auth: {
     api: {
-      getSession: (...args: unknown[]) => getSessionMock(...args),
+      getSession: (...args: unknown[]): unknown => getSessionMock(...args),
     },
   },
 }));

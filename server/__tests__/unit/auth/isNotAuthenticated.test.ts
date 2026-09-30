@@ -6,7 +6,7 @@ const getSessionMock = vi.fn();
 vi.mock("../../../src/config/auth.js", () => ({
   auth: {
     api: {
-      getSession: (...args: unknown[]) => getSessionMock(...args),
+      getSession: (...args: unknown[]): unknown => getSessionMock(...args),
     },
   },
 }));
@@ -15,9 +15,8 @@ vi.mock("better-auth/node", () => ({
   fromNodeHeaders: (headers: unknown) => headers,
 }));
 
-const { isNotAuthenticated } = await import(
-  "../../../src/auth/isNotAuthenticated.js"
-);
+const { isNotAuthenticated } =
+  await import("../../../src/auth/isNotAuthenticated.js");
 
 function createMockResponse() {
   const statusMock = vi.fn().mockReturnThis();
