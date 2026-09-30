@@ -15,40 +15,62 @@ datasource db {
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-model Session {
-  id        String   @id
-  sid       String   @unique
-  data      String
-  expiresAt DateTime
-
-  @@map("sessions")
-}
-
 enum role {
   ADMIN
   USER
 }
 
-model User {
-  id               String          @id @default(uuid())
+model user {
+  id               String          @id
+  name             String
   email            String          @unique
-  password         String?
-  githubId         String?         @unique
+  emailVerified    Boolean         @default(false)
+  image            String?
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
   role             role            @default(USER)
   adminRequestedAt DateTime?
+  sessions         session[]
+  accounts         account[]
   pendingChanges   PendingChange[]
-
-  @@map("users")
 }
 
-model PendingUser {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  password  String
-  token     String
+model session {
+  id        String   @id
   expiresAt DateTime
+  token     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      user     @relation(fields: [userId], references: [id])
+}
 
-  @@map("pending_users")
+model account {
+  id                    String    @id
+  accountId             String
+  providerId            String
+  userId                String
+  user                  user      @relation(fields: [userId], references: [id])
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+}
+
+model verification {
+  id         String    @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime? @default(now())
+  updatedAt  DateTime? @updatedAt
 }
 
 enum typeOfChange {
@@ -97,7 +119,7 @@ model University {
   faculties         Faculty[]
 
   @@unique([name, city])
-  @@map("universities")
+  @@map("university")
 }
 
 model Faculty {
@@ -116,7 +138,7 @@ model Faculty {
   studyPrograms     StudyProgram[]
 
   @@unique([name, universityId])
-  @@map("faculties")
+  @@map("faculty")
 }
 
 model StudyProgram {
@@ -133,7 +155,7 @@ model StudyProgram {
   tracks        Track[]
 
   @@unique([name, facultyId, cycle])
-  @@map("study_programs")
+  @@map("study_program")
 }
 
 model Track {
@@ -147,7 +169,7 @@ model Track {
   lastModified   DateTime?
 
   @@unique([name, studyProgramId])
-  @@map("tracks")
+  @@map("track")
 }
 
 enum entityType {
@@ -174,7 +196,7 @@ model PendingChange {
   // proposed data
   data Json?
 
-  user       User      @relation(fields: [userId], references: [id])
+  user       user      @relation(fields: [userId], references: [id])
   userId     String
   createdAt  DateTime  @default(now())
   reviewedAt DateTime?
@@ -184,5 +206,5 @@ model PendingChange {
   @@index([targetId])
   @@index([parentId])
   @@index([userId])
-  @@map("pending_changes")
+  @@map("pending_change")
 }

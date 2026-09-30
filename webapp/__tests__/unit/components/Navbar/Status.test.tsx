@@ -28,7 +28,15 @@ describe("Status", () => {
 
     render(
       <Wrapper
-        userData={{ email: "test@example.com", role: "USER" }}
+        userData={{
+          id: "test-id",
+          name: "test",
+          email: "test@example.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
         setIsMenuOpen={setIsMenuOpen}
       />,
     );

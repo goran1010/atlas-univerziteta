@@ -1,8 +1,22 @@
 import { beforeEach, describe, expect, test, vi } from "vitest";
-
-import { isNotAuthenticated } from "../../../src/auth/isNotAuthenticated.js";
-
 import type { NextFunction, Request, Response } from "express";
+
+const getSessionMock = vi.fn();
+
+vi.mock("../../../src/config/auth.js", () => ({
+  auth: {
+    api: {
+      getSession: (...args: unknown[]): unknown => getSessionMock(...args),
+    },
+  },
+}));
+
+vi.mock("better-auth/node", () => ({
+  fromNodeHeaders: (headers: unknown) => headers,
+}));
+
+const { isNotAuthenticated } =
+  await import("../../../src/auth/isNotAuthenticated.js");
 
 function createMockResponse() {
   const statusMock = vi.fn().mockReturnThis();
@@ -21,26 +35,31 @@ describe("isNotAuthenticated", () => {
     vi.clearAllMocks();
   });
 
-  test("calls next when req.user is missing", () => {
-    const req = {} as Request;
+  test("calls next when no session exists", async () => {
+    getSessionMock.mockResolvedValue(null);
+
+    const req = { headers: {} } as Request;
     const { res, statusMock, jsonMock } = createMockResponse();
     const next = vi.fn() as unknown as NextFunction;
 
-    isNotAuthenticated(req, res, next);
+    await isNotAuthenticated(req, res, next);
 
     expect(next).toHaveBeenCalled();
     expect(statusMock).not.toHaveBeenCalled();
     expect(jsonMock).not.toHaveBeenCalled();
   });
 
-  test("responds with status 403 when req.user exists", () => {
-    const req = {
+  test("responds with status 403 when session exists", async () => {
+    getSessionMock.mockResolvedValue({
       user: { id: "1", role: "USER" },
-    } as Request;
+      session: {},
+    });
+
+    const req = { headers: {} } as Request;
     const { res, statusMock, jsonMock } = createMockResponse();
     const next = vi.fn() as unknown as NextFunction;
 
-    isNotAuthenticated(req, res, next);
+    await isNotAuthenticated(req, res, next);
 
     expect(next).not.toHaveBeenCalled();
     expect(statusMock).toHaveBeenCalledWith(403);

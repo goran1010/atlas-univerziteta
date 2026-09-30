@@ -4,21 +4,11 @@ import {
   handleApproveAdminRequest,
   handleDeclineAdminRequest,
 } from "../../../../../src/components/AdminDashboard/utils/adminActions";
-import { getCsrfToken } from "../../../../../src/utils/getCsrfToken";
 
 import type { RequestContext } from "../../../../../src/utils/apiMutation";
 import type { AdminPendingChange } from "../../../../../src/schemas/pendingChange";
 import type { AdminRequest } from "../../../../../src/schemas/adminRequest";
 
-vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
-  const actual =
-    await importOriginal<
-      typeof import("../../../../../src/utils/getCsrfToken")
-    >();
-  return { ...actual, getCsrfToken: vi.fn() };
-});
-
-const mockedGetCsrfToken = vi.mocked(getCsrfToken);
 const fetchMock = vi.fn();
 
 const change: AdminPendingChange = {
@@ -29,7 +19,15 @@ const change: AdminPendingChange = {
   parentId: null,
   data: { name: "Updated faculty" },
   userId: "user-1",
-  user: { email: "johndoe@examplemail.com", role: "USER" },
+  user: {
+    id: "test-id",
+    name: "test",
+    email: "johndoe@examplemail.com",
+    emailVerified: true,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    role: "USER",
+  },
   createdAt: new Date(),
   currentEntity: null,
 };
@@ -49,9 +47,7 @@ function createCtx(): RequestContext {
 }
 
 beforeEach(() => {
-  mockedGetCsrfToken.mockReset();
   fetchMock.mockReset();
-  mockedGetCsrfToken.mockResolvedValue("csrf-token");
   fetchMock.mockResolvedValue({
     ok: true,
     json: () => Promise.resolve({ message: "Done." }),

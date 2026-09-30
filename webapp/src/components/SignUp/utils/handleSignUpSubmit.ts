@@ -1,9 +1,14 @@
-import { signupResponseSchema } from "../../../schemas/auth";
-import { apiMutation } from "../../../utils/apiMutation";
+import { authClient } from "../../../utils/authClient";
 
 import type { SubmitEvent } from "react";
 import type { NavigateFunction } from "react-router";
-import type { RequestContext } from "../../../utils/apiMutation";
+import type { AddNotification, TFunction } from "../../../types";
+
+interface SignUpContext {
+  addNotification: AddNotification;
+  setLoading: (loading: boolean) => void;
+  t: TFunction;
+}
 
 async function handleSignUpSubmit(
   e: SubmitEvent<HTMLFormElement>,
@@ -13,30 +18,39 @@ async function handleSignUpSubmit(
     "confirm-password": string;
   },
   navigate: NavigateFunction,
-  ctx: RequestContext,
+  ctx: SignUpContext,
 ) {
   e.preventDefault();
+  ctx.setLoading(true);
 
-  const result = await apiMutation(
-    {
-      path: "/auth/signup",
-      method: "POST",
-      body: {
-        email: inputFields.email,
-        password: inputFields.password,
-        "confirm-password": inputFields["confirm-password"],
-      },
-      responseSchema: signupResponseSchema,
-      successMessageKey: "messages.auth.registrationSuccess",
-      errorMessageKey: "messages.auth.registrationFailed",
-      caughtErrorMessageKey: "messages.auth.registrationError",
-      logLabel: "sign up",
-    },
-    ctx,
-  );
-  if (!result) return;
+  try {
+    const { error } = await authClient.signUp.email({
+      email: inputFields.email,
+      password: inputFields.password,
+      name: inputFields.email.split("@")[0] ?? inputFields.email,
+    });
 
-  void navigate("/login");
+    if (error) {
+      ctx.addNotification({
+        type: "error",
+        message: ctx.t("messages.auth.registrationFailed"),
+      });
+      return;
+    }
+
+    ctx.addNotification({
+      type: "success",
+      message: ctx.t("messages.auth.registrationSuccess"),
+    });
+    void navigate("/login");
+  } catch {
+    ctx.addNotification({
+      type: "error",
+      message: ctx.t("messages.auth.registrationError"),
+    });
+  } finally {
+    ctx.setLoading(false);
+  }
 }
 
 export { handleSignUpSubmit };

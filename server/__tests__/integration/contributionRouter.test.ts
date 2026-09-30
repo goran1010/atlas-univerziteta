@@ -28,14 +28,10 @@ async function createLoggedInAgent() {
   const loginResponse = await createAndLoginUser(agent, {});
 
   expect(loginResponse.status).toBe(200);
-  expect(loginResponse.body).toEqual(
-    expect.objectContaining({
-      message: "Logged in successfully",
-    }),
-  );
+  expect(loginResponse.body).toHaveProperty("token");
 
   const loginResponseBody = getResponseObject(loginResponse.body as unknown);
-  const user = getResponseObject(loginResponseBody["data"]) as {
+  const user = getResponseObject(loginResponseBody["user"]) as {
     id: string;
     email: string;
   };
@@ -427,7 +423,10 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
     const { agent, user } = await createLoggedInAgent();
     const otherUser = await prisma.user.create({
       data: {
+        id: crypto.randomUUID(),
+        name: "other-user",
         email: `other_${Date.now().toString()}@example.com`,
+        updatedAt: new Date(),
       },
     });
 

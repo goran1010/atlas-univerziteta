@@ -6,8 +6,6 @@ import { isAdmin } from "../auth/isAdmin.js";
 import { contributionRouter } from "./contributionRouter.js";
 import { isAuthenticated } from "../auth/isAuthenticated.js";
 
-usersRouter.get("/me", usersController.me);
-
 usersRouter.use(isAuthenticated);
 
 usersRouter.post("/logout", usersController.logout);

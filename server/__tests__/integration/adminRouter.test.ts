@@ -2,10 +2,19 @@ import request from "supertest";
 import { describe, test, expect } from "vitest";
 import { app } from "../../src/app.js";
 import { createAndLoginUser } from "../utils/createUserAndLogin.js";
-import { createNewUserInput } from "../utils/createNewUserInput.js";
+import { createDbUserData } from "../utils/createNewUserInput.js";
 import { prisma } from "../../src/db/prisma.js";
 import { logger } from "../../src/utils/logger.js";
 import type { entityType } from "../../src/generated/prisma/enums.js";
+
+async function deleteUser(email: string) {
+  const user = await prisma.user.findUnique({ where: { email } });
+  if (!user) return;
+  await prisma.account.deleteMany({ where: { userId: user.id } });
+  await prisma.session.deleteMany({ where: { userId: user.id } });
+  await prisma.pendingChange.deleteMany({ where: { userId: user.id } });
+  await prisma.user.delete({ where: { id: user.id } });
+}
 
 function asUnknown(value: unknown): unknown {
   return value;
@@ -13,9 +22,8 @@ function asUnknown(value: unknown): unknown {
 
 describe("Admin Router - GET /users/admin/pending-changes", () => {
   test("Responds with status 200 and all pending changes if role ADMIN", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -79,9 +87,8 @@ describe("Admin Router - GET /users/admin/pending-changes", () => {
 
 describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
   test("Responds with status 200 if role ADMIN", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -126,9 +133,8 @@ describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
 
 describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   test("Responds with status 404 if pending change does not exist", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -154,9 +160,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   });
 
   test("Responds with status 404 if stored pending change data is invalid for its entity type", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -199,9 +204,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   });
 
   test("Responds with status 404 if stored pending change data is not a record", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -245,9 +249,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   test.each(entityTypes)(
     "Responds with status 404 if stored pending change target id is null for a DELETE change type for entity type %s",
     async (entityType) => {
-      const userInput = createNewUserInput({ role: "ADMIN" });
-      const { ["confirm-password"]: confirmPassword, ...userRequested } =
-        userInput;
+      const userInput = createDbUserData({ role: "ADMIN" });
+      const userRequested = userInput;
 
       const userInDb = await prisma.user.create({
         data: userRequested,
@@ -285,9 +288,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   test.each(entityTypes)(
     "Responds with status 404 if stored pending change target id is null for UPDATE change type for entity type %s",
     async (entityType) => {
-      const userInput = createNewUserInput({ role: "ADMIN" });
-      const { ["confirm-password"]: confirmPassword, ...userRequested } =
-        userInput;
+      const userInput = createDbUserData({ role: "ADMIN" });
+      const userRequested = userInput;
 
       const userInDb = await prisma.user.create({
         data: userRequested,
@@ -325,9 +327,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   test.each(enums)(
     "Responds with status 404 if stored pending change parent id is null for CREATE change type for entity type %s",
     async (entityType) => {
-      const userInput = createNewUserInput({ role: "ADMIN" });
-      const { ["confirm-password"]: confirmPassword, ...userRequested } =
-        userInput;
+      const userInput = createDbUserData({ role: "ADMIN" });
+      const userRequested = userInput;
 
       const userInDb = await prisma.user.create({
         data: userRequested,
@@ -365,9 +366,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
 describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY", () => {
   test("Responds with status 200 and message if a pending change is approved successfully DELETE", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -417,9 +417,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -466,9 +465,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -526,9 +524,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
 
 describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", () => {
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -584,9 +581,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -650,9 +646,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for DELETE", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -714,9 +709,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
 
 describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROGRAM", () => {
   test("Responds with status 200 and message if a pending change is approved successfully DELETE", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -784,9 +778,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -849,9 +842,8 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
-    const userInput = createNewUserInput({ role: "ADMIN" });
-    const { ["confirm-password"]: confirmPassword, ...userRequested } =
-      userInput;
+    const userInput = createDbUserData({ role: "ADMIN" });
+    const userRequested = userInput;
 
     const userInDb = await prisma.user.create({
       data: userRequested,
@@ -927,14 +919,14 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
 
 describe("Admin Router - GET /users/admin/admin-requests", () => {
   test("Responds with status 200 and only users with an active request", async () => {
-    const requestingInput = createNewUserInput();
-    const { ["confirm-password"]: _cp1, ...requestingData } = requestingInput;
+    const requestingInput = createDbUserData();
+    const requestingData = requestingInput;
     const requestingUser = await prisma.user.create({
       data: { ...requestingData, adminRequestedAt: new Date() },
     });
 
-    const silentInput = createNewUserInput();
-    const { ["confirm-password"]: _cp2, ...silentData } = silentInput;
+    const silentInput = createDbUserData();
+    const silentData = silentInput;
     const silentUser = await prisma.user.create({ data: silentData });
 
     const agent = request.agent(app);
@@ -983,22 +975,22 @@ describe("Admin Router - GET /users/admin/admin-requests", () => {
 
   test("Responds with status 403 if role is not ADMIN", async () => {
     const agent = request.agent(app);
-    const userData = createNewUserInput();
+    const userData = createDbUserData();
     await createAndLoginUser(agent, userData);
 
     const response = await agent.get("/users/admin/admin-requests");
 
     expect(response.status).toBe(403);
 
-    await prisma.user.delete({ where: { email: userData.email } });
+    await deleteUser(userData.email);
   });
 });
 
 describe("Admin Router - POST /users/admin/approve-admin-request", () => {
   test("Responds with status 200, promotes the user, and clears the request", async () => {
     // The approve/decline endpoints validate the id as a UUID
-    const requestingInput = createNewUserInput({ id: crypto.randomUUID() });
-    const { ["confirm-password"]: _cp, ...requestingData } = requestingInput;
+    const requestingInput = createDbUserData({ id: crypto.randomUUID() });
+    const requestingData = requestingInput;
     const requestingUser = await prisma.user.create({
       data: { ...requestingData, adminRequestedAt: new Date() },
     });
@@ -1057,8 +1049,8 @@ describe("Admin Router - POST /users/admin/approve-admin-request", () => {
 describe("Admin Router - DELETE /users/admin/decline-admin-request", () => {
   test("Responds with status 200, keeps the USER role, and clears the request", async () => {
     // The approve/decline endpoints validate the id as a UUID
-    const requestingInput = createNewUserInput({ id: crypto.randomUUID() });
-    const { ["confirm-password"]: _cp, ...requestingData } = requestingInput;
+    const requestingInput = createDbUserData({ id: crypto.randomUUID() });
+    const requestingData = requestingInput;
     const requestingUser = await prisma.user.create({
       data: { ...requestingData, adminRequestedAt: new Date() },
     });

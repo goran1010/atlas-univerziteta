@@ -51,7 +51,19 @@ describe("AdminDashboard component", () => {
   });
 
   test("render component if user is not admin", async () => {
-    render(<Wrapper initialUser={{ email: "user@mail.com", role: "USER" }} />);
+    render(
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "user@mail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
+    );
 
     const paragraphElement = await screen.findByText(
       /You need to be an admin to see the admin dashboard./i,
@@ -64,7 +76,17 @@ describe("AdminDashboard component", () => {
 
   test("render component if user is admin", async () => {
     render(
-      <Wrapper initialUser={{ email: "admin@mail.com", role: "ADMIN" }} />,
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "admin@mail.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "ADMIN",
+        }}
+      />,
     );
 
     const headingElement = await screen.findByRole("heading", {

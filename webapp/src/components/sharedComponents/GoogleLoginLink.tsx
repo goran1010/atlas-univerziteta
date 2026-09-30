@@ -2,14 +2,14 @@ import { Spinner } from "../sharedComponents/Spinner";
 import { use, useState } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { authClient } from "../../utils/authClient";
-import { GitHubIcon } from "./icons";
+import { GoogleIcon } from "./icons";
 
-interface GitHubLoginLinkProps {
+interface GoogleLoginLinkProps {
   disabled: boolean;
   onLoadingChange: (loading: boolean) => void;
 }
 
-function GitHubLoginLink({ disabled, onLoadingChange }: GitHubLoginLinkProps) {
+function GoogleLoginLink({ disabled, onLoadingChange }: GoogleLoginLinkProps) {
   const { t } = use(RootContext);
   const [loading, setLoading] = useState(false);
   const isDisabled = disabled || loading;
@@ -19,7 +19,7 @@ function GitHubLoginLink({ disabled, onLoadingChange }: GitHubLoginLinkProps) {
     setLoading(true);
     onLoadingChange(true);
     await authClient.signIn.social({
-      provider: "github",
+      provider: "google",
       callbackURL: window.location.origin,
     });
   }
@@ -37,11 +37,11 @@ function GitHubLoginLink({ disabled, onLoadingChange }: GitHubLoginLinkProps) {
         {loading && <Spinner />}
       </div>
       <span className={`flex gap-1 ${loading ? "invisible" : "visible"}`}>
-        <GitHubIcon size={20} />
-        {t("auth.continueWithGithub")}
+        <GoogleIcon size={20} />
+        {t("auth.continueWithGoogle")}
       </span>
     </button>
   );
 }
 
-export { GitHubLoginLink };
+export { GoogleLoginLink };

@@ -1,21 +1,21 @@
 import express from "express";
 const app = express();
 import cors from "cors";
+import { toNodeHandler } from "better-auth/node";
 import { env } from "./config/env.js";
+import { auth } from "./config/auth.js";
+
+const credentialedCors = cors({
+  origin: env.WEBAPP_URL,
+  credentials: true,
+});
 
 import { RequestValidationError } from "./errors/RequestValidationError.js";
 
 import type { Request, Response, NextFunction } from "express";
 
-import { sessionMiddleware } from "./config/sessionMiddleware.js";
-import { passport } from "./config/passport.js";
-
 import helmet from "helmet";
 import * as rateLimiter from "./utils/rateLimiter.js";
-
-import { csrfSync } from "csrf-sync";
-import { csrfRouter } from "./routes/csrfRouter.js";
-const { csrfSynchronisedProtection } = csrfSync();
 
 import compression from "compression";
 
@@ -25,7 +25,6 @@ import { sendError } from "./utils/response.js";
 
 import { apiRouter } from "./routes/apiRouter.js";
 import * as apiController from "./controllers/apiController.js";
-import { authRouter } from "./routes/authRouter.js";
 import { usersRouter } from "./routes/usersRouter.js";
 import { healthRouter } from "./routes/healthRouter.js";
 
@@ -44,27 +43,19 @@ app.use((req, _res, next) => {
 app.use(helmet());
 app.use(compression());
 
-// Public routes
+// BetterAuth needs credentialed CORS (not the wildcard "*" from the public /api
+// routes) and must read the raw body before express.json() consumes it.
+app.use("/api/auth", credentialedCors);
+app.all("/api/auth/*splat", toNodeHandler(auth));
+
+// Public routes (wildcard CORS - open data)
 app.get("/", cors(), apiController.root);
 app.use("/health", cors(), healthRouter);
 app.use("/api", cors(), rateLimiter.api, apiRouter);
 
-app.use(
-  cors({
-    origin: env.WEBAPP_URL,
-    credentials: true,
-  }),
-);
-
+app.use(credentialedCors);
 app.use(express.json());
-
-app.use(sessionMiddleware);
-app.use(passport.session());
-
-app.use(csrfRouter);
-
-app.use("/auth", rateLimiter.auth, authRouter);
-app.use("/users", rateLimiter.users, csrfSynchronisedProtection, usersRouter);
+app.use("/users", rateLimiter.users, usersRouter);
 
 app.use((_req, res) => {
   sendError(res, {
@@ -74,8 +65,6 @@ app.use((_req, res) => {
   });
 });
 
-// Errors created via the http-errors package (csrf-sync, body parsing, ...).
-// A 4xx status means the request was at fault and the message is safe to send.
 interface ClientHttpError extends Error {
   status: number;
   code?: unknown;
@@ -110,10 +99,7 @@ app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
     );
     sendError(res, {
       status: error.status,
-      code:
-        error.code === "EBADCSRFTOKEN"
-          ? "CSRF_TOKEN_INVALID"
-          : "REQUEST_FAILED",
+      code: "REQUEST_FAILED",
       message: error.message,
     });
     return;

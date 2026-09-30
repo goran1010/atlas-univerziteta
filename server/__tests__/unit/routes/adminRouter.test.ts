@@ -5,7 +5,7 @@ import { prisma } from "../../../src/db/prisma.js";
 import * as transactionModel from "../../../src/models/transactionModel.js";
 
 import type {
-  User,
+  user,
   entityType,
   typeOfChange,
 } from "../../../src/generated/prisma/client.js";
@@ -19,7 +19,7 @@ function getResponseObject(body: unknown): Record<string, unknown> {
   return body as Record<string, unknown>;
 }
 
-let mockedUser: Omit<User, "password"> | undefined;
+let mockedUser: user | undefined;
 
 interface MockedResult {
   id: string;
@@ -31,14 +31,14 @@ interface MockedResult {
   createdAt: Date;
   reviewedAt: Date | null;
   data: JsonValue;
-  user: Omit<User, "password">;
+  user: user;
 }
 
 vi.mock("../../../src/auth/isAuthenticated.js", () => {
   return {
     isAuthenticated: (req: Request, res: Response, next: NextFunction) => {
-      req.user = mockedUser;
-      if (req.user) {
+      if (mockedUser) {
+        req.authSession = { user: mockedUser, session: {} } as never;
         next();
         return;
       }
@@ -46,6 +46,36 @@ vi.mock("../../../src/auth/isAuthenticated.js", () => {
       res.status(401).json({
         error: "You are not logged in.",
         details: [{ msg: null }],
+      });
+    },
+  };
+});
+
+vi.mock("../../../src/auth/isAdmin.js", () => {
+  return {
+    isAdmin: (req: Request, res: Response, next: NextFunction) => {
+      if (!mockedUser) {
+        res.status(401).json({
+          error: {
+            code: "AUTH_REQUIRED",
+            message: "Unauthorized: user not authenticated.",
+          },
+        });
+        return;
+      }
+
+      req.authSession = { user: mockedUser, session: {} } as never;
+
+      if (mockedUser.role === "ADMIN") {
+        next();
+        return;
+      }
+
+      res.status(403).json({
+        error: {
+          code: "FORBIDDEN",
+          message: "Access denied: admin role is required.",
+        },
       });
     },
   };
@@ -79,9 +109,13 @@ describe("Admin Router - GET /users/admin//pending-changes", () => {
   test("Responds with You need to be admin to access this route if role USER", async () => {
     mockedUser = {
       id: "1",
+      name: "test-user",
+      emailVerified: true,
+      image: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
       email: "user1@example.com",
       role: "USER",
-      githubId: null,
       adminRequestedAt: null,
     };
 
@@ -113,9 +147,13 @@ describe("Admin Router - GET /users/admin//pending-changes", () => {
         data: {},
         user: {
           id: "1",
+          name: "test-user",
+          emailVerified: true,
+          image: null,
+          createdAt: new Date(),
+          updatedAt: new Date(),
           email: "admin1@example.com",
           role: "ADMIN",
-          githubId: null,
           adminRequestedAt: null,
         },
       },
@@ -127,9 +165,13 @@ describe("Admin Router - GET /users/admin//pending-changes", () => {
 
     mockedUser = {
       id: "1",
+      name: "test-user",
+      emailVerified: true,
+      image: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
       email: "admin1@example.com",
       role: "ADMIN",
-      githubId: null,
       adminRequestedAt: null,
     };
 
@@ -144,6 +186,11 @@ describe("Admin Router - GET /users/admin//pending-changes", () => {
           reviewedAt: change.reviewedAt
             ? change.reviewedAt.toISOString()
             : null,
+          user: {
+            ...change.user,
+            createdAt: change.user.createdAt.toISOString(),
+            updatedAt: change.user.updatedAt.toISOString(),
+          },
           currentEntity: null,
           parentContext: null,
         })),
@@ -173,9 +220,13 @@ describe("Admin Router - DELETE /decline-pending-change", () => {
   test("Responds with You need to be admin to access this route if role USER", async () => {
     mockedUser = {
       id: "1",
+      name: "test-user",
+      emailVerified: true,
+      image: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
       email: "user1@example.com",
       role: "USER",
-      githubId: null,
       adminRequestedAt: null,
     };
 
@@ -208,9 +259,13 @@ describe("Admin Router - DELETE /decline-pending-change", () => {
       data: {},
       user: {
         id: "1",
+        name: "test-user",
+        emailVerified: true,
+        image: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
         email: "admin1@example.com",
         role: "ADMIN",
-        githubId: null,
         adminRequestedAt: null,
       },
     };
@@ -220,9 +275,13 @@ describe("Admin Router - DELETE /decline-pending-change", () => {
 
     mockedUser = {
       id: "1",
+      name: "test-user",
+      emailVerified: true,
+      image: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
       email: "admin1@example.com",
       role: "ADMIN",
-      githubId: null,
       adminRequestedAt: null,
     };
 
@@ -260,9 +319,13 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   test("Responds with You need to be admin to access this route if role USER", async () => {
     mockedUser = {
       id: "1",
+      name: "test-user",
+      emailVerified: true,
+      image: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
       email: "user1@example.com",
       role: "USER",
-      githubId: null,
       adminRequestedAt: null,
     };
 
@@ -285,9 +348,13 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   test("Responds with status 404 and Pending change not found if no valid id is provided", async () => {
     mockedUser = {
       id: "1",
+      name: "test-user",
+      emailVerified: true,
+      image: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
       email: "user1@example.com",
       role: "ADMIN",
-      githubId: null,
       adminRequestedAt: null,
     };
 
@@ -311,9 +378,13 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
     mockedUser = {
       id: "1",
+      name: "test-user",
+      emailVerified: true,
+      image: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
       email: "user1@example.com",
       role: "ADMIN",
-      githubId: null,
       adminRequestedAt: null,
     };
 

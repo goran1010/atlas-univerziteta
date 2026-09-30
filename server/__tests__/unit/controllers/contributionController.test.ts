@@ -31,9 +31,7 @@ vi.mock("../../../src/db/prisma.js", () => ({
 import {
   createEntity,
   deleteEntity,
-  deletePendingChange,
   editEntity,
-  getPendingChanges,
 } from "../../../src/controllers/contributionController.js";
 import { RequestValidationError } from "../../../src/errors/RequestValidationError.js";
 
@@ -64,8 +62,8 @@ describe("contributionController", () => {
 
   test("createEntity throws a validation error when contribution data is invalid", async () => {
     const req = {
-      user: { id: "1" },
-    } as Request;
+      authSession: { user: { id: "1" } },
+    } as unknown as Request;
     const { res } = createMockResponse();
 
     await expect(createEntity(req, res)).rejects.toBeInstanceOf(
@@ -76,7 +74,7 @@ describe("contributionController", () => {
   test("createEntity rejects when pending change creation fails", async () => {
     const failure = new Error("create failed");
     const req = {
-      user: { id: "1" },
+      authSession: { user: { id: "1" } },
       body: {
         entityType: "UNIVERSITY",
         data: {
@@ -97,25 +95,10 @@ describe("contributionController", () => {
     expect(jsonMock).not.toHaveBeenCalled();
   });
 
-  test("editEntity responds with status 401 when user is not authenticated", async () => {
-    const req = {} as Request;
-    const { res, statusMock, jsonMock } = createMockResponse();
-
-    await editEntity(req, res);
-
-    expect(statusMock).toHaveBeenCalledWith(401);
-    expect(jsonMock).toHaveBeenCalledWith({
-      error: {
-        code: "AUTH_REQUIRED",
-        message: "Authentication required: log in and try again.",
-      },
-    });
-  });
-
   test("editEntity throws a validation error when contribution data is invalid", async () => {
     const req = {
-      user: { id: "1" },
-    } as Request;
+      authSession: { user: { id: "1" } },
+    } as unknown as Request;
     const { res } = createMockResponse();
 
     await expect(editEntity(req, res)).rejects.toBeInstanceOf(
@@ -126,7 +109,7 @@ describe("contributionController", () => {
   test("editEntity rejects when pending change creation fails", async () => {
     const failure = new Error("update failed");
     const req = {
-      user: { id: "1" },
+      authSession: { user: { id: "1" } },
       body: {
         entityType: "UNIVERSITY",
         targetId: 1,
@@ -143,27 +126,12 @@ describe("contributionController", () => {
     expect(jsonMock).not.toHaveBeenCalled();
   });
 
-  test("deleteEntity responds with status 401 when user is not authenticated", async () => {
-    const req = {} as Request;
-    const { res, statusMock, jsonMock } = createMockResponse();
-
-    await deleteEntity(req, res);
-
-    expect(statusMock).toHaveBeenCalledWith(401);
-    expect(jsonMock).toHaveBeenCalledWith({
-      error: {
-        code: "AUTH_REQUIRED",
-        message: "Authentication required: log in and try again.",
-      },
-    });
-  });
-
   test("deleteEntity rejects when pending change creation fails", async () => {
     const failure = new Error("delete failed");
     const req = {
-      user: { id: "1" },
+      authSession: { user: { id: "1" } },
       body: { entityType: "UNIVERSITY", targetId: 1 },
-    } as Request;
+    } as unknown as Request;
     const { res, statusMock, jsonMock } = createMockResponse();
 
     createPendingChangeMock.mockRejectedValue(failure);
@@ -172,36 +140,5 @@ describe("contributionController", () => {
 
     expect(statusMock).not.toHaveBeenCalled();
     expect(jsonMock).not.toHaveBeenCalled();
-  });
-
-  test("getPendingChanges responds with status 401 when user is not authenticated", async () => {
-    const req = {} as Request;
-    const { res, statusMock, jsonMock } = createMockResponse();
-
-    await getPendingChanges(req, res);
-
-    expect(findPendingChangesMock).not.toHaveBeenCalled();
-    expect(statusMock).toHaveBeenCalledWith(401);
-    expect(jsonMock).toHaveBeenCalledWith({
-      error: {
-        code: "AUTH_REQUIRED",
-        message: "Authentication required: log in and try again.",
-      },
-    });
-  });
-
-  test("deletePendingChange responds with status 401 when user is not authenticated", async () => {
-    const req = {} as Request;
-    const { res, statusMock, jsonMock } = createMockResponse();
-
-    await deletePendingChange(req, res);
-
-    expect(statusMock).toHaveBeenCalledWith(401);
-    expect(jsonMock).toHaveBeenCalledWith({
-      error: {
-        code: "AUTH_REQUIRED",
-        message: "Authentication required: log in and try again.",
-      },
-    });
   });
 });

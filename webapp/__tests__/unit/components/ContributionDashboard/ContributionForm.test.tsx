@@ -19,7 +19,15 @@ const mockPendingChanges: PendingChange[] = [
     parentId: null,
     data: { name: "Faculty of Engineering" },
     createdAt: new Date(),
-    user: { email: "johndoe@examplemail.com", role: "USER" },
+    user: {
+      id: "test-id",
+      name: "test",
+      email: "johndoe@examplemail.com",
+      emailVerified: true,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      role: "USER",
+    },
     userId: "058d1adc-58e4-4f31-8021-64e37e7d0dd0",
   },
 ];
@@ -104,28 +112,76 @@ function Wrapper({ initialUser }: { initialUser: UserData }) {
 
 describe("ContributionForm component rendering", () => {
   test("renders Add new data tab link", async () => {
-    render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
+    render(
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "some@email.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
+    );
 
     const tab = await screen.findByRole("link", { name: /Add new data/i });
     expect(tab).toBeInTheDocument();
   });
 
   test("renders Pending changes tab link", async () => {
-    render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
+    render(
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "some@email.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
+    );
 
     const tab = await screen.findByRole("link", { name: /Pending changes/i });
     expect(tab).toBeInTheDocument();
   });
 
   test("shows entity type select when Add new data tab is active", async () => {
-    render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
+    render(
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "some@email.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
+    );
 
     const entityTypeLabel = await screen.findByText(/Entity Type/i);
     expect(entityTypeLabel).toBeInTheDocument();
   });
 
   test("switches to pending changes tab on click", async () => {
-    render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
+    render(
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "some@email.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
+    );
 
     const tab = await screen.findByRole("link", { name: /Pending changes/i });
     await user.click(tab);
@@ -135,7 +191,19 @@ describe("ContributionForm component rendering", () => {
 
   test("shows the pending changes count after loading pending changes", async () => {
     setupFetchMock({ pendingChanges: mockPendingChanges });
-    render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
+    render(
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "some@email.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
+    );
 
     const tab = await screen.findByRole("link", { name: /Pending changes/i });
     await user.click(tab);
@@ -150,7 +218,19 @@ describe("ContributionForm component rendering", () => {
       error:
         "Something went wrong while loading pending changes. Refresh the page and try again.",
     });
-    render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
+    render(
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "some@email.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
+    );
 
     const tab = await screen.findByRole("link", { name: /Pending changes/i });
     await user.click(tab);
@@ -166,7 +246,19 @@ describe("ContributionForm component rendering", () => {
   test("rejects a malformed successful pending changes response", async () => {
     vi.spyOn(console, "error").mockImplementation(() => vi.fn());
     setupFetchMock({ pendingData: [{ id: "invalid-pending-change" }] });
-    render(<Wrapper initialUser={{ email: "some@email.com", role: "USER" }} />);
+    render(
+      <Wrapper
+        initialUser={{
+          id: "test-id",
+          name: "test",
+          email: "some@email.com",
+          emailVerified: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          role: "USER",
+        }}
+      />,
+    );
 
     await user.click(
       await screen.findByRole("link", { name: /Pending changes/i }),

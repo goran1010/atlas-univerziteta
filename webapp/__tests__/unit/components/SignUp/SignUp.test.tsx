@@ -6,15 +6,18 @@ import { LogIn } from "../../../../src/components/LogIn/LogIn";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-vi.mock("../../../../src/utils/getCsrfToken", async (importOriginal) => {
-  const actual =
-    await importOriginal<typeof import("../../../../src/utils/getCsrfToken")>();
-  return {
-    ...actual,
-    getCsrfToken: () => Promise.resolve("mocked-csrf-token"),
-    clearCsrfToken: vi.fn(),
-  };
-});
+const signUpEmailMock = vi.fn();
+
+vi.mock("../../../../src/utils/authClient", () => ({
+  authClient: {
+    signUp: {
+      email: (...args: unknown[]): unknown => signUpEmailMock(...args),
+    },
+    signIn: {
+      social: vi.fn().mockReturnValue(new Promise(() => undefined)),
+    },
+  },
+}));
 
 const user = userEvent.setup();
 
@@ -95,7 +98,15 @@ describe("Render SignUp Component", () => {
     function WrapperWithUser() {
       return (
         <RootContextProvider
-          initialUserData={{ email: "user@mail.com", role: "USER" }}
+          initialUserData={{
+            id: "test-id",
+            name: "test",
+            email: "user@mail.com",
+            emailVerified: true,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+            role: "USER",
+          }}
         >
           <MemoryRouter initialEntries={["/signup"]}>
             <Notifications />
@@ -248,27 +259,18 @@ describe("SignUp Form Validation on Create button click", () => {
 
 describe("SignUp Form Submit", () => {
   test("shows a translated error after clicking Create with an existing email", async () => {
-    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-    const mockResponse = new Response(
-      JSON.stringify({
-        error: {
-          message:
-            "Validation failed: Email already in use Fix the highlighted fields and try again.",
-        },
-      }),
-      {
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(mockResponse);
+    signUpEmailMock.mockResolvedValue({
+      data: null,
+      error: { message: "Email already in use" },
+    });
+
     await submitSignUpForm({
       email: "newemail@mail.com",
       password: "Password123",
       confirmPassword: "Password123",
     });
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(signUpEmailMock).toHaveBeenCalledTimes(1);
 
     const registrationFailedMessage = await screen.findByText(
       /Registration failed\. Check your details, then try again\./i,
@@ -277,17 +279,10 @@ describe("SignUp Form Submit", () => {
   });
 
   test("Redirects to LogIn on successful form submit", async () => {
-    const mockResponse = new Response(
-      JSON.stringify({
-        message: "Registration successful! Check your email.",
-        data: { email: "newemail@mail.com" },
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(mockResponse);
+    signUpEmailMock.mockResolvedValue({
+      data: { user: { email: "newemail@mail.com" } },
+      error: null,
+    });
 
     await submitSignUpForm({
       email: "newemail@mail.com",
@@ -295,51 +290,16 @@ describe("SignUp Form Submit", () => {
       confirmPassword: "Password123",
     });
 
-    const logInButton = await screen.findByRole("button", { name: /Log In/i });
-    expect(logInButton).toBeInTheDocument();
-
-    const successMessage = await screen.findByText(
-      /Registration successful! Check your email./i,
-    );
+    const successMessage = await screen.findByText(/Registration successful/i);
     expect(successMessage).toBeInTheDocument();
   });
 
-  test("shows a translated error when a successful response is malformed", async () => {
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => undefined);
-    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
-      new Response(JSON.stringify({ message: "Registration successful." }), {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      }),
-    );
-
-    await submitSignUpForm({
-      email: "newemail@mail.com",
-      password: "Password123",
-      confirmPassword: "Password123",
-    });
-
-    expect(
-      await screen.findByText(
-        /^Something went wrong during registration\. Try again in a moment\.$/i,
-      ),
-    ).toBeInTheDocument();
-    expect(
-      screen.queryByRole("button", { name: /Log In/i }),
-    ).not.toBeInTheDocument();
-    expect(consoleErrorSpy).toHaveBeenCalled();
-  });
-
-  test("shows error message when network request throws", async () => {
+  test("shows error message when signUp throws", async () => {
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => vi.fn());
 
-    vi.spyOn(globalThis, "fetch").mockRejectedValueOnce(
-      new Error("Network error"),
-    );
+    signUpEmailMock.mockRejectedValue(new Error("Network error"));
 
     await submitSignUpForm({
       email: "newemail@mail.com",
@@ -355,13 +315,11 @@ describe("SignUp Form Submit", () => {
     consoleErrorSpy.mockRestore();
   });
 
-  test("shows fallback registration failed message when backend error payload is missing", async () => {
-    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-    const mockResponse = new Response(null, {
-      status: 400,
-      statusText: "Bad Request",
+  test("shows fallback registration failed message when backend returns error", async () => {
+    signUpEmailMock.mockResolvedValue({
+      data: null,
+      error: { message: "Bad Request" },
     });
-    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(mockResponse);
 
     await submitSignUpForm({
       email: "newemail@mail.com",
@@ -373,7 +331,7 @@ describe("SignUp Form Submit", () => {
       "Registration failed. Check your details, then try again.",
     );
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(signUpEmailMock).toHaveBeenCalled();
     expect(fallbackError).toBeInTheDocument();
   });
 });

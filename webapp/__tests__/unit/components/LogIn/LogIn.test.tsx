@@ -6,15 +6,17 @@ import { About } from "../../../../src/components/About/About";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-vi.mock("../../../../src/utils/getCsrfToken", async (importOriginal) => {
-  const actual =
-    await importOriginal<typeof import("../../../../src/utils/getCsrfToken")>();
-  return {
-    ...actual,
-    getCsrfToken: () => Promise.resolve("mocked-csrf-token"),
-    clearCsrfToken: vi.fn(),
-  };
-});
+const signInEmailMock = vi.fn();
+const signInSocialMock = vi.fn();
+
+vi.mock("../../../../src/utils/authClient", () => ({
+  authClient: {
+    signIn: {
+      email: (...args: unknown[]): unknown => signInEmailMock(...args),
+      social: (...args: unknown[]): unknown => signInSocialMock(...args),
+    },
+  },
+}));
 
 const user = userEvent.setup();
 
@@ -47,6 +49,8 @@ async function submitLogInForm({
 }
 
 beforeEach(() => {
+  vi.clearAllMocks();
+
   function Wrapper() {
     return (
       <RootContextProvider>
@@ -84,11 +88,11 @@ describe("Render LogIn Component", () => {
     expect(logInButton).toBeInTheDocument();
   });
 
-  test("shows github login error notification from query params", async () => {
-    function WrapperWithGithubError() {
+  test("shows oauth error notification from query params", async () => {
+    function WrapperWithError() {
       return (
         <RootContextProvider>
-          <MemoryRouter initialEntries={["/login?error=github"]}>
+          <MemoryRouter initialEntries={["/login?error=something"]}>
             <Notifications />
             <Routes>
               <Route path="/" element={<About />} />
@@ -99,40 +103,26 @@ describe("Render LogIn Component", () => {
       );
     }
 
-    render(<WrapperWithGithubError />);
+    render(<WrapperWithError />);
 
-    const githubFailed = await screen.findByText(/GitHub login failed/i);
+    const oauthFailed = await screen.findByText(/Login failed/i);
 
-    expect(githubFailed).toBeInTheDocument();
-  });
-
-  test("shows the no-verified-email notification for error=github_no_email", async () => {
-    function WrapperWithGithubNoEmail() {
-      return (
-        <RootContextProvider>
-          <MemoryRouter initialEntries={["/login?error=github_no_email"]}>
-            <Notifications />
-            <Routes>
-              <Route path="/" element={<About />} />
-              <Route path="/login" element={<LogIn />} />
-            </Routes>
-          </MemoryRouter>
-        </RootContextProvider>
-      );
-    }
-
-    render(<WrapperWithGithubNoEmail />);
-
-    const githubNoEmail = await screen.findByText(/no verified email/i);
-
-    expect(githubNoEmail).toBeInTheDocument();
+    expect(oauthFailed).toBeInTheDocument();
   });
 
   test("redirects to home and warns when user is already logged in", async () => {
     function WrapperWithUser() {
       return (
         <RootContextProvider
-          initialUserData={{ email: "user@mail.com", role: "USER" }}
+          initialUserData={{
+            id: "test-id",
+            name: "test",
+            email: "user@mail.com",
+            emailVerified: true,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+            role: "USER",
+          }}
         >
           <MemoryRouter initialEntries={["/login"]}>
             <Notifications />
@@ -159,38 +149,32 @@ describe("Render LogIn Component", () => {
 });
 
 describe("GitHub login", () => {
-  test("starts loading when the GitHub login link is clicked", async () => {
-    const githubLoginLink = screen.getByRole("link", {
+  test("starts loading when the GitHub login button is clicked", async () => {
+    signInSocialMock.mockReturnValue(new Promise(() => undefined));
+    const githubLoginButton = screen.getByRole("button", {
       name: "Continue with GitHub",
     });
-    githubLoginLink.addEventListener("click", (event) => {
-      event.preventDefault();
-    });
 
-    await user.click(githubLoginLink);
+    await user.click(githubLoginButton);
 
-    expect(githubLoginLink).toHaveAttribute("aria-disabled", "true");
+    expect(githubLoginButton).toBeDisabled();
     expect(
-      within(githubLoginLink).getByRole("status", { name: /Loading/i }),
+      within(githubLoginButton).getByRole("status", { name: /Loading/i }),
     ).toBeInTheDocument();
   });
 
   test("prevents a repeated GitHub login click while loading", async () => {
-    const githubLoginLink = screen.getByRole("link", {
+    signInSocialMock.mockReturnValue(new Promise(() => undefined));
+    const githubLoginButton = screen.getByRole("button", {
       name: "Continue with GitHub",
     });
-    githubLoginLink.addEventListener(
-      "click",
-      (event) => {
-        event.preventDefault();
-      },
-      { once: true },
-    );
-    await user.click(githubLoginLink);
 
-    const wasPrevented = !fireEvent.click(githubLoginLink);
+    await user.click(githubLoginButton);
 
-    expect(wasPrevented).toBe(true);
+    const wasPrevented = !fireEvent.click(githubLoginButton);
+
+    expect(wasPrevented).toBe(false);
+    expect(githubLoginButton).toBeDisabled();
   });
 });
 
@@ -263,22 +247,11 @@ describe("LogIn for validation on button click", () => {
 });
 
 describe("LogIn Form Submit", () => {
-  test("shows a translated error after submitting wrong email or password", async () => {
-    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-    const mockErrorResponse = new Response(
-      JSON.stringify({
-        error: {
-          message:
-            "Login failed: Invalid email or password. Check your credentials and try again.",
-        },
-      }),
-      {
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(mockErrorResponse);
+  test("shows a translated error after submitting with wrong credentials", async () => {
+    signInEmailMock.mockResolvedValue({
+      data: null,
+      error: { message: "Invalid credentials" },
+    });
 
     await submitLogInForm({
       email: "existing@user.com",
@@ -289,23 +262,25 @@ describe("LogIn Form Submit", () => {
       /^Login failed\. Check your email and password, then try again\.$/i,
     );
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(signInEmailMock).toHaveBeenCalledTimes(1);
     expect(errorMessage).toBeInTheDocument();
   });
 
   test("Redirects to Home on successful form submit", async () => {
-    const mockedResponse = new Response(
-      JSON.stringify({
-        message: "Logged in successfully",
-        data: { email: "new@user.com", role: "USER" },
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
+    signInEmailMock.mockResolvedValue({
+      data: {
+        user: {
+          id: "test-id",
+          name: "test",
+          email: "new@user.com",
+          emailVerified: true,
+          role: "USER",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       },
-    );
-
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(mockedResponse);
+      error: null,
+    });
 
     await submitLogInForm({ email: "new@user.com", password: "Password123" });
 
@@ -315,41 +290,12 @@ describe("LogIn Form Submit", () => {
     expect(homePageText).toBeInTheDocument();
   });
 
-  test("shows a translated error when a successful response is malformed", async () => {
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => undefined);
-    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
-      new Response(JSON.stringify({ message: "Logged in successfully" }), {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      }),
-    );
-
-    await submitLogInForm({
-      email: "new@user.com",
-      password: "Password123",
-    });
-
-    expect(
-      await screen.findByText(
-        /^Something went wrong during login\. Try again in a moment\.$/i,
-      ),
-    ).toBeInTheDocument();
-    expect(
-      screen.queryByText(/Universities and Study Programs/i),
-    ).not.toBeInTheDocument();
-    expect(consoleErrorSpy).toHaveBeenCalled();
-  });
-
-  test("shows error message when network request throws", async () => {
+  test("shows error message when signIn throws", async () => {
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => vi.fn());
 
-    vi.spyOn(globalThis, "fetch").mockRejectedValueOnce(
-      new Error("Network error"),
-    );
+    signInEmailMock.mockRejectedValue(new Error("Network error"));
 
     await submitLogInForm({
       email: "existing@user.com",
@@ -362,27 +308,5 @@ describe("LogIn Form Submit", () => {
     expect(networkErrorMessage).toBeInTheDocument();
 
     consoleErrorSpy.mockRestore();
-  });
-
-  test("shows fallback login failed message when backend error payload is missing", async () => {
-    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-    const mockedResponse = new Response(JSON.stringify({}), {
-      status: 400,
-      headers: { "Content-Type": "application/json" },
-    });
-
-    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(mockedResponse);
-
-    await submitLogInForm({
-      email: "existing@user.com",
-      password: "Password123",
-    });
-
-    const fallbackError = await screen.findByText(
-      /^Login failed\. Check your email and password, then try again\.$/i,
-    );
-
-    expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fallbackError).toBeInTheDocument();
   });
 });

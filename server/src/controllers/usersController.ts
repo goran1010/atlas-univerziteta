@@ -1,68 +1,18 @@
 import { prisma } from "../db/prisma.js";
 import { sendError, sendSuccess } from "../utils/response.js";
-import { env } from "../config/env.js";
-import { logger } from "../utils/logger.js";
 
 import type { Request, Response } from "express";
 
-const IS_PRODUCTION = env.NODE_ENV === "production";
-const NUMBER_OF_DAYS = 30;
-
-function me(req: Request, res: Response) {
-  if (!req.user) {
-    sendSuccess(res, {
-      message: "No user logged in",
-      data: null,
-    });
-    return;
-  }
-
+function logout(_req: Request, res: Response) {
   sendSuccess(res, {
-    message: "User info retrieved",
-    data: req.user,
-  });
-}
-
-function logout(req: Request, res: Response) {
-  req.logout((err) => {
-    if (err) {
-      logger.error(err, "Logout failed.");
-      sendError(res, {
-        status: 500,
-        code: "LOGOUT_FAILED",
-        message: "Logout failed: try again.",
-      });
-      return;
-    }
-
-    req.session.destroy((err) => {
-      if (err) {
-        logger.error(err, "Session destroy failed during logout.");
-        sendError(res, {
-          status: 500,
-          code: "LOGOUT_FAILED",
-          message: "Logout failed: try again.",
-        });
-        return;
-      }
-
-      res.clearCookie("sessionId", {
-        // Must set clearCookie options to match cookie set options, otherwise browser will not clear cookies
-        maxAge: NUMBER_OF_DAYS * 24 * 60 * 60 * 1000,
-        sameSite: "lax",
-        secure: IS_PRODUCTION,
-        httpOnly: true,
-        path: "/",
-      });
-      sendSuccess(res, {
-        message: "User logged out successfully",
-      });
-    });
+    message: "User logged out successfully",
   });
 }
 
 async function requestAdmin(req: Request, res: Response) {
-  if (!req.user) {
+  const user = req.authSession?.user;
+
+  if (!user) {
     sendError(res, {
       status: 401,
       code: "AUTH_REQUIRED",
@@ -71,7 +21,7 @@ async function requestAdmin(req: Request, res: Response) {
     return;
   }
 
-  if (req.user.role === "ADMIN") {
+  if (user.role === "ADMIN") {
     sendError(res, {
       status: 400,
       code: "ALREADY_ADMIN",
@@ -81,7 +31,7 @@ async function requestAdmin(req: Request, res: Response) {
   }
 
   const { adminRequestedAt } = await prisma.user.update({
-    where: { id: req.user.id },
+    where: { id: user.id },
     data: { adminRequestedAt: new Date() },
   });
 
@@ -92,7 +42,9 @@ async function requestAdmin(req: Request, res: Response) {
 }
 
 async function cancelAdminRequest(req: Request, res: Response) {
-  if (!req.user) {
+  const user = req.authSession?.user;
+
+  if (!user) {
     sendError(res, {
       status: 401,
       code: "AUTH_REQUIRED",
@@ -102,7 +54,7 @@ async function cancelAdminRequest(req: Request, res: Response) {
   }
 
   await prisma.user.update({
-    where: { id: req.user.id },
+    where: { id: user.id },
     data: { adminRequestedAt: null },
   });
 
@@ -111,4 +63,4 @@ async function cancelAdminRequest(req: Request, res: Response) {
   });
 }
 
-export { logout, me, requestAdmin, cancelAdminRequest };
+export { logout, requestAdmin, cancelAdminRequest };

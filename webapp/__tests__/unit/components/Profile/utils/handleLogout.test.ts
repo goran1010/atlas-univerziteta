@@ -1,65 +1,57 @@
 import { handleLogout } from "../../../../../src/components/Profile/utils/handleLogout";
-import {
-  clearCsrfToken,
-  getCsrfToken,
-} from "../../../../../src/utils/getCsrfToken";
+import type { AddNotification } from "../../../../../src/types";
 
-import type { RequestContext } from "../../../../../src/utils/apiMutation";
+const signOutMock = vi.fn();
 
-vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
-  const actual =
-    await importOriginal<
-      typeof import("../../../../../src/utils/getCsrfToken")
-    >();
-  return { ...actual, getCsrfToken: vi.fn(), clearCsrfToken: vi.fn() };
-});
+vi.mock("../../../../../src/utils/authClient", () => ({
+  authClient: {
+    signOut: (...args: unknown[]): unknown => signOutMock(...args),
+  },
+}));
 
-const mockedGetCsrfToken = vi.mocked(getCsrfToken);
-const mockedClearCsrfToken = vi.mocked(clearCsrfToken);
-const fetchMock = vi.fn();
-
-function createCtx(): RequestContext {
+function createCtx() {
   return {
-    addNotification: vi.fn(),
-    setLoading: vi.fn(),
+    addNotification: vi.fn<AddNotification>(),
+    setLoading: vi.fn<(loading: boolean) => void>(),
     t: (key: string) => key,
   };
 }
 
 beforeEach(() => {
-  mockedGetCsrfToken.mockReset();
-  mockedClearCsrfToken.mockReset();
-  fetchMock.mockReset();
-  mockedGetCsrfToken.mockResolvedValue("csrf-token");
-  vi.spyOn(globalThis, "fetch").mockImplementation(fetchMock);
-});
-
-afterEach(() => {
-  vi.restoreAllMocks();
+  vi.clearAllMocks();
 });
 
 describe("handleLogout", () => {
   test("clears the session, navigates home and notifies", async () => {
-    fetchMock.mockResolvedValue({
-      ok: true,
-      json: () => Promise.resolve({ message: "Logged out." }),
-    });
+    signOutMock.mockResolvedValue({ error: null });
     const ctx = createCtx();
     const navigate = vi.fn();
     const setUserData = vi.fn();
 
     await handleLogout(navigate, setUserData, ctx);
 
-    expect(fetchMock).toHaveBeenCalledWith(
-      expect.stringContaining("/users/logout"),
-      expect.objectContaining({ method: "POST" }),
-    );
+    expect(signOutMock).toHaveBeenCalled();
     expect(setUserData).toHaveBeenCalledWith(null);
-    expect(mockedClearCsrfToken).toHaveBeenCalled();
     expect(navigate).toHaveBeenCalledWith("/");
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "success",
       message: "messages.auth.logoutSuccess",
+    });
+  });
+
+  test("notifies on error and does not clear user data", async () => {
+    signOutMock.mockResolvedValue({ error: { message: "Failed" } });
+    const ctx = createCtx();
+    const navigate = vi.fn();
+    const setUserData = vi.fn();
+
+    await handleLogout(navigate, setUserData, ctx);
+
+    expect(setUserData).not.toHaveBeenCalled();
+    expect(navigate).not.toHaveBeenCalled();
+    expect(ctx.addNotification).toHaveBeenCalledWith({
+      type: "error",
+      message: "messages.auth.logoutFailed",
     });
   });
 });

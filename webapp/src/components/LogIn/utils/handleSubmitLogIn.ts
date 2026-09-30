@@ -1,42 +1,54 @@
-import { loginResponseSchema } from "../../../schemas/auth";
-import { apiMutation } from "../../../utils/apiMutation";
-import { clearCsrfToken } from "../../../utils/getCsrfToken";
+import { authClient } from "../../../utils/authClient";
 
 import type { SubmitEvent } from "react";
 import type { NavigateFunction } from "react-router";
-import type { RequestContext } from "../../../utils/apiMutation";
 import type { UserData } from "../../../types";
+import type { AddNotification, TFunction } from "../../../types";
+
+interface LoginContext {
+  addNotification: AddNotification;
+  setLoading: (loading: boolean) => void;
+  t: TFunction;
+}
 
 async function handleSubmitLogIn(
   e: SubmitEvent<HTMLFormElement>,
   inputFields: { email: string; password: string },
   setUserData: (data: UserData) => void,
   navigate: NavigateFunction,
-  ctx: RequestContext,
+  ctx: LoginContext,
 ) {
   e.preventDefault();
+  ctx.setLoading(true);
 
-  const result = await apiMutation(
-    {
-      path: "/auth/login",
-      method: "POST",
-      body: {
-        email: inputFields.email,
-        password: inputFields.password,
-      },
-      responseSchema: loginResponseSchema,
-      successMessageKey: "messages.auth.loginSuccess",
-      errorMessageKey: "messages.auth.loginFailed",
-      caughtErrorMessageKey: "messages.auth.loginError",
-      logLabel: "log in",
-    },
-    ctx,
-  );
-  if (!result) return;
+  try {
+    const { data, error } = await authClient.signIn.email({
+      email: inputFields.email,
+      password: inputFields.password,
+    });
 
-  setUserData(result.data);
-  clearCsrfToken();
-  void navigate("/");
+    if (error) {
+      ctx.addNotification({
+        type: "error",
+        message: ctx.t("messages.auth.loginFailed"),
+      });
+      return;
+    }
+
+    setUserData(data.user);
+    ctx.addNotification({
+      type: "success",
+      message: ctx.t("messages.auth.loginSuccess"),
+    });
+    void navigate("/");
+  } catch {
+    ctx.addNotification({
+      type: "error",
+      message: ctx.t("messages.auth.loginError"),
+    });
+  } finally {
+    ctx.setLoading(false);
+  }
 }
 
 export { handleSubmitLogIn };

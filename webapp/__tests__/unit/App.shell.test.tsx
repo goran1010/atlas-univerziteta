@@ -3,8 +3,21 @@ import { createMemoryRouter } from "react-router";
 import { routes } from "../../src/routes";
 import { RouterProvider } from "react-router";
 import userEvent from "@testing-library/user-event";
+import { authClient } from "../../src/utils/authClient";
+
+vi.mock("../../src/utils/authClient", () => ({
+  authClient: {
+    getSession: vi.fn(),
+    signIn: { social: vi.fn().mockReturnValue(new Promise(() => undefined)) },
+    signOut: vi.fn(),
+  },
+}));
 
 beforeEach(() => {
+  vi.mocked(authClient.getSession).mockResolvedValue({
+    data: null,
+    error: null,
+  });
   const fetchSpy = vi.spyOn(globalThis, "fetch");
   vi.spyOn(console, "error").mockImplementation(() => vi.fn());
 
@@ -65,63 +78,24 @@ describe("Root component", () => {
   });
 
   test("renders Profile link when user is logged in", async () => {
-    const mockUserData = new Response(
-      JSON.stringify({
-        message: "User retrieved successfully.",
-        data: {
-          role: "USER",
+    vi.mocked(authClient.getSession).mockResolvedValue({
+      data: {
+        user: {
+          id: "test-id",
+          name: "test",
           email: "testuser@example.com",
+          emailVerified: true,
+          role: "USER",
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
+        session: {},
       },
-    );
-
-    vi.spyOn(globalThis, "fetch").mockImplementation((url) => {
-      const requestUrl =
-        typeof url === "string"
-          ? url
-          : url instanceof URL
-            ? url.toString()
-            : url.url;
-
-      if (requestUrl.endsWith("/health")) {
-        return Promise.resolve(
-          new Response(
-            JSON.stringify({
-              message: "Server is live.",
-            }),
-            {
-              status: 200,
-              headers: { "Content-Type": "application/json" },
-            },
-          ),
-        );
-      }
-
-      if (requestUrl.endsWith("/users/me")) {
-        return Promise.resolve(mockUserData.clone());
-      }
-
-      return Promise.resolve(
-        new Response(
-          JSON.stringify({
-            message: "User not authenticated.",
-            data: null,
-          }),
-          {
-            status: 401,
-            headers: { "Content-Type": "application/json" },
-          },
-        ),
-      );
+      error: null,
     });
 
     renderRoot();
 
-    // a passive status check no longer notifies; the link is the signal
     const profileLink = await screen.findByRole("link", { name: /Profile/i });
     expect(profileLink).toBeInTheDocument();
   });

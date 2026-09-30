@@ -67,12 +67,12 @@
   "auth": {
     "or": "ILI",
     "continueWithGithub": "Nastavi preko GitHub-a",
+    "continueWithGoogle": "Nastavi preko Google-a",
     "login": {
       "linkText": "Prijava",
       "noAccountPrefix": "Nemate nalog?",
       "heading": "Prijava",
-      "githubFailed": "GitHub prijava nije uspjela. Pokušajte ponovo.",
-      "githubNoEmail": "GitHub prijava nije uspjela: GitHub nalog nema potvrđenu email adresu. Potvrdite email adresu na GitHub-u i pokušajte ponovo.",
+      "oauthFailed": "Prijava nije uspjela. Pokušajte ponovo.",
       "alreadyLoggedIn": "Već ste prijavljeni. Preusmereni ste na početnu stranicu.",
       "noAccount": "Nemate nalog ? Idite na stranicu Registracija."
     },
@@ -300,12 +300,10 @@
       "rateLimited": "Previše zahtjeva. Sačekajte 15 minuta, pa pokušajte ponovo.",
       "authRequired": "Morate biti prijavljeni za ovu radnju. Prijavite se i pokušajte ponovo.",
       "forbidden": "Nemate dozvolu za ovu radnju.",
-      "csrfInvalid": "Sigurnosna provjera sesije nije uspjela. Osvježite stranicu i pokušajte ponovo.",
       "alreadyLoggedIn": "Već ste prijavljeni.",
       "alreadyAdmin": "Već imate admin ulogu.",
       "emailNotSent": "Email za potvrdu nije poslan. Provjerite email adresu i pokušajte ponovo."
     },
-    "csrfTokenFailed": "Nije moguće uspostaviti sigurnu sesiju. Osvježite stranicu i pokušajte ponovo.",
     "pendingChanges": {
       "loadFailed": "Nije moguće učitati izmjene na čekanju. Provjerite konekciju i pokušajte ponovo.",
       "fetchError": "Došlo je do greške pri učitavanju izmjena na čekanju. Osvježite stranicu i pokušajte ponovo."
@@ -323,7 +321,8 @@
       "logoutFailed": "Odjava nije uspjela. Pokušajte ponovo.",
       "logoutError": "Došlo je do greške tokom odjave. Pokušajte ponovo za koji trenutak.",
       "logoutSuccess": "Uspješno ste odjavljeni.",
-      "githubLoginSuccess": "Uspješno ste se prijavili preko GitHub-a."
+      "githubLoginSuccess": "Uspješno ste se prijavili preko GitHub-a.",
+      "googleLoginSuccess": "Uspješno ste se prijavili preko Google-a."
     },
     "admin": {
       "approveSuccess": "Izmjena na čekanju je odobrena.",

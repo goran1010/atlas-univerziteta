@@ -18,9 +18,9 @@ The data is modeled as a nested academic hierarchy: university, its faculties, a
 - Unified search across universities, faculties, and study programs: multi-word queries where every word must match somewhere in the entity's hierarchy, case- and diacritic-insensitive, tolerant of Bosnian/Croatian/Serbian inflected forms, with ECTS/duration/founding-year matching and local-language filter words (e.g. "javna" finds public universities)
 - Relevance-ranked, grouped results with per-type filters, counts, and capped sections
 - Detail pages for universities and faculties with shareable links and per-page social previews
-- Email/password signup with confirmation emails, session login, and optional GitHub OAuth (with account linking either way)
+- Email/password signup with email verification, session login, and optional GitHub/Google OAuth (with automatic account linking)
 - Authenticated suggestions for creating, updating, or deleting data, reviewed by admins before applying
-- CSRF protection, Zod validation on both ends, WCAG-checked UI in English and the local language
+- Zod validation on both ends, WCAG-checked UI in English and the local language
 
 ## Quick start
 
@@ -92,9 +92,9 @@ Podaci prate akademsku hijerarhiju: univerzitet, njegovi fakulteti i njihovi stu
 - Objedinjena pretraga univerziteta, fakulteta i studijskih programa: više riječi odjednom (svaka riječ se traži kroz cijelu hijerarhiju), neosjetljiva na velika/mala slova i dijakritike, prepoznaje padeže i rodove (medicina/medicine/medicini, javna/javni/javno), kao i ECTS bodove, trajanje i godinu osnivanja
 - Rezultati rangirani po relevantnosti i grupisani po tipu, uz filtere, brojače i ograničene sekcije sa "Prikaži sve"
 - Stranice sa detaljima univerziteta i fakulteta, sa linkovima za dijeljenje i ispravnim pregledima na društvenim mrežama
-- Registracija uz potvrdu emailom, prijava sesijom i opciona GitHub prijava (sa povezivanjem naloga u oba smjera)
+- Registracija uz potvrdu emailom, prijava sesijom i opciona GitHub/Google prijava (sa automatskim povezivanjem naloga)
 - Prijavljeni korisnici predlažu dodavanje, izmjenu ili brisanje podataka; administratori pregledaju prijedloge prije primjene
-- CSRF zaštita, validacija podataka na obje strane, pristupačnost provjerena po WCAG standardu, interfejs na engleskom i našem jeziku
+- Validacija podataka na obje strane, pristupačnost provjerena po WCAG standardu, interfejs na engleskom i našem jeziku
 
 ### Pokretanje
 

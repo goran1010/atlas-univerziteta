@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { SignUpForm } from "./SignUpForm";
 import { GitHubLoginLink } from "../sharedComponents/GitHubLoginLink";
+import { GoogleLoginLink } from "../sharedComponents/GoogleLoginLink";
 import { DividerOr } from "../sharedComponents/DividerOr";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../../utils/envConfig";
@@ -53,7 +54,10 @@ function SignUp() {
 
           <DividerOr />
 
-          <GitHubLoginLink disabled={loading} onLoadingChange={setLoading} />
+          <div className="flex flex-col gap-2">
+            <GitHubLoginLink disabled={loading} onLoadingChange={setLoading} />
+            <GoogleLoginLink disabled={loading} onLoadingChange={setLoading} />
+          </div>
 
           <DividerOr />
 

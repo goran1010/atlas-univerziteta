@@ -6,10 +6,12 @@ class Env {
   public readonly RESEND_API_KEY: string | undefined;
   public readonly RESEND_FROM_EMAIL: string;
   public readonly COOKIE_SECRET: string;
+  public readonly BETTER_AUTH_SECRET: string;
   public NODE_ENV: "development" | "test" | "production";
   public readonly GITHUB_CLIENT_ID: string;
   public readonly GITHUB_CLIENT_SECRET: string;
-  public readonly GITHUB_CALLBACK_URL: string;
+  public readonly GOOGLE_CLIENT_ID: string;
+  public readonly GOOGLE_CLIENT_SECRET: string;
   public TEST_DATABASE_URL?: string | undefined;
 
   constructor() {
@@ -27,10 +29,13 @@ class Env {
     this.RESEND_FROM_EMAIL =
       process.env["RESEND_FROM_EMAIL"] ?? "onboarding@resend.dev";
     this.COOKIE_SECRET = Env.#getEnv("COOKIE_SECRET");
+    this.BETTER_AUTH_SECRET = Env.#getEnv("BETTER_AUTH_SECRET");
 
     this.GITHUB_CLIENT_ID = Env.#getEnv("GITHUB_CLIENT_ID");
     this.GITHUB_CLIENT_SECRET = Env.#getEnv("GITHUB_CLIENT_SECRET");
-    this.GITHUB_CALLBACK_URL = Env.#getEnv("GITHUB_CALLBACK_URL");
+
+    this.GOOGLE_CLIENT_ID = Env.#getEnv("GOOGLE_CLIENT_ID");
+    this.GOOGLE_CLIENT_SECRET = Env.#getEnv("GOOGLE_CLIENT_SECRET");
 
     this.TEST_DATABASE_URL = Env.#getTestEnv("TEST_DATABASE_URL");
   }
