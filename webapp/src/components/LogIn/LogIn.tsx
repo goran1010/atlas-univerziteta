@@ -17,15 +17,11 @@ function LogIn() {
 
   useEffect(() => {
     const loginError = searchParams.get("error");
-    const errorMessages: Record<string, string> = {
-      github: "auth.login.githubFailed",
-      github_no_email: "auth.login.githubNoEmail",
-      google: "auth.login.googleFailed",
-      google_no_email: "auth.login.googleNoEmail",
-    };
-    const messageKey = loginError ? errorMessages[loginError] : undefined;
-    if (messageKey) {
-      addNotification({ type: "error", message: t(messageKey) });
+    if (loginError) {
+      addNotification({
+        type: "error",
+        message: t("auth.login.oauthFailed"),
+      });
     }
   }, [searchParams, addNotification, t]);
 

@@ -1,9 +1,15 @@
 import type { SystemLanguage } from "../utils/setInitialLanguage";
 
 export type UserData = {
+  id: string;
+  name: string;
   email: string;
-  role: "ADMIN" | "USER";
+  emailVerified: boolean;
+  image?: string | null;
+  role?: string;
   adminRequestedAt?: string | null;
+  createdAt: Date;
+  updatedAt: Date;
 } | null;
 
 export type Language = SystemLanguage | "system";

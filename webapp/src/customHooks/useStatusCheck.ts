@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { SERVER_URL } from "../utils/envConfig";
-import { currentUserResponseSchema } from "../schemas/auth";
+import { authClient } from "../utils/authClient";
 
 import type { AddNotification } from "../types";
 import type { UserData } from "../types";
@@ -18,43 +17,18 @@ function useStatusCheck(
 
   useEffect(() => {
     let isCancelled = false;
-    const abortController = new AbortController();
 
     async function checkLogin() {
       try {
-        const response = await fetch(`${SERVER_URL}/users/me`, {
-          mode: "cors",
-          method: "GET",
-          credentials: "include",
-          signal: abortController.signal,
-        });
+        const { data: session, error } = await authClient.getSession();
 
-        if (!response.ok) {
-          const message = tRef.current("messages.loginStatus.error");
+        if (isCancelled) return;
 
-          if (isCancelled) {
-            return;
-          }
+        if (error || !session) return;
 
-          addNotification({
-            type: "error",
-            message,
-          });
-
-          return;
-        }
-
-        const result = currentUserResponseSchema.parse(await response.json());
-
-        if (isCancelled || !result.data) {
-          return;
-        }
-
-        setUserData(result.data);
+        setUserData(session.user);
       } catch (err) {
-        if (isCancelled) {
-          return;
-        }
+        if (isCancelled) return;
 
         addNotification({
           type: "error",
@@ -69,7 +43,6 @@ function useStatusCheck(
 
     return () => {
       isCancelled = true;
-      abortController.abort();
     };
   }, [addNotification]);
 

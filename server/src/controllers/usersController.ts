@@ -1,28 +1,7 @@
-import { fromNodeHeaders } from "better-auth/node";
 import { prisma } from "../db/prisma.js";
-import { auth } from "../config/auth.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 
 import type { Request, Response } from "express";
-
-async function me(req: Request, res: Response) {
-  const session = await auth.api.getSession({
-    headers: fromNodeHeaders(req.headers),
-  });
-
-  if (!session) {
-    sendSuccess(res, {
-      message: "No user logged in",
-      data: null,
-    });
-    return;
-  }
-
-  sendSuccess(res, {
-    message: "User info retrieved",
-    data: session.user,
-  });
-}
 
 function logout(_req: Request, res: Response) {
   sendSuccess(res, {
@@ -84,4 +63,4 @@ async function cancelAdminRequest(req: Request, res: Response) {
   });
 }
 
-export { logout, me, requestAdmin, cancelAdminRequest };
+export { logout, requestAdmin, cancelAdminRequest };

@@ -1,33 +1,47 @@
-import { actionSuccessResponseSchema } from "../../../schemas/api";
-import { clearCsrfToken } from "../../../utils/getCsrfToken";
-import { apiMutation } from "../../../utils/apiMutation";
+import { authClient } from "../../../utils/authClient";
 
-import type { RequestContext } from "../../../utils/apiMutation";
+import type { AddNotification, TFunction } from "../../../types";
 import type { UserData } from "../../../types";
 import type { NavigateFunction } from "react-router";
+
+interface LogoutContext {
+  addNotification: AddNotification;
+  setLoading: (loading: boolean) => void;
+  t: TFunction;
+}
 
 async function handleLogout(
   navigate: NavigateFunction,
   setUserData: (data: UserData) => void,
-  ctx: RequestContext,
+  ctx: LogoutContext,
 ) {
-  const result = await apiMutation(
-    {
-      path: "/users/logout",
-      method: "POST",
-      responseSchema: actionSuccessResponseSchema,
-      successMessageKey: "messages.auth.logoutSuccess",
-      errorMessageKey: "messages.auth.logoutFailed",
-      caughtErrorMessageKey: "messages.auth.logoutError",
-      logLabel: "log out",
-    },
-    ctx,
-  );
-  if (!result) return;
+  ctx.setLoading(true);
 
-  setUserData(null);
-  clearCsrfToken();
-  void navigate("/");
+  try {
+    const { error } = await authClient.signOut();
+
+    if (error) {
+      ctx.addNotification({
+        type: "error",
+        message: ctx.t("messages.auth.logoutFailed"),
+      });
+      return;
+    }
+
+    setUserData(null);
+    ctx.addNotification({
+      type: "success",
+      message: ctx.t("messages.auth.logoutSuccess"),
+    });
+    void navigate("/");
+  } catch {
+    ctx.addNotification({
+      type: "error",
+      message: ctx.t("messages.auth.logoutError"),
+    });
+  } finally {
+    ctx.setLoading(false);
+  }
 }
 
 export { handleLogout };

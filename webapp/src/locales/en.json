@@ -72,10 +72,7 @@
       "linkText": "Log In",
       "noAccountPrefix": "Don't have an account?",
       "heading": "Log in",
-      "githubFailed": "GitHub login failed. Please try again.",
-      "githubNoEmail": "GitHub login failed: your GitHub account has no verified email address. Verify your email on GitHub and try again.",
-      "googleFailed": "Google login failed. Please try again.",
-      "googleNoEmail": "Google login failed: your Google account has no verified email address.",
+      "oauthFailed": "Login failed. Please try again.",
       "alreadyLoggedIn": "You are already logged in. Redirected to the home page.",
       "noAccount": "Don't have an account ? Go to the Sign Up page."
     },
@@ -303,12 +300,10 @@
       "rateLimited": "Too many requests. Please wait 15 minutes, then try again.",
       "authRequired": "You need to be logged in for this. Log in and try again.",
       "forbidden": "You do not have permission for this action.",
-      "csrfInvalid": "Your session security check failed. Refresh the page and try again.",
       "alreadyLoggedIn": "You are already logged in.",
       "alreadyAdmin": "You already have the admin role.",
       "emailNotSent": "Confirmation email could not be sent. Check the email address and try again."
     },
-    "csrfTokenFailed": "Could not start a secure session. Refresh the page and try again.",
     "pendingChanges": {
       "loadFailed": "Could not load pending changes. Check your connection and try again.",
       "fetchError": "Something went wrong while loading pending changes. Refresh the page and try again."

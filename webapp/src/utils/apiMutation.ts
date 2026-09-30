@@ -1,7 +1,6 @@
 import { SERVER_URL } from "./envConfig";
 import { readResponseError } from "../schemas/api";
 import { notificationMessageKey } from "./apiError";
-import { getCsrfToken, isCsrfTokenError } from "./getCsrfToken";
 
 import type { z } from "zod";
 import type { TFunction } from "../types";
@@ -24,9 +23,6 @@ interface ApiMutationConfig<Schema extends z.ZodType> {
   logLabel: string;
 }
 
-// Sends an authorized mutation to the API: toggles loading, fetches the CSRF
-// token, performs the request and shows a success or error notification.
-// Returns the parsed response on success, or null after any handled failure.
 async function apiMutation<Schema extends z.ZodType>(
   {
     path,
@@ -42,14 +38,12 @@ async function apiMutation<Schema extends z.ZodType>(
 ): Promise<z.output<Schema> | null> {
   try {
     setLoading(true);
-    const csrfToken = await getCsrfToken({ addNotification, t });
 
     const options: RequestInit = {
       method,
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
-        "x-csrf-token": csrfToken,
       },
       credentials: "include",
     };
@@ -78,9 +72,6 @@ async function apiMutation<Schema extends z.ZodType>(
     });
     return null;
   } catch (error) {
-    if (isCsrfTokenError(error)) {
-      return null;
-    }
     addNotification({
       type: "error",
       message: t(caughtErrorMessageKey),
