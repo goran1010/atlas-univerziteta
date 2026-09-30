@@ -80,7 +80,7 @@ model PendingUser {
   token     String
   expiresAt DateTime
 
-  @@map("pending_users")
+  @@map("pending_user")
 }
 
 enum typeOfChange {
@@ -129,7 +129,7 @@ model University {
   faculties         Faculty[]
 
   @@unique([name, city])
-  @@map("universities")
+  @@map("university")
 }
 
 model Faculty {
@@ -148,7 +148,7 @@ model Faculty {
   studyPrograms     StudyProgram[]
 
   @@unique([name, universityId])
-  @@map("faculties")
+  @@map("faculty")
 }
 
 model StudyProgram {
@@ -165,7 +165,7 @@ model StudyProgram {
   tracks        Track[]
 
   @@unique([name, facultyId, cycle])
-  @@map("study_programs")
+  @@map("study_program")
 }
 
 model Track {
@@ -179,7 +179,7 @@ model Track {
   lastModified   DateTime?
 
   @@unique([name, studyProgramId])
-  @@map("tracks")
+  @@map("track")
 }
 
 enum entityType {
@@ -216,5 +216,5 @@ model PendingChange {
   @@index([targetId])
   @@index([parentId])
   @@index([userId])
-  @@map("pending_changes")
+  @@map("pending_change")
 }
