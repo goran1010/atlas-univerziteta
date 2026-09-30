@@ -6,7 +6,7 @@ export type UserData = {
   email: string;
   emailVerified: boolean;
   image?: string | null;
-  role?: string;
+  role?: "ADMIN" | "USER";
   adminRequestedAt?: string | null;
   createdAt: Date;
   updatedAt: Date;
