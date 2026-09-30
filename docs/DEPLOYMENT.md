@@ -8,10 +8,11 @@
 
 See `.env.production.example` for the VPS environment variable reference and `docker-compose.yml` for the container setup.
 
-Production GitHub OAuth callback URL:
+BetterAuth handles OAuth callback URLs automatically based on the server's base URL. Update the authorized redirect URIs in your GitHub and Google OAuth app settings to match:
 
 ```text
-https://atlasuniverziteta.com/server/auth/github/callback
+https://atlasuniverziteta.com/server/api/auth/callback/github
+https://atlasuniverziteta.com/server/api/auth/callback/google
 ```
 
 ## Share previews and prerendered meta

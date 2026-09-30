@@ -9,8 +9,9 @@ Local development setup for Atlas Univerziteta. For hosting and production confi
 
 You will also need:
 
-- a Resend API key for signup confirmation emails
-- GitHub OAuth credentials if you want GitHub login enabled (create them at <https://github.com/settings/developers>)
+- a Resend API key for signup confirmation emails (in dev mode, confirmation links are logged to the console instead)
+- GitHub OAuth credentials if you want GitHub login (create them at <https://github.com/settings/developers>)
+- Google OAuth credentials if you want Google login (create them at <https://console.cloud.google.com/apis/credentials>)
 
 ## Installation
 
@@ -35,10 +36,12 @@ Fill in the server values and adjust the webapp server URL if needed.
 - `SERVER_URL`: public server base URL used in confirmation links
 - `PORT`: server port, usually `3000`
 - `COOKIE_SECRET`: session secret
+- `BETTER_AUTH_SECRET`: BetterAuth secret (at least 32 characters, generate with `openssl rand -base64 32`)
 - `NODE_ENV`: runtime mode, usually `development`
-- `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET` / `GITHUB_CALLBACK_URL`: optional GitHub OAuth settings
+- `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET`: optional GitHub OAuth settings
+- `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`: optional Google OAuth settings
 
-Local callback example: `http://localhost:3000/auth/github/callback`
+BetterAuth handles OAuth callback URLs automatically - no callback URL env vars needed.
 
 ### Webapp (`webapp/.env.example`)
 
