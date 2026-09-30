@@ -1,17 +1,7 @@
-import { CsrfTokenError } from "../../../../../src/utils/getCsrfToken";
 import type { PendingChange } from "../../../../../src/schemas/pendingChange";
 import type { HandleSubmitUniversityEntityParams } from "../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
 
-const getCsrfTokenMock = vi.fn<(args: unknown) => Promise<string>>();
 const fetchMock = vi.fn();
-
-vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
-  const actual =
-    await importOriginal<
-      typeof import("../../../../../src/utils/getCsrfToken")
-    >();
-  return { ...actual, getCsrfToken: (args: unknown) => getCsrfTokenMock(args) };
-});
 
 const t = (key: string) => key;
 
@@ -52,7 +42,6 @@ function createErrorResponse(error: Record<string, unknown>) {
 }
 
 beforeEach(() => {
-  getCsrfTokenMock.mockReset();
   fetchMock.mockReset();
   vi.spyOn(globalThis, "fetch").mockImplementation(fetchMock);
 });
@@ -63,7 +52,6 @@ afterEach(() => {
 
 describe("handleSubmitUniversityEntity", () => {
   test("uses POST with numeric parent id for create under parent entity", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
     fetchMock.mockResolvedValue(
       createSuccessResponse(
         {
@@ -74,7 +62,7 @@ describe("handleSubmitUniversityEntity", () => {
           parentId: 15,
           data: { name: "Faculty of Law" },
           createdAt: new Date(),
-          user: { email: "user@email.com", role: "USER" },
+          user: { id: "test-id", name: "test", email: "user@email.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
           userId: "user-1",
         },
         "Created.",
@@ -105,7 +93,6 @@ describe("handleSubmitUniversityEntity", () => {
   });
 
   test("submits a create request and calls onSuccess", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
     fetchMock.mockResolvedValue(
       createSuccessResponse(
         {
@@ -121,7 +108,7 @@ describe("handleSubmitUniversityEntity", () => {
             ownership: "PUBLIC",
           },
           createdAt: new Date(),
-          user: { email: "submitter@email.com", role: "USER" },
+          user: { id: "test-id", name: "test", email: "submitter@email.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
           userId: "user-1",
         },
         "Pending change created successfully.",
@@ -146,7 +133,6 @@ describe("handleSubmitUniversityEntity", () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-csrf-token": "csrf-token",
         },
       }),
     );
@@ -160,7 +146,6 @@ describe("handleSubmitUniversityEntity", () => {
   });
 
   test("uses PUT and target id for updates", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
     fetchMock.mockResolvedValue(
       createSuccessResponse(
         {
@@ -171,7 +156,7 @@ describe("handleSubmitUniversityEntity", () => {
           parentId: null,
           data: { name: "Updated Faculty" },
           createdAt: new Date(),
-          user: { email: "user@email.com", role: "USER" },
+          user: { id: "test-id", name: "test", email: "user@email.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
           userId: "user-1",
         },
         "Updated.",
@@ -203,7 +188,6 @@ describe("handleSubmitUniversityEntity", () => {
   });
 
   test("uses DELETE and target id for delete changes", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
     fetchMock.mockResolvedValue(
       createSuccessResponse(
         {
@@ -214,7 +198,7 @@ describe("handleSubmitUniversityEntity", () => {
           parentId: null,
           data: {},
           createdAt: new Date(),
-          user: { email: "user@email.com", role: "USER" },
+          user: { id: "test-id", name: "test", email: "user@email.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
           userId: "user-1",
         },
         "Deleted.",
@@ -244,27 +228,7 @@ describe("handleSubmitUniversityEntity", () => {
     );
   });
 
-  test("does not notify again when fetching the csrf token fails", async () => {
-    getCsrfTokenMock.mockRejectedValue(
-      new CsrfTokenError(new Error("token endpoint down")),
-    );
-
-    const { handleSubmitUniversityEntity } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
-    const addNotification = vi.fn();
-    const setLoading = vi.fn();
-
-    await handleSubmitUniversityEntity({
-      ...baseArgs,
-      ctx: { addNotification, setLoading, t },
-    });
-
-    expect(fetchMock).not.toHaveBeenCalled();
-    expect(addNotification).not.toHaveBeenCalled();
-    expect(setLoading).toHaveBeenLastCalledWith(false);
-  });
-
-  test("does not request a CSRF token or submit an invalid target ID", async () => {
+  test("does not submit an invalid target ID", async () => {
     vi.spyOn(console, "error").mockImplementation(() => vi.fn());
     const addNotification = vi.fn();
 
@@ -280,7 +244,6 @@ describe("handleSubmitUniversityEntity", () => {
       ctx: { addNotification, setLoading: vi.fn(), t },
     });
 
-    expect(getCsrfTokenMock).not.toHaveBeenCalled();
     expect(fetchMock).not.toHaveBeenCalled();
     expect(addNotification).toHaveBeenCalledWith({
       type: "error",
@@ -289,7 +252,6 @@ describe("handleSubmitUniversityEntity", () => {
   });
 
   test("does not call onSuccess when a successful response has invalid data", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
     fetchMock.mockResolvedValue({
       ok: true,
       json: () =>
@@ -322,7 +284,6 @@ describe("handleSubmitUniversityEntity", () => {
   });
 
   test("falls back to the generic add error when the backend error payload is missing", async () => {
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
     fetchMock.mockResolvedValue(createErrorResponse({}));
 
     const { handleSubmitUniversityEntity } =
@@ -342,7 +303,6 @@ describe("handleSubmitUniversityEntity", () => {
 
   test("shows the fallback error when the request throws", async () => {
     const requestError = new Error("Network failure");
-    getCsrfTokenMock.mockResolvedValue("csrf-token");
     fetchMock.mockRejectedValue(requestError);
     const consoleErrorSpy = vi
       .spyOn(console, "error")

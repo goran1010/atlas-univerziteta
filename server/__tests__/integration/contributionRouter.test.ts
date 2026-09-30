@@ -427,7 +427,10 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
     const { agent, user } = await createLoggedInAgent();
     const otherUser = await prisma.user.create({
       data: {
+        id: crypto.randomUUID(),
+        name: "other-user",
         email: `other_${Date.now().toString()}@example.com`,
+        updatedAt: new Date(),
       },
     });
 

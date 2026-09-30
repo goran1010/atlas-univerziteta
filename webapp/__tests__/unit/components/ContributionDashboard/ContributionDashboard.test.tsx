@@ -33,7 +33,12 @@ describe("render ContributionDashboard component", () => {
 
   test("renders contribution form when user exists", async () => {
     const userData: UserData = {
+      id: "test-id",
+      name: "test",
       email: "some@email.com",
+      emailVerified: true,
+      createdAt: new Date(),
+      updatedAt: new Date(),
       role: "USER",
     };
     render(<Wrapper initialUser={userData} />);

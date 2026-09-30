@@ -1,11 +1,9 @@
 interface CreateNewUserInputOptions {
   id?: string;
+  name?: string;
   email?: string;
   password?: string;
   role?: "USER" | "ADMIN";
-  githubId?: string | null;
-  googleId?: string | null;
-  "confirm-password"?: string;
 }
 
 function createNewUserInput(user: CreateNewUserInputOptions = {}) {
@@ -14,14 +12,12 @@ function createNewUserInput(user: CreateNewUserInputOptions = {}) {
 
   const newUser = {
     id: user.id ?? `${timestamp.toString()}_${randomSuffix.toString()}`,
+    name: user.name ?? `test_user_${randomSuffix.toString()}`,
     email:
       user.email ??
       `test_user_${timestamp.toString()}_${randomSuffix.toString()}@non-existent-mail.comms`,
-    password: user.password ?? "123123",
+    password: user.password ?? "Password123",
     role: user.role ?? "USER",
-    githubId: user.githubId ?? null,
-    googleId: user.googleId ?? null,
-    "confirm-password": user["confirm-password"] ?? "123123",
   };
 
   return newUser;

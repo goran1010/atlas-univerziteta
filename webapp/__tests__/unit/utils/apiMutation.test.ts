@@ -1,17 +1,7 @@
 import { z } from "zod";
 import { apiMutation } from "../../../src/utils/apiMutation";
-import { CsrfTokenError } from "../../../src/utils/getCsrfToken";
-import { getCsrfToken } from "../../../src/utils/getCsrfToken";
 
 import type { RequestContext } from "../../../src/utils/apiMutation";
-
-vi.mock("../../../src/utils/getCsrfToken", async (importOriginal) => {
-  const actual =
-    await importOriginal<typeof import("../../../src/utils/getCsrfToken")>();
-  return { ...actual, getCsrfToken: vi.fn() };
-});
-
-const mockedGetCsrfToken = vi.mocked(getCsrfToken);
 
 const fetchMock = vi.fn();
 
@@ -39,9 +29,7 @@ function createCtx(): RequestContext {
 }
 
 beforeEach(() => {
-  mockedGetCsrfToken.mockReset();
   fetchMock.mockReset();
-  mockedGetCsrfToken.mockResolvedValue("csrf-token");
   vi.spyOn(globalThis, "fetch").mockImplementation(fetchMock);
 });
 
@@ -65,7 +53,6 @@ describe("apiMutation", () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-csrf-token": "csrf-token",
         },
         body: JSON.stringify({ id: "change-1" }),
         credentials: "include",
@@ -202,19 +189,5 @@ describe("apiMutation", () => {
       "Error trying to run example action:",
       requestError,
     );
-  });
-
-  test("does not notify again when fetching the csrf token fails", async () => {
-    mockedGetCsrfToken.mockRejectedValue(
-      new CsrfTokenError(new Error("token endpoint down")),
-    );
-    const ctx = createCtx();
-
-    const result = await apiMutation(createConfig(), ctx);
-
-    expect(result).toBeNull();
-    expect(fetchMock).not.toHaveBeenCalled();
-    expect(ctx.addNotification).not.toHaveBeenCalled();
-    expect(ctx.setLoading).toHaveBeenLastCalledWith(false);
   });
 });

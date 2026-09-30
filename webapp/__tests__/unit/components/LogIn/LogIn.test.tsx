@@ -6,16 +6,6 @@ import { About } from "../../../../src/components/About/About";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-vi.mock("../../../../src/utils/getCsrfToken", async (importOriginal) => {
-  const actual =
-    await importOriginal<typeof import("../../../../src/utils/getCsrfToken")>();
-  return {
-    ...actual,
-    getCsrfToken: () => Promise.resolve("mocked-csrf-token"),
-    clearCsrfToken: vi.fn(),
-  };
-});
-
 const user = userEvent.setup();
 
 interface FormElements {
@@ -132,7 +122,7 @@ describe("Render LogIn Component", () => {
     function WrapperWithUser() {
       return (
         <RootContextProvider
-          initialUserData={{ email: "user@mail.com", role: "USER" }}
+          initialUserData={{ id: "test-id", name: "test", email: "user@mail.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }}
         >
           <MemoryRouter initialEntries={["/login"]}>
             <Notifications />
@@ -297,7 +287,7 @@ describe("LogIn Form Submit", () => {
     const mockedResponse = new Response(
       JSON.stringify({
         message: "Logged in successfully",
-        data: { email: "new@user.com", role: "USER" },
+        data: { id: "test-id", name: "test", email: "new@user.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
       }),
       {
         status: 200,

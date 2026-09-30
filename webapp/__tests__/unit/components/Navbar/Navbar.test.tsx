@@ -12,7 +12,12 @@ import type { UserData } from "../../../../src/types";
 
 function createUser(role: Role = "ADMIN"): UserData {
   return {
+    id: "test-id",
+    name: "test",
     email: "test@example.com",
+    emailVerified: true,
+    createdAt: new Date(),
+    updatedAt: new Date(),
     role,
   };
 }
@@ -125,7 +130,7 @@ describe("Render Navbar on root route", () => {
         new Response(
           JSON.stringify({
             message: "User retrieved successfully.",
-            data: { email: "test@example.com", role: "USER" },
+            data: { id: "test-id", name: "test", email: "test@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
           }),
           {
             status: 200,
@@ -136,7 +141,7 @@ describe("Render Navbar on root route", () => {
     });
 
     render(
-      <Wrapper initialUser={{ email: "test@example.com", role: "USER" }} />,
+      <Wrapper initialUser={{ id: "test-id", name: "test", email: "test@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
     );
     await screen.findByText(/Home/i);
 

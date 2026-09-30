@@ -4,24 +4,36 @@ import {
 } from "../../../src/utils/sanitizeUser.js";
 import { describe, test, expect } from "vitest";
 
-import type { User } from "../../../src/generated/prisma/client.js";
+import type { user } from "../../../src/generated/prisma/client.js";
+
+const now = new Date();
 
 describe("sanitizeUser", () => {
-  test("should remove password from user object", () => {
-    const user: User = {
+  test("should return user fields without relations", () => {
+    const dbUser: user = {
       id: "1",
-      role: "USER",
-      password: "secret",
+      name: "Test User",
       email: "testuser@example.com",
-      githubId: "123456",
-      googleId: null,
+      emailVerified: true,
+      image: null,
+      role: "USER",
       adminRequestedAt: null,
+      createdAt: now,
+      updatedAt: now,
     };
-    const sanitizedUser = sanitizeUser(user);
+    const sanitized = sanitizeUser(dbUser);
 
-    expect(sanitizedUser).not.toHaveProperty("password");
-    expect(sanitizedUser).toHaveProperty("email", "testuser@example.com");
-    expect(sanitizedUser).toHaveProperty("adminRequestedAt", null);
+    expect(sanitized).toEqual({
+      id: "1",
+      name: "Test User",
+      email: "testuser@example.com",
+      emailVerified: true,
+      image: null,
+      role: "USER",
+      adminRequestedAt: null,
+      createdAt: now,
+      updatedAt: now,
+    });
   });
 });
 
@@ -31,30 +43,34 @@ describe("sanitizeUsers", () => {
   });
 
   test("should sanitize an array of user objects", () => {
-    const users: User[] = [
+    const users: user[] = [
       {
         id: "1",
-        password: "secret1",
+        name: "User One",
         email: "user1@example.com",
-        githubId: "123456",
-        googleId: null,
+        emailVerified: true,
+        image: null,
         role: "USER",
         adminRequestedAt: null,
+        createdAt: now,
+        updatedAt: now,
       },
       {
         id: "2",
-        password: "secret2",
+        name: "User Two",
         email: "user2@example.com",
-        githubId: "654321",
-        googleId: null,
+        emailVerified: true,
+        image: null,
         role: "ADMIN",
         adminRequestedAt: null,
+        createdAt: now,
+        updatedAt: now,
       },
     ];
     const sanitizedUsers = sanitizeUsers(users);
-    sanitizedUsers.forEach((user) => {
-      expect(user).not.toHaveProperty("password");
-      expect(user).toHaveProperty("email");
+    sanitizedUsers.forEach((u) => {
+      expect(u).toHaveProperty("email");
+      expect(u).toHaveProperty("name");
     });
   });
 });

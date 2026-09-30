@@ -17,10 +17,12 @@ import {
   universityEditDataSchema,
 } from "./contribution";
 
-const pendingChangeUserSchema = z.object({
-  email: z.email(),
-  role: userRoleSchema,
-});
+const pendingChangeUserSchema = z
+  .object({
+    email: z.email(),
+    role: userRoleSchema,
+  })
+  .passthrough();
 
 const pendingChangeBaseSchema = z.object({
   id: z.string().min(1),

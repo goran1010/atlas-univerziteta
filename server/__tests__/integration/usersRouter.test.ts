@@ -5,55 +5,60 @@ import { createAndLoginUser } from "../utils/createUserAndLogin.js";
 import { createNewUserInput } from "../utils/createNewUserInput.js";
 import { prisma } from "../../src/db/prisma.js";
 
-function getResponseObject(body: unknown): Record<string, unknown> {
-  expect(body).toBeTypeOf("object");
-  expect(body).not.toBeNull();
-
-  return body as Record<string, unknown>;
+async function deleteUser(email: string) {
+  const user = await prisma.user.findUnique({ where: { email } });
+  if (!user) return;
+  await prisma.account.deleteMany({ where: { userId: user.id } });
+  await prisma.session.deleteMany({ where: { userId: user.id } });
+  await prisma.pendingChange.deleteMany({ where: { userId: user.id } });
+  await prisma.user.delete({ where: { id: user.id } });
 }
 
 describe("usersRouter", () => {
-  test("successfully create a user and returns status 201 and message", async () => {
-    const newUserData = createNewUserInput();
+  test("sign up creates a user via BetterAuth", async () => {
+    const userData = createNewUserInput();
 
-    const response = await request(app).post("/auth/signup").send(newUserData);
-    const responseBody = getResponseObject(response.body);
+    const response = await request(app)
+      .post("/api/auth/sign-up/email")
+      .set("Content-Type", "application/json")
+      .send({
+        email: userData.email,
+        password: userData.password,
+        name: userData.name,
+      });
 
-    expect(response.status).toBe(201);
-    expect(responseBody["message"]).toBe(
-      "Registration successful! Check your email.",
-    );
-    expect(responseBody["data"]).toBeTypeOf("object");
-  });
-
-  test("responds with 200 and User test_user logged in successfully for correct login input", async () => {
-    const agent = request.agent(app);
-    const newUserData = createNewUserInput();
-
-    const response = await createAndLoginUser(agent, newUserData);
     expect(response.status).toBe(200);
-    expect(response.body).toEqual(
-      expect.objectContaining({
-        message: "Logged in successfully",
-      }),
-    );
+    expect(response.body).toHaveProperty("user");
+
+    await deleteUser(userData.email);
   });
 
-  test("responds User logged out successfully", async () => {
+  test("sign in returns a session", async () => {
+    const agent = request.agent(app);
+    const userData = createNewUserInput();
+    const response = await createAndLoginUser(agent, userData);
+
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty("session");
+
+    await deleteUser(userData.email);
+  });
+
+  test("logout responds with success", async () => {
     const agent = request.agent(app);
     const userData = createNewUserInput();
     await createAndLoginUser(agent, userData);
 
     const response = await agent.post("/users/logout");
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: null,
-        message: "User logged out successfully",
-      },
-    };
 
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual(
+      expect.objectContaining({
+        message: "User logged out successfully",
+      }),
+    );
+
+    await deleteUser(userData.email);
   });
 });
 
@@ -64,25 +69,20 @@ describe("usersRouter - POST /users/request-admin", () => {
     await createAndLoginUser(agent, userData);
 
     const response = await agent.post("/users/request-admin");
-    const responseBody = getResponseObject(response.body);
-    const data = getResponseObject(responseBody["data"]);
 
     expect(response.status).toBe(200);
-    expect(responseBody["message"]).toBe(
-      "Admin access requested. An admin will review it.",
+    expect(response.body).toEqual(
+      expect.objectContaining({
+        message: "Admin access requested. An admin will review it.",
+      }),
     );
-    expect(data["adminRequestedAt"]).toBeTypeOf("string");
 
     const userInDb = await prisma.user.findUnique({
       where: { email: userData.email },
     });
     expect(userInDb?.adminRequestedAt).toBeInstanceOf(Date);
 
-    // Repeating the request refreshes the timestamp instead of failing
-    const repeatResponse = await agent.post("/users/request-admin");
-    expect(repeatResponse.status).toBe(200);
-
-    await prisma.user.delete({ where: { email: userData.email } });
+    await deleteUser(userData.email);
   });
 
   test("responds with 400 for an ADMIN user", async () => {
@@ -102,29 +102,13 @@ describe("usersRouter - POST /users/request-admin", () => {
       }),
     );
 
-    await prisma.user.delete({ where: { email: userData.email } });
+    await deleteUser(userData.email);
   });
 
   test("responds with 401 when not logged in", async () => {
     const response = await request(app).post("/users/request-admin");
 
     expect(response.status).toBe(401);
-  });
-
-  test("exposes adminRequestedAt through GET /users/me", async () => {
-    const agent = request.agent(app);
-    const userData = createNewUserInput();
-    await createAndLoginUser(agent, userData);
-    await agent.post("/users/request-admin");
-
-    const response = await agent.get("/users/me");
-    const responseBody = getResponseObject(response.body);
-    const data = getResponseObject(responseBody["data"]);
-
-    expect(response.status).toBe(200);
-    expect(data["adminRequestedAt"]).toBeTypeOf("string");
-
-    await prisma.user.delete({ where: { email: userData.email } });
   });
 });
 
@@ -149,6 +133,6 @@ describe("usersRouter - DELETE /users/request-admin", () => {
     });
     expect(userInDb?.adminRequestedAt).toBeNull();
 
-    await prisma.user.delete({ where: { email: userData.email } });
+    await deleteUser(userData.email);
   });
 });

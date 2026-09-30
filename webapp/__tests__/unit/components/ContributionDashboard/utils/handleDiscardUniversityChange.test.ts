@@ -1,17 +1,7 @@
 import { handleDiscardUniversityChange } from "../../../../../src/components/ContributionDashboard/utils/handleDiscardUniversityChange";
-import { getCsrfToken } from "../../../../../src/utils/getCsrfToken";
 
 import type { RequestContext } from "../../../../../src/utils/apiMutation";
 
-vi.mock("../../../../../src/utils/getCsrfToken", async (importOriginal) => {
-  const actual =
-    await importOriginal<
-      typeof import("../../../../../src/utils/getCsrfToken")
-    >();
-  return { ...actual, getCsrfToken: vi.fn() };
-});
-
-const mockedGetCsrfToken = vi.mocked(getCsrfToken);
 const fetchMock = vi.fn();
 
 function createCtx(): RequestContext {
@@ -23,9 +13,7 @@ function createCtx(): RequestContext {
 }
 
 beforeEach(() => {
-  mockedGetCsrfToken.mockReset();
   fetchMock.mockReset();
-  mockedGetCsrfToken.mockResolvedValue("csrf-token");
   vi.spyOn(globalThis, "fetch").mockImplementation(fetchMock);
 });
 

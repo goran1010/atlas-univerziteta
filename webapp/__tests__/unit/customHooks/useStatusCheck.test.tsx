@@ -33,7 +33,7 @@ describe("useStatusCheck", () => {
     const response = new Response(
       JSON.stringify({
         message: null,
-        data: { email: "user@example.com", role: "USER" },
+        data: { id: "test-id", name: "test", email: "user@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
       }),
       { headers: { "Content-Type": "application/json" } },
     );
@@ -75,7 +75,7 @@ describe("useStatusCheck", () => {
       new Response(
         JSON.stringify({
           message: "Welcome back",
-          data: { email: "user@example.com", role: "USER" },
+          data: { id: "test-id", name: "test", email: "user@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
         }),
         { headers: { "Content-Type": "application/json" } },
       ),
