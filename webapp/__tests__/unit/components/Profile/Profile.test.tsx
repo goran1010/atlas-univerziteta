@@ -8,6 +8,19 @@ import { RootContextProvider } from "../../../utils/rootContextProvider";
 
 import type { UserData } from "../../../../src/types";
 
+import { authClient } from "../../../../src/utils/authClient";
+
+vi.mock("../../../../src/utils/authClient", () => ({
+  authClient: {
+    getSession: vi.fn().mockResolvedValue({ data: null, error: null }),
+    signIn: {
+      email: vi.fn(),
+      social: vi.fn().mockReturnValue(new Promise(() => {})),
+    },
+    signOut: vi.fn().mockResolvedValue({ error: null }),
+  },
+}));
+
 const user = userEvent.setup();
 
 beforeEach(() => {
@@ -119,37 +132,10 @@ describe("Profile Component", () => {
 });
 
 describe("Profile Component handle logout", () => {
-  test("stays on the profile when fetching the csrf token fails", async () => {
-    const fetchSpy = vi.spyOn(globalThis, "fetch");
-
-    render(
-      <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
-    );
-
-    await clickLogout();
-
-    const headingElement = await screen.findByRole("heading", {
-      name: /My Profile/i,
-    });
-    expect(headingElement).toBeInTheDocument();
-    expect(fetchSpy).not.toHaveBeenCalled();
-  });
-
   test("handles logout failure due to server error", async () => {
-    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-    const fetchSpy = vi.spyOn(globalThis, "fetch");
-    const mockErrorResponse = new Response(
-      JSON.stringify({
-        error: {
-          message: "Something went wrong during logout. Try again in a moment.",
-        },
-      }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-    fetchSpy.mockResolvedValueOnce(mockErrorResponse);
+    vi.mocked(authClient.signOut).mockResolvedValueOnce({
+      error: { message: "Server error" },
+    } as never);
 
     render(
       <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
@@ -164,12 +150,9 @@ describe("Profile Component handle logout", () => {
   });
 
   test("handles logout failure due to unexpected error", async () => {
-    const fetchSpy = vi.spyOn(globalThis, "fetch");
-    const consoleErrorSpy = vi
-      .spyOn(console, "error")
-      .mockImplementation(() => vi.fn());
-
-    fetchSpy.mockRejectedValueOnce(new Error("Network error"));
+    vi.mocked(authClient.signOut).mockRejectedValueOnce(
+      new Error("Network error"),
+    );
 
     render(
       <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
@@ -181,22 +164,12 @@ describe("Profile Component handle logout", () => {
       /Something went wrong during logout./i,
     );
     expect(notificationElement).toBeInTheDocument();
-    expect(consoleErrorSpy).toHaveBeenCalled();
   });
 
   test("handles logout correctly", async () => {
-    const fetchSpy = vi.spyOn(globalThis, "fetch");
-    const mockSuccessResponse = new Response(
-      JSON.stringify({
-        message: "User logged out successfully",
-        data: null,
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-    fetchSpy.mockResolvedValueOnce(mockSuccessResponse);
+    vi.mocked(authClient.signOut).mockResolvedValueOnce({
+      error: null,
+    } as never);
 
     render(
       <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
@@ -214,13 +187,10 @@ describe("Profile Component handle logout", () => {
     expect(logoutButton).not.toBeInTheDocument();
   });
 
-  test("keeps the user logged in when a successful logout response is malformed", async () => {
-    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
-      new Response(JSON.stringify({}), {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      }),
-    );
+  test("stays on profile when logout returns error", async () => {
+    vi.mocked(authClient.signOut).mockResolvedValueOnce({
+      error: { message: "Failed" },
+    } as never);
 
     render(
       <Wrapper initialUser={{ id: "test-id", name: "test", email: "testuser@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,
@@ -230,7 +200,7 @@ describe("Profile Component handle logout", () => {
 
     expect(
       await screen.findByText(
-        /^Something went wrong during logout\. Try again in a moment\.$/i,
+        /Logout did not complete/i,
       ),
     ).toBeInTheDocument();
     expect(
@@ -279,7 +249,6 @@ describe("Profile Component admin request", () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-csrf-token": "mocked-csrf-token",
         },
       }),
     );

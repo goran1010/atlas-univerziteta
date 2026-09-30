@@ -26,12 +26,13 @@ async function createAndLoginUser(
       name: userData.name,
     });
 
-  if (userData.role !== "USER") {
-    await prisma.user.update({
-      where: { email: userData.email },
-      data: { role: userData.role },
-    });
-  }
+  await prisma.user.update({
+    where: { email: userData.email },
+    data: {
+      emailVerified: true,
+      ...(userData.role !== "USER" ? { role: userData.role } : {}),
+    },
+  });
 
   const response = await agent
     .post("/api/auth/sign-in/email")

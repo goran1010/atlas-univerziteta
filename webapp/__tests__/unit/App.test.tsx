@@ -2,6 +2,12 @@ import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { routes } from "../../src/routes";
 
+vi.mock("../../src/utils/authClient", () => ({
+  authClient: {
+    getSession: vi.fn().mockRejectedValue(new Error("Session check failed")),
+  },
+}));
+
 describe("App", () => {
   beforeEach(() => {
     vi.spyOn(globalThis, "fetch").mockImplementation((input) => {
@@ -11,17 +17,9 @@ describe("App", () => {
         return Promise.resolve(new Response(null, { status: 200 }));
       }
 
-      if (url.endsWith("/users/me")) {
-        return Promise.resolve(
-          new Response(JSON.stringify({ message: "User not authenticated." }), {
-            status: 401,
-            headers: { "Content-Type": "application/json" },
-          }),
-        );
-      }
-
-      return Promise.reject(new Error(`Unexpected request: ${url}`));
+      return Promise.resolve(new Response(null, { status: 200 }));
     });
+    vi.spyOn(console, "error").mockImplementation(() => undefined);
   });
 
   afterEach(() => {
@@ -29,7 +27,7 @@ describe("App", () => {
     vi.restoreAllMocks();
   });
 
-  test("shows a login-status error when the current-user response is not OK", async () => {
+  test("shows a login-status error when the session check fails", async () => {
     const router = createMemoryRouter(routes, {
       initialEntries: ["/"],
     });
@@ -39,10 +37,6 @@ describe("App", () => {
       "Could not check your login status. Refresh the page and try again.",
     );
 
-    expect(globalThis.fetch).toHaveBeenCalledWith(
-      expect.stringMatching(/\/users\/me$/),
-      expect.objectContaining({ method: "GET" }),
-    );
     expect(errorNotification).toBeInTheDocument();
   });
 });

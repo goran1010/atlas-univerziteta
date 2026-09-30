@@ -20,7 +20,7 @@ function GitHubLoginLink({ disabled, onLoadingChange }: GitHubLoginLinkProps) {
     onLoadingChange(true);
     await authClient.signIn.social({
       provider: "github",
-      callbackURL: "/",
+      callbackURL: window.location.origin,
     });
   }
 

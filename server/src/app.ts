@@ -38,6 +38,17 @@ app.use((req, _res, next) => {
 app.use(helmet());
 app.use(compression());
 
+// BetterAuth handler: must be before express.json() and before the
+// wildcard-CORS /api routes (it needs credentialed CORS, not "*").
+app.use(
+  "/api/auth",
+  cors({
+    origin: env.WEBAPP_URL,
+    credentials: true,
+  }),
+);
+app.all("/api/auth/*splat", toNodeHandler(auth));
+
 // Public routes
 app.get("/", cors(), apiController.root);
 app.use("/health", cors(), healthRouter);
@@ -49,9 +60,6 @@ app.use(
     credentials: true,
   }),
 );
-
-// BetterAuth handler must be mounted before express.json()
-app.all("/api/auth/*splat", toNodeHandler(auth));
 
 app.use(express.json());
 

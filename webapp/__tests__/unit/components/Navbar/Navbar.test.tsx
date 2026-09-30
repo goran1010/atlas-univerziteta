@@ -7,6 +7,15 @@ import userEvent from "@testing-library/user-event";
 import { useCloseMenu } from "../../../../src/customHooks/useCloseMenu";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { ThemeProvider } from "../../../../src/contextData/ThemeProvider";
+import { authClient } from "../../../../src/utils/authClient";
+
+vi.mock("../../../../src/utils/authClient", () => ({
+  authClient: {
+    getSession: vi.fn().mockResolvedValue({ data: null, error: null }),
+    signIn: { social: vi.fn().mockReturnValue(new Promise(() => {})) },
+    signOut: vi.fn().mockResolvedValue({ error: null }),
+  },
+}));
 
 import type { UserData } from "../../../../src/types";
 
@@ -114,31 +123,13 @@ describe("Render Navbar on root route", () => {
   });
 
   test("user logged in", async () => {
-    vi.spyOn(globalThis, "fetch").mockImplementation((url) => {
-      const requestUrl = getRequestUrl(url);
-
-      if (requestUrl.endsWith("/api")) {
-        return Promise.resolve(
-          new Response(JSON.stringify({ message: "Server is live." }), {
-            status: 200,
-            headers: { "Content-Type": "application/json" },
-          }),
-        );
-      }
-
-      return Promise.resolve(
-        new Response(
-          JSON.stringify({
-            message: "User retrieved successfully.",
-            data: { id: "test-id", name: "test", email: "test@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" },
-          }),
-          {
-            status: 200,
-            headers: { "Content-Type": "application/json" },
-          },
-        ),
-      );
-    });
+    vi.mocked(authClient.getSession).mockResolvedValue({
+      data: {
+        user: { id: "test-id", name: "test", email: "test@example.com", emailVerified: true, role: "USER", createdAt: new Date(), updatedAt: new Date() },
+        session: {},
+      },
+      error: null,
+    } as never);
 
     render(
       <Wrapper initialUser={{ id: "test-id", name: "test", email: "test@example.com", emailVerified: true, createdAt: new Date(), updatedAt: new Date(), role: "USER" }} />,

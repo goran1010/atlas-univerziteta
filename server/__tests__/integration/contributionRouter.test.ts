@@ -28,14 +28,10 @@ async function createLoggedInAgent() {
   const loginResponse = await createAndLoginUser(agent, {});
 
   expect(loginResponse.status).toBe(200);
-  expect(loginResponse.body).toEqual(
-    expect.objectContaining({
-      message: "Logged in successfully",
-    }),
-  );
+  expect(loginResponse.body).toHaveProperty("token");
 
   const loginResponseBody = getResponseObject(loginResponse.body as unknown);
-  const user = getResponseObject(loginResponseBody["data"]) as {
+  const user = getResponseObject(loginResponseBody["user"]) as {
     id: string;
     email: string;
   };

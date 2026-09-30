@@ -180,6 +180,11 @@ describe("Admin Router - GET /users/admin//pending-changes", () => {
           reviewedAt: change.reviewedAt
             ? change.reviewedAt.toISOString()
             : null,
+          user: {
+            ...change.user,
+            createdAt: change.user.createdAt.toISOString(),
+            updatedAt: change.user.updatedAt.toISOString(),
+          },
           currentEntity: null,
           parentContext: null,
         })),

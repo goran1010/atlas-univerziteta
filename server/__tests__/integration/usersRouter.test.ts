@@ -39,7 +39,7 @@ describe("usersRouter", () => {
     const response = await createAndLoginUser(agent, userData);
 
     expect(response.status).toBe(200);
-    expect(response.body).toHaveProperty("session");
+    expect(response.body).toHaveProperty("token");
 
     await deleteUser(userData.email);
   });

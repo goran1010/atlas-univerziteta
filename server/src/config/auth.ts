@@ -3,6 +3,7 @@ import { prismaAdapter } from "better-auth/adapters/prisma";
 
 import { prisma } from "../db/prisma.js";
 import { env } from "./env.js";
+import { sendConfirmationEmail } from "../email/confirmationEmail.js";
 
 const auth = betterAuth({
   database: prismaAdapter(prisma, { provider: "postgresql" }),
@@ -11,6 +12,19 @@ const auth = betterAuth({
   trustedOrigins: [env.WEBAPP_URL],
   emailAndPassword: {
     enabled: true,
+    requireEmailVerification: true,
+  },
+  emailVerification: {
+    sendOnSignUp: true,
+    sendVerificationEmail: async ({ user, url }) => {
+      void sendConfirmationEmail(user.email, url);
+    },
+  },
+  account: {
+    accountLinking: {
+      enabled: true,
+      trustedProviders: ["github", "google"],
+    },
   },
   user: {
     additionalFields: {

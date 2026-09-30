@@ -20,7 +20,7 @@ function GoogleLoginLink({ disabled, onLoadingChange }: GoogleLoginLinkProps) {
     onLoadingChange(true);
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: "/",
+      callbackURL: window.location.origin,
     });
   }
 
