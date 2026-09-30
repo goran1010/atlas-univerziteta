@@ -73,16 +73,6 @@ model verification {
   updatedAt  DateTime? @updatedAt
 }
 
-model PendingUser {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  password  String
-  token     String
-  expiresAt DateTime
-
-  @@map("pending_user")
-}
-
 enum typeOfChange {
   UPDATE
   DELETE
