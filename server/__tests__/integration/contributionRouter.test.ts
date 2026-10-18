@@ -59,6 +59,19 @@ async function createFaculty() {
   });
 }
 
+async function createStudyProgram() {
+  const faculty = await createFaculty();
+  entitySequence++;
+
+  return prisma.studyProgram.create({
+    data: {
+      name: `Test Study Program ${entitySequence.toString()}`,
+      cycle: "FIRST",
+      facultyId: faculty.id,
+    },
+  });
+}
+
 describe("Contribution Router - POST /users/contribution/universities", () => {
   test("responds with status 401 when not logged in", async () => {
     const response = await request(app).post(
@@ -175,6 +188,54 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     });
 
     expect(response.status).toBe(201);
+  });
+
+  test("responds with status 201 and stores a study program suggestion under a faculty", async () => {
+    const { agent } = await createLoggedInAgent();
+    const faculty = await createFaculty();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      entityType: "STUDY_PROGRAM",
+      parentId: faculty.id,
+      data: { name: "Suggested Study Program", cycle: "FIRST" },
+    });
+
+    expect(response.status).toBe(201);
+  });
+
+  test("responds with status 201 and stores a track suggestion under a study program", async () => {
+    const { agent, user } = await createLoggedInAgent();
+    const studyProgram = await createStudyProgram();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      entityType: "TRACK",
+      parentId: studyProgram.id,
+      data: { name: "Suggested Track", ects: 60 },
+    });
+
+    expect(response.status).toBe(201);
+    const stored = await prisma.pendingChange.findFirst({
+      where: { userId: user.id, entityType: "TRACK" },
+    });
+    expect(stored?.parentId).toBe(studyProgram.id);
+    expect(stored?.typeOfChange).toBe("CREATE");
+  });
+
+  test("responds with status 404 when a track create parent study program does not exist", async () => {
+    const { agent } = await createLoggedInAgent();
+    const studyProgram = await createStudyProgram();
+    await prisma.studyProgram.delete({ where: { id: studyProgram.id } });
+
+    const response = await agent.post("/users/contribution/universities").send({
+      entityType: "TRACK",
+      parentId: studyProgram.id,
+      data: { name: "Orphan Track" },
+    });
+
+    expect(response.status).toBe(404);
+    expect(response.body).toEqual({
+      error: { code: "NOT_FOUND", message: "Parent entity not found." },
+    });
   });
 });
 
@@ -322,6 +383,36 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     expect(response.body).toEqual({
       error: { code: "NOT_FOUND", message: "Target entity not found." },
     });
+  });
+
+  test("responds with status 201 and stores a track edit suggestion", async () => {
+    const { agent, user } = await createLoggedInAgent();
+    const studyProgram = await createStudyProgram();
+    entitySequence++;
+    const track = await prisma.track.create({
+      data: {
+        name: `Test Track ${entitySequence.toString()}`,
+        studyProgramId: studyProgram.id,
+      },
+    });
+
+    const response = await agent.put("/users/contribution/universities").send({
+      entityType: "TRACK",
+      targetId: track.id,
+      data: { name: "Updated Track Name" },
+    });
+
+    expect(response.status).toBe(201);
+    const stored = await prisma.pendingChange.findFirst({
+      where: { userId: user.id, entityType: "TRACK" },
+    });
+    expect(stored).toEqual(
+      expect.objectContaining({
+        typeOfChange: "UPDATE",
+        targetId: track.id,
+        data: { name: "Updated Track Name" },
+      }),
+    );
   });
 });
 

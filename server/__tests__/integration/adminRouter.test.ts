@@ -36,6 +36,7 @@ beforeAll(async () => {
 
 afterEach(async () => {
   await prisma.pendingChange.deleteMany();
+  await prisma.track.deleteMany({ where: { name: { startsWith: "Test " } } });
   await prisma.studyProgram.deleteMany({
     where: { name: { startsWith: "Test " } },
   });
@@ -98,6 +99,12 @@ function createFaculty(universityId: number, name: string) {
 function createStudyProgram(facultyId: number, name: string) {
   return prisma.studyProgram.create({
     data: { name, cycle: "FIRST", facultyId },
+  });
+}
+
+function createTrack(studyProgramId: number, name: string) {
+  return prisma.track.create({
+    data: { name, studyProgramId },
   });
 }
 
@@ -491,6 +498,95 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
         cycle: "SECOND",
         durationYears: 4,
         ects: 240,
+      }),
+    );
+  });
+});
+
+describe("Admin Router - POST /users/admin/approve-pending-change for TRACK", () => {
+  test("Responds with status 200 and message if a pending change is approved successfully for DELETE", async () => {
+    const university = await createUniversity("Test University for DELETE");
+    const faculty = await createFaculty(university.id, "Test Delete Faculty");
+    const studyProgram = await createStudyProgram(
+      faculty.id,
+      "Test Delete Study Program",
+    );
+    const track = await createTrack(studyProgram.id, "Test Delete Track");
+    const pendingChange = await createPendingChange({
+      entityType: "TRACK",
+      typeOfChange: "DELETE",
+      targetId: track.id,
+      parentId: studyProgram.id,
+      data: {},
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expectApproved(response);
+    expect(
+      await prisma.track.findUnique({ where: { id: track.id } }),
+    ).toBeNull();
+  });
+
+  test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
+    const university = await createUniversity("Test University for CREATE");
+    const faculty = await createFaculty(university.id, "Test Create Faculty");
+    const studyProgram = await createStudyProgram(
+      faculty.id,
+      "Test Create Study Program",
+    );
+    const pendingChange = await createPendingChange({
+      entityType: "TRACK",
+      typeOfChange: "CREATE",
+      parentId: studyProgram.id,
+      data: {
+        name: "Test Create Track",
+        ects: 60,
+        durationYears: 1,
+      },
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expectApproved(response);
+    const created = await prisma.track.findFirst({
+      where: { name: "Test Create Track" },
+    });
+    expect(created).toEqual(
+      expect.objectContaining({
+        studyProgramId: studyProgram.id,
+        ects: 60,
+        durationYears: 1,
+      }),
+    );
+  });
+
+  test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
+    const university = await createUniversity("Test University for UPDATE");
+    const faculty = await createFaculty(university.id, "Test Update Faculty");
+    const studyProgram = await createStudyProgram(
+      faculty.id,
+      "Test Update Study Program",
+    );
+    const track = await createTrack(studyProgram.id, "Test Update Track");
+    const pendingChange = await createPendingChange({
+      entityType: "TRACK",
+      typeOfChange: "UPDATE",
+      targetId: track.id,
+      parentId: studyProgram.id,
+      data: {
+        name: "Test Approve Track Updated",
+        ects: 90,
+      },
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expectApproved(response);
+    expect(await prisma.track.findUnique({ where: { id: track.id } })).toEqual(
+      expect.objectContaining({
+        name: "Test Approve Track Updated",
+        ects: 90,
       }),
     );
   });
