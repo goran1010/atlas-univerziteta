@@ -1,5 +1,19 @@
 import { cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/vitest";
+import { server } from "../utils/msw";
+
+beforeAll(() => {
+  server.listen({ onUnhandledRequest: "error" });
+});
+
+beforeEach(() => {
+  localStorage.clear();
+  localStorage.setItem("language", "en");
+});
+
+afterAll(() => {
+  server.close();
+});
 
 const media: MediaQueryList = {
   matches: false,
@@ -27,5 +41,6 @@ HTMLDialogElement.prototype.showModal = vi.fn();
 HTMLDialogElement.prototype.close = vi.fn();
 
 afterEach(() => {
+  server.resetHandlers();
   cleanup();
 });
