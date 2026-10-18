@@ -30,6 +30,23 @@ describe("app", () => {
     });
   });
 
+  test("app responds with status 400 when the request body is malformed JSON", async () => {
+    const { app } = await import("../../src/app.js");
+
+    const response = await request(app)
+      .post("/users/contribution/universities")
+      .set("Content-Type", "application/json")
+      .send('{"broken"');
+
+    expect(response.status).toBe(400);
+    expect(response.body).toEqual({
+      error: {
+        code: "REQUEST_FAILED",
+        message: expect.stringContaining("JSON") as unknown,
+      },
+    });
+  });
+
   test("app responds with status 404 for unknown routes", async () => {
     const { app } = await import("../../src/app.js");
 
