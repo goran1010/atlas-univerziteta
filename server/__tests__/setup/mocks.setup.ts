@@ -19,27 +19,6 @@ vi.mock("pino", () => {
   };
 });
 
-vi.mock("csrf-sync", async () => {
-  const originalModule = await vi.importActual("csrf-sync");
-  return {
-    ...originalModule,
-    csrfSync: () => {
-      return {
-        csrfSynchronisedProtection: (
-          _req: Request,
-          _res: Response,
-          next: NextFunction,
-        ) => {
-          next();
-        },
-        generateToken: () => {
-          return "mocked-csrf-token";
-        },
-      };
-    },
-  };
-});
-
 vi.mock("../../src/utils/rateLimiter.js", async () => {
   const originalModule = await vi.importActual(
     "../../src/utils/rateLimiter.js",
