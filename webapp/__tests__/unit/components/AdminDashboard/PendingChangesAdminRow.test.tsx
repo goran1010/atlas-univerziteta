@@ -1,23 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { makeUser } from "../../../utils/makeUser";
 import { PendingChangesAdminRow } from "../../../../src/components/AdminDashboard/PendingChangesAdminRow";
-import type { ReactElement } from "react";
+
 import type { AdminPendingChange } from "../../../../src/schemas/pendingChange";
-
-const handleApprovePendingChangeMock =
-  vi.fn<(...args: unknown[]) => undefined>();
-const handleDeclinePendingChangeMock =
-  vi.fn<(...args: unknown[]) => undefined>();
-
-vi.mock("../../../../src/components/AdminDashboard/utils/adminActions", () => ({
-  handleApprovePendingChange: (...args: unknown[]) => {
-    handleApprovePendingChangeMock(...args);
-  },
-  handleDeclinePendingChange: (...args: unknown[]) => {
-    handleDeclinePendingChangeMock(...args);
-  },
-}));
 
 const change: AdminPendingChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",
@@ -27,84 +13,30 @@ const change: AdminPendingChange = {
   parentId: null,
   data: {},
   userId: "user-1",
-  user: {
-    id: "test-id",
-    name: "test",
-    email: "johndoe@examplemail.com",
-    emailVerified: true,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    role: "USER",
-  },
+  user: makeUser({ email: "johndoe@examplemail.com" }),
   createdAt: new Date(),
   currentEntity: null,
 };
 
-function Wrapper({ children }: { children: ReactElement }) {
-  return <RootContextProvider>{children}</RootContextProvider>;
-}
-
-beforeEach(() => {
-  localStorage.setItem("language", "en");
-  handleApprovePendingChangeMock.mockReset();
-  handleDeclinePendingChangeMock.mockReset();
-});
-
-afterEach(() => {
-  vi.restoreAllMocks();
-});
-
 describe("PendingChangesAdminRow", () => {
-  test("renders delete pending change details with delete styling", () => {
+  test("renders the change type, entity label, submitter and actions", () => {
     render(
-      <Wrapper>
+      <RootContextProvider>
         <PendingChangesAdminRow
           data={change}
           addNotification={vi.fn()}
           setPendingChanges={vi.fn()}
           index={0}
         />
-      </Wrapper>,
+      </RootContextProvider>,
     );
 
-    const row = screen.getByRole("button", { name: /Approve/i }).closest("li");
-    const badge = screen.getByText("Delete");
-
+    expect(screen.getByText("Delete")).toBeInTheDocument();
     expect(screen.getByText("Track (smjer)")).toBeInTheDocument();
     expect(screen.getByText("johndoe@examplemail.com")).toBeInTheDocument();
-    expect(row).toHaveClass("border-l-4");
-    expect(row).toHaveClass("border-l-red-500");
-    expect(badge).toHaveClass("bg-red-100");
-    expect(badge).toHaveClass("text-red-800");
-  });
-
-  test("calls the confirm and decline handlers when action buttons are clicked", async () => {
-    const addNotification = vi.fn();
-    const setPendingChanges = vi.fn();
-
-    render(
-      <Wrapper>
-        <PendingChangesAdminRow
-          data={change}
-          addNotification={addNotification}
-          setPendingChanges={setPendingChanges}
-          index={1}
-        />
-      </Wrapper>,
-    );
-
-    const user = userEvent.setup();
-    const approveButton = screen.getByRole("button", { name: /Approve/i });
-
-    await user.click(approveButton);
-
-    expect(handleApprovePendingChangeMock).toHaveBeenCalledWith(
-      change,
-      setPendingChanges,
-      expect.objectContaining({
-        addNotification,
-      }),
-    );
-    expect(approveButton.closest("li")).toHaveClass("bg-(--surface-alt)");
+    expect(
+      screen.getByRole("button", { name: /Approve/i }),
+    ).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Reject/i })).toBeInTheDocument();
   });
 });

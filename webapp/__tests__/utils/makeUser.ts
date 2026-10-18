@@ -1,6 +1,6 @@
 import type { UserData } from "../../src/types";
 
-type User = NonNullable<UserData>;
+type User = NonNullable<UserData> & { role: "ADMIN" | "USER" };
 
 function makeUser(overrides: Partial<User> = {}): User {
   return {
