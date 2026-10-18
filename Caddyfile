@@ -2,5 +2,6 @@
 # The webapp is hosted on Netlify separately - Caddy only handles the API.
 # Automatic HTTPS via Let's Encrypt for the API subdomain.
 {$DOMAIN} {
+	log
 	reverse_proxy server:3000
 }

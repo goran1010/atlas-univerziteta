@@ -42,7 +42,7 @@ RUN npm ci --omit=dev && npm install prisma
 
 # Copy the compiled JavaScript from the build stage.
 # This is the key multi-stage trick: COPY --from=build pulls files from
-# the first stage, not from your local machine.
+# the first stage
 COPY --from=build /app/dist ./dist
 
 # Generate the Prisma client for this platform.

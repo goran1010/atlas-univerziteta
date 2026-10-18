@@ -1,187 +1,205 @@
 import request from "supertest";
-import { describe, test, expect } from "vitest";
+import { describe, test, expect, beforeAll, afterEach, afterAll } from "vitest";
 import { app } from "../../src/app.js";
 import { createAndLoginUser } from "../utils/createUserAndLogin.js";
 import { createDbUserData } from "../utils/createNewUserInput.js";
 import { deleteUser } from "../utils/deleteUser.js";
+import {
+  getResponseObject,
+  getResponseArray,
+} from "../utils/responseHelpers.js";
 import { prisma } from "../../src/db/prisma.js";
 import { logger } from "../../src/utils/logger.js";
-import type { entityType } from "../../src/generated/prisma/enums.js";
 
-function asUnknown(value: unknown): unknown {
-  return value;
+import type { Agent, Response } from "supertest";
+import type {
+  entityType,
+  typeOfChange,
+} from "../../src/generated/prisma/enums.js";
+import type { Prisma } from "../../src/generated/prisma/client.js";
+
+const TEST_EMAIL_DOMAIN = "@non-existent-mail.comms";
+
+let agent: Agent;
+let admin: { id: string; email: string };
+
+beforeAll(async () => {
+  agent = request.agent(app);
+  const loginResponse = await createAndLoginUser(agent, { role: "ADMIN" });
+  expect(loginResponse.status).toBe(200);
+  const loginResponseBody = getResponseObject(loginResponse.body);
+  admin = getResponseObject(loginResponseBody["user"]) as {
+    id: string;
+    email: string;
+  };
+});
+
+afterEach(async () => {
+  await prisma.pendingChange.deleteMany();
+  await prisma.studyProgram.deleteMany({
+    where: { name: { startsWith: "Test " } },
+  });
+  await prisma.faculty.deleteMany({ where: { name: { startsWith: "Test " } } });
+  await prisma.university.deleteMany({
+    where: { name: { startsWith: "Test " } },
+  });
+
+  const leftoverUsers = await prisma.user.findMany({
+    where: { email: { endsWith: TEST_EMAIL_DOMAIN }, id: { not: admin.id } },
+  });
+  for (const user of leftoverUsers) {
+    await deleteUser(user.email);
+  }
+});
+
+afterAll(async () => {
+  await deleteUser(admin.email);
+});
+
+interface PendingChangeInput {
+  entityType: entityType;
+  typeOfChange: typeOfChange;
+  targetId?: number | null;
+  parentId?: number | null;
+  data?: Prisma.InputJsonValue;
+}
+
+function createPendingChange({
+  entityType,
+  typeOfChange,
+  targetId = null,
+  parentId = null,
+  data,
+}: PendingChangeInput) {
+  return prisma.pendingChange.create({
+    data: {
+      entityType,
+      typeOfChange,
+      targetId,
+      parentId,
+      ...(data === undefined ? {} : { data }),
+      user: { connect: { id: admin.id } },
+    },
+  });
+}
+
+function createUniversity(name: string) {
+  return prisma.university.create({
+    data: { name, city: "Test City", entity: "FBIH", ownership: "PUBLIC" },
+  });
+}
+
+function createFaculty(universityId: number, name: string) {
+  return prisma.faculty.create({
+    data: { name, city: "Test City", universityId },
+  });
+}
+
+function createStudyProgram(facultyId: number, name: string) {
+  return prisma.studyProgram.create({
+    data: { name, cycle: "FIRST", facultyId },
+  });
+}
+
+function approve(id: string) {
+  return agent.post("/users/admin/approve-pending-change").send({ id });
+}
+
+function expectApproved(response: Response) {
+  expect(response.status).toBe(200);
+  expect(response.body).toEqual({
+    data: null,
+    message: "Pending change approved successfully.",
+  });
 }
 
 describe("Admin Router - GET /users/admin/pending-changes", () => {
   test("Responds with status 200 and all pending changes if role ADMIN", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
-    });
-
-    const pendingChange = await prisma.pendingChange.create({
+    const pendingChange = await createPendingChange({
+      entityType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      targetId: 1,
       data: {
-        entityType: "UNIVERSITY",
-        typeOfChange: "CREATE",
-        targetId: 1,
-        parentId: null,
-        data: {
-          name: "Test Admin GET University",
-          city: "Test City",
-          entity: "FBIH",
-          ownership: "PUBLIC",
-        },
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
+        name: "Test Admin GET University",
+        city: "Test City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
       },
     });
 
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
     const response = await agent.get("/users/admin/pending-changes");
+    const responseBody = getResponseObject(response.body);
+
     expect(response.status).toBe(200);
-    const responseBody = asUnknown(response.body);
-    expect(responseBody).toEqual(
-      expect.objectContaining({
-        message: "Pending changes retrieved successfully.",
-      }),
+    expect(responseBody["message"]).toBe(
+      "Pending changes retrieved successfully.",
     );
-
-    if (
-      typeof responseBody !== "object" ||
-      responseBody === null ||
-      !("data" in responseBody) ||
-      !Array.isArray(responseBody.data)
-    ) {
-      throw new Error("Expected pending changes response data to be an array");
-    }
-
-    expect(responseBody.data).toEqual(
+    const data = getResponseArray(responseBody["data"]);
+    expect(data).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           id: pendingChange.id,
           user: {
-            email: userInDb.email,
-            role: userInDb.role,
+            email: admin.email,
+            role: "ADMIN",
           },
         }),
       ]),
     );
-
-    await prisma.pendingChange.delete({ where: { id: pendingChange.id } });
-    await prisma.user.delete({ where: { id: userInDb.id } });
   });
 });
 
 describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
   test("Responds with status 200 if role ADMIN", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
-    });
-
-    const pendingChange = await prisma.pendingChange.create({
+    const pendingChange = await createPendingChange({
+      entityType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      targetId: 1,
       data: {
-        entityType: "UNIVERSITY",
-        typeOfChange: "CREATE",
-        targetId: 1,
-        parentId: null,
-        data: {
-          name: "Test Decline University",
-          city: "Test City",
-          entity: "FBIH",
-          ownership: "PUBLIC",
-        },
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
+        name: "Test Decline University",
+        city: "Test City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
       },
     });
 
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
     const response = await agent
       .delete("/users/admin/decline-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
-    expect(response.status).toBe(200);
-    expect(response.body).toEqual(
-      expect.objectContaining({
-        message: "Pending change declined successfully.",
-      }),
-    );
+      .send({ id: pendingChange.id });
 
-    await prisma.user.delete({ where: { id: userInDb.id } });
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({
+      data: null,
+      message: "Pending change declined successfully.",
+    });
+    expect(
+      await prisma.pendingChange.findUnique({
+        where: { id: pendingChange.id },
+      }),
+    ).toBeNull();
   });
 });
 
 describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   test("Responds with status 404 if pending change does not exist", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
-    });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: "a7d3c8f1-4b9e-4f2a-8c3e-5d7f1b9a2c6e",
-      });
+    const response = await approve("a7d3c8f1-4b9e-4f2a-8c3e-5d7f1b9a2c6e");
 
     expect(response.status).toBe(404);
-    expect(response.body).toEqual(
-      expect.objectContaining({
-        error: { code: "NOT_FOUND", message: "Pending change not found." },
-      }),
-    );
-
-    await prisma.user.delete({ where: { id: userInDb.id } });
+    expect(response.body).toEqual({
+      error: { code: "NOT_FOUND", message: "Pending change not found." },
+    });
   });
 
   test("Responds with status 404 if stored pending change data is invalid for its entity type", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
-    });
-
-    const pendingChange = await prisma.pendingChange.create({
+    const pendingChange = await createPendingChange({
+      entityType: "UNIVERSITY",
+      typeOfChange: "CREATE",
       data: {
-        entityType: "UNIVERSITY",
-        typeOfChange: "CREATE",
-        targetId: null,
-        parentId: null,
-        data: {
-          name: "Malformed University",
-        },
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
+        name: "Malformed University",
       },
     });
 
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
+    const response = await approve(pendingChange.id);
 
     expect(response.status).toBe(404);
     expect(logger.warn).toHaveBeenCalledWith(
@@ -190,45 +208,18 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
       }),
       "Pending change data failed validation during approval.",
     );
-
-    await prisma.pendingChange.delete({ where: { id: pendingChange.id } });
-    await prisma.user.delete({ where: { id: userInDb.id } });
   });
 
   test("Responds with status 404 if stored pending change data is not a record", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
+    const pendingChange = await createPendingChange({
+      entityType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      data: "invalid string data",
     });
 
-    const pendingChange = await prisma.pendingChange.create({
-      data: {
-        entityType: "UNIVERSITY",
-        typeOfChange: "CREATE",
-        targetId: null,
-        parentId: null,
-        data: "invalid string data",
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
-      },
-    });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
+    const response = await approve(pendingChange.id);
 
     expect(response.status).toBe(404);
-
-    await prisma.pendingChange.delete({ where: { id: pendingChange.id } });
-    await prisma.user.delete({ where: { id: userInDb.id } });
   });
 
   const entityTypes: entityType[] = [
@@ -241,709 +232,286 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   test.each(entityTypes)(
     "Responds with status 404 if stored pending change target id is null for a DELETE change type for entity type %s",
     async (entityType) => {
-      const userInput = createDbUserData({ role: "ADMIN" });
-      const userRequested = userInput;
-
-      const userInDb = await prisma.user.create({
-        data: userRequested,
+      const pendingChange = await createPendingChange({
+        entityType,
+        typeOfChange: "DELETE",
+        data: {},
       });
 
-      const pendingChange = await prisma.pendingChange.create({
-        data: {
-          entityType,
-          typeOfChange: "DELETE",
-          targetId: null,
-          parentId: null,
-          data: {},
-          createdAt: new Date("2024-01-01T00:00:00.000Z"),
-          reviewedAt: null,
-          user: { connect: { id: userInDb.id } },
-        },
-      });
-
-      const agent = request.agent(app);
-      await createAndLoginUser(agent, { role: "ADMIN" });
-
-      const response = await agent
-        .post("/users/admin/approve-pending-change")
-        .send({
-          id: pendingChange.id,
-        });
+      const response = await approve(pendingChange.id);
 
       expect(response.status).toBe(404);
-
-      await prisma.pendingChange.delete({ where: { id: pendingChange.id } });
-      await prisma.user.delete({ where: { id: userInDb.id } });
     },
   );
 
   test.each(entityTypes)(
     "Responds with status 404 if stored pending change target id is null for UPDATE change type for entity type %s",
     async (entityType) => {
-      const userInput = createDbUserData({ role: "ADMIN" });
-      const userRequested = userInput;
-
-      const userInDb = await prisma.user.create({
-        data: userRequested,
+      const pendingChange = await createPendingChange({
+        entityType,
+        typeOfChange: "UPDATE",
+        data: {},
       });
 
-      const pendingChange = await prisma.pendingChange.create({
-        data: {
-          entityType,
-          typeOfChange: "UPDATE",
-          targetId: null,
-          parentId: null,
-          data: {},
-          createdAt: new Date("2024-01-01T00:00:00.000Z"),
-          reviewedAt: null,
-          user: { connect: { id: userInDb.id } },
-        },
-      });
-
-      const agent = request.agent(app);
-      await createAndLoginUser(agent, { role: "ADMIN" });
-
-      const response = await agent
-        .post("/users/admin/approve-pending-change")
-        .send({
-          id: pendingChange.id,
-        });
+      const response = await approve(pendingChange.id);
 
       expect(response.status).toBe(404);
-
-      await prisma.pendingChange.delete({ where: { id: pendingChange.id } });
-      await prisma.user.delete({ where: { id: userInDb.id } });
     },
   );
-  const enums = ["FACULTY", "STUDY_PROGRAM", "TRACK"] as const;
-  test.each(enums)(
+
+  const childEntityTypes = ["FACULTY", "STUDY_PROGRAM", "TRACK"] as const;
+
+  test.each(childEntityTypes)(
     "Responds with status 404 if stored pending change parent id is null for CREATE change type for entity type %s",
     async (entityType) => {
-      const userInput = createDbUserData({ role: "ADMIN" });
-      const userRequested = userInput;
-
-      const userInDb = await prisma.user.create({
-        data: userRequested,
+      const pendingChange = await createPendingChange({
+        entityType,
+        typeOfChange: "CREATE",
+        data: {},
       });
 
-      const pendingChange = await prisma.pendingChange.create({
-        data: {
-          entityType,
-          typeOfChange: "CREATE",
-          targetId: null,
-          parentId: null,
-          data: {},
-          createdAt: new Date("2024-01-01T00:00:00.000Z"),
-          reviewedAt: null,
-          user: { connect: { id: userInDb.id } },
-        },
-      });
-
-      const agent = request.agent(app);
-      await createAndLoginUser(agent, { role: "ADMIN" });
-
-      const response = await agent
-        .post("/users/admin/approve-pending-change")
-        .send({
-          id: pendingChange.id,
-        });
+      const response = await approve(pendingChange.id);
 
       expect(response.status).toBe(404);
-
-      await prisma.pendingChange.delete({ where: { id: pendingChange.id } });
-      await prisma.user.delete({ where: { id: userInDb.id } });
     },
   );
 });
 
 describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY", () => {
   test("Responds with status 200 and message if a pending change is approved successfully DELETE", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
+    const university = await createUniversity("Test DELETE University");
+    const pendingChange = await createPendingChange({
+      entityType: "UNIVERSITY",
+      typeOfChange: "DELETE",
+      targetId: university.id,
     });
 
-    const university = await prisma.university.create({
-      data: {
-        name: "Test DELETE University",
-        city: "Test City",
-        entity: "FBIH",
-        ownership: "PUBLIC",
-      },
-    });
+    const response = await approve(pendingChange.id);
 
-    const pendingChange = await prisma.pendingChange.create({
-      data: {
-        entityType: "UNIVERSITY",
-        typeOfChange: "DELETE",
-        targetId: university.id,
-        parentId: null,
-
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
-      },
-    });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: null,
-        message: "Pending change approved successfully.",
-      },
-    };
-
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
-
-    await prisma.user.delete({ where: { id: userInDb.id } });
+    expectApproved(response);
+    expect(
+      await prisma.university.findUnique({ where: { id: university.id } }),
+    ).toBeNull();
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
-    });
-
-    const pendingChange = await prisma.pendingChange.create({
+    const pendingChange = await createPendingChange({
+      entityType: "UNIVERSITY",
+      typeOfChange: "CREATE",
       data: {
-        entityType: "UNIVERSITY",
-        typeOfChange: "CREATE",
-        targetId: null,
-        parentId: null,
-        data: {
-          name: "Test Create University",
-          city: "Test City",
-          entity: "FBIH",
-          ownership: "PUBLIC",
-        },
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
-      },
-    });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: null,
-        message: "Pending change approved successfully.",
-      },
-    };
-
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
-    await prisma.university.deleteMany();
-
-    await prisma.user.delete({ where: { id: userInDb.id } });
-  });
-
-  test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
-    });
-
-    const university = await prisma.university.create({
-      data: {
-        name: "Test Update University",
+        name: "Test Create University",
         city: "Test City",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
     });
 
-    const pendingChange = await prisma.pendingChange.create({
+    const response = await approve(pendingChange.id);
+
+    expectApproved(response);
+    const created = await prisma.university.findFirst({
+      where: { name: "Test Create University" },
+    });
+    expect(created).not.toBeNull();
+  });
+
+  test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
+    const university = await createUniversity("Test Update University");
+    const pendingChange = await createPendingChange({
+      entityType: "UNIVERSITY",
+      typeOfChange: "UPDATE",
+      targetId: university.id,
       data: {
-        entityType: "UNIVERSITY",
-        typeOfChange: "UPDATE",
-        targetId: university.id,
-        parentId: null,
-        data: {
-          name: "Test Approve University Updated",
-          city: "Test City Updated",
-          entity: "RS",
-          ownership: "PRIVATE",
-        },
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
+        name: "Test Approve University Updated",
+        city: "Test City Updated",
+        entity: "RS",
+        ownership: "PRIVATE",
       },
     });
 
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
+    const response = await approve(pendingChange.id);
 
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: null,
-        message: "Pending change approved successfully.",
-      },
-    };
-
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
-    await prisma.university.deleteMany();
-
-    await prisma.user.delete({ where: { id: userInDb.id } });
+    expectApproved(response);
+    expect(
+      await prisma.university.findUnique({ where: { id: university.id } }),
+    ).toEqual(
+      expect.objectContaining({
+        name: "Test Approve University Updated",
+        city: "Test City Updated",
+        entity: "RS",
+        ownership: "PRIVATE",
+      }),
+    );
   });
 });
 
 describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", () => {
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
-    });
-
-    const university = await prisma.university.create({
+    const university = await createUniversity("Test University for CREATE");
+    const pendingChange = await createPendingChange({
+      entityType: "FACULTY",
+      typeOfChange: "CREATE",
+      parentId: university.id,
       data: {
-        name: "Test University for CREATE",
+        name: "Test Create Faculty",
         city: "Test City",
-        entity: "FBIH",
-        ownership: "PUBLIC",
       },
     });
 
-    const pendingChange = await prisma.pendingChange.create({
-      data: {
-        entityType: "FACULTY",
-        typeOfChange: "CREATE",
-        targetId: null,
-        parentId: university.id,
-        data: {
-          name: "Test Create Faculty",
-          city: "Test City",
-        },
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
-      },
+    const response = await approve(pendingChange.id);
+
+    expectApproved(response);
+    const created = await prisma.faculty.findFirst({
+      where: { name: "Test Create Faculty" },
     });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: null,
-        message: "Pending change approved successfully.",
-      },
-    };
-
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
-
-    await prisma.faculty.deleteMany();
-    await prisma.university.deleteMany();
-
-    await prisma.user.delete({ where: { id: userInDb.id } });
+    expect(created?.universityId).toBe(university.id);
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
-    });
-
-    const university = await prisma.university.create({
+    const university = await createUniversity("Test University for UPDATE");
+    const faculty = await createFaculty(university.id, "Test Update Faculty");
+    const pendingChange = await createPendingChange({
+      entityType: "FACULTY",
+      typeOfChange: "UPDATE",
+      targetId: faculty.id,
+      parentId: university.id,
       data: {
-        name: "Test University for UPDATE",
-        city: "Test City",
-        entity: "FBIH",
-        ownership: "PUBLIC",
+        name: "Test Approve Faculty Updated",
+        city: "Test City Updated",
       },
     });
 
-    const faculty = await prisma.faculty.create({
-      data: {
-        name: "Test Update Faculty",
-        city: "Test City",
-        universityId: university.id,
-      },
-    });
+    const response = await approve(pendingChange.id);
 
-    const pendingChange = await prisma.pendingChange.create({
-      data: {
-        entityType: "FACULTY",
-        typeOfChange: "UPDATE",
-        targetId: faculty.id,
-        parentId: university.id,
-        data: {
-          name: "Test Approve Faculty Updated",
-          city: "Test City Updated",
-        },
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
-      },
-    });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: null,
-        message: "Pending change approved successfully.",
-      },
-    };
-
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
-
-    await prisma.faculty.deleteMany();
-    await prisma.university.deleteMany();
-
-    await prisma.user.delete({ where: { id: userInDb.id } });
+    expectApproved(response);
+    expect(
+      await prisma.faculty.findUnique({ where: { id: faculty.id } }),
+    ).toEqual(
+      expect.objectContaining({
+        name: "Test Approve Faculty Updated",
+        city: "Test City Updated",
+      }),
+    );
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for DELETE", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
+    const university = await createUniversity("Test University for DELETE");
+    const faculty = await createFaculty(university.id, "Test Delete Faculty");
+    const pendingChange = await createPendingChange({
+      entityType: "FACULTY",
+      typeOfChange: "DELETE",
+      targetId: faculty.id,
+      parentId: university.id,
+      data: {},
     });
 
-    const university = await prisma.university.create({
-      data: {
-        name: "Test University for DELETE",
-        city: "Test City",
-        entity: "FBIH",
-        ownership: "PUBLIC",
-      },
-    });
+    const response = await approve(pendingChange.id);
 
-    const faculty = await prisma.faculty.create({
-      data: {
-        name: "Test Delete Faculty",
-        city: "Test City",
-        universityId: university.id,
-      },
-    });
-
-    const pendingChange = await prisma.pendingChange.create({
-      data: {
-        entityType: "FACULTY",
-        typeOfChange: "DELETE",
-        targetId: faculty.id,
-        parentId: university.id,
-        data: {},
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
-      },
-    });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: null,
-        message: "Pending change approved successfully.",
-      },
-    };
-
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
-
-    await prisma.faculty.deleteMany();
-    await prisma.university.deleteMany();
-    await prisma.user.delete({ where: { id: userInDb.id } });
+    expectApproved(response);
+    expect(
+      await prisma.faculty.findUnique({ where: { id: faculty.id } }),
+    ).toBeNull();
   });
 });
 
 describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROGRAM", () => {
   test("Responds with status 200 and message if a pending change is approved successfully DELETE", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
+    const university = await createUniversity("Test University for DELETE");
+    const faculty = await createFaculty(university.id, "Test Delete Faculty");
+    const studyProgram = await createStudyProgram(
+      faculty.id,
+      "Test Delete Study Program",
+    );
+    const pendingChange = await createPendingChange({
+      entityType: "STUDY_PROGRAM",
+      typeOfChange: "DELETE",
+      targetId: studyProgram.id,
+      parentId: faculty.id,
+      data: {},
     });
 
-    const university = await prisma.university.create({
-      data: {
-        name: "Test University for DELETE",
-        city: "Test City",
-        entity: "FBIH",
-        ownership: "PUBLIC",
-      },
-    });
+    const response = await approve(pendingChange.id);
 
-    const faculty = await prisma.faculty.create({
-      data: {
-        name: "Test Delete Faculty",
-        city: "Test City",
-        universityId: university.id,
-      },
-    });
-
-    const studyProgram = await prisma.studyProgram.create({
-      data: {
-        name: "Test Delete Study Program",
-        cycle: "FIRST",
-        facultyId: faculty.id,
-      },
-    });
-
-    const pendingChange = await prisma.pendingChange.create({
-      data: {
-        entityType: "STUDY_PROGRAM",
-        typeOfChange: "DELETE",
-        targetId: studyProgram.id,
-        parentId: faculty.id,
-        data: {},
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
-      },
-    });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: null,
-        message: "Pending change approved successfully.",
-      },
-    };
-
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
-
-    await prisma.studyProgram.deleteMany();
-    await prisma.faculty.deleteMany();
-    await prisma.user.delete({ where: { id: userInDb.id } });
+    expectApproved(response);
+    expect(
+      await prisma.studyProgram.findUnique({ where: { id: studyProgram.id } }),
+    ).toBeNull();
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
-    });
-
-    const university = await prisma.university.create({
+    const university = await createUniversity("Test University for CREATE");
+    const faculty = await createFaculty(university.id, "Test Create Faculty");
+    const pendingChange = await createPendingChange({
+      entityType: "STUDY_PROGRAM",
+      typeOfChange: "CREATE",
+      parentId: faculty.id,
       data: {
-        name: "Test University for CREATE",
-        city: "Test City",
-        entity: "FBIH",
-        ownership: "PUBLIC",
+        name: "Test Create Study Program",
+        cycle: "FIRST",
       },
     });
 
-    const faculty = await prisma.faculty.create({
-      data: {
-        name: "Test Create Faculty",
-        city: "Test City",
-        universityId: university.id,
-      },
+    const response = await approve(pendingChange.id);
+
+    expectApproved(response);
+    const created = await prisma.studyProgram.findFirst({
+      where: { name: "Test Create Study Program" },
     });
-
-    const pendingChange = await prisma.pendingChange.create({
-      data: {
-        entityType: "STUDY_PROGRAM",
-        typeOfChange: "CREATE",
-        targetId: null,
-        parentId: faculty.id,
-        data: {
-          name: "Test Create Study Program",
-          cycle: "FIRST",
-        },
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
-      },
-    });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: null,
-        message: "Pending change approved successfully.",
-      },
-    };
-
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
-
-    await prisma.studyProgram.deleteMany();
-    await prisma.faculty.deleteMany();
-    await prisma.user.delete({ where: { id: userInDb.id } });
+    expect(created?.facultyId).toBe(faculty.id);
   });
 
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
-    const userInput = createDbUserData({ role: "ADMIN" });
-    const userRequested = userInput;
-
-    const userInDb = await prisma.user.create({
-      data: userRequested,
-    });
-
-    const university = await prisma.university.create({
+    const university = await createUniversity("Test University for UPDATE");
+    const faculty = await createFaculty(university.id, "Test Update Faculty");
+    const studyProgram = await createStudyProgram(
+      faculty.id,
+      "Test Update Study Program",
+    );
+    const pendingChange = await createPendingChange({
+      entityType: "STUDY_PROGRAM",
+      typeOfChange: "UPDATE",
+      targetId: studyProgram.id,
+      parentId: faculty.id,
       data: {
-        name: "Test University for UPDATE",
-        city: "Test City",
-        entity: "FBIH",
-        ownership: "PUBLIC",
+        name: "Test Approve Study Program Updated",
+        cycle: "SECOND",
+        durationYears: 4,
+        ects: 240,
       },
     });
 
-    const faculty = await prisma.faculty.create({
-      data: {
-        name: "Test Update Faculty",
-        city: "Test City",
-        universityId: university.id,
-      },
-    });
+    const response = await approve(pendingChange.id);
 
-    const studyProgram = await prisma.studyProgram.create({
-      data: {
-        name: "Test Update Study Program",
-        cycle: "FIRST",
-        facultyId: faculty.id,
-      },
-    });
-
-    const pendingChange = await prisma.pendingChange.create({
-      data: {
-        entityType: "STUDY_PROGRAM",
-        typeOfChange: "UPDATE",
-        targetId: studyProgram.id,
-        parentId: faculty.id,
-        data: {
-          name: "Test Approve Study Program Updated",
-          cycle: "SECOND",
-          durationYears: 4,
-          ects: 240,
-        },
-        createdAt: new Date("2024-01-01T00:00:00.000Z"),
-        reviewedAt: null,
-        user: { connect: { id: userInDb.id } },
-      },
-    });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
-    const response = await agent
-      .post("/users/admin/approve-pending-change")
-      .send({
-        id: pendingChange.id,
-      });
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: null,
-        message: "Pending change approved successfully.",
-      },
-    };
-
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
-
-    await prisma.studyProgram.deleteMany();
-    await prisma.faculty.deleteMany();
-    await prisma.university.deleteMany();
-    await prisma.user.delete({ where: { id: userInDb.id } });
+    expectApproved(response);
+    expect(
+      await prisma.studyProgram.findUnique({ where: { id: studyProgram.id } }),
+    ).toEqual(
+      expect.objectContaining({
+        name: "Test Approve Study Program Updated",
+        cycle: "SECOND",
+        durationYears: 4,
+        ects: 240,
+      }),
+    );
   });
 });
 
 describe("Admin Router - GET /users/admin/admin-requests", () => {
   test("Responds with status 200 and only users with an active request", async () => {
-    const requestingInput = createDbUserData();
-    const requestingData = requestingInput;
     const requestingUser = await prisma.user.create({
-      data: { ...requestingData, adminRequestedAt: new Date() },
+      data: { ...createDbUserData(), adminRequestedAt: new Date() },
     });
-
-    const silentInput = createDbUserData();
-    const silentData = silentInput;
-    const silentUser = await prisma.user.create({ data: silentData });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
+    const silentUser = await prisma.user.create({ data: createDbUserData() });
 
     const response = await agent.get("/users/admin/admin-requests");
-    const responseBody = asUnknown(response.body);
+    const responseBody = getResponseObject(response.body);
 
     expect(response.status).toBe(200);
-    expect(responseBody).toEqual(
-      expect.objectContaining({
-        message: "Admin requests retrieved successfully.",
-      }),
+    expect(responseBody["message"]).toBe(
+      "Admin requests retrieved successfully.",
     );
-
-    if (
-      typeof responseBody !== "object" ||
-      responseBody === null ||
-      !("data" in responseBody) ||
-      !Array.isArray(responseBody.data)
-    ) {
-      throw new Error("Expected admin requests response data to be an array");
-    }
-
-    expect(responseBody.data).toEqual(
+    const data = getResponseArray(responseBody["data"]);
+    expect(data).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           id: requestingUser.id,
@@ -952,43 +520,29 @@ describe("Admin Router - GET /users/admin/admin-requests", () => {
       ]),
     );
     expect(
-      responseBody.data.some(
-        (adminRequest: unknown) =>
-          typeof adminRequest === "object" &&
-          adminRequest !== null &&
-          "id" in adminRequest &&
-          adminRequest.id === silentUser.id,
-      ),
+      data.some((adminRequest) => adminRequest["id"] === silentUser.id),
     ).toBe(false);
-
-    await prisma.user.delete({ where: { id: requestingUser.id } });
-    await prisma.user.delete({ where: { id: silentUser.id } });
   });
 
   test("Responds with status 403 if role is not ADMIN", async () => {
-    const agent = request.agent(app);
-    const userData = createDbUserData();
-    await createAndLoginUser(agent, userData);
+    const userAgent = request.agent(app);
+    await createAndLoginUser(userAgent, {});
 
-    const response = await agent.get("/users/admin/admin-requests");
+    const response = await userAgent.get("/users/admin/admin-requests");
 
     expect(response.status).toBe(403);
-
-    await deleteUser(userData.email);
   });
 });
 
 describe("Admin Router - POST /users/admin/approve-admin-request", () => {
   test("Responds with status 200, promotes the user, and clears the request", async () => {
     // The approve/decline endpoints validate the id as a UUID
-    const requestingInput = createDbUserData({ id: crypto.randomUUID() });
-    const requestingData = requestingInput;
     const requestingUser = await prisma.user.create({
-      data: { ...requestingData, adminRequestedAt: new Date() },
+      data: {
+        ...createDbUserData({ id: crypto.randomUUID() }),
+        adminRequestedAt: new Date(),
+      },
     });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
 
     const response = await agent
       .post("/users/admin/approve-admin-request")
@@ -1006,30 +560,20 @@ describe("Admin Router - POST /users/admin/approve-admin-request", () => {
     });
     expect(userInDb?.role).toBe("ADMIN");
     expect(userInDb?.adminRequestedAt).toBeNull();
-
-    await prisma.user.delete({ where: { id: requestingUser.id } });
   });
 
   test("Responds with status 404 if the user has no active request", async () => {
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
     const response = await agent
       .post("/users/admin/approve-admin-request")
       .send({ id: "a7d3c8f1-4b9e-4f2a-8c3e-5d7f1b9a2c6e" });
 
     expect(response.status).toBe(404);
-    expect(response.body).toEqual(
-      expect.objectContaining({
-        error: { code: "NOT_FOUND", message: "Admin request not found." },
-      }),
-    );
+    expect(response.body).toEqual({
+      error: { code: "NOT_FOUND", message: "Admin request not found." },
+    });
   });
 
   test("Responds with status 400 for a malformed user id", async () => {
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
-
     const response = await agent
       .post("/users/admin/approve-admin-request")
       .send({ id: "not-a-uuid" });
@@ -1041,14 +585,12 @@ describe("Admin Router - POST /users/admin/approve-admin-request", () => {
 describe("Admin Router - DELETE /users/admin/decline-admin-request", () => {
   test("Responds with status 200, keeps the USER role, and clears the request", async () => {
     // The approve/decline endpoints validate the id as a UUID
-    const requestingInput = createDbUserData({ id: crypto.randomUUID() });
-    const requestingData = requestingInput;
     const requestingUser = await prisma.user.create({
-      data: { ...requestingData, adminRequestedAt: new Date() },
+      data: {
+        ...createDbUserData({ id: crypto.randomUUID() }),
+        adminRequestedAt: new Date(),
+      },
     });
-
-    const agent = request.agent(app);
-    await createAndLoginUser(agent, { role: "ADMIN" });
 
     const response = await agent
       .delete("/users/admin/decline-admin-request")
@@ -1072,7 +614,5 @@ describe("Admin Router - DELETE /users/admin/decline-admin-request", () => {
       .delete("/users/admin/decline-admin-request")
       .send({ id: requestingUser.id });
     expect(repeatResponse.status).toBe(404);
-
-    await prisma.user.delete({ where: { id: requestingUser.id } });
   });
 });
