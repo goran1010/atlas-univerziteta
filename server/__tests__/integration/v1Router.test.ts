@@ -146,6 +146,24 @@ describe("GET /api/v1/search", () => {
 
     expect(response).toEqual(expect.objectContaining(expectedResponse));
   });
+
+  test("responds with status 400 when searchTerm exceeds 100 characters", async () => {
+    const response = await request(app).get(
+      `/api/v1/search?searchTerm=${"a".repeat(101)}`,
+    );
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["issues"]).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          path: "searchTerm",
+          message: "Search term must not exceed 100 characters.",
+        }),
+      ]),
+    );
+  });
 });
 
 describe("GET /api/v1/search - multi-word terms", () => {
@@ -636,6 +654,42 @@ describe("GET /api/v1/universities/:id", () => {
     expect(response.status).toBe(400);
     expect(error["message"]).toBeTypeOf("string");
     expect(error["message"]).toBe("Request validation failed.");
+  });
+
+  test("responds with status 400 for emoji in university id", async () => {
+    const response = await request(app).get("/api/v1/universities/😊");
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["message"]).toBe("Request validation failed.");
+  });
+
+  test("responds with status 404 for non-existent university id", async () => {
+    const uniInDb = await prisma.university.create({
+      data: {
+        name: "Test Integration University 404",
+        city: "Sarajevo",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+    await prisma.university.delete({ where: { id: uniInDb.id } });
+
+    const response = await request(app).get(
+      `/api/v1/universities/${String(uniInDb.id)}`,
+    );
+    const expectedResponse = {
+      status: 404,
+      body: {
+        error: {
+          code: "NOT_FOUND",
+          message: "University not found.",
+        },
+      },
+    };
+
+    expect(response).toEqual(expect.objectContaining(expectedResponse));
   });
 });
 
