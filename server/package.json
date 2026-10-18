@@ -14,6 +14,8 @@
     "db:seed": "npx prisma db seed",
     "prisma_studio": "npx prisma studio",
     "test": "NODE_ENV=test vitest",
+    "test:unit": "NODE_ENV=test vitest run --project unit",
+    "test:integration": "NODE_ENV=test vitest run --project integration",
     "start": "node --env-file-if-exists=.env dist/index.js",
     "dev": "tsx watch --env-file-if-exists=.env src/index.ts | pino-pretty",
     "lint": "eslint .",
