@@ -35,7 +35,16 @@ app.use(rateLimiter.global);
 
 app.use((req, _res, next) => {
   logger.info(
-    `${req.method} method to ${req.originalUrl} from ${String(req.ip)}`,
+    {
+      method: req.method,
+      url: req.originalUrl,
+      ip: req.ip,
+      // Real visitor IP when the request comes through the Netlify /server
+      // proxy; spoofable on direct hits, so only req.ip is trusted.
+      clientIp: req.headers["x-nf-client-connection-ip"],
+      userAgent: req.headers["user-agent"],
+    },
+    "request",
   );
   next();
 });
