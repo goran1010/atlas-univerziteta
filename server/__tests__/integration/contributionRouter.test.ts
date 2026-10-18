@@ -4,13 +4,7 @@ import { describe, test, expect } from "vitest";
 import { app } from "../../src/app.js";
 import { prisma } from "../../src/db/prisma.js";
 import { createAndLoginUser } from "../utils/createUserAndLogin.js";
-
-function getResponseObject(body: unknown): Record<string, unknown> {
-  expect(body).toBeTypeOf("object");
-  expect(body).not.toBeNull();
-
-  return body as Record<string, unknown>;
-}
+import { getResponseObject } from "../utils/responseHelpers.js";
 
 function expectValidationIssue(
   error: Record<string, unknown>,

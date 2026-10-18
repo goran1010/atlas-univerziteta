@@ -275,5 +275,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             cd /root/atlas-univerziteta
+            git pull --ff-only
             docker compose pull server
             docker compose up -d
+            docker compose exec -T caddy caddy reload --config /etc/caddy/Caddyfile
