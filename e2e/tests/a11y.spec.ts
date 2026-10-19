@@ -1,6 +1,11 @@
 import { test, expect } from "@playwright/test";
 import { AxeBuilder } from "@axe-core/playwright";
-import type { Page, Locator } from "@playwright/test";
+import {
+  ADMIN_STORAGE_STATE,
+  E2E_SERVER_URL,
+  USER_STORAGE_STATE,
+} from "../env";
+import type { APIRequestContext, Page, Locator } from "@playwright/test";
 
 const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"];
 
@@ -64,4 +69,78 @@ test("search results have no detectable a11y violations", async ({ page }) => {
     page.locator('main a[href^="/universities/"]').first(),
   ).toBeVisible({ timeout: 5000 });
   await expectNoViolations(page);
+});
+
+async function firstEntity(
+  request: APIRequestContext,
+  path: "universities" | "faculties",
+) {
+  const response = await request.get(`${E2E_SERVER_URL}/api/v1/${path}`);
+  const { data } = (await response.json()) as {
+    data: { id: number; name: string }[];
+  };
+  const entity = data.at(0);
+  if (!entity) throw new Error(`Expected at least one seeded ${path} row`);
+  return entity;
+}
+
+test("detail pages have no detectable a11y violations", async ({
+  page,
+  request,
+}) => {
+  for (const path of ["universities", "faculties"] as const) {
+    const entity = await firstEntity(request, path);
+
+    await page.goto(`/${path}/${String(entity.id)}`);
+    await expect(
+      page.getByRole("heading", { name: entity.name, level: 1 }),
+    ).toBeVisible();
+    await expectNoViolations(page);
+  }
+});
+
+test.describe("authenticated pages", () => {
+  test.use({ storageState: USER_STORAGE_STATE });
+
+  test("profile page has no detectable a11y violations", async ({ page }) => {
+    await page.goto("/profile");
+    await expect(
+      page.getByRole("heading", { name: "My Profile" }),
+    ).toBeVisible();
+    await expectNoViolations(page);
+  });
+
+  test("contribution dashboard has no detectable a11y violations", async ({
+    page,
+  }) => {
+    await page.goto("/improve-data/add");
+    await expect(
+      page.getByRole("heading", { name: "Improve the Data" }),
+    ).toBeVisible();
+    await expectNoViolations(page);
+  });
+});
+
+test.describe("admin pages", () => {
+  test.use({ storageState: ADMIN_STORAGE_STATE });
+
+  test("pending changes tab has no detectable a11y violations", async ({
+    page,
+  }) => {
+    await page.goto("/admin-dashboard/pending-changes");
+    await expect(
+      page.getByRole("heading", { name: "Admin Dashboard", exact: true }),
+    ).toBeVisible();
+    await expectNoViolations(page);
+  });
+
+  test("admin requests tab has no detectable a11y violations", async ({
+    page,
+  }) => {
+    await page.goto("/admin-dashboard/admin-requests");
+    await expect(
+      page.getByRole("heading", { name: "Admin Dashboard", exact: true }),
+    ).toBeVisible();
+    await expectNoViolations(page);
+  });
 });
