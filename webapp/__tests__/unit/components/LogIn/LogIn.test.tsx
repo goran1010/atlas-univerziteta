@@ -162,6 +162,37 @@ describe("GitHub login", () => {
   });
 });
 
+describe("Google login", () => {
+  test("starts the Google social sign-in and shows loading", async () => {
+    signInSocialMock.mockReturnValue(new Promise(() => undefined));
+    const googleLoginButton = screen.getByRole("button", {
+      name: "Continue with Google",
+    });
+
+    await user.click(googleLoginButton);
+
+    expect(signInSocialMock).toHaveBeenCalledWith(
+      expect.objectContaining({ provider: "google" }),
+    );
+    expect(googleLoginButton).toBeDisabled();
+    expect(
+      within(googleLoginButton).getByRole("status", { name: /Loading/i }),
+    ).toBeInTheDocument();
+  });
+
+  test("disables the Google button while another provider is loading", async () => {
+    signInSocialMock.mockReturnValue(new Promise(() => undefined));
+
+    await user.click(
+      screen.getByRole("button", { name: "Continue with GitHub" }),
+    );
+
+    expect(
+      screen.getByRole("button", { name: "Continue with Google" }),
+    ).toBeDisabled();
+  });
+});
+
 describe("User typing in input fields in LogIn Component", () => {
   test("displays user input", async () => {
     const { passwordField, emailField } = createFormElements();

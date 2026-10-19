@@ -32,6 +32,7 @@ const detailsById: Record<string, unknown> = {
         id: 3,
         name: "Faculty of Electrical Engineering",
         universityId: 1,
+        city: "Novi Grad",
         studyPrograms: [],
       },
     ],
@@ -67,14 +68,18 @@ beforeEach(() => {
   );
 });
 
-function renderPicker(depth: number, onSelect = vi.fn()) {
+function renderPicker(
+  depth: number,
+  onSelect = vi.fn(),
+  showSelectedDetails = false,
+) {
   render(
     <RootContextProvider>
       <Notifications />
       <EntityPicker
         depth={depth}
         legend="Pick"
-        showSelectedDetails={false}
+        showSelectedDetails={showSelectedDetails}
         onSelect={onSelect}
       />
     </RootContextProvider>,
@@ -149,6 +154,25 @@ describe("EntityPicker", () => {
     });
     expect(facultySelect).toBeDisabled();
     expect(screen.getByText(/No faculties available/i)).toBeInTheDocument();
+  });
+
+  test("shows the picked faculty details when enabled", async () => {
+    renderPicker(2, vi.fn(), true);
+    const user = userEvent.setup();
+
+    await user.selectOptions(
+      await screen.findByRole("combobox", { name: /^University$/i }),
+      "1",
+    );
+    await screen.findByRole("option", {
+      name: /Faculty of Electrical Engineering/i,
+    });
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /^Faculty$/i }),
+      "3",
+    );
+
+    expect(await screen.findByText("Novi Grad")).toBeInTheDocument();
   });
 
   test("shows an error notification when the universities list fails to load", async () => {
