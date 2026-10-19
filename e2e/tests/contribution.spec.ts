@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
-import { queryE2eDb } from "../db";
-import { ADMIN_STORAGE_STATE, USER_STORAGE_STATE } from "../env";
+import { queryE2eDb } from "../utils/db";
+import { ADMIN_STORAGE_STATE, USER_STORAGE_STATE } from "../utils/env";
 
 import type { Browser, Page } from "@playwright/test";
 

@@ -4,7 +4,7 @@ import {
   ADMIN_STORAGE_STATE,
   E2E_SERVER_URL,
   USER_STORAGE_STATE,
-} from "../env";
+} from "../utils/env";
 import type { APIRequestContext, Page, Locator } from "@playwright/test";
 
 const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"];

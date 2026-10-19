@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { E2E_SERVER_URL } from "../env";
+import { E2E_SERVER_URL } from "../utils/env";
 
 import type { APIRequestContext } from "@playwright/test";
 

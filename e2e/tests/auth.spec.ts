@@ -1,4 +1,6 @@
 import { test, expect } from "@playwright/test";
+import { logIn } from "../utils/helpers";
+import { E2E_USER } from "../utils/env";
 
 const PASSWORD = "E2e_test_password_123";
 
@@ -20,6 +22,16 @@ test("signup redirects to login", async ({ page }) => {
   await page.getByRole("button", { name: "Create" }).click();
 
   await expect(page).toHaveURL(/\/login$/);
+});
+
+// the happy path also runs inside the setup project, but a regression there
+// reports as "setup failed" plus cascading skips - this names it clearly
+test("login with valid credentials shows the logged-in navbar", async ({
+  page,
+}) => {
+  await logIn(page, E2E_USER);
+
+  await expect(page.getByRole("link", { name: "Log In" })).toBeHidden();
 });
 
 test("login with wrong credentials shows an error", async ({ page }) => {

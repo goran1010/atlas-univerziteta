@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
-import { queryE2eDb } from "../db";
-import { E2E_USER, USER_STORAGE_STATE } from "../env";
+import { queryE2eDb } from "../utils/db";
+import { logIn } from "../utils/helpers";
+import { E2E_USER, USER_STORAGE_STATE } from "../utils/env";
 
 test.describe("profile admin request", () => {
   test.use({ storageState: USER_STORAGE_STATE });
@@ -52,13 +53,7 @@ test.describe("logout", () => {
   // session server-side, which would break every later spec reusing it -
   // so this test logs in fresh and revokes only its own session
   test("logs out and stays logged out after a reload", async ({ page }) => {
-    await page.goto("/login");
-    await page.getByRole("textbox", { name: "Email" }).fill(E2E_USER.email);
-    await page
-      .getByRole("textbox", { name: "Password" })
-      .fill(E2E_USER.password);
-    await page.getByRole("button", { name: "Log in" }).click();
-    await expect(page.getByRole("link", { name: "Profile" })).toBeVisible();
+    await logIn(page, E2E_USER);
 
     await page.goto("/profile");
     await page.getByRole("button", { name: "Log out" }).click();

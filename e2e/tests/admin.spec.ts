@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
-import { queryE2eDb } from "../db";
-import { ADMIN_STORAGE_STATE } from "../env";
+import { queryE2eDb } from "../utils/db";
+import { ADMIN_STORAGE_STATE } from "../utils/env";
 
 // Throwaway requesters are created directly in the database so this spec
 // never touches the shared e2e user's role, and each test finds its own row
