@@ -83,6 +83,7 @@ function Wrapper({ university = baseUniversity }) {
 
 describe("UniversityCard", () => {
   vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+  vi.spyOn(console, "error").mockImplementation(() => vi.fn());
 
   beforeEach(() => {
     detailRequests = 0;
