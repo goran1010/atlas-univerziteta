@@ -17,6 +17,19 @@ async function firstEntity(
   return entity;
 }
 
+async function firstUniversityWithFaculties(request: APIRequestContext) {
+  const response = await request.get(`${E2E_SERVER_URL}/api/v1/universities`);
+  expect(response.ok()).toBe(true);
+  const { data } = (await response.json()) as {
+    data: { id: number; name: string; _count?: { faculties: number } }[];
+  };
+  const university = data.find((u) => (u._count?.faculties ?? 0) > 0);
+  if (!university) {
+    throw new Error("Expected a seeded university that has faculties");
+  }
+  return university;
+}
+
 test.describe("detail pages", () => {
   test("clicking a university navigates to its detail page", async ({
     page,
@@ -38,15 +51,14 @@ test.describe("detail pages", () => {
     ).toBeVisible();
   });
 
-  test("university detail page shows faculties", async ({ page }) => {
-    await page.goto("/search");
-    await page.getByRole("button", { name: /Browse All/i }).click();
+  test("university detail page shows faculties", async ({ page, request }) => {
+    const university = await firstUniversityWithFaculties(request);
 
-    const firstUniLink = page.locator('main a[href^="/universities/"]').first();
-    await expect(firstUniLink).toBeVisible();
-    await firstUniLink.click();
+    await page.goto(`/universities/${String(university.id)}`);
 
-    await expect(page).toHaveURL(/\/universities\/\d+$/);
+    await expect(
+      page.getByRole("heading", { name: university.name, level: 1 }),
+    ).toBeVisible();
     await expect(
       page.getByRole("heading", { level: 2, name: /faculty|faculties/i }),
     ).toBeVisible();
