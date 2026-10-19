@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
       react(),
 
       // Use React Compiler only for optimization in production build, not for testing
-      // Need to make sure to memoize manually where needed to ensure tests don't fail due to infinte loops
+      // Need to make sure to memoize manually where needed, to ensure tests don't fail due to infinite loops!!!
       mode !== "test" && babel({ presets: [reactCompilerPreset()] }),
 
       tailwindcss(),
