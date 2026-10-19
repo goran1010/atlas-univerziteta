@@ -2,10 +2,6 @@ import { render, screen, within } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { routes } from "../../src/routes";
 
-beforeEach(() => {
-  vi.spyOn(console, "error").mockImplementation(() => undefined);
-});
-
 afterEach(() => {
   vi.restoreAllMocks();
 });

@@ -25,10 +25,6 @@ vi.mock("../../../../src/utils/authClient", () => ({
 
 const user = userEvent.setup();
 
-beforeEach(() => {
-  vi.spyOn(console, "error").mockImplementation(() => vi.fn());
-});
-
 afterEach(() => {
   vi.restoreAllMocks();
 });

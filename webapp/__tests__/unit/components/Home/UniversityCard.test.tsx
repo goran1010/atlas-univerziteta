@@ -82,9 +82,6 @@ function Wrapper({ university = baseUniversity }) {
 }
 
 describe("UniversityCard", () => {
-  vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-  vi.spyOn(console, "error").mockImplementation(() => vi.fn());
-
   beforeEach(() => {
     detailRequests = 0;
     givenDetails([]);
@@ -153,6 +150,7 @@ describe("UniversityCard", () => {
   });
 
   test("shows API error notification when details response is non-ok", async () => {
+    const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     server.use(
       http.get("*/api/v1/universities/:id", () =>
         HttpResponse.json(
@@ -172,9 +170,16 @@ describe("UniversityCard", () => {
         /Could not load the details\. Try again in a moment\./i,
       ),
     ).toBeInTheDocument();
+    expect(warnSpy).toHaveBeenCalledWith(
+      "Failed to load university details:",
+      "Failed from API.",
+    );
   });
 
   test("shows an error notification when a successful details response is malformed", async () => {
+    const errorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => vi.fn());
     server.use(
       http.get("*/api/v1/universities/:id", () =>
         HttpResponse.json({
@@ -195,9 +200,14 @@ describe("UniversityCard", () => {
       ),
     ).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Expand/i })).toBeVisible();
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error loading university details:",
+      expect.any(Error),
+    );
   });
 
   test("rejects an out-of-range academic value in a successful details response", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => vi.fn());
     givenDetails([
       {
         id: 11,
@@ -235,7 +245,9 @@ describe("UniversityCard", () => {
   });
 
   test("shows fallback notification when details request throws", async () => {
-    vi.spyOn(console, "error").mockImplementation(() => vi.fn());
+    const errorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => vi.fn());
     server.use(
       http.get("*/api/v1/universities/:id", () => HttpResponse.error()),
     );
@@ -250,6 +262,10 @@ describe("UniversityCard", () => {
         /Could not load the details\. Try again in a moment\./i,
       ),
     ).toBeInTheDocument();
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error loading university details:",
+      expect.any(Error),
+    );
   });
 
   test("renders private ownership label", () => {

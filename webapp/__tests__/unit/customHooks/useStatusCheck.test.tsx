@@ -26,7 +26,6 @@ function StatusCheckProbe({ addNotification }: StatusCheckProbeProps) {
 beforeEach(() => {
   vi.useFakeTimers();
   vi.clearAllMocks();
-  vi.spyOn(console, "error").mockImplementation(() => undefined);
 });
 
 afterEach(() => {
@@ -121,6 +120,9 @@ describe("useStatusCheck", () => {
   });
 
   test("reports an error when getSession throws", async () => {
+    const errorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => undefined);
     const addNotification = vi.fn(() => "notification-id");
     getSessionMock.mockRejectedValue(new Error("Network error"));
 
@@ -135,5 +137,9 @@ describe("useStatusCheck", () => {
       message: "messages.loginStatus.error",
     });
     expect(screen.getByTestId("user-email")).toHaveTextContent("none");
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error checking login status:",
+      expect.any(Error),
+    );
   });
 });

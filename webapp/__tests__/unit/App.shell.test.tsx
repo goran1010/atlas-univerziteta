@@ -18,7 +18,6 @@ beforeEach(() => {
     data: null,
     error: null,
   });
-  vi.spyOn(console, "error").mockImplementation(() => vi.fn());
 });
 
 afterEach(() => {

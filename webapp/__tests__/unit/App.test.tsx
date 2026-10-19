@@ -9,16 +9,15 @@ vi.mock("../../src/utils/authClient", () => ({
 }));
 
 describe("App", () => {
-  beforeEach(() => {
-    vi.spyOn(console, "error").mockImplementation(() => undefined);
-  });
-
   afterEach(() => {
     vi.clearAllTimers();
     vi.restoreAllMocks();
   });
 
   test("shows a login-status error when the session check fails", async () => {
+    const errorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => undefined);
     const router = createMemoryRouter(routes, {
       initialEntries: ["/"],
     });
@@ -29,5 +28,9 @@ describe("App", () => {
     );
 
     expect(errorNotification).toBeInTheDocument();
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error checking login status:",
+      expect.any(Error),
+    );
   });
 });
