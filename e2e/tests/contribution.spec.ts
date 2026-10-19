@@ -91,6 +91,62 @@ test("contribution approval round-trip", async ({ browser }) => {
   });
 });
 
+test("user can discard their own pending change", async ({ browser }) => {
+  const { name: universityName } = uniqueName("E2E Discarded University");
+
+  await withUserPage(browser, async (userPage) => {
+    await submitUniversityCreate(userPage, universityName);
+
+    await userPage.goto("/improve-data/pending");
+    const row = userPage.getByRole("listitem").filter({ hasText: "Create" });
+    await expect(row).toBeVisible();
+
+    await row.getByRole("button", { name: "Delete", exact: true }).click();
+
+    await expect(userPage.getByText("Pending change discarded.")).toBeVisible();
+    await expect(
+      userPage.getByText("No pending changes to display."),
+    ).toBeVisible();
+  });
+});
+
+test("user can submit an update suggestion for an existing university", async ({
+  browser,
+}) => {
+  const { name: updatedName } = uniqueName("E2E Updated University");
+
+  await withUserPage(browser, async (userPage) => {
+    await userPage.goto("/improve-data/add");
+    await userPage
+      .getByRole("combobox", { name: "Entity Type" })
+      .selectOption("UNIVERSITY");
+    await userPage
+      .getByRole("combobox", { name: "Change", exact: true })
+      .selectOption("UPDATE");
+
+    // pick the first real university from the seeded list
+    const universityPicker = userPage.getByRole("combobox", {
+      name: "University",
+      exact: true,
+    });
+    await expect(universityPicker.locator("option").nth(1)).toBeAttached();
+    await universityPicker.selectOption({ index: 1 });
+
+    await expect(userPage.getByText("Current data")).toBeVisible();
+
+    await userPage
+      .getByRole("textbox", { name: "Name", exact: true })
+      .fill(updatedName);
+    await userPage.getByRole("button", { name: "Submit Suggestion" }).click();
+    await expect(userPage.getByText("Suggestion submitted.")).toBeVisible();
+
+    await userPage.goto("/improve-data/pending");
+    await expect(
+      userPage.getByRole("listitem").filter({ hasText: "Update" }),
+    ).toBeVisible();
+  });
+});
+
 test("contribution rejection round-trip", async ({ browser }) => {
   const { suffix, name: universityName } = uniqueName(
     "E2E Rejected University",
