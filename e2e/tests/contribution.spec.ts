@@ -1,5 +1,12 @@
 import { test, expect } from "@playwright/test";
+import { queryE2eDb } from "../db";
 import { ADMIN_STORAGE_STATE, USER_STORAGE_STATE } from "../env";
+
+test.beforeEach(async () => {
+  // a retry after a mid-test failure must not find the previous attempt's
+  // pending change still queued when it asserts an empty queue
+  await queryE2eDb('DELETE FROM "pending_change"', []);
+});
 
 test("contribution approval round-trip", async ({ browser }) => {
   const suffix =
@@ -47,7 +54,7 @@ test("contribution approval round-trip", async ({ browser }) => {
 
   await adminPage.goto("/search");
   await adminPage.getByRole("searchbox", { name: "Search" }).fill(suffix);
-  // generous timeout: random suffixes expand to many diacritic variants,
+  // generous timeout: random suffixes expand to many variants,
   // making this search slow under parallel workers
   await expect(adminPage.getByText(universityName)).toBeVisible({
     timeout: 15000,

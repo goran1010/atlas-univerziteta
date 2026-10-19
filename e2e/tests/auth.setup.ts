@@ -13,7 +13,23 @@ interface Account {
   password: string;
 }
 
+// CI retries re-run this setup, and a leftover account from the failed
+// attempt would make the fixed-email signup fail - start from a clean slate
+async function deleteAccount(email: string) {
+  const rows = await queryE2eDb<{ id: string }>(
+    'SELECT id FROM "user" WHERE email = $1',
+    [email],
+  );
+  const id = rows[0]?.id;
+  if (!id) return;
+  await queryE2eDb('DELETE FROM "account" WHERE "userId" = $1', [id]);
+  await queryE2eDb('DELETE FROM "session" WHERE "userId" = $1', [id]);
+  await queryE2eDb('DELETE FROM "pending_change" WHERE "userId" = $1', [id]);
+  await queryE2eDb('DELETE FROM "user" WHERE id = $1', [id]);
+}
+
 async function signUpAndVerify(page: Page, account: Account) {
+  await deleteAccount(account.email);
   await page.goto("/signup");
   await page.getByRole("textbox", { name: "Email" }).fill(account.email);
   await page
