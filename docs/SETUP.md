@@ -69,7 +69,9 @@ npm run test:webapp
 npm run test:coverage:all
 ```
 
-Server tests require `TEST_DATABASE_URL` with a user that can `CREATEDB`. The database named in the URL is never used - the test setup creates a fresh template database per run (schema via migrations, no seed data) and a clone per test file, dropping them afterwards.
+Server tests are split into two vitest projects: `unit` (no database needed) and `integration` (real Postgres). From `server/`, `npm run test:unit` and `npm run test:integration` run them separately.
+
+Integration tests require `TEST_DATABASE_URL` with a user that can `CREATEDB`. The database named in the URL is never used - the test setup creates a fresh template database per run (schema via migrations, no seed data) and a clone per test file, dropping them afterwards.
 
 ### E2E and accessibility tests
 

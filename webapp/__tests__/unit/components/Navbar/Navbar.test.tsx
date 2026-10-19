@@ -32,17 +32,14 @@ async function openMobileMenu() {
     expect(menuButton).toHaveAttribute("aria-expanded", "true");
   });
 
+  // the button's aria-controls names the menu element directly
   const controlsId = menuButton.getAttribute("aria-controls");
   if (!controlsId) {
     throw new Error("Menu button does not have aria-controls attribute");
   }
-  const mobileMenu = screen
-    .getAllByRole("link")
-    .find((link) => link.closest(`#${controlsId}`))
-    ?.closest("div");
-
+  const mobileMenu = document.getElementById(controlsId);
   if (!mobileMenu) {
-    throw new Error("Mobile menu not found");
+    throw new Error(`Mobile menu element #${controlsId} not found`);
   }
 
   return {

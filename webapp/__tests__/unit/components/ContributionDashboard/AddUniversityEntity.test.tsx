@@ -55,12 +55,12 @@ interface CapturedSubmission {
 let universitiesRequests = 0;
 let submissions: CapturedSubmission[] = [];
 
+// echoes the request back as a valid pending change so the response passes
+// the schema parse and the component's real success path runs
 function submissionResponse(
-  method: CapturedSubmission["method"],
+  typeOfChange: "CREATE" | "UPDATE",
   body: Record<string, unknown>,
 ) {
-  const typeOfChange =
-    method === "POST" ? "CREATE" : method === "PUT" ? "UPDATE" : "DELETE";
   return HttpResponse.json(
     {
       message: "Suggestion submitted.",
@@ -79,14 +79,6 @@ function submissionResponse(
   );
 }
 
-function captureSubmission(method: CapturedSubmission["method"]) {
-  return async ({ request }: { request: Request }) => {
-    const body = (await request.json()) as Record<string, unknown>;
-    submissions.push({ method, body });
-    return submissionResponse(method, body);
-  };
-}
-
 beforeEach(() => {
   universitiesRequests = 0;
   submissions = [];
@@ -98,8 +90,16 @@ beforeEach(() => {
     http.get("*/api/v1/universities/:id", () =>
       HttpResponse.json({ message: "ok", data: universityDetail }),
     ),
-    http.post("*/users/contribution/universities", captureSubmission("POST")),
-    http.put("*/users/contribution/universities", captureSubmission("PUT")),
+    http.post("*/users/contribution/universities", async ({ request }) => {
+      const body = (await request.json()) as Record<string, unknown>;
+      submissions.push({ method: "POST", body });
+      return submissionResponse("CREATE", body);
+    }),
+    http.put("*/users/contribution/universities", async ({ request }) => {
+      const body = (await request.json()) as Record<string, unknown>;
+      submissions.push({ method: "PUT", body });
+      return submissionResponse("UPDATE", body);
+    }),
   );
 });
 
