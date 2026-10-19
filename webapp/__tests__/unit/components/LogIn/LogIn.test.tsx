@@ -175,8 +175,7 @@ describe("User typing in input fields in LogIn Component", () => {
 });
 
 describe("LogIn form validation", () => {
-  // each case asserts the message both while typing and after a Log in
-  // click, which is what the two near-identical describes used to cover
+  // each case asserts the message both while typing and after a Log in click
   test("shows validation messages for an invalid email", async () => {
     const { emailField, logInButton } = createFormElements();
 

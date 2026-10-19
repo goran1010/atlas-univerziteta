@@ -5,6 +5,8 @@ import { Profile } from "../../../../src/components/Profile/Profile";
 import { LogIn } from "../../../../src/components/LogIn/LogIn";
 import userEvent from "@testing-library/user-event";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { makeUser } from "../../../utils/makeUser";
+import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { UserData } from "../../../../src/types";
 
@@ -24,28 +26,29 @@ vi.mock("../../../../src/utils/authClient", () => ({
 const user = userEvent.setup();
 
 beforeEach(() => {
-  const mockResponse = new Response(
-    JSON.stringify({
-      message: "User logged out successfully",
-      data: null,
-    }),
-    {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    },
-  );
-  const mockConsoleError = vi.fn();
-
-  vi.spyOn(globalThis, "fetch").mockResolvedValue(mockResponse);
-  vi.spyOn(console, "error").mockImplementation(mockConsoleError);
+  vi.spyOn(console, "error").mockImplementation(() => vi.fn());
 });
 
 afterEach(() => {
   vi.restoreAllMocks();
 });
 
-function Wrapper({ initialUser = null }: { initialUser?: UserData }) {
-  return (
+function givenAdminRequestEndpoints() {
+  server.use(
+    http.post("*/users/request-admin", () =>
+      HttpResponse.json({
+        message: "Admin access requested. An admin will review it.",
+        data: { adminRequestedAt: "2026-08-16T10:00:00.000Z" },
+      }),
+    ),
+    http.delete("*/users/request-admin", () =>
+      HttpResponse.json({ message: "Admin request cancelled.", data: null }),
+    ),
+  );
+}
+
+function renderProfile(initialUser: UserData = makeUser()) {
+  render(
     <RootContextProvider initialUserData={initialUser}>
       <MemoryRouter initialEntries={["/profile"]}>
         <Notifications />
@@ -55,7 +58,7 @@ function Wrapper({ initialUser = null }: { initialUser?: UserData }) {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </MemoryRouter>
-    </RootContextProvider>
+    </RootContextProvider>,
   );
 }
 
@@ -64,7 +67,6 @@ async function clickLogout() {
     name: /Log out/i,
   });
 
-  expect(logoutButton).toBeInTheDocument();
   await user.click(logoutButton);
 
   return logoutButton;
@@ -72,7 +74,8 @@ async function clickLogout() {
 
 describe("Profile Component", () => {
   test("renders access denied card when user is not logged in", async () => {
-    render(<Wrapper />);
+    renderProfile(null);
+
     const message = await screen.findByText(
       /You need to be logged in to view your profile./i,
     );
@@ -86,192 +89,73 @@ describe("Profile Component", () => {
     ).toHaveAttribute("href", "/");
   });
 
-  test("renders profile component when user is logged in", async () => {
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "testuser@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-        }}
-      />,
-    );
-    const headingElement = await screen.findByRole("heading", {
-      name: /My Profile/i,
-    });
-    expect(headingElement).toBeInTheDocument();
-  });
+  test.each(["USER", "ADMIN"] as const)(
+    "displays the profile heading, email and %s role",
+    async (role) => {
+      renderProfile(
+        makeUser({ email: `${role.toLowerCase()}@example.com`, role }),
+      );
 
-  test("displays user information correctly", async () => {
-    const user: UserData = {
-      id: "test-id",
-      name: "test",
-      email: "testuser@example.com",
-      emailVerified: true,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-      role: "USER",
-    };
-    render(<Wrapper initialUser={user} />);
-    const emailElement = await screen.findByText(/testuser@example.com/i);
-    const roleElement = await screen.findByText("USER");
-    expect(emailElement).toBeInTheDocument();
-    expect(roleElement).toBeInTheDocument();
-  });
-
-  test("displays admin role when user role is ADMIN", async () => {
-    const user: UserData = {
-      id: "test-id",
-      name: "test",
-      email: "admin@example.com",
-      emailVerified: true,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-      role: "ADMIN",
-    };
-    render(<Wrapper initialUser={user} />);
-    const emailElement = await screen.findByText(/admin@example.com/i);
-    const roleElement = await screen.findByText("ADMIN");
-    expect(emailElement).toBeInTheDocument();
-    expect(roleElement).toBeInTheDocument();
-  });
+      expect(
+        await screen.findByRole("heading", { name: /My Profile/i }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText(`${role.toLowerCase()}@example.com`),
+      ).toBeInTheDocument();
+      expect(screen.getByText(role)).toBeInTheDocument();
+    },
+  );
 });
 
 describe("Profile Component handle logout", () => {
-  test("handles logout failure due to server error", async () => {
+  test("handles logout correctly", async () => {
+    vi.mocked(authClient.signOut).mockResolvedValueOnce({
+      error: null,
+    });
+    renderProfile();
+
+    const logoutButton = await clickLogout();
+
+    expect(
+      await screen.findByText(/Successfully logged out/i),
+    ).toBeInTheDocument();
+    expect(await screen.findByText(/Home Page/i)).toBeInTheDocument();
+    expect(logoutButton).not.toBeInTheDocument();
+  });
+
+  test("shows an error and stays on profile when logout returns an error", async () => {
     vi.mocked(authClient.signOut).mockResolvedValueOnce({
       error: { message: "Server error" },
     });
-
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "testuser@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-        }}
-      />,
-    );
+    renderProfile();
 
     await clickLogout();
 
-    const notificationElement = await screen.findByText(
-      "Logout did not complete. Try again.",
-    );
-    expect(notificationElement).toBeInTheDocument();
+    expect(
+      await screen.findByText("Logout did not complete. Try again."),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /My Profile/i }),
+    ).toBeInTheDocument();
   });
 
   test("handles logout failure due to unexpected error", async () => {
     vi.mocked(authClient.signOut).mockRejectedValueOnce(
       new Error("Network error"),
     );
-
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "testuser@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-        }}
-      />,
-    );
-
-    await clickLogout();
-
-    const notificationElement = await screen.findByText(
-      /Something went wrong during logout./i,
-    );
-    expect(notificationElement).toBeInTheDocument();
-  });
-
-  test("handles logout correctly", async () => {
-    vi.mocked(authClient.signOut).mockResolvedValueOnce({
-      error: null,
-    });
-
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "testuser@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-        }}
-      />,
-    );
-    const logoutButton = await clickLogout();
-
-    const notificationElement = await screen.findByText(
-      /Successfully logged out/i,
-    );
-    expect(notificationElement).toBeInTheDocument();
-
-    const homePage = await screen.findByText(/Home Page/i);
-
-    expect(homePage).toBeInTheDocument();
-    expect(logoutButton).not.toBeInTheDocument();
-  });
-
-  test("stays on profile when logout returns error", async () => {
-    vi.mocked(authClient.signOut).mockResolvedValueOnce({
-      error: { message: "Failed" },
-    });
-
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "testuser@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-        }}
-      />,
-    );
+    renderProfile();
 
     await clickLogout();
 
     expect(
-      await screen.findByText(/Logout did not complete/i),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", { name: /My Profile/i }),
+      await screen.findByText(/Something went wrong during logout./i),
     ).toBeInTheDocument();
   });
 });
 
 describe("Profile Component admin request", () => {
   test("shows the request button for a USER without an active request", async () => {
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "testuser@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-        }}
-      />,
-    );
+    renderProfile();
 
     expect(
       await screen.findByRole("button", { name: /Request admin access/i }),
@@ -282,44 +166,13 @@ describe("Profile Component admin request", () => {
   });
 
   test("requests admin access and shows the pending state", async () => {
-    const fetchSpy = vi.spyOn(globalThis, "fetch");
-    fetchSpy.mockResolvedValueOnce(
-      new Response(
-        JSON.stringify({
-          message: "Admin access requested. An admin will review it.",
-          data: { adminRequestedAt: "2026-08-16T10:00:00.000Z" },
-        }),
-        { status: 200, headers: { "Content-Type": "application/json" } },
-      ),
-    );
-
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "testuser@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-        }}
-      />,
-    );
+    givenAdminRequestEndpoints();
+    renderProfile();
 
     await user.click(
       await screen.findByRole("button", { name: /Request admin access/i }),
     );
 
-    expect(fetchSpy).toHaveBeenCalledWith(
-      expect.stringContaining("/users/request-admin"),
-      expect.objectContaining({
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }),
-    );
     expect(
       await screen.findByText(/Admin request pending/i),
     ).toBeInTheDocument();
@@ -332,28 +185,8 @@ describe("Profile Component admin request", () => {
   });
 
   test("cancels a pending admin request", async () => {
-    const fetchSpy = vi.spyOn(globalThis, "fetch");
-    fetchSpy.mockResolvedValueOnce(
-      new Response(
-        JSON.stringify({ message: "Admin request cancelled.", data: null }),
-        { status: 200, headers: { "Content-Type": "application/json" } },
-      ),
-    );
-
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "testuser@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-          adminRequestedAt: "2026-08-16T10:00:00.000Z",
-        }}
-      />,
-    );
+    givenAdminRequestEndpoints();
+    renderProfile(makeUser({ adminRequestedAt: "2026-08-16T10:00:00.000Z" }));
 
     expect(
       await screen.findByText(/Admin request pending/i),
@@ -363,10 +196,6 @@ describe("Profile Component admin request", () => {
       screen.getByRole("button", { name: /Cancel admin request/i }),
     );
 
-    expect(fetchSpy).toHaveBeenCalledWith(
-      expect.stringContaining("/users/request-admin"),
-      expect.objectContaining({ method: "DELETE" }),
-    );
     expect(
       await screen.findByRole("button", { name: /Request admin access/i }),
     ).toBeInTheDocument();
@@ -376,27 +205,16 @@ describe("Profile Component admin request", () => {
   });
 
   test("shows an error notification when the request fails", async () => {
-    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
-      new Response(
-        JSON.stringify({ error: { message: "Something went wrong." } }),
-        { status: 500, headers: { "Content-Type": "application/json" } },
+    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+    server.use(
+      http.post("*/users/request-admin", () =>
+        HttpResponse.json(
+          { error: { message: "Something went wrong." } },
+          { status: 500 },
+        ),
       ),
     );
-    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "testuser@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-        }}
-      />,
-    );
+    renderProfile();
 
     await user.click(
       await screen.findByRole("button", { name: /Request admin access/i }),
@@ -413,19 +231,7 @@ describe("Profile Component admin request", () => {
   });
 
   test("does not show admin request controls for an ADMIN", async () => {
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "admin@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "ADMIN",
-        }}
-      />,
-    );
+    renderProfile(makeUser({ email: "admin@example.com", role: "ADMIN" }));
 
     await screen.findByRole("heading", { name: /My Profile/i });
 
