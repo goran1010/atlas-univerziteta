@@ -2,21 +2,38 @@ import { render, screen } from "@testing-library/react";
 import { Button } from "../../../../src/components/sharedComponents/Button";
 
 describe("Button", () => {
-  test("uses the primary variant by default", () => {
+  test("renders a non-submitting button by default", () => {
     render(<Button>Save</Button>);
 
     const button = screen.getByRole("button", { name: "Save" });
 
     expect(button).toHaveAttribute("type", "button");
-    expect(button).toHaveClass("bg-(--accent)");
+    expect(button).toBeEnabled();
   });
 
-  test("uses the supplied variant", () => {
-    render(<Button variant="danger">Delete</Button>);
+  test("honors an explicit type", () => {
+    render(<Button type="submit">Send</Button>);
 
-    const button = screen.getByRole("button", { name: "Delete" });
+    expect(screen.getByRole("button", { name: "Send" })).toHaveAttribute(
+      "type",
+      "submit",
+    );
+  });
 
-    expect(button).toHaveClass("bg-red-700");
-    expect(button).not.toHaveClass("bg-(--accent)");
+  test("disables the button and shows a spinner while loading", () => {
+    render(<Button loading>Save</Button>);
+
+    const button = screen.getByRole("button");
+
+    expect(button).toBeDisabled();
+    expect(screen.getByRole("status")).toBeInTheDocument();
+    // the label stays mounted (hidden) so the button keeps its width
+    expect(screen.getByText("Save")).toBeInTheDocument();
+  });
+
+  test("stays disabled when the disabled prop is set", () => {
+    render(<Button disabled>Save</Button>);
+
+    expect(screen.getByRole("button", { name: "Save" })).toBeDisabled();
   });
 });

@@ -9,25 +9,15 @@ vi.mock("../../src/utils/authClient", () => ({
 }));
 
 describe("App", () => {
-  beforeEach(() => {
-    vi.spyOn(globalThis, "fetch").mockImplementation((input) => {
-      const url = input instanceof Request ? input.url : input.toString();
-
-      if (url.endsWith("/health")) {
-        return Promise.resolve(new Response(null, { status: 200 }));
-      }
-
-      return Promise.resolve(new Response(null, { status: 200 }));
-    });
-    vi.spyOn(console, "error").mockImplementation(() => undefined);
-  });
-
   afterEach(() => {
     vi.clearAllTimers();
     vi.restoreAllMocks();
   });
 
   test("shows a login-status error when the session check fails", async () => {
+    const errorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => undefined);
     const router = createMemoryRouter(routes, {
       initialEntries: ["/"],
     });
@@ -38,5 +28,9 @@ describe("App", () => {
     );
 
     expect(errorNotification).toBeInTheDocument();
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error checking login status:",
+      expect.any(Error),
+    );
   });
 });

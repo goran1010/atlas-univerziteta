@@ -1,10 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { createMemoryRouter, RouterProvider } from "react-router";
 import { AdminForm } from "../../../../src/components/AdminDashboard/AdminForm";
 import { AdminRequests } from "../../../../src/components/AdminDashboard/AdminRequests";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
-import { createMemoryRouter, RouterProvider } from "react-router";
+import { makeUser } from "../../../utils/makeUser";
+import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { AdminRequest } from "../../../../src/schemas/adminRequest";
 
@@ -18,106 +20,51 @@ const mockAdminRequests: AdminRequest[] = [
   },
 ];
 
-const createFetchResponse = (data: unknown, ok = true) => ({
-  ok,
-  json: () => Promise.resolve(data),
-});
+function givenAdminRequests(adminRequests: AdminRequest[]) {
+  server.use(
+    http.get("*/users/admin/admin-requests", () =>
+      HttpResponse.json({
+        data: adminRequests,
+        message: "Admin requests retrieved successfully.",
+      }),
+    ),
+    http.get("*/users/admin/pending-changes", () =>
+      HttpResponse.json({
+        data: [],
+        message: "Pending changes retrieved successfully.",
+      }),
+    ),
+  );
+}
 
-const fetchMock = vi.fn();
-
-const setupFetchMock = ({
-  adminRequests = mockAdminRequests,
-  csrfToken = "csrf-token",
-} = {}) => {
-  fetchMock.mockReset();
-  fetchMock.mockImplementation((url) => {
-    const requestUrl = String(url);
-    if (requestUrl.includes("/csrf-token")) {
-      return Promise.resolve(
-        createFetchResponse({ data: csrfToken, message: "Success" }),
-      );
-    }
-    if (requestUrl.includes("/users/admin/admin-requests")) {
-      return Promise.resolve(
-        createFetchResponse({
-          data: adminRequests,
-          message: "Admin requests retrieved successfully.",
-        }),
-      );
-    }
-    if (requestUrl.includes("/users/admin/pending-changes")) {
-      return Promise.resolve(
-        createFetchResponse({
-          data: [],
-          message: "Pending changes retrieved successfully.",
-        }),
-      );
-    }
-    if (requestUrl.includes("/approve-admin-request")) {
-      return Promise.resolve(
-        createFetchResponse({
-          message: "Admin request approved successfully.",
-        }),
-      );
-    }
-    if (requestUrl.includes("/decline-admin-request")) {
-      return Promise.resolve(
-        createFetchResponse({
-          message: "Admin request declined successfully.",
-        }),
-      );
-    }
-    throw new Error(`Unexpected fetch request: ${requestUrl}`);
-  });
-};
-
-function Wrapper() {
+function renderAdminRequests() {
   const router = createMemoryRouter(
     [
       {
         path: "/admin-dashboard",
         element: (
           <RootContextProvider
-            initialUserData={{
-              id: "test-id",
-              name: "test",
+            initialUserData={makeUser({
               email: "admin@example.com",
-              emailVerified: true,
-              createdAt: new Date(),
-              updatedAt: new Date(),
               role: "ADMIN",
-            }}
+            })}
           >
             <Notifications />
             <AdminForm />
           </RootContextProvider>
         ),
-        children: [
-          {
-            path: "admin-requests",
-            element: <AdminRequests />,
-          },
-        ],
+        children: [{ path: "admin-requests", element: <AdminRequests /> }],
       },
     ],
     { initialEntries: ["/admin-dashboard/admin-requests"] },
   );
-  return <RouterProvider router={router} />;
+  render(<RouterProvider router={router} />);
 }
-
-beforeEach(() => {
-  vi.spyOn(globalThis, "fetch").mockImplementation(fetchMock);
-  fetchMock.mockReset();
-});
-
-afterEach(() => {
-  vi.restoreAllMocks();
-});
 
 describe("AdminRequests component", () => {
   test("renders a request row with email", async () => {
-    setupFetchMock();
-    render(<Wrapper />);
+    givenAdminRequests(mockAdminRequests);
+    renderAdminRequests();
 
     expect(
       await screen.findByText("johndoe@examplemail.com"),
@@ -125,8 +72,8 @@ describe("AdminRequests component", () => {
   });
 
   test("renders the empty state when there are no requests", async () => {
-    setupFetchMock({ adminRequests: [] });
-    render(<Wrapper />);
+    givenAdminRequests([]);
+    renderAdminRequests();
 
     expect(
       await screen.findByText(/There are no admin requests at the moment./i),
@@ -134,69 +81,75 @@ describe("AdminRequests component", () => {
   });
 
   test("approves a request and removes the row", async () => {
-    setupFetchMock();
-    render(<Wrapper />);
+    givenAdminRequests(mockAdminRequests);
+    let approvedId: string | undefined;
+    server.use(
+      http.post("*/users/admin/approve-admin-request", async ({ request }) => {
+        approvedId = ((await request.json()) as { id: string }).id;
+        return HttpResponse.json({
+          data: null,
+          message: "Admin request approved successfully.",
+        });
+      }),
+    );
+    renderAdminRequests();
 
     await user.click(await screen.findByRole("button", { name: /Approve/i }));
 
-    expect(fetchMock).toHaveBeenCalledWith(
-      expect.stringContaining("/users/admin/approve-admin-request"),
-      expect.objectContaining({
-        method: "POST",
-        body: JSON.stringify({ id: mockAdminRequests[0]?.id }),
-      }),
-    );
     expect(
       await screen.findByText(/Admin request approved./i),
     ).toBeInTheDocument();
+    expect(approvedId).toBe(mockAdminRequests[0]?.id);
     expect(
       screen.queryByText("johndoe@examplemail.com"),
     ).not.toBeInTheDocument();
   });
 
   test("declines a request and removes the row", async () => {
-    setupFetchMock();
-    render(<Wrapper />);
+    givenAdminRequests(mockAdminRequests);
+    let declinedId: string | undefined;
+    server.use(
+      http.delete(
+        "*/users/admin/decline-admin-request",
+        async ({ request }) => {
+          declinedId = ((await request.json()) as { id: string }).id;
+          return HttpResponse.json({
+            data: null,
+            message: "Admin request declined successfully.",
+          });
+        },
+      ),
+    );
+    renderAdminRequests();
 
     await user.click(await screen.findByRole("button", { name: /Reject/i }));
 
-    expect(fetchMock).toHaveBeenCalledWith(
-      expect.stringContaining("/users/admin/decline-admin-request"),
-      expect.objectContaining({
-        method: "DELETE",
-        body: JSON.stringify({ id: mockAdminRequests[0]?.id }),
-      }),
-    );
     expect(
       await screen.findByText(/Admin request declined./i),
     ).toBeInTheDocument();
+    expect(declinedId).toBe(mockAdminRequests[0]?.id);
     expect(
       screen.queryByText("johndoe@examplemail.com"),
     ).not.toBeInTheDocument();
   });
 
   test("shows an error notification when fetching requests fails", async () => {
-    setupFetchMock();
     vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-    fetchMock.mockImplementation((url) => {
-      const requestUrl = String(url);
-      if (requestUrl.includes("/users/admin/pending-changes")) {
-        return Promise.resolve(
-          createFetchResponse({
-            data: [],
-            message: "Pending changes retrieved successfully.",
-          }),
-        );
-      }
-      return Promise.resolve(
-        createFetchResponse(
+    server.use(
+      http.get("*/users/admin/admin-requests", () =>
+        HttpResponse.json(
           { error: { message: "Something went wrong." } },
-          false,
+          { status: 500 },
         ),
-      );
-    });
-
-    render(<Wrapper />);
+      ),
+      http.get("*/users/admin/pending-changes", () =>
+        HttpResponse.json({
+          data: [],
+          message: "Pending changes retrieved successfully.",
+        }),
+      ),
+    );
+    renderAdminRequests();
 
     expect(
       await screen.findByText(/Could not load admin requests./i),

@@ -3,6 +3,7 @@ import { createMemoryRouter, RouterProvider } from "react-router";
 import { HomeLayout } from "../../../../src/components/Home/HomeLayout";
 import { UnifiedSearch } from "../../../../src/components/Home/UnifiedSearch";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { server, http, HttpResponse } from "../../../utils/msw";
 import { Navigate } from "react-router";
 
 function Wrapper({ initialEntry = "/search" }: { initialEntry?: string }) {
@@ -28,22 +29,25 @@ function Wrapper({ initialEntry = "/search" }: { initialEntry?: string }) {
   return <RouterProvider router={router} />;
 }
 
-beforeEach(() => {
-  const mockResponse = new Response(
-    JSON.stringify({
-      data: [],
-      message: "Universities retrieved successfully.",
-    }),
-    {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    },
-  );
-  vi.spyOn(globalThis, "fetch").mockResolvedValue(mockResponse);
-});
+let searchRequests = 0;
 
-afterEach(() => {
-  vi.restoreAllMocks();
+beforeEach(() => {
+  searchRequests = 0;
+  server.use(
+    http.get("*/api/v1/search", () => {
+      searchRequests++;
+      return HttpResponse.json({
+        message: "Search results retrieved successfully.",
+        data: {
+          universities: [],
+          faculties: [],
+          studyPrograms: [],
+          totals: { universities: 0, faculties: 0, studyPrograms: 0 },
+          direct: { universities: 0, faculties: 0, studyPrograms: 0 },
+        },
+      });
+    }),
+  );
 });
 
 describe("Universities page", () => {
@@ -66,6 +70,6 @@ describe("Universities page", () => {
     expect(
       screen.getByRole("button", { name: /Browse All/i }),
     ).toBeInTheDocument();
-    expect(fetch).not.toHaveBeenCalled();
+    expect(searchRequests).toBe(0);
   });
 });

@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { UniversityCard } from "../../../../src/components/Home/UniversityCard";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { UniversityListItem } from "../../../../src/schemas/university";
 
@@ -27,6 +28,46 @@ const baseUniversity: UniversityListItem = {
   _count: { faculties: 3 },
 };
 
+const nestedFaculties = [
+  {
+    id: 11,
+    name: "Faculty of Electrical Engineering",
+    universityId: 1,
+    studyPrograms: [
+      {
+        id: 21,
+        name: "Computer Science",
+        facultyId: 11,
+        cycle: "FIRST",
+        ects: 180,
+        tracks: [
+          {
+            id: 31,
+            name: "Software Track",
+            studyProgramId: 21,
+            ects: 60,
+            durationYears: 1,
+          },
+        ],
+      },
+    ],
+  },
+];
+
+let detailRequests = 0;
+
+function givenDetails(faculties: unknown) {
+  server.use(
+    http.get("*/api/v1/universities/:id", () => {
+      detailRequests++;
+      return HttpResponse.json({
+        message: "University retrieved successfully.",
+        data: { ...baseUniversity, faculties },
+      });
+    }),
+  );
+}
+
 function Wrapper({ university = baseUniversity }) {
   return (
     <RootContextProvider>
@@ -41,135 +82,49 @@ function Wrapper({ university = baseUniversity }) {
 }
 
 describe("UniversityCard", () => {
-  vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-
   beforeEach(() => {
-    const mockResponse = new Response(
-      JSON.stringify({
-        message: "University retrieved successfully.",
-        data: { ...baseUniversity, faculties: [] },
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(mockResponse);
-  });
-
-  afterEach(() => {
-    vi.restoreAllMocks();
+    detailRequests = 0;
+    givenDetails([]);
   });
 
   test("renders basic university metadata", () => {
     render(<Wrapper />);
 
-    const universityName = screen.getByText(/University of Sarajevo/i);
-    const cityText = screen.getByText("Sarajevo");
-    const entityText = screen.getByText(/Federation of B&H/i);
-    const foundedText = screen.getByText("1949");
-    const websiteLink = screen.getByRole("link", {
-      name: /https:\/\/unsa\.ba/i,
-    });
-
-    expect(universityName).toBeInTheDocument();
-    expect(cityText).toBeInTheDocument();
-    expect(entityText).toBeInTheDocument();
-    expect(foundedText).toBeInTheDocument();
-    expect(websiteLink).toHaveAttribute("href", "https://unsa.ba");
+    expect(screen.getByText(/University of Sarajevo/i)).toBeInTheDocument();
+    expect(screen.getByText("Sarajevo")).toBeInTheDocument();
+    expect(screen.getByText(/Federation of B&H/i)).toBeInTheDocument();
+    expect(screen.getByText("1949")).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /https:\/\/unsa\.ba/i }),
+    ).toHaveAttribute("href", "https://unsa.ba");
   });
 
   test("loads details, can hide details, and reopens cached details without refetch", async () => {
-    const mockResponse = new Response(
-      JSON.stringify({
-        message: "University retrieved successfully.",
-        data: { ...baseUniversity, faculties: [] },
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(mockResponse);
-
     render(<Wrapper />);
     const user = userEvent.setup();
 
-    const viewDetailsButton = screen.getByRole("button", {
-      name: /Expand/i,
-    });
+    await user.click(screen.getByRole("button", { name: /Expand/i }));
 
-    await user.click(viewDetailsButton);
+    expect(await screen.findByText(/Faculties: -/i)).toBeInTheDocument();
+    expect(detailRequests).toBe(1);
 
-    const noFacultiesText = await screen.findByText(/Faculties: -/i);
-    expect(noFacultiesText).toBeInTheDocument();
-    expect(fetch).toHaveBeenCalledTimes(1);
-
-    const hideDetailsButton = screen.getByRole("button", {
-      name: /Collapse/i,
-    });
-    await user.click(hideDetailsButton);
+    await user.click(screen.getByRole("button", { name: /Collapse/i }));
 
     expect(screen.queryByText(/Faculties: -/i)).not.toBeInTheDocument();
 
-    const showCachedDetailsButton = screen.getByRole("button", {
-      name: /Expand/i,
-    });
-    await user.click(showCachedDetailsButton);
+    await user.click(screen.getByRole("button", { name: /Expand/i }));
 
-    const cachedDetails = await screen.findByText(/Faculties: -/i);
-
-    expect(fetch).toHaveBeenCalledTimes(1);
-    expect(cachedDetails).toBeInTheDocument();
+    expect(await screen.findByText(/Faculties: -/i)).toBeInTheDocument();
+    expect(detailRequests).toBe(1);
   });
 
   test("expands nested faculty, study program and track rows", async () => {
-    const mockResponse = new Response(
-      JSON.stringify({
-        message: "University retrieved successfully.",
-        data: {
-          ...baseUniversity,
-          faculties: [
-            {
-              id: 11,
-              name: "Faculty of Electrical Engineering",
-              universityId: 1,
-              studyPrograms: [
-                {
-                  id: 21,
-                  name: "Computer Science",
-                  facultyId: 11,
-                  cycle: "FIRST",
-                  ects: 180,
-                  tracks: [
-                    {
-                      id: 31,
-                      name: "Software Track",
-                      studyProgramId: 21,
-                      ects: 60,
-                      durationYears: 1,
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(mockResponse);
+    givenDetails(nestedFaculties);
 
     render(<Wrapper />);
     const user = userEvent.setup();
 
-    const viewDetailsButton = screen.getByRole("button", {
-      name: /Expand/i,
-    });
-    await user.click(viewDetailsButton);
+    await user.click(screen.getByRole("button", { name: /Expand/i }));
 
     const facultiesTitle = await screen.findByText(
       (_content, element) =>
@@ -183,62 +138,25 @@ describe("UniversityCard", () => {
     ).toBeInTheDocument();
 
     // University button is now "Hide details"; the faculty has the only "View details"
-    const facultyViewButton = screen.getByRole("button", {
-      name: /Expand/i,
-    });
-    await user.click(facultyViewButton);
+    await user.click(screen.getByRole("button", { name: /Expand/i }));
 
     // Study program details (name, duration, ECTS) are shown immediately
-    const programName = await screen.findByText(/Computer Science/i);
-    expect(programName).toBeInTheDocument();
+    expect(await screen.findByText(/Computer Science/i)).toBeInTheDocument();
 
     // tracks render inline with the study program, no further expand
-    const trackName = await screen.findByText(/Software Track/i);
-    const durationText = screen.getByText(/1 year\b/i);
-    const ectsText = screen.getByText(/60 ECTS/i);
-
-    expect(trackName).toBeInTheDocument();
-    expect(durationText).toBeInTheDocument();
-    expect(ectsText).toBeInTheDocument();
+    expect(await screen.findByText(/Software Track/i)).toBeInTheDocument();
+    expect(screen.getByText(/1 year\b/i)).toBeInTheDocument();
+    expect(screen.getByText(/60 ECTS/i)).toBeInTheDocument();
   });
 
   test("shows API error notification when details response is non-ok", async () => {
-    const mockErrorResponse = new Response(
-      JSON.stringify({ error: { message: "Failed from API." } }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(mockErrorResponse);
-
-    render(<Wrapper />);
-    const user = userEvent.setup();
-
-    const viewDetailsButton = screen.getByRole("button", {
-      name: /Expand/i,
-    });
-    await user.click(viewDetailsButton);
-
-    const apiErrorMessage = await screen.findByText(
-      /Could not load the details\. Try again in a moment\./i,
-    );
-
-    expect(fetch).toHaveBeenCalledTimes(1);
-    expect(apiErrorMessage).toBeInTheDocument();
-  });
-
-  test("shows an error notification when a successful details response is malformed", async () => {
-    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
-      new Response(
-        JSON.stringify({
-          message: "University retrieved successfully.",
-          data: { id: 1, name: "University of Sarajevo" },
-        }),
-        {
-          status: 200,
-          headers: { "Content-Type": "application/json" },
-        },
+    const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+    server.use(
+      http.get("*/api/v1/universities/:id", () =>
+        HttpResponse.json(
+          { error: { message: "Failed from API." } },
+          { status: 500 },
+        ),
       ),
     );
 
@@ -247,52 +165,72 @@ describe("UniversityCard", () => {
 
     await user.click(screen.getByRole("button", { name: /Expand/i }));
 
-    const errorMessage = await screen.findByText(
-      /Could not load the details\. Try again in a moment\./i,
+    expect(
+      await screen.findByText(
+        /Could not load the details\. Try again in a moment\./i,
+      ),
+    ).toBeInTheDocument();
+    expect(warnSpy).toHaveBeenCalledWith(
+      "Failed to load university details:",
+      "Failed from API.",
+    );
+  });
+
+  test("shows an error notification when a successful details response is malformed", async () => {
+    const errorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => vi.fn());
+    server.use(
+      http.get("*/api/v1/universities/:id", () =>
+        HttpResponse.json({
+          message: "University retrieved successfully.",
+          data: { id: 1, name: "University of Sarajevo" },
+        }),
+      ),
     );
 
-    expect(errorMessage).toBeInTheDocument();
+    render(<Wrapper />);
+    const user = userEvent.setup();
+
+    await user.click(screen.getByRole("button", { name: /Expand/i }));
+
+    expect(
+      await screen.findByText(
+        /Could not load the details\. Try again in a moment\./i,
+      ),
+    ).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Expand/i })).toBeVisible();
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error loading university details:",
+      expect.any(Error),
+    );
   });
 
   test("rejects an out-of-range academic value in a successful details response", async () => {
-    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
-      new Response(
-        JSON.stringify({
-          message: "University retrieved successfully.",
-          data: {
-            ...baseUniversity,
-            faculties: [
+    vi.spyOn(console, "error").mockImplementation(() => vi.fn());
+    givenDetails([
+      {
+        id: 11,
+        name: "Faculty of Electrical Engineering",
+        universityId: 1,
+        studyPrograms: [
+          {
+            id: 21,
+            name: "Computer Science",
+            facultyId: 11,
+            cycle: "FIRST",
+            tracks: [
               {
-                id: 11,
-                name: "Faculty of Electrical Engineering",
-                universityId: 1,
-                studyPrograms: [
-                  {
-                    id: 21,
-                    name: "Computer Science",
-                    facultyId: 11,
-                    cycle: "FIRST",
-                    tracks: [
-                      {
-                        id: 31,
-                        name: "Software Track",
-                        studyProgramId: 21,
-                        ects: 0,
-                      },
-                    ],
-                  },
-                ],
+                id: 31,
+                name: "Software Track",
+                studyProgramId: 21,
+                ects: 0,
               },
             ],
           },
-        }),
-        {
-          status: 200,
-          headers: { "Content-Type": "application/json" },
-        },
-      ),
-    );
+        ],
+      },
+    ]);
 
     render(<Wrapper />);
     const user = userEvent.setup();
@@ -307,22 +245,27 @@ describe("UniversityCard", () => {
   });
 
   test("shows fallback notification when details request throws", async () => {
-    vi.spyOn(globalThis, "fetch").mockRejectedValueOnce(new Error("network"));
+    const errorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => vi.fn());
+    server.use(
+      http.get("*/api/v1/universities/:id", () => HttpResponse.error()),
+    );
 
     render(<Wrapper />);
     const user = userEvent.setup();
 
-    const viewDetailsButton = screen.getByRole("button", {
-      name: /Expand/i,
-    });
-    await user.click(viewDetailsButton);
+    await user.click(screen.getByRole("button", { name: /Expand/i }));
 
-    const fallbackError = await screen.findByText(
-      /Could not load the details\. Try again in a moment\./i,
+    expect(
+      await screen.findByText(
+        /Could not load the details\. Try again in a moment\./i,
+      ),
+    ).toBeInTheDocument();
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error loading university details:",
+      expect.any(Error),
     );
-
-    expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fallbackError).toBeInTheDocument();
   });
 
   test("renders private ownership label", () => {
@@ -336,8 +279,6 @@ describe("UniversityCard", () => {
       />,
     );
 
-    const privateOwnership = screen.getByText(/Private/i);
-
-    expect(privateOwnership).toBeInTheDocument();
+    expect(screen.getByText(/Private/i)).toBeInTheDocument();
   });
 });

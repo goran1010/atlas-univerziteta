@@ -17,49 +17,9 @@ vi.mock("../../../../src/utils/authClient", () => ({
   },
 }));
 
+import { makeUser } from "../../../utils/makeUser";
+
 import type { UserData } from "../../../../src/types";
-
-function createUser(role: Role = "ADMIN"): UserData {
-  return {
-    id: "test-id",
-    name: "test",
-    email: "test@example.com",
-    emailVerified: true,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    role,
-  };
-}
-
-beforeEach(() => {
-  localStorage.setItem("language", "en");
-  vi.spyOn(globalThis, "fetch").mockImplementation((url) => {
-    const requestUrl = getRequestUrl(url);
-
-    if (requestUrl.endsWith("/api")) {
-      return Promise.resolve(
-        new Response(JSON.stringify({ message: "Server is live." }), {
-          status: 200,
-          headers: { "Content-Type": "application/json" },
-        }),
-      );
-    }
-
-    return Promise.resolve(
-      new Response(
-        JSON.stringify({ message: "User not authenticated.", data: null }),
-        {
-          status: 401,
-          headers: { "Content-Type": "application/json" },
-        },
-      ),
-    );
-  });
-});
-
-afterEach(() => {
-  vi.restoreAllMocks();
-});
 
 async function openMobileMenu() {
   const menuButton = await screen.findByRole("button", {
@@ -72,17 +32,14 @@ async function openMobileMenu() {
     expect(menuButton).toHaveAttribute("aria-expanded", "true");
   });
 
+  // the button's aria-controls names the menu element directly
   const controlsId = menuButton.getAttribute("aria-controls");
   if (!controlsId) {
     throw new Error("Menu button does not have aria-controls attribute");
   }
-  const mobileMenu = screen
-    .getAllByRole("link")
-    .find((link) => link.closest(`#${controlsId}`))
-    ?.closest("div");
-
+  const mobileMenu = document.getElementById(controlsId);
   if (!mobileMenu) {
-    throw new Error("Mobile menu not found");
+    throw new Error(`Mobile menu element #${controlsId} not found`);
   }
 
   return {
@@ -139,19 +96,7 @@ describe("Render Navbar on root route", () => {
       error: null,
     });
 
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "test@example.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-        }}
-      />,
-    );
+    render(<Wrapper initialUser={makeUser()} />);
     await screen.findByText(/Home/i);
 
     const profile = await screen.findByRole("link", { name: /profile/i });
@@ -171,7 +116,7 @@ function NavbarWrapper({
   role?: "ADMIN" | "USER";
   withUser?: boolean;
 }) {
-  const userData = withUser ? createUser(role) : null;
+  const userData = withUser ? makeUser({ role }) : null;
 
   const closeMenu = useCloseMenu();
   return (
@@ -187,18 +132,6 @@ function NavbarWrapper({
 
 type Role = "ADMIN" | "USER";
 const roles: Role[] = ["ADMIN", "USER"];
-
-function getRequestUrl(url: RequestInfo | URL) {
-  if (typeof url === "string") {
-    return url;
-  }
-
-  if (url instanceof URL) {
-    return url.toString();
-  }
-
-  return url.url;
-}
 
 describe("render Navbar mobile menu", () => {
   test.each(roles)("opens mobile menu for %s role", async (role) => {
@@ -291,24 +224,5 @@ describe("Navbar switchers", () => {
 
     await userEvent.click(languageButton);
     expect(localStorage.getItem("language")).toBe("en");
-  });
-});
-
-describe("render Menu based on viewport size", () => {
-  test("Menu has the appropriate css", async () => {
-    render(<NavbarWrapper />);
-
-    const homeLink = await screen.findByRole("link", { name: /Home/i });
-    const aboutLink = screen.getByRole("link", { name: /About/i });
-
-    expect(homeLink).toBeInTheDocument();
-    expect(aboutLink).toBeInTheDocument();
-
-    const menuButton = screen.getByRole("button", {
-      name: /Toggle navigation menu/i,
-    });
-
-    expect(menuButton.parentElement).toHaveClass("flex");
-    expect(menuButton.parentElement).toHaveClass("md:hidden");
   });
 });

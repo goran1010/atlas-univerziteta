@@ -2,7 +2,6 @@ services:
   # --- Caddy: reverse proxy + automatic HTTPS ---
   # Caddy is the entry point for API traffic. It terminates TLS and
   # forwards requests to the Node.js server container.
-  # The webapp is hosted separately on Netlify.
   caddy:
     image: caddy:2
     restart: unless-stopped
@@ -46,10 +45,10 @@ services:
   # Uses the official Postgres image. Data is stored in a named volume
   # so it survives container restarts and rebuilds.
   db:
-    image: postgres:17
+    image: postgres:18
     restart: unless-stopped
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}

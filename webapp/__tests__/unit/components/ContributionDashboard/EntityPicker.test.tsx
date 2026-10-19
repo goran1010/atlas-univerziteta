@@ -4,6 +4,7 @@ import { EntityPicker } from "../../../../src/components/ContributionDashboard/E
 import { getPickerDepth } from "../../../../src/components/ContributionDashboard/utils/getPickerDepth";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { server, http, HttpResponse } from "../../../utils/msw";
 
 const universitiesList = [
   {
@@ -31,6 +32,7 @@ const detailsById: Record<string, unknown> = {
         id: 3,
         name: "Faculty of Electrical Engineering",
         universityId: 1,
+        city: "Novi Grad",
         studyPrograms: [],
       },
     ],
@@ -41,50 +43,49 @@ const detailsById: Record<string, unknown> = {
   },
 };
 
-function jsonResponse(data: unknown) {
-  return new Response(JSON.stringify({ message: "ok", data }), {
-    status: 200,
-    headers: { "Content-Type": "application/json" },
-  });
-}
+let universitiesRequests = 0;
+let detailRequests = 0;
 
-function setupFetchMock() {
-  vi.spyOn(globalThis, "fetch").mockImplementation((input) => {
-    const url = input instanceof Request ? input.url : String(input);
-    if (url.endsWith("/api/v1/universities")) {
-      return Promise.resolve(jsonResponse(universitiesList));
-    }
-    const detailMatch = /\/api\/v1\/universities\/(\d+)$/.exec(url);
-    if (detailMatch?.[1] && detailsById[detailMatch[1]]) {
-      return Promise.resolve(jsonResponse(detailsById[detailMatch[1]]));
-    }
-    throw new Error(`Unexpected fetch: ${url}`);
-  });
-}
+beforeEach(() => {
+  universitiesRequests = 0;
+  detailRequests = 0;
+  server.use(
+    http.get("*/api/v1/universities", () => {
+      universitiesRequests++;
+      return HttpResponse.json({ message: "ok", data: universitiesList });
+    }),
+    http.get("*/api/v1/universities/:id", ({ params }) => {
+      detailRequests++;
+      const detail = detailsById[String(params.id)];
+      if (!detail) {
+        return HttpResponse.json(
+          { error: { message: "University not found." } },
+          { status: 404 },
+        );
+      }
+      return HttpResponse.json({ message: "ok", data: detail });
+    }),
+  );
+});
 
-function renderPicker(depth: number, onSelect = vi.fn()) {
+function renderPicker(
+  depth: number,
+  onSelect = vi.fn(),
+  showSelectedDetails = false,
+) {
   render(
     <RootContextProvider>
       <Notifications />
       <EntityPicker
         depth={depth}
         legend="Pick"
-        showSelectedDetails={false}
+        showSelectedDetails={showSelectedDetails}
         onSelect={onSelect}
       />
     </RootContextProvider>,
   );
   return onSelect;
 }
-
-beforeEach(() => {
-  localStorage.setItem("language", "en");
-  setupFetchMock();
-});
-
-afterEach(() => {
-  vi.restoreAllMocks();
-});
 
 describe("getPickerDepth", () => {
   test.each([
@@ -103,9 +104,7 @@ describe("getPickerDepth", () => {
 });
 
 describe("EntityPicker", () => {
-  vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-
-  test("reports the university id at depth 1", async () => {
+  test("reports the university id at depth 1 without fetching details", async () => {
     const onSelect = renderPicker(1);
     const user = userEvent.setup();
 
@@ -115,7 +114,8 @@ describe("EntityPicker", () => {
     await user.selectOptions(universitySelect, "1");
 
     expect(onSelect).toHaveBeenLastCalledWith("1");
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(universitiesRequests).toBe(1);
+    expect(detailRequests).toBe(0);
   });
 
   test("clears the reported id until the deepest level is picked", async () => {
@@ -156,12 +156,31 @@ describe("EntityPicker", () => {
     expect(screen.getByText(/No faculties available/i)).toBeInTheDocument();
   });
 
+  test("shows the picked faculty details when enabled", async () => {
+    renderPicker(2, vi.fn(), true);
+    const user = userEvent.setup();
+
+    await user.selectOptions(
+      await screen.findByRole("combobox", { name: /^University$/i }),
+      "1",
+    );
+    await screen.findByRole("option", {
+      name: /Faculty of Electrical Engineering/i,
+    });
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /^Faculty$/i }),
+      "3",
+    );
+
+    expect(await screen.findByText("Novi Grad")).toBeInTheDocument();
+  });
+
   test("shows an error notification when the universities list fails to load", async () => {
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(
-      new Response(JSON.stringify({ error: { message: "boom" } }), {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      }),
+    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+    server.use(
+      http.get("*/api/v1/universities", () =>
+        HttpResponse.json({ error: { message: "boom" } }, { status: 500 }),
+      ),
     );
 
     renderPicker(1);

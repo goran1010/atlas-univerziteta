@@ -1,24 +1,11 @@
-import { act, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { AddUniversityEntity } from "../../../../src/components/ContributionDashboard/AddUniversityEntity";
+import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { ReactElement } from "react";
-import type { HandleSubmitUniversityEntityParams } from "../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
-
-const handleSubmitUniversityEntityMock =
-  vi.fn<(args: HandleSubmitUniversityEntityParams) => undefined>();
-
-vi.mock(
-  "../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity",
-  () => ({
-    handleSubmitUniversityEntity: (
-      args: HandleSubmitUniversityEntityParams,
-    ) => {
-      handleSubmitUniversityEntityMock(args);
-    },
-  }),
-);
 
 const universitiesList = [
   {
@@ -60,36 +47,69 @@ const universityDetail = {
   ],
 };
 
-function jsonResponse(data: unknown) {
-  return new Response(JSON.stringify({ message: "ok", data }), {
-    status: 200,
-    headers: { "Content-Type": "application/json" },
-  });
+interface CapturedSubmission {
+  method: "POST" | "PUT" | "DELETE";
+  body: Record<string, unknown>;
 }
 
-function setupFetchMock() {
-  vi.spyOn(globalThis, "fetch").mockImplementation((input) => {
-    const url = input instanceof Request ? input.url : String(input);
-    if (url.endsWith("/api/v1/universities")) {
-      return Promise.resolve(jsonResponse(universitiesList));
-    }
-    if (url.includes("/api/v1/universities/")) {
-      return Promise.resolve(jsonResponse(universityDetail));
-    }
-    throw new Error(`Unexpected fetch: ${url}`);
-  });
+let universitiesRequests = 0;
+let submissions: CapturedSubmission[] = [];
+
+// echoes the request back as a valid pending change so the response passes
+// the schema parse and the component's real success path runs
+function submissionResponse(
+  typeOfChange: "CREATE" | "UPDATE",
+  body: Record<string, unknown>,
+) {
+  return HttpResponse.json(
+    {
+      message: "Suggestion submitted.",
+      data: {
+        id: "11111111-2222-4333-8444-555555555555",
+        userId: "test-id",
+        entityType: body.entityType,
+        typeOfChange,
+        targetId: body.targetId == null ? null : Number(body.targetId),
+        parentId: body.parentId == null ? null : Number(body.parentId),
+        data: body.data ?? {},
+        createdAt: new Date().toISOString(),
+      },
+    },
+    { status: 201 },
+  );
 }
+
+beforeEach(() => {
+  universitiesRequests = 0;
+  submissions = [];
+  server.use(
+    http.get("*/api/v1/universities", () => {
+      universitiesRequests++;
+      return HttpResponse.json({ message: "ok", data: universitiesList });
+    }),
+    http.get("*/api/v1/universities/:id", () =>
+      HttpResponse.json({ message: "ok", data: universityDetail }),
+    ),
+    http.post("*/users/contribution/universities", async ({ request }) => {
+      const body = (await request.json()) as Record<string, unknown>;
+      submissions.push({ method: "POST", body });
+      return submissionResponse("CREATE", body);
+    }),
+    http.put("*/users/contribution/universities", async ({ request }) => {
+      const body = (await request.json()) as Record<string, unknown>;
+      submissions.push({ method: "PUT", body });
+      return submissionResponse("UPDATE", body);
+    }),
+  );
+});
 
 function Wrapper({ children }: { children: ReactElement }) {
-  return <RootContextProvider>{children}</RootContextProvider>;
-}
-
-function expectSubmitArgs() {
-  const submittedArgs = handleSubmitUniversityEntityMock.mock.calls[0]?.[0];
-
-  expect(submittedArgs).toBeDefined();
-
-  return submittedArgs;
+  return (
+    <RootContextProvider>
+      <Notifications />
+      {children}
+    </RootContextProvider>
+  );
 }
 
 async function pickUniversity(user: ReturnType<typeof userEvent.setup>) {
@@ -128,16 +148,6 @@ async function pickTrack(user: ReturnType<typeof userEvent.setup>) {
   );
 }
 
-beforeEach(() => {
-  localStorage.setItem("language", "en");
-  handleSubmitUniversityEntityMock.mockReset();
-  setupFetchMock();
-});
-
-afterEach(() => {
-  vi.restoreAllMocks();
-});
-
 describe("AddUniversityEntity", () => {
   test("renders university create fields when university is selected", async () => {
     render(
@@ -158,7 +168,7 @@ describe("AddUniversityEntity", () => {
     expect(
       screen.getByRole("button", { name: /Submit Suggestion/i }),
     ).toBeInTheDocument();
-    expect(fetch).not.toHaveBeenCalled();
+    expect(universitiesRequests).toBe(0);
   });
 
   test("renders the entity picker and hides data fields for delete changes", async () => {
@@ -305,7 +315,7 @@ describe("AddUniversityEntity", () => {
     expect(universitySelect).toHaveValue("");
   });
 
-  test("submits the selected entity data through the handler", async () => {
+  test("submits a university create suggestion and resets the form", async () => {
     const refetchPendingChanges = vi.fn();
 
     render(
@@ -329,39 +339,32 @@ describe("AddUniversityEntity", () => {
       screen.getByRole("button", { name: /Submit Suggestion/i }),
     );
 
-    const submittedArgs = expectSubmitArgs();
+    expect(
+      await screen.findByText(/Suggestion submitted./i),
+    ).toBeInTheDocument();
 
-    expect(submittedArgs.entityType).toBe("UNIVERSITY");
-    expect(submittedArgs.parentId).toBe("");
-    expect(submittedArgs.targetId).toBe("");
-    expect(submittedArgs.typeOfChange).toBe("CREATE");
-    expect(submittedArgs.data).toMatchObject({
-      name: "University of Sarajevo",
-      city: "Sarajevo",
-      entity: "FBIH",
-      ownership: "PUBLIC",
+    expect(submissions).toHaveLength(1);
+    expect(submissions[0]?.method).toBe("POST");
+    expect(submissions[0]?.body).toEqual({
+      entityType: "UNIVERSITY",
+      data: {
+        name: "University of Sarajevo",
+        city: "Sarajevo",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
     });
-    expect(typeof submittedArgs.onSuccess).toBe("function");
-    expect(typeof submittedArgs.ctx.addNotification).toBe("function");
-    expect(typeof submittedArgs.ctx.setLoading).toBe("function");
-    expect(typeof submittedArgs.ctx.t).toBe("function");
-
-    act(() => {
-      submittedArgs.onSuccess();
-    });
-
+    expect(refetchPendingChanges).toHaveBeenCalled();
     expect(screen.getByLabelText(/Name/i)).toHaveValue("");
     expect(screen.getByRole("combobox", { name: /Entity Type/i })).toHaveValue(
       "UNIVERSITY",
     );
   });
 
-  test("submits track data with picked target id on update", async () => {
-    const refetchPendingChanges = vi.fn();
-
+  test("submits track data with the picked target id on update", async () => {
     render(
       <Wrapper>
-        <AddUniversityEntity refetchPendingChanges={refetchPendingChanges} />
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
       </Wrapper>,
     );
 
@@ -391,20 +394,25 @@ describe("AddUniversityEntity", () => {
       screen.getByRole("button", { name: /Submit Suggestion/i }),
     );
 
-    const submittedArgs = expectSubmitArgs();
+    expect(
+      await screen.findByText(/Suggestion submitted./i),
+    ).toBeInTheDocument();
 
-    expect(submittedArgs.entityType).toBe("TRACK");
-    expect(submittedArgs.targetId).toBe("11");
-    expect(submittedArgs.typeOfChange).toBe("UPDATE");
-    expect(submittedArgs.data).toMatchObject({
-      name: "Software Track",
-      ects: 60,
-      durationYears: 1,
+    expect(submissions).toHaveLength(1);
+    const submission = submissions[0];
+    expect(submission.method).toBe("PUT");
+    expect(submission.body).toMatchObject({
+      entityType: "TRACK",
+      data: {
+        name: "Software Track",
+        ects: 60,
+        durationYears: 1,
+      },
     });
-    expect(typeof submittedArgs.onSuccess).toBe("function");
+    expect(Number(submission.body.targetId)).toBe(11);
   });
 
-  test("submits study program data with picked parent id", async () => {
+  test("submits study program data with the picked parent id", async () => {
     render(
       <Wrapper>
         <AddUniversityEntity refetchPendingChanges={vi.fn()} />
@@ -430,16 +438,22 @@ describe("AddUniversityEntity", () => {
       screen.getByRole("button", { name: /Submit Suggestion/i }),
     );
 
-    const submittedArgs = expectSubmitArgs();
+    expect(
+      await screen.findByText(/Suggestion submitted./i),
+    ).toBeInTheDocument();
 
-    expect(submittedArgs.entityType).toBe("STUDY_PROGRAM");
-    expect(submittedArgs.parentId).toBe("3");
-    expect(submittedArgs.typeOfChange).toBe("CREATE");
-    expect(submittedArgs.data).toMatchObject({
-      name: "Computer Science",
-      cycle: "FIRST",
-      durationYears: 3,
-      ects: 180,
+    expect(submissions).toHaveLength(1);
+    const submission = submissions[0];
+    expect(submission.method).toBe("POST");
+    expect(submission.body).toMatchObject({
+      entityType: "STUDY_PROGRAM",
+      data: {
+        name: "Computer Science",
+        cycle: "FIRST",
+        durationYears: 3,
+        ects: 180,
+      },
     });
+    expect(Number(submission.body.parentId)).toBe(3);
   });
 });

@@ -1,5 +1,19 @@
 import { cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/vitest";
+import { server } from "../utils/msw";
+
+beforeAll(() => {
+  server.listen({ onUnhandledRequest: "error" });
+});
+
+beforeEach(() => {
+  localStorage.clear();
+  localStorage.setItem("language", "en");
+});
+
+afterAll(() => {
+  server.close();
+});
 
 const media: MediaQueryList = {
   matches: false,
@@ -21,11 +35,21 @@ Object.defineProperty(window, "matchMedia", {
   value: vi.fn().mockImplementation(() => media),
 });
 
-// jsdom doesn't implement scrollTo or the <dialog> API; stub them.
+// jsdom doesn't implement scrollTo or the <dialog> API; stub them. The
+// dialog stubs keep the open attribute and close event faithful so role
+// queries see modal content the way a browser would.
 window.scrollTo = vi.fn() as typeof window.scrollTo;
-HTMLDialogElement.prototype.showModal = vi.fn();
-HTMLDialogElement.prototype.close = vi.fn();
+HTMLDialogElement.prototype.showModal = vi.fn(function (
+  this: HTMLDialogElement,
+) {
+  this.open = true;
+});
+HTMLDialogElement.prototype.close = vi.fn(function (this: HTMLDialogElement) {
+  this.open = false;
+  this.dispatchEvent(new Event("close"));
+});
 
 afterEach(() => {
+  server.resetHandlers();
   cleanup();
 });

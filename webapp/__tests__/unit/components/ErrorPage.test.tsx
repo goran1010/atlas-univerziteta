@@ -6,14 +6,17 @@ import { RouterProvider } from "react-router";
 
 const user = userEvent.setup();
 
-vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-
 function renderErrorPage() {
+  // every test here renders an unmatched route on purpose, which makes
+  // react-router warn; the spy scopes the mute to exactly that
+  const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+
   const router = createMemoryRouter(routes, {
     initialEntries: ["/non-existent-route"],
   });
 
   render(<RouterProvider router={router} />);
+  return warnSpy;
 }
 
 async function getGoHomeLink() {
@@ -24,9 +27,10 @@ async function getGoHomeLink() {
 
 describe("ErrorPage component", () => {
   test("renders error message", async () => {
-    renderErrorPage();
+    const warnSpy = renderErrorPage();
     const errorMessage = await screen.findByText(/There is nothing here./i);
     expect(errorMessage).toBeInTheDocument();
+    expect(warnSpy).toHaveBeenCalled();
   });
 
   test("renders Go Home link with correct href", async () => {
@@ -41,7 +45,6 @@ describe("ErrorPage component", () => {
 
 describe("ErrorPage navigation", () => {
   test("navigates to home page when Go Home link is clicked", async () => {
-    vi.spyOn(console, "error").mockImplementation(() => vi.fn());
     renderErrorPage();
 
     const goHomeLink = await getGoHomeLink();

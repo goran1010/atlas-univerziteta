@@ -3,16 +3,8 @@ import { describe, test, expect } from "vitest";
 import { app } from "../../src/app.js";
 import { createAndLoginUser } from "../utils/createUserAndLogin.js";
 import { createNewUserInput } from "../utils/createNewUserInput.js";
+import { deleteUser } from "../utils/deleteUser.js";
 import { prisma } from "../../src/db/prisma.js";
-
-async function deleteUser(email: string) {
-  const user = await prisma.user.findUnique({ where: { email } });
-  if (!user) return;
-  await prisma.account.deleteMany({ where: { userId: user.id } });
-  await prisma.session.deleteMany({ where: { userId: user.id } });
-  await prisma.pendingChange.deleteMany({ where: { userId: user.id } });
-  await prisma.user.delete({ where: { id: user.id } });
-}
 
 describe("usersRouter", () => {
   test("sign up creates a user via BetterAuth", async () => {

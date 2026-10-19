@@ -2,34 +2,22 @@ import request from "supertest";
 import { app } from "../../src/app.js";
 import { describe, test, expect } from "vitest";
 import { prisma } from "../../src/db/prisma.js";
-
-function getResponseObject(body: unknown): Record<string, unknown> {
-  expect(body).toBeTypeOf("object");
-  expect(body).not.toBeNull();
-
-  return body as Record<string, unknown>;
-}
-
-function getResponseArray(value: unknown): Record<string, unknown>[] {
-  expect(Array.isArray(value)).toBe(true);
-
-  return value as Record<string, unknown>[];
-}
+import {
+  getResponseObject,
+  getResponseArray,
+} from "../utils/responseHelpers.js";
 
 describe("GET /", () => {
   test("responds with status 200 when LIVE", async () => {
     const response = await request(app).get("/api/v1/");
-    const expectedResponse = {
-      status: 200,
-      body: {
-        data: {
-          status: "ok",
-        },
-        message: "API v1 server is running",
-      },
-    };
 
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({
+      data: {
+        status: "ok",
+      },
+      message: "API v1 server is running",
+    });
   });
 });
 
@@ -122,29 +110,44 @@ describe("GET /api/v1/search", () => {
     const response = await request(app).get(
       "/api/v1/search?searchTerm=completely-nonexistent-term-xyz",
     );
-    const expectedResponse = {
-      status: 200,
-      body: {
-        message: "Search results retrieved successfully.",
-        data: {
-          universities: [],
-          faculties: [],
-          studyPrograms: [],
-          totals: {
-            universities: 0,
-            faculties: 0,
-            studyPrograms: 0,
-          },
-          direct: {
-            universities: 0,
-            faculties: 0,
-            studyPrograms: 0,
-          },
+
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({
+      message: "Search results retrieved successfully.",
+      data: {
+        universities: [],
+        faculties: [],
+        studyPrograms: [],
+        totals: {
+          universities: 0,
+          faculties: 0,
+          studyPrograms: 0,
+        },
+        direct: {
+          universities: 0,
+          faculties: 0,
+          studyPrograms: 0,
         },
       },
-    };
+    });
+  });
 
-    expect(response).toEqual(expect.objectContaining(expectedResponse));
+  test("responds with status 400 when searchTerm exceeds 100 characters", async () => {
+    const response = await request(app).get(
+      `/api/v1/search?searchTerm=${"a".repeat(101)}`,
+    );
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["issues"]).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          path: "searchTerm",
+          message: "Search term must not exceed 100 characters.",
+        }),
+      ]),
+    );
   });
 });
 
@@ -636,6 +639,39 @@ describe("GET /api/v1/universities/:id", () => {
     expect(response.status).toBe(400);
     expect(error["message"]).toBeTypeOf("string");
     expect(error["message"]).toBe("Request validation failed.");
+  });
+
+  test("responds with status 400 for emoji in university id", async () => {
+    const response = await request(app).get("/api/v1/universities/😊");
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["message"]).toBe("Request validation failed.");
+  });
+
+  test("responds with status 404 for non-existent university id", async () => {
+    const uniInDb = await prisma.university.create({
+      data: {
+        name: "Test Integration University 404",
+        city: "Sarajevo",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+    await prisma.university.delete({ where: { id: uniInDb.id } });
+
+    const response = await request(app).get(
+      `/api/v1/universities/${String(uniInDb.id)}`,
+    );
+
+    expect(response.status).toBe(404);
+    expect(response.body).toEqual({
+      error: {
+        code: "NOT_FOUND",
+        message: "University not found.",
+      },
+    });
   });
 });
 

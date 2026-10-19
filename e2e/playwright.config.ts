@@ -1,5 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
-import { E2E_SERVER_URL, E2E_WEBAPP_URL, e2eDatabaseUrl } from "./env";
+import { E2E_SERVER_URL, E2E_WEBAPP_URL, e2eDatabaseUrl } from "./utils/env";
 
 function definedProcessEnv(): Record<string, string> {
   const env: Record<string, string> = {};
@@ -11,7 +11,7 @@ function definedProcessEnv(): Record<string, string> {
 
 export default defineConfig({
   testDir: "./tests",
-  globalSetup: "./global-setup.ts",
+  globalSetup: "./setup/global-setup.ts",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
@@ -23,7 +23,7 @@ export default defineConfig({
     screenshot: "only-on-failure",
   },
   projects: [
-    { name: "setup", testMatch: /auth\.setup\.ts/ },
+    { name: "setup", testDir: "./setup", testMatch: /auth\.setup\.ts/ },
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },

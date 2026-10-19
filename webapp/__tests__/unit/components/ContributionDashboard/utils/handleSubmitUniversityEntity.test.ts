@@ -1,3 +1,6 @@
+import { handleSubmitUniversityEntity } from "../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
+import { makeUser } from "../../../../utils/makeUser";
+
 import type { PendingChange } from "../../../../../src/schemas/pendingChange";
 import type { HandleSubmitUniversityEntityParams } from "../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
 
@@ -24,9 +27,34 @@ const baseArgs = {
   },
 } satisfies HandleSubmitUniversityEntityParams;
 
+function makePendingChange(
+  overrides: Partial<PendingChange> = {},
+): Partial<PendingChange> {
+  // the spread over a discriminated union widens the discriminants, so the
+  // factory result is cast back; the schema parse in the code under test
+  // validates the runtime shape anyway
+  return {
+    id: "1",
+    entityType: "UNIVERSITY",
+    typeOfChange: "CREATE",
+    targetId: null,
+    parentId: null,
+    data: {
+      name: "University of Sarajevo",
+      city: "Sarajevo",
+      entity: "FBIH",
+      ownership: "PUBLIC",
+    },
+    createdAt: new Date(),
+    user: makeUser({ email: "user@email.com" }),
+    userId: "user-1",
+    ...overrides,
+  } as Partial<PendingChange>;
+}
+
 function createSuccessResponse(
   data: PendingChange | Partial<PendingChange>,
-  message: string,
+  message = "Suggestion submitted.",
 ) {
   return {
     ok: true,
@@ -54,31 +82,13 @@ describe("handleSubmitUniversityEntity", () => {
   test("uses POST with numeric parent id for create under parent entity", async () => {
     fetchMock.mockResolvedValue(
       createSuccessResponse(
-        {
-          id: "1",
+        makePendingChange({
           entityType: "FACULTY",
-          typeOfChange: "CREATE",
-          targetId: null,
           parentId: 15,
           data: { name: "Faculty of Law" },
-          createdAt: new Date(),
-          user: {
-            id: "test-id",
-            name: "test",
-            email: "user@email.com",
-            emailVerified: true,
-            createdAt: new Date(),
-            updatedAt: new Date(),
-            role: "USER",
-          },
-          userId: "user-1",
-        },
-        "Created.",
+        }),
       ),
     );
-
-    const { handleSubmitUniversityEntity } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
@@ -101,38 +111,7 @@ describe("handleSubmitUniversityEntity", () => {
   });
 
   test("submits a create request and calls onSuccess", async () => {
-    fetchMock.mockResolvedValue(
-      createSuccessResponse(
-        {
-          id: "1",
-          entityType: "UNIVERSITY",
-          typeOfChange: "CREATE",
-          targetId: null,
-          parentId: null,
-          data: {
-            name: "University of Sarajevo",
-            city: "Sarajevo",
-            entity: "FBIH",
-            ownership: "PUBLIC",
-          },
-          createdAt: new Date(),
-          user: {
-            id: "test-id",
-            name: "test",
-            email: "submitter@email.com",
-            emailVerified: true,
-            createdAt: new Date(),
-            updatedAt: new Date(),
-            role: "USER",
-          },
-          userId: "user-1",
-        },
-        "Pending change created successfully.",
-      ),
-    );
-
-    const { handleSubmitUniversityEntity } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
+    fetchMock.mockResolvedValue(createSuccessResponse(makePendingChange()));
     const addNotification = vi.fn();
     const setLoading = vi.fn();
     const onSuccess = vi.fn();
@@ -164,31 +143,14 @@ describe("handleSubmitUniversityEntity", () => {
   test("uses PUT and target id for updates", async () => {
     fetchMock.mockResolvedValue(
       createSuccessResponse(
-        {
-          id: "1",
+        makePendingChange({
           entityType: "FACULTY",
           typeOfChange: "UPDATE",
           targetId: 7,
-          parentId: null,
           data: { name: "Updated Faculty" },
-          createdAt: new Date(),
-          user: {
-            id: "test-id",
-            name: "test",
-            email: "user@email.com",
-            emailVerified: true,
-            createdAt: new Date(),
-            updatedAt: new Date(),
-            role: "USER",
-          },
-          userId: "user-1",
-        },
-        "Updated.",
+        }),
       ),
     );
-
-    const { handleSubmitUniversityEntity } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
@@ -214,31 +176,14 @@ describe("handleSubmitUniversityEntity", () => {
   test("uses DELETE and target id for delete changes", async () => {
     fetchMock.mockResolvedValue(
       createSuccessResponse(
-        {
-          id: "1",
+        makePendingChange({
           entityType: "TRACK",
           typeOfChange: "DELETE",
           targetId: 42,
-          parentId: null,
           data: {},
-          createdAt: new Date(),
-          user: {
-            id: "test-id",
-            name: "test",
-            email: "user@email.com",
-            emailVerified: true,
-            createdAt: new Date(),
-            updatedAt: new Date(),
-            role: "USER",
-          },
-          userId: "user-1",
-        },
-        "Deleted.",
+        }),
       ),
     );
-
-    const { handleSubmitUniversityEntity } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
@@ -264,9 +209,6 @@ describe("handleSubmitUniversityEntity", () => {
     vi.spyOn(console, "error").mockImplementation(() => vi.fn());
     const addNotification = vi.fn();
 
-    const { handleSubmitUniversityEntity } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
-
     await handleSubmitUniversityEntity({
       ...baseArgs,
       entityType: "FACULTY",
@@ -284,22 +226,14 @@ describe("handleSubmitUniversityEntity", () => {
   });
 
   test("does not call onSuccess when a successful response has invalid data", async () => {
-    fetchMock.mockResolvedValue({
-      ok: true,
-      json: () =>
-        Promise.resolve({
-          message: "Suggestion submitted.",
-          data: { id: "pending-change-1" },
-        }),
-    });
+    fetchMock.mockResolvedValue(
+      createSuccessResponse({ id: "pending-change-1" }),
+    );
     const onSuccess = vi.fn();
     const addNotification = vi.fn();
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => undefined);
-
-    const { handleSubmitUniversityEntity } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
@@ -317,9 +251,6 @@ describe("handleSubmitUniversityEntity", () => {
 
   test("falls back to the generic add error when the backend error payload is missing", async () => {
     fetchMock.mockResolvedValue(createErrorResponse({}));
-
-    const { handleSubmitUniversityEntity } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
     const addNotification = vi.fn();
 
     await handleSubmitUniversityEntity({
@@ -339,9 +270,6 @@ describe("handleSubmitUniversityEntity", () => {
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => undefined);
-
-    const { handleSubmitUniversityEntity } =
-      await import("../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity");
     const addNotification = vi.fn();
 
     await handleSubmitUniversityEntity({

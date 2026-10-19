@@ -2,8 +2,6 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    globalSetup: "./__tests__/setup/globalSetup.ts",
-    setupFiles: "./__tests__/setup/setup.ts",
     coverage: {
       exclude: [
         "./__tests__/**",
@@ -12,5 +10,25 @@ export default defineConfig({
         "generated/**",
       ],
     },
+    projects: [
+      {
+        test: {
+          name: "unit",
+          include: ["__tests__/unit/**/*.test.ts"],
+          setupFiles: ["./__tests__/setup/mocks.setup.ts"],
+        },
+      },
+      {
+        test: {
+          name: "integration",
+          include: ["__tests__/integration/**/*.test.ts"],
+          globalSetup: "./__tests__/setup/globalSetup.ts",
+          setupFiles: [
+            "./__tests__/setup/mocks.setup.ts",
+            "./__tests__/setup/db.setup.ts",
+          ],
+        },
+      },
+    ],
   },
 });

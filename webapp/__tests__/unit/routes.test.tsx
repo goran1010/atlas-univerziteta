@@ -2,22 +2,6 @@ import { render, screen, within } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { routes } from "../../src/routes";
 
-const mockedResponse = new Response(
-  JSON.stringify({
-    data: [{ id: 1, code: "mocked code" }],
-    message: "mocked message",
-  }),
-  {
-    status: 200,
-    headers: { "Content-Type": "application/json" },
-  },
-);
-
-beforeEach(() => {
-  vi.spyOn(globalThis, "fetch").mockResolvedValue(mockedResponse);
-  vi.spyOn(console, "error").mockImplementation(() => undefined);
-});
-
 afterEach(() => {
   vi.restoreAllMocks();
 });
@@ -31,20 +15,6 @@ function renderRoute(route: string) {
 }
 
 describe("Loading components when visiting an address", () => {
-  test("render Error Page when visiting non-existent address", async () => {
-    const consoleSpy = vi
-      .spyOn(console, "warn")
-      .mockImplementation(() => undefined);
-
-    renderRoute("/non-existent-address");
-
-    const linkElement = await screen.findByText(/Go to Home Page/i);
-    expect(linkElement).not.toBeNull();
-    expect(consoleSpy).toHaveBeenCalled();
-
-    consoleSpy.mockRestore();
-  });
-
   test("visit home page renders the universities page", async () => {
     renderRoute("/");
 

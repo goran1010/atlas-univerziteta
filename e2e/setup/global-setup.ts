@@ -1,7 +1,7 @@
 import { execSync } from "node:child_process";
 import path from "node:path";
 import pg from "pg";
-import { E2E_SERVER_URL, E2E_WEBAPP_URL, e2eDatabaseUrl } from "./env";
+import { E2E_SERVER_URL, E2E_WEBAPP_URL, e2eDatabaseUrl } from "../utils/env";
 
 export default async function globalSetup() {
   const dbUrl = e2eDatabaseUrl();
@@ -21,7 +21,7 @@ export default async function globalSetup() {
   }
   await client.end();
 
-  const serverDir = path.resolve(import.meta.dirname, "../server");
+  const serverDir = path.resolve(import.meta.dirname, "../../server");
   // the seed script imports the server's env validation, which requires more
   // than the database URL - provide the same values the webServer entries use
   const env = {
