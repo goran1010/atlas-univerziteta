@@ -8,6 +8,17 @@
 
 See `.env.production.example` for the VPS environment variable reference and `docker-compose.yml` for the container setup.
 
+The VPS additionally keeps an untracked `docker-compose.override.yml` next to the compose file. It switches the `server` service from a local build to the published image, which is what lets the deploy job run `docker compose pull server`:
+
+```yaml
+services:
+  server:
+    image: ghcr.io/goran1010/atlas-univerziteta-server:latest
+    build: !reset null
+```
+
+Recreate this file when setting up a new server - without it, deploys try to build the image on the VPS instead of pulling it.
+
 OAuth callbacks go through the Netlify `/server` proxy (set by `OAUTH_CALLBACK_BASE_URL` in `docker-compose.yml`), so the OAuth state and session cookies stay on the webapp domain. Register these redirect URIs in the GitHub and Google OAuth app settings:
 
 ```text
