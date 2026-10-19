@@ -1,15 +1,18 @@
-import { use } from "react";
+import { use, useEffect } from "react";
 import { render, screen } from "@testing-library/react";
 import { RootContext } from "../../../src/contextData/RootContext";
 
 function RootContextProbe() {
   const context = use(RootContext);
-  const notification = { type: "info" as const, message: "Default" };
 
-  context.setLanguage("sr");
-  context.addNotification(notification);
-  context.removeNotification("notification-id");
-  context.setUserData(null);
+  // the default context functions must be safe no-ops; calling them in an
+  // effect proves they neither throw nor change the rendered defaults
+  useEffect(() => {
+    context.setLanguage("sr");
+    context.addNotification({ type: "info", message: "Default" });
+    context.removeNotification("notification-id");
+    context.setUserData(null);
+  }, [context]);
 
   return (
     <div>

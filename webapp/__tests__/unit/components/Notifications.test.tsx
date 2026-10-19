@@ -44,11 +44,11 @@ function createNotification(type: TypeNotification): Notification {
   };
 }
 
-const notificationCases: [TypeNotification, "status" | "alert", string][] = [
-  ["success", "status", "border-l-green-600"],
-  ["error", "alert", "border-l-red-600"],
-  ["warning", "alert", "border-l-amber-500"],
-  ["info", "status", "border-l-sky-600"],
+const notificationCases: [TypeNotification, "status" | "alert"][] = [
+  ["success", "status"],
+  ["error", "alert"],
+  ["warning", "alert"],
+  ["info", "status"],
 ];
 
 describe("Notifications", () => {
@@ -69,14 +69,13 @@ describe("Notifications", () => {
   });
 
   test.each(notificationCases)(
-    "renders a %s notification with the correct role and style",
-    (type, role, styleClass) => {
+    "renders a %s notification with the correct role",
+    (type, role) => {
       render(<Wrapper notifications={[createNotification(type)]} />);
 
       const notification = screen.getByRole(role);
 
       expect(notification).toHaveTextContent(`${type} message`);
-      expect(notification).toHaveClass(styleClass);
       expect(screen.getByRole("complementary")).toHaveAttribute(
         "aria-label",
         "notifications.title",

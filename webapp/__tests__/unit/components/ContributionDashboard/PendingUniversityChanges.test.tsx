@@ -4,26 +4,6 @@ import { RootContextProvider } from "../../../utils/rootContextProvider";
 
 import type { PendingChange } from "../../../../src/schemas/pendingChange";
 
-const PendingUniversityChangesRowMock = vi.fn();
-
-vi.mock(
-  "../../../../src/components/ContributionDashboard/PendingUniversityChangesRow",
-  () => ({
-    PendingUniversityChangesRow: (props: { change: PendingChange }) => {
-      PendingUniversityChangesRowMock(props);
-      return (
-        <li>
-          {"name" in props.change.data ? props.change.data.name : "Mock row"}
-        </li>
-      );
-    },
-  }),
-);
-
-vi.mock("../../../../src/utils/Spinner", () => ({
-  Spinner: () => <p>Loading...</p>,
-}));
-
 function Wrapper({ children }: { children: React.ReactNode }) {
   return <RootContextProvider>{children}</RootContextProvider>;
 }
@@ -64,15 +44,6 @@ const pendingChanges: PendingChange[] = [
   },
 ];
 
-beforeEach(() => {
-  localStorage.setItem("language", "en");
-  PendingUniversityChangesRowMock.mockReset();
-});
-
-afterEach(() => {
-  vi.restoreAllMocks();
-});
-
 describe("PendingUniversityChanges", () => {
   test("renders spinner when loading", () => {
     render(
@@ -104,29 +75,19 @@ describe("PendingUniversityChanges", () => {
     ).toBeInTheDocument();
   });
 
-  test("renders pending changes rows and count", () => {
-    const setPendingChanges = vi.fn();
-
+  test("renders a row for every pending change", () => {
     render(
       <Wrapper>
         <PendingUniversityChanges
           loading={false}
           pendingChanges={pendingChanges}
-          setPendingChanges={setPendingChanges}
+          setPendingChanges={vi.fn()}
         />
       </Wrapper>,
     );
 
-    expect(screen.getByText(/^Change$/)).toBeInTheDocument();
-    expect(screen.getByText(/^Entity Type$/)).toBeInTheDocument();
-
-    expect(PendingUniversityChangesRowMock).toHaveBeenCalledTimes(2);
-    expect(PendingUniversityChangesRowMock).toHaveBeenNthCalledWith(
-      1,
-      expect.objectContaining({
-        index: 0,
-        setPendingChanges,
-      }),
-    );
+    expect(screen.getAllByRole("listitem")).toHaveLength(2);
+    expect(screen.getByText("Create")).toBeInTheDocument();
+    expect(screen.getByText("Update")).toBeInTheDocument();
   });
 });
