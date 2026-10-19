@@ -61,7 +61,7 @@ test("search results have no detectable a11y violations", async ({ page }) => {
   await page.goto("/search");
   await page.getByRole("searchbox", { name: "Search" }).fill("univerzitet");
   await expect(
-    page.getByRole("main").getByRole("listitem").first(),
+    page.locator('main a[href^="/universities/"]').first(),
   ).toBeVisible({ timeout: 5000 });
   await expectNoViolations(page);
 });
