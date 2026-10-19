@@ -5,6 +5,7 @@ import { LogIn } from "../../../../src/components/LogIn/LogIn";
 import { About } from "../../../../src/components/About/About";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { makeUser } from "../../../utils/makeUser";
 
 const signInEmailMock = vi.fn();
 const signInSocialMock = vi.fn();
@@ -81,13 +82,6 @@ describe("Render LogIn Component", () => {
     expect(linkElement).toBeInTheDocument();
   });
 
-  test("LogIn form fields", () => {
-    const { emailField, passwordField, logInButton } = createFormElements();
-    expect(emailField).toBeInTheDocument();
-    expect(passwordField).toBeInTheDocument();
-    expect(logInButton).toBeInTheDocument();
-  });
-
   test("shows oauth error notification from query params", async () => {
     function WrapperWithError() {
       return (
@@ -113,17 +107,7 @@ describe("Render LogIn Component", () => {
   test("redirects to home and warns when user is already logged in", async () => {
     function WrapperWithUser() {
       return (
-        <RootContextProvider
-          initialUserData={{
-            id: "test-id",
-            name: "test",
-            email: "user@mail.com",
-            emailVerified: true,
-            createdAt: new Date(),
-            updatedAt: new Date(),
-            role: "USER",
-          }}
-        >
+        <RootContextProvider initialUserData={makeUser()}>
           <MemoryRouter initialEntries={["/login"]}>
             <Notifications />
             <Routes>
@@ -190,57 +174,34 @@ describe("User typing in input fields in LogIn Component", () => {
   });
 });
 
-describe("LogIn form validation on input", () => {
-  test("shows validation messages for invalid email", async () => {
-    const { emailField } = createFormElements();
+describe("LogIn form validation", () => {
+  // each case asserts the message both while typing and after a Log in
+  // click, which is what the two near-identical describes used to cover
+  test("shows validation messages for an invalid email", async () => {
+    const { emailField, logInButton } = createFormElements();
 
     await user.type(emailField, "not_an_email");
-    expect(emailField).toHaveValue("not_an_email");
     expect(emailField.validationMessage).toMatch(/valid email/i);
+    await user.click(logInButton);
+    expect(emailField.validationMessage).toMatch(/valid email/i);
+
     await user.clear(emailField);
     await user.type(emailField, "test@mail.com");
-    expect(emailField).toHaveValue("test@mail.com");
+    expect(emailField.validationMessage).toBe("");
+    await user.click(logInButton);
     expect(emailField.validationMessage).toBe("");
   });
-  test("shows validation messages for invalid password", async () => {
-    const { passwordField } = createFormElements();
+
+  test("requires a password but accepts any non-empty one", async () => {
+    const { passwordField, logInButton } = createFormElements();
 
     await user.type(passwordField, "pass");
-    expect(passwordField).toHaveValue("pass");
     expect(passwordField.validationMessage).toBe("");
+    await user.click(logInButton);
+    expect(passwordField.validationMessage).toBe("");
+
     await user.clear(passwordField);
     expect(passwordField.validationMessage).toMatch(/password is required/i);
-  });
-});
-
-describe("LogIn for validation on button click", () => {
-  test("shows validation messages for invalid email input", async () => {
-    const { logInButton, emailField } = createFormElements();
-
-    await user.type(emailField, "not_an_email");
-    await user.click(logInButton);
-
-    expect(emailField).toHaveValue("not_an_email");
-    expect(emailField.validationMessage).toMatch(/valid email/i);
-
-    await user.clear(emailField);
-    await user.type(emailField, "test@mail.com");
-    await user.click(logInButton);
-
-    expect(emailField).toHaveValue("test@mail.com");
-    expect(emailField.validationMessage).toBe("");
-  });
-
-  test("shows validation messages for invalid password input", async () => {
-    const { logInButton, passwordField } = createFormElements();
-
-    await user.type(passwordField, "pass");
-    await user.click(logInButton);
-
-    expect(passwordField).toHaveValue("pass");
-    expect(passwordField.validationMessage).toBe("");
-
-    await user.clear(passwordField);
     await user.click(logInButton);
     expect(passwordField.validationMessage).toMatch(/password is required/i);
   });

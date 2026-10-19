@@ -5,6 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { LogIn } from "../../../../src/components/LogIn/LogIn";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { makeUser } from "../../../utils/makeUser";
 
 const signUpEmailMock = vi.fn();
 
@@ -20,9 +21,6 @@ vi.mock("../../../../src/utils/authClient", () => ({
 }));
 
 const user = userEvent.setup();
-
-type Element =
-  "emailField" | "passwordField" | "confirmPasswordField" | "signUpButton";
 
 beforeEach(() => {
   function Wrapper() {
@@ -86,28 +84,10 @@ describe("Render SignUp Component", () => {
     expect(linkElement).toBeInTheDocument();
   });
 
-  test("SignUp form fields", () => {
-    const formElements = createFormElements();
-    let element: Element;
-    for (element in formElements) {
-      expect(formElements[element]).toBeInTheDocument();
-    }
-  });
-
   test("redirects to home and warns when user is already logged in", async () => {
     function WrapperWithUser() {
       return (
-        <RootContextProvider
-          initialUserData={{
-            id: "test-id",
-            name: "test",
-            email: "user@mail.com",
-            emailVerified: true,
-            createdAt: new Date(),
-            updatedAt: new Date(),
-            role: "USER",
-          }}
-        >
+        <RootContextProvider initialUserData={makeUser()}>
           <MemoryRouter initialEntries={["/signup"]}>
             <Notifications />
             <Routes>
@@ -148,111 +128,57 @@ describe("User typing in input fields in SignUp Component", () => {
   });
 });
 
-describe("SignUp Form Validation on input", () => {
-  test("shows validation messages for email input", async () => {
-    const { emailField }: { emailField: HTMLInputElement } =
-      createFormElements();
+describe("SignUp Form Validation", () => {
+  // each case asserts the message both while typing and after a Create click
+  const validationCases = [
+    { field: "email", value: "te", message: /valid email/i },
+    { field: "email", value: "test", message: /valid email/i },
+    { field: "email", value: "test@", message: /valid email/i },
+    { field: "email", value: "test@mail.com", message: "" },
+    { field: "password", value: "pass", message: /at least 6 characters/i },
+    { field: "password", value: "password", message: /at least one number/i },
+    { field: "password", value: "Password!", message: /only contain/i },
+    { field: "password", value: "password1", message: "" },
+  ] as const;
 
-    await user.type(emailField, "te");
-    expect(emailField).toHaveValue("te");
-    expect(emailField.validationMessage).toMatch(/valid email/i);
-    await user.type(emailField, "st");
-    expect(emailField).toHaveValue("test");
-    expect(emailField.validationMessage).toMatch(/valid email/i);
-    await user.type(emailField, "@");
-    expect(emailField).toHaveValue("test@");
-    expect(emailField.validationMessage).toMatch(/valid email/i);
-    await user.type(emailField, "mail.com");
-    expect(emailField).toHaveValue("test@mail.com");
-    expect(emailField.validationMessage).toBe("");
-  });
+  test.each(validationCases)(
+    "$field input $value shows the right validation message",
+    async ({ field, value, message }) => {
+      const { emailField, passwordField, signUpButton } = createFormElements();
+      const input = field === "email" ? emailField : passwordField;
 
-  test("shows validation messages for password input", async () => {
-    const { passwordField } = createFormElements();
+      await user.type(input, value);
+      expect(input).toHaveValue(value);
 
-    await user.type(passwordField, "pass");
-    expect(passwordField).toHaveValue("pass");
-    expect(passwordField.validationMessage).toMatch(/at least 6 characters/i);
-    await user.type(passwordField, "word");
-    expect(passwordField).toHaveValue("password");
-    expect(passwordField.validationMessage).toMatch(/at least one number/i);
-    await user.type(passwordField, "1");
-    expect(passwordField.validationMessage).toBe("");
+      if (message === "") {
+        expect(input.validationMessage).toBe("");
+      } else {
+        expect(input.validationMessage).toMatch(message);
+      }
 
-    await user.clear(passwordField);
-    await user.type(passwordField, "Password!");
-    expect(passwordField.validationMessage).toMatch(/only contain/i);
-  });
+      await user.click(signUpButton);
 
-  test("shows validation messages for confirm password input", async () => {
-    const { passwordField, confirmPasswordField } = createFormElements();
+      if (message === "") {
+        expect(input.validationMessage).toBe("");
+      } else {
+        expect(input.validationMessage).toMatch(message);
+      }
+    },
+  );
 
-    await user.type(passwordField, "password");
-    expect(passwordField).toHaveValue("password");
-
-    await user.type(confirmPasswordField, "different");
-    expect(confirmPasswordField).toHaveValue("different");
-    expect(confirmPasswordField.validationMessage).toMatch(/must match/i);
-    await user.clear(confirmPasswordField);
-    await user.type(confirmPasswordField, "password");
-    expect(confirmPasswordField).toHaveValue("password");
-    expect(confirmPasswordField.validationMessage).toBe("");
-  });
-});
-
-describe("SignUp Form Validation on Create button click", () => {
-  test("shows validation messages for invalid input on Create button click", async () => {
-    const { signUpButton, emailField } = createFormElements();
-
-    await user.type(emailField, "te");
-    expect(emailField).toHaveValue("te");
-    await user.click(signUpButton);
-    expect(emailField.validationMessage).toMatch(/valid email/i);
-    await user.type(emailField, "st");
-    expect(emailField).toHaveValue("test");
-    await user.click(signUpButton);
-    expect(emailField.validationMessage).toMatch(/valid email/i);
-    await user.type(emailField, "@");
-    expect(emailField).toHaveValue("test@");
-    await user.click(signUpButton);
-    expect(emailField.validationMessage).toMatch(/valid email/i);
-    await user.type(emailField, "mail.com");
-    expect(emailField).toHaveValue("test@mail.com");
-    await user.click(signUpButton);
-    expect(emailField.validationMessage).toBe("");
-  });
-
-  test("shows validation messages for password input", async () => {
-    const { passwordField, signUpButton } = createFormElements();
-
-    await user.type(passwordField, "pass");
-    expect(passwordField).toHaveValue("pass");
-    await user.click(signUpButton);
-    expect(passwordField.validationMessage).toMatch(/at least 6 characters/i);
-    await user.type(passwordField, "word");
-    expect(passwordField).toHaveValue("password");
-    await user.click(signUpButton);
-    expect(passwordField.validationMessage).toMatch(/at least one number/i);
-    await user.type(passwordField, "1");
-    await user.click(signUpButton);
-    expect(passwordField.validationMessage).toBe("");
-  });
-
-  test("shows validation messages for confirm password input", async () => {
+  test("requires confirm password to match the password", async () => {
     const { passwordField, confirmPasswordField, signUpButton } =
       createFormElements();
 
     await user.type(passwordField, "password");
-    expect(passwordField).toHaveValue("password");
-
     await user.type(confirmPasswordField, "different");
-    expect(confirmPasswordField).toHaveValue("different");
+    expect(confirmPasswordField.validationMessage).toMatch(/must match/i);
+
     await user.click(signUpButton);
     expect(confirmPasswordField.validationMessage).toMatch(/must match/i);
+
     await user.clear(confirmPasswordField);
     await user.type(confirmPasswordField, "password");
-    expect(confirmPasswordField).toHaveValue("password");
-    await user.click(signUpButton);
     expect(confirmPasswordField.validationMessage).toBe("");
   });
 });
