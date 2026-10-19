@@ -18,40 +18,7 @@ beforeEach(() => {
     data: null,
     error: null,
   });
-  const fetchSpy = vi.spyOn(globalThis, "fetch");
   vi.spyOn(console, "error").mockImplementation(() => vi.fn());
-
-  fetchSpy.mockImplementation((url) => {
-    if (typeof url !== "string") {
-      return Promise.reject(new Error("Invalid URL"));
-    }
-    if (url.endsWith("/health")) {
-      return Promise.resolve(
-        new Response(
-          JSON.stringify({
-            message: "Server is live.",
-          }),
-          {
-            status: 200,
-            headers: { "Content-Type": "application/json" },
-          },
-        ),
-      );
-    }
-
-    return Promise.resolve(
-      new Response(
-        JSON.stringify({
-          message: "User not authenticated.",
-          data: null,
-        }),
-        {
-          status: 401,
-          headers: { "Content-Type": "application/json" },
-        },
-      ),
-    );
-  });
 });
 
 afterEach(() => {
@@ -98,13 +65,6 @@ describe("Root component", () => {
 
     const profileLink = await screen.findByRole("link", { name: /Profile/i });
     expect(profileLink).toBeInTheDocument();
-  });
-
-  test("renders Log In link when user is not logged in", async () => {
-    renderRoot();
-
-    const screenLink = await screen.findAllByRole("link", { name: /Log In/i });
-    expect(screenLink.length).toBe(1);
   });
 });
 

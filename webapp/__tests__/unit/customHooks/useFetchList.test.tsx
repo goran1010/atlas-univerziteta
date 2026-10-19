@@ -1,6 +1,8 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { useFetchList } from "../../../src/customHooks/useFetchList";
 import { RootContextProvider } from "../../utils/rootContextProvider";
+import { makeUser } from "../../utils/makeUser";
+import { server, http, HttpResponse } from "../../utils/msw";
 import { adminPendingChangesResponseSchema } from "../../../src/schemas/pendingChange";
 
 import type { RootContextType } from "../../../src/contextData/RootContext";
@@ -41,107 +43,63 @@ function Wrapper({
   );
 }
 
-const fetchMock = vi.fn();
+const validPendingChange = {
+  id: "pending-change-1",
+  entityType: "UNIVERSITY",
+  typeOfChange: "CREATE",
+  targetId: null,
+  parentId: null,
+  data: {
+    name: "University of Sarajevo",
+    city: "Sarajevo",
+    entity: "FBIH",
+    ownership: "PUBLIC",
+  },
+  userId: "user-1",
+  user: makeUser({ email: "user@example.com" }),
+  createdAt: "2026-07-25T10:00:00.000Z",
+};
+
+let requests: Request[] = [];
+
+function givenResponse(body: unknown, status = 200) {
+  server.use(
+    http.get("*/users/admin/pending-changes", ({ request }) => {
+      requests.push(request);
+      return HttpResponse.json(body as Record<string, unknown>, { status });
+    }),
+  );
+}
 
 beforeEach(() => {
-  fetchMock.mockReset();
-  vi.spyOn(globalThis, "fetch").mockImplementation(fetchMock);
-});
-
-afterEach(() => {
-  vi.restoreAllMocks();
+  requests = [];
 });
 
 describe("useFetchList", () => {
   test("stores validated items from a successful response", async () => {
     const addNotification = vi.fn();
-    fetchMock.mockResolvedValue(
-      new Response(
-        JSON.stringify({
-          message: "Pending changes retrieved successfully.",
-          data: [
-            {
-              id: "pending-change-1",
-              entityType: "UNIVERSITY",
-              typeOfChange: "CREATE",
-              targetId: null,
-              parentId: null,
-              data: {
-                name: "University of Sarajevo",
-                city: "Sarajevo",
-                entity: "FBIH",
-                ownership: "PUBLIC",
-              },
-              userId: "user-1",
-              user: {
-                id: "test-id",
-                name: "test",
-                email: "user@example.com",
-                emailVerified: true,
-                createdAt: new Date(),
-                updatedAt: new Date(),
-                role: "USER",
-              },
-              createdAt: "2026-07-25T10:00:00.000Z",
-            },
-          ],
-        }),
-        { headers: { "Content-Type": "application/json" } },
-      ),
-    );
+    givenResponse({
+      message: "Pending changes retrieved successfully.",
+      data: [validPendingChange],
+    });
 
     render(<Wrapper addNotification={addNotification} setLoading={vi.fn()} />);
 
     await waitFor(() => {
       expect(screen.getByTestId("item-count")).toHaveTextContent("1");
     });
-    expect(fetchMock).toHaveBeenCalledWith(
-      expect.stringContaining("/users/admin/pending-changes"),
-      expect.objectContaining({ method: "GET", credentials: "include" }),
-    );
+    expect(requests).toHaveLength(1);
+    expect(requests[0]?.credentials).toBe("include");
     // passive loads are their own confirmation - no success toast
     expect(addNotification).not.toHaveBeenCalled();
   });
 
   test("rejects data that does not match the schema", async () => {
     const addNotification = vi.fn();
-    fetchMock.mockResolvedValue(
-      new Response(
-        JSON.stringify({
-          message: "Pending changes retrieved successfully.",
-          data: [
-            {
-              id: "pending-change-1",
-              entityType: "UNIVERSITY",
-              typeOfChange: "CREATE",
-              targetId: null,
-              parentId: null,
-              data: {
-                id: "test-id",
-                name: "test",
-                email: "user@example.com",
-                emailVerified: true,
-                createdAt: new Date(),
-                updatedAt: new Date(),
-                role: "USER",
-              },
-              userId: "user-1",
-              user: {
-                id: "test-id",
-                name: "test",
-                email: "user@example.com",
-                emailVerified: true,
-                createdAt: new Date(),
-                updatedAt: new Date(),
-                role: "USER",
-              },
-              createdAt: "2026-07-25T10:00:00.000Z",
-            },
-          ],
-        }),
-        { headers: { "Content-Type": "application/json" } },
-      ),
-    );
+    givenResponse({
+      message: "Pending changes retrieved successfully.",
+      data: [{ ...validPendingChange, data: { unexpected: "shape" } }],
+    });
     const consoleErrorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => undefined);
@@ -162,11 +120,7 @@ describe("useFetchList", () => {
     vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
     const addNotification = vi.fn();
     const setLoading = vi.fn();
-    fetchMock.mockResolvedValue(
-      new Response(JSON.stringify({ error: { message: "Access denied" } }), {
-        status: 403,
-      }),
-    );
+    givenResponse({ error: { message: "Access denied" } }, 403);
 
     render(
       <Wrapper addNotification={addNotification} setLoading={setLoading} />,
@@ -183,8 +137,11 @@ describe("useFetchList", () => {
 
   test("uses the fallback error message when the API error body is invalid", async () => {
     const addNotification = vi.fn();
-    fetchMock.mockResolvedValue(
-      new Response("not valid JSON", { status: 500 }),
+    server.use(
+      http.get(
+        "*/users/admin/pending-changes",
+        () => new HttpResponse("not valid JSON", { status: 500 }),
+      ),
     );
 
     render(<Wrapper addNotification={addNotification} setLoading={vi.fn()} />);
@@ -199,6 +156,8 @@ describe("useFetchList", () => {
   });
 
   test("does not fetch when disabled", () => {
+    givenResponse({ message: "ok", data: [] });
+
     render(
       <Wrapper
         addNotification={vi.fn()}
@@ -207,6 +166,6 @@ describe("useFetchList", () => {
       />,
     );
 
-    expect(fetchMock).not.toHaveBeenCalled();
+    expect(requests).toHaveLength(0);
   });
 });

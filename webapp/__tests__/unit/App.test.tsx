@@ -10,15 +10,6 @@ vi.mock("../../src/utils/authClient", () => ({
 
 describe("App", () => {
   beforeEach(() => {
-    vi.spyOn(globalThis, "fetch").mockImplementation((input) => {
-      const url = input instanceof Request ? input.url : input.toString();
-
-      if (url.endsWith("/health")) {
-        return Promise.resolve(new Response(null, { status: 200 }));
-      }
-
-      return Promise.resolve(new Response(null, { status: 200 }));
-    });
     vi.spyOn(console, "error").mockImplementation(() => undefined);
   });
 

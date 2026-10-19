@@ -3,26 +3,26 @@ import { AdminDashboard } from "../../../../src/components/AdminDashboard/AdminD
 import { Notifications } from "../../../../src/components/Notifications";
 import { MemoryRouter, Routes, Route } from "react-router";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { makeUser } from "../../../utils/makeUser";
+import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { UserData } from "../../../../src/types";
 
 beforeEach(() => {
-  vi.spyOn(globalThis, "fetch").mockResolvedValue(
-    new Response(
-      JSON.stringify({
+  server.use(
+    http.get("*/users/admin/pending-changes", () =>
+      HttpResponse.json({
         data: [],
-        message: "mocked message",
+        message: "Pending changes retrieved successfully.",
       }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      },
+    ),
+    http.get("*/users/admin/admin-requests", () =>
+      HttpResponse.json({
+        data: [],
+        message: "Admin requests retrieved successfully.",
+      }),
     ),
   );
-});
-
-afterEach(() => {
-  vi.restoreAllMocks();
 });
 
 function Wrapper({ initialUser = null }: { initialUser?: UserData }) {
@@ -51,19 +51,7 @@ describe("AdminDashboard component", () => {
   });
 
   test("render component if user is not admin", async () => {
-    render(
-      <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "user@mail.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "USER",
-        }}
-      />,
-    );
+    render(<Wrapper initialUser={makeUser({ email: "user@mail.com" })} />);
 
     const paragraphElement = await screen.findByText(
       /You need to be an admin to see the admin dashboard./i,
@@ -77,15 +65,7 @@ describe("AdminDashboard component", () => {
   test("render component if user is admin", async () => {
     render(
       <Wrapper
-        initialUser={{
-          id: "test-id",
-          name: "test",
-          email: "admin@mail.com",
-          emailVerified: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: "ADMIN",
-        }}
+        initialUser={makeUser({ email: "admin@mail.com", role: "ADMIN" })}
       />,
     );
 
