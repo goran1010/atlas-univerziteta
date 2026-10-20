@@ -632,10 +632,9 @@ describe("Admin Router - GET /users/admin/admin-requests", () => {
 
 describe("Admin Router - POST /users/admin/approve-admin-request", () => {
   test("Responds with status 200, promotes the user, and clears the request", async () => {
-    // The approve/decline endpoints validate the id as a UUID
     const requestingUser = await prisma.user.create({
       data: {
-        ...createDbUserData({ id: crypto.randomUUID() }),
+        ...createDbUserData(),
         adminRequestedAt: new Date(),
       },
     });
@@ -661,7 +660,7 @@ describe("Admin Router - POST /users/admin/approve-admin-request", () => {
   test("Responds with status 404 if the user has no active request", async () => {
     const response = await agent
       .post("/users/admin/approve-admin-request")
-      .send({ id: "a7d3c8f1-4b9e-4f2a-8c3e-5d7f1b9a2c6e" });
+      .send({ id: "nonexistent_user_id" });
 
     expect(response.status).toBe(404);
     expect(response.body).toEqual({
@@ -669,10 +668,10 @@ describe("Admin Router - POST /users/admin/approve-admin-request", () => {
     });
   });
 
-  test("Responds with status 400 for a malformed user id", async () => {
+  test("Responds with status 400 for an empty user id", async () => {
     const response = await agent
       .post("/users/admin/approve-admin-request")
-      .send({ id: "not-a-uuid" });
+      .send({ id: "" });
 
     expect(response.status).toBe(400);
   });
@@ -680,10 +679,9 @@ describe("Admin Router - POST /users/admin/approve-admin-request", () => {
 
 describe("Admin Router - DELETE /users/admin/decline-admin-request", () => {
   test("Responds with status 200, keeps the USER role, and clears the request", async () => {
-    // The approve/decline endpoints validate the id as a UUID
     const requestingUser = await prisma.user.create({
       data: {
-        ...createDbUserData({ id: crypto.randomUUID() }),
+        ...createDbUserData(),
         adminRequestedAt: new Date(),
       },
     });
