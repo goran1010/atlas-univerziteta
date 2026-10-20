@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Limit issue/PR text
         id: limit_text
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           result-encoding: string
           script: |
