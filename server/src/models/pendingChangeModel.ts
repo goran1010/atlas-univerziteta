@@ -51,6 +51,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
             address: true,
             phone: true,
             email: true,
+            _count: { select: { faculties: true } },
           },
         })
       : [],
@@ -66,6 +67,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
             phone: true,
             email: true,
             university: { select: { name: true } },
+            _count: { select: { studyPrograms: true } },
           },
         })
       : [],
@@ -85,6 +87,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
                 university: { select: { name: true } },
               },
             },
+            _count: { select: { tracks: true } },
           },
         })
       : [],
@@ -112,9 +115,28 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
       : [],
   ]);
 
-  // Build maps for currentEntity (strip relation fields from the response)
+  // Build maps for currentEntity (strip relation fields from the response,
+  // flatten child counts so reviewers see what hangs off the entity)
   const entityMaps: Record<entityType, Map<number, object>> = {
-    UNIVERSITY: new Map(universities.map((e) => [e.id, e])),
+    UNIVERSITY: new Map(
+      universities.map((u) => [
+        u.id,
+        {
+          id: u.id,
+          name: u.name,
+          acronym: u.acronym,
+          city: u.city,
+          entity: u.entity,
+          ownership: u.ownership,
+          foundedYear: u.foundedYear,
+          website: u.website,
+          address: u.address,
+          phone: u.phone,
+          email: u.email,
+          facultyCount: u._count.faculties,
+        },
+      ]),
+    ),
     FACULTY: new Map(
       faculties.map((f) => [
         f.id,
@@ -126,6 +148,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
           address: f.address,
           phone: f.phone,
           email: f.email,
+          studyProgramCount: f._count.studyPrograms,
         },
       ]),
     ),
@@ -139,6 +162,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
           durationYears: sp.durationYears,
           ects: sp.ects,
           language: sp.language,
+          trackCount: sp._count.tracks,
         },
       ]),
     ),

@@ -121,6 +121,7 @@ describe("enrichWithCurrentEntity", () => {
       address: null,
       phone: null,
       email: null,
+      facultyCount: 1,
     });
     expect(universityChange?.parentContext).toBeNull();
 
@@ -133,6 +134,7 @@ describe("enrichWithCurrentEntity", () => {
       address: "Enrich Street 1",
       phone: "+387 33 000 000",
       email: "faculty@enrich.example",
+      studyProgramCount: 1,
     });
     expect(facultyChange?.parentContext).toBe("Test Enrich University");
 
@@ -143,6 +145,7 @@ describe("enrichWithCurrentEntity", () => {
       durationYears: 3,
       ects: 180,
       language: "Bosanski",
+      trackCount: 1,
     });
     expect(programChange?.parentContext).toBe(
       "Test Enrich University › Test Enrich Faculty",
