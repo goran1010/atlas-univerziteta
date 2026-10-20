@@ -50,7 +50,7 @@
     "better-auth": "^1.7.5",
     "compression": "^1.8.1",
     "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
+    "dotenv": "^18.0.8",
     "express": "^5.2.1",
     "express-rate-limit": "^8.5.2",
     "helmet": "^8.2.0",
@@ -59,8 +59,8 @@
     "zod": "^4.4.3"
   },
   "allowScripts": {
-    "@prisma/engines@7.10.0": true,
     "esbuild@0.28.2": true,
-    "prisma@7.10.0": true
+    "prisma@7.10.1": true,
+    "@prisma/engines@7.10.1": true
   }
 }
