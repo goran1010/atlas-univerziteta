@@ -265,7 +265,10 @@
     "proposedData": "Proposed Data",
     "currentData": "Current Data",
     "proposedChanges": "Proposed Changes",
-    "entityDeleted": "Entity no longer exists"
+    "entityDeleted": "Entity no longer exists",
+    "facultyCount": "Faculties",
+    "studyProgramCount": "Study programs",
+    "trackCount": "Tracks"
   },
   "error": {
     "notFound": "There is nothing here.",

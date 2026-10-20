@@ -83,6 +83,7 @@ describe("PendingUniversityChangesRow", () => {
     });
     await userEvent.click(detailButton);
 
-    expect(screen.getByText("University of Sarajevo")).toBeInTheDocument();
+    // Once in the row's breadcrumb line, once in the expanded detail
+    expect(screen.getAllByText("University of Sarajevo")).toHaveLength(2);
   });
 });

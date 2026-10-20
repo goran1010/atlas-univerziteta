@@ -102,7 +102,13 @@ const currentEntitySchema = z
   .nullable()
   .optional();
 
-const parentContextSchema = z.string().nullable().optional();
+const parentCrumbSchema = z.object({
+  entityType: z.enum(["UNIVERSITY", "FACULTY", "STUDY_PROGRAM"]),
+  id: positiveIntegerSchema,
+  name: z.string(),
+});
+
+const parentContextSchema = z.array(parentCrumbSchema).nullable().optional();
 
 const adminPendingChangeSchema = pendingChangeSchema.and(
   z.object({
@@ -136,6 +142,7 @@ const pendingChangeResponseSchema = z.object({
 
 export type PendingChange = z.infer<typeof pendingChangeWithEntitySchema>;
 export type AdminPendingChange = z.infer<typeof adminPendingChangeSchema>;
+export type ParentCrumb = z.infer<typeof parentCrumbSchema>;
 export {
   adminPendingChangesResponseSchema,
   pendingChangeSchema,
