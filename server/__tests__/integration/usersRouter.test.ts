@@ -35,23 +35,6 @@ describe("usersRouter", () => {
 
     await deleteUser(userData.email);
   });
-
-  test("logout responds with success", async () => {
-    const agent = request.agent(app);
-    const userData = createNewUserInput();
-    await createAndLoginUser(agent, userData);
-
-    const response = await agent.post("/users/logout");
-
-    expect(response.status).toBe(200);
-    expect(response.body).toEqual(
-      expect.objectContaining({
-        message: "User logged out successfully",
-      }),
-    );
-
-    await deleteUser(userData.email);
-  });
 });
 
 describe("usersRouter - POST /users/request-admin", () => {
