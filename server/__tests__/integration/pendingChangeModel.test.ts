@@ -11,6 +11,7 @@ beforeAll(async () => {
   const university = await prisma.university.create({
     data: {
       name: "Test Enrich University",
+      acronym: "TEU",
       city: "Test City",
       entity: "FBIH",
       ownership: "PUBLIC",
@@ -21,6 +22,9 @@ beforeAll(async () => {
           name: "Test Enrich Faculty",
           city: "Test Faculty City",
           website: "https://enrich-faculty.example",
+          address: "Enrich Street 1",
+          phone: "+387 33 000 000",
+          email: "faculty@enrich.example",
           studyPrograms: {
             create: {
               name: "Test Enrich Program",
@@ -105,17 +109,19 @@ describe("enrichWithCurrentEntity", () => {
       enriched;
 
     // UNIVERSITY: full selected fields, never a parent context
-    expect(universityChange?.currentEntity).toEqual(
-      expect.objectContaining({
-        id: universityId,
-        name: "Test Enrich University",
-        city: "Test City",
-        entity: "FBIH",
-        ownership: "PUBLIC",
-        foundedYear: "1950",
-        website: "https://enrich.example",
-      }),
-    );
+    expect(universityChange?.currentEntity).toEqual({
+      id: universityId,
+      name: "Test Enrich University",
+      acronym: "TEU",
+      city: "Test City",
+      entity: "FBIH",
+      ownership: "PUBLIC",
+      foundedYear: "1950",
+      website: "https://enrich.example",
+      address: null,
+      phone: null,
+      email: null,
+    });
     expect(universityChange?.parentContext).toBeNull();
 
     // FACULTY: relation fields stripped from currentEntity
@@ -124,6 +130,9 @@ describe("enrichWithCurrentEntity", () => {
       name: "Test Enrich Faculty",
       city: "Test Faculty City",
       website: "https://enrich-faculty.example",
+      address: "Enrich Street 1",
+      phone: "+387 33 000 000",
+      email: "faculty@enrich.example",
     });
     expect(facultyChange?.parentContext).toBe("Test Enrich University");
 

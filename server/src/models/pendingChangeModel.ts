@@ -42,6 +42,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
           select: {
             id: true,
             name: true,
+            acronym: true,
             city: true,
             entity: true,
             ownership: true,
@@ -117,7 +118,15 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
     FACULTY: new Map(
       faculties.map((f) => [
         f.id,
-        { id: f.id, name: f.name, city: f.city, website: f.website },
+        {
+          id: f.id,
+          name: f.name,
+          city: f.city,
+          website: f.website,
+          address: f.address,
+          phone: f.phone,
+          email: f.email,
+        },
       ]),
     ),
     STUDY_PROGRAM: new Map(
