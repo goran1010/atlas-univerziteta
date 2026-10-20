@@ -301,6 +301,37 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
     ).toBeNull();
   });
 
+  test("DELETE cascades through faculties, study programs, and tracks", async () => {
+    const university = await createUniversity("Test Cascade University");
+    const faculty = await createFaculty(university.id, "Test Cascade Faculty");
+    const studyProgram = await createStudyProgram(
+      faculty.id,
+      "Test Cascade Program",
+    );
+    const track = await createTrack(studyProgram.id, "Test Cascade Track");
+    const pendingChange = await createPendingChange({
+      entityType: "UNIVERSITY",
+      typeOfChange: "DELETE",
+      targetId: university.id,
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expectApproved(response);
+    expect(
+      await prisma.university.findUnique({ where: { id: university.id } }),
+    ).toBeNull();
+    expect(
+      await prisma.faculty.findUnique({ where: { id: faculty.id } }),
+    ).toBeNull();
+    expect(
+      await prisma.studyProgram.findUnique({ where: { id: studyProgram.id } }),
+    ).toBeNull();
+    expect(
+      await prisma.track.findUnique({ where: { id: track.id } }),
+    ).toBeNull();
+  });
+
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
     const pendingChange = await createPendingChange({
       entityType: "UNIVERSITY",
