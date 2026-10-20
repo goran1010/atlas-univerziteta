@@ -78,6 +78,9 @@ beforeEach(() => {
 describe("useFetchList", () => {
   test("stores validated items from a successful response", async () => {
     const addNotification = vi.fn();
+    // msw 3 no longer preserves `credentials` on the intercepted Request,
+    // so assert the fetch init directly
+    const fetchSpy = vi.spyOn(globalThis, "fetch");
     givenResponse({
       message: "Pending changes retrieved successfully.",
       data: [validPendingChange],
@@ -89,7 +92,11 @@ describe("useFetchList", () => {
       expect(screen.getByTestId("item-count")).toHaveTextContent("1");
     });
     expect(requests).toHaveLength(1);
-    expect(requests[0]?.credentials).toBe("include");
+    expect(fetchSpy).toHaveBeenCalledWith(
+      expect.stringContaining("/users/admin/pending-changes"),
+      expect.objectContaining({ credentials: "include" }),
+    );
+    fetchSpy.mockRestore();
     // passive loads are their own confirmation - no success toast
     expect(addNotification).not.toHaveBeenCalled();
   });

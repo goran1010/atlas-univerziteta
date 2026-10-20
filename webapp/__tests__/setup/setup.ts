@@ -3,7 +3,7 @@ import "@testing-library/jest-dom/vitest";
 import { server } from "../utils/msw";
 
 beforeAll(() => {
-  server.listen({ onUnhandledRequest: "error" });
+  server.listen({ onUnhandledFrame: "error" });
 });
 
 beforeEach(() => {
