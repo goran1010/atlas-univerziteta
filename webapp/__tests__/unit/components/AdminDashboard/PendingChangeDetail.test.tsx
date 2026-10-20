@@ -90,4 +90,44 @@ describe("PendingChangeDetail", () => {
 
     expect(screen.getByText(/Entity no longer exists/i)).toBeInTheDocument();
   });
+
+  test("shows the acronym and faculty count for a university DELETE", () => {
+    renderDetail({
+      entityType: "UNIVERSITY",
+      typeOfChange: "DELETE",
+      data: {},
+      currentEntity: {
+        name: "Test University",
+        acronym: "TU",
+        facultyCount: 11,
+      },
+    });
+
+    expect(screen.getByText("Acronym")).toBeInTheDocument();
+    expect(screen.getByText("TU")).toBeInTheDocument();
+    expect(screen.getByText("Faculties")).toBeInTheDocument();
+    expect(screen.getByText("11")).toBeInTheDocument();
+  });
+
+  test("shows child counts for faculty and study program current data", () => {
+    renderDetail({
+      entityType: "FACULTY",
+      typeOfChange: "DELETE",
+      data: {},
+      currentEntity: { name: "Test Faculty", studyProgramCount: 4 },
+    });
+
+    expect(screen.getByText("Study programs")).toBeInTheDocument();
+    expect(screen.getByText("4")).toBeInTheDocument();
+
+    renderDetail({
+      entityType: "STUDY_PROGRAM",
+      typeOfChange: "DELETE",
+      data: {},
+      currentEntity: { name: "Test Program", trackCount: 2 },
+    });
+
+    expect(screen.getByText("Tracks")).toBeInTheDocument();
+    expect(screen.getByText("2")).toBeInTheDocument();
+  });
 });
