@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { makeUser } from "../../../utils/makeUser";
+import { renderWithProviders } from "../../../utils/renderWithProviders";
 import { PendingChangesAdminRow } from "../../../../src/components/AdminDashboard/PendingChangesAdminRow";
 
 import type { AdminPendingChange } from "../../../../src/schemas/pendingChange";
@@ -38,5 +39,28 @@ describe("PendingChangesAdminRow", () => {
       screen.getByRole("button", { name: /Approve/i }),
     ).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Reject/i })).toBeInTheDocument();
+  });
+
+  test("renders a linked parent breadcrumb ending in the entity name", () => {
+    renderWithProviders(
+      <PendingChangesAdminRow
+        data={{
+          ...change,
+          entityType: "FACULTY",
+          currentEntity: { name: "Changed Faculty" },
+          parentContext: [
+            { entityType: "UNIVERSITY", id: 3, name: "Parent University" },
+          ],
+        }}
+        addNotification={vi.fn()}
+        setPendingChanges={vi.fn()}
+        index={0}
+      />,
+    );
+
+    expect(
+      screen.getByRole("link", { name: "Parent University" }),
+    ).toHaveAttribute("href", "/universities/3");
+    expect(screen.getByText(/Changed Faculty/)).toBeInTheDocument();
   });
 });

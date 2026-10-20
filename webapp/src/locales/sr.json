@@ -265,7 +265,10 @@
     "proposedData": "Predloženi podaci",
     "currentData": "Trenutni podaci",
     "proposedChanges": "Predložene izmjene",
-    "entityDeleted": "Entitet više ne postoji"
+    "entityDeleted": "Entitet više ne postoji",
+    "facultyCount": "Fakulteti",
+    "studyProgramCount": "Studijski programi",
+    "trackCount": "Smjerovi"
   },
   "error": {
     "notFound": "Ovdje nema ničega.",

@@ -9,13 +9,21 @@ interface PendingChangeWithTarget {
   parentId: number | null;
 }
 
+// One ancestor in the academic hierarchy, ordered top-down, so the UI can
+// render linked breadcrumbs (universities and faculties have detail pages).
+interface ParentCrumb {
+  entityType: "UNIVERSITY" | "FACULTY" | "STUDY_PROGRAM";
+  id: number;
+  name: string;
+}
+
 // For UPDATE/DELETE pending changes, batch-fetch the current entity data
 // from the corresponding table so the reviewer (admin or contributor)
 // can see what is being changed or removed.
 //
-// Also resolves the parent hierarchy context for non-UNIVERSITY entities
-// so reviewers can see where an entity sits in the academic tree
-// (e.g. "University of Sarajevo > Faculty of Law").
+// Also resolves the parent hierarchy for non-UNIVERSITY entities so
+// reviewers can see where an entity sits in the academic tree, as an
+// ordered top-down list of `ParentCrumb`s the UI renders as breadcrumbs.
 //
 // Returns the same array with `currentEntity` and `parentContext`
 // attached to each item.
@@ -42,6 +50,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
           select: {
             id: true,
             name: true,
+            acronym: true,
             city: true,
             entity: true,
             ownership: true,
@@ -50,6 +59,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
             address: true,
             phone: true,
             email: true,
+            _count: { select: { faculties: true } },
           },
         })
       : [],
@@ -64,7 +74,8 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
             address: true,
             phone: true,
             email: true,
-            university: { select: { name: true } },
+            university: { select: { id: true, name: true } },
+            _count: { select: { studyPrograms: true } },
           },
         })
       : [],
@@ -80,10 +91,12 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
             language: true,
             faculty: {
               select: {
+                id: true,
                 name: true,
-                university: { select: { name: true } },
+                university: { select: { id: true, name: true } },
               },
             },
+            _count: { select: { tracks: true } },
           },
         })
       : [],
@@ -97,11 +110,13 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
             durationYears: true,
             studyProgram: {
               select: {
+                id: true,
                 name: true,
                 faculty: {
                   select: {
+                    id: true,
                     name: true,
-                    university: { select: { name: true } },
+                    university: { select: { id: true, name: true } },
                   },
                 },
               },
@@ -111,13 +126,41 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
       : [],
   ]);
 
-  // Build maps for currentEntity (strip relation fields from the response)
+  // Build maps for currentEntity (strip relation fields from the response,
+  // flatten child counts so reviewers see what hangs off the entity)
   const entityMaps: Record<entityType, Map<number, object>> = {
-    UNIVERSITY: new Map(universities.map((e) => [e.id, e])),
+    UNIVERSITY: new Map(
+      universities.map((u) => [
+        u.id,
+        {
+          id: u.id,
+          name: u.name,
+          acronym: u.acronym,
+          city: u.city,
+          entity: u.entity,
+          ownership: u.ownership,
+          foundedYear: u.foundedYear,
+          website: u.website,
+          address: u.address,
+          phone: u.phone,
+          email: u.email,
+          facultyCount: u._count.faculties,
+        },
+      ]),
+    ),
     FACULTY: new Map(
       faculties.map((f) => [
         f.id,
-        { id: f.id, name: f.name, city: f.city, website: f.website },
+        {
+          id: f.id,
+          name: f.name,
+          city: f.city,
+          website: f.website,
+          address: f.address,
+          phone: f.phone,
+          email: f.email,
+          studyProgramCount: f._count.studyPrograms,
+        },
       ]),
     ),
     STUDY_PROGRAM: new Map(
@@ -130,6 +173,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
           durationYears: sp.durationYears,
           ects: sp.ects,
           language: sp.language,
+          trackCount: sp._count.tracks,
         },
       ]),
     ),
@@ -146,20 +190,58 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
     ),
   };
 
-  // Build parent context strings for UPDATE/DELETE targets
-  const parentContextMaps: Record<entityType, Map<number, string>> = {
+  // Build parent breadcrumb trails for UPDATE/DELETE targets
+  const parentContextMaps: Record<entityType, Map<number, ParentCrumb[]>> = {
     UNIVERSITY: new Map(),
-    FACULTY: new Map(faculties.map((f) => [f.id, f.university.name])),
+    FACULTY: new Map(
+      faculties.map((f) => [
+        f.id,
+        [
+          {
+            entityType: "UNIVERSITY" as const,
+            id: f.university.id,
+            name: f.university.name,
+          },
+        ],
+      ]),
+    ),
     STUDY_PROGRAM: new Map(
       studyPrograms.map((sp) => [
         sp.id,
-        `${sp.faculty.university.name} › ${sp.faculty.name}`,
+        [
+          {
+            entityType: "UNIVERSITY" as const,
+            id: sp.faculty.university.id,
+            name: sp.faculty.university.name,
+          },
+          {
+            entityType: "FACULTY" as const,
+            id: sp.faculty.id,
+            name: sp.faculty.name,
+          },
+        ],
       ]),
     ),
     TRACK: new Map(
       tracks.map((tr) => [
         tr.id,
-        `${tr.studyProgram.faculty.university.name} › ${tr.studyProgram.faculty.name} › ${tr.studyProgram.name}`,
+        [
+          {
+            entityType: "UNIVERSITY" as const,
+            id: tr.studyProgram.faculty.university.id,
+            name: tr.studyProgram.faculty.university.name,
+          },
+          {
+            entityType: "FACULTY" as const,
+            id: tr.studyProgram.faculty.id,
+            name: tr.studyProgram.faculty.name,
+          },
+          {
+            entityType: "STUDY_PROGRAM" as const,
+            id: tr.studyProgram.id,
+            name: tr.studyProgram.name,
+          },
+        ],
       ]),
     ),
   };
@@ -204,7 +286,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
             select: {
               id: true,
               name: true,
-              university: { select: { name: true } },
+              university: { select: { id: true, name: true } },
             },
           })
         : [],
@@ -216,8 +298,9 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
               name: true,
               faculty: {
                 select: {
+                  id: true,
                   name: true,
-                  university: { select: { name: true } },
+                  university: { select: { id: true, name: true } },
                 },
               },
             },
@@ -225,20 +308,47 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
         : [],
     ]);
 
-  const parentUniversityMap = new Map(
-    parentUniversities.map((u) => [u.id, u.name]),
+  const parentUniversityMap = new Map<number, ParentCrumb[]>(
+    parentUniversities.map((u) => [
+      u.id,
+      [{ entityType: "UNIVERSITY" as const, id: u.id, name: u.name }],
+    ]),
   );
-  const parentFacultyMap = new Map(
-    parentFaculties.map((f) => [f.id, `${f.university.name} › ${f.name}`]),
+  const parentFacultyMap = new Map<number, ParentCrumb[]>(
+    parentFaculties.map((f) => [
+      f.id,
+      [
+        {
+          entityType: "UNIVERSITY" as const,
+          id: f.university.id,
+          name: f.university.name,
+        },
+        { entityType: "FACULTY" as const, id: f.id, name: f.name },
+      ],
+    ]),
   );
-  const parentStudyProgramMap = new Map(
+  const parentStudyProgramMap = new Map<number, ParentCrumb[]>(
     parentStudyPrograms.map((sp) => [
       sp.id,
-      `${sp.faculty.university.name} › ${sp.faculty.name} › ${sp.name}`,
+      [
+        {
+          entityType: "UNIVERSITY" as const,
+          id: sp.faculty.university.id,
+          name: sp.faculty.university.name,
+        },
+        {
+          entityType: "FACULTY" as const,
+          id: sp.faculty.id,
+          name: sp.faculty.name,
+        },
+        { entityType: "STUDY_PROGRAM" as const, id: sp.id, name: sp.name },
+      ],
     ]),
   );
 
-  function getCreateParentContext(pc: PendingChangeWithTarget): string | null {
+  function getCreateParentContext(
+    pc: PendingChangeWithTarget,
+  ): ParentCrumb[] | null {
     if (pc.parentId == null) return null;
     if (pc.entityType === "FACULTY")
       return parentUniversityMap.get(pc.parentId) ?? null;

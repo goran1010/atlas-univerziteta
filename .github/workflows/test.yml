@@ -31,7 +31,6 @@ jobs:
       WEBAPP_URL: http://localhost:5173
       NODE_ENV: test
       SERVER_URL: http://localhost:3000
-      COOKIE_SECRET: "123456789"
       TEST_DATABASE_URL: postgresql://test_user:test_password@localhost:5432/postgres
       DATABASE_URL: postgresql://test_user:test_password@localhost:5432/postgres_db
       RESEND_API_KEY: random_text_for_ci

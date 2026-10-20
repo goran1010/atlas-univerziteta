@@ -46,6 +46,7 @@ function buildEntityRows(
 
   switch (entityType) {
     case "UNIVERSITY":
+      push(t("contribution.dataFields.acronym"), entity.acronym);
       push(t("contribution.dataFields.city"), entity.city);
       if (typeof entity.entity === "string") {
         push(
@@ -64,6 +65,7 @@ function buildEntityRows(
       push(t("contribution.dataFields.address"), entity.address);
       push(t("contribution.dataFields.phone"), entity.phone);
       push(t("contribution.dataFields.email"), entity.email);
+      push(t("admin.facultyCount"), entity.facultyCount);
       break;
     case "FACULTY":
       push(t("contribution.dataFields.city"), entity.city);
@@ -71,6 +73,7 @@ function buildEntityRows(
       push(t("contribution.dataFields.address"), entity.address);
       push(t("contribution.dataFields.phone"), entity.phone);
       push(t("contribution.dataFields.email"), entity.email);
+      push(t("admin.studyProgramCount"), entity.studyProgramCount);
       break;
     case "STUDY_PROGRAM":
       if (typeof entity.cycle === "string") {
@@ -82,6 +85,7 @@ function buildEntityRows(
       push(t("contribution.dataFields.durationYears"), entity.durationYears);
       push(t("contribution.dataFields.ects"), entity.ects);
       push(t("contribution.dataFields.language"), entity.language);
+      push(t("admin.trackCount"), entity.trackCount);
       break;
     case "TRACK":
       push(t("contribution.dataFields.ects"), entity.ects);

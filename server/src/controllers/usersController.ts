@@ -3,12 +3,6 @@ import { sendError, sendSuccess } from "../utils/response.js";
 
 import type { Request, Response } from "express";
 
-function logout(_req: Request, res: Response) {
-  sendSuccess(res, {
-    message: "User logged out successfully",
-  });
-}
-
 async function requestAdmin(req: Request, res: Response) {
   const user = req.authSession?.user;
 
@@ -63,4 +57,4 @@ async function cancelAdminRequest(req: Request, res: Response) {
   });
 }
 
-export { logout, requestAdmin, cancelAdminRequest };
+export { requestAdmin, cancelAdminRequest };

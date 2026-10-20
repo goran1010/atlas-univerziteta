@@ -20,7 +20,7 @@ Contributions of any kind are welcome - bug fixes, new features, data, documenta
 
 In development and test modes, the server skips sending real emails and logs the confirmation link to the console instead. You can click it directly to confirm the account - no `RESEND_API_KEY` needed.
 
-In production, emails are sent via [Resend](https://resend.com). The current sender (`onboarding@resend.dev`) is Resend's shared test domain and can only deliver to the Resend account owner's email. To send to any user, verify a custom domain in the Resend dashboard and update the `from` address in `server/src/email/confirmationEmail.ts`.
+In production, emails are sent via [Resend](https://resend.com). The default sender (`onboarding@resend.dev`) is Resend's shared test domain and can only deliver to the Resend account owner's email. To send to any user, verify a custom domain in the Resend dashboard and set `RESEND_FROM_EMAIL` in the server environment.
 
 ## Guidelines
 
@@ -37,13 +37,15 @@ If you want to contribute data through the Atlas Univerziteta app (instead of op
 
 1. Create an account and confirm your email.
 2. Log in and open `/improve-data`.
-3. Submit a suggestion to create, edit, or delete a university entity (University, Faculty, Study Program, Track, or Subject).
+3. Submit a suggestion to create, edit, or delete a university entity (University, Faculty, Study Program, or Track).
 4. Your suggestion is stored as a pending change.
 5. Admin users review pending changes and either approve or reject them.
 
 Notes:
 
 - Approved suggestions are applied to the live university dataset by admins.
+- Approving a deletion also removes everything nested under the entity (a
+  university's faculties, their study programs, and their tracks).
 - You can remove your own pending suggestion before review from the pending changes list in the dashboard.
 
 ## Reporting Issues

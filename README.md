@@ -19,7 +19,7 @@ The data is modeled as a nested academic hierarchy: university, its faculties, a
 - Relevance-ranked, grouped results with per-type filters, counts, and capped sections
 - Detail pages for universities and faculties with shareable links and per-page social previews
 - Email/password signup with email verification, session login, and optional GitHub/Google OAuth (with automatic account linking)
-- Authenticated suggestions for creating, updating, or deleting data, reviewed by admins before applying
+- Authenticated suggestions for creating, updating, or deleting data, reviewed by admins before applying - the review shows the current data, child counts, and the entity's place in the academic hierarchy
 - Zod validation on both ends, WCAG-checked UI in English and the local language
 
 ## Quick start
@@ -93,7 +93,7 @@ Podaci prate akademsku hijerarhiju: univerzitet, njegovi fakulteti i njihovi stu
 - Rezultati rangirani po relevantnosti i grupisani po tipu, uz filtere, brojače i ograničene sekcije sa "Prikaži sve"
 - Stranice sa detaljima univerziteta i fakulteta, sa linkovima za dijeljenje i ispravnim pregledima na društvenim mrežama
 - Registracija uz potvrdu emailom, prijava sesijom i opciona GitHub/Google prijava (sa automatskim povezivanjem naloga)
-- Prijavljeni korisnici predlažu dodavanje, izmjenu ili brisanje podataka; administratori pregledaju prijedloge prije primjene
+- Prijavljeni korisnici predlažu dodavanje, izmjenu ili brisanje podataka; administratori pri pregledu vide trenutne podatke, broj podređenih stavki i mjesto u akademskoj hijerarhiji prije primjene
 - Validacija podataka na obje strane, pristupačnost provjerena po WCAG standardu, interfejs na engleskom i našem jeziku
 
 ### Pokretanje

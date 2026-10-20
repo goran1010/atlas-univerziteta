@@ -91,7 +91,6 @@ jobs:
       WEBAPP_URL: http://localhost:5173
       NODE_ENV: test
       SERVER_URL: http://localhost:3000
-      COOKIE_SECRET: "123456789"
       TEST_DATABASE_URL: postgresql://test_user:test_password@localhost:5432/postgres
       DATABASE_URL: postgresql://test_user:test_password@localhost:5432/postgres_db
       RESEND_API_KEY: random_text_for_ci
@@ -146,7 +145,6 @@ jobs:
     env:
       E2E_DATABASE_URL: postgresql://test_user:test_password@localhost:5432/uniatlas_e2e
       DATABASE_URL: postgresql://test_user:test_password@localhost:5432/uniatlas_e2e
-      COOKIE_SECRET: "123456789"
       RESEND_API_KEY: random_text_for_ci
       GITHUB_CLIENT_ID: random_text_for_ci
       GITHUB_CLIENT_SECRET: random_text_for_ci
@@ -177,7 +175,7 @@ jobs:
 
       - name: Cache Playwright browsers
         id: playwright-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
@@ -195,7 +193,7 @@ jobs:
 
       - name: Upload Playwright report
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: playwright-report
           path: e2e/playwright-report/

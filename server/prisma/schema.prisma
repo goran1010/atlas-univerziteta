@@ -126,7 +126,7 @@ model Faculty {
   id                Int            @id @default(autoincrement())
   name              String
   universityId      Int
-  university        University     @relation(fields: [universityId], references: [id])
+  university        University     @relation(fields: [universityId], references: [id], onDelete: Cascade)
   city              String?
   website           String?
   address           String?
@@ -145,7 +145,7 @@ model StudyProgram {
   id            Int        @id @default(autoincrement())
   name          String
   facultyId     Int
-  faculty       Faculty    @relation(fields: [facultyId], references: [id])
+  faculty       Faculty    @relation(fields: [facultyId], references: [id], onDelete: Cascade)
   cycle         studyCycle
   durationYears Int?
   ects          Int?
@@ -162,7 +162,7 @@ model Track {
   id             Int          @id @default(autoincrement())
   name           String
   studyProgramId Int
-  studyProgram   StudyProgram @relation(fields: [studyProgramId], references: [id])
+  studyProgram   StudyProgram @relation(fields: [studyProgramId], references: [id], onDelete: Cascade)
   ects           Int?
   durationYears  Int?
   sourceUrl      String?

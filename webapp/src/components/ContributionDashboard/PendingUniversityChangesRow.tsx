@@ -4,6 +4,8 @@ import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
+import { ParentBreadcrumb } from "../sharedComponents/ParentBreadcrumb";
+import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import type { PendingChange } from "../../schemas/pendingChange";
 
 interface BadgeStyles {
@@ -40,16 +42,16 @@ function PendingUniversityChangesRow({
   }
 
   const isEven = index % 2 === 0;
+  const entityName = getChangedEntityName(change);
 
   return (
     <li
       className={`rounded-md p-2 sm:p-3 ${isEven ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
     >
-      {change.parentContext && (
-        <p className="text-xs text-(--text-muted) px-2 py-1 truncate text-center">
-          {change.parentContext}
-        </p>
-      )}
+      <ParentBreadcrumb
+        crumbs={change.parentContext ?? []}
+        current={entityName}
+      />
       <div className="grid gap-2 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]">
         <div className="flex justify-between sm:justify-start items-center gap-2">
           <span className="sm:hidden text-xs font-semibold text-(--text-muted)">

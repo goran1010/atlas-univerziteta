@@ -32,10 +32,10 @@ Fill in the server values and adjust the webapp server URL if needed.
 - `DATABASE_URL`: PostgreSQL connection string for development
 - `TEST_DATABASE_URL`: PostgreSQL connection for server tests (credentials/host only - the suite creates and drops its own databases, so the user needs `CREATEDB` rights)
 - `RESEND_API_KEY`: API key for confirmation emails
-- `WEBAPP_URL`: webapp origin allowed by credentialed CORS
+- `RESEND_FROM_EMAIL`: optional sender address for confirmation emails, defaults to `onboarding@resend.dev` (Resend's shared test domain)
+- `WEBAPP_URL`: webapp origin allowed by credentialed CORS and by the origin check on state-changing `/users` requests
 - `SERVER_URL`: public server base URL used in confirmation links
 - `PORT`: server port, usually `3000`
-- `COOKIE_SECRET`: session secret
 - `BETTER_AUTH_SECRET`: BetterAuth secret (at least 32 characters, generate with `openssl rand -base64 32`)
 - `NODE_ENV`: runtime mode, usually `development`
 - `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET`: optional GitHub OAuth settings

@@ -54,12 +54,10 @@
     "url": "https://github.com/goran1010/atlas-univerziteta/issues"
   },
   "homepage": "https://github.com/goran1010/atlas-univerziteta#readme",
-  "dependencies": {
-    "concurrently": "^9.2.1"
-  },
   "devDependencies": {
     "@cspell/dict-hr-hr": "^3.1.2",
     "@cspell/dict-sr-latn": "^1.0.8",
+    "concurrently": "^10.0.6",
     "cspell": "^10.3.3",
     "pino-pretty": "^13.1.3"
   }

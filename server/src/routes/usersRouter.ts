@@ -8,8 +8,6 @@ import { isAuthenticated } from "../auth/isAuthenticated.js";
 
 usersRouter.use(isAuthenticated);
 
-usersRouter.post("/logout", usersController.logout);
-
 usersRouter.post("/request-admin", usersController.requestAdmin);
 
 usersRouter.delete("/request-admin", usersController.cancelAdminRequest);

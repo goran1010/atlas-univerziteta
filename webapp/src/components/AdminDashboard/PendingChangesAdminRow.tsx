@@ -8,6 +8,8 @@ import {
   handleDeclinePendingChange,
 } from "./utils/adminActions";
 import { PendingChangeDetail } from "./PendingChangeDetail";
+import { ParentBreadcrumb } from "../sharedComponents/ParentBreadcrumb";
+import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import type { Notification } from "../../types";
 import type { TypeOfChange } from "../../schemas/domain";
 import type { AdminPendingChange } from "../../schemas/pendingChange";
@@ -53,6 +55,7 @@ const PendingChangesAdminRow = memo(
     const ctx = { addNotification, setLoading, t };
 
     const currentEntity = data.currentEntity ?? null;
+    const entityName = getChangedEntityName(data);
 
     async function handleApprove() {
       setActiveAction("approve");
@@ -72,11 +75,10 @@ const PendingChangesAdminRow = memo(
           ROW_ACCENT[data.typeOfChange]
         } ${index % 2 === 0 ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
       >
-        {data.parentContext && (
-          <p className="text-xs text-(--text-muted) px-2 py-1 text-center truncate">
-            {data.parentContext}
-          </p>
-        )}
+        <ParentBreadcrumb
+          crumbs={data.parentContext ?? []}
+          current={entityName}
+        />
         <div className="grid gap-2 w-full p-1 sm:p-1 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)]">
           <div className="flex justify-between sm:justify-center items-center">
             <span className="sm:hidden font-semibold">
