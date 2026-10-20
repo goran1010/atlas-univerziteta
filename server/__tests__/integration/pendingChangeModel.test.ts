@@ -136,7 +136,13 @@ describe("enrichWithCurrentEntity", () => {
       email: "faculty@enrich.example",
       studyProgramCount: 1,
     });
-    expect(facultyChange?.parentContext).toBe("Test Enrich University");
+    expect(facultyChange?.parentContext).toEqual([
+      {
+        entityType: "UNIVERSITY",
+        id: universityId,
+        name: "Test Enrich University",
+      },
+    ]);
 
     expect(programChange?.currentEntity).toEqual({
       id: studyProgramId,
@@ -147,9 +153,14 @@ describe("enrichWithCurrentEntity", () => {
       language: "Bosanski",
       trackCount: 1,
     });
-    expect(programChange?.parentContext).toBe(
-      "Test Enrich University › Test Enrich Faculty",
-    );
+    expect(programChange?.parentContext).toEqual([
+      {
+        entityType: "UNIVERSITY",
+        id: universityId,
+        name: "Test Enrich University",
+      },
+      { entityType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
+    ]);
 
     expect(trackChange?.currentEntity).toEqual({
       id: trackId,
@@ -157,9 +168,19 @@ describe("enrichWithCurrentEntity", () => {
       ects: 60,
       durationYears: 1,
     });
-    expect(trackChange?.parentContext).toBe(
-      "Test Enrich University › Test Enrich Faculty › Test Enrich Program",
-    );
+    expect(trackChange?.parentContext).toEqual([
+      {
+        entityType: "UNIVERSITY",
+        id: universityId,
+        name: "Test Enrich University",
+      },
+      { entityType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
+      {
+        entityType: "STUDY_PROGRAM",
+        id: studyProgramId,
+        name: "Test Enrich Program",
+      },
+    ]);
   });
 
   test("preserves the original pending change fields on the result", async () => {
@@ -218,13 +239,34 @@ describe("enrichWithCurrentEntity", () => {
     expect(universityCreate?.currentEntity).toBeNull();
     expect(universityCreate?.parentContext).toBeNull();
     expect(facultyCreate?.currentEntity).toBeNull();
-    expect(facultyCreate?.parentContext).toBe("Test Enrich University");
-    expect(programCreate?.parentContext).toBe(
-      "Test Enrich University › Test Enrich Faculty",
-    );
-    expect(trackCreate?.parentContext).toBe(
-      "Test Enrich University › Test Enrich Faculty › Test Enrich Program",
-    );
+    expect(facultyCreate?.parentContext).toEqual([
+      {
+        entityType: "UNIVERSITY",
+        id: universityId,
+        name: "Test Enrich University",
+      },
+    ]);
+    expect(programCreate?.parentContext).toEqual([
+      {
+        entityType: "UNIVERSITY",
+        id: universityId,
+        name: "Test Enrich University",
+      },
+      { entityType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
+    ]);
+    expect(trackCreate?.parentContext).toEqual([
+      {
+        entityType: "UNIVERSITY",
+        id: universityId,
+        name: "Test Enrich University",
+      },
+      { entityType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
+      {
+        entityType: "STUDY_PROGRAM",
+        id: studyProgramId,
+        name: "Test Enrich Program",
+      },
+    ]);
   });
 
   test("falls back to null when targets or parents no longer exist", async () => {
