@@ -27,6 +27,7 @@ import { apiRouter } from "./routes/apiRouter.js";
 import * as apiController from "./controllers/apiController.js";
 import { usersRouter } from "./routes/usersRouter.js";
 import { healthRouter } from "./routes/healthRouter.js";
+import { verifyOrigin } from "./auth/verifyOrigin.js";
 
 // Trust first proxy (Caddy reverse proxy)
 app.set("trust proxy", 1);
@@ -55,7 +56,7 @@ app.use("/api", cors(), rateLimiter.api, apiRouter);
 
 app.use(credentialedCors);
 app.use(express.json());
-app.use("/users", rateLimiter.users, usersRouter);
+app.use("/users", rateLimiter.users, verifyOrigin, usersRouter);
 
 app.use((_req, res) => {
   sendError(res, {
