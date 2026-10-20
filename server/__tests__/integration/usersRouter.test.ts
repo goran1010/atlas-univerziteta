@@ -5,6 +5,7 @@ import { createAndLoginUser } from "../utils/createUserAndLogin.js";
 import { createNewUserInput } from "../utils/createNewUserInput.js";
 import { deleteUser } from "../utils/deleteUser.js";
 import { prisma } from "../../src/db/prisma.js";
+import { env } from "../../src/config/env.js";
 
 describe("usersRouter", () => {
   test("sign up creates a user via BetterAuth", async () => {
@@ -107,6 +108,36 @@ describe("usersRouter - DELETE /users/request-admin", () => {
       where: { email: userData.email },
     });
     expect(userInDb?.adminRequestedAt).toBeNull();
+
+    await deleteUser(userData.email);
+  });
+});
+
+describe("usersRouter - origin verification", () => {
+  test("responds with 403 for a state-changing request from a foreign origin", async () => {
+    const response = await request(app)
+      .post("/users/request-admin")
+      .set("Origin", "https://evil.example");
+
+    expect(response.status).toBe(403);
+    expect(response.body).toEqual({
+      error: {
+        code: "FORBIDDEN",
+        message: "Request origin is not allowed.",
+      },
+    });
+  });
+
+  test("accepts a state-changing request from the webapp origin", async () => {
+    const agent = request.agent(app);
+    const userData = createNewUserInput();
+    await createAndLoginUser(agent, userData);
+
+    const response = await agent
+      .post("/users/request-admin")
+      .set("Origin", env.WEBAPP_URL);
+
+    expect(response.status).toBe(200);
 
     await deleteUser(userData.email);
   });
