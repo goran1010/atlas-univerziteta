@@ -29,7 +29,6 @@ jobs:
     env:
       E2E_DATABASE_URL: postgresql://test_user:test_password@localhost:5432/uniatlas_e2e
       DATABASE_URL: postgresql://test_user:test_password@localhost:5432/uniatlas_e2e
-      COOKIE_SECRET: "123456789"
       RESEND_API_KEY: random_text_for_ci
       GITHUB_CLIENT_ID: random_text_for_ci
       GITHUB_CLIENT_SECRET: random_text_for_ci

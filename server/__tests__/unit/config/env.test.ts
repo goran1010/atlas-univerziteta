@@ -8,7 +8,6 @@ function setRequiredEnv() {
   process.env["SERVER_URL"] = "http://localhost:3000";
   process.env["PORT"] = "3000";
   process.env["RESEND_API_KEY"] = "resend-key";
-  process.env["COOKIE_SECRET"] = "cookie-secret";
   process.env["BETTER_AUTH_SECRET"] = "better-auth-secret";
   process.env["GITHUB_CLIENT_ID"] = "github-client-id";
   process.env["GITHUB_CLIENT_SECRET"] = "github-client-secret";
