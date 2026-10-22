@@ -10,32 +10,39 @@ import {
   studyCycleSchema,
 } from "./domain";
 
-const requiredNameSchema = z.string().trim().min(1);
+// Length caps mirror server/src/validation/contributionValidation.ts
+const requiredNameSchema = z.string().trim().min(1).max(200);
 const optionalNameSchema = requiredNameSchema.optional();
+const acronymSchema = z.string().trim().min(1).max(20);
+const foundedYearSchema = z.string().trim().min(1).max(20);
+const addressSchema = z.string().trim().min(1).max(300);
+const phoneSchema = z.string().trim().min(1).max(50);
+const languageSchema = z.string().trim().min(1).max(100);
+const emailSchema = z.email().max(254);
 
 // http(s) only - bare z.url() accepts javascript: and data: URLs
-const websiteSchema = z.url({ protocol: /^https?$/ });
+const websiteSchema = z.url({ protocol: /^https?$/ }).max(254);
 
 const universityCreateDataSchema = z.strictObject({
   name: requiredNameSchema,
   city: requiredNameSchema,
   entity: entitySchema,
   ownership: ownershipSchema,
-  acronym: requiredNameSchema.optional(),
-  foundedYear: requiredNameSchema.optional(),
+  acronym: acronymSchema.optional(),
+  foundedYear: foundedYearSchema.optional(),
   website: websiteSchema.optional(),
-  address: requiredNameSchema.optional(),
-  phone: requiredNameSchema.optional(),
-  email: z.email().optional(),
+  address: addressSchema.optional(),
+  phone: phoneSchema.optional(),
+  email: emailSchema.optional(),
 });
 
 const facultyCreateDataSchema = z.strictObject({
   name: requiredNameSchema,
   city: requiredNameSchema.optional(),
   website: websiteSchema.optional(),
-  address: requiredNameSchema.optional(),
-  phone: requiredNameSchema.optional(),
-  email: z.email().optional(),
+  address: addressSchema.optional(),
+  phone: phoneSchema.optional(),
+  email: emailSchema.optional(),
 });
 
 const studyProgramCreateDataSchema = z.strictObject({
@@ -43,7 +50,7 @@ const studyProgramCreateDataSchema = z.strictObject({
   cycle: studyCycleSchema,
   durationYears: durationYearsSchema.optional(),
   ects: ectsSchema.optional(),
-  language: requiredNameSchema.optional(),
+  language: languageSchema.optional(),
 });
 
 function nonEmptyObject<T extends z.ZodRawShape>(shape: T) {
@@ -55,21 +62,21 @@ const universityEditDataSchema = nonEmptyObject({
   city: optionalNameSchema,
   entity: entitySchema.optional(),
   ownership: ownershipSchema.optional(),
-  acronym: requiredNameSchema.nullable().optional(),
-  foundedYear: requiredNameSchema.nullable().optional(),
+  acronym: acronymSchema.nullable().optional(),
+  foundedYear: foundedYearSchema.nullable().optional(),
   website: websiteSchema.nullable().optional(),
-  address: requiredNameSchema.nullable().optional(),
-  phone: requiredNameSchema.nullable().optional(),
-  email: z.email().nullable().optional(),
+  address: addressSchema.nullable().optional(),
+  phone: phoneSchema.nullable().optional(),
+  email: emailSchema.nullable().optional(),
 });
 
 const facultyEditDataSchema = nonEmptyObject({
   name: optionalNameSchema,
   city: requiredNameSchema.nullable().optional(),
   website: websiteSchema.nullable().optional(),
-  address: requiredNameSchema.nullable().optional(),
-  phone: requiredNameSchema.nullable().optional(),
-  email: z.email().nullable().optional(),
+  address: addressSchema.nullable().optional(),
+  phone: phoneSchema.nullable().optional(),
+  email: emailSchema.nullable().optional(),
 });
 
 const studyProgramEditDataSchema = nonEmptyObject({
@@ -77,7 +84,7 @@ const studyProgramEditDataSchema = nonEmptyObject({
   cycle: studyCycleSchema.optional(),
   durationYears: durationYearsSchema.nullable().optional(),
   ects: ectsSchema.nullable().optional(),
-  language: requiredNameSchema.nullable().optional(),
+  language: languageSchema.nullable().optional(),
 });
 
 const trackCreateDataSchema = z.strictObject({

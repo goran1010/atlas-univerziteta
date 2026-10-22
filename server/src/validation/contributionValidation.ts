@@ -57,16 +57,14 @@ const ectsSchema = z
   });
 
 // http(s) only - bare z.url() accepts javascript: and data: URLs
-const websiteSchema = z.url({ protocol: /^https?$/, error: "Invalid URL" });
+const websiteSchema = z
+  .url({ protocol: /^https?$/, error: "Invalid URL" })
+  .max(254);
 
 const universityCreateDataSchema = z.strictObject({
-  name: z.string().trim().min(1, {
-    error: "Name is required",
-  }),
+  name: z.string().trim().min(1, { error: "Name is required" }).max(200),
 
-  city: z.string().trim().min(1, {
-    error: "City is required",
-  }),
+  city: z.string().trim().min(1, { error: "City is required" }).max(200),
 
   entity: z.enum(["FBIH", "RS", "BD"], {
     error: "Invalid entity - must be FBIH, RS, or BD",
@@ -76,39 +74,35 @@ const universityCreateDataSchema = z.strictObject({
     error: "Ownership must be PUBLIC or PRIVATE",
   }),
 
-  acronym: z.string().trim().min(1).optional(),
+  acronym: z.string().trim().min(1).max(20).optional(),
 
-  foundedYear: z.string().trim().min(1).optional(),
+  foundedYear: z.string().trim().min(1).max(20).optional(),
 
   website: websiteSchema.optional(),
 
-  address: z.string().trim().min(1).optional(),
+  address: z.string().trim().min(1).max(300).optional(),
 
-  phone: z.string().trim().min(1).optional(),
+  phone: z.string().trim().min(1).max(50).optional(),
 
-  email: z.email({ error: "Invalid email" }).optional(),
+  email: z.email({ error: "Invalid email" }).max(254).optional(),
 });
 
 const facultyCreateDataSchema = z.strictObject({
-  name: z.string().trim().min(1, {
-    error: "Name is required",
-  }),
+  name: z.string().trim().min(1, { error: "Name is required" }).max(200),
 
-  city: z.string().trim().optional(),
+  city: z.string().trim().min(1).max(200).optional(),
 
   website: websiteSchema.optional(),
 
-  address: z.string().trim().min(1).optional(),
+  address: z.string().trim().min(1).max(300).optional(),
 
-  phone: z.string().trim().min(1).optional(),
+  phone: z.string().trim().min(1).max(50).optional(),
 
-  email: z.email({ error: "Invalid email" }).optional(),
+  email: z.email({ error: "Invalid email" }).max(254).optional(),
 });
 
 const studyProgramCreateDataSchema = z.strictObject({
-  name: z.string().trim().min(1, {
-    error: "Name is required",
-  }),
+  name: z.string().trim().min(1, { error: "Name is required" }).max(200),
 
   cycle: z.enum(
     ["FIRST", "SECOND", "THIRD", "INTEGRATED", "VOCATIONAL", "SPECIALIST"],
@@ -122,13 +116,11 @@ const studyProgramCreateDataSchema = z.strictObject({
 
   ects: ectsSchema.optional(),
 
-  language: z.string().trim().min(1).optional(),
+  language: z.string().trim().min(1).max(100).optional(),
 });
 
 const trackCreateDataSchema = z.strictObject({
-  name: z.string().trim().min(1, {
-    error: "Name is required",
-  }),
+  name: z.string().trim().min(1, { error: "Name is required" }).max(200),
 
   ects: ectsSchema.optional(),
 
@@ -168,12 +160,14 @@ const universityEditDataSchema = z
       .min(1, {
         error: "Name cannot be empty if provided",
       })
+      .max(200)
       .optional(),
 
     city: z
       .string()
       .trim()
       .min(1, { error: "City cannot be empty if provided" })
+      .max(200)
       .optional(),
 
     entity: z
@@ -188,17 +182,17 @@ const universityEditDataSchema = z
       })
       .optional(),
 
-    acronym: z.string().trim().min(1).nullable().optional(),
+    acronym: z.string().trim().min(1).max(20).nullable().optional(),
 
-    foundedYear: z.string().trim().min(1).nullable().optional(),
+    foundedYear: z.string().trim().min(1).max(20).nullable().optional(),
 
     website: websiteSchema.nullable().optional(),
 
-    address: z.string().trim().min(1).nullable().optional(),
+    address: z.string().trim().min(1).max(300).nullable().optional(),
 
-    phone: z.string().trim().min(1).nullable().optional(),
+    phone: z.string().trim().min(1).max(50).nullable().optional(),
 
-    email: z.email({ error: "Invalid email" }).nullable().optional(),
+    email: z.email({ error: "Invalid email" }).max(254).nullable().optional(),
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
@@ -212,22 +206,24 @@ const facultyEditDataSchema = z
       .min(1, {
         error: "Name cannot be empty if provided",
       })
+      .max(200)
       .optional(),
 
     city: z
       .string()
       .trim()
       .min(1, { error: "City cannot be empty if provided" })
+      .max(200)
       .nullable()
       .optional(),
 
     website: websiteSchema.nullable().optional(),
 
-    address: z.string().trim().min(1).nullable().optional(),
+    address: z.string().trim().min(1).max(300).nullable().optional(),
 
-    phone: z.string().trim().min(1).nullable().optional(),
+    phone: z.string().trim().min(1).max(50).nullable().optional(),
 
-    email: z.email({ error: "Invalid email" }).nullable().optional(),
+    email: z.email({ error: "Invalid email" }).max(254).nullable().optional(),
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
@@ -241,6 +237,7 @@ const studyProgramEditDataSchema = z
       .min(1, {
         error: "Name cannot be empty if provided",
       })
+      .max(200)
       .optional(),
 
     cycle: z
@@ -256,7 +253,7 @@ const studyProgramEditDataSchema = z
 
     ects: ectsSchema.nullable().optional(),
 
-    language: z.string().trim().min(1).nullable().optional(),
+    language: z.string().trim().min(1).max(100).nullable().optional(),
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
@@ -270,6 +267,7 @@ const trackEditDataSchema = z
       .min(1, {
         error: "Name cannot be empty if provided",
       })
+      .max(200)
       .optional(),
 
     ects: ectsSchema.nullable().optional(),

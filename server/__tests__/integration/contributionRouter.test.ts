@@ -141,6 +141,25 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     });
   });
 
+  test("responds with status 400 when a field exceeds its max length", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      entityType: "UNIVERSITY",
+      data: {
+        name: "a".repeat(201),
+        city: "TestCity",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, { path: "data.name", code: "too_big" });
+  });
+
   test("responds with status 201 and stores a create suggestion", async () => {
     const { agent, user } = await createLoggedInAgent();
 
@@ -284,6 +303,21 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
 
     expect(response.status).toBe(400);
     expectValidationIssue(error, { path: "request", code: "invalid_type" });
+  });
+
+  test("responds with status 400 when an edited field exceeds its max length", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.put("/users/contribution/universities").send({
+      entityType: "UNIVERSITY",
+      targetId: "1",
+      data: { phone: "1".repeat(51) },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, { path: "data.phone", code: "too_big" });
   });
 
   test("responds with status 400 when an edit has no changes", async () => {
