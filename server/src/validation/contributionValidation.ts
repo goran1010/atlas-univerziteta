@@ -56,6 +56,9 @@ const ectsSchema = z
     error: "ECTS must be a positive integer",
   });
 
+// http(s) only - bare z.url() accepts javascript: and data: URLs
+const websiteSchema = z.url({ protocol: /^https?$/, error: "Invalid URL" });
+
 const universityCreateDataSchema = z.strictObject({
   name: z.string().trim().min(1, {
     error: "Name is required",
@@ -77,7 +80,7 @@ const universityCreateDataSchema = z.strictObject({
 
   foundedYear: z.string().trim().min(1).optional(),
 
-  website: z.url({ error: "Invalid URL" }).optional(),
+  website: websiteSchema.optional(),
 
   address: z.string().trim().min(1).optional(),
 
@@ -93,7 +96,7 @@ const facultyCreateDataSchema = z.strictObject({
 
   city: z.string().trim().optional(),
 
-  website: z.url({ error: "Invalid URL" }).optional(),
+  website: websiteSchema.optional(),
 
   address: z.string().trim().min(1).optional(),
 
@@ -189,7 +192,7 @@ const universityEditDataSchema = z
 
     foundedYear: z.string().trim().min(1).nullable().optional(),
 
-    website: z.url({ error: "Invalid URL" }).nullable().optional(),
+    website: websiteSchema.nullable().optional(),
 
     address: z.string().trim().min(1).nullable().optional(),
 
@@ -218,7 +221,7 @@ const facultyEditDataSchema = z
       .nullable()
       .optional(),
 
-    website: z.url({ error: "Invalid URL" }).nullable().optional(),
+    website: websiteSchema.nullable().optional(),
 
     address: z.string().trim().min(1).nullable().optional(),
 

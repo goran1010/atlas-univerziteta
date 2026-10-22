@@ -13,6 +13,9 @@ import {
 const requiredNameSchema = z.string().trim().min(1);
 const optionalNameSchema = requiredNameSchema.optional();
 
+// http(s) only - bare z.url() accepts javascript: and data: URLs
+const websiteSchema = z.url({ protocol: /^https?$/ });
+
 const universityCreateDataSchema = z.strictObject({
   name: requiredNameSchema,
   city: requiredNameSchema,
@@ -20,7 +23,7 @@ const universityCreateDataSchema = z.strictObject({
   ownership: ownershipSchema,
   acronym: requiredNameSchema.optional(),
   foundedYear: requiredNameSchema.optional(),
-  website: z.url().optional(),
+  website: websiteSchema.optional(),
   address: requiredNameSchema.optional(),
   phone: requiredNameSchema.optional(),
   email: z.email().optional(),
@@ -29,7 +32,7 @@ const universityCreateDataSchema = z.strictObject({
 const facultyCreateDataSchema = z.strictObject({
   name: requiredNameSchema,
   city: requiredNameSchema.optional(),
-  website: z.url().optional(),
+  website: websiteSchema.optional(),
   address: requiredNameSchema.optional(),
   phone: requiredNameSchema.optional(),
   email: z.email().optional(),
@@ -54,7 +57,7 @@ const universityEditDataSchema = nonEmptyObject({
   ownership: ownershipSchema.optional(),
   acronym: requiredNameSchema.nullable().optional(),
   foundedYear: requiredNameSchema.nullable().optional(),
-  website: z.url().nullable().optional(),
+  website: websiteSchema.nullable().optional(),
   address: requiredNameSchema.nullable().optional(),
   phone: requiredNameSchema.nullable().optional(),
   email: z.email().nullable().optional(),
@@ -63,7 +66,7 @@ const universityEditDataSchema = nonEmptyObject({
 const facultyEditDataSchema = nonEmptyObject({
   name: optionalNameSchema,
   city: requiredNameSchema.nullable().optional(),
-  website: z.url().nullable().optional(),
+  website: websiteSchema.nullable().optional(),
   address: requiredNameSchema.nullable().optional(),
   phone: requiredNameSchema.nullable().optional(),
   email: z.email().nullable().optional(),

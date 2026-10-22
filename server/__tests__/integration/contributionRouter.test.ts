@@ -118,6 +118,29 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     expectValidationIssue(error, { path: "data", code: "unrecognized_keys" });
   });
 
+  test("responds with status 400 when the website is not http(s)", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      entityType: "UNIVERSITY",
+      data: {
+        name: "TestCity University",
+        city: "TestCity",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        website: "javascript:alert(1)",
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, {
+      path: "data.website",
+      code: "invalid_format",
+    });
+  });
+
   test("responds with status 201 and stores a create suggestion", async () => {
     const { agent, user } = await createLoggedInAgent();
 
