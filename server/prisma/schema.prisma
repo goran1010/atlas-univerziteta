@@ -45,6 +45,8 @@ model session {
   userAgent String?
   userId    String
   user      user     @relation(fields: [userId], references: [id])
+
+  @@index([userId])
 }
 
 model account {
@@ -62,6 +64,8 @@ model account {
   password              String?
   createdAt             DateTime  @default(now())
   updatedAt             DateTime  @updatedAt
+
+  @@index([userId])
 }
 
 model verification {
@@ -137,7 +141,9 @@ model Faculty {
   lastModified      DateTime?
   studyPrograms     StudyProgram[]
 
+  // the unique above starts with name, so FK lookups need their own index
   @@unique([name, universityId])
+  @@index([universityId])
   @@map("faculty")
 }
 
@@ -155,6 +161,7 @@ model StudyProgram {
   tracks        Track[]
 
   @@unique([name, facultyId, cycle])
+  @@index([facultyId])
   @@map("study_program")
 }
 
@@ -169,6 +176,7 @@ model Track {
   lastModified   DateTime?
 
   @@unique([name, studyProgramId])
+  @@index([studyProgramId])
   @@map("track")
 }
 
