@@ -136,19 +136,15 @@ console.log(`Pre-rendered meta tags for ${String(generated)} static routes.`);
 // ---- per-entity pages + sitemap --------------------------------------------
 // The build fetches the catalog and writes a static page per university and
 // faculty so shared links get entity-specific previews (crawlers do not run
-// the SPA). Meta freshness equals deploy freshness. Netlify's runtime
-// VITE_SERVER_URL is the /server proxy path, which does not exist at build
-// time - set PRERENDER_API_URL there (absolute URL) to enable this stage.
+// the SPA). Meta freshness equals deploy freshness. VITE_SERVER_URL is an
+// absolute URL in production and is used directly.
 
 function apiBaseUrl() {
-  const candidates = [
-    process.env.PRERENDER_API_URL,
-    process.env.VITE_SERVER_URL,
-  ];
+  const candidates = [process.env.VITE_SERVER_URL];
   const envFile = join(import.meta.dirname, "..", ".env");
   if (existsSync(envFile)) {
     const parsed = parseEnv(readFileSync(envFile, "utf-8"));
-    candidates.push(parsed.PRERENDER_API_URL, parsed.VITE_SERVER_URL);
+    candidates.push(parsed.VITE_SERVER_URL);
   }
   const absolute = candidates.find(
     (value) =>
@@ -193,7 +189,7 @@ function appendToSitemap(urls) {
 const apiUrl = apiBaseUrl();
 if (!apiUrl) {
   console.warn(
-    "prerender-meta: no absolute API URL (PRERENDER_API_URL) - skipping per-entity pages.",
+    "prerender-meta: no absolute API URL (VITE_SERVER_URL) - skipping per-entity pages.",
   );
 } else {
   try {

@@ -41,14 +41,11 @@ Fill in the server values and adjust the webapp server URL if needed.
 - `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET`: optional GitHub OAuth settings
 - `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`: optional Google OAuth settings
 
-- `OAUTH_CALLBACK_BASE_URL`: optional base for OAuth callbacks, defaults to `SERVER_URL`
-
 Local OAuth callback URLs to register with GitHub and Google: `http://localhost:3000/api/auth/callback/github` and `http://localhost:3000/api/auth/callback/google`.
 
 ### Webapp (`webapp/.env.example`)
 
-- `VITE_SERVER_URL`: server base URL used by the React app - `http://localhost:3000` locally, `/server` on Netlify (see [DEPLOYMENT.md](./DEPLOYMENT.md))
-- `PRERENDER_API_URL`: optional absolute API URL for the build-time share-page generation (see [DEPLOYMENT.md](./DEPLOYMENT.md))
+- `VITE_SERVER_URL`: server base URL used by the React app - `http://localhost:3000` locally, `https://api.atlasuniverziteta.com` on Netlify (see [DEPLOYMENT.md](./DEPLOYMENT.md))
 
 ## Database setup and running
 

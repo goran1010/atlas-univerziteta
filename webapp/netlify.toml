@@ -12,12 +12,6 @@
   force = true
 
 [[redirects]]
-  from = "/server/*"
-  to = "https://api.atlasuniverziteta.com/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/*"
   to = "/"
   status = 200

@@ -79,25 +79,6 @@ describe("env config", () => {
     expect(env.RESEND_FROM_EMAIL).toBe("noreply@atlasuniverziteta.com");
   });
 
-  test("defaults OAUTH_CALLBACK_BASE_URL to SERVER_URL", async () => {
-    delete process.env["OAUTH_CALLBACK_BASE_URL"];
-    vi.resetModules();
-
-    const { env } = await import("../../../src/config/env.js");
-    expect(env.OAUTH_CALLBACK_BASE_URL).toBe("http://localhost:3000");
-  });
-
-  test("uses OAUTH_CALLBACK_BASE_URL when set", async () => {
-    process.env["OAUTH_CALLBACK_BASE_URL"] =
-      "https://atlasuniverziteta.com/server";
-    vi.resetModules();
-
-    const { env } = await import("../../../src/config/env.js");
-    expect(env.OAUTH_CALLBACK_BASE_URL).toBe(
-      "https://atlasuniverziteta.com/server",
-    );
-  });
-
   test("throws if NODE_ENV is invalid", async () => {
     process.env["NODE_ENV"] = "staging";
     vi.resetModules();

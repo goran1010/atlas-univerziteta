@@ -46,7 +46,7 @@ app.use(compression());
 
 // BetterAuth needs credentialed CORS (not the wildcard "*" from the public /api
 // routes) and must read the raw body before express.json() consumes it.
-app.use("/api/auth", credentialedCors);
+app.use("/api/auth", credentialedCors, rateLimiter.auth);
 app.all("/api/auth/*splat", toNodeHandler(auth));
 
 // Public routes (wildcard CORS - open data)
