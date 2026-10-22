@@ -35,9 +35,7 @@ app.set("trust proxy", 1);
 app.use(rateLimiter.global);
 
 app.use((req, _res, next) => {
-  logger.info(
-    `${req.method} method to ${req.originalUrl} from ${String(req.ip)}`,
-  );
+  logger.info(`${req.method} method to ${req.path} from ${String(req.ip)}`);
   next();
 });
 
@@ -81,7 +79,7 @@ function isClientHttpError(error: unknown): error is ClientHttpError {
 app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   if (error instanceof RequestValidationError) {
     logger.warn(
-      { issues: error.issues, method: req.method, url: req.originalUrl },
+      { issues: error.issues, method: req.method, url: req.path },
       "Request validation failed.",
     );
     sendError(res, {
@@ -95,7 +93,7 @@ app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
 
   if (isClientHttpError(error)) {
     logger.warn(
-      { err: error, method: req.method, url: req.originalUrl },
+      { err: error, method: req.method, url: req.path },
       "Request failed with a client error.",
     );
     sendError(res, {
@@ -107,7 +105,7 @@ app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   }
 
   logger.error(
-    { err: error, method: req.method, url: req.originalUrl },
+    { err: error, method: req.method, url: req.path },
     "Unhandled error.",
   );
 
