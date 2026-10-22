@@ -168,11 +168,12 @@ async function deletePendingChange(req: Request, res: Response) {
     req.body,
   );
 
-  const pendingChange = await prisma.pendingChange.findMany({
+  // deleteMany so a missing or concurrently-removed change is a clean 404
+  const { count } = await prisma.pendingChange.deleteMany({
     where: { userId: id, id: pendingChangeId },
   });
 
-  if (pendingChange.length === 0) {
+  if (count === 0) {
     sendError(res, {
       status: 404,
       code: "NOT_FOUND",
@@ -180,10 +181,6 @@ async function deletePendingChange(req: Request, res: Response) {
     });
     return;
   }
-
-  await prisma.pendingChange.delete({
-    where: { id: pendingChangeId },
-  });
 
   sendSuccess(res, {
     message: "Pending change deleted successfully.",

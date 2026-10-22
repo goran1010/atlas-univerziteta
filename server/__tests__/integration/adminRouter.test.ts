@@ -185,6 +185,17 @@ describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
       }),
     ).toBeNull();
   });
+
+  test("Responds with status 404 if pending change does not exist", async () => {
+    const response = await agent
+      .delete("/users/admin/decline-pending-change")
+      .send({ id: "a7d3c8f1-4b9e-4f2a-8c3e-5d7f1b9a2c6e" });
+
+    expect(response.status).toBe(404);
+    expect(response.body).toEqual({
+      error: { code: "NOT_FOUND", message: "Pending change not found." },
+    });
+  });
 });
 
 describe("Admin Router - POST /users/admin/approve-pending-change", () => {
