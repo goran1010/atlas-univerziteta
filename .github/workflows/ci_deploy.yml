@@ -266,7 +266,7 @@ jobs:
           docker push ghcr.io/goran1010/atlas-univerziteta-server:latest
 
       - name: Deploy to VPS
-        uses: appleboy/ssh-action@v1
+        uses: appleboy/ssh-action@0ff4204d59e8e51228ff73bce53f80d53301dee2 # v1.2.5
         with:
           host: 188.245.124.7
           username: root

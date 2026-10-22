@@ -50,6 +50,11 @@ COPY --from=build /app/dist ./dist
 # the production OS (they might differ).
 RUN npx prisma generate
 
+# Run as the unprivileged node user (built into the official image) so a
+# compromised server process doesn't get root inside the container. The app
+# only reads its files, so root-owned COPY output is fine.
+USER node
+
 EXPOSE 3000
 
 # On startup: run pending database migrations, then start the server.
