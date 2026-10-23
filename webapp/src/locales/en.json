@@ -152,6 +152,8 @@
       "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks).",
       "search": "Search across universities, faculties, and study programs (track names match through their study program). Optional search term (min 2 characters) and filters; with neither, returns a capped listing of everything. Matches name, city, acronym, ECTS/duration, and related unit names (case-insensitive, diacritic-insensitive).",
       "searchTermParam": "Text to search for (2-100 characters). Optional if at least one filter is provided.",
+      "pageParam": "Page number, starting at 1 (default 1).",
+      "limitParam": "Items per page, 1-100 (default 50).",
       "getAllFaculties": "Retrieve all faculties, ordered by university name then faculty name. Includes the parent university.",
       "getFacultyById": "Retrieve a faculty by ID with nested study programs and tracks, plus the parent university.",
       "getAllStudyPrograms": "Retrieve all study programs, ordered by cycle then name. Includes the parent faculty and university.",

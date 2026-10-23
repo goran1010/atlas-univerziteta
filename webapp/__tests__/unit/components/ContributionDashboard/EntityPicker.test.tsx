@@ -52,7 +52,13 @@ beforeEach(() => {
   server.use(
     http.get("*/api/v1/universities", () => {
       universitiesRequests++;
-      return HttpResponse.json({ message: "ok", data: universitiesList });
+      return HttpResponse.json({
+        message: "ok",
+        data: universitiesList,
+        page: 1,
+        totalPages: 1,
+        total: universitiesList.length,
+      });
     }),
     http.get("*/api/v1/universities/:id", ({ params }) => {
       detailRequests++;

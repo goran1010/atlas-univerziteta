@@ -162,6 +162,20 @@ async function fetchJson(url) {
   return response.json();
 }
 
+// the list endpoints paginate (max 100 per page) - walk every page
+async function fetchAllPages(baseUrl) {
+  const items = [];
+  let page = 1;
+  let totalPages = 1;
+  while (page <= totalPages) {
+    const body = await fetchJson(`${baseUrl}?limit=100&page=${String(page)}`);
+    items.push(...body.data);
+    totalPages = body.totalPages ?? 1;
+    page += 1;
+  }
+  return items;
+}
+
 function appendToSitemap(urls) {
   const sitemapFile = join(distDir, "sitemap.xml");
   if (!existsSync(sitemapFile)) return;
@@ -194,14 +208,14 @@ if (!apiUrl) {
 } else {
   try {
     const [universities, faculties] = await Promise.all([
-      fetchJson(`${apiUrl}/api/v1/universities`),
-      fetchJson(`${apiUrl}/api/v1/faculties`),
+      fetchAllPages(`${apiUrl}/api/v1/universities`),
+      fetchAllPages(`${apiUrl}/api/v1/faculties`),
     ]);
 
     const entityUrls = [];
     let entityPages = 0;
 
-    for (const university of universities.data) {
+    for (const university of universities) {
       const url = `/universities/${String(university.id)}`;
       const entityLabel = t(`universitiesPage.entities.${university.entity}`);
       renderRoute({
@@ -214,7 +228,7 @@ if (!apiUrl) {
       entityPages++;
     }
 
-    for (const faculty of faculties.data) {
+    for (const faculty of faculties) {
       const url = `/faculties/${String(faculty.id)}`;
       renderRoute({
         path: url.slice(1),

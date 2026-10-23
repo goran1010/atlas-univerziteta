@@ -89,6 +89,9 @@ const universityDetailSchema = universitySchema.extend({
 const universityListResponseSchema = z.object({
   message: z.string(),
   data: z.array(universityListItemSchema),
+  page: z.number(),
+  totalPages: z.number(),
+  total: z.number(),
 });
 
 const universityDetailResponseSchema = z.object({

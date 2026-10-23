@@ -29,16 +29,28 @@ interface Options {
   status?: number;
 }
 
+interface Pagination {
+  page: number;
+  totalPages: number;
+  total: number;
+}
+
 interface SuccessOptions extends Options {
   data?: unknown;
   message?: string | null;
+  pagination?: Pagination;
 }
 
 function sendSuccess(
   res: Response,
-  { status = 200, data = null, message = null }: SuccessOptions = {},
+  {
+    status = 200,
+    data = null,
+    message = null,
+    pagination,
+  }: SuccessOptions = {},
 ) {
-  res.status(status).json({ data, message });
+  res.status(status).json({ data, message, ...pagination });
 }
 
 function sendError(

@@ -14,6 +14,19 @@ export interface Endpoint {
   errorExample?: string | null;
 }
 
+const paginationParams = [
+  {
+    name: "page",
+    required: false,
+    descriptionKey: "api.endpointsData.pageParam",
+  },
+  {
+    name: "limit",
+    required: false,
+    descriptionKey: "api.endpointsData.limitParam",
+  },
+];
+
 const notFoundError = (entity: string) =>
   `// 404\n{ "error": { "code": "NOT_FOUND", "message": "${entity} not found." } }`;
 
@@ -44,7 +57,7 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/universities",
     descriptionKey: "api.endpointsData.getAllUniversities",
-    params: null,
+    params: paginationParams,
     successExample: `{
   "message": "Universities retrieved successfully.",
   "data": [
@@ -55,7 +68,8 @@ const apiEndpoints: Endpoint[] = [
       "_count": { "faculties": 23 }
     },
     ...
-  ]
+  ],
+  "page": 1, "totalPages": 1, "total": 49
 }`,
     errorExample: null,
   },
@@ -90,7 +104,7 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/faculties",
     descriptionKey: "api.endpointsData.getAllFaculties",
-    params: null,
+    params: paginationParams,
     successExample: `{
   "message": "Faculties retrieved successfully.",
   "data": [
@@ -100,7 +114,8 @@ const apiEndpoints: Endpoint[] = [
       "university": { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA" }
     },
     ...
-  ]
+  ],
+  "page": 1, "totalPages": 4, "total": 193
 }`,
     errorExample: null,
   },
@@ -128,18 +143,20 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/study-programs",
     descriptionKey: "api.endpointsData.getAllStudyPrograms",
-    params: null,
+    params: paginationParams,
     successExample: `{
   "message": "Study programs retrieved successfully.",
   "data": [
     {
-      "id": 1, "name": "Software Engineering", "cycle": "FIRST", "ects": 180,
+      "id": 1, "name": "Software Engineering", "cycle": "FIRST",
+      "durationYears": 3, "ects": 180, "language": "Bosnian",
       "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
         "university": { "id": 1, "name": "University of Sarajevo" }
       }
     },
     ...
-  ]
+  ],
+  "page": 1, "totalPages": 37, "total": 1823
 }`,
     errorExample: null,
   },
@@ -166,12 +183,12 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/tracks",
     descriptionKey: "api.endpointsData.getAllTracks",
-    params: null,
+    params: paginationParams,
     successExample: `{
   "message": "Tracks retrieved successfully.",
   "data": [
     {
-      "id": 1, "name": "Software Development", "ects": 60,
+      "id": 1, "name": "Software Development", "ects": 60, "durationYears": 1,
       "studyProgram": { "id": 1, "name": "Software Engineering",
         "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
           "university": { "id": 1, "name": "University of Sarajevo" }
@@ -179,7 +196,8 @@ const apiEndpoints: Endpoint[] = [
       }
     },
     ...
-  ]
+  ],
+  "page": 1, "totalPages": 12, "total": 584
 }`,
     errorExample: null,
   },

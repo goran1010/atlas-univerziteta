@@ -152,6 +152,8 @@
       "getUniversityById": "Preuzimanje univerziteta po ID-u s potpunim ugniježđenim detaljima (fakulteti, studijski programi i smjerovi).",
       "search": "Pretraga univerziteta, fakulteta i studijskih programa (nazivi smjerova se pronalaze preko svog studijskog programa). Pojam za pretragu (min 2 karaktera) i filteri su opcioni; bez njih vraća ograničen popis svega. Pretražuje po nazivu, gradu, akronimu, ECTS/trajanju i nazivima povezanih jedinica (neosjetljivo na velika/mala slova i dijakritike).",
       "searchTermParam": "Tekst za pretragu (2-100 karaktera). Opciono ako je naveden barem jedan filter.",
+      "pageParam": "Broj stranice, počinje od 1 (podrazumevano 1).",
+      "limitParam": "Broj stavki po stranici, 1-100 (podrazumevano 50).",
       "getAllFaculties": "Preuzimanje svih fakulteta, sortiranih po nazivu univerziteta pa po nazivu fakulteta. Uključuje nadređeni univerzitet.",
       "getFacultyById": "Preuzimanje fakulteta po ID-u s ugniježđenim studijskim programima i smjerovima, te nadređenim univerzitetom.",
       "getAllStudyPrograms": "Preuzimanje svih studijskih programa, sortiranih po ciklusu pa po nazivu. Uključuje nadređeni fakultet i univerzitet.",

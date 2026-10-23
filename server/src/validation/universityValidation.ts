@@ -25,6 +25,15 @@ function getTrackById(input: unknown) {
   return parseRequest(idParamsSchema, input);
 }
 
+const listQuerySchema = z.object({
+  page: z.coerce.number().int().min(1).default(1),
+  limit: z.coerce.number().int().min(1).max(100).default(50),
+});
+
+function listQuery(input: unknown) {
+  return parseRequest(listQuerySchema, input);
+}
+
 const studyCycleEnum = z.enum([
   "FIRST",
   "SECOND",
@@ -75,5 +84,6 @@ export {
   getFacultyById,
   getStudyProgramById,
   getTrackById,
+  listQuery,
   searchQuery,
 };

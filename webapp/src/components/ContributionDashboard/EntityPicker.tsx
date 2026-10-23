@@ -107,7 +107,9 @@ function EntityPicker({
     async function fetchUniversities() {
       const result = await fetchPublic(
         {
-          path: "/api/v1/universities",
+          // the picker needs the whole directory; one max-size page covers
+          // every university in the country with room to spare
+          path: "/api/v1/universities?limit=100",
           responseSchema: universityListResponseSchema,
           errorMessageKey: "messages.universities.loadError",
           logLabel: "load universities",

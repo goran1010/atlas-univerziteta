@@ -108,6 +108,7 @@ function UnifiedSearch() {
           hadTerm={view.hadTerm}
           t={t}
           onShowAll={handleShowAll}
+          activeTypeFilters={typeFilters}
         />
       )}
     </div>

@@ -90,11 +90,13 @@ function SearchResults({
   hadTerm = false,
   t,
   onShowAll,
+  activeTypeFilters = [],
 }: {
   results: UnifiedSearchResults;
   hadTerm?: boolean;
   t: (key: string) => string;
   onShowAll?: (type: SearchType) => void;
+  activeTypeFilters?: SearchType[];
 }) {
   const noResultsAtAll =
     results.universities.length === 0 &&
@@ -246,6 +248,10 @@ function SearchResults({
         const { shown, total, direct } = sectionData[type];
         const contextOnly = hadTerm && direct === 0;
         const startCollapsed = contextOnly && !(allContextOnly && index === 0);
+        // already filtered to just this type: the server cap decides what is
+        // shown, so a "show all" would re-run the identical query
+        const alreadyShowingAll =
+          activeTypeFilters.length === 1 && activeTypeFilters[0] === type;
         return (
           <ResultSection
             // remount when the band changes so defaultCollapsed reapplies
@@ -255,10 +261,11 @@ function SearchResults({
             shown={shown}
             defaultCollapsed={startCollapsed}
             onShowAll={
-              onShowAll &&
-              (() => {
-                onShowAll(type);
-              })
+              onShowAll && !alreadyShowingAll
+                ? () => {
+                    onShowAll(type);
+                  }
+                : undefined
             }
           >
             <div className="flex flex-col gap-3 w-full">

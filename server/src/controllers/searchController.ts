@@ -17,8 +17,11 @@ import type { WhereClause } from "../search/matchers.js";
 import type { Request, Response } from "express";
 
 // In the combined (federated) view each section is capped and reports its
-// true total; a request for exactly one type returns everything.
+// true total; a request for exactly one type gets a higher bound (the UI
+// shows "shown / total" when truncated) that keeps the largest section
+// (1800+ study programs) from being returned in one response.
 const FEDERATED_SECTION_LIMIT = 25;
+const SINGLE_TYPE_LIMIT = 100;
 
 interface SectionQuery<Item> {
   count: (where: WhereClause) => Promise<number>;
@@ -98,7 +101,8 @@ async function search(req: Request, res: Response) {
   const wanted = (kind: "university" | "faculty" | "studyProgram") =>
     type === undefined || type.includes(kind);
 
-  const limit = type?.length === 1 ? undefined : FEDERATED_SECTION_LIMIT;
+  const limit =
+    type?.length === 1 ? SINGLE_TYPE_LIMIT : FEDERATED_SECTION_LIMIT;
 
   const cycleFilter = cycle ? { in: cycle } : undefined;
 
