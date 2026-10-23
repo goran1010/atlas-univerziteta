@@ -14,9 +14,7 @@ import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
 import { byCycleDisplayOrder } from "./utils/cycleOrder";
 import { Spinner } from "../sharedComponents/Spinner";
-import { SERVER_URL } from "../../utils/envConfig";
-import { readApiError } from "../../schemas/api";
-import { notificationMessageKey } from "../../utils/apiError";
+import { fetchPublic } from "../../utils/fetchPublic";
 import { facultyDetailResponseSchema } from "../../schemas/university";
 import { tCount } from "../../utils/pluralize";
 
@@ -48,39 +46,18 @@ function FacultyResult({
       setExpanded(true);
       return;
     }
-    try {
-      setLoadingDetail(true);
-      const res = await fetch(
-        `${SERVER_URL}/api/v1/faculties/${faculty.id.toString()}`,
-        { method: "GET", mode: "cors" },
-      );
-      if (res.ok) {
-        const result = facultyDetailResponseSchema.parse(await res.json());
-        setDetailData(result.data);
-        setExpanded(true);
-      } else {
-        const serverError = readApiError(await res.json());
-        if (serverError) {
-          console.warn("Failed to load faculty details:", serverError.message);
-        }
-        addNotification({
-          type: "error",
-          message: t(
-            notificationMessageKey(
-              serverError?.code,
-              "messages.universities.detailsError",
-            ),
-          ),
-        });
-      }
-    } catch (error) {
-      console.error("Error loading faculty details:", error);
-      addNotification({
-        type: "error",
-        message: t("messages.universities.detailsError"),
-      });
-    } finally {
-      setLoadingDetail(false);
+    const result = await fetchPublic(
+      {
+        path: `/api/v1/faculties/${faculty.id.toString()}`,
+        responseSchema: facultyDetailResponseSchema,
+        errorMessageKey: "messages.universities.detailsError",
+        logLabel: "load faculty details",
+      },
+      { t, addNotification, setLoading: setLoadingDetail },
+    );
+    if (result) {
+      setDetailData(result.data);
+      setExpanded(true);
     }
   }
 

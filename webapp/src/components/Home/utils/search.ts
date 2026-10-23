@@ -1,5 +1,4 @@
-import { SERVER_URL } from "../../../utils/envConfig";
-import { readApiError } from "../../../schemas/api";
+import { fetchPublicResponse } from "../../../utils/fetchPublic";
 import { unifiedSearchResponseSchema } from "../../../schemas/university";
 
 import type { UnifiedSearchResults } from "../../../schemas/university";
@@ -30,20 +29,17 @@ async function searchAll(
     }
   }
 
-  const res = await fetch(`${SERVER_URL}/api/v1/search?${params.toString()}`, {
-    method: "GET",
-    mode: "cors",
-  });
+  const outcome = await fetchPublicResponse(
+    `/api/v1/search?${params.toString()}`,
+    unifiedSearchResponseSchema,
+  );
 
-  if (res.ok) {
-    const result = unifiedSearchResponseSchema.parse(await res.json());
-    return result.data;
+  if (outcome.ok) return outcome.result.data;
+
+  if (outcome.error) {
+    console.warn("Search failed:", outcome.error.message);
   }
-  const serverError = readApiError(await res.json());
-  if (serverError) {
-    console.warn("Search failed:", serverError.message);
-  }
-  throw new SearchFailedError(serverError?.code);
+  throw new SearchFailedError(outcome.error?.code);
 }
 
 class SearchFailedError extends Error {

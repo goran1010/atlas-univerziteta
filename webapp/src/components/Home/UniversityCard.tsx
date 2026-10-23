@@ -18,9 +18,7 @@ import { FacultyRow } from "./FacultyRow";
 import { ShareButton } from "./ShareButton";
 import { ResultGroup } from "./ResultGroup";
 import { groupBy } from "./utils/groupBy";
-import { SERVER_URL } from "../../utils/envConfig";
-import { readApiError } from "../../schemas/api";
-import { notificationMessageKey } from "../../utils/apiError";
+import { fetchPublic } from "../../utils/fetchPublic";
 import { universityDetailResponseSchema } from "../../schemas/university";
 
 import type {
@@ -51,46 +49,18 @@ function UniversityCard({
       setExpanded(true);
       return;
     }
-    try {
-      setLoadingDetail(true);
-      const res = await fetch(
-        `${SERVER_URL}/api/v1/universities/${university.id.toString()}`,
-        {
-          method: "GET",
-          mode: "cors",
-        },
-      );
-
-      if (res.ok) {
-        const result = universityDetailResponseSchema.parse(await res.json());
-        setDetailData(result.data);
-        setExpanded(true);
-      } else {
-        const serverError = readApiError(await res.json());
-        if (serverError) {
-          console.warn(
-            "Failed to load university details:",
-            serverError.message,
-          );
-        }
-        addNotification({
-          type: "error",
-          message: t(
-            notificationMessageKey(
-              serverError?.code,
-              "messages.universities.detailsError",
-            ),
-          ),
-        });
-      }
-    } catch (error) {
-      console.error("Error loading university details:", error);
-      addNotification({
-        type: "error",
-        message: t("messages.universities.detailsError"),
-      });
-    } finally {
-      setLoadingDetail(false);
+    const result = await fetchPublic(
+      {
+        path: `/api/v1/universities/${university.id.toString()}`,
+        responseSchema: universityDetailResponseSchema,
+        errorMessageKey: "messages.universities.detailsError",
+        logLabel: "load university details",
+      },
+      { t, addNotification, setLoading: setLoadingDetail },
+    );
+    if (result) {
+      setDetailData(result.data);
+      setExpanded(true);
     }
   }
 

@@ -12,9 +12,7 @@ import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
 import { tCount } from "../../utils/pluralize";
-import { SERVER_URL } from "../../utils/envConfig";
-import { readApiError } from "../../schemas/api";
-import { notificationMessageKey } from "../../utils/apiError";
+import { fetchPublic } from "../../utils/fetchPublic";
 import { universityDetailResponseSchema } from "../../schemas/university";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../../utils/envConfig";
@@ -26,49 +24,27 @@ function UniversityDetailPage() {
   const { t, addNotification } = use(RootContext);
   const [university, setUniversity] = useState<UniversityDetail>();
   const [loading, setLoading] = useState(true);
-  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     async function fetchUniversity() {
-      try {
-        setLoading(true);
-        setNotFound(false);
-        const res = await fetch(
-          `${SERVER_URL}/api/v1/universities/${id ?? ""}`,
-          { method: "GET", mode: "cors" },
-        );
-        if (res.ok) {
-          const result = universityDetailResponseSchema.parse(await res.json());
-          setUniversity(result.data);
-        } else if (res.status === 404) {
-          setNotFound(true);
-        } else {
-          const serverError = readApiError(await res.json());
-          addNotification({
-            type: "error",
-            message: t(
-              notificationMessageKey(
-                serverError?.code,
-                "messages.universities.detailsError",
-              ),
-            ),
-          });
-        }
-      } catch {
-        addNotification({
-          type: "error",
-          message: t("messages.universities.detailsError"),
-        });
-      } finally {
-        setLoading(false);
-      }
+      const result = await fetchPublic(
+        {
+          path: `/api/v1/universities/${id ?? ""}`,
+          responseSchema: universityDetailResponseSchema,
+          errorMessageKey: "messages.universities.detailsError",
+          logLabel: "load university details",
+          quiet404: true,
+        },
+        { t, addNotification, setLoading },
+      );
+      setUniversity(result ? result.data : undefined);
     }
     void fetchUniversity();
   }, [id, t, addNotification]);
 
   if (loading) return <Spinner />;
 
-  if (notFound || !university) {
+  if (!university) {
     return (
       <div className="w-full mx-auto px-1 sm:px-4 py-8 text-center">
         <p className="text-(--text-muted) text-lg">

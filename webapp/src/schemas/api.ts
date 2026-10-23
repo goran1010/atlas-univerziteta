@@ -28,3 +28,4 @@ async function readResponseError(response: Response): Promise<ApiError | null> {
 }
 
 export { actionSuccessResponseSchema, readApiError, readResponseError };
+export type { ApiError };

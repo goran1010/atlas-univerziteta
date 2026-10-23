@@ -17,9 +17,7 @@ import { TrackList } from "./TrackList";
 import { groupBy } from "./utils/groupBy";
 import { byCycleDisplayOrder } from "./utils/cycleOrder";
 import { tCount } from "../../utils/pluralize";
-import { SERVER_URL } from "../../utils/envConfig";
-import { readApiError } from "../../schemas/api";
-import { notificationMessageKey } from "../../utils/apiError";
+import { fetchPublic } from "../../utils/fetchPublic";
 import { facultyDetailResponseSchema } from "../../schemas/university";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../../utils/envConfig";
@@ -32,49 +30,27 @@ function FacultyDetailPage() {
   const { t, addNotification } = use(RootContext);
   const [faculty, setFaculty] = useState<FacultyDetail>();
   const [loading, setLoading] = useState(true);
-  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     async function fetchFaculty() {
-      try {
-        setLoading(true);
-        setNotFound(false);
-        const res = await fetch(`${SERVER_URL}/api/v1/faculties/${id ?? ""}`, {
-          method: "GET",
-          mode: "cors",
-        });
-        if (res.ok) {
-          const result = facultyDetailResponseSchema.parse(await res.json());
-          setFaculty(result.data);
-        } else if (res.status === 404) {
-          setNotFound(true);
-        } else {
-          const serverError = readApiError(await res.json());
-          addNotification({
-            type: "error",
-            message: t(
-              notificationMessageKey(
-                serverError?.code,
-                "messages.universities.detailsError",
-              ),
-            ),
-          });
-        }
-      } catch {
-        addNotification({
-          type: "error",
-          message: t("messages.universities.detailsError"),
-        });
-      } finally {
-        setLoading(false);
-      }
+      const result = await fetchPublic(
+        {
+          path: `/api/v1/faculties/${id ?? ""}`,
+          responseSchema: facultyDetailResponseSchema,
+          errorMessageKey: "messages.universities.detailsError",
+          logLabel: "load faculty details",
+          quiet404: true,
+        },
+        { t, addNotification, setLoading },
+      );
+      setFaculty(result ? result.data : undefined);
     }
     void fetchFaculty();
   }, [id, t, addNotification]);
 
   if (loading) return <Spinner />;
 
-  if (notFound || !faculty) {
+  if (!faculty) {
     return (
       <div className="w-full mx-auto px-1 sm:px-4 py-8 text-center">
         <p className="text-(--text-muted) text-lg">

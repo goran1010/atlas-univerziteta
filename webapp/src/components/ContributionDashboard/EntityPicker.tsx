@@ -4,9 +4,7 @@ import { Select } from "../sharedComponents/Select";
 import { Label } from "../sharedComponents/Label";
 import { Spinner } from "../sharedComponents/Spinner";
 import { SelectedEntityDetails } from "./SelectedEntityDetails";
-import { SERVER_URL } from "../../utils/envConfig";
-import { readApiError } from "../../schemas/api";
-import { notificationMessageKey } from "../../utils/apiError";
+import { fetchPublic } from "../../utils/fetchPublic";
 import {
   universityDetailResponseSchema,
   universityListResponseSchema,
@@ -105,39 +103,16 @@ function EntityPicker({
 
   useEffect(() => {
     async function fetchUniversities() {
-      try {
-        setLoadingList(true);
-        const res = await fetch(`${SERVER_URL}/api/v1/universities`, {
-          method: "GET",
-          mode: "cors",
-        });
-
-        if (res.ok) {
-          const result = universityListResponseSchema.parse(await res.json());
-          setUniversities(result.data);
-        } else {
-          const serverError = readApiError(await res.json());
-          if (serverError) {
-            console.warn("Failed to load universities:", serverError.message);
-          }
-          addNotification({
-            type: "error",
-            message: tRef.current(
-              notificationMessageKey(
-                serverError?.code,
-                "messages.universities.loadError",
-              ),
-            ),
-          });
-        }
-      } catch {
-        addNotification({
-          type: "error",
-          message: tRef.current("messages.universities.loadError"),
-        });
-      } finally {
-        setLoadingList(false);
-      }
+      const result = await fetchPublic(
+        {
+          path: "/api/v1/universities",
+          responseSchema: universityListResponseSchema,
+          errorMessageKey: "messages.universities.loadError",
+          logLabel: "load universities",
+        },
+        { t: tRef.current, addNotification, setLoading: setLoadingList },
+      );
+      if (result) setUniversities(result.data);
     }
     void fetchUniversities();
   }, [addNotification]);
@@ -151,42 +126,16 @@ function EntityPicker({
     onSelect(depth === 1 ? value : "");
     if (!value || depth === 1) return;
 
-    try {
-      setLoadingDetail(true);
-      const res = await fetch(`${SERVER_URL}/api/v1/universities/${value}`, {
-        method: "GET",
-        mode: "cors",
-      });
-
-      if (res.ok) {
-        const result = universityDetailResponseSchema.parse(await res.json());
-        setDetail(result.data);
-      } else {
-        const serverError = readApiError(await res.json());
-        if (serverError) {
-          console.warn(
-            "Failed to load university details:",
-            serverError.message,
-          );
-        }
-        addNotification({
-          type: "error",
-          message: t(
-            notificationMessageKey(
-              serverError?.code,
-              "messages.universities.detailsError",
-            ),
-          ),
-        });
-      }
-    } catch {
-      addNotification({
-        type: "error",
-        message: t("messages.universities.detailsError"),
-      });
-    } finally {
-      setLoadingDetail(false);
-    }
+    const result = await fetchPublic(
+      {
+        path: `/api/v1/universities/${value}`,
+        responseSchema: universityDetailResponseSchema,
+        errorMessageKey: "messages.universities.detailsError",
+        logLabel: "load university details",
+      },
+      { t, addNotification, setLoading: setLoadingDetail },
+    );
+    if (result) setDetail(result.data);
   }
 
   function handleFacultyChange(value: string) {

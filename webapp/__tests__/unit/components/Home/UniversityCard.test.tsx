@@ -201,7 +201,7 @@ describe("UniversityCard", () => {
     ).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Expand/i })).toBeVisible();
     expect(errorSpy).toHaveBeenCalledWith(
-      "Error loading university details:",
+      "Error trying to load university details:",
       expect.any(Error),
     );
   });
@@ -263,7 +263,7 @@ describe("UniversityCard", () => {
       ),
     ).toBeInTheDocument();
     expect(errorSpy).toHaveBeenCalledWith(
-      "Error loading university details:",
+      "Error trying to load university details:",
       expect.any(Error),
     );
   });
