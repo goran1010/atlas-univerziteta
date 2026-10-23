@@ -104,19 +104,37 @@ function EntityPicker({
   const [loadingDetail, setLoadingDetail] = useState(false);
 
   useEffect(() => {
+    // the picker needs the complete directory, so walk every page (one page
+    // in practice - the max page size covers every university in the country)
     async function fetchUniversities() {
-      const result = await fetchPublic(
-        {
-          // the picker needs the whole directory; one max-size page covers
-          // every university in the country with room to spare
-          path: "/api/v1/universities?limit=100",
-          responseSchema: universityListResponseSchema,
-          errorMessageKey: "messages.universities.loadError",
-          logLabel: "load universities",
-        },
-        { t: tRef.current, addNotification, setLoading: setLoadingList },
-      );
-      if (result) setUniversities(result.data);
+      setLoadingList(true);
+      try {
+        const items: UniversityListItem[] = [];
+        let page = 1;
+        let totalPages = 1;
+        while (page <= totalPages) {
+          const result = await fetchPublic(
+            {
+              path: `/api/v1/universities?limit=100&page=${page.toString()}`,
+              responseSchema: universityListResponseSchema,
+              errorMessageKey: "messages.universities.loadError",
+              logLabel: "load universities",
+            },
+            {
+              t: tRef.current,
+              addNotification,
+              setLoading: () => undefined,
+            },
+          );
+          if (!result) return;
+          items.push(...result.data);
+          totalPages = result.totalPages;
+          page += 1;
+        }
+        setUniversities(items);
+      } finally {
+        setLoadingList(false);
+      }
     }
     void fetchUniversities();
   }, [addNotification]);

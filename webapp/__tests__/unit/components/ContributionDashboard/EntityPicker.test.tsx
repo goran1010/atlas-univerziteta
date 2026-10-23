@@ -110,6 +110,34 @@ describe("getPickerDepth", () => {
 });
 
 describe("EntityPicker", () => {
+  test("walks every page of the university directory", async () => {
+    server.use(
+      http.get("*/api/v1/universities", ({ request }) => {
+        universitiesRequests++;
+        const page = new URL(request.url).searchParams.get("page");
+        const item =
+          page === "2"
+            ? { ...universitiesList[0], id: 99, name: "Second Page University" }
+            : universitiesList[0];
+        return HttpResponse.json({
+          message: "ok",
+          data: [item],
+          page: Number(page ?? "1"),
+          totalPages: 2,
+          total: 2,
+        });
+      }),
+    );
+    renderPicker(1);
+
+    const universitySelect = await screen.findByRole("combobox", {
+      name: /^University$/i,
+    });
+
+    expect(universitiesRequests).toBe(2);
+    expect(universitySelect).toContainHTML("Second Page University");
+  });
+
   test("reports the university id at depth 1 without fetching details", async () => {
     const onSelect = renderPicker(1);
     const user = userEvent.setup();
