@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, use } from "react";
 import { useParams, Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import {
   BuildingIcon,
@@ -21,7 +22,8 @@ import type { UniversityDetail } from "../../schemas/university";
 
 function UniversityDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [university, setUniversity] = useState<UniversityDetail>();
   const [loading, setLoading] = useState(true);
 

@@ -4,6 +4,7 @@ import { useState, use, useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
 import { LogInForm } from "./LogInForm";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { GitHubLoginLink } from "../sharedComponents/GitHubLoginLink";
 import { GoogleLoginLink } from "../sharedComponents/GoogleLoginLink";
 import { DividerOr } from "../sharedComponents/DividerOr";
@@ -13,7 +14,8 @@ import { SITE_URL } from "../../utils/envConfig";
 function LogIn() {
   const [loading, setLoading] = useState(false);
   const [searchParams] = useSearchParams();
-  const { t, addNotification, userData } = use(RootContext);
+  const { t, userData } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
 
   useEffect(() => {
     const loginError = searchParams.get("error");

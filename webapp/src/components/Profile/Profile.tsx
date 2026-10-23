@@ -1,5 +1,6 @@
 import { LinkButton } from "../sharedComponents/LinkButton";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { use, useState } from "react";
 import { useNavigate } from "react-router";
 import { handleLogout } from "./utils/handleLogout";
@@ -11,7 +12,8 @@ import { Button } from "../sharedComponents/Button";
 import { Helmet } from "react-helmet-async";
 
 function Profile() {
-  const { userData, setUserData, t, addNotification } = use(RootContext);
+  const { userData, setUserData, t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [loading, setLoading] = useState(false);
   const [adminRequestLoading, setAdminRequestLoading] = useState(false);
   const navigate = useNavigate();

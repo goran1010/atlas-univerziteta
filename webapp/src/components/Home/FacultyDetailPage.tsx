@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, use } from "react";
 import { useParams, useSearchParams, Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import {
   AwardIcon,
@@ -27,7 +28,8 @@ import type { FacultyDetail } from "../../schemas/university";
 function FacultyDetailPage() {
   const { id } = useParams<{ id: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [faculty, setFaculty] = useState<FacultyDetail>();
   const [loading, setLoading] = useState(true);
 

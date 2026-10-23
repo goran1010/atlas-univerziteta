@@ -6,6 +6,7 @@ import { handleSignUpSubmit } from "./utils/handleSignUpSubmit";
 import { useState, useRef, use } from "react";
 import { useNavigate } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Button } from "../sharedComponents/Button";
 import { Input } from "../sharedComponents/Input";
 import { Label } from "../sharedComponents/Label";
@@ -18,7 +19,8 @@ interface SignUpFormProps {
 
 function SignUpForm({ disabled, onLoadingChange }: SignUpFormProps) {
   const navigate = useNavigate();
-  const { addNotification, t } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [loading, setLoading] = useState(false);
 
   function handleSetLoading(value: boolean) {

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Select } from "../sharedComponents/Select";
 import { Label } from "../sharedComponents/Label";
 import { Spinner } from "../sharedComponents/Spinner";
@@ -85,7 +86,8 @@ function EntityPicker({
   showSelectedDetails,
   onSelect,
 }: EntityPickerProps) {
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
 
   const tRef = useRef(t);
   useEffect(() => {

@@ -1,5 +1,6 @@
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Select } from "../sharedComponents/Select";
 import { Label } from "../sharedComponents/Label";
 import { Button } from "../sharedComponents/Button";
@@ -49,7 +50,8 @@ function AddUniversityEntity({
 }: {
   refetchPendingChanges: () => void;
 }) {
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [formState, setFormState] = useState(INIT_FORM);
   const [loading, setLoading] = useState(false);
   const [pickerResetKey, setPickerResetKey] = useState(0);

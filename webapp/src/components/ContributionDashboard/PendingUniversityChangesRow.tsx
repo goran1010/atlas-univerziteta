@@ -1,5 +1,6 @@
 import { useState, use, type Dispatch, type SetStateAction } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
@@ -31,7 +32,8 @@ function PendingUniversityChangesRow({
   index,
   setPendingChanges,
 }: PendingUniversityChangesRowProps) {
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [loading, setLoading] = useState(false);
   const ctx = { addNotification, setLoading, t };
   const [dialogOpen, setDialogOpen] = useState(false);

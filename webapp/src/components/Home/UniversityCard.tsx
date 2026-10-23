@@ -7,6 +7,7 @@ import {
 import { useState, use } from "react";
 import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
 import { LinkButton } from "../sharedComponents/LinkButton";
@@ -34,7 +35,8 @@ function UniversityCard({
   contextHint?: string;
 }) {
   const hasFaculties = university._count.faculties > 0;
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<UniversityDetail>();
   const [loadingDetail, setLoadingDetail] = useState(false);

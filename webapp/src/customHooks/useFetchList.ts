@@ -1,5 +1,6 @@
 import { use, useEffect, useRef, useState } from "react";
 import { RootContext } from "../contextData/RootContext";
+import { NotificationContext } from "../contextData/NotificationContext";
 import { SERVER_URL } from "../utils/envConfig";
 import { readResponseError } from "../schemas/api";
 import { notificationMessageKey } from "../utils/apiError";
@@ -26,7 +27,8 @@ function useFetchList<Item>({
   enabled = true,
   refetchKey = 0,
 }: UseFetchListOptions<Item>): [Item[], Dispatch<SetStateAction<Item[]>>] {
-  const { addNotification, t } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [items, setItems] = useState<Item[]>([]);
 
   // notifications should use the language active when the fetch settles,

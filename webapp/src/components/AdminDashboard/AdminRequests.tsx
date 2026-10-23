@@ -1,6 +1,7 @@
 import { use, useState } from "react";
 import { useOutletContext } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import { Button } from "../sharedComponents/Button";
 import {
@@ -94,7 +95,8 @@ function AdminRequestRow({
 }
 
 function AdminRequests() {
-  const { addNotification, t } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const { adminRequests, setAdminRequests, requestsLoading } =
     useOutletContext<AdminOutletContext>();
 

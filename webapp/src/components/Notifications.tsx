@@ -1,6 +1,10 @@
 import { XIcon } from "./sharedComponents/icons";
 import { use, useEffect, useRef } from "react";
 import { RootContext } from "../contextData/RootContext";
+import {
+  NotificationContext,
+  NotificationListContext,
+} from "../contextData/NotificationContext";
 import type { TypeNotification } from "../types";
 
 function getNotificationStyles(type: TypeNotification) {
@@ -25,7 +29,9 @@ function getNotificationRole(type: TypeNotification) {
 }
 
 function Notifications() {
-  const { notifications, removeNotification, t } = use(RootContext);
+  const { t } = use(RootContext);
+  const { removeNotification } = use(NotificationContext);
+  const notifications = use(NotificationListContext);
   const timerMapRef = useRef<Map<string, ReturnType<typeof setTimeout>>>(
     new Map(),
   );

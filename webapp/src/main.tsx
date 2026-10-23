@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import { routes } from "./routes";
 import { ThemeProvider } from "./contextData/ThemeProvider";
+import { NotificationProvider } from "./contextData/NotificationProvider";
 import "./styles/index.css";
 
 const router = createBrowserRouter(routes);
@@ -16,7 +17,9 @@ if (!rootElement) {
 createRoot(rootElement).render(
   <StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <NotificationProvider>
+        <RouterProvider router={router} />
+      </NotificationProvider>
     </ThemeProvider>
   </StrictMode>,
 );

@@ -2,6 +2,7 @@ import { LinkButton } from "../sharedComponents/LinkButton";
 import { useState, useEffect, use } from "react";
 import { useNavigate } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { SignUpForm } from "./SignUpForm";
 import { GitHubLoginLink } from "../sharedComponents/GitHubLoginLink";
 import { GoogleLoginLink } from "../sharedComponents/GoogleLoginLink";
@@ -11,7 +12,8 @@ import { SITE_URL } from "../../utils/envConfig";
 
 function SignUp() {
   const [loading, setLoading] = useState(false);
-  const { addNotification, t, userData } = use(RootContext);
+  const { t, userData } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const navigate = useNavigate();
 
   useEffect(() => {

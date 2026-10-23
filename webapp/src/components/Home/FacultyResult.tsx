@@ -2,6 +2,7 @@ import { LandmarkIcon, MapPinIcon } from "../sharedComponents/icons";
 import { useState, use } from "react";
 import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { ResultCard } from "./ResultCard";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
@@ -31,7 +32,8 @@ function FacultyResult({
   contextHint?: string;
 }) {
   const hasPrograms = (faculty._count?.studyPrograms ?? 0) > 0;
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<FacultyDetail>();
   const [loadingDetail, setLoadingDetail] = useState(false);

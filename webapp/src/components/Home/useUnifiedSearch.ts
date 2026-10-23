@@ -1,6 +1,7 @@
 import { useState, use, useEffect, useRef, useCallback } from "react";
 import { useSearchParams } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { searchAll, SearchFailedError } from "./utils/search";
 import { notificationMessageKey } from "../../utils/apiError";
 
@@ -29,7 +30,8 @@ type ViewState =
 // filters, local state backs the input, and every change funnels through
 // triggerSearch. The UnifiedSearch component renders what this returns.
 function useUnifiedSearch() {
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const [loading, setLoading] = useState(false);
   const [view, setView] = useState<ViewState>({ kind: "idle" });

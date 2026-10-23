@@ -1,13 +1,15 @@
 import { use } from "react";
 import { useOutletContext } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import { PendingChangesAdminRow } from "./PendingChangesAdminRow";
 
 import type { AdminOutletContext } from "./types";
 
 function PendingChangesAdmin() {
-  const { addNotification, t } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const { pendingChanges, setPendingChanges, pendingLoading } =
     useOutletContext<AdminOutletContext>();
 

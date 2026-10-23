@@ -5,7 +5,7 @@ import { makeUser } from "../../utils/makeUser";
 import { server, http, HttpResponse } from "../../utils/msw";
 import { adminPendingChangesResponseSchema } from "../../../src/schemas/pendingChange";
 
-import type { RootContextType } from "../../../src/contextData/RootContext";
+import type { AddNotification } from "../../../src/types";
 
 const identityTranslate = (key: string) => key;
 
@@ -32,7 +32,7 @@ function Wrapper({
   setLoading,
   enabled,
 }: {
-  addNotification: RootContextType["addNotification"];
+  addNotification: AddNotification;
   setLoading: (loading: boolean) => void;
   enabled?: boolean;
 }) {

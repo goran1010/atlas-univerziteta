@@ -1,10 +1,12 @@
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { SITE_URL } from "../../utils/envConfig";
 
 function ShareButton({ url }: { url: string }) {
   // context-sourced so no call site can forget the copy notification
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
 
   async function handleShare() {
     const fullUrl = `${SITE_URL}${url}`;

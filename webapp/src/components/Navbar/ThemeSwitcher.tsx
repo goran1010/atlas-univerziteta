@@ -1,5 +1,6 @@
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { useTheme } from "../../customHooks/useTheme";
 import { THEMES } from "../../utils/theme";
 import { SunIcon, MoonIcon, MonitorIcon } from "../sharedComponents/icons";
@@ -18,7 +19,8 @@ function getThemeIcon(theme: Theme) {
 }
 
 function ThemeSwitcher() {
-  const { addNotification, t } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const { theme, setTheme } = useTheme();
 
   function handleThemeToggle() {

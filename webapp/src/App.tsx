@@ -1,14 +1,15 @@
+import { use } from "react";
 import { Outlet } from "react-router";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { useStatusCheck } from "./customHooks/useStatusCheck";
 import { Notifications } from "./components/Notifications";
-import { useNotification } from "./customHooks/useNotification";
 import { useCloseMenu } from "./customHooks/useCloseMenu";
 import { useLanguage } from "./customHooks/useLanguage";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { RootContext } from "./contextData/RootContext";
+import { NotificationContext } from "./contextData/NotificationContext";
 import { SkipNavbarLink } from "./components/SkipNavbarLink";
 import { RouteAnnouncer } from "./components/RouteAnnouncer";
 import { SITE_URL } from "./utils/envConfig";
@@ -16,8 +17,7 @@ import { SITE_URL } from "./utils/envConfig";
 function App() {
   const closeMenu = useCloseMenu();
 
-  const { notifications, addNotification, removeNotification } =
-    useNotification();
+  const { addNotification } = use(NotificationContext);
   const { language, setLanguage, t } = useLanguage();
 
   const { userData, setUserData } = useStatusCheck(addNotification, t);
@@ -28,9 +28,6 @@ function App() {
         language,
         setLanguage,
         t,
-        notifications,
-        addNotification,
-        removeNotification,
         userData,
         setUserData,
       }}
