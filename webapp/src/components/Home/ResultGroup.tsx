@@ -19,7 +19,7 @@ function ResultGroup({
   const { t } = use(RootContext);
 
   return (
-    <div className="relative mt-2 border border-(--border-color)/30 rounded-xl overflow-x-clip p-1 pt-3 sm:p-3 sm:pt-4 bg-(--surface-1)/40">
+    <div className="relative mt-2 border border-(--border-color)/30 rounded-xl overflow-x-clip p-1 pt-5 sm:p-3 sm:pt-5 bg-(--surface-1)/40">
       <div className="absolute -top-2.5 left-3 right-3 flex items-center justify-between">
         <span className="px-2 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wide rounded bg-(--surface-alt) text-(--accent-text) leading-tight border border-(--border-color)/40">
           {label}

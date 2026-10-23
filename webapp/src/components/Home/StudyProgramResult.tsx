@@ -23,14 +23,14 @@ function StudyProgramResult({
 }) {
   return (
     <ResultCard>
-      <p className="font-bold">
+      <h3 className="font-bold">
         <Link
           to={`/faculties/${program.faculty.id.toString()}?program=${program.id.toString()}`}
           className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
           {program.name}
         </Link>
-      </p>
+      </h3>
       <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5 text-sm text-(--text-secondary)">
         <span>
           <GraduationCapIcon /> {t(`universitiesPage.cycles.${program.cycle}`)}

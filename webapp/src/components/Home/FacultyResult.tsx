@@ -77,14 +77,14 @@ function FacultyResult({
             : ""
         }
       >
-        <p className="font-bold">
+        <h3 className="font-bold">
           <Link
             to={`/faculties/${faculty.id.toString()}`}
             className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             {faculty.name}
           </Link>
-        </p>
+        </h3>
         <p className="text-sm text-(--text-muted) mt-0.5">
           <LandmarkIcon /> {faculty.university.name}
           {faculty.university.acronym && ` (${faculty.university.acronym})`}

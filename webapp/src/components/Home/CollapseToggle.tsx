@@ -17,6 +17,7 @@ function CollapseToggle({
     <button
       type="button"
       onClick={onClick}
+      aria-expanded={!collapsed}
       className={`flex items-center gap-1 px-2 py-1 text-xs font-medium text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--hover-surface) rounded-md cursor-pointer transition-colors ${className}`}
     >
       <ChevronDownIcon

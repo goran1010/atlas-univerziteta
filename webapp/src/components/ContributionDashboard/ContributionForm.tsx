@@ -37,7 +37,7 @@ function ContributionForm() {
 
   return (
     <div className="flex flex-col gap-2 items-center w-full">
-      <h1 className="text-center text-(--text-secondary)">
+      <h1 className="text-xl sm:text-2xl font-bold text-center text-(--text-secondary)">
         {t("contribution.title")}
       </h1>
       <div className="flex gap-1 border-b border-(--border-color) items-center justify-center">

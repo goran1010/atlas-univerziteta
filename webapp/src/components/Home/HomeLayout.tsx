@@ -28,7 +28,7 @@ function HomeLayout() {
       </Helmet>
 
       <div className="w-full mx-auto px-1 sm:px-4 flex flex-col gap-2">
-        <h1 className="text-center text-(--text-secondary)">
+        <h1 className="text-xl sm:text-2xl font-bold text-center text-(--text-secondary)">
           {t("universitiesPage.title")}
         </h1>
         <div className="w-full">

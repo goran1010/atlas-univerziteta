@@ -24,6 +24,7 @@ function FilterSection({
         onClick={() => {
           setOpen((prev) => !prev);
         }}
+        aria-expanded={open}
         className="flex items-center gap-1.5 text-xs font-semibold text-(--text-muted) cursor-pointer"
       >
         <ChevronDownIcon
@@ -150,6 +151,7 @@ function FilterPanel({
       <button
         type="button"
         onClick={onToggleFilters}
+        aria-expanded={filtersOpen}
         className="flex items-center justify-between w-full px-4 py-2.5 text-sm font-semibold text-(--text-primary) cursor-pointer"
       >
         <span className="flex items-center gap-2">

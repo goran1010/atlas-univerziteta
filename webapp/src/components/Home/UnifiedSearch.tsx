@@ -92,6 +92,16 @@ function UnifiedSearch() {
         </Button>
       )}
 
+      {/* announce result counts to screen readers on every search */}
+      <p aria-live="polite" className="sr-only">
+        {view.kind === "search" &&
+          `${t("universitiesPage.searchResultsAnnouncement")} ${[
+            `${String(view.results.totals?.universities ?? view.results.universities.length)} ${t("universitiesPage.universitiesSection")}`,
+            `${String(view.results.totals?.faculties ?? view.results.faculties.length)} ${t("universitiesPage.facultiesSection")}`,
+            `${String(view.results.totals?.studyPrograms ?? view.results.studyPrograms.length)} ${t("universitiesPage.studyProgramsSection")}`,
+          ].join(", ")}`}
+      </p>
+
       {loading && view.kind === "idle" ? (
         <Spinner />
       ) : view.kind === "idle" ? (
