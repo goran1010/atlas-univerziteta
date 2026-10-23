@@ -1,7 +1,9 @@
 import {
-  foldSearchText,
-  foldSearchTextOrNull,
-} from "../../src/utils/searchText.js";
+  universitySearchFields,
+  facultySearchFields,
+  studyProgramSearchFields,
+  trackSearchFields,
+} from "../../src/search/fields.js";
 
 import type { Prisma } from "../../src/generated/prisma/client.js";
 
@@ -46,14 +48,13 @@ function mapOne<T>(value: T | T[], fold: (item: T) => T): T | T[] {
 }
 
 function foldTrackFixture(track: TrackFixture) {
-  return { ...track, searchName: foldSearchText(track.name) };
+  return { ...track, ...trackSearchFields(track) };
 }
 
 function foldStudyProgramFixture(program: StudyProgramFixture) {
   return {
     ...program,
-    searchName: foldSearchText(program.name),
-    searchLanguage: foldSearchTextOrNull(program.language ?? null),
+    ...studyProgramSearchFields(program),
     ...(program.tracks && {
       tracks: { create: mapOne(program.tracks.create, foldTrackFixture) },
     }),
@@ -63,8 +64,7 @@ function foldStudyProgramFixture(program: StudyProgramFixture) {
 function foldFacultyFixture(faculty: FacultyFixture) {
   return {
     ...faculty,
-    searchName: foldSearchText(faculty.name),
-    searchCity: foldSearchTextOrNull(faculty.city ?? null),
+    ...facultySearchFields(faculty),
     ...(faculty.studyPrograms && {
       studyPrograms: {
         create: mapOne(faculty.studyPrograms.create, foldStudyProgramFixture),
@@ -76,9 +76,7 @@ function foldFacultyFixture(faculty: FacultyFixture) {
 function foldUniversityFixture(university: UniversityFixture) {
   return {
     ...university,
-    searchName: foldSearchText(university.name),
-    searchCity: foldSearchText(university.city),
-    searchAcronym: foldSearchTextOrNull(university.acronym ?? null),
+    ...universitySearchFields(university),
     ...(university.faculties && {
       faculties: {
         create: mapOne(university.faculties.create, foldFacultyFixture),

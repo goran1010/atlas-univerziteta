@@ -1,27 +1,4 @@
-// Folds searchable text for the search* columns: lowercase, BCS diacritics
-// stripped, đ and the dj digraph both folded to d so "Đorđe", "Djordje" and
-// "dorde" land on the same form. Writers apply it when storing entities
-// (pendingChangeInputs.ts, seed.ts, db/refold.ts) and search applies it to
-// query terms, so one plain `contains` matches.
-const FOLDS: Record<string, string> = {
-  č: "c",
-  ć: "c",
-  š: "s",
-  ž: "z",
-  đ: "d",
-};
-
-function foldSearchText(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[čćšžđ]/g, (char) => FOLDS[char] ?? char)
-    .replaceAll("dj", "d");
-}
-
-// for nullable sources: clearing a field clears its folded copy
-function foldSearchTextOrNull(text: string | null): string | null {
-  return text === null ? null : foldSearchText(text);
-}
+import { foldSearchText } from "./fold.js";
 
 type SearchToken =
   | { kind: "text"; word: string; stem: string }
@@ -127,5 +104,5 @@ function tokenizeSearchTerm(term: string): SearchToken[] {
   return tokens.slice(0, MAX_TOKENS);
 }
 
-export { foldSearchText, foldSearchTextOrNull, stemWord, tokenizeSearchTerm };
+export { stemWord, tokenizeSearchTerm };
 export type { SearchToken };

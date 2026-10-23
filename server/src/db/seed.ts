@@ -6,7 +6,12 @@ import { z } from "zod";
 
 import { env } from "../config/env.js";
 import { PrismaClient } from "../generated/prisma/client.js";
-import { foldSearchText, foldSearchTextOrNull } from "../utils/searchText.js";
+import {
+  universitySearchFields,
+  facultySearchFields,
+  studyProgramSearchFields,
+  trackSearchFields,
+} from "../search/fields.js";
 
 import type { UniversityCreateManyInput } from "../generated/prisma/models.js";
 
@@ -125,11 +130,13 @@ function toUniversityData(
 ): UniversityCreateManyInput {
   return {
     name: university.name,
-    searchName: foldSearchText(university.name),
     acronym: university.acronym ?? null,
-    searchAcronym: foldSearchTextOrNull(university.acronym ?? null),
     city: university.city,
-    searchCity: foldSearchText(university.city),
+    ...universitySearchFields({
+      name: university.name,
+      city: university.city,
+      acronym: university.acronym ?? null,
+    }),
     entity: university.entity,
     ownership: university.ownership,
     foundedYear: university.foundedYear ?? null,
@@ -190,10 +197,12 @@ async function main() {
           },
           create: {
             name: faculty.name,
-            searchName: foldSearchText(faculty.name),
             universityId,
             city: faculty.city ?? null,
-            searchCity: foldSearchTextOrNull(faculty.city ?? null),
+            ...facultySearchFields({
+              name: faculty.name,
+              city: faculty.city ?? null,
+            }),
             website: faculty.website ?? null,
             address: faculty.address ?? null,
             phone: faculty.phone ?? null,
@@ -204,7 +213,7 @@ async function main() {
           },
           update: {
             city: faculty.city ?? null,
-            searchCity: foldSearchTextOrNull(faculty.city ?? null),
+            ...facultySearchFields({ city: faculty.city ?? null }),
             website: faculty.website ?? null,
             address: faculty.address ?? null,
             phone: faculty.phone ?? null,
@@ -260,13 +269,15 @@ async function main() {
             },
             create: {
               name: program.name,
-              searchName: foldSearchText(program.name),
               facultyId,
               cycle: program.cycle,
               durationYears: program.durationYears ?? null,
               ects: program.ects ?? null,
               language: program.language ?? null,
-              searchLanguage: foldSearchTextOrNull(program.language ?? null),
+              ...studyProgramSearchFields({
+                name: program.name,
+                language: program.language ?? null,
+              }),
               sourceUrl,
               lastModified,
             },
@@ -274,7 +285,9 @@ async function main() {
               durationYears: program.durationYears ?? null,
               ects: program.ects ?? null,
               language: program.language ?? null,
-              searchLanguage: foldSearchTextOrNull(program.language ?? null),
+              ...studyProgramSearchFields({
+                language: program.language ?? null,
+              }),
               sourceUrl,
               lastModified,
             },
@@ -335,8 +348,8 @@ async function main() {
           },
           create: {
             name: track.name,
-            searchName: foldSearchText(track.name),
             studyProgramId: studyProgram.id,
+            ...trackSearchFields({ name: track.name }),
             ects: track.ects ?? null,
             durationYears: track.durationYears ?? null,
             sourceUrl: track.sourceUrl ?? null,

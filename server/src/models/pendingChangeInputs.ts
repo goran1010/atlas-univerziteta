@@ -1,4 +1,9 @@
-import { foldSearchText, foldSearchTextOrNull } from "../utils/searchText.js";
+import {
+  universitySearchFields,
+  facultySearchFields,
+  studyProgramSearchFields,
+  trackSearchFields,
+} from "../search/fields.js";
 
 import type { Prisma } from "../generated/prisma/client.js";
 import type {
@@ -13,28 +18,25 @@ import type {
 } from "../validation/contributionValidation.js";
 
 // Pure mapping from validated pending-change payloads to Prisma inputs -
-// the approval transaction itself lives in transactionModel.ts. Each
-// searchable field is stored together with its folded search* copy.
+// the approval transaction itself lives in transactionModel.ts. The spread
+// *SearchFields helpers store the folded search* copy of every searchable
+// field that is present.
 function toUniversityCreateInput(
   data: UniversityCreateData,
 ): Prisma.UniversityCreateInput {
   return {
     lastModified: new Date(),
     name: data.name,
-    searchName: foldSearchText(data.name),
     city: data.city,
-    searchCity: foldSearchText(data.city),
     entity: data.entity,
     ownership: data.ownership,
-    ...(data.acronym !== undefined && {
-      acronym: data.acronym,
-      searchAcronym: foldSearchText(data.acronym),
-    }),
+    ...(data.acronym !== undefined && { acronym: data.acronym }),
     ...(data.foundedYear !== undefined && { foundedYear: data.foundedYear }),
     ...(data.website !== undefined && { website: data.website }),
     ...(data.address !== undefined && { address: data.address }),
     ...(data.phone !== undefined && { phone: data.phone }),
     ...(data.email !== undefined && { email: data.email }),
+    ...universitySearchFields(data),
   };
 }
 
@@ -43,25 +45,17 @@ function toUniversityUpdateInput(
 ): Prisma.UniversityUpdateInput {
   return {
     lastModified: new Date(),
-    ...(data.name !== undefined && {
-      name: data.name,
-      searchName: foldSearchText(data.name),
-    }),
-    ...(data.city !== undefined && {
-      city: data.city,
-      searchCity: foldSearchText(data.city),
-    }),
+    ...(data.name !== undefined && { name: data.name }),
+    ...(data.city !== undefined && { city: data.city }),
     ...(data.entity !== undefined && { entity: data.entity }),
     ...(data.ownership !== undefined && { ownership: data.ownership }),
-    ...(data.acronym !== undefined && {
-      acronym: data.acronym,
-      searchAcronym: foldSearchTextOrNull(data.acronym),
-    }),
+    ...(data.acronym !== undefined && { acronym: data.acronym }),
     ...(data.foundedYear !== undefined && { foundedYear: data.foundedYear }),
     ...(data.website !== undefined && { website: data.website }),
     ...(data.address !== undefined && { address: data.address }),
     ...(data.phone !== undefined && { phone: data.phone }),
     ...(data.email !== undefined && { email: data.email }),
+    ...universitySearchFields(data),
   };
 }
 
@@ -72,16 +66,13 @@ function toFacultyCreateInput(
   return {
     lastModified: new Date(),
     name: data.name,
-    searchName: foldSearchText(data.name),
     universityId,
-    ...(data.city !== undefined && {
-      city: data.city,
-      searchCity: foldSearchText(data.city),
-    }),
+    ...(data.city !== undefined && { city: data.city }),
     ...(data.website !== undefined && { website: data.website }),
     ...(data.address !== undefined && { address: data.address }),
     ...(data.phone !== undefined && { phone: data.phone }),
     ...(data.email !== undefined && { email: data.email }),
+    ...facultySearchFields(data),
   };
 }
 
@@ -90,18 +81,13 @@ function toFacultyUpdateInput(
 ): Prisma.FacultyUpdateInput {
   return {
     lastModified: new Date(),
-    ...(data.name !== undefined && {
-      name: data.name,
-      searchName: foldSearchText(data.name),
-    }),
-    ...(data.city !== undefined && {
-      city: data.city,
-      searchCity: foldSearchTextOrNull(data.city),
-    }),
+    ...(data.name !== undefined && { name: data.name }),
+    ...(data.city !== undefined && { city: data.city }),
     ...(data.website !== undefined && { website: data.website }),
     ...(data.address !== undefined && { address: data.address }),
     ...(data.phone !== undefined && { phone: data.phone }),
     ...(data.email !== undefined && { email: data.email }),
+    ...facultySearchFields(data),
   };
 }
 
@@ -112,17 +98,14 @@ function toStudyProgramCreateInput(
   return {
     lastModified: new Date(),
     name: data.name,
-    searchName: foldSearchText(data.name),
     cycle: data.cycle,
     facultyId,
     ...(data.durationYears !== undefined && {
       durationYears: data.durationYears,
     }),
     ...(data.ects !== undefined && { ects: data.ects }),
-    ...(data.language !== undefined && {
-      language: data.language,
-      searchLanguage: foldSearchText(data.language),
-    }),
+    ...(data.language !== undefined && { language: data.language }),
+    ...studyProgramSearchFields(data),
   };
 }
 
@@ -131,19 +114,14 @@ function toStudyProgramUpdateInput(
 ): Prisma.StudyProgramUpdateInput {
   return {
     lastModified: new Date(),
-    ...(data.name !== undefined && {
-      name: data.name,
-      searchName: foldSearchText(data.name),
-    }),
+    ...(data.name !== undefined && { name: data.name }),
     ...(data.cycle !== undefined && { cycle: data.cycle }),
     ...(data.durationYears !== undefined && {
       durationYears: data.durationYears,
     }),
     ...(data.ects !== undefined && { ects: data.ects }),
-    ...(data.language !== undefined && {
-      language: data.language,
-      searchLanguage: foldSearchTextOrNull(data.language),
-    }),
+    ...(data.language !== undefined && { language: data.language }),
+    ...studyProgramSearchFields(data),
   };
 }
 
@@ -154,26 +132,24 @@ function toTrackCreateInput(
   return {
     lastModified: new Date(),
     name: data.name,
-    searchName: foldSearchText(data.name),
     studyProgramId,
     ...(data.ects !== undefined && { ects: data.ects }),
     ...(data.durationYears !== undefined && {
       durationYears: data.durationYears,
     }),
+    ...trackSearchFields(data),
   };
 }
 
 function toTrackUpdateInput(data: TrackEditData): Prisma.TrackUpdateInput {
   return {
     lastModified: new Date(),
-    ...(data.name !== undefined && {
-      name: data.name,
-      searchName: foldSearchText(data.name),
-    }),
+    ...(data.name !== undefined && { name: data.name }),
     ...(data.ects !== undefined && { ects: data.ects }),
     ...(data.durationYears !== undefined && {
       durationYears: data.durationYears,
     }),
+    ...trackSearchFields(data),
   };
 }
 

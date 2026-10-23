@@ -1,22 +1,23 @@
 /* eslint-disable no-console -- CLI maintenance script: console output is its interface */
 import { prisma } from "./prisma.js";
-import { foldSearchText, foldSearchTextOrNull } from "../utils/searchText.js";
+import {
+  universitySearchFields,
+  facultySearchFields,
+  studyProgramSearchFields,
+  trackSearchFields,
+} from "../search/fields.js";
 
 // Rewrites every row's folded search* columns from its source fields. App
 // writes keep the columns in sync (pendingChangeInputs.ts, seed.ts); run
 // this after editing entities with manual SQL, or once after changing the
-// fold rules in searchText.ts.
+// fold rules in search/fold.ts.
 async function main() {
   try {
     const universities = await prisma.university.findMany();
     for (const university of universities) {
       await prisma.university.update({
         where: { id: university.id },
-        data: {
-          searchName: foldSearchText(university.name),
-          searchCity: foldSearchText(university.city),
-          searchAcronym: foldSearchTextOrNull(university.acronym),
-        },
+        data: universitySearchFields(university),
       });
     }
     console.log(`Refolded ${universities.length.toString()} universities.`);
@@ -25,10 +26,7 @@ async function main() {
     for (const faculty of faculties) {
       await prisma.faculty.update({
         where: { id: faculty.id },
-        data: {
-          searchName: foldSearchText(faculty.name),
-          searchCity: foldSearchTextOrNull(faculty.city),
-        },
+        data: facultySearchFields(faculty),
       });
     }
     console.log(`Refolded ${faculties.length.toString()} faculties.`);
@@ -37,10 +35,7 @@ async function main() {
     for (const studyProgram of studyPrograms) {
       await prisma.studyProgram.update({
         where: { id: studyProgram.id },
-        data: {
-          searchName: foldSearchText(studyProgram.name),
-          searchLanguage: foldSearchTextOrNull(studyProgram.language),
-        },
+        data: studyProgramSearchFields(studyProgram),
       });
     }
     console.log(`Refolded ${studyPrograms.length.toString()} study programs.`);
@@ -49,7 +44,7 @@ async function main() {
     for (const track of tracks) {
       await prisma.track.update({
         where: { id: track.id },
-        data: { searchName: foldSearchText(track.name) },
+        data: trackSearchFields(track),
       });
     }
     console.log(`Refolded ${tracks.length.toString()} tracks.`);
