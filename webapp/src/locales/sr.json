@@ -163,7 +163,7 @@
       "entityParam": "Filtriranje po entitetu: FBIH, RS ili BD.",
       "ownershipParam": "Filtriranje po vlasništvu: PUBLIC ili PRIVATE.",
       "cycleParam": "Filtriranje po ciklusu studija. Prihvata višestruke vrijednosti (npr. cycle=FIRST&cycle=SECOND). Vrijednosti: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
-      "typeParam": "Filter tipa rezultata: university, faculty ili studyProgram. Može se ponoviti. Sa tačno jednim tipom sekcija se vraća bez ograničenja; inače su sekcije ograničene uz prave ukupne brojeve."
+      "typeParam": "Filter tipa rezultata: university, faculty ili studyProgram. Može se ponoviti. Sekcije su ograničene na 25 rezultata (100 kada je tražen tačno jedan tip) i uvijek vraćaju prave ukupne brojeve."
     }
   },
   "endpoint": {

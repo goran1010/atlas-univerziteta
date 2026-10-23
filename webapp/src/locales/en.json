@@ -163,7 +163,7 @@
       "entityParam": "Filter by entity: FBIH, RS, or BD.",
       "ownershipParam": "Filter by ownership: PUBLIC or PRIVATE.",
       "cycleParam": "Filter by study cycle. Accepts multiple values (e.g. cycle=FIRST&cycle=SECOND). Values: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
-      "typeParam": "Result type filter: university, faculty, or studyProgram. Repeatable. With exactly one type the section is returned uncapped; otherwise sections are capped with true totals."
+      "typeParam": "Result type filter: university, faculty, or studyProgram. Repeatable. Sections are capped at 25 results (100 when exactly one type is requested) and always report true totals."
     }
   },
   "endpoint": {
