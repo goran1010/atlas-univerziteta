@@ -449,5 +449,8 @@
   },
   "links": {
     "opensInNewTab": "(otvara se u novoj kartici)"
+  },
+  "dialog": {
+    "close": "Zatvori"
   }
 }

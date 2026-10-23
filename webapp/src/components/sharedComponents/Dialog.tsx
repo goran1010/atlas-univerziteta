@@ -1,4 +1,12 @@
-import { useEffect, useRef, type ReactNode, type MouseEvent } from "react";
+import {
+  use,
+  useEffect,
+  useId,
+  useRef,
+  type ReactNode,
+  type MouseEvent,
+} from "react";
+import { RootContext } from "../../contextData/RootContext";
 
 interface DialogProps {
   open: boolean;
@@ -17,17 +25,31 @@ function Dialog({
   headerActions,
   footer,
 }: DialogProps) {
+  const { t } = use(RootContext);
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const titleId = useId();
 
   useEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog) return;
 
-    if (open && !dialog.open) {
+    const opener =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
+
+    if (!dialog.open) {
       dialog.showModal();
-    } else if (!open && dialog.open) {
-      dialog.close();
     }
+    // the component unmounts the element as soon as `open` flips, so closing
+    // and handing focus back to the opener must happen in the cleanup, while
+    // the dialog is still in the DOM
+    return () => {
+      if (dialog.open) {
+        dialog.close();
+      }
+      opener?.focus();
+    };
   }, [open]);
 
   function handleBackdropClick(e: MouseEvent<HTMLDialogElement>) {
@@ -44,16 +66,19 @@ function Dialog({
       ref={dialogRef}
       onClose={onClose}
       onClick={handleBackdropClick}
+      aria-labelledby={titleId}
       className="m-auto backdrop:bg-black/50 backdrop:backdrop-blur-sm backdrop:cursor-pointer rounded-2xl border border-(--border-color) bg-(--surface-2) text-(--text-primary) shadow-(--card-shadow) p-0 w-[min(95vw,40rem)] max-h-[85vh] overflow-y-auto cursor-default"
     >
       <div className="sticky top-0 flex items-center justify-between p-3 border-b border-(--border-color) bg-(--surface-2) z-10">
-        <h2 className="text-sm font-semibold min-w-0 truncate">{title}</h2>
+        <h2 id={titleId} className="text-sm font-semibold min-w-0 truncate">
+          {title}
+        </h2>
         <div className="flex items-center gap-1 shrink-0">
           {headerActions}
           <button
             type="button"
             onClick={onClose}
-            aria-label="Close"
+            aria-label={t("dialog.close")}
             className="p-1 rounded-md cursor-pointer transition-transform active:scale-90 text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
           >
             <svg

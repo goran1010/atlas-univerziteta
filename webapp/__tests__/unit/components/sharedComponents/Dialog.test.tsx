@@ -1,12 +1,13 @@
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { useState } from "react";
+import { screen } from "@testing-library/react";
 import { Dialog } from "../../../../src/components/sharedComponents/Dialog";
+import { renderWithProviders } from "../../../utils/renderWithProviders";
 
 function renderDialog({
   open = true,
   onClose = vi.fn(),
 }: { open?: boolean; onClose?: () => void } = {}) {
-  render(
+  const { user } = renderWithProviders(
     <Dialog
       open={open}
       onClose={onClose}
@@ -16,7 +17,32 @@ function renderDialog({
       <p>Dialog body</p>
     </Dialog>,
   );
-  return { onClose, user: userEvent.setup() };
+  return { onClose, user };
+}
+
+function DialogHarness() {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => {
+          setOpen(true);
+        }}
+      >
+        Open dialog
+      </button>
+      <Dialog
+        open={open}
+        onClose={() => {
+          setOpen(false);
+        }}
+        title="Dialog title"
+      >
+        <p>Dialog body</p>
+      </Dialog>
+    </>
+  );
 }
 
 describe("Dialog", () => {
@@ -34,6 +60,14 @@ describe("Dialog", () => {
     ).toBeInTheDocument();
     expect(screen.getByText("Dialog body")).toBeInTheDocument();
     expect(screen.getByText("Footer")).toBeInTheDocument();
+  });
+
+  test("labels the dialog with its title", () => {
+    renderDialog();
+
+    expect(
+      screen.getByRole("dialog", { name: "Dialog title" }),
+    ).toBeInTheDocument();
   });
 
   test("calls onClose from the close button", async () => {
@@ -58,5 +92,16 @@ describe("Dialog", () => {
     await user.click(screen.getByText("Dialog body"));
 
     expect(onClose).not.toHaveBeenCalled();
+  });
+
+  test("returns focus to the opener after closing", async () => {
+    const { user } = renderWithProviders(<DialogHarness />);
+    const opener = screen.getByRole("button", { name: "Open dialog" });
+
+    await user.click(opener);
+    await user.click(screen.getByRole("button", { name: /Close/i }));
+
+    expect(screen.queryByText("Dialog body")).not.toBeInTheDocument();
+    expect(opener).toHaveFocus();
   });
 });

@@ -449,5 +449,8 @@
   },
   "links": {
     "opensInNewTab": "(opens in new tab)"
+  },
+  "dialog": {
+    "close": "Close"
   }
 }
