@@ -1,4 +1,4 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect, useRef, use } from "react";
 import { useParams, useSearchParams, Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../sharedComponents/Spinner";
@@ -31,6 +31,13 @@ function FacultyDetailPage() {
   const [faculty, setFaculty] = useState<FacultyDetail>();
   const [loading, setLoading] = useState(true);
 
+  // notifications should use the language active when the fetch settles,
+  // without a language switch re-triggering the fetch
+  const tRef = useRef(t);
+  useEffect(() => {
+    tRef.current = t;
+  });
+
   useEffect(() => {
     async function fetchFaculty() {
       const result = await fetchPublic(
@@ -41,12 +48,12 @@ function FacultyDetailPage() {
           logLabel: "load faculty details",
           quiet404: true,
         },
-        { t, addNotification, setLoading },
+        { t: (key) => tRef.current(key), addNotification, setLoading },
       );
       setFaculty(result ? result.data : undefined);
     }
     void fetchFaculty();
-  }, [id, t, addNotification]);
+  }, [id, addNotification]);
 
   if (loading) return <Spinner />;
 

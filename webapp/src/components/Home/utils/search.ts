@@ -13,6 +13,7 @@ interface SearchFilters {
 async function searchAll(
   term: string | undefined,
   filters?: SearchFilters,
+  signal?: AbortSignal,
 ): Promise<UnifiedSearchResults> {
   const params = new URLSearchParams();
   if (term) params.set("searchTerm", term);
@@ -32,6 +33,7 @@ async function searchAll(
   const outcome = await fetchPublicResponse(
     `/api/v1/search?${params.toString()}`,
     unifiedSearchResponseSchema,
+    signal,
   );
 
   if (outcome.ok) return outcome.result.data;

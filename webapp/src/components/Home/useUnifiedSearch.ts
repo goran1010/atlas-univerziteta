@@ -35,6 +35,7 @@ function useUnifiedSearch() {
   const [view, setView] = useState<ViewState>({ kind: "idle" });
   const inputRef = useRef<HTMLInputElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const abortRef = useRef<AbortController | null>(null);
   const initialLoadDone = useRef(false);
   const [filtersOpen, setFiltersOpen] = useState(() => {
     const params = new URLSearchParams(window.location.search);
@@ -109,16 +110,26 @@ function useUnifiedSearch() {
         type?: string[];
       },
     ) => {
+      // a newer search supersedes any in-flight one
+      abortRef.current?.abort();
+      const controller = new AbortController();
+      abortRef.current = controller;
+
       try {
         setLoading(true);
-        const results = await searchAll(term, {
-          entity: filters.entity ?? undefined,
-          ownership: filters.ownership ?? undefined,
-          cycle: filters.cycle?.length ? filters.cycle : undefined,
-          type: filters.type?.length ? filters.type : undefined,
-        });
+        const results = await searchAll(
+          term,
+          {
+            entity: filters.entity ?? undefined,
+            ownership: filters.ownership ?? undefined,
+            cycle: filters.cycle?.length ? filters.cycle : undefined,
+            type: filters.type?.length ? filters.type : undefined,
+          },
+          controller.signal,
+        );
         setView({ kind: "search", results, hadTerm: term !== undefined });
       } catch (error) {
+        if (controller.signal.aborted) return;
         addNotification({
           type: "error",
           message: t(
@@ -129,11 +140,18 @@ function useUnifiedSearch() {
           ),
         });
       } finally {
-        setLoading(false);
+        // the superseding search owns the loading flag now
+        if (abortRef.current === controller) setLoading(false);
       }
     },
     [addNotification, t],
   );
+
+  useEffect(() => {
+    return () => {
+      abortRef.current?.abort();
+    };
+  }, []);
 
   const triggerSearch = useCallback(
     (

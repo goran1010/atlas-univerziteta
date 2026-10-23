@@ -89,4 +89,21 @@ describe("searchAll", () => {
 
     await expect(searchAll("term")).rejects.toThrow();
   });
+
+  test("rejects with an abort error when its signal aborts", async () => {
+    server.use(
+      http.get("*/api/v1/search", async () => {
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        return HttpResponse.json({ message: "ok", data: emptyResults });
+      }),
+    );
+    const controller = new AbortController();
+
+    const pending = searchAll("term", undefined, controller.signal);
+    controller.abort();
+
+    const failure = await pending.catch((error: unknown) => error);
+    expect(failure).toBeInstanceOf(Error);
+    expect((failure as Error).name).toBe("AbortError");
+  });
 });
