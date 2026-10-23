@@ -62,6 +62,10 @@ test("contribution approval round-trip", async ({ browser }) => {
 
   await adminPage.goto("/admin-dashboard/pending-changes");
   await adminPage.getByRole("button", { name: "Approve" }).click();
+  await adminPage
+    .getByRole("dialog")
+    .getByRole("button", { name: "Approve" })
+    .click();
   await expect(
     adminPage.getByText("There are no pending changes at the moment."),
   ).toBeVisible();
@@ -91,6 +95,10 @@ test("user can discard their own pending change", async ({ browser }) => {
   await expect(row).toBeVisible();
 
   await row.getByRole("button", { name: "Delete", exact: true }).click();
+  await userPage
+    .getByRole("dialog")
+    .getByRole("button", { name: "Delete", exact: true })
+    .click();
 
   await expect(userPage.getByText("Pending change discarded.")).toBeVisible();
   await expect(
@@ -161,6 +169,10 @@ test("contribution rejection round-trip", async ({ browser }) => {
 
   await adminPage.goto("/admin-dashboard/pending-changes");
   await adminPage.getByRole("button", { name: "Reject" }).click();
+  await adminPage
+    .getByRole("dialog")
+    .getByRole("button", { name: "Reject" })
+    .click();
   await expect(
     adminPage.getByText("There are no pending changes at the moment."),
   ).toBeVisible();

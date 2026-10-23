@@ -15,7 +15,13 @@ interface DialogProps {
   children: ReactNode;
   headerActions?: ReactNode;
   footer?: ReactNode;
+  size?: "default" | "sm";
 }
+
+const SIZE_CLASSES = {
+  default: "w-[min(95vw,40rem)]",
+  sm: "w-[min(95vw,26rem)]",
+};
 
 function Dialog({
   open,
@@ -24,6 +30,7 @@ function Dialog({
   children,
   headerActions,
   footer,
+  size = "default",
 }: DialogProps) {
   const { t } = use(RootContext);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -67,7 +74,7 @@ function Dialog({
       onClose={onClose}
       onClick={handleBackdropClick}
       aria-labelledby={titleId}
-      className="m-auto backdrop:bg-black/50 backdrop:backdrop-blur-sm backdrop:cursor-pointer rounded-2xl border border-(--border-color) bg-(--surface-2) text-(--text-primary) shadow-(--card-shadow) p-0 w-[min(95vw,40rem)] max-h-[85vh] overflow-y-auto cursor-default"
+      className={`m-auto backdrop:bg-black/50 backdrop:backdrop-blur-sm backdrop:cursor-pointer rounded-2xl border border-(--border-color) bg-(--surface-2) text-(--text-primary) shadow-(--card-shadow) p-0 ${SIZE_CLASSES[size]} max-h-[85vh] overflow-y-auto cursor-default`}
     >
       <div className="sticky top-0 flex items-center justify-between p-3 border-b border-(--border-color) bg-(--surface-2) z-10">
         <h2 id={titleId} className="text-sm font-semibold min-w-0 truncate">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { PendingUniversityChanges } from "../../../../src/components/ContributionDashboard/PendingUniversityChanges";
 import { Notifications } from "../../../../src/components/Notifications";
@@ -129,6 +129,11 @@ describe("PendingUniversityChanges", () => {
     const deleteButtons = screen.getAllByRole("button", { name: /^Delete$/i });
     expect(deleteButtons).toHaveLength(2);
     await user.click(deleteButtons[0]);
+    await user.click(
+      within(screen.getByRole("dialog")).getByRole("button", {
+        name: /^Delete$/i,
+      }),
+    );
 
     expect(
       await screen.findByText(/Pending change discarded\./i),

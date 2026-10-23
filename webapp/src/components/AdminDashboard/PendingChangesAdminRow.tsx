@@ -1,6 +1,7 @@
 import { memo, type Dispatch, type SetStateAction } from "react";
 import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
+import { ConfirmDialog } from "../sharedComponents/ConfirmDialog";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import {
@@ -45,6 +46,9 @@ const PendingChangesAdminRow = memo(
       "approve" | "decline" | null
     >(null);
     const [dialogOpen, setDialogOpen] = useState(false);
+    const [confirmAction, setConfirmAction] = useState<
+      "approve" | "decline" | null
+    >(null);
     const { t } = use(RootContext);
     const loading = activeAction !== null;
 
@@ -121,7 +125,9 @@ const PendingChangesAdminRow = memo(
           <Button
             variant="success"
             className="px-3 py-1.5 text-xs sm:max-w-25"
-            onClick={() => void handleApprove()}
+            onClick={() => {
+              setConfirmAction("approve");
+            }}
             type="button"
             loading={activeAction === "approve"}
             disabled={loading}
@@ -131,7 +137,9 @@ const PendingChangesAdminRow = memo(
           <Button
             variant="danger"
             className="px-3 py-1.5 text-xs sm:max-w-25"
-            onClick={() => void handleDecline()}
+            onClick={() => {
+              setConfirmAction("decline");
+            }}
             type="button"
             loading={activeAction === "decline"}
             disabled={loading}
@@ -139,6 +147,26 @@ const PendingChangesAdminRow = memo(
             {t("form.reject")}
           </Button>
         </div>
+
+        <ConfirmDialog
+          open={confirmAction !== null}
+          title={
+            confirmAction === "approve" ? t("form.approve") : t("form.reject")
+          }
+          confirmLabel={
+            confirmAction === "approve" ? t("form.approve") : t("form.reject")
+          }
+          confirmVariant={confirmAction === "approve" ? "success" : "danger"}
+          onConfirm={() => {
+            const action = confirmAction;
+            setConfirmAction(null);
+            if (action === "approve") void handleApprove();
+            if (action === "decline") void handleDecline();
+          }}
+          onCancel={() => {
+            setConfirmAction(null);
+          }}
+        />
 
         <Dialog
           open={dialogOpen}
@@ -151,7 +179,9 @@ const PendingChangesAdminRow = memo(
               <Button
                 variant="success"
                 className="sm:w-auto"
-                onClick={() => void handleApprove()}
+                onClick={() => {
+                  setConfirmAction("approve");
+                }}
                 type="button"
                 loading={activeAction === "approve"}
                 disabled={loading}
@@ -161,7 +191,9 @@ const PendingChangesAdminRow = memo(
               <Button
                 variant="danger"
                 className="sm:w-auto"
-                onClick={() => void handleDecline()}
+                onClick={() => {
+                  setConfirmAction("decline");
+                }}
                 type="button"
                 loading={activeAction === "decline"}
                 disabled={loading}

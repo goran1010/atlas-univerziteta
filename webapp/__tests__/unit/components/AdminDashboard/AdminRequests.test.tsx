@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { AdminForm } from "../../../../src/components/AdminDashboard/AdminForm";
@@ -95,6 +95,11 @@ describe("AdminRequests component", () => {
     renderAdminRequests();
 
     await user.click(await screen.findByRole("button", { name: /Approve/i }));
+    await user.click(
+      within(screen.getByRole("dialog")).getByRole("button", {
+        name: /Approve/i,
+      }),
+    );
 
     expect(
       await screen.findByText(/Admin request approved./i),
@@ -123,6 +128,11 @@ describe("AdminRequests component", () => {
     renderAdminRequests();
 
     await user.click(await screen.findByRole("button", { name: /Reject/i }));
+    await user.click(
+      within(screen.getByRole("dialog")).getByRole("button", {
+        name: /Reject/i,
+      }),
+    );
 
     expect(
       await screen.findByText(/Admin request declined./i),

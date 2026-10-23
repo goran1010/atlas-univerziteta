@@ -450,6 +450,10 @@
   "links": {
     "opensInNewTab": "(otvara se u novoj kartici)"
   },
+  "confirm": {
+    "cancel": "Odustani",
+    "message": "Da li ste sigurni da želite nastaviti?"
+  },
   "dialog": {
     "close": "Zatvori"
   }

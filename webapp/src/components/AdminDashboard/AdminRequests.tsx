@@ -4,6 +4,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import { Button } from "../sharedComponents/Button";
+import { ConfirmDialog } from "../sharedComponents/ConfirmDialog";
 import {
   handleApproveAdminRequest,
   handleDeclineAdminRequest,
@@ -28,6 +29,9 @@ function AdminRequestRow({
   index,
 }: AdminRequestRowProps) {
   const [activeAction, setActiveAction] = useState<
+    "approve" | "decline" | null
+  >(null);
+  const [confirmAction, setConfirmAction] = useState<
     "approve" | "decline" | null
   >(null);
   const { t } = use(RootContext);
@@ -67,8 +71,7 @@ function AdminRequestRow({
           variant="success"
           className="px-3 py-2 text-sm sm:max-w-25"
           onClick={() => {
-            setActiveAction("approve");
-            void handleApproveAdminRequest(adminRequest, setAdminRequests, ctx);
+            setConfirmAction("approve");
           }}
           type="button"
           loading={activeAction === "approve"}
@@ -80,8 +83,7 @@ function AdminRequestRow({
           variant="danger"
           className="px-3 py-2 text-sm sm:max-w-25"
           onClick={() => {
-            setActiveAction("decline");
-            void handleDeclineAdminRequest(adminRequest, setAdminRequests, ctx);
+            setConfirmAction("decline");
           }}
           type="button"
           loading={activeAction === "decline"}
@@ -90,6 +92,31 @@ function AdminRequestRow({
           {t("form.reject")}
         </Button>
       </div>
+
+      <ConfirmDialog
+        open={confirmAction !== null}
+        title={
+          confirmAction === "approve" ? t("form.approve") : t("form.reject")
+        }
+        confirmLabel={
+          confirmAction === "approve" ? t("form.approve") : t("form.reject")
+        }
+        confirmVariant={confirmAction === "approve" ? "success" : "danger"}
+        onConfirm={() => {
+          const action = confirmAction;
+          setConfirmAction(null);
+          setActiveAction(action);
+          if (action === "approve") {
+            void handleApproveAdminRequest(adminRequest, setAdminRequests, ctx);
+          }
+          if (action === "decline") {
+            void handleDeclineAdminRequest(adminRequest, setAdminRequests, ctx);
+          }
+        }}
+        onCancel={() => {
+          setConfirmAction(null);
+        }}
+      />
     </li>
   );
 }

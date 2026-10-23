@@ -450,6 +450,10 @@
   "links": {
     "opensInNewTab": "(opens in new tab)"
   },
+  "confirm": {
+    "cancel": "Cancel",
+    "message": "Are you sure you want to continue?"
+  },
   "dialog": {
     "close": "Close"
   }

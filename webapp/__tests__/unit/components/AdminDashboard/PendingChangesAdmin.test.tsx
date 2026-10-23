@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 import { AdminDashboard } from "../../../../src/components/AdminDashboard/AdminDashboard";
@@ -124,6 +124,11 @@ describe("PendingChangesAdmin", () => {
     const user = renderAdminDashboard();
 
     await user.click(await screen.findByRole("button", { name: /Approve/i }));
+    await user.click(
+      within(screen.getByRole("dialog")).getByRole("button", {
+        name: /Approve/i,
+      }),
+    );
 
     expect(
       await screen.findByText(/There are no pending changes at the moment./i),
@@ -135,6 +140,11 @@ describe("PendingChangesAdmin", () => {
     const user = renderAdminDashboard();
 
     await user.click(await screen.findByRole("button", { name: /Reject/i }));
+    await user.click(
+      within(screen.getByRole("dialog")).getByRole("button", {
+        name: /Reject/i,
+      }),
+    );
 
     expect(
       await screen.findByText(/There are no pending changes at the moment./i),

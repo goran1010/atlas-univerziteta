@@ -3,6 +3,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
+import { ConfirmDialog } from "../sharedComponents/ConfirmDialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
 import { ParentBreadcrumb } from "../sharedComponents/ParentBreadcrumb";
@@ -37,6 +38,7 @@ function PendingUniversityChangesRow({
   const [loading, setLoading] = useState(false);
   const ctx = { addNotification, setLoading, t };
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [confirmOpen, setConfirmOpen] = useState(false);
 
   async function handleDelete() {
     await handleDiscardUniversityChange(change.id, setPendingChanges, ctx);
@@ -89,12 +91,27 @@ function PendingUniversityChangesRow({
             variant="danger"
             className="px-3 py-1.5 text-xs"
             loading={loading}
-            onClick={() => void handleDelete()}
+            onClick={() => {
+              setConfirmOpen(true);
+            }}
           >
             {t("contribution.deleteChange")}
           </Button>
         </div>
       </div>
+
+      <ConfirmDialog
+        open={confirmOpen}
+        title={t("contribution.deleteChange")}
+        confirmLabel={t("contribution.deleteChange")}
+        onConfirm={() => {
+          setConfirmOpen(false);
+          void handleDelete();
+        }}
+        onCancel={() => {
+          setConfirmOpen(false);
+        }}
+      />
 
       <Dialog
         open={dialogOpen}
@@ -107,7 +124,9 @@ function PendingUniversityChangesRow({
             variant="danger"
             className="sm:w-auto"
             loading={loading}
-            onClick={() => void handleDelete()}
+            onClick={() => {
+              setConfirmOpen(true);
+            }}
           >
             {t("contribution.deleteChange")}
           </Button>
