@@ -6,6 +6,7 @@ import {
   getResponseObject,
   getResponseArray,
 } from "../utils/responseHelpers.js";
+import { foldUniversityFixture } from "../utils/foldSearchFixture.js";
 
 describe("GET /", () => {
   test("responds with status 200 when LIVE", async () => {
@@ -32,12 +33,12 @@ describe("GET /api/v1/universities", () => {
     }
 
     const uniInDb = await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: testUniversityName,
         city: "Sarajevo",
         entity: "FBIH",
         ownership: "PUBLIC",
-      },
+      }),
     });
 
     const response = await request(app).get("/api/v1/universities");
@@ -75,12 +76,12 @@ describe("GET /api/v1/search", () => {
       }
 
       const uniInDb = await prisma.university.create({
-        data: {
+        data: foldUniversityFixture({
           name: testUniversityName,
           city: "TestSearchCity",
           entity: "FBIH",
           ownership: "PUBLIC",
-        },
+        }),
       });
 
       const response = await request(app).get(
@@ -168,7 +169,7 @@ describe("GET /api/v1/search - multi-word terms", () => {
     await cleanup();
 
     await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: `Univerzitet ${suffix} Zvornik`,
         city: "TestZvornik",
         entity: "RS",
@@ -184,10 +185,10 @@ describe("GET /api/v1/search - multi-word terms", () => {
             },
           },
         },
-      },
+      }),
     });
     await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: `Univerzitet ${suffix} Trebinje`,
         city: "TestTrebinje",
         entity: "RS",
@@ -203,7 +204,7 @@ describe("GET /api/v1/search - multi-word terms", () => {
             },
           },
         },
-      },
+      }),
     });
 
     const response = await request(app).get(
@@ -246,7 +247,7 @@ describe("GET /api/v1/search - multi-word terms", () => {
       ["TestAliasGradB", "PRIVATE"],
     ] as const) {
       await prisma.university.create({
-        data: {
+        data: foldUniversityFixture({
           name: `Univerzitet ${suffix} ${city}`,
           city,
           entity: "FBIH",
@@ -262,7 +263,7 @@ describe("GET /api/v1/search - multi-word terms", () => {
               },
             },
           },
-        },
+        }),
       });
     }
 
@@ -300,7 +301,7 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
     await cleanup();
 
     const university = await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: `Univerzitet ${marker} Host`,
         city: "TestGrad",
         entity: "FBIH",
@@ -313,7 +314,7 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
             },
           },
         },
-      },
+      }),
     });
 
     const response = await request(app).get(
@@ -349,7 +350,7 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
     await cleanup();
 
     await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: `Univerzitet ${marker}`,
         city: "TestGrad",
         entity: "FBIH",
@@ -367,7 +368,7 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
             },
           },
         },
-      },
+      }),
     });
 
     const hit = async (term: string) => {
@@ -392,12 +393,14 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
     await cleanup();
 
     await prisma.university.createMany({
-      data: Array.from({ length: 28 }, (_, i) => ({
-        name: `${marker} ${String(i).padStart(2, "0")}`,
-        city: "TestGrad",
-        entity: "FBIH" as const,
-        ownership: "PUBLIC" as const,
-      })),
+      data: Array.from({ length: 28 }, (_, i) =>
+        foldUniversityFixture({
+          name: `${marker} ${String(i).padStart(2, "0")}`,
+          city: "TestGrad",
+          entity: "FBIH" as const,
+          ownership: "PUBLIC" as const,
+        }),
+      ),
     });
 
     const federated = await request(app).get(
@@ -439,15 +442,15 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
     await cleanup();
 
     const ownMatch = await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: `Zzz ${marker} Own Univerzitet`,
         city: "TestGrad",
         entity: "FBIH",
         ownership: "PUBLIC",
-      },
+      }),
     });
     const contextMatch = await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         // sorts before the own match alphabetically, so plain ordering
         // would put it first - the tiering must not
         name: "Aaa TierContextHost Univerzitet",
@@ -455,7 +458,7 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: { create: { name: `Fakultet ${marker} Context` } },
-      },
+      }),
     });
 
     const response = await request(app).get(
@@ -504,7 +507,7 @@ describe("GET /api/v1/search - inflected terms", () => {
     await cleanup();
 
     await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: `Univerzitet ${marker}`,
         city: "TestGrad",
         entity: "FBIH",
@@ -517,7 +520,7 @@ describe("GET /api/v1/search - inflected terms", () => {
             },
           },
         },
-      },
+      }),
     });
 
     // each declined query form must find both the noun and the adjective name
@@ -585,7 +588,7 @@ describe("GET /api/v1/search - type filter", () => {
 describe("GET /api/v1/universities/:id", () => {
   test("responds with status 200 and a university by id", async () => {
     const uniInDb = await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: "Test Integration University By ID",
         city: "Sarajevo",
         entity: "FBIH",
@@ -601,7 +604,7 @@ describe("GET /api/v1/universities/:id", () => {
             },
           },
         },
-      },
+      }),
     });
 
     const response = await request(app).get(
@@ -652,12 +655,12 @@ describe("GET /api/v1/universities/:id", () => {
 
   test("responds with status 404 for non-existent university id", async () => {
     const uniInDb = await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: "Test Integration University 404",
         city: "Sarajevo",
         entity: "FBIH",
         ownership: "PUBLIC",
-      },
+      }),
     });
     await prisma.university.delete({ where: { id: uniInDb.id } });
 
@@ -678,7 +681,7 @@ describe("GET /api/v1/universities/:id", () => {
 describe("GET /api/v1/search - related entities", () => {
   test("responds with grouped faculties and study programs including parent data", async () => {
     const university = await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: "Test Integration Unified Search University",
         city: "Sarajevo",
         entity: "FBIH",
@@ -694,7 +697,7 @@ describe("GET /api/v1/search - related entities", () => {
             },
           },
         },
-      },
+      }),
     });
 
     const response = await request(app).get(
@@ -750,7 +753,7 @@ describe("GET /api/v1/search - diacritic-insensitive matching", () => {
     }
 
     const university = await prisma.university.create({
-      data: {
+      data: foldUniversityFixture({
         name: testUniversityName,
         city: "Sarajevo",
         entity: "FBIH",
@@ -771,7 +774,7 @@ describe("GET /api/v1/search - diacritic-insensitive matching", () => {
             },
           },
         },
-      },
+      }),
     });
 
     const universityResponse = await request(app).get(

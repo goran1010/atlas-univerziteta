@@ -12,6 +12,7 @@
     "db:deploy_generate": "npx prisma migrate deploy && npx prisma generate",
     "db:generate": "npx prisma generate",
     "db:seed": "npx prisma db seed",
+    "db:refold": "tsx --env-file-if-exists=.env src/db/refold.ts",
     "prisma_studio": "npx prisma studio",
     "test": "NODE_ENV=test vitest",
     "test:unit": "NODE_ENV=test vitest run --project unit",

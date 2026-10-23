@@ -103,11 +103,18 @@ enum studyCycle {
   SPECIALIST
 }
 
+// The search* columns hold diacritic-folded lowercase copies of their source
+// fields, set by writers via foldSearchText (pendingChangeInputs.ts, seed.ts).
+// @default("") keeps them out of required create inputs; a row written
+// without them simply cannot be found through search.
 model University {
   id                Int       @id @default(autoincrement())
   name              String    @unique
+  searchName        String    @default("")
   acronym           String?
+  searchAcronym     String?
   city              String
+  searchCity        String    @default("")
   entity            entity
   ownership         ownership
   foundedYear       String?
@@ -129,9 +136,11 @@ model University {
 model Faculty {
   id                Int            @id @default(autoincrement())
   name              String
+  searchName        String         @default("")
   universityId      Int
   university        University     @relation(fields: [universityId], references: [id], onDelete: Cascade)
   city              String?
+  searchCity        String?
   website           String?
   address           String?
   phone             String?
@@ -148,17 +157,19 @@ model Faculty {
 }
 
 model StudyProgram {
-  id            Int        @id @default(autoincrement())
-  name          String
-  facultyId     Int
-  faculty       Faculty    @relation(fields: [facultyId], references: [id], onDelete: Cascade)
-  cycle         studyCycle
-  durationYears Int?
-  ects          Int?
-  language      String?
-  sourceUrl     String?
-  lastModified  DateTime?
-  tracks        Track[]
+  id             Int        @id @default(autoincrement())
+  name           String
+  searchName     String     @default("")
+  facultyId      Int
+  faculty        Faculty    @relation(fields: [facultyId], references: [id], onDelete: Cascade)
+  cycle          studyCycle
+  durationYears  Int?
+  ects           Int?
+  language       String?
+  searchLanguage String?
+  sourceUrl      String?
+  lastModified   DateTime?
+  tracks         Track[]
 
   @@unique([name, facultyId, cycle])
   @@index([facultyId])
@@ -168,6 +179,7 @@ model StudyProgram {
 model Track {
   id             Int          @id @default(autoincrement())
   name           String
+  searchName     String       @default("")
   studyProgramId Int
   studyProgram   StudyProgram @relation(fields: [studyProgramId], references: [id], onDelete: Cascade)
   ects           Int?

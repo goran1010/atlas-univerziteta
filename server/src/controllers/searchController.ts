@@ -1,15 +1,16 @@
 import { prisma } from "../db/prisma.js";
 import { sendSuccess } from "../utils/response.js";
-import { tokenizeSearchTerm } from "../utils/searchVariants.js";
+import { tokenizeSearchTerm } from "../utils/searchText.js";
 import * as universityValidation from "../validation/universityValidation.js";
 
-import type { SearchToken } from "../utils/searchVariants.js";
+import type { SearchToken } from "../utils/searchText.js";
 import type { Request, Response } from "express";
 
 // Bosnian/Serbian terms and common synonyms mapped to the English enum
 // values, so search matches in both languages. Local words are keyed by
 // their STEM so every gender/case form matches (javna/javni/javno -> JAVN);
 // words the stemmer leaves alone (prvi, master) are keyed as typed.
+// Tokens arrive diacritic-folded, so only ASCII spellings are keyed.
 const ENUM_ALIASES: Record<string, string> = {
   JAVN: "PUBLIC",
   PRIVATN: "PRIVATE",
@@ -19,17 +20,13 @@ const ENUM_ALIASES: Record<string, string> = {
   DRUGI: "SECOND",
   MASTER: "SECOND",
   TREC: "THIRD",
-  TREĆ: "THIRD",
   TRECI: "THIRD",
-  TREĆI: "THIRD",
   DOCTORAL: "THIRD",
   PHD: "THIRD",
   INTEGRISAN: "INTEGRATED",
   INTEGRISANI: "INTEGRATED",
   STRUCN: "VOCATIONAL",
-  STRUČN: "VOCATIONAL",
   SPECIJALISTICK: "SPECIALIST",
-  SPECIJALISTIČK: "SPECIALIST",
 } as const;
 
 const ENTITIES = ["FBIH", "RS", "BD"] as const;
@@ -49,10 +46,10 @@ const FEDERATED_SECTION_LIMIT = 25;
 
 type WhereClause = Record<string, unknown>;
 
-function containsAny(variants: string[], field: string): WhereClause[] {
-  return variants.map((variant) => ({
-    [field]: { contains: variant, mode: "insensitive" as const },
-  }));
+// The search* columns and the token stems are folded the same way (see
+// searchText.ts), so one case-sensitive `contains` per field is enough.
+function foldedContains(field: string, stem: string): WhereClause {
+  return { [field]: { contains: stem } };
 }
 
 function enumMatch(
@@ -81,9 +78,9 @@ function universityOwnMatch(token: SearchToken): WhereClause[] {
   }
   if (token.kind !== "text") return [];
   return [
-    ...containsAny(token.variants, "name"),
-    ...containsAny(token.variants, "city"),
-    ...containsAny(token.variants, "acronym"),
+    foldedContains("searchName", token.stem),
+    foldedContains("searchCity", token.stem),
+    foldedContains("searchAcronym", token.stem),
     ...enumMatch("entity", ENTITIES, token.word, token.stem),
     ...enumMatch("ownership", OWNERSHIPS, token.word, token.stem),
   ];
@@ -92,8 +89,8 @@ function universityOwnMatch(token: SearchToken): WhereClause[] {
 function facultyOwnMatch(token: SearchToken): WhereClause[] {
   if (token.kind !== "text") return [];
   return [
-    ...containsAny(token.variants, "name"),
-    ...containsAny(token.variants, "city"),
+    foldedContains("searchName", token.stem),
+    foldedContains("searchCity", token.stem),
   ];
 }
 
@@ -110,15 +107,15 @@ function numericMatch(token: SearchToken): WhereClause[] {
 function studyProgramOwnMatch(token: SearchToken): WhereClause[] {
   if (token.kind !== "text") return numericMatch(token);
   return [
-    ...containsAny(token.variants, "name"),
-    ...containsAny(token.variants, "language"),
+    foldedContains("searchName", token.stem),
+    foldedContains("searchLanguage", token.stem),
     ...enumMatch("cycle", CYCLES, token.word, token.stem),
   ];
 }
 
 function trackOwnMatch(token: SearchToken): WhereClause[] {
   if (token.kind !== "text") return numericMatch(token);
-  return containsAny(token.variants, "name");
+  return [foldedContains("searchName", token.stem)];
 }
 
 function studyProgramDownMatch(token: SearchToken): WhereClause[] {

@@ -1,56 +1,28 @@
 import {
-  expandSearchTerm,
+  foldSearchText,
   stemWord,
   tokenizeSearchTerm,
-} from "../../../src/utils/searchVariants.js";
+} from "../../../src/utils/searchText.js";
 import { describe, test, expect } from "vitest";
 
-describe("expandSearchTerm", () => {
-  test("returns just the term when no mapped characters are present", () => {
-    expect(expandSearchTerm("berlin")).toEqual(["berlin"]);
+describe("foldSearchText", () => {
+  test("leaves plain lowercase text alone", () => {
+    expect(foldSearchText("berlin")).toBe("berlin");
   });
 
-  test("expands plain characters into accented variants", () => {
-    const variants = expandSearchTerm("cazin");
-
-    expect(variants).toContain("cazin");
-    expect(variants).toContain("čazin");
-    expect(variants).toContain("ćazin");
-    expect(variants).toContain("cažin");
+  test("lowercases and strips BCS diacritics", () => {
+    expect(foldSearchText("Čačak")).toBe("cacak");
+    expect(foldSearchText("Šumarstvo")).toBe("sumarstvo");
+    expect(foldSearchText("Džemal")).toBe("dzemal");
+    expect(foldSearchText("ČĆŠŽ")).toBe("ccsz");
   });
 
-  test("expands typed ASCII to accented spellings", () => {
-    expect(expandSearchTerm("dzemal")).toContain("džemal");
-  });
-
-  test("strips accents from typed accented spellings", () => {
-    expect(expandSearchTerm("džemal")).toContain("dzemal");
-  });
-
-  test("maps the dj digraph to đ", () => {
-    expect(expandSearchTerm("djordje")).toContain("đorđe");
-  });
-
-  test("maps đ back to dj and d", () => {
-    const variants = expandSearchTerm("đorđe");
-
-    expect(variants).toContain("djordje");
-    expect(variants).toContain("dorde");
-  });
-
-  test("lowercases the term before expanding", () => {
-    const variants = expandSearchTerm("Čapljina");
-
-    expect(variants).toContain("čapljina");
-    expect(variants).toContain("capljina");
-  });
-
-  test("caps the number of variants and keeps the raw term", () => {
-    const term = "c".repeat(100);
-    const variants = expandSearchTerm(term);
-
-    expect(variants.length).toBeLessThanOrEqual(65);
-    expect(variants).toContain(term);
+  test("folds đ and the dj digraph to the same form", () => {
+    expect(foldSearchText("Đorđe")).toBe("dorde");
+    expect(foldSearchText("Djordje")).toBe("dorde");
+    expect(foldSearchText("dorde")).toBe("dorde");
+    expect(foldSearchText("Međugorje")).toBe("medugorje");
+    expect(foldSearchText("Medjugorje")).toBe("medugorje");
   });
 });
 
@@ -78,24 +50,19 @@ describe("stemWord", () => {
 });
 
 describe("tokenizeSearchTerm", () => {
-  test("splits on whitespace and expands each text word's stem", () => {
+  test("splits on whitespace and folds and stems each text word", () => {
     const tokens = tokenizeSearchTerm("Banja  Luka");
 
     expect(tokens).toHaveLength(2);
-    expect(tokens[0]).toMatchObject({
-      kind: "text",
-      word: "Banja",
-      stem: "banj",
-    });
+    expect(tokens[0]).toEqual({ kind: "text", word: "banja", stem: "banj" });
     // "luk" would fall below the minimum stem length, so Luka stays whole
-    expect(tokens[1]).toMatchObject({
-      kind: "text",
-      word: "Luka",
-      stem: "luka",
-    });
-    const first = tokens[0];
-    if (first?.kind !== "text") throw new Error("expected a text token");
-    expect(first.variants).toContain("banj");
+    expect(tokens[1]).toEqual({ kind: "text", word: "luka", stem: "luka" });
+  });
+
+  test("folds diacritics before stemming", () => {
+    expect(tokenizeSearchTerm("Bihaću")).toEqual([
+      { kind: "text", word: "bihacu", stem: "bihac" },
+    ]);
   });
 
   test("drops text words shorter than two characters", () => {
@@ -154,5 +121,13 @@ describe("tokenizeSearchTerm", () => {
       { kind: "ects", value: 180 },
       { kind: "text", word: "sarajevo" },
     ]);
+  });
+
+  test("caps the number of tokens per query", () => {
+    const term = Array.from({ length: 20 }, (_, i) => `word${String(i)}`).join(
+      " ",
+    );
+
+    expect(tokenizeSearchTerm(term)).toHaveLength(8);
   });
 });
