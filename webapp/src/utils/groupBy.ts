@@ -1,5 +1,5 @@
-// Groups an array of items by a key function, preserving the order
-// of the first occurrence of each key.
+// Group order follows each key's first occurrence - result sections rely
+// on the input order surviving the grouping.
 function groupBy<T>(items: T[], keyFn: (item: T) => string) {
   const groups: { key: string; items: T[] }[] = [];
   const seen = new Map<string, number>();

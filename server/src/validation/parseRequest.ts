@@ -2,7 +2,6 @@ import { RequestValidationError } from "../errors/RequestValidationError.js";
 
 import type { z } from "zod";
 
-// Validates request input, throwing a RequestValidationError (400) on failure.
 function parseRequest<Schema extends z.ZodType>(
   schema: Schema,
   input: unknown,

@@ -90,7 +90,6 @@ function Notifications() {
       }
     });
 
-    // Uses notifications from the current render.
     timers.forEach((timer, id) => {
       if (!currentNotificationIds.has(id)) {
         if (timer.timeout !== null) {

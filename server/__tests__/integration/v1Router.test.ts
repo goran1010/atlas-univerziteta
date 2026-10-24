@@ -801,8 +801,8 @@ describe("GET /api/v1/search - diacritic-insensitive matching", () => {
       true,
     );
 
-    // track names are no longer a standalone section; the search surfaces
-    // the parent study program through downward matching instead
+    // tracks have no section of their own; a track-name match surfaces the
+    // parent study program through downward matching
     const trackResponse = await request(app).get(
       `/api/v1/search?searchTerm=${encodeURIComponent("računari")}`,
     );

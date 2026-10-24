@@ -18,15 +18,9 @@ interface ParentCrumb {
 }
 
 // For UPDATE/DELETE pending changes, batch-fetch the current entity data
-// from the corresponding table so the reviewer (admin or contributor)
-// can see what is being changed or removed.
-//
-// Also resolves the parent hierarchy for non-UNIVERSITY entities so
-// reviewers can see where an entity sits in the academic tree, as an
-// ordered top-down list of `ParentCrumb`s the UI renders as breadcrumbs.
-//
-// Returns the same array with `currentEntity` and `parentContext`
-// attached to each item.
+// from the corresponding table so the reviewer (admin or contributor) can
+// see what is being changed or removed, and resolve the parent hierarchy
+// so they can see where the entity sits in the academic tree.
 async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
   pendingChanges: T[],
 ) {
