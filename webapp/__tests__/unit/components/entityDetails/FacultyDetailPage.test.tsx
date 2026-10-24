@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { HelmetProvider } from "react-helmet-async";
 import userEvent from "@testing-library/user-event";
-import { FacultyDetailPage } from "../../../../src/components/EntityDetails/FacultyDetailPage";
+import { FacultyDetailPage } from "../../../../src/components/entityDetails/FacultyDetailPage";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";

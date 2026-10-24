@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { HelmetProvider } from "react-helmet-async";
-import { UniversityDetailPage } from "../../../../src/components/EntityDetails/UniversityDetailPage";
+import { UniversityDetailPage } from "../../../../src/components/entityDetails/UniversityDetailPage";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";

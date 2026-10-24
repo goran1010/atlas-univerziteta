@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { ShareButton } from "../../../../src/components/EntityDetails/ShareButton";
+import { ShareButton } from "../../../../src/components/entityDetails/ShareButton";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 

@@ -5,7 +5,7 @@ import {
 } from "../sharedComponents/icons";
 import { Link } from "react-router";
 import { ResultCard } from "./ResultCard";
-import { FacultyBreadcrumb } from "../EntityDetails/FacultyBreadcrumb";
+import { FacultyBreadcrumb } from "../entityDetails/FacultyBreadcrumb";
 import { TrackList } from "./TrackList";
 import { tCount } from "../../utils/pluralize";
 
