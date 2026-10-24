@@ -80,25 +80,25 @@ describe("enrichWithCurrentEntity", () => {
   test("attaches current entities and parent context across a mixed batch", async () => {
     const enriched = await enrichWithCurrentEntity([
       {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         typeOfChange: "UPDATE",
         targetId: universityId,
         parentId: null,
       },
       {
-        entityType: "FACULTY",
+        targetType: "FACULTY",
         typeOfChange: "DELETE",
         targetId: facultyId,
         parentId: universityId,
       },
       {
-        entityType: "STUDY_PROGRAM",
+        targetType: "STUDY_PROGRAM",
         typeOfChange: "UPDATE",
         targetId: studyProgramId,
         parentId: facultyId,
       },
       {
-        entityType: "TRACK",
+        targetType: "TRACK",
         typeOfChange: "DELETE",
         targetId: trackId,
         parentId: studyProgramId,
@@ -138,7 +138,7 @@ describe("enrichWithCurrentEntity", () => {
     });
     expect(facultyChange?.parentContext).toEqual([
       {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         id: universityId,
         name: "Test Enrich University",
       },
@@ -155,11 +155,11 @@ describe("enrichWithCurrentEntity", () => {
     });
     expect(programChange?.parentContext).toEqual([
       {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         id: universityId,
         name: "Test Enrich University",
       },
-      { entityType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
+      { targetType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
     ]);
 
     expect(trackChange?.currentEntity).toEqual({
@@ -170,13 +170,13 @@ describe("enrichWithCurrentEntity", () => {
     });
     expect(trackChange?.parentContext).toEqual([
       {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         id: universityId,
         name: "Test Enrich University",
       },
-      { entityType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
+      { targetType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
       {
-        entityType: "STUDY_PROGRAM",
+        targetType: "STUDY_PROGRAM",
         id: studyProgramId,
         name: "Test Enrich Program",
       },
@@ -186,7 +186,7 @@ describe("enrichWithCurrentEntity", () => {
   test("preserves the original pending change fields on the result", async () => {
     const enriched = await enrichWithCurrentEntity([
       {
-        entityType: "FACULTY" as const,
+        targetType: "FACULTY" as const,
         typeOfChange: "DELETE",
         targetId: facultyId,
         parentId: universityId,
@@ -196,7 +196,7 @@ describe("enrichWithCurrentEntity", () => {
 
     expect(enriched[0]).toEqual(
       expect.objectContaining({
-        entityType: "FACULTY",
+        targetType: "FACULTY",
         typeOfChange: "DELETE",
         targetId: facultyId,
         parentId: universityId,
@@ -208,25 +208,25 @@ describe("enrichWithCurrentEntity", () => {
   test("resolves parent context for CREATE changes from parentId", async () => {
     const enriched = await enrichWithCurrentEntity([
       {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         typeOfChange: "CREATE",
         targetId: null,
         parentId: null,
       },
       {
-        entityType: "FACULTY",
+        targetType: "FACULTY",
         typeOfChange: "CREATE",
         targetId: null,
         parentId: universityId,
       },
       {
-        entityType: "STUDY_PROGRAM",
+        targetType: "STUDY_PROGRAM",
         typeOfChange: "CREATE",
         targetId: null,
         parentId: facultyId,
       },
       {
-        entityType: "TRACK",
+        targetType: "TRACK",
         typeOfChange: "CREATE",
         targetId: null,
         parentId: studyProgramId,
@@ -241,28 +241,28 @@ describe("enrichWithCurrentEntity", () => {
     expect(facultyCreate?.currentEntity).toBeNull();
     expect(facultyCreate?.parentContext).toEqual([
       {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         id: universityId,
         name: "Test Enrich University",
       },
     ]);
     expect(programCreate?.parentContext).toEqual([
       {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         id: universityId,
         name: "Test Enrich University",
       },
-      { entityType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
+      { targetType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
     ]);
     expect(trackCreate?.parentContext).toEqual([
       {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         id: universityId,
         name: "Test Enrich University",
       },
-      { entityType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
+      { targetType: "FACULTY", id: facultyId, name: "Test Enrich Faculty" },
       {
-        entityType: "STUDY_PROGRAM",
+        targetType: "STUDY_PROGRAM",
         id: studyProgramId,
         name: "Test Enrich Program",
       },
@@ -282,19 +282,19 @@ describe("enrichWithCurrentEntity", () => {
 
     const enriched = await enrichWithCurrentEntity([
       {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         typeOfChange: "UPDATE",
         targetId: missingUniversity.id,
         parentId: null,
       },
       {
-        entityType: "FACULTY",
+        targetType: "FACULTY",
         typeOfChange: "CREATE",
         targetId: null,
         parentId: missingUniversity.id,
       },
       {
-        entityType: "FACULTY",
+        targetType: "FACULTY",
         typeOfChange: "UPDATE",
         targetId: null,
         parentId: null,

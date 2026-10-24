@@ -1,6 +1,7 @@
 import { use } from "react";
 import { GlobeIcon } from "../sharedComponents/icons";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 
 import type { Language, SetLanguage } from "../../types";
 
@@ -82,7 +83,8 @@ function LanguageSwitcher({
   setLanguage: SetLanguage;
   language: Language;
 }) {
-  const { addNotification, t } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
 
   function handleLanguageToggle() {
     const currentIndex = languageOrder.indexOf(language);

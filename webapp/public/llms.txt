@@ -12,8 +12,10 @@ Atlas Univerziteta is a free, open-source directory of universities, faculties, 
 ## API access
 
 - [API root and discovery](https://api.atlasuniverziteta.com/)
-- [All universities endpoint](https://api.atlasuniverziteta.com/api/v1/universities)
+- [Universities list endpoint (paginated: page and limit query params, up to 100 per page; the response carries page, totalPages and total)](https://api.atlasuniverziteta.com/api/v1/universities)
 - [University by id endpoint](https://api.atlasuniverziteta.com/api/v1/universities/1)
 - [Unified search endpoint (universities, faculties, study programs; supports searchTerm, entity, ownership, cycle and type filters)](https://api.atlasuniverziteta.com/api/v1/search?searchTerm=sarajevo)
+
+The same list and by-id pattern serves /api/v1/faculties, /api/v1/study-programs and /api/v1/tracks.
 
 The search matches names, cities, acronyms, ECTS/duration values, and related unit names, case- and diacritic-insensitively, with tolerance for Bosnian/Croatian/Serbian inflected word forms.

@@ -5,16 +5,9 @@ type ErrorCode =
   | "VALIDATION_ERROR"
   | "AUTH_REQUIRED"
   | "FORBIDDEN"
-  | "ALREADY_LOGGED_IN"
   | "ALREADY_ADMIN"
   | "NOT_FOUND"
   | "RATE_LIMITED"
-  | "SIGNUP_FAILED"
-  | "LOGIN_FAILED"
-  | "EMAIL_NOT_SENT"
-  | "CONFIRMATION_TOKEN_INVALID"
-  | "LOGOUT_FAILED"
-  | "CSRF_TOKEN_INVALID"
   | "REQUEST_FAILED"
   | "INTERNAL_SERVER_ERROR";
 
@@ -29,16 +22,28 @@ interface Options {
   status?: number;
 }
 
+interface Pagination {
+  page: number;
+  totalPages: number;
+  total: number;
+}
+
 interface SuccessOptions extends Options {
   data?: unknown;
   message?: string | null;
+  pagination?: Pagination;
 }
 
 function sendSuccess(
   res: Response,
-  { status = 200, data = null, message = null }: SuccessOptions = {},
+  {
+    status = 200,
+    data = null,
+    message = null,
+    pagination,
+  }: SuccessOptions = {},
 ) {
-  res.status(status).json({ data, message });
+  res.status(status).json({ data, message, ...pagination });
 }
 
 function sendError(

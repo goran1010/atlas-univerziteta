@@ -1,6 +1,6 @@
 import { handleDiscardUniversityChange } from "../../../../../src/components/ContributionDashboard/utils/handleDiscardUniversityChange";
 
-import type { RequestContext } from "../../../../../src/utils/apiMutation";
+import type { RequestContext } from "../../../../../src/types";
 
 const fetchMock = vi.fn();
 
@@ -67,7 +67,7 @@ describe("handleDiscardUniversityChange", () => {
     expect(setPendingChanges).not.toHaveBeenCalled();
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.universities.deleteError",
+      message: "messages.universities.deleteError (Discard failed.)",
     });
     expect(consoleWarnSpy).toHaveBeenCalled();
   });

@@ -41,22 +41,26 @@ Fill in the server values and adjust the webapp server URL if needed.
 - `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET`: optional GitHub OAuth settings
 - `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`: optional Google OAuth settings
 
-- `OAUTH_CALLBACK_BASE_URL`: optional base for OAuth callbacks, defaults to `SERVER_URL`
-
 Local OAuth callback URLs to register with GitHub and Google: `http://localhost:3000/api/auth/callback/github` and `http://localhost:3000/api/auth/callback/google`.
 
 ### Webapp (`webapp/.env.example`)
 
-- `VITE_SERVER_URL`: server base URL used by the React app - `http://localhost:3000` locally, `/server` on Netlify (see [DEPLOYMENT.md](./DEPLOYMENT.md))
-- `PRERENDER_API_URL`: optional absolute API URL for the build-time share-page generation (see [DEPLOYMENT.md](./DEPLOYMENT.md))
+- `VITE_API_URL`: API base URL used by the React app - `http://localhost:3000` locally, `https://api.atlasuniverziteta.com` on Netlify (see [DEPLOYMENT.md](./DEPLOYMENT.md))
+- `VITE_PUBLIC_API_URL`: absolute API base URL shown on the `/api-docs` page for external consumers - falls back to `VITE_API_URL` when unset (fine for local development)
+- `VITE_SITE_URL`: absolute site URL for canonical links and Open Graph meta tags - defaults to `https://atlasuniverziteta.com` when unset
 
 ## Database setup and running
 
 ```bash
-npm run db:deploy_generate   # migrations + Prisma client
-npm run db:seed              # optional seed data
-npm run dev:all              # server + webapp together
+npm run db:setup   # apply migrations + generate Prisma client
+npm run db:seed    # optional seed data
+npm run dev:all    # server + webapp together
 ```
+
+`npm run db:refold` rewrites the folded `search*` columns from the source
+fields. App writes keep them in sync automatically; run it after editing
+entities with manual SQL, or once after a change to the fold rules in
+`server/src/search/fold.ts`.
 
 Local defaults: server `http://localhost:3000`, webapp `http://localhost:5173`.
 

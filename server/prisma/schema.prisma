@@ -1,8 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
   provider = "prisma-client"
   output   = "../src/generated/prisma"
@@ -11,9 +6,6 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
-
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 enum role {
   ADMIN
@@ -45,6 +37,8 @@ model session {
   userAgent String?
   userId    String
   user      user     @relation(fields: [userId], references: [id])
+
+  @@index([userId])
 }
 
 model account {
@@ -62,6 +56,8 @@ model account {
   password              String?
   createdAt             DateTime  @default(now())
   updatedAt             DateTime  @updatedAt
+
+  @@index([userId])
 }
 
 model verification {
@@ -99,11 +95,18 @@ enum studyCycle {
   SPECIALIST
 }
 
+// The search* columns hold diacritic-folded lowercase copies of their source
+// fields, set by writers via foldSearchText (pendingChangeInputs.ts, seed.ts).
+// @default("") keeps them out of required create inputs; a row written
+// without them simply cannot be found through search.
 model University {
   id                Int       @id @default(autoincrement())
   name              String    @unique
+  searchName        String    @default("")
   acronym           String?
+  searchAcronym     String?
   city              String
+  searchCity        String    @default("")
   entity            entity
   ownership         ownership
   foundedYear       String?
@@ -125,9 +128,11 @@ model University {
 model Faculty {
   id                Int            @id @default(autoincrement())
   name              String
+  searchName        String         @default("")
   universityId      Int
   university        University     @relation(fields: [universityId], references: [id], onDelete: Cascade)
   city              String?
+  searchCity        String?
   website           String?
   address           String?
   phone             String?
@@ -137,30 +142,36 @@ model Faculty {
   lastModified      DateTime?
   studyPrograms     StudyProgram[]
 
+  // the unique above starts with name, so FK lookups need their own index
   @@unique([name, universityId])
+  @@index([universityId])
   @@map("faculty")
 }
 
 model StudyProgram {
-  id            Int        @id @default(autoincrement())
-  name          String
-  facultyId     Int
-  faculty       Faculty    @relation(fields: [facultyId], references: [id], onDelete: Cascade)
-  cycle         studyCycle
-  durationYears Int?
-  ects          Int?
-  language      String?
-  sourceUrl     String?
-  lastModified  DateTime?
-  tracks        Track[]
+  id             Int        @id @default(autoincrement())
+  name           String
+  searchName     String     @default("")
+  facultyId      Int
+  faculty        Faculty    @relation(fields: [facultyId], references: [id], onDelete: Cascade)
+  cycle          studyCycle
+  durationYears  Int?
+  ects           Int?
+  language       String?
+  searchLanguage String?
+  sourceUrl      String?
+  lastModified   DateTime?
+  tracks         Track[]
 
   @@unique([name, facultyId, cycle])
+  @@index([facultyId])
   @@map("study_program")
 }
 
 model Track {
   id             Int          @id @default(autoincrement())
   name           String
+  searchName     String       @default("")
   studyProgramId Int
   studyProgram   StudyProgram @relation(fields: [studyProgramId], references: [id], onDelete: Cascade)
   ects           Int?
@@ -169,10 +180,11 @@ model Track {
   lastModified   DateTime?
 
   @@unique([name, studyProgramId])
+  @@index([studyProgramId])
   @@map("track")
 }
 
-enum entityType {
+enum targetType {
   UNIVERSITY
   FACULTY
   STUDY_PROGRAM
@@ -181,7 +193,7 @@ enum entityType {
 
 model PendingChange {
   id           String       @id @default(uuid())
-  entityType   entityType
+  targetType   targetType
   typeOfChange typeOfChange
 
   // UPDATE or DELETE target
@@ -202,7 +214,7 @@ model PendingChange {
   reviewedAt DateTime?
 
   @@index([createdAt])
-  @@index([entityType, typeOfChange])
+  @@index([targetType, typeOfChange])
   @@index([targetId])
   @@index([parentId])
   @@index([userId])

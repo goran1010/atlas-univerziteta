@@ -1,190 +1,34 @@
 import { prisma } from "../db/prisma.js";
 import { sendSuccess } from "../utils/response.js";
-import { tokenizeSearchTerm } from "../utils/searchVariants.js";
-import * as universityValidation from "../validation/universityValidation.js";
+import { tokenizeSearchTerm } from "../search/tokenize.js";
+import {
+  universityOwnMatch,
+  universityFullMatch,
+  facultyOwnMatch,
+  facultyFullMatch,
+  studyProgramOwnMatch,
+  studyProgramFullMatch,
+  tokenWhere,
+} from "../search/matchers.js";
+import * as v1Validation from "../validation/v1Validation.js";
 
-import type { SearchToken } from "../utils/searchVariants.js";
+import type { SearchToken } from "../search/tokenize.js";
+import type { WhereClause } from "../search/matchers.js";
 import type { Request, Response } from "express";
 
-// Bosnian/Serbian terms and common synonyms mapped to the English enum
-// values, so search matches in both languages. Local words are keyed by
-// their STEM so every gender/case form matches (javna/javni/javno -> JAVN);
-// words the stemmer leaves alone (prvi, master) are keyed as typed.
-const ENUM_ALIASES: Record<string, string> = {
-  JAVN: "PUBLIC",
-  PRIVATN: "PRIVATE",
-  PRVI: "FIRST",
-  BACHELOR: "FIRST",
-  DRUG: "SECOND",
-  DRUGI: "SECOND",
-  MASTER: "SECOND",
-  TREC: "THIRD",
-  TREĆ: "THIRD",
-  TRECI: "THIRD",
-  TREĆI: "THIRD",
-  DOCTORAL: "THIRD",
-  PHD: "THIRD",
-  INTEGRISAN: "INTEGRATED",
-  INTEGRISANI: "INTEGRATED",
-  STRUCN: "VOCATIONAL",
-  STRUČN: "VOCATIONAL",
-  SPECIJALISTICK: "SPECIALIST",
-  SPECIJALISTIČK: "SPECIALIST",
-} as const;
-
-const ENTITIES = ["FBIH", "RS", "BD"] as const;
-const OWNERSHIPS = ["PUBLIC", "PRIVATE"] as const;
-const CYCLES = [
-  "FIRST",
-  "SECOND",
-  "THIRD",
-  "INTEGRATED",
-  "VOCATIONAL",
-  "SPECIALIST",
-] as const;
-
-// In the combined (federated) view each section is capped and reports its
-// true total; a request for exactly one type returns everything.
-const FEDERATED_SECTION_LIMIT = 25;
-
-type WhereClause = Record<string, unknown>;
-
-function containsAny(variants: string[], field: string): WhereClause[] {
-  return variants.map((variant) => ({
-    [field]: { contains: variant, mode: "insensitive" as const },
-  }));
-}
-
-function enumMatch(
-  field: string,
-  values: readonly string[],
-  word: string,
-  stem: string,
-): WhereClause[] {
-  for (const form of [word.toUpperCase(), stem.toUpperCase()]) {
-    const candidate = ENUM_ALIASES[form] ?? form;
-    const match = values.find((value) => value === candidate);
-    if (match) return [{ [field]: match }];
-  }
-  return [];
-}
-
-// Every entity is searchable through its own fields, its ancestors and its
-// descendants: "banja luka informatika" reaches a study program through its
-// university's city, and the same university is found through the program.
-// The own-field matchers below are composed upward (nested relation clauses)
-// and downward (`some` on child relations) into one full matcher per model.
-
-function universityOwnMatch(token: SearchToken): WhereClause[] {
-  if (token.kind === "number") {
-    return [{ foundedYear: { contains: String(token.value) } }];
-  }
-  if (token.kind !== "text") return [];
-  return [
-    ...containsAny(token.variants, "name"),
-    ...containsAny(token.variants, "city"),
-    ...containsAny(token.variants, "acronym"),
-    ...enumMatch("entity", ENTITIES, token.word, token.stem),
-    ...enumMatch("ownership", OWNERSHIPS, token.word, token.stem),
-  ];
-}
-
-function facultyOwnMatch(token: SearchToken): WhereClause[] {
-  if (token.kind !== "text") return [];
-  return [
-    ...containsAny(token.variants, "name"),
-    ...containsAny(token.variants, "city"),
-  ];
-}
-
-// study programs and tracks share the same numeric fields
-function numericMatch(token: SearchToken): WhereClause[] {
-  if (token.kind === "ects") return [{ ects: token.value }];
-  if (token.kind === "duration") return [{ durationYears: token.value }];
-  if (token.kind === "number") {
-    return [{ ects: token.value }, { durationYears: token.value }];
-  }
-  return [];
-}
-
-function studyProgramOwnMatch(token: SearchToken): WhereClause[] {
-  if (token.kind !== "text") return numericMatch(token);
-  return [
-    ...containsAny(token.variants, "name"),
-    ...containsAny(token.variants, "language"),
-    ...enumMatch("cycle", CYCLES, token.word, token.stem),
-  ];
-}
-
-function trackOwnMatch(token: SearchToken): WhereClause[] {
-  if (token.kind !== "text") return numericMatch(token);
-  return containsAny(token.variants, "name");
-}
-
-function studyProgramDownMatch(token: SearchToken): WhereClause[] {
-  const trackClauses = trackOwnMatch(token);
-  return trackClauses.length
-    ? [{ tracks: { some: { OR: trackClauses } } }]
-    : [];
-}
-
-function facultyDownMatch(token: SearchToken): WhereClause[] {
-  const programClauses = [
-    ...studyProgramOwnMatch(token),
-    ...studyProgramDownMatch(token),
-  ];
-  return programClauses.length
-    ? [{ studyPrograms: { some: { OR: programClauses } } }]
-    : [];
-}
-
-function universityDownMatch(token: SearchToken): WhereClause[] {
-  const facultyClauses = [
-    ...facultyOwnMatch(token),
-    ...facultyDownMatch(token),
-  ];
-  return facultyClauses.length
-    ? [{ faculties: { some: { OR: facultyClauses } } }]
-    : [];
-}
-
-function universityFullMatch(token: SearchToken): WhereClause[] {
-  return [...universityOwnMatch(token), ...universityDownMatch(token)];
-}
-
-function facultyFullMatch(token: SearchToken): WhereClause[] {
-  return [
-    ...facultyOwnMatch(token),
-    ...universityOwnMatch(token).map((clause) => ({ university: clause })),
-    ...facultyDownMatch(token),
-  ];
-}
-
-function studyProgramFullMatch(token: SearchToken): WhereClause[] {
-  return [
-    ...studyProgramOwnMatch(token),
-    ...facultyOwnMatch(token).map((clause) => ({ faculty: clause })),
-    ...universityOwnMatch(token).map((clause) => ({
-      faculty: { university: clause },
-    })),
-    ...studyProgramDownMatch(token),
-  ];
-}
-
-// Every token must match (AND across tokens, OR across fields per token).
-function tokenWhere(
-  tokens: SearchToken[],
-  matcher: (token: SearchToken) => WhereClause[],
-): WhereClause[] {
-  return tokens.map((token) => ({ OR: matcher(token) }));
-}
+// In the combined (unified) view each section is capped and reports its
+// true total; a request for exactly one type gets a higher bound (the UI
+// shows "shown / total" when truncated) that keeps the largest section
+// (1800+ study programs) from being returned in one response.
+const UNIFIED_SECTION_LIMIT = 25;
+const SINGLE_TYPE_LIMIT = 100;
 
 interface SectionQuery<Item> {
   count: (where: WhereClause) => Promise<number>;
   findMany: (where: WhereClause, take: number | undefined) => Promise<Item[]>;
 }
 
-// Under the federated cap, entities matching every token in their OWN fields
+// Under the unified cap, entities matching every token in their OWN fields
 // fill the section first; context-only matches top it up. The cap decides
 // which items survive, so weak matches must not crowd out direct ones.
 async function searchSection<Item extends { id: number }>(
@@ -233,7 +77,7 @@ async function searchSection<Item extends { id: number }>(
 
 async function search(req: Request, res: Response) {
   const { searchTerm, entity, ownership, cycle, type } =
-    universityValidation.searchQuery(req.query);
+    v1Validation.searchQuery(req.query);
 
   const tokens = searchTerm === undefined ? [] : tokenizeSearchTerm(searchTerm);
 
@@ -257,7 +101,7 @@ async function search(req: Request, res: Response) {
   const wanted = (kind: "university" | "faculty" | "studyProgram") =>
     type === undefined || type.includes(kind);
 
-  const limit = type?.length === 1 ? undefined : FEDERATED_SECTION_LIMIT;
+  const limit = type?.length === 1 ? SINGLE_TYPE_LIMIT : UNIFIED_SECTION_LIMIT;
 
   const cycleFilter = cycle ? { in: cycle } : undefined;
 

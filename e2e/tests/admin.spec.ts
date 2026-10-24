@@ -45,10 +45,14 @@ test("approving an admin request promotes the user and clears the row", async ({
   await insertAdminRequest(requester);
 
   await page.goto("/admin-dashboard/admin-requests");
-  const row = page.getByRole("listitem").filter({ hasText: requester.email });
+  const row = page.getByRole("row").filter({ hasText: requester.email });
   await expect(row).toBeVisible();
 
   await row.getByRole("button", { name: "Approve" }).click();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Approve" })
+    .click();
 
   await expect(page.getByText("Admin request approved.")).toBeVisible();
   await expect(row).toBeHidden();
@@ -65,10 +69,14 @@ test("declining an admin request keeps the user role and clears the row", async 
   await insertAdminRequest(requester);
 
   await page.goto("/admin-dashboard/admin-requests");
-  const row = page.getByRole("listitem").filter({ hasText: requester.email });
+  const row = page.getByRole("row").filter({ hasText: requester.email });
   await expect(row).toBeVisible();
 
   await row.getByRole("button", { name: "Reject" }).click();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Reject" })
+    .click();
 
   await expect(page.getByText("Admin request declined.")).toBeVisible();
   await expect(row).toBeHidden();

@@ -136,19 +136,15 @@ console.log(`Pre-rendered meta tags for ${String(generated)} static routes.`);
 // ---- per-entity pages + sitemap --------------------------------------------
 // The build fetches the catalog and writes a static page per university and
 // faculty so shared links get entity-specific previews (crawlers do not run
-// the SPA). Meta freshness equals deploy freshness. Netlify's runtime
-// VITE_SERVER_URL is the /server proxy path, which does not exist at build
-// time - set PRERENDER_API_URL there (absolute URL) to enable this stage.
+// the SPA). Meta freshness equals deploy freshness. VITE_API_URL is an
+// absolute URL in production and is used directly.
 
 function apiBaseUrl() {
-  const candidates = [
-    process.env.PRERENDER_API_URL,
-    process.env.VITE_SERVER_URL,
-  ];
+  const candidates = [process.env.VITE_API_URL];
   const envFile = join(import.meta.dirname, "..", ".env");
   if (existsSync(envFile)) {
     const parsed = parseEnv(readFileSync(envFile, "utf-8"));
-    candidates.push(parsed.PRERENDER_API_URL, parsed.VITE_SERVER_URL);
+    candidates.push(parsed.VITE_API_URL);
   }
   const absolute = candidates.find(
     (value) =>
@@ -164,6 +160,20 @@ async function fetchJson(url) {
     throw new Error(`${url} responded ${String(response.status)}`);
   }
   return response.json();
+}
+
+// the list endpoints paginate (max 100 per page) - walk every page
+async function fetchAllPages(baseUrl) {
+  const items = [];
+  let page = 1;
+  let totalPages = 1;
+  while (page <= totalPages) {
+    const body = await fetchJson(`${baseUrl}?limit=100&page=${String(page)}`);
+    items.push(...body.data);
+    totalPages = body.totalPages ?? 1;
+    page += 1;
+  }
+  return items;
 }
 
 function appendToSitemap(urls) {
@@ -193,19 +203,19 @@ function appendToSitemap(urls) {
 const apiUrl = apiBaseUrl();
 if (!apiUrl) {
   console.warn(
-    "prerender-meta: no absolute API URL (PRERENDER_API_URL) - skipping per-entity pages.",
+    "prerender-meta: no absolute API URL (VITE_API_URL) - skipping per-entity pages.",
   );
 } else {
   try {
     const [universities, faculties] = await Promise.all([
-      fetchJson(`${apiUrl}/api/v1/universities`),
-      fetchJson(`${apiUrl}/api/v1/faculties`),
+      fetchAllPages(`${apiUrl}/api/v1/universities`),
+      fetchAllPages(`${apiUrl}/api/v1/faculties`),
     ]);
 
     const entityUrls = [];
     let entityPages = 0;
 
-    for (const university of universities.data) {
+    for (const university of universities) {
       const url = `/universities/${String(university.id)}`;
       const entityLabel = t(`universitiesPage.entities.${university.entity}`);
       renderRoute({
@@ -218,7 +228,7 @@ if (!apiUrl) {
       entityPages++;
     }
 
-    for (const faculty of faculties.data) {
+    for (const faculty of faculties) {
       const url = `/faculties/${String(faculty.id)}`;
       renderRoute({
         path: url.slice(1),

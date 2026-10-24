@@ -1,3 +1,10 @@
+import {
+  universitySearchFields,
+  facultySearchFields,
+  studyProgramSearchFields,
+  trackSearchFields,
+} from "../search/fields.js";
+
 import type { Prisma } from "../generated/prisma/client.js";
 import type {
   FacultyCreateData,
@@ -11,7 +18,9 @@ import type {
 } from "../validation/contributionValidation.js";
 
 // Pure mapping from validated pending-change payloads to Prisma inputs -
-// the approval transaction itself lives in transactionModel.ts.
+// the approval transaction itself lives in applyPendingChange.ts. The spread
+// *SearchFields helpers store the folded search* copy of every searchable
+// field that is present.
 function toUniversityCreateInput(
   data: UniversityCreateData,
 ): Prisma.UniversityCreateInput {
@@ -27,6 +36,7 @@ function toUniversityCreateInput(
     ...(data.address !== undefined && { address: data.address }),
     ...(data.phone !== undefined && { phone: data.phone }),
     ...(data.email !== undefined && { email: data.email }),
+    ...universitySearchFields(data),
   };
 }
 
@@ -45,6 +55,7 @@ function toUniversityUpdateInput(
     ...(data.address !== undefined && { address: data.address }),
     ...(data.phone !== undefined && { phone: data.phone }),
     ...(data.email !== undefined && { email: data.email }),
+    ...universitySearchFields(data),
   };
 }
 
@@ -61,6 +72,7 @@ function toFacultyCreateInput(
     ...(data.address !== undefined && { address: data.address }),
     ...(data.phone !== undefined && { phone: data.phone }),
     ...(data.email !== undefined && { email: data.email }),
+    ...facultySearchFields(data),
   };
 }
 
@@ -75,6 +87,7 @@ function toFacultyUpdateInput(
     ...(data.address !== undefined && { address: data.address }),
     ...(data.phone !== undefined && { phone: data.phone }),
     ...(data.email !== undefined && { email: data.email }),
+    ...facultySearchFields(data),
   };
 }
 
@@ -92,6 +105,7 @@ function toStudyProgramCreateInput(
     }),
     ...(data.ects !== undefined && { ects: data.ects }),
     ...(data.language !== undefined && { language: data.language }),
+    ...studyProgramSearchFields(data),
   };
 }
 
@@ -107,6 +121,7 @@ function toStudyProgramUpdateInput(
     }),
     ...(data.ects !== undefined && { ects: data.ects }),
     ...(data.language !== undefined && { language: data.language }),
+    ...studyProgramSearchFields(data),
   };
 }
 
@@ -122,6 +137,7 @@ function toTrackCreateInput(
     ...(data.durationYears !== undefined && {
       durationYears: data.durationYears,
     }),
+    ...trackSearchFields(data),
   };
 }
 
@@ -133,6 +149,7 @@ function toTrackUpdateInput(data: TrackEditData): Prisma.TrackUpdateInput {
     ...(data.durationYears !== undefined && {
       durationYears: data.durationYears,
     }),
+    ...trackSearchFields(data),
   };
 }
 

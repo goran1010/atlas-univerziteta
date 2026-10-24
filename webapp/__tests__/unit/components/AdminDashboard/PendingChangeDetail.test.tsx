@@ -13,7 +13,7 @@ function renderDetail(props: Parameters<typeof PendingChangeDetail>[0]) {
 describe("PendingChangeDetail", () => {
   test("shows proposed data with translated values and website link for CREATE", () => {
     renderDetail({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       typeOfChange: "CREATE",
       data: {
         name: "New University",
@@ -36,7 +36,7 @@ describe("PendingChangeDetail", () => {
 
   test("shows current data next to proposed changes for UPDATE", () => {
     renderDetail({
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       typeOfChange: "UPDATE",
       data: { name: "New Faculty Name" },
       currentEntity: { name: "Old Faculty Name", city: "Sarajevo" },
@@ -51,7 +51,7 @@ describe("PendingChangeDetail", () => {
 
   test("notes a deleted target for UPDATE when the entity is gone", () => {
     renderDetail({
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       typeOfChange: "UPDATE",
       data: { name: "New Faculty Name" },
       currentEntity: null,
@@ -63,7 +63,7 @@ describe("PendingChangeDetail", () => {
 
   test("shows the current study program data for DELETE", () => {
     renderDetail({
-      entityType: "STUDY_PROGRAM",
+      targetType: "STUDY_PROGRAM",
       typeOfChange: "DELETE",
       data: {},
       currentEntity: {
@@ -82,7 +82,7 @@ describe("PendingChangeDetail", () => {
 
   test("notes a deleted target for DELETE when the entity is gone", () => {
     renderDetail({
-      entityType: "TRACK",
+      targetType: "TRACK",
       typeOfChange: "DELETE",
       data: {},
       currentEntity: undefined,
@@ -93,7 +93,7 @@ describe("PendingChangeDetail", () => {
 
   test("shows the acronym and faculty count for a university DELETE", () => {
     renderDetail({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       typeOfChange: "DELETE",
       data: {},
       currentEntity: {
@@ -111,7 +111,7 @@ describe("PendingChangeDetail", () => {
 
   test("shows child counts for faculty and study program current data", () => {
     renderDetail({
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       typeOfChange: "DELETE",
       data: {},
       currentEntity: { name: "Test Faculty", studyProgramCount: 4 },
@@ -121,7 +121,7 @@ describe("PendingChangeDetail", () => {
     expect(screen.getByText("4")).toBeInTheDocument();
 
     renderDetail({
-      entityType: "STUDY_PROGRAM",
+      targetType: "STUDY_PROGRAM",
       typeOfChange: "DELETE",
       data: {},
       currentEntity: { name: "Test Program", trackCount: 2 },

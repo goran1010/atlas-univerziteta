@@ -4,6 +4,7 @@ import {
 } from "./utils/loginValidation";
 import { useRef, useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { useNavigate } from "react-router";
 import { handleSubmitLogIn } from "./utils/handleSubmitLogIn";
 import { Button } from "../sharedComponents/Button";
@@ -18,7 +19,8 @@ interface LogInFormProps {
 
 function LogInForm({ disabled, onLoadingChange }: LogInFormProps) {
   const navigate = useNavigate();
-  const { setUserData, addNotification, t } = use(RootContext);
+  const { setUserData, t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [loading, setLoading] = useState(false);
 
   function handleSetLoading(value: boolean) {

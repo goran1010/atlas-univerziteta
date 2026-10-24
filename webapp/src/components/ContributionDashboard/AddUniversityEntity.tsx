@@ -1,30 +1,30 @@
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Select } from "../sharedComponents/Select";
 import { Label } from "../sharedComponents/Label";
 import { Button } from "../sharedComponents/Button";
 import { DataField } from "./DataField";
-import { EntityPicker } from "./EntityPicker";
+import { TargetPicker } from "./TargetPicker";
+import { UniversityFields } from "./fields/UniversityFields";
+import { FacultyFields } from "./fields/FacultyFields";
+import { StudyProgramFields } from "./fields/StudyProgramFields";
+import { TrackFields } from "./fields/TrackFields";
 import { getPickerDepth } from "./utils/getPickerDepth";
 import { handleSubmitUniversityEntity } from "./utils/handleSubmitUniversityEntity";
-import type {
-  Entity,
-  EntityType,
-  StudyCycle,
-  TypeOfChange,
-} from "../../schemas/domain";
+import type { TargetType, TypeOfChange } from "../../schemas/domain";
 import type { ContributionFormDraft, ContributionFormState } from "./types";
 import type { SubmitEvent } from "react";
 
 const INIT_FORM: ContributionFormState = {
-  entityType: "UNIVERSITY",
+  targetType: "UNIVERSITY",
   typeOfChange: "CREATE",
   parentId: "",
   targetId: "",
   data: {},
 };
 
-const ENTITY_TYPES: EntityType[] = [
+const ENTITY_TYPES: TargetType[] = [
   "UNIVERSITY",
   "FACULTY",
   "STUDY_PROGRAM",
@@ -33,34 +33,24 @@ const ENTITY_TYPES: EntityType[] = [
 
 const TYPE_OF_CHANGES: TypeOfChange[] = ["CREATE", "UPDATE", "DELETE"];
 
-const CYCLES: StudyCycle[] = [
-  "FIRST",
-  "SECOND",
-  "THIRD",
-  "INTEGRATED",
-  "VOCATIONAL",
-  "SPECIALIST",
-];
-
-const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
-
 function AddUniversityEntity({
   refetchPendingChanges,
 }: {
   refetchPendingChanges: () => void;
 }) {
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [formState, setFormState] = useState(INIT_FORM);
   const [loading, setLoading] = useState(false);
   const [pickerResetKey, setPickerResetKey] = useState(0);
 
-  const { entityType, typeOfChange, parentId, targetId, data } = formState;
+  const { targetType, typeOfChange, parentId, targetId, data } = formState;
 
   function setField(field: keyof ContributionFormState, value: string) {
     setFormState((prev) => ({ ...prev, [field]: value }));
   }
 
-  function setSelector(field: "entityType" | "typeOfChange", value: string) {
+  function setSelector(field: "targetType" | "typeOfChange", value: string) {
     setFormState((prev) => ({
       ...prev,
       [field]: value,
@@ -84,14 +74,14 @@ function AddUniversityEntity({
     }));
   }
 
-  const needsParent = typeOfChange === "CREATE" && entityType !== "UNIVERSITY";
+  const needsParent = typeOfChange === "CREATE" && targetType !== "UNIVERSITY";
   const needsTarget = typeOfChange !== "CREATE";
   const needsDataFields = typeOfChange !== "DELETE";
 
   async function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     await handleSubmitUniversityEntity({
-      entityType,
+      targetType,
       parentId,
       targetId,
       typeOfChange,
@@ -114,15 +104,15 @@ function AddUniversityEntity({
         {t("form.requiredHint")}
       </p>
       <div className="flex flex-col gap-1 items-center">
-        <Label htmlFor="entityType" required>
+        <Label htmlFor="targetType" required>
           {t("contribution.entityType")}
         </Label>
         <Select
-          id="entityType"
-          name="entityType"
-          value={entityType}
+          id="targetType"
+          name="targetType"
+          value={targetType}
           onChange={(e) => {
-            setSelector("entityType", e.target.value);
+            setSelector("targetType", e.target.value);
           }}
           required
         >
@@ -154,9 +144,9 @@ function AddUniversityEntity({
         </Select>
       </div>
       {(needsParent || needsTarget) && (
-        <EntityPicker
-          key={`${entityType}-${typeOfChange}-${String(pickerResetKey)}`}
-          depth={getPickerDepth(entityType, typeOfChange)}
+        <TargetPicker
+          key={`${targetType}-${typeOfChange}-${String(pickerResetKey)}`}
+          depth={getPickerDepth(targetType, typeOfChange)}
           legend={
             needsParent
               ? t("contribution.picker.parent")
@@ -171,7 +161,7 @@ function AddUniversityEntity({
       {needsDataFields && (
         <fieldset className="flex flex-col gap-3 border border-(--border-color) rounded-lg p-3">
           <legend className="text-xs font-semibold px-1 text-(--text-secondary)">
-            Data
+            {t("contribution.dataLegend")}
           </legend>
 
           <DataField
@@ -185,267 +175,28 @@ function AddUniversityEntity({
             }}
           />
 
-          {entityType === "UNIVERSITY" && (
-            <>
-              <DataField
-                label={t("contribution.dataFields.acronym")}
-                id="dataAcronym"
-                type="text"
-                value={data.acronym ?? ""}
-                onChange={(e) => {
-                  setDataField("acronym", e.target.value || undefined);
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.city")}
-                id="dataCity"
-                type="text"
-                required={typeOfChange === "CREATE"}
-                value={data.city ?? ""}
-                onChange={(e) => {
-                  setDataField("city", e.target.value);
-                }}
-              />
-              <div className="flex flex-col gap-1 self-center">
-                <div className="flex flex-col gap-1">
-                  <Label
-                    htmlFor="dataEntity"
-                    className="text-center"
-                    required={typeOfChange === "CREATE"}
-                  >
-                    {t("contribution.dataFields.entity")}
-                  </Label>
-                  <Select
-                    id="dataEntity"
-                    value={data.entity ?? ""}
-                    onChange={(e) => {
-                      setDataField("entity", e.target.value);
-                    }}
-                    required={typeOfChange === "CREATE"}
-                  >
-                    <option value="">-</option>
-                    {ENTITIES.map((en) => (
-                      <option key={en} value={en}>
-                        {t(`contribution.entities.${en}`)}
-                      </option>
-                    ))}
-                  </Select>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <Label
-                    htmlFor="dataOwnership"
-                    className="text-center"
-                    required={typeOfChange === "CREATE"}
-                  >
-                    {t("contribution.dataFields.ownership")}
-                  </Label>
-                  <Select
-                    id="dataOwnership"
-                    value={data.ownership ?? ""}
-                    onChange={(e) => {
-                      setDataField("ownership", e.target.value);
-                    }}
-                    required={typeOfChange === "CREATE"}
-                  >
-                    <option value="">-</option>
-                    <option value="PUBLIC">
-                      {t("universitiesPage.ownership.PUBLIC")}
-                    </option>
-                    <option value="PRIVATE">
-                      {t("universitiesPage.ownership.PRIVATE")}
-                    </option>
-                  </Select>
-                </div>
-              </div>
-              <DataField
-                label={t("contribution.dataFields.foundedYear")}
-                id="dataFoundedYear"
-                type="text"
-                value={data.foundedYear ?? ""}
-                onChange={(e) => {
-                  setDataField("foundedYear", e.target.value || undefined);
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.website")}
-                id="dataWebsite"
-                type="url"
-                value={data.website ?? ""}
-                onChange={(e) => {
-                  setDataField("website", e.target.value || undefined);
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.address")}
-                id="dataAddress"
-                type="text"
-                value={data.address ?? ""}
-                onChange={(e) => {
-                  setDataField("address", e.target.value || undefined);
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.phone")}
-                id="dataPhone"
-                type="tel"
-                value={data.phone ?? ""}
-                onChange={(e) => {
-                  setDataField("phone", e.target.value || undefined);
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.email")}
-                id="dataEmail"
-                type="email"
-                value={data.email ?? ""}
-                onChange={(e) => {
-                  setDataField("email", e.target.value || undefined);
-                }}
-              />
-            </>
+          {targetType === "UNIVERSITY" && (
+            <UniversityFields
+              data={data}
+              typeOfChange={typeOfChange}
+              setDataField={setDataField}
+            />
           )}
 
-          {entityType === "FACULTY" && (
-            <>
-              <DataField
-                label={t("contribution.dataFields.city")}
-                id="dataFacultyCity"
-                type="text"
-                value={data.city ?? ""}
-                onChange={(e) => {
-                  setDataField("city", e.target.value || undefined);
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.website")}
-                id="dataFacultyWebsite"
-                type="url"
-                value={data.website ?? ""}
-                onChange={(e) => {
-                  setDataField("website", e.target.value || undefined);
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.address")}
-                id="dataFacultyAddress"
-                type="text"
-                value={data.address ?? ""}
-                onChange={(e) => {
-                  setDataField("address", e.target.value || undefined);
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.phone")}
-                id="dataFacultyPhone"
-                type="tel"
-                value={data.phone ?? ""}
-                onChange={(e) => {
-                  setDataField("phone", e.target.value || undefined);
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.email")}
-                id="dataFacultyEmail"
-                type="email"
-                value={data.email ?? ""}
-                onChange={(e) => {
-                  setDataField("email", e.target.value || undefined);
-                }}
-              />
-            </>
+          {targetType === "FACULTY" && (
+            <FacultyFields data={data} setDataField={setDataField} />
           )}
 
-          {entityType === "STUDY_PROGRAM" && (
-            <>
-              <div className="flex flex-col gap-1">
-                <Label htmlFor="dataCycle" required={typeOfChange === "CREATE"}>
-                  {t("contribution.dataFields.cycle")}
-                </Label>
-                <Select
-                  id="dataCycle"
-                  value={data.cycle ?? ""}
-                  onChange={(e) => {
-                    setDataField("cycle", e.target.value);
-                  }}
-                  required={typeOfChange === "CREATE"}
-                >
-                  <option value="">-</option>
-                  {CYCLES.map((c) => (
-                    <option key={c} value={c}>
-                      {t(`contribution.cycles.${c}`)}
-                    </option>
-                  ))}
-                </Select>
-              </div>
-              <DataField
-                label={t("contribution.dataFields.durationYears")}
-                id="dataDuration"
-                type="number"
-                min={1}
-                max={10}
-                value={data.durationYears ?? ""}
-                onChange={(e) => {
-                  setDataField(
-                    "durationYears",
-                    e.target.value === "" ? undefined : Number(e.target.value),
-                  );
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.ects")}
-                id="dataEcts"
-                type="number"
-                min={1}
-                value={data.ects ?? ""}
-                onChange={(e) => {
-                  setDataField(
-                    "ects",
-                    e.target.value === "" ? undefined : Number(e.target.value),
-                  );
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.language")}
-                id="dataLanguage"
-                type="text"
-                value={data.language ?? ""}
-                onChange={(e) => {
-                  setDataField("language", e.target.value || undefined);
-                }}
-              />
-            </>
+          {targetType === "STUDY_PROGRAM" && (
+            <StudyProgramFields
+              data={data}
+              typeOfChange={typeOfChange}
+              setDataField={setDataField}
+            />
           )}
 
-          {entityType === "TRACK" && (
-            <>
-              <DataField
-                label={t("contribution.dataFields.ects")}
-                id="dataTrackEcts"
-                type="number"
-                min={1}
-                value={data.ects ?? ""}
-                onChange={(e) => {
-                  setDataField(
-                    "ects",
-                    e.target.value === "" ? undefined : Number(e.target.value),
-                  );
-                }}
-              />
-              <DataField
-                label={t("contribution.dataFields.durationYears")}
-                id="dataTrackDuration"
-                type="number"
-                min={1}
-                max={10}
-                value={data.durationYears ?? ""}
-                onChange={(e) => {
-                  setDataField(
-                    "durationYears",
-                    e.target.value === "" ? undefined : Number(e.target.value),
-                  );
-                }}
-              />
-            </>
+          {targetType === "TRACK" && (
+            <TrackFields data={data} setDataField={setDataField} />
           )}
         </fieldset>
       )}

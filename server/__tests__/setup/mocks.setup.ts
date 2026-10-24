@@ -23,19 +23,20 @@ vi.mock("../../src/utils/rateLimiter.js", async () => {
   const originalModule = await vi.importActual(
     "../../src/utils/rateLimiter.js",
   );
+  // vi.fn wrappers that skip limiting so tests can assert a limiter is mounted
   return {
     ...originalModule,
-    global: (_req: Request, _res: Response, next: NextFunction) => {
+    global: vi.fn((_req: Request, _res: Response, next: NextFunction) => {
       next();
-    },
-    auth: (_req: Request, _res: Response, next: NextFunction) => {
+    }),
+    auth: vi.fn((_req: Request, _res: Response, next: NextFunction) => {
       next();
-    },
-    api: (_req: Request, _res: Response, next: NextFunction) => {
+    }),
+    api: vi.fn((_req: Request, _res: Response, next: NextFunction) => {
       next();
-    },
-    users: (_req: Request, _res: Response, next: NextFunction) => {
+    }),
+    users: vi.fn((_req: Request, _res: Response, next: NextFunction) => {
       next();
-    },
+    }),
   };
 });

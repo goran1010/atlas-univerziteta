@@ -16,4 +16,13 @@ function root(_req: Request, res: Response) {
   });
 }
 
-export { root };
+function status(_req: Request, res: Response) {
+  sendSuccess(res, {
+    data: {
+      status: "ok",
+    },
+    message: "API server is running",
+  });
+}
+
+export { root, status };

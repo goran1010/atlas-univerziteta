@@ -13,10 +13,10 @@ jobs:
       DATABASE_URL: postgresql://test_user:test_password@localhost:5432/postgres_db
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -43,10 +43,10 @@ jobs:
       DATABASE_URL: postgresql://test_user:test_password@localhost:5432/postgres_db
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -86,7 +86,7 @@ jobs:
           --health-retries=5
 
     env:
-      VITE_SERVER_URL: http://localhost:3000
+      VITE_API_URL: http://localhost:3000
       PORT: 3000
       WEBAPP_URL: http://localhost:5173
       NODE_ENV: test
@@ -102,10 +102,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -117,7 +117,7 @@ jobs:
         run: npm run test:webapp
 
       - name: Migrate database and generate Prisma client
-        run: npm run db:deploy_generate
+        run: npm run db:setup
 
       - name: Test server
         run: npm run test:server
@@ -154,10 +154,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -204,10 +204,10 @@ jobs:
     name: Run spell and format check
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -234,7 +234,7 @@ jobs:
     outputs:
       should_deploy: ${{ steps.changes.outputs.should_deploy }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 2
 
@@ -255,7 +255,7 @@ jobs:
     permissions:
       packages: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Log in to GitHub Container Registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
@@ -266,7 +266,7 @@ jobs:
           docker push ghcr.io/goran1010/atlas-univerziteta-server:latest
 
       - name: Deploy to VPS
-        uses: appleboy/ssh-action@v1
+        uses: appleboy/ssh-action@0ff4204d59e8e51228ff73bce53f80d53301dee2 # v1.2.5
         with:
           host: 188.245.124.7
           username: root

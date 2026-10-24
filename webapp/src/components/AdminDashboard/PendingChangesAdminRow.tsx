@@ -1,6 +1,7 @@
 import { memo, type Dispatch, type SetStateAction } from "react";
 import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
+import { ConfirmDialog } from "../sharedComponents/ConfirmDialog";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import {
@@ -8,7 +9,7 @@ import {
   handleDeclinePendingChange,
 } from "./utils/adminActions";
 import { PendingChangeDetail } from "./PendingChangeDetail";
-import { ParentBreadcrumb } from "../sharedComponents/ParentBreadcrumb";
+import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import type { Notification } from "../../types";
 import type { TypeOfChange } from "../../schemas/domain";
@@ -16,14 +17,15 @@ import type { AdminPendingChange } from "../../schemas/pendingChange";
 
 const ROW_ACCENT: Record<TypeOfChange, string> = {
   CREATE: "border-l-4 border-l-green-500 dark:border-l-green-400",
-  UPDATE: "border-l-4 border-l-blue-500 dark:border-l-blue-400",
+  UPDATE: "border-l-4 border-l-yellow-500 dark:border-l-yellow-400",
   DELETE: "border-l-4 border-l-red-500 dark:border-l-red-400",
 };
 
 const BADGE: Record<TypeOfChange, string> = {
   CREATE:
     "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300",
-  UPDATE: "bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300",
+  UPDATE:
+    "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300",
   DELETE: "bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300",
 };
 
@@ -45,6 +47,9 @@ const PendingChangesAdminRow = memo(
       "approve" | "decline" | null
     >(null);
     const [dialogOpen, setDialogOpen] = useState(false);
+    const [confirmAction, setConfirmAction] = useState<
+      "approve" | "decline" | null
+    >(null);
     const { t } = use(RootContext);
     const loading = activeAction !== null;
 
@@ -71,6 +76,7 @@ const PendingChangesAdminRow = memo(
 
     return (
       <li
+        role="row"
         className={`rounded-md transition-colors hover:bg-(--hover-surface) ${
           ROW_ACCENT[data.typeOfChange]
         } ${index % 2 === 0 ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
@@ -80,7 +86,10 @@ const PendingChangesAdminRow = memo(
           current={entityName}
         />
         <div className="grid gap-2 w-full p-1 sm:p-1 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)]">
-          <div className="flex justify-between sm:justify-center items-center">
+          <div
+            role="cell"
+            className="flex justify-between sm:justify-center items-center"
+          >
             <span className="sm:hidden font-semibold">
               {t("contribution.change")}
             </span>
@@ -92,15 +101,21 @@ const PendingChangesAdminRow = memo(
               {t(`contribution.changeTypes.${data.typeOfChange}`)}
             </span>
           </div>
-          <div className="flex justify-between sm:justify-center items-center flex-wrap gap-1">
+          <div
+            role="cell"
+            className="flex justify-between sm:justify-center items-center flex-wrap gap-1"
+          >
             <span className="sm:hidden font-semibold">
               {t("contribution.entityType")}
             </span>
             <span className="font-mono font-medium text-(--text-primary) text-xs">
-              {t(`contribution.entityTypes.${data.entityType}`)}
+              {t(`contribution.entityTypes.${data.targetType}`)}
             </span>
           </div>
-          <div className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0">
+          <div
+            role="cell"
+            className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0"
+          >
             <span className="sm:hidden font-semibold">
               {t("contribution.user")}
             </span>
@@ -108,7 +123,10 @@ const PendingChangesAdminRow = memo(
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 p-1">
+        <div
+          role="cell"
+          className="flex flex-col sm:flex-row justify-center items-center gap-2 p-1"
+        >
           <Button
             variant="secondary"
             className="px-3 py-1.5 text-xs sm:max-w-30"
@@ -121,7 +139,9 @@ const PendingChangesAdminRow = memo(
           <Button
             variant="success"
             className="px-3 py-1.5 text-xs sm:max-w-25"
-            onClick={() => void handleApprove()}
+            onClick={() => {
+              setConfirmAction("approve");
+            }}
             type="button"
             loading={activeAction === "approve"}
             disabled={loading}
@@ -131,7 +151,9 @@ const PendingChangesAdminRow = memo(
           <Button
             variant="danger"
             className="px-3 py-1.5 text-xs sm:max-w-25"
-            onClick={() => void handleDecline()}
+            onClick={() => {
+              setConfirmAction("decline");
+            }}
             type="button"
             loading={activeAction === "decline"}
             disabled={loading}
@@ -140,18 +162,40 @@ const PendingChangesAdminRow = memo(
           </Button>
         </div>
 
+        <ConfirmDialog
+          open={confirmAction !== null}
+          title={
+            confirmAction === "approve" ? t("form.approve") : t("form.reject")
+          }
+          confirmLabel={
+            confirmAction === "approve" ? t("form.approve") : t("form.reject")
+          }
+          confirmVariant={confirmAction === "approve" ? "success" : "danger"}
+          onConfirm={() => {
+            const action = confirmAction;
+            setConfirmAction(null);
+            if (action === "approve") void handleApprove();
+            if (action === "decline") void handleDecline();
+          }}
+          onCancel={() => {
+            setConfirmAction(null);
+          }}
+        />
+
         <Dialog
           open={dialogOpen}
           onClose={() => {
             setDialogOpen(false);
           }}
-          title={`${t(`contribution.changeTypes.${data.typeOfChange}`)} ${t(`contribution.entityTypes.${data.entityType}`)} - ${data.user.email}`}
+          title={`${t(`contribution.changeTypes.${data.typeOfChange}`)} ${t(`contribution.entityTypes.${data.targetType}`)} - ${data.user.email}`}
           footer={
             <>
               <Button
                 variant="success"
                 className="sm:w-auto"
-                onClick={() => void handleApprove()}
+                onClick={() => {
+                  setConfirmAction("approve");
+                }}
                 type="button"
                 loading={activeAction === "approve"}
                 disabled={loading}
@@ -161,7 +205,9 @@ const PendingChangesAdminRow = memo(
               <Button
                 variant="danger"
                 className="sm:w-auto"
-                onClick={() => void handleDecline()}
+                onClick={() => {
+                  setConfirmAction("decline");
+                }}
                 type="button"
                 loading={activeAction === "decline"}
                 disabled={loading}
@@ -172,7 +218,7 @@ const PendingChangesAdminRow = memo(
           }
         >
           <PendingChangeDetail
-            entityType={data.entityType}
+            targetType={data.targetType}
             typeOfChange={data.typeOfChange}
             data={data.data}
             currentEntity={currentEntity}

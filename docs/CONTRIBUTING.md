@@ -8,9 +8,9 @@ Contributions of any kind are welcome - bug fixes, new features, data, documenta
 2. Run `npm run install:all` to install dependencies
 3. Set up your local environment:
    - Copy `server/.env.example` to `server/.env` and fill in your database, email service, BetterAuth secret, and (optionally) GitHub/Google OAuth credentials
-   - Copy `webapp/.env.example` to `webapp/.env` and update `VITE_SERVER_URL` if needed
+   - Copy `webapp/.env.example` to `webapp/.env` and update `VITE_API_URL` if needed
 4. Set up the databases:
-   - Run `npm run db:deploy_generate` to initialize the development database
+   - Run `npm run db:setup` to initialize the development database
    - Server tests need no database setup - the suite creates its own temporary databases from `TEST_DATABASE_URL` (the user just needs `CREATEDB` rights)
    - E2E tests need no database setup either - the suite creates, resets, and seeds its own `uniatlas_e2e` database; just install the browser once with `npm run install:browsers`
 5. Make your changes, write tests where appropriate, and ensure the full test suite passes (`npm run test:all`)

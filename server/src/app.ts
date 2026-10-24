@@ -29,6 +29,12 @@ import { usersRouter } from "./routes/usersRouter.js";
 import { healthRouter } from "./routes/healthRouter.js";
 import { verifyOrigin } from "./auth/verifyOrigin.js";
 
+// The URL the client requested, minus the query string - auth URLs carry
+// tokens and OAuth codes there, which must stay out of the logs.
+function loggableUrl(req: Request) {
+  return req.originalUrl.replace(/\?.*$/, "");
+}
+
 // Trust first proxy (Caddy reverse proxy)
 app.set("trust proxy", 1);
 
@@ -36,7 +42,7 @@ app.use(rateLimiter.global);
 
 app.use((req, _res, next) => {
   logger.info(
-    `${req.method} method to ${req.originalUrl} from ${String(req.ip)}`,
+    `${req.method} method to ${loggableUrl(req)} from ${String(req.ip)}`,
   );
   next();
 });
@@ -46,7 +52,7 @@ app.use(compression());
 
 // BetterAuth needs credentialed CORS (not the wildcard "*" from the public /api
 // routes) and must read the raw body before express.json() consumes it.
-app.use("/api/auth", credentialedCors);
+app.use("/api/auth", credentialedCors, rateLimiter.auth);
 app.all("/api/auth/*splat", toNodeHandler(auth));
 
 // Public routes (wildcard CORS - open data)
@@ -81,7 +87,7 @@ function isClientHttpError(error: unknown): error is ClientHttpError {
 app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   if (error instanceof RequestValidationError) {
     logger.warn(
-      { issues: error.issues, method: req.method, url: req.originalUrl },
+      { issues: error.issues, method: req.method, url: loggableUrl(req) },
       "Request validation failed.",
     );
     sendError(res, {
@@ -95,7 +101,7 @@ app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
 
   if (isClientHttpError(error)) {
     logger.warn(
-      { err: error, method: req.method, url: req.originalUrl },
+      { err: error, method: req.method, url: loggableUrl(req) },
       "Request failed with a client error.",
     );
     sendError(res, {
@@ -107,7 +113,7 @@ app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   }
 
   logger.error(
-    { err: error, method: req.method, url: req.originalUrl },
+    { err: error, method: req.method, url: loggableUrl(req) },
     "Unhandled error.",
   );
 

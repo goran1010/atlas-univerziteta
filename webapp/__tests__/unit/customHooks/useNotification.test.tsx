@@ -40,6 +40,17 @@ function NotificationProbe() {
       </button>
       <button
         type="button"
+        onClick={() =>
+          addNotification({
+            type: "error",
+            message: "Error values",
+          })
+        }
+      >
+        Add Error
+      </button>
+      <button
+        type="button"
         onClick={() => {
           for (let i = 0; i < 6; i++) {
             addNotification({ type: "info", message: `N${i.toString()}` });
@@ -182,6 +193,15 @@ describe("useNotification", () => {
 
     expect(screen.getByTestId("first-type")).toHaveTextContent("info");
     expect(screen.getByTestId("first-duration")).toHaveTextContent("3000");
+  });
+
+  test("errors default to the longer alert duration", async () => {
+    render(<NotificationProbe />);
+
+    await userEvent.click(screen.getByRole("button", { name: /Add Error/i }));
+
+    expect(screen.getByTestId("first-type")).toHaveTextContent("error");
+    expect(screen.getByTestId("first-duration")).toHaveTextContent("8000");
   });
 
   test("keeps max 5 notifications and removes oldest", async () => {

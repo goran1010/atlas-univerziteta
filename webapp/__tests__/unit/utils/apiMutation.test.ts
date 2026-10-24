@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { apiMutation } from "../../../src/utils/apiMutation";
 
-import type { RequestContext } from "../../../src/utils/apiMutation";
+import type { RequestContext } from "../../../src/types";
 
 const fetchMock = vi.fn();
 
@@ -102,7 +102,7 @@ describe("apiMutation", () => {
     );
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.example.error",
+      message: "messages.example.error (Rejected on the server.)",
     });
   });
 

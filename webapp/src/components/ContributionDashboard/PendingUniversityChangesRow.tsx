@@ -1,10 +1,12 @@
 import { useState, use, type Dispatch, type SetStateAction } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Button } from "../sharedComponents/Button";
 import { Dialog } from "../sharedComponents/Dialog";
+import { ConfirmDialog } from "../sharedComponents/ConfirmDialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
-import { ParentBreadcrumb } from "../sharedComponents/ParentBreadcrumb";
+import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import type { PendingChange } from "../../schemas/pendingChange";
 
@@ -16,7 +18,8 @@ interface BadgeStyles {
 
 const BADGE: BadgeStyles = {
   CREATE: "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200",
-  UPDATE: "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200",
+  UPDATE:
+    "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-200",
   DELETE: "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-200",
 };
 
@@ -31,10 +34,12 @@ function PendingUniversityChangesRow({
   index,
   setPendingChanges,
 }: PendingUniversityChangesRowProps) {
-  const { t, addNotification } = use(RootContext);
+  const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [loading, setLoading] = useState(false);
   const ctx = { addNotification, setLoading, t };
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [confirmOpen, setConfirmOpen] = useState(false);
 
   async function handleDelete() {
     await handleDiscardUniversityChange(change.id, setPendingChanges, ctx);
@@ -46,6 +51,7 @@ function PendingUniversityChangesRow({
 
   return (
     <li
+      role="row"
       className={`rounded-md p-2 sm:p-3 ${isEven ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
     >
       <ParentBreadcrumb
@@ -53,7 +59,10 @@ function PendingUniversityChangesRow({
         current={entityName}
       />
       <div className="grid gap-2 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]">
-        <div className="flex justify-between sm:justify-start items-center gap-2">
+        <div
+          role="cell"
+          className="flex justify-between sm:justify-start items-center gap-2"
+        >
           <span className="sm:hidden text-xs font-semibold text-(--text-muted)">
             {t("contribution.change")}
           </span>
@@ -64,16 +73,22 @@ function PendingUniversityChangesRow({
           </span>
         </div>
 
-        <div className="flex justify-between sm:justify-center items-center gap-2">
+        <div
+          role="cell"
+          className="flex justify-between sm:justify-center items-center gap-2"
+        >
           <span className="sm:hidden text-xs font-semibold text-(--text-muted)">
             {t("contribution.entityType")}
           </span>
           <span className="text-xs font-mono text-(--text-secondary)">
-            {t(`contribution.entityTypes.${change.entityType}`)}
+            {t(`contribution.entityTypes.${change.targetType}`)}
           </span>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-end items-center gap-2">
+        <div
+          role="cell"
+          className="flex flex-col sm:flex-row justify-end items-center gap-2"
+        >
           <Button
             variant="secondary"
             className="px-3 py-1.5 text-xs"
@@ -87,32 +102,49 @@ function PendingUniversityChangesRow({
             variant="danger"
             className="px-3 py-1.5 text-xs"
             loading={loading}
-            onClick={() => void handleDelete()}
+            onClick={() => {
+              setConfirmOpen(true);
+            }}
           >
             {t("contribution.deleteChange")}
           </Button>
         </div>
       </div>
 
+      <ConfirmDialog
+        open={confirmOpen}
+        title={t("contribution.deleteChange")}
+        confirmLabel={t("contribution.deleteChange")}
+        onConfirm={() => {
+          setConfirmOpen(false);
+          void handleDelete();
+        }}
+        onCancel={() => {
+          setConfirmOpen(false);
+        }}
+      />
+
       <Dialog
         open={dialogOpen}
         onClose={() => {
           setDialogOpen(false);
         }}
-        title={`${t(`contribution.changeTypes.${change.typeOfChange}`)} ${t(`contribution.entityTypes.${change.entityType}`)}`}
+        title={`${t(`contribution.changeTypes.${change.typeOfChange}`)} ${t(`contribution.entityTypes.${change.targetType}`)}`}
         footer={
           <Button
             variant="danger"
             className="sm:w-auto"
             loading={loading}
-            onClick={() => void handleDelete()}
+            onClick={() => {
+              setConfirmOpen(true);
+            }}
           >
             {t("contribution.deleteChange")}
           </Button>
         }
       >
         <PendingChangeDetail
-          entityType={change.entityType}
+          targetType={change.targetType}
           typeOfChange={change.typeOfChange}
           data={change.data}
           currentEntity={change.currentEntity ?? null}

@@ -5,7 +5,7 @@ import {
   handleDeclineAdminRequest,
 } from "../../../../../src/components/AdminDashboard/utils/adminActions";
 
-import type { RequestContext } from "../../../../../src/utils/apiMutation";
+import type { RequestContext } from "../../../../../src/types";
 import type { AdminPendingChange } from "../../../../../src/schemas/pendingChange";
 import type { AdminRequest } from "../../../../../src/schemas/adminRequest";
 
@@ -13,7 +13,7 @@ const fetchMock = vi.fn();
 
 const change: AdminPendingChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",
-  entityType: "FACULTY",
+  targetType: "FACULTY",
   typeOfChange: "UPDATE",
   targetId: 1,
   parentId: null,
@@ -101,7 +101,7 @@ describe("handleApprovePendingChange", () => {
     expect(setPendingChanges).not.toHaveBeenCalled();
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.admin.approveError",
+      message: "messages.admin.approveError (Approval failed.)",
     });
     expect(consoleWarnSpy).toHaveBeenCalled();
   });

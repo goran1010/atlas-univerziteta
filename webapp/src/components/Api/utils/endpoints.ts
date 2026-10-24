@@ -14,6 +14,19 @@ export interface Endpoint {
   errorExample?: string | null;
 }
 
+const paginationParams = [
+  {
+    name: "page",
+    required: false,
+    descriptionKey: "api.endpointsData.pageParam",
+  },
+  {
+    name: "limit",
+    required: false,
+    descriptionKey: "api.endpointsData.limitParam",
+  },
+];
+
 const notFoundError = (entity: string) =>
   `// 404\n{ "error": { "code": "NOT_FOUND", "message": "${entity} not found." } }`;
 
@@ -44,18 +57,19 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/universities",
     descriptionKey: "api.endpointsData.getAllUniversities",
-    params: null,
+    params: paginationParams,
     successExample: `{
   "message": "Universities retrieved successfully.",
   "data": [
     {
-      "id": 1, "name": "University of Sarajevo", "acronym": "UNSA",
+      "id": 17, "name": "Univerzitet u Sarajevu", "acronym": "UNSA",
       "city": "Sarajevo", "entity": "FBIH", "ownership": "PUBLIC",
-      "foundedYear": "1949", "website": "https://unsa.ba",
-      "_count": { "faculties": 23 }
+      "foundedYear": "1949", "website": "https://www.unsa.ba",
+      "_count": { "faculties": 27 }
     },
     ...
-  ]
+  ],
+  "page": 1, "totalPages": 1, "total": 22
 }`,
     errorExample: null,
   },
@@ -67,20 +81,26 @@ const apiEndpoints: Endpoint[] = [
     successExample: `{
   "message": "University retrieved successfully.",
   "data": {
-    "id": 1, "name": "University of Sarajevo", "acronym": "UNSA",
+    "id": 17, "name": "Univerzitet u Sarajevu", "acronym": "UNSA",
     "city": "Sarajevo", "entity": "FBIH", "ownership": "PUBLIC",
-    "foundedYear": "1949", "website": "https://unsa.ba",
+    "foundedYear": "1949", "website": "https://www.unsa.ba",
     "address": "Obala Kulina bana 7/II, 71000 Sarajevo",
     "phone": "+387 33 565 100", "email": "javnost@unsa.ba",
+    "accreditationFrom": "2007-08-15T00:00:00.000Z",
+    "accreditationTo": "2029-08-25T00:00:00.000Z",
+    "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
+    "sourceUrl": "https://hea.gov.ba/",
+    "lastModified": "2026-08-29T00:00:00.000Z",
     "faculties": [
-      { "id": 1, "name": "Faculty of Science",
-        "city": "Sarajevo", "website": "https://pmf.unsa.ba",
+      { "id": 142, "name": "Filozofski fakultet", "city": "Sarajevo", ...,
         "studyPrograms": [
-          { "id": 1, "name": "Computer Science", "cycle": "FIRST",
-            "tracks": [ ... ]
-          }
+          { "id": 1309, "name": "Arapski jezik i književnost",
+            "cycle": "FIRST", ..., "tracks": [ ... ]
+          },
+          ...
         ]
-      }
+      },
+      ...
     ]
   }
 }`,
@@ -90,17 +110,18 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/faculties",
     descriptionKey: "api.endpointsData.getAllFaculties",
-    params: null,
+    params: paginationParams,
     successExample: `{
   "message": "Faculties retrieved successfully.",
   "data": [
     {
-      "id": 1, "name": "Faculty of Electrical Engineering",
-      "city": "Sarajevo", "website": "https://etf.unsa.ba",
-      "university": { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA" }
+      "id": 106, "name": "Elektrotehnički fakultet",
+      "city": "Istočno Sarajevo", "website": "http://etf.ues.rs.ba",
+      "university": { "id": 15, "name": "Univerzitet u Istočnom Sarajevu", "acronym": "UNIS" }
     },
     ...
-  ]
+  ],
+  "page": 1, "totalPages": 4, "total": 193
 }`,
     errorExample: null,
   },
@@ -112,13 +133,20 @@ const apiEndpoints: Endpoint[] = [
     successExample: `{
   "message": "Faculty retrieved successfully.",
   "data": {
-    "id": 1, "name": "Faculty of Electrical Engineering",
-    "city": "Sarajevo", "website": "https://etf.unsa.ba",
-    "university": { "id": 1, "name": "University of Sarajevo", "acronym": "UNSA" },
+    "id": 106, "name": "Elektrotehnički fakultet", "universityId": 15,
+    "city": "Istočno Sarajevo", "website": "http://etf.ues.rs.ba",
+    "address": "Vuka Karadžića 30, 71123 Istočno Sarajevo",
+    "phone": "+387 57 342 788", "email": "kontakt@etf.ues.rs.ba",
+    "isUniversityLevel": false,
+    "sourceUrl": "https://www.ues.rs.ba/en/faculties/",
+    "lastModified": "2026-08-29T00:00:00.000Z",
+    "university": { "id": 15, "name": "Univerzitet u Istočnom Sarajevu",
+      "acronym": "UNIS", ... },
     "studyPrograms": [
-      { "id": 1, "name": "Computer Science", "cycle": "FIRST",
+      { "id": 871, "name": "Automatika i elektronika", "cycle": "FIRST", ...,
         "tracks": [ ... ]
-      }
+      },
+      ...
     ]
   }
 }`,
@@ -128,18 +156,20 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/study-programs",
     descriptionKey: "api.endpointsData.getAllStudyPrograms",
-    params: null,
+    params: paginationParams,
     successExample: `{
   "message": "Study programs retrieved successfully.",
   "data": [
     {
-      "id": 1, "name": "Software Engineering", "cycle": "FIRST", "ects": 180,
-      "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
-        "university": { "id": 1, "name": "University of Sarajevo" }
+      "id": 1, "name": "Menadžment i preduzetništvo", "cycle": "FIRST",
+      "durationYears": 3, "ects": 180, "language": null,
+      "faculty": { "id": 2, "name": "Ekonomski fakultet",
+        "university": { "id": 1, "name": "Evropski univerzitet, Brčko distrikt BiH" }
       }
     },
     ...
-  ]
+  ],
+  "page": 1, "totalPages": 37, "total": 1823
 }`,
     errorExample: null,
   },
@@ -151,12 +181,18 @@ const apiEndpoints: Endpoint[] = [
     successExample: `{
   "message": "Study program retrieved successfully.",
   "data": {
-    "id": 1, "name": "Software Engineering", "cycle": "FIRST", "ects": 180,
-    "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
-      "university": { "id": 1, "name": "University of Sarajevo" }
+    "id": 190, "name": "Ekonomija", "facultyId": 18, "cycle": "FIRST",
+    "durationYears": 4, "ects": 240, "language": null,
+    "sourceUrl": "http://iubd.edu.ba/index.php/fakulteti/fakultet-za-menadzmentt/ekonomija",
+    "lastModified": "2026-08-25T00:00:00.000Z",
+    "faculty": { "id": 18, "name": "Fakultet za menadžment", ...,
+      "university": { "id": 2, "name": "Internacionalni univerzitet, Brčko distrikt BiH", ... }
     },
     "tracks": [
-      { "id": 1, "name": "Software Development", "ects": 60 }
+      { "id": 1, "name": "Računovodstvo i revizija", "studyProgramId": 190,
+        "ects": null, "durationYears": null, "sourceUrl": null,
+        "lastModified": "2026-08-26T00:00:00.000Z" },
+      ...
     ]
   }
 }`,
@@ -166,20 +202,21 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/tracks",
     descriptionKey: "api.endpointsData.getAllTracks",
-    params: null,
+    params: paginationParams,
     successExample: `{
   "message": "Tracks retrieved successfully.",
   "data": [
     {
-      "id": 1, "name": "Software Development", "ects": 60,
-      "studyProgram": { "id": 1, "name": "Software Engineering",
-        "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
-          "university": { "id": 1, "name": "University of Sarajevo" }
+      "id": 1, "name": "Računovodstvo i revizija", "ects": null, "durationYears": null,
+      "studyProgram": { "id": 190, "name": "Ekonomija",
+        "faculty": { "id": 18, "name": "Fakultet za menadžment",
+          "university": { "id": 2, "name": "Internacionalni univerzitet, Brčko distrikt BiH" }
         }
       }
     },
     ...
-  ]
+  ],
+  "page": 1, "totalPages": 12, "total": 584
 }`,
     errorExample: null,
   },
@@ -191,10 +228,12 @@ const apiEndpoints: Endpoint[] = [
     successExample: `{
   "message": "Track retrieved successfully.",
   "data": {
-    "id": 1, "name": "Software Development", "ects": 60,
-    "studyProgram": { "id": 1, "name": "Software Engineering",
-      "faculty": { "id": 1, "name": "Faculty of Electrical Engineering",
-        "university": { "id": 1, "name": "University of Sarajevo" }
+    "id": 1, "name": "Računovodstvo i revizija", "studyProgramId": 190,
+    "ects": null, "durationYears": null, "sourceUrl": null,
+    "lastModified": "2026-08-26T00:00:00.000Z",
+    "studyProgram": { "id": 190, "name": "Ekonomija", "cycle": "FIRST", ...,
+      "faculty": { "id": 18, "name": "Fakultet za menadžment", ...,
+        "university": { "id": 2, "name": "Internacionalni univerzitet, Brčko distrikt BiH", ... }
       }
     }
   }

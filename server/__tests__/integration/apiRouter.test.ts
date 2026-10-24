@@ -21,3 +21,17 @@ describe("GET /", () => {
     });
   });
 });
+
+describe("GET /api", () => {
+  test("responds with the API status", async () => {
+    const response = await request(app).get("/api");
+
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({
+      data: {
+        status: "ok",
+      },
+      message: "API server is running",
+    });
+  });
+});

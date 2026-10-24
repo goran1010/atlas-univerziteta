@@ -2,7 +2,7 @@ import { prisma } from "../db/prisma.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 
 import type { Request, Response } from "express";
-import * as universityValidation from "../validation/universityValidation.js";
+import * as v1Validation from "../validation/v1Validation.js";
 
 function status(_req: Request, res: Response) {
   sendSuccess(res, {
@@ -13,64 +13,142 @@ function status(_req: Request, res: Response) {
   });
 }
 
-async function getUniversities(_req: Request, res: Response) {
-  const universities = await prisma.university.findMany({
-    orderBy: [{ ownership: "asc" }, { name: "asc" }],
-    include: { _count: { select: { faculties: true } } },
-  });
+// List endpoints are a paginated directory: the entity's public fields plus
+// a minimal parent reference. The full records live on the by-id endpoints.
+function pagination(page: number, limit: number, total: number) {
+  return { page, totalPages: Math.max(1, Math.ceil(total / limit)), total };
+}
+
+async function getUniversities(req: Request, res: Response) {
+  const { page, limit } = v1Validation.listQuery(req.query);
+
+  const [total, universities] = await Promise.all([
+    prisma.university.count(),
+    prisma.university.findMany({
+      orderBy: [{ ownership: "asc" }, { name: "asc" }],
+      select: {
+        id: true,
+        name: true,
+        acronym: true,
+        city: true,
+        entity: true,
+        ownership: true,
+        foundedYear: true,
+        website: true,
+        _count: { select: { faculties: true } },
+      },
+      skip: (page - 1) * limit,
+      take: limit,
+    }),
+  ]);
+
   sendSuccess(res, {
     message: "Universities retrieved successfully.",
     data: universities,
+    pagination: pagination(page, limit, total),
   });
 }
 
-async function getFaculties(_req: Request, res: Response) {
-  const faculties = await prisma.faculty.findMany({
-    orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
-    include: { university: true },
-  });
+async function getFaculties(req: Request, res: Response) {
+  const { page, limit } = v1Validation.listQuery(req.query);
+
+  const [total, faculties] = await Promise.all([
+    prisma.faculty.count(),
+    prisma.faculty.findMany({
+      orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
+      select: {
+        id: true,
+        name: true,
+        city: true,
+        website: true,
+        university: { select: { id: true, name: true, acronym: true } },
+      },
+      skip: (page - 1) * limit,
+      take: limit,
+    }),
+  ]);
+
   sendSuccess(res, {
     message: "Faculties retrieved successfully.",
     data: faculties,
+    pagination: pagination(page, limit, total),
   });
 }
 
-async function getStudyPrograms(_req: Request, res: Response) {
-  const studyPrograms = await prisma.studyProgram.findMany({
-    orderBy: [{ cycle: "asc" }, { name: "asc" }],
-    include: {
-      faculty: {
-        include: { university: true },
-      },
-    },
-  });
-  sendSuccess(res, {
-    message: "Study programs retrieved successfully.",
-    data: studyPrograms,
-  });
-}
+async function getStudyPrograms(req: Request, res: Response) {
+  const { page, limit } = v1Validation.listQuery(req.query);
 
-async function getTracks(_req: Request, res: Response) {
-  const tracks = await prisma.track.findMany({
-    orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }],
-    include: {
-      studyProgram: {
-        include: {
-          faculty: {
-            include: { university: true },
+  const [total, studyPrograms] = await Promise.all([
+    prisma.studyProgram.count(),
+    prisma.studyProgram.findMany({
+      orderBy: [{ cycle: "asc" }, { name: "asc" }],
+      select: {
+        id: true,
+        name: true,
+        cycle: true,
+        durationYears: true,
+        ects: true,
+        language: true,
+        faculty: {
+          select: {
+            id: true,
+            name: true,
+            university: { select: { id: true, name: true } },
           },
         },
       },
-    },
+      skip: (page - 1) * limit,
+      take: limit,
+    }),
+  ]);
+
+  sendSuccess(res, {
+    message: "Study programs retrieved successfully.",
+    data: studyPrograms,
+    pagination: pagination(page, limit, total),
   });
+}
+
+async function getTracks(req: Request, res: Response) {
+  const { page, limit } = v1Validation.listQuery(req.query);
+
+  const [total, tracks] = await Promise.all([
+    prisma.track.count(),
+    prisma.track.findMany({
+      orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }],
+      select: {
+        id: true,
+        name: true,
+        ects: true,
+        durationYears: true,
+        studyProgram: {
+          select: {
+            id: true,
+            name: true,
+            faculty: {
+              select: {
+                id: true,
+                name: true,
+                university: { select: { id: true, name: true } },
+              },
+            },
+          },
+        },
+      },
+      skip: (page - 1) * limit,
+      take: limit,
+    }),
+  ]);
+
   sendSuccess(res, {
     message: "Tracks retrieved successfully.",
     data: tracks,
+    pagination: pagination(page, limit, total),
   });
 }
 
 async function getUniversityById(req: Request, res: Response) {
-  const { id } = universityValidation.getUniversityById(req.params);
+  const { id } = v1Validation.getUniversityById(req.params);
 
   const university = await prisma.university.findUnique({
     where: {
@@ -105,7 +183,7 @@ async function getUniversityById(req: Request, res: Response) {
 }
 
 async function getFacultyById(req: Request, res: Response) {
-  const { id } = universityValidation.getFacultyById(req.params);
+  const { id } = v1Validation.getFacultyById(req.params);
 
   const faculty = await prisma.faculty.findUnique({
     where: { id },
@@ -134,7 +212,7 @@ async function getFacultyById(req: Request, res: Response) {
 }
 
 async function getStudyProgramById(req: Request, res: Response) {
-  const { id } = universityValidation.getStudyProgramById(req.params);
+  const { id } = v1Validation.getStudyProgramById(req.params);
 
   const studyProgram = await prisma.studyProgram.findUnique({
     where: { id },
@@ -160,7 +238,7 @@ async function getStudyProgramById(req: Request, res: Response) {
 }
 
 async function getTrackById(req: Request, res: Response) {
-  const { id } = universityValidation.getTrackById(req.params);
+  const { id } = v1Validation.getTrackById(req.params);
 
   const track = await prisma.track.findUnique({
     where: { id },

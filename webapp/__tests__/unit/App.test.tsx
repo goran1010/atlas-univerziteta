@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { routes } from "../../src/routes";
+import { NotificationProvider } from "../../src/contextData/NotificationProvider";
 
 vi.mock("../../src/utils/authClient", () => ({
   authClient: {
@@ -21,7 +22,11 @@ describe("App", () => {
     const router = createMemoryRouter(routes, {
       initialEntries: ["/"],
     });
-    render(<RouterProvider router={router} />);
+    render(
+      <NotificationProvider>
+        <RouterProvider router={router} />
+      </NotificationProvider>,
+    );
 
     const errorNotification = await screen.findByText(
       "Could not check your login status. Refresh the page and try again.",
@@ -32,5 +37,22 @@ describe("App", () => {
       "Error checking login status:",
       expect.any(Error),
     );
+  });
+
+  test("announces a completed OAuth login from the callback marker", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => undefined);
+    const router = createMemoryRouter(routes, {
+      initialEntries: ["/?login=success"],
+    });
+    render(
+      <NotificationProvider>
+        <RouterProvider router={router} />
+      </NotificationProvider>,
+    );
+
+    expect(
+      await screen.findByText("Successfully logged in."),
+    ).toBeInTheDocument();
+    expect(router.state.location.search).not.toContain("login=success");
   });
 });

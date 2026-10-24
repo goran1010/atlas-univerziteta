@@ -67,7 +67,7 @@ function submissionResponse(
       data: {
         id: "11111111-2222-4333-8444-555555555555",
         userId: "test-id",
-        entityType: body.entityType,
+        targetType: body.targetType,
         typeOfChange,
         targetId: body.targetId == null ? null : Number(body.targetId),
         parentId: body.parentId == null ? null : Number(body.parentId),
@@ -85,7 +85,13 @@ beforeEach(() => {
   server.use(
     http.get("*/api/v1/universities", () => {
       universitiesRequests++;
-      return HttpResponse.json({ message: "ok", data: universitiesList });
+      return HttpResponse.json({
+        message: "ok",
+        data: universitiesList,
+        page: 1,
+        totalPages: 1,
+        total: universitiesList.length,
+      });
     }),
     http.get("*/api/v1/universities/:id", () =>
       HttpResponse.json({ message: "ok", data: universityDetail }),
@@ -157,9 +163,9 @@ describe("AddUniversityEntity", () => {
     );
 
     const user = userEvent.setup();
-    const entityType = screen.getByRole("combobox", { name: /Entity Type/i });
+    const targetType = screen.getByRole("combobox", { name: /Entity Type/i });
 
-    await user.selectOptions(entityType, "UNIVERSITY");
+    await user.selectOptions(targetType, "UNIVERSITY");
 
     expect(screen.getByLabelText(/Name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/City/i)).toBeInTheDocument();
@@ -346,7 +352,7 @@ describe("AddUniversityEntity", () => {
     expect(submissions).toHaveLength(1);
     expect(submissions[0]?.method).toBe("POST");
     expect(submissions[0]?.body).toEqual({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       data: {
         name: "University of Sarajevo",
         city: "Sarajevo",
@@ -402,7 +408,7 @@ describe("AddUniversityEntity", () => {
     const submission = submissions[0];
     expect(submission.method).toBe("PUT");
     expect(submission.body).toMatchObject({
-      entityType: "TRACK",
+      targetType: "TRACK",
       data: {
         name: "Software Track",
         ects: 60,
@@ -446,7 +452,7 @@ describe("AddUniversityEntity", () => {
     const submission = submissions[0];
     expect(submission.method).toBe("POST");
     expect(submission.body).toMatchObject({
-      entityType: "STUDY_PROGRAM",
+      targetType: "STUDY_PROGRAM",
       data: {
         name: "Computer Science",
         cycle: "FIRST",

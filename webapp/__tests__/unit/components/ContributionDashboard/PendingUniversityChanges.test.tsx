@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { PendingUniversityChanges } from "../../../../src/components/ContributionDashboard/PendingUniversityChanges";
 import { Notifications } from "../../../../src/components/Notifications";
@@ -29,7 +29,7 @@ function StatefulHarness({ initial }: { initial: PendingChange[] }) {
 const pendingChanges: PendingChange[] = [
   {
     id: "1",
-    entityType: "UNIVERSITY",
+    targetType: "UNIVERSITY",
     typeOfChange: "CREATE",
     data: {
       name: "University of Sarajevo",
@@ -48,7 +48,7 @@ const pendingChanges: PendingChange[] = [
   },
   {
     id: "2",
-    entityType: "FACULTY",
+    targetType: "FACULTY",
     typeOfChange: "UPDATE",
     data: { name: "Faculty of Engineering" },
     targetId: 2,
@@ -104,7 +104,9 @@ describe("PendingUniversityChanges", () => {
       </Wrapper>,
     );
 
-    expect(screen.getAllByRole("listitem")).toHaveLength(2);
+    expect(
+      within(screen.getByRole("rowgroup")).getAllByRole("row"),
+    ).toHaveLength(2);
     expect(screen.getByText("Create")).toBeInTheDocument();
     expect(screen.getByText("Update")).toBeInTheDocument();
   });
@@ -129,6 +131,11 @@ describe("PendingUniversityChanges", () => {
     const deleteButtons = screen.getAllByRole("button", { name: /^Delete$/i });
     expect(deleteButtons).toHaveLength(2);
     await user.click(deleteButtons[0]);
+    await user.click(
+      within(screen.getByRole("dialog")).getByRole("button", {
+        name: /^Delete$/i,
+      }),
+    );
 
     expect(
       await screen.findByText(/Pending change discarded\./i),

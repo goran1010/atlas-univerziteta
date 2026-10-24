@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 import {
-  entityTypeSchema,
+  targetTypeSchema,
   positiveIntegerSchema,
   userRoleSchema,
 } from "./domain";
@@ -33,63 +33,63 @@ const pendingChangeBaseSchema = z.object({
 
 const pendingChangeSchema = z.union([
   pendingChangeBaseSchema.extend({
-    entityType: z.literal("UNIVERSITY"),
+    targetType: z.literal("UNIVERSITY"),
     typeOfChange: z.literal("CREATE"),
     targetId: z.null(),
     parentId: z.null(),
     data: universityCreateDataSchema,
   }),
   pendingChangeBaseSchema.extend({
-    entityType: z.literal("FACULTY"),
+    targetType: z.literal("FACULTY"),
     typeOfChange: z.literal("CREATE"),
     targetId: z.null(),
     parentId: positiveIntegerSchema,
     data: facultyCreateDataSchema,
   }),
   pendingChangeBaseSchema.extend({
-    entityType: z.literal("STUDY_PROGRAM"),
+    targetType: z.literal("STUDY_PROGRAM"),
     typeOfChange: z.literal("CREATE"),
     targetId: z.null(),
     parentId: positiveIntegerSchema,
     data: studyProgramCreateDataSchema,
   }),
   pendingChangeBaseSchema.extend({
-    entityType: z.literal("TRACK"),
+    targetType: z.literal("TRACK"),
     typeOfChange: z.literal("CREATE"),
     targetId: z.null(),
     parentId: positiveIntegerSchema,
     data: trackCreateDataSchema,
   }),
   pendingChangeBaseSchema.extend({
-    entityType: z.literal("UNIVERSITY"),
+    targetType: z.literal("UNIVERSITY"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIntegerSchema,
     parentId: z.null(),
     data: universityEditDataSchema,
   }),
   pendingChangeBaseSchema.extend({
-    entityType: z.literal("FACULTY"),
+    targetType: z.literal("FACULTY"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIntegerSchema,
     parentId: z.null(),
     data: facultyEditDataSchema,
   }),
   pendingChangeBaseSchema.extend({
-    entityType: z.literal("STUDY_PROGRAM"),
+    targetType: z.literal("STUDY_PROGRAM"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIntegerSchema,
     parentId: z.null(),
     data: studyProgramEditDataSchema,
   }),
   pendingChangeBaseSchema.extend({
-    entityType: z.literal("TRACK"),
+    targetType: z.literal("TRACK"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIntegerSchema,
     parentId: z.null(),
     data: trackEditDataSchema,
   }),
   pendingChangeBaseSchema.extend({
-    entityType: entityTypeSchema,
+    targetType: targetTypeSchema,
     typeOfChange: z.literal("DELETE"),
     targetId: positiveIntegerSchema,
     parentId: z.null(),
@@ -103,7 +103,7 @@ const currentEntitySchema = z
   .optional();
 
 const parentCrumbSchema = z.object({
-  entityType: z.enum(["UNIVERSITY", "FACULTY", "STUDY_PROGRAM"]),
+  targetType: z.enum(["UNIVERSITY", "FACULTY", "STUDY_PROGRAM"]),
   id: positiveIntegerSchema,
   name: z.string(),
 });

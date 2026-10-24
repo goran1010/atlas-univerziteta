@@ -1,36 +1,30 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import { Notifications } from "../../../src/components/Notifications";
-import { RootContext } from "../../../src/contextData/RootContext";
+import {
+  NotificationContext,
+  NotificationListContext,
+} from "../../../src/contextData/NotificationContext";
 
 import type { Notification, TypeNotification } from "../../../src/types";
-import type { RootContextType } from "../../../src/contextData/RootContext";
+import type { NotificationContextType } from "../../../src/contextData/NotificationContext";
 
 interface WrapperProps {
   notifications: Notification[];
-  removeNotification?: RootContextType["removeNotification"];
+  removeNotification?: NotificationContextType["removeNotification"];
 }
 
-function createContextValue({
+function Wrapper({
   notifications,
   removeNotification = vi.fn(),
-}: WrapperProps): RootContextType {
-  return {
-    language: "en",
-    setLanguage: vi.fn(),
-    t: (key) => key,
-    notifications,
-    addNotification: vi.fn(),
-    removeNotification,
-    userData: null,
-    setUserData: vi.fn(),
-  };
-}
-
-function Wrapper(props: WrapperProps) {
+}: WrapperProps) {
   return (
-    <RootContext value={createContextValue(props)}>
-      <Notifications />
-    </RootContext>
+    <NotificationContext
+      value={{ addNotification: vi.fn(), removeNotification }}
+    >
+      <NotificationListContext value={notifications}>
+        <Notifications />
+      </NotificationListContext>
+    </NotificationContext>
   );
 }
 
@@ -121,6 +115,36 @@ describe("Notifications", () => {
     });
 
     expect(removeNotification).toHaveBeenCalledWith("temporary-id");
+  });
+
+  test("pauses the countdown while hovered and resumes after", async () => {
+    const removeNotification = vi.fn();
+    render(
+      <Wrapper
+        notifications={[
+          {
+            id: "hovered-id",
+            type: "error",
+            message: "Hover me",
+            duration: 1000,
+            persistent: false,
+          },
+        ]}
+        removeNotification={removeNotification}
+      />,
+    );
+
+    fireEvent.mouseEnter(screen.getByRole("complementary"));
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(5000);
+    });
+    expect(removeNotification).not.toHaveBeenCalled();
+
+    fireEvent.mouseLeave(screen.getByRole("complementary"));
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(1000);
+    });
+    expect(removeNotification).toHaveBeenCalledWith("hovered-id");
   });
 
   test("cancels an existing timer when a notification becomes persistent", async () => {

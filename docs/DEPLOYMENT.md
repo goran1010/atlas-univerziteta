@@ -2,7 +2,8 @@
 
 - **Webapp:** Netlify (auto-deploys on push to `main`), serves static files via CDN
 - **API + Database:** VPS with Docker Compose (Caddy, Node.js server, PostgreSQL)
-- **Proxy:** Netlify proxies `/server/*` to the API, keeping session cookies first-party
+- **API access:** the webapp calls `https://api.atlasuniverziteta.com` directly; the apex and the api subdomain are same-site, so session cookies flow without a proxy
+- **Security headers:** Netlify serves a strict Content-Security-Policy (no `unsafe-inline`) and the other security headers from `webapp/netlify.toml`
 - **HTTPS:** Automatic via Let's Encrypt (Caddy) and Netlify
 - **Email:** Resend with a verified custom domain
 
@@ -19,11 +20,11 @@ services:
 
 Recreate this file when setting up a new server - without it, deploys try to build the image on the VPS instead of pulling it.
 
-OAuth callbacks go through the Netlify `/server` proxy (set by `OAUTH_CALLBACK_BASE_URL` in `docker-compose.yml`), so the OAuth state and session cookies stay on the webapp domain. Register these redirect URIs in the GitHub and Google OAuth app settings:
+OAuth callbacks go directly to the API domain (better-auth builds them from `SERVER_URL`). Register these redirect URIs in the GitHub and Google OAuth app settings:
 
 ```text
-https://atlasuniverziteta.com/server/api/auth/callback/github
-https://atlasuniverziteta.com/server/api/auth/callback/google
+https://api.atlasuniverziteta.com/api/auth/callback/github
+https://api.atlasuniverziteta.com/api/auth/callback/google
 ```
 
 ## Share previews and prerendered meta
@@ -33,6 +34,6 @@ The webapp is an SPA, and social crawlers (Discord, Facebook, X) do not run Java
 Two stages:
 
 1. **Static routes** (`/search`, `/about`, `/api-docs`, `/login`, `/signup`): titles and descriptions come from `webapp/src/locales/en.json`; each route can have its own share image in `webapp/public/images/og-images/` (1200x630 px), falling back to `og-image-home.png` while missing.
-2. **Per-entity pages**: the script fetches all universities and faculties from the API and writes a page per `/universities/:id` and `/faculties/:id`, and appends them to `sitemap.xml`. This stage needs an **absolute** API URL at build time - on Netlify the runtime `VITE_SERVER_URL` is the `/server` proxy path, so set `PRERENDER_API_URL=https://api.atlasuniverziteta.com` in the Netlify build environment. If the API is unreachable, the stage logs a warning and is skipped - the deploy never fails because of it.
+2. **Per-entity pages**: the script fetches all universities and faculties from the API and writes a page per `/universities/:id` and `/faculties/:id`, and appends them to `sitemap.xml`. This stage needs an **absolute** API URL at build time - `VITE_API_URL` is an absolute URL in production and is used directly. If the API is unreachable, the stage logs a warning and is skipped - the deploy never fails because of it.
 
 Share metadata is a deploy-time snapshot: renamed or newly added entities get correct previews on the next deploy.

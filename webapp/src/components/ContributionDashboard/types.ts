@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type {
   Entity,
-  EntityType,
+  TargetType,
   Ownership,
   StudyCycle,
   TypeOfChange,
@@ -26,7 +26,7 @@ export interface ContributionFormDraft {
 }
 
 export interface ContributionFormState {
-  entityType: EntityType;
+  targetType: TargetType;
   typeOfChange: TypeOfChange;
   parentId: string;
   targetId: string;

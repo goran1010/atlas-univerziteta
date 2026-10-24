@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, Navigate, RouterProvider } from "react-router";
 import { AdminDashboard } from "../../../../src/components/AdminDashboard/AdminDashboard";
@@ -13,7 +13,7 @@ const contributor = makeUser({ email: "johndoe@examplemail.com" });
 
 const facultyChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",
-  entityType: "FACULTY",
+  targetType: "FACULTY",
   typeOfChange: "UPDATE",
   targetId: 1,
   parentId: null,
@@ -25,7 +25,7 @@ const facultyChange = {
 
 const universityChange = {
   id: "12345678-90ab-cdef-1234-567890abcdef",
-  entityType: "UNIVERSITY",
+  targetType: "UNIVERSITY",
   typeOfChange: "CREATE",
   targetId: null,
   parentId: null,
@@ -124,6 +124,11 @@ describe("PendingChangesAdmin", () => {
     const user = renderAdminDashboard();
 
     await user.click(await screen.findByRole("button", { name: /Approve/i }));
+    await user.click(
+      within(screen.getByRole("dialog")).getByRole("button", {
+        name: /Approve/i,
+      }),
+    );
 
     expect(
       await screen.findByText(/There are no pending changes at the moment./i),
@@ -135,6 +140,11 @@ describe("PendingChangesAdmin", () => {
     const user = renderAdminDashboard();
 
     await user.click(await screen.findByRole("button", { name: /Reject/i }));
+    await user.click(
+      within(screen.getByRole("dialog")).getByRole("button", {
+        name: /Reject/i,
+      }),
+    );
 
     expect(
       await screen.findByText(/There are no pending changes at the moment./i),

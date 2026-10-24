@@ -8,7 +8,7 @@ import type { AdminPendingChange } from "../../../../src/schemas/pendingChange";
 
 const change: AdminPendingChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",
-  entityType: "TRACK",
+  targetType: "TRACK",
   typeOfChange: "DELETE",
   targetId: 1,
   parentId: null,
@@ -46,10 +46,10 @@ describe("PendingChangesAdminRow", () => {
       <PendingChangesAdminRow
         data={{
           ...change,
-          entityType: "FACULTY",
+          targetType: "FACULTY",
           currentEntity: { name: "Changed Faculty" },
           parentContext: [
-            { entityType: "UNIVERSITY", id: 3, name: "Parent University" },
+            { targetType: "UNIVERSITY", id: 3, name: "Parent University" },
           ],
         }}
         addNotification={vi.fn()}

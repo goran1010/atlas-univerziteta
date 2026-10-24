@@ -1,16 +1,9 @@
-import { SERVER_URL } from "./envConfig";
+import { API_URL } from "./envConfig";
 import { readResponseError } from "../schemas/api";
-import { notificationMessageKey } from "./apiError";
+import { notificationMessage } from "./apiError";
 
 import type { z } from "zod";
-import type { TFunction } from "../types";
-import type { AddNotification } from "../types";
-
-interface RequestContext {
-  addNotification: AddNotification;
-  setLoading: (loading: boolean) => void;
-  t: TFunction;
-}
+import type { RequestContext } from "../types";
 
 interface ApiMutationConfig<Schema extends z.ZodType> {
   path: string;
@@ -51,7 +44,7 @@ async function apiMutation<Schema extends z.ZodType>(
       options.body = JSON.stringify(body);
     }
 
-    const response = await fetch(`${SERVER_URL}${path}`, options);
+    const response = await fetch(`${API_URL}${path}`, options);
 
     if (response.ok) {
       const result = responseSchema.parse(await response.json());
@@ -68,7 +61,7 @@ async function apiMutation<Schema extends z.ZodType>(
     }
     addNotification({
       type: "error",
-      message: t(notificationMessageKey(serverError?.code, errorMessageKey)),
+      message: notificationMessage(t, errorMessageKey, serverError),
     });
     return null;
   } catch (error) {
@@ -84,4 +77,4 @@ async function apiMutation<Schema extends z.ZodType>(
 }
 
 export { apiMutation };
-export type { ApiMutationConfig, RequestContext };
+export type { ApiMutationConfig };

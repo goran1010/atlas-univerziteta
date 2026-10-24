@@ -1,5 +1,6 @@
 import { LinkButton } from "../sharedComponents/LinkButton";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { use, useState } from "react";
 import { useNavigate } from "react-router";
 import { handleLogout } from "./utils/handleLogout";
@@ -11,7 +12,8 @@ import { Button } from "../sharedComponents/Button";
 import { Helmet } from "react-helmet-async";
 
 function Profile() {
-  const { userData, setUserData, t, addNotification } = use(RootContext);
+  const { userData, setUserData, t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const [loading, setLoading] = useState(false);
   const [adminRequestLoading, setAdminRequestLoading] = useState(false);
   const navigate = useNavigate();
@@ -30,7 +32,7 @@ function Profile() {
           <meta name="robots" content="noindex, nofollow" />
         </Helmet>
         <section className="relative h-full w-full flex flex-col items-center justify-center gap-4 p-3 bg-(--surface-2) text-(--text-primary) border border-(--border-color) rounded-2xl shadow-(--card-shadow) backdrop-blur-sm">
-          <h1 className="text-center text-(--text-secondary)">
+          <h1 className="text-xl sm:text-2xl font-bold text-center text-(--text-secondary)">
             {t("profile.needLogin")}
           </h1>
           <div className="flex flex-wrap gap-3 justify-center">

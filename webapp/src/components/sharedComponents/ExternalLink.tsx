@@ -5,6 +5,10 @@ import { RootContext } from "../../contextData/RootContext";
 const baseClassName =
   "font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) rounded-sm";
 
+// Hrefs can come from user-contributed data; anything outside these schemes
+// (javascript:, data:, ...) renders as plain text instead of a link.
+const safeHrefPattern = /^(https?:|mailto:|tel:)/i;
+
 function ExternalLink({
   href,
   newTab = true,
@@ -17,6 +21,10 @@ function ExternalLink({
   children: ReactNode;
 }) {
   const { t } = use(RootContext);
+
+  if (!safeHrefPattern.test(href)) {
+    return <span className={className}>{children}</span>;
+  }
 
   return (
     <a

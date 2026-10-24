@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const entityTypeSchema = z.enum([
+const targetTypeSchema = z.enum([
   "UNIVERSITY",
   "FACULTY",
   "STUDY_PROGRAM",
@@ -25,7 +25,7 @@ const positiveIntegerSchema = integerSchema.positive();
 const durationYearsSchema = integerSchema.min(1).max(10);
 const ectsSchema = positiveIntegerSchema;
 export type Entity = z.infer<typeof entitySchema>;
-export type EntityType = z.infer<typeof entityTypeSchema>;
+export type TargetType = z.infer<typeof targetTypeSchema>;
 export type Ownership = z.infer<typeof ownershipSchema>;
 export type StudyCycle = z.infer<typeof studyCycleSchema>;
 export type TypeOfChange = z.infer<typeof typeOfChangeSchema>;
@@ -36,7 +36,7 @@ export {
   durationYearsSchema,
   ectsSchema,
   entitySchema,
-  entityTypeSchema,
+  targetTypeSchema,
   integerSchema,
   ownershipSchema,
   positiveIntegerSchema,

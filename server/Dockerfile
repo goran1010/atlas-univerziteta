@@ -1,14 +1,11 @@
-# --- Stage 1: "build" ---
-# This stage installs ALL dependencies (including devDependencies like
-# TypeScript) and compiles the source code. Think of it as a temporary
-# workshop - we build here, then take only the finished product.
+# Build stage: installs devDependencies (TypeScript) and compiles; the
+# production stage copies out only the result.
 FROM node:24-slim AS build
 
 WORKDIR /app
 
-# Copy package files first, BEFORE copying source code.
-# Docker caches each step (layer). If package.json hasn't changed,
-# Docker skips the expensive `npm ci` on the next build.
+# package files before source, so an unchanged package.json keeps the
+# expensive npm ci layer cached
 COPY package.json package-lock.json ./
 COPY prisma ./prisma/
 
@@ -16,15 +13,13 @@ RUN npm ci
 
 COPY . .
 
-# Generate the Prisma client (needs the schema, not a database) and
-# compile TypeScript. We skip `prisma migrate deploy` here because
-# there's no database during the build - migrations run at container
-# startup instead (see CMD below).
+# Generating the Prisma client needs the schema, not a database. No
+# `prisma migrate deploy` here - there is no database during the build;
+# migrations run at container startup (see CMD below).
 RUN npx prisma generate && npx tsc --build tsconfig.build.json
 
-# --- Stage 2: "production" ---
-# Start fresh from a clean Node image. Only copy what we need to run.
-# This keeps the final image small (no TypeScript compiler, no devDeps).
+# Production stage: only what the server needs at runtime - no TypeScript
+# compiler, no devDeps.
 FROM node:24-slim AS production
 
 # Prisma needs OpenSSL to talk to the database.
@@ -40,18 +35,18 @@ COPY prisma.config.ts ./
 # needed at runtime for `prisma migrate deploy` on container startup).
 RUN npm ci --omit=dev && npm install prisma
 
-# Copy the compiled JavaScript from the build stage.
-# This is the key multi-stage trick: COPY --from=build pulls files from
-# the first stage
 COPY --from=build /app/dist ./dist
 
-# Generate the Prisma client for this platform.
-# The build stage generated it for the build OS; this regenerates for
-# the production OS (they might differ).
+# The build stage generated the Prisma client for the build OS; regenerate
+# for the production OS (they might differ).
 RUN npx prisma generate
+
+# Run as the unprivileged node user (built into the official image) so a
+# compromised server process doesn't get root inside the container. The app
+# only reads its files, so root-owned COPY output is fine.
+USER node
 
 EXPOSE 3000
 
-# On startup: run pending database migrations, then start the server.
-# Using shell form (not exec form) so the && works.
+# shell form (not exec form) so the && works
 CMD npx prisma migrate deploy && node dist/index.js

@@ -1,5 +1,5 @@
 import { prisma } from "../db/prisma.js";
-import * as transactionModel from "../models/transactionModel.js";
+import { approvePendingChange as applyPendingChange } from "../models/applyPendingChange.js";
 import { enrichWithCurrentEntity } from "../models/pendingChangeModel.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 import * as adminValidation from "../validation/adminValidation.js";
@@ -29,7 +29,17 @@ async function getPendingChanges(_req: Request, res: Response) {
 async function declinePendingChange(req: Request, res: Response) {
   const { id } = adminValidation.declinePendingChange(req.body);
 
-  await prisma.pendingChange.delete({ where: { id } });
+  // deleteMany so an already-removed change is a clean 404
+  const { count } = await prisma.pendingChange.deleteMany({ where: { id } });
+
+  if (count === 0) {
+    sendError(res, {
+      status: 404,
+      code: "NOT_FOUND",
+      message: "Pending change not found.",
+    });
+    return;
+  }
 
   sendSuccess(res, {
     message: "Pending change declined successfully.",
@@ -39,7 +49,7 @@ async function declinePendingChange(req: Request, res: Response) {
 async function approvePendingChange(req: Request, res: Response) {
   const { id } = adminValidation.approvePendingChange(req.body);
 
-  const wasApplied = await transactionModel.approvePendingChange({
+  const wasApplied = await applyPendingChange({
     id,
   });
 

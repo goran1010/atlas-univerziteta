@@ -62,6 +62,10 @@ test("contribution approval round-trip", async ({ browser }) => {
 
   await adminPage.goto("/admin-dashboard/pending-changes");
   await adminPage.getByRole("button", { name: "Approve" }).click();
+  await adminPage
+    .getByRole("dialog")
+    .getByRole("button", { name: "Approve" })
+    .click();
   await expect(
     adminPage.getByText("There are no pending changes at the moment."),
   ).toBeVisible();
@@ -87,10 +91,14 @@ test("user can discard their own pending change", async ({ browser }) => {
   await submitUniversityCreate(userPage, universityName);
 
   await userPage.goto("/improve-data/pending");
-  const row = userPage.getByRole("listitem").filter({ hasText: "Create" });
+  const row = userPage.getByRole("row").filter({ hasText: "Create" });
   await expect(row).toBeVisible();
 
   await row.getByRole("button", { name: "Delete", exact: true }).click();
+  await userPage
+    .getByRole("dialog")
+    .getByRole("button", { name: "Delete", exact: true })
+    .click();
 
   await expect(userPage.getByText("Pending change discarded.")).toBeVisible();
   await expect(
@@ -136,7 +144,7 @@ test("user can submit an update suggestion for an existing university", async ({
 
   await userPage.goto("/improve-data/pending");
   await expect(
-    userPage.getByRole("listitem").filter({ hasText: "Update" }),
+    userPage.getByRole("row").filter({ hasText: "Update" }),
   ).toBeVisible();
 
   await userContext.close();
@@ -161,6 +169,10 @@ test("contribution rejection round-trip", async ({ browser }) => {
 
   await adminPage.goto("/admin-dashboard/pending-changes");
   await adminPage.getByRole("button", { name: "Reject" }).click();
+  await adminPage
+    .getByRole("dialog")
+    .getByRole("button", { name: "Reject" })
+    .click();
   await expect(
     adminPage.getByText("There are no pending changes at the moment."),
   ).toBeVisible();

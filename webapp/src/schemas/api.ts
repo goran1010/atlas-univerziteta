@@ -4,6 +4,9 @@ const apiErrorResponseSchema = z.object({
   error: z.object({
     code: z.string().optional(),
     message: z.string(),
+    issues: z
+      .array(z.object({ path: z.string(), message: z.string() }))
+      .optional(),
   }),
 });
 
@@ -28,3 +31,4 @@ async function readResponseError(response: Response): Promise<ApiError | null> {
 }
 
 export { actionSuccessResponseSchema, readApiError, readResponseError };
+export type { ApiError };

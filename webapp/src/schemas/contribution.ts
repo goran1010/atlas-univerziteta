@@ -4,35 +4,45 @@ import {
   durationYearsSchema,
   ectsSchema,
   entitySchema,
-  entityTypeSchema,
+  targetTypeSchema,
   ownershipSchema,
   positiveIntegerSchema,
   studyCycleSchema,
 } from "./domain";
 
-const requiredNameSchema = z.string().trim().min(1);
+// Length caps mirror server/src/validation/contributionValidation.ts
+const requiredNameSchema = z.string().trim().min(1).max(200);
 const optionalNameSchema = requiredNameSchema.optional();
+const acronymSchema = z.string().trim().min(1).max(20);
+const foundedYearSchema = z.string().trim().min(1).max(20);
+const addressSchema = z.string().trim().min(1).max(300);
+const phoneSchema = z.string().trim().min(1).max(50);
+const languageSchema = z.string().trim().min(1).max(100);
+const emailSchema = z.email().max(254);
+
+// http(s) only - bare z.url() accepts javascript: and data: URLs
+const websiteSchema = z.url({ protocol: /^https?$/ }).max(254);
 
 const universityCreateDataSchema = z.strictObject({
   name: requiredNameSchema,
   city: requiredNameSchema,
   entity: entitySchema,
   ownership: ownershipSchema,
-  acronym: requiredNameSchema.optional(),
-  foundedYear: requiredNameSchema.optional(),
-  website: z.url().optional(),
-  address: requiredNameSchema.optional(),
-  phone: requiredNameSchema.optional(),
-  email: z.email().optional(),
+  acronym: acronymSchema.optional(),
+  foundedYear: foundedYearSchema.optional(),
+  website: websiteSchema.optional(),
+  address: addressSchema.optional(),
+  phone: phoneSchema.optional(),
+  email: emailSchema.optional(),
 });
 
 const facultyCreateDataSchema = z.strictObject({
   name: requiredNameSchema,
   city: requiredNameSchema.optional(),
-  website: z.url().optional(),
-  address: requiredNameSchema.optional(),
-  phone: requiredNameSchema.optional(),
-  email: z.email().optional(),
+  website: websiteSchema.optional(),
+  address: addressSchema.optional(),
+  phone: phoneSchema.optional(),
+  email: emailSchema.optional(),
 });
 
 const studyProgramCreateDataSchema = z.strictObject({
@@ -40,7 +50,7 @@ const studyProgramCreateDataSchema = z.strictObject({
   cycle: studyCycleSchema,
   durationYears: durationYearsSchema.optional(),
   ects: ectsSchema.optional(),
-  language: requiredNameSchema.optional(),
+  language: languageSchema.optional(),
 });
 
 function nonEmptyObject<T extends z.ZodRawShape>(shape: T) {
@@ -52,21 +62,21 @@ const universityEditDataSchema = nonEmptyObject({
   city: optionalNameSchema,
   entity: entitySchema.optional(),
   ownership: ownershipSchema.optional(),
-  acronym: requiredNameSchema.nullable().optional(),
-  foundedYear: requiredNameSchema.nullable().optional(),
-  website: z.url().nullable().optional(),
-  address: requiredNameSchema.nullable().optional(),
-  phone: requiredNameSchema.nullable().optional(),
-  email: z.email().nullable().optional(),
+  acronym: acronymSchema.nullable().optional(),
+  foundedYear: foundedYearSchema.nullable().optional(),
+  website: websiteSchema.nullable().optional(),
+  address: addressSchema.nullable().optional(),
+  phone: phoneSchema.nullable().optional(),
+  email: emailSchema.nullable().optional(),
 });
 
 const facultyEditDataSchema = nonEmptyObject({
   name: optionalNameSchema,
   city: requiredNameSchema.nullable().optional(),
-  website: z.url().nullable().optional(),
-  address: requiredNameSchema.nullable().optional(),
-  phone: requiredNameSchema.nullable().optional(),
-  email: z.email().nullable().optional(),
+  website: websiteSchema.nullable().optional(),
+  address: addressSchema.nullable().optional(),
+  phone: phoneSchema.nullable().optional(),
+  email: emailSchema.nullable().optional(),
 });
 
 const studyProgramEditDataSchema = nonEmptyObject({
@@ -74,7 +84,7 @@ const studyProgramEditDataSchema = nonEmptyObject({
   cycle: studyCycleSchema.optional(),
   durationYears: durationYearsSchema.nullable().optional(),
   ects: ectsSchema.nullable().optional(),
-  language: requiredNameSchema.nullable().optional(),
+  language: languageSchema.nullable().optional(),
 });
 
 const trackCreateDataSchema = z.strictObject({
@@ -98,54 +108,54 @@ const positiveIdSchema = z
 
 const contributionSubmissionSchema = z.union([
   z.object({
-    entityType: z.literal("UNIVERSITY"),
+    targetType: z.literal("UNIVERSITY"),
     typeOfChange: z.literal("CREATE"),
     data: universityCreateDataSchema,
   }),
   z.object({
-    entityType: z.literal("FACULTY"),
+    targetType: z.literal("FACULTY"),
     typeOfChange: z.literal("CREATE"),
     parentId: positiveIdSchema,
     data: facultyCreateDataSchema,
   }),
   z.object({
-    entityType: z.literal("STUDY_PROGRAM"),
+    targetType: z.literal("STUDY_PROGRAM"),
     typeOfChange: z.literal("CREATE"),
     parentId: positiveIdSchema,
     data: studyProgramCreateDataSchema,
   }),
   z.object({
-    entityType: z.literal("TRACK"),
+    targetType: z.literal("TRACK"),
     typeOfChange: z.literal("CREATE"),
     parentId: positiveIdSchema,
     data: trackCreateDataSchema,
   }),
   z.object({
-    entityType: z.literal("UNIVERSITY"),
+    targetType: z.literal("UNIVERSITY"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIdSchema,
     data: universityEditDataSchema,
   }),
   z.object({
-    entityType: z.literal("FACULTY"),
+    targetType: z.literal("FACULTY"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIdSchema,
     data: facultyEditDataSchema,
   }),
   z.object({
-    entityType: z.literal("STUDY_PROGRAM"),
+    targetType: z.literal("STUDY_PROGRAM"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIdSchema,
     data: studyProgramEditDataSchema,
   }),
   z.object({
-    entityType: z.literal("TRACK"),
+    targetType: z.literal("TRACK"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIdSchema,
     data: trackEditDataSchema,
   }),
   z.object({
-    entityType: entityTypeSchema,
+    targetType: targetTypeSchema,
     typeOfChange: z.literal("DELETE"),
     targetId: positiveIdSchema,
   }),
