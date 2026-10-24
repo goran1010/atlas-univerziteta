@@ -57,7 +57,7 @@ jobs:
         run: npm run test:webapp
 
       - name: Migrate database and generate Prisma client
-        run: npm run db:deploy_generate
+        run: npm run db:setup
 
       - name: Test server
         run: npm run test:server

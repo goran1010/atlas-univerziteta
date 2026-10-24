@@ -50,9 +50,9 @@ Local OAuth callback URLs to register with GitHub and Google: `http://localhost:
 ## Database setup and running
 
 ```bash
-npm run db:deploy_generate   # migrations + Prisma client
-npm run db:seed              # optional seed data
-npm run dev:all              # server + webapp together
+npm run db:setup   # apply migrations + generate Prisma client
+npm run db:seed    # optional seed data
+npm run dev:all    # server + webapp together
 ```
 
 `npm run db:refold` rewrites the folded `search*` columns from the source

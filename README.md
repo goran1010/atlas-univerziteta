@@ -29,7 +29,7 @@ git clone https://github.com/goran1010/atlas-univerziteta.git
 cd atlas-univerziteta
 npm run install:all
 cp server/.env.example server/.env && cp webapp/.env.example webapp/.env
-npm run db:deploy_generate && npm run db:seed
+npm run db:setup && npm run db:seed
 npm run dev:all
 ```
 
