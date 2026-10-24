@@ -1,6 +1,6 @@
 import { handleDiscardUniversityChange } from "../../../../../src/components/ContributionDashboard/utils/handleDiscardUniversityChange";
 
-import type { RequestContext } from "../../../../../src/utils/apiMutation";
+import type { RequestContext } from "../../../../../src/types";
 
 const fetchMock = vi.fn();
 

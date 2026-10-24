@@ -1,7 +1,7 @@
 import { useState, useCallback, use } from "react";
 import { NavLink, Outlet } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
-import { useFetchList } from "../../customHooks/useFetchList";
+import { useUsersList } from "../../customHooks/useUsersList";
 import { pendingChangesResponseSchema } from "../../schemas/pendingChange";
 
 import type { ContributionOutletContext } from "./types";
@@ -15,7 +15,7 @@ function ContributionTabs() {
   const { t } = use(RootContext);
   const [loading, setLoading] = useState(false);
   const [refetchKey, setRefetchKey] = useState(0);
-  const [pendingChanges, setPendingChanges] = useFetchList({
+  const [pendingChanges, setPendingChanges] = useUsersList({
     path: "/users/contribution/pending-changes/universities",
     responseSchema: pendingChangesResponseSchema,
     errorMessageKey: "messages.pendingChanges.fetchError",

@@ -4,7 +4,7 @@ import { notificationMessage } from "./apiError";
 
 import type { z } from "zod";
 import type { ApiError } from "../schemas/api";
-import type { AddNotification, TFunction } from "../types";
+import type { RequestContext } from "../types";
 
 // GET counterpart of apiMutation: one place for the fetch/parse/notify block
 // that public reads used to copy-paste.
@@ -45,12 +45,6 @@ interface FetchPublicConfig<Schema extends z.ZodType> {
   quiet404?: boolean;
 }
 
-interface FetchPublicContext {
-  addNotification: AddNotification;
-  setLoading: (loading: boolean) => void;
-  t: TFunction;
-}
-
 async function fetchPublic<Schema extends z.ZodType>(
   {
     path,
@@ -59,7 +53,7 @@ async function fetchPublic<Schema extends z.ZodType>(
     logLabel,
     quiet404,
   }: FetchPublicConfig<Schema>,
-  { addNotification, setLoading, t }: FetchPublicContext,
+  { addNotification, setLoading, t }: RequestContext,
 ): Promise<z.output<Schema> | null> {
   try {
     setLoading(true);

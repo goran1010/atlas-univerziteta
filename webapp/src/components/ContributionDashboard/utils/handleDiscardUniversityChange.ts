@@ -1,7 +1,7 @@
 import { actionSuccessResponseSchema } from "../../../schemas/api";
 import { apiMutation } from "../../../utils/apiMutation";
 
-import type { RequestContext } from "../../../utils/apiMutation";
+import type { RequestContext } from "../../../types";
 import type { PendingChange } from "../../../schemas/pendingChange";
 import type { Dispatch, SetStateAction } from "react";
 

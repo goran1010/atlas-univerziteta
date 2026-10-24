@@ -16,11 +16,11 @@ import type { SearchToken } from "../search/tokenize.js";
 import type { WhereClause } from "../search/matchers.js";
 import type { Request, Response } from "express";
 
-// In the combined (federated) view each section is capped and reports its
+// In the combined (unified) view each section is capped and reports its
 // true total; a request for exactly one type gets a higher bound (the UI
 // shows "shown / total" when truncated) that keeps the largest section
 // (1800+ study programs) from being returned in one response.
-const FEDERATED_SECTION_LIMIT = 25;
+const UNIFIED_SECTION_LIMIT = 25;
 const SINGLE_TYPE_LIMIT = 100;
 
 interface SectionQuery<Item> {
@@ -28,7 +28,7 @@ interface SectionQuery<Item> {
   findMany: (where: WhereClause, take: number | undefined) => Promise<Item[]>;
 }
 
-// Under the federated cap, entities matching every token in their OWN fields
+// Under the unified cap, entities matching every token in their OWN fields
 // fill the section first; context-only matches top it up. The cap decides
 // which items survive, so weak matches must not crowd out direct ones.
 async function searchSection<Item extends { id: number }>(
@@ -101,8 +101,7 @@ async function search(req: Request, res: Response) {
   const wanted = (kind: "university" | "faculty" | "studyProgram") =>
     type === undefined || type.includes(kind);
 
-  const limit =
-    type?.length === 1 ? SINGLE_TYPE_LIMIT : FEDERATED_SECTION_LIMIT;
+  const limit = type?.length === 1 ? SINGLE_TYPE_LIMIT : UNIFIED_SECTION_LIMIT;
 
   const cycleFilter = cycle ? { in: cycle } : undefined;
 

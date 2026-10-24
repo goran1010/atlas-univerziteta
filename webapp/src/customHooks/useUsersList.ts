@@ -8,7 +8,7 @@ import { notificationMessageKey } from "../utils/apiError";
 import type { Dispatch, SetStateAction } from "react";
 import type { ZodType } from "zod";
 
-interface UseFetchListOptions<Item> {
+interface UseUsersListOptions<Item> {
   path: string;
   responseSchema: ZodType<{ data: Item[] }>;
   errorMessageKey: string;
@@ -18,7 +18,7 @@ interface UseFetchListOptions<Item> {
   refetchKey?: number;
 }
 
-function useFetchList<Item>({
+function useUsersList<Item>({
   path,
   responseSchema,
   errorMessageKey,
@@ -26,7 +26,7 @@ function useFetchList<Item>({
   setLoading,
   enabled = true,
   refetchKey = 0,
-}: UseFetchListOptions<Item>): [Item[], Dispatch<SetStateAction<Item[]>>] {
+}: UseUsersListOptions<Item>): [Item[], Dispatch<SetStateAction<Item[]>>] {
   const { t } = use(RootContext);
   const { addNotification } = use(NotificationContext);
   const [items, setItems] = useState<Item[]>([]);
@@ -94,4 +94,4 @@ function useFetchList<Item>({
   return [items, setItems];
 }
 
-export { useFetchList };
+export { useUsersList };

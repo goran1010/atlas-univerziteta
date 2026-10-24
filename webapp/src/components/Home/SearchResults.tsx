@@ -2,7 +2,7 @@ import { use, useState, type ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { SearchIcon } from "../sharedComponents/icons";
 import { Button } from "../sharedComponents/Button";
-import { UniversityCard } from "./UniversityCard";
+import { UniversityResult } from "./UniversityResult";
 import { FacultyResult } from "./FacultyResult";
 import { StudyProgramResult } from "./StudyProgramResult";
 import { ResultGroup } from "./ResultGroup";
@@ -196,7 +196,7 @@ function SearchResults({
             defaultCollapsed={groupsCollapsed(shown)}
           >
             {g.items.map(({ item, hint }) => (
-              <UniversityCard
+              <UniversityResult
                 key={item.id}
                 university={item}
                 contextHint={hint}

@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { apiMutation } from "../../../src/utils/apiMutation";
 
-import type { RequestContext } from "../../../src/utils/apiMutation";
+import type { RequestContext } from "../../../src/types";
 
 const fetchMock = vi.fn();
 

@@ -386,7 +386,7 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
     await cleanup();
   });
 
-  test("caps federated sections at 25 with true totals; single type is uncapped", async () => {
+  test("caps unified sections at 25 with true totals; single type allows more", async () => {
     const marker = "CapTestUni";
     const cleanup = () =>
       prisma.university.deleteMany({ where: { name: { contains: marker } } });
@@ -403,14 +403,14 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
       ),
     });
 
-    const federated = await request(app).get(
+    const unified = await request(app).get(
       `/api/v1/search?searchTerm=${marker}`,
     );
-    const federatedData = getResponseObject(
-      getResponseObject(federated.body)["data"],
+    const unifiedData = getResponseObject(
+      getResponseObject(unified.body)["data"],
     );
-    expect(getResponseArray(federatedData["universities"])).toHaveLength(25);
-    const totals = getResponseObject(federatedData["totals"]);
+    expect(getResponseArray(unifiedData["universities"])).toHaveLength(25);
+    const totals = getResponseObject(unifiedData["totals"]);
     expect(totals["universities"]).toBe(28);
 
     const singleType = await request(app).get(

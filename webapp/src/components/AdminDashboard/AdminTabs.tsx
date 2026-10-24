@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from "react-router";
 import { use, useState } from "react";
 import { RootContext } from "../../contextData/RootContext";
-import { useFetchList } from "../../customHooks/useFetchList";
+import { useUsersList } from "../../customHooks/useUsersList";
 import { adminPendingChangesResponseSchema } from "../../schemas/pendingChange";
 import { adminRequestsResponseSchema } from "../../schemas/adminRequest";
 
@@ -12,7 +12,7 @@ function AdminTabs() {
   const [pendingLoading, setPendingLoading] = useState(true);
   const [requestsLoading, setRequestsLoading] = useState(true);
 
-  const [pendingChanges, setPendingChanges] = useFetchList({
+  const [pendingChanges, setPendingChanges] = useUsersList({
     path: "/users/admin/pending-changes",
     responseSchema: adminPendingChangesResponseSchema,
     errorMessageKey: "messages.pendingChanges.fetchError",
@@ -20,7 +20,7 @@ function AdminTabs() {
     setLoading: setPendingLoading,
   });
 
-  const [adminRequests, setAdminRequests] = useFetchList({
+  const [adminRequests, setAdminRequests] = useUsersList({
     path: "/users/admin/admin-requests",
     responseSchema: adminRequestsResponseSchema,
     errorMessageKey: "messages.adminRequest.fetchError",

@@ -4,7 +4,7 @@ import type { z } from "zod";
 import { pendingChangeResponseSchema } from "../../../schemas/pendingChange";
 import { apiMutation } from "../../../utils/apiMutation";
 
-import type { RequestContext } from "../../../utils/apiMutation";
+import type { RequestContext } from "../../../types";
 import type { TypeOfChange } from "../../../schemas/domain";
 import type { ContributionFormDraft } from "../types";
 

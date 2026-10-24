@@ -2,7 +2,7 @@ import { actionSuccessResponseSchema } from "../../../schemas/api";
 import { requestAdminResponseSchema } from "../../../schemas/adminRequest";
 import { apiMutation } from "../../../utils/apiMutation";
 
-import type { RequestContext } from "../../../utils/apiMutation";
+import type { RequestContext } from "../../../types";
 import type { UserData } from "../../../types";
 import type { Dispatch, SetStateAction } from "react";
 

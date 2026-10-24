@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import userEvent from "@testing-library/user-event";
-import { UniversityCard } from "../../../../src/components/Home/UniversityCard";
+import { UniversityResult } from "../../../../src/components/Home/UniversityResult";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
@@ -74,14 +74,14 @@ function Wrapper({ university = baseUniversity }) {
       <MemoryRouter>
         <Notifications />
         <ul>
-          <UniversityCard university={university} />
+          <UniversityResult university={university} />
         </ul>
       </MemoryRouter>
     </RootContextProvider>
   );
 }
 
-describe("UniversityCard", () => {
+describe("UniversityResult", () => {
   beforeEach(() => {
     detailRequests = 0;
     givenDetails([]);

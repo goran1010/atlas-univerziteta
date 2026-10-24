@@ -28,3 +28,10 @@ export interface Notification {
 
 export type AddNotification = (notification: Notification) => void;
 export type RemoveNotification = (id: string | undefined) => void;
+
+// the trio request helpers need to report progress and failures
+export interface RequestContext {
+  addNotification: AddNotification;
+  setLoading: (loading: boolean) => void;
+  t: TFunction;
+}

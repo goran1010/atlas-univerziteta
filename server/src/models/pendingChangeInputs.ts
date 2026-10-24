@@ -18,7 +18,7 @@ import type {
 } from "../validation/contributionValidation.js";
 
 // Pure mapping from validated pending-change payloads to Prisma inputs -
-// the approval transaction itself lives in transactionModel.ts. The spread
+// the approval transaction itself lives in applyPendingChange.ts. The spread
 // *SearchFields helpers store the folded search* copy of every searchable
 // field that is present.
 function toUniversityCreateInput(

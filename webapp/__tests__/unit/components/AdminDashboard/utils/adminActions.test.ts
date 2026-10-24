@@ -5,7 +5,7 @@ import {
   handleDeclineAdminRequest,
 } from "../../../../../src/components/AdminDashboard/utils/adminActions";
 
-import type { RequestContext } from "../../../../../src/utils/apiMutation";
+import type { RequestContext } from "../../../../../src/types";
 import type { AdminPendingChange } from "../../../../../src/schemas/pendingChange";
 import type { AdminRequest } from "../../../../../src/schemas/adminRequest";
 

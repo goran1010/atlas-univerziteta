@@ -1,5 +1,5 @@
 import { prisma } from "../db/prisma.js";
-import * as transactionModel from "../models/transactionModel.js";
+import { approvePendingChange as applyPendingChange } from "../models/applyPendingChange.js";
 import { enrichWithCurrentEntity } from "../models/pendingChangeModel.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 import * as adminValidation from "../validation/adminValidation.js";
@@ -49,7 +49,7 @@ async function declinePendingChange(req: Request, res: Response) {
 async function approvePendingChange(req: Request, res: Response) {
   const { id } = adminValidation.approvePendingChange(req.body);
 
-  const wasApplied = await transactionModel.approvePendingChange({
+  const wasApplied = await applyPendingChange({
     id,
   });
 

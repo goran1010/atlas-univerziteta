@@ -3,14 +3,7 @@ import { readResponseError } from "../schemas/api";
 import { notificationMessage } from "./apiError";
 
 import type { z } from "zod";
-import type { TFunction } from "../types";
-import type { AddNotification } from "../types";
-
-interface RequestContext {
-  addNotification: AddNotification;
-  setLoading: (loading: boolean) => void;
-  t: TFunction;
-}
+import type { RequestContext } from "../types";
 
 interface ApiMutationConfig<Schema extends z.ZodType> {
   path: string;
@@ -84,4 +77,4 @@ async function apiMutation<Schema extends z.ZodType>(
 }
 
 export { apiMutation };
-export type { ApiMutationConfig, RequestContext };
+export type { ApiMutationConfig };

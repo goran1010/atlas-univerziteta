@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { useFetchList } from "../../../src/customHooks/useFetchList";
+import { useUsersList } from "../../../src/customHooks/useUsersList";
 import { RootContextProvider } from "../../utils/rootContextProvider";
 import { makeUser } from "../../utils/makeUser";
 import { server, http, HttpResponse } from "../../utils/msw";
@@ -15,7 +15,7 @@ interface HookProbeProps {
 }
 
 function HookProbe({ setLoading, enabled }: HookProbeProps) {
-  const [items] = useFetchList({
+  const [items] = useUsersList({
     path: "/users/admin/pending-changes",
     responseSchema: adminPendingChangesResponseSchema,
     errorMessageKey: "messages.pendingChanges.fetchError",
@@ -75,7 +75,7 @@ beforeEach(() => {
   requests = [];
 });
 
-describe("useFetchList", () => {
+describe("useUsersList", () => {
   test("stores validated items from a successful response", async () => {
     const addNotification = vi.fn();
     // msw 3 no longer preserves `credentials` on the intercepted Request,

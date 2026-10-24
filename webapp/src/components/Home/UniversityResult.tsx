@@ -27,7 +27,7 @@ import type {
   UniversityListItem,
 } from "../../schemas/university";
 
-function UniversityCard({
+function UniversityResult({
   university,
   contextHint,
 }: {
@@ -293,4 +293,4 @@ function UniversityCard({
   );
 }
 
-export { UniversityCard };
+export { UniversityResult };
