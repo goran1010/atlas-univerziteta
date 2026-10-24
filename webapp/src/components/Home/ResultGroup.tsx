@@ -1,6 +1,7 @@
 import { useState, use, type ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { CollapseToggle } from "./CollapseToggle";
+import { Button } from "../sharedComponents/Button";
 
 function ResultGroup({
   label,
@@ -8,12 +9,17 @@ function ResultGroup({
   collapsible = false,
   defaultCollapsed = false,
   count,
+  truncated = false,
+  onShowAll,
 }: {
   label: string;
   children: ReactNode;
   collapsible?: boolean;
   defaultCollapsed?: boolean;
   count?: number;
+  // the section is capped, so this group's count is only a lower bound
+  truncated?: boolean;
+  onShowAll?: () => void;
 }) {
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
   const { t } = use(RootContext);
@@ -26,6 +32,7 @@ function ResultGroup({
           {count != null && (
             <span className="ml-1 px-1 rounded-full bg-(--hover-surface) text-(--accent-text)">
               {count}
+              {truncated && "+"}
             </span>
           )}
         </span>
@@ -41,7 +48,20 @@ function ResultGroup({
         )}
       </div>
       {!collapsed && (
-        <ul className="flex flex-col gap-2 list-none">{children}</ul>
+        <>
+          <ul className="flex flex-col gap-2 list-none">{children}</ul>
+          {truncated && onShowAll && (
+            <div className="flex justify-center mt-2">
+              <Button
+                variant="ghost"
+                className="px-3 py-1 text-xs border border-(--border-color)/40"
+                onClick={onShowAll}
+              >
+                {t("universitiesPage.showAll")}
+              </Button>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

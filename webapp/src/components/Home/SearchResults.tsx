@@ -11,7 +11,7 @@ import { groupBy } from "./utils/groupBy";
 import { cycleRank } from "./utils/cycleOrder";
 
 import type { UnifiedSearchResults } from "../../schemas/university";
-import type { SearchType } from "../../schemas/domain";
+import type { Ownership, SearchType, StudyCycle } from "../../schemas/domain";
 
 // above this many items in a section, its groups start out collapsed so a
 // full single-type listing stays scannable
@@ -91,12 +91,19 @@ function SearchResults({
   t,
   onShowAll,
   activeTypeFilters = [],
+  activeCycleFilters = [],
+  activeOwnershipFilter = "",
 }: {
   results: UnifiedSearchResults;
   hadTerm?: boolean;
   t: (key: string) => string;
-  onShowAll?: (type: SearchType) => void;
+  onShowAll?: (
+    type: SearchType,
+    group?: { cycle?: StudyCycle; ownership?: Ownership },
+  ) => void;
   activeTypeFilters?: SearchType[];
+  activeCycleFilters?: StudyCycle[];
+  activeOwnershipFilter?: Ownership | "";
 }) {
   const noResultsAtAll =
     results.universities.length === 0 &&
@@ -142,6 +149,30 @@ function SearchResults({
 
   const groupsCollapsed = (shown: number) => shown > COLLAPSE_GROUPS_ABOVE;
 
+  // a subgroup's own show-all applies the matching server-side filter; it is
+  // omitted when that filter is already active (the view then shows all of it)
+  function groupShowAll(
+    type: SearchType,
+    group: {
+      cycle?: StudyCycle | undefined;
+      ownership?: Ownership | undefined;
+    },
+  ) {
+    if (!onShowAll) return undefined;
+    if (group.cycle === undefined && group.ownership === undefined) {
+      return undefined;
+    }
+    if (group.cycle && activeCycleFilters.includes(group.cycle)) {
+      return undefined;
+    }
+    if (group.ownership && activeOwnershipFilter === group.ownership) {
+      return undefined;
+    }
+    return () => {
+      onShowAll(type, group);
+    };
+  }
+
   function renderSectionBody(type: SearchType): ReactNode {
     const { shown, direct } = sectionData[type];
     switch (type) {
@@ -158,6 +189,10 @@ function SearchResults({
             label={g.key}
             collapsible
             count={g.items.length}
+            truncated={sectionData[type].shown < sectionData[type].total}
+            onShowAll={groupShowAll(type, {
+              ownership: g.items[0]?.item.ownership,
+            })}
             defaultCollapsed={groupsCollapsed(shown)}
           >
             {g.items.map(({ item, hint }) => (
@@ -182,6 +217,7 @@ function SearchResults({
             label={g.key}
             collapsible
             count={g.items.length}
+            truncated={sectionData[type].shown < sectionData[type].total}
             defaultCollapsed={groupsCollapsed(shown)}
           >
             {g.items.map(({ item, hint }) => (
@@ -206,6 +242,8 @@ function SearchResults({
             label={g.key}
             collapsible
             count={g.items.length}
+            truncated={sectionData[type].shown < sectionData[type].total}
+            onShowAll={groupShowAll(type, { cycle: g.items[0]?.item.cycle })}
             defaultCollapsed={groupsCollapsed(shown)}
           >
             {g.items.map(({ item, hint }) => (

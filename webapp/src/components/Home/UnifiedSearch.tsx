@@ -119,6 +119,8 @@ function UnifiedSearch() {
           t={t}
           onShowAll={handleShowAll}
           activeTypeFilters={typeFilters}
+          activeCycleFilters={cycleFilters}
+          activeOwnershipFilter={ownershipFilter}
         />
       )}
     </div>
