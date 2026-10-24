@@ -1,6 +1,7 @@
 import { Navigate } from "react-router";
 import { App } from "./App";
 import { ErrorPage } from "./components/ErrorPage";
+import { Spinner } from "./components/sharedComponents/Spinner";
 import { HomeLayout } from "./components/Home/HomeLayout";
 import { UnifiedSearch } from "./components/Home/UnifiedSearch";
 import { UniversityDetailPage } from "./components/Home/UniversityDetailPage";
@@ -14,6 +15,8 @@ const routes = [
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+    // shown while a lazy route's chunk loads on a direct/initial visit
+    hydrateFallbackElement: <Spinner />,
     children: [
       {
         element: <HomeLayout />,

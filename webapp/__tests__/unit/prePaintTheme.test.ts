@@ -1,11 +1,13 @@
+import script from "../../public/theme-init.js?raw";
 import html from "../../index.html?raw";
 
-/* The module script tag carries attributes, so this only matches the
-   inline pre-paint theme script. */
 function runPrePaintScript() {
-  const match = /<script>([\s\S]*?)<\/script>/.exec(html);
-  if (!match) throw new Error("Pre-paint script not found in index.html");
-  eval(match[1]);
+  // the script lives in its own file so the strict script-src CSP allows it;
+  // index.html must still load it before anything renders
+  if (!html.includes('<script src="/theme-init.js"></script>')) {
+    throw new Error("index.html does not load the pre-paint theme script");
+  }
+  eval(script);
 }
 
 function mockSystemDark(matches: boolean) {
@@ -23,7 +25,7 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-describe("index.html pre-paint theme script", () => {
+describe("pre-paint theme script", () => {
   test("applies the dark class when dark is stored", () => {
     localStorage.setItem("theme", "dark");
     mockSystemDark(false);

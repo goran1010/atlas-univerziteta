@@ -24,8 +24,7 @@ function Spinner({ size = "md" }: { size?: "sm" | "md" }) {
         }
       >
         <div
-          className={`border-3 border-(--border-color) border-t-3 border-t-(--accent) rounded-full aspect-square ${sizeClass}`}
-          style={{ animation: "spin 1s linear infinite" }}
+          className={`animate-spin border-3 border-(--border-color) border-t-3 border-t-(--accent) rounded-full aspect-square ${sizeClass}`}
         />
         <span className="sr-only">{t("loading")}</span>
       </div>
