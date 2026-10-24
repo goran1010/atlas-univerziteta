@@ -4,9 +4,7 @@ const CODE_MESSAGE_KEYS: Record<string, string> = {
   RATE_LIMITED: "messages.apiError.rateLimited",
   AUTH_REQUIRED: "messages.apiError.authRequired",
   FORBIDDEN: "messages.apiError.forbidden",
-  ALREADY_LOGGED_IN: "messages.apiError.alreadyLoggedIn",
   ALREADY_ADMIN: "messages.apiError.alreadyAdmin",
-  EMAIL_NOT_SENT: "messages.apiError.emailNotSent",
 };
 
 function notificationMessageKey(

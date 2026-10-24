@@ -1,7 +1,6 @@
 {
   "title": {
     "app": "Atlas Univerziteta",
-    "home": "Home",
     "api": "API docs",
     "universities": "Search",
     "contribute": "Improve data",
@@ -29,9 +28,6 @@
     "login": "Log In",
     "language": "Language",
     "theme": "Theme",
-    "choose": "Choose",
-    "close": "Close",
-    "menu": "Menu",
     "toggleThemeAria": "Toggle theme menu",
     "toggleMenuAria": "Toggle navigation menu",
     "skipToContent": "Skip to content",
@@ -54,7 +50,6 @@
     }
   },
   "language": {
-    "select": "Language",
     "system": "System",
     "english": "English",
     "bcs": "Bosnian/Croatian/Serbian",
@@ -74,15 +69,13 @@
       "noAccountPrefix": "Don't have an account?",
       "heading": "Log in",
       "oauthFailed": "Login failed. Please try again.",
-      "alreadyLoggedIn": "You are already logged in. Redirected to the home page.",
-      "noAccount": "Don't have an account ? Go to the Sign Up page."
+      "alreadyLoggedIn": "You are already logged in. Redirected to the home page."
     },
     "signup": {
       "linkText": "Sign Up",
       "haveAccountPrefix": "Already have an account?",
       "heading": "Create your account",
-      "blockedWhileLoggedIn": "You can't sign up while logged in. Redirected to the home page.",
-      "haveAccount": "Already have an account ? Go back to the Log In page."
+      "blockedWhileLoggedIn": "You can't sign up while logged in. Redirected to the home page."
     }
   },
   "form": {
@@ -90,15 +83,8 @@
     "password": "Password",
     "confirmPassword": "Confirm Password",
     "create": "Create",
-    "search": "Search",
-    "getAll": "Get All",
-    "update": "Update",
-    "delete": "Delete",
-    "discard": "Discard",
     "approve": "Approve",
     "reject": "Reject",
-    "addData": "Add data",
-    "closeForm": "Close form",
     "requiredHint": "Fields marked with * are required."
   },
   "profile": {
@@ -112,7 +98,6 @@
     "cancelAdminRequest": "Cancel admin request"
   },
   "home": {
-    "title": "Universities and Study Programs in Bosnia and Herzegovina",
     "heading": "Universities and Study Programs in Bosnia and Herzegovina",
     "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities - institutions, faculties, study programs, and tracks.",
     "summary": "Use Atlas Univerziteta to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
@@ -120,8 +105,7 @@
     "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, and tracks. Search by name, city, acronym, entity, ownership, study cycle, and more.",
     "card": {
       "universities": {
-        "title": "Universities",
-        "description": "Browse universities, faculties, study programs, and tracks across Bosnia and Herzegovina."
+        "title": "Universities"
       }
     },
     "improveHeading": "Improve the Data",
@@ -260,12 +244,10 @@
     "needAdmin": "You need to be an admin to see the admin dashboard.",
     "needLoginAndAdmin": "You need to be logged in and an admin to see the admin dashboard.",
     "dashboardTitle": "Admin Dashboard",
-    "pendingChangesCountAria": "pending changes count",
     "pendingChanges": "Pending Changes",
     "noPendingChanges": "There are no pending changes at the moment.",
     "adminRequests": "Admin Requests",
     "noAdminRequests": "There are no admin requests at the moment.",
-    "adminRequestsCountAria": "admin requests count",
     "requestedAt": "Requested",
     "proposedData": "Proposed Data",
     "currentData": "Current Data",
@@ -277,8 +259,7 @@
   },
   "error": {
     "notFound": "There is nothing here.",
-    "goHome": "Go to Home Page",
-    "pageTitle": "Page Not Found"
+    "goHome": "Go to Home Page"
   },
   "footer": {
     "name": "Goran Jović",
@@ -286,10 +267,7 @@
   },
   "validation": {
     "email": {
-      "invalid": "Please enter a valid email address",
-      "minLength": "Email must have at least 3 characters",
-      "missingAt": "Please include an '@' in the email address.",
-      "missingDomain": "Please enter a part following '@'."
+      "invalid": "Please enter a valid email address"
     },
     "password": {
       "minLength": "Password must have at least 6 characters",
@@ -297,10 +275,6 @@
       "allowedCharacters": "Password can only contain letters, numbers, dashes, or underscores",
       "requiresNumber": "Password must contain at least one number",
       "mustMatch": "Password and confirm password fields must match"
-    },
-    "search": {
-      "minLength": "Search must have at least 2 characters",
-      "maxLength": "Search must not exceed 100 characters"
     }
   },
   "messages": {
@@ -308,12 +282,9 @@
       "rateLimited": "Too many requests. Please wait 15 minutes, then try again.",
       "authRequired": "You need to be logged in for this. Log in and try again.",
       "forbidden": "You do not have permission for this action.",
-      "alreadyLoggedIn": "You are already logged in.",
-      "alreadyAdmin": "You already have the admin role.",
-      "emailNotSent": "Confirmation email could not be sent. Check the email address and try again."
+      "alreadyAdmin": "You already have the admin role."
     },
     "pendingChanges": {
-      "loadFailed": "Could not load pending changes. Check your connection and try again.",
       "fetchError": "Something went wrong while loading pending changes. Refresh the page and try again."
     },
     "loginStatus": {
@@ -328,16 +299,12 @@
       "registrationSuccess": "Registration successful! Check your email.",
       "logoutFailed": "Logout did not complete. Try again.",
       "logoutError": "Something went wrong during logout. Try again in a moment.",
-      "logoutSuccess": "Successfully logged out.",
-      "githubLoginSuccess": "Successfully logged in with GitHub.",
-      "googleLoginSuccess": "Successfully logged in with Google."
+      "logoutSuccess": "Successfully logged out."
     },
     "admin": {
       "approveSuccess": "Pending change approved.",
-      "approveFailed": "Could not approve the pending change. Refresh the list and try again.",
       "approveError": "Something went wrong while approving the pending change. Try again.",
       "declineSuccess": "Pending change declined.",
-      "declineFailed": "Could not decline the pending change. Refresh the list and try again.",
       "declineError": "Something went wrong while declining the pending change. Try again."
     },
     "universities": {
@@ -345,10 +312,8 @@
       "searchError": "Search did not complete. Try again in a moment.",
       "detailsError": "Could not load the details. Try again in a moment.",
       "addSuccess": "Suggestion submitted.",
-      "addFailed": "Could not submit the suggestion. Check your input, then try again.",
       "addError": "Something went wrong while submitting the suggestion. Try again.",
       "deleteSuccess": "Pending change discarded.",
-      "deleteFailed": "Could not discard the pending change. Refresh the list and try again.",
       "deleteError": "Something went wrong while discarding the pending change. Try again."
     },
     "adminRequest": {
@@ -374,11 +339,8 @@
     "studyProgramsSection": "Study programs",
     "noResults": "No universities found.",
     "noFacultyResults": "No faculties found.",
-    "noStudyProgramResults": "No study programs found.",
     "noResultsAtAll": "No results found.",
     "searchResultsAnnouncement": "Search results:",
-    "city": "City",
-    "entity": "Entity",
     "entities": {
       "FBIH": "Federation of B&H",
       "RS": "Republika Srpska",
@@ -393,11 +355,9 @@
     "studyProgramCount_one": "study program",
     "studyProgramCount_few": "study programs",
     "studyProgramCount_other": "study programs",
-    "tracks": "Tracks (smjerovi)",
     "trackCount_one": "track",
     "trackCount_few": "tracks",
     "trackCount_other": "tracks",
-    "cycle": "Cycle",
     "cycles": {
       "FIRST": "First (Bachelor)",
       "SECOND": "Second (Master)",
@@ -412,7 +372,6 @@
     "durationYears_few": "years",
     "durationYears_other": "years",
     "noStudyPrograms": "No study programs available.",
-    "website": "Website",
     "foundedYear": "Founded",
     "expand": "Expand",
     "collapse": "Collapse",
@@ -420,10 +379,6 @@
     "ownership": {
       "PUBLIC": "Public",
       "PRIVATE": "Private"
-    },
-    "ownershipGroup": {
-      "PUBLIC": "Public universities",
-      "PRIVATE": "Private universities"
     },
     "clearSearch": "Clear search",
     "filters": "Filters",
@@ -441,7 +396,6 @@
     "filterEntity": "Entity",
     "filterOwnership": "Ownership",
     "filterCycle": "Study cycle",
-    "all": "All",
     "openFullPage": "Open full page",
     "shareLink": "Share link",
     "linkCopied": "Link copied to clipboard.",
