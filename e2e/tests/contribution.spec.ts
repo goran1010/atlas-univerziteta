@@ -91,7 +91,7 @@ test("user can discard their own pending change", async ({ browser }) => {
   await submitUniversityCreate(userPage, universityName);
 
   await userPage.goto("/improve-data/pending");
-  const row = userPage.getByRole("listitem").filter({ hasText: "Create" });
+  const row = userPage.getByRole("row").filter({ hasText: "Create" });
   await expect(row).toBeVisible();
 
   await row.getByRole("button", { name: "Delete", exact: true }).click();
@@ -144,7 +144,7 @@ test("user can submit an update suggestion for an existing university", async ({
 
   await userPage.goto("/improve-data/pending");
   await expect(
-    userPage.getByRole("listitem").filter({ hasText: "Update" }),
+    userPage.getByRole("row").filter({ hasText: "Update" }),
   ).toBeVisible();
 
   await userContext.close();

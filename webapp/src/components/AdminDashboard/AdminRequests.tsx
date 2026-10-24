@@ -45,18 +45,25 @@ function AdminRequestRow({
 
   return (
     <li
+      role="row"
       className={`rounded-md transition-colors hover:bg-(--hover-surface) ${
         index % 2 === 0 ? "bg-(--surface-2)" : "bg-(--surface-alt)"
       }`}
     >
       <div className="grid gap-2 w-full p-1 sm:gap-1 sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-        <div className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0">
+        <div
+          role="cell"
+          className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0"
+        >
           <span className="sm:hidden font-semibold">
             {t("contribution.user")}
           </span>
           <span className="break-all">{adminRequest.email}</span>
         </div>
-        <div className="flex justify-between sm:justify-center items-center flex-wrap gap-1">
+        <div
+          role="cell"
+          className="flex justify-between sm:justify-center items-center flex-wrap gap-1"
+        >
           <span className="sm:hidden font-semibold">
             {t("admin.requestedAt")}
           </span>
@@ -66,7 +73,7 @@ function AdminRequestRow({
         </div>
       </div>
 
-      <div className="flex justify-center sm:flex-row gap-2 p-1">
+      <div role="cell" className="flex justify-center sm:flex-row gap-2 p-1">
         <Button
           variant="success"
           className="px-3 py-2 text-sm sm:max-w-25"
@@ -139,10 +146,20 @@ function AdminRequests() {
 
   return (
     <section className="flex flex-col justify-center items-center p-1 w-full">
-      <ul className="w-full max-w-4xl flex flex-col border border-(--border-strong) rounded-md p-2 bg-(--surface-2) gap-1">
-        <li className="hidden sm:grid sm:gap-1 text-center w-full p-2 border border-(--border-strong) rounded-md font-bold text-(--text-primary) bg-(--surface-3) sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-          <div>{t("contribution.user")}</div>
-          <div>{t("admin.requestedAt")}</div>
+      <ul
+        role="table"
+        aria-label={t("admin.adminRequests")}
+        className="w-full max-w-4xl flex flex-col border border-(--border-strong) rounded-md p-2 bg-(--surface-2) gap-1"
+      >
+        <li
+          role="row"
+          className="hidden sm:grid sm:gap-1 text-center w-full p-2 border border-(--border-strong) rounded-md font-bold text-(--text-primary) bg-(--surface-3) sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]"
+        >
+          <div role="columnheader">{t("contribution.user")}</div>
+          <div role="columnheader">{t("admin.requestedAt")}</div>
+          <div role="columnheader" className="sr-only">
+            {t("contribution.actions")}
+          </div>
         </li>
         {adminRequests.map((adminRequest, index) => (
           <AdminRequestRow

@@ -25,11 +25,24 @@ function PendingChangesAdmin() {
 
   return (
     <section className="flex flex-col justify-center items-center p-1 w-full">
-      <ul className="w-full flex flex-col border border-(--border-strong) rounded-md p-2 bg-(--surface-2) gap-1">
-        <li className="hidden sm:grid sm:gap-1 text-center w-full p-2 border border-(--border-strong) rounded-md font-bold text-(--text-primary) bg-(--surface-3) sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)]">
-          <div>{t("contribution.change")}</div>
-          <div>{t("contribution.entityType")}</div>
-          <div>{t("contribution.user")}</div>
+      {/* ARIA table roles on the grid layout: real <table> elements cannot
+          keep the responsive card layout, the roles give screen readers the
+          column-to-value association */}
+      <ul
+        role="table"
+        aria-label={t("admin.pendingChanges")}
+        className="w-full flex flex-col border border-(--border-strong) rounded-md p-2 bg-(--surface-2) gap-1"
+      >
+        <li
+          role="row"
+          className="hidden sm:grid sm:gap-1 text-center w-full p-2 border border-(--border-strong) rounded-md font-bold text-(--text-primary) bg-(--surface-3) sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)]"
+        >
+          <div role="columnheader">{t("contribution.change")}</div>
+          <div role="columnheader">{t("contribution.entityType")}</div>
+          <div role="columnheader">{t("contribution.user")}</div>
+          <div role="columnheader" className="sr-only">
+            {t("contribution.actions")}
+          </div>
         </li>
         {pendingChanges.map((data, index) => (
           <PendingChangesAdminRow

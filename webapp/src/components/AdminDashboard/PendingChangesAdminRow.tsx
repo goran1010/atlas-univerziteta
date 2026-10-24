@@ -76,6 +76,7 @@ const PendingChangesAdminRow = memo(
 
     return (
       <li
+        role="row"
         className={`rounded-md transition-colors hover:bg-(--hover-surface) ${
           ROW_ACCENT[data.typeOfChange]
         } ${index % 2 === 0 ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
@@ -85,7 +86,10 @@ const PendingChangesAdminRow = memo(
           current={entityName}
         />
         <div className="grid gap-2 w-full p-1 sm:p-1 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)]">
-          <div className="flex justify-between sm:justify-center items-center">
+          <div
+            role="cell"
+            className="flex justify-between sm:justify-center items-center"
+          >
             <span className="sm:hidden font-semibold">
               {t("contribution.change")}
             </span>
@@ -97,7 +101,10 @@ const PendingChangesAdminRow = memo(
               {t(`contribution.changeTypes.${data.typeOfChange}`)}
             </span>
           </div>
-          <div className="flex justify-between sm:justify-center items-center flex-wrap gap-1">
+          <div
+            role="cell"
+            className="flex justify-between sm:justify-center items-center flex-wrap gap-1"
+          >
             <span className="sm:hidden font-semibold">
               {t("contribution.entityType")}
             </span>
@@ -105,7 +112,10 @@ const PendingChangesAdminRow = memo(
               {t(`contribution.entityTypes.${data.entityType}`)}
             </span>
           </div>
-          <div className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0">
+          <div
+            role="cell"
+            className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0"
+          >
             <span className="sm:hidden font-semibold">
               {t("contribution.user")}
             </span>
@@ -113,7 +123,10 @@ const PendingChangesAdminRow = memo(
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 p-1">
+        <div
+          role="cell"
+          className="flex flex-col sm:flex-row justify-center items-center gap-2 p-1"
+        >
           <Button
             variant="secondary"
             className="px-3 py-1.5 text-xs sm:max-w-30"

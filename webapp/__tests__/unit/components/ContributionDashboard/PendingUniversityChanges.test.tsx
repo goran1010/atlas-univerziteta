@@ -104,7 +104,9 @@ describe("PendingUniversityChanges", () => {
       </Wrapper>,
     );
 
-    expect(screen.getAllByRole("listitem")).toHaveLength(2);
+    expect(
+      within(screen.getByRole("rowgroup")).getAllByRole("row"),
+    ).toHaveLength(2);
     expect(screen.getByText("Create")).toBeInTheDocument();
     expect(screen.getByText("Update")).toBeInTheDocument();
   });
