@@ -57,7 +57,7 @@ function FacultyDetailPage() {
     void fetchFaculty();
   }, [id, addNotification]);
 
-  if (loading) return <Spinner />;
+  if (loading) return <Spinner page />;
 
   if (!faculty) {
     return (

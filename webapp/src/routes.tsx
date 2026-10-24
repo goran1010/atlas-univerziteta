@@ -16,7 +16,7 @@ const routes = [
     element: <App />,
     errorElement: <ErrorPage />,
     // shown while a lazy route's chunk loads on a direct/initial visit
-    hydrateFallbackElement: <Spinner />,
+    hydrateFallbackElement: <Spinner page />,
     children: [
       {
         element: <HomeLayout />,

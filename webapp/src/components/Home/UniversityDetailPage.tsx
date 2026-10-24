@@ -51,7 +51,7 @@ function UniversityDetailPage() {
     void fetchUniversity();
   }, [id, addNotification]);
 
-  if (loading) return <Spinner />;
+  if (loading) return <Spinner page />;
 
   if (!university) {
     return (

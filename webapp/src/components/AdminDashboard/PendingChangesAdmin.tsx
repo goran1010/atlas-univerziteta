@@ -13,7 +13,7 @@ function PendingChangesAdmin() {
   const { pendingChanges, setPendingChanges, pendingLoading } =
     useOutletContext<AdminOutletContext>();
 
-  if (pendingLoading) return <Spinner />;
+  if (pendingLoading) return <Spinner page />;
 
   if (!pendingChanges.length) {
     return (

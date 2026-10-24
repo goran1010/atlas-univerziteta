@@ -18,7 +18,7 @@ function PendingUniversityChanges({
 }: PendingUniversityChangesProps) {
   const { t } = use(RootContext);
 
-  if (loading) return <Spinner />;
+  if (loading) return <Spinner page />;
 
   if (!pendingChanges.length) {
     return (

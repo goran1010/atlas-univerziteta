@@ -134,7 +134,7 @@ function AdminRequests() {
   const { adminRequests, setAdminRequests, requestsLoading } =
     useOutletContext<AdminOutletContext>();
 
-  if (requestsLoading) return <Spinner />;
+  if (requestsLoading) return <Spinner page />;
 
   if (!adminRequests.length) {
     return (

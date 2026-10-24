@@ -103,7 +103,7 @@ function UnifiedSearch() {
       </p>
 
       {loading && view.kind === "idle" ? (
-        <Spinner />
+        <Spinner page />
       ) : view.kind === "idle" ? (
         <Button
           variant="secondary"
