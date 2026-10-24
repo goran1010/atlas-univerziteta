@@ -1,6 +1,6 @@
 import { SERVER_URL } from "./envConfig";
 import { readResponseError } from "../schemas/api";
-import { notificationMessageKey } from "./apiError";
+import { notificationMessage } from "./apiError";
 
 import type { z } from "zod";
 import type { ApiError } from "../schemas/api";
@@ -75,7 +75,7 @@ async function fetchPublic<Schema extends z.ZodType>(
     }
     addNotification({
       type: "error",
-      message: t(notificationMessageKey(outcome.error?.code, errorMessageKey)),
+      message: notificationMessage(t, errorMessageKey, outcome.error),
     });
     return null;
   } catch (error) {

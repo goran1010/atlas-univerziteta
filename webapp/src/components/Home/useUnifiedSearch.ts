@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { searchAll, SearchFailedError } from "./utils/search";
-import { notificationMessageKey } from "../../utils/apiError";
+import { notificationMessage } from "../../utils/apiError";
 
 import {
   entitySchema,
@@ -134,11 +134,10 @@ function useUnifiedSearch() {
         if (controller.signal.aborted) return;
         addNotification({
           type: "error",
-          message: t(
-            notificationMessageKey(
-              error instanceof SearchFailedError ? error.code : undefined,
-              "messages.universities.searchError",
-            ),
+          message: notificationMessage(
+            t,
+            "messages.universities.searchError",
+            error instanceof SearchFailedError ? error.serverError : null,
           ),
         });
       } finally {

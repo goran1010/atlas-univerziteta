@@ -102,7 +102,7 @@ describe("apiMutation", () => {
     );
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.example.error",
+      message: "messages.example.error (Rejected on the server.)",
     });
   });
 

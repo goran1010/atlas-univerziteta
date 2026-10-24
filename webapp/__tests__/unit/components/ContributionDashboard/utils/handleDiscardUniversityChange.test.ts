@@ -67,7 +67,7 @@ describe("handleDiscardUniversityChange", () => {
     expect(setPendingChanges).not.toHaveBeenCalled();
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.universities.deleteError",
+      message: "messages.universities.deleteError (Discard failed.)",
     });
     expect(consoleWarnSpy).toHaveBeenCalled();
   });

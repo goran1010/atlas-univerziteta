@@ -386,7 +386,7 @@ describe("UnifiedSearch", () => {
 
     expect(
       await screen.findByText(
-        /^Search did not complete\. Try again in a moment\.$/i,
+        /^Search did not complete\. Try again in a moment\./i,
       ),
     ).toBeInTheDocument();
   });

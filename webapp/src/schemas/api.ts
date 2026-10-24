@@ -4,6 +4,9 @@ const apiErrorResponseSchema = z.object({
   error: z.object({
     code: z.string().optional(),
     message: z.string(),
+    issues: z
+      .array(z.object({ path: z.string(), message: z.string() }))
+      .optional(),
   }),
 });
 

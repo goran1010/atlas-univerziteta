@@ -1,6 +1,7 @@
 import { fetchPublicResponse } from "../../../utils/fetchPublic";
 import { unifiedSearchResponseSchema } from "../../../schemas/university";
 
+import type { ApiError } from "../../../schemas/api";
 import type { UnifiedSearchResults } from "../../../schemas/university";
 
 interface SearchFilters {
@@ -41,16 +42,20 @@ async function searchAll(
   if (outcome.error) {
     console.warn("Search failed:", outcome.error.message);
   }
-  throw new SearchFailedError(outcome.error?.code);
+  throw new SearchFailedError(outcome.error);
 }
 
 class SearchFailedError extends Error {
-  readonly code?: string;
+  readonly serverError: ApiError | null;
 
-  constructor(code?: string) {
+  constructor(serverError: ApiError | null) {
     super("Search failed");
     this.name = "SearchFailedError";
-    this.code = code;
+    this.serverError = serverError;
+  }
+
+  get code(): string | undefined {
+    return this.serverError?.code;
   }
 }
 

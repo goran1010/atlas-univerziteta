@@ -1,6 +1,6 @@
 import { SERVER_URL } from "./envConfig";
 import { readResponseError } from "../schemas/api";
-import { notificationMessageKey } from "./apiError";
+import { notificationMessage } from "./apiError";
 
 import type { z } from "zod";
 import type { TFunction } from "../types";
@@ -68,7 +68,7 @@ async function apiMutation<Schema extends z.ZodType>(
     }
     addNotification({
       type: "error",
-      message: t(notificationMessageKey(serverError?.code, errorMessageKey)),
+      message: notificationMessage(t, errorMessageKey, serverError),
     });
     return null;
   } catch (error) {

@@ -101,7 +101,7 @@ describe("handleApprovePendingChange", () => {
     expect(setPendingChanges).not.toHaveBeenCalled();
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.admin.approveError",
+      message: "messages.admin.approveError (Approval failed.)",
     });
     expect(consoleWarnSpy).toHaveBeenCalled();
   });
