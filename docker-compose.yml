@@ -5,6 +5,13 @@ services:
   caddy:
     image: caddy:2
     restart: unless-stopped
+    # Docker keeps container logs forever by default; cap each service at
+    # 5 files of 10 MB, oldest dropped first
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     ports:
       - "80:80"
       - "443:443"
@@ -22,6 +29,11 @@ services:
   server:
     build: ./server
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     depends_on:
       db:
         condition: service_healthy
@@ -45,6 +57,11 @@ services:
   db:
     image: postgres:18
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     volumes:
       - pgdata:/var/lib/postgresql
     environment:
