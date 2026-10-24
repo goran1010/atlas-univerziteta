@@ -29,7 +29,7 @@ function StatefulHarness({ initial }: { initial: PendingChange[] }) {
 const pendingChanges: PendingChange[] = [
   {
     id: "1",
-    entityType: "UNIVERSITY",
+    targetType: "UNIVERSITY",
     typeOfChange: "CREATE",
     data: {
       name: "University of Sarajevo",
@@ -48,7 +48,7 @@ const pendingChanges: PendingChange[] = [
   },
   {
     id: "2",
-    entityType: "FACULTY",
+    targetType: "FACULTY",
     typeOfChange: "UPDATE",
     data: { name: "Faculty of Engineering" },
     targetId: 2,

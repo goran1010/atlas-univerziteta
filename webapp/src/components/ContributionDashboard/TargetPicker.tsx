@@ -73,19 +73,19 @@ function LevelSelect({
   );
 }
 
-interface EntityPickerProps {
+interface TargetPickerProps {
   depth: number;
   legend: string;
   showSelectedDetails: boolean;
   onSelect: (id: string) => void;
 }
 
-function EntityPicker({
+function TargetPicker({
   depth,
   legend,
   showSelectedDetails,
   onSelect,
-}: EntityPickerProps) {
+}: TargetPickerProps) {
   const { t } = use(RootContext);
   const { addNotification } = use(NotificationContext);
 
@@ -282,4 +282,4 @@ function EntityPicker({
   );
 }
 
-export { EntityPicker };
+export { TargetPicker };

@@ -8,7 +8,7 @@ import type { PendingChange } from "../../../../src/schemas/pendingChange";
 
 const change: PendingChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",
-  entityType: "UNIVERSITY",
+  targetType: "UNIVERSITY",
   typeOfChange: "DELETE",
   targetId: 1,
   parentId: null,
@@ -62,7 +62,7 @@ describe("PendingUniversityChangesRow", () => {
         <PendingUniversityChangesRow
           change={{
             ...change,
-            entityType: "UNIVERSITY",
+            targetType: "UNIVERSITY",
             typeOfChange: "CREATE",
             targetId: null,
             data: {

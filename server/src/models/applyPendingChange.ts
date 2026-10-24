@@ -53,14 +53,14 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
       return false;
     }
 
-    const { entityType, typeOfChange, targetId, parentId } = pendingChange;
+    const { targetType, typeOfChange, targetId, parentId } = pendingChange;
 
     const deletePendingChange = async () => {
       await tx.pendingChange.delete({ where: { id } });
       return true;
     };
 
-    if (entityType === "UNIVERSITY") {
+    if (targetType === "UNIVERSITY") {
       if (typeOfChange === "DELETE") {
         if (targetId === null) return false;
 
@@ -99,7 +99,7 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
       return deletePendingChange();
     }
 
-    if (entityType === "FACULTY") {
+    if (targetType === "FACULTY") {
       if (typeOfChange === "DELETE") {
         if (targetId === null) return false;
 
@@ -141,7 +141,7 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
       return deletePendingChange();
     }
 
-    if (entityType === "STUDY_PROGRAM") {
+    if (targetType === "STUDY_PROGRAM") {
       if (typeOfChange === "DELETE") {
         if (targetId === null) return false;
 
@@ -183,7 +183,7 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
       return deletePendingChange();
     }
 
-    // entityType === "TRACK" is the only remaining case
+    // targetType === "TRACK" is the only remaining case
     if (typeOfChange === "DELETE") {
       if (targetId === null) return false;
 

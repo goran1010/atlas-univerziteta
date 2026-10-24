@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { EntityPicker } from "../../../../src/components/ContributionDashboard/EntityPicker";
+import { TargetPicker } from "../../../../src/components/ContributionDashboard/TargetPicker";
 import { getPickerDepth } from "../../../../src/components/ContributionDashboard/utils/getPickerDepth";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
@@ -82,7 +82,7 @@ function renderPicker(
   render(
     <RootContextProvider>
       <Notifications />
-      <EntityPicker
+      <TargetPicker
         depth={depth}
         legend="Pick"
         showSelectedDetails={showSelectedDetails}
@@ -104,12 +104,12 @@ describe("getPickerDepth", () => {
     ["STUDY_PROGRAM", "DELETE", 3],
     ["TRACK", "CREATE", 3],
     ["TRACK", "UPDATE", 4],
-  ] as const)("%s + %s needs depth %i", (entityType, typeOfChange, depth) => {
-    expect(getPickerDepth(entityType, typeOfChange)).toBe(depth);
+  ] as const)("%s + %s needs depth %i", (targetType, typeOfChange, depth) => {
+    expect(getPickerDepth(targetType, typeOfChange)).toBe(depth);
   });
 });
 
-describe("EntityPicker", () => {
+describe("TargetPicker", () => {
   test("walks every page of the university directory", async () => {
     server.use(
       http.get("*/api/v1/universities", ({ request }) => {

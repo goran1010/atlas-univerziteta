@@ -81,7 +81,7 @@ function PendingUniversityChangesRow({
             {t("contribution.entityType")}
           </span>
           <span className="text-xs font-mono text-(--text-secondary)">
-            {t(`contribution.entityTypes.${change.entityType}`)}
+            {t(`contribution.entityTypes.${change.targetType}`)}
           </span>
         </div>
 
@@ -129,7 +129,7 @@ function PendingUniversityChangesRow({
         onClose={() => {
           setDialogOpen(false);
         }}
-        title={`${t(`contribution.changeTypes.${change.typeOfChange}`)} ${t(`contribution.entityTypes.${change.entityType}`)}`}
+        title={`${t(`contribution.changeTypes.${change.typeOfChange}`)} ${t(`contribution.entityTypes.${change.targetType}`)}`}
         footer={
           <Button
             variant="danger"
@@ -144,7 +144,7 @@ function PendingUniversityChangesRow({
         }
       >
         <PendingChangeDetail
-          entityType={change.entityType}
+          targetType={change.targetType}
           typeOfChange={change.typeOfChange}
           data={change.data}
           currentEntity={change.currentEntity ?? null}

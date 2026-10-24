@@ -3,7 +3,7 @@ import { enrichWithCurrentEntity } from "../models/pendingChangeModel.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 import * as contributionValidation from "../validation/contributionValidation.js";
 import type { Request, Response } from "express";
-import type { entityType } from "../generated/prisma/enums.js";
+import type { targetType } from "../generated/prisma/enums.js";
 
 function getSessionUser(req: Request) {
   const user = req.authSession?.user;
@@ -11,8 +11,8 @@ function getSessionUser(req: Request) {
   return user;
 }
 
-async function entityExists(entityType: entityType, id: number) {
-  switch (entityType) {
+async function entityExists(targetType: targetType, id: number) {
+  switch (targetType) {
     case "UNIVERSITY":
       return (await prisma.university.findUnique({ where: { id } })) !== null;
     case "FACULTY":
@@ -24,8 +24,8 @@ async function entityExists(entityType: entityType, id: number) {
   }
 }
 
-async function parentEntityExists(entityType: entityType, parentId: number) {
-  switch (entityType) {
+async function parentEntityExists(targetType: targetType, parentId: number) {
+  switch (targetType) {
     case "FACULTY":
       return entityExists("UNIVERSITY", parentId);
     case "STUDY_PROGRAM":
@@ -41,10 +41,10 @@ async function createEntity(req: Request, res: Response) {
   const user = getSessionUser(req);
 
   const contribution = contributionValidation.createEntity(req.body);
-  const { entityType, data } = contribution;
+  const { targetType, data } = contribution;
   const parentId = "parentId" in contribution ? contribution.parentId : null;
 
-  if (parentId !== null && !(await parentEntityExists(entityType, parentId))) {
+  if (parentId !== null && !(await parentEntityExists(targetType, parentId))) {
     sendError(res, {
       status: 404,
       code: "NOT_FOUND",
@@ -60,7 +60,7 @@ async function createEntity(req: Request, res: Response) {
           id: user.id,
         },
       },
-      entityType,
+      targetType,
       typeOfChange: "CREATE",
       parentId,
       data,
@@ -77,11 +77,11 @@ async function createEntity(req: Request, res: Response) {
 
 async function editEntity(req: Request, res: Response) {
   const user = getSessionUser(req);
-  const { entityType, targetId, data } = contributionValidation.editEntity(
+  const { targetType, targetId, data } = contributionValidation.editEntity(
     req.body,
   );
 
-  if (!(await entityExists(entityType, targetId))) {
+  if (!(await entityExists(targetType, targetId))) {
     sendError(res, {
       status: 404,
       code: "NOT_FOUND",
@@ -98,7 +98,7 @@ async function editEntity(req: Request, res: Response) {
         },
       },
 
-      entityType,
+      targetType,
       typeOfChange: "UPDATE",
       targetId,
       data,
@@ -114,11 +114,11 @@ async function editEntity(req: Request, res: Response) {
 
 async function deleteEntity(req: Request, res: Response) {
   const user = getSessionUser(req);
-  const { entityType, targetId } = contributionValidation.deleteEntity(
+  const { targetType, targetId } = contributionValidation.deleteEntity(
     req.body,
   );
 
-  if (!(await entityExists(entityType, targetId))) {
+  if (!(await entityExists(targetType, targetId))) {
     sendError(res, {
       status: 404,
       code: "NOT_FOUND",
@@ -134,7 +134,7 @@ async function deleteEntity(req: Request, res: Response) {
           id: user.id,
         },
       },
-      entityType,
+      targetType,
       typeOfChange: "DELETE",
       targetId,
       data: {},

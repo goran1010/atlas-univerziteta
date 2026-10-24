@@ -109,7 +109,7 @@ const PendingChangesAdminRow = memo(
               {t("contribution.entityType")}
             </span>
             <span className="font-mono font-medium text-(--text-primary) text-xs">
-              {t(`contribution.entityTypes.${data.entityType}`)}
+              {t(`contribution.entityTypes.${data.targetType}`)}
             </span>
           </div>
           <div
@@ -187,7 +187,7 @@ const PendingChangesAdminRow = memo(
           onClose={() => {
             setDialogOpen(false);
           }}
-          title={`${t(`contribution.changeTypes.${data.typeOfChange}`)} ${t(`contribution.entityTypes.${data.entityType}`)} - ${data.user.email}`}
+          title={`${t(`contribution.changeTypes.${data.typeOfChange}`)} ${t(`contribution.entityTypes.${data.targetType}`)} - ${data.user.email}`}
           footer={
             <>
               <Button
@@ -218,7 +218,7 @@ const PendingChangesAdminRow = memo(
           }
         >
           <PendingChangeDetail
-            entityType={data.entityType}
+            targetType={data.targetType}
             typeOfChange={data.typeOfChange}
             data={data.data}
             currentEntity={currentEntity}

@@ -9,7 +9,7 @@ const fetchMock = vi.fn();
 const t = (key: string) => key;
 
 const baseArgs = {
-  entityType: "UNIVERSITY",
+  targetType: "UNIVERSITY",
   parentId: "",
   targetId: "",
   typeOfChange: "CREATE" as const,
@@ -35,7 +35,7 @@ function makePendingChange(
   // validates the runtime shape anyway
   return {
     id: "1",
-    entityType: "UNIVERSITY",
+    targetType: "UNIVERSITY",
     typeOfChange: "CREATE",
     targetId: null,
     parentId: null,
@@ -83,7 +83,7 @@ describe("handleSubmitUniversityEntity", () => {
     fetchMock.mockResolvedValue(
       createSuccessResponse(
         makePendingChange({
-          entityType: "FACULTY",
+          targetType: "FACULTY",
           parentId: 15,
           data: { name: "Faculty of Law" },
         }),
@@ -92,7 +92,7 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       parentId: "15",
       data: { name: "Faculty of Law" },
     });
@@ -102,7 +102,7 @@ describe("handleSubmitUniversityEntity", () => {
       expect.objectContaining({
         method: "POST",
         body: JSON.stringify({
-          entityType: "FACULTY",
+          targetType: "FACULTY",
           parentId: 15,
           data: { name: "Faculty of Law" },
         }),
@@ -144,7 +144,7 @@ describe("handleSubmitUniversityEntity", () => {
     fetchMock.mockResolvedValue(
       createSuccessResponse(
         makePendingChange({
-          entityType: "FACULTY",
+          targetType: "FACULTY",
           typeOfChange: "UPDATE",
           targetId: 7,
           data: { name: "Updated Faculty" },
@@ -154,7 +154,7 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       targetId: "7",
       typeOfChange: "UPDATE",
       data: { name: "Updated Faculty" },
@@ -165,7 +165,7 @@ describe("handleSubmitUniversityEntity", () => {
       expect.objectContaining({
         method: "PUT",
         body: JSON.stringify({
-          entityType: "FACULTY",
+          targetType: "FACULTY",
           targetId: 7,
           data: { name: "Updated Faculty" },
         }),
@@ -177,7 +177,7 @@ describe("handleSubmitUniversityEntity", () => {
     fetchMock.mockResolvedValue(
       createSuccessResponse(
         makePendingChange({
-          entityType: "TRACK",
+          targetType: "TRACK",
           typeOfChange: "DELETE",
           targetId: 42,
           data: {},
@@ -187,7 +187,7 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      entityType: "TRACK",
+      targetType: "TRACK",
       targetId: "42",
       typeOfChange: "DELETE",
       data: {},
@@ -198,7 +198,7 @@ describe("handleSubmitUniversityEntity", () => {
       expect.objectContaining({
         method: "DELETE",
         body: JSON.stringify({
-          entityType: "TRACK",
+          targetType: "TRACK",
           targetId: 42,
         }),
       }),
@@ -211,7 +211,7 @@ describe("handleSubmitUniversityEntity", () => {
 
     await handleSubmitUniversityEntity({
       ...baseArgs,
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       targetId: "not-a-number",
       typeOfChange: "UPDATE",
       data: { name: "Updated Faculty" },

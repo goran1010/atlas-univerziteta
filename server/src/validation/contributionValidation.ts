@@ -2,7 +2,7 @@ import { z } from "zod";
 
 import { parseRequest } from "./parseRequest.js";
 
-const entityTypeSchema = z.enum(
+const targetTypeSchema = z.enum(
   ["UNIVERSITY", "FACULTY", "STUDY_PROGRAM", "TRACK"],
   {
     error: "Invalid entity type",
@@ -127,26 +127,26 @@ const trackCreateDataSchema = z.strictObject({
   durationYears: durationYearsSchema.optional(),
 });
 
-const createEntitySchema = z.discriminatedUnion("entityType", [
+const createEntitySchema = z.discriminatedUnion("targetType", [
   z.strictObject({
-    entityType: z.literal("UNIVERSITY"),
+    targetType: z.literal("UNIVERSITY"),
     data: universityCreateDataSchema,
   }),
 
   z.strictObject({
-    entityType: z.literal("FACULTY"),
+    targetType: z.literal("FACULTY"),
     parentId: parentIdSchema,
     data: facultyCreateDataSchema,
   }),
 
   z.strictObject({
-    entityType: z.literal("STUDY_PROGRAM"),
+    targetType: z.literal("STUDY_PROGRAM"),
     parentId: parentIdSchema,
     data: studyProgramCreateDataSchema,
   }),
 
   z.strictObject({
-    entityType: z.literal("TRACK"),
+    targetType: z.literal("TRACK"),
     parentId: parentIdSchema,
     data: trackCreateDataSchema,
   }),
@@ -278,34 +278,34 @@ const trackEditDataSchema = z
     error: "At least one field must be provided",
   });
 
-const editEntitySchema = z.discriminatedUnion("entityType", [
+const editEntitySchema = z.discriminatedUnion("targetType", [
   z.strictObject({
-    entityType: z.literal("UNIVERSITY"),
+    targetType: z.literal("UNIVERSITY"),
     targetId: targetIdSchema,
     data: universityEditDataSchema,
   }),
 
   z.strictObject({
-    entityType: z.literal("FACULTY"),
+    targetType: z.literal("FACULTY"),
     targetId: targetIdSchema,
     data: facultyEditDataSchema,
   }),
 
   z.strictObject({
-    entityType: z.literal("STUDY_PROGRAM"),
+    targetType: z.literal("STUDY_PROGRAM"),
     targetId: targetIdSchema,
     data: studyProgramEditDataSchema,
   }),
 
   z.strictObject({
-    entityType: z.literal("TRACK"),
+    targetType: z.literal("TRACK"),
     targetId: targetIdSchema,
     data: trackEditDataSchema,
   }),
 ]);
 
 const deleteEntitySchema = z.strictObject({
-  entityType: entityTypeSchema,
+  targetType: targetTypeSchema,
 
   targetId: targetIdSchema,
 });

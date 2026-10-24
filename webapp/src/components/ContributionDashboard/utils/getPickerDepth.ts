@@ -1,6 +1,6 @@
-import type { EntityType, TypeOfChange } from "../../../schemas/domain";
+import type { TargetType, TypeOfChange } from "../../../schemas/domain";
 
-const ENTITY_LEVELS: Record<EntityType, number> = {
+const ENTITY_LEVELS: Record<TargetType, number> = {
   UNIVERSITY: 1,
   FACULTY: 2,
   STUDY_PROGRAM: 3,
@@ -11,10 +11,10 @@ const ENTITY_LEVELS: Record<EntityType, number> = {
 // down to the entity itself; CREATE stops one level up, at the parent the
 // new entity goes under.
 function getPickerDepth(
-  entityType: EntityType,
+  targetType: TargetType,
   typeOfChange: TypeOfChange,
 ): number {
-  const level = ENTITY_LEVELS[entityType];
+  const level = ENTITY_LEVELS[targetType];
   return typeOfChange === "CREATE" ? level - 1 : level;
 }
 

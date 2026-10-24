@@ -1,9 +1,9 @@
 import { prisma } from "../db/prisma.js";
 
-import type { entityType } from "../generated/prisma/enums.js";
+import type { targetType } from "../generated/prisma/enums.js";
 
 interface PendingChangeWithTarget {
-  entityType: entityType;
+  targetType: targetType;
   typeOfChange: string;
   targetId: number | null;
   parentId: number | null;
@@ -12,7 +12,7 @@ interface PendingChangeWithTarget {
 // One ancestor in the academic hierarchy, ordered top-down, so the UI can
 // render linked breadcrumbs (universities and faculties have detail pages).
 interface ParentCrumb {
-  entityType: "UNIVERSITY" | "FACULTY" | "STUDY_PROGRAM";
+  targetType: "UNIVERSITY" | "FACULTY" | "STUDY_PROGRAM";
   id: number;
   name: string;
 }
@@ -30,7 +30,7 @@ interface ParentCrumb {
 async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
   pendingChanges: T[],
 ) {
-  const targetIds: Record<entityType, number[]> = {
+  const targetIds: Record<targetType, number[]> = {
     UNIVERSITY: [],
     FACULTY: [],
     STUDY_PROGRAM: [],
@@ -39,7 +39,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
 
   for (const pc of pendingChanges) {
     if (pc.targetId != null) {
-      targetIds[pc.entityType].push(pc.targetId);
+      targetIds[pc.targetType].push(pc.targetId);
     }
   }
 
@@ -128,7 +128,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
 
   // Build maps for currentEntity (strip relation fields from the response,
   // flatten child counts so reviewers see what hangs off the entity)
-  const entityMaps: Record<entityType, Map<number, object>> = {
+  const entityMaps: Record<targetType, Map<number, object>> = {
     UNIVERSITY: new Map(
       universities.map((u) => [
         u.id,
@@ -191,14 +191,14 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
   };
 
   // Build parent breadcrumb trails for UPDATE/DELETE targets
-  const parentContextMaps: Record<entityType, Map<number, ParentCrumb[]>> = {
+  const parentContextMaps: Record<targetType, Map<number, ParentCrumb[]>> = {
     UNIVERSITY: new Map(),
     FACULTY: new Map(
       faculties.map((f) => [
         f.id,
         [
           {
-            entityType: "UNIVERSITY" as const,
+            targetType: "UNIVERSITY" as const,
             id: f.university.id,
             name: f.university.name,
           },
@@ -210,12 +210,12 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
         sp.id,
         [
           {
-            entityType: "UNIVERSITY" as const,
+            targetType: "UNIVERSITY" as const,
             id: sp.faculty.university.id,
             name: sp.faculty.university.name,
           },
           {
-            entityType: "FACULTY" as const,
+            targetType: "FACULTY" as const,
             id: sp.faculty.id,
             name: sp.faculty.name,
           },
@@ -227,17 +227,17 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
         tr.id,
         [
           {
-            entityType: "UNIVERSITY" as const,
+            targetType: "UNIVERSITY" as const,
             id: tr.studyProgram.faculty.university.id,
             name: tr.studyProgram.faculty.university.name,
           },
           {
-            entityType: "FACULTY" as const,
+            targetType: "FACULTY" as const,
             id: tr.studyProgram.faculty.id,
             name: tr.studyProgram.faculty.name,
           },
           {
-            entityType: "STUDY_PROGRAM" as const,
+            targetType: "STUDY_PROGRAM" as const,
             id: tr.studyProgram.id,
             name: tr.studyProgram.name,
           },
@@ -262,11 +262,11 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
 
   for (const pc of pendingChanges) {
     if (pc.typeOfChange === "CREATE" && pc.parentId != null) {
-      if (pc.entityType === "FACULTY") {
+      if (pc.targetType === "FACULTY") {
         createParentIds.UNIVERSITY.push(pc.parentId);
-      } else if (pc.entityType === "STUDY_PROGRAM") {
+      } else if (pc.targetType === "STUDY_PROGRAM") {
         createParentIds.FACULTY.push(pc.parentId);
-      } else if (pc.entityType === "TRACK") {
+      } else if (pc.targetType === "TRACK") {
         createParentIds.STUDY_PROGRAM.push(pc.parentId);
       }
     }
@@ -311,7 +311,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
   const parentUniversityMap = new Map<number, ParentCrumb[]>(
     parentUniversities.map((u) => [
       u.id,
-      [{ entityType: "UNIVERSITY" as const, id: u.id, name: u.name }],
+      [{ targetType: "UNIVERSITY" as const, id: u.id, name: u.name }],
     ]),
   );
   const parentFacultyMap = new Map<number, ParentCrumb[]>(
@@ -319,11 +319,11 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
       f.id,
       [
         {
-          entityType: "UNIVERSITY" as const,
+          targetType: "UNIVERSITY" as const,
           id: f.university.id,
           name: f.university.name,
         },
-        { entityType: "FACULTY" as const, id: f.id, name: f.name },
+        { targetType: "FACULTY" as const, id: f.id, name: f.name },
       ],
     ]),
   );
@@ -332,16 +332,16 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
       sp.id,
       [
         {
-          entityType: "UNIVERSITY" as const,
+          targetType: "UNIVERSITY" as const,
           id: sp.faculty.university.id,
           name: sp.faculty.university.name,
         },
         {
-          entityType: "FACULTY" as const,
+          targetType: "FACULTY" as const,
           id: sp.faculty.id,
           name: sp.faculty.name,
         },
-        { entityType: "STUDY_PROGRAM" as const, id: sp.id, name: sp.name },
+        { targetType: "STUDY_PROGRAM" as const, id: sp.id, name: sp.name },
       ],
     ]),
   );
@@ -350,11 +350,11 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
     pc: PendingChangeWithTarget,
   ): ParentCrumb[] | null {
     if (pc.parentId == null) return null;
-    if (pc.entityType === "FACULTY")
+    if (pc.targetType === "FACULTY")
       return parentUniversityMap.get(pc.parentId) ?? null;
-    if (pc.entityType === "STUDY_PROGRAM")
+    if (pc.targetType === "STUDY_PROGRAM")
       return parentFacultyMap.get(pc.parentId) ?? null;
-    if (pc.entityType === "TRACK")
+    if (pc.targetType === "TRACK")
       return parentStudyProgramMap.get(pc.parentId) ?? null;
     return null;
   }
@@ -363,15 +363,15 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
     ...pc,
     currentEntity:
       pc.targetId != null
-        ? (entityMaps[pc.entityType].get(pc.targetId) ?? null)
+        ? (entityMaps[pc.targetType].get(pc.targetId) ?? null)
         : null,
     parentContext:
-      pc.entityType === "UNIVERSITY"
+      pc.targetType === "UNIVERSITY"
         ? null
         : pc.typeOfChange === "CREATE"
           ? getCreateParentContext(pc)
           : pc.targetId != null
-            ? (parentContextMaps[pc.entityType].get(pc.targetId) ?? null)
+            ? (parentContextMaps[pc.targetType].get(pc.targetId) ?? null)
             : null,
   }));
 }

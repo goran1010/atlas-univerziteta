@@ -9,7 +9,7 @@ import type { TypeOfChange } from "../../../schemas/domain";
 import type { ContributionFormDraft } from "../types";
 
 export interface HandleSubmitUniversityEntityParams {
-  entityType: string;
+  targetType: string;
   parentId?: string;
   targetId?: string;
   typeOfChange: TypeOfChange;
@@ -21,28 +21,28 @@ export interface HandleSubmitUniversityEntityParams {
 type ContributionSubmission = z.infer<typeof contributionSubmissionSchema>;
 
 function buildSubmissionInput({
-  entityType,
+  targetType,
   parentId,
   targetId,
   typeOfChange,
   data,
 }: {
-  entityType: string;
+  targetType: string;
   parentId?: string;
   targetId?: string;
   typeOfChange: TypeOfChange;
   data: ContributionFormDraft;
 }) {
-  if (typeOfChange === "CREATE" && entityType === "UNIVERSITY") {
-    return { entityType, typeOfChange, data };
+  if (typeOfChange === "CREATE" && targetType === "UNIVERSITY") {
+    return { targetType, typeOfChange, data };
   }
   if (typeOfChange === "CREATE") {
-    return { entityType, typeOfChange, parentId, data };
+    return { targetType, typeOfChange, parentId, data };
   }
   if (typeOfChange === "UPDATE") {
-    return { entityType, typeOfChange, targetId, data };
+    return { targetType, typeOfChange, targetId, data };
   }
-  return { entityType, typeOfChange, targetId };
+  return { targetType, typeOfChange, targetId };
 }
 
 const METHOD_FOR_CHANGE = {
@@ -55,25 +55,25 @@ function buildRequestBody(submission: ContributionSubmission) {
   if (submission.typeOfChange === "CREATE") {
     if ("parentId" in submission) {
       return {
-        entityType: submission.entityType,
+        targetType: submission.targetType,
         parentId: submission.parentId,
         data: submission.data,
       };
     }
-    return { entityType: submission.entityType, data: submission.data };
+    return { targetType: submission.targetType, data: submission.data };
   }
   if (submission.typeOfChange === "UPDATE") {
     return {
-      entityType: submission.entityType,
+      targetType: submission.targetType,
       targetId: submission.targetId,
       data: submission.data,
     };
   }
-  return { entityType: submission.entityType, targetId: submission.targetId };
+  return { targetType: submission.targetType, targetId: submission.targetId };
 }
 
 async function handleSubmitUniversityEntity({
-  entityType,
+  targetType,
   parentId,
   targetId,
   typeOfChange,
@@ -83,7 +83,7 @@ async function handleSubmitUniversityEntity({
 }: HandleSubmitUniversityEntityParams) {
   const parsed = contributionSubmissionSchema.safeParse(
     buildSubmissionInput({
-      entityType,
+      targetType,
       parentId,
       targetId,
       typeOfChange,

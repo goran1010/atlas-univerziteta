@@ -45,7 +45,7 @@ function Wrapper({
 
 const validPendingChange = {
   id: "pending-change-1",
-  entityType: "UNIVERSITY",
+  targetType: "UNIVERSITY",
   typeOfChange: "CREATE",
   targetId: null,
   parentId: null,

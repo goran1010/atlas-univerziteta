@@ -192,7 +192,7 @@ model Track {
   @@map("track")
 }
 
-enum entityType {
+enum targetType {
   UNIVERSITY
   FACULTY
   STUDY_PROGRAM
@@ -201,7 +201,7 @@ enum entityType {
 
 model PendingChange {
   id           String       @id @default(uuid())
-  entityType   entityType
+  targetType   targetType
   typeOfChange typeOfChange
 
   // UPDATE or DELETE target
@@ -222,7 +222,7 @@ model PendingChange {
   reviewedAt DateTime?
 
   @@index([createdAt])
-  @@index([entityType, typeOfChange])
+  @@index([targetType, typeOfChange])
   @@index([targetId])
   @@index([parentId])
   @@index([userId])

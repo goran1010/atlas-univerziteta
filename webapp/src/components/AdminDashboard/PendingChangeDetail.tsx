@@ -17,7 +17,7 @@ function isUrl(value: unknown): value is string {
 }
 
 function buildEntityRows(
-  entityType: string,
+  targetType: string,
   entity: Record<string, unknown>,
   t: TFunction,
 ): DetailRow[] {
@@ -44,7 +44,7 @@ function buildEntityRows(
 
   push(t("contribution.dataFields.name"), entity.name);
 
-  switch (entityType) {
+  switch (targetType) {
     case "UNIVERSITY":
       push(t("contribution.dataFields.acronym"), entity.acronym);
       push(t("contribution.dataFields.city"), entity.city);
@@ -131,14 +131,14 @@ function DataCard({ heading, rows }: { heading: string; rows: DetailRow[] }) {
 }
 
 interface PendingChangeDetailProps {
-  entityType: string;
+  targetType: string;
   typeOfChange: string;
   data: Record<string, unknown>;
   currentEntity?: Record<string, unknown> | null;
 }
 
 function PendingChangeDetail({
-  entityType,
+  targetType,
   typeOfChange,
   data: proposedData,
   currentEntity,
@@ -152,7 +152,7 @@ function PendingChangeDetail({
       {typeOfChange === "CREATE" && hasProposedFields && (
         <DataCard
           heading={t("admin.proposedData")}
-          rows={buildEntityRows(entityType, proposedData, t)}
+          rows={buildEntityRows(targetType, proposedData, t)}
         />
       )}
 
@@ -161,7 +161,7 @@ function PendingChangeDetail({
           {currentEntity ? (
             <DataCard
               heading={t("admin.currentData")}
-              rows={buildEntityRows(entityType, currentEntity, t)}
+              rows={buildEntityRows(targetType, currentEntity, t)}
             />
           ) : currentEntity === null ? (
             <p className="text-xs italic text-(--text-secondary)">
@@ -171,7 +171,7 @@ function PendingChangeDetail({
           {hasProposedFields && (
             <DataCard
               heading={t("admin.proposedChanges")}
-              rows={buildEntityRows(entityType, proposedData, t)}
+              rows={buildEntityRows(targetType, proposedData, t)}
             />
           )}
         </>
@@ -182,7 +182,7 @@ function PendingChangeDetail({
           {currentEntity ? (
             <DataCard
               heading={t("admin.currentData")}
-              rows={buildEntityRows(entityType, currentEntity, t)}
+              rows={buildEntityRows(targetType, currentEntity, t)}
             />
           ) : (
             <p className="text-xs italic text-(--text-secondary)">

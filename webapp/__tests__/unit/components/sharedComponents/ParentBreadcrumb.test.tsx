@@ -5,9 +5,9 @@ import { renderWithProviders } from "../../../utils/renderWithProviders";
 import type { ParentCrumb } from "../../../../src/schemas/pendingChange";
 
 const crumbs: ParentCrumb[] = [
-  { entityType: "UNIVERSITY", id: 3, name: "Test University" },
-  { entityType: "FACULTY", id: 7, name: "Test Faculty" },
-  { entityType: "STUDY_PROGRAM", id: 11, name: "Test Program" },
+  { targetType: "UNIVERSITY", id: 3, name: "Test University" },
+  { targetType: "FACULTY", id: 7, name: "Test Faculty" },
+  { targetType: "STUDY_PROGRAM", id: 11, name: "Test Program" },
 ];
 
 describe("ParentBreadcrumb", () => {

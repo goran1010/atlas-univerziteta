@@ -15,7 +15,7 @@ const user = userEvent.setup();
 
 const pendingChange = {
   id: "8687b282-fcc6-4f69-8744-0f8e1585d991",
-  entityType: "FACULTY",
+  targetType: "FACULTY",
   typeOfChange: "UPDATE",
   targetId: 1,
   parentId: null,

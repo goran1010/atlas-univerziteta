@@ -5,12 +5,12 @@ import { Select } from "../sharedComponents/Select";
 import { Label } from "../sharedComponents/Label";
 import { Button } from "../sharedComponents/Button";
 import { DataField } from "./DataField";
-import { EntityPicker } from "./EntityPicker";
+import { TargetPicker } from "./TargetPicker";
 import { getPickerDepth } from "./utils/getPickerDepth";
 import { handleSubmitUniversityEntity } from "./utils/handleSubmitUniversityEntity";
 import type {
   Entity,
-  EntityType,
+  TargetType,
   StudyCycle,
   TypeOfChange,
 } from "../../schemas/domain";
@@ -18,14 +18,14 @@ import type { ContributionFormDraft, ContributionFormState } from "./types";
 import type { SubmitEvent } from "react";
 
 const INIT_FORM: ContributionFormState = {
-  entityType: "UNIVERSITY",
+  targetType: "UNIVERSITY",
   typeOfChange: "CREATE",
   parentId: "",
   targetId: "",
   data: {},
 };
 
-const ENTITY_TYPES: EntityType[] = [
+const ENTITY_TYPES: TargetType[] = [
   "UNIVERSITY",
   "FACULTY",
   "STUDY_PROGRAM",
@@ -56,13 +56,13 @@ function AddUniversityEntity({
   const [loading, setLoading] = useState(false);
   const [pickerResetKey, setPickerResetKey] = useState(0);
 
-  const { entityType, typeOfChange, parentId, targetId, data } = formState;
+  const { targetType, typeOfChange, parentId, targetId, data } = formState;
 
   function setField(field: keyof ContributionFormState, value: string) {
     setFormState((prev) => ({ ...prev, [field]: value }));
   }
 
-  function setSelector(field: "entityType" | "typeOfChange", value: string) {
+  function setSelector(field: "targetType" | "typeOfChange", value: string) {
     setFormState((prev) => ({
       ...prev,
       [field]: value,
@@ -86,14 +86,14 @@ function AddUniversityEntity({
     }));
   }
 
-  const needsParent = typeOfChange === "CREATE" && entityType !== "UNIVERSITY";
+  const needsParent = typeOfChange === "CREATE" && targetType !== "UNIVERSITY";
   const needsTarget = typeOfChange !== "CREATE";
   const needsDataFields = typeOfChange !== "DELETE";
 
   async function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     await handleSubmitUniversityEntity({
-      entityType,
+      targetType,
       parentId,
       targetId,
       typeOfChange,
@@ -116,15 +116,15 @@ function AddUniversityEntity({
         {t("form.requiredHint")}
       </p>
       <div className="flex flex-col gap-1 items-center">
-        <Label htmlFor="entityType" required>
+        <Label htmlFor="targetType" required>
           {t("contribution.entityType")}
         </Label>
         <Select
-          id="entityType"
-          name="entityType"
-          value={entityType}
+          id="targetType"
+          name="targetType"
+          value={targetType}
           onChange={(e) => {
-            setSelector("entityType", e.target.value);
+            setSelector("targetType", e.target.value);
           }}
           required
         >
@@ -156,9 +156,9 @@ function AddUniversityEntity({
         </Select>
       </div>
       {(needsParent || needsTarget) && (
-        <EntityPicker
-          key={`${entityType}-${typeOfChange}-${String(pickerResetKey)}`}
-          depth={getPickerDepth(entityType, typeOfChange)}
+        <TargetPicker
+          key={`${targetType}-${typeOfChange}-${String(pickerResetKey)}`}
+          depth={getPickerDepth(targetType, typeOfChange)}
           legend={
             needsParent
               ? t("contribution.picker.parent")
@@ -187,7 +187,7 @@ function AddUniversityEntity({
             }}
           />
 
-          {entityType === "UNIVERSITY" && (
+          {targetType === "UNIVERSITY" && (
             <>
               <DataField
                 label={t("contribution.dataFields.acronym")}
@@ -307,7 +307,7 @@ function AddUniversityEntity({
             </>
           )}
 
-          {entityType === "FACULTY" && (
+          {targetType === "FACULTY" && (
             <>
               <DataField
                 label={t("contribution.dataFields.city")}
@@ -357,7 +357,7 @@ function AddUniversityEntity({
             </>
           )}
 
-          {entityType === "STUDY_PROGRAM" && (
+          {targetType === "STUDY_PROGRAM" && (
             <>
               <div className="flex flex-col gap-1">
                 <Label htmlFor="dataCycle" required={typeOfChange === "CREATE"}>
@@ -418,7 +418,7 @@ function AddUniversityEntity({
             </>
           )}
 
-          {entityType === "TRACK" && (
+          {targetType === "TRACK" && (
             <>
               <DataField
                 label={t("contribution.dataFields.ects")}

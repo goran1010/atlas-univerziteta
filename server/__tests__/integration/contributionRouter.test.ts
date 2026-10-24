@@ -87,7 +87,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     });
   });
 
-  test("responds with status 400 when entityType is missing", async () => {
+  test("responds with status 400 when targetType is missing", async () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.post("/users/contribution/universities");
@@ -102,7 +102,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.post("/users/contribution/universities").send({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       data: {
         name: "TestCity University",
         city: "TestCity",
@@ -122,7 +122,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.post("/users/contribution/universities").send({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       data: {
         name: "TestCity University",
         city: "TestCity",
@@ -145,7 +145,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.post("/users/contribution/universities").send({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       data: {
         name: "a".repeat(201),
         city: "TestCity",
@@ -164,7 +164,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     const { agent, user } = await createLoggedInAgent();
 
     const response = await agent.post("/users/contribution/universities").send({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       data: {
         name: "TestCity University",
         city: "TestCity",
@@ -190,7 +190,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     expect(pendingChange).toEqual(
       expect.objectContaining({
         userId: user.id,
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         typeOfChange: "CREATE",
         parentId: null,
         targetId: null,
@@ -208,7 +208,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.post("/users/contribution/universities").send({
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       parentId: 999999,
       data: { name: "Faculty without university" },
     });
@@ -224,7 +224,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     const university = await createUniversity();
 
     const response = await agent.post("/users/contribution/universities").send({
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       parentId: university.id,
       data: { name: "Faculty with university" },
     });
@@ -237,7 +237,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     const faculty = await createFaculty();
 
     const response = await agent.post("/users/contribution/universities").send({
-      entityType: "STUDY_PROGRAM",
+      targetType: "STUDY_PROGRAM",
       parentId: faculty.id,
       data: { name: "Suggested Study Program", cycle: "FIRST" },
     });
@@ -250,14 +250,14 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     const studyProgram = await createStudyProgram();
 
     const response = await agent.post("/users/contribution/universities").send({
-      entityType: "TRACK",
+      targetType: "TRACK",
       parentId: studyProgram.id,
       data: { name: "Suggested Track", ects: 60 },
     });
 
     expect(response.status).toBe(201);
     const stored = await prisma.pendingChange.findFirst({
-      where: { userId: user.id, entityType: "TRACK" },
+      where: { userId: user.id, targetType: "TRACK" },
     });
     expect(stored?.parentId).toBe(studyProgram.id);
     expect(stored?.typeOfChange).toBe("CREATE");
@@ -269,7 +269,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     await prisma.studyProgram.delete({ where: { id: studyProgram.id } });
 
     const response = await agent.post("/users/contribution/universities").send({
-      entityType: "TRACK",
+      targetType: "TRACK",
       parentId: studyProgram.id,
       data: { name: "Orphan Track" },
     });
@@ -294,7 +294,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     });
   });
 
-  test("responds with status 400 when entityType is missing", async () => {
+  test("responds with status 400 when targetType is missing", async () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.put("/users/contribution/universities");
@@ -309,7 +309,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.put("/users/contribution/universities").send({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       targetId: "1",
       data: { phone: "1".repeat(51) },
     });
@@ -324,7 +324,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.put("/users/contribution/universities").send({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       targetId: 1,
       data: {},
     });
@@ -339,7 +339,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.put("/users/contribution/universities").send({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       targetId: 1,
       data: { city: "   " },
     });
@@ -354,7 +354,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.put("/users/contribution/universities").send({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       targetId: "1",
       data: { name: "Updated Name" },
     });
@@ -370,7 +370,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     const faculty = await createFaculty();
 
     const response = await agent.put("/users/contribution/universities").send({
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       targetId: faculty.id,
       data: { city: null },
     });
@@ -385,7 +385,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     expect(pendingChange).toEqual(
       expect.objectContaining({
         userId: user.id,
-        entityType: "FACULTY",
+        targetType: "FACULTY",
         targetId: faculty.id,
         data: { city: null },
       }),
@@ -397,7 +397,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     const university = await createUniversity();
 
     const response = await agent.put("/users/contribution/universities").send({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       targetId: university.id,
       data: { name: "Updated Name" },
     });
@@ -419,7 +419,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     expect(pendingChange).toEqual(
       expect.objectContaining({
         userId: user.id,
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         typeOfChange: "UPDATE",
         targetId: university.id,
         data: { name: "Updated Name" },
@@ -431,7 +431,7 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.put("/users/contribution/universities").send({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       targetId: 999999,
       data: { name: "Updated Name" },
     });
@@ -454,14 +454,14 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     });
 
     const response = await agent.put("/users/contribution/universities").send({
-      entityType: "TRACK",
+      targetType: "TRACK",
       targetId: track.id,
       data: { name: "Updated Track Name" },
     });
 
     expect(response.status).toBe(201);
     const stored = await prisma.pendingChange.findFirst({
-      where: { userId: user.id, entityType: "TRACK" },
+      where: { userId: user.id, targetType: "TRACK" },
     });
     expect(stored).toEqual(
       expect.objectContaining({
@@ -488,7 +488,7 @@ describe("Contribution Router - DELETE /users/contribution/universities", () => 
     });
   });
 
-  test("responds with status 400 when entityType is missing", async () => {
+  test("responds with status 400 when targetType is missing", async () => {
     const { agent } = await createLoggedInAgent();
 
     const response = await agent.delete("/users/contribution/universities");
@@ -505,7 +505,7 @@ describe("Contribution Router - DELETE /users/contribution/universities", () => 
 
     const response = await agent
       .delete("/users/contribution/universities")
-      .send({ entityType: "UNIVERSITY", targetId: university.id });
+      .send({ targetType: "UNIVERSITY", targetId: university.id });
 
     expect(response.status).toBe(201);
     expect(response.body).toEqual(
@@ -524,7 +524,7 @@ describe("Contribution Router - DELETE /users/contribution/universities", () => 
     expect(pendingChange).toEqual(
       expect.objectContaining({
         userId: user.id,
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         typeOfChange: "DELETE",
         targetId: university.id,
         data: {},
@@ -537,7 +537,7 @@ describe("Contribution Router - DELETE /users/contribution/universities", () => 
 
     const response = await agent
       .delete("/users/contribution/universities")
-      .send({ entityType: "UNIVERSITY", targetId: 999999 });
+      .send({ targetType: "UNIVERSITY", targetId: 999999 });
 
     expect(response.status).toBe(404);
     expect(response.body).toEqual({
@@ -574,7 +574,7 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
 
     const ownPendingChange = await prisma.pendingChange.create({
       data: {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         typeOfChange: "CREATE",
         data: {
           name: "Own University",
@@ -587,7 +587,7 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
     });
     await prisma.pendingChange.create({
       data: {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         typeOfChange: "CREATE",
         data: {
           name: "Other University",
@@ -657,7 +657,7 @@ describe("Contribution Router - DELETE /users/contribution/pending-changes/unive
     const { agent, user } = await createLoggedInAgent();
     const pendingChange = await prisma.pendingChange.create({
       data: {
-        entityType: "UNIVERSITY",
+        targetType: "UNIVERSITY",
         typeOfChange: "CREATE",
         data: {
           name: "Delete Me",

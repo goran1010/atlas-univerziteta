@@ -2,7 +2,7 @@ import { prisma } from "../db/prisma.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 
 import type { Request, Response } from "express";
-import * as universityValidation from "../validation/universityValidation.js";
+import * as v1Validation from "../validation/v1Validation.js";
 
 function status(_req: Request, res: Response) {
   sendSuccess(res, {
@@ -20,7 +20,7 @@ function pagination(page: number, limit: number, total: number) {
 }
 
 async function getUniversities(req: Request, res: Response) {
-  const { page, limit } = universityValidation.listQuery(req.query);
+  const { page, limit } = v1Validation.listQuery(req.query);
 
   const [total, universities] = await Promise.all([
     prisma.university.count(),
@@ -50,7 +50,7 @@ async function getUniversities(req: Request, res: Response) {
 }
 
 async function getFaculties(req: Request, res: Response) {
-  const { page, limit } = universityValidation.listQuery(req.query);
+  const { page, limit } = v1Validation.listQuery(req.query);
 
   const [total, faculties] = await Promise.all([
     prisma.faculty.count(),
@@ -76,7 +76,7 @@ async function getFaculties(req: Request, res: Response) {
 }
 
 async function getStudyPrograms(req: Request, res: Response) {
-  const { page, limit } = universityValidation.listQuery(req.query);
+  const { page, limit } = v1Validation.listQuery(req.query);
 
   const [total, studyPrograms] = await Promise.all([
     prisma.studyProgram.count(),
@@ -110,7 +110,7 @@ async function getStudyPrograms(req: Request, res: Response) {
 }
 
 async function getTracks(req: Request, res: Response) {
-  const { page, limit } = universityValidation.listQuery(req.query);
+  const { page, limit } = v1Validation.listQuery(req.query);
 
   const [total, tracks] = await Promise.all([
     prisma.track.count(),
@@ -148,7 +148,7 @@ async function getTracks(req: Request, res: Response) {
 }
 
 async function getUniversityById(req: Request, res: Response) {
-  const { id } = universityValidation.getUniversityById(req.params);
+  const { id } = v1Validation.getUniversityById(req.params);
 
   const university = await prisma.university.findUnique({
     where: {
@@ -183,7 +183,7 @@ async function getUniversityById(req: Request, res: Response) {
 }
 
 async function getFacultyById(req: Request, res: Response) {
-  const { id } = universityValidation.getFacultyById(req.params);
+  const { id } = v1Validation.getFacultyById(req.params);
 
   const faculty = await prisma.faculty.findUnique({
     where: { id },
@@ -212,7 +212,7 @@ async function getFacultyById(req: Request, res: Response) {
 }
 
 async function getStudyProgramById(req: Request, res: Response) {
-  const { id } = universityValidation.getStudyProgramById(req.params);
+  const { id } = v1Validation.getStudyProgramById(req.params);
 
   const studyProgram = await prisma.studyProgram.findUnique({
     where: { id },
@@ -238,7 +238,7 @@ async function getStudyProgramById(req: Request, res: Response) {
 }
 
 async function getTrackById(req: Request, res: Response) {
-  const { id } = universityValidation.getTrackById(req.params);
+  const { id } = v1Validation.getTrackById(req.params);
 
   const track = await prisma.track.findUnique({
     where: { id },

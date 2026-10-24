@@ -13,7 +13,7 @@ import { logger } from "../../src/utils/logger.js";
 
 import type { Agent, Response } from "supertest";
 import type {
-  entityType,
+  targetType,
   typeOfChange,
 } from "../../src/generated/prisma/enums.js";
 import type { Prisma } from "../../src/generated/prisma/client.js";
@@ -58,7 +58,7 @@ afterAll(async () => {
 });
 
 interface PendingChangeInput {
-  entityType: entityType;
+  targetType: targetType;
   typeOfChange: typeOfChange;
   targetId?: number | null;
   parentId?: number | null;
@@ -66,7 +66,7 @@ interface PendingChangeInput {
 }
 
 function createPendingChange({
-  entityType,
+  targetType,
   typeOfChange,
   targetId = null,
   parentId = null,
@@ -74,7 +74,7 @@ function createPendingChange({
 }: PendingChangeInput) {
   return prisma.pendingChange.create({
     data: {
-      entityType,
+      targetType,
       typeOfChange,
       targetId,
       parentId,
@@ -123,7 +123,7 @@ function expectApproved(response: Response) {
 describe("Admin Router - GET /users/admin/pending-changes", () => {
   test("Responds with status 200 and all pending changes if role ADMIN", async () => {
     const pendingChange = await createPendingChange({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       typeOfChange: "CREATE",
       targetId: 1,
       data: {
@@ -159,7 +159,7 @@ describe("Admin Router - GET /users/admin/pending-changes", () => {
 describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
   test("Responds with status 200 if role ADMIN", async () => {
     const pendingChange = await createPendingChange({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       typeOfChange: "CREATE",
       targetId: 1,
       data: {
@@ -210,7 +210,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
   test("Responds with status 404 if stored pending change data is invalid for its entity type", async () => {
     const pendingChange = await createPendingChange({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       typeOfChange: "CREATE",
       data: {
         name: "Malformed University",
@@ -230,7 +230,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
   test("Responds with status 404 if stored pending change data is not a record", async () => {
     const pendingChange = await createPendingChange({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       typeOfChange: "CREATE",
       data: "invalid string data",
     });
@@ -240,7 +240,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
     expect(response.status).toBe(404);
   });
 
-  const entityTypes: entityType[] = [
+  const entityTypes: targetType[] = [
     "UNIVERSITY",
     "FACULTY",
     "STUDY_PROGRAM",
@@ -249,9 +249,9 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
   test.each(entityTypes)(
     "Responds with status 404 if stored pending change target id is null for a DELETE change type for entity type %s",
-    async (entityType) => {
+    async (targetType) => {
       const pendingChange = await createPendingChange({
-        entityType,
+        targetType,
         typeOfChange: "DELETE",
         data: {},
       });
@@ -264,9 +264,9 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
   test.each(entityTypes)(
     "Responds with status 404 if stored pending change target id is null for UPDATE change type for entity type %s",
-    async (entityType) => {
+    async (targetType) => {
       const pendingChange = await createPendingChange({
-        entityType,
+        targetType,
         typeOfChange: "UPDATE",
         data: {},
       });
@@ -281,9 +281,9 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
   test.each(childEntityTypes)(
     "Responds with status 404 if stored pending change parent id is null for CREATE change type for entity type %s",
-    async (entityType) => {
+    async (targetType) => {
       const pendingChange = await createPendingChange({
-        entityType,
+        targetType,
         typeOfChange: "CREATE",
         data: {},
       });
@@ -299,7 +299,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
   test("Responds with status 200 and message if a pending change is approved successfully DELETE", async () => {
     const university = await createUniversity("Test DELETE University");
     const pendingChange = await createPendingChange({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       typeOfChange: "DELETE",
       targetId: university.id,
     });
@@ -321,7 +321,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
     );
     const track = await createTrack(studyProgram.id, "Test Cascade Track");
     const pendingChange = await createPendingChange({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       typeOfChange: "DELETE",
       targetId: university.id,
     });
@@ -345,7 +345,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
 
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
     const pendingChange = await createPendingChange({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       typeOfChange: "CREATE",
       data: {
         name: "Test Create University",
@@ -367,7 +367,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
   test("Responds with status 200 and message if a pending change is approved successfully for UPDATE", async () => {
     const university = await createUniversity("Test Update University");
     const pendingChange = await createPendingChange({
-      entityType: "UNIVERSITY",
+      targetType: "UNIVERSITY",
       typeOfChange: "UPDATE",
       targetId: university.id,
       data: {
@@ -398,7 +398,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
   test("Responds with status 200 and message if a pending change is approved successfully for CREATE", async () => {
     const university = await createUniversity("Test University for CREATE");
     const pendingChange = await createPendingChange({
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       typeOfChange: "CREATE",
       parentId: university.id,
       data: {
@@ -420,7 +420,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
     const university = await createUniversity("Test University for UPDATE");
     const faculty = await createFaculty(university.id, "Test Update Faculty");
     const pendingChange = await createPendingChange({
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       typeOfChange: "UPDATE",
       targetId: faculty.id,
       parentId: university.id,
@@ -447,7 +447,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", 
     const university = await createUniversity("Test University for DELETE");
     const faculty = await createFaculty(university.id, "Test Delete Faculty");
     const pendingChange = await createPendingChange({
-      entityType: "FACULTY",
+      targetType: "FACULTY",
       typeOfChange: "DELETE",
       targetId: faculty.id,
       parentId: university.id,
@@ -472,7 +472,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
       "Test Delete Study Program",
     );
     const pendingChange = await createPendingChange({
-      entityType: "STUDY_PROGRAM",
+      targetType: "STUDY_PROGRAM",
       typeOfChange: "DELETE",
       targetId: studyProgram.id,
       parentId: faculty.id,
@@ -491,7 +491,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
     const university = await createUniversity("Test University for CREATE");
     const faculty = await createFaculty(university.id, "Test Create Faculty");
     const pendingChange = await createPendingChange({
-      entityType: "STUDY_PROGRAM",
+      targetType: "STUDY_PROGRAM",
       typeOfChange: "CREATE",
       parentId: faculty.id,
       data: {
@@ -517,7 +517,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for STUDY_PROG
       "Test Update Study Program",
     );
     const pendingChange = await createPendingChange({
-      entityType: "STUDY_PROGRAM",
+      targetType: "STUDY_PROGRAM",
       typeOfChange: "UPDATE",
       targetId: studyProgram.id,
       parentId: faculty.id,
@@ -555,7 +555,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for TRACK", ()
     );
     const track = await createTrack(studyProgram.id, "Test Delete Track");
     const pendingChange = await createPendingChange({
-      entityType: "TRACK",
+      targetType: "TRACK",
       typeOfChange: "DELETE",
       targetId: track.id,
       parentId: studyProgram.id,
@@ -578,7 +578,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for TRACK", ()
       "Test Create Study Program",
     );
     const pendingChange = await createPendingChange({
-      entityType: "TRACK",
+      targetType: "TRACK",
       typeOfChange: "CREATE",
       parentId: studyProgram.id,
       data: {
@@ -612,7 +612,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for TRACK", ()
     );
     const track = await createTrack(studyProgram.id, "Test Update Track");
     const pendingChange = await createPendingChange({
-      entityType: "TRACK",
+      targetType: "TRACK",
       typeOfChange: "UPDATE",
       targetId: track.id,
       parentId: studyProgram.id,

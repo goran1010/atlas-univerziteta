@@ -10,7 +10,7 @@ import {
   studyProgramFullMatch,
   tokenWhere,
 } from "../search/matchers.js";
-import * as universityValidation from "../validation/universityValidation.js";
+import * as v1Validation from "../validation/v1Validation.js";
 
 import type { SearchToken } from "../search/tokenize.js";
 import type { WhereClause } from "../search/matchers.js";
@@ -77,7 +77,7 @@ async function searchSection<Item extends { id: number }>(
 
 async function search(req: Request, res: Response) {
   const { searchTerm, entity, ownership, cycle, type } =
-    universityValidation.searchQuery(req.query);
+    v1Validation.searchQuery(req.query);
 
   const tokens = searchTerm === undefined ? [] : tokenizeSearchTerm(searchTerm);
 

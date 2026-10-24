@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 import type { ParentCrumb } from "../../schemas/pendingChange";
 
-const DETAIL_PATHS: Partial<Record<ParentCrumb["entityType"], string>> = {
+const DETAIL_PATHS: Partial<Record<ParentCrumb["targetType"], string>> = {
   UNIVERSITY: "/universities",
   FACULTY: "/faculties",
 };
@@ -22,10 +22,10 @@ function ParentBreadcrumb({ crumbs, current }: ParentBreadcrumbProps) {
   return (
     <p className="text-xs text-(--text-muted) px-2 py-1 text-center">
       {crumbs.map((crumb, index) => {
-        const path = DETAIL_PATHS[crumb.entityType];
+        const path = DETAIL_PATHS[crumb.targetType];
 
         return (
-          <span key={`${crumb.entityType}-${crumb.id.toString()}`}>
+          <span key={`${crumb.targetType}-${crumb.id.toString()}`}>
             {index > 0 && " › "}
             {path ? (
               <Link
