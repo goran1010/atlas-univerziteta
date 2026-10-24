@@ -9,7 +9,7 @@ import {
   handleDeclinePendingChange,
 } from "./utils/adminActions";
 import { PendingChangeDetail } from "./PendingChangeDetail";
-import { ParentBreadcrumb } from "../sharedComponents/ParentBreadcrumb";
+import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import type { Notification } from "../../types";
 import type { TypeOfChange } from "../../schemas/domain";

@@ -6,7 +6,7 @@ import { Dialog } from "../sharedComponents/Dialog";
 import { ConfirmDialog } from "../sharedComponents/ConfirmDialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
-import { ParentBreadcrumb } from "../sharedComponents/ParentBreadcrumb";
+import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import type { PendingChange } from "../../schemas/pendingChange";
 

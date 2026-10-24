@@ -1,11 +1,11 @@
 import { Navigate } from "react-router";
 import { App } from "./App";
-import { ErrorPage } from "./components/ErrorPage";
+import { ErrorPage } from "./components/layout/ErrorPage";
 import { Spinner } from "./components/sharedComponents/Spinner";
-import { HomeLayout } from "./components/Home/HomeLayout";
-import { UnifiedSearch } from "./components/Home/UnifiedSearch";
-import { UniversityDetailPage } from "./components/Home/UniversityDetailPage";
-import { FacultyDetailPage } from "./components/Home/FacultyDetailPage";
+import { HomeLayout } from "./components/layout/HomeLayout";
+import { UnifiedSearch } from "./components/Search/UnifiedSearch";
+import { UniversityDetailPage } from "./components/EntityDetails/UniversityDetailPage";
+import { FacultyDetailPage } from "./components/EntityDetails/FacultyDetailPage";
 
 // The public search and detail pages stay in the main bundle - they are the
 // landing pages. Everything else loads on first navigation via route.lazy,

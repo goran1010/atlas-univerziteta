@@ -1,8 +1,8 @@
 import { use } from "react";
 import { Outlet } from "react-router";
 import { Navbar } from "./components/Navbar/Navbar";
-import { Footer } from "./components/Footer";
-import { ScrollToTop } from "./components/ScrollToTop";
+import { Footer } from "./components/layout/Footer";
+import { ScrollToTop } from "./components/layout/ScrollToTop";
 import { useStatusCheck } from "./customHooks/useStatusCheck";
 import { useOAuthLoginAnnouncement } from "./customHooks/useOAuthLoginAnnouncement";
 import { Notifications } from "./components/Notifications";
@@ -11,8 +11,8 @@ import { useLanguage } from "./customHooks/useLanguage";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { RootContext } from "./contextData/RootContext";
 import { NotificationContext } from "./contextData/NotificationContext";
-import { SkipNavbarLink } from "./components/SkipNavbarLink";
-import { RouteAnnouncer } from "./components/RouteAnnouncer";
+import { SkipNavbarLink } from "./components/layout/SkipNavbarLink";
+import { RouteAnnouncer } from "./components/layout/RouteAnnouncer";
 import { SITE_URL } from "./utils/envConfig";
 
 function App() {
