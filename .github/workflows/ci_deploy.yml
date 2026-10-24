@@ -86,7 +86,7 @@ jobs:
           --health-retries=5
 
     env:
-      VITE_SERVER_URL: http://localhost:3000
+      VITE_API_URL: http://localhost:3000
       PORT: 3000
       WEBAPP_URL: http://localhost:5173
       NODE_ENV: test

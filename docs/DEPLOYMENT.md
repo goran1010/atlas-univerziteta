@@ -33,6 +33,6 @@ The webapp is an SPA, and social crawlers (Discord, Facebook, X) do not run Java
 Two stages:
 
 1. **Static routes** (`/search`, `/about`, `/api-docs`, `/login`, `/signup`): titles and descriptions come from `webapp/src/locales/en.json`; each route can have its own share image in `webapp/public/images/og-images/` (1200x630 px), falling back to `og-image-home.png` while missing.
-2. **Per-entity pages**: the script fetches all universities and faculties from the API and writes a page per `/universities/:id` and `/faculties/:id`, and appends them to `sitemap.xml`. This stage needs an **absolute** API URL at build time - `VITE_SERVER_URL` is an absolute URL in production and is used directly. If the API is unreachable, the stage logs a warning and is skipped - the deploy never fails because of it.
+2. **Per-entity pages**: the script fetches all universities and faculties from the API and writes a page per `/universities/:id` and `/faculties/:id`, and appends them to `sitemap.xml`. This stage needs an **absolute** API URL at build time - `VITE_API_URL` is an absolute URL in production and is used directly. If the API is unreachable, the stage logs a warning and is skipped - the deploy never fails because of it.
 
 Share metadata is a deploy-time snapshot: renamed or newly added entities get correct previews on the next deploy.

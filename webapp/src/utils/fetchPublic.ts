@@ -1,4 +1,4 @@
-import { SERVER_URL } from "./envConfig";
+import { API_URL } from "./envConfig";
 import { readResponseError } from "../schemas/api";
 import { notificationMessage } from "./apiError";
 
@@ -6,8 +6,8 @@ import type { z } from "zod";
 import type { ApiError } from "../schemas/api";
 import type { RequestContext } from "../types";
 
-// GET counterpart of apiMutation: one place for the fetch/parse/notify block
-// that public reads used to copy-paste.
+// GET counterpart of apiMutation: the shared fetch/parse/notify block for
+// public reads.
 
 type FetchPublicOutcome<Schema extends z.ZodType> =
   | { ok: true; result: z.output<Schema> }
@@ -20,7 +20,7 @@ async function fetchPublicResponse<Schema extends z.ZodType>(
   responseSchema: Schema,
   signal?: AbortSignal,
 ): Promise<FetchPublicOutcome<Schema>> {
-  const response = await fetch(`${SERVER_URL}${path}`, {
+  const response = await fetch(`${API_URL}${path}`, {
     method: "GET",
     mode: "cors",
     ...(signal && { signal }),

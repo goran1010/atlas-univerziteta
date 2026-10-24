@@ -172,6 +172,7 @@ function useUnifiedSearch() {
       if (hasText && trimmed.length < 2) return;
 
       if (!hasText && !hasAnyFilter && !browse) {
+        // eslint-disable-next-line react-x/set-state-in-effect -- also reached synchronously from the deep-link effect, whose purpose is syncing URL params into view state
         setView({ kind: "idle" });
         return;
       }
@@ -227,7 +228,6 @@ function useUnifiedSearch() {
   const urlQuery = searchParams.get("q") ?? "";
   useEffect(() => {
     if (document.activeElement === inputRef.current) return;
-    // eslint-disable-next-line react-x/set-state-in-effect -- syncing external URL changes into the input is the effect's purpose
     setSearchInput(urlQuery);
   }, [urlQuery]);
 

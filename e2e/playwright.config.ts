@@ -53,7 +53,7 @@ export default defineConfig({
       timeout: 60_000,
       env: {
         ...definedProcessEnv(),
-        VITE_SERVER_URL: E2E_SERVER_URL,
+        VITE_API_URL: E2E_SERVER_URL,
       },
     },
   ],

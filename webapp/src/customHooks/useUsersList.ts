@@ -1,7 +1,7 @@
 import { use, useEffect, useRef, useState } from "react";
 import { RootContext } from "../contextData/RootContext";
 import { NotificationContext } from "../contextData/NotificationContext";
-import { SERVER_URL } from "../utils/envConfig";
+import { API_URL } from "../utils/envConfig";
 import { readResponseError } from "../schemas/api";
 import { notificationMessageKey } from "../utils/apiError";
 
@@ -44,7 +44,7 @@ function useUsersList<Item>({
       try {
         setLoading(true);
 
-        const response = await fetch(`${SERVER_URL}${path}`, {
+        const response = await fetch(`${API_URL}${path}`, {
           method: "GET",
           mode: "cors",
           headers: {

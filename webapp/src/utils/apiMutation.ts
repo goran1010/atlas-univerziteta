@@ -1,4 +1,4 @@
-import { SERVER_URL } from "./envConfig";
+import { API_URL } from "./envConfig";
 import { readResponseError } from "../schemas/api";
 import { notificationMessage } from "./apiError";
 
@@ -44,7 +44,7 @@ async function apiMutation<Schema extends z.ZodType>(
       options.body = JSON.stringify(body);
     }
 
-    const response = await fetch(`${SERVER_URL}${path}`, options);
+    const response = await fetch(`${API_URL}${path}`, options);
 
     if (response.ok) {
       const result = responseSchema.parse(await response.json());

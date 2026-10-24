@@ -45,7 +45,7 @@ Local OAuth callback URLs to register with GitHub and Google: `http://localhost:
 
 ### Webapp (`webapp/.env.example`)
 
-- `VITE_SERVER_URL`: server base URL used by the React app - `http://localhost:3000` locally, `https://api.atlasuniverziteta.com` on Netlify (see [DEPLOYMENT.md](./DEPLOYMENT.md))
+- `VITE_API_URL`: API base URL used by the React app - `http://localhost:3000` locally, `https://api.atlasuniverziteta.com` on Netlify (see [DEPLOYMENT.md](./DEPLOYMENT.md))
 
 ## Database setup and running
 

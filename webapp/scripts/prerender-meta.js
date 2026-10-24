@@ -136,15 +136,15 @@ console.log(`Pre-rendered meta tags for ${String(generated)} static routes.`);
 // ---- per-entity pages + sitemap --------------------------------------------
 // The build fetches the catalog and writes a static page per university and
 // faculty so shared links get entity-specific previews (crawlers do not run
-// the SPA). Meta freshness equals deploy freshness. VITE_SERVER_URL is an
+// the SPA). Meta freshness equals deploy freshness. VITE_API_URL is an
 // absolute URL in production and is used directly.
 
 function apiBaseUrl() {
-  const candidates = [process.env.VITE_SERVER_URL];
+  const candidates = [process.env.VITE_API_URL];
   const envFile = join(import.meta.dirname, "..", ".env");
   if (existsSync(envFile)) {
     const parsed = parseEnv(readFileSync(envFile, "utf-8"));
-    candidates.push(parsed.VITE_SERVER_URL);
+    candidates.push(parsed.VITE_API_URL);
   }
   const absolute = candidates.find(
     (value) =>
@@ -203,7 +203,7 @@ function appendToSitemap(urls) {
 const apiUrl = apiBaseUrl();
 if (!apiUrl) {
   console.warn(
-    "prerender-meta: no absolute API URL (VITE_SERVER_URL) - skipping per-entity pages.",
+    "prerender-meta: no absolute API URL (VITE_API_URL) - skipping per-entity pages.",
   );
 } else {
   try {
