@@ -79,7 +79,7 @@ function UniversityDetailPage() {
           name="description"
           content={`${university.name} - ${university.city}, ${entityLabel}`}
         />
-        <link rel="canonical" href={`${SITE_URL}/universities/${id ?? ""}`} />
+        <link rel="canonical" href={`${SITE_URL}/universities/${id ?? ""}/`} />
         <meta
           property="og:title"
           content={`${university.name} | ${t("title.app")}`}
@@ -90,7 +90,7 @@ function UniversityDetailPage() {
         />
         <meta
           property="og:url"
-          content={`${SITE_URL}/universities/${id ?? ""}`}
+          content={`${SITE_URL}/universities/${id ?? ""}/`}
         />
       </Helmet>
 

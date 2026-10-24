@@ -97,7 +97,7 @@ function FacultyDetailPage() {
           name="description"
           content={`${faculty.name} - ${faculty.university.name}`}
         />
-        <link rel="canonical" href={`${SITE_URL}/faculties/${id ?? ""}`} />
+        <link rel="canonical" href={`${SITE_URL}/faculties/${id ?? ""}/`} />
         <meta
           property="og:title"
           content={`${faculty.name} | ${t("title.app")}`}
@@ -106,7 +106,10 @@ function FacultyDetailPage() {
           property="og:description"
           content={`${faculty.name} - ${faculty.university.name}`}
         />
-        <meta property="og:url" content={`${SITE_URL}/faculties/${id ?? ""}`} />
+        <meta
+          property="og:url"
+          content={`${SITE_URL}/faculties/${id ?? ""}/`}
+        />
       </Helmet>
 
       <div className="w-full mx-auto px-1 sm:px-4 py-4">

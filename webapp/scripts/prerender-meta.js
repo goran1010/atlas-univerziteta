@@ -112,7 +112,7 @@ function renderRoute(route) {
   // og:url is already an absolute URL in the built HTML - replace the path
   html = html.replace(
     /(<meta\s+property="og:url"\s+content=")(https?:\/\/[^/]+)(\/?)(")/,
-    `$1$2${route.url}$4`,
+    `$1$2${route.url}/$4`,
   );
 
   if (route.image && existsSync(join(imagesDir, route.image))) {
@@ -181,14 +181,15 @@ function appendToSitemap(urls) {
   if (!existsSync(sitemapFile)) return;
   let xml = readFileSync(sitemapFile, "utf-8");
   const today = new Date().toISOString().slice(0, 10);
+  // each page is a <path>/index.html directory, which Netlify serves at
+  // <path>/ and reaches from <path> only through a 301
+  const locs = urls.map((url) => `https://atlasuniverziteta.com${url}/`);
   // rerunning against the same dist must not duplicate entries
-  const newUrls = urls.filter(
-    (url) => !xml.includes(`<loc>https://atlasuniverziteta.com${url}</loc>`),
-  );
-  const entries = newUrls
+  const newLocs = locs.filter((loc) => !xml.includes(`<loc>${loc}</loc>`));
+  const entries = newLocs
     .map(
-      (url) => `  <url>
-    <loc>https://atlasuniverziteta.com${url}</loc>
+      (loc) => `  <url>
+    <loc>${loc}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
