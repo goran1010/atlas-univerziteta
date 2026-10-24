@@ -28,13 +28,20 @@ function getNotificationRole(type: TypeNotification) {
   return "status";
 }
 
+// Auto-dismiss countdown for one toast: timeout is null while paused, with
+// the remaining milliseconds saved for the resume.
+interface ToastTimer {
+  timeout: ReturnType<typeof setTimeout> | null;
+  endsAt: number;
+  remaining: number;
+}
+
 function Notifications() {
   const { t } = use(RootContext);
   const { removeNotification } = use(NotificationContext);
   const notifications = use(NotificationListContext);
-  const timerMapRef = useRef<Map<string, ReturnType<typeof setTimeout>>>(
-    new Map(),
-  );
+  const timerMapRef = useRef<Map<string, ToastTimer>>(new Map());
+  const pausedRef = useRef(false);
 
   useEffect(() => {
     const timers = timerMapRef.current;
@@ -58,27 +65,37 @@ function Notifications() {
         const existingTimer = timers.get(notificationId);
 
         if (existingTimer !== undefined) {
-          clearTimeout(existingTimer);
+          if (existingTimer.timeout !== null) {
+            clearTimeout(existingTimer.timeout);
+          }
           timers.delete(notificationId);
         }
 
         return;
       }
 
-      if (!timers.has(notificationId)) {
-        const timer = setTimeout(() => {
-          removeNotification(notificationId);
-          timers.delete(notificationId);
-        }, notification.duration ?? undefined);
-
-        timers.set(notificationId, timer);
+      if (!timers.has(notificationId) && notification.duration) {
+        const duration = notification.duration;
+        // a toast arriving under the pointer starts paused like the rest
+        timers.set(notificationId, {
+          timeout: pausedRef.current
+            ? null
+            : setTimeout(() => {
+                removeNotification(notificationId);
+                timers.delete(notificationId);
+              }, duration),
+          endsAt: Date.now() + duration,
+          remaining: duration,
+        });
       }
     });
 
     // Uses notifications from the current render.
     timers.forEach((timer, id) => {
       if (!currentNotificationIds.has(id)) {
-        clearTimeout(timer);
+        if (timer.timeout !== null) {
+          clearTimeout(timer.timeout);
+        }
         timers.delete(id);
       }
     });
@@ -89,12 +106,40 @@ function Notifications() {
 
     return () => {
       timers.forEach((timer) => {
-        clearTimeout(timer);
+        if (timer.timeout !== null) {
+          clearTimeout(timer.timeout);
+        }
       });
 
       timers.clear();
     };
   }, []);
+
+  // hovering or focusing the stack pauses every countdown, so a toast cannot
+  // vanish while it is being read or its dismiss button is being reached
+  function pauseTimers() {
+    pausedRef.current = true;
+    timerMapRef.current.forEach((timer) => {
+      if (timer.timeout !== null) {
+        clearTimeout(timer.timeout);
+        timer.timeout = null;
+        timer.remaining = Math.max(timer.endsAt - Date.now(), 0);
+      }
+    });
+  }
+
+  function resumeTimers() {
+    pausedRef.current = false;
+    timerMapRef.current.forEach((timer, id) => {
+      if (timer.timeout === null) {
+        timer.endsAt = Date.now() + timer.remaining;
+        timer.timeout = setTimeout(() => {
+          removeNotification(id);
+          timerMapRef.current.delete(id);
+        }, timer.remaining);
+      }
+    });
+  }
 
   // The popover attribute is applied imperatively: where the API exists it
   // puts notifications in the browser top layer (above native <dialog>
@@ -126,6 +171,10 @@ function Notifications() {
       aria-label={t("notifications.title")}
       aria-live="polite"
       aria-relevant="additions text"
+      onMouseEnter={pauseTimers}
+      onMouseLeave={resumeTimers}
+      onFocus={pauseTimers}
+      onBlur={resumeTimers}
     >
       <ul className="flex flex-col gap-2">
         {notifications.map((notification) => (

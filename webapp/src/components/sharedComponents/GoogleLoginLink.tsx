@@ -2,6 +2,7 @@ import { Spinner } from "../sharedComponents/Spinner";
 import { use, useState } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { authClient } from "../../utils/authClient";
+import { oauthLoginCallbackUrl } from "../../customHooks/useOAuthLoginAnnouncement";
 import { GoogleIcon } from "./icons";
 
 interface GoogleLoginLinkProps {
@@ -20,7 +21,7 @@ function GoogleLoginLink({ disabled, onLoadingChange }: GoogleLoginLinkProps) {
     onLoadingChange(true);
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: window.location.origin,
+      callbackURL: oauthLoginCallbackUrl(),
     });
   }
 

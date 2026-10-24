@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { useStatusCheck } from "./customHooks/useStatusCheck";
+import { useOAuthLoginAnnouncement } from "./customHooks/useOAuthLoginAnnouncement";
 import { Notifications } from "./components/Notifications";
 import { useCloseMenu } from "./customHooks/useCloseMenu";
 import { useLanguage } from "./customHooks/useLanguage";
@@ -21,6 +22,8 @@ function App() {
   const { language, setLanguage, t } = useLanguage();
 
   const { userData, setUserData } = useStatusCheck(addNotification, t);
+
+  useOAuthLoginAnnouncement(addNotification, t);
 
   return (
     <RootContext
@@ -49,7 +52,7 @@ function App() {
         <>
           <ScrollToTop />
 
-          {/* A11y: Accessibility features like route announcer and skip link */}
+          {/* A11y: Accessibility features */}
           <RouteAnnouncer />
           <SkipNavbarLink t={t} />
 

@@ -3,23 +3,28 @@ import type { Notification } from "../types";
 
 const MAX_NOTIFICATIONS = 5;
 
+// errors and warnings carry information the user must act on, so they stay
+// long enough to read; successes and infos only confirm
+const DEFAULT_DURATION = 3000;
+const ALERT_DURATION = 8000;
+
 function useNotification() {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
   const addNotification = useCallback(
-    ({
-      id,
-      type,
-      message,
-      duration = 3000,
-      persistent = false,
-    }: Notification) => {
+    ({ id, type, message, duration, persistent = false }: Notification) => {
+      const resolvedDuration =
+        duration !== undefined
+          ? duration
+          : type === "error" || type === "warning"
+            ? ALERT_DURATION
+            : DEFAULT_DURATION;
       const notificationId = id ?? crypto.randomUUID();
       const newNotification = {
         id: notificationId,
         type,
         message,
-        duration,
+        duration: resolvedDuration,
         persistent,
         createdAt: Date.now(),
       };

@@ -38,4 +38,21 @@ describe("App", () => {
       expect.any(Error),
     );
   });
+
+  test("announces a completed OAuth login from the callback marker", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => undefined);
+    const router = createMemoryRouter(routes, {
+      initialEntries: ["/?login=success"],
+    });
+    render(
+      <NotificationProvider>
+        <RouterProvider router={router} />
+      </NotificationProvider>,
+    );
+
+    expect(
+      await screen.findByText("Successfully logged in."),
+    ).toBeInTheDocument();
+    expect(router.state.location.search).not.toContain("login=success");
+  });
 });

@@ -117,6 +117,36 @@ describe("Notifications", () => {
     expect(removeNotification).toHaveBeenCalledWith("temporary-id");
   });
 
+  test("pauses the countdown while hovered and resumes after", async () => {
+    const removeNotification = vi.fn();
+    render(
+      <Wrapper
+        notifications={[
+          {
+            id: "hovered-id",
+            type: "error",
+            message: "Hover me",
+            duration: 1000,
+            persistent: false,
+          },
+        ]}
+        removeNotification={removeNotification}
+      />,
+    );
+
+    fireEvent.mouseEnter(screen.getByRole("complementary"));
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(5000);
+    });
+    expect(removeNotification).not.toHaveBeenCalled();
+
+    fireEvent.mouseLeave(screen.getByRole("complementary"));
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(1000);
+    });
+    expect(removeNotification).toHaveBeenCalledWith("hovered-id");
+  });
+
   test("cancels an existing timer when a notification becomes persistent", async () => {
     const removeNotification = vi.fn();
     const notification: Notification = {

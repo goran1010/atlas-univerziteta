@@ -2,6 +2,7 @@ import { Spinner } from "../sharedComponents/Spinner";
 import { use, useState } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { authClient } from "../../utils/authClient";
+import { oauthLoginCallbackUrl } from "../../customHooks/useOAuthLoginAnnouncement";
 import { GitHubIcon } from "./icons";
 
 interface GitHubLoginLinkProps {
@@ -20,7 +21,7 @@ function GitHubLoginLink({ disabled, onLoadingChange }: GitHubLoginLinkProps) {
     onLoadingChange(true);
     await authClient.signIn.social({
       provider: "github",
-      callbackURL: window.location.origin,
+      callbackURL: oauthLoginCallbackUrl(),
     });
   }
 
