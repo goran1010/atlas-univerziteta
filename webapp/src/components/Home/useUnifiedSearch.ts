@@ -148,11 +148,9 @@ function useUnifiedSearch() {
     [addNotification, t],
   );
 
-  useEffect(() => {
-    return () => {
-      abortRef.current?.abort();
-    };
-  }, []);
+  // No abort-on-unmount: StrictMode's mount/unmount/remount would cancel the
+  // one-time deep-link search (initialLoadDone stays set, nothing re-fires).
+  // A fetch resolving after unmount is harmless.
 
   const triggerSearch = useCallback(
     (
