@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, RouterProvider } from "react-router";
-import { AdminForm } from "../../../../src/components/AdminDashboard/AdminForm";
+import { AdminTabs } from "../../../../src/components/AdminDashboard/AdminTabs";
 import { AdminRequests } from "../../../../src/components/AdminDashboard/AdminRequests";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
@@ -50,7 +50,7 @@ function renderAdminRequests() {
             })}
           >
             <Notifications />
-            <AdminForm />
+            <AdminTabs />
           </RootContextProvider>
         ),
         children: [{ path: "admin-requests", element: <AdminRequests /> }],

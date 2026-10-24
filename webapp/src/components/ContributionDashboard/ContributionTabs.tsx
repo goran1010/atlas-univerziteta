@@ -11,7 +11,7 @@ const TABS = [
   { key: "pendingChanges", to: "/improve-data/pending" },
 ];
 
-function ContributionForm() {
+function ContributionTabs() {
   const { t } = use(RootContext);
   const [loading, setLoading] = useState(false);
   const [refetchKey, setRefetchKey] = useState(0);
@@ -70,4 +70,4 @@ function ContributionForm() {
   );
 }
 
-export { ContributionForm };
+export { ContributionTabs };

@@ -7,7 +7,7 @@ import { adminRequestsResponseSchema } from "../../schemas/adminRequest";
 
 import type { AdminOutletContext } from "./types";
 
-function AdminForm() {
+function AdminTabs() {
   const { t } = use(RootContext);
   const [pendingLoading, setPendingLoading] = useState(true);
   const [requestsLoading, setRequestsLoading] = useState(true);
@@ -86,4 +86,4 @@ function AdminForm() {
     </div>
   );
 }
-export { AdminForm };
+export { AdminTabs };

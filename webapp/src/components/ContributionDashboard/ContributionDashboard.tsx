@@ -1,7 +1,7 @@
 import { LinkButton } from "../sharedComponents/LinkButton";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
-import { ContributionForm } from "./ContributionForm";
+import { ContributionTabs } from "./ContributionTabs";
 import { Helmet } from "react-helmet-async";
 
 function ContributionDashboard() {
@@ -32,7 +32,7 @@ function ContributionDashboard() {
         <title>{`${t("title.contribute")} | ${t("title.app")}`}</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      <ContributionForm />
+      <ContributionTabs />
     </>
   );
 }

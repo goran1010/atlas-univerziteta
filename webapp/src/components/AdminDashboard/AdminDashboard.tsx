@@ -1,7 +1,7 @@
 import { LinkButton } from "../sharedComponents/LinkButton";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
-import { AdminForm } from "./AdminForm";
+import { AdminTabs } from "./AdminTabs";
 import { Helmet } from "react-helmet-async";
 
 function AdminDashboard() {
@@ -34,7 +34,7 @@ function AdminDashboard() {
         <title>{`${t("title.admin")} | ${t("title.app")}`}</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      <AdminForm />
+      <AdminTabs />
     </>
   );
 }
