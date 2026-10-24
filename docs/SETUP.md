@@ -46,6 +46,8 @@ Local OAuth callback URLs to register with GitHub and Google: `http://localhost:
 ### Webapp (`webapp/.env.example`)
 
 - `VITE_API_URL`: API base URL used by the React app - `http://localhost:3000` locally, `https://api.atlasuniverziteta.com` on Netlify (see [DEPLOYMENT.md](./DEPLOYMENT.md))
+- `VITE_PUBLIC_API_URL`: absolute API base URL shown on the `/api-docs` page for external consumers - falls back to `VITE_API_URL` when unset (fine for local development)
+- `VITE_SITE_URL`: absolute site URL for canonical links and Open Graph meta tags - defaults to `https://atlasuniverziteta.com` when unset
 
 ## Database setup and running
 
@@ -58,7 +60,7 @@ npm run dev:all    # server + webapp together
 `npm run db:refold` rewrites the folded `search*` columns from the source
 fields. App writes keep them in sync automatically; run it after editing
 entities with manual SQL, or once after a change to the fold rules in
-`server/src/utils/searchText.ts`.
+`server/src/search/fold.ts`.
 
 Local defaults: server `http://localhost:3000`, webapp `http://localhost:5173`.
 

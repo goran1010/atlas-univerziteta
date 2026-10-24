@@ -3,6 +3,7 @@
 - **Webapp:** Netlify (auto-deploys on push to `main`), serves static files via CDN
 - **API + Database:** VPS with Docker Compose (Caddy, Node.js server, PostgreSQL)
 - **API access:** the webapp calls `https://api.atlasuniverziteta.com` directly; the apex and the api subdomain are same-site, so session cookies flow without a proxy
+- **Security headers:** Netlify serves a strict Content-Security-Policy (no `unsafe-inline`) and the other security headers from `webapp/netlify.toml`
 - **HTTPS:** Automatic via Let's Encrypt (Caddy) and Netlify
 - **Email:** Resend with a verified custom domain
 
