@@ -34,7 +34,8 @@
     "menu": "Meni",
     "toggleThemeAria": "Prikaži meni za temu",
     "toggleMenuAria": "Prikaži navigacioni meni",
-    "skipToContent": "Preskoči na sadržaj"
+    "skipToContent": "Preskoči na sadržaj",
+    "breadcrumb": "Putanja do stranice"
   },
   "loading": "Učitavanje…",
   "notifications": {
@@ -164,7 +165,8 @@
       "ownershipParam": "Filtriranje po vlasništvu: PUBLIC ili PRIVATE.",
       "cycleParam": "Filtriranje po ciklusu studija. Prihvata višestruke vrijednosti (npr. cycle=FIRST&cycle=SECOND). Vrijednosti: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
       "typeParam": "Filter tipa rezultata: university, faculty ili studyProgram. Može se ponoviti. Sekcije su ograničene na 25 rezultata (100 kada je tražen tačno jedan tip) i uvijek vraćaju prave ukupne brojeve."
-    }
+    },
+    "githubReadme": "GitHub README"
   },
   "endpoint": {
     "requestBody": "Tijelo zahtjeva",
@@ -251,7 +253,8 @@
       "BD": "BD - Brčko Distrikt"
     },
     "submitSuggestion": "Pošalji prijedlog",
-    "deleteChange": "Obriši"
+    "deleteChange": "Obriši",
+    "dataLegend": "Podaci"
   },
   "admin": {
     "needAdmin": "Morate biti admin da biste vidjeli admin kontrolnu tablu.",

@@ -1,4 +1,6 @@
+import { use } from "react";
 import { Link } from "react-router";
+import { RootContext } from "../../contextData/RootContext";
 import { ChevronDownIcon } from "../sharedComponents/icons";
 
 interface BreadcrumbItem {
@@ -7,8 +9,12 @@ interface BreadcrumbItem {
 }
 
 function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
+  const { t } = use(RootContext);
   return (
-    <nav aria-label="Breadcrumb" className="text-sm text-(--text-muted) mb-4">
+    <nav
+      aria-label={t("nav.breadcrumb")}
+      className="text-sm text-(--text-muted) mb-4"
+    >
       <ol className="flex flex-wrap items-center gap-1">
         {items.map((item, i) => (
           <li key={item.label} className="flex items-center gap-1">

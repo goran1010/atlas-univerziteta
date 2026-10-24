@@ -18,7 +18,8 @@ interface BadgeStyles {
 
 const BADGE: BadgeStyles = {
   CREATE: "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200",
-  UPDATE: "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200",
+  UPDATE:
+    "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-200",
   DELETE: "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-200",
 };
 

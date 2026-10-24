@@ -17,14 +17,15 @@ import type { AdminPendingChange } from "../../schemas/pendingChange";
 
 const ROW_ACCENT: Record<TypeOfChange, string> = {
   CREATE: "border-l-4 border-l-green-500 dark:border-l-green-400",
-  UPDATE: "border-l-4 border-l-blue-500 dark:border-l-blue-400",
+  UPDATE: "border-l-4 border-l-yellow-500 dark:border-l-yellow-400",
   DELETE: "border-l-4 border-l-red-500 dark:border-l-red-400",
 };
 
 const BADGE: Record<TypeOfChange, string> = {
   CREATE:
     "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300",
-  UPDATE: "bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300",
+  UPDATE:
+    "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300",
   DELETE: "bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300",
 };
 

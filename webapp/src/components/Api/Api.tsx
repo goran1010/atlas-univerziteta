@@ -45,7 +45,7 @@ function Api() {
               className="inline-flex items-center gap-1 align-middle"
             >
               <GitHubIcon size={14} />
-              GitHub README
+              {t("api.githubReadme")}
             </ExternalLink>
             .
           </p>
