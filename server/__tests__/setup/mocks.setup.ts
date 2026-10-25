@@ -32,6 +32,9 @@ vi.mock("../../src/utils/rateLimiter.js", async () => {
     auth: vi.fn((_req: Request, _res: Response, next: NextFunction) => {
       next();
     }),
+    authGeneral: vi.fn((_req: Request, _res: Response, next: NextFunction) => {
+      next();
+    }),
     api: vi.fn((_req: Request, _res: Response, next: NextFunction) => {
       next();
     }),
