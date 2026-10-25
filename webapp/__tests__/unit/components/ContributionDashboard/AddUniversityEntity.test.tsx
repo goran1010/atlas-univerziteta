@@ -163,7 +163,7 @@ describe("AddUniversityEntity", () => {
     );
 
     const user = userEvent.setup();
-    const targetType = screen.getByRole("combobox", { name: /Entity Type/i });
+    const targetType = screen.getByRole("combobox", { name: /Item type/i });
 
     await user.selectOptions(targetType, "UNIVERSITY");
 
@@ -189,7 +189,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "FACULTY",
     );
     await user.selectOptions(
@@ -219,7 +219,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "STUDY_PROGRAM",
     );
 
@@ -247,7 +247,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "TRACK",
     );
 
@@ -271,7 +271,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "UNIVERSITY",
     );
     await user.selectOptions(
@@ -293,7 +293,7 @@ describe("AddUniversityEntity", () => {
     user: ReturnType<typeof userEvent.setup>,
   ) {
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "UNIVERSITY",
     );
     await user.selectOptions(
@@ -403,7 +403,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "UNIVERSITY",
     );
     await user.selectOptions(
@@ -417,7 +417,7 @@ describe("AddUniversityEntity", () => {
     );
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "FACULTY",
     );
 
@@ -439,7 +439,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "UNIVERSITY",
     );
     await user.type(screen.getByLabelText(/Name/i), "University of Sarajevo");
@@ -471,7 +471,7 @@ describe("AddUniversityEntity", () => {
     });
     expect(refetchPendingChanges).toHaveBeenCalled();
     expect(screen.getByLabelText(/Name/i)).toHaveValue("");
-    expect(screen.getByRole("combobox", { name: /Entity Type/i })).toHaveValue(
+    expect(screen.getByRole("combobox", { name: /Item type/i })).toHaveValue(
       "UNIVERSITY",
     );
   });
@@ -521,7 +521,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "TRACK",
     );
     await user.selectOptions(
@@ -572,7 +572,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "STUDY_PROGRAM",
     );
 

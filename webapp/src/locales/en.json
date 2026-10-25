@@ -171,17 +171,16 @@
     "noDataset": "No dataset",
     "actions": "Actions",
     "selectDatasetError": "You need to select a dataset.",
-    "viewEditAllData": "View and edit all data:",
-    "addNewData": "Add new data",
-    "pendingChanges": "Pending Changes",
-    "noPendingChanges": "No pending changes to display.",
+    "addNewData": "Propose changes",
+    "pendingChanges": "My suggestions",
+    "noPendingChanges": "You have no suggestions awaiting review.",
     "change": "Change",
     "comment": "Comment for the admin",
-    "entityType": "Entity Type",
-    "pendingChangesCountAria": "pending changes count",
+    "entityType": "Item type",
     "searchResultsCountAria": "search result count",
     "searchResults": "Search Results",
     "user": "User",
+    "contributor": "Contributor",
     "dataset": {
       "universities": "Universities",
       "universitiesPlaceholder": "Universities placeholder"
@@ -239,7 +238,7 @@
       "BD": "BD - Brčko District"
     },
     "submitSuggestion": "Submit suggestion",
-    "deleteChange": "Delete",
+    "deleteChange": "Withdraw",
     "dataLegend": "Data"
   },
   "admin": {
@@ -254,7 +253,7 @@
     "proposedData": "Proposed Data",
     "currentData": "Current Data",
     "proposedChanges": "Proposed Changes",
-    "entityDeleted": "Entity no longer exists",
+    "entityDeleted": "This item no longer exists",
     "facultyCount": "Faculties",
     "studyProgramCount": "Study programs",
     "trackCount": "Tracks",

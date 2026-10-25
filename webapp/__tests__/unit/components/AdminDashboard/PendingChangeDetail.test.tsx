@@ -93,7 +93,7 @@ describe("PendingChangeDetail", () => {
       currentEntity: null,
     });
 
-    expect(screen.getByText(/Entity no longer exists/i)).toBeInTheDocument();
+    expect(screen.getByText(/This item no longer exists/i)).toBeInTheDocument();
     expect(screen.getByText("Proposed Changes")).toBeInTheDocument();
   });
 
@@ -124,7 +124,7 @@ describe("PendingChangeDetail", () => {
       currentEntity: undefined,
     });
 
-    expect(screen.getByText(/Entity no longer exists/i)).toBeInTheDocument();
+    expect(screen.getByText(/This item no longer exists/i)).toBeInTheDocument();
   });
 
   test("shows the acronym and faculty count for a university DELETE", () => {

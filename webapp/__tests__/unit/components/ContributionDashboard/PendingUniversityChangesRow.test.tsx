@@ -53,7 +53,9 @@ describe("PendingUniversityChangesRow", () => {
     expect(
       screen.getByRole("button", { name: /View info/i }),
     ).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /Delete/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /Withdraw/i }),
+    ).toBeInTheDocument();
   });
 
   test("shows the contributor comment in the expanded detail", async () => {
