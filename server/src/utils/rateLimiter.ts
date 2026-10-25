@@ -27,8 +27,7 @@ const global = rateLimit({
   legacyHeaders: false,
 });
 
-// guards only the credential endpoints (sign-in, sign-up, password flows,
-// verification emails) where attempts can be brute-forced or trigger mail
+// credential endpoints only - guessable and can trigger outbound mail
 const auth = rateLimit({
   windowMs: 15 * MINUTE,
   max: isProduction ? 15 : 500,
@@ -39,9 +38,8 @@ const auth = rateLimit({
   legacyHeaders: false,
 });
 
-// the rest of /api/auth: get-session runs on every full page load, and
-// sign-out and OAuth callbacks are part of normal browsing - a strict limit
-// here would log active users out of the UI
+// the rest of /api/auth: get-session runs on every full page load, so a
+// strict limit here would log active users out of the UI
 const authGeneral = rateLimit({
   windowMs: 15 * MINUTE,
   max: isProduction ? 150 : 5000,
@@ -52,8 +50,8 @@ const authGeneral = rateLimit({
   legacyHeaders: false,
 });
 
-// per IP, so it must leave room for NAT-shared networks (student dorms,
-// university wifi) where many visitors browse from one address
+// per IP - must leave room for NAT-shared networks (student dorms, campus
+// wifi) where many visitors browse from one address
 const api = rateLimit({
   windowMs: 15 * MINUTE,
   max: isProduction ? 300 : 5000,

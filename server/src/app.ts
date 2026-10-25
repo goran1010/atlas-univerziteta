@@ -52,9 +52,6 @@ app.use(compression());
 
 // BetterAuth needs credentialed CORS (not the wildcard "*" from the public /api
 // routes) and must read the raw body before express.json() consumes it.
-// Credential endpoints get the strict limiter; everything else under
-// /api/auth (get-session on every page load, sign-out, OAuth callbacks)
-// only the lenient one.
 app.use("/api/auth", credentialedCors);
 app.use(
   [
