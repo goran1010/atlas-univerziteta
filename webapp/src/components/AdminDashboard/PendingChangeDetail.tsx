@@ -135,6 +135,7 @@ interface PendingChangeDetailProps {
   typeOfChange: string;
   data: Record<string, unknown>;
   currentEntity?: Record<string, unknown> | null;
+  comment?: string | null;
 }
 
 function PendingChangeDetail({
@@ -142,6 +143,7 @@ function PendingChangeDetail({
   typeOfChange,
   data: proposedData,
   currentEntity,
+  comment,
 }: PendingChangeDetailProps) {
   const { t } = use(RootContext);
 
@@ -190,6 +192,17 @@ function PendingChangeDetail({
             </p>
           )}
         </>
+      )}
+
+      {comment && (
+        <div className="flex flex-col gap-1 rounded-lg border border-(--border-color) bg-(--surface-2) p-2 sm:p-3 w-full">
+          <p className="text-xs font-semibold text-(--text-secondary) mb-1">
+            {t("contribution.comment")}
+          </p>
+          <p className="text-sm text-(--text-primary) whitespace-pre-wrap wrap-break-word">
+            {comment}
+          </p>
+        </div>
       )}
     </div>
   );

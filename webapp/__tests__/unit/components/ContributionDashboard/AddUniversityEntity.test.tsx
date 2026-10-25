@@ -169,7 +169,9 @@ describe("AddUniversityEntity", () => {
 
     expect(screen.getByLabelText(/Name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/City/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/^Entity( \*)?$/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole("combobox", { name: /^Entity$/i }),
+    ).toBeInTheDocument();
     expect(screen.getByLabelText(/Ownership/i)).toBeInTheDocument();
     expect(
       screen.getByRole("button", { name: /Submit Suggestion/i }),
@@ -338,7 +340,10 @@ describe("AddUniversityEntity", () => {
     );
     await user.type(screen.getByLabelText(/Name/i), "University of Sarajevo");
     await user.type(screen.getByLabelText(/City/i), "Sarajevo");
-    await user.selectOptions(screen.getByLabelText(/^Entity( \*)?$/i), "FBIH");
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /^Entity$/i }),
+      "FBIH",
+    );
     await user.selectOptions(screen.getByLabelText(/Ownership/i), "PUBLIC");
 
     await user.click(
@@ -365,6 +370,41 @@ describe("AddUniversityEntity", () => {
     expect(screen.getByRole("combobox", { name: /Entity Type/i })).toHaveValue(
       "UNIVERSITY",
     );
+  });
+
+  test("submits the contributor comment and resets it with the form", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+
+    const user = userEvent.setup();
+
+    await user.type(screen.getByLabelText(/Name/i), "Commented University");
+    await user.type(screen.getByLabelText(/City/i), "Sarajevo");
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /^Entity$/i }),
+      "FBIH",
+    );
+    await user.selectOptions(screen.getByLabelText(/Ownership/i), "PUBLIC");
+    await user.type(
+      screen.getByLabelText(/Comment for the admin/i),
+      "Found on the official site",
+    );
+
+    await user.click(
+      screen.getByRole("button", { name: /Submit Suggestion/i }),
+    );
+
+    expect(
+      await screen.findByText(/Suggestion submitted./i),
+    ).toBeInTheDocument();
+
+    expect(submissions[0]?.body).toEqual(
+      expect.objectContaining({ comment: "Found on the official site" }),
+    );
+    expect(screen.getByLabelText(/Comment for the admin/i)).toHaveValue("");
   });
 
   test("submits track data with the picked target id on update", async () => {

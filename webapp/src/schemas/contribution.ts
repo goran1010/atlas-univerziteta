@@ -23,6 +23,8 @@ const emailSchema = z.email().max(254);
 // http(s) only - bare z.url() accepts javascript: and data: URLs
 const websiteSchema = z.url({ protocol: /^https?$/ }).max(254);
 
+const commentSchema = z.string().trim().min(1).max(1000).optional();
+
 const universityCreateDataSchema = z.strictObject({
   name: requiredNameSchema,
   city: requiredNameSchema,
@@ -111,53 +113,62 @@ const contributionSubmissionSchema = z.union([
     targetType: z.literal("UNIVERSITY"),
     typeOfChange: z.literal("CREATE"),
     data: universityCreateDataSchema,
+    comment: commentSchema,
   }),
   z.object({
     targetType: z.literal("FACULTY"),
     typeOfChange: z.literal("CREATE"),
     parentId: positiveIdSchema,
     data: facultyCreateDataSchema,
+    comment: commentSchema,
   }),
   z.object({
     targetType: z.literal("STUDY_PROGRAM"),
     typeOfChange: z.literal("CREATE"),
     parentId: positiveIdSchema,
     data: studyProgramCreateDataSchema,
+    comment: commentSchema,
   }),
   z.object({
     targetType: z.literal("TRACK"),
     typeOfChange: z.literal("CREATE"),
     parentId: positiveIdSchema,
     data: trackCreateDataSchema,
+    comment: commentSchema,
   }),
   z.object({
     targetType: z.literal("UNIVERSITY"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIdSchema,
     data: universityEditDataSchema,
+    comment: commentSchema,
   }),
   z.object({
     targetType: z.literal("FACULTY"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIdSchema,
     data: facultyEditDataSchema,
+    comment: commentSchema,
   }),
   z.object({
     targetType: z.literal("STUDY_PROGRAM"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIdSchema,
     data: studyProgramEditDataSchema,
+    comment: commentSchema,
   }),
   z.object({
     targetType: z.literal("TRACK"),
     typeOfChange: z.literal("UPDATE"),
     targetId: positiveIdSchema,
     data: trackEditDataSchema,
+    comment: commentSchema,
   }),
   z.object({
     targetType: targetTypeSchema,
     typeOfChange: z.literal("DELETE"),
     targetId: positiveIdSchema,
+    comment: commentSchema,
   }),
 ]);
 

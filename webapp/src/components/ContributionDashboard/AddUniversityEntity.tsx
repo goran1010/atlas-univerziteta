@@ -2,6 +2,7 @@ import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { Select } from "../sharedComponents/Select";
+import { Textarea } from "../sharedComponents/Textarea";
 import { Label } from "../sharedComponents/Label";
 import { Button } from "../sharedComponents/Button";
 import { DataField } from "./DataField";
@@ -22,6 +23,7 @@ const INIT_FORM: ContributionFormState = {
   parentId: "",
   targetId: "",
   data: {},
+  comment: "",
 };
 
 const ENTITY_TYPES: TargetType[] = [
@@ -44,7 +46,8 @@ function AddUniversityEntity({
   const [loading, setLoading] = useState(false);
   const [pickerResetKey, setPickerResetKey] = useState(0);
 
-  const { targetType, typeOfChange, parentId, targetId, data } = formState;
+  const { targetType, typeOfChange, parentId, targetId, data, comment } =
+    formState;
 
   function setField(field: keyof ContributionFormState, value: string) {
     setFormState((prev) => ({ ...prev, [field]: value }));
@@ -86,6 +89,7 @@ function AddUniversityEntity({
       targetId,
       typeOfChange,
       data,
+      comment,
       onSuccess: () => {
         setFormState(INIT_FORM);
         setPickerResetKey((prev) => prev + 1);
@@ -100,9 +104,6 @@ function AddUniversityEntity({
       onSubmit={(e) => void handleSubmit(e)}
       className="flex flex-col gap-4 w-full max-w-lg"
     >
-      <p className="text-xs text-center text-(--text-muted)">
-        {t("form.requiredHint")}
-      </p>
       <div className="flex flex-col gap-1 items-center">
         <Label htmlFor="targetType" required>
           {t("contribution.entityType")}
@@ -200,6 +201,19 @@ function AddUniversityEntity({
           )}
         </fieldset>
       )}
+      <div className="flex flex-col gap-1">
+        <Label htmlFor="contributionComment">{t("contribution.comment")}</Label>
+        <Textarea
+          id="contributionComment"
+          name="comment"
+          rows={3}
+          maxLength={1000}
+          value={comment}
+          onChange={(e) => {
+            setField("comment", e.target.value);
+          }}
+        />
+      </div>
       <Button
         type="submit"
         variant={

@@ -85,7 +85,7 @@
     "create": "Create",
     "approve": "Approve",
     "reject": "Reject",
-    "requiredHint": "Fields marked with * are required."
+    "required": "required"
   },
   "profile": {
     "title": "My Profile",
@@ -175,6 +175,7 @@
     "pendingChanges": "Pending Changes",
     "noPendingChanges": "No pending changes to display.",
     "change": "Change",
+    "comment": "Comment for the admin",
     "entityType": "Entity Type",
     "pendingChangesCountAria": "pending changes count",
     "searchResultsCountAria": "search result count",

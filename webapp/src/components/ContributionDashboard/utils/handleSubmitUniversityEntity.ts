@@ -14,6 +14,7 @@ export interface HandleSubmitUniversityEntityParams {
   targetId?: string;
   typeOfChange: TypeOfChange;
   data: ContributionFormDraft;
+  comment?: string;
   onSuccess: () => void;
   ctx: RequestContext;
 }
@@ -26,23 +27,38 @@ function buildSubmissionInput({
   targetId,
   typeOfChange,
   data,
+  comment,
 }: {
   targetType: string;
   parentId?: string;
   targetId?: string;
   typeOfChange: TypeOfChange;
   data: ContributionFormDraft;
+  comment?: string;
 }) {
+  const trimmedComment = comment?.trim() ? comment.trim() : undefined;
   if (typeOfChange === "CREATE" && targetType === "UNIVERSITY") {
-    return { targetType, typeOfChange, data };
+    return { targetType, typeOfChange, data, comment: trimmedComment };
   }
   if (typeOfChange === "CREATE") {
-    return { targetType, typeOfChange, parentId, data };
+    return {
+      targetType,
+      typeOfChange,
+      parentId,
+      data,
+      comment: trimmedComment,
+    };
   }
   if (typeOfChange === "UPDATE") {
-    return { targetType, typeOfChange, targetId, data };
+    return {
+      targetType,
+      typeOfChange,
+      targetId,
+      data,
+      comment: trimmedComment,
+    };
   }
-  return { targetType, typeOfChange, targetId };
+  return { targetType, typeOfChange, targetId, comment: trimmedComment };
 }
 
 const METHOD_FOR_CHANGE = {
@@ -51,6 +67,8 @@ const METHOD_FOR_CHANGE = {
   DELETE: "DELETE",
 } as const;
 
+// JSON.stringify drops undefined values, so an absent comment never reaches
+// the server's strict schemas
 function buildRequestBody(submission: ContributionSubmission) {
   if (submission.typeOfChange === "CREATE") {
     if ("parentId" in submission) {
@@ -58,18 +76,28 @@ function buildRequestBody(submission: ContributionSubmission) {
         targetType: submission.targetType,
         parentId: submission.parentId,
         data: submission.data,
+        comment: submission.comment,
       };
     }
-    return { targetType: submission.targetType, data: submission.data };
+    return {
+      targetType: submission.targetType,
+      data: submission.data,
+      comment: submission.comment,
+    };
   }
   if (submission.typeOfChange === "UPDATE") {
     return {
       targetType: submission.targetType,
       targetId: submission.targetId,
       data: submission.data,
+      comment: submission.comment,
     };
   }
-  return { targetType: submission.targetType, targetId: submission.targetId };
+  return {
+    targetType: submission.targetType,
+    targetId: submission.targetId,
+    comment: submission.comment,
+  };
 }
 
 async function handleSubmitUniversityEntity({
@@ -78,6 +106,7 @@ async function handleSubmitUniversityEntity({
   targetId,
   typeOfChange,
   data,
+  comment,
   onSuccess,
   ctx,
 }: HandleSubmitUniversityEntityParams) {
@@ -88,6 +117,7 @@ async function handleSubmitUniversityEntity({
       targetId,
       typeOfChange,
       data,
+      comment,
     }),
   );
   if (!parsed.success) {

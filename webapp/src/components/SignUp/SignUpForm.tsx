@@ -61,7 +61,6 @@ function SignUpForm({ disabled, onLoadingChange }: SignUpFormProps) {
       className="flex flex-col gap-3"
       onSubmit={(e) => void handleSignUpSubmit(e, inputFields, navigate, ctx)}
     >
-      <p className="text-xs text-(--text-muted)">{t("form.requiredHint")}</p>
       <div>
         <Label htmlFor="email" required>
           {t("form.email")}

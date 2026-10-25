@@ -41,6 +41,9 @@ async function submitUniversityCreate(page: Page, universityName: string) {
   await page
     .getByRole("combobox", { name: "Ownership" })
     .selectOption("PUBLIC");
+  await page
+    .getByRole("textbox", { name: "Comment for the admin" })
+    .fill(`E2E comment for ${universityName}`);
   await page.getByRole("button", { name: "Submit Suggestion" }).click();
   await expect(page.getByText("Suggestion submitted.")).toBeVisible();
 }
@@ -61,6 +64,19 @@ test("contribution approval round-trip", async ({ browser }) => {
   const adminPage = await adminContext.newPage();
 
   await adminPage.goto("/admin-dashboard/pending-changes");
+  const changeRow = adminPage
+    .getByRole("row")
+    .filter({ hasText: universityName });
+  await changeRow.getByRole("button", { name: "View info" }).click();
+  await expect(
+    adminPage
+      .getByRole("dialog")
+      .getByText(`E2E comment for ${universityName}`),
+  ).toBeVisible();
+  await adminPage
+    .getByRole("dialog")
+    .getByRole("button", { name: "Close" })
+    .click();
   await adminPage.getByRole("button", { name: "Approve" }).click();
   await adminPage
     .getByRole("dialog")

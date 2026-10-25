@@ -56,6 +56,23 @@ describe("PendingUniversityChangesRow", () => {
     expect(screen.getByRole("button", { name: /Delete/i })).toBeInTheDocument();
   });
 
+  test("shows the contributor comment in the expanded detail", async () => {
+    render(
+      <Wrapper>
+        <PendingUniversityChangesRow
+          change={{ ...change, comment: "University closed in 2024" }}
+          index={0}
+          setPendingChanges={vi.fn()}
+        />
+      </Wrapper>,
+    );
+
+    await userEvent.click(screen.getByRole("button", { name: /View info/i }));
+
+    expect(screen.getByText("University closed in 2024")).toBeInTheDocument();
+    expect(screen.getByText(/Comment for the admin/i)).toBeInTheDocument();
+  });
+
   test("shows the contribution name in the expanded detail", async () => {
     render(
       <Wrapper>
