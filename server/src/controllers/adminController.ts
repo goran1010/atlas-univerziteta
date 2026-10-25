@@ -78,6 +78,7 @@ async function getAdminRequests(_req: Request, res: Response) {
       id: true,
       email: true,
       adminRequestedAt: true,
+      adminRequestReason: true,
     },
     orderBy: { adminRequestedAt: "asc" },
   });
@@ -94,7 +95,7 @@ async function approveAdminRequest(req: Request, res: Response) {
   // updateMany so a missing user or an already-handled request is a clean 404
   const { count } = await prisma.user.updateMany({
     where: { id, adminRequestedAt: { not: null } },
-    data: { role: "ADMIN", adminRequestedAt: null },
+    data: { role: "ADMIN", adminRequestedAt: null, adminRequestReason: null },
   });
 
   if (count === 0) {
@@ -116,7 +117,7 @@ async function declineAdminRequest(req: Request, res: Response) {
 
   const { count } = await prisma.user.updateMany({
     where: { id, adminRequestedAt: { not: null } },
-    data: { adminRequestedAt: null },
+    data: { adminRequestedAt: null, adminRequestReason: null },
   });
 
   if (count === 0) {

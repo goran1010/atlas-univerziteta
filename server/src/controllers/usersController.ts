@@ -1,5 +1,6 @@
 import { prisma } from "../db/prisma.js";
 import { sendError, sendSuccess } from "../utils/response.js";
+import * as usersValidation from "../validation/usersValidation.js";
 
 import type { Request, Response } from "express";
 
@@ -24,9 +25,14 @@ async function requestAdmin(req: Request, res: Response) {
     return;
   }
 
+  const body = usersValidation.requestAdmin(req.body);
+
   const { adminRequestedAt } = await prisma.user.update({
     where: { id: user.id },
-    data: { adminRequestedAt: new Date() },
+    data: {
+      adminRequestedAt: new Date(),
+      adminRequestReason: body?.reason ?? null,
+    },
   });
 
   sendSuccess(res, {
@@ -49,7 +55,7 @@ async function cancelAdminRequest(req: Request, res: Response) {
 
   await prisma.user.update({
     where: { id: user.id },
-    data: { adminRequestedAt: null },
+    data: { adminRequestedAt: null, adminRequestReason: null },
   });
 
   sendSuccess(res, {

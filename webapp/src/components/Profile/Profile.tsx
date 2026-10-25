@@ -9,6 +9,8 @@ import {
   handleCancelAdminRequest,
 } from "./utils/handleAdminRequest";
 import { Button } from "../sharedComponents/Button";
+import { Label } from "../sharedComponents/Label";
+import { Textarea } from "../sharedComponents/Textarea";
 import { Helmet } from "react-helmet-async";
 
 function Profile() {
@@ -16,6 +18,7 @@ function Profile() {
   const { addNotification } = use(NotificationContext);
   const [loading, setLoading] = useState(false);
   const [adminRequestLoading, setAdminRequestLoading] = useState(false);
+  const [adminRequestReason, setAdminRequestReason] = useState("");
   const navigate = useNavigate();
   const adminRequestCtx = {
     addNotification,
@@ -104,17 +107,38 @@ function Profile() {
                   </Button>
                 </>
               ) : (
-                <Button
-                  onClick={() =>
-                    void handleRequestAdmin(setUserData, adminRequestCtx)
-                  }
-                  variant="success"
-                  className="px-6 py-3 font-semibold"
-                  type="button"
-                  loading={adminRequestLoading}
-                >
-                  {t("profile.requestAdmin")}
-                </Button>
+                <>
+                  <div className="flex flex-col gap-1 text-left">
+                    <Label htmlFor="adminRequestReason">
+                      {t("profile.adminRequestReason")}
+                    </Label>
+                    <Textarea
+                      id="adminRequestReason"
+                      name="adminRequestReason"
+                      rows={3}
+                      maxLength={1000}
+                      value={adminRequestReason}
+                      onChange={(e) => {
+                        setAdminRequestReason(e.target.value);
+                      }}
+                    />
+                  </div>
+                  <Button
+                    onClick={() =>
+                      void handleRequestAdmin(
+                        setUserData,
+                        adminRequestCtx,
+                        adminRequestReason,
+                      )
+                    }
+                    variant="success"
+                    className="px-6 py-3 font-semibold"
+                    type="button"
+                    loading={adminRequestLoading}
+                  >
+                    {t("profile.requestAdmin")}
+                  </Button>
+                </>
               )}
             </div>
           )}

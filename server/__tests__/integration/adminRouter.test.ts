@@ -637,7 +637,11 @@ describe("Admin Router - POST /users/admin/approve-pending-change for TRACK", ()
 describe("Admin Router - GET /users/admin/admin-requests", () => {
   test("Responds with status 200 and only users with an active request", async () => {
     const requestingUser = await prisma.user.create({
-      data: { ...createDbUserData(), adminRequestedAt: new Date() },
+      data: {
+        ...createDbUserData(),
+        adminRequestedAt: new Date(),
+        adminRequestReason: "I maintain my university's data",
+      },
     });
     const silentUser = await prisma.user.create({ data: createDbUserData() });
 
@@ -654,6 +658,7 @@ describe("Admin Router - GET /users/admin/admin-requests", () => {
         expect.objectContaining({
           id: requestingUser.id,
           email: requestingUser.email,
+          adminRequestReason: "I maintain my university's data",
         }),
       ]),
     );
@@ -678,6 +683,7 @@ describe("Admin Router - POST /users/admin/approve-admin-request", () => {
       data: {
         ...createDbUserData(),
         adminRequestedAt: new Date(),
+        adminRequestReason: "Promote me",
       },
     });
 
@@ -697,6 +703,7 @@ describe("Admin Router - POST /users/admin/approve-admin-request", () => {
     });
     expect(userInDb?.role).toBe("ADMIN");
     expect(userInDb?.adminRequestedAt).toBeNull();
+    expect(userInDb?.adminRequestReason).toBeNull();
   });
 
   test("Responds with status 404 if the user has no active request", async () => {
@@ -725,6 +732,7 @@ describe("Admin Router - DELETE /users/admin/decline-admin-request", () => {
       data: {
         ...createDbUserData(),
         adminRequestedAt: new Date(),
+        adminRequestReason: "Decline me",
       },
     });
 
@@ -744,6 +752,7 @@ describe("Admin Router - DELETE /users/admin/decline-admin-request", () => {
     });
     expect(userInDb?.role).toBe("USER");
     expect(userInDb?.adminRequestedAt).toBeNull();
+    expect(userInDb?.adminRequestReason).toBeNull();
 
     // Declining again is a 404 because the request is no longer active
     const repeatResponse = await agent

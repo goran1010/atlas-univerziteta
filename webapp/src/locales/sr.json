@@ -94,6 +94,7 @@
     "needLogin": "Morate biti prijavljeni da biste vidjeli svoj profil.",
     "logout": "Odjavi se",
     "requestAdmin": "Zatraži admin pristup",
+    "adminRequestReason": "Zašto želite administratorski pristup?",
     "adminRequestPending": "Zahtjev za admin pristup je na čekanju",
     "cancelAdminRequest": "Otkaži zahtjev za admin pristup"
   },

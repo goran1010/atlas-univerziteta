@@ -73,6 +73,12 @@ function AdminRequestRow({
         </div>
       </div>
 
+      {adminRequest.adminRequestReason && (
+        <p className="px-1 pb-1 text-sm text-(--text-secondary) whitespace-pre-wrap wrap-break-word">
+          {adminRequest.adminRequestReason}
+        </p>
+      )}
+
       <div role="cell" className="flex justify-center sm:flex-row gap-2 p-1">
         <Button
           variant="success"

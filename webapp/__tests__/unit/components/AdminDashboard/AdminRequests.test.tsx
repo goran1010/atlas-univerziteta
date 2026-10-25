@@ -71,6 +71,20 @@ describe("AdminRequests component", () => {
     ).toBeInTheDocument();
   });
 
+  test("shows the request reason when one was given", async () => {
+    givenAdminRequests([
+      {
+        ...mockAdminRequests[0],
+        adminRequestReason: "I maintain my university's data",
+      },
+    ]);
+    renderAdminRequests();
+
+    expect(
+      await screen.findByText("I maintain my university's data"),
+    ).toBeInTheDocument();
+  });
+
   test("renders the empty state when there are no requests", async () => {
     givenAdminRequests([]);
     renderAdminRequests();

@@ -94,6 +94,7 @@
     "needLogin": "You need to be logged in to view your profile.",
     "logout": "Log out",
     "requestAdmin": "Request admin access",
+    "adminRequestReason": "Why do you want admin access?",
     "adminRequestPending": "Admin request pending",
     "cancelAdminRequest": "Cancel admin request"
   },

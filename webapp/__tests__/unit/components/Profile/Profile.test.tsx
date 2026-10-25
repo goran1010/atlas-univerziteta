@@ -180,6 +180,33 @@ describe("Profile Component admin request", () => {
     ).not.toBeInTheDocument();
   });
 
+  test("sends the typed reason with the admin request", async () => {
+    const bodies: unknown[] = [];
+    server.use(
+      http.post("*/users/request-admin", async ({ request }) => {
+        bodies.push(request.body === null ? null : await request.json());
+        return HttpResponse.json({
+          message: "Admin access requested. An admin will review it.",
+          data: { adminRequestedAt: "2026-08-16T10:00:00.000Z" },
+        });
+      }),
+    );
+    renderProfile();
+
+    await user.type(
+      await screen.findByLabelText(/Why do you want admin access\?/i),
+      "I maintain my university's data",
+    );
+    await user.click(
+      screen.getByRole("button", { name: /Request admin access/i }),
+    );
+
+    expect(
+      await screen.findByText(/Admin request pending/i),
+    ).toBeInTheDocument();
+    expect(bodies).toEqual([{ reason: "I maintain my university's data" }]);
+  });
+
   test("cancels a pending admin request", async () => {
     givenAdminRequestEndpoints();
     renderProfile(makeUser({ adminRequestedAt: "2026-08-16T10:00:00.000Z" }));
