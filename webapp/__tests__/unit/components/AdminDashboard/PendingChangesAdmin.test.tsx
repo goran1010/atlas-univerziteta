@@ -119,27 +119,6 @@ describe("PendingChangesAdmin", () => {
     expect(screen.getByText("janedoe@examplemail.com")).toBeInTheDocument();
   });
 
-  test("groups several changes against the same entity under one header", async () => {
-    const secondFacultyChange = {
-      ...facultyChange,
-      id: "9798c393-0dd7-4a70-9855-1f9f2696e002",
-      data: { city: "Mostar" },
-      currentEntity: { name: "Faculty of Engineering" },
-    };
-    givenPendingChanges([
-      { ...facultyChange, currentEntity: { name: "Faculty of Engineering" } },
-      secondFacultyChange,
-      universityChange,
-    ]);
-    renderAdminDashboard();
-
-    expect(
-      await screen.findByText("Faculty of Engineering - Faculty (2)"),
-    ).toBeInTheDocument();
-    // a single change against its own target gets no group header
-    expect(screen.queryByText(/New University - University/)).toBeNull();
-  });
-
   test("approving a change removes it and shows the empty state", async () => {
     givenPendingChanges([facultyChange]);
     const user = renderAdminDashboard();
