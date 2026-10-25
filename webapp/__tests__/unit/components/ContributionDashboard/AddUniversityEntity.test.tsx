@@ -289,6 +289,110 @@ describe("AddUniversityEntity", () => {
     expect(screen.getByLabelText(/City/i)).toBeInTheDocument();
   });
 
+  async function startUniversityUpdate(
+    user: ReturnType<typeof userEvent.setup>,
+  ) {
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /Entity Type/i }),
+      "UNIVERSITY",
+    );
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /Change/i }),
+      "UPDATE",
+    );
+    await pickUniversity(user);
+    // prefill has landed once the name input shows the current value
+    expect(
+      await screen.findByDisplayValue("University of Sarajevo"),
+    ).toBeInTheDocument();
+  }
+
+  test("prefills the form with the target's current data on update", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+    const user = userEvent.setup();
+
+    await startUniversityUpdate(user);
+
+    expect(screen.getByLabelText(/Name/i)).toHaveValue(
+      "University of Sarajevo",
+    );
+    expect(screen.getByLabelText(/City/i)).toHaveValue("Sarajevo");
+    expect(screen.getByLabelText(/Acronym/i)).toHaveValue("UNSA");
+  });
+
+  test("submits only the fields that changed on update", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+    const user = userEvent.setup();
+
+    await startUniversityUpdate(user);
+    await user.clear(screen.getByLabelText(/City/i));
+    await user.type(screen.getByLabelText(/City/i), "Mostar");
+    await user.click(
+      screen.getByRole("button", { name: /Submit Suggestion/i }),
+    );
+
+    expect(
+      await screen.findByText(/Suggestion submitted./i),
+    ).toBeInTheDocument();
+    expect(submissions).toHaveLength(1);
+    expect(submissions[0]?.body).toEqual({
+      targetType: "UNIVERSITY",
+      targetId: 1,
+      data: { city: "Mostar" },
+    });
+  });
+
+  test("sends null for an emptied clearable field on update", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+    const user = userEvent.setup();
+
+    await startUniversityUpdate(user);
+    await user.clear(screen.getByLabelText(/Acronym/i));
+    await user.click(
+      screen.getByRole("button", { name: /Submit Suggestion/i }),
+    );
+
+    expect(
+      await screen.findByText(/Suggestion submitted./i),
+    ).toBeInTheDocument();
+    expect(submissions[0]?.body).toEqual({
+      targetType: "UNIVERSITY",
+      targetId: 1,
+      data: { acronym: null },
+    });
+  });
+
+  test("blocks an update that changes nothing", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+    const user = userEvent.setup();
+
+    await startUniversityUpdate(user);
+    await user.click(
+      screen.getByRole("button", { name: /Submit Suggestion/i }),
+    );
+
+    expect(
+      await screen.findByText(/matches the current data/i),
+    ).toBeInTheDocument();
+    expect(submissions).toHaveLength(0);
+  });
+
   test("resets the picker when entity type changes", async () => {
     render(
       <Wrapper>

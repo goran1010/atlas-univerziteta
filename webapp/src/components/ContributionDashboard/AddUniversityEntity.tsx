@@ -1,4 +1,4 @@
-import { useState, use } from "react";
+import { useState, useRef, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { Select } from "../sharedComponents/Select";
@@ -13,6 +13,7 @@ import { StudyProgramFields } from "./fields/StudyProgramFields";
 import { TrackFields } from "./fields/TrackFields";
 import { getPickerDepth } from "./utils/getPickerDepth";
 import { handleSubmitUniversityEntity } from "./utils/handleSubmitUniversityEntity";
+import { fetchTargetDraft } from "./utils/updatePrefill";
 import type { TargetType, TypeOfChange } from "../../schemas/domain";
 import type { ContributionFormDraft, ContributionFormState } from "./types";
 import type { SubmitEvent } from "react";
@@ -43,8 +44,11 @@ function AddUniversityEntity({
   const { t } = use(RootContext);
   const { addNotification } = use(NotificationContext);
   const [formState, setFormState] = useState(INIT_FORM);
+  const [baseline, setBaseline] = useState<ContributionFormDraft>();
   const [loading, setLoading] = useState(false);
   const [pickerResetKey, setPickerResetKey] = useState(0);
+  // guards prefill responses against a target re-picked mid-flight
+  const targetIdRef = useRef("");
 
   const { targetType, typeOfChange, parentId, targetId, data, comment } =
     formState;
@@ -59,7 +63,10 @@ function AddUniversityEntity({
       [field]: value,
       parentId: "",
       targetId: "",
+      data: {},
     }));
+    setBaseline(undefined);
+    targetIdRef.current = "";
   }
 
   function setDataField(
@@ -81,6 +88,24 @@ function AddUniversityEntity({
   const needsTarget = typeOfChange !== "CREATE";
   const needsDataFields = typeOfChange !== "DELETE";
 
+  async function prefillTarget(id: string) {
+    setBaseline(undefined);
+    if (!id) {
+      setFormState((prev) => ({ ...prev, data: {} }));
+      return;
+    }
+
+    const draft = await fetchTargetDraft(targetType, id, {
+      addNotification,
+      setLoading: () => undefined,
+      t,
+    });
+    if (!draft || targetIdRef.current !== id) return;
+
+    setBaseline(draft);
+    setFormState((prev) => ({ ...prev, data: draft }));
+  }
+
   async function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     await handleSubmitUniversityEntity({
@@ -89,9 +114,12 @@ function AddUniversityEntity({
       targetId,
       typeOfChange,
       data,
+      baseline,
       comment,
       onSuccess: () => {
         setFormState(INIT_FORM);
+        setBaseline(undefined);
+        targetIdRef.current = "";
         setPickerResetKey((prev) => prev + 1);
         refetchPendingChanges();
       },
@@ -156,6 +184,10 @@ function AddUniversityEntity({
           showSelectedDetails={typeOfChange !== "CREATE"}
           onSelect={(id) => {
             setField(needsParent ? "parentId" : "targetId", id);
+            if (!needsParent && typeOfChange === "UPDATE") {
+              targetIdRef.current = id;
+              void prefillTarget(id);
+            }
           }}
         />
       )}

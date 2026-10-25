@@ -180,7 +180,19 @@ const facultyDetailResponseSchema = z.object({
   data: facultyDetailSchema,
 });
 
+const studyProgramDetailResponseSchema = z.object({
+  message: z.string(),
+  data: studyProgramSchema,
+});
+
+const trackDetailResponseSchema = z.object({
+  message: z.string(),
+  data: trackSchema,
+});
+
 export type FacultyDetail = z.infer<typeof facultyDetailSchema>;
+export type StudyProgramDetail = z.infer<typeof studyProgramSchema>;
+export type TrackDetail = z.infer<typeof trackSchema>;
 export type UniversityDetail = z.infer<typeof universityDetailSchema>;
 export type UniversityListItem = z.infer<typeof universityListItemSchema>;
 export type UniversityDetailFaculty = UniversityDetail["faculties"][number];
@@ -200,4 +212,6 @@ export {
   universityDetailResponseSchema,
   universityListResponseSchema,
   facultyDetailResponseSchema,
+  studyProgramDetailResponseSchema,
+  trackDetailResponseSchema,
 };
