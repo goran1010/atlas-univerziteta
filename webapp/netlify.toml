@@ -1,3 +1,8 @@
+# prerender-meta.ts runs under plain node, which strips types natively only
+# on Node 22.18+ - pin the build image so a default downgrade cannot break it
+[build.environment]
+  NODE_VERSION = "24"
+
 # Everything is self-hosted (fonts, images, the theme-init script) except the
 # API calls, so the policy stays strict: no unsafe-inline anywhere.
 [[headers]]

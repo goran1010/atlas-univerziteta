@@ -1,22 +1,43 @@
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 import { parseEnv } from "node:util";
+import { renderRouteHtml, addSitemapEntries } from "./prerender-meta-lib.ts";
+import type { MetaRoute } from "./prerender-meta-lib.ts";
 
 const distDir = join(import.meta.dirname, "..", "dist");
 
-const localeFile = join(import.meta.dirname, "..", "src", "locales", "en.json");
-const locale = JSON.parse(readFileSync(localeFile, "utf-8"));
+interface LocaleTree {
+  [key: string]: string | LocaleTree;
+}
 
-function t(path) {
-  return path.split(".").reduce((obj, key) => obj[key], locale);
+const localeFile = join(import.meta.dirname, "..", "src", "locales", "en.json");
+const locale = JSON.parse(readFileSync(localeFile, "utf-8")) as LocaleTree;
+
+function t(path: string): string {
+  let node: string | LocaleTree | undefined = locale;
+  for (const key of path.split(".")) {
+    if (typeof node !== "object") {
+      node = undefined;
+      break;
+    }
+    node = node[key];
+  }
+  if (typeof node !== "string") {
+    throw new Error(`Missing locale key: ${path}`);
+  }
+  return node;
 }
 
 const APP_NAME = t("title.app");
 
+interface Route extends MetaRoute {
+  path: string;
+}
+
 // every title follows "Page | App"; image names refer to
 // public/images/og-images/<name> and fall back to the default og image when the
 // screenshot has not been added yet
-const routes = [
+const routes: Route[] = [
   {
     path: "search",
     title: `${t("title.universities")} | ${APP_NAME}`,
@@ -64,60 +85,13 @@ const imagesDir = join(
 
 const indexHtml = readFileSync(join(distDir, "index.html"), "utf-8");
 
-function replaceMetaContent(html, property, content) {
-  const ogPattern = new RegExp(
-    `(<meta\\s+property="${property}"\\s+content=")([^"]*)(")`,
-  );
-  const twitterPattern = new RegExp(
-    `(<meta\\s+name="${property}"\\s+content=")([^"]*)(")`,
-  );
-  html = html.replace(ogPattern, `$1${content}$3`);
-  html = html.replace(twitterPattern, `$1${content}$3`);
-  return html;
-}
+function renderRoute(route: Route) {
+  const image =
+    route.image && existsSync(join(imagesDir, route.image))
+      ? route.image
+      : undefined;
 
-function replaceTitle(html, title) {
-  return html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
-}
-
-function replaceDescription(html, description) {
-  return html.replace(
-    /(<meta\s+name="description"\s+content=")([^"]*)(")/,
-    `$1${description}$3`,
-  );
-}
-
-function escapeHtml(value) {
-  return value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
-
-function renderRoute(route) {
-  let html = indexHtml;
-
-  const title = escapeHtml(route.title);
-  const description = escapeHtml(route.description);
-
-  html = replaceTitle(html, title);
-  html = replaceDescription(html, description);
-
-  html = replaceMetaContent(html, "og:title", title);
-  html = replaceMetaContent(html, "og:description", description);
-  html = replaceMetaContent(html, "twitter:title", title);
-  html = replaceMetaContent(html, "twitter:description", description);
-
-  // og:url is already an absolute URL in the built HTML - replace the path
-  html = html.replace(
-    /(<meta\s+property="og:url"\s+content=")(https?:\/\/[^/]+)(\/?)(")/,
-    `$1$2${route.url}/$4`,
-  );
-
-  if (route.image && existsSync(join(imagesDir, route.image))) {
-    html = html.replaceAll("og-image-home.png", route.image);
-  }
+  const html = renderRouteHtml(indexHtml, { ...route, image });
 
   const outDir = join(distDir, route.path);
   mkdirSync(outDir, { recursive: true });
@@ -139,11 +113,14 @@ console.log(`Pre-rendered meta tags for ${String(generated)} static routes.`);
 // the SPA). Meta freshness equals deploy freshness. VITE_API_URL is an
 // absolute URL in production and is used directly.
 
-function apiBaseUrl() {
-  const candidates = [process.env.VITE_API_URL];
+function apiBaseUrl(): string | null {
+  const candidates: (string | undefined)[] = [process.env.VITE_API_URL];
   const envFile = join(import.meta.dirname, "..", ".env");
   if (existsSync(envFile)) {
-    const parsed = parseEnv(readFileSync(envFile, "utf-8"));
+    const parsed = parseEnv(readFileSync(envFile, "utf-8")) as Record<
+      string,
+      string | undefined
+    >;
     candidates.push(parsed.VITE_API_URL);
   }
   const absolute = candidates.find(
@@ -154,7 +131,7 @@ function apiBaseUrl() {
   return absolute ? absolute.replace(/\/+$/, "") : null;
 }
 
-async function fetchJson(url) {
+async function fetchJson(url: string): Promise<unknown> {
   const response = await fetch(url, { signal: AbortSignal.timeout(15_000) });
   if (!response.ok) {
     throw new Error(`${url} responded ${String(response.status)}`);
@@ -163,12 +140,14 @@ async function fetchJson(url) {
 }
 
 // the list endpoints paginate (max 100 per page) - walk every page
-async function fetchAllPages(baseUrl) {
-  const items = [];
+async function fetchAllPages<T>(baseUrl: string): Promise<T[]> {
+  const items: T[] = [];
   let page = 1;
   let totalPages = 1;
   while (page <= totalPages) {
-    const body = await fetchJson(`${baseUrl}?limit=100&page=${String(page)}`);
+    const body = (await fetchJson(
+      `${baseUrl}?limit=100&page=${String(page)}`,
+    )) as { data: T[]; totalPages?: number };
     items.push(...body.data);
     totalPages = body.totalPages ?? 1;
     page += 1;
@@ -176,29 +155,25 @@ async function fetchAllPages(baseUrl) {
   return items;
 }
 
-function appendToSitemap(urls) {
+function appendToSitemap(urls: string[]) {
   const sitemapFile = join(distDir, "sitemap.xml");
   if (!existsSync(sitemapFile)) return;
-  let xml = readFileSync(sitemapFile, "utf-8");
+  const xml = readFileSync(sitemapFile, "utf-8");
   const today = new Date().toISOString().slice(0, 10);
-  // each page is a <path>/index.html directory, which Netlify serves at
-  // <path>/ and reaches from <path> only through a 301
-  const locs = urls.map((url) => `https://atlasuniverziteta.com${url}/`);
-  // rerunning against the same dist must not duplicate entries
-  const newLocs = locs.filter((loc) => !xml.includes(`<loc>${loc}</loc>`));
-  const entries = newLocs
-    .map(
-      (loc) => `  <url>
-    <loc>${loc}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-`,
-    )
-    .join("");
-  xml = xml.replace("</urlset>", `${entries}</urlset>`);
-  writeFileSync(sitemapFile, xml);
+  writeFileSync(sitemapFile, addSitemapEntries(xml, urls, today));
+}
+
+interface UniversityListItem {
+  id: number;
+  name: string;
+  city: string;
+  entity: string;
+}
+
+interface FacultyListItem {
+  id: number;
+  name: string;
+  university: { name: string };
 }
 
 const apiUrl = apiBaseUrl();
@@ -209,11 +184,11 @@ if (!apiUrl) {
 } else {
   try {
     const [universities, faculties] = await Promise.all([
-      fetchAllPages(`${apiUrl}/api/v1/universities`),
-      fetchAllPages(`${apiUrl}/api/v1/faculties`),
+      fetchAllPages<UniversityListItem>(`${apiUrl}/api/v1/universities`),
+      fetchAllPages<FacultyListItem>(`${apiUrl}/api/v1/faculties`),
     ]);
 
-    const entityUrls = [];
+    const entityUrls: string[] = [];
     let entityPages = 0;
 
     for (const university of universities) {
