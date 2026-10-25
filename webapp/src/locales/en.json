@@ -257,7 +257,14 @@
     "entityDeleted": "Entity no longer exists",
     "facultyCount": "Faculties",
     "studyProgramCount": "Study programs",
-    "trackCount": "Tracks"
+    "trackCount": "Tracks",
+    "diff": {
+      "field": "Field",
+      "current": "Current",
+      "proposed": "Proposed",
+      "cleared": "cleared",
+      "noChange": "no change"
+    }
   },
   "error": {
     "notFound": "There is nothing here.",

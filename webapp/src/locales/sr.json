@@ -257,7 +257,14 @@
     "entityDeleted": "Entitet više ne postoji",
     "facultyCount": "Fakulteti",
     "studyProgramCount": "Studijski programi",
-    "trackCount": "Smjerovi"
+    "trackCount": "Smjerovi",
+    "diff": {
+      "field": "Polje",
+      "current": "Trenutno",
+      "proposed": "Predloženo",
+      "cleared": "obrisano",
+      "noChange": "bez izmjene"
+    }
   },
   "error": {
     "notFound": "Ovdje nema ničega.",

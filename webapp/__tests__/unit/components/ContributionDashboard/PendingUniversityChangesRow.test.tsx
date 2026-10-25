@@ -100,7 +100,7 @@ describe("PendingUniversityChangesRow", () => {
     });
     await userEvent.click(detailButton);
 
-    // Once in the row's breadcrumb line, once in the expanded detail
-    expect(screen.getAllByText("University of Sarajevo")).toHaveLength(2);
+    // Row breadcrumb, the dialog's own breadcrumb, and the detail row
+    expect(screen.getAllByText("University of Sarajevo")).toHaveLength(3);
   });
 });

@@ -222,6 +222,7 @@ const PendingChangesAdminRow = memo(
             typeOfChange={data.typeOfChange}
             data={data.data}
             currentEntity={currentEntity}
+            parentContext={data.parentContext}
             comment={data.comment}
           />
         </Dialog>

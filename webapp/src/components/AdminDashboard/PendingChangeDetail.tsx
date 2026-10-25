@@ -1,12 +1,91 @@
 import { use, type ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
+import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
+import { getChangedEntityName } from "../../utils/getChangedEntityName";
 
 import type { TFunction } from "../../types";
+import type { ParentCrumb } from "../../schemas/pendingChange";
 
-interface DetailRow {
+interface FieldSpec {
+  key: string;
   label: string;
-  value: ReactNode;
+  translate?: (value: string, t: TFunction) => string;
+}
+
+function entityFieldSpecs(targetType: string, t: TFunction): FieldSpec[] {
+  const name = { key: "name", label: t("contribution.dataFields.name") };
+  const city = { key: "city", label: t("contribution.dataFields.city") };
+  const website = {
+    key: "website",
+    label: t("contribution.dataFields.website"),
+  };
+  const address = {
+    key: "address",
+    label: t("contribution.dataFields.address"),
+  };
+  const phone = { key: "phone", label: t("contribution.dataFields.phone") };
+  const email = { key: "email", label: t("contribution.dataFields.email") };
+  const ects = { key: "ects", label: t("contribution.dataFields.ects") };
+  const durationYears = {
+    key: "durationYears",
+    label: t("contribution.dataFields.durationYears"),
+  };
+
+  switch (targetType) {
+    case "UNIVERSITY":
+      return [
+        name,
+        { key: "acronym", label: t("contribution.dataFields.acronym") },
+        city,
+        {
+          key: "entity",
+          label: t("contribution.dataFields.entity"),
+          translate: (value, translator) =>
+            translator(`contribution.entities.${value}`),
+        },
+        {
+          key: "ownership",
+          label: t("contribution.dataFields.ownership"),
+          translate: (value, translator) =>
+            translator(`universitiesPage.ownership.${value}`),
+        },
+        { key: "foundedYear", label: t("universitiesPage.foundedYear") },
+        website,
+        address,
+        phone,
+        email,
+        { key: "facultyCount", label: t("admin.facultyCount") },
+      ];
+    case "FACULTY":
+      return [
+        name,
+        city,
+        website,
+        address,
+        phone,
+        email,
+        { key: "studyProgramCount", label: t("admin.studyProgramCount") },
+      ];
+    case "STUDY_PROGRAM":
+      return [
+        name,
+        {
+          key: "cycle",
+          label: t("contribution.dataFields.cycle"),
+          translate: (value, translator) =>
+            translator(`contribution.cycles.${value}`),
+        },
+        durationYears,
+        ects,
+        { key: "language", label: t("contribution.dataFields.language") },
+        { key: "trackCount", label: t("admin.trackCount") },
+      ];
+    case "TRACK":
+      return [name, ects, durationYears];
+    default:
+      return [name];
+  }
 }
 
 function isUrl(value: unknown): value is string {
@@ -16,84 +95,42 @@ function isUrl(value: unknown): value is string {
   );
 }
 
+function formatValue(
+  raw: unknown,
+  spec: FieldSpec,
+  t: TFunction,
+): ReactNode | null {
+  if (raw === undefined || raw === null || raw === "") return null;
+
+  if (isUrl(raw)) {
+    return (
+      <ExternalLink href={raw} className="break-all">
+        {raw}
+      </ExternalLink>
+    );
+  }
+
+  if (typeof raw === "string" && spec.translate) return spec.translate(raw, t);
+  if (typeof raw !== "string" && typeof raw !== "number") return null;
+  return raw;
+}
+
+interface DetailRow {
+  label: string;
+  value: ReactNode;
+}
+
 function buildEntityRows(
   targetType: string,
   entity: Record<string, unknown>,
   t: TFunction,
 ): DetailRow[] {
-  const rows: DetailRow[] = [];
-
-  function push(label: string, raw: unknown) {
-    if (raw === undefined || raw === null || raw === "") return;
-
-    if (isUrl(raw)) {
-      rows.push({
-        label,
-        value: (
-          <ExternalLink href={raw} className="break-all">
-            {raw}
-          </ExternalLink>
-        ),
-      });
-      return;
-    }
-
-    if (typeof raw !== "string" && typeof raw !== "number") return;
-    rows.push({ label, value: raw });
-  }
-
-  push(t("contribution.dataFields.name"), entity.name);
-
-  switch (targetType) {
-    case "UNIVERSITY":
-      push(t("contribution.dataFields.acronym"), entity.acronym);
-      push(t("contribution.dataFields.city"), entity.city);
-      if (typeof entity.entity === "string") {
-        push(
-          t("contribution.dataFields.entity"),
-          t(`contribution.entities.${entity.entity}`),
-        );
-      }
-      if (typeof entity.ownership === "string") {
-        push(
-          t("contribution.dataFields.ownership"),
-          t(`universitiesPage.ownership.${entity.ownership}`),
-        );
-      }
-      push(t("universitiesPage.foundedYear"), entity.foundedYear);
-      push(t("contribution.dataFields.website"), entity.website);
-      push(t("contribution.dataFields.address"), entity.address);
-      push(t("contribution.dataFields.phone"), entity.phone);
-      push(t("contribution.dataFields.email"), entity.email);
-      push(t("admin.facultyCount"), entity.facultyCount);
-      break;
-    case "FACULTY":
-      push(t("contribution.dataFields.city"), entity.city);
-      push(t("contribution.dataFields.website"), entity.website);
-      push(t("contribution.dataFields.address"), entity.address);
-      push(t("contribution.dataFields.phone"), entity.phone);
-      push(t("contribution.dataFields.email"), entity.email);
-      push(t("admin.studyProgramCount"), entity.studyProgramCount);
-      break;
-    case "STUDY_PROGRAM":
-      if (typeof entity.cycle === "string") {
-        push(
-          t("contribution.dataFields.cycle"),
-          t(`contribution.cycles.${entity.cycle}`),
-        );
-      }
-      push(t("contribution.dataFields.durationYears"), entity.durationYears);
-      push(t("contribution.dataFields.ects"), entity.ects);
-      push(t("contribution.dataFields.language"), entity.language);
-      push(t("admin.trackCount"), entity.trackCount);
-      break;
-    case "TRACK":
-      push(t("contribution.dataFields.ects"), entity.ects);
-      push(t("contribution.dataFields.durationYears"), entity.durationYears);
-      break;
-  }
-
-  return rows;
+  return entityFieldSpecs(targetType, t)
+    .map((spec) => ({
+      label: spec.label,
+      value: formatValue(entity[spec.key], spec, t),
+    }))
+    .filter((row) => row.value !== null);
 }
 
 function DataCard({ heading, rows }: { heading: string; rows: DetailRow[] }) {
@@ -130,11 +167,153 @@ function DataCard({ heading, rows }: { heading: string; rows: DetailRow[] }) {
   );
 }
 
+// values are strings or numbers by the time they reach the diff; anything
+// else never compares equal
+function comparable(value: unknown): string | null {
+  if (typeof value === "string" || typeof value === "number") {
+    return String(value);
+  }
+  return null;
+}
+
+type DiffState = "changed" | "cleared" | "same";
+
+interface DiffRow {
+  label: string;
+  current: ReactNode;
+  proposed: ReactNode;
+  state: DiffState;
+}
+
+function buildDiffRows(
+  targetType: string,
+  currentEntity: Record<string, unknown>,
+  proposedData: Record<string, unknown>,
+  t: TFunction,
+): DiffRow[] {
+  return entityFieldSpecs(targetType, t)
+    .filter((spec) => spec.key in proposedData)
+    .map((spec) => {
+      const currentRaw = currentEntity[spec.key];
+      const current = formatValue(currentRaw, spec, t);
+
+      const proposedRaw = proposedData[spec.key];
+      if (proposedRaw === null) {
+        return {
+          label: spec.label,
+          current,
+          proposed: null,
+          state: "cleared" as const,
+        };
+      }
+
+      const proposed = formatValue(proposedRaw, spec, t);
+      const same = comparable(proposedRaw) === comparable(currentRaw);
+      return {
+        label: spec.label,
+        current,
+        proposed,
+        state: same ? ("same" as const) : ("changed" as const),
+      };
+    });
+}
+
+function DiffProposedCell({ row }: { row: DiffRow }) {
+  const { t } = use(RootContext);
+
+  if (row.state === "cleared") {
+    return (
+      <span className="italic text-red-700 dark:text-red-300">
+        {t("admin.diff.cleared")}
+      </span>
+    );
+  }
+  if (row.state === "same") {
+    return (
+      <>
+        {row.proposed}
+        <span className="ml-1 italic text-xs text-(--text-muted)">
+          ({t("admin.diff.noChange")})
+        </span>
+      </>
+    );
+  }
+  return (
+    <span className="font-semibold text-(--text-primary)">{row.proposed}</span>
+  );
+}
+
+function DiffCard({
+  targetType,
+  currentEntity,
+  proposedData,
+}: {
+  targetType: string;
+  currentEntity: Record<string, unknown>;
+  proposedData: Record<string, unknown>;
+}) {
+  const { t } = use(RootContext);
+  const rows = buildDiffRows(targetType, currentEntity, proposedData, t);
+
+  return (
+    <div className="flex flex-col gap-1 rounded-lg border border-(--border-color) bg-(--surface-2) p-2 sm:p-3 w-full">
+      <p className="text-xs font-semibold text-(--text-secondary) mb-1">
+        {t("admin.proposedChanges")}
+      </p>
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="border-b border-(--border-strong) text-xs text-(--text-muted) uppercase tracking-wide">
+              <th scope="col" className="py-1 pr-3 text-left font-semibold">
+                {t("admin.diff.field")}
+              </th>
+              <th scope="col" className="py-1 pr-3 text-left font-semibold">
+                {t("admin.diff.current")}
+              </th>
+              <th scope="col" className="py-1 text-left font-semibold">
+                {t("admin.diff.proposed")}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr
+                key={row.label}
+                className={`border-b border-(--border-color) last:border-b-0 ${
+                  row.state === "changed" || row.state === "cleared"
+                    ? "bg-yellow-50 dark:bg-yellow-900/20"
+                    : ""
+                }`}
+              >
+                <th
+                  scope="row"
+                  className="py-1.5 pr-3 text-left font-medium text-(--text-secondary) whitespace-nowrap align-top"
+                >
+                  {row.label}
+                </th>
+                <td className="py-1.5 pr-3 text-(--text-secondary) wrap-break-word align-top">
+                  {row.current ?? (
+                    <span className="text-(--text-muted)">-</span>
+                  )}
+                </td>
+                <td className="py-1.5 text-(--text-primary) wrap-break-word align-top">
+                  <DiffProposedCell row={row} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
 interface PendingChangeDetailProps {
   targetType: string;
   typeOfChange: string;
   data: Record<string, unknown>;
   currentEntity?: Record<string, unknown> | null;
+  parentContext?: ParentCrumb[] | null;
   comment?: string | null;
 }
 
@@ -143,14 +322,20 @@ function PendingChangeDetail({
   typeOfChange,
   data: proposedData,
   currentEntity,
+  parentContext,
   comment,
 }: PendingChangeDetailProps) {
   const { t } = use(RootContext);
 
   const hasProposedFields = Object.keys(proposedData).length > 0;
+  const entityName = getChangedEntityName({
+    currentEntity,
+    data: proposedData,
+  });
 
   return (
     <div className="flex flex-col gap-2 pt-2 w-full">
+      <ParentBreadcrumb crumbs={parentContext ?? []} current={entityName} />
       {typeOfChange === "CREATE" && hasProposedFields && (
         <DataCard
           heading={t("admin.proposedData")}
@@ -158,26 +343,28 @@ function PendingChangeDetail({
         />
       )}
 
-      {typeOfChange === "UPDATE" && (
-        <>
-          {currentEntity ? (
-            <DataCard
-              heading={t("admin.currentData")}
-              rows={buildEntityRows(targetType, currentEntity, t)}
-            />
-          ) : currentEntity === null ? (
-            <p className="text-xs italic text-(--text-secondary)">
-              {t("admin.entityDeleted")}
-            </p>
-          ) : null}
-          {hasProposedFields && (
-            <DataCard
-              heading={t("admin.proposedChanges")}
-              rows={buildEntityRows(targetType, proposedData, t)}
-            />
-          )}
-        </>
-      )}
+      {typeOfChange === "UPDATE" &&
+        (currentEntity ? (
+          <DiffCard
+            targetType={targetType}
+            currentEntity={currentEntity}
+            proposedData={proposedData}
+          />
+        ) : (
+          <>
+            {currentEntity === null && (
+              <p className="text-xs italic text-(--text-secondary)">
+                {t("admin.entityDeleted")}
+              </p>
+            )}
+            {hasProposedFields && (
+              <DataCard
+                heading={t("admin.proposedChanges")}
+                rows={buildEntityRows(targetType, proposedData, t)}
+              />
+            )}
+          </>
+        ))}
 
       {typeOfChange === "DELETE" && (
         <>
