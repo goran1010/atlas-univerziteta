@@ -2,6 +2,7 @@ import request from "supertest";
 import { describe, test, expect } from "vitest";
 
 import { app } from "../../src/app.js";
+import { env } from "../../src/config/env.js";
 import { prisma } from "../../src/db/prisma.js";
 import { createAndLoginUser } from "../utils/createUserAndLogin.js";
 import { getResponseObject } from "../utils/responseHelpers.js";
@@ -682,5 +683,144 @@ describe("Contribution Router - DELETE /users/contribution/pending-changes/unive
       message: "Pending change deleted successfully.",
     });
     expect(pendingChangeInDb).toBeNull();
+  });
+});
+
+describe("Contribution Router - malicious input", () => {
+  test("responds with status 403 when the Origin header does not match the webapp", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent
+      .post("/users/contribution/universities")
+      .set("Origin", "https://evil.example")
+      .send({
+        targetType: "UNIVERSITY",
+        data: {
+          name: "Evil Origin University",
+          city: "City",
+          entity: "FBIH",
+          ownership: "PUBLIC",
+        },
+      });
+
+    expect(response.status).toBe(403);
+    expect(response.body).toEqual({
+      error: { code: "FORBIDDEN", message: "Request origin is not allowed." },
+    });
+  });
+
+  test("responds with status 201 when the Origin header matches the webapp", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent
+      .post("/users/contribution/universities")
+      .set("Origin", env.WEBAPP_URL)
+      .send({
+        targetType: "UNIVERSITY",
+        data: {
+          name: "Matching Origin University",
+          city: "City",
+          entity: "FBIH",
+          ownership: "PUBLIC",
+        },
+      });
+
+    expect(response.status).toBe(201);
+  });
+
+  test("stores HTML-sensitive characters verbatim without interpreting them", async () => {
+    const { agent } = await createLoggedInAgent();
+    const name = `<script>alert(1)</script> & "quoted" $' $&`;
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: { name, city: "City", entity: "FBIH", ownership: "PUBLIC" },
+    });
+
+    expect(response.status).toBe(201);
+    const responseBody = getResponseObject(response.body);
+    const data = getResponseObject(responseBody["data"]);
+    const pendingChange = await prisma.pendingChange.findUnique({
+      where: { id: data["id"] as string },
+    });
+    expect((pendingChange?.data as { name: string }).name).toBe(name);
+  });
+
+  test.each([
+    "data:text/html,<script>alert(1)</script>",
+    "vbscript:Evil(1)",
+    "//evil.example/path",
+    "JavaScript:alert(1)",
+    "java\nscript:alert(1)",
+    "ftp://example.com/file",
+  ])("responds with status 400 for unsafe website URL %s", async (website) => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Unsafe URL University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        website,
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, {
+      path: "data.website",
+      code: "invalid_format",
+    });
+  });
+
+  test("responds with status 400 for __proto__ and constructor keys", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    // a JS object literal would set the actual prototype instead of a key,
+    // so the payload goes out as raw JSON
+    const body = `{
+      "targetType": "UNIVERSITY",
+      "data": {
+        "name": "Proto University",
+        "city": "City",
+        "entity": "FBIH",
+        "ownership": "PUBLIC",
+        "__proto__": { "polluted": true },
+        "constructor": { "polluted": true }
+      }
+    }`;
+
+    const response = await agent
+      .post("/users/contribution/universities")
+      .set("Content-Type", "application/json")
+      .send(body);
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, { path: "data", code: "unrecognized_keys" });
+    expect(({} as { polluted?: boolean }).polluted).toBeUndefined();
+  });
+
+  test("responds with status 413 when the body exceeds the JSON size limit", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "x".repeat(200 * 1024),
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expect(response.status).toBe(413);
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+    expect(error["code"]).toBe("REQUEST_FAILED");
   });
 });
