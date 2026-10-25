@@ -161,6 +161,88 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     expectValidationIssue(error, { path: "data.name", code: "too_big" });
   });
 
+  test("stores an optional contributor comment on all three routes", async () => {
+    const { agent, user } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const create = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Commented University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+      comment: "Found on the official site",
+    });
+    const edit = await agent.put("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      data: { name: "Commented Rename" },
+      comment: "Name changed after merger",
+    });
+    const remove = await agent.delete("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      comment: "University closed in 2024",
+    });
+
+    expect(create.status).toBe(201);
+    expect(edit.status).toBe(201);
+    expect(remove.status).toBe(201);
+
+    const stored = await prisma.pendingChange.findMany({
+      where: { userId: user.id },
+      orderBy: { createdAt: "asc" },
+      select: { comment: true },
+    });
+    expect(stored.map((change) => change.comment)).toEqual([
+      "Found on the official site",
+      "Name changed after merger",
+      "University closed in 2024",
+    ]);
+  });
+
+  test("stores no comment when none is sent", async () => {
+    const { agent, user } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Uncommented University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expect(response.status).toBe(201);
+    const stored = await prisma.pendingChange.findFirst({
+      where: { userId: user.id },
+    });
+    expect(stored?.comment).toBeNull();
+  });
+
+  test("responds with status 400 when the comment exceeds its max length", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Long Comment University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+      comment: "a".repeat(1001),
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, { path: "comment", code: "too_big" });
+  });
+
   test("responds with status 201 and stores a create suggestion", async () => {
     const { agent, user } = await createLoggedInAgent();
 

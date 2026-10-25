@@ -61,7 +61,7 @@ async function createEntity(req: Request, res: Response) {
   const user = getSessionUser(req);
 
   const contribution = contributionValidation.createEntity(req.body);
-  const { targetType, data } = contribution;
+  const { targetType, data, comment } = contribution;
   const parentId = "parentId" in contribution ? contribution.parentId : null;
 
   if (await sendLimitErrorIfFull(res, user.id)) return;
@@ -86,6 +86,7 @@ async function createEntity(req: Request, res: Response) {
       typeOfChange: "CREATE",
       parentId,
       data,
+      comment: comment ?? null,
     },
   });
 
@@ -110,9 +111,8 @@ function isNoOpEdit(
 
 async function editEntity(req: Request, res: Response) {
   const user = getSessionUser(req);
-  const { targetType, targetId, data } = contributionValidation.editEntity(
-    req.body,
-  );
+  const { targetType, targetId, data, comment } =
+    contributionValidation.editEntity(req.body);
 
   if (await sendLimitErrorIfFull(res, user.id)) return;
 
@@ -147,6 +147,7 @@ async function editEntity(req: Request, res: Response) {
       typeOfChange: "UPDATE",
       targetId,
       data,
+      comment: comment ?? null,
     },
   });
 
@@ -159,7 +160,7 @@ async function editEntity(req: Request, res: Response) {
 
 async function deleteEntity(req: Request, res: Response) {
   const user = getSessionUser(req);
-  const { targetType, targetId } = contributionValidation.deleteEntity(
+  const { targetType, targetId, comment } = contributionValidation.deleteEntity(
     req.body,
   );
 
@@ -185,6 +186,7 @@ async function deleteEntity(req: Request, res: Response) {
       typeOfChange: "DELETE",
       targetId,
       data: {},
+      comment: comment ?? null,
     },
   });
 

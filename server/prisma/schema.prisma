@@ -208,6 +208,9 @@ model PendingChange {
   // proposed data
   data Json?
 
+  // contributor's note to the reviewing admin
+  comment String?
+
   user       user      @relation(fields: [userId], references: [id])
   userId     String
   createdAt  DateTime  @default(now())
