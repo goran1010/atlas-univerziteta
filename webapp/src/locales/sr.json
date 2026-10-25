@@ -282,7 +282,9 @@
       "rateLimited": "Previše zahtjeva. Sačekajte 15 minuta, pa pokušajte ponovo.",
       "authRequired": "Morate biti prijavljeni za ovu radnju. Prijavite se i pokušajte ponovo.",
       "forbidden": "Nemate dozvolu za ovu radnju.",
-      "alreadyAdmin": "Već imate admin ulogu."
+      "alreadyAdmin": "Već imate admin ulogu.",
+      "contributionLimit": "Već imate 20 prijedloga koji čekaju pregled. Sačekajte dok ih admin pregleda.",
+      "noChanges": "Predložena izmjena je ista kao trenutni podaci - nema šta da se mijenja."
     },
     "pendingChanges": {
       "fetchError": "Došlo je do greške pri učitavanju izmjena na čekanju. Osvježite stranicu i pokušajte ponovo."

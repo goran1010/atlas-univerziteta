@@ -282,7 +282,9 @@
       "rateLimited": "Too many requests. Please wait 15 minutes, then try again.",
       "authRequired": "You need to be logged in for this. Log in and try again.",
       "forbidden": "You do not have permission for this action.",
-      "alreadyAdmin": "You already have the admin role."
+      "alreadyAdmin": "You already have the admin role.",
+      "contributionLimit": "You already have 20 suggestions awaiting review. Please wait until an admin reviews them.",
+      "noChanges": "The suggested edit matches the current data - nothing to change."
     },
     "pendingChanges": {
       "fetchError": "Something went wrong while loading pending changes. Refresh the page and try again."

@@ -8,6 +8,7 @@ import type { Request, Response } from "express";
 
 async function getPendingChanges(_req: Request, res: Response) {
   const pendingChanges = await prisma.pendingChange.findMany({
+    orderBy: { createdAt: "asc" },
     include: {
       user: {
         select: {

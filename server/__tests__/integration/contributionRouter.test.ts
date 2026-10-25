@@ -264,6 +264,86 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     expect(stored?.typeOfChange).toBe("CREATE");
   });
 
+  test("responds with status 429 on every route once the open-change cap is reached", async () => {
+    const { agent, user } = await createLoggedInAgent();
+    const university = await createUniversity();
+    await prisma.pendingChange.createMany({
+      data: Array.from({ length: 20 }, (_, i) => ({
+        targetType: "UNIVERSITY" as const,
+        typeOfChange: "CREATE" as const,
+        data: {
+          name: `Capped University ${i.toString()}`,
+          city: "City",
+          entity: "FBIH",
+          ownership: "PUBLIC",
+        },
+        userId: user.id,
+      })),
+    });
+
+    const expectLimited = (response: { status: number; body: unknown }) => {
+      expect(response.status).toBe(429);
+      const error = getResponseObject(
+        getResponseObject(response.body)["error"],
+      );
+      expect(error["code"]).toBe("CONTRIBUTION_LIMIT");
+    };
+
+    expectLimited(
+      await agent.post("/users/contribution/universities").send({
+        targetType: "UNIVERSITY",
+        data: {
+          name: "One Too Many",
+          city: "City",
+          entity: "FBIH",
+          ownership: "PUBLIC",
+        },
+      }),
+    );
+    expectLimited(
+      await agent.put("/users/contribution/universities").send({
+        targetType: "UNIVERSITY",
+        targetId: university.id,
+        data: { name: "One Too Many" },
+      }),
+    );
+    expectLimited(
+      await agent.delete("/users/contribution/universities").send({
+        targetType: "UNIVERSITY",
+        targetId: university.id,
+      }),
+    );
+  });
+
+  test("responds with status 201 one change below the open-change cap", async () => {
+    const { agent, user } = await createLoggedInAgent();
+    await prisma.pendingChange.createMany({
+      data: Array.from({ length: 19 }, (_, i) => ({
+        targetType: "UNIVERSITY" as const,
+        typeOfChange: "CREATE" as const,
+        data: {
+          name: `Almost Capped University ${i.toString()}`,
+          city: "City",
+          entity: "FBIH",
+          ownership: "PUBLIC",
+        },
+        userId: user.id,
+      })),
+    });
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Twentieth University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expect(response.status).toBe(201);
+  });
+
   test("responds with status 404 when a track create parent study program does not exist", async () => {
     const { agent } = await createLoggedInAgent();
     const studyProgram = await createStudyProgram();
@@ -368,7 +448,11 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
 
   test("allows null to clear an optional faculty city", async () => {
     const { agent, user } = await createLoggedInAgent();
-    const faculty = await createFaculty();
+    const created = await createFaculty();
+    const faculty = await prisma.faculty.update({
+      where: { id: created.id },
+      data: { city: "Clear Me City" },
+    });
 
     const response = await agent.put("/users/contribution/universities").send({
       targetType: "FACULTY",
@@ -426,6 +510,35 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
         data: { name: "Updated Name" },
       }),
     );
+  });
+
+  test("responds with status 400 when the edit matches the current data", async () => {
+    const { agent } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const response = await agent.put("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      data: { name: university.name, city: university.city, phone: null },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["code"]).toBe("NO_CHANGES");
+  });
+
+  test("responds with status 201 when at least one edited field differs", async () => {
+    const { agent } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const response = await agent.put("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      data: { name: university.name, city: "Different City" },
+    });
+
+    expect(response.status).toBe(201);
   });
 
   test("responds with status 404 when an edit target does not exist", async () => {
@@ -620,6 +733,46 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
         userId: user.id,
       }),
     );
+  });
+});
+
+describe("Contribution Router - pending changes ordering", () => {
+  test("returns pending changes oldest first", async () => {
+    const { agent, user } = await createLoggedInAgent();
+    const changeData = {
+      name: "Ordered University",
+      city: "City",
+      entity: "FBIH",
+      ownership: "PUBLIC",
+    };
+    const newer = await prisma.pendingChange.create({
+      data: {
+        targetType: "UNIVERSITY",
+        typeOfChange: "CREATE",
+        data: changeData,
+        createdAt: new Date("2026-02-01T00:00:00.000Z"),
+        user: { connect: { id: user.id } },
+      },
+    });
+    const older = await prisma.pendingChange.create({
+      data: {
+        targetType: "UNIVERSITY",
+        typeOfChange: "CREATE",
+        data: changeData,
+        createdAt: new Date("2026-01-01T00:00:00.000Z"),
+        user: { connect: { id: user.id } },
+      },
+    });
+
+    const response = await agent.get(
+      "/users/contribution/pending-changes/universities",
+    );
+
+    expect(response.status).toBe(200);
+    const data = getResponseObject(response.body)["data"] as {
+      id: string;
+    }[];
+    expect(data.map((change) => change.id)).toEqual([older.id, newer.id]);
   });
 });
 
