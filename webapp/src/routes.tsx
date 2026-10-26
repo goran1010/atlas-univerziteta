@@ -8,8 +8,44 @@ import { UniversityDetailPage } from "./components/entityDetails/UniversityDetai
 import { FacultyDetailPage } from "./components/entityDetails/FacultyDetailPage";
 
 // The public search and detail pages stay in the main bundle - they are the
-// landing pages. Everything else loads on first navigation via route.lazy,
-// which keeps the current page visible while the chunk downloads.
+// landing pages. Everything else splits into route chunks, but all of them
+// are warmed right after the landing page goes idle (prefetchLazyRoutes), so
+// navigation never waits on a download; route.lazy stays as the fallback for
+// direct deep links before the prefetch finishes.
+const routeImports = {
+  about: () => import("./components/About/About"),
+  api: () => import("./components/Api/Api"),
+  contributionDashboard: () =>
+    import("./components/ContributionDashboard/ContributionDashboard"),
+  addDataTab: () => import("./components/ContributionDashboard/AddDataTab"),
+  pendingChangesTab: () =>
+    import("./components/ContributionDashboard/PendingChangesTab"),
+  adminDashboard: () => import("./components/AdminDashboard/AdminDashboard"),
+  pendingChangesAdmin: () =>
+    import("./components/AdminDashboard/PendingChangesAdmin"),
+  adminRequests: () => import("./components/AdminDashboard/AdminRequests"),
+  profile: () => import("./components/Profile/Profile"),
+  login: () => import("./components/LogIn/LogIn"),
+  signup: () => import("./components/SignUp/SignUp"),
+};
+
+// a failed warm-up is harmless - the route.lazy import retries on navigation
+function prefetchLazyRoutes() {
+  const warm = () => {
+    for (const importRoute of Object.values(routeImports)) {
+      void importRoute().catch(() => undefined);
+    }
+  };
+
+  // typeof check: lib.dom types the API as always present, but Safari
+  // still ships without it
+  if (typeof window.requestIdleCallback === "function") {
+    window.requestIdleCallback(warm, { timeout: 5000 });
+  } else {
+    window.setTimeout(warm, 2000);
+  }
+}
+
 const routes = [
   {
     path: "/",
@@ -40,38 +76,34 @@ const routes = [
       {
         path: "about",
         lazy: async () => ({
-          Component: (await import("./components/About/About")).About,
+          Component: (await routeImports.about()).About,
         }),
       },
       {
         path: "api-docs",
         lazy: async () => ({
-          Component: (await import("./components/Api/Api")).Api,
+          Component: (await routeImports.api()).Api,
         }),
       },
       {
         path: "improve-data",
         lazy: async () => ({
-          Component: (
-            await import("./components/ContributionDashboard/ContributionDashboard")
-          ).ContributionDashboard,
+          Component: (await routeImports.contributionDashboard())
+            .ContributionDashboard,
         }),
         children: [
           { index: true, element: <Navigate to="add" replace /> },
           {
             path: "add",
             lazy: async () => ({
-              Component: (
-                await import("./components/ContributionDashboard/AddDataTab")
-              ).AddDataTab,
+              Component: (await routeImports.addDataTab()).AddDataTab,
             }),
           },
           {
             path: "pending",
             lazy: async () => ({
-              Component: (
-                await import("./components/ContributionDashboard/PendingChangesTab")
-              ).PendingChangesTab,
+              Component: (await routeImports.pendingChangesTab())
+                .PendingChangesTab,
             }),
           },
         ],
@@ -79,9 +111,7 @@ const routes = [
       {
         path: "admin-dashboard",
         lazy: async () => ({
-          Component: (
-            await import("./components/AdminDashboard/AdminDashboard")
-          ).AdminDashboard,
+          Component: (await routeImports.adminDashboard()).AdminDashboard,
         }),
         children: [
           {
@@ -91,17 +121,14 @@ const routes = [
           {
             path: "pending-changes",
             lazy: async () => ({
-              Component: (
-                await import("./components/AdminDashboard/PendingChangesAdmin")
-              ).PendingChangesAdmin,
+              Component: (await routeImports.pendingChangesAdmin())
+                .PendingChangesAdmin,
             }),
           },
           {
             path: "admin-requests",
             lazy: async () => ({
-              Component: (
-                await import("./components/AdminDashboard/AdminRequests")
-              ).AdminRequests,
+              Component: (await routeImports.adminRequests()).AdminRequests,
             }),
           },
         ],
@@ -109,23 +136,23 @@ const routes = [
       {
         path: "profile",
         lazy: async () => ({
-          Component: (await import("./components/Profile/Profile")).Profile,
+          Component: (await routeImports.profile()).Profile,
         }),
       },
       {
         path: "login",
         lazy: async () => ({
-          Component: (await import("./components/LogIn/LogIn")).LogIn,
+          Component: (await routeImports.login()).LogIn,
         }),
       },
       {
         path: "signup",
         lazy: async () => ({
-          Component: (await import("./components/SignUp/SignUp")).SignUp,
+          Component: (await routeImports.signup()).SignUp,
         }),
       },
     ],
   },
 ];
 
-export { routes };
+export { routes, prefetchLazyRoutes };
