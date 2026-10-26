@@ -12,7 +12,7 @@
   "accreditationFrom": "2025-02-14",
   "accreditationTo": "2030-02-14",
   "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
-  "sourceUrl": "https://hea.gov.ba/",
+  "sourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
   "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://www.ibu.edu.ba/",
   "facultiesLastModified": "2026-08-21",
@@ -25,7 +25,7 @@
       "phone": "+387 33 944 400",
       "email": "info@ibu.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.ibu.edu.ba (menu + sitemap; site is client-rendered)",
+      "studyProgramsSourceUrl": "https://www.ibu.edu.ba",
       "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
@@ -82,7 +82,7 @@
       "phone": "+387 33 944 400",
       "email": "info@ibu.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.ibu.edu.ba (menu + sitemap; site is client-rendered)",
+      "studyProgramsSourceUrl": "https://www.ibu.edu.ba",
       "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
@@ -137,7 +137,7 @@
       "phone": "+387 33 944 400",
       "email": "info@ibu.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.ibu.edu.ba (menu + sitemap; site is client-rendered)",
+      "studyProgramsSourceUrl": "https://www.ibu.edu.ba",
       "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {

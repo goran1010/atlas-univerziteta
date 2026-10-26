@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2031-01-26",
   "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
-  "sourceUrl": "https://hea.gov.ba/",
+  "sourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
   "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://www.unt.ba/",
   "facultiesLastModified": "2026-08-21",
@@ -25,7 +25,7 @@
       "phone": "+387 30 540 876",
       "email": "info@eft.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
+      "studyProgramsSourceUrl": "https://www.unt.ba",
       "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
@@ -98,7 +98,7 @@
       "phone": "+387 30 878 045",
       "email": "studentska@fmpe.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
+      "studyProgramsSourceUrl": "https://www.unt.ba",
       "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
@@ -176,7 +176,7 @@
       "phone": "+387 30 540 876",
       "email": "info@fts.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
+      "studyProgramsSourceUrl": "https://www.unt.ba",
       "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
@@ -219,7 +219,7 @@
       "phone": "+387 30 515 770",
       "email": "info@fzf.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
+      "studyProgramsSourceUrl": "https://www.unt.ba",
       "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
@@ -300,7 +300,7 @@
       "phone": "+387 30 870 371",
       "email": "info@pfk.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
+      "studyProgramsSourceUrl": "https://www.unt.ba",
       "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {

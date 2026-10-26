@@ -39,6 +39,12 @@ const universityFileNames = fs
 
 const optionalTextSchema = z.string().trim().min(1).nullish();
 
+// a plain URL with no annotations - notes belong next to the data, not in it
+const optionalUrlSchema = z
+  .string()
+  .regex(/^https?:\/\/\S+$/)
+  .nullish();
+
 const optionalDateSchema = z.iso
   .date()
   .transform((value) => new Date(value))
@@ -48,7 +54,7 @@ const trackSeedSchema = z.strictObject({
   name: z.string().trim().min(1),
   ects: z.number().int().positive().nullish(),
   durationYears: z.number().int().positive().nullish(),
-  sourceUrl: optionalTextSchema,
+  sourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
 });
 
@@ -65,7 +71,7 @@ const studyProgramSeedSchema = z.strictObject({
   durationYears: z.number().int().positive().nullish(),
   ects: z.number().int().positive().nullish(),
   language: optionalTextSchema,
-  sourceUrl: optionalTextSchema,
+  sourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
   tracks: z.array(trackSeedSchema).min(1).optional(),
 });
@@ -78,9 +84,9 @@ const facultySeedSchema = z.strictObject({
   phone: optionalTextSchema,
   email: optionalTextSchema,
   isUniversityLevel: z.boolean().optional(),
-  sourceUrl: optionalTextSchema,
+  sourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
-  studyProgramsSourceUrl: optionalTextSchema,
+  studyProgramsSourceUrl: optionalUrlSchema,
   studyProgramsLastModified: optionalDateSchema,
   studyPrograms: z.array(studyProgramSeedSchema).min(1).optional(),
 });
@@ -99,9 +105,9 @@ const universitySeedSchema = z.strictObject({
   accreditationFrom: optionalDateSchema,
   accreditationTo: optionalDateSchema,
   authority: optionalTextSchema,
-  sourceUrl: optionalTextSchema,
+  sourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
-  facultiesSourceUrl: optionalTextSchema,
+  facultiesSourceUrl: optionalUrlSchema,
   facultiesLastModified: optionalDateSchema,
   faculties: z.array(facultySeedSchema).min(1),
 });

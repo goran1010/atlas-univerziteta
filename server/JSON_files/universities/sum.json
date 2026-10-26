@@ -12,7 +12,7 @@
   "accreditationFrom": "2024-02-26",
   "accreditationTo": "2028-02-26",
   "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
-  "sourceUrl": "https://hea.gov.ba/",
+  "sourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
   "lastModified": "2026-08-29",
   "facultiesSourceUrl": "https://www.sum.ba/clanice/sastavnice",
   "facultiesLastModified": "2026-08-21",
@@ -25,7 +25,7 @@
       "phone": "+387 36 337 100",
       "email": "aptf@sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
@@ -108,7 +108,7 @@
       "phone": "+387 39 708 578",
       "email": "alu@sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
@@ -193,7 +193,7 @@
       "phone": "+387 36 355 100",
       "email": "dekanat@ef.sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
@@ -249,7 +249,7 @@
       "phone": "+387 36 355 000",
       "email": "fgag@sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
@@ -301,7 +301,7 @@
       "phone": "+387 36 355 455",
       "email": "maticni.ured@fpmoz.sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
@@ -575,7 +575,7 @@
       "phone": "+387 36 337 001",
       "email": "fsre@sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
@@ -692,7 +692,7 @@
       "phone": "+387 36 337 050",
       "email": "fzs@fzs.sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
@@ -799,7 +799,7 @@
       "phone": "+387 36 312 791",
       "email": "farf@sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
@@ -845,7 +845,7 @@
       "phone": "+387 36 355 400",
       "email": "ff@sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
@@ -1083,7 +1083,7 @@
       "phone": "+387 36 335 600",
       "email": "mef@sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
@@ -1128,7 +1128,7 @@
       "phone": "+387 36 337 150",
       "email": "pf@sum.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.sum.ba (per-faculty sources)",
+      "studyProgramsSourceUrl": "https://www.sum.ba",
       "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
