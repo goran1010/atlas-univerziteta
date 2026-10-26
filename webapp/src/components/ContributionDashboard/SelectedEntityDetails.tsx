@@ -47,6 +47,21 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
     });
   }
 
+  function pushAddress(label: string, value: string | undefined | null) {
+    if (!value) return;
+    rows.push({
+      label,
+      value: (
+        <ExternalLink
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(value)}`}
+          className="break-all"
+        >
+          {value}
+        </ExternalLink>
+      ),
+    });
+  }
+
   function pushEmail(label: string, value: string | undefined | null) {
     if (!value) return;
     rows.push({
@@ -78,14 +93,14 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
       );
       push(t("universitiesPage.foundedYear"), entity.data.foundedYear);
       pushWebsite(t("contribution.dataFields.website"), entity.data.website);
-      push(t("contribution.dataFields.address"), entity.data.address);
+      pushAddress(t("contribution.dataFields.address"), entity.data.address);
       pushPhone(t("contribution.dataFields.phone"), entity.data.phone);
       pushEmail(t("contribution.dataFields.email"), entity.data.email);
       break;
     case "FACULTY":
       push(t("contribution.dataFields.city"), entity.data.city);
       pushWebsite(t("contribution.dataFields.website"), entity.data.website);
-      push(t("contribution.dataFields.address"), entity.data.address);
+      pushAddress(t("contribution.dataFields.address"), entity.data.address);
       pushPhone(t("contribution.dataFields.phone"), entity.data.phone);
       pushEmail(t("contribution.dataFields.email"), entity.data.email);
       break;
@@ -108,6 +123,10 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
         entity.data.durationYears,
       );
       break;
+  }
+
+  if ("dataSourceUrl" in entity.data) {
+    pushWebsite(t("universitiesPage.dataSource"), entity.data.dataSourceUrl);
   }
 
   return rows;

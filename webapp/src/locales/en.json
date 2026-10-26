@@ -413,7 +413,8 @@
     "openFullPage": "Open full page",
     "shareLink": "Share link",
     "linkCopied": "Link copied to clipboard.",
-    "linkCopyFailed": "Could not copy link."
+    "linkCopyFailed": "Could not copy link.",
+    "dataSource": "Data source"
   },
   "access": {
     "goToLogin": "Log In",

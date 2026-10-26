@@ -13,6 +13,7 @@ const facultyDetail = {
   universityId: 1,
   city: "Sarajevo",
   website: "https://etf.unsa.ba",
+  dataSourceUrl: "https://etf.unsa.ba/o-fakultetu",
   university: {
     id: 1,
     name: "University of Sarajevo",
@@ -78,6 +79,16 @@ function renderPage(route = "/faculties/11") {
 }
 
 describe("FacultyDetailPage", () => {
+  test("links the faculty data source", async () => {
+    givenFaculty(facultyDetail);
+    renderPage();
+
+    const links = await screen.findAllByRole("link", {
+      name: /Data source/i,
+    });
+    expect(links[0]).toHaveAttribute("href", "https://etf.unsa.ba/o-fakultetu");
+  });
+
   test("renders the faculty with breadcrumb, university link and programs", async () => {
     givenFaculty(facultyDetail);
     renderPage();

@@ -110,6 +110,17 @@ function formatValue(
     );
   }
 
+  if (typeof raw === "string" && spec.key === "address") {
+    return (
+      <ExternalLink
+        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(raw)}`}
+        className="break-all"
+      >
+        {raw}
+      </ExternalLink>
+    );
+  }
+
   if (typeof raw === "string" && spec.key === "phone") {
     return (
       <ExternalLink href={`tel:${raw.replace(/[^+\d]/g, "")}`} newTab={false}>

@@ -1,4 +1,7 @@
+import { use } from "react";
+import { RootContext } from "../../contextData/RootContext";
 import {
+  BookOpenIcon,
   EnvelopeIcon,
   GlobeIcon,
   HomeIcon,
@@ -13,12 +16,16 @@ function ContactLinks({
   address,
   phone,
   email,
+  dataSourceUrl,
 }: {
   website?: string | null;
   address?: string | null;
   phone?: string | null;
   email?: string | null;
+  dataSourceUrl?: string | null;
 }) {
+  const { t } = use(RootContext);
+
   return (
     <>
       {website && (
@@ -53,6 +60,11 @@ function ContactLinks({
           className={`truncate max-w-xs ${touchTarget}`}
         >
           <EnvelopeIcon size="1em" /> {email}
+        </ExternalLink>
+      )}
+      {dataSourceUrl && (
+        <ExternalLink href={dataSourceUrl} className={touchTarget}>
+          <BookOpenIcon /> {t("universitiesPage.dataSource")}
         </ExternalLink>
       )}
     </>

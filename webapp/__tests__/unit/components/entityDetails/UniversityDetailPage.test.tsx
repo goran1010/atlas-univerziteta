@@ -15,6 +15,7 @@ const universityDetail = {
   ownership: "PUBLIC",
   foundedYear: "1949",
   website: "https://unsa.ba",
+  dataSourceUrl: "https://www.unsa.ba/o-univerzitetu",
   faculties: [
     {
       id: 11,
@@ -108,6 +109,14 @@ describe("UniversityDetailPage", () => {
       screen.getByRole("link", { name: /Faculty of Law/i }),
     ).toHaveAttribute("href", "/faculties/12");
     expect(screen.getByText(/1 study program/i)).toBeInTheDocument();
+  });
+
+  test("links the data source", async () => {
+    givenUniversity(universityDetail);
+    renderPage();
+
+    const link = await screen.findByRole("link", { name: /Data source/i });
+    expect(link).toHaveAttribute("href", "https://www.unsa.ba/o-univerzitetu");
   });
 
   test("shows the not-found message with a search link on 404", async () => {

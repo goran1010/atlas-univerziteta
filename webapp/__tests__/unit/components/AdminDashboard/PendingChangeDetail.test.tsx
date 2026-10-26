@@ -19,6 +19,7 @@ describe("PendingChangeDetail", () => {
         name: "Contact University",
         email: "info@uni.example",
         phone: "+387 33 123-456",
+        address: "Obala Kulina bana 7",
       },
     });
 
@@ -28,6 +29,12 @@ describe("PendingChangeDetail", () => {
     expect(
       screen.getByRole("link", { name: /\+387 33 123-456/i }),
     ).toHaveAttribute("href", "tel:+38733123456");
+    expect(
+      screen.getByRole("link", { name: /Obala Kulina bana 7/i }),
+    ).toHaveAttribute(
+      "href",
+      "https://www.google.com/maps/search/?api=1&query=Obala%20Kulina%20bana%207",
+    );
   });
 
   test("shows proposed data with translated values and website link for CREATE", () => {

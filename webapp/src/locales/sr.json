@@ -413,7 +413,8 @@
     "openFullPage": "Otvori cijelu stranicu",
     "shareLink": "Podijeli link",
     "linkCopied": "Link kopiran u clipboard.",
-    "linkCopyFailed": "Nije moguće kopirati link."
+    "linkCopyFailed": "Nije moguće kopirati link.",
+    "dataSource": "Izvor podataka"
   },
   "access": {
     "goToLogin": "Prijavi se",
