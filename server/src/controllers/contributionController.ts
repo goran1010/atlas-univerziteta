@@ -11,17 +11,37 @@ function getSessionUser(req: Request) {
   return user;
 }
 
-async function entityExists(targetType: targetType, id: number) {
+async function findEntity(targetType: targetType, id: number) {
   switch (targetType) {
     case "UNIVERSITY":
-      return (await prisma.university.findUnique({ where: { id } })) !== null;
+      return prisma.university.findUnique({ where: { id } });
     case "FACULTY":
-      return (await prisma.faculty.findUnique({ where: { id } })) !== null;
+      return prisma.faculty.findUnique({ where: { id } });
     case "STUDY_PROGRAM":
-      return (await prisma.studyProgram.findUnique({ where: { id } })) !== null;
+      return prisma.studyProgram.findUnique({ where: { id } });
     case "TRACK":
-      return (await prisma.track.findUnique({ where: { id } })) !== null;
+      return prisma.track.findUnique({ where: { id } });
   }
+}
+
+async function entityExists(targetType: targetType, id: number) {
+  return (await findEntity(targetType, id)) !== null;
+}
+
+const MAX_OPEN_CHANGES_PER_USER = 20;
+
+// a per-user cap on top of the IP rate limit, so one account cannot flood
+// the admin review queue
+async function sendLimitErrorIfFull(res: Response, userId: string) {
+  const openChanges = await prisma.pendingChange.count({ where: { userId } });
+  if (openChanges < MAX_OPEN_CHANGES_PER_USER) return false;
+
+  sendError(res, {
+    status: 429,
+    code: "CONTRIBUTION_LIMIT",
+    message: `You already have ${String(MAX_OPEN_CHANGES_PER_USER)} suggestions awaiting review. Please wait until an admin reviews them.`,
+  });
+  return true;
 }
 
 async function parentEntityExists(targetType: targetType, parentId: number) {
@@ -41,8 +61,10 @@ async function createEntity(req: Request, res: Response) {
   const user = getSessionUser(req);
 
   const contribution = contributionValidation.createEntity(req.body);
-  const { targetType, data } = contribution;
+  const { targetType, data, comment } = contribution;
   const parentId = "parentId" in contribution ? contribution.parentId : null;
+
+  if (await sendLimitErrorIfFull(res, user.id)) return;
 
   if (parentId !== null && !(await parentEntityExists(targetType, parentId))) {
     sendError(res, {
@@ -64,6 +86,7 @@ async function createEntity(req: Request, res: Response) {
       typeOfChange: "CREATE",
       parentId,
       data,
+      comment: comment ?? null,
     },
   });
 
@@ -75,17 +98,39 @@ async function createEntity(req: Request, res: Response) {
   return;
 }
 
+// a proposed value of null means "clear the field", which matches a null
+// column; absent keys are not proposed and not compared
+function isNoOpEdit(
+  data: Record<string, unknown>,
+  entity: Record<string, unknown>,
+) {
+  return Object.entries(data).every(
+    ([key, value]) => entity[key] === (value ?? null),
+  );
+}
+
 async function editEntity(req: Request, res: Response) {
   const user = getSessionUser(req);
-  const { targetType, targetId, data } = contributionValidation.editEntity(
-    req.body,
-  );
+  const { targetType, targetId, data, comment } =
+    contributionValidation.editEntity(req.body);
 
-  if (!(await entityExists(targetType, targetId))) {
+  if (await sendLimitErrorIfFull(res, user.id)) return;
+
+  const target = await findEntity(targetType, targetId);
+  if (!target) {
     sendError(res, {
       status: 404,
       code: "NOT_FOUND",
       message: "Target entity not found.",
+    });
+    return;
+  }
+
+  if (isNoOpEdit(data, target)) {
+    sendError(res, {
+      status: 400,
+      code: "NO_CHANGES",
+      message: "The suggested edit matches the current data.",
     });
     return;
   }
@@ -102,6 +147,7 @@ async function editEntity(req: Request, res: Response) {
       typeOfChange: "UPDATE",
       targetId,
       data,
+      comment: comment ?? null,
     },
   });
 
@@ -114,9 +160,11 @@ async function editEntity(req: Request, res: Response) {
 
 async function deleteEntity(req: Request, res: Response) {
   const user = getSessionUser(req);
-  const { targetType, targetId } = contributionValidation.deleteEntity(
+  const { targetType, targetId, comment } = contributionValidation.deleteEntity(
     req.body,
   );
+
+  if (await sendLimitErrorIfFull(res, user.id)) return;
 
   if (!(await entityExists(targetType, targetId))) {
     sendError(res, {
@@ -138,6 +186,7 @@ async function deleteEntity(req: Request, res: Response) {
       typeOfChange: "DELETE",
       targetId,
       data: {},
+      comment: comment ?? null,
     },
   });
 
@@ -152,6 +201,7 @@ async function getPendingChanges(req: Request, res: Response) {
   const { id } = getSessionUser(req);
   const pendingChanges = await prisma.pendingChange.findMany({
     where: { userId: id },
+    orderBy: { createdAt: "asc" },
   });
 
   const enriched = await enrichWithCurrentEntity(pendingChanges);

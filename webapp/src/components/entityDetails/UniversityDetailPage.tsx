@@ -143,6 +143,7 @@ function UniversityDetailPage() {
                 address={university.address}
                 phone={university.phone}
                 email={university.email}
+                dataSourceUrl={university.dataSourceUrl}
               />
             </div>
           </div>

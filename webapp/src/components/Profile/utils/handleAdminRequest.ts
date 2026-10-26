@@ -9,11 +9,14 @@ import type { Dispatch, SetStateAction } from "react";
 async function handleRequestAdmin(
   setUserData: Dispatch<SetStateAction<UserData>>,
   ctx: RequestContext,
+  reason?: string,
 ) {
+  const trimmedReason = reason?.trim() ? reason.trim() : undefined;
   const result = await apiMutation(
     {
       path: "/users/request-admin",
       method: "POST",
+      body: trimmedReason === undefined ? undefined : { reason: trimmedReason },
       responseSchema: requestAdminResponseSchema,
       successMessageKey: "messages.adminRequest.requestSuccess",
       errorMessageKey: "messages.adminRequest.requestError",
@@ -25,7 +28,11 @@ async function handleRequestAdmin(
 
   setUserData(
     (prev) =>
-      prev && { ...prev, adminRequestedAt: result.data.adminRequestedAt },
+      prev && {
+        ...prev,
+        adminRequestedAt: result.data.adminRequestedAt,
+        adminRequestReason: trimmedReason ?? null,
+      },
   );
 }
 
@@ -46,7 +53,10 @@ async function handleCancelAdminRequest(
   );
   if (!result) return;
 
-  setUserData((prev) => prev && { ...prev, adminRequestedAt: null });
+  setUserData(
+    (prev) =>
+      prev && { ...prev, adminRequestedAt: null, adminRequestReason: null },
+  );
 }
 
 export { handleRequestAdmin, handleCancelAdminRequest };

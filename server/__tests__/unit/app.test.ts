@@ -16,6 +16,7 @@ describe("app", () => {
         throw new Error("Unexpected error");
       }),
       auth: vi.fn(),
+      authGeneral: vi.fn(),
       users: vi.fn(),
     }));
     const { app } = await import("../../src/app.js");

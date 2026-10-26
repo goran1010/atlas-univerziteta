@@ -1,4 +1,7 @@
-import { handleSubmitUniversityEntity } from "../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
+import {
+  handleSubmitUniversityEntity,
+  buildEditDelta,
+} from "../../../../../src/components/ContributionDashboard/utils/handleSubmitUniversityEntity";
 import { makeUser } from "../../../../utils/makeUser";
 
 import type { PendingChange } from "../../../../../src/schemas/pendingChange";
@@ -284,6 +287,55 @@ describe("handleSubmitUniversityEntity", () => {
     expect(consoleErrorSpy).toHaveBeenCalledWith(
       "Error trying to submit university change:",
       requestError,
+    );
+  });
+});
+
+describe("buildEditDelta", () => {
+  const baseline = {
+    name: "Faculty of Science",
+    city: "Sarajevo",
+    website: "https://pmf.example",
+  };
+
+  test("includes only changed fields", () => {
+    expect(
+      buildEditDelta({ ...baseline, city: "Mostar" }, baseline, "FACULTY"),
+    ).toEqual({ city: "Mostar" });
+  });
+
+  test("sends null for an emptied clearable field", () => {
+    expect(
+      buildEditDelta({ ...baseline, website: undefined }, baseline, "FACULTY"),
+    ).toEqual({ website: null });
+  });
+
+  test("treats an emptied non-clearable field as unchanged", () => {
+    expect(
+      buildEditDelta({ ...baseline, name: "" }, baseline, "FACULTY"),
+    ).toEqual({});
+  });
+
+  test("compares numeric fields by value", () => {
+    expect(
+      buildEditDelta(
+        { name: "Track", ects: 60 },
+        { name: "Track", ects: 60 },
+        "TRACK",
+      ),
+    ).toEqual({});
+    expect(
+      buildEditDelta(
+        { name: "Track", ects: 30 },
+        { name: "Track", ects: 60 },
+        "TRACK",
+      ),
+    ).toEqual({ ects: 30 });
+  });
+
+  test("ignores fields absent from both draft and baseline", () => {
+    expect(buildEditDelta({ name: "Same" }, { name: "Same" }, "TRACK")).toEqual(
+      {},
     );
   });
 });

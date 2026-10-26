@@ -8,6 +8,8 @@ const CODE_MESSAGE_KEYS: Record<string, string> = {
   AUTH_REQUIRED: "messages.apiError.authRequired",
   FORBIDDEN: "messages.apiError.forbidden",
   ALREADY_ADMIN: "messages.apiError.alreadyAdmin",
+  CONTRIBUTION_LIMIT: "messages.apiError.contributionLimit",
+  NO_CHANGES: "messages.apiError.noChanges",
 };
 
 function notificationMessageKey(

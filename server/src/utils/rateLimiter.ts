@@ -27,6 +27,7 @@ const global = rateLimit({
   legacyHeaders: false,
 });
 
+// credential endpoints only - guessable and can trigger outbound mail
 const auth = rateLimit({
   windowMs: 15 * MINUTE,
   max: isProduction ? 15 : 500,
@@ -37,9 +38,23 @@ const auth = rateLimit({
   legacyHeaders: false,
 });
 
+// the rest of /api/auth: get-session runs on every full page load, so a
+// strict limit here would log active users out of the UI
+const authGeneral = rateLimit({
+  windowMs: 15 * MINUTE,
+  max: isProduction ? 150 : 5000,
+  handler: rateLimitHandler(
+    "Too many requests. Please wait 15 minutes, then try again.",
+  ),
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+// per IP - must leave room for NAT-shared networks (student dorms, campus
+// wifi) where many visitors browse from one address
 const api = rateLimit({
   windowMs: 15 * MINUTE,
-  max: isProduction ? 100 : 5000,
+  max: isProduction ? 300 : 5000,
   handler: rateLimitHandler(
     "Too many API requests. Please wait 15 minutes, then try again.",
   ),
@@ -57,4 +72,4 @@ const users = rateLimit({
   legacyHeaders: false,
 });
 
-export { global, auth, api, users };
+export { global, auth, authGeneral, api, users };

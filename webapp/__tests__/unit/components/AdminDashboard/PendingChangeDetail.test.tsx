@@ -11,6 +11,32 @@ function renderDetail(props: Parameters<typeof PendingChangeDetail>[0]) {
 }
 
 describe("PendingChangeDetail", () => {
+  test("renders email and phone as mailto and tel links", () => {
+    renderDetail({
+      targetType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      data: {
+        name: "Contact University",
+        email: "info@uni.example",
+        phone: "+387 33 123-456",
+        address: "Obala Kulina bana 7",
+      },
+    });
+
+    expect(
+      screen.getByRole("link", { name: /info@uni.example/i }),
+    ).toHaveAttribute("href", "mailto:info@uni.example");
+    expect(
+      screen.getByRole("link", { name: /\+387 33 123-456/i }),
+    ).toHaveAttribute("href", "tel:+38733123456");
+    expect(
+      screen.getByRole("link", { name: /Obala Kulina bana 7/i }),
+    ).toHaveAttribute(
+      "href",
+      "https://www.google.com/maps/search/?api=1&query=Obala%20Kulina%20bana%207",
+    );
+  });
+
   test("shows proposed data with translated values and website link for CREATE", () => {
     renderDetail({
       targetType: "UNIVERSITY",
@@ -25,7 +51,7 @@ describe("PendingChangeDetail", () => {
     });
 
     expect(screen.getByText("Proposed Data")).toBeInTheDocument();
-    expect(screen.getByText("New University")).toBeInTheDocument();
+    expect(screen.getAllByText("New University")).toHaveLength(2);
     expect(screen.getByText("Mostar")).toBeInTheDocument();
     expect(screen.getByText(/Federation of B&H/i)).toBeInTheDocument();
     expect(screen.getByText("Public")).toBeInTheDocument();
@@ -34,19 +60,55 @@ describe("PendingChangeDetail", () => {
     ).toHaveAttribute("href", "https://new.example");
   });
 
-  test("shows current data next to proposed changes for UPDATE", () => {
+  test("shows a current vs proposed diff table for UPDATE", () => {
     renderDetail({
       targetType: "FACULTY",
       typeOfChange: "UPDATE",
-      data: { name: "New Faculty Name" },
-      currentEntity: { name: "Old Faculty Name", city: "Sarajevo" },
+      data: { name: "New Faculty Name", city: "Sarajevo", website: null },
+      currentEntity: {
+        name: "Old Faculty Name",
+        city: "Sarajevo",
+        website: "https://old.example",
+      },
     });
 
-    expect(screen.getByText("Current Data")).toBeInTheDocument();
-    expect(screen.getByText("Old Faculty Name")).toBeInTheDocument();
-    expect(screen.getByText("Sarajevo")).toBeInTheDocument();
     expect(screen.getByText("Proposed Changes")).toBeInTheDocument();
+    expect(
+      screen.getByRole("columnheader", { name: "Current" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("columnheader", { name: "Proposed" }),
+    ).toBeInTheDocument();
+
+    // the entity name heads the card and appears in the changed row
+    expect(screen.getAllByText("Old Faculty Name")).toHaveLength(2);
     expect(screen.getByText("New Faculty Name")).toBeInTheDocument();
+    // proposed value equal to current is flagged as a no-op
+    expect(screen.getByText(/no change/i)).toBeInTheDocument();
+    // null means the field is being cleared
+    expect(screen.getByText(/cleared/i)).toBeInTheDocument();
+  });
+
+  test("names the entity above the table and lists only proposed fields", () => {
+    renderDetail({
+      targetType: "FACULTY",
+      typeOfChange: "UPDATE",
+      data: { phone: "+387 33 123 456" },
+      currentEntity: {
+        name: "Faculty of Science",
+        city: "Sarajevo",
+        phone: "+387 33 000 000",
+      },
+    });
+
+    // the entity name is a heading line, not a table row
+    expect(screen.getByText("Faculty of Science")).toBeInTheDocument();
+    expect(
+      screen.queryByRole("rowheader", { name: "Name" }),
+    ).not.toBeInTheDocument();
+    expect(screen.getByText("+387 33 123 456")).toBeInTheDocument();
+    // city is untouched by the proposal, so it has no row
+    expect(screen.queryByText("Sarajevo")).not.toBeInTheDocument();
   });
 
   test("notes a deleted target for UPDATE when the entity is gone", () => {
@@ -57,7 +119,7 @@ describe("PendingChangeDetail", () => {
       currentEntity: null,
     });
 
-    expect(screen.getByText(/Entity no longer exists/i)).toBeInTheDocument();
+    expect(screen.getByText(/This item no longer exists/i)).toBeInTheDocument();
     expect(screen.getByText("Proposed Changes")).toBeInTheDocument();
   });
 
@@ -75,7 +137,7 @@ describe("PendingChangeDetail", () => {
     });
 
     expect(screen.getByText("Current Data")).toBeInTheDocument();
-    expect(screen.getByText("Computer Science")).toBeInTheDocument();
+    expect(screen.getAllByText("Computer Science")).toHaveLength(2);
     expect(screen.getByText("3")).toBeInTheDocument();
     expect(screen.getByText("180")).toBeInTheDocument();
   });
@@ -88,7 +150,7 @@ describe("PendingChangeDetail", () => {
       currentEntity: undefined,
     });
 
-    expect(screen.getByText(/Entity no longer exists/i)).toBeInTheDocument();
+    expect(screen.getByText(/This item no longer exists/i)).toBeInTheDocument();
   });
 
   test("shows the acronym and faculty count for a university DELETE", () => {

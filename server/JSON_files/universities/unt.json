@@ -12,10 +12,8 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2031-01-26",
   "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
-  "sourceUrl": "https://hea.gov.ba/",
+  "dataSourceUrl": "https://www.unt.ba",
   "lastModified": "2026-08-29",
-  "facultiesSourceUrl": "https://www.unt.ba/",
-  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Edukacijski fakultet",
@@ -25,70 +23,81 @@
       "phone": "+387 30 540 876",
       "email": "info@eft.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "B/H/S jezik i književnost",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Edukacijski menadžment",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Komunikologija/novinarstvo",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Matematika i informatika",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Opća kineziologija",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Pedagogija i psihologija",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Personalni trener",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Predškolski odgoj",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Razredna nastava",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Specijalne namjene",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Sportski menadžment",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Sportski trener",
           "cycle": "FIRST",
-          "sourceUrl": "https://www.eft.ba/web/"
+          "dataSourceUrl": "https://www.eft.ba/web/",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://web.eft.ba"
     },
     {
       "name": "Fakultet za menadžment i poslovnu ekonomiju",
@@ -98,75 +107,86 @@
       "phone": "+387 30 878 045",
       "email": "studentska@fmpe.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Finansijski menadžment",
           "cycle": "SECOND",
-          "sourceUrl": "https://fmpe.edu.ba/master-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/master-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Opći menadžment",
           "cycle": "SECOND",
-          "sourceUrl": "https://fmpe.edu.ba/master-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/master-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Poslovna ekonomija",
           "cycle": "SECOND",
-          "sourceUrl": "https://fmpe.edu.ba/master-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/master-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Poslovna psihologija",
           "cycle": "SECOND",
-          "sourceUrl": "https://fmpe.edu.ba/master-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/master-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Zdravstveni menadžment",
           "cycle": "SECOND",
-          "sourceUrl": "https://fmpe.edu.ba/master-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/master-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Bezbjednosni menadžment",
           "cycle": "FIRST",
           "durationYears": 3,
-          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Menadžment u bankarstvu i osiguranju",
           "cycle": "FIRST",
           "durationYears": 3,
-          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Menadžment u turizmu i ugostiteljstvu",
           "cycle": "FIRST",
           "durationYears": 3,
-          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Opći menadžment",
           "cycle": "FIRST",
           "durationYears": 3,
-          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Poslovna ekonomija",
           "cycle": "FIRST",
-          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Poslovna informatika",
           "cycle": "FIRST",
           "durationYears": 3,
-          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Poslovna psihologija",
           "cycle": "FIRST",
-          "sourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/"
+          "dataSourceUrl": "https://fmpe.edu.ba/dodiplomski-studij/",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://fmpe.edu.ba"
     },
     {
       "name": "Fakultet za tehničke studije",
@@ -176,40 +196,45 @@
       "phone": "+387 30 540 876",
       "email": "info@fts.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Arhitektura",
           "cycle": "FIRST",
-          "sourceUrl": "https://fts.edu.ba/"
+          "dataSourceUrl": "https://fts.edu.ba/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Grafički dizajn i multimedija",
           "cycle": "FIRST",
-          "sourceUrl": "https://fts.edu.ba/"
+          "dataSourceUrl": "https://fts.edu.ba/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Građevina",
           "cycle": "FIRST",
-          "sourceUrl": "https://fts.edu.ba/"
+          "dataSourceUrl": "https://fts.edu.ba/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Inženjerska informatika",
           "cycle": "FIRST",
-          "sourceUrl": "https://fts.edu.ba/"
+          "dataSourceUrl": "https://fts.edu.ba/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Sigurnost i zaštita na radu i zaštita od požara",
           "cycle": "FIRST",
-          "sourceUrl": "https://fts.edu.ba/"
+          "dataSourceUrl": "https://fts.edu.ba/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Tekstilno inženjerstvo i modni dizajn",
           "cycle": "FIRST",
-          "sourceUrl": "https://fts.edu.ba/"
+          "dataSourceUrl": "https://fts.edu.ba/",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://fts.edu.ba"
     },
     {
       "name": "Farmaceutsko-zdravstveni fakultet",
@@ -219,78 +244,88 @@
       "phone": "+387 30 515 770",
       "email": "info@fzf.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Fizioterapija",
           "cycle": "SECOND",
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Medicinsko-laboratorijska dijagnostika",
           "cycle": "SECOND",
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Radiologija",
           "cycle": "SECOND",
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Sestrinstvo",
           "cycle": "SECOND",
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Farmacija",
           "cycle": "INTEGRATED",
           "durationYears": 5,
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Stomatologija",
           "cycle": "INTEGRATED",
           "durationYears": 5,
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Fizioterapija",
           "cycle": "FIRST",
           "durationYears": 4,
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Medicinsko-laboratorijska dijagnostika",
           "cycle": "FIRST",
           "durationYears": 4,
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Radiologija",
           "cycle": "FIRST",
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Sestrinstvo",
           "cycle": "FIRST",
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Biomedicina i zdravstvo",
           "cycle": "THIRD",
           "durationYears": 3,
-          "sourceUrl": "https://fzf.edu.ba"
+          "dataSourceUrl": "https://fzf.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Dentalna higijena",
           "cycle": "FIRST",
           "durationYears": null,
           "ects": null,
-          "sourceUrl": "https://fmpe.edu.ba/wp-content/uploads/2024/07/KONKURS-za-upis-studenata-2024-2025-UNT.pdf",
+          "dataSourceUrl": "https://fmpe.edu.ba/wp-content/uploads/2024/07/KONKURS-za-upis-studenata-2024-2025-UNT.pdf",
           "lastModified": "2026-08-29"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://fzf.edu.ba"
     },
     {
       "name": "Pravni fakultet",
@@ -300,40 +335,43 @@
       "phone": "+387 30 870 371",
       "email": "info@pfk.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unt.ba (per-faculty sites)",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Javna uprava",
           "cycle": "SECOND",
-          "sourceUrl": "http://pfk.edu.ba/v2/"
+          "dataSourceUrl": "http://pfk.edu.ba/v2/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Opće pravo",
           "cycle": "SECOND",
-          "sourceUrl": "http://pfk.edu.ba/v2/"
+          "dataSourceUrl": "http://pfk.edu.ba/v2/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Poslovno pravo",
           "cycle": "SECOND",
-          "sourceUrl": "http://pfk.edu.ba/v2/"
+          "dataSourceUrl": "http://pfk.edu.ba/v2/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Opće pravo",
           "cycle": "FIRST",
           "durationYears": 4,
-          "sourceUrl": "http://pfk.edu.ba/v2/"
+          "dataSourceUrl": "http://pfk.edu.ba/v2/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Poslovno pravo",
           "cycle": "FIRST",
           "durationYears": 3,
-          "sourceUrl": "http://pfk.edu.ba/v2/"
+          "dataSourceUrl": "http://pfk.edu.ba/v2/",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Pravo",
           "cycle": "THIRD",
-          "sourceUrl": "http://pfk.edu.ba/v2/",
+          "dataSourceUrl": "http://pfk.edu.ba/v2/",
           "tracks": [
             {
               "name": "Građansko pravo",
@@ -363,9 +401,11 @@
               "name": "Evropsko pravo",
               "lastModified": "2026-08-26"
             }
-          ]
+          ],
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://pfk.edu.ba/v2/bs/"
     }
   ]
 }

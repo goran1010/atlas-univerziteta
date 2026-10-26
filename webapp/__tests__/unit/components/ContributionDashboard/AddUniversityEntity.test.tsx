@@ -163,13 +163,15 @@ describe("AddUniversityEntity", () => {
     );
 
     const user = userEvent.setup();
-    const targetType = screen.getByRole("combobox", { name: /Entity Type/i });
+    const targetType = screen.getByRole("combobox", { name: /Item type/i });
 
     await user.selectOptions(targetType, "UNIVERSITY");
 
     expect(screen.getByLabelText(/Name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/City/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/^Entity( \*)?$/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole("combobox", { name: /^Entity$/i }),
+    ).toBeInTheDocument();
     expect(screen.getByLabelText(/Ownership/i)).toBeInTheDocument();
     expect(
       screen.getByRole("button", { name: /Submit Suggestion/i }),
@@ -187,7 +189,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "FACULTY",
     );
     await user.selectOptions(
@@ -217,7 +219,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "STUDY_PROGRAM",
     );
 
@@ -245,7 +247,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "TRACK",
     );
 
@@ -269,7 +271,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "UNIVERSITY",
     );
     await user.selectOptions(
@@ -287,6 +289,110 @@ describe("AddUniversityEntity", () => {
     expect(screen.getByLabelText(/City/i)).toBeInTheDocument();
   });
 
+  async function startUniversityUpdate(
+    user: ReturnType<typeof userEvent.setup>,
+  ) {
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /Item type/i }),
+      "UNIVERSITY",
+    );
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /Change/i }),
+      "UPDATE",
+    );
+    await pickUniversity(user);
+    // prefill has landed once the name input shows the current value
+    expect(
+      await screen.findByDisplayValue("University of Sarajevo"),
+    ).toBeInTheDocument();
+  }
+
+  test("prefills the form with the target's current data on update", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+    const user = userEvent.setup();
+
+    await startUniversityUpdate(user);
+
+    expect(screen.getByLabelText(/Name/i)).toHaveValue(
+      "University of Sarajevo",
+    );
+    expect(screen.getByLabelText(/City/i)).toHaveValue("Sarajevo");
+    expect(screen.getByLabelText(/Acronym/i)).toHaveValue("UNSA");
+  });
+
+  test("submits only the fields that changed on update", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+    const user = userEvent.setup();
+
+    await startUniversityUpdate(user);
+    await user.clear(screen.getByLabelText(/City/i));
+    await user.type(screen.getByLabelText(/City/i), "Mostar");
+    await user.click(
+      screen.getByRole("button", { name: /Submit Suggestion/i }),
+    );
+
+    expect(
+      await screen.findByText(/Suggestion submitted./i),
+    ).toBeInTheDocument();
+    expect(submissions).toHaveLength(1);
+    expect(submissions[0]?.body).toEqual({
+      targetType: "UNIVERSITY",
+      targetId: 1,
+      data: { city: "Mostar" },
+    });
+  });
+
+  test("sends null for an emptied clearable field on update", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+    const user = userEvent.setup();
+
+    await startUniversityUpdate(user);
+    await user.clear(screen.getByLabelText(/Acronym/i));
+    await user.click(
+      screen.getByRole("button", { name: /Submit Suggestion/i }),
+    );
+
+    expect(
+      await screen.findByText(/Suggestion submitted./i),
+    ).toBeInTheDocument();
+    expect(submissions[0]?.body).toEqual({
+      targetType: "UNIVERSITY",
+      targetId: 1,
+      data: { acronym: null },
+    });
+  });
+
+  test("blocks an update that changes nothing", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+    const user = userEvent.setup();
+
+    await startUniversityUpdate(user);
+    await user.click(
+      screen.getByRole("button", { name: /Submit Suggestion/i }),
+    );
+
+    expect(
+      await screen.findByText(/matches the current data/i),
+    ).toBeInTheDocument();
+    expect(submissions).toHaveLength(0);
+  });
+
   test("resets the picker when entity type changes", async () => {
     render(
       <Wrapper>
@@ -297,7 +403,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "UNIVERSITY",
     );
     await user.selectOptions(
@@ -311,7 +417,7 @@ describe("AddUniversityEntity", () => {
     );
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "FACULTY",
     );
 
@@ -333,12 +439,15 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "UNIVERSITY",
     );
     await user.type(screen.getByLabelText(/Name/i), "University of Sarajevo");
     await user.type(screen.getByLabelText(/City/i), "Sarajevo");
-    await user.selectOptions(screen.getByLabelText(/^Entity( \*)?$/i), "FBIH");
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /^Entity$/i }),
+      "FBIH",
+    );
     await user.selectOptions(screen.getByLabelText(/Ownership/i), "PUBLIC");
 
     await user.click(
@@ -362,9 +471,44 @@ describe("AddUniversityEntity", () => {
     });
     expect(refetchPendingChanges).toHaveBeenCalled();
     expect(screen.getByLabelText(/Name/i)).toHaveValue("");
-    expect(screen.getByRole("combobox", { name: /Entity Type/i })).toHaveValue(
+    expect(screen.getByRole("combobox", { name: /Item type/i })).toHaveValue(
       "UNIVERSITY",
     );
+  });
+
+  test("submits the contributor comment and resets it with the form", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+
+    const user = userEvent.setup();
+
+    await user.type(screen.getByLabelText(/Name/i), "Commented University");
+    await user.type(screen.getByLabelText(/City/i), "Sarajevo");
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /^Entity$/i }),
+      "FBIH",
+    );
+    await user.selectOptions(screen.getByLabelText(/Ownership/i), "PUBLIC");
+    await user.type(
+      screen.getByLabelText(/Comment for the admin/i),
+      "Found on the official site",
+    );
+
+    await user.click(
+      screen.getByRole("button", { name: /Submit Suggestion/i }),
+    );
+
+    expect(
+      await screen.findByText(/Suggestion submitted./i),
+    ).toBeInTheDocument();
+
+    expect(submissions[0]?.body).toEqual(
+      expect.objectContaining({ comment: "Found on the official site" }),
+    );
+    expect(screen.getByLabelText(/Comment for the admin/i)).toHaveValue("");
   });
 
   test("submits track data with the picked target id on update", async () => {
@@ -377,7 +521,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "TRACK",
     );
     await user.selectOptions(
@@ -428,7 +572,7 @@ describe("AddUniversityEntity", () => {
     const user = userEvent.setup();
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /Entity Type/i }),
+      screen.getByRole("combobox", { name: /Item type/i }),
       "STUDY_PROGRAM",
     );
 

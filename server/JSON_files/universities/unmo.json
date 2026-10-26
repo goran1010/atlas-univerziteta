@@ -12,10 +12,8 @@
   "accreditationFrom": "2024-01-29",
   "accreditationTo": "2028-01-29",
   "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
-  "sourceUrl": "https://hea.gov.ba/",
+  "dataSourceUrl": "https://www.unmo.ba/kontakt/",
   "lastModified": "2026-08-29",
-  "facultiesSourceUrl": "https://unmo.ba/univerzitet/fakulteti/",
-  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Agromediteranski fakultet",
@@ -25,45 +23,49 @@
       "phone": "+387 36 571 388",
       "email": "af@unmo.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Povrtlarsko-cvjećarski",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Voćarsko-vinogradarski",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Ekologija i upravljanje okolišom u poljoprivredi",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Povrtlarsko-cvjećarski",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Voćarsko-vinogradarski",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://af.unmo.ba/"
     },
     {
       "name": "Ekonomski fakultet",
@@ -73,15 +75,13 @@
       "phone": "+387 36 514 910",
       "email": "ef@unmo.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Poslovna ekonomija",
           "cycle": "SECOND",
           "durationYears": null,
           "ects": null,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
           "tracks": [
             {
               "name": "60 ECTS",
@@ -93,12 +93,13 @@
               "ects": 120,
               "durationYears": 2
             }
-          ]
+          ],
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Zajednički master studij sa Ekonomskim fakultetom Univerziteta u Sarajevu",
           "cycle": "SECOND",
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -112,23 +113,27 @@
               "ects": 120,
               "durationYears": 2
             }
-          ]
+          ],
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Akademski dodiplomski studij",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Stručni dodiplomski studij",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://ef.unmo.ba/"
     },
     {
       "name": "Fakultet humanističkih nauka",
@@ -138,102 +143,113 @@
       "phone": "+387 36 571 559",
       "email": "fhn@unmo.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Bosanski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Engleski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Historija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Komunikologija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Njemački jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Bosanski/Hrvatski/Srpski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Dvopredmetni studijski program Bosanski jezik i književnost i komunikologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Engleski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Historija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Komunikologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Njemački jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Turski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Digitalna komunikacija i PR",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": null,
-          "sourceUrl": "https://upisi.unmo.ba/prvi-ciklus/fakultet-humanistickih-nauka/",
+          "dataSourceUrl": "https://upisi.unmo.ba/prvi-ciklus/fakultet-humanistickih-nauka/",
           "lastModified": "2026-08-29"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://fhn.unmo.ba/"
     },
     {
       "name": "Fakultet informacijskih tehnologija",
@@ -243,33 +259,33 @@
       "phone": "+387 36 281 160",
       "email": "info@fit.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Informacijske tehnologije",
           "cycle": "FIRST",
           "durationYears": null,
           "ects": null,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
           "tracks": [
             {
               "name": "Razvoj softvera",
               "ects": 180,
               "durationYears": 3,
-              "sourceUrl": "https://fit.ba/pages/40",
+              "dataSourceUrl": "https://fit.ba/pages/40",
               "lastModified": "2026-08-29"
             },
             {
               "name": "Softverski inženjering",
               "ects": 240,
               "durationYears": 4,
-              "sourceUrl": "https://fit.ba/pages/41",
+              "dataSourceUrl": "https://fit.ba/pages/41",
               "lastModified": "2026-08-29"
             }
-          ]
+          ],
+          "lastModified": "2026-08-23"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://fit.ba/"
     },
     {
       "name": "Građevinski fakultet",
@@ -279,46 +295,49 @@
       "phone": "+387 36 514 850",
       "email": "gf@unmo.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Konstrukcije",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Upravljanje okolišnom infrastrukturom",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Geodezija i geoinformatika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Građevinarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Arhitektura",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://gf.unmo.ba/studij/i-ciklus/",
+          "dataSourceUrl": "https://gf.unmo.ba/studij/i-ciklus/",
           "lastModified": "2026-08-29"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://gf.unmo.ba/"
     },
     {
       "name": "Mašinski fakultet",
@@ -328,60 +347,65 @@
       "phone": "+387 36 571 258",
       "email": "mf@unmo.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Dizajn proizvoda",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Kompjuterski inžinjering",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Obnovljivi izvori energije",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Dizajn proizvoda",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Energetika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Kompjuterski inžinjering",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Elektrotehnika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://upisi.unmo.ba/prvi-ciklus/masinski-fakultet/",
+          "dataSourceUrl": "https://upisi.unmo.ba/prvi-ciklus/masinski-fakultet/",
           "lastModified": "2026-08-29"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://mf.unmo.ba/"
     },
     {
       "name": "Nastavnički fakultet",
@@ -391,136 +415,153 @@
       "phone": "+387 36 514 203",
       "email": "nf@unmo.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Hemija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Konzervacijska biologija i ekologija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Pedagogija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Psihologija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Razredna nastava",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Sociologija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Sport i zdravlje",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Stručni studij iz oblasti sporta (3+2)",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Biologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Hemija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Konzervacijska biologija i ekologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Pedagogija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Psihologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Psihologija i sociologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Razredna nastava",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Sociologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Sport i zdravlje",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Stručni studij iz oblasti sporta",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://nf.unmo.ba/"
     },
     {
       "name": "Pravni fakultet",
@@ -530,39 +571,41 @@
       "phone": "+387 36 514 233",
       "email": "pf@unmo.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
-      "studyProgramsLastModified": "2026-08-23",
       "studyPrograms": [
         {
           "name": "Građansko pravo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Krivično pravo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Pravo (opće)",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
+          "lastModified": "2026-08-23"
         },
         {
           "name": "Kriminologija i sigurnosne studije",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://pf.unmo.ba/ba/studiranje/i-ciklus/",
+          "dataSourceUrl": "https://pf.unmo.ba/ba/studiranje/i-ciklus/",
           "lastModified": "2026-08-29"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://pf.unmo.ba/"
     },
     {
       "name": "Univerzitetski studiji",
@@ -572,49 +615,48 @@
       "phone": "+387 36 570 727",
       "email": "univerzitet@unmo.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/",
       "studyPrograms": [
         {
           "name": "Dizajn interijera",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
         },
         {
           "name": "Politehnika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
         },
         {
           "name": "Poslovna informatika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
         },
         {
           "name": "Turizam",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
         },
         {
           "name": "Zdravstvena njega",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
+          "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
         },
         {
           "name": "Farmacija",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "sourceUrl": "https://upisi.unmo.ba/prvi-ciklus/univerzitetski-studiji/",
+          "dataSourceUrl": "https://upisi.unmo.ba/prvi-ciklus/univerzitetski-studiji/",
           "lastModified": "2026-08-29"
         },
         {
@@ -622,7 +664,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "sourceUrl": "https://upisi.unmo.ba/prvi-ciklus/univerzitetski-studiji/",
+          "dataSourceUrl": "https://upisi.unmo.ba/prvi-ciklus/univerzitetski-studiji/",
           "lastModified": "2026-08-29"
         },
         {
@@ -630,10 +672,11 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "sourceUrl": "https://upisi.unmo.ba/prvi-ciklus/univerzitetski-studiji/",
+          "dataSourceUrl": "https://upisi.unmo.ba/prvi-ciklus/univerzitetski-studiji/",
           "lastModified": "2026-08-29"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
     }
   ]
 }

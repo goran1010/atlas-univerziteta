@@ -39,7 +39,7 @@ function PendingChangesAdmin() {
         >
           <div role="columnheader">{t("contribution.change")}</div>
           <div role="columnheader">{t("contribution.entityType")}</div>
-          <div role="columnheader">{t("contribution.user")}</div>
+          <div role="columnheader">{t("contribution.contributor")}</div>
           <div role="columnheader" className="sr-only">
             {t("contribution.actions")}
           </div>

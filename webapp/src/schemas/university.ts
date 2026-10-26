@@ -30,7 +30,7 @@ const universitySchema = z.object({
   accreditationFrom: optionalTextSchema,
   accreditationTo: optionalTextSchema,
   authority: optionalTextSchema,
-  sourceUrl: optionalTextSchema,
+  dataSourceUrl: optionalTextSchema,
   lastModified: optionalTextSchema,
 });
 
@@ -42,7 +42,7 @@ const trackSchema = z.object({
   durationYears: durationYearsSchema
     .nullish()
     .transform((value) => value ?? undefined),
-  sourceUrl: optionalTextSchema,
+  dataSourceUrl: optionalTextSchema,
   lastModified: optionalTextSchema,
 });
 
@@ -56,7 +56,7 @@ const studyProgramSchema = z.object({
     .transform((value) => value ?? undefined),
   ects: ectsSchema.nullish().transform((value) => value ?? undefined),
   language: optionalTextSchema,
-  sourceUrl: optionalTextSchema,
+  dataSourceUrl: optionalTextSchema,
   lastModified: optionalTextSchema,
   tracks: z.array(trackSchema).optional().default([]),
 });
@@ -70,7 +70,7 @@ const facultySchema = z.object({
   address: optionalTextSchema,
   phone: optionalTextSchema,
   email: optionalTextSchema,
-  sourceUrl: optionalTextSchema,
+  dataSourceUrl: optionalTextSchema,
   lastModified: optionalTextSchema,
   studyPrograms: z.array(studyProgramSchema),
 });
@@ -180,7 +180,19 @@ const facultyDetailResponseSchema = z.object({
   data: facultyDetailSchema,
 });
 
+const studyProgramDetailResponseSchema = z.object({
+  message: z.string(),
+  data: studyProgramSchema,
+});
+
+const trackDetailResponseSchema = z.object({
+  message: z.string(),
+  data: trackSchema,
+});
+
 export type FacultyDetail = z.infer<typeof facultyDetailSchema>;
+export type StudyProgramDetail = z.infer<typeof studyProgramSchema>;
+export type TrackDetail = z.infer<typeof trackSchema>;
 export type UniversityDetail = z.infer<typeof universityDetailSchema>;
 export type UniversityListItem = z.infer<typeof universityListItemSchema>;
 export type UniversityDetailFaculty = UniversityDetail["faculties"][number];
@@ -200,4 +212,6 @@ export {
   universityDetailResponseSchema,
   universityListResponseSchema,
   facultyDetailResponseSchema,
+  studyProgramDetailResponseSchema,
+  trackDetailResponseSchema,
 };

@@ -61,6 +61,13 @@ const websiteSchema = z
   .url({ protocol: /^https?$/, error: "Invalid URL" })
   .max(254);
 
+const commentSchema = z
+  .string()
+  .trim()
+  .min(1)
+  .max(1000, { error: "Comment must be 1000 characters or fewer" })
+  .optional();
+
 const universityCreateDataSchema = z.strictObject({
   name: z.string().trim().min(1, { error: "Name is required" }).max(200),
 
@@ -131,24 +138,28 @@ const createEntitySchema = z.discriminatedUnion("targetType", [
   z.strictObject({
     targetType: z.literal("UNIVERSITY"),
     data: universityCreateDataSchema,
+    comment: commentSchema,
   }),
 
   z.strictObject({
     targetType: z.literal("FACULTY"),
     parentId: parentIdSchema,
     data: facultyCreateDataSchema,
+    comment: commentSchema,
   }),
 
   z.strictObject({
     targetType: z.literal("STUDY_PROGRAM"),
     parentId: parentIdSchema,
     data: studyProgramCreateDataSchema,
+    comment: commentSchema,
   }),
 
   z.strictObject({
     targetType: z.literal("TRACK"),
     parentId: parentIdSchema,
     data: trackCreateDataSchema,
+    comment: commentSchema,
   }),
 ]);
 
@@ -283,24 +294,28 @@ const editEntitySchema = z.discriminatedUnion("targetType", [
     targetType: z.literal("UNIVERSITY"),
     targetId: targetIdSchema,
     data: universityEditDataSchema,
+    comment: commentSchema,
   }),
 
   z.strictObject({
     targetType: z.literal("FACULTY"),
     targetId: targetIdSchema,
     data: facultyEditDataSchema,
+    comment: commentSchema,
   }),
 
   z.strictObject({
     targetType: z.literal("STUDY_PROGRAM"),
     targetId: targetIdSchema,
     data: studyProgramEditDataSchema,
+    comment: commentSchema,
   }),
 
   z.strictObject({
     targetType: z.literal("TRACK"),
     targetId: targetIdSchema,
     data: trackEditDataSchema,
+    comment: commentSchema,
   }),
 ]);
 
@@ -308,6 +323,8 @@ const deleteEntitySchema = z.strictObject({
   targetType: targetTypeSchema,
 
   targetId: targetIdSchema,
+
+  comment: commentSchema,
 });
 
 const deletePendingChangeSchema = z.strictObject({

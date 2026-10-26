@@ -13,18 +13,21 @@ enum role {
 }
 
 model user {
-  id               String          @id
+  id               String    @id
   name             String
-  email            String          @unique
-  emailVerified    Boolean         @default(false)
+  email            String    @unique
+  emailVerified    Boolean   @default(false)
   image            String?
-  createdAt        DateTime        @default(now())
-  updatedAt        DateTime        @updatedAt
-  role             role            @default(USER)
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  role             role      @default(USER)
   adminRequestedAt DateTime?
-  sessions         session[]
-  accounts         account[]
-  pendingChanges   PendingChange[]
+
+  // why the user wants admin access, cleared when the request is resolved
+  adminRequestReason String?
+  sessions           session[]
+  accounts           account[]
+  pendingChanges     PendingChange[]
 }
 
 model session {
@@ -117,7 +120,7 @@ model University {
   accreditationFrom DateTime?
   accreditationTo   DateTime?
   authority         String?
-  sourceUrl         String?
+  dataSourceUrl     String?
   lastModified      DateTime?
   faculties         Faculty[]
 
@@ -138,7 +141,7 @@ model Faculty {
   phone             String?
   email             String?
   isUniversityLevel Boolean        @default(false)
-  sourceUrl         String?
+  dataSourceUrl     String?
   lastModified      DateTime?
   studyPrograms     StudyProgram[]
 
@@ -159,7 +162,7 @@ model StudyProgram {
   ects           Int?
   language       String?
   searchLanguage String?
-  sourceUrl      String?
+  dataSourceUrl  String?
   lastModified   DateTime?
   tracks         Track[]
 
@@ -176,7 +179,7 @@ model Track {
   studyProgram   StudyProgram @relation(fields: [studyProgramId], references: [id], onDelete: Cascade)
   ects           Int?
   durationYears  Int?
-  sourceUrl      String?
+  dataSourceUrl  String?
   lastModified   DateTime?
 
   @@unique([name, studyProgramId])
@@ -207,6 +210,9 @@ model PendingChange {
 
   // proposed data
   data Json?
+
+  // contributor's note to the reviewing admin
+  comment String?
 
   user       user      @relation(fields: [userId], references: [id])
   userId     String

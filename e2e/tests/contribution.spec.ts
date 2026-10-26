@@ -24,7 +24,7 @@ function uniqueName(prefix: string) {
 async function submitUniversityCreate(page: Page, universityName: string) {
   await page.goto("/improve-data/add");
   await page
-    .getByRole("combobox", { name: "Entity Type" })
+    .getByRole("combobox", { name: "Item type" })
     .selectOption("UNIVERSITY");
   await page
     .getByRole("combobox", { name: "Change", exact: true })
@@ -41,6 +41,9 @@ async function submitUniversityCreate(page: Page, universityName: string) {
   await page
     .getByRole("combobox", { name: "Ownership" })
     .selectOption("PUBLIC");
+  await page
+    .getByRole("textbox", { name: "Comment for the admin" })
+    .fill(`E2E comment for ${universityName}`);
   await page.getByRole("button", { name: "Submit Suggestion" }).click();
   await expect(page.getByText("Suggestion submitted.")).toBeVisible();
 }
@@ -61,6 +64,19 @@ test("contribution approval round-trip", async ({ browser }) => {
   const adminPage = await adminContext.newPage();
 
   await adminPage.goto("/admin-dashboard/pending-changes");
+  const changeRow = adminPage
+    .getByRole("row")
+    .filter({ hasText: universityName });
+  await changeRow.getByRole("button", { name: "View info" }).click();
+  await expect(
+    adminPage
+      .getByRole("dialog")
+      .getByText(`E2E comment for ${universityName}`),
+  ).toBeVisible();
+  await adminPage
+    .getByRole("dialog")
+    .getByRole("button", { name: "Close" })
+    .click();
   await adminPage.getByRole("button", { name: "Approve" }).click();
   await adminPage
     .getByRole("dialog")
@@ -94,15 +110,15 @@ test("user can discard their own pending change", async ({ browser }) => {
   const row = userPage.getByRole("row").filter({ hasText: "Create" });
   await expect(row).toBeVisible();
 
-  await row.getByRole("button", { name: "Delete", exact: true }).click();
+  await row.getByRole("button", { name: "Withdraw", exact: true }).click();
   await userPage
     .getByRole("dialog")
-    .getByRole("button", { name: "Delete", exact: true })
+    .getByRole("button", { name: "Withdraw", exact: true })
     .click();
 
   await expect(userPage.getByText("Pending change discarded.")).toBeVisible();
   await expect(
-    userPage.getByText("No pending changes to display."),
+    userPage.getByText("You have no suggestions awaiting review."),
   ).toBeVisible();
 
   await userContext.close();
@@ -120,7 +136,7 @@ test("user can submit an update suggestion for an existing university", async ({
 
   await userPage.goto("/improve-data/add");
   await userPage
-    .getByRole("combobox", { name: "Entity Type" })
+    .getByRole("combobox", { name: "Item type" })
     .selectOption("UNIVERSITY");
   await userPage
     .getByRole("combobox", { name: "Change", exact: true })

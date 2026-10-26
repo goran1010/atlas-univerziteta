@@ -29,6 +29,7 @@ const pendingChangeBaseSchema = z.object({
   userId: z.string(),
   user: pendingChangeUserSchema.nullable().optional(),
   createdAt: z.coerce.date(),
+  comment: z.string().nullable().optional(),
 });
 
 const pendingChangeSchema = z.union([

@@ -59,7 +59,6 @@ function LogInForm({ disabled, onLoadingChange }: LogInFormProps) {
       }
       className="flex flex-col gap-3"
     >
-      <p className="text-xs text-(--text-muted)">{t("form.requiredHint")}</p>
       <div>
         <Label htmlFor="email" required>
           {t("form.email")}

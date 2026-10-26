@@ -148,6 +148,8 @@ function PendingUniversityChangesRow({
           typeOfChange={change.typeOfChange}
           data={change.data}
           currentEntity={change.currentEntity ?? null}
+          parentContext={change.parentContext}
+          comment={change.comment}
         />
       </Dialog>
     </li>

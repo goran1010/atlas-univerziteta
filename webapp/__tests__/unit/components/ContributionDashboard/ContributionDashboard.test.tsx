@@ -81,31 +81,33 @@ describe("ContributionDashboard", () => {
       await screen.findByRole("heading", { name: /Improve the Data/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: /Add new data/i }),
+      screen.getByRole("link", { name: /Propose changes/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: /Pending changes/i }),
+      screen.getByRole("link", { name: /My suggestions/i }),
     ).toBeInTheDocument();
-    expect(await screen.findByText(/Entity Type/i)).toBeInTheDocument();
+    expect(await screen.findByText(/Item type/i)).toBeInTheDocument();
   });
 
   test("switches to the pending changes tab on click", async () => {
     renderDashboard();
 
     await user.click(
-      await screen.findByRole("link", { name: /Pending changes/i }),
+      await screen.findByRole("link", { name: /My suggestions/i }),
     );
 
-    expect(await screen.findByText(/no pending changes/i)).toBeInTheDocument();
+    expect(
+      await screen.findByText(/You have no suggestions awaiting review/i),
+    ).toBeInTheDocument();
   });
 
   test("shows the pending changes count in the tab link", async () => {
     givenPendingChanges([pendingChange]);
     renderDashboard();
 
-    const tab = await screen.findByRole("link", { name: /Pending changes/i });
+    const tab = await screen.findByRole("link", { name: /My suggestions/i });
 
-    // The count badge renders inside the "Pending changes" tab link
+    // The count badge renders inside the "My suggestions" tab link
     await waitFor(() => {
       expect(tab).toHaveTextContent("1");
     });
@@ -129,14 +131,16 @@ describe("ContributionDashboard", () => {
     renderDashboard();
 
     await user.click(
-      await screen.findByRole("link", { name: /Pending changes/i }),
+      await screen.findByRole("link", { name: /My suggestions/i }),
     );
 
     const alert = await screen.findByRole("alert");
     expect(alert).toHaveTextContent(
       /Something went wrong while loading pending changes\. Refresh the page and try again\./i,
     );
-    expect(screen.getByText(/no pending changes/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/You have no suggestions awaiting review/i),
+    ).toBeInTheDocument();
   });
 
   test("rejects a malformed successful pending changes response", async () => {
@@ -145,7 +149,7 @@ describe("ContributionDashboard", () => {
     renderDashboard();
 
     await user.click(
-      await screen.findByRole("link", { name: /Pending changes/i }),
+      await screen.findByRole("link", { name: /My suggestions/i }),
     );
 
     expect(
@@ -153,6 +157,8 @@ describe("ContributionDashboard", () => {
         /^Something went wrong while loading pending changes\. Refresh the page and try again\.$/i,
       ),
     ).toBeInTheDocument();
-    expect(screen.getByText(/no pending changes/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/You have no suggestions awaiting review/i),
+    ).toBeInTheDocument();
   });
 });

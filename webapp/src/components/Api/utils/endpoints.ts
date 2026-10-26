@@ -89,7 +89,7 @@ const apiEndpoints: Endpoint[] = [
     "accreditationFrom": "2007-08-15T00:00:00.000Z",
     "accreditationTo": "2029-08-25T00:00:00.000Z",
     "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
-    "sourceUrl": "https://hea.gov.ba/",
+    "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
     "lastModified": "2026-08-29T00:00:00.000Z",
     "faculties": [
       { "id": 142, "name": "Filozofski fakultet", "city": "Sarajevo", ...,
@@ -138,7 +138,7 @@ const apiEndpoints: Endpoint[] = [
     "address": "Vuka Karadžića 30, 71123 Istočno Sarajevo",
     "phone": "+387 57 342 788", "email": "kontakt@etf.ues.rs.ba",
     "isUniversityLevel": false,
-    "sourceUrl": "https://www.ues.rs.ba/en/faculties/",
+    "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/",
     "lastModified": "2026-08-29T00:00:00.000Z",
     "university": { "id": 15, "name": "Univerzitet u Istočnom Sarajevu",
       "acronym": "UNIS", ... },
@@ -183,14 +183,14 @@ const apiEndpoints: Endpoint[] = [
   "data": {
     "id": 190, "name": "Ekonomija", "facultyId": 18, "cycle": "FIRST",
     "durationYears": 4, "ects": 240, "language": null,
-    "sourceUrl": "http://iubd.edu.ba/index.php/fakulteti/fakultet-za-menadzmentt/ekonomija",
+    "dataSourceUrl": "http://iubd.edu.ba/index.php/fakulteti/fakultet-za-menadzmentt/ekonomija",
     "lastModified": "2026-08-25T00:00:00.000Z",
     "faculty": { "id": 18, "name": "Fakultet za menadžment", ...,
       "university": { "id": 2, "name": "Internacionalni univerzitet, Brčko distrikt BiH", ... }
     },
     "tracks": [
       { "id": 1, "name": "Računovodstvo i revizija", "studyProgramId": 190,
-        "ects": null, "durationYears": null, "sourceUrl": null,
+        "ects": null, "durationYears": null, "dataSourceUrl": null,
         "lastModified": "2026-08-26T00:00:00.000Z" },
       ...
     ]
@@ -229,7 +229,7 @@ const apiEndpoints: Endpoint[] = [
   "message": "Track retrieved successfully.",
   "data": {
     "id": 1, "name": "Računovodstvo i revizija", "studyProgramId": 190,
-    "ects": null, "durationYears": null, "sourceUrl": null,
+    "ects": null, "durationYears": null, "dataSourceUrl": null,
     "lastModified": "2026-08-26T00:00:00.000Z",
     "studyProgram": { "id": 190, "name": "Ekonomija", "cycle": "FIRST", ...,
       "faculty": { "id": 18, "name": "Fakultet za menadžment", ...,

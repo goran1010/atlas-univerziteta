@@ -31,6 +31,7 @@ export interface ContributionFormState {
   parentId: string;
   targetId: string;
   data: ContributionFormDraft;
+  comment: string;
 }
 
 export interface ContributionOutletContext {

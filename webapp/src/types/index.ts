@@ -8,6 +8,7 @@ export type UserData = {
   image?: string | null;
   role?: "ADMIN" | "USER";
   adminRequestedAt?: string | null;
+  adminRequestReason?: string | null;
   createdAt: Date;
   updatedAt: Date;
 } | null;

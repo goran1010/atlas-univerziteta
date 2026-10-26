@@ -89,7 +89,7 @@ describe("PendingUniversityChanges", () => {
     );
 
     expect(
-      screen.getByText(/No pending changes to display\./i),
+      screen.getByText(/You have no suggestions awaiting review\./i),
     ).toBeInTheDocument();
   });
 
@@ -128,12 +128,14 @@ describe("PendingUniversityChanges", () => {
     render(<StatefulHarness initial={pendingChanges} />);
     const user = userEvent.setup();
 
-    const deleteButtons = screen.getAllByRole("button", { name: /^Delete$/i });
+    const deleteButtons = screen.getAllByRole("button", {
+      name: /^Withdraw$/i,
+    });
     expect(deleteButtons).toHaveLength(2);
     await user.click(deleteButtons[0]);
     await user.click(
       within(screen.getByRole("dialog")).getByRole("button", {
-        name: /^Delete$/i,
+        name: /^Withdraw$/i,
       }),
     );
 

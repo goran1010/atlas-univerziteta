@@ -61,6 +61,40 @@ describe("usersRouter - POST /users/request-admin", () => {
     await deleteUser(userData.email);
   });
 
+  test("stores an optional reason with the request", async () => {
+    const agent = request.agent(app);
+    const userData = createNewUserInput();
+    await createAndLoginUser(agent, userData);
+
+    const response = await agent
+      .post("/users/request-admin")
+      .send({ reason: "I maintain the data for my university" });
+
+    expect(response.status).toBe(200);
+    const userInDb = await prisma.user.findUnique({
+      where: { email: userData.email },
+    });
+    expect(userInDb?.adminRequestReason).toBe(
+      "I maintain the data for my university",
+    );
+
+    await deleteUser(userData.email);
+  });
+
+  test("responds with 400 when the reason exceeds its max length", async () => {
+    const agent = request.agent(app);
+    const userData = createNewUserInput();
+    await createAndLoginUser(agent, userData);
+
+    const response = await agent
+      .post("/users/request-admin")
+      .send({ reason: "a".repeat(1001) });
+
+    expect(response.status).toBe(400);
+
+    await deleteUser(userData.email);
+  });
+
   test("responds with 400 for an ADMIN user", async () => {
     const agent = request.agent(app);
     const userData = createNewUserInput({ role: "ADMIN" });
@@ -93,7 +127,9 @@ describe("usersRouter - DELETE /users/request-admin", () => {
     const agent = request.agent(app);
     const userData = createNewUserInput();
     await createAndLoginUser(agent, userData);
-    await agent.post("/users/request-admin");
+    await agent
+      .post("/users/request-admin")
+      .send({ reason: "Cancelled later" });
 
     const response = await agent.delete("/users/request-admin");
 
@@ -108,6 +144,7 @@ describe("usersRouter - DELETE /users/request-admin", () => {
       where: { email: userData.email },
     });
     expect(userInDb?.adminRequestedAt).toBeNull();
+    expect(userInDb?.adminRequestReason).toBeNull();
 
     await deleteUser(userData.email);
   });

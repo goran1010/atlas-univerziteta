@@ -2,6 +2,7 @@ import request from "supertest";
 import { describe, test, expect } from "vitest";
 
 import { app } from "../../src/app.js";
+import { env } from "../../src/config/env.js";
 import { prisma } from "../../src/db/prisma.js";
 import { createAndLoginUser } from "../utils/createUserAndLogin.js";
 import { getResponseObject } from "../utils/responseHelpers.js";
@@ -118,6 +119,26 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     expectValidationIssue(error, { path: "data", code: "unrecognized_keys" });
   });
 
+  test("responds with status 400 when the payload tries to set dataSourceUrl", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Provenance University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        dataSourceUrl: "https://example.com/source",
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, { path: "data", code: "unrecognized_keys" });
+  });
+
   test("responds with status 400 when the website is not http(s)", async () => {
     const { agent } = await createLoggedInAgent();
 
@@ -158,6 +179,88 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
 
     expect(response.status).toBe(400);
     expectValidationIssue(error, { path: "data.name", code: "too_big" });
+  });
+
+  test("stores an optional contributor comment on all three routes", async () => {
+    const { agent, user } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const create = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Commented University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+      comment: "Found on the official site",
+    });
+    const edit = await agent.put("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      data: { name: "Commented Rename" },
+      comment: "Name changed after merger",
+    });
+    const remove = await agent.delete("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      comment: "University closed in 2024",
+    });
+
+    expect(create.status).toBe(201);
+    expect(edit.status).toBe(201);
+    expect(remove.status).toBe(201);
+
+    const stored = await prisma.pendingChange.findMany({
+      where: { userId: user.id },
+      orderBy: { createdAt: "asc" },
+      select: { comment: true },
+    });
+    expect(stored.map((change) => change.comment)).toEqual([
+      "Found on the official site",
+      "Name changed after merger",
+      "University closed in 2024",
+    ]);
+  });
+
+  test("stores no comment when none is sent", async () => {
+    const { agent, user } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Uncommented University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expect(response.status).toBe(201);
+    const stored = await prisma.pendingChange.findFirst({
+      where: { userId: user.id },
+    });
+    expect(stored?.comment).toBeNull();
+  });
+
+  test("responds with status 400 when the comment exceeds its max length", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Long Comment University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+      comment: "a".repeat(1001),
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, { path: "comment", code: "too_big" });
   });
 
   test("responds with status 201 and stores a create suggestion", async () => {
@@ -261,6 +364,86 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     });
     expect(stored?.parentId).toBe(studyProgram.id);
     expect(stored?.typeOfChange).toBe("CREATE");
+  });
+
+  test("responds with status 429 on every route once the open-change cap is reached", async () => {
+    const { agent, user } = await createLoggedInAgent();
+    const university = await createUniversity();
+    await prisma.pendingChange.createMany({
+      data: Array.from({ length: 20 }, (_, i) => ({
+        targetType: "UNIVERSITY" as const,
+        typeOfChange: "CREATE" as const,
+        data: {
+          name: `Capped University ${i.toString()}`,
+          city: "City",
+          entity: "FBIH",
+          ownership: "PUBLIC",
+        },
+        userId: user.id,
+      })),
+    });
+
+    const expectLimited = (response: { status: number; body: unknown }) => {
+      expect(response.status).toBe(429);
+      const error = getResponseObject(
+        getResponseObject(response.body)["error"],
+      );
+      expect(error["code"]).toBe("CONTRIBUTION_LIMIT");
+    };
+
+    expectLimited(
+      await agent.post("/users/contribution/universities").send({
+        targetType: "UNIVERSITY",
+        data: {
+          name: "One Too Many",
+          city: "City",
+          entity: "FBIH",
+          ownership: "PUBLIC",
+        },
+      }),
+    );
+    expectLimited(
+      await agent.put("/users/contribution/universities").send({
+        targetType: "UNIVERSITY",
+        targetId: university.id,
+        data: { name: "One Too Many" },
+      }),
+    );
+    expectLimited(
+      await agent.delete("/users/contribution/universities").send({
+        targetType: "UNIVERSITY",
+        targetId: university.id,
+      }),
+    );
+  });
+
+  test("responds with status 201 one change below the open-change cap", async () => {
+    const { agent, user } = await createLoggedInAgent();
+    await prisma.pendingChange.createMany({
+      data: Array.from({ length: 19 }, (_, i) => ({
+        targetType: "UNIVERSITY" as const,
+        typeOfChange: "CREATE" as const,
+        data: {
+          name: `Almost Capped University ${i.toString()}`,
+          city: "City",
+          entity: "FBIH",
+          ownership: "PUBLIC",
+        },
+        userId: user.id,
+      })),
+    });
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Twentieth University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expect(response.status).toBe(201);
   });
 
   test("responds with status 404 when a track create parent study program does not exist", async () => {
@@ -367,7 +550,11 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
 
   test("allows null to clear an optional faculty city", async () => {
     const { agent, user } = await createLoggedInAgent();
-    const faculty = await createFaculty();
+    const created = await createFaculty();
+    const faculty = await prisma.faculty.update({
+      where: { id: created.id },
+      data: { city: "Clear Me City" },
+    });
 
     const response = await agent.put("/users/contribution/universities").send({
       targetType: "FACULTY",
@@ -425,6 +612,35 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
         data: { name: "Updated Name" },
       }),
     );
+  });
+
+  test("responds with status 400 when the edit matches the current data", async () => {
+    const { agent } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const response = await agent.put("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      data: { name: university.name, city: university.city, phone: null },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["code"]).toBe("NO_CHANGES");
+  });
+
+  test("responds with status 201 when at least one edited field differs", async () => {
+    const { agent } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const response = await agent.put("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      data: { name: university.name, city: "Different City" },
+    });
+
+    expect(response.status).toBe(201);
   });
 
   test("responds with status 404 when an edit target does not exist", async () => {
@@ -622,6 +838,46 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
   });
 });
 
+describe("Contribution Router - pending changes ordering", () => {
+  test("returns pending changes oldest first", async () => {
+    const { agent, user } = await createLoggedInAgent();
+    const changeData = {
+      name: "Ordered University",
+      city: "City",
+      entity: "FBIH",
+      ownership: "PUBLIC",
+    };
+    const newer = await prisma.pendingChange.create({
+      data: {
+        targetType: "UNIVERSITY",
+        typeOfChange: "CREATE",
+        data: changeData,
+        createdAt: new Date("2026-02-01T00:00:00.000Z"),
+        user: { connect: { id: user.id } },
+      },
+    });
+    const older = await prisma.pendingChange.create({
+      data: {
+        targetType: "UNIVERSITY",
+        typeOfChange: "CREATE",
+        data: changeData,
+        createdAt: new Date("2026-01-01T00:00:00.000Z"),
+        user: { connect: { id: user.id } },
+      },
+    });
+
+    const response = await agent.get(
+      "/users/contribution/pending-changes/universities",
+    );
+
+    expect(response.status).toBe(200);
+    const data = getResponseObject(response.body)["data"] as {
+      id: string;
+    }[];
+    expect(data.map((change) => change.id)).toEqual([older.id, newer.id]);
+  });
+});
+
 describe("Contribution Router - DELETE /users/contribution/pending-changes/universities", () => {
   test("responds with status 401 when not logged in", async () => {
     const response = await request(app).delete(
@@ -682,5 +938,144 @@ describe("Contribution Router - DELETE /users/contribution/pending-changes/unive
       message: "Pending change deleted successfully.",
     });
     expect(pendingChangeInDb).toBeNull();
+  });
+});
+
+describe("Contribution Router - malicious input", () => {
+  test("responds with status 403 when the Origin header does not match the webapp", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent
+      .post("/users/contribution/universities")
+      .set("Origin", "https://evil.example")
+      .send({
+        targetType: "UNIVERSITY",
+        data: {
+          name: "Evil Origin University",
+          city: "City",
+          entity: "FBIH",
+          ownership: "PUBLIC",
+        },
+      });
+
+    expect(response.status).toBe(403);
+    expect(response.body).toEqual({
+      error: { code: "FORBIDDEN", message: "Request origin is not allowed." },
+    });
+  });
+
+  test("responds with status 201 when the Origin header matches the webapp", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent
+      .post("/users/contribution/universities")
+      .set("Origin", env.WEBAPP_URL)
+      .send({
+        targetType: "UNIVERSITY",
+        data: {
+          name: "Matching Origin University",
+          city: "City",
+          entity: "FBIH",
+          ownership: "PUBLIC",
+        },
+      });
+
+    expect(response.status).toBe(201);
+  });
+
+  test("stores HTML-sensitive characters verbatim without interpreting them", async () => {
+    const { agent } = await createLoggedInAgent();
+    const name = `<script>alert(1)</script> & "quoted" $' $&`;
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: { name, city: "City", entity: "FBIH", ownership: "PUBLIC" },
+    });
+
+    expect(response.status).toBe(201);
+    const responseBody = getResponseObject(response.body);
+    const data = getResponseObject(responseBody["data"]);
+    const pendingChange = await prisma.pendingChange.findUnique({
+      where: { id: data["id"] as string },
+    });
+    expect((pendingChange?.data as { name: string }).name).toBe(name);
+  });
+
+  test.each([
+    "data:text/html,<script>alert(1)</script>",
+    "vbscript:Evil(1)",
+    "//evil.example/path",
+    "JavaScript:alert(1)",
+    "java\nscript:alert(1)",
+    "ftp://example.com/file",
+  ])("responds with status 400 for unsafe website URL %s", async (website) => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Unsafe URL University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        website,
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, {
+      path: "data.website",
+      code: "invalid_format",
+    });
+  });
+
+  test("responds with status 400 for __proto__ and constructor keys", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    // a JS object literal would set the actual prototype instead of a key,
+    // so the payload goes out as raw JSON
+    const body = `{
+      "targetType": "UNIVERSITY",
+      "data": {
+        "name": "Proto University",
+        "city": "City",
+        "entity": "FBIH",
+        "ownership": "PUBLIC",
+        "__proto__": { "polluted": true },
+        "constructor": { "polluted": true }
+      }
+    }`;
+
+    const response = await agent
+      .post("/users/contribution/universities")
+      .set("Content-Type", "application/json")
+      .send(body);
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, { path: "data", code: "unrecognized_keys" });
+    expect(({} as { polluted?: boolean }).polluted).toBeUndefined();
+  });
+
+  test("responds with status 413 when the body exceeds the JSON size limit", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "x".repeat(200 * 1024),
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expect(response.status).toBe(413);
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+    expect(error["code"]).toBe("REQUEST_FAILED");
   });
 });

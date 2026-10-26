@@ -15,7 +15,7 @@ const faculty: UniversityDetailFaculty = {
   address: undefined,
   phone: undefined,
   email: undefined,
-  sourceUrl: undefined,
+  dataSourceUrl: undefined,
   lastModified: undefined,
   studyPrograms: [
     {
@@ -26,7 +26,7 @@ const faculty: UniversityDetailFaculty = {
       durationYears: undefined,
       ects: undefined,
       language: undefined,
-      sourceUrl: undefined,
+      dataSourceUrl: undefined,
       lastModified: undefined,
       tracks: [],
     },

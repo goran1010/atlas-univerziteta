@@ -12,10 +12,8 @@
   "accreditationFrom": "2022-08-16",
   "accreditationTo": "2027-08-16",
   "authority": "Ministarstvo obrazovanja i nauke Tuzlanskog kantona",
-  "sourceUrl": "https://hea.gov.ba/",
+  "dataSourceUrl": "https://eukallos.edu.ba/kontakt/",
   "lastModified": "2026-08-29",
-  "facultiesSourceUrl": "https://eukallos.edu.ba/",
-  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Ekonomski fakultet",
@@ -25,45 +23,51 @@
       "phone": "+387 35 299 091",
       "email": "ss@eukallos.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Marketing i trgovina",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment i preduzetništvo",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment javne uprave",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment turizma i sporta",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Ekonomija - opći smjer",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Računovodstvo i revizija",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Turizam i ekologija",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://ef.eukallos.edu.ba"
     },
     {
       "name": "Fakultet političkih nauka",
@@ -73,25 +77,27 @@
       "phone": "+387 35 299 091",
       "email": "ss@eukallos.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Međunarodni odnosi i diplomatija",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Politologija",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Žurnalistika i komunikologija",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://fpn.eukallos.edu.ba"
     },
     {
       "name": "Fakultet zdravstvenih nauka",
@@ -101,50 +107,57 @@
       "phone": "+387 35 299 091",
       "email": "ss@eukallos.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Farmacija",
           "cycle": "INTEGRATED",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Stomatologija",
           "cycle": "INTEGRATED",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Fizioterapija i radna terapija",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u sportu",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Radiologija",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Sanitarni inžinjering",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Sestrinstvo",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Sportski trener",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://fzn.eukallos.edu.ba"
     },
     {
       "name": "Medicinski fakultet",
@@ -154,20 +167,21 @@
       "phone": "+387 35 299 091",
       "email": "ss@eukallos.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Medicina",
           "cycle": "INTEGRATED",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Biomedicina i zdravstvo",
           "cycle": "THIRD",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://mf.eukallos.edu.ba"
     },
     {
       "name": "Pedagoški fakultet",
@@ -177,45 +191,51 @@
       "phone": "+387 35 299 091",
       "email": "ss@eukallos.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Geografija",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Informatika i tehnika",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Matematika i fizika",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Razredna nastava",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Razredna nastava sa defektologijom",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Razredna nastava sa engleskim jezikom",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Vaspitač predškolskih ustanova",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://pdf.eukallos.edu.ba"
     },
     {
       "name": "Pravni fakultet",
@@ -225,25 +245,27 @@
       "phone": "+387 35 299 091",
       "email": "ss@eukallos.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Bezbjednost",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Forenzika",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Opće pravo",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://pf.eukallos.edu.ba"
     },
     {
       "name": "Tehnički fakultet",
@@ -253,65 +275,75 @@
       "phone": "+387 35 299 091",
       "email": "ss@eukallos.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://eukallos.edu.ba",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Aerodromi/putevi i željeznice",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Arhitektura",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Bezbjednost u saobraćaju",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Drumski saobraćaj",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Geodezija",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Građevinarstvo",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Hidrotehnika",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Inženjerska informatika",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Konstrukcije",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u saobraćaju",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Poljoprivreda",
           "cycle": "FIRST",
-          "sourceUrl": "https://eukallos.edu.ba"
+          "dataSourceUrl": "https://eukallos.edu.ba",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://tf.eukallos.edu.ba"
     }
   ]
 }

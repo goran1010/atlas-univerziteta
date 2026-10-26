@@ -1,6 +1,6 @@
 import { render, screen, within } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
-import { routes } from "../../src/routes";
+import { routes, prefetchLazyRoutes } from "../../src/routes";
 
 afterEach(() => {
   vi.restoreAllMocks();
@@ -63,5 +63,32 @@ describe("Loading components when visiting an address", () => {
 
     expect(homeLink).not.toBeNull();
     expect(aboutLink).not.toBeNull();
+  });
+});
+
+describe("prefetchLazyRoutes", () => {
+  test("warms the route chunks during idle time when available", () => {
+    const requestIdleCallback = vi.fn((callback: IdleRequestCallback) => {
+      callback({} as IdleDeadline);
+      return 0;
+    });
+    vi.stubGlobal("requestIdleCallback", requestIdleCallback);
+
+    prefetchLazyRoutes();
+
+    expect(requestIdleCallback).toHaveBeenCalledOnce();
+    vi.unstubAllGlobals();
+  });
+
+  test("falls back to a timeout when requestIdleCallback is missing", () => {
+    expect("requestIdleCallback" in window).toBe(false);
+    vi.useFakeTimers();
+    const setTimeoutSpy = vi.spyOn(window, "setTimeout");
+
+    prefetchLazyRoutes();
+    vi.runAllTimers();
+
+    expect(setTimeoutSpy).toHaveBeenCalledOnce();
+    vi.useRealTimers();
   });
 });

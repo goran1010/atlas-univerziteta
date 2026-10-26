@@ -8,8 +8,10 @@ import {
   ClockIcon,
   GraduationCapIcon,
   MapPinIcon,
+  BookOpenIcon,
 } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
+import { ExternalLink } from "../sharedComponents/ExternalLink";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
 import { Button } from "../sharedComponents/Button";
@@ -155,6 +157,7 @@ function FacultyDetailPage() {
                 address={faculty.address}
                 phone={faculty.phone}
                 email={faculty.email}
+                dataSourceUrl={faculty.dataSourceUrl}
               />
             </div>
           </div>
@@ -228,6 +231,12 @@ function FacultyDetailPage() {
                             <span className="text-(--text-muted)">
                               {sp.language}
                             </span>
+                          )}
+                          {sp.dataSourceUrl && (
+                            <ExternalLink href={sp.dataSourceUrl}>
+                              <BookOpenIcon />{" "}
+                              {t("universitiesPage.dataSource")}
+                            </ExternalLink>
                           )}
                         </div>
                         <TrackList

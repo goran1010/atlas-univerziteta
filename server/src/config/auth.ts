@@ -38,6 +38,11 @@ const auth = betterAuth({
         required: false,
         input: false,
       },
+      adminRequestReason: {
+        type: "string",
+        required: false,
+        input: false,
+      },
     },
   },
   socialProviders: {

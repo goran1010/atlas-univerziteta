@@ -85,7 +85,7 @@
     "create": "Create",
     "approve": "Approve",
     "reject": "Reject",
-    "requiredHint": "Fields marked with * are required."
+    "required": "required"
   },
   "profile": {
     "title": "My Profile",
@@ -94,8 +94,14 @@
     "needLogin": "You need to be logged in to view your profile.",
     "logout": "Log out",
     "requestAdmin": "Request admin access",
-    "adminRequestPending": "Admin request pending",
-    "cancelAdminRequest": "Cancel admin request"
+    "adminRequestReason": "Why do you want admin access?",
+    "cancelAdminRequest": "Cancel admin request",
+    "memberSince": "Member since",
+    "emailVerifiedBadge": "Verified",
+    "emailNotVerifiedBadge": "Not verified",
+    "adminRequestPendingSince": "Admin request pending since",
+    "suggestionsAwaiting": "Suggestions awaiting review",
+    "changesAwaiting": "Changes awaiting your review"
   },
   "home": {
     "heading": "Universities and Study Programs in Bosnia and Herzegovina",
@@ -134,7 +140,7 @@
       "apiStatus": "Check API status.",
       "apiV1Status": "Check API v1 status.",
       "getAllUniversities": "Retrieve all universities, ordered by ownership then name. Includes a faculty count per university.",
-      "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks).",
+      "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks). dataSourceUrl on each unit is the URL its initial data was obtained from.",
       "search": "Search across universities, faculties, and study programs (track names match through their study program). Optional search term (min 2 characters) and filters; with neither, returns a capped listing of everything. Matches name, city, acronym, ECTS/duration, and related unit names (case-insensitive, diacritic-insensitive).",
       "searchTermParam": "Text to search for (2-100 characters). Optional if at least one filter is provided.",
       "pageParam": "Page number, starting at 1 (default 1).",
@@ -170,16 +176,16 @@
     "noDataset": "No dataset",
     "actions": "Actions",
     "selectDatasetError": "You need to select a dataset.",
-    "viewEditAllData": "View and edit all data:",
-    "addNewData": "Add new data",
-    "pendingChanges": "Pending Changes",
-    "noPendingChanges": "No pending changes to display.",
+    "addNewData": "Propose changes",
+    "pendingChanges": "My suggestions",
+    "noPendingChanges": "You have no suggestions awaiting review.",
     "change": "Change",
-    "entityType": "Entity Type",
-    "pendingChangesCountAria": "pending changes count",
+    "comment": "Comment for the admin",
+    "entityType": "Item type",
     "searchResultsCountAria": "search result count",
     "searchResults": "Search Results",
     "user": "User",
+    "contributor": "Contributor",
     "dataset": {
       "universities": "Universities",
       "universitiesPlaceholder": "Universities placeholder"
@@ -220,7 +226,6 @@
       "address": "Address",
       "phone": "Phone",
       "email": "Email",
-      "sourceUrl": "Source URL",
       "ownership": "Ownership"
     },
     "cycles": {
@@ -237,7 +242,7 @@
       "BD": "BD - Brčko District"
     },
     "submitSuggestion": "Submit suggestion",
-    "deleteChange": "Delete",
+    "deleteChange": "Withdraw",
     "dataLegend": "Data"
   },
   "admin": {
@@ -252,10 +257,17 @@
     "proposedData": "Proposed Data",
     "currentData": "Current Data",
     "proposedChanges": "Proposed Changes",
-    "entityDeleted": "Entity no longer exists",
+    "entityDeleted": "This item no longer exists",
     "facultyCount": "Faculties",
     "studyProgramCount": "Study programs",
-    "trackCount": "Tracks"
+    "trackCount": "Tracks",
+    "diff": {
+      "field": "Field",
+      "current": "Current",
+      "proposed": "Proposed",
+      "cleared": "cleared",
+      "noChange": "no change"
+    }
   },
   "error": {
     "notFound": "There is nothing here.",
@@ -282,7 +294,9 @@
       "rateLimited": "Too many requests. Please wait 15 minutes, then try again.",
       "authRequired": "You need to be logged in for this. Log in and try again.",
       "forbidden": "You do not have permission for this action.",
-      "alreadyAdmin": "You already have the admin role."
+      "alreadyAdmin": "You already have the admin role.",
+      "contributionLimit": "You already have 20 suggestions awaiting review. Please wait until an admin reviews them.",
+      "noChanges": "The suggested edit matches the current data - nothing to change."
     },
     "pendingChanges": {
       "fetchError": "Something went wrong while loading pending changes. Refresh the page and try again."
@@ -399,7 +413,8 @@
     "openFullPage": "Open full page",
     "shareLink": "Share link",
     "linkCopied": "Link copied to clipboard.",
-    "linkCopyFailed": "Could not copy link."
+    "linkCopyFailed": "Could not copy link.",
+    "dataSource": "Data source"
   },
   "access": {
     "goToLogin": "Log In",

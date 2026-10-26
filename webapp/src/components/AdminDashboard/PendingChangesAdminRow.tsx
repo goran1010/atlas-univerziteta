@@ -117,7 +117,7 @@ const PendingChangesAdminRow = memo(
             className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0"
           >
             <span className="sm:hidden font-semibold">
-              {t("contribution.user")}
+              {t("contribution.contributor")}
             </span>
             <span className="break-all">{data.user.email}</span>
           </div>
@@ -222,6 +222,8 @@ const PendingChangesAdminRow = memo(
             typeOfChange={data.typeOfChange}
             data={data.data}
             currentEntity={currentEntity}
+            parentContext={data.parentContext}
+            comment={data.comment}
           />
         </Dialog>
       </li>
