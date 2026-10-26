@@ -12,10 +12,8 @@
   "accreditationFrom": "2020-05-02",
   "accreditationTo": "2030-08-01",
   "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
-  "sourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
   "lastModified": "2026-08-29",
-  "facultiesSourceUrl": "https://www.ssst.edu.ba/",
-  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Computer Science",
@@ -25,17 +23,17 @@
       "phone": "+387 33 975 002",
       "email": "administration@ssst.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Computer Science",
           "cycle": "FIRST",
           "durationYears": 4,
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/computer-science/2"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/computer-science/2",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     },
     {
       "name": "Dentistry",
@@ -45,16 +43,16 @@
       "phone": "+387 33 975 002",
       "email": "administration@ssst.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Dentistry",
           "cycle": "INTEGRATED",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/dentistry/8"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/dentistry/8",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     },
     {
       "name": "Economics and Business",
@@ -64,22 +62,23 @@
       "phone": "+387 33 975 002",
       "email": "administration@ssst.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "MBA",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/economics-and-business/5"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/economics-and-business/5",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Economics and Business",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/economics-and-business/5"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/economics-and-business/5",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     },
     {
       "name": "Foreign Languages",
@@ -89,22 +88,23 @@
       "phone": "+387 33 975 002",
       "email": "administration@ssst.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "English and Applied Studies",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/foreign-languages/11"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/foreign-languages/11",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "German Language and Literature",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/foreign-languages/11"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/foreign-languages/11",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     },
     {
       "name": "Game Design and Development",
@@ -114,17 +114,17 @@
       "phone": "+387 33 975 002",
       "email": "gaming@ssst.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Game Design and Development",
           "cycle": "FIRST",
           "durationYears": 3,
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/game-design-and-development/1"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/game-design-and-development/1",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     },
     {
       "name": "Health Studies",
@@ -134,22 +134,23 @@
       "phone": "+387 33 975 002",
       "email": "administration@ssst.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Health Sciences",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/health-studies/7"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/health-studies/7",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Health Sciences",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/health-studies/7"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/health-studies/7",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     },
     {
       "name": "Pharmaco-Economics",
@@ -159,16 +160,16 @@
       "phone": "+387 33 975 002",
       "email": "administration@ssst.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Health Economics and Pharmacoeconomics",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/pharmaco-economics/10"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/pharmaco-economics/10",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     },
     {
       "name": "Pharmacy",
@@ -178,16 +179,16 @@
       "phone": "+387 33 975 002",
       "email": "administration@ssst.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Pharmacy",
           "cycle": "INTEGRATED",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/pharmacy/9"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/pharmacy/9",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     },
     {
       "name": "Political Science and International Relations",
@@ -197,22 +198,23 @@
       "phone": "+387 33 975 002",
       "email": "administration@ssst.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Political Science and International Relations",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/political-science-and-international-relations/4"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/political-science-and-international-relations/4",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Political Science and International Relations",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/political-science-and-international-relations/4"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/political-science-and-international-relations/4",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     },
     {
       "name": "Sarajevo Film Academy",
@@ -222,22 +224,23 @@
       "phone": "+387 33 975 060",
       "email": "info@sfa.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Film Directing",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/sarajevo-film-academy/12"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/sarajevo-film-academy/12",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Film Directing",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/sarajevo-film-academy/12"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/sarajevo-film-academy/12",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     },
     {
       "name": "Sarajevo Medical School",
@@ -247,28 +250,30 @@
       "phone": "+387 33 975 002",
       "email": "administration@ssst.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ssst.edu.ba/en",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Medicine",
           "cycle": "INTEGRATED",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/sarajevo-medical-school/6"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/sarajevo-medical-school/6",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Biomedicine",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/pharmaco-economics/10"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/pharmaco-economics/10",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Clinical Medicine",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://ssst.edu.ba/en/department/pharmaco-economics/10"
+          "dataSourceUrl": "https://ssst.edu.ba/en/department/pharmaco-economics/10",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ssst.edu.ba/"
     }
   ]
 }

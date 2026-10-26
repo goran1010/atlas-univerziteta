@@ -12,10 +12,8 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2026-06-20",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
-  "sourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
   "lastModified": "2026-08-29",
-  "facultiesSourceUrl": "https://univerzitetps.com/studijski-programi",
-  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Fakultet pravnih nauka",
@@ -25,28 +23,33 @@
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Pravne nauke",
           "cycle": "FIRST",
           "durationYears": 4,
-          "ects": 240
+          "ects": 240,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Pravo Evropske unije",
           "cycle": "FIRST",
           "durationYears": 3,
-          "ects": 180
+          "ects": 180,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Pravne nauke",
           "cycle": "SECOND",
           "durationYears": 1,
-          "ects": 60
+          "ects": 60,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
     },
     {
       "name": "Fakultet za ekologiju",
@@ -56,8 +59,6 @@
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Ekologija",
@@ -75,15 +76,20 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Ekologija",
           "cycle": "SECOND",
           "durationYears": 1,
-          "ects": 60
+          "ects": 60,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
     },
     {
       "name": "Fakultet za informacione tehnologije i dizajn",
@@ -93,8 +99,6 @@
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Računarske i informacione tehnologije",
@@ -112,13 +116,17 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Informacione tehnologije",
           "cycle": "SECOND",
           "durationYears": 1,
-          "ects": 60
+          "ects": 60,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Grafički dizajn",
@@ -136,15 +144,20 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Dizajn",
           "cycle": "SECOND",
           "durationYears": 1,
-          "ects": 60
+          "ects": 60,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
     },
     {
       "name": "Fakultet za novinarstvo i komunikologiju",
@@ -154,16 +167,17 @@
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://univerzitetps.com/studijski-programi/",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Novinarstvo i komunikologija",
           "cycle": "FIRST",
           "durationYears": 3,
-          "ects": 180
+          "ects": 180,
+          "dataSourceUrl": "https://univerzitetps.com/studijski-programi/",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
     },
     {
       "name": "Fakultet za poslovne i finansijske studije",
@@ -173,8 +187,6 @@
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Poslovne i finansijske studije",
@@ -184,20 +196,22 @@
           "tracks": [
             {
               "name": "Računovodstvo i revizija",
-              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "dataSourceUrl": "https://univerzitetps.com/poslovne-studije/",
               "lastModified": "2026-08-29"
             },
             {
               "name": "Porezi, carine i budžet",
-              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "dataSourceUrl": "https://univerzitetps.com/poslovne-studije/",
               "lastModified": "2026-08-29"
             },
             {
               "name": "Bankarstvo i berzansko poslovanje",
-              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "dataSourceUrl": "https://univerzitetps.com/poslovne-studije/",
               "lastModified": "2026-08-29"
             }
-          ]
+          ],
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Finansije, bankarstvo i osiguranje",
@@ -207,26 +221,30 @@
           "tracks": [
             {
               "name": "Računovodstvo i revizija",
-              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "dataSourceUrl": "https://univerzitetps.com/poslovne-studije/",
               "lastModified": "2026-08-29"
             },
             {
               "name": "Porezi, carine i budžet",
-              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "dataSourceUrl": "https://univerzitetps.com/poslovne-studije/",
               "lastModified": "2026-08-29"
             },
             {
               "name": "Bankarstvo",
-              "sourceUrl": "https://univerzitetps.com/poslovne-studije/",
+              "dataSourceUrl": "https://univerzitetps.com/poslovne-studije/",
               "lastModified": "2026-08-29"
             }
-          ]
+          ],
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Finansijski, bankarski i berzanski menadžment",
           "cycle": "SECOND",
           "durationYears": 1,
-          "ects": 60
+          "ects": 60,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Ekonomija i finansije",
@@ -246,9 +264,12 @@
               "name": "Menadžment i poslovna ekonomija",
               "lastModified": "2026-08-26"
             }
-          ]
+          ],
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
     },
     {
       "name": "Fakultet za primijenjenu ekonomiju",
@@ -258,28 +279,33 @@
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Menadžment i marketing",
           "cycle": "FIRST",
           "durationYears": 3,
-          "ects": 180
+          "ects": 180,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment i marketing malih i srednjih preduzeća",
           "cycle": "FIRST",
           "durationYears": 4,
-          "ects": 240
+          "ects": 240,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment i marketing malih i srednjih preduzeća",
           "cycle": "SECOND",
           "durationYears": 1,
-          "ects": 60
+          "ects": 60,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
     },
     {
       "name": "Fakultet za turizam i hotelijerstvo",
@@ -289,8 +315,6 @@
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Turizam i hotelijerstvo",
@@ -308,13 +332,17 @@
               "name": "Restoraterstvo i Gastronomija",
               "lastModified": "2026-08-26"
             }
-          ]
+          ],
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Turizam",
           "cycle": "SECOND",
           "durationYears": 1,
-          "ects": 60
+          "ects": 60,
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Hotelijerstvo",
@@ -330,9 +358,12 @@
               "name": "Restoraterstvo i Gastronomija",
               "lastModified": "2026-08-26"
             }
-          ]
+          ],
+          "dataSourceUrl": "https://univerzitetps.com/wp-content/uploads/2026/06/Novo_KONKURS-I-II-i-III-ciklus-za-objavu-JUN-2026.-1.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
     },
     {
       "name": "Univerzitetski studiji",
@@ -342,23 +373,23 @@
       "phone": "+387 51 248 300",
       "email": "ups@univerzitetps.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://univerzitetps.com/studijski-programi/",
       "studyPrograms": [
         {
           "name": "Bankarsko i berzansko poslovanje",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://univerzitetps.com/studijski-programi/"
+          "dataSourceUrl": "https://univerzitetps.com/studijski-programi/"
         },
         {
           "name": "Preduzetništvo i menadžment malih i srednjih preduzeća",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "sourceUrl": "https://univerzitetps.com/studijski-programi/"
+          "dataSourceUrl": "https://univerzitetps.com/studijski-programi/"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
     }
   ]
 }

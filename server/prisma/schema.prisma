@@ -120,7 +120,7 @@ model University {
   accreditationFrom DateTime?
   accreditationTo   DateTime?
   authority         String?
-  sourceUrl         String?
+  dataSourceUrl     String?
   lastModified      DateTime?
   faculties         Faculty[]
 
@@ -141,7 +141,7 @@ model Faculty {
   phone             String?
   email             String?
   isUniversityLevel Boolean        @default(false)
-  sourceUrl         String?
+  dataSourceUrl     String?
   lastModified      DateTime?
   studyPrograms     StudyProgram[]
 
@@ -162,7 +162,7 @@ model StudyProgram {
   ects           Int?
   language       String?
   searchLanguage String?
-  sourceUrl      String?
+  dataSourceUrl  String?
   lastModified   DateTime?
   tracks         Track[]
 
@@ -179,7 +179,7 @@ model Track {
   studyProgram   StudyProgram @relation(fields: [studyProgramId], references: [id], onDelete: Cascade)
   ects           Int?
   durationYears  Int?
-  sourceUrl      String?
+  dataSourceUrl  String?
   lastModified   DateTime?
 
   @@unique([name, studyProgramId])

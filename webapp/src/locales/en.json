@@ -140,7 +140,7 @@
       "apiStatus": "Check API status.",
       "apiV1Status": "Check API v1 status.",
       "getAllUniversities": "Retrieve all universities, ordered by ownership then name. Includes a faculty count per university.",
-      "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks).",
+      "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks). dataSourceUrl on each unit is the URL its initial data was obtained from.",
       "search": "Search across universities, faculties, and study programs (track names match through their study program). Optional search term (min 2 characters) and filters; with neither, returns a capped listing of everything. Matches name, city, acronym, ECTS/duration, and related unit names (case-insensitive, diacritic-insensitive).",
       "searchTermParam": "Text to search for (2-100 characters). Optional if at least one filter is provided.",
       "pageParam": "Page number, starting at 1 (default 1).",
@@ -226,7 +226,6 @@
       "address": "Address",
       "phone": "Phone",
       "email": "Email",
-      "sourceUrl": "Source URL",
       "ownership": "Ownership"
     },
     "cycles": {

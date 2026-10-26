@@ -12,10 +12,8 @@
   "accreditationFrom": "2025-02-14",
   "accreditationTo": "2030-02-14",
   "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
-  "sourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
   "lastModified": "2026-08-29",
-  "facultiesSourceUrl": "https://www.ibu.edu.ba/",
-  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Fakultet za edukaciju i humanističke nauke",
@@ -25,14 +23,13 @@
       "phone": "+387 33 944 400",
       "email": "info@ibu.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.ibu.edu.ba",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Graphic Design and Multimedia",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-graphic-design-and-multimedia-master"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-graphic-design-and-multimedia-master",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Digital Communications and Public Relations",
@@ -40,39 +37,46 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/admission/digital-communications-and-public-relations"
+          "dataSourceUrl": "https://www.ibu.edu.ba/admission/digital-communications-and-public-relations",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "English Language and Literature",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-english-language-and-literature-bsc"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-english-language-and-literature-bsc",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Film and Video Production",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-film-and-video-production"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-film-and-video-production",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Graphic Design and Multimedia",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-graphic-design-and-multimedia"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-graphic-design-and-multimedia",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Educational Communication",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/admission/international-doctoral-program-educational-communication"
+          "dataSourceUrl": "https://www.ibu.edu.ba/admission/international-doctoral-program-educational-communication",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "English Language and Literature",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-english-language-and-literature-phd"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-english-language-and-literature-phd",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ibu.edu.ba/"
     },
     {
       "name": "Fakultet za ekonomiju i društvene nauke",
@@ -82,52 +86,58 @@
       "phone": "+387 33 944 400",
       "email": "info@ibu.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.ibu.edu.ba",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "International Relations and European Studies",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-international-relations-and-european-studies-master"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-international-relations-and-european-studies-master",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Management",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-management-master"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-management-master",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Economics and Finance",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/admission/banking-and-finance"
+          "dataSourceUrl": "https://www.ibu.edu.ba/admission/banking-and-finance",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "International Relations and European Studies",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-international-relations-and-european-studies"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-international-relations-and-european-studies",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Management",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-management"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-management",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "International Relations and European Studies",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-international-relations-and-european-studies-phd"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-international-relations-and-european-studies-phd",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Management",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-management-phd"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-management-phd",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ibu.edu.ba/"
     },
     {
       "name": "Fakultet za inžinjering, prirodne i medicinske nauke",
@@ -137,106 +147,121 @@
       "phone": "+387 33 944 400",
       "email": "info@ibu.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.ibu.edu.ba",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Architecture",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-architecture-master"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-architecture-master",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Civil Engineering",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-civil-engineering-msc"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-civil-engineering-msc",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Electrical and Electronics Engineering",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-electrical-and-electronics-engineering-master"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-electrical-and-electronics-engineering-master",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Genetics and Bioengineering",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-genetics-and-bioengineering-master"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-genetics-and-bioengineering-master",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Information Technology",
           "cycle": "SECOND",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-information-technologies-master"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-information-technologies-master",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Dentistry",
           "cycle": "INTEGRATED",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-dentistry"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-dentistry",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Architecture",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-architecture"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-architecture",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Civil Engineering",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-civil-engineering"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-civil-engineering",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Electrical and Electronics Engineering",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-electrical-and-electronics-engineering"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-electrical-and-electronics-engineering",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Genetics and Bioengineering",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-genetics-and-bioengineering"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-genetics-and-bioengineering",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Information Technology",
           "cycle": "FIRST",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-information-technologies"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-information-technologies",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Architecture",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-architecture-phd"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-architecture-phd",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Civil Engineering",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-civil-engineering-phd"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-civil-engineering-phd",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Electrical and Electronics Engineering",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-electrical-and-electronics-engineering-phd"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-electrical-and-electronics-engineering-phd",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Genetics and Bioengineering",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-genetics-and-bioengineering-phd"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-genetics-and-bioengineering-phd",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Information Technology",
           "cycle": "THIRD",
           "language": "engleski",
-          "sourceUrl": "https://www.ibu.edu.ba/department-of-information-technologies-phd"
+          "dataSourceUrl": "https://www.ibu.edu.ba/department-of-information-technologies-phd",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ibu.edu.ba/"
     }
   ]
 }

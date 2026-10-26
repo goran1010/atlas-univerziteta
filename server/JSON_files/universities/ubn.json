@@ -12,10 +12,8 @@
   "accreditationFrom": "2021-07-28",
   "accreditationTo": "2026-07-28",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
-  "sourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
   "lastModified": "2026-08-29",
-  "facultiesSourceUrl": "https://www.ubn.rs.ba/fakulteti",
-  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Fakultet za psihologiju",
@@ -25,17 +23,18 @@
       "phone": "+387 55 350 150",
       "email": "info@ubn.rs.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.ubn.rs.ba/katalog-studijskih-programa",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Psihologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "srpski"
+          "language": "srpski",
+          "dataSourceUrl": "https://www.ubn.rs.ba/katalog-studijskih-programa",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ubn.rs.ba/fakulteti"
     },
     {
       "name": "Fakultet zdravstvenih studija",
@@ -45,17 +44,18 @@
       "phone": "+387 55 350 150",
       "email": "info@ubn.rs.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.ubn.rs.ba/katalog-studijskih-programa",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Sestrinstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "srpski"
+          "language": "srpski",
+          "dataSourceUrl": "https://www.ubn.rs.ba/katalog-studijskih-programa",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ubn.rs.ba/fakulteti"
     },
     {
       "name": "Farmaceutski fakultet",
@@ -65,17 +65,18 @@
       "phone": "+387 55 350 150",
       "email": "info@ubn.rs.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.ubn.rs.ba/katalog-studijskih-programa",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Farmacija",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "srpski"
+          "language": "srpski",
+          "dataSourceUrl": "https://www.ubn.rs.ba/katalog-studijskih-programa",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ubn.rs.ba/fakulteti"
     },
     {
       "name": "Poljoprivredni fakultet",
@@ -85,39 +86,45 @@
       "phone": "+387 55 350 150",
       "email": "info@ubn.rs.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://www.ubn.rs.ba/katalog-studijskih-programa",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Poljoprivredna proizvodnja",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "srpski"
+          "language": "srpski",
+          "dataSourceUrl": "https://www.ubn.rs.ba/katalog-studijskih-programa",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Agroekonomija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "srpski"
+          "language": "srpski",
+          "dataSourceUrl": "https://www.ubn.rs.ba/katalog-studijskih-programa",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Agroekologija",
           "cycle": "FIRST",
-          "sourceUrl": "https://pf.ubn.rs.ba/osnovne-akademske-studije/"
+          "dataSourceUrl": "https://pf.ubn.rs.ba/osnovne-akademske-studije/",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Agroekologija",
           "cycle": "SECOND",
-          "sourceUrl": "https://pf.ubn.rs.ba/studije-ii-ciklusa/"
+          "dataSourceUrl": "https://pf.ubn.rs.ba/studije-ii-ciklusa/",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Održiva poljoprivreda i ruralni razvoj",
           "cycle": "THIRD",
-          "sourceUrl": "https://pf.ubn.rs.ba/studije-iii-ciklusa/"
+          "dataSourceUrl": "https://pf.ubn.rs.ba/studije-iii-ciklusa/",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ubn.rs.ba/fakulteti"
     }
   ]
 }

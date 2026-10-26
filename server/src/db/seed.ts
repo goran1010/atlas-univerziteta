@@ -54,7 +54,7 @@ const trackSeedSchema = z.strictObject({
   name: z.string().trim().min(1),
   ects: z.number().int().positive().nullish(),
   durationYears: z.number().int().positive().nullish(),
-  sourceUrl: optionalUrlSchema,
+  dataSourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
 });
 
@@ -71,7 +71,7 @@ const studyProgramSeedSchema = z.strictObject({
   durationYears: z.number().int().positive().nullish(),
   ects: z.number().int().positive().nullish(),
   language: optionalTextSchema,
-  sourceUrl: optionalUrlSchema,
+  dataSourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
   tracks: z.array(trackSeedSchema).min(1).optional(),
 });
@@ -84,10 +84,8 @@ const facultySeedSchema = z.strictObject({
   phone: optionalTextSchema,
   email: optionalTextSchema,
   isUniversityLevel: z.boolean().optional(),
-  sourceUrl: optionalUrlSchema,
+  dataSourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
-  studyProgramsSourceUrl: optionalUrlSchema,
-  studyProgramsLastModified: optionalDateSchema,
   studyPrograms: z.array(studyProgramSeedSchema).min(1).optional(),
 });
 
@@ -105,10 +103,8 @@ const universitySeedSchema = z.strictObject({
   accreditationFrom: optionalDateSchema,
   accreditationTo: optionalDateSchema,
   authority: optionalTextSchema,
-  sourceUrl: optionalUrlSchema,
+  dataSourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
-  facultiesSourceUrl: optionalUrlSchema,
-  facultiesLastModified: optionalDateSchema,
   faculties: z.array(facultySeedSchema).min(1),
 });
 
@@ -153,7 +149,7 @@ function toUniversityData(
     accreditationFrom: university.accreditationFrom ?? null,
     accreditationTo: university.accreditationTo ?? null,
     authority: university.authority ?? null,
-    sourceUrl: university.sourceUrl ?? null,
+    dataSourceUrl: university.dataSourceUrl ?? null,
     lastModified: university.lastModified ?? null,
   };
 }
@@ -192,9 +188,8 @@ async function main() {
       }
 
       return tree.faculties.map((faculty) => {
-        const sourceUrl = faculty.sourceUrl ?? tree.facultiesSourceUrl ?? null;
-        const lastModified =
-          faculty.lastModified ?? tree.facultiesLastModified ?? null;
+        const dataSourceUrl = faculty.dataSourceUrl ?? null;
+        const lastModified = faculty.lastModified ?? null;
         const isUniversityLevel = faculty.isUniversityLevel ?? false;
 
         return prisma.faculty.upsert({
@@ -214,7 +209,7 @@ async function main() {
             phone: faculty.phone ?? null,
             email: faculty.email ?? null,
             isUniversityLevel,
-            sourceUrl,
+            dataSourceUrl,
             lastModified,
           },
           update: {
@@ -225,7 +220,7 @@ async function main() {
             phone: faculty.phone ?? null,
             email: faculty.email ?? null,
             isUniversityLevel,
-            sourceUrl,
+            dataSourceUrl,
             lastModified,
           },
         });
@@ -260,10 +255,8 @@ async function main() {
         }
 
         return (faculty.studyPrograms ?? []).map((program) => {
-          const sourceUrl =
-            program.sourceUrl ?? faculty.studyProgramsSourceUrl ?? null;
-          const lastModified =
-            program.lastModified ?? faculty.studyProgramsLastModified ?? null;
+          const dataSourceUrl = program.dataSourceUrl ?? null;
+          const lastModified = program.lastModified ?? null;
 
           return prisma.studyProgram.upsert({
             where: {
@@ -284,7 +277,7 @@ async function main() {
                 name: program.name,
                 language: program.language ?? null,
               }),
-              sourceUrl,
+              dataSourceUrl,
               lastModified,
             },
             update: {
@@ -294,7 +287,7 @@ async function main() {
               ...studyProgramSearchFields({
                 language: program.language ?? null,
               }),
-              sourceUrl,
+              dataSourceUrl,
               lastModified,
             },
           });
@@ -358,13 +351,14 @@ async function main() {
             ...trackSearchFields({ name: track.name }),
             ects: track.ects ?? null,
             durationYears: track.durationYears ?? null,
-            sourceUrl: track.sourceUrl ?? null,
+            // a track's numbers come from its program's document
+            dataSourceUrl: track.dataSourceUrl ?? studyProgram.dataSourceUrl,
             lastModified: track.lastModified ?? null,
           },
           update: {
             ects: track.ects ?? null,
             durationYears: track.durationYears ?? null,
-            sourceUrl: track.sourceUrl ?? null,
+            dataSourceUrl: track.dataSourceUrl ?? studyProgram.dataSourceUrl,
             lastModified: track.lastModified ?? null,
           },
         }),

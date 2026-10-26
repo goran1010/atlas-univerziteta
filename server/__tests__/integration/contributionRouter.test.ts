@@ -119,6 +119,26 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     expectValidationIssue(error, { path: "data", code: "unrecognized_keys" });
   });
 
+  test("responds with status 400 when the payload tries to set dataSourceUrl", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Provenance University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        dataSourceUrl: "https://example.com/source",
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, { path: "data", code: "unrecognized_keys" });
+  });
+
   test("responds with status 400 when the website is not http(s)", async () => {
     const { agent } = await createLoggedInAgent();
 

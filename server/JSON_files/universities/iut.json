@@ -12,10 +12,8 @@
   "accreditationFrom": "2016-05-23",
   "accreditationTo": "2030-12-31",
   "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
-  "sourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
   "lastModified": "2026-08-29",
-  "facultiesSourceUrl": "https://iu-travnik.com/faculties-institutes/",
-  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Ekološki fakultet",
@@ -25,14 +23,12 @@
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Ekologija i okolinsko upravljanje",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -46,13 +42,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Inžinjerstvo zaštite životne sredine",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -66,13 +63,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Održivi razvoj i obnovljivi izvori energije",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -86,13 +84,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Očuvanje biodiverziteta",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -106,7 +105,8 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Primijenjena ekologija",
@@ -114,7 +114,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -126,7 +126,8 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Zaštita životne sredine",
@@ -134,7 +135,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -146,7 +147,8 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Primijenjena ekologija",
@@ -154,7 +156,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -166,7 +168,8 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Zaštita životne sredine",
@@ -174,7 +177,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -186,7 +189,8 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Biodiverzitet",
@@ -194,7 +198,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Ekologija i zaštita životne sredine",
@@ -202,7 +207,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Inžinjerstvo zaštite životne sredine",
@@ -210,7 +216,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Održivi razvoj",
@@ -218,7 +225,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Zaštita okoliša u gradovima",
@@ -226,9 +234,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
     },
     {
       "name": "Ekonomski fakultet",
@@ -238,14 +248,12 @@
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Ekonomija, menadžment i biznis",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -259,13 +267,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Finansije, bankarstvo i osiguranje",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -279,13 +288,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Finansijska tržišta, instrumenti i institucije",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -299,13 +309,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Marketing, menadžment i trgovina",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -319,13 +330,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u obrazovanju",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -339,13 +351,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u zdravstvu",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -359,13 +372,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Preduzetništvo i samo zapošljavanje",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -379,13 +393,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Računovodstvo i revizija",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -399,13 +414,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Turizam i hotelijerstvo",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -419,13 +435,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Bankarstvo i osiguranje",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -439,13 +456,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Finansije, računovodstvo i revizija",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -459,13 +477,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Finansijska tržišta, instrumenti i institucije",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -479,13 +498,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Marketing i trgovina",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -499,13 +519,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u obrazovanju",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -519,13 +540,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u zdravstvu",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -539,13 +561,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Poslovna ekonomija",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -559,13 +582,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Poslovna informatika",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -579,13 +603,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Poslovni menadžment",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -599,13 +624,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Preduzetništvo i samo zapošljavanje",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -619,13 +645,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Turizam i hotelijerstvo",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -639,7 +666,8 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Bankarstvo i osiguranje",
@@ -647,7 +675,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Ekonomija",
@@ -655,7 +684,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Finansijska tržišta, instrumenti i institucije",
@@ -663,7 +693,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Marketing i trgovina",
@@ -671,7 +702,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment",
@@ -679,7 +711,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u obrazovanju",
@@ -687,7 +720,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u zdravstvu",
@@ -695,7 +729,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Preduzetništvo",
@@ -703,7 +738,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Računovodstvo, finansije i revizija",
@@ -711,7 +747,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Turizam i hotelijerstvo",
@@ -719,9 +756,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
     },
     {
       "name": "Fakultet informacionih tehnologija",
@@ -731,14 +770,12 @@
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Informacione tehnologije",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -752,13 +789,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Računarski sistemi i mreže",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -772,13 +810,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Softversko programiranje",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -792,13 +831,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Informacione tehnologije",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -812,13 +852,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Računarski sistemi i mreže",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -832,13 +873,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Softversko programiranje",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -852,7 +894,8 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Informacione tehnologije",
@@ -860,7 +903,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Računarski sistemi i mreže",
@@ -868,7 +912,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Softversko programiranje",
@@ -876,9 +921,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
     },
     {
       "name": "Fakultet politehničkih nauka",
@@ -888,14 +935,12 @@
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Arhitektura i urbanizam",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -909,13 +954,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Elektroenergetika",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -929,13 +975,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Energetika",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -949,13 +996,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Energetska efikasnost i obnovljivi izvori energije",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -969,13 +1017,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Građevinarstvo",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -989,13 +1038,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Hidrookolinski inžinjering",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1009,13 +1059,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Informacioni menadžment",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1029,13 +1080,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Inžinjerstvo i menadžment osiguranja",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1049,13 +1101,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Korporativna sigurnost",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1069,13 +1122,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Logistika sistema",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1089,13 +1143,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Logistički menadžment",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1109,13 +1164,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Mašinske konstrukcije",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1129,13 +1185,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment ljudskih resursa",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1149,13 +1206,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Motori i vozila",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1169,13 +1227,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Preduzetnički menadžment",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1189,13 +1248,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Privredna i tehnička logistika",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1209,13 +1269,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Proizvodno mašinstvo",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1229,13 +1290,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Putevi",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1249,13 +1311,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Računarstvo i informatika",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1269,13 +1332,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Sigurnost",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1289,13 +1353,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Telekomunikacije",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1309,13 +1374,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Zaštita na radu",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1329,13 +1395,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Arhitektura i urbanizam",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1349,13 +1416,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Elektroenergetika",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1369,13 +1437,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Energetika",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1389,13 +1458,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Energetska efikasnost i obnovljivi izvori energije",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1409,13 +1479,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Građevinarstvo",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1429,13 +1500,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Hidrookolinski inžinjering",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1449,13 +1521,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Informacioni menadžment",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1469,13 +1542,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Inžinjerstvo i menadžment osiguranja",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1489,13 +1563,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Korporativna sigurnost",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1509,13 +1584,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Logistika sistema",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1529,13 +1605,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Logistički menadžment",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1549,13 +1626,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Mašinske konstrukcije",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1569,13 +1647,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment ljudskih resursa",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1589,13 +1668,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Motori i vozila",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1609,13 +1689,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Preduzetnički menadžment",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1629,13 +1710,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Privredna i tehnička logistika",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1649,13 +1731,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Proizvodno mašinstvo",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1669,13 +1752,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Putevi",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1689,13 +1773,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Računarstvo i informatika",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1709,13 +1794,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Sigurnost",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1729,13 +1815,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Telekomunikacije",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1749,13 +1836,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Zaštita na radu",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1769,7 +1857,8 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Arhitektura i urbanizam",
@@ -1777,7 +1866,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Elektroenergetika",
@@ -1785,7 +1875,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Energetika",
@@ -1793,7 +1884,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Energetska efikasnost i obnovljivi izvori energije",
@@ -1801,7 +1893,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Građevinarstvo",
@@ -1809,7 +1902,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Hidrookolinski inžinjering",
@@ -1817,7 +1911,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Informacioni menadžment",
@@ -1825,7 +1920,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Inžinjerstvo i menadžment osiguranja",
@@ -1833,7 +1929,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Korporativna sigurnost",
@@ -1841,7 +1938,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Logistika sistema",
@@ -1849,7 +1947,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Logistički menadžment",
@@ -1857,7 +1956,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Mašinske konstrukcije",
@@ -1865,7 +1965,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment ljudskih resursa",
@@ -1873,7 +1974,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Motori i vozila",
@@ -1881,7 +1983,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Preduzetnički menadžment",
@@ -1889,7 +1992,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Privredna i tehnička logistika",
@@ -1897,7 +2001,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Proizvodno mašinstvo",
@@ -1905,7 +2010,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Putevi",
@@ -1913,7 +2019,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Računarstvo i informatika",
@@ -1921,7 +2028,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Sigurnost",
@@ -1929,7 +2037,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Telekomunikacije",
@@ -1937,7 +2046,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Zaštita na radu",
@@ -1945,9 +2055,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
     },
     {
       "name": "Fakultet za medije i komunikacije",
@@ -1957,14 +2069,12 @@
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Novinarstvo",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1978,13 +2088,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Odnosi s javnošću",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -1998,13 +2109,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Komunikacije",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -2018,13 +2130,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Mediji i novinarstvo",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -2038,7 +2151,8 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Komunikacije",
@@ -2046,7 +2160,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Mediji",
@@ -2054,7 +2169,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Odnosi s javnošću",
@@ -2062,9 +2178,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
     },
     {
       "name": "Pravni fakultet",
@@ -2074,8 +2192,6 @@
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Državno i međunarodno javno pravo",
@@ -2083,7 +2199,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -2095,7 +2211,8 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Građansko pravo",
@@ -2103,7 +2220,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -2115,7 +2232,8 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Historija države i prava",
@@ -2123,7 +2241,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -2135,7 +2253,8 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Javna uprava",
@@ -2143,7 +2262,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -2155,7 +2274,8 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Krivično pravo",
@@ -2163,7 +2283,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -2175,7 +2295,8 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Privredno pravo",
@@ -2183,7 +2304,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -2195,7 +2316,8 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Javna uprava",
@@ -2203,7 +2325,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -2215,7 +2337,8 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Opće pravo",
@@ -2223,7 +2346,7 @@
           "durationYears": null,
           "ects": null,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "tracks": [
             {
               "name": "Model 3+2",
@@ -2235,13 +2358,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Unutrašnji poslovi i kriminalistika",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -2255,7 +2379,8 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Državno i međunarodno javno pravo",
@@ -2263,7 +2388,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Građansko pravo",
@@ -2271,7 +2397,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Historija države i prava",
@@ -2279,7 +2406,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Javna uprava",
@@ -2287,7 +2415,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Krivično pravo",
@@ -2295,7 +2424,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Privredno pravo",
@@ -2303,9 +2433,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
     },
     {
       "name": "Saobraćajni fakultet",
@@ -2315,14 +2447,12 @@
       "phone": "+387 30 509 682",
       "email": "studentska@iu-travnik.com",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
-      "studyProgramsLastModified": "2026-08-25",
       "studyPrograms": [
         {
           "name": "Drumski i gradski saobraćaj",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -2336,13 +2466,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u saobraćaju",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -2356,13 +2487,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Sigurnost u drumskom saobraćaju",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -2376,13 +2508,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Vazdušni saobraćaj",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -2396,13 +2529,14 @@
               "ects": 60,
               "durationYears": 1
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Drumski i gradski saobraćaj",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -2416,13 +2550,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u saobraćaju",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -2436,13 +2571,14 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Vazdušni saobraćaj",
           "cycle": "FIRST",
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
           "ects": null,
           "durationYears": null,
           "tracks": [
@@ -2456,7 +2592,8 @@
               "ects": 240,
               "durationYears": 4
             }
-          ]
+          ],
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Drumski i gradski saobraćaj",
@@ -2464,7 +2601,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Menadžment u saobraćaju",
@@ -2472,7 +2610,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Saobraćaj",
@@ -2480,7 +2619,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Sigurnost u drumskom saobraćaju",
@@ -2488,7 +2628,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         },
         {
           "name": "Vazdušni saobraćaj",
@@ -2496,9 +2637,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf"
+          "dataSourceUrl": "https://iu-travnik.com/wp-content/uploads/2025/12/Pregled-studijskih-programa-po-fakultetima-i-modelima-za-web-stranicu-2025-26.pdf",
+          "lastModified": "2026-08-25"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
     }
   ]
 }

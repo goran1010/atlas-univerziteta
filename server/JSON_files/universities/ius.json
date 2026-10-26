@@ -12,10 +12,8 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2029-08-29",
   "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
-  "sourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
   "lastModified": "2026-08-29",
-  "facultiesSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini",
-  "facultiesLastModified": "2026-08-21",
   "faculties": [
     {
       "name": "Edukacijski fakultet",
@@ -25,8 +23,6 @@
       "phone": "+387 33 957 300",
       "email": "admission@ius.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Computer Education and Instructional Technology",
@@ -34,7 +30,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "English Language and Literature, Teaching",
@@ -42,7 +39,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Turkish Language and Literature, Teaching",
@@ -50,7 +48,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Computer Education and Instructional Technology",
@@ -58,7 +57,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "English Language and Literature, Teaching",
@@ -66,7 +66,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Turkish Language and Literature, Teaching",
@@ -74,7 +75,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "English Language and Literature, Teaching",
@@ -82,9 +84,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
     },
     {
       "name": "Fakultet medicinskih nauka",
@@ -94,14 +98,12 @@
       "phone": "+387 33 957 305",
       "email": "admission@ius.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Dental Medicine",
           "cycle": "INTEGRATED",
           "language": "engleski",
-          "sourceUrl": "https://fms.ius.edu.ba/en",
+          "dataSourceUrl": "https://fms.ius.edu.ba/en",
           "ects": 360,
           "durationYears": 6,
           "lastModified": "2026-08-27"
@@ -110,12 +112,13 @@
           "name": "Medicine",
           "cycle": "INTEGRATED",
           "language": "engleski",
-          "sourceUrl": "https://fms.ius.edu.ba/en",
+          "dataSourceUrl": "https://fms.ius.edu.ba/en",
           "ects": 360,
           "durationYears": 6,
           "lastModified": "2026-08-27"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
     },
     {
       "name": "Fakultet menadžmenta i javne uprave",
@@ -125,8 +128,6 @@
       "phone": "+387 33 957 400",
       "email": "admission@ius.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Economics",
@@ -134,7 +135,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "International Business and Finance",
@@ -142,7 +144,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Management",
@@ -150,7 +153,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Political Science and International Relations",
@@ -158,7 +162,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Economics",
@@ -166,7 +171,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Hospitality and Tourism Management",
@@ -174,7 +180,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "International Business and Finance",
@@ -182,7 +189,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "International Relations and Diplomacy",
@@ -190,7 +198,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Management",
@@ -198,7 +207,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Political Science and International Relations",
@@ -206,7 +216,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Economics",
@@ -214,7 +225,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Management",
@@ -222,7 +234,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Political Science and International Relations",
@@ -230,9 +243,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
     },
     {
       "name": "Fakultet prirodnih i tehničkih nauka",
@@ -242,8 +257,6 @@
       "phone": "+387 33 957 200",
       "email": "admission@ius.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Architecture",
@@ -251,7 +264,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Computer Sciences and Engineering",
@@ -259,7 +273,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Electrical and Electronics Engineering",
@@ -267,7 +282,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Genetics and Bioengineering",
@@ -275,7 +291,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Industrial Engineering",
@@ -283,7 +300,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Mechanical Engineering",
@@ -291,7 +309,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Software Engineering",
@@ -299,7 +318,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Architecture",
@@ -307,7 +327,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Artificial Intelligence and Data Engineering",
@@ -315,7 +336,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Computer Sciences and Engineering",
@@ -323,7 +345,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Electrical and Electronics Engineering",
@@ -331,7 +354,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Genetics and Bioengineering",
@@ -339,7 +363,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Mechanical Engineering",
@@ -347,7 +372,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Software Engineering",
@@ -355,7 +381,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Computer Sciences and Engineering",
@@ -363,7 +390,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Electrical and Electronics Engineering",
@@ -371,7 +399,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Genetics and Bioengineering",
@@ -379,7 +408,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Industrial Engineering",
@@ -387,7 +417,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Mechanical Engineering",
@@ -395,9 +426,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
     },
     {
       "name": "Fakultet umjetnosti i društvenih nauka",
@@ -407,8 +440,6 @@
       "phone": "+387 33 957 300",
       "email": "admission@ius.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Cultural Studies",
@@ -416,7 +447,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "English Language and Literature",
@@ -424,7 +456,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Psychology",
@@ -432,7 +465,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Visual Arts and Visual Communications Design",
@@ -440,7 +474,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "English Language and Literature",
@@ -448,7 +483,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Media and Communication",
@@ -456,7 +492,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Psychology",
@@ -464,7 +501,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Visual Arts and Visual Communications Design",
@@ -472,7 +510,8 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Cultural Studies",
@@ -480,7 +519,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "English Language and Literature",
@@ -488,7 +528,8 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Psychology",
@@ -496,9 +537,11 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
     },
     {
       "name": "Pravni fakultet",
@@ -508,8 +551,6 @@
       "phone": "+387 33 957 485",
       "email": "admission@ius.edu.ba",
       "lastModified": "2026-08-29",
-      "studyProgramsSourceUrl": "https://ius.edu.ba",
-      "studyProgramsLastModified": "2026-08-24",
       "studyPrograms": [
         {
           "name": "Law",
@@ -517,7 +558,8 @@
           "durationYears": 1,
           "ects": 60,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         },
         {
           "name": "Law",
@@ -525,9 +567,11 @@
           "durationYears": 4,
           "ects": 240,
           "language": "engleski",
-          "sourceUrl": "https://ius.edu.ba"
+          "dataSourceUrl": "https://ius.edu.ba",
+          "lastModified": "2026-08-24"
         }
-      ]
+      ],
+      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
     }
   ]
 }
