@@ -34,7 +34,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/grafika/ciklus-i"
+          "sourceUrl": "https://alu.unsa.ba/grafika/"
         },
         {
           "name": "Grafički dizajn",
@@ -42,7 +42,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/graficki-dizajn/ciklus-i"
+          "sourceUrl": "https://alu.unsa.ba/graficki-dizajn/"
         },
         {
           "name": "Interdisciplinarni studij konzervacija i restauracija",
@@ -50,7 +50,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/interdisciplinarni-studijski-program-konzervacija-i-restauracija-i-ciklus"
+          "sourceUrl": "https://alu.unsa.ba/interdisciplinarni-studijski-program-konzervacija-i-restauracija/"
         },
         {
           "name": "Kiparstvo",
@@ -58,7 +58,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/kiparstvo/ciklus-i"
+          "sourceUrl": "https://alu.unsa.ba/kiparstvo-3/"
         },
         {
           "name": "Nastavnički",
@@ -66,7 +66,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/nastavnicki/ciklus-i"
+          "sourceUrl": "https://alu.unsa.ba/nastavnicki-odsjek/"
         },
         {
           "name": "Produkt dizajn",
@@ -74,7 +74,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/produkt-dizajn/ciklus-i"
+          "sourceUrl": "https://alu.unsa.ba/produkt-dizajn/"
         },
         {
           "name": "Slikarstvo",
@@ -82,7 +82,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/slikarstvo/ciklus-i"
+          "sourceUrl": "https://alu.unsa.ba/slikarstvo/"
         },
         {
           "name": "Fotografija",
@@ -97,7 +97,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/grafika/ciklus-ii"
+          "sourceUrl": "https://alu.unsa.ba/grafika/"
         },
         {
           "name": "Grafički dizajn",
@@ -105,7 +105,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/graficki-dizajn/ciklus-ii"
+          "sourceUrl": "https://alu.unsa.ba/graficki-dizajn/"
         },
         {
           "name": "Interdisciplinarni studij konzervacija i restauracija",
@@ -113,7 +113,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/content/interdisciplinarni-studijski-program-konzervacija-i-restauracija-ii-ciklus"
+          "sourceUrl": "https://alu.unsa.ba/interdisciplinarni-studijski-program-konzervacija-i-restauracija/"
         },
         {
           "name": "Kiparstvo",
@@ -121,7 +121,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/kiparstvo/ciklus-ii"
+          "sourceUrl": "https://alu.unsa.ba/kiparstvo-3/"
         },
         {
           "name": "Nastavnički",
@@ -129,7 +129,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/nastavnicki/ciklus-ii-nastavnicki"
+          "sourceUrl": "https://alu.unsa.ba/nastavnicki-odsjek/"
         },
         {
           "name": "Produkt dizajn",
@@ -137,7 +137,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/produkt-dizajn/ciklus-ii"
+          "sourceUrl": "https://alu.unsa.ba/produkt-dizajn/"
         },
         {
           "name": "Slikarstvo",
@@ -145,7 +145,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.alu.unsa.ba/odsjek/slikarstvo/ciklus-ii"
+          "sourceUrl": "https://alu.unsa.ba/slikarstvo/"
         }
       ]
     },
@@ -249,7 +249,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://af.unsa.ba/s-i-ciklus.php"
+          "sourceUrl": "https://af.unsa.ba/i-ciklus-bakalaureat/"
         },
         {
           "name": "Arhitektura i urbanizam",
@@ -257,7 +257,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://af.unsa.ba/s-ii-ciklus.php"
+          "sourceUrl": "https://af.unsa.ba/ii-ciklus-master-studij/"
         },
         {
           "name": "Arhitektura i urbanizam",
@@ -265,7 +265,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://af.unsa.ba/s-iii-ciklus.php"
+          "sourceUrl": "https://af.unsa.ba/iii-ciklus-doktorski-studij/"
         }
       ]
     },
@@ -286,7 +286,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/ects_2015.pdf"
+          "sourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/ects_2015_3_1.pdf"
         },
         {
           "name": "Menadžment",
@@ -294,7 +294,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/ects_2015.pdf"
+          "sourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/ects_2015_3_1.pdf"
         },
         {
           "name": "Visoka poslovna škola",
@@ -302,7 +302,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/ects_2015.pdf"
+          "sourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/ects_2015_3_1.pdf"
         },
         {
           "name": "The Study Programme in Cooperation with Griffith College Dublin, Ireland (Sarajevo Business School)",
@@ -326,7 +326,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/ects_2015.pdf"
+          "sourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/ects_2015_3_1.pdf"
         },
         {
           "name": "Menadžment",
@@ -334,7 +334,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/ects_2015.pdf"
+          "sourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/ects_2015_3_1.pdf"
         },
         {
           "name": "Zajednički master program u saradnju sa Ekonomskim fakultetom Univerzitet u Ljubljani menadžmenta “Javni sektor i ekonomija okoliša”",
@@ -378,7 +378,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "http://www.efsa.unsa.ba/ef/docs/Doktorski%20studij/Doktorski-Course-Catalogue_2012.pdf"
+          "sourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/doktorski-course-catalogue_2012_0.pdf"
         },
         {
           "name": "Management/Business",
@@ -386,7 +386,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "engleski",
-          "sourceUrl": "http://www.efsa.unsa.ba/ef/docs/Doktorski%20studij/Doktorski-Course-Catalogue_2012.pdf"
+          "sourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/doktorski-course-catalogue_2012_0.pdf"
         },
         {
           "name": "Poslovanje i informacione tehnologije",
@@ -416,7 +416,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=134"
+          "sourceUrl": "https://etf.unsa.ba/prvi-ciklus"
         },
         {
           "name": "Data Science and Artificial Intelligence",
@@ -431,7 +431,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=134"
+          "sourceUrl": "https://etf.unsa.ba/prvi-ciklus"
         },
         {
           "name": "Računarstvo i informatika",
@@ -439,7 +439,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=134"
+          "sourceUrl": "https://etf.unsa.ba/prvi-ciklus"
         },
         {
           "name": "Telekomunikacije",
@@ -447,7 +447,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=134"
+          "sourceUrl": "https://etf.unsa.ba/prvi-ciklus"
         },
         {
           "name": "Automatika i elektronika",
@@ -455,7 +455,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=135"
+          "sourceUrl": "https://etf.unsa.ba/drugi-ciklus"
         },
         {
           "name": "Elektroenergetika",
@@ -463,7 +463,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=135"
+          "sourceUrl": "https://etf.unsa.ba/drugi-ciklus"
         },
         {
           "name": "Master program Softver inženjering",
@@ -479,7 +479,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=135"
+          "sourceUrl": "https://etf.unsa.ba/drugi-ciklus"
         },
         {
           "name": "Sigurnost informacija",
@@ -495,7 +495,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=135"
+          "sourceUrl": "https://etf.unsa.ba/drugi-ciklus"
         },
         {
           "name": "Automatika i elektronika",
@@ -503,7 +503,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=461"
+          "sourceUrl": "https://etf.unsa.ba/treci-ciklus"
         },
         {
           "name": "Elektroenergetika",
@@ -511,7 +511,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=461"
+          "sourceUrl": "https://etf.unsa.ba/treci-ciklus"
         },
         {
           "name": "Računarstvo i informatika",
@@ -519,7 +519,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=461"
+          "sourceUrl": "https://etf.unsa.ba/treci-ciklus"
         },
         {
           "name": "Telekomunikacije",
@@ -527,7 +527,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.etf.unsa.ba/index.php?id=461"
+          "sourceUrl": "https://etf.unsa.ba/treci-ciklus"
         }
       ]
     },
@@ -774,7 +774,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.fasto.unsa.ba/index.php/2014-10-21-13-06-33/2014-10-21-13-28-42/menadzment-u-sportu-180-ects"
+          "sourceUrl": "https://fasto.unsa.ba/menadzment-u-sportu-sportskom-turizmu-i-rekreaciji-i-ciklus/"
         },
         {
           "name": "Opšti studij",
@@ -782,7 +782,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.fasto.unsa.ba/index.php/2014-10-21-13-06-33/2014-10-21-13-28-42/opci-smjer-240-ects"
+          "sourceUrl": "https://fasto.unsa.ba/i-ciklus/"
         },
         {
           "name": "Menadžment u sportu",
@@ -790,7 +790,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.fasto.unsa.ba/index.php/2014-10-21-13-06-33/2014-10-21-13-35-57/menadzment-u-sportu-120-ects"
+          "sourceUrl": "https://fasto.unsa.ba/menadzment-u-sportu-sportskom-turizmu-i-rekreaciji-ii-ciklus/"
         },
         {
           "name": "Opći studij",
@@ -798,7 +798,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.fasto.unsa.ba/index.php/2014-10-21-13-06-33/2014-10-21-13-35-57/opci-smjer-60-ects"
+          "sourceUrl": "https://fasto.unsa.ba/ii-ciklus/"
         },
         {
           "name": "Doktorski studij iz oblasti „Kineziologija“",
@@ -806,7 +806,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.fasto.unsa.ba/index.php/2014-10-21-13-06-33/2014-10-21-13-43-49/doktorski-studij-iz-oblasti-kineziologije"
+          "sourceUrl": "https://fasto.unsa.ba/doktorski-studij-iz-oblasti-kineziologije/"
         }
       ]
     },
@@ -858,7 +858,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.masterprogrami.edu.ba/korporativna-sigurnost"
+          "sourceUrl": "https://brucoskivodic.fkn.unsa.ba/II-ciklus-studija/korporativna-sigurnost-i-zastita.php"
         },
         {
           "name": "Kriminalistika",
@@ -866,7 +866,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.masterprogrami.edu.ba/kriminalistika"
+          "sourceUrl": "https://brucoskivodic.fkn.unsa.ba/II-ciklus-studija/kriminalistika.php"
         },
         {
           "name": "Kriminologija",
@@ -874,7 +874,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.masterprogrami.edu.ba/kriminologija"
+          "sourceUrl": "https://brucoskivodic.fkn.unsa.ba/II-ciklus-studija/kriminologija.php"
         },
         {
           "name": "Krizni menadžment u sigurnosnom sektoru",
@@ -882,7 +882,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.masterprogrami.edu.ba/krizni-menadzment"
+          "sourceUrl": "https://brucoskivodic.fkn.unsa.ba/II-ciklus-studija/krizni-menadzment-u-sigurnosnom-sektoru.php"
         },
         {
           "name": "Sigurnosne studije",
@@ -890,7 +890,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.masterprogrami.edu.ba/sigurnosne-studije"
+          "sourceUrl": "https://brucoskivodic.fkn.unsa.ba/II-ciklus-studija/sigurnosne-studije.php"
         },
         {
           "name": "Kriminalistika",
@@ -898,7 +898,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fkn.unsa.ba/nastavni-proces"
+          "sourceUrl": "https://brucoskivodic.fkn.unsa.ba/III-ciklus-studija/iii-ciklus-studija.php"
         },
         {
           "name": "Kriminologija",
@@ -906,7 +906,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fkn.unsa.ba/nastavni-proces"
+          "sourceUrl": "https://brucoskivodic.fkn.unsa.ba/III-ciklus-studija/iii-ciklus-studija.php"
         },
         {
           "name": "Sigurnosne studije",
@@ -914,7 +914,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fkn.unsa.ba/nastavni-proces"
+          "sourceUrl": "https://brucoskivodic.fkn.unsa.ba/III-ciklus-studija/iii-ciklus-studija.php"
         }
       ]
     },
@@ -935,7 +935,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fsk.unsa.ba/studijski-programi",
+          "sourceUrl": "https://fsk.unsa.ba/studij/",
           "tracks": [
             {
               "name": "Kompjuterske i informacijske tehnologije"
@@ -954,7 +954,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fsk.unsa.ba/studijski-programi",
+          "sourceUrl": "https://fsk.unsa.ba/studij/",
           "tracks": [
             {
               "name": "Cestovni saobraćaj"
@@ -973,7 +973,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fsk.unsa.ba/studijski-programi",
+          "sourceUrl": "https://fsk.unsa.ba/studij/",
           "tracks": [
             {
               "name": "Kompjuterske i informacijske tehnologije"
@@ -992,7 +992,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fsk.unsa.ba/studijski-programi",
+          "sourceUrl": "https://fsk.unsa.ba/studij/",
           "tracks": [
             {
               "name": "Cestovni saobraćaj"
@@ -1011,7 +1011,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fsk.unsa.ba/studijski-programi"
+          "sourceUrl": "https://fsk.unsa.ba/studij/"
         },
         {
           "name": "Oblast komunikacijske tehnologije",
@@ -1019,7 +1019,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fsk.unsa.ba/studijski-programi"
+          "sourceUrl": "https://fsk.unsa.ba/studij/"
         },
         {
           "name": "Oblast poštanske tehnologije",
@@ -1027,7 +1027,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fsk.unsa.ba/studijski-programi"
+          "sourceUrl": "https://fsk.unsa.ba/studij/"
         },
         {
           "name": "Oblast zrakoplovni saobraćaj",
@@ -1035,7 +1035,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fsk.unsa.ba/studijski-programi"
+          "sourceUrl": "https://fsk.unsa.ba/studij/"
         },
         {
           "name": "Oblast željeznički saobraćaj",
@@ -1043,7 +1043,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fsk.unsa.ba/studijski-programi"
+          "sourceUrl": "https://fsk.unsa.ba/studij/"
         }
       ]
     },
@@ -1144,7 +1144,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/studijski-program-babicarstvo-primaljstvo"
+          "sourceUrl": "https://www.fzs.unsa.ba/babicarstvo-primaljstvo-1-ciklus/"
         },
         {
           "name": "Fizikalna terapija",
@@ -1152,7 +1152,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/edukacija/1-ciklus/fizikalna-terapija"
+          "sourceUrl": "https://www.fzs.unsa.ba/fizioterapija-1-ciklus/"
         },
         {
           "name": "Laboratorijske tehnologije",
@@ -1160,7 +1160,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/edukacija/1-ciklus/laboratorijske-tehnologije"
+          "sourceUrl": "https://www.fzs.unsa.ba/laboratorijske-tehnologije-1-ciklus/"
         },
         {
           "name": "Radiološke tehnologije",
@@ -1168,7 +1168,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/edukacija/1-ciklus/radioloske-tehnologije"
+          "sourceUrl": "https://www.fzs.unsa.ba/radioloske-tehnologije-1-ciklus/"
         },
         {
           "name": "Sanitarno inžinjerstvo",
@@ -1176,7 +1176,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/edukacija/1-ciklus/sanitarno-inzinjerstvo"
+          "sourceUrl": "https://www.fzs.unsa.ba/sanitarno-inzinjerstvo-1-ciklus/"
         },
         {
           "name": "Zdravstvena njega",
@@ -1184,7 +1184,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/edukacija/1-ciklus/zdravstvena-njega"
+          "sourceUrl": "https://www.fzs.unsa.ba/zdravstvena-njega-1-ciklus/"
         },
         {
           "name": "Zdravstveni nutricionizam i dijetetika",
@@ -1192,7 +1192,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/studijski-program-zdravstveni-nutricionizam-i-dietetika"
+          "sourceUrl": "https://www.fzs.unsa.ba/zdravstveni-nutricionizam-i-dijetetika-1-ciklus/"
         },
         {
           "name": "Fizikalna terapija",
@@ -1200,7 +1200,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/edukacija/ii-ciklus/fizikalna-terapija"
+          "sourceUrl": "https://www.fzs.unsa.ba/fizioterapija-2-ciklus/"
         },
         {
           "name": "Laboratorijske tehnologije",
@@ -1208,7 +1208,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/edukacija/ii-ciklus/laboratorijske-tehnologije"
+          "sourceUrl": "https://www.fzs.unsa.ba/laboratorijske-tehnologije-2-ciklus/"
         },
         {
           "name": "Radiološke tehnologije",
@@ -1216,7 +1216,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/edukacija/ii-ciklus/radioloske-tehnologije"
+          "sourceUrl": "https://www.fzs.unsa.ba/radioloske-tehnologije-2-ciklus/"
         },
         {
           "name": "Sanitarno inžinjerstvo",
@@ -1224,7 +1224,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/edukacija/ii-ciklus/sanitarno-inzinjerstvo"
+          "sourceUrl": "https://www.fzs.unsa.ba/sanitarno-inzinjerstvo-2-ciklus/"
         },
         {
           "name": "Zdravstvena njega",
@@ -1232,7 +1232,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://www.fzs.unsa.ba/edukacija/ii-ciklus/zdravstvena-njega"
+          "sourceUrl": "https://www.fzs.unsa.ba/zdravstvena-njega-2-ciklus/"
         }
       ]
     },
@@ -1253,7 +1253,7 @@
           "durationYears": 5,
           "ects": 300,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://ffsa.unsa.ba/wp-content/uploads/2017/12/Nastavni-plan-i-program-ECTS-katalog-2015.pdf"
+          "sourceUrl": "https://ffsa.unsa.ba/podaci/Nastava/I_II_ciklus/2024-2025/Nastavni_plan_i_program_2015-2016_katalog_predmeta.pdf"
         },
         {
           "name": "Farmaceutska istraživanja",
@@ -1261,7 +1261,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "https://ffsa.unsa.ba/wp-content/uploads/2014/03/NASTAVNI-PLAN-I-PROGRAM-III-CIKLUSA-Farmaceutska-istra%C5%BEivanja-1.pdf"
+          "sourceUrl": "https://ffsa.unsa.ba/index.php/studij/iii-ciklus-studija-doktorski-studij/iii-ciklus-studija-doktorski-studij-dokumenti/nastavni-plan-i-program-2023-2024"
         }
       ]
     },
@@ -1282,7 +1282,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i arapski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Arapski jezik i književnost i engleski jezik i književnost",
@@ -1290,7 +1290,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, arapski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Arapski jezik i književnost i filozofija",
@@ -1298,7 +1298,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i arapski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Arapski jezik i književnost i francuski jezik i književnost",
@@ -1306,7 +1306,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, arapski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Arapski jezik i književnost i pedagogija",
@@ -1314,7 +1314,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i arapski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Arapski jezik i književnost i perzijski jezik i književnost",
@@ -1322,7 +1322,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, arapski i perzijski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Arapski jezik i književnost i turski jezik i književnost",
@@ -1330,7 +1330,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, arapski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Arheologija",
@@ -1338,7 +1338,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-30-25"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/"
         },
         {
           "name": "Arheologija i bosanski, hrvatski i srpski jezik",
@@ -1346,7 +1346,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-30-25"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/"
         },
         {
           "name": "Arheologija i historija",
@@ -1354,7 +1354,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-30-25"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/"
         },
         {
           "name": "Arheologija i historija umjetnosti",
@@ -1362,7 +1362,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-30-25"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/"
         },
         {
           "name": "Arheologija i italijanski jezik i književnost",
@@ -1370,7 +1370,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-30-25"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/"
         },
         {
           "name": "Bibliotekarstvo i bosanski, hrvatski i srpski jezik",
@@ -1378,7 +1378,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Bibliotekarstvo i engleski jezik i književnost",
@@ -1386,7 +1386,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Bibliotekarstvo i historija",
@@ -1394,7 +1394,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Bibliotekarstvo i njemački jezik i književnost",
@@ -1402,7 +1402,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i njemački",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Bosanski, hrvatski i engleski jezik i književnost",
@@ -1410,7 +1410,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi"
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/"
         },
         {
           "name": "Bosanski, hrvatski i njemački jezik i književnost",
@@ -1418,7 +1418,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i njemački",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi"
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/"
         },
         {
           "name": "Bosanski, hrvatski i srpski jezik i arapski jezik i književnost",
@@ -1426,7 +1426,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i arapski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi"
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/"
         },
         {
           "name": "Bosanski, hrvatski i srpski jezik i bibliotekarstvo",
@@ -1434,7 +1434,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "bosanski, hrvatski i srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi"
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/"
         },
         {
           "name": "Bosanski, hrvatski i srpski jezik i italijanski jezik i književnost",
@@ -1442,7 +1442,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi"
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/"
         },
         {
           "name": "Bosanski, hrvatski i srpski jezik i književnosti naroda Bosne i Hercegovine",
@@ -1450,7 +1450,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "bosanski, hrvatski i srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi"
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/"
         },
         {
           "name": "Bosanski, hrvatski i srpski jezik i pedagogija",
@@ -1458,7 +1458,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "bosanski, hrvatski i srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi"
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/"
         },
         {
           "name": "Bosanski, hrvatski i srpski jezik i turski jezik i književnost",
@@ -1466,7 +1466,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi"
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/"
         },
         {
           "name": "Engleski jezik i književnost",
@@ -1474,7 +1474,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Engleski jezik i književnost i arapski jezik i književnost",
@@ -1482,7 +1482,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, engleski i arapski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Engleski jezik i književnost i bibliotekarstvo",
@@ -1490,7 +1490,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Engleski jezik i književnost i bosanski, hrvatski i srpski jezik",
@@ -1498,7 +1498,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Engleski jezik i književnost i francuski jezik i književnost",
@@ -1506,7 +1506,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, engleski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Engleski jezik i književnost i italijanski jezik i književnost",
@@ -1514,7 +1514,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, engleski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Engleski jezik i književnost i latinski jezik i rimska književnost",
@@ -1522,7 +1522,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, engleski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Engleski jezik i književnost i njemački jezik i književnost",
@@ -1530,7 +1530,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, engleski i njemački",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Engleski jezik i književnost i pedagogija",
@@ -1538,7 +1538,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Engleski jezik i književnost i ruski jezik i književnost",
@@ -1546,7 +1546,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, engleski i ruski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Engleski jezik i književnost i turski jezik i književnost",
@@ -1554,7 +1554,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, engleski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Filozofija",
@@ -1562,7 +1562,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "bosanski, hrvatski i srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-24-43"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/"
         },
         {
           "name": "Filozofija i historija umjetnosti",
@@ -1570,7 +1570,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "bosanski, hrvatski i srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-24-43"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/"
         },
         {
           "name": "Filozofija i italijanski jezik i književnost",
@@ -1578,7 +1578,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-24-43"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/"
         },
         {
           "name": "Filozofija i komparativna književnost",
@@ -1586,7 +1586,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "bosanski, hrvatski i srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-24-43"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/"
         },
         {
           "name": "Filozofija i njemački jezik i književnost",
@@ -1594,7 +1594,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i njemački",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-24-43"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/"
         },
         {
           "name": "Filozofija i sociologija",
@@ -1602,7 +1602,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "bosanski, hrvatski i srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-24-43"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/"
         },
         {
           "name": "Francuski jezik i kjiževnost i njemački jezik i književnost",
@@ -1610,7 +1610,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, francuski i njemački",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Francuski jezik i kjiževnost i ruski jezik i književnost",
@@ -1618,7 +1618,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, francuski i ruski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Francuski jezik i književnost",
@@ -1626,7 +1626,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Francuski jezik i književnost i bosanski, hrvatski i srpski jezik",
@@ -1634,7 +1634,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Francuski jezik i književnost i filozofija",
@@ -1642,7 +1642,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Francuski jezik i književnost i italijanski jezik i književnost",
@@ -1650,7 +1650,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, francuski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Francuski jezik i književnost i latinski jezik i rimska književnost",
@@ -1658,7 +1658,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, francuski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Francuski jezik i književnost i pedagogija",
@@ -1666,7 +1666,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Francuski jezik i književnost i turski jezik i književnost",
@@ -1674,7 +1674,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, francuski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Historija",
@@ -1682,7 +1682,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-27-35"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/"
         },
         {
           "name": "Historija i arheologija",
@@ -1690,7 +1690,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-27-35"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/"
         },
         {
           "name": "Historija i historija umjetnosti",
@@ -1698,7 +1698,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-27-35"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/"
         },
         {
           "name": "Historija i latinski jezik i rimska književnost",
@@ -1706,7 +1706,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-27-35"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/"
         },
         {
           "name": "Historija i sociologija",
@@ -1714,7 +1714,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-27-35"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/"
         },
         {
           "name": "Historija umjetnosti i arapski jezik i književnost",
@@ -1722,7 +1722,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i arapski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Historija umjetnosti i arheologija",
@@ -1730,7 +1730,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Historija umjetnosti i bibliotekarstvo",
@@ -1738,7 +1738,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Historija umjetnosti i filozofija",
@@ -1746,7 +1746,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Historija umjetnosti i francuski jezik i književnost",
@@ -1754,7 +1754,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Historija umjetnosti i historija",
@@ -1762,7 +1762,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Historija umjetnosti i italijanski jezik i književnost",
@@ -1770,7 +1770,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Historija umjetnosti i književnosti naroda Bosne i Hercegovine",
@@ -1778,7 +1778,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Historija umjetnosti i komparativna književnost",
@@ -1786,7 +1786,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Historija umjetnosti i ruski jezik i književnost",
@@ -1794,7 +1794,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i ruski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Historija umjetnosti i sociologija",
@@ -1802,7 +1802,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43"
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/"
         },
         {
           "name": "Italijanski jezik i književnost",
@@ -1810,7 +1810,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Italijanski jezik i književnost i arheologija",
@@ -1818,7 +1818,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Italijanski jezik i književnost i engleski jezik i književnost",
@@ -1826,7 +1826,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, italijanski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Italijanski jezik i književnost i francuski jezik i književnost",
@@ -1834,7 +1834,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, italijanski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Italijanski jezik i književnost i historija umjetnosti",
@@ -1842,7 +1842,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Italijanski jezik i književnost i komparativna književnost",
@@ -1850,7 +1850,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Italijanski jezik i književnost i latinski jezik i rimska književnost",
@@ -1858,7 +1858,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, italijanski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Italijanski jezik i književnost i sociologija",
@@ -1866,7 +1866,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Književnosti naroda Bosne i Hercegovine",
@@ -1874,7 +1874,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-36-41"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/"
         },
         {
           "name": "Književnosti naroda Bosne i Hercegovine i bibliotekarstvo",
@@ -1882,7 +1882,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-36-41"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/"
         },
         {
           "name": "Književnosti naroda Bosne i Hercegovine i bosanski, hrvatski i srpski jezik",
@@ -1890,7 +1890,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-36-41",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/",
           "tracks": [
             {
               "name": "Nastavnički"
@@ -1903,7 +1903,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-36-41"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/"
         },
         {
           "name": "Komparativna književnost",
@@ -1911,7 +1911,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Komparativna književnost i bibliotekarstvo",
@@ -1919,7 +1919,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Komparativna književnost i bosanski, hrvatski i srpski jezik",
@@ -1927,7 +1927,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Komparativna književnost i francuski jezik i književnost",
@@ -1935,7 +1935,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Komparativna književnost i historija umjetnosti",
@@ -1943,7 +1943,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Komparativna književnost i ruski jezik i književnost",
@@ -1951,7 +1951,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Komparativna književnost i turski jezik i književnost",
@@ -1959,7 +1959,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Latinski jezik i rimska književnost i bibliotekarstvo",
@@ -1967,7 +1967,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Latinski jezik i rimska književnost i bosanski, hrvatski i srpski jezik",
@@ -1975,7 +1975,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Latinski jezik i rimska književnost i engleski jezik i književnost",
@@ -1983,7 +1983,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, latinski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Latinski jezik i rimska književnost i francuski jezik i književnost",
@@ -1991,7 +1991,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, latinski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Latinski jezik i rimska književnost i historija",
@@ -1999,7 +1999,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Latinski jezik i rimska književnost i historija umjetnosti",
@@ -2007,7 +2007,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Latinski jezik i rimska književnost i italijanski jezik i književnost",
@@ -2015,7 +2015,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, latinski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Latinski jezik i rimska književnost i pedagogija",
@@ -2023,7 +2023,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Latinski jezik i rimska književnost i turski jezik i književnost",
@@ -2031,7 +2031,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, latinski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Njemački jezik i književnost",
@@ -2039,7 +2039,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i njemački",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-32-30"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/"
         },
         {
           "name": "Njemački jezik i književnost i bibliotekarstvo",
@@ -2047,7 +2047,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i njemački",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-32-30"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/"
         },
         {
           "name": "Njemački jezik i književnost i engleski jezik i književnost",
@@ -2055,7 +2055,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, njemački i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/"
         },
         {
           "name": "Njemački jezik i književnost i italijanski jezik i književnost",
@@ -2063,7 +2063,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, njemački i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-32-30"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/"
         },
         {
           "name": "Njemački jezik i književnost i književnosti naroda Bosne i Hercegovine",
@@ -2071,7 +2071,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i njemački",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-32-30"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/"
         },
         {
           "name": "Njemački jezik i književnost i latinski jezik i rimska književnost",
@@ -2079,7 +2079,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, njemački i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-32-30"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/"
         },
         {
           "name": "Njemački jezik i književnost i ruski jezik i književnost",
@@ -2087,7 +2087,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, njemački i ruski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-32-30"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/"
         },
         {
           "name": "Njemački jezik i književnost i turski jezik i književnost",
@@ -2095,7 +2095,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, njemački i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-32-30"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/"
         },
         {
           "name": "Pedagogija",
@@ -2103,7 +2103,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-44-33"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/"
         },
         {
           "name": "Pedagogija i bibliotekarstvo",
@@ -2111,7 +2111,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-44-33"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/"
         },
         {
           "name": "Pedagogija i bosanski, hrvatski i srpski jezik",
@@ -2119,7 +2119,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-44-33"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/"
         },
         {
           "name": "Pedagogija i engleski jezik i književnost",
@@ -2127,7 +2127,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-44-33"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/"
         },
         {
           "name": "Pedagogija i filozofija",
@@ -2135,7 +2135,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-44-33"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/"
         },
         {
           "name": "Pedagogija i italijanski jezik i književnost",
@@ -2143,7 +2143,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-44-33"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/"
         },
         {
           "name": "Pedagogija i sociologija",
@@ -2151,7 +2151,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-44-33"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/"
         },
         {
           "name": "Perzijski jezik i književnost",
@@ -2159,7 +2159,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i perzijski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Perzijski jezik i književnost i arapski jezik i književnost",
@@ -2167,7 +2167,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, perzijski i arapski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Perzijski jezik i književnost i italijanski jezik i književnost",
@@ -2175,7 +2175,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, perzijski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Perzijski jezik i književnost i pedagogija",
@@ -2183,7 +2183,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i perzijski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Perzijski jezik i književnost i turski jezik i književnost",
@@ -2191,7 +2191,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, perzijski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Psihologija",
@@ -2199,7 +2199,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-46-21"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-psihologiju/"
         },
         {
           "name": "Ruski jezik i književnost",
@@ -2207,7 +2207,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i ruski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-23-03-35"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-slavenske-jezike-knjizevnosti/"
         },
         {
           "name": "Ruski jezik i književnost i engleski jezik i književnost",
@@ -2215,7 +2215,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, ruski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-23-03-35"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-slavenske-jezike-knjizevnosti/"
         },
         {
           "name": "Ruski jezik i književnost i književnosti naroda Bosne i Hercegovine",
@@ -2223,7 +2223,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i ruski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-23-03-35"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-slavenske-jezike-knjizevnosti/"
         },
         {
           "name": "Sociologija",
@@ -2231,7 +2231,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-11-07-21-00"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/"
         },
         {
           "name": "Sociologija i bibliotekarstvo",
@@ -2239,7 +2239,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-11-07-21-00"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/"
         },
         {
           "name": "Sociologija i francuski jezik i književnost",
@@ -2247,7 +2247,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-11-07-21-00"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/"
         },
         {
           "name": "Sociologija i historija umjetnosti",
@@ -2255,7 +2255,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-11-07-21-00"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/"
         },
         {
           "name": "Sociologija i književnosti naroda Bosne i Hercegovine",
@@ -2263,7 +2263,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-11-07-21-00"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/"
         },
         {
           "name": "Sociologija i komparativna književnost",
@@ -2271,7 +2271,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-11-07-21-00"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/"
         },
         {
           "name": "Sociologije i etnologije",
@@ -2279,7 +2279,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-11-07-21-00"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/"
         },
         {
           "name": "Specijalne pedagogije",
@@ -2287,7 +2287,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-44-33"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/"
         },
         {
           "name": "Turski jezik i književnost",
@@ -2295,7 +2295,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i arapski jezik i književnost",
@@ -2303,7 +2303,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i arheologija",
@@ -2311,7 +2311,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i bibliotekarstvo",
@@ -2319,7 +2319,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i bosanski, hrvatski i srpski jezik",
@@ -2327,7 +2327,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i engleski jezik i književnost",
@@ -2335,7 +2335,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i francuski jezik i književnost",
@@ -2343,7 +2343,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i historija umjetnosti",
@@ -2351,7 +2351,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i književnosti naroda Bosne i Hercegovine",
@@ -2359,7 +2359,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i latinski jezik i rimska književnost",
@@ -2367,7 +2367,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i perzijski jezik i književnost",
@@ -2375,7 +2375,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i ruski jezik i književnost",
@@ -2383,7 +2383,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski, turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Arapski jezik i književnost i turski jezik i književnost",
@@ -2391,7 +2391,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski, arapski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Arapski jezik i književnost",
@@ -2399,7 +2399,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i arapski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "tracks": [
             {
               "name": "Opći"
@@ -2412,7 +2412,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-30-25"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/"
         },
         {
           "name": "Arheologija i historija umjetnosti (Moderna i savremena umjetnost)",
@@ -2420,7 +2420,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-30-25"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/"
         },
         {
           "name": "Arheologija i komparativna književnost",
@@ -2428,7 +2428,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-30-25"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/"
         },
         {
           "name": "Bibliotekarstvo i historija umjetnosti Umjetnost na tlu Bosne i Hercegovine od 15. stoljeća do 1918. godine",
@@ -2436,7 +2436,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Bibliotekarstvo i književnosti naroda Bosne i Hercegovine",
@@ -2444,7 +2444,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Bibliotekarstvo i pedagogija",
@@ -2452,7 +2452,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Bosanski, hrvatski i srpski jezik i italijanski jezik i književnosti",
@@ -2460,7 +2460,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi"
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/"
         },
         {
           "name": "Bosanski, hrvatski i srpski jezik i jezik i francuski jezik i književnost",
@@ -2468,7 +2468,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi"
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/"
         },
         {
           "name": "Bosanski, hrvatski i srpski jezik i književnosti naroda Bosne i Hercegovine",
@@ -2476,7 +2476,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi",
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "tracks": [
             {
               "name": "Nastavnički"
@@ -2489,7 +2489,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/nastavni-planovi-i-programi",
+          "sourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "tracks": [
             {
               "name": "Lektorski"
@@ -2502,7 +2502,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-13-22-32-48",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "tracks": [
             {
               "name": "Književni"
@@ -2524,7 +2524,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-24-43",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "tracks": [
             {
               "name": "Nastavnički"
@@ -2540,7 +2540,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i francuski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Francuski jezik i književnost i italijanski jezik i književnost",
@@ -2548,7 +2548,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski, francuski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Francuski jezik i književnost i latinski jezik i književnost",
@@ -2556,7 +2556,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski, francuski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Historija",
@@ -2564,7 +2564,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-27-35",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/",
           "tracks": [
             {
               "name": "Nastavni"
@@ -2583,7 +2583,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-27-35"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/"
         },
         {
           "name": "Historija umjetnosti",
@@ -2591,7 +2591,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-32-43",
+          "sourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "tracks": [
             {
               "name": "Moderna i savremena umjetnost i bibliotekarstvo"
@@ -2628,7 +2628,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Italijanski jezik i književnost i historija umjetnosti (Umjetnost na tlu Bosne i Hercegovine od 15. stoljeća do 1918. godine)",
@@ -2636,7 +2636,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Književnosti naroda Bosne i Hercegovine i bibliotekarstvo",
@@ -2644,7 +2644,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-36-41"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/"
         },
         {
           "name": "Književnosti naroda Bosne i Hercegovine i bosanski, hrvatski i srpski jezik",
@@ -2652,7 +2652,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-36-41",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/",
           "tracks": [
             {
               "name": "Nastavnički"
@@ -2665,7 +2665,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-36-41",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/",
           "tracks": [
             {
               "name": "Naučni"
@@ -2678,7 +2678,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Komparativna književnost i bibliotekarstvo",
@@ -2686,7 +2686,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/"
         },
         {
           "name": "Komparativna književnost i historija umjetnosti",
@@ -2694,7 +2694,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-39-55",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "tracks": [
             {
               "name": "Umjetnost na tlu Bosne i Hercegovine od 15. stoljeća do 1918. godine"
@@ -2710,7 +2710,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Latinski jezik i rimska književnost i italijanski jezik i književnost",
@@ -2718,7 +2718,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski, latinski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-31"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Latinski jezik i rimska književnost i komparativna književnost",
@@ -2726,7 +2726,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i latinski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-18-00-10-3"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/"
         },
         {
           "name": "Njemački jezik i književnost",
@@ -2734,7 +2734,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i njemački",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-14-00-32-30",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/",
           "tracks": [
             {
               "name": "Književni"
@@ -2750,7 +2750,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-44-33"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/"
         },
         {
           "name": "Pedagogija strukovni studij",
@@ -2758,7 +2758,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-44-33"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/"
         },
         {
           "name": "Perzijski jezik i književnost",
@@ -2766,7 +2766,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i perzijski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Psihologija",
@@ -2774,7 +2774,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-46-21u"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-psihologiju/"
         },
         {
           "name": "Ruski jezik i književnost",
@@ -2782,7 +2782,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i ruski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-23-03-35",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-slavenske-jezike-knjizevnosti/",
           "tracks": [
             {
               "name": "Nastavni"
@@ -2795,7 +2795,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-11-07-21-00",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/",
           "tracks": [
             {
               "name": "Nastavnički"
@@ -2811,7 +2811,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski, turski i arapski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost i italijanski jezik i književnost",
@@ -2819,7 +2819,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski, turski i italijanski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/"
         },
         {
           "name": "Turski jezik i književnost",
@@ -2827,7 +2827,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i turski",
-          "sourceUrl": "http://ff.unsa.ba/index.php/bs/2014-12-15-22-42-27",
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "tracks": [
             {
               "name": "Opći"
@@ -2847,7 +2847,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ff.unsa.ba/files/doktorskiStudiji/19-20/NPP-Doktorski-studij-Arheologija-2019-2020.pdf"
+          "sourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/"
         },
         {
           "name": "Doktorski studij iz historije",
@@ -2970,7 +2970,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://gf.unsa.ba/brosura-geotehnika.pdf"
+          "sourceUrl": "https://gf.unsa.ba/gradjevinarstvo-smjer-geotehnika/"
         },
         {
           "name": "Magistarski studij geodezije i geoinformatike",
@@ -3027,7 +3027,7 @@
           "durationYears": 5,
           "ects": 300,
           "language": "hrvatski",
-          "sourceUrl": "http://kbf.ba/page.php?id=338"
+          "sourceUrl": "https://kbf.unsa.ba/integrirani-filozofsko-teoloski-studij/"
         },
         {
           "name": "Međureligijski studij i izgradnja mira",
@@ -3268,7 +3268,7 @@
           "durationYears": 6,
           "ects": 360,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.mf.unsa.ba/index.php/studijski-programi-i-edukacija/dodiplomski-studij"
+          "sourceUrl": "https://mf.unsa.ba/studij/studiji-medicine/plan-i-program/"
         },
         {
           "name": "Medicine",
@@ -3276,7 +3276,7 @@
           "durationYears": 6,
           "ects": 360,
           "language": "engleski",
-          "sourceUrl": "http://en.mf.unsa.ba/data/Nastavni_plan_i_program_na_engleskom_jeziku.pdf"
+          "sourceUrl": "https://mf.unsa.ba/medical-study-in-english/"
         },
         {
           "name": "Biomedicina i zdravstvo",
@@ -3284,7 +3284,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://mf.unsa.ba/podaci/dokumenti/doktorski/Reformisani_Curriculum_doktorskog_studija.pdf"
+          "sourceUrl": "https://mf.unsa.ba/studij/treci-ciklus/plan-i-program/"
         }
       ]
     },
@@ -3845,7 +3845,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20programi%20ANIMALNA%20PROIZVODNJA-AKVAKULTURA-%20odsjek%20Zootehnika.pdf"
+          "sourceUrl": "https://ppf.unsa.ba/uploads/Dokumenti/ZA%20WEB_studijski%20programi.pdf"
         },
         {
           "name": "Animalna proizvodnja",
@@ -3853,7 +3853,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20programi%20ANIMALNA%20PROIZVODNJA-AKVAKULTURA-%20odsjek%20Zootehnika.pdf"
+          "sourceUrl": "https://ppf.unsa.ba/uploads/Dokumenti/ZA%20WEB_studijski%20programi.pdf"
         },
         {
           "name": "Ekonomika poljoprivrede i prehrambene industrije",
@@ -3941,7 +3941,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20KONTROLA%20KVALITETA%20HRANE%20I%20PICA-II%20ciklus%20studija-odsjek%20Prehrambene%20tehnologije.pdf"
+          "sourceUrl": "https://ppf.unsa.ba/uploads/Silabusi/8.%20II%20KKHiP%20elaborat.pdf"
         },
         {
           "name": "Održivo upravljanje zemljištem i ruralnim prostorom",
@@ -4076,26 +4076,26 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/i-ciklus-studija/biohemija-i-fiziologija",
+          "sourceUrl": "https://biologija.pmf.unsa.ba/prvi-ciklus-studija/",
           "tracks": [
             {
               "name": "Biohemija i fiziologija"
             },
             {
               "name": "Ekologija",
-              "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/i-ciklus-studija/ekologija"
+              "sourceUrl": "https://biologija.pmf.unsa.ba/prvi-ciklus-studija/"
             },
             {
               "name": "Genetika",
-              "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/i-ciklus-studija/genetika"
+              "sourceUrl": "https://biologija.pmf.unsa.ba/prvi-ciklus-studija/"
             },
             {
               "name": "Mikrobiologija",
-              "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/i-ciklus-studija/mikrobiologija"
+              "sourceUrl": "https://biologija.pmf.unsa.ba/prvi-ciklus-studija/"
             },
             {
               "name": "Nastavnički",
-              "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/i-ciklus-studija/nastavnicki"
+              "sourceUrl": "https://biologija.pmf.unsa.ba/prvi-ciklus-studija/"
             }
           ]
         },
@@ -4128,18 +4128,18 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://pmf.unsa.ba/geografija/i-ciklus-studija/nastavni-programi-i-ciklusa/smjer-nastavnicki/",
+          "sourceUrl": "https://geografija.pmf.unsa.ba/prvi-ciklus-studija/nastavni-programi-2024-2025/prvi-ciklus-studija-nastavnicki-smjer/",
           "tracks": [
             {
               "name": "Nastavnički"
             },
             {
               "name": "Regionalno i prostorno planiranje",
-              "sourceUrl": "http://pmf.unsa.ba/geografija/i-ciklus-studija/nastavni-programi-i-ciklusa/smjer-regionalno-i-prostorno-planiranje"
+              "sourceUrl": "https://geografija.pmf.unsa.ba/prvi-ciklus-studija/nastavni-programi-2024-2025/smjer-regionalno-i-prostorno-planiranje/"
             },
             {
               "name": "Turizam i zaštita životne sredine",
-              "sourceUrl": "http://pmf.unsa.ba/geografija/i-ciklus-studija/nastavni-programi-i-ciklusa/smjer-turizam-i-zastita-zivotne-sredine/"
+              "sourceUrl": "https://geografija.pmf.unsa.ba/prvi-ciklus-studija/nastavni-programi-2024-2025/smjer-turizam-i-zastita-zivotne-sredine/"
             }
           ]
         },
@@ -4149,7 +4149,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.pmf.unsa.ba/hemija/index.php/bs/studijski-programi/i-ciklus/kontrola-kvaliteta-i-zastita-okolisa/9-uncategorised/782-plan-i-program-kontrola-kvaliteta-i-zastita-okolisa-i-ciklus-2"
+          "sourceUrl": "https://hemija.pmf.unsa.ba/prvi-ciklus-studija/kontrola-kvaliteta-i-zastita-okolisa-2021-2022/"
         },
         {
           "name": "Hemija Nastavnički",
@@ -4157,7 +4157,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.pmf.unsa.ba/hemija/index.php/bs/studijski-programi/i-ciklus/nastavnicki-smjer/9-uncategorised/781-inovirani-plan-i-program-nastavnicki-smjer-i-ciklus-2"
+          "sourceUrl": "https://hemija.pmf.unsa.ba/prvi-ciklus-studija/nastavnicki-smjer-2021-2022/"
         },
         {
           "name": "Hemija Opći",
@@ -4165,7 +4165,7 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.pmf.unsa.ba/hemija/index.php/bs/studijski-programi/i-ciklus/opsti-smjer/9-uncategorised/780-inovirani-plan-i-program-i-ciklus-opsti-smjer-2"
+          "sourceUrl": "https://hemija.pmf.unsa.ba/prvi-ciklus-studija/opsti-smjer-2021-2022/"
         },
         {
           "name": "Konzervacija i restauracija interdisciplinarni studij",
@@ -4180,26 +4180,26 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://math.pmf.unsa.ba/dodiplomski-studij/matematika-nastavni-smjer.html",
+          "sourceUrl": "https://math.pmf.unsa.ba/prvi-ciklus-studija/nastavnicki-smjer-matematika/",
           "tracks": [
             {
               "name": "Nastavnički"
             },
             {
               "name": "Nastavnički (matematika i informatika)",
-              "sourceUrl": "http://math.pmf.unsa.ba/dodiplomski-studij/matematika-i-informatika-nastavni-smjer.html"
+              "sourceUrl": "https://math.pmf.unsa.ba/prvi-ciklus-studija/nastavnicki-smjer-matematika-i-informatika/"
             },
             {
               "name": "Opći",
-              "sourceUrl": "http://math.pmf.unsa.ba/dodiplomski-studij/teorijska-matematika.html"
+              "sourceUrl": "https://math.pmf.unsa.ba/prvi-ciklus-studija/opci-smjer/"
             },
             {
               "name": "Primijenjena matematika",
-              "sourceUrl": "http://math.pmf.unsa.ba/dodiplomski-studij/primijenjena-matematika.html"
+              "sourceUrl": "https://math.pmf.unsa.ba/prvi-ciklus-studija/primjenjena-matematika/"
             },
             {
               "name": "Teorijska kompjuterska nauka",
-              "sourceUrl": "http://math.pmf.unsa.ba/dodiplomski-studij/teorijska-kompjuterska-nauka.html"
+              "sourceUrl": "https://math.pmf.unsa.ba/prvi-ciklus-studija/kompjuterske-nauke/"
             }
           ]
         },
@@ -4209,26 +4209,26 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/ii-ciklus-studija/biohemija-i-fiziologija",
+          "sourceUrl": "https://biologija.pmf.unsa.ba/drugi-ciklus-studija/",
           "tracks": [
             {
               "name": "Biohemija i fiziologija"
             },
             {
               "name": "Ekologija",
-              "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/ii-ciklus-studija/ekologija"
+              "sourceUrl": "https://biologija.pmf.unsa.ba/drugi-ciklus-studija/"
             },
             {
               "name": "Genetika",
-              "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/ii-ciklus-studija/genetika"
+              "sourceUrl": "https://biologija.pmf.unsa.ba/drugi-ciklus-studija/"
             },
             {
               "name": "Mikrobiologija",
-              "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/ii-ciklus-studija/mikrobiologija"
+              "sourceUrl": "https://biologija.pmf.unsa.ba/drugi-ciklus-studija/"
             },
             {
               "name": "Nastavnički",
-              "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/ii-ciklus-studija/nastavnicki"
+              "sourceUrl": "https://biologija.pmf.unsa.ba/drugi-ciklus-studija/"
             }
           ]
         },
@@ -4255,18 +4255,18 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://pmf.unsa.ba/geografija/ii-ciklus-studija/nastavni-programi-ii-ciklusa/smjer-nastavnicki/",
+          "sourceUrl": "https://geografija.pmf.unsa.ba/drugi-ciklus-studija/nastavni-programi-ii/smjer-nastavnicki/",
           "tracks": [
             {
               "name": "Nastavnički"
             },
             {
               "name": "Regionalno i prostorno planiranje",
-              "sourceUrl": "http://pmf.unsa.ba/geografija/ii-ciklus-studija/nastavni-programi-ii-ciklusa/smjer-regionalno-i-prostorno-planiranje/"
+              "sourceUrl": "https://geografija.pmf.unsa.ba/drugi-ciklus-studija/nastavni-programi-ii/smjer-regionalno-i-prostorno-planiranje/"
             },
             {
               "name": "Turizam i zaštita životne sredine",
-              "sourceUrl": "http://pmf.unsa.ba/geografija/wp-content/uploads//NastavniplanoviIIciklus/Nastavni_plan_II_ciklus_turizam_i_zastita_zivotne_sredine.pdf"
+              "sourceUrl": "https://geografija.pmf.unsa.ba/drugi-ciklus-studija/nastavni-programi-ii/smjer-turizam-i-zastita-zivotne-sredine/"
             }
           ]
         },
@@ -4276,14 +4276,14 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.pmf.unsa.ba/hemija/index.php/bs/studijski-programi/ii-ciklus/nastavnicki-smjer",
+          "sourceUrl": "https://hemija.pmf.unsa.ba/drugi-ciklus-studija/nastavnicki-smjer-2021-2022/",
           "tracks": [
             {
               "name": "Nastavnički"
             },
             {
               "name": "Opći",
-              "sourceUrl": "http://www.pmf.unsa.ba/hemija/index.php/bs/studijski-programi/ii-ciklus/opsti-smjer"
+              "sourceUrl": "https://hemija.pmf.unsa.ba/drugi-ciklus-studija/opsti-smjer-2021-2022/"
             }
           ]
         },
@@ -4293,7 +4293,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.pmf.unsa.ba/hemija/index.php/bs/studijski-programi/ii-ciklus/kkzo"
+          "sourceUrl": "https://hemija.pmf.unsa.ba/drugi-ciklus-studija/kontrola-kvaliteta-i-zastita-okolisa-2021-2022/"
         },
         {
           "name": "Interdisciplinarni studij Konzervacija-restauracija",
@@ -4308,22 +4308,22 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://math.pmf.unsa.ba/postdiplomski-studij/primijenjena-matematika.html",
+          "sourceUrl": "https://math.pmf.unsa.ba/drugi-ciklus-studija/primijenjena-matematika/",
           "tracks": [
             {
               "name": "Primijenjena matematika"
             },
             {
               "name": "Nastavnički",
-              "sourceUrl": "http://math.pmf.unsa.ba/postdiplomski-studij/nastavnicki-smjer.html"
+              "sourceUrl": "https://math.pmf.unsa.ba/drugi-ciklus-studija/nastavnicki-smjer/"
             },
             {
               "name": "Opći",
-              "sourceUrl": "http://math.pmf.unsa.ba/postdiplomski-studij/opci-smjer.html"
+              "sourceUrl": "https://math.pmf.unsa.ba/drugi-ciklus-studija/opci-smjer/"
             },
             {
               "name": "Teorijska kompjuterska nauka",
-              "sourceUrl": "http://math.pmf.unsa.ba/postdiplomski-studij/teorijska-kompjuterska-nauka.html"
+              "sourceUrl": "https://math.pmf.unsa.ba/drugi-ciklus-studija/kompjuterske-nauke/"
             }
           ]
         },
@@ -4333,7 +4333,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.pmf.unsa.ba/biologija/index.php/studijski-programi/iii-ciklus-studija",
+          "sourceUrl": "https://biologija.pmf.unsa.ba/treci-ciklus-studija/",
           "tracks": [
             {
               "name": "Biohemija i fiziologija"
@@ -4368,14 +4368,14 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://pmf.unsa.ba/geografija/iii-ciklus-studija/nastavni-programi/smjer-regionalno-i-prostorno-planiranje/",
+          "sourceUrl": "https://geografija.pmf.unsa.ba/treci-ciklus-studija/nastavni-programi-iii/smjer-regionalno-i-prostorno-planiranje/",
           "tracks": [
             {
               "name": "Regionalno i prostorno planiranje"
             },
             {
               "name": "Turizam i zaštita životne sredine",
-              "sourceUrl": "http://pmf.unsa.ba/geografija/iii-ciklus-studija/nastavni-programi/smjer-turizam-i-zastita-zivotne-sredine/"
+              "sourceUrl": "https://geografija.pmf.unsa.ba/treci-ciklus-studija/nastavni-programi-iii/smjer-turizam-i-zastita-zivotne-sredine/"
             }
           ]
         },
@@ -4385,7 +4385,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.pmf.unsa.ba/hemija/index.php/bs/studijski-programi/iii-ciklus/hemija"
+          "sourceUrl": "https://hemija.pmf.unsa.ba/treci-ciklus-studija/doktorski-studij-hemijskih-nauka/"
         },
         {
           "name": "Matematičke nauke u Jugoistočnoj Evropi",
@@ -4393,7 +4393,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://math.pmf.unsa.ba/doktorski-studij/matematicke-nauke-u-jugoistocnoj-evropi.html"
+          "sourceUrl": "https://math.pmf.unsa.ba/treci-ciklus-studija/matematicke-nauke-u-jugoistocnoj-evropi/"
         },
         {
           "name": "Matematičke nauke u Jugoistočnoj Evropi Primijenjena matematika",
@@ -4401,7 +4401,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://math.pmf.unsa.ba/doktorski-studij/matematicke-nauke-u-jugoistocnoj-evropi.html"
+          "sourceUrl": "https://math.pmf.unsa.ba/treci-ciklus-studija/matematicke-nauke-u-jugoistocnoj-evropi/"
         },
         {
           "name": "Matematičke nauke u Jugoistočnoj Evropi Teorijska kompjuterska nauka",
@@ -4409,7 +4409,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://math.pmf.unsa.ba/doktorski-studij/matematicke-nauke-u-jugoistocnoj-evropi.html"
+          "sourceUrl": "https://math.pmf.unsa.ba/treci-ciklus-studija/matematicke-nauke-u-jugoistocnoj-evropi/"
         },
         {
           "name": "Zajednički doktorski studij Prirodne i matematičke nauke u obrazovanju",
@@ -4417,14 +4417,14 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://www.pmf.unsa.ba/hemija/index.php/bs/studijski-programi/iii-ciklus/prirodne-i-matematicke-nauke-u-obrazovanju",
+          "sourceUrl": "https://hemija.pmf.unsa.ba/treci-ciklus-studija/hemija-u-obrazovanju/",
           "tracks": [
             {
               "name": "Biologija"
             },
             {
               "name": "Fizika",
-              "sourceUrl": "http://www.pmf.unsa.ba/fizika/index.php/bs/treci-ciklus"
+              "sourceUrl": "https://fizika.pmf.unsa.ba/iii-ciklus-studija/fizika-u-obrazovanju/"
             },
             {
               "name": "Geografija",
@@ -4435,7 +4435,7 @@
             },
             {
               "name": "Matematika",
-              "sourceUrl": "http://math.pmf.unsa.ba/doktorski-studij/prirodne-i-matematicke-nauke-u-obrazovanju.html"
+              "sourceUrl": "https://math.pmf.unsa.ba/treci-ciklus-studija/prirodne-i-matematicke-nauke-u-obrazovanju/"
             }
           ]
         },
@@ -4487,7 +4487,7 @@
           "durationYears": 6,
           "ects": 360,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://sf.unsa.ba/bs/bolonjski-studij/"
+          "sourceUrl": "https://sf.unsa.ba/integrirani-studij-i-i-ii-ciklusa/"
         },
         {
           "name": "Doktorski studij",
@@ -4495,7 +4495,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://sf.unsa.ba/bs/studij-i-programi/doktorski/"
+          "sourceUrl": "https://sf.unsa.ba/treci-ciklus-studija-doktorski-studij/"
         }
       ]
     },
@@ -4516,7 +4516,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://sfsa.unsa.ba/dokumenti/katalog%20I%20ciklus/I%20ciklus%20hortikultura%2020172018.pdf"
+          "sourceUrl": "https://sfsa.unsa.ba/studij/i-ciklus-bachelor/i-ciklus-hortikultura/"
         },
         {
           "name": "Šumarstvo",
@@ -4524,7 +4524,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://sfsa.unsa.ba/dokumenti/katalog%20I%20ciklus/I%20ciklus%20sumarstvo%2020172018.pdf"
+          "sourceUrl": "https://sfsa.unsa.ba/studij/i-ciklus-bachelor/i-ciklus-sumarstvo/"
         },
         {
           "name": "Održivo upravljanje šumskim ekosistemima",
@@ -4532,7 +4532,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://sfsa.unsa.ba/dokumenti/katalog%20II%20ciklus/IIcik20172018sumarstvo.pdf"
+          "sourceUrl": "https://sfsa.unsa.ba/studij/ii-ciklus-master-studij/ii-ciklus-sumarstvo/"
         },
         {
           "name": "Pejsažna arhitektura",
@@ -4540,7 +4540,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://sfsa.unsa.ba/dokumenti/katalog%20II%20ciklus/IIcik20172018hortikultura.pdf"
+          "sourceUrl": "https://sfsa.unsa.ba/studij/ii-ciklus-master-studij/ii-ciklus-hotikultura/"
         },
         {
           "name": "III studija Šumarstvo i Hortikultura",
@@ -4568,7 +4568,7 @@
           "durationYears": 5,
           "ects": 300,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://vfs.unsa.ba/student/VFS_stud_vodic_BOS_2018_ver_17012018.pdf"
+          "sourceUrl": "https://vfs.unsa.ba/portal/nastavni-plan-i-program-integriranog-studija/"
         },
         {
           "name": "Veterinarska medicina i javno zdravstvo",
@@ -4576,7 +4576,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski",
-          "sourceUrl": "http://vfs.unsa.ba/web/index.php/nastava/doktorski-studij/opce-informacije"
+          "sourceUrl": "https://vfs.unsa.ba/portal/doktorski-studij-opce-informacije/"
         }
       ]
     },
@@ -4619,7 +4619,7 @@
           "name": "Master studij Evropske studije",
           "cycle": "SECOND",
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://cis.unsa.ba/bs/programi/magistarski/evropske-studije/"
+          "sourceUrl": "https://cis.unsa.ba/bhs/programi/magistarski/evropske-studije/"
         },
         {
           "name": "Master studij Jedinstveno zdravlje",
@@ -4627,7 +4627,7 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://cis.unsa.ba/bs/programi/magistarski/jedinstveno-zdravlje/"
+          "sourceUrl": "https://cis.unsa.ba/bhs/programi/magistarski/jedinstveno-zdravlje/"
         },
         {
           "name": "Master studij Nutricionizam",
@@ -4643,7 +4643,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://cis.unsa.ba/bs/programi/magistarski/rodne-studije/"
+          "sourceUrl": "https://cis.unsa.ba/bhs/programi/magistarski/rodne-studije/"
         },
         {
           "name": "Master studij Upravljanje državom i nevladinim organizacijama",
@@ -4651,7 +4651,7 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://cis.unsa.ba/bs/programi/magistarski/upravljanje-drzavom-i-nevladinim-organizacijama/"
+          "sourceUrl": "https://cis.unsa.ba/bhs/programi/magistarski/upravljanje-drzavom-i-nevladinim-organizacijama/"
         },
         {
           "name": "Međunarodna i regionalna sigurnost",
@@ -4667,7 +4667,7 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Bosanski, hrvatski, srpski i engleski",
-          "sourceUrl": "http://cis.unsa.ba/bs/programi/doktorski/doktorski-studij-rodne-studije/"
+          "sourceUrl": "https://cis.unsa.ba/bhs/programi/doktorski/doktorski-studij-rodne-studije/"
         },
         {
           "name": "Globalne studije",
