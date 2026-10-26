@@ -25,6 +25,32 @@ vi.mock("../../../../src/utils/authClient", () => ({
 
 const user = userEvent.setup();
 
+function givenPendingCounts(ownCount = 0, adminCount = 0) {
+  const changes = (count: number) =>
+    Array.from({ length: count }, (_, i) => ({
+      id: `00000000-0000-4000-8000-00000000000${i.toString()}`,
+      targetType: "UNIVERSITY",
+      typeOfChange: "DELETE",
+      targetId: i + 1,
+      parentId: null,
+      data: {},
+      userId: "test-id",
+      createdAt: "2026-05-06T07:34:01.967Z",
+    }));
+  server.use(
+    http.get("*/users/contribution/pending-changes/universities", () =>
+      HttpResponse.json({ message: "ok", data: changes(ownCount) }),
+    ),
+    http.get("*/users/admin/pending-changes", () =>
+      HttpResponse.json({ message: "ok", data: changes(adminCount) }),
+    ),
+  );
+}
+
+beforeEach(() => {
+  givenPendingCounts();
+});
+
 afterEach(() => {
   vi.restoreAllMocks();
 });
@@ -145,6 +171,89 @@ describe("Profile Component handle logout", () => {
 
     expect(
       await screen.findByText(/Something went wrong during logout./i),
+    ).toBeInTheDocument();
+  });
+});
+
+describe("Profile Component identity and summary", () => {
+  test("shows name, initial-letter avatar, member since, and verified badge", async () => {
+    renderProfile(
+      makeUser({
+        name: "Goran",
+        createdAt: new Date("2026-01-15T00:00:00.000Z"),
+        emailVerified: true,
+      }),
+    );
+
+    expect(await screen.findByText("Goran")).toBeInTheDocument();
+    expect(screen.getByText("G")).toBeInTheDocument();
+    expect(screen.queryByRole("img")).not.toBeInTheDocument();
+    expect(screen.getByText(/Member since/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        new Date("2026-01-15T00:00:00.000Z").toLocaleDateString(),
+      ),
+    ).toBeInTheDocument();
+    expect(screen.getByText("Verified")).toBeInTheDocument();
+  });
+
+  test("shows the avatar image and unverified badge when applicable", async () => {
+    renderProfile(
+      makeUser({
+        image: "https://avatars.example/me.png",
+        emailVerified: false,
+      }),
+    );
+
+    expect(await screen.findByText("Not verified")).toBeInTheDocument();
+    expect(document.querySelector("img")).toHaveAttribute(
+      "src",
+      "https://avatars.example/me.png",
+    );
+  });
+
+  test("links the pending suggestion count to the contribution dashboard", async () => {
+    givenPendingCounts(2, 0);
+    renderProfile();
+
+    expect(
+      await screen.findByText(/Suggestions awaiting review/i),
+    ).toBeInTheDocument();
+    const countLink = screen.getByRole("link", { name: "2" });
+    expect(countLink).toHaveAttribute("href", "/improve-data/pending");
+  });
+
+  test("links the pending change count to the admin dashboard for admins", async () => {
+    givenPendingCounts(0, 3);
+    renderProfile(makeUser({ role: "ADMIN" }));
+
+    expect(
+      await screen.findByText(/Changes awaiting your review/i),
+    ).toBeInTheDocument();
+    const countLink = screen.getByRole("link", { name: "3" });
+    expect(countLink).toHaveAttribute(
+      "href",
+      "/admin-dashboard/pending-changes",
+    );
+  });
+
+  test("shows the pending-since date and the user's own request reason", async () => {
+    renderProfile(
+      makeUser({
+        adminRequestedAt: "2026-08-16T10:00:00.000Z",
+        adminRequestReason: "I maintain my university's data",
+      }),
+    );
+
+    expect(
+      await screen.findByText(
+        new RegExp(
+          `Admin request pending since ${new Date("2026-08-16T10:00:00.000Z").toLocaleDateString()}`,
+        ),
+      ),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("I maintain my university's data"),
     ).toBeInTheDocument();
   });
 });

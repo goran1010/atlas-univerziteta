@@ -95,8 +95,13 @@
     "logout": "Log out",
     "requestAdmin": "Request admin access",
     "adminRequestReason": "Why do you want admin access?",
-    "adminRequestPending": "Admin request pending",
-    "cancelAdminRequest": "Cancel admin request"
+    "cancelAdminRequest": "Cancel admin request",
+    "memberSince": "Member since",
+    "emailVerifiedBadge": "Verified",
+    "emailNotVerifiedBadge": "Not verified",
+    "adminRequestPendingSince": "Admin request pending since",
+    "suggestionsAwaiting": "Suggestions awaiting review",
+    "changesAwaiting": "Changes awaiting your review"
   },
   "home": {
     "heading": "Universities and Study Programs in Bosnia and Herzegovina",

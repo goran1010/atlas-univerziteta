@@ -28,7 +28,11 @@ async function handleRequestAdmin(
 
   setUserData(
     (prev) =>
-      prev && { ...prev, adminRequestedAt: result.data.adminRequestedAt },
+      prev && {
+        ...prev,
+        adminRequestedAt: result.data.adminRequestedAt,
+        adminRequestReason: trimmedReason ?? null,
+      },
   );
 }
 
@@ -49,7 +53,10 @@ async function handleCancelAdminRequest(
   );
   if (!result) return;
 
-  setUserData((prev) => prev && { ...prev, adminRequestedAt: null });
+  setUserData(
+    (prev) =>
+      prev && { ...prev, adminRequestedAt: null, adminRequestReason: null },
+  );
 }
 
 export { handleRequestAdmin, handleCancelAdminRequest };

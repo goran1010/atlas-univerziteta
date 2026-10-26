@@ -95,8 +95,13 @@
     "logout": "Odjavi se",
     "requestAdmin": "Zatraži admin pristup",
     "adminRequestReason": "Zašto želite administratorski pristup?",
-    "adminRequestPending": "Zahtjev za admin pristup je na čekanju",
-    "cancelAdminRequest": "Otkaži zahtjev za admin pristup"
+    "cancelAdminRequest": "Otkaži zahtjev za admin pristup",
+    "memberSince": "Član od",
+    "emailVerifiedBadge": "Potvrđen",
+    "emailNotVerifiedBadge": "Nije potvrđen",
+    "adminRequestPendingSince": "Zahtjev za admin pristup čeka od",
+    "suggestionsAwaiting": "Prijedlozi koji čekaju pregled",
+    "changesAwaiting": "Izmjene koje čekaju vaš pregled"
   },
   "home": {
     "heading": "Univerziteti i studijski programi u Bosni i Hercegovini",
