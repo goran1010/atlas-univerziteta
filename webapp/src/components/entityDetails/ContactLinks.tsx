@@ -39,7 +39,7 @@ function ContactLinks({
       )}
       {phone && (
         <ExternalLink
-          href={`tel:${phone}`}
+          href={`tel:${phone.replace(/[^+\d]/g, "")}`}
           newTab={false}
           className={touchTarget}
         >

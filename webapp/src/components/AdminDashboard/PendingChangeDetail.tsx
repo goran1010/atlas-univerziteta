@@ -102,6 +102,22 @@ function formatValue(
 ): ReactNode | null {
   if (raw === undefined || raw === null || raw === "") return null;
 
+  if (typeof raw === "string" && spec.key === "email") {
+    return (
+      <ExternalLink href={`mailto:${raw}`} newTab={false} className="break-all">
+        {raw}
+      </ExternalLink>
+    );
+  }
+
+  if (typeof raw === "string" && spec.key === "phone") {
+    return (
+      <ExternalLink href={`tel:${raw.replace(/[^+\d]/g, "")}`} newTab={false}>
+        {raw}
+      </ExternalLink>
+    );
+  }
+
   if (isUrl(raw)) {
     return (
       <ExternalLink href={raw} className="break-all">

@@ -1,12 +1,14 @@
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { ExternalLink } from "../sharedComponents/ExternalLink";
 
+import type { ReactNode } from "react";
 import type { PickedEntity } from "./TargetPicker";
 import type { TFunction } from "../../types";
 
 interface DetailRow {
   label: string;
-  value: string | number;
+  value: ReactNode;
 }
 
 function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
@@ -16,6 +18,49 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
     if (value !== undefined && value !== null && value !== "") {
       rows.push({ label, value });
     }
+  }
+
+  function pushWebsite(label: string, value: string | undefined | null) {
+    if (!value) return;
+    rows.push({
+      label,
+      value: (
+        <ExternalLink href={value} className="break-all">
+          {value}
+        </ExternalLink>
+      ),
+    });
+  }
+
+  function pushPhone(label: string, value: string | undefined | null) {
+    if (!value) return;
+    rows.push({
+      label,
+      value: (
+        <ExternalLink
+          href={`tel:${value.replace(/[^+\d]/g, "")}`}
+          newTab={false}
+        >
+          {value}
+        </ExternalLink>
+      ),
+    });
+  }
+
+  function pushEmail(label: string, value: string | undefined | null) {
+    if (!value) return;
+    rows.push({
+      label,
+      value: (
+        <ExternalLink
+          href={`mailto:${value}`}
+          newTab={false}
+          className="break-all"
+        >
+          {value}
+        </ExternalLink>
+      ),
+    });
   }
 
   push(t("contribution.dataFields.name"), entity.data.name);
@@ -32,17 +77,17 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
         t(`universitiesPage.ownership.${entity.data.ownership}`),
       );
       push(t("universitiesPage.foundedYear"), entity.data.foundedYear);
-      push(t("contribution.dataFields.website"), entity.data.website);
+      pushWebsite(t("contribution.dataFields.website"), entity.data.website);
       push(t("contribution.dataFields.address"), entity.data.address);
-      push(t("contribution.dataFields.phone"), entity.data.phone);
-      push(t("contribution.dataFields.email"), entity.data.email);
+      pushPhone(t("contribution.dataFields.phone"), entity.data.phone);
+      pushEmail(t("contribution.dataFields.email"), entity.data.email);
       break;
     case "FACULTY":
       push(t("contribution.dataFields.city"), entity.data.city);
-      push(t("contribution.dataFields.website"), entity.data.website);
+      pushWebsite(t("contribution.dataFields.website"), entity.data.website);
       push(t("contribution.dataFields.address"), entity.data.address);
-      push(t("contribution.dataFields.phone"), entity.data.phone);
-      push(t("contribution.dataFields.email"), entity.data.email);
+      pushPhone(t("contribution.dataFields.phone"), entity.data.phone);
+      pushEmail(t("contribution.dataFields.email"), entity.data.email);
       break;
     case "STUDY_PROGRAM":
       push(

@@ -11,6 +11,25 @@ function renderDetail(props: Parameters<typeof PendingChangeDetail>[0]) {
 }
 
 describe("PendingChangeDetail", () => {
+  test("renders email and phone as mailto and tel links", () => {
+    renderDetail({
+      targetType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      data: {
+        name: "Contact University",
+        email: "info@uni.example",
+        phone: "+387 33 123-456",
+      },
+    });
+
+    expect(
+      screen.getByRole("link", { name: /info@uni.example/i }),
+    ).toHaveAttribute("href", "mailto:info@uni.example");
+    expect(
+      screen.getByRole("link", { name: /\+387 33 123-456/i }),
+    ).toHaveAttribute("href", "tel:+38733123456");
+  });
+
   test("shows proposed data with translated values and website link for CREATE", () => {
     renderDetail({
       targetType: "UNIVERSITY",
