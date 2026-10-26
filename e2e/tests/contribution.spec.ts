@@ -118,7 +118,7 @@ test("user can discard their own pending change", async ({ browser }) => {
 
   await expect(userPage.getByText("Pending change discarded.")).toBeVisible();
   await expect(
-    userPage.getByText("No pending changes to display."),
+    userPage.getByText("You have no suggestions awaiting review."),
   ).toBeVisible();
 
   await userContext.close();
