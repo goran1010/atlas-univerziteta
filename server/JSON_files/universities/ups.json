@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2026-06-20",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://univerzitetps.com/kontakt/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -49,7 +49,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
+      "dataSourceUrl": "https://univerzitetps.com/pravne-nauke/"
     },
     {
       "name": "Fakultet za ekologiju",
@@ -89,7 +89,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
+      "dataSourceUrl": "https://univerzitetps.com/ekologija-2/"
     },
     {
       "name": "Fakultet za informacione tehnologije i dizajn",
@@ -157,7 +157,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
+      "dataSourceUrl": "https://univerzitetps.com/fakultet-za-informacione-tehnologije-i-dizajn/"
     },
     {
       "name": "Fakultet za novinarstvo i komunikologiju",
@@ -177,7 +177,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
+      "dataSourceUrl": "https://univerzitetps.com/novinarstvo-komunikologija/"
     },
     {
       "name": "Fakultet za poslovne i finansijske studije",
@@ -269,7 +269,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
+      "dataSourceUrl": "https://univerzitetps.com/poslovne-studije/"
     },
     {
       "name": "Fakultet za primijenjenu ekonomiju",
@@ -305,7 +305,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
+      "dataSourceUrl": "https://univerzitetps.com/primjenjena-ekonomija/"
     },
     {
       "name": "Fakultet za turizam i hotelijerstvo",
@@ -363,7 +363,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
+      "dataSourceUrl": "https://univerzitetps.com/turizam-hotelijerstvo/"
     },
     {
       "name": "Univerzitetski studiji",
@@ -389,7 +389,7 @@
           "dataSourceUrl": "https://univerzitetps.com/studijski-programi/"
         }
       ],
-      "dataSourceUrl": "https://univerzitetps.com/studijski-programi"
+      "dataSourceUrl": "https://univerzitetps.com/studijski-programi/"
     }
   ]
 }

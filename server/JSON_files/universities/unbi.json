@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2030-09-11",
   "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Unsko-sanskog kantona",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://unbi.ba/rektorat",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -84,7 +84,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unbi.ba/"
+      "dataSourceUrl": "https://btf.unbi.ba"
     },
     {
       "name": "Ekonomski fakultet",
@@ -128,7 +128,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unbi.ba/"
+      "dataSourceUrl": "https://efbi.unbi.ba"
     },
     {
       "name": "Fakultet zdravstvenih studija",
@@ -180,7 +180,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unbi.ba/"
+      "dataSourceUrl": "https://fzs.unbi.ba"
     },
     {
       "name": "Islamski pedagoški fakultet",
@@ -224,7 +224,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unbi.ba/"
+      "dataSourceUrl": "https://ipf.unbi.ba"
     },
     {
       "name": "Pedagoški fakultet",
@@ -324,7 +324,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unbi.ba/"
+      "dataSourceUrl": "https://pfb.unbi.ba"
     },
     {
       "name": "Pravni fakultet",
@@ -360,7 +360,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://unbi.ba/"
+      "dataSourceUrl": "https://prf.unbi.ba"
     },
     {
       "name": "Tehnički fakultet",
@@ -508,7 +508,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unbi.ba/"
+      "dataSourceUrl": "http://tfb.unbi.ba"
     }
   ]
 }

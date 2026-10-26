@@ -12,7 +12,7 @@
   "accreditationFrom": "2016-05-23",
   "accreditationTo": "2030-12-31",
   "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://iu-travnik.com/contact-page/kontakt/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -238,7 +238,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
+      "dataSourceUrl": "https://iu-travnik.com/ekoloski-fakultet/"
     },
     {
       "name": "Ekonomski fakultet",
@@ -760,7 +760,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
+      "dataSourceUrl": "https://iu-travnik.com/ekonomski-fakultet/"
     },
     {
       "name": "Fakultet informacionih tehnologija",
@@ -925,7 +925,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
+      "dataSourceUrl": "https://iu-travnik.com/fakultet-informacionih-tehnologija/"
     },
     {
       "name": "Fakultet politehničkih nauka",
@@ -2059,7 +2059,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
+      "dataSourceUrl": "https://iu-travnik.com/fakultet-politehnickih-nauka/"
     },
     {
       "name": "Fakultet za medije i komunikacije",
@@ -2182,7 +2182,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
+      "dataSourceUrl": "https://iu-travnik.com/fakultet-za-medije-i-komunikacije/"
     },
     {
       "name": "Pravni fakultet",
@@ -2437,7 +2437,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
+      "dataSourceUrl": "https://iu-travnik.com/pravni-fakultet/"
     },
     {
       "name": "Saobraćajni fakultet",
@@ -2641,7 +2641,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://iu-travnik.com/faculties-institutes/"
+      "dataSourceUrl": "https://iu-travnik.com/saobracajni-fakultet/"
     }
   ]
 }

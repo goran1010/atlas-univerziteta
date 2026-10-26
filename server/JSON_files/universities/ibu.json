@@ -12,7 +12,7 @@
   "accreditationFrom": "2025-02-14",
   "accreditationTo": "2030-02-14",
   "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.ibu.edu.ba/contact-us",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -76,7 +76,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.ibu.edu.ba/"
+      "dataSourceUrl": "https://www.ibu.edu.ba/faculty-of-education-and-humanities"
     },
     {
       "name": "Fakultet za ekonomiju i društvene nauke",
@@ -137,7 +137,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.ibu.edu.ba/"
+      "dataSourceUrl": "https://www.ibu.edu.ba/faculty-of-economics-and-social-sciences"
     },
     {
       "name": "Fakultet za inžinjering, prirodne i medicinske nauke",
@@ -261,7 +261,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.ibu.edu.ba/"
+      "dataSourceUrl": "https://www.ibu.edu.ba/faculty-of-engineering-natural-and-medical-sciences"
     }
   ]
 }

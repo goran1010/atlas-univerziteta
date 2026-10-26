@@ -12,7 +12,7 @@
   "accreditationFrom": "2021-07-28",
   "accreditationTo": "2026-07-28",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.ubn.rs.ba/kontakt",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -34,7 +34,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://www.ubn.rs.ba/fakulteti"
+      "dataSourceUrl": "https://fzp.ubn.rs.ba"
     },
     {
       "name": "Fakultet zdravstvenih studija",
@@ -55,7 +55,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://www.ubn.rs.ba/fakulteti"
+      "dataSourceUrl": "https://fzs.ubn.rs.ba"
     },
     {
       "name": "Farmaceutski fakultet",
@@ -76,7 +76,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://www.ubn.rs.ba/fakulteti"
+      "dataSourceUrl": "https://ff.ubn.rs.ba"
     },
     {
       "name": "Poljoprivredni fakultet",
@@ -124,7 +124,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://www.ubn.rs.ba/fakulteti"
+      "dataSourceUrl": "https://pf.ubn.rs.ba"
     }
   ]
 }

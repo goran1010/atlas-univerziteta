@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2029-07-22",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.unibl.org/sr/kontakt",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -81,7 +81,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://au.unibl.org"
     },
     {
       "name": "Arhitektonsko-građevinsko-geodetski fakultet",
@@ -196,7 +196,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://aggf.unibl.org"
     },
     {
       "name": "Ekonomski fakultet",
@@ -327,7 +327,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://ef.unibl.org"
     },
     {
       "name": "Elektrotehnički fakultet",
@@ -427,7 +427,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://etf.unibl.org"
     },
     {
       "name": "Fakultet bezbjednosnih nauka",
@@ -463,7 +463,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://fbn.unibl.org"
     },
     {
       "name": "Fakultet fizičkog vaspitanja i sporta",
@@ -507,7 +507,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://ffvs.unibl.org"
     },
     {
       "name": "Fakultet političkih nauka",
@@ -669,7 +669,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://fpn.unibl.org"
     },
     {
       "name": "Filološki fakultet",
@@ -793,7 +793,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://flf.unibl.org"
     },
     {
       "name": "Filozofski fakultet",
@@ -925,7 +925,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://ff.unibl.org"
     },
     {
       "name": "Mašinski fakultet",
@@ -1033,7 +1033,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://mf.unibl.org"
     },
     {
       "name": "Medicinski fakultet",
@@ -1162,7 +1162,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://med.unibl.org"
     },
     {
       "name": "Poljoprivredni fakultet",
@@ -1222,7 +1222,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://agro.unibl.org"
     },
     {
       "name": "Pravni fakultet",
@@ -1352,7 +1352,7 @@
           ]
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://pf.unibl.org"
     },
     {
       "name": "Prirodno-matematički fakultet",
@@ -1628,7 +1628,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://pmf.unibl.org"
     },
     {
       "name": "Rudarski fakultet",
@@ -1672,7 +1672,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://rf.unibl.org"
     },
     {
       "name": "Tehnološki fakultet",
@@ -1814,7 +1814,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://tf.unibl.org"
     },
     {
       "name": "Šumarski fakultet",
@@ -1876,7 +1876,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.unibl.org/sr/clanice"
+      "dataSourceUrl": "https://sf.unibl.org"
     }
   ]
 }

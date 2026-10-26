@@ -12,7 +12,7 @@
   "accreditationFrom": "2022-03-07",
   "accreditationTo": "2027-09-06",
   "authority": "Vlada Brčko distrikta BiH, Odjel za obrazovanje",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://eubd.edu.ba/kontakt-2/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -69,7 +69,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eubd.edu.ba/"
+      "dataSourceUrl": "https://eubd.edu.ba/ekonomski-fakultet/"
     },
     {
       "name": "Fakultet političkih nauka",
@@ -129,7 +129,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eubd.edu.ba/"
+      "dataSourceUrl": "https://eubd.edu.ba/fakultet-politickih-nauka/"
     },
     {
       "name": "Fakultet za medicinu, farmaciju i zdravstvo",
@@ -303,7 +303,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eubd.edu.ba/"
+      "dataSourceUrl": "https://eubd.edu.ba/fakultet-zdravstvenih-nauka/"
     },
     {
       "name": "Pedagoški fakultet",
@@ -459,7 +459,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eubd.edu.ba/"
+      "dataSourceUrl": "https://eubd.edu.ba/pedagoski-fakultet/"
     },
     {
       "name": "Pravni fakultet",
@@ -519,7 +519,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eubd.edu.ba/"
+      "dataSourceUrl": "https://eubd.edu.ba/pravni-fakultet/"
     },
     {
       "name": "Tehnički fakultet",
@@ -779,7 +779,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eubd.edu.ba/"
+      "dataSourceUrl": "https://eubd.edu.ba/tehnicki-fakultet/"
     }
   ]
 }

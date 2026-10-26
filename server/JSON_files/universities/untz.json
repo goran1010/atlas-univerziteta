@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2033-03-19",
   "authority": "Ministarstvo obrazovanja i nauke Tuzlanskog kantona",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://untz.ba/kontakt/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -49,7 +49,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "http://adu.untz.ba/web/bs/"
     },
     {
       "name": "Edukacijsko-rehabilitacijski fakultet",
@@ -121,7 +121,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "http://erf.untz.ba/web/"
     },
     {
       "name": "Ekonomski fakultet",
@@ -171,7 +171,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "https://ef1.untz.ba/"
     },
     {
       "name": "Fakultet elektrotehnike",
@@ -260,7 +260,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "https://fet.ba/"
     },
     {
       "name": "Fakultet za tjelesni odgoj i sport",
@@ -303,7 +303,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "https://ftos.untz.ba/"
     },
     {
       "name": "Farmaceutski fakultet",
@@ -334,7 +334,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "http://frmf.untz.ba/web/bs/pocetna/"
     },
     {
       "name": "Filozofski fakultet",
@@ -652,7 +652,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "https://ff.untz.ba/"
     },
     {
       "name": "Mašinski fakultet",
@@ -717,7 +717,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "http://mf.untz.ba/"
     },
     {
       "name": "Medicinski fakultet",
@@ -753,7 +753,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "https://mfuntz.edu.ba/"
     },
     {
       "name": "Pravni fakultet",
@@ -788,7 +788,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "http://pf.untz.ba/"
     },
     {
       "name": "Prirodno-matematički fakultet",
@@ -944,7 +944,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "http://pmf.untz.ba/"
     },
     {
       "name": "Rudarsko-geološko-građevinski fakultet",
@@ -1041,7 +1041,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "https://rggf.untz.ba/"
     },
     {
       "name": "Tehnološki fakultet",
@@ -1150,7 +1150,7 @@
           ]
         }
       ],
-      "dataSourceUrl": "https://untz.ba/studij-nastava/fakulteti-akademija/"
+      "dataSourceUrl": "https://tf.untz.ba/"
     }
   ]
 }

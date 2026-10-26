@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2029-08-25",
   "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.unsa.ba/o-univerzitetu",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -160,7 +160,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://alu.unsa.ba"
     },
     {
       "name": "Akademija scenskih umjetnosti",
@@ -250,7 +250,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://asu.unsa.ba"
     },
     {
       "name": "Arhitektonski fakultet",
@@ -289,7 +289,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://af.unsa.ba"
     },
     {
       "name": "Ekonomski fakultet",
@@ -430,7 +430,7 @@
           "lastModified": "2026-08-26"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://www.efsa.unsa.ba/ef/bs"
     },
     {
       "name": "Elektrotehnički fakultet",
@@ -574,7 +574,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://etf.unsa.ba"
     },
     {
       "name": "Fakultet islamskih nauka",
@@ -658,7 +658,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://fin.unsa.ba"
     },
     {
       "name": "Fakultet političkih nauka",
@@ -823,7 +823,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://fpn.unsa.ba/b/"
     },
     {
       "name": "Fakultet sporta i tjelesnog odgoja",
@@ -880,7 +880,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://fasto.unsa.ba"
     },
     {
       "name": "Fakultet za kriminalistiku, kriminologiju i sigurnosne studije",
@@ -1000,7 +1000,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://www.fkn.edu.ba/"
     },
     {
       "name": "Fakultet za saobraćaj i komunikacije",
@@ -1137,7 +1137,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://fsk.unsa.ba"
     },
     {
       "name": "Fakultet za upravu",
@@ -1224,7 +1224,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://www.unsa.ba/org-jedinica/fakultet-za-upravu"
     },
     {
       "name": "Fakultet zdravstvenih studija",
@@ -1344,7 +1344,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://fzs.unsa.ba"
     },
     {
       "name": "Farmaceutski fakultet",
@@ -1374,7 +1374,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://www.ffsa.unsa.ba"
     },
     {
       "name": "Filozofski fakultet",
@@ -3248,7 +3248,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://ff.unsa.ba"
     },
     {
       "name": "Građevinski fakultet",
@@ -3331,7 +3331,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://gf.unsa.ba"
     },
     {
       "name": "Katolički bogoslovni fakultet",
@@ -3361,7 +3361,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://kbf.unsa.ba"
     },
     {
       "name": "Mašinski fakultet",
@@ -3598,7 +3598,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://mef.unsa.ba"
     },
     {
       "name": "Medicinski fakultet",
@@ -3637,7 +3637,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://mf.unsa.ba"
     },
     {
       "name": "Muzička akademija",
@@ -4115,7 +4115,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://mas.unsa.ba"
     },
     {
       "name": "Pedagoški fakultet",
@@ -4208,7 +4208,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://pf.unsa.ba"
     },
     {
       "name": "Poljoprivredno-prehrambeni fakultet",
@@ -4427,7 +4427,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://ppf.unsa.ba"
     },
     {
       "name": "Pravni fakultet",
@@ -4466,7 +4466,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://pfsa.unsa.ba/pf/"
     },
     {
       "name": "Prirodno-matematički fakultet",
@@ -4892,7 +4892,7 @@
           ]
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://pmf.unsa.ba"
     },
     {
       "name": "Stomatološki fakultet",
@@ -4922,7 +4922,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://sf.unsa.ba"
     },
     {
       "name": "Šumarski fakultet",
@@ -4979,7 +4979,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://sfsa.unsa.ba"
     },
     {
       "name": "Veterinarski fakultet",
@@ -5009,7 +5009,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://vfs.unsa.ba/portal/"
     },
     {
       "name": "Centar za interdisciplinarne studije",
@@ -5108,7 +5108,7 @@
           "dataSourceUrl": "https://cis.unsa.ba/bhs/programi/doktorski/doktorski-studij-globalne-studije/"
         }
       ],
-      "dataSourceUrl": "https://www.unsa.ba/org-jedinica"
+      "dataSourceUrl": "https://cis.unsa.ba/bhs/cis-center-for-interdisciplinary-studies/"
     }
   ]
 }

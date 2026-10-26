@@ -12,7 +12,7 @@
   "accreditationFrom": "2021-10-18",
   "accreditationTo": "2027-04-18",
   "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://hercegovina.edu.ba/hr/kontakt/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -163,7 +163,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://hercegovina.edu.ba/hr/o-nama/"
+      "dataSourceUrl": "https://hercegovina.edu.ba/hr/ustrojbene-jedinice/"
     },
     {
       "name": "Fakultet međunarodnih odnosa i diplomacije",
@@ -209,7 +209,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://hercegovina.edu.ba/hr/o-nama/"
+      "dataSourceUrl": "https://hercegovina.edu.ba/hr/ustrojbene-jedinice/"
     }
   ]
 }

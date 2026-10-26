@@ -12,7 +12,7 @@
   "accreditationFrom": "2022-03-07",
   "accreditationTo": "2027-09-06",
   "authority": "Vlada Brčko distrikta BiH, Odjel za obrazovanje",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "http://iubd.edu.ba/index.php/kontakt",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -121,7 +121,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "http://iubd.edu.ba/"
+      "dataSourceUrl": "http://iubd.edu.ba/index.php/fakulteti/fakultet-za-informatikuu"
     },
     {
       "name": "Fakultet za menadžment",
@@ -327,7 +327,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "http://iubd.edu.ba/"
+      "dataSourceUrl": "http://iubd.edu.ba/index.php/fakulteti/fakultet-za-menadzmentt"
     },
     {
       "name": "Fakultet za poslovne komunikacije",
@@ -403,7 +403,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "http://iubd.edu.ba/"
+      "dataSourceUrl": "http://iubd.edu.ba/index.php/fakulteti/fakultet-za-poslovne-komunikacijee"
     },
     {
       "name": "Fakultet za poslovno-civilnu bezbjednost",
@@ -483,7 +483,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "http://iubd.edu.ba/"
+      "dataSourceUrl": "http://iubd.edu.ba/index.php/fakulteti/fakultet-za-poslovno-civilnu-bezbjednostt"
     },
     {
       "name": "Fakultet za saobraćajno inženjerstvo",
@@ -519,7 +519,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "http://iubd.edu.ba/"
+      "dataSourceUrl": "http://iubd.edu.ba/index.php/fakulteti/fakultet-za-saobracajno-inzenjerstvoo"
     },
     {
       "name": "Pravni fakultet",
@@ -603,7 +603,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "http://iubd.edu.ba/"
+      "dataSourceUrl": "http://iubd.edu.ba/index.php/fakulteti/pravni-fakultett"
     },
     {
       "name": "Učiteljski fakultet",
@@ -731,7 +731,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "http://iubd.edu.ba/"
+      "dataSourceUrl": "http://iubd.edu.ba/index.php/fakulteti/uciteljski-fakultett"
     }
   ]
 }

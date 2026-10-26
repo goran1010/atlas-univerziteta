@@ -12,7 +12,7 @@
   "accreditationFrom": "2022-07-05",
   "accreditationTo": "2027-07-04",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://spu.ba/kontakt/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -73,7 +73,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://spu.ba/"
+      "dataSourceUrl": "https://au.spu.ba/"
     },
     {
       "name": "Fakultet za bezbjednost i zaštitu",
@@ -139,7 +139,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://spu.ba/"
+      "dataSourceUrl": "https://fbz.spu.ba/"
     },
     {
       "name": "Fakultet za ekonomiju i menadžment",
@@ -167,7 +167,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://spu.ba/"
+      "dataSourceUrl": "https://fem.spu.ba/"
     },
     {
       "name": "Fakultet za informacione tehnologije",
@@ -207,7 +207,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://spu.ba/"
+      "dataSourceUrl": "https://fit.spu.ba/"
     },
     {
       "name": "Filološki fakultet",
@@ -217,7 +217,7 @@
       "phone": "+387 51 345 910",
       "email": "info@spu.ba",
       "lastModified": "2026-08-29",
-      "dataSourceUrl": "https://spu.ba/"
+      "dataSourceUrl": "https://ff.spu.ba/"
     },
     {
       "name": "Poreska akademija",
@@ -227,7 +227,7 @@
       "phone": "+387 51 345 910",
       "email": "info@spu.ba",
       "lastModified": "2026-08-29",
-      "dataSourceUrl": "https://spu.ba/"
+      "dataSourceUrl": "https://pa.spu.ba/"
     },
     {
       "name": "Pravni fakultet",
@@ -255,7 +255,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://spu.ba/"
+      "dataSourceUrl": "https://pf.spu.ba/"
     }
   ]
 }

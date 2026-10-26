@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2026-06-10",
   "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://sveuciliste.unvi.edu.ba/o-sveucilistu/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -73,7 +73,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://sveuciliste.unvi.edu.ba/o-sveucilistu/"
+      "dataSourceUrl": "https://sveuciliste.unvi.edu.ba/fakultet-informacionih-tehnologija/"
     },
     {
       "name": "Fakultet poslovne ekonomije",
@@ -166,7 +166,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://sveuciliste.unvi.edu.ba/o-sveucilistu/"
+      "dataSourceUrl": "https://sveuciliste.unvi.edu.ba/fakultet-poslovne-ekonomije/"
     },
     {
       "name": "Fakultet zdravstvenih studija",
@@ -244,7 +244,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://sveuciliste.unvi.edu.ba/o-sveucilistu/"
+      "dataSourceUrl": "https://sveuciliste.unvi.edu.ba/fakultet-zdravstvenih-studija/"
     },
     {
       "name": "Pravni fakultet",
@@ -280,7 +280,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://sveuciliste.unvi.edu.ba/o-sveucilistu/"
+      "dataSourceUrl": "https://sveuciliste.unvi.edu.ba/pravni-fakultet/"
     }
   ]
 }

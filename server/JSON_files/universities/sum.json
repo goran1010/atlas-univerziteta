@@ -12,7 +12,7 @@
   "accreditationFrom": "2024-02-26",
   "accreditationTo": "2028-02-26",
   "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.sum.ba/kontakt",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -97,7 +97,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://aptf.sum.ba"
     },
     {
       "name": "Akademija likovnih umjetnosti",
@@ -181,7 +181,7 @@
           "lastModified": "2026-08-26"
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://alu.sum.ba"
     },
     {
       "name": "Ekonomski fakultet",
@@ -237,7 +237,7 @@
           "lastModified": "2026-08-26"
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://ef.sum.ba"
     },
     {
       "name": "Fakultet građevinarstva, arhitekture i geodezije",
@@ -289,7 +289,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://fgag.sum.ba"
     },
     {
       "name": "Fakultet prirodoslovno-matematičkih i odgojnih znanosti",
@@ -564,7 +564,7 @@
           ]
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://fpmoz.sum.ba"
     },
     {
       "name": "Fakultet strojarstva, računarstva i elektrotehnike",
@@ -680,7 +680,7 @@
           ]
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://fsre.sum.ba"
     },
     {
       "name": "Fakultet zdravstvenih studija",
@@ -786,7 +786,7 @@
           "lastModified": "2026-08-26"
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://fzs.sum.ba"
     },
     {
       "name": "Farmaceutski fakultet",
@@ -831,7 +831,7 @@
           "lastModified": "2026-08-26"
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://farf.sum.ba"
     },
     {
       "name": "Filozofski fakultet",
@@ -1068,7 +1068,7 @@
           "lastModified": "2026-08-26"
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://ff.sum.ba"
     },
     {
       "name": "Medicinski fakultet",
@@ -1113,7 +1113,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://mef.sum.ba"
     },
     {
       "name": "Pravni fakultet",
@@ -1157,7 +1157,7 @@
           "lastModified": "2026-08-26"
         }
       ],
-      "dataSourceUrl": "https://www.sum.ba/clanice/sastavnice"
+      "dataSourceUrl": "https://pf.sum.ba"
     }
   ]
 }

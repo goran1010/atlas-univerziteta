@@ -12,7 +12,7 @@
   "accreditationFrom": "2024-04-18",
   "accreditationTo": "2029-04-18",
   "authority": "Ministarstvo za obrazovanje, nauku, kulturu i sport Zeničko-dobojskog kantona",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://unze.ba/o-unze/osnovne-informacije/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -81,7 +81,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unze.ba/fakulteti"
+      "dataSourceUrl": "https://ef.unze.ba/"
     },
     {
       "name": "Fakultet inženjerstva i prirodnih nauka",
@@ -173,7 +173,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unze.ba/fakulteti"
+      "dataSourceUrl": "https://www.fipn.unze.ba/"
     },
     {
       "name": "Filozofski fakultet",
@@ -329,7 +329,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://unze.ba/fakulteti"
+      "dataSourceUrl": "https://ff.unze.ba/"
     },
     {
       "name": "Islamski pedagoški fakultet",
@@ -437,7 +437,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://unze.ba/fakulteti"
+      "dataSourceUrl": "https://www.ipf.unze.ba/"
     },
     {
       "name": "Mašinski fakultet",
@@ -567,7 +567,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unze.ba/fakulteti"
+      "dataSourceUrl": "https://mf.unze.ba/"
     },
     {
       "name": "Medicinski fakultet",
@@ -603,7 +603,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unze.ba/fakulteti"
+      "dataSourceUrl": "https://medf.unze.ba/"
     },
     {
       "name": "Politehnički fakultet",
@@ -647,7 +647,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unze.ba/fakulteti"
+      "dataSourceUrl": "https://ptf.unze.ba/"
     },
     {
       "name": "Pravni fakultet",
@@ -682,7 +682,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unze.ba/fakulteti"
+      "dataSourceUrl": "https://www.prf.unze.ba/"
     }
   ]
 }

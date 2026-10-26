@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2029-08-29",
   "authority": "Ministarstvo za nauku, visoko obrazovanje i mlade Kantona Sarajevo",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.ius.edu.ba/bs/kontakt",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -88,7 +88,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
+      "dataSourceUrl": "https://fedu.ius.edu.ba/en"
     },
     {
       "name": "Fakultet medicinskih nauka",
@@ -118,7 +118,7 @@
           "lastModified": "2026-08-27"
         }
       ],
-      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
+      "dataSourceUrl": "https://fms.ius.edu.ba/en"
     },
     {
       "name": "Fakultet menadžmenta i javne uprave",
@@ -247,7 +247,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
+      "dataSourceUrl": "https://fba.ius.edu.ba/en"
     },
     {
       "name": "Fakultet prirodnih i tehničkih nauka",
@@ -430,7 +430,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
+      "dataSourceUrl": "https://fens.ius.edu.ba/en"
     },
     {
       "name": "Fakultet umjetnosti i društvenih nauka",
@@ -541,7 +541,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
+      "dataSourceUrl": "https://fass.ius.edu.ba/en"
     },
     {
       "name": "Pravni fakultet",
@@ -571,7 +571,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.ius.edu.ba/en/announcement/konkurs-za-upis-u-prvi-i-integrisani-ciklus-studija-u-2025-2026-studijskoj-godini"
+      "dataSourceUrl": "https://flw.ius.edu.ba/en"
     }
   ]
 }

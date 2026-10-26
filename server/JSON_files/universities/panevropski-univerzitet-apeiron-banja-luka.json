@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2028-11-23",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://apeiron-uni.eu/kontakt/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -43,7 +43,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://apeiron-uni.eu/fakulteti-i-organizacione-jedinice/"
+      "dataSourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-filoloskih-nauka/"
     },
     {
       "name": "Fakultet informacionih tehnologija",
@@ -91,7 +91,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://apeiron-uni.eu/fakulteti-i-organizacione-jedinice/"
+      "dataSourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-informacionih-tehnologija/"
     },
     {
       "name": "Fakultet poslovne ekonomije",
@@ -133,7 +133,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://apeiron-uni.eu/fakulteti-i-organizacione-jedinice/"
+      "dataSourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-poslovne-ekonomije/"
     },
     {
       "name": "Fakultet pravnih nauka",
@@ -157,7 +157,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://apeiron-uni.eu/fakulteti-i-organizacione-jedinice/"
+      "dataSourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-pravnih-nauka/"
     },
     {
       "name": "Fakultet sportskih nauka",
@@ -199,7 +199,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://apeiron-uni.eu/fakulteti-i-organizacione-jedinice/"
+      "dataSourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-sportskih-nauka/"
     },
     {
       "name": "Fakultet zdravstvenih nauka",
@@ -253,7 +253,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://apeiron-uni.eu/fakulteti-i-organizacione-jedinice/"
+      "dataSourceUrl": "https://apeiron-uni.eu/osnovne-studije/fakultet-zdravstvenih-nauka/"
     },
     {
       "name": "Saobraćajni fakultet",
@@ -271,7 +271,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://apeiron-uni.eu/fakulteti-i-organizacione-jedinice/"
+      "dataSourceUrl": "https://apeiron-uni.eu/osnovne-studije/saobracajni-fakultet/"
     }
   ]
 }

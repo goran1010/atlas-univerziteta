@@ -12,7 +12,7 @@
   "accreditationFrom": "2022-08-16",
   "accreditationTo": "2027-08-16",
   "authority": "Ministarstvo obrazovanja i nauke Tuzlanskog kantona",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://eukallos.edu.ba/kontakt/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -67,7 +67,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eukallos.edu.ba/"
+      "dataSourceUrl": "https://ef.eukallos.edu.ba"
     },
     {
       "name": "Fakultet političkih nauka",
@@ -97,7 +97,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eukallos.edu.ba/"
+      "dataSourceUrl": "https://fpn.eukallos.edu.ba"
     },
     {
       "name": "Fakultet zdravstvenih nauka",
@@ -157,7 +157,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eukallos.edu.ba/"
+      "dataSourceUrl": "https://fzn.eukallos.edu.ba"
     },
     {
       "name": "Medicinski fakultet",
@@ -181,7 +181,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eukallos.edu.ba/"
+      "dataSourceUrl": "https://mf.eukallos.edu.ba"
     },
     {
       "name": "Pedagoški fakultet",
@@ -235,7 +235,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eukallos.edu.ba/"
+      "dataSourceUrl": "https://pdf.eukallos.edu.ba"
     },
     {
       "name": "Pravni fakultet",
@@ -265,7 +265,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eukallos.edu.ba/"
+      "dataSourceUrl": "https://pf.eukallos.edu.ba"
     },
     {
       "name": "Tehnički fakultet",
@@ -343,7 +343,7 @@
           "lastModified": "2026-08-25"
         }
       ],
-      "dataSourceUrl": "https://eukallos.edu.ba/"
+      "dataSourceUrl": "https://tf.eukallos.edu.ba"
     }
   ]
 }

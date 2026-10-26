@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2030-06-18",
   "authority": "Ministarstvo za naučnotehnološki razvoj i visoko obrazovanje Republike Srpske/Agencija za visoko obrazovanje Republike Srpske",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.ues.rs.ba/kontakt/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -41,7 +41,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://alutb.ues.rs.ba"
     },
     {
       "name": "Ekonomski fakultet Pale",
@@ -152,7 +152,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://ekofis.ues.rs.ba"
     },
     {
       "name": "Ekonomski fakultet Brčko",
@@ -188,7 +188,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://efb.ues.rs.ba"
     },
     {
       "name": "Elektrotehnički fakultet",
@@ -283,7 +283,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://etf.ues.rs.ba"
     },
     {
       "name": "Fakultet fizičkog vaspitanja i sporta",
@@ -353,7 +353,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://ffvis.ues.rs.ba"
     },
     {
       "name": "Fakultet poslovne ekonomije",
@@ -424,7 +424,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "http://fpe.ues.rs.ba"
     },
     {
       "name": "Fakultet za proizvodnju i menadžment",
@@ -476,7 +476,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://fpm.ues.rs.ba"
     },
     {
       "name": "Filozofski fakultet",
@@ -776,7 +776,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://ff.ues.rs.ba"
     },
     {
       "name": "Mašinski fakultet",
@@ -821,7 +821,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://maf.ues.rs.ba"
     },
     {
       "name": "Medicinski fakultet",
@@ -924,7 +924,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://mef.ues.rs.ba"
     },
     {
       "name": "Muzička akademija",
@@ -977,7 +977,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://mak.ues.rs.ba"
     },
     {
       "name": "Pedagoški fakultet",
@@ -1055,7 +1055,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://pfb.ues.rs.ba"
     },
     {
       "name": "Poljoprivredni fakultet",
@@ -1115,7 +1115,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://pof.ues.rs.ba"
     },
     {
       "name": "Pravni fakultet",
@@ -1150,7 +1150,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "http://pravni.ues.rs.ba"
     },
     {
       "name": "Pravoslavni bogoslovski fakultet",
@@ -1202,7 +1202,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://bogoslovski.ues.rs.ba"
     },
     {
       "name": "Saobraćajni fakultet",
@@ -1322,7 +1322,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://sf.ues.rs.ba"
     },
     {
       "name": "Tehnološki fakultet",
@@ -1383,7 +1383,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://www.ues.rs.ba/en/faculties/"
+      "dataSourceUrl": "https://tfzv.ues.rs.ba"
     }
   ]
 }

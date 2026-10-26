@@ -12,7 +12,7 @@
   "accreditationFrom": "2007-08-15",
   "accreditationTo": "2031-01-26",
   "authority": "Ministarstvo obrazovanja, znanosti, mladih, kulture i sporta Srednjobosanskog kantona",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.unt.ba",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -97,7 +97,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.unt.ba/"
+      "dataSourceUrl": "https://web.eft.ba"
     },
     {
       "name": "Fakultet za menadžment i poslovnu ekonomiju",
@@ -186,7 +186,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.unt.ba/"
+      "dataSourceUrl": "https://fmpe.edu.ba"
     },
     {
       "name": "Fakultet za tehničke studije",
@@ -234,7 +234,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.unt.ba/"
+      "dataSourceUrl": "https://fts.edu.ba"
     },
     {
       "name": "Farmaceutsko-zdravstveni fakultet",
@@ -325,7 +325,7 @@
           "lastModified": "2026-08-29"
         }
       ],
-      "dataSourceUrl": "https://www.unt.ba/"
+      "dataSourceUrl": "https://fzf.edu.ba"
     },
     {
       "name": "Pravni fakultet",
@@ -405,7 +405,7 @@
           "lastModified": "2026-08-24"
         }
       ],
-      "dataSourceUrl": "https://www.unt.ba/"
+      "dataSourceUrl": "https://pfk.edu.ba/v2/bs/"
     }
   ]
 }

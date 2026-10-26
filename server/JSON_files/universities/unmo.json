@@ -12,7 +12,7 @@
   "accreditationFrom": "2024-01-29",
   "accreditationTo": "2028-01-29",
   "authority": "Ministarstvo obrazovanja, nauke, kulture i sporta Hercegovačko-neretvanskog kantona",
-  "dataSourceUrl": "https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu",
+  "dataSourceUrl": "https://www.unmo.ba/kontakt/",
   "lastModified": "2026-08-29",
   "faculties": [
     {
@@ -65,7 +65,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unmo.ba/univerzitet/fakulteti/"
+      "dataSourceUrl": "https://af.unmo.ba/"
     },
     {
       "name": "Ekonomski fakultet",
@@ -133,7 +133,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unmo.ba/univerzitet/fakulteti/"
+      "dataSourceUrl": "https://ef.unmo.ba/"
     },
     {
       "name": "Fakultet humanističkih nauka",
@@ -249,7 +249,7 @@
           "lastModified": "2026-08-29"
         }
       ],
-      "dataSourceUrl": "https://unmo.ba/univerzitet/fakulteti/"
+      "dataSourceUrl": "https://fhn.unmo.ba/"
     },
     {
       "name": "Fakultet informacijskih tehnologija",
@@ -285,7 +285,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unmo.ba/univerzitet/fakulteti/"
+      "dataSourceUrl": "https://fit.ba/"
     },
     {
       "name": "Građevinski fakultet",
@@ -337,7 +337,7 @@
           "lastModified": "2026-08-29"
         }
       ],
-      "dataSourceUrl": "https://unmo.ba/univerzitet/fakulteti/"
+      "dataSourceUrl": "https://gf.unmo.ba/"
     },
     {
       "name": "Mašinski fakultet",
@@ -405,7 +405,7 @@
           "lastModified": "2026-08-29"
         }
       ],
-      "dataSourceUrl": "https://unmo.ba/univerzitet/fakulteti/"
+      "dataSourceUrl": "https://mf.unmo.ba/"
     },
     {
       "name": "Nastavnički fakultet",
@@ -561,7 +561,7 @@
           "lastModified": "2026-08-23"
         }
       ],
-      "dataSourceUrl": "https://unmo.ba/univerzitet/fakulteti/"
+      "dataSourceUrl": "https://nf.unmo.ba/"
     },
     {
       "name": "Pravni fakultet",
@@ -605,7 +605,7 @@
           "lastModified": "2026-08-29"
         }
       ],
-      "dataSourceUrl": "https://unmo.ba/univerzitet/fakulteti/"
+      "dataSourceUrl": "https://pf.unmo.ba/"
     },
     {
       "name": "Univerzitetski studiji",
@@ -676,7 +676,7 @@
           "lastModified": "2026-08-29"
         }
       ],
-      "dataSourceUrl": "https://unmo.ba/univerzitet/fakulteti/"
+      "dataSourceUrl": "https://www.unmo.ba/univerzitet/studijski-programi/"
     }
   ]
 }
