@@ -171,6 +171,79 @@ describe("PendingChangeDetail", () => {
     expect(screen.getByText("11")).toBeInTheDocument();
   });
 
+  test("renders a university tree CREATE as nested card groups", () => {
+    renderDetail({
+      targetType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      data: {
+        name: "Tree University",
+        city: "Mostar",
+        entity: "FBIH",
+        ownership: "PRIVATE",
+        faculties: [
+          {
+            name: "Fakultet A",
+            studyPrograms: [
+              {
+                name: "Program X",
+                cycle: "FIRST",
+                ects: 180,
+                tracks: [{ name: "Smjer 1" }],
+              },
+            ],
+          },
+          { name: "Fakultet B" },
+        ],
+      },
+    });
+
+    expect(screen.getByText("Proposed Data")).toBeInTheDocument();
+    expect(screen.getByText("Faculties (2)")).toBeInTheDocument();
+    // each node name appears as a card heading and as its Name row
+    expect(screen.getAllByText("Fakultet A")).toHaveLength(2);
+    expect(screen.getAllByText("Fakultet B")).toHaveLength(2);
+    expect(screen.getByText("Study programs (1)")).toBeInTheDocument();
+    expect(screen.getAllByText("Program X")).toHaveLength(2);
+    expect(screen.getByText("FIRST - Bachelor")).toBeInTheDocument();
+    expect(screen.getByText("180")).toBeInTheDocument();
+    expect(screen.getByText("Tracks (1)")).toBeInTheDocument();
+    expect(screen.getAllByText("Smjer 1")).toHaveLength(2);
+  });
+
+  test("renders a study program subtree CREATE with its tracks", () => {
+    renderDetail({
+      targetType: "STUDY_PROGRAM",
+      typeOfChange: "CREATE",
+      data: {
+        name: "Subtree Program",
+        cycle: "SECOND",
+        tracks: [{ name: "Track One" }, { name: "Track Two", ects: 60 }],
+      },
+    });
+
+    expect(screen.getByText("Tracks (2)")).toBeInTheDocument();
+    expect(screen.getAllByText("Track One")).toHaveLength(2);
+    expect(screen.getAllByText("Track Two")).toHaveLength(2);
+    expect(screen.getByText("60")).toBeInTheDocument();
+  });
+
+  test("renders no tree groups for a flat CREATE", () => {
+    renderDetail({
+      targetType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      data: {
+        name: "Flat University",
+        city: "Tuzla",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expect(screen.queryByText(/Faculties \(/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Study programs \(/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Tracks \(/)).not.toBeInTheDocument();
+  });
+
   test("shows child counts for faculty and study program current data", () => {
     renderDetail({
       targetType: "FACULTY",
