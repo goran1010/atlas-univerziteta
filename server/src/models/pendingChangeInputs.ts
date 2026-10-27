@@ -9,18 +9,25 @@ import type { Prisma } from "../generated/prisma/client.js";
 import type {
   FacultyCreateData,
   FacultyEditData,
+  FacultyTreeData,
   StudyProgramCreateData,
   StudyProgramEditData,
+  StudyProgramTreeData,
   TrackCreateData,
   TrackEditData,
   UniversityCreateData,
   UniversityEditData,
+  UniversityTreeData,
 } from "../validation/contributionValidation.js";
 
 // Pure mapping from validated pending-change payloads to Prisma inputs -
 // the approval transaction itself lives in applyPendingChange.ts. The spread
 // *SearchFields helpers store the folded search* copy of every searchable
 // field that is present.
+//
+// The *CreateFields helpers map one node without its parent id, so the tree
+// mappers can nest them under `{ create: [...] }` and Prisma fills in the
+// foreign keys while creating the whole subtree in one statement.
 function toUniversityCreateInput(
   data: UniversityCreateData,
 ): Prisma.UniversityCreateInput {
@@ -59,14 +66,12 @@ function toUniversityUpdateInput(
   };
 }
 
-function toFacultyCreateInput(
+function toFacultyCreateFields(
   data: FacultyCreateData,
-  universityId: number,
-): Prisma.FacultyUncheckedCreateInput {
+): Prisma.FacultyCreateWithoutUniversityInput {
   return {
     lastModified: new Date(),
     name: data.name,
-    universityId,
     ...(data.city !== undefined && { city: data.city }),
     ...(data.website !== undefined && { website: data.website }),
     ...(data.address !== undefined && { address: data.address }),
@@ -91,15 +96,13 @@ function toFacultyUpdateInput(
   };
 }
 
-function toStudyProgramCreateInput(
+function toStudyProgramCreateFields(
   data: StudyProgramCreateData,
-  facultyId: number,
-): Prisma.StudyProgramUncheckedCreateInput {
+): Prisma.StudyProgramCreateWithoutFacultyInput {
   return {
     lastModified: new Date(),
     name: data.name,
     cycle: data.cycle,
-    facultyId,
     ...(data.durationYears !== undefined && {
       durationYears: data.durationYears,
     }),
@@ -125,19 +128,76 @@ function toStudyProgramUpdateInput(
   };
 }
 
-function toTrackCreateInput(
+function toTrackCreateFields(
   data: TrackCreateData,
-  studyProgramId: number,
-): Prisma.TrackUncheckedCreateInput {
+): Prisma.TrackCreateWithoutStudyProgramInput {
   return {
     lastModified: new Date(),
     name: data.name,
-    studyProgramId,
     ...(data.ects !== undefined && { ects: data.ects }),
     ...(data.durationYears !== undefined && {
       durationYears: data.durationYears,
     }),
     ...trackSearchFields(data),
+  };
+}
+
+function toTrackCreateInput(
+  data: TrackCreateData,
+  studyProgramId: number,
+): Prisma.TrackUncheckedCreateInput {
+  return { ...toTrackCreateFields(data), studyProgramId };
+}
+
+function toStudyProgramTreeCreateFields(
+  data: StudyProgramTreeData,
+): Prisma.StudyProgramCreateWithoutFacultyInput {
+  const { tracks, ...fields } = data;
+  return {
+    ...toStudyProgramCreateFields(fields),
+    ...(tracks !== undefined && {
+      tracks: { create: tracks.map(toTrackCreateFields) },
+    }),
+  };
+}
+
+function toStudyProgramTreeCreateInput(
+  data: StudyProgramTreeData,
+  facultyId: number,
+): Prisma.StudyProgramUncheckedCreateInput {
+  return { ...toStudyProgramTreeCreateFields(data), facultyId };
+}
+
+function toFacultyTreeCreateFields(
+  data: FacultyTreeData,
+): Prisma.FacultyCreateWithoutUniversityInput {
+  const { studyPrograms, ...fields } = data;
+  return {
+    ...toFacultyCreateFields(fields),
+    ...(studyPrograms !== undefined && {
+      studyPrograms: {
+        create: studyPrograms.map(toStudyProgramTreeCreateFields),
+      },
+    }),
+  };
+}
+
+function toFacultyTreeCreateInput(
+  data: FacultyTreeData,
+  universityId: number,
+): Prisma.FacultyUncheckedCreateInput {
+  return { ...toFacultyTreeCreateFields(data), universityId };
+}
+
+function toUniversityTreeCreateInput(
+  data: UniversityTreeData,
+): Prisma.UniversityCreateInput {
+  const { faculties, ...fields } = data;
+  return {
+    ...toUniversityCreateInput(fields),
+    ...(faculties !== undefined && {
+      faculties: { create: faculties.map(toFacultyTreeCreateFields) },
+    }),
   };
 }
 
@@ -154,11 +214,11 @@ function toTrackUpdateInput(data: TrackEditData): Prisma.TrackUpdateInput {
 }
 
 export {
-  toUniversityCreateInput,
+  toUniversityTreeCreateInput,
   toUniversityUpdateInput,
-  toFacultyCreateInput,
+  toFacultyTreeCreateInput,
   toFacultyUpdateInput,
-  toStudyProgramCreateInput,
+  toStudyProgramTreeCreateInput,
   toStudyProgramUpdateInput,
   toTrackCreateInput,
   toTrackUpdateInput,

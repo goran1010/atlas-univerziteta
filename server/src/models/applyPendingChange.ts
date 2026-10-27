@@ -1,23 +1,23 @@
 import { prisma } from "../db/prisma.js";
 import {
-  toUniversityCreateInput,
+  toUniversityTreeCreateInput,
   toUniversityUpdateInput,
-  toFacultyCreateInput,
+  toFacultyTreeCreateInput,
   toFacultyUpdateInput,
-  toStudyProgramCreateInput,
+  toStudyProgramTreeCreateInput,
   toStudyProgramUpdateInput,
   toTrackCreateInput,
   toTrackUpdateInput,
 } from "./pendingChangeInputs.js";
 import { logger } from "../utils/logger.js";
 import {
-  facultyCreateDataSchema,
+  facultyTreeDataSchema,
   facultyEditDataSchema,
-  studyProgramCreateDataSchema,
+  studyProgramTreeDataSchema,
   studyProgramEditDataSchema,
   trackCreateDataSchema,
   trackEditDataSchema,
-  universityCreateDataSchema,
+  universityTreeDataSchema,
   universityEditDataSchema,
 } from "../validation/contributionValidation.js";
 
@@ -70,14 +70,15 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
 
       if (typeOfChange === "CREATE") {
         const data = parsePendingChangeData(
-          universityCreateDataSchema,
+          universityTreeDataSchema,
           pendingChange.data,
           id,
         );
         if (!data) return false;
 
+        // one nested create, so the whole tree lands or nothing does
         await tx.university.create({
-          data: toUniversityCreateInput(data),
+          data: toUniversityTreeCreateInput(data),
         });
         return deletePendingChange();
       }
@@ -111,14 +112,14 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
         if (parentId === null) return false;
 
         const data = parsePendingChangeData(
-          facultyCreateDataSchema,
+          facultyTreeDataSchema,
           pendingChange.data,
           id,
         );
         if (!data) return false;
 
         await tx.faculty.create({
-          data: toFacultyCreateInput(data, parentId),
+          data: toFacultyTreeCreateInput(data, parentId),
         });
 
         return deletePendingChange();
@@ -153,14 +154,14 @@ async function approvePendingChange({ id }: { id: string }): Promise<boolean> {
         if (parentId === null) return false;
 
         const data = parsePendingChangeData(
-          studyProgramCreateDataSchema,
+          studyProgramTreeDataSchema,
           pendingChange.data,
           id,
         );
         if (!data) return false;
 
         await tx.studyProgram.create({
-          data: toStudyProgramCreateInput(data, parentId),
+          data: toStudyProgramTreeCreateInput(data, parentId),
         });
 
         return deletePendingChange();
