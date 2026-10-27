@@ -151,7 +151,7 @@ function UniversityDetailPage() {
           <div className="border-t border-(--border-color) pt-4">
             <h2 className="text-lg font-semibold text-(--text-primary) mb-3">
               <BuildingIcon />{" "}
-              <span className="text-blue-600 dark:text-blue-400">
+              <span className="text-teal-600 dark:text-teal-400">
                 {university.faculties.length}
               </span>{" "}
               {tCount(

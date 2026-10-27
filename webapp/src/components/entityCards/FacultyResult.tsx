@@ -12,6 +12,7 @@ import { ContactLinks } from "../entityDetails/ContactLinks";
 import { ShareButton } from "../entityDetails/ShareButton";
 import { StudyProgramRow } from "./StudyProgramRow";
 import { ResultGroup } from "../Search/ResultGroup";
+import { LEVEL_GUIDE } from "../../utils/levelColors";
 import { groupBy } from "../../utils/groupBy";
 import { byCycleDisplayOrder } from "../../utils/cycleOrder";
 import { Spinner } from "../sharedComponents/Spinner";
@@ -64,7 +65,7 @@ function FacultyResult({
   }
 
   return (
-    <ResultCard>
+    <ResultCard level="FACULTY">
       <div
         onClick={(e) => {
           if (e.target instanceof Element && e.target.closest("a, button"))
@@ -166,7 +167,7 @@ function FacultyResult({
           {detailData.studyPrograms.length > 0 ? (
             <>
               <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">
-                <span className="text-blue-600 dark:text-blue-400">
+                <span className="text-violet-600 dark:text-violet-400">
                   {detailData.studyPrograms.length}
                 </span>{" "}
                 {tCount(
@@ -175,13 +176,19 @@ function FacultyResult({
                   detailData.studyPrograms.length,
                 )}
               </p>
-              <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
+              <div
+                className={`ml-0.5 sm:ml-4 ${LEVEL_GUIDE.STUDY_PROGRAM} pl-1.5 sm:pl-3`}
+              >
                 <div className="flex flex-col gap-2">
                   {groupBy(
                     byCycleDisplayOrder(detailData.studyPrograms),
                     (sp) => t(`universitiesPage.cycles.${sp.cycle}`),
                   ).map((g) => (
-                    <ResultGroup key={g.key} label={g.key}>
+                    <ResultGroup
+                      key={g.key}
+                      label={g.key}
+                      level="STUDY_PROGRAM"
+                    >
                       {g.items.map((sp) => (
                         <StudyProgramRow
                           key={sp.id}

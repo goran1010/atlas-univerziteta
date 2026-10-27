@@ -166,7 +166,7 @@ function FacultyDetailPage() {
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <h2 className="text-lg font-semibold text-(--text-primary)">
                 <GraduationCapIcon />{" "}
-                <span className="text-blue-600 dark:text-blue-400">
+                <span className="text-violet-600 dark:text-violet-400">
                   {visiblePrograms.length}
                 </span>{" "}
                 {tCount(
@@ -196,6 +196,7 @@ function FacultyDetailPage() {
                     label={group.key}
                     collapsible
                     count={group.items.length}
+                    level="STUDY_PROGRAM"
                   >
                     {group.items.map((sp) => (
                       <li

@@ -19,6 +19,7 @@ import { FacultyRow } from "./FacultyRow";
 import { ShareButton } from "../entityDetails/ShareButton";
 import { ResultGroup } from "../Search/ResultGroup";
 import { groupBy } from "../../utils/groupBy";
+import { LEVEL_GUIDE, LEVEL_STRIP } from "../../utils/levelColors";
 import { fetchPublic } from "../../utils/fetchPublic";
 import { universityDetailResponseSchema } from "../../schemas/university";
 
@@ -84,7 +85,9 @@ function UniversityResult({
     : [];
 
   return (
-    <li className="border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2)">
+    <li
+      className={`border border-(--border-color) rounded-lg overflow-hidden bg-(--surface-2) ${LEVEL_STRIP.UNIVERSITY}`}
+    >
       <div
         className={`p-2 sm:p-4 transition-colors ${
           hasFaculties ? "cursor-pointer hover:bg-(--hover-surface)" : ""
@@ -130,7 +133,7 @@ function UniversityResult({
             {university._count.faculties > 0 && (
               <span>
                 <BuildingIcon />{" "}
-                <span className="font-bold text-blue-600 dark:text-blue-400">
+                <span className="font-bold text-teal-600 dark:text-teal-400">
                   {university._count.faculties}
                 </span>{" "}
                 {tCount(
@@ -224,7 +227,7 @@ function UniversityResult({
             </div>
             <p className="text-sm text-(--text-muted)">
               <BuildingIcon />{" "}
-              <span className="font-bold text-blue-600 dark:text-blue-400">
+              <span className="font-bold text-teal-600 dark:text-teal-400">
                 {university._count.faculties}
               </span>{" "}
               {tCount(
@@ -252,7 +255,7 @@ function UniversityResult({
           {detailData.faculties.length > 0 ? (
             <>
               <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-2">
-                <span className="text-blue-600 dark:text-blue-400">
+                <span className="text-teal-600 dark:text-teal-400">
                   {detailData.faculties.length}
                 </span>{" "}
                 {tCount(
@@ -261,11 +264,13 @@ function UniversityResult({
                   detailData.faculties.length,
                 )}
               </p>
-              <div className="ml-0.5 sm:ml-4 border-l-2 border-(--border-color) pl-1.5 sm:pl-3">
+              <div
+                className={`ml-0.5 sm:ml-4 ${LEVEL_GUIDE.FACULTY} pl-1.5 sm:pl-3`}
+              >
                 {facultyCityGroups.length > 1 ? (
                   <div className="flex flex-col gap-2">
                     {facultyCityGroups.map((g) => (
-                      <ResultGroup key={g.key} label={g.key}>
+                      <ResultGroup key={g.key} label={g.key} level="FACULTY">
                         {g.items.map((f) => (
                           <FacultyRow key={f.id} faculty={f} t={t} />
                         ))}

@@ -9,8 +9,17 @@ import { CollapseToggle } from "./CollapseToggle";
 import { groupBy } from "../../utils/groupBy";
 import { cycleRank } from "../../utils/cycleOrder";
 
+import { LEVEL_BADGE } from "../../utils/levelColors";
+
 import type { UnifiedSearchResults } from "../../schemas/university";
 import type { SearchType } from "../../schemas/domain";
+import type { EntityLevel } from "../../utils/levelColors";
+
+const SECTION_LEVEL: Record<SearchType, EntityLevel> = {
+  university: "UNIVERSITY",
+  faculty: "FACULTY",
+  studyProgram: "STUDY_PROGRAM",
+};
 
 // above this many items in a section, its groups start out collapsed so a
 // full single-type listing stays scannable
@@ -24,11 +33,13 @@ const SEARCH_ORDER: SearchType[] = ["studyProgram", "faculty", "university"];
 function ResultSection({
   heading,
   count,
+  level,
   defaultCollapsed = false,
   children,
 }: {
   heading: string;
   count: number;
+  level: EntityLevel;
   defaultCollapsed?: boolean;
   children: ReactNode;
 }) {
@@ -40,7 +51,9 @@ function ResultSection({
       <div className="flex items-center justify-between gap-3 w-full">
         <h2 className="text-lg font-semibold text-(--text-primary)">
           {heading}
-          <span className="ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold align-middle bg-(--hover-surface) text-(--accent-text)">
+          <span
+            className={`ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold align-middle ${LEVEL_BADGE[level]}`}
+          >
             {count}
           </span>
         </h2>
@@ -120,6 +133,7 @@ function SearchResults({
             label={g.key}
             collapsible
             count={g.items.length}
+            level={SECTION_LEVEL[type]}
             defaultCollapsed={groupsCollapsed(count)}
           >
             {g.items.map(({ item, hint }) => (
@@ -144,6 +158,7 @@ function SearchResults({
             label={g.key}
             collapsible
             count={g.items.length}
+            level={SECTION_LEVEL[type]}
             defaultCollapsed={groupsCollapsed(count)}
           >
             {g.items.map(({ item, hint }) => (
@@ -168,6 +183,7 @@ function SearchResults({
             label={g.key}
             collapsible
             count={g.items.length}
+            level={SECTION_LEVEL[type]}
             defaultCollapsed={groupsCollapsed(count)}
           >
             {g.items.map(({ item, hint }) => (
@@ -216,6 +232,7 @@ function SearchResults({
             key={`${type}:${startCollapsed.toString()}`}
             heading={t(HEADING_KEYS[type])}
             count={count}
+            level={SECTION_LEVEL[type]}
             defaultCollapsed={startCollapsed}
           >
             <div className="flex flex-col gap-3 w-full">
