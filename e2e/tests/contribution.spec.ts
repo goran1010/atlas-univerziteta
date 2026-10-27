@@ -96,6 +96,130 @@ test("contribution approval round-trip", async ({ browser }) => {
   await adminContext.close();
 });
 
+test("whole tree JSON contribution approval round-trip", async ({
+  browser,
+}) => {
+  const { suffix, name: universityName } = uniqueName("E2E Tree University");
+  const facultyName = `E2E Tree Faculty ${suffix}`;
+  const programName = `E2E Tree Program ${suffix}`;
+  const trackName = `E2E Tree Track ${suffix}`;
+
+  const tree = {
+    name: universityName,
+    city: "Testograd",
+    entity: "FBIH",
+    ownership: "PUBLIC",
+    faculties: [
+      {
+        name: facultyName,
+        studyPrograms: [
+          {
+            name: programName,
+            cycle: "FIRST",
+            ects: 180,
+            tracks: [{ name: trackName }],
+          },
+        ],
+      },
+    ],
+  };
+
+  const userContext = await browser.newContext({
+    storageState: USER_STORAGE_STATE,
+  });
+  const userPage = await userContext.newPage();
+
+  await userPage.goto("/improve-data/add-tree");
+  await userPage
+    .getByRole("textbox", { name: "Tree JSON" })
+    .fill(JSON.stringify(tree, null, 2));
+  await userPage.getByRole("button", { name: "Validate" }).click();
+  await expect(userPage.getByText("Preview")).toBeVisible();
+  await expect(userPage.getByText("Faculties (1)")).toBeVisible();
+  await userPage.getByRole("button", { name: "Submit Suggestion" }).click();
+  await expect(userPage.getByText("Suggestion submitted.")).toBeVisible();
+
+  await userPage.goto("/improve-data/pending");
+  await expect(userPage.getByText("+3 in tree")).toBeVisible();
+  await userContext.close();
+
+  const adminContext = await browser.newContext({
+    storageState: ADMIN_STORAGE_STATE,
+  });
+  const adminPage = await adminContext.newPage();
+
+  await adminPage.goto("/admin-dashboard/pending-changes");
+  const changeRow = adminPage
+    .getByRole("row")
+    .filter({ hasText: universityName });
+  await expect(changeRow.getByText("+3 in tree")).toBeVisible();
+  await changeRow.getByRole("button", { name: "View info" }).click();
+  const dialog = adminPage.getByRole("dialog");
+  await expect(dialog.getByText("Faculties (1)")).toBeVisible();
+  await expect(dialog.getByText(programName).first()).toBeVisible();
+  await expect(dialog.getByText(trackName).first()).toBeVisible();
+  await dialog.getByRole("button", { name: "Close" }).click();
+
+  await adminPage.getByRole("button", { name: "Approve" }).click();
+  await adminPage
+    .getByRole("dialog")
+    .getByRole("button", { name: "Approve" })
+    .click();
+  await expect(
+    adminPage.getByText("There are no pending changes at the moment."),
+  ).toBeVisible();
+
+  // the whole subtree must be live, correctly linked level by level
+  const rows = await queryE2eDb<{ track: string }>(
+    `SELECT t.name AS track
+       FROM track t
+       JOIN study_program sp ON sp.id = t."studyProgramId"
+       JOIN faculty f ON f.id = sp."facultyId"
+       JOIN university u ON u.id = f."universityId"
+      WHERE u.name = $1 AND f.name = $2 AND sp.name = $3`,
+    [universityName, facultyName, programName],
+  );
+  expect(rows).toEqual([{ track: trackName }]);
+
+  await adminPage.goto("/search");
+  await adminPage.getByRole("searchbox", { name: "Search" }).fill(suffix);
+  // the university, faculty, program and track cards all carry the
+  // university name, so any single match proves the tree is searchable
+  await expect(adminPage.getByText(universityName).first()).toBeVisible({
+    timeout: 15000,
+  });
+  await adminContext.close();
+});
+
+test("tree JSON validation errors block submission", async ({ browser }) => {
+  const userContext = await browser.newContext({
+    storageState: USER_STORAGE_STATE,
+  });
+  const userPage = await userContext.newPage();
+
+  await userPage.goto("/improve-data/add-tree");
+  await userPage.getByRole("textbox", { name: "Tree JSON" }).fill(
+    JSON.stringify({
+      name: "E2E Broken Tree University",
+      city: "Testograd",
+      entity: "FBIH",
+      ownership: "PUBLIC",
+      faculties: [{ name: "Same Faculty" }, { name: "Same Faculty" }],
+    }),
+  );
+  await userPage.getByRole("button", { name: "Validate" }).click();
+
+  await expect(userPage.getByText("Validation errors")).toBeVisible();
+  await expect(
+    userPage.getByText(/faculties\.1\.name: Duplicate faculty name/),
+  ).toBeVisible();
+  await expect(
+    userPage.getByRole("button", { name: "Submit Suggestion" }),
+  ).toBeDisabled();
+
+  await userContext.close();
+});
+
 test("user can discard their own pending change", async ({ browser }) => {
   const { name: universityName } = uniqueName("E2E Discarded University");
 
