@@ -9,6 +9,7 @@
     "login": "Prijava",
     "signup": "Registracija",
     "notFound": "Stranica nije pronađena",
+    "error": "Greška",
     "about": "O projektu"
   },
   "meta": {
@@ -282,7 +283,9 @@
   },
   "error": {
     "notFound": "Ovdje nema ničega.",
-    "goHome": "Idi na početnu stranicu"
+    "generic": "Došlo je do greške.",
+    "goHome": "Idi na početnu stranicu",
+    "reload": "Ponovo učitaj stranicu"
   },
   "footer": {
     "name": "Goran Jović",

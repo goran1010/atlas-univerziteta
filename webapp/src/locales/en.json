@@ -9,6 +9,7 @@
     "login": "Log in",
     "signup": "Sign up",
     "notFound": "Page not found",
+    "error": "Error",
     "about": "About"
   },
   "meta": {
@@ -282,7 +283,9 @@
   },
   "error": {
     "notFound": "There is nothing here.",
-    "goHome": "Go to Home Page"
+    "generic": "Something went wrong.",
+    "goHome": "Go to Home Page",
+    "reload": "Reload the page"
   },
   "footer": {
     "name": "Goran Jović",
