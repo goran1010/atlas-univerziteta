@@ -464,6 +464,274 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
   });
 });
 
+describe("Contribution Router - tree submissions", () => {
+  test("accepts a nested university tree as a single pending change", async () => {
+    const { agent, user } = await createLoggedInAgent();
+
+    const tree = {
+      name: "Tree University",
+      city: "City",
+      entity: "FBIH",
+      ownership: "PUBLIC",
+      faculties: [
+        {
+          name: "Faculty of Trees",
+          studyPrograms: [
+            {
+              name: "Forestry",
+              cycle: "FIRST",
+              ects: 180,
+              tracks: [{ name: "Urban Forestry", ects: 180 }],
+            },
+          ],
+        },
+        { name: "Faculty of Roots" },
+      ],
+    };
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: tree,
+    });
+
+    expect(response.status).toBe(201);
+
+    const stored = await prisma.pendingChange.findMany({
+      where: { userId: user.id },
+    });
+    expect(stored).toHaveLength(1);
+    expect(stored[0]?.typeOfChange).toBe("CREATE");
+    expect(stored[0]?.data).toEqual(tree);
+  });
+
+  test("accepts a faculty subtree with programs and tracks", async () => {
+    const { agent } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "FACULTY",
+      parentId: university.id,
+      data: {
+        name: "Subtree Faculty",
+        studyPrograms: [
+          {
+            name: "Program A",
+            cycle: "FIRST",
+            tracks: [{ name: "Track A" }, { name: "Track B" }],
+          },
+          { name: "Program A", cycle: "SECOND" },
+        ],
+      },
+    });
+
+    expect(response.status).toBe(201);
+  });
+
+  test("accepts a study program subtree with tracks", async () => {
+    const { agent } = await createLoggedInAgent();
+    const faculty = await createFaculty();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "STUDY_PROGRAM",
+      parentId: faculty.id,
+      data: {
+        name: "Subtree Program",
+        cycle: "FIRST",
+        tracks: [{ name: "Only Track" }],
+      },
+    });
+
+    expect(response.status).toBe(201);
+  });
+
+  test("rejects duplicate faculty names in a university tree", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Duplicate Faculties University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: [{ name: "Same Faculty" }, { name: "Same Faculty" }],
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, {
+      path: "data.faculties.1.name",
+      code: "custom",
+    });
+  });
+
+  test("rejects duplicate study program name and cycle in a faculty", async () => {
+    const { agent } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "FACULTY",
+      parentId: university.id,
+      data: {
+        name: "Duplicate Programs Faculty",
+        studyPrograms: [
+          { name: "Same Program", cycle: "FIRST" },
+          { name: "Same Program", cycle: "FIRST" },
+        ],
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, {
+      path: "data.studyPrograms.1.name",
+      code: "custom",
+    });
+  });
+
+  test("rejects duplicate track names in a study program", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Duplicate Tracks University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: [
+          {
+            name: "Faculty",
+            studyPrograms: [
+              {
+                name: "Program",
+                cycle: "FIRST",
+                tracks: [{ name: "Same Track" }, { name: "Same Track" }],
+              },
+            ],
+          },
+        ],
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, {
+      path: "data.faculties.0.studyPrograms.0.tracks.1.name",
+      code: "custom",
+    });
+  });
+
+  test("rejects unknown fields on nested nodes", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Provenance Tree University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: [
+          { name: "Faculty", dataSourceUrl: "https://example.com/source" },
+        ],
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, {
+      path: "data.faculties.0",
+      code: "unrecognized_keys",
+    });
+  });
+
+  test("rejects an empty children array", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Empty Faculties University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: [],
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, {
+      path: "data.faculties",
+      code: "too_small",
+    });
+  });
+
+  test("accepts a tree at exactly the node cap and rejects one above it", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const facultiesFor = (count: number) =>
+      Array.from({ length: count }, (_, index) => ({
+        name: `Cap Faculty ${index.toString()}`,
+      }));
+
+    const atCap = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "At Cap University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: facultiesFor(799),
+      },
+    });
+    expect(atCap.status).toBe(201);
+
+    const aboveCap = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Above Cap University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: facultiesFor(800),
+      },
+    });
+    const responseBody = getResponseObject(aboveCap.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(aboveCap.status).toBe(400);
+    expectValidationIssue(error, { path: "data", code: "custom" });
+  });
+
+  test("accepts a tree payload above the 100kb default body limit", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Large Payload University",
+        city: "City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        // ~700 faculties at ~200 bytes each puts the body well past 100kb
+        faculties: Array.from({ length: 700 }, (_, index) => ({
+          name: `Large Faculty ${index.toString()} ${"x".repeat(150)}`,
+        })),
+      },
+    });
+
+    expect(response.status).toBe(201);
+  });
+});
+
 describe("Contribution Router - PUT /users/contribution/universities", () => {
   test("responds with status 401 when not logged in", async () => {
     const response = await request(app).put("/users/contribution/universities");
@@ -1066,7 +1334,7 @@ describe("Contribution Router - malicious input", () => {
     const response = await agent.post("/users/contribution/universities").send({
       targetType: "UNIVERSITY",
       data: {
-        name: "x".repeat(200 * 1024),
+        name: "x".repeat(600 * 1024),
         city: "City",
         entity: "FBIH",
         ownership: "PUBLIC",
