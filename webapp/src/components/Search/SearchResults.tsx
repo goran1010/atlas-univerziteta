@@ -47,26 +47,55 @@ function ResultSection({
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
   const { t } = use(RootContext);
 
+  const headingContent = (
+    <>
+      {heading}
+      <span
+        className={`ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold align-middle ${LEVEL_BADGE[level]}`}
+      >
+        {count}
+      </span>
+    </>
+  );
+
+  // collapsed, the whole section box is one button, like collapsed groups
+  if (collapsed) {
+    return (
+      <section className="w-full border border-(--border-color) rounded-lg">
+        <h2 className="text-lg font-semibold text-(--text-primary)">
+          <button
+            type="button"
+            aria-expanded={false}
+            onClick={() => {
+              setCollapsed(false);
+            }}
+            className="flex w-full flex-wrap items-center justify-between gap-x-3 gap-y-1 p-3 rounded-lg text-left cursor-pointer hover:bg-(--hover-surface) transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
+            <span>{headingContent}</span>
+            <span className="text-xs font-normal text-(--text-muted)">
+              {count} {t("universitiesPage.hiddenTapToExpand")}
+            </span>
+          </button>
+        </h2>
+      </section>
+    );
+  }
+
   return (
     <section className="w-full flex flex-col gap-2 border border-(--border-color) rounded-lg p-3">
       <div className="flex items-center justify-between gap-3 w-full">
         <h2 className="text-lg font-semibold text-(--text-primary)">
-          {heading}
-          <span
-            className={`ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold align-middle ${LEVEL_BADGE[level]}`}
-          >
-            {count}
-          </span>
+          {headingContent}
         </h2>
         <CollapseToggle
           collapsed={collapsed}
           onClick={() => {
-            setCollapsed((prev) => !prev);
+            setCollapsed(true);
           }}
           t={t}
         />
       </div>
-      {!collapsed && children}
+      {children}
     </section>
   );
 }

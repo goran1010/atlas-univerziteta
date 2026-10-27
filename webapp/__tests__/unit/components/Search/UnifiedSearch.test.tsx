@@ -215,10 +215,12 @@ describe("UnifiedSearch", () => {
     expect(headings[0]?.textContent).toMatch(/Study programs/);
     expect(headings[1]?.textContent).toMatch(/Universities/);
 
-    // the context-only universities section starts collapsed
+    // the context-only universities section starts collapsed as one
+    // whole-box expander button
     expect(screen.queryByText(/University of Mostar/i)).not.toBeInTheDocument();
-    const expandButtons = screen.getAllByRole("button", { name: "Expand" });
-    await user.click(expandButtons[expandButtons.length - 1]);
+    await user.click(
+      screen.getByRole("button", { name: /Universities.*tap to expand/i }),
+    );
 
     expect(
       await screen.findByText(/Matched through its faculties/i),

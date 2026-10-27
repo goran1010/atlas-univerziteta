@@ -1,6 +1,33 @@
 import { ChevronDownIcon } from "../sharedComponents/icons";
+import { LEVEL_BADGE } from "../../utils/levelColors";
 
 import type { TFunction } from "../../types";
+import type { EntityLevel } from "../../utils/levelColors";
+
+// the content of a collapsed box's expander: looks like a control (border,
+// chevron) and carries the level hue, not plain text
+function ExpandHintChip({
+  count,
+  level,
+  t,
+}: {
+  count?: number | undefined;
+  level?: EntityLevel | undefined;
+  t: TFunction;
+}) {
+  const colors = level
+    ? LEVEL_BADGE[level]
+    : "bg-(--surface-alt) text-(--accent-text)";
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border border-(--border-color)/60 ${colors}`}
+    >
+      <ChevronDownIcon className="-rotate-90" />
+      {count != null && `${String(count)} `}
+      {t("universitiesPage.hiddenTapToExpand")}
+    </span>
+  );
+}
 
 function CollapseToggle({
   collapsed,
@@ -30,4 +57,4 @@ function CollapseToggle({
   );
 }
 
-export { CollapseToggle };
+export { CollapseToggle, ExpandHintChip };
