@@ -219,7 +219,7 @@ function AddTreeEntity({
         <Button
           type="button"
           variant="secondary"
-          className="px-3 py-1.5 text-xs self-center"
+          className="px-3 py-2 sm:py-1.5 text-xs self-center w-full max-w-xs sm:w-auto"
           onClick={() => fileInputRef.current?.click()}
         >
           <UploadIcon className="mr-1.5" />

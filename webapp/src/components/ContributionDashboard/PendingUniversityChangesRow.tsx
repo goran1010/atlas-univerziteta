@@ -97,25 +97,27 @@ function PendingUniversityChangesRow({
           role="cell"
           className="flex flex-col sm:flex-row justify-end items-center gap-2"
         >
-          <Button
-            variant="secondary"
-            className="px-3 py-1.5 text-xs"
-            onClick={() => {
-              setDialogOpen(true);
-            }}
-          >
-            {t("universitiesPage.viewInfo")}
-          </Button>
-          <Button
-            variant="danger"
-            className="px-3 py-1.5 text-xs"
-            loading={loading}
-            onClick={() => {
-              setConfirmOpen(true);
-            }}
-          >
-            {t("contribution.deleteChange")}
-          </Button>
+          <div className="flex w-full sm:w-auto gap-2">
+            <Button
+              variant="secondary"
+              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
+              onClick={() => {
+                setDialogOpen(true);
+              }}
+            >
+              {t("universitiesPage.viewInfo")}
+            </Button>
+            <Button
+              variant="danger"
+              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
+              loading={loading}
+              onClick={() => {
+                setConfirmOpen(true);
+              }}
+            >
+              {t("contribution.deleteChange")}
+            </Button>
+          </div>
         </div>
       </div>
 

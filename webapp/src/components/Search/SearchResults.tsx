@@ -37,7 +37,7 @@ function ResultSection({
 
   return (
     <section className="w-full flex flex-col gap-2 border border-(--border-color) rounded-lg p-3">
-      <div className="flex items-center justify-between w-full">
+      <div className="flex items-center justify-between gap-3 w-full">
         <h2 className="text-lg font-semibold text-(--text-primary)">
           {heading}
           <span className="ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold align-middle bg-(--hover-surface) text-(--accent-text)">

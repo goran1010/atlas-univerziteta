@@ -86,11 +86,11 @@ function Dialog({
             type="button"
             onClick={onClose}
             aria-label={t("dialog.close")}
-            className="p-1 rounded-md cursor-pointer transition-transform active:scale-90 text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+            className="p-2 sm:p-1.5 rounded-md cursor-pointer transition-transform active:scale-90 text-(--text-secondary) border border-(--border-color) bg-(--surface-1) shadow-(--card-shadow-soft) hover:text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
           >
             <svg
-              width="16"
-              height="16"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

@@ -106,7 +106,7 @@ function FacultyResult({
       <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
         <Button
           variant="secondary"
-          className="px-3 py-1.5 text-xs"
+          className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
           onClick={() => {
             setDialogOpen(true);
           }}
@@ -116,7 +116,7 @@ function FacultyResult({
         {hasPrograms && (
           <DetailsToggleButton
             expanded={expanded}
-            className="px-3 py-1.5 text-xs"
+            className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
             onClick={() => {
               void handleExpand();
             }}
@@ -146,7 +146,7 @@ function FacultyResult({
           <div className="flex justify-center">
             <LinkButton
               to={`/faculties/${faculty.id.toString()}`}
-              className="text-sm"
+              className="text-sm w-full sm:w-auto"
               onClick={() => {
                 setDialogOpen(false);
               }}

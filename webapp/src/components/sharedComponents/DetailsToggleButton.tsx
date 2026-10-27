@@ -22,7 +22,7 @@ function DetailsToggleButton({
 
   return (
     <Button
-      variant="ghost"
+      variant="toggle"
       className={className}
       onClick={onClick}
       loading={loading}

@@ -57,7 +57,7 @@ function UnifiedSearch() {
             type="button"
             aria-label={t("universitiesPage.clearSearch")}
             onClick={handleClear}
-            className={`p-1 rounded cursor-pointer text-(--text-secondary) hover:text-(--text-primary) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) ${
+            className={`p-2 sm:p-1 text-lg rounded cursor-pointer text-(--text-secondary) hover:text-(--text-primary) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) ${
               searchInput === "" ? "invisible" : "visible"
             }`}
           >
@@ -84,7 +84,7 @@ function UnifiedSearch() {
       {(hasFilters || hasSearchTerm || view.kind !== "idle") && (
         <Button
           variant="danger"
-          className="text-xs px-3 py-1.5 sm:w-auto"
+          className="text-xs px-3 py-2 sm:py-1.5 w-full max-w-xs sm:w-auto"
           onClick={handleClearAll}
         >
           {t("universitiesPage.resetSearch")}
@@ -106,7 +106,7 @@ function UnifiedSearch() {
       ) : view.kind === "idle" ? (
         <Button
           variant="secondary"
-          className="px-6 py-2.5"
+          className="px-6 py-2.5 w-full max-w-xs sm:w-auto"
           onClick={handleBrowseAll}
         >
           {t("universitiesPage.browseAll")}

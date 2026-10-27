@@ -137,37 +137,39 @@ const PendingChangesAdminRow = memo(
         >
           <Button
             variant="secondary"
-            className="px-3 py-1.5 text-xs sm:max-w-30"
+            className="px-3 py-2 sm:py-1.5 text-xs w-full sm:w-auto sm:max-w-30"
             onClick={() => {
               setDialogOpen(true);
             }}
           >
             {t("universitiesPage.viewInfo")}
           </Button>
-          <Button
-            variant="success"
-            className="px-3 py-1.5 text-xs sm:max-w-25"
-            onClick={() => {
-              setConfirmAction("approve");
-            }}
-            type="button"
-            loading={activeAction === "approve"}
-            disabled={loading}
-          >
-            {t("form.approve")}
-          </Button>
-          <Button
-            variant="danger"
-            className="px-3 py-1.5 text-xs sm:max-w-25"
-            onClick={() => {
-              setConfirmAction("decline");
-            }}
-            type="button"
-            loading={activeAction === "decline"}
-            disabled={loading}
-          >
-            {t("form.reject")}
-          </Button>
+          <div className="flex w-full sm:w-auto gap-2">
+            <Button
+              variant="success"
+              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial sm:max-w-25"
+              onClick={() => {
+                setConfirmAction("approve");
+              }}
+              type="button"
+              loading={activeAction === "approve"}
+              disabled={loading}
+            >
+              {t("form.approve")}
+            </Button>
+            <Button
+              variant="danger"
+              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial sm:max-w-25"
+              onClick={() => {
+                setConfirmAction("decline");
+              }}
+              type="button"
+              loading={activeAction === "decline"}
+              disabled={loading}
+            >
+              {t("form.reject")}
+            </Button>
+          </div>
         </div>
 
         <ConfirmDialog

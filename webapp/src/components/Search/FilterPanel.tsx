@@ -53,7 +53,7 @@ function RadioOption({
   onChange: (value: string) => void;
 }) {
   return (
-    <label className="flex items-center gap-2 text-sm text-(--text-primary) cursor-pointer py-0.5 hover:text-(--accent-text) transition-colors">
+    <label className="flex items-center gap-2 text-sm text-(--text-primary) cursor-pointer py-1.5 sm:py-0.5 hover:text-(--accent-text) transition-colors">
       <input
         type="radio"
         name={name}
@@ -84,7 +84,7 @@ function CheckboxOption({
   onChange: (value: string, checked: boolean) => void;
 }) {
   return (
-    <label className="flex items-center gap-2 text-sm text-(--text-primary) cursor-pointer py-0.5 hover:text-(--accent-text) transition-colors">
+    <label className="flex items-center gap-2 text-sm text-(--text-primary) cursor-pointer py-1.5 sm:py-0.5 hover:text-(--accent-text) transition-colors">
       <input
         type="checkbox"
         value={value}

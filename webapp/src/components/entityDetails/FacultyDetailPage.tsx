@@ -178,7 +178,7 @@ function FacultyDetailPage() {
               {focusedProgram && (
                 <Button
                   variant="secondary"
-                  className="px-3 py-1.5 text-xs"
+                  className="px-3 py-2 sm:py-1.5 text-xs w-full max-w-xs sm:w-auto"
                   onClick={() => {
                     setSearchParams(new URLSearchParams(), { replace: true });
                   }}
