@@ -5,7 +5,7 @@ import { UniversityResult } from "../entityCards/UniversityResult";
 import { FacultyResult } from "../entityCards/FacultyResult";
 import { StudyProgramResult } from "../entityCards/StudyProgramResult";
 import { ResultGroup } from "./ResultGroup";
-import { CollapseToggle } from "./CollapseToggle";
+import { CollapseToggle, ExpandHintChip } from "./CollapseToggle";
 import { groupBy } from "../../utils/groupBy";
 import { cycleRank } from "../../utils/cycleOrder";
 
@@ -72,9 +72,7 @@ function ResultSection({
             className="flex w-full flex-wrap items-center justify-between gap-x-3 gap-y-1 p-3 rounded-lg text-left cursor-pointer hover:bg-(--hover-surface) transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
           >
             <span>{headingContent}</span>
-            <span className="text-xs font-normal text-(--text-muted)">
-              {count} {t("universitiesPage.hiddenTapToExpand")}
-            </span>
+            <ExpandHintChip count={count} level={level} t={t} />
           </button>
         </h2>
       </section>

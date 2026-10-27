@@ -1,6 +1,6 @@
 import { useState, use, type ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
-import { CollapseToggle } from "./CollapseToggle";
+import { CollapseToggle, ExpandHintChip } from "./CollapseToggle";
 import { LEVEL_BADGE } from "../../utils/levelColors";
 
 import type { EntityLevel } from "../../utils/levelColors";
@@ -63,9 +63,8 @@ function ResultGroup({
         <span className="absolute -top-3 left-3 flex items-center">
           <LabelPill label={label} count={count} level={level} />
         </span>
-        <span className="block w-full py-2 text-xs">
-          {count != null && `${String(count)} `}
-          {t("universitiesPage.hiddenTapToExpand")}
+        <span className="flex w-full justify-center py-1.5">
+          <ExpandHintChip count={count} level={level} t={t} />
         </span>
       </button>
     );
