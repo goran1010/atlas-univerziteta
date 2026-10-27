@@ -10,13 +10,30 @@ const DETAIL_PATHS: Partial<Record<ParentCrumb["targetType"], string>> = {
 const linkClassName =
   "underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors";
 
-interface ParentBreadcrumbProps {
-  crumbs: ParentCrumb[];
-  // The changed entity itself, shown as the final, non-linked segment
-  current?: string | null;
+// The detail page for an existing entity, or undefined for levels without
+// one (programs, tracks) - so the final breadcrumb segment can link too.
+function entityDetailPath(
+  targetType: string,
+  targetId: number | null | undefined,
+): string | undefined {
+  if (targetId == null) return undefined;
+  const path = DETAIL_PATHS[targetType as ParentCrumb["targetType"]];
+  return path ? `${path}/${targetId.toString()}` : undefined;
 }
 
-function ParentBreadcrumb({ crumbs, current }: ParentBreadcrumbProps) {
+interface ParentBreadcrumbProps {
+  crumbs: ParentCrumb[];
+  // The changed entity itself, shown as the final segment
+  current?: string | null;
+  // when set, the final segment links to the entity's detail page
+  currentPath?: string | undefined;
+}
+
+function ParentBreadcrumb({
+  crumbs,
+  current,
+  currentPath,
+}: ParentBreadcrumbProps) {
   if (crumbs.length === 0 && !current) return null;
 
   return (
@@ -43,11 +60,17 @@ function ParentBreadcrumb({ crumbs, current }: ParentBreadcrumbProps) {
       {current && (
         <span className="font-medium text-(--text-primary)">
           {crumbs.length > 0 && " › "}
-          {current}
+          {currentPath ? (
+            <Link to={currentPath} className={linkClassName}>
+              {current}
+            </Link>
+          ) : (
+            current
+          )}
         </span>
       )}
     </p>
   );
 }
 
-export { ParentBreadcrumb };
+export { ParentBreadcrumb, entityDetailPath };

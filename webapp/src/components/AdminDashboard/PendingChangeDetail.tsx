@@ -3,6 +3,9 @@ import { RootContext } from "../../contextData/RootContext";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
+import { LEVEL_GUIDE, LEVEL_TEXT } from "../../utils/levelColors";
+
+import type { EntityLevel } from "../../utils/levelColors";
 
 import type { TFunction } from "../../types";
 import type { ParentCrumb } from "../../schemas/pendingChange";
@@ -202,14 +205,16 @@ function DataCard({ heading, rows }: { heading: string; rows: DetailRow[] }) {
 
 function ChildGroup({
   label,
+  level,
   children,
 }: {
   label: string;
+  level: EntityLevel;
   children: ReactNode;
 }) {
   return (
-    <div className="flex flex-col gap-2 pl-2 sm:pl-3 border-l-2 border-(--border-color)">
-      <p className="text-xs font-semibold text-(--text-secondary)">{label}</p>
+    <div className={`flex flex-col gap-2 pl-2 sm:pl-3 ${LEVEL_GUIDE[level]}`}>
+      <p className={`text-xs font-semibold ${LEVEL_TEXT[level]}`}>{label}</p>
       {children}
     </div>
   );
@@ -219,7 +224,10 @@ function TrackTreeCards({ tracks }: { tracks: TrackCreateData[] }) {
   const { t } = use(RootContext);
 
   return (
-    <ChildGroup label={`${t("admin.trackCount")} (${String(tracks.length)})`}>
+    <ChildGroup
+      level="TRACK"
+      label={`${t("admin.trackCount")} (${String(tracks.length)})`}
+    >
       {tracks.map((track, index) => (
         <DataCard
           key={`${track.name}-${String(index)}`}
@@ -240,6 +248,7 @@ function StudyProgramTreeCards({
 
   return (
     <ChildGroup
+      level="STUDY_PROGRAM"
       label={`${t("admin.studyProgramCount")} (${String(studyPrograms.length)})`}
     >
       {studyPrograms.map((program, index) => (
@@ -263,6 +272,7 @@ function FacultyTreeCards({ faculties }: { faculties: FacultyTreeData[] }) {
 
   return (
     <ChildGroup
+      level="FACULTY"
       label={`${t("admin.facultyCount")} (${String(faculties.length)})`}
     >
       {faculties.map((faculty, index) => (
@@ -459,6 +469,7 @@ interface PendingChangeDetailProps {
   currentEntity?: Record<string, unknown> | null;
   parentContext?: ParentCrumb[] | null;
   comment?: string | null;
+  currentPath?: string | undefined;
 }
 
 function PendingChangeDetail({
@@ -468,6 +479,7 @@ function PendingChangeDetail({
   currentEntity,
   parentContext,
   comment,
+  currentPath,
 }: PendingChangeDetailProps) {
   const { t } = use(RootContext);
 
@@ -479,7 +491,11 @@ function PendingChangeDetail({
 
   return (
     <div className="flex flex-col gap-2 pt-2 w-full">
-      <ParentBreadcrumb crumbs={parentContext ?? []} current={entityName} />
+      <ParentBreadcrumb
+        crumbs={parentContext ?? []}
+        current={entityName}
+        currentPath={currentPath}
+      />
       {typeOfChange === "CREATE" && hasProposedFields && (
         <>
           <DataCard

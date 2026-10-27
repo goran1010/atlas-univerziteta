@@ -9,7 +9,10 @@ import {
   handleDeclinePendingChange,
 } from "./utils/adminActions";
 import { PendingChangeDetail } from "./PendingChangeDetail";
-import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
+import {
+  ParentBreadcrumb,
+  entityDetailPath,
+} from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { countNestedNodes } from "../../utils/countNestedNodes";
 import { LEVEL_BADGE } from "../../utils/levelColors";
@@ -63,6 +66,10 @@ const PendingChangesAdminRow = memo(
 
     const currentEntity = data.currentEntity ?? null;
     const entityName = getChangedEntityName(data);
+    const currentPath =
+      data.typeOfChange !== "CREATE" && currentEntity
+        ? entityDetailPath(data.targetType, data.targetId)
+        : undefined;
     const nestedCount =
       data.typeOfChange === "CREATE" ? countNestedNodes(data.data) : 0;
 
@@ -88,6 +95,7 @@ const PendingChangesAdminRow = memo(
         <ParentBreadcrumb
           crumbs={data.parentContext ?? []}
           current={entityName}
+          currentPath={currentPath}
         />
         <div className="grid gap-2 w-full p-1 sm:p-1 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)]">
           <div
@@ -112,7 +120,9 @@ const PendingChangesAdminRow = memo(
             <span className="sm:hidden font-semibold">
               {t("contribution.entityType")}
             </span>
-            <span className="font-mono font-medium text-(--text-primary) text-xs">
+            <span
+              className={`px-2 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[data.targetType]}`}
+            >
               {t(`contribution.entityTypes.${data.targetType}`)}
             </span>
             {nestedCount > 0 && (
@@ -249,6 +259,7 @@ const PendingChangesAdminRow = memo(
             currentEntity={currentEntity}
             parentContext={data.parentContext}
             comment={data.comment}
+            currentPath={currentPath}
           />
         </Dialog>
       </li>

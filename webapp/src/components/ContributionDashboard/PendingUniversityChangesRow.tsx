@@ -6,7 +6,10 @@ import { Dialog } from "../sharedComponents/Dialog";
 import { ConfirmDialog } from "../sharedComponents/ConfirmDialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
-import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
+import {
+  ParentBreadcrumb,
+  entityDetailPath,
+} from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { countNestedNodes } from "../../utils/countNestedNodes";
 import { LEVEL_BADGE } from "../../utils/levelColors";
@@ -50,6 +53,10 @@ function PendingUniversityChangesRow({
 
   const isEven = index % 2 === 0;
   const entityName = getChangedEntityName(change);
+  const currentPath =
+    change.typeOfChange !== "CREATE" && change.currentEntity
+      ? entityDetailPath(change.targetType, change.targetId)
+      : undefined;
   const nestedCount =
     change.typeOfChange === "CREATE" ? countNestedNodes(change.data) : 0;
 
@@ -61,6 +68,7 @@ function PendingUniversityChangesRow({
       <ParentBreadcrumb
         crumbs={change.parentContext ?? []}
         current={entityName}
+        currentPath={currentPath}
       />
       <div className="grid gap-2 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]">
         <div
@@ -84,7 +92,9 @@ function PendingUniversityChangesRow({
           <span className="sm:hidden text-xs font-semibold text-(--text-muted)">
             {t("contribution.entityType")}
           </span>
-          <span className="text-xs font-mono text-(--text-secondary)">
+          <span
+            className={`px-2 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[change.targetType]}`}
+          >
             {t(`contribution.entityTypes.${change.targetType}`)}
           </span>
           {nestedCount > 0 && (
@@ -174,6 +184,7 @@ function PendingUniversityChangesRow({
           currentEntity={change.currentEntity ?? null}
           parentContext={change.parentContext}
           comment={change.comment}
+          currentPath={currentPath}
         />
       </Dialog>
     </li>
