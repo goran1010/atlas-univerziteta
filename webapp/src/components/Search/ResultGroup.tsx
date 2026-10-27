@@ -36,6 +36,7 @@ function ResultGroup({
     return (
       <button
         type="button"
+        aria-expanded={false}
         onClick={() => {
           setCollapsed(false);
         }}
