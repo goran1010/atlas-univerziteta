@@ -9,6 +9,7 @@ import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
 import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { countNestedNodes } from "../../utils/countNestedNodes";
+import { LEVEL_BADGE } from "../../utils/levelColors";
 import type { PendingChange } from "../../schemas/pendingChange";
 
 interface BadgeStyles {
@@ -139,7 +140,20 @@ function PendingUniversityChangesRow({
         onClose={() => {
           setDialogOpen(false);
         }}
-        title={`${t(`contribution.changeTypes.${change.typeOfChange}`)} ${t(`contribution.entityTypes.${change.targetType}`)}`}
+        title={
+          <>
+            <span
+              className={`px-1.5 py-0.5 rounded text-xs font-semibold ${BADGE[change.typeOfChange]}`}
+            >
+              {t(`contribution.changeTypes.${change.typeOfChange}`)}
+            </span>{" "}
+            <span
+              className={`px-1.5 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[change.targetType]}`}
+            >
+              {t(`contribution.entityTypes.${change.targetType}`)}
+            </span>
+          </>
+        }
         footer={
           <Button
             variant="danger"

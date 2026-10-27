@@ -22,8 +22,9 @@ const SECTION_LEVEL: Record<SearchType, EntityLevel> = {
 };
 
 // above this many items in a section, its groups start out collapsed so a
-// full single-type listing stays scannable
-const COLLAPSE_GROUPS_ABOVE = 50;
+// full single-type listing stays scannable; high enough that ordinary
+// searches start expanded and only huge listings (a bare browse) fold
+const COLLAPSE_GROUPS_ABOVE = 150;
 
 // browsing keeps the hierarchy order; a term search ranks sections with
 // direct (own-field) matches first, most specific first

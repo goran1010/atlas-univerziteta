@@ -12,6 +12,7 @@ import { PendingChangeDetail } from "./PendingChangeDetail";
 import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { countNestedNodes } from "../../utils/countNestedNodes";
+import { LEVEL_BADGE } from "../../utils/levelColors";
 import type { Notification } from "../../types";
 import type { TypeOfChange } from "../../schemas/domain";
 import type { AdminPendingChange } from "../../schemas/pendingChange";
@@ -197,7 +198,21 @@ const PendingChangesAdminRow = memo(
           onClose={() => {
             setDialogOpen(false);
           }}
-          title={`${t(`contribution.changeTypes.${data.typeOfChange}`)} ${t(`contribution.entityTypes.${data.targetType}`)} - ${data.user.email}`}
+          title={
+            <>
+              <span
+                className={`px-1.5 py-0.5 rounded text-xs font-semibold ${BADGE[data.typeOfChange]}`}
+              >
+                {t(`contribution.changeTypes.${data.typeOfChange}`)}
+              </span>{" "}
+              <span
+                className={`px-1.5 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[data.targetType]}`}
+              >
+                {t(`contribution.entityTypes.${data.targetType}`)}
+              </span>{" "}
+              <span className="text-(--text-secondary)">{data.user.email}</span>
+            </>
+          }
           footer={
             <>
               <Button

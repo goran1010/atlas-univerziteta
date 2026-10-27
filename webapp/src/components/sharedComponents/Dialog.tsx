@@ -11,7 +11,7 @@ import { RootContext } from "../../contextData/RootContext";
 interface DialogProps {
   open: boolean;
   onClose: () => void;
-  title: string;
+  title: ReactNode;
   children: ReactNode;
   headerActions?: ReactNode;
   footer?: ReactNode;
