@@ -7,7 +7,6 @@ const emptySearchResults = {
     universities: [],
     faculties: [],
     studyPrograms: [],
-    totals: { universities: 0, faculties: 0, studyPrograms: 0 },
     direct: { universities: 0, faculties: 0, studyPrograms: 0 },
   },
 };

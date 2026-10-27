@@ -1,7 +1,6 @@
 import { use, useState, type ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { SearchIcon } from "../sharedComponents/icons";
-import { Button } from "../sharedComponents/Button";
 import { UniversityResult } from "../entityCards/UniversityResult";
 import { FacultyResult } from "../entityCards/FacultyResult";
 import { StudyProgramResult } from "../entityCards/StudyProgramResult";
@@ -11,7 +10,7 @@ import { groupBy } from "../../utils/groupBy";
 import { cycleRank } from "../../utils/cycleOrder";
 
 import type { UnifiedSearchResults } from "../../schemas/university";
-import type { Ownership, SearchType, StudyCycle } from "../../schemas/domain";
+import type { SearchType } from "../../schemas/domain";
 
 // above this many items in a section, its groups start out collapsed so a
 // full single-type listing stays scannable
@@ -24,17 +23,13 @@ const SEARCH_ORDER: SearchType[] = ["studyProgram", "faculty", "university"];
 
 function ResultSection({
   heading,
-  total,
-  shown,
+  count,
   defaultCollapsed = false,
-  onShowAll,
   children,
 }: {
   heading: string;
-  total: number;
-  shown: number;
+  count: number;
   defaultCollapsed?: boolean;
-  onShowAll?: () => void;
   children: ReactNode;
 }) {
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
@@ -46,9 +41,7 @@ function ResultSection({
         <h2 className="text-lg font-semibold text-(--text-primary)">
           {heading}
           <span className="ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold align-middle bg-(--hover-surface) text-(--accent-text)">
-            {shown < total
-              ? `${shown.toString()} / ${total.toString()}`
-              : total}
+            {count}
           </span>
         </h2>
         <CollapseToggle
@@ -59,28 +52,7 @@ function ResultSection({
           t={t}
         />
       </div>
-      {!collapsed && (
-        <>
-          {children}
-          {shown < total && (
-            <div className="flex flex-col items-center gap-1.5 mt-1">
-              <p className="text-xs text-(--text-muted)">
-                {t("universitiesPage.showingFirst")} {shown}{" "}
-                {t("universitiesPage.showingOf")} {total}
-              </p>
-              {onShowAll && (
-                <Button
-                  variant="secondary"
-                  className="px-4 py-1.5 text-xs"
-                  onClick={onShowAll}
-                >
-                  {t("universitiesPage.showAll")} ({total})
-                </Button>
-              )}
-            </div>
-          )}
-        </>
-      )}
+      {!collapsed && children}
     </section>
   );
 }
@@ -89,21 +61,10 @@ function SearchResults({
   results,
   hadTerm = false,
   t,
-  onShowAll,
-  activeTypeFilters = [],
-  activeCycleFilters = [],
-  activeOwnershipFilter = "",
 }: {
   results: UnifiedSearchResults;
   hadTerm?: boolean;
   t: (key: string) => string;
-  onShowAll?: (
-    type: SearchType,
-    group?: { cycle?: StudyCycle; ownership?: Ownership },
-  ) => void;
-  activeTypeFilters?: SearchType[];
-  activeCycleFilters?: StudyCycle[];
-  activeOwnershipFilter?: Ownership | "";
 }) {
   const noResultsAtAll =
     results.universities.length === 0 &&
@@ -128,53 +89,23 @@ function SearchResults({
 
   const sectionData = {
     university: {
-      shown: results.universities.length,
-      total: results.totals?.universities ?? results.universities.length,
+      count: results.universities.length,
       direct: results.direct?.universities ?? results.universities.length,
     },
     faculty: {
-      shown: results.faculties.length,
-      total: results.totals?.faculties ?? results.faculties.length,
+      count: results.faculties.length,
       direct: results.direct?.faculties ?? results.faculties.length,
     },
     studyProgram: {
-      shown: results.studyPrograms.length,
-      total: results.totals?.studyPrograms ?? results.studyPrograms.length,
+      count: results.studyPrograms.length,
       direct: results.direct?.studyPrograms ?? results.studyPrograms.length,
     },
-  } satisfies Record<
-    SearchType,
-    { shown: number; total: number; direct: number }
-  >;
+  } satisfies Record<SearchType, { count: number; direct: number }>;
 
-  const groupsCollapsed = (shown: number) => shown > COLLAPSE_GROUPS_ABOVE;
-
-  // a subgroup's own show-all applies the matching server-side filter; it is
-  // omitted when that filter is already active (the view then shows all of it)
-  function groupShowAll(
-    type: SearchType,
-    group: {
-      cycle?: StudyCycle | undefined;
-      ownership?: Ownership | undefined;
-    },
-  ) {
-    if (!onShowAll) return undefined;
-    if (group.cycle === undefined && group.ownership === undefined) {
-      return undefined;
-    }
-    if (group.cycle && activeCycleFilters.includes(group.cycle)) {
-      return undefined;
-    }
-    if (group.ownership && activeOwnershipFilter === group.ownership) {
-      return undefined;
-    }
-    return () => {
-      onShowAll(type, group);
-    };
-  }
+  const groupsCollapsed = (count: number) => count > COLLAPSE_GROUPS_ABOVE;
 
   function renderSectionBody(type: SearchType): ReactNode {
-    const { shown, direct } = sectionData[type];
+    const { count, direct } = sectionData[type];
     switch (type) {
       case "university":
         return groupBy(
@@ -189,11 +120,7 @@ function SearchResults({
             label={g.key}
             collapsible
             count={g.items.length}
-            truncated={sectionData[type].shown < sectionData[type].total}
-            onShowAll={groupShowAll(type, {
-              ownership: g.items[0]?.item.ownership,
-            })}
-            defaultCollapsed={groupsCollapsed(shown)}
+            defaultCollapsed={groupsCollapsed(count)}
           >
             {g.items.map(({ item, hint }) => (
               <UniversityResult
@@ -217,8 +144,7 @@ function SearchResults({
             label={g.key}
             collapsible
             count={g.items.length}
-            truncated={sectionData[type].shown < sectionData[type].total}
-            defaultCollapsed={groupsCollapsed(shown)}
+            defaultCollapsed={groupsCollapsed(count)}
           >
             {g.items.map(({ item, hint }) => (
               <FacultyResult key={item.id} faculty={item} contextHint={hint} />
@@ -242,9 +168,7 @@ function SearchResults({
             label={g.key}
             collapsible
             count={g.items.length}
-            truncated={sectionData[type].shown < sectionData[type].total}
-            onShowAll={groupShowAll(type, { cycle: g.items[0]?.item.cycle })}
-            defaultCollapsed={groupsCollapsed(shown)}
+            defaultCollapsed={groupsCollapsed(count)}
           >
             {g.items.map(({ item, hint }) => (
               <StudyProgramResult
@@ -266,7 +190,7 @@ function SearchResults({
   };
 
   const baseOrder = hadTerm ? SEARCH_ORDER : BROWSE_ORDER;
-  const visibleTypes = baseOrder.filter((type) => sectionData[type].shown > 0);
+  const visibleTypes = baseOrder.filter((type) => sectionData[type].count > 0);
   const orderedTypes = hadTerm
     ? [
         ...visibleTypes.filter((type) => sectionData[type].direct > 0),
@@ -283,28 +207,16 @@ function SearchResults({
   return (
     <>
       {orderedTypes.map((type, index) => {
-        const { shown, total, direct } = sectionData[type];
+        const { count, direct } = sectionData[type];
         const contextOnly = hadTerm && direct === 0;
         const startCollapsed = contextOnly && !(allContextOnly && index === 0);
-        // already filtered to just this type: the server cap decides what is
-        // shown, so a "show all" would re-run the identical query
-        const alreadyShowingAll =
-          activeTypeFilters.length === 1 && activeTypeFilters[0] === type;
         return (
           <ResultSection
             // remount when the band changes so defaultCollapsed reapplies
             key={`${type}:${startCollapsed.toString()}`}
             heading={t(HEADING_KEYS[type])}
-            total={total}
-            shown={shown}
+            count={count}
             defaultCollapsed={startCollapsed}
-            onShowAll={
-              onShowAll && !alreadyShowingAll
-                ? () => {
-                    onShowAll(type);
-                  }
-                : undefined
-            }
           >
             <div className="flex flex-col gap-3 w-full">
               {renderSectionBody(type)}

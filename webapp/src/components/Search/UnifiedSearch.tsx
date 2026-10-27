@@ -24,7 +24,6 @@ function UnifiedSearch() {
     handleFilterChange,
     handleCycleChange,
     handleTypeChange,
-    handleShowAll,
     handleBrowseAll,
     handleClear,
     handleClearAll,
@@ -96,9 +95,9 @@ function UnifiedSearch() {
       <p aria-live="polite" className="sr-only">
         {view.kind === "search" &&
           `${t("universitiesPage.searchResultsAnnouncement")} ${[
-            `${String(view.results.totals?.universities ?? view.results.universities.length)} ${t("universitiesPage.universitiesSection")}`,
-            `${String(view.results.totals?.faculties ?? view.results.faculties.length)} ${t("universitiesPage.facultiesSection")}`,
-            `${String(view.results.totals?.studyPrograms ?? view.results.studyPrograms.length)} ${t("universitiesPage.studyProgramsSection")}`,
+            `${String(view.results.universities.length)} ${t("universitiesPage.universitiesSection")}`,
+            `${String(view.results.faculties.length)} ${t("universitiesPage.facultiesSection")}`,
+            `${String(view.results.studyPrograms.length)} ${t("universitiesPage.studyProgramsSection")}`,
           ].join(", ")}`}
       </p>
 
@@ -113,15 +112,7 @@ function UnifiedSearch() {
           {t("universitiesPage.browseAll")}
         </Button>
       ) : (
-        <SearchResults
-          results={view.results}
-          hadTerm={view.hadTerm}
-          t={t}
-          onShowAll={handleShowAll}
-          activeTypeFilters={typeFilters}
-          activeCycleFilters={cycleFilters}
-          activeOwnershipFilter={ownershipFilter}
-        />
+        <SearchResults results={view.results} hadTerm={view.hadTerm} t={t} />
       )}
     </div>
   );
