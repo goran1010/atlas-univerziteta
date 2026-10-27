@@ -8,6 +8,7 @@ import type { ContributionOutletContext } from "./types";
 
 const TABS = [
   { key: "addNewData", to: "/improve-data/add" },
+  { key: "addTree", to: "/improve-data/add-tree" },
   { key: "pendingChanges", to: "/improve-data/pending" },
 ];
 

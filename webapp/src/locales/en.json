@@ -177,6 +177,7 @@
     "actions": "Actions",
     "selectDatasetError": "You need to select a dataset.",
     "addNewData": "Propose changes",
+    "addTree": "Propose a JSON tree",
     "pendingChanges": "My suggestions",
     "noPendingChanges": "You have no suggestions awaiting review.",
     "change": "Change",
@@ -244,7 +245,16 @@
     },
     "submitSuggestion": "Submit suggestion",
     "deleteChange": "Withdraw",
-    "dataLegend": "Data"
+    "dataLegend": "Data",
+    "tree": {
+      "help": "Paste a whole tree as JSON: a university with faculties, study programs and tracks, or a subtree starting at a faculty or study program. The fields are the same as in the single-item form.",
+      "jsonLabel": "Tree JSON",
+      "loadFile": "Load a .json file",
+      "validate": "Validate",
+      "invalidJson": "The text is not valid JSON.",
+      "validationErrors": "Validation errors",
+      "preview": "Preview"
+    }
   },
   "admin": {
     "needAdmin": "You need to be an admin to see the admin dashboard.",
