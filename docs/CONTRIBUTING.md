@@ -48,6 +48,52 @@ Notes:
   university's faculties, their study programs, and their tracks).
 - You can remove your own pending suggestion before review from the pending changes list in the dashboard.
 
+## Contributing a Whole University (JSON)
+
+Besides single-item suggestions, the app accepts a whole university in one submission: the university together with its faculties, their study programs, and their tracks. Open `/improve-data`, pick the "Add a whole university (JSON)" tab, paste or load the JSON, validate, check the preview, and submit. The submission is stored as one pending change and reviewed as one unit: an admin approves everything or declines everything.
+
+You can also start one level lower: pick Faculty as the item type, choose the university it belongs under, and submit a faculty with its study programs and tracks.
+
+The JSON mirrors the structure of the seed files. Children live in `faculties`, `studyPrograms`, and `tracks` arrays, and each level takes the same fields as the single-item form:
+
+- University: `name`, `city`, `entity` (`FBIH`, `RS`, `BD`), and `ownership` (`PUBLIC`, `PRIVATE`) are required; `acronym`, `foundedYear`, `website`, `address`, `phone`, and `email` are optional.
+- Faculty: `name` is required; `city`, `website`, `address`, `phone`, and `email` are optional.
+- Study program: `name` and `cycle` (`FIRST`, `SECOND`, `THIRD`, `INTEGRATED`, `VOCATIONAL`, `SPECIALIST`) are required; `durationYears`, `ects`, and `language` are optional.
+- Track: `name` is required; `ects` and `durationYears` are optional.
+
+Example:
+
+```json
+{
+  "name": "Example University",
+  "city": "Sarajevo",
+  "entity": "FBIH",
+  "ownership": "PRIVATE",
+  "faculties": [
+    {
+      "name": "Faculty of Example Studies",
+      "studyPrograms": [
+        {
+          "name": "Example Program",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "tracks": [{ "name": "Example Track" }]
+        }
+      ]
+    }
+  ]
+}
+```
+
+Rules the validator enforces:
+
+- Sibling names must be unique: faculty names within a university, study program name and cycle pairs within a faculty, and track names within a study program. These mirror the database constraints, so an approved submission cannot half-fail.
+- A submission can hold at most 800 items in total, and the request body at most 512kb.
+- Unknown fields are rejected. Provenance fields that appear in the seed files (`dataSourceUrl`, `lastModified`, accreditation data) are not accepted in contributions.
+
+If an approved submission collides with existing data, for example a university with the same name already exists, nothing is applied, the suggestion stays in the queue, and the admin sees which name collided.
+
 ## Reporting Issues
 
 For bugs or feature requests, open a GitHub issue. For security vulnerabilities, email <goran1010jovic@gmail.com> instead of opening a public issue.

@@ -98,7 +98,7 @@ async function pasteJson(
   user: ReturnType<typeof userEvent.setup>,
   text: string,
 ) {
-  const textarea = screen.getByRole("textbox", { name: /Tree JSON/i });
+  const textarea = screen.getByRole("textbox", { name: /JSON data/i });
   await user.click(textarea);
   await user.paste(text);
 }
@@ -144,6 +144,24 @@ describe("AddTreeEntity", () => {
     ).toBeDisabled();
   });
 
+  test("hints at the type mix-up when a university is pasted as a faculty", async () => {
+    const user = userEvent.setup();
+    renderTree();
+
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /Item type/i }),
+      "FACULTY",
+    );
+    await pasteJson(user, validTreeJson);
+    await user.click(screen.getByRole("button", { name: /Validate/i }));
+
+    expect(
+      screen.getByText(
+        "This looks like a whole university. Switch the item type to University.",
+      ),
+    ).toBeInTheDocument();
+  });
+
   test("previews a valid tree, submits it, and resets the form", async () => {
     const user = userEvent.setup();
     const refetch = renderTree();
@@ -171,7 +189,7 @@ describe("AddTreeEntity", () => {
       data: JSON.parse(validTreeJson) as Record<string, unknown>,
     });
     expect(refetch).toHaveBeenCalledTimes(1);
-    expect(screen.getByRole("textbox", { name: /Tree JSON/i })).toHaveValue("");
+    expect(screen.getByRole("textbox", { name: /JSON data/i })).toHaveValue("");
     expect(screen.queryByText("Preview")).not.toBeInTheDocument();
   });
 
@@ -184,7 +202,7 @@ describe("AddTreeEntity", () => {
     expect(screen.getByText("Preview")).toBeInTheDocument();
 
     await user.type(
-      screen.getByRole("textbox", { name: /Tree JSON/i }),
+      screen.getByRole("textbox", { name: /JSON data/i }),
       " edited",
     );
 
@@ -251,7 +269,7 @@ describe("AddTreeEntity", () => {
     await user.upload(input, file);
 
     await waitFor(() => {
-      expect(screen.getByRole("textbox", { name: /Tree JSON/i })).toHaveValue(
+      expect(screen.getByRole("textbox", { name: /JSON data/i })).toHaveValue(
         validTreeJson,
       );
     });

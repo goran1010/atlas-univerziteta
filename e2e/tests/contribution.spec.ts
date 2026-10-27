@@ -131,7 +131,7 @@ test("whole tree JSON contribution approval round-trip", async ({
 
   await userPage.goto("/improve-data/add-tree");
   await userPage
-    .getByRole("textbox", { name: "Tree JSON" })
+    .getByRole("textbox", { name: "JSON data" })
     .fill(JSON.stringify(tree, null, 2));
   await userPage.getByRole("button", { name: "Validate" }).click();
   await expect(userPage.getByText("Preview")).toBeVisible();
@@ -140,7 +140,7 @@ test("whole tree JSON contribution approval round-trip", async ({
   await expect(userPage.getByText("Suggestion submitted.")).toBeVisible();
 
   await userPage.goto("/improve-data/pending");
-  await expect(userPage.getByText("+3 in tree")).toBeVisible();
+  await expect(userPage.getByText("+3 included")).toBeVisible();
   await userContext.close();
 
   const adminContext = await browser.newContext({
@@ -152,7 +152,7 @@ test("whole tree JSON contribution approval round-trip", async ({
   const changeRow = adminPage
     .getByRole("row")
     .filter({ hasText: universityName });
-  await expect(changeRow.getByText("+3 in tree")).toBeVisible();
+  await expect(changeRow.getByText("+3 included")).toBeVisible();
   await changeRow.getByRole("button", { name: "View info" }).click();
   const dialog = adminPage.getByRole("dialog");
   await expect(dialog.getByText("Faculties (1)")).toBeVisible();
@@ -198,7 +198,7 @@ test("tree JSON validation errors block submission", async ({ browser }) => {
   const userPage = await userContext.newPage();
 
   await userPage.goto("/improve-data/add-tree");
-  await userPage.getByRole("textbox", { name: "Tree JSON" }).fill(
+  await userPage.getByRole("textbox", { name: "JSON data" }).fill(
     JSON.stringify({
       name: "E2E Broken Tree University",
       city: "Testograd",

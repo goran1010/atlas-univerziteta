@@ -123,12 +123,12 @@ test.describe("authenticated pages", () => {
   test("tree paste tab has no detectable a11y violations", async ({ page }) => {
     await page.goto("/improve-data/add-tree");
     await expect(
-      page.getByRole("textbox", { name: "Tree JSON" }),
+      page.getByRole("textbox", { name: "JSON data" }),
     ).toBeVisible();
     await expectNoViolations(page);
 
     // the validated preview renders the nested tree cards - scan those too
-    await page.getByRole("textbox", { name: "Tree JSON" }).fill(
+    await page.getByRole("textbox", { name: "JSON data" }).fill(
       JSON.stringify({
         name: "A11y Tree University",
         city: "Testograd",

@@ -13,52 +13,64 @@ import { getPickerDepth } from "./utils/getPickerDepth";
 import { handleSubmitTree } from "./utils/handleSubmitTree";
 import {
   facultyTreeDataSchema,
-  studyProgramTreeDataSchema,
   universityTreeDataSchema,
 } from "../../schemas/contribution";
 
 import type { ChangeEvent, SubmitEvent } from "react";
 import type {
   FacultyTreeData,
-  StudyProgramTreeData,
   UniversityTreeData,
 } from "../../schemas/contribution";
 
-type TreeRootType = "UNIVERSITY" | "FACULTY" | "STUDY_PROGRAM";
-type TreeData = UniversityTreeData | FacultyTreeData | StudyProgramTreeData;
+// Study programs stay out of this tab on purpose: a program with its few
+// tracks is small enough for the single-item form.
+type TreeRootType = "UNIVERSITY" | "FACULTY";
+type TreeData = UniversityTreeData | FacultyTreeData;
 
-const TREE_ROOT_TYPES: TreeRootType[] = [
-  "UNIVERSITY",
-  "FACULTY",
-  "STUDY_PROGRAM",
-];
+const TREE_ROOT_TYPES: TreeRootType[] = ["UNIVERSITY", "FACULTY"];
+
+// the placeholders show the full field set per level; only name, city,
+// entity, ownership and cycle are required
+const FACULTY_PLACEHOLDER = `{
+  "name": "...",
+  "city": "...",
+  "website": "https://...",
+  "address": "...",
+  "phone": "+387 ...",
+  "email": "...",
+  "studyPrograms": [
+    {
+      "name": "...",
+      "cycle": "FIRST | SECOND | THIRD | INTEGRATED | VOCATIONAL | SPECIALIST",
+      "durationYears": 3,
+      "ects": 180,
+      "language": "...",
+      "tracks": [
+        { "name": "...", "ects": 180, "durationYears": 3 }
+      ]
+    }
+  ]
+}`;
 
 const JSON_PLACEHOLDER: Record<TreeRootType, string> = {
   UNIVERSITY: `{
   "name": "...",
+  "acronym": "...",
   "city": "...",
-  "entity": "FBIH",
-  "ownership": "PUBLIC",
+  "entity": "FBIH | RS | BD",
+  "ownership": "PUBLIC | PRIVATE",
+  "foundedYear": "...",
+  "website": "https://...",
+  "address": "...",
+  "phone": "+387 ...",
+  "email": "...",
   "faculties": [
-    {
-      "name": "...",
-      "studyPrograms": [
-        { "name": "...", "cycle": "FIRST", "tracks": [{ "name": "..." }] }
-      ]
-    }
+${FACULTY_PLACEHOLDER.split("\n")
+  .map((line) => `    ${line}`)
+  .join("\n")}
   ]
 }`,
-  FACULTY: `{
-  "name": "...",
-  "studyPrograms": [
-    { "name": "...", "cycle": "FIRST", "tracks": [{ "name": "..." }] }
-  ]
-}`,
-  STUDY_PROGRAM: `{
-  "name": "...",
-  "cycle": "FIRST",
-  "tracks": [{ "name": "..." }]
-}`,
+  FACULTY: FACULTY_PLACEHOLDER,
 };
 
 interface ValidationIssue {
@@ -68,8 +80,7 @@ interface ValidationIssue {
 
 function parseTree(rootType: TreeRootType, raw: unknown) {
   if (rootType === "UNIVERSITY") return universityTreeDataSchema.safeParse(raw);
-  if (rootType === "FACULTY") return facultyTreeDataSchema.safeParse(raw);
-  return studyProgramTreeDataSchema.safeParse(raw);
+  return facultyTreeDataSchema.safeParse(raw);
 }
 
 function AddTreeEntity({
@@ -130,12 +141,25 @@ function AddTreeEntity({
 
     const result = parseTree(rootType, raw);
     if (!result.success) {
-      setIssues(
-        result.error.issues.map((issue) => ({
-          path: issue.path.map(String).join("."),
-          message: issue.message,
-        })),
-      );
+      const issuesFound = result.error.issues.map((issue) => ({
+        path: issue.path.map(String).join("."),
+        message: issue.message,
+      }));
+
+      // the most common mix-up: a whole university pasted while the item
+      // type is still Faculty - name it instead of listing unrecognized keys
+      const looksLikeUniversity =
+        typeof raw === "object" &&
+        raw !== null &&
+        ("faculties" in raw || "entity" in raw || "ownership" in raw);
+      if (rootType === "FACULTY" && looksLikeUniversity) {
+        issuesFound.unshift({
+          path: "",
+          message: t("contribution.tree.looksLikeUniversity"),
+        });
+      }
+
+      setIssues(issuesFound);
       return;
     }
 
@@ -168,9 +192,6 @@ function AddTreeEntity({
       onSubmit={(e) => void handleSubmit(e)}
       className="flex flex-col gap-4 w-full max-w-lg"
     >
-      <p className="text-sm text-(--text-secondary)">
-        {t("contribution.tree.help")}
-      </p>
       <div className="flex flex-col gap-1 items-center">
         <Label htmlFor="treeRootType" required>
           {t("contribution.entityType")}
@@ -207,7 +228,7 @@ function AddTreeEntity({
         <Textarea
           id="treeJson"
           name="treeJson"
-          rows={14}
+          rows={18}
           className="font-mono text-xs placeholder:opacity-60"
           placeholder={JSON_PLACEHOLDER[rootType]}
           value={jsonText}

@@ -4,14 +4,13 @@ import { apiMutation } from "../../../utils/apiMutation";
 import type { RequestContext } from "../../../types";
 import type {
   FacultyTreeData,
-  StudyProgramTreeData,
   UniversityTreeData,
 } from "../../../schemas/contribution";
 
 interface HandleSubmitTreeParams {
-  targetType: "UNIVERSITY" | "FACULTY" | "STUDY_PROGRAM";
+  targetType: "UNIVERSITY" | "FACULTY";
   parentId?: number;
-  data: UniversityTreeData | FacultyTreeData | StudyProgramTreeData;
+  data: UniversityTreeData | FacultyTreeData;
   comment?: string;
   onSuccess: () => void;
   ctx: RequestContext;

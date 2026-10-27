@@ -141,7 +141,7 @@ describe("PendingUniversityChangesRow", () => {
       </Wrapper>,
     );
 
-    expect(screen.getByText("+4 in tree")).toBeInTheDocument();
+    expect(screen.getByText("+4 included")).toBeInTheDocument();
   });
 
   test("shows no nested count badge for a flat CREATE", () => {
@@ -166,6 +166,6 @@ describe("PendingUniversityChangesRow", () => {
       </Wrapper>,
     );
 
-    expect(screen.queryByText(/in tree/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/included/)).not.toBeInTheDocument();
   });
 });
