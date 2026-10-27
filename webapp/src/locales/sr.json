@@ -181,6 +181,7 @@
     "change": "Izmjena",
     "comment": "Komentar za administratora",
     "entityType": "Vrsta stavke",
+    "nestedInTree": "u stablu",
     "actions": "Akcije",
     "searchResultsCountAria": "broj rezultata pretrage",
     "searchResults": "Rezultati pretrage",

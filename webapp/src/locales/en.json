@@ -182,6 +182,7 @@
     "change": "Change",
     "comment": "Comment for the admin",
     "entityType": "Item type",
+    "nestedInTree": "in tree",
     "searchResultsCountAria": "search result count",
     "searchResults": "Search Results",
     "user": "User",

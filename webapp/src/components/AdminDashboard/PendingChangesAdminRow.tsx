@@ -11,6 +11,7 @@ import {
 import { PendingChangeDetail } from "./PendingChangeDetail";
 import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
+import { countNestedNodes } from "../../utils/countNestedNodes";
 import type { Notification } from "../../types";
 import type { TypeOfChange } from "../../schemas/domain";
 import type { AdminPendingChange } from "../../schemas/pendingChange";
@@ -61,6 +62,8 @@ const PendingChangesAdminRow = memo(
 
     const currentEntity = data.currentEntity ?? null;
     const entityName = getChangedEntityName(data);
+    const nestedCount =
+      data.typeOfChange === "CREATE" ? countNestedNodes(data.data) : 0;
 
     async function handleApprove() {
       setActiveAction("approve");
@@ -111,6 +114,11 @@ const PendingChangesAdminRow = memo(
             <span className="font-mono font-medium text-(--text-primary) text-xs">
               {t(`contribution.entityTypes.${data.targetType}`)}
             </span>
+            {nestedCount > 0 && (
+              <span className="px-1.5 py-0.5 rounded text-xs font-semibold bg-(--surface-1) border border-(--border-color) text-(--text-secondary)">
+                +{nestedCount} {t("contribution.nestedInTree")}
+              </span>
+            )}
           </div>
           <div
             role="cell"

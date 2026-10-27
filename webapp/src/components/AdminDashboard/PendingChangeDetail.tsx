@@ -6,6 +6,12 @@ import { getChangedEntityName } from "../../utils/getChangedEntityName";
 
 import type { TFunction } from "../../types";
 import type { ParentCrumb } from "../../schemas/pendingChange";
+import type {
+  FacultyTreeData,
+  StudyProgramTreeData,
+  TrackCreateData,
+  UniversityTreeData,
+} from "../../schemas/contribution";
 
 interface FieldSpec {
   key: string;
@@ -194,6 +200,117 @@ function DataCard({ heading, rows }: { heading: string; rows: DetailRow[] }) {
   );
 }
 
+function ChildGroup({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className="flex flex-col gap-2 pl-2 sm:pl-3 border-l-2 border-(--border-color)">
+      <p className="text-xs font-semibold text-(--text-secondary)">{label}</p>
+      {children}
+    </div>
+  );
+}
+
+function TrackTreeCards({ tracks }: { tracks: TrackCreateData[] }) {
+  const { t } = use(RootContext);
+
+  return (
+    <ChildGroup label={`${t("admin.trackCount")} (${String(tracks.length)})`}>
+      {tracks.map((track, index) => (
+        <DataCard
+          key={`${track.name}-${String(index)}`}
+          heading={track.name}
+          rows={buildEntityRows("TRACK", track, t)}
+        />
+      ))}
+    </ChildGroup>
+  );
+}
+
+function StudyProgramTreeCards({
+  studyPrograms,
+}: {
+  studyPrograms: StudyProgramTreeData[];
+}) {
+  const { t } = use(RootContext);
+
+  return (
+    <ChildGroup
+      label={`${t("admin.studyProgramCount")} (${String(studyPrograms.length)})`}
+    >
+      {studyPrograms.map((program, index) => (
+        <div
+          key={`${program.name}-${program.cycle}-${String(index)}`}
+          className="flex flex-col gap-2"
+        >
+          <DataCard
+            heading={program.name}
+            rows={buildEntityRows("STUDY_PROGRAM", program, t)}
+          />
+          {program.tracks && <TrackTreeCards tracks={program.tracks} />}
+        </div>
+      ))}
+    </ChildGroup>
+  );
+}
+
+function FacultyTreeCards({ faculties }: { faculties: FacultyTreeData[] }) {
+  const { t } = use(RootContext);
+
+  return (
+    <ChildGroup
+      label={`${t("admin.facultyCount")} (${String(faculties.length)})`}
+    >
+      {faculties.map((faculty, index) => (
+        <div
+          key={`${faculty.name}-${String(index)}`}
+          className="flex flex-col gap-2"
+        >
+          <DataCard
+            heading={faculty.name}
+            rows={buildEntityRows("FACULTY", faculty, t)}
+          />
+          {faculty.studyPrograms && (
+            <StudyProgramTreeCards studyPrograms={faculty.studyPrograms} />
+          )}
+        </div>
+      ))}
+    </ChildGroup>
+  );
+}
+
+// The nested children of a tree CREATE as indented card groups; also reused
+// as the preview for tree submissions. The data has passed the tree create
+// schemas upstream (API response or paste validation), so the children
+// arrays match the inferred tree types.
+function TreeChildCards({
+  targetType,
+  data,
+}: {
+  targetType: string;
+  data: Record<string, unknown>;
+}) {
+  if (targetType === "UNIVERSITY") {
+    const { faculties } = data as Partial<UniversityTreeData>;
+    return faculties ? <FacultyTreeCards faculties={faculties} /> : null;
+  }
+  if (targetType === "FACULTY") {
+    const { studyPrograms } = data as Partial<FacultyTreeData>;
+    return studyPrograms ? (
+      <StudyProgramTreeCards studyPrograms={studyPrograms} />
+    ) : null;
+  }
+  if (targetType === "STUDY_PROGRAM") {
+    const { tracks } = data as Partial<StudyProgramTreeData>;
+    return tracks ? <TrackTreeCards tracks={tracks} /> : null;
+  }
+  return null;
+}
+
 // values are strings or numbers by the time they reach the diff; anything
 // else never compares equal
 function comparable(value: unknown): string | null {
@@ -364,10 +481,13 @@ function PendingChangeDetail({
     <div className="flex flex-col gap-2 pt-2 w-full">
       <ParentBreadcrumb crumbs={parentContext ?? []} current={entityName} />
       {typeOfChange === "CREATE" && hasProposedFields && (
-        <DataCard
-          heading={t("admin.proposedData")}
-          rows={buildEntityRows(targetType, proposedData, t)}
-        />
+        <>
+          <DataCard
+            heading={t("admin.proposedData")}
+            rows={buildEntityRows(targetType, proposedData, t)}
+          />
+          <TreeChildCards targetType={targetType} data={proposedData} />
+        </>
       )}
 
       {typeOfChange === "UPDATE" &&
@@ -422,4 +542,4 @@ function PendingChangeDetail({
   );
 }
 
-export { PendingChangeDetail };
+export { PendingChangeDetail, TreeChildCards };

@@ -8,6 +8,7 @@ import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityCh
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
 import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
+import { countNestedNodes } from "../../utils/countNestedNodes";
 import type { PendingChange } from "../../schemas/pendingChange";
 
 interface BadgeStyles {
@@ -48,6 +49,8 @@ function PendingUniversityChangesRow({
 
   const isEven = index % 2 === 0;
   const entityName = getChangedEntityName(change);
+  const nestedCount =
+    change.typeOfChange === "CREATE" ? countNestedNodes(change.data) : 0;
 
   return (
     <li
@@ -83,6 +86,11 @@ function PendingUniversityChangesRow({
           <span className="text-xs font-mono text-(--text-secondary)">
             {t(`contribution.entityTypes.${change.targetType}`)}
           </span>
+          {nestedCount > 0 && (
+            <span className="px-1.5 py-0.5 rounded text-xs font-semibold bg-(--surface-1) border border-(--border-color) text-(--text-secondary)">
+              +{nestedCount} {t("contribution.nestedInTree")}
+            </span>
+          )}
         </div>
 
         <div
