@@ -752,7 +752,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for trees", ()
     );
   });
 
-  test("a failing tree approval creates nothing and keeps the pending change", async () => {
+  test("a conflicting tree approval answers 409, creates nothing, and keeps the pending change", async () => {
     await createUniversity("Test Collision University");
     const pendingChange = await createPendingChange({
       targetType: "UNIVERSITY",
@@ -768,7 +768,13 @@ describe("Admin Router - POST /users/admin/approve-pending-change for trees", ()
 
     const response = await approve(pendingChange.id);
 
-    expect(response.status).toBe(500);
+    expect(response.status).toBe(409);
+    expect(response.body).toEqual({
+      error: {
+        code: "CONFLICT",
+        message: "A university with this name already exists.",
+      },
+    });
     expect(
       await prisma.faculty.findFirst({
         where: { name: "Test Collision Faculty" },
@@ -779,6 +785,36 @@ describe("Admin Router - POST /users/admin/approve-pending-change for trees", ()
         where: { id: pendingChange.id },
       }),
     ).not.toBeNull();
+  });
+
+  test("a faculty name collision names the faculty constraint in the 409", async () => {
+    const university = await createUniversity("Test Faculty Conflict Uni");
+    await createFaculty(university.id, "Test Existing Faculty");
+
+    const pendingChange = await createPendingChange({
+      targetType: "FACULTY",
+      typeOfChange: "CREATE",
+      parentId: university.id,
+      data: {
+        name: "Test Existing Faculty",
+        studyPrograms: [{ name: "Test Conflict Program", cycle: "FIRST" }],
+      },
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expect(response.status).toBe(409);
+    expect(response.body).toEqual({
+      error: {
+        code: "CONFLICT",
+        message: "A faculty with this name already exists in that university.",
+      },
+    });
+    expect(
+      await prisma.studyProgram.findFirst({
+        where: { name: "Test Conflict Program" },
+      }),
+    ).toBeNull();
   });
 });
 

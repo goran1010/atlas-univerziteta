@@ -7,6 +7,7 @@ type ErrorCode =
   | "FORBIDDEN"
   | "ALREADY_ADMIN"
   | "NOT_FOUND"
+  | "CONFLICT"
   | "CONTRIBUTION_LIMIT"
   | "NO_CHANGES"
   | "RATE_LIMITED"
