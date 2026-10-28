@@ -470,7 +470,23 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
 });
 
 describe("GET /api/v1/search - empty browse", () => {
-  test("returns full sections when no term or filters given", async () => {
+  test("rejects a query with no term and no filters", async () => {
+    const response = await request(app).get("/api/v1/search");
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["code"]).toBe("VALIDATION_ERROR");
+    expect(error["issues"]).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          message: "Provide a search term or at least one filter.",
+        }),
+      ]),
+    );
+  });
+
+  test("returns full sections when browsing by type filters", async () => {
     const [universityCount, facultyCount, studyProgramCount] =
       await Promise.all([
         prisma.university.count(),
@@ -478,7 +494,9 @@ describe("GET /api/v1/search - empty browse", () => {
         prisma.studyProgram.count(),
       ]);
 
-    const response = await request(app).get("/api/v1/search");
+    const response = await request(app).get(
+      "/api/v1/search?type=university&type=faculty&type=studyProgram",
+    );
     const responseBody = getResponseObject(response.body);
     const data = getResponseObject(responseBody["data"]);
 

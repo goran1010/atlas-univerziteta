@@ -51,72 +51,161 @@ async function approvePendingChange({
 }: {
   id: string;
 }): Promise<ApplyResult> {
-  return prisma.$transaction(async (tx) => {
-    const pendingChange = await tx.pendingChange.findUnique({
-      where: { id },
-    });
+  // a whole-university tree is up to 800 nested inserts, more than Prisma's
+  // 5s default transaction budget allows on a slow disk
+  return prisma.$transaction(
+    async (tx) => {
+      const pendingChange = await tx.pendingChange.findUnique({
+        where: { id },
+      });
 
-    if (!pendingChange) {
-      return "NOT_FOUND";
-    }
-
-    const { targetType, typeOfChange, targetId, parentId } = pendingChange;
-
-    // Of two concurrent approvals, the second blocks on this delete and
-    // finds the row gone; a failure after the claim rolls it back.
-    const claim = async () => {
-      const { count } = await tx.pendingChange.deleteMany({ where: { id } });
-      return count > 0;
-    };
-
-    if (targetType === "UNIVERSITY") {
-      if (typeOfChange === "DELETE") {
-        if (targetId === null) return "INVALID_DATA";
-
-        if (!(await claim())) return "NOT_FOUND";
-        await tx.university.delete({ where: { id: targetId } });
-        return "APPLIED";
+      if (!pendingChange) {
+        return "NOT_FOUND";
       }
 
-      if (typeOfChange === "CREATE") {
+      const { targetType, typeOfChange, targetId, parentId } = pendingChange;
+
+      // Of two concurrent approvals, the second blocks on this delete and
+      // finds the row gone; a failure after the claim rolls it back.
+      const claim = async () => {
+        const { count } = await tx.pendingChange.deleteMany({ where: { id } });
+        return count > 0;
+      };
+
+      if (targetType === "UNIVERSITY") {
+        if (typeOfChange === "DELETE") {
+          if (targetId === null) return "INVALID_DATA";
+
+          if (!(await claim())) return "NOT_FOUND";
+          await tx.university.delete({ where: { id: targetId } });
+          return "APPLIED";
+        }
+
+        if (typeOfChange === "CREATE") {
+          const data = parsePendingChangeData(
+            universityTreeDataSchema,
+            pendingChange.data,
+            id,
+          );
+          if (!data) return "INVALID_DATA";
+
+          if (!(await claim())) return "NOT_FOUND";
+          // one nested create, so the whole tree lands or nothing does
+          await tx.university.create({
+            data: toUniversityTreeCreateInput(data),
+          });
+          return "APPLIED";
+        }
+
+        if (targetId === null) return "INVALID_DATA";
+
         const data = parsePendingChangeData(
-          universityTreeDataSchema,
+          universityEditDataSchema,
           pendingChange.data,
           id,
         );
         if (!data) return "INVALID_DATA";
 
         if (!(await claim())) return "NOT_FOUND";
-        // one nested create, so the whole tree lands or nothing does
-        await tx.university.create({
-          data: toUniversityTreeCreateInput(data),
+        await tx.university.update({
+          where: { id: targetId },
+          data: toUniversityUpdateInput(data),
         });
         return "APPLIED";
       }
 
-      if (targetId === null) return "INVALID_DATA";
+      if (targetType === "FACULTY") {
+        if (typeOfChange === "DELETE") {
+          if (targetId === null) return "INVALID_DATA";
 
-      const data = parsePendingChangeData(
-        universityEditDataSchema,
-        pendingChange.data,
-        id,
-      );
-      if (!data) return "INVALID_DATA";
+          if (!(await claim())) return "NOT_FOUND";
+          await tx.faculty.delete({ where: { id: targetId } });
+          return "APPLIED";
+        }
 
-      if (!(await claim())) return "NOT_FOUND";
-      await tx.university.update({
-        where: { id: targetId },
-        data: toUniversityUpdateInput(data),
-      });
-      return "APPLIED";
-    }
+        if (typeOfChange === "CREATE") {
+          if (parentId === null) return "INVALID_DATA";
 
-    if (targetType === "FACULTY") {
+          const data = parsePendingChangeData(
+            facultyTreeDataSchema,
+            pendingChange.data,
+            id,
+          );
+          if (!data) return "INVALID_DATA";
+
+          if (!(await claim())) return "NOT_FOUND";
+          await tx.faculty.create({
+            data: toFacultyTreeCreateInput(data, parentId),
+          });
+          return "APPLIED";
+        }
+
+        if (targetId === null) return "INVALID_DATA";
+
+        const data = parsePendingChangeData(
+          facultyEditDataSchema,
+          pendingChange.data,
+          id,
+        );
+        if (!data) return "INVALID_DATA";
+
+        if (!(await claim())) return "NOT_FOUND";
+        await tx.faculty.update({
+          where: { id: targetId },
+          data: toFacultyUpdateInput(data),
+        });
+        return "APPLIED";
+      }
+
+      if (targetType === "STUDY_PROGRAM") {
+        if (typeOfChange === "DELETE") {
+          if (targetId === null) return "INVALID_DATA";
+
+          if (!(await claim())) return "NOT_FOUND";
+          await tx.studyProgram.delete({ where: { id: targetId } });
+          return "APPLIED";
+        }
+
+        if (typeOfChange === "CREATE") {
+          if (parentId === null) return "INVALID_DATA";
+
+          const data = parsePendingChangeData(
+            studyProgramTreeDataSchema,
+            pendingChange.data,
+            id,
+          );
+          if (!data) return "INVALID_DATA";
+
+          if (!(await claim())) return "NOT_FOUND";
+          await tx.studyProgram.create({
+            data: toStudyProgramTreeCreateInput(data, parentId),
+          });
+          return "APPLIED";
+        }
+
+        if (targetId === null) return "INVALID_DATA";
+
+        const data = parsePendingChangeData(
+          studyProgramEditDataSchema,
+          pendingChange.data,
+          id,
+        );
+        if (!data) return "INVALID_DATA";
+
+        if (!(await claim())) return "NOT_FOUND";
+        await tx.studyProgram.update({
+          where: { id: targetId },
+          data: toStudyProgramUpdateInput(data),
+        });
+        return "APPLIED";
+      }
+
+      // targetType === "TRACK" is the only remaining case
       if (typeOfChange === "DELETE") {
         if (targetId === null) return "INVALID_DATA";
 
         if (!(await claim())) return "NOT_FOUND";
-        await tx.faculty.delete({ where: { id: targetId } });
+        await tx.track.delete({ where: { id: targetId } });
         return "APPLIED";
       }
 
@@ -124,15 +213,15 @@ async function approvePendingChange({
         if (parentId === null) return "INVALID_DATA";
 
         const data = parsePendingChangeData(
-          facultyTreeDataSchema,
+          trackCreateDataSchema,
           pendingChange.data,
           id,
         );
         if (!data) return "INVALID_DATA";
 
         if (!(await claim())) return "NOT_FOUND";
-        await tx.faculty.create({
-          data: toFacultyTreeCreateInput(data, parentId),
+        await tx.track.create({
+          data: toTrackCreateInput(data, parentId),
         });
         return "APPLIED";
       }
@@ -140,105 +229,21 @@ async function approvePendingChange({
       if (targetId === null) return "INVALID_DATA";
 
       const data = parsePendingChangeData(
-        facultyEditDataSchema,
+        trackEditDataSchema,
         pendingChange.data,
         id,
       );
       if (!data) return "INVALID_DATA";
 
       if (!(await claim())) return "NOT_FOUND";
-      await tx.faculty.update({
+      await tx.track.update({
         where: { id: targetId },
-        data: toFacultyUpdateInput(data),
+        data: toTrackUpdateInput(data),
       });
       return "APPLIED";
-    }
-
-    if (targetType === "STUDY_PROGRAM") {
-      if (typeOfChange === "DELETE") {
-        if (targetId === null) return "INVALID_DATA";
-
-        if (!(await claim())) return "NOT_FOUND";
-        await tx.studyProgram.delete({ where: { id: targetId } });
-        return "APPLIED";
-      }
-
-      if (typeOfChange === "CREATE") {
-        if (parentId === null) return "INVALID_DATA";
-
-        const data = parsePendingChangeData(
-          studyProgramTreeDataSchema,
-          pendingChange.data,
-          id,
-        );
-        if (!data) return "INVALID_DATA";
-
-        if (!(await claim())) return "NOT_FOUND";
-        await tx.studyProgram.create({
-          data: toStudyProgramTreeCreateInput(data, parentId),
-        });
-        return "APPLIED";
-      }
-
-      if (targetId === null) return "INVALID_DATA";
-
-      const data = parsePendingChangeData(
-        studyProgramEditDataSchema,
-        pendingChange.data,
-        id,
-      );
-      if (!data) return "INVALID_DATA";
-
-      if (!(await claim())) return "NOT_FOUND";
-      await tx.studyProgram.update({
-        where: { id: targetId },
-        data: toStudyProgramUpdateInput(data),
-      });
-      return "APPLIED";
-    }
-
-    // targetType === "TRACK" is the only remaining case
-    if (typeOfChange === "DELETE") {
-      if (targetId === null) return "INVALID_DATA";
-
-      if (!(await claim())) return "NOT_FOUND";
-      await tx.track.delete({ where: { id: targetId } });
-      return "APPLIED";
-    }
-
-    if (typeOfChange === "CREATE") {
-      if (parentId === null) return "INVALID_DATA";
-
-      const data = parsePendingChangeData(
-        trackCreateDataSchema,
-        pendingChange.data,
-        id,
-      );
-      if (!data) return "INVALID_DATA";
-
-      if (!(await claim())) return "NOT_FOUND";
-      await tx.track.create({
-        data: toTrackCreateInput(data, parentId),
-      });
-      return "APPLIED";
-    }
-
-    if (targetId === null) return "INVALID_DATA";
-
-    const data = parsePendingChangeData(
-      trackEditDataSchema,
-      pendingChange.data,
-      id,
-    );
-    if (!data) return "INVALID_DATA";
-
-    if (!(await claim())) return "NOT_FOUND";
-    await tx.track.update({
-      where: { id: targetId },
-      data: toTrackUpdateInput(data),
-    });
-    return "APPLIED";
-  });
+    },
+    { timeout: 20_000 },
+  );
 }
 
 export { approvePendingChange };
