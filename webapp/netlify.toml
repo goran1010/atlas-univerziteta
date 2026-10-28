@@ -4,11 +4,12 @@
   NODE_VERSION = "24"
 
 # Everything is self-hosted (fonts, images, the theme-init script) except the
-# API calls, so the policy stays strict: no unsafe-inline anywhere.
+# API calls and the OAuth profile photos, so the policy stays strict: no
+# unsafe-inline anywhere.
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.atlasuniverziteta.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://*.googleusercontent.com https://avatars.githubusercontent.com; font-src 'self'; connect-src 'self' https://api.atlasuniverziteta.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
     Cross-Origin-Opener-Policy = "same-origin-allow-popups"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
