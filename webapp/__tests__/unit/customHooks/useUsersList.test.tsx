@@ -11,7 +11,7 @@ const identityTranslate = (key: string) => key;
 
 interface HookProbeProps {
   setLoading: (loading: boolean) => void;
-  enabled?: boolean;
+  enabled?: boolean | undefined;
 }
 
 function HookProbe({ setLoading, enabled }: HookProbeProps) {

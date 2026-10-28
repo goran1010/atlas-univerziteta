@@ -9,20 +9,20 @@ import type {
 import type { PendingChange } from "../../schemas/pendingChange";
 
 export interface ContributionFormDraft {
-  name?: string;
-  city?: string;
-  entity?: Entity;
-  ownership?: Ownership;
-  acronym?: string;
-  foundedYear?: string;
-  website?: string;
-  address?: string;
-  phone?: string;
-  email?: string;
-  cycle?: StudyCycle;
-  durationYears?: number;
-  ects?: number;
-  language?: string;
+  name?: string | undefined;
+  city?: string | undefined;
+  entity?: Entity | undefined;
+  ownership?: Ownership | undefined;
+  acronym?: string | undefined;
+  foundedYear?: string | undefined;
+  website?: string | undefined;
+  address?: string | undefined;
+  phone?: string | undefined;
+  email?: string | undefined;
+  cycle?: StudyCycle | undefined;
+  durationYears?: number | undefined;
+  ects?: number | undefined;
+  language?: string | undefined;
 }
 
 export interface ContributionFormState {

@@ -4,9 +4,11 @@ import { vi } from "vitest";
 import type { Request, Response, NextFunction } from "express";
 
 vi.mock("../../src/email/confirmationEmail.js", () => ({
-  sendConfirmationEmail: vi.fn(() => {
-    return { success: true };
-  }),
+  sendConfirmationEmail: vi.fn().mockResolvedValue(undefined),
+}));
+
+vi.mock("../../src/email/resetPasswordEmail.js", () => ({
+  sendResetPasswordEmail: vi.fn().mockResolvedValue(undefined),
 }));
 
 vi.mock("pino", () => {

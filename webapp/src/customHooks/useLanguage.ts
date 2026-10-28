@@ -41,7 +41,7 @@ function useLanguage() {
   const t: TFunction = useCallback(
     (key: string): string => {
       const keys = key.split(".");
-      let value: TranslationValue = translations[resolvedLanguage];
+      let value: TranslationValue | undefined = translations[resolvedLanguage];
 
       for (const k of keys) {
         if (typeof value !== "object") return key;

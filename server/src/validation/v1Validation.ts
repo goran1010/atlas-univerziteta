@@ -75,8 +75,19 @@ const searchQuerySchema = z.object({
     .transform(toArray),
 });
 
+// a bare query would return the entire dataset in one response
+const guardedSearchQuerySchema = searchQuerySchema.refine(
+  (query) =>
+    query.searchTerm !== undefined ||
+    query.entity !== undefined ||
+    query.ownership !== undefined ||
+    query.cycle !== undefined ||
+    query.type !== undefined,
+  { message: "Provide a search term or at least one filter." },
+);
+
 function searchQuery(input: unknown) {
-  return parseRequest(searchQuerySchema, input);
+  return parseRequest(guardedSearchQuerySchema, input);
 }
 
 export {

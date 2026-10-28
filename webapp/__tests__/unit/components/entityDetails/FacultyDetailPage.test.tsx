@@ -156,7 +156,10 @@ describe("FacultyDetailPage", () => {
     );
   });
 
-  test("shows an error notification when the request fails", async () => {
+  test("shows the error card with a retry button when the request fails", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => {
+      return;
+    });
     server.use(
       http.get("*/api/v1/faculties/:id", () =>
         HttpResponse.json(
@@ -168,9 +171,10 @@ describe("FacultyDetailPage", () => {
     renderPage();
 
     expect(
-      await screen.findByText(
-        /Could not load the details\. Try again in a moment\./i,
-      ),
+      await screen.findByText("Could not load the data."),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /Try again/i }),
     ).toBeInTheDocument();
   });
 });

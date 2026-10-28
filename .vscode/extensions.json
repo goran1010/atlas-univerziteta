@@ -1,3 +1,15 @@
 {
-  "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-azuretools.vscode-containers",
+    "prisma.prisma",
+    "bradlc.vscode-tailwindcss",
+    "vitest.explorer",
+    "ms-playwright.playwright",
+    "streetsidesoftware.code-spell-checker",
+    "redhat.vscode-yaml",
+    "github.vscode-github-actions",
+    "matthewpi.caddyfile-support"
+  ]
 }

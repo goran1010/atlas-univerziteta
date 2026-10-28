@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_call:
 
 jobs:
   test:
@@ -47,8 +48,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version-file: ".nvmrc"
           cache: npm
+          cache-dependency-path: "**/package-lock.json"
 
       - name: Install dependencies
         run: npm run install:all
@@ -56,8 +58,8 @@ jobs:
       - name: Test webapp
         run: npm run test:webapp
 
-      - name: Migrate database and generate Prisma client
-        run: npm run db:setup
+      - name: Generate Prisma client
+        run: npm run db:generate
 
       - name: Test server
         run: npm run test:server

@@ -1,11 +1,8 @@
 import { test, expect } from "@playwright/test";
 import { AxeBuilder } from "@axe-core/playwright";
-import {
-  ADMIN_STORAGE_STATE,
-  E2E_SERVER_URL,
-  USER_STORAGE_STATE,
-} from "../utils/env";
-import type { APIRequestContext, Page, Locator } from "@playwright/test";
+import { ADMIN_STORAGE_STATE, USER_STORAGE_STATE } from "../utils/env";
+import { firstEntity } from "../utils/helpers";
+import type { Page, Locator } from "@playwright/test";
 
 const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"];
 
@@ -70,19 +67,6 @@ test("search results have no detectable a11y violations", async ({ page }) => {
   ).toBeVisible({ timeout: 5000 });
   await expectNoViolations(page);
 });
-
-async function firstEntity(
-  request: APIRequestContext,
-  path: "universities" | "faculties",
-) {
-  const response = await request.get(`${E2E_SERVER_URL}/api/v1/${path}`);
-  const { data } = (await response.json()) as {
-    data: { id: number; name: string }[];
-  };
-  const entity = data.at(0);
-  if (!entity) throw new Error(`Expected at least one seeded ${path} row`);
-  return entity;
-}
 
 test("detail pages have no detectable a11y violations", async ({
   page,

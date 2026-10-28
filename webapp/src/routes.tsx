@@ -28,6 +28,8 @@ const routeImports = {
   profile: () => import("./components/Profile/Profile"),
   login: () => import("./components/LogIn/LogIn"),
   signup: () => import("./components/SignUp/SignUp"),
+  forgotPassword: () => import("./components/ForgotPassword/ForgotPassword"),
+  resetPassword: () => import("./components/ResetPassword/ResetPassword"),
 };
 
 // a failed warm-up is harmless - the route.lazy import retries on navigation
@@ -156,6 +158,18 @@ const routes = [
         path: "signup",
         lazy: async () => ({
           Component: (await routeImports.signup()).SignUp,
+        }),
+      },
+      {
+        path: "forgot-password",
+        lazy: async () => ({
+          Component: (await routeImports.forgotPassword()).ForgotPassword,
+        }),
+      },
+      {
+        path: "reset-password",
+        lazy: async () => ({
+          Component: (await routeImports.resetPassword()).ResetPassword,
         }),
       },
     ],

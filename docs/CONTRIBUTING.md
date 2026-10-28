@@ -1,6 +1,6 @@
 # Contributing to Atlas Univerziteta
 
-Contributions of any kind are welcome - bug fixes, new features, data, documentation, or tests.
+Contributions of any kind are welcome - bug fixes, new features, documentation, or tests. University data is contributed through the app itself, not through pull requests - see [In-App Data Contributions](#in-app-data-contributions). The JSON files in `server/JSON_files/` are the bootstrap dataset for development and e2e databases; the live dataset evolves only through approved in-app suggestions.
 
 ## Getting Started
 
@@ -26,14 +26,14 @@ In production, emails are sent via [Resend](https://resend.com). The default sen
 
 - Never commit secrets, API keys, or `.env` files
 - All data must come from verifiable and/or official sources
-- Keep commits focused; use conventional prefixes: `feat:`, `fix:`, `docs:`, `data:`, `test:`, `refactor:`, `chore:`, etc.
+- Keep commits focused; use conventional prefixes: `feat:`, `fix:`, `docs:`, `test:`, `refactor:`, `chore:`, etc.
 - Write tests for new features or bug fixes
 - Run `npm run test:all` locally before pushing to ensure all tests pass
 - Follow existing code style and patterns in the codebase
 
 ## In-App Data Contributions
 
-If you want to contribute data through the Atlas Univerziteta app (instead of opening a code PR), use the current workflow below:
+Data contributions happen in the Atlas Univerziteta app - suggestions are reviewed by admins and applied to the live dataset there. Use the workflow below:
 
 1. Create an account and confirm your email.
 2. Log in and open `/improve-data`.

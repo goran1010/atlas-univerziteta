@@ -5,232 +5,27 @@ on:
     branches:
       - main
 
+# the checks are the same reusable workflows the PR pipelines run
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    name: Run lint check
-    env:
-      DATABASE_URL: postgresql://test_user:test_password@localhost:5432/postgres_db
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
-
-      - name: Install dependencies
-        run: npm run install:all
-
-      - name: Generate Prisma client
-        run: npm run db:generate
-
-      - name: Lint webapp
-        run: npm run lint:webapp
-
-      - name: Lint server
-        run: npm run lint:server
-
-      - name: Lint e2e
-        run: npm run lint:e2e
-
-  type_check:
-    runs-on: ubuntu-latest
-    name: Run type-check
-    env:
-      DATABASE_URL: postgresql://test_user:test_password@localhost:5432/postgres_db
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
-
-      - name: Install dependencies
-        run: npm run install:all
-
-      - name: Generate Prisma client
-        run: npm run db:generate
-
-      - name: Type check webapp
-        run: npm run typecheck:webapp
-
-      - name: Type check server
-        run: npm run typecheck:server
-
-      - name: Type check e2e
-        run: npm run typecheck:e2e
+  lint_type_check:
+    uses: ./.github/workflows/lint_type_check.yml
 
   test:
-    runs-on: ubuntu-latest
-    name: Run tests
-
-    services:
-      postgres:
-        image: postgres:18
-        ports:
-          - 5432:5432
-        env:
-          POSTGRES_USER: test_user
-          POSTGRES_PASSWORD: test_password
-          POSTGRES_DB: postgres
-        options: >-
-          --health-cmd="pg_isready -U test_user -d postgres"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=5
-
-    env:
-      VITE_API_URL: http://localhost:3000
-      PORT: 3000
-      WEBAPP_URL: http://localhost:5173
-      NODE_ENV: test
-      SERVER_URL: http://localhost:3000
-      TEST_DATABASE_URL: postgresql://test_user:test_password@localhost:5432/postgres
-      DATABASE_URL: postgresql://test_user:test_password@localhost:5432/postgres_db
-      RESEND_API_KEY: random_text_for_ci
-      GITHUB_CLIENT_ID: random_text_for_ci
-      GITHUB_CLIENT_SECRET: random_text_for_ci
-      GOOGLE_CLIENT_ID: random_text_for_ci
-      GOOGLE_CLIENT_SECRET: random_text_for_ci
-      BETTER_AUTH_SECRET: random_text_for_ci_at_least_32_chars
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
-
-      - name: Install dependencies
-        run: npm run install:all
-
-      - name: Test webapp
-        run: npm run test:webapp
-
-      - name: Migrate database and generate Prisma client
-        run: npm run db:setup
-
-      - name: Test server
-        run: npm run test:server
+    uses: ./.github/workflows/test.yml
 
   e2e:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    name: Run Playwright e2e and a11y tests
-
-    services:
-      postgres:
-        image: postgres:18
-        ports:
-          - 5432:5432
-        env:
-          POSTGRES_USER: test_user
-          POSTGRES_PASSWORD: test_password
-          POSTGRES_DB: postgres
-        options: >-
-          --health-cmd="pg_isready -U test_user -d postgres"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=5
-
-    env:
-      E2E_DATABASE_URL: postgresql://test_user:test_password@localhost:5432/uniatlas_e2e
-      DATABASE_URL: postgresql://test_user:test_password@localhost:5432/uniatlas_e2e
-      RESEND_API_KEY: random_text_for_ci
-      GITHUB_CLIENT_ID: random_text_for_ci
-      GITHUB_CLIENT_SECRET: random_text_for_ci
-      GOOGLE_CLIENT_ID: random_text_for_ci
-      GOOGLE_CLIENT_SECRET: random_text_for_ci
-      BETTER_AUTH_SECRET: random_text_for_ci_at_least_32_chars
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
-          cache-dependency-path: "**/package-lock.json"
-
-      - name: Install dependencies
-        run: npm run install:all
-
-      - name: Generate Prisma client
-        run: npm run db:generate
-
-      - name: Get Playwright version
-        id: playwright-version
-        run: echo "version=$(node -p "require('./e2e/node_modules/@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
-
-      - name: Cache Playwright browsers
-        id: playwright-cache
-        uses: actions/cache@v6
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
-
-      - name: Install Playwright browsers
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: cd e2e && npx playwright install --with-deps chromium
-
-      - name: Install Playwright system dependencies
-        if: steps.playwright-cache.outputs.cache-hit == 'true'
-        run: cd e2e && npx playwright install-deps chromium
-
-      - name: Run e2e and a11y tests
-        run: npm run test:e2e
-
-      - name: Upload Playwright report
-        if: failure()
-        uses: actions/upload-artifact@v7
-        with:
-          name: playwright-report
-          path: e2e/playwright-report/
-          retention-days: 7
+    uses: ./.github/workflows/e2e.yml
 
   spell_format:
-    runs-on: ubuntu-latest
-    name: Run spell and format check
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
+    uses: ./.github/workflows/spell_format_check.yml
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
-
-      - name: Install all dependencies
-        run: npm run install:all
-
-      - name: Check webapp formatting
-        run: npm run format:check:webapp
-
-      - name: Check server formatting
-        run: npm run format:check:server
-
-      - name: Check e2e formatting
-        run: npm run format:check:e2e
-
-      - name: Run spell check
-        run: npm run spell
+  build:
+    uses: ./.github/workflows/build.yml
 
   check_deploy_paths:
     runs-on: ubuntu-latest
     name: Check if deploy is needed
-    needs: [lint, type_check, test, e2e, spell_format]
+    needs: [lint_type_check, test, e2e, spell_format, build]
     outputs:
       should_deploy: ${{ steps.changes.outputs.should_deploy }}
     steps:
@@ -241,7 +36,7 @@ jobs:
       - name: Check for deploy-relevant changes
         id: changes
         run: |
-          if git diff --name-only HEAD~1 HEAD | grep -qE '^server/|^docker-compose\.yml$|^Caddyfile$'; then
+          if git diff --name-only HEAD~1 HEAD | grep -qE '^server/|^docker-compose(\.prod)?\.yml$|^Caddyfile$'; then
             echo "should_deploy=true" >> "$GITHUB_OUTPUT"
           else
             echo "should_deploy=false" >> "$GITHUB_OUTPUT"
@@ -274,6 +69,6 @@ jobs:
           script: |
             cd /root/atlas-univerziteta
             git pull --ff-only
-            docker compose pull server
-            docker compose up -d
-            docker compose exec -T caddy caddy reload --config /etc/caddy/Caddyfile
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml pull server
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml exec -T caddy caddy reload --config /etc/caddy/Caddyfile

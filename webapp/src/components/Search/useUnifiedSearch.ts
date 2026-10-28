@@ -38,7 +38,6 @@ function useUnifiedSearch() {
   const inputRef = useRef<HTMLInputElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
   const abortRef = useRef<AbortController | null>(null);
-  const initialLoadDone = useRef(false);
   const [filtersOpen, setFiltersOpen] = useState(() => {
     const params = new URLSearchParams(window.location.search);
     const hasEntity = params.has("entity");
@@ -106,10 +105,10 @@ function useUnifiedSearch() {
     async (
       term: string | undefined,
       filters: {
-        entity?: string;
-        ownership?: string;
-        cycle?: string[];
-        type?: string[];
+        entity?: string | undefined;
+        ownership?: string | undefined;
+        cycle?: string[] | undefined;
+        type?: string[] | undefined;
       },
     ) => {
       // a newer search supersedes any in-flight one
@@ -172,7 +171,7 @@ function useUnifiedSearch() {
       if (hasText && trimmed.length < 2) return;
 
       if (!hasText && !hasAnyFilter && !browse) {
-        // eslint-disable-next-line react-x/set-state-in-effect -- also reached synchronously from the deep-link effect, whose purpose is syncing URL params into view state
+        // eslint-disable-next-line react-x/set-state-in-effect -- reached synchronously from the params effect, whose purpose is syncing URL params into view state
         setView({ kind: "idle" });
         return;
       }
@@ -191,31 +190,28 @@ function useUnifiedSearch() {
     [executeSearch],
   );
 
+  // The URL is the single search trigger: handlers only write params, and
+  // this effect runs the search - the same path covers deep links, the
+  // page's own handlers, and in-app navigation to /search with new params.
+  const paramsKey = searchParams.toString();
+  const urlQuery = searchParams.get("q") ?? "";
   useEffect(() => {
-    if (initialLoadDone.current) return;
-    initialLoadDone.current = true;
-
-    const hasAnyParam =
-      searchInput.trim() ||
-      entityFilter ||
-      ownershipFilter ||
-      cycleFilters.length > 0 ||
-      typeFilters.length > 0 ||
-      browseAll;
-
-    if (hasAnyParam) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- deliberate one-time search for a deep-linked URL
-      triggerSearch(
-        searchInput,
-        entityFilter,
-        ownershipFilter,
-        cycleFilters,
-        typeFilters,
-        browseAll,
-      );
+    if (paramsKey === "") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect, react-x/set-state-in-effect -- syncing URL params into view state is this effect's purpose
+      setView({ kind: "idle" });
+      return;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps -- mount-only by design; later param changes go through the handlers
-  }, []);
+
+    triggerSearch(
+      urlQuery,
+      entityFilter,
+      ownershipFilter,
+      cycleFilters,
+      typeFilters,
+      browseAll,
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps -- every filter value above derives from paramsKey
+  }, [paramsKey, triggerSearch]);
 
   useEffect(() => {
     if (window.matchMedia("(pointer: fine)").matches) {
@@ -225,7 +221,6 @@ function useUnifiedSearch() {
 
   // reflect external URL changes (e.g. nav links) into the input, but never
   // while the user is typing in it - that would recreate the cursor jump
-  const urlQuery = searchParams.get("q") ?? "";
   useEffect(() => {
     if (document.activeElement === inputRef.current) return;
     setSearchInput(urlQuery);
@@ -236,14 +231,6 @@ function useUnifiedSearch() {
     clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       updateParams({ q: value || null });
-      triggerSearch(
-        value,
-        entityFilter,
-        ownershipFilter,
-        cycleFilters,
-        typeFilters,
-        browseAll,
-      );
     }, SEARCH_DEBOUNCE_MS);
   }
 
@@ -252,18 +239,6 @@ function useUnifiedSearch() {
     value: string | null,
   ) {
     updateParams({ [key]: value });
-
-    const nextEntity = key === "entity" ? (value ?? "") : entityFilter;
-    const nextOwnership = key === "ownership" ? (value ?? "") : ownershipFilter;
-
-    triggerSearch(
-      searchInput,
-      nextEntity,
-      nextOwnership,
-      cycleFilters,
-      typeFilters,
-      browseAll,
-    );
   }
 
   function handleCycleChange(value: string, checked: boolean) {
@@ -271,14 +246,6 @@ function useUnifiedSearch() {
       ? [...cycleFilters, value]
       : cycleFilters.filter((c) => c !== value);
     updateParams({ cycle: next });
-    triggerSearch(
-      searchInput,
-      entityFilter,
-      ownershipFilter,
-      next,
-      typeFilters,
-      browseAll,
-    );
   }
 
   function handleTypeChange(value: string, checked: boolean) {
@@ -286,40 +253,16 @@ function useUnifiedSearch() {
       ? [...typeFilters, value]
       : typeFilters.filter((type) => type !== value);
     updateParams({ type: next });
-    triggerSearch(
-      searchInput,
-      entityFilter,
-      ownershipFilter,
-      cycleFilters,
-      next,
-      browseAll,
-    );
   }
 
   function handleBrowseAll() {
     updateParams({ browse: "all" });
-    triggerSearch(
-      searchInput,
-      entityFilter,
-      ownershipFilter,
-      cycleFilters,
-      typeFilters,
-      true,
-    );
   }
 
   function handleClear() {
     setSearchInput("");
-    updateParams({ q: null });
     clearTimeout(debounceRef.current);
-    triggerSearch(
-      "",
-      entityFilter,
-      ownershipFilter,
-      cycleFilters,
-      typeFilters,
-      browseAll,
-    );
+    updateParams({ q: null });
     inputRef.current?.focus();
   }
 
@@ -327,7 +270,6 @@ function useUnifiedSearch() {
     setSearchInput("");
     clearTimeout(debounceRef.current);
     setSearchParams(new URLSearchParams(), { replace: true });
-    setView({ kind: "idle" });
   }
 
   return {

@@ -1,8 +1,7 @@
 import { use } from "react";
-import { Outlet } from "react-router";
+import { Outlet, ScrollRestoration } from "react-router";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/layout/Footer";
-import { ScrollToTop } from "./components/layout/ScrollToTop";
 import { useStatusCheck } from "./customHooks/useStatusCheck";
 import { useOAuthLoginAnnouncement } from "./customHooks/useOAuthLoginAnnouncement";
 import { Notifications } from "./components/Notifications";
@@ -50,7 +49,7 @@ function App() {
           />
         </Helmet>
         <>
-          <ScrollToTop />
+          <ScrollRestoration />
 
           {/* A11y: Accessibility features */}
           <RouteAnnouncer />

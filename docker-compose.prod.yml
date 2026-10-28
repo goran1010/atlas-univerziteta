@@ -1,0 +1,7 @@
+# Production override: the server runs the image CI built and pushed, instead
+# of building on the VPS. Every compose command on the VPS passes both files:
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml <command>
+services:
+  server:
+    image: ghcr.io/goran1010/atlas-univerziteta-server:latest
+    build: !reset null

@@ -7,6 +7,7 @@ import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { PendingChange } from "../../../../src/schemas/pendingChange";
+import { nth } from "../../../utils/nth";
 
 function Wrapper({ children }: { children: React.ReactNode }) {
   return <RootContextProvider>{children}</RootContextProvider>;
@@ -132,7 +133,7 @@ describe("PendingUniversityChanges", () => {
       name: /^Withdraw$/i,
     });
     expect(deleteButtons).toHaveLength(2);
-    await user.click(deleteButtons[0]);
+    await user.click(nth(deleteButtons));
     await user.click(
       within(screen.getByRole("dialog")).getByRole("button", {
         name: /^Withdraw$/i,

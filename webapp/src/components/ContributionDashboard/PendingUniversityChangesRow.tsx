@@ -10,21 +10,9 @@ import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { entityDetailPath } from "../../utils/entityDetailPath";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { countNestedNodes } from "../../utils/countNestedNodes";
+import { CHANGE_TYPE_BADGE } from "../../utils/changeTypeBadges";
 import { LEVEL_BADGE } from "../../utils/levelColors";
 import type { PendingChange } from "../../schemas/pendingChange";
-
-interface BadgeStyles {
-  CREATE: string;
-  UPDATE: string;
-  DELETE: string;
-}
-
-const BADGE: BadgeStyles = {
-  CREATE: "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200",
-  UPDATE:
-    "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-200",
-  DELETE: "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-200",
-};
 
 interface PendingUniversityChangesRowProps {
   change: PendingChange;
@@ -61,111 +49,65 @@ function PendingUniversityChangesRow({
   return (
     <li
       role="row"
-      className={`rounded-md p-2 sm:p-3 ${isEven ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
+      className={`grid gap-2 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] rounded-md p-2 sm:p-3 ${isEven ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
     >
-      <ParentBreadcrumb
-        crumbs={change.parentContext ?? []}
-        current={entityName}
-        currentPath={currentPath}
-      />
-      <div className="grid gap-2 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]">
-        <div
-          role="cell"
-          className="flex justify-between sm:justify-start items-center gap-2"
+      <div role="cell" className="sm:col-span-3">
+        <ParentBreadcrumb
+          crumbs={change.parentContext ?? []}
+          current={entityName}
+          currentPath={currentPath}
+        />
+      </div>
+      <div
+        role="cell"
+        className="flex justify-between sm:justify-start items-center gap-2"
+      >
+        <span className="sm:hidden text-xs font-semibold text-(--text-muted)">
+          {t("contribution.change")}
+        </span>
+        <span
+          className={`px-2 py-0.5 rounded text-xs font-semibold ${CHANGE_TYPE_BADGE[change.typeOfChange]}`}
         >
-          <span className="sm:hidden text-xs font-semibold text-(--text-muted)">
-            {t("contribution.change")}
-          </span>
-          <span
-            className={`px-2 py-0.5 rounded text-xs font-semibold ${BADGE[change.typeOfChange]}`}
-          >
-            {t(`contribution.changeTypes.${change.typeOfChange}`)}
-          </span>
-        </div>
-
-        <div
-          role="cell"
-          className="flex justify-between sm:justify-center items-center gap-2"
-        >
-          <span className="sm:hidden text-xs font-semibold text-(--text-muted)">
-            {t("contribution.entityType")}
-          </span>
-          <span
-            className={`px-2 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[change.targetType]}`}
-          >
-            {t(`contribution.entityTypes.${change.targetType}`)}
-          </span>
-          {nestedCount > 0 && (
-            <span className="px-1.5 py-0.5 rounded text-xs font-semibold bg-(--surface-1) border border-(--border-color) text-(--text-secondary)">
-              +{nestedCount} {t("contribution.nestedInTree")}
-            </span>
-          )}
-        </div>
-
-        <div
-          role="cell"
-          className="flex flex-col sm:flex-row justify-end items-center gap-2"
-        >
-          <div className="flex w-full sm:w-auto gap-2">
-            <Button
-              variant="secondary"
-              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
-              onClick={() => {
-                setDialogOpen(true);
-              }}
-            >
-              {t("universitiesPage.viewInfo")}
-            </Button>
-            <Button
-              variant="danger"
-              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
-              loading={loading}
-              onClick={() => {
-                setConfirmOpen(true);
-              }}
-            >
-              {t("contribution.deleteChange")}
-            </Button>
-          </div>
-        </div>
+          {t(`contribution.changeTypes.${change.typeOfChange}`)}
+        </span>
       </div>
 
-      <ConfirmDialog
-        open={confirmOpen}
-        title={t("contribution.deleteChange")}
-        confirmLabel={t("contribution.deleteChange")}
-        onConfirm={() => {
-          setConfirmOpen(false);
-          void handleDelete();
-        }}
-        onCancel={() => {
-          setConfirmOpen(false);
-        }}
-      />
+      <div
+        role="cell"
+        className="flex justify-between sm:justify-center items-center gap-2"
+      >
+        <span className="sm:hidden text-xs font-semibold text-(--text-muted)">
+          {t("contribution.entityType")}
+        </span>
+        <span
+          className={`px-2 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[change.targetType]}`}
+        >
+          {t(`contribution.entityTypes.${change.targetType}`)}
+        </span>
+        {nestedCount > 0 && (
+          <span className="px-1.5 py-0.5 rounded text-xs font-semibold bg-(--surface-1) border border-(--border-color) text-(--text-secondary)">
+            +{nestedCount} {t("contribution.nestedInTree")}
+          </span>
+        )}
+      </div>
 
-      <Dialog
-        open={dialogOpen}
-        onClose={() => {
-          setDialogOpen(false);
-        }}
-        title={
-          <>
-            <span
-              className={`px-1.5 py-0.5 rounded text-xs font-semibold ${BADGE[change.typeOfChange]}`}
-            >
-              {t(`contribution.changeTypes.${change.typeOfChange}`)}
-            </span>{" "}
-            <span
-              className={`px-1.5 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[change.targetType]}`}
-            >
-              {t(`contribution.entityTypes.${change.targetType}`)}
-            </span>
-          </>
-        }
-        footer={
+      <div
+        role="cell"
+        className="flex flex-col sm:flex-row justify-end items-center gap-2"
+      >
+        <div className="flex w-full sm:w-auto gap-2">
+          <Button
+            variant="secondary"
+            className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
+            onClick={() => {
+              setDialogOpen(true);
+            }}
+          >
+            {t("universitiesPage.viewInfo")}
+          </Button>
           <Button
             variant="danger"
-            className="sm:w-auto"
+            className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
             loading={loading}
             onClick={() => {
               setConfirmOpen(true);
@@ -173,18 +115,64 @@ function PendingUniversityChangesRow({
           >
             {t("contribution.deleteChange")}
           </Button>
-        }
-      >
-        <PendingChangeDetail
-          targetType={change.targetType}
-          typeOfChange={change.typeOfChange}
-          data={change.data}
-          currentEntity={change.currentEntity ?? null}
-          parentContext={change.parentContext}
-          comment={change.comment}
-          currentPath={currentPath}
+        </div>
+
+        <ConfirmDialog
+          open={confirmOpen}
+          title={t("contribution.deleteChange")}
+          confirmLabel={t("contribution.deleteChange")}
+          onConfirm={() => {
+            setConfirmOpen(false);
+            void handleDelete();
+          }}
+          onCancel={() => {
+            setConfirmOpen(false);
+          }}
         />
-      </Dialog>
+
+        <Dialog
+          open={dialogOpen}
+          onClose={() => {
+            setDialogOpen(false);
+          }}
+          title={
+            <>
+              <span
+                className={`px-1.5 py-0.5 rounded text-xs font-semibold ${CHANGE_TYPE_BADGE[change.typeOfChange]}`}
+              >
+                {t(`contribution.changeTypes.${change.typeOfChange}`)}
+              </span>{" "}
+              <span
+                className={`px-1.5 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[change.targetType]}`}
+              >
+                {t(`contribution.entityTypes.${change.targetType}`)}
+              </span>
+            </>
+          }
+          footer={
+            <Button
+              variant="danger"
+              className="sm:w-auto"
+              loading={loading}
+              onClick={() => {
+                setConfirmOpen(true);
+              }}
+            >
+              {t("contribution.deleteChange")}
+            </Button>
+          }
+        >
+          <PendingChangeDetail
+            targetType={change.targetType}
+            typeOfChange={change.typeOfChange}
+            data={change.data}
+            currentEntity={change.currentEntity ?? null}
+            parentContext={change.parentContext}
+            comment={change.comment}
+            currentPath={currentPath}
+          />
+        </Dialog>
+      </div>
     </li>
   );
 }

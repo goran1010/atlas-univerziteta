@@ -1,5 +1,5 @@
 import { render, screen, waitFor, within } from "@testing-library/react";
-import { MemoryRouter, Routes, Route } from "react-router";
+import { MemoryRouter, RouterProvider, createMemoryRouter } from "react-router";
 import { App } from "../../../../src/App";
 import { Notifications } from "../../../../src/components/Notifications";
 import { Navbar } from "../../../../src/components/Navbar/Navbar";
@@ -55,14 +55,24 @@ function expectSharedNavbarLinks() {
 
 describe("Render Navbar on root route", () => {
   function Wrapper({ initialUser }: { initialUser: UserData }) {
+    // a data router: App renders ScrollRestoration, which requires one
+    const router = createMemoryRouter(
+      [
+        {
+          path: "/",
+          element: (
+            <>
+              <Notifications />
+              <App />
+            </>
+          ),
+        },
+      ],
+      { initialEntries: ["/"] },
+    );
     return (
       <RootContextProvider initialUserData={initialUser}>
-        <MemoryRouter initialEntries={["/"]}>
-          <Notifications />
-          <Routes>
-            <Route path="/" element={<App />} />
-          </Routes>
-        </MemoryRouter>
+        <RouterProvider router={router} />
       </RootContextProvider>
     );
   }

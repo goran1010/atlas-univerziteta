@@ -7,7 +7,8 @@ const signupPasswordAllowedCharactersSchema = z
   .trim()
   .regex(/^[a-zA-Z0-9_-]+$/);
 
-const signupPasswordMinLengthSchema = z.string().trim().min(6);
+// BetterAuth rejects passwords under 8 characters server-side
+const signupPasswordMinLengthSchema = z.string().trim().min(8);
 
 const signupPasswordRequiresNumberSchema = z.string().trim().regex(/\d/);
 

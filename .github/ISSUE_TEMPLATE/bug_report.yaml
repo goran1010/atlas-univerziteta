@@ -1,4 +1,4 @@
-name: 🐛 Bug report
+name: Bug report
 description: Create a report to help us improve
 title: "<Short description of the bug>"
 labels: ["bug"]
@@ -26,7 +26,7 @@ body:
     attributes:
       label: Describe the bug
       description: A clear and concise description of what the bug is
-      placeholder: ex. "The postal code search returns incorrect results for Sarajevo..."
+      placeholder: ex. "Searching for a faculty by city returns no results..."
     validations:
       required: true
 
@@ -48,7 +48,7 @@ body:
     attributes:
       label: Expected behavior
       description: A clear and concise description of what you expected to happen
-      placeholder: ex. "The search should return postal codes for all municipalities in Sarajevo Canton"
+      placeholder: ex. "The search should list every faculty in that city"
     validations:
       required: true
 

@@ -205,11 +205,15 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
     expect(response.status).toBe(404);
     expect(response.body).toEqual({
-      error: { code: "NOT_FOUND", message: "Pending change not found." },
+      error: {
+        code: "NOT_FOUND",
+        message:
+          "Pending change not found - it may have already been reviewed.",
+      },
     });
   });
 
-  test("Responds with status 404 if stored pending change data is invalid for its entity type", async () => {
+  test("Responds with status 422 if stored pending change data is invalid for its entity type", async () => {
     const pendingChange = await createPendingChange({
       targetType: "UNIVERSITY",
       typeOfChange: "CREATE",
@@ -220,7 +224,19 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
     const response = await approve(pendingChange.id);
 
-    expect(response.status).toBe(404);
+    expect(response.status).toBe(422);
+    expect(response.body).toEqual({
+      error: {
+        code: "INVALID_STORED_DATA",
+        message:
+          "The stored suggestion data is no longer valid and cannot be applied. Decline it instead.",
+      },
+    });
+    expect(
+      await prisma.pendingChange.findUnique({
+        where: { id: pendingChange.id },
+      }),
+    ).not.toBeNull();
     expect(logger.warn).toHaveBeenCalledWith(
       expect.objectContaining({
         pendingChangeId: pendingChange.id,
@@ -229,7 +245,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
     );
   });
 
-  test("Responds with status 404 if stored pending change data is not a record", async () => {
+  test("Responds with status 422 if stored pending change data is not a record", async () => {
     const pendingChange = await createPendingChange({
       targetType: "UNIVERSITY",
       typeOfChange: "CREATE",
@@ -238,7 +254,115 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
     const response = await approve(pendingChange.id);
 
-    expect(response.status).toBe(404);
+    expect(response.status).toBe(422);
+  });
+
+  test("a second approval of the same change answers 404", async () => {
+    const pendingChange = await createPendingChange({
+      targetType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      data: {
+        name: "Test Twice-Approved University",
+        city: "Test City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expectApproved(await approve(pendingChange.id));
+
+    const second = await approve(pendingChange.id);
+    expect(second.status).toBe(404);
+    expect(second.body).toEqual({
+      error: {
+        code: "NOT_FOUND",
+        message:
+          "Pending change not found - it may have already been reviewed.",
+      },
+    });
+    expect(
+      await prisma.university.count({
+        where: { name: "Test Twice-Approved University" },
+      }),
+    ).toBe(1);
+  });
+
+  test("approving an UPDATE whose target was deleted answers 409 and keeps the row", async () => {
+    const university = await createUniversity("Test Stale Update University");
+    const pendingChange = await createPendingChange({
+      targetType: "UNIVERSITY",
+      typeOfChange: "UPDATE",
+      targetId: university.id,
+      data: { name: "Test Stale Update Renamed" },
+    });
+    await prisma.university.delete({ where: { id: university.id } });
+
+    const response = await approve(pendingChange.id);
+
+    expect(response.status).toBe(409);
+    expect(response.body).toEqual({
+      error: {
+        code: "CONFLICT",
+        message: "The target of this change no longer exists.",
+      },
+    });
+    expect(
+      await prisma.pendingChange.findUnique({
+        where: { id: pendingChange.id },
+      }),
+    ).not.toBeNull();
+  });
+
+  test("approving a DELETE whose target was deleted answers 409", async () => {
+    const university = await createUniversity("Test Stale Delete University");
+    const faculty = await createFaculty(university.id, "Test Stale Faculty");
+    const pendingChange = await createPendingChange({
+      targetType: "FACULTY",
+      typeOfChange: "DELETE",
+      targetId: faculty.id,
+    });
+    await prisma.faculty.delete({ where: { id: faculty.id } });
+
+    const response = await approve(pendingChange.id);
+
+    expect(response.status).toBe(409);
+    expect(response.body).toEqual({
+      error: {
+        code: "CONFLICT",
+        message: "The target of this change no longer exists.",
+      },
+    });
+  });
+
+  test("approving a CREATE whose parent was deleted answers 409 and keeps the row", async () => {
+    const university = await createUniversity("Test Gone Parent University");
+    const pendingChange = await createPendingChange({
+      targetType: "FACULTY",
+      typeOfChange: "CREATE",
+      parentId: university.id,
+      data: { name: "Test Orphaned Faculty" },
+    });
+    await prisma.university.delete({ where: { id: university.id } });
+
+    const response = await approve(pendingChange.id);
+
+    expect(response.status).toBe(409);
+    expect(response.body).toEqual({
+      error: {
+        code: "CONFLICT",
+        message: "The parent this new item belongs under no longer exists.",
+      },
+    });
+    expect(
+      await prisma.faculty.findFirst({
+        where: { name: "Test Orphaned Faculty" },
+      }),
+    ).toBeNull();
+    expect(
+      await prisma.pendingChange.findUnique({
+        where: { id: pendingChange.id },
+      }),
+    ).not.toBeNull();
   });
 
   const entityTypes: targetType[] = [
@@ -249,7 +373,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
   ];
 
   test.each(entityTypes)(
-    "Responds with status 404 if stored pending change target id is null for a DELETE change type for entity type %s",
+    "Responds with status 422 if stored pending change target id is null for a DELETE change type for entity type %s",
     async (targetType) => {
       const pendingChange = await createPendingChange({
         targetType,
@@ -259,12 +383,12 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
       const response = await approve(pendingChange.id);
 
-      expect(response.status).toBe(404);
+      expect(response.status).toBe(422);
     },
   );
 
   test.each(entityTypes)(
-    "Responds with status 404 if stored pending change target id is null for UPDATE change type for entity type %s",
+    "Responds with status 422 if stored pending change target id is null for UPDATE change type for entity type %s",
     async (targetType) => {
       const pendingChange = await createPendingChange({
         targetType,
@@ -274,14 +398,14 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
       const response = await approve(pendingChange.id);
 
-      expect(response.status).toBe(404);
+      expect(response.status).toBe(422);
     },
   );
 
   const childEntityTypes = ["FACULTY", "STUDY_PROGRAM", "TRACK"] as const;
 
   test.each(childEntityTypes)(
-    "Responds with status 404 if stored pending change parent id is null for CREATE change type for entity type %s",
+    "Responds with status 422 if stored pending change parent id is null for CREATE change type for entity type %s",
     async (targetType) => {
       const pendingChange = await createPendingChange({
         targetType,
@@ -291,7 +415,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
 
       const response = await approve(pendingChange.id);
 
-      expect(response.status).toBe(404);
+      expect(response.status).toBe(422);
     },
   );
 });

@@ -146,7 +146,6 @@ export type AdminPendingChange = z.infer<typeof adminPendingChangeSchema>;
 export type ParentCrumb = z.infer<typeof parentCrumbSchema>;
 export {
   adminPendingChangesResponseSchema,
-  pendingChangeSchema,
   pendingChangeResponseSchema,
   pendingChangesResponseSchema,
 };

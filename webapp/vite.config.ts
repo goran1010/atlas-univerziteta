@@ -8,7 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 const DEFAULT_SITE_URL = "https://atlasuniverziteta.com";
 
 export default defineConfig(({ mode }) => {
-  process.env.VITE_SITE_URL ??= DEFAULT_SITE_URL;
+  process.env["VITE_SITE_URL"] ??= DEFAULT_SITE_URL;
 
   return {
     plugins: [

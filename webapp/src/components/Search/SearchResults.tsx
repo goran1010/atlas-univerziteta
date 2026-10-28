@@ -157,7 +157,8 @@ function SearchResults({
           (entry) => t(`universitiesPage.ownership.${entry.item.ownership}`),
         ).map((g) => (
           <ResultGroup
-            key={g.key}
+            // remount when the band changes so defaultCollapsed reapplies
+            key={`${g.key}:${groupsCollapsed(count).toString()}`}
             label={g.key}
             collapsible
             count={g.items.length}
@@ -182,7 +183,8 @@ function SearchResults({
           (entry) => entry.item.university.name,
         ).map((g) => (
           <ResultGroup
-            key={g.key}
+            // remount when the band changes so defaultCollapsed reapplies
+            key={`${g.key}:${groupsCollapsed(count).toString()}`}
             label={g.key}
             collapsible
             count={g.items.length}
@@ -207,7 +209,8 @@ function SearchResults({
           (entry) => t(`universitiesPage.cycles.${entry.item.cycle}`),
         ).map((g) => (
           <ResultGroup
-            key={g.key}
+            // remount when the band changes so defaultCollapsed reapplies
+            key={`${g.key}:${groupsCollapsed(count).toString()}`}
             label={g.key}
             collapsible
             count={g.items.length}

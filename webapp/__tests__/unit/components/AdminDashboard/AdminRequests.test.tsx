@@ -9,6 +9,7 @@ import { makeUser } from "../../../utils/makeUser";
 import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { AdminRequest } from "../../../../src/schemas/adminRequest";
+import { nth } from "../../../utils/nth";
 
 const user = userEvent.setup();
 
@@ -74,7 +75,7 @@ describe("AdminRequests component", () => {
   test("shows the request reason when one was given", async () => {
     givenAdminRequests([
       {
-        ...mockAdminRequests[0],
+        ...nth(mockAdminRequests),
         adminRequestReason: "I maintain my university's data",
       },
     ]);

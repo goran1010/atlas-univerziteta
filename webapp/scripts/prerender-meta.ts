@@ -1,3 +1,4 @@
+/* eslint-disable no-console -- build script reports progress on stdout */
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 import { parseEnv } from "node:util";
@@ -114,14 +115,14 @@ console.log(`Pre-rendered meta tags for ${String(generated)} static routes.`);
 // absolute URL in production and is used directly.
 
 function apiBaseUrl(): string | null {
-  const candidates: (string | undefined)[] = [process.env.VITE_API_URL];
+  const candidates: (string | undefined)[] = [process.env["VITE_API_URL"]];
   const envFile = join(import.meta.dirname, "..", ".env");
   if (existsSync(envFile)) {
     const parsed = parseEnv(readFileSync(envFile, "utf-8")) as Record<
       string,
       string | undefined
     >;
-    candidates.push(parsed.VITE_API_URL);
+    candidates.push(parsed["VITE_API_URL"]);
   }
   const absolute = candidates.find(
     (value) =>

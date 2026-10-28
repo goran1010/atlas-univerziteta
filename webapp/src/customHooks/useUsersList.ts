@@ -14,8 +14,8 @@ interface UseUsersListOptions<Item> {
   errorMessageKey: string;
   logLabel: string;
   setLoading: (loading: boolean) => void;
-  enabled?: boolean;
-  refetchKey?: number;
+  enabled?: boolean | undefined;
+  refetchKey?: number | undefined;
 }
 
 function useUsersList<Item>({

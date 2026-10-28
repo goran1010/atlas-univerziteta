@@ -25,7 +25,6 @@ Please check the options that are relevant. -->
 - [ ] Chore (maintenance or other changes that don't modify src or test files)
 - [ ] Code refactoring
 - [ ] Test addition or update
-- [ ] Data contribution/update
 
 ## This PR
 <!--
@@ -33,15 +32,6 @@ Please check the options that are relevant. -->
 - Be specific about what was added, modified, or removed
 - Mention any new dependencies or configuration changes
 -->
-
-## Data quality (only if contributing data)
-<!-- Replace the whitespace between the square brackets with an 'x', e.g. [x]. After you create the PR, they will become checkboxes that you can click on.
-
-Please check all items to confirm the quality of the data being contributed. -->
-
-- [ ] Data follows the project's data standards
-- [ ] Data includes proper source attribution
-- [ ] Data is properly formatted (JSON/CSV structure)
 
 ## Screenshots (optional)
 <!-- Add screenshots or GIFs to show UI changes. -->

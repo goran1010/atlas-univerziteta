@@ -20,6 +20,8 @@ The data is modeled as a nested academic hierarchy: university, its faculties, a
 - Detail pages for universities and faculties with shareable links and per-page social previews
 - Email/password signup with email verification, session login, and optional GitHub/Google OAuth (with automatic account linking)
 - Authenticated suggestions for creating, updating, or deleting data, reviewed by admins before applying - the review shows the current data, child counts, and the entity's place in the academic hierarchy
+- Whole-university suggestions: one reviewed submission can hold a university with its faculties, study programs, and tracks - built in a nested form or pasted as JSON
+- Data provenance built in: every university and faculty links to the official page it was sourced from, and addresses open directly in Google Maps
 - Zod validation on both ends, WCAG-checked UI in English and the local language
 
 ## Quick start
@@ -90,10 +92,12 @@ Podaci prate akademsku hijerarhiju: univerzitet, njegovi fakulteti i njihovi stu
 
 - Javni REST API pod `/api/v1` - bez prijave i bez ključeva
 - Objedinjena pretraga univerziteta, fakulteta i studijskih programa: više riječi odjednom (svaka riječ se traži kroz cijelu hijerarhiju), neosjetljiva na velika/mala slova i dijakritike, prepoznaje padeže i rodove (medicina/medicine/medicini, javna/javni/javno), kao i ECTS bodove, trajanje i godinu osnivanja
-- Rezultati rangirani po relevantnosti i grupisani po tipu, uz filtere, brojače i ograničene sekcije sa "Prikaži sve"
+- Rezultati rangirani po relevantnosti i grupisani po tipu, uz filtere i brojače
 - Stranice sa detaljima univerziteta i fakulteta, sa linkovima za dijeljenje i ispravnim pregledima na društvenim mrežama
 - Registracija uz potvrdu emailom, prijava sesijom i opciona GitHub/Google prijava (sa automatskim povezivanjem naloga)
 - Prijavljeni korisnici predlažu dodavanje, izmjenu ili brisanje podataka; administratori pri pregledu vide trenutne podatke, broj podređenih stavki i mjesto u akademskoj hijerarhiji prije primjene
+- Prijedlozi cijelog univerziteta: jedna prijava može sadržati univerzitet sa fakultetima, studijskim programima i smjerovima - kroz ugniježdenu formu ili lijepljenjem JSON-a
+- Porijeklo podataka: svaki univerzitet i fakultet vodi na zvaničnu stranicu sa koje su podaci preuzeti, a adrese se otvaraju direktno u Google mapama
 - Validacija podataka na obje strane, pristupačnost provjerena po WCAG standardu, interfejs na engleskom i našem jeziku
 
 ### Pokretanje

@@ -19,7 +19,7 @@ type ProviderOverrides = Partial<
 interface RootContextProviderProps {
   children: ReactNode;
   initialUserData?: UserData;
-  rootValue?: ProviderOverrides;
+  rootValue?: ProviderOverrides | undefined;
 }
 
 function RootContextProvider({

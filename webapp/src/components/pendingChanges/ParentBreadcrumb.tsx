@@ -1,10 +1,7 @@
-import { Link } from "react-router";
 import { DETAIL_PATHS } from "../../utils/entityDetailPath";
+import { TextLink } from "../sharedComponents/TextLink";
 
 import type { ParentCrumb } from "../../schemas/pendingChange";
-
-const linkClassName =
-  "underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors";
 
 interface ParentBreadcrumbProps {
   crumbs: ParentCrumb[];
@@ -30,12 +27,9 @@ function ParentBreadcrumb({
           <span key={`${crumb.targetType}-${crumb.id.toString()}`}>
             {index > 0 && " › "}
             {path ? (
-              <Link
-                to={`${path}/${crumb.id.toString()}`}
-                className={linkClassName}
-              >
+              <TextLink to={`${path}/${crumb.id.toString()}`}>
                 {crumb.name}
-              </Link>
+              </TextLink>
             ) : (
               crumb.name
             )}
@@ -46,9 +40,7 @@ function ParentBreadcrumb({
         <span className="font-medium text-(--text-primary)">
           {crumbs.length > 0 && " › "}
           {currentPath ? (
-            <Link to={currentPath} className={linkClassName}>
-              {current}
-            </Link>
+            <TextLink to={currentPath}>{current}</TextLink>
           ) : (
             current
           )}

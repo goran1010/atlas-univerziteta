@@ -179,3 +179,37 @@ describe("usersRouter - origin verification", () => {
     await deleteUser(userData.email);
   });
 });
+
+describe("user deletion cascade", () => {
+  test("deleting a user removes their sessions, accounts, and pending changes", async () => {
+    const agent = request.agent(app);
+    const userData = createNewUserInput();
+    await createAndLoginUser(agent, userData);
+
+    const user = await prisma.user.findUniqueOrThrow({
+      where: { email: userData.email },
+    });
+    await prisma.pendingChange.create({
+      data: {
+        targetType: "UNIVERSITY",
+        typeOfChange: "CREATE",
+        data: { name: "Cascade University" },
+        user: { connect: { id: user.id } },
+      },
+    });
+    expect(
+      await prisma.session.count({ where: { userId: user.id } }),
+    ).toBeGreaterThan(0);
+    expect(
+      await prisma.account.count({ where: { userId: user.id } }),
+    ).toBeGreaterThan(0);
+
+    await prisma.user.delete({ where: { id: user.id } });
+
+    expect(await prisma.session.count({ where: { userId: user.id } })).toBe(0);
+    expect(await prisma.account.count({ where: { userId: user.id } })).toBe(0);
+    expect(
+      await prisma.pendingChange.count({ where: { userId: user.id } }),
+    ).toBe(0);
+  });
+});

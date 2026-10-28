@@ -39,7 +39,7 @@ model session {
   ipAddress String?
   userAgent String?
   userId    String
-  user      user     @relation(fields: [userId], references: [id])
+  user      user     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
 }
@@ -49,7 +49,7 @@ model account {
   accountId             String
   providerId            String
   userId                String
-  user                  user      @relation(fields: [userId], references: [id])
+  user                  user      @relation(fields: [userId], references: [id], onDelete: Cascade)
   accessToken           String?
   refreshToken          String?
   idToken               String?
@@ -214,10 +214,9 @@ model PendingChange {
   // contributor's note to the reviewing admin
   comment String?
 
-  user       user      @relation(fields: [userId], references: [id])
+  user       user      @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId     String
-  createdAt  DateTime  @default(now())
-  reviewedAt DateTime?
+  createdAt DateTime @default(now())
 
   @@index([createdAt])
   @@index([targetType, typeOfChange])

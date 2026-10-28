@@ -1,4 +1,5 @@
 import { use } from "react";
+import { mapsHref, telHref } from "../../utils/contactHrefs";
 import { RootContext } from "../../contextData/RootContext";
 import {
   BookOpenIcon,
@@ -18,11 +19,11 @@ function ContactLinks({
   email,
   dataSourceUrl,
 }: {
-  website?: string | null;
-  address?: string | null;
-  phone?: string | null;
-  email?: string | null;
-  dataSourceUrl?: string | null;
+  website?: string | null | undefined;
+  address?: string | null | undefined;
+  phone?: string | null | undefined;
+  email?: string | null | undefined;
+  dataSourceUrl?: string | null | undefined;
 }) {
   const { t } = use(RootContext);
 
@@ -37,16 +38,13 @@ function ContactLinks({
         </ExternalLink>
       )}
       {address && (
-        <ExternalLink
-          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
-          className={touchTarget}
-        >
+        <ExternalLink href={mapsHref(address)} className={touchTarget}>
           <HomeIcon /> {address}
         </ExternalLink>
       )}
       {phone && (
         <ExternalLink
-          href={`tel:${phone.replace(/[^+\d]/g, "")}`}
+          href={telHref(phone)}
           newTab={false}
           className={touchTarget}
         >

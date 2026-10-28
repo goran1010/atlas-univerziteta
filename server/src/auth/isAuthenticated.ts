@@ -30,4 +30,12 @@ async function isAuthenticated(
   }
 }
 
-export { isAuthenticated };
+// for handlers behind the middleware: the session is guaranteed, a missing
+// one means the route was mounted without it
+function getSessionUser(req: Request) {
+  const user = req.authSession?.user;
+  if (!user) throw new Error("No session - isAuthenticated middleware missing");
+  return user;
+}
+
+export { isAuthenticated, getSessionUser };

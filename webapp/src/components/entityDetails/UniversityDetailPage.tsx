@@ -1,73 +1,66 @@
-import { useState, useEffect, useRef, use } from "react";
+import { use } from "react";
+import { TextLink } from "../sharedComponents/TextLink";
 import { useParams, Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
-import { NotificationContext } from "../../contextData/NotificationContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import {
   BuildingIcon,
   CalendarIcon,
   MapPinIcon,
-  TagIcon,
 } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
 import { tCount } from "../../utils/pluralize";
-import { fetchPublic } from "../../utils/fetchPublic";
 import { universityDetailResponseSchema } from "../../schemas/university";
+import { useEntityDetail } from "../../customHooks/useEntityDetail";
+import { UniversityMetaRow } from "../entityCards/UniversityMeta";
+import { DetailPageStatus } from "./DetailPageStatus";
+import { Button } from "../sharedComponents/Button";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../../utils/envConfig";
-
-import type { UniversityDetail } from "../../schemas/university";
 
 function UniversityDetailPage() {
   const { id } = useParams<{ id: string }>();
   const { t } = use(RootContext);
-  const { addNotification } = use(NotificationContext);
-  const [university, setUniversity] = useState<UniversityDetail>();
-  const [loading, setLoading] = useState(true);
+  const { state, retry } = useEntityDetail(
+    `/api/v1/universities/${id ?? ""}`,
+    universityDetailResponseSchema,
+    "load university details",
+  );
 
-  // notifications should use the language active when the fetch settles,
-  // without a language switch re-triggering the fetch
-  const tRef = useRef(t);
-  useEffect(() => {
-    tRef.current = t;
-  });
+  if (state.kind === "loading") return <Spinner page />;
 
-  useEffect(() => {
-    async function fetchUniversity() {
-      const result = await fetchPublic(
-        {
-          path: `/api/v1/universities/${id ?? ""}`,
-          responseSchema: universityDetailResponseSchema,
-          errorMessageKey: "messages.universities.detailsError",
-          logLabel: "load university details",
-          quiet404: true,
-        },
-        { t: (key) => tRef.current(key), addNotification, setLoading },
-      );
-      setUniversity(result ? result.data : undefined);
-    }
-    void fetchUniversity();
-  }, [id, addNotification]);
-
-  if (loading) return <Spinner page />;
-
-  if (!university) {
+  if (state.kind === "error") {
     return (
-      <div className="w-full mx-auto px-1 sm:px-4 py-8 text-center">
-        <p className="text-(--text-muted) text-lg">
-          {t("universitiesPage.noResults")}
-        </p>
-        <Link
-          to="/search"
-          className="text-(--accent-text) underline underline-offset-2 mt-2 inline-block"
-        >
-          {t("universitiesPage.search")}
-        </Link>
-      </div>
+      <DetailPageStatus
+        message={t("universitiesPage.detailError")}
+        action={
+          <Button variant="secondary" className="mt-3" onClick={retry}>
+            {t("universitiesPage.retry")}
+          </Button>
+        }
+      />
     );
   }
+
+  if (state.kind === "notFound") {
+    return (
+      <DetailPageStatus
+        message={t("universitiesPage.noResults")}
+        action={
+          <Link
+            to="/search"
+            className="text-(--accent-text) underline underline-offset-2 mt-2 inline-block"
+          >
+            {t("universitiesPage.search")}
+          </Link>
+        }
+      />
+    );
+  }
+
+  const university = state.data.data;
 
   const entityLabel = t(`universitiesPage.entities.${university.entity}`);
 
@@ -115,28 +108,18 @@ function UniversityDetailPage() {
               </h1>
               <ShareButton url={`/universities/${id ?? ""}`} />
             </div>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm text-(--text-secondary)">
-              <span>
-                <MapPinIcon /> {university.city}
-              </span>
-              <span>
-                <TagIcon /> {entityLabel}
-              </span>
-              <span
-                className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-                  university.ownership === "PUBLIC"
-                    ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200"
-                    : "bg-(--surface-alt) text-(--text-secondary)"
-                }`}
-              >
-                {t(`universitiesPage.ownership.${university.ownership}`)}
-              </span>
+            <UniversityMetaRow
+              city={university.city}
+              entity={university.entity}
+              ownership={university.ownership}
+              className="gap-x-4 gap-y-1 mt-2"
+            >
               {university.foundedYear && (
                 <span>
                   <CalendarIcon /> {university.foundedYear}
                 </span>
               )}
-            </div>
+            </UniversityMetaRow>
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted) mt-2">
               <ContactLinks
                 website={university.website}
@@ -167,12 +150,12 @@ function UniversityDetailPage() {
                     key={faculty.id}
                     className="border border-(--border-color) rounded-lg p-3 bg-(--surface-2) hover:bg-(--hover-surface) transition-colors"
                   >
-                    <Link
+                    <TextLink
                       to={`/faculties/${faculty.id.toString()}`}
-                      className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      className="font-bold"
                     >
                       {faculty.name}
-                    </Link>
+                    </TextLink>
                     <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
                       {faculty.city && (
                         <span>
@@ -198,7 +181,7 @@ function UniversityDetailPage() {
               </ul>
             ) : (
               <p className="text-sm text-(--text-muted) italic">
-                {t("universitiesPage.noStudyPrograms")}
+                {t("universitiesPage.noFaculties")}
               </p>
             )}
           </div>

@@ -1,15 +1,10 @@
 import { prisma } from "../db/prisma.js";
+import { getSessionUser } from "../auth/isAuthenticated.js";
 import { enrichWithCurrentEntity } from "../models/pendingChangeModel.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 import * as contributionValidation from "../validation/contributionValidation.js";
 import type { Request, Response } from "express";
 import type { targetType } from "../generated/prisma/enums.js";
-
-function getSessionUser(req: Request) {
-  const user = req.authSession?.user;
-  if (!user) throw new Error("No session - isAuthenticated middleware missing");
-  return user;
-}
 
 async function findEntity(targetType: targetType, id: number) {
   switch (targetType) {

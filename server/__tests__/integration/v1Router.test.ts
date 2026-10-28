@@ -470,7 +470,23 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
 });
 
 describe("GET /api/v1/search - empty browse", () => {
-  test("returns full sections when no term or filters given", async () => {
+  test("rejects a query with no term and no filters", async () => {
+    const response = await request(app).get("/api/v1/search");
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["code"]).toBe("VALIDATION_ERROR");
+    expect(error["issues"]).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          message: "Provide a search term or at least one filter.",
+        }),
+      ]),
+    );
+  });
+
+  test("returns full sections when browsing by type filters", async () => {
     const [universityCount, facultyCount, studyProgramCount] =
       await Promise.all([
         prisma.university.count(),
@@ -478,7 +494,9 @@ describe("GET /api/v1/search - empty browse", () => {
         prisma.studyProgram.count(),
       ]);
 
-    const response = await request(app).get("/api/v1/search");
+    const response = await request(app).get(
+      "/api/v1/search?type=university&type=faculty&type=studyProgram",
+    );
     const responseBody = getResponseObject(response.body);
     const data = getResponseObject(responseBody["data"]);
 
@@ -835,5 +853,118 @@ describe("GET /api/v1/search - diacritic-insensitive matching", () => {
     });
     await prisma.faculty.deleteMany({ where: { universityId: university.id } });
     await prisma.university.delete({ where: { id: university.id } });
+  });
+});
+
+describe("GET /api/v1/search - filters", () => {
+  const marker = "FilterTestUni";
+
+  const cleanup = async () => {
+    await prisma.university.deleteMany({
+      where: { name: { contains: marker } },
+    });
+  };
+
+  async function seedFilterFixtures() {
+    await cleanup();
+    await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `${marker} RS Private`,
+        city: "FilterGrad",
+        entity: "RS",
+        ownership: "PRIVATE",
+        faculties: {
+          create: {
+            name: `${marker} Fakultet`,
+            studyPrograms: {
+              create: [
+                { name: `${marker} First Program`, cycle: "FIRST" },
+                { name: `${marker} Second Program`, cycle: "SECOND" },
+              ],
+            },
+          },
+        },
+      }),
+    });
+    await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `${marker} FBIH Public`,
+        city: "FilterGrad",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      }),
+    });
+  }
+
+  test("filters by entity, ownership, and cycle, alone and combined", async () => {
+    await seedFilterFixtures();
+
+    const byEntity = await request(app).get(
+      `/api/v1/search?searchTerm=${marker}&entity=RS`,
+    );
+    const entityData = getResponseObject(
+      getResponseObject(byEntity.body)["data"],
+    );
+    const entityUniversities = getResponseArray(entityData["universities"]);
+    expect(entityUniversities).toHaveLength(1);
+    expect(entityUniversities[0]?.["name"]).toBe(`${marker} RS Private`);
+
+    const byOwnership = await request(app).get(
+      `/api/v1/search?searchTerm=${marker}&ownership=PUBLIC`,
+    );
+    const ownershipData = getResponseObject(
+      getResponseObject(byOwnership.body)["data"],
+    );
+    const ownershipUniversities = getResponseArray(
+      ownershipData["universities"],
+    );
+    expect(ownershipUniversities).toHaveLength(1);
+    expect(ownershipUniversities[0]?.["name"]).toBe(`${marker} FBIH Public`);
+
+    const byCycle = await request(app).get(
+      `/api/v1/search?searchTerm=${marker}&cycle=SECOND&type=studyProgram`,
+    );
+    const cycleData = getResponseObject(
+      getResponseObject(byCycle.body)["data"],
+    );
+    const cyclePrograms = getResponseArray(cycleData["studyPrograms"]);
+    expect(cyclePrograms).toHaveLength(1);
+    expect(cyclePrograms[0]?.["name"]).toBe(`${marker} Second Program`);
+
+    const combined = await request(app).get(
+      `/api/v1/search?searchTerm=${marker}&entity=RS&ownership=PRIVATE&type=university`,
+    );
+    const combinedData = getResponseObject(
+      getResponseObject(combined.body)["data"],
+    );
+    const combinedUniversities = getResponseArray(combinedData["universities"]);
+    expect(combinedUniversities).toHaveLength(1);
+    expect(combinedUniversities[0]?.["name"]).toBe(`${marker} RS Private`);
+
+    const excluded = await request(app).get(
+      `/api/v1/search?searchTerm=${marker}&entity=BD`,
+    );
+    const excludedData = getResponseObject(
+      getResponseObject(excluded.body)["data"],
+    );
+    expect(getResponseArray(excludedData["universities"])).toHaveLength(0);
+
+    await cleanup();
+  });
+
+  test.each([
+    ["entity", "entity=XX"],
+    ["ownership", "ownership=STATE"],
+    ["cycle", "cycle=FOURTH"],
+    ["type", "type=tracks"],
+  ])("rejects an invalid %s value", async (_name, query) => {
+    const response = await request(app).get(
+      `/api/v1/search?searchTerm=test&${query}`,
+    );
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expect(error["code"]).toBe("VALIDATION_ERROR");
   });
 });

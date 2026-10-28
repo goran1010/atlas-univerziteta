@@ -8,12 +8,14 @@
     "profile": "Moj profil",
     "login": "Prijava",
     "signup": "Registracija",
+    "forgotPassword": "Zaboravljena lozinka",
+    "resetPassword": "Resetovanje lozinke",
     "notFound": "Stranica nije pronađena",
     "error": "Greška",
     "about": "O projektu"
   },
   "meta": {
-    "home": "Istražite univerzitete, fakultete, studijske programe i smjerove u Bosni i Hercegovini kroz besplatan javni skup podataka, pretraživo web sučelje i REST API.",
+    "home": "Istražite univerzitete, fakultete, studijske programe i smjerove u Bosni i Hercegovini kroz besplatan javni skup podataka, pretraživi web interfejs i REST API.",
     "universities": "Istražite univerzitete i studijske programe u Bosni i Hercegovini.",
     "api": "REST API dokumentacija za Atlas Univerziteta. Pristupite podacima o univerzitetima i studijskim programima programski.",
     "login": "Prijavite se na vaš Atlas Univerziteta nalog kako biste doprinijeli podacima i pratili vaše prijave.",
@@ -77,6 +79,21 @@
       "haveAccountPrefix": "Već imate nalog?",
       "heading": "Kreirajte svoj nalog",
       "blockedWhileLoggedIn": "Ne možete se registrovati dok ste prijavljeni. Preusmereni ste na početnu stranicu."
+    },
+    "forgotPassword": {
+      "linkText": "Zaboravili ste lozinku?",
+      "heading": "Resetujte lozinku",
+      "description": "Unesite email svog naloga i poslaćemo vam link za resetovanje lozinke.",
+      "submit": "Pošalji link",
+      "sent": "Ako nalog sa ovim emailom postoji, link za resetovanje lozinke je na putu. Provjerite email.",
+      "backToLogin": "Nazad na prijavu"
+    },
+    "resetPassword": {
+      "heading": "Odaberite novu lozinku",
+      "submit": "Resetuj lozinku",
+      "invalidHeading": "Ovaj link za resetovanje ne važi",
+      "invalidDescription": "Link je možda istekao ili je već iskorišten. Zatražite novi ispod.",
+      "requestNew": "Zatraži novi link"
     }
   },
   "form": {
@@ -107,7 +124,7 @@
   "home": {
     "heading": "Univerziteti i studijski programi u Bosni i Hercegovini",
     "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o Bosni i Hercegovini. Fokus je na univerzitetima - institucijama, fakultetima, studijskim programima i smjerovima.",
-    "summary": "Koristite Atlas Univerziteta za pregled profila univerziteta, poređenje akademske ponude i pristup strukturiranim javnim podacima kroz jednostavno sučelje ili direktno kroz API.",
+    "summary": "Koristite Atlas Univerziteta za pregled profila univerziteta, poređenje akademske ponude i pristup strukturiranim javnim podacima kroz jednostavan interfejs ili direktno kroz API.",
     "exploreHeading": "Istražite podatke",
     "exploreDescription": "Pregledajte univerzitete širom Bosne i Hercegovine. Pogledajte fakultete, studijske programe i smjerove. Pretražujte po nazivu, gradu, akronimu, entitetu, vlasništvu, ciklusu studija i više.",
     "card": {
@@ -249,7 +266,7 @@
     "dataLegend": "Podaci",
     "tree": {
       "jsonLabel": "JSON podaci",
-      "loadFile": "Učitaj .json datoteku",
+      "loadFile": "Učitaj .json fajl",
       "validate": "Provjeri",
       "invalidJson": "Tekst nije ispravan JSON.",
       "validationErrors": "Greške u podacima",
@@ -303,7 +320,7 @@
       "invalid": "Unesite ispravnu email adresu"
     },
     "password": {
-      "minLength": "Lozinka mora imati najmanje 6 karaktera",
+      "minLength": "Lozinka mora imati najmanje 8 karaktera",
       "required": "Lozinka je obavezna",
       "allowedCharacters": "Lozinka može sadržavati samo slova, brojeve, crtice ili donje crte",
       "requiresNumber": "Lozinka mora sadržavati najmanje jedan broj",
@@ -334,7 +351,12 @@
       "registrationSuccess": "Registracija je uspješna. Provjerite email.",
       "logoutFailed": "Odjava nije uspjela. Pokušajte ponovo.",
       "logoutError": "Došlo je do greške tokom odjave. Pokušajte ponovo za koji trenutak.",
-      "logoutSuccess": "Uspješno ste odjavljeni."
+      "logoutSuccess": "Uspješno ste odjavljeni.",
+      "resetRequestFailed": "Slanje linka nije uspjelo. Pokušajte ponovo.",
+      "resetRequestError": "Došlo je do greške pri slanju linka. Pokušajte ponovo za koji trenutak.",
+      "resetFailed": "Resetovanje lozinke nije uspjelo. Pokušajte ponovo.",
+      "resetSuccess": "Lozinka je resetovana. Prijavite se novom lozinkom.",
+      "resetError": "Došlo je do greške pri resetovanju lozinke. Pokušajte ponovo za koji trenutak."
     },
     "admin": {
       "approveSuccess": "Izmjena na čekanju je odobrena.",
@@ -407,6 +429,9 @@
     "durationYears_few": "godine",
     "durationYears_other": "godina",
     "noStudyPrograms": "Nema dostupnih studijskih programa.",
+    "detailError": "Podaci se nisu mogli učitati.",
+    "retry": "Pokušaj ponovo",
+    "noFaculties": "Nema dostupnih fakulteta.",
     "foundedYear": "Osnovan",
     "expand": "Proširi",
     "hiddenTapToExpand": "skriveno - klikni za prikaz",

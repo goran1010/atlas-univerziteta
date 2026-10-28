@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_call:
 
 jobs:
   format:
@@ -13,11 +14,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Setup Node.js 24
+      - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version-file: ".nvmrc"
           cache: npm
+          cache-dependency-path: "**/package-lock.json"
 
       - name: Install dependencies
         run: npm run install:all
@@ -38,11 +40,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Setup Node.js 24
+      - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version-file: ".nvmrc"
           cache: npm
+          cache-dependency-path: "**/package-lock.json"
 
       # root install only - cspell and its dictionaries are root devDependencies
       - name: Install dependencies

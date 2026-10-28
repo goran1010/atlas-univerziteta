@@ -1,3 +1,5 @@
+import { TextLink } from "../sharedComponents/TextLink";
+import { UniversityMetaRow } from "./UniversityMeta";
 import {
   BuildingIcon,
   CalendarIcon,
@@ -5,7 +7,6 @@ import {
   TagIcon,
 } from "../sharedComponents/icons";
 import { useState, use } from "react";
-import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
@@ -33,7 +34,7 @@ function UniversityResult({
   contextHint,
 }: {
   university: UniversityListItem;
-  contextHint?: string;
+  contextHint?: string | undefined;
 }) {
   const hasFaculties = university._count.faculties > 0;
   const { t } = use(RootContext);
@@ -100,36 +101,24 @@ function UniversityResult({
       >
         <div>
           <h3 className="font-bold text-base leading-snug">
-            <Link
+            <TextLink
               to={`/universities/${university.id.toString()}`}
-              className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="font-bold"
             >
               {university.name}
-            </Link>
+            </TextLink>
             {university.acronym && (
               <span className="ml-2 text-sm font-normal text-(--text-muted)">
                 ({university.acronym})
               </span>
             )}
           </h3>
-          <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
-            <span>
-              <MapPinIcon /> {university.city}
-            </span>
-            <span>
-              <TagIcon /> {entityLabel}
-            </span>
-            <span
-              className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-                university.ownership === "PUBLIC"
-                  ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200"
-                  : "bg-(--surface-alt) text-(--text-secondary)"
-              }`}
-            >
-              {university.ownership === "PUBLIC"
-                ? t(`universitiesPage.ownership.PUBLIC`)
-                : t(`universitiesPage.ownership.PRIVATE`)}
-            </span>
+          <UniversityMetaRow
+            city={university.city}
+            entity={university.entity}
+            ownership={university.ownership}
+            className="gap-x-3 gap-y-0.5 mt-1"
+          >
             {university._count.faculties > 0 && (
               <span>
                 <BuildingIcon />{" "}
@@ -148,7 +137,7 @@ function UniversityResult({
                 <CalendarIcon /> {university.foundedYear}
               </span>
             )}
-          </div>
+          </UniversityMetaRow>
           <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-1">
             <ContactLinks
               website={university.website}

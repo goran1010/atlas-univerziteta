@@ -57,7 +57,7 @@ app.use(
   [
     "/api/auth/sign-in",
     "/api/auth/sign-up",
-    "/api/auth/forget-password",
+    "/api/auth/request-password-reset",
     "/api/auth/reset-password",
     "/api/auth/send-verification-email",
   ],

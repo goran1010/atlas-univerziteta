@@ -6,6 +6,7 @@ import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { ReactElement } from "react";
+import { nth } from "../../../utils/nth";
 
 const universitiesList = [
   {
@@ -67,11 +68,11 @@ function submissionResponse(
       data: {
         id: "11111111-2222-4333-8444-555555555555",
         userId: "test-id",
-        targetType: body.targetType,
+        targetType: body["targetType"],
         typeOfChange,
-        targetId: body.targetId == null ? null : Number(body.targetId),
-        parentId: body.parentId == null ? null : Number(body.parentId),
-        data: body.data ?? {},
+        targetId: body["targetId"] == null ? null : Number(body["targetId"]),
+        parentId: body["parentId"] == null ? null : Number(body["parentId"]),
+        data: body["data"] ?? {},
         createdAt: new Date().toISOString(),
       },
     },
@@ -549,7 +550,7 @@ describe("AddUniversityEntity", () => {
     ).toBeInTheDocument();
 
     expect(submissions).toHaveLength(1);
-    const submission = submissions[0];
+    const submission = nth(submissions);
     expect(submission.method).toBe("PUT");
     expect(submission.body).toMatchObject({
       targetType: "TRACK",
@@ -559,7 +560,7 @@ describe("AddUniversityEntity", () => {
         durationYears: 1,
       },
     });
-    expect(Number(submission.body.targetId)).toBe(11);
+    expect(Number(submission.body["targetId"])).toBe(11);
   });
 
   test("submits study program data with the picked parent id", async () => {
@@ -593,7 +594,7 @@ describe("AddUniversityEntity", () => {
     ).toBeInTheDocument();
 
     expect(submissions).toHaveLength(1);
-    const submission = submissions[0];
+    const submission = nth(submissions);
     expect(submission.method).toBe("POST");
     expect(submission.body).toMatchObject({
       targetType: "STUDY_PROGRAM",
@@ -604,6 +605,6 @@ describe("AddUniversityEntity", () => {
         ects: 180,
       },
     });
-    expect(Number(submission.body.parentId)).toBe(3);
+    expect(Number(submission.body["parentId"])).toBe(3);
   });
 });

@@ -25,7 +25,7 @@ function ThemeSwitcher() {
 
   function handleThemeToggle() {
     const currentIndex = THEMES.indexOf(theme);
-    const nextTheme = THEMES[(currentIndex + 1) % THEMES.length];
+    const nextTheme = THEMES[(currentIndex + 1) % THEMES.length] ?? theme;
 
     setTheme(nextTheme);
     addNotification({

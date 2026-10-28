@@ -31,9 +31,9 @@ COPY package.json package-lock.json ./
 COPY prisma ./prisma/
 COPY prisma.config.ts ./
 
-# Install production dependencies plus prisma CLI (a devDependency, but
-# needed at runtime for `prisma migrate deploy` on container startup).
-RUN npm ci --omit=dev && npm install prisma
+# Production dependencies include the prisma CLI, lockfile-pinned - it runs
+# `prisma migrate deploy` on container startup (see CMD below).
+RUN npm ci --omit=dev
 
 COPY --from=build /app/dist ./dist
 

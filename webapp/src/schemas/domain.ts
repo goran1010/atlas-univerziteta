@@ -16,7 +16,6 @@ const studyCycleSchema = z.enum([
   "VOCATIONAL",
   "SPECIALIST",
 ]);
-const typeOfChangeSchema = z.enum(["CREATE", "UPDATE", "DELETE"]);
 const searchTypeSchema = z.enum(["university", "faculty", "studyProgram"]);
 const userRoleSchema = z.enum(["ADMIN", "USER"]);
 
@@ -28,11 +27,10 @@ export type Entity = z.infer<typeof entitySchema>;
 export type TargetType = z.infer<typeof targetTypeSchema>;
 export type Ownership = z.infer<typeof ownershipSchema>;
 export type StudyCycle = z.infer<typeof studyCycleSchema>;
-export type TypeOfChange = z.infer<typeof typeOfChangeSchema>;
+export type TypeOfChange = "CREATE" | "UPDATE" | "DELETE";
 export type SearchType = z.infer<typeof searchTypeSchema>;
 
 export {
-  typeOfChangeSchema,
   durationYearsSchema,
   ectsSchema,
   entitySchema,

@@ -14,14 +14,14 @@ type ContributionEditDelta = {
 
 export interface HandleSubmitUniversityEntityParams {
   targetType: string;
-  parentId?: string;
-  targetId?: string;
+  parentId?: string | undefined;
+  targetId?: string | undefined;
   typeOfChange: TypeOfChange;
   data: ContributionFormDraft;
   // the update target's current values; when present, only changed fields
   // are submitted and emptied clearable fields are sent as null
-  baseline?: ContributionFormDraft;
-  comment?: string;
+  baseline?: ContributionFormDraft | undefined;
+  comment?: string | undefined;
   onSuccess: () => void;
   ctx: RequestContext;
 }
@@ -98,11 +98,11 @@ function buildSubmissionInput({
   comment,
 }: {
   targetType: string;
-  parentId?: string;
-  targetId?: string;
+  parentId?: string | undefined;
+  targetId?: string | undefined;
   typeOfChange: TypeOfChange;
   data: ContributionFormDraft | ContributionEditDelta;
-  comment?: string;
+  comment?: string | undefined;
 }) {
   const trimmedComment = comment?.trim() ? comment.trim() : undefined;
   if (typeOfChange === "CREATE" && targetType === "UNIVERSITY") {

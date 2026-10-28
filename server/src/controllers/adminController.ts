@@ -1,6 +1,8 @@
 import { prisma } from "../db/prisma.js";
 import { Prisma } from "../generated/prisma/client.js";
-import { approvePendingChange as applyPendingChange } from "../models/applyPendingChange.js";
+import { applyPendingChange } from "../models/applyPendingChange.js";
+
+import type { ApplyResult } from "../models/applyPendingChange.js";
 import { enrichWithCurrentEntity } from "../models/pendingChangeModel.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 import * as adminValidation from "../validation/adminValidation.js";
@@ -50,16 +52,14 @@ async function declinePendingChange(req: Request, res: Response) {
 
 // The DB unique constraints are the final duplicate check for approvals
 // (submission only validates within the payload). Name the collision so the
-// admin can write a useful decline reason instead of seeing a generic error.
+// admin can write a useful decline reason.
 function uniqueConflictMessage(error: unknown): string | null {
   if (!(error instanceof Prisma.PrismaClientKnownRequestError)) return null;
   if (error.code !== "P2002") return null;
 
-  // depending on the driver, meta.target is the field list or the unique
-  // constraint name (e.g. "faculty_name_universityId_key")
-  // the violated constraint's location in meta depends on the driver (field
-  // list in `target` vs the pg adapter's nested constraint index name), but
-  // its name always carries the parent FK column, so match the whole meta
+  // the constraint's location in meta depends on the driver (field list in
+  // `target` vs the pg adapter's nested constraint index name), but its name
+  // always carries the parent FK column, so match the whole meta
   const metaText = JSON.stringify(error.meta ?? {});
 
   if (metaText.includes("universityId")) {
@@ -74,25 +74,48 @@ function uniqueConflictMessage(error: unknown): string | null {
   return "A university with this name already exists.";
 }
 
+// Approval raced the current data: the change's own target (P2025) or the
+// parent a create goes under (P2003) was deleted after submission.
+function staleTargetMessage(error: unknown): string | null {
+  if (!(error instanceof Prisma.PrismaClientKnownRequestError)) return null;
+  if (error.code === "P2025") {
+    return "The target of this change no longer exists.";
+  }
+  if (error.code === "P2003") {
+    return "The parent this new item belongs under no longer exists.";
+  }
+  return null;
+}
+
 async function approvePendingChange(req: Request, res: Response) {
   const { id } = adminValidation.approvePendingChange(req.body);
 
-  let wasApplied: boolean;
+  let result: ApplyResult;
   try {
-    wasApplied = await applyPendingChange({ id });
+    result = await applyPendingChange({ id });
   } catch (error) {
-    const conflict = uniqueConflictMessage(error);
+    const conflict = uniqueConflictMessage(error) ?? staleTargetMessage(error);
     if (conflict === null) throw error;
 
     sendError(res, { status: 409, code: "CONFLICT", message: conflict });
     return;
   }
 
-  if (!wasApplied) {
+  if (result === "NOT_FOUND") {
     sendError(res, {
       status: 404,
       code: "NOT_FOUND",
-      message: "Pending change not found.",
+      message: "Pending change not found - it may have already been reviewed.",
+    });
+    return;
+  }
+
+  if (result === "INVALID_DATA") {
+    sendError(res, {
+      status: 422,
+      code: "INVALID_STORED_DATA",
+      message:
+        "The stored suggestion data is no longer valid and cannot be applied. Decline it instead.",
     });
     return;
   }

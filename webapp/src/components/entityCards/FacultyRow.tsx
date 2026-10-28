@@ -1,6 +1,6 @@
 import { BookOpenIcon, MapPinIcon } from "../sharedComponents/icons";
+import { TextLink } from "../sharedComponents/TextLink";
 import { useState } from "react";
-import { Link } from "react-router";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
 import { LinkButton } from "../sharedComponents/LinkButton";
@@ -42,12 +42,9 @@ function FacultyRow({
       >
         <div className="min-w-0">
           <p className="font-semibold">
-            <Link
-              to={`/faculties/${faculty.id.toString()}`}
-              className="underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
+            <TextLink to={`/faculties/${faculty.id.toString()}`}>
               {faculty.name}
-            </Link>
+            </TextLink>
           </p>
           {hasStudyPrograms && (
             <p className="text-xs text-(--text-muted) mt-0.5">
