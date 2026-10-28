@@ -154,7 +154,7 @@ function SearchResults({
             item,
             hint: contextHintFor(type, index, direct),
           })),
-          (entry) => t(`universitiesPage.ownership.${entry.item.ownership}`),
+          (entry) => t(`universitiesPage.countries.${entry.item.country}`),
         ).map((g) => (
           <ResultGroup
             // remount when the band changes so defaultCollapsed reapplies

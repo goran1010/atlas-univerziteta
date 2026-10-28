@@ -1,7 +1,6 @@
 import { SearchIcon, XIcon } from "../sharedComponents/icons";
 import { Button } from "../sharedComponents/Button";
 import { Spinner } from "../sharedComponents/Spinner";
-import { FilterPanel } from "./FilterPanel";
 import { SearchResults } from "./SearchResults";
 import { useUnifiedSearch } from "./useUnifiedSearch";
 
@@ -12,19 +11,8 @@ function UnifiedSearch() {
     loading,
     inputRef,
     searchInput,
-    countryFilter,
-    entityFilter,
-    ownershipFilter,
-    cycleFilters,
-    typeFilters,
-    filtersOpen,
-    setFiltersOpen,
-    hasFilters,
     hasSearchTerm,
     handleInputChange,
-    handleFilterChange,
-    handleCycleChange,
-    handleTypeChange,
     handleBrowseAll,
     handleClear,
     handleClearAll,
@@ -67,23 +55,7 @@ function UnifiedSearch() {
         </div>
       </div>
 
-      <FilterPanel
-        countryFilter={countryFilter}
-        entityFilter={entityFilter}
-        ownershipFilter={ownershipFilter}
-        cycleFilters={cycleFilters}
-        typeFilters={typeFilters}
-        filtersOpen={filtersOpen}
-        onToggleFilters={() => {
-          setFiltersOpen((prev) => !prev);
-        }}
-        onFilterChange={handleFilterChange}
-        onCycleChange={handleCycleChange}
-        onTypeChange={handleTypeChange}
-        t={t}
-      />
-
-      {(hasFilters || hasSearchTerm || view.kind !== "idle") && (
+      {(hasSearchTerm || view.kind !== "idle") && (
         <Button
           variant="danger"
           className="text-xs px-3 py-2 sm:py-1.5 w-full max-w-xs sm:w-auto"
