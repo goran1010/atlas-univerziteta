@@ -16,6 +16,9 @@ const auth = betterAuth({
   },
   emailVerification: {
     sendOnSignUp: true,
+    // a blocked unverified sign-in re-sends the link, otherwise the user
+    // has no way to request a new one
+    sendOnSignIn: true,
     sendVerificationEmail: async ({ user, url }) => {
       await sendConfirmationEmail(user.email, url);
     },
