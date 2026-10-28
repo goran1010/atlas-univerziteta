@@ -6,6 +6,7 @@ const targetTypeSchema = z.enum([
   "STUDY_PROGRAM",
   "TRACK",
 ]);
+const countrySchema = z.enum(["BIH", "SRB", "HRV", "MNE"]);
 const entitySchema = z.enum(["FBIH", "RS", "BD"]);
 const ownershipSchema = z.enum(["PUBLIC", "PRIVATE"]);
 const studyCycleSchema = z.enum([
@@ -23,6 +24,7 @@ const integerSchema = z.number().int();
 const positiveIntegerSchema = integerSchema.positive();
 const durationYearsSchema = integerSchema.min(1).max(10);
 const ectsSchema = positiveIntegerSchema;
+export type Country = z.infer<typeof countrySchema>;
 export type Entity = z.infer<typeof entitySchema>;
 export type TargetType = z.infer<typeof targetTypeSchema>;
 export type Ownership = z.infer<typeof ownershipSchema>;
@@ -31,6 +33,7 @@ export type TypeOfChange = "CREATE" | "UPDATE" | "DELETE";
 export type SearchType = z.infer<typeof searchTypeSchema>;
 
 export {
+  countrySchema,
   durationYearsSchema,
   ectsSchema,
   entitySchema,

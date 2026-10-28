@@ -11,6 +11,7 @@ const university: PickedEntity = {
     name: "University of Sarajevo",
     acronym: "UNSA",
     city: "Sarajevo",
+    country: "BIH",
     entity: "FBIH",
     ownership: "PUBLIC",
     foundedYear: undefined,

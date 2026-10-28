@@ -15,8 +15,8 @@
     "about": "About"
   },
   "meta": {
-    "home": "Explore universities, faculties, study programs, and tracks in Bosnia and Herzegovina with a free public dataset, searchable web interface, and REST API.",
-    "universities": "Explore universities and study programs in Bosnia and Herzegovina.",
+    "home": "Explore universities, faculties, study programs, and tracks across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro with a free public dataset, searchable web interface, and REST API.",
+    "universities": "Explore universities and study programs across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro.",
     "api": "REST API documentation for Atlas Univerziteta. Access universities and study programs data programmatically.",
     "login": "Log in to your Atlas Univerziteta account to contribute data and track your submissions.",
     "signup": "Create a free Atlas Univerziteta account to start contributing university data."
@@ -122,11 +122,11 @@
     "changesAwaiting": "Changes awaiting your review"
   },
   "home": {
-    "heading": "Universities and Study Programs in Bosnia and Herzegovina",
-    "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities - institutions, faculties, study programs, and tracks.",
+    "heading": "Universities and Study Programs",
+    "intro": "A free, open-source project building a structured, searchable database of public higher-education data. Focused on universities - institutions, faculties, study programs, and tracks - across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro.",
     "summary": "Use Atlas Univerziteta to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
-    "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, and tracks. Search by name, city, acronym, entity, ownership, study cycle, and more.",
+    "exploreDescription": "Browse universities across multiple countries. View faculties, study programs, and tracks. Search by name, city, acronym, country, entity, ownership, study cycle, and more.",
     "card": {
       "universities": {
         "title": "Universities"
@@ -235,6 +235,7 @@
     "dataFields": {
       "name": "Name",
       "city": "City",
+      "country": "Country",
       "entity": "Entity",
       "cycle": "Study cycle",
       "durationYears": "Duration (years)",
@@ -255,6 +256,12 @@
       "INTEGRATED": "INTEGRATED - Bachelor+Master",
       "VOCATIONAL": "VOCATIONAL",
       "SPECIALIST": "SPECIALIST - Specialist Study"
+    },
+    "countries": {
+      "BIH": "Bosnia and Herzegovina",
+      "SRB": "Serbia",
+      "HRV": "Croatia",
+      "MNE": "Montenegro"
     },
     "entities": {
       "FBIH": "FBIH - Federation of B&H",
@@ -389,7 +396,7 @@
     "title": "Find programs and universities",
     "browseAll": "Browse all",
     "search": "Search",
-    "searchHint": "Search across all data - by name, city, acronym, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
+    "searchHint": "Search across all data - by name, city, acronym, country, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
     "searchAllPlaceholder": "Search by name, city, cycle, entity…",
     "universitiesSection": "Universities",
     "facultiesSection": "Faculties",
@@ -398,6 +405,12 @@
     "noFacultyResults": "No faculties found.",
     "noResultsAtAll": "No results found.",
     "searchResultsAnnouncement": "Search results:",
+    "countries": {
+      "BIH": "Bosnia and Herzegovina",
+      "SRB": "Serbia",
+      "HRV": "Croatia",
+      "MNE": "Montenegro"
+    },
     "entities": {
       "FBIH": "Federation of B&H",
       "RS": "Republika Srpska",
@@ -451,6 +464,7 @@
       "studyProgram": "Matched through its faculty, university, or tracks"
     },
     "showAllPrograms": "Show all study programs",
+    "filterCountry": "Country",
     "filterEntity": "Entity",
     "filterOwnership": "Ownership",
     "filterCycle": "Study cycle",

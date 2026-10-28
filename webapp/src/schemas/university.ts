@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import {
+  countrySchema,
   durationYearsSchema,
   ectsSchema,
   entitySchema,
@@ -20,7 +21,8 @@ const universitySchema = z.object({
   name: z.string().min(1),
   acronym: optionalTextSchema,
   city: z.string().min(1),
-  entity: entitySchema,
+  country: countrySchema,
+  entity: entitySchema.nullish().transform((value) => value ?? undefined),
   ownership: ownershipSchema,
   foundedYear: optionalTextSchema,
   website: optionalTextSchema,
@@ -104,7 +106,8 @@ const searchResultUniversitySchema = z.object({
   name: z.string().min(1),
   acronym: optionalTextSchema,
   city: z.string().min(1),
-  entity: entitySchema,
+  country: countrySchema,
+  entity: entitySchema.nullish().transform((value) => value ?? undefined),
   ownership: ownershipSchema,
 });
 
