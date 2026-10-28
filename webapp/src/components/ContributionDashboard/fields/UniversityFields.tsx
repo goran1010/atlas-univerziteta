@@ -4,8 +4,9 @@ import { DataField } from "../DataField";
 import { Label } from "../../sharedComponents/Label";
 import { Select } from "../../sharedComponents/Select";
 import type { ContributionFormDraft } from "../types";
-import type { TypeOfChange, Entity } from "../../../schemas/domain";
+import type { TypeOfChange, Country, Entity } from "../../../schemas/domain";
 
+const COUNTRIES: Country[] = ["BIH", "SRB", "HRV", "MNE"];
 const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
 
 interface UniversityFieldsProps {
@@ -48,28 +49,56 @@ function UniversityFields({
       <div className="flex flex-col gap-1 self-center">
         <div className="flex flex-col gap-1">
           <Label
-            htmlFor="dataEntity"
+            htmlFor="dataCountry"
             className="text-center"
             required={typeOfChange === "CREATE"}
           >
-            {t("contribution.dataFields.entity")}
+            {t("contribution.dataFields.country")}
           </Label>
           <Select
-            id="dataEntity"
-            value={data.entity ?? ""}
+            id="dataCountry"
+            value={data.country ?? ""}
             onChange={(e) => {
-              setDataField("entity", e.target.value);
+              const value = e.target.value;
+              setDataField("country", value || undefined);
+              if (value !== "BIH") setDataField("entity", undefined);
             }}
             required={typeOfChange === "CREATE"}
           >
             <option value="">-</option>
-            {ENTITIES.map((en) => (
-              <option key={en} value={en}>
-                {t(`contribution.entities.${en}`)}
+            {COUNTRIES.map((c) => (
+              <option key={c} value={c}>
+                {t(`contribution.countries.${c}`)}
               </option>
             ))}
           </Select>
         </div>
+        {data.country === "BIH" && (
+          <div className="flex flex-col gap-1">
+            <Label
+              htmlFor="dataEntity"
+              className="text-center"
+              required={typeOfChange === "CREATE"}
+            >
+              {t("contribution.dataFields.entity")}
+            </Label>
+            <Select
+              id="dataEntity"
+              value={data.entity ?? ""}
+              onChange={(e) => {
+                setDataField("entity", e.target.value || undefined);
+              }}
+              required={typeOfChange === "CREATE"}
+            >
+              <option value="">-</option>
+              {ENTITIES.map((en) => (
+                <option key={en} value={en}>
+                  {t(`contribution.entities.${en}`)}
+                </option>
+              ))}
+            </Select>
+          </div>
+        )}
         <div className="flex flex-col gap-1">
           <Label
             htmlFor="dataOwnership"
