@@ -30,5 +30,5 @@ async function readResponseError(response: Response): Promise<ApiError | null> {
   }
 }
 
-export { actionSuccessResponseSchema, readApiError, readResponseError };
+export { actionSuccessResponseSchema, readResponseError };
 export type { ApiError };

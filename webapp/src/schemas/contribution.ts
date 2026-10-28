@@ -286,10 +286,8 @@ const contributionSubmissionSchema = z.union([
 
 export {
   contributionSubmissionSchema,
-  facultyCreateDataSchema,
   facultyEditDataSchema,
   facultyTreeDataSchema,
-  studyProgramCreateDataSchema,
   studyProgramEditDataSchema,
   studyProgramTreeDataSchema,
   trackCreateDataSchema,

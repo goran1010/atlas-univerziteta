@@ -32,7 +32,6 @@ export type TypeOfChange = z.infer<typeof typeOfChangeSchema>;
 export type SearchType = z.infer<typeof searchTypeSchema>;
 
 export {
-  typeOfChangeSchema,
   durationYearsSchema,
   ectsSchema,
   entitySchema,

@@ -1,21 +1,8 @@
 import { test, expect } from "@playwright/test";
 import { E2E_SERVER_URL } from "../utils/env";
+import { firstEntity } from "../utils/helpers";
 
 import type { APIRequestContext } from "@playwright/test";
-
-async function firstEntity(
-  request: APIRequestContext,
-  path: "universities" | "faculties",
-) {
-  const response = await request.get(`${E2E_SERVER_URL}/api/v1/${path}`);
-  expect(response.ok()).toBe(true);
-  const { data } = (await response.json()) as {
-    data: { id: number; name: string }[];
-  };
-  const entity = data.at(0);
-  if (!entity) throw new Error(`Expected at least one seeded ${path} row`);
-  return entity;
-}
 
 async function firstUniversityWithFaculties(request: APIRequestContext) {
   const response = await request.get(`${E2E_SERVER_URL}/api/v1/universities`);
