@@ -12,6 +12,7 @@ function UnifiedSearch() {
     loading,
     inputRef,
     searchInput,
+    countryFilter,
     entityFilter,
     ownershipFilter,
     cycleFilters,
@@ -67,6 +68,7 @@ function UnifiedSearch() {
       </div>
 
       <FilterPanel
+        countryFilter={countryFilter}
         entityFilter={entityFilter}
         ownershipFilter={ownershipFilter}
         cycleFilters={cycleFilters}

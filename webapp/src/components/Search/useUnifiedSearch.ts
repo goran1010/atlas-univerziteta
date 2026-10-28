@@ -6,6 +6,7 @@ import { searchAll, SearchFailedError } from "./utils/search";
 import { notificationMessage } from "../../utils/apiError";
 
 import {
+  countrySchema,
   entitySchema,
   ownershipSchema,
   searchTypeSchema,
@@ -14,6 +15,7 @@ import {
 
 import type { UnifiedSearchResults } from "../../schemas/university";
 import type {
+  Country,
   Entity,
   Ownership,
   SearchType,
@@ -40,11 +42,12 @@ function useUnifiedSearch() {
   const abortRef = useRef<AbortController | null>(null);
   const [filtersOpen, setFiltersOpen] = useState(() => {
     const params = new URLSearchParams(window.location.search);
+    const hasCountry = params.has("country");
     const hasEntity = params.has("entity");
     const hasOwnership = params.has("ownership");
     const hasCycle = params.getAll("cycle").length > 0;
     const hasType = params.getAll("type").length > 0;
-    return hasEntity || hasOwnership || hasCycle || hasType;
+    return hasCountry || hasEntity || hasOwnership || hasCycle || hasType;
   });
 
   // local state backs the input: deriving it from the URL would re-render
@@ -53,6 +56,10 @@ function useUnifiedSearch() {
   const [searchInput, setSearchInput] = useState(
     () => searchParams.get("q") ?? "",
   );
+  const countryParsed = countrySchema.safeParse(searchParams.get("country"));
+  const countryFilter: Country | "" = countryParsed.success
+    ? countryParsed.data
+    : "";
   const entityParsed = entitySchema.safeParse(searchParams.get("entity"));
   const entityFilter: Entity | "" = entityParsed.success
     ? entityParsed.data
@@ -76,6 +83,7 @@ function useUnifiedSearch() {
   const browseAll = searchParams.get("browse") === "all";
 
   const hasFilters =
+    countryFilter !== "" ||
     entityFilter !== "" ||
     ownershipFilter !== "" ||
     cycleFilters.length > 0 ||
@@ -105,6 +113,7 @@ function useUnifiedSearch() {
     async (
       term: string | undefined,
       filters: {
+        country?: string | undefined;
         entity?: string | undefined;
         ownership?: string | undefined;
         cycle?: string[] | undefined;
@@ -154,6 +163,7 @@ function useUnifiedSearch() {
   const triggerSearch = useCallback(
     (
       term: string,
+      country: string,
       entity: string,
       ownership: string,
       cycle: string[],
@@ -163,6 +173,7 @@ function useUnifiedSearch() {
       const trimmed = term.trim();
       const hasText = trimmed.length > 0;
       const hasAnyFilter =
+        country !== "" ||
         entity !== "" ||
         ownership !== "" ||
         cycle.length > 0 ||
@@ -181,6 +192,7 @@ function useUnifiedSearch() {
       const browseOnly = !hasText && !hasAnyFilter && browse;
 
       void executeSearch(hasText ? trimmed : undefined, {
+        country: country || undefined,
         entity: entity || undefined,
         ownership: ownership || undefined,
         cycle,
@@ -204,6 +216,7 @@ function useUnifiedSearch() {
 
     triggerSearch(
       urlQuery,
+      countryFilter,
       entityFilter,
       ownershipFilter,
       cycleFilters,
@@ -235,10 +248,14 @@ function useUnifiedSearch() {
   }
 
   function handleFilterChange(
-    key: "entity" | "ownership",
+    key: "country" | "entity" | "ownership",
     value: string | null,
   ) {
-    updateParams({ [key]: value });
+    if (key === "country" && value !== "BIH") {
+      updateParams({ country: value, entity: null });
+    } else {
+      updateParams({ [key]: value });
+    }
   }
 
   function handleCycleChange(value: string, checked: boolean) {
@@ -278,6 +295,7 @@ function useUnifiedSearch() {
     loading,
     inputRef,
     searchInput,
+    countryFilter,
     entityFilter,
     ownershipFilter,
     cycleFilters,

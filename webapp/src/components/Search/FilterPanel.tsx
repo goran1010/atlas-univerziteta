@@ -2,6 +2,7 @@ import { useState, type ReactNode } from "react";
 import { ChevronDownIcon } from "../sharedComponents/icons";
 
 import type {
+  Country,
   Entity,
   Ownership,
   SearchType,
@@ -105,6 +106,7 @@ const TYPE_LABEL_KEYS: Record<SearchType, string> = {
   faculty: "universitiesPage.facultiesSection",
   studyProgram: "universitiesPage.studyProgramsSection",
 };
+const COUNTRIES: Country[] = ["BIH", "SRB", "HRV", "MNE"];
 const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
 const OWNERSHIPS: Ownership[] = ["PUBLIC", "PRIVATE"];
 const CYCLES: StudyCycle[] = [
@@ -117,6 +119,7 @@ const CYCLES: StudyCycle[] = [
 ];
 
 function FilterPanel({
+  countryFilter,
   entityFilter,
   ownershipFilter,
   cycleFilters,
@@ -128,18 +131,20 @@ function FilterPanel({
   onTypeChange,
   t,
 }: {
+  countryFilter: Country | "";
   entityFilter: Entity | "";
   ownershipFilter: Ownership | "";
   cycleFilters: StudyCycle[];
   typeFilters: SearchType[];
   filtersOpen: boolean;
   onToggleFilters: () => void;
-  onFilterChange: (key: "entity" | "ownership", value: string | null) => void;
+  onFilterChange: (key: "country" | "entity" | "ownership", value: string | null) => void;
   onCycleChange: (value: string, checked: boolean) => void;
   onTypeChange: (value: string, checked: boolean) => void;
   t: (key: string) => string;
 }) {
   const activeCount = [
+    countryFilter,
     entityFilter,
     ownershipFilter,
     ...cycleFilters,
@@ -168,6 +173,20 @@ function FilterPanel({
       </button>
       {filtersOpen && (
         <div className="px-4 pb-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 border-t border-(--border-color) pt-3">
+          <FilterSection label={t("universitiesPage.filterCountry")}>
+            {COUNTRIES.map((c) => (
+              <RadioOption
+                key={c}
+                name="country"
+                value={c}
+                label={t(`universitiesPage.countries.${c}`)}
+                checked={countryFilter === c}
+                onChange={(v) => {
+                  onFilterChange("country", v || null);
+                }}
+              />
+            ))}
+          </FilterSection>
           <FilterSection label={t("universitiesPage.filterType")}>
             {TYPES.map((type) => (
               <CheckboxOption
@@ -179,20 +198,22 @@ function FilterPanel({
               />
             ))}
           </FilterSection>
-          <FilterSection label={t("universitiesPage.filterEntity")}>
-            {ENTITIES.map((e) => (
-              <RadioOption
-                key={e}
-                name="entity"
-                value={e}
-                label={t(`universitiesPage.entities.${e}`)}
-                checked={entityFilter === e}
-                onChange={(v) => {
-                  onFilterChange("entity", v || null);
-                }}
-              />
-            ))}
-          </FilterSection>
+          {countryFilter === "BIH" && (
+            <FilterSection label={t("universitiesPage.filterEntity")}>
+              {ENTITIES.map((e) => (
+                <RadioOption
+                  key={e}
+                  name="entity"
+                  value={e}
+                  label={t(`universitiesPage.entities.${e}`)}
+                  checked={entityFilter === e}
+                  onChange={(v) => {
+                    onFilterChange("entity", v || null);
+                  }}
+                />
+              ))}
+            </FilterSection>
+          )}
           <FilterSection label={t("universitiesPage.filterOwnership")}>
             {OWNERSHIPS.map((o) => (
               <RadioOption
