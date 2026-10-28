@@ -25,12 +25,13 @@ async function getUniversities(req: Request, res: Response) {
   const [total, universities] = await Promise.all([
     prisma.university.count(),
     prisma.university.findMany({
-      orderBy: [{ ownership: "asc" }, { name: "asc" }],
+      orderBy: [{ country: "asc" }, { ownership: "asc" }, { name: "asc" }],
       select: {
         id: true,
         name: true,
         acronym: true,
         city: true,
+        country: true,
         entity: true,
         ownership: true,
         foundedYear: true,

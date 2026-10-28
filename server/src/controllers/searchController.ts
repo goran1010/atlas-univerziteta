@@ -50,7 +50,7 @@ async function searchSection<Item extends { id: number }>(
 }
 
 async function search(req: Request, res: Response) {
-  const { searchTerm, entity, ownership, cycle, type } =
+  const { searchTerm, country, entity, ownership, cycle, type } =
     v1Validation.searchQuery(req.query);
 
   const tokens = searchTerm === undefined ? [] : tokenizeSearchTerm(searchTerm);
@@ -85,7 +85,7 @@ async function search(req: Request, res: Response) {
             findMany: (where) =>
               prisma.university.findMany({
                 where,
-                orderBy: [{ ownership: "asc" }, { name: "asc" }],
+                orderBy: [{ country: "asc" }, { ownership: "asc" }, { name: "asc" }],
                 include: { _count: { select: { faculties: true } } },
               }),
           },
@@ -93,6 +93,7 @@ async function search(req: Request, res: Response) {
           universityOwnMatch,
           universityFullMatch,
           [
+            ...(country ? [{ country }] : []),
             ...(entity ? [{ entity }] : []),
             ...(ownership ? [{ ownership }] : []),
           ],
@@ -115,6 +116,7 @@ async function search(req: Request, res: Response) {
           facultyOwnMatch,
           facultyFullMatch,
           [
+            ...(country ? [{ university: { country } }] : []),
             ...(entity ? [{ university: { entity } }] : []),
             ...(ownership ? [{ university: { ownership } }] : []),
           ],
@@ -150,6 +152,7 @@ async function search(req: Request, res: Response) {
           studyProgramFullMatch,
           [
             ...(cycleFilter ? [{ cycle: cycleFilter }] : []),
+            ...(country ? [{ faculty: { university: { country } } }] : []),
             ...(entity ? [{ faculty: { university: { entity } } }] : []),
             ...(ownership ? [{ faculty: { university: { ownership } } }] : []),
           ],
