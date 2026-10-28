@@ -1,9 +1,10 @@
 import { LinkButton } from "../sharedComponents/LinkButton";
+import { TextLink } from "../sharedComponents/TextLink";
 import { RootContext } from "../../contextData/RootContext";
 import { formatDate } from "../../utils/formatDate";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { use, useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { useUsersList } from "../../customHooks/useUsersList";
 import { pendingChangesResponseSchema } from "../../schemas/pendingChange";
 import { handleLogout } from "./utils/handleLogout";
@@ -157,16 +158,16 @@ function Profile() {
                   )}
                 </dt>
                 <dd>
-                  <Link
+                  <TextLink
                     to={
                       isAdmin
                         ? "/admin-dashboard/pending-changes"
                         : "/improve-data/pending"
                     }
-                    className="text-lg font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="text-lg font-bold"
                   >
                     {String(pendingItems.length)}
-                  </Link>
+                  </TextLink>
                 </dd>
               </div>
             )}

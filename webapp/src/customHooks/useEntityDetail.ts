@@ -52,7 +52,7 @@ function useEntityDetail<Schema extends z.ZodType>(
       }
     }
 
-    // eslint-disable-next-line react-x/set-state-in-effect -- reset to loading when the path or attempt changes
+    // eslint-disable-next-line react-x/set-state-in-effect, react-hooks/set-state-in-effect -- reset to loading when the path or attempt changes
     setState({ kind: "loading" });
     void load();
 

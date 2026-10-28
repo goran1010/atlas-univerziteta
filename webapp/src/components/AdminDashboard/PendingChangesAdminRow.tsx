@@ -13,6 +13,7 @@ import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { entityDetailPath } from "../../utils/entityDetailPath";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { countNestedNodes } from "../../utils/countNestedNodes";
+import { CHANGE_TYPE_BADGE } from "../../utils/changeTypeBadges";
 import { LEVEL_BADGE } from "../../utils/levelColors";
 import type { Notification } from "../../types";
 import type { TypeOfChange } from "../../schemas/domain";
@@ -22,14 +23,6 @@ const ROW_ACCENT: Record<TypeOfChange, string> = {
   CREATE: "border-l-4 border-l-green-500 dark:border-l-green-400",
   UPDATE: "border-l-4 border-l-yellow-500 dark:border-l-yellow-400",
   DELETE: "border-l-4 border-l-red-500 dark:border-l-red-400",
-};
-
-const BADGE: Record<TypeOfChange, string> = {
-  CREATE:
-    "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300",
-  UPDATE:
-    "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300",
-  DELETE: "bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300",
 };
 
 interface PendingChangesAdminRowProps {
@@ -106,7 +99,7 @@ const PendingChangesAdminRow = memo(
           </span>
           <span
             className={`px-2 py-1 rounded-md text-xs font-semibold capitalize ${
-              BADGE[data.typeOfChange]
+              CHANGE_TYPE_BADGE[data.typeOfChange]
             }`}
           >
             {t(`contribution.changeTypes.${data.typeOfChange}`)}
@@ -208,7 +201,7 @@ const PendingChangesAdminRow = memo(
             title={
               <>
                 <span
-                  className={`px-1.5 py-0.5 rounded text-xs font-semibold ${BADGE[data.typeOfChange]}`}
+                  className={`px-1.5 py-0.5 rounded text-xs font-semibold ${CHANGE_TYPE_BADGE[data.typeOfChange]}`}
                 >
                   {t(`contribution.changeTypes.${data.typeOfChange}`)}
                 </span>{" "}

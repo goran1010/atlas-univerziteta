@@ -10,21 +10,9 @@ import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { entityDetailPath } from "../../utils/entityDetailPath";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { countNestedNodes } from "../../utils/countNestedNodes";
+import { CHANGE_TYPE_BADGE } from "../../utils/changeTypeBadges";
 import { LEVEL_BADGE } from "../../utils/levelColors";
 import type { PendingChange } from "../../schemas/pendingChange";
-
-interface BadgeStyles {
-  CREATE: string;
-  UPDATE: string;
-  DELETE: string;
-}
-
-const BADGE: BadgeStyles = {
-  CREATE: "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200",
-  UPDATE:
-    "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-200",
-  DELETE: "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-200",
-};
 
 interface PendingUniversityChangesRowProps {
   change: PendingChange;
@@ -78,7 +66,7 @@ function PendingUniversityChangesRow({
           {t("contribution.change")}
         </span>
         <span
-          className={`px-2 py-0.5 rounded text-xs font-semibold ${BADGE[change.typeOfChange]}`}
+          className={`px-2 py-0.5 rounded text-xs font-semibold ${CHANGE_TYPE_BADGE[change.typeOfChange]}`}
         >
           {t(`contribution.changeTypes.${change.typeOfChange}`)}
         </span>
@@ -150,7 +138,7 @@ function PendingUniversityChangesRow({
           title={
             <>
               <span
-                className={`px-1.5 py-0.5 rounded text-xs font-semibold ${BADGE[change.typeOfChange]}`}
+                className={`px-1.5 py-0.5 rounded text-xs font-semibold ${CHANGE_TYPE_BADGE[change.typeOfChange]}`}
               >
                 {t(`contribution.changeTypes.${change.typeOfChange}`)}
               </span>{" "}

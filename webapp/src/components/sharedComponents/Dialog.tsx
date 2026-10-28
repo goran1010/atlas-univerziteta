@@ -1,3 +1,4 @@
+import { XIcon } from "./icons";
 import {
   use,
   useEffect,
@@ -88,20 +89,7 @@ function Dialog({
             aria-label={t("dialog.close")}
             className="p-2 sm:p-1.5 rounded-md cursor-pointer transition-transform active:scale-90 text-(--text-secondary) border border-(--border-color) bg-(--surface-1) shadow-(--card-shadow-soft) hover:text-(--text-primary) hover:bg-(--hover-surface) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
           >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
+            <XIcon className="text-[18px]" />
           </button>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { use, type ReactNode } from "react";
+import { mapsHref, telHref } from "../../utils/contactHrefs";
 import { RootContext } from "../../contextData/RootContext";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
@@ -121,10 +122,7 @@ function formatValue(
 
   if (typeof raw === "string" && spec.key === "address") {
     return (
-      <ExternalLink
-        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(raw)}`}
-        className="break-all"
-      >
+      <ExternalLink href={mapsHref(raw)} className="break-all">
         {raw}
       </ExternalLink>
     );
@@ -132,7 +130,7 @@ function formatValue(
 
   if (typeof raw === "string" && spec.key === "phone") {
     return (
-      <ExternalLink href={`tel:${raw.replace(/[^+\d]/g, "")}`} newTab={false}>
+      <ExternalLink href={telHref(raw)} newTab={false}>
         {raw}
       </ExternalLink>
     );

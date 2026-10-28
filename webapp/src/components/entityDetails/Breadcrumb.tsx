@@ -1,5 +1,5 @@
 import { use } from "react";
-import { Link } from "react-router";
+import { TextLink } from "../sharedComponents/TextLink";
 import { RootContext } from "../../contextData/RootContext";
 import { ChevronDownIcon } from "../sharedComponents/icons";
 
@@ -20,12 +20,7 @@ function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
           <li key={item.label} className="flex items-center gap-1">
             {i > 0 && <ChevronDownIcon className="text-[10px] -rotate-90" />}
             {item.to ? (
-              <Link
-                to={item.to}
-                className="underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                {item.label}
-              </Link>
+              <TextLink to={item.to}>{item.label}</TextLink>
             ) : (
               <span className="text-(--text-primary) font-medium">
                 {item.label}

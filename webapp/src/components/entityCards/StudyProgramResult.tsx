@@ -1,9 +1,9 @@
+import { TextLink } from "../sharedComponents/TextLink";
 import {
   AwardIcon,
   ClockIcon,
   GraduationCapIcon,
 } from "../sharedComponents/icons";
-import { Link } from "react-router";
 import { ResultCard } from "./ResultCard";
 import { FacultyBreadcrumb } from "../entityDetails/FacultyBreadcrumb";
 import { TrackList } from "./TrackList";
@@ -24,12 +24,12 @@ function StudyProgramResult({
   return (
     <ResultCard level="STUDY_PROGRAM">
       <h3 className="font-bold">
-        <Link
+        <TextLink
           to={`/faculties/${program.faculty.id.toString()}?program=${program.id.toString()}`}
-          className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          className="font-bold"
         >
           {program.name}
-        </Link>
+        </TextLink>
       </h3>
       <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5 text-sm text-(--text-secondary)">
         <span>

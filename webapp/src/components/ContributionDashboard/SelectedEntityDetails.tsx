@@ -1,4 +1,5 @@
 import { use } from "react";
+import { mapsHref, telHref } from "../../utils/contactHrefs";
 import { RootContext } from "../../contextData/RootContext";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 
@@ -37,10 +38,7 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
     rows.push({
       label,
       value: (
-        <ExternalLink
-          href={`tel:${value.replace(/[^+\d]/g, "")}`}
-          newTab={false}
-        >
+        <ExternalLink href={telHref(value)} newTab={false}>
           {value}
         </ExternalLink>
       ),
@@ -52,10 +50,7 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
     rows.push({
       label,
       value: (
-        <ExternalLink
-          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(value)}`}
-          className="break-all"
-        >
+        <ExternalLink href={mapsHref(value)} className="break-all">
           {value}
         </ExternalLink>
       ),

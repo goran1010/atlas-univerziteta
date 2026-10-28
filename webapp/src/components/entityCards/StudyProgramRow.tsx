@@ -1,5 +1,5 @@
 import { AwardIcon, ClockIcon, SpeechIcon } from "../sharedComponents/icons";
-import { Link } from "react-router";
+import { TextLink } from "../sharedComponents/TextLink";
 import { tCount } from "../../utils/pluralize";
 import { TrackList } from "./TrackList";
 
@@ -21,12 +21,12 @@ function StudyProgramRow({
     <li className="text-sm">
       <div className="py-1 px-0.5 sm:px-2 rounded-md">
         <div className="min-w-0">
-          <Link
+          <TextLink
             to={`/faculties/${facultyId.toString()}?program=${program.id.toString()}`}
-            className="font-medium underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="font-medium"
           >
             {program.name}
-          </Link>
+          </TextLink>
           <div className="flex flex-wrap gap-x-1.5 sm:gap-x-3 items-center text-xs text-(--text-muted) mt-0.5">
             {program.durationYears != null && (
               <span>

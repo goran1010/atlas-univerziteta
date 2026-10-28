@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { TextLink } from "../sharedComponents/TextLink";
 import { BuildingIcon } from "../sharedComponents/icons";
 
 function FacultyBreadcrumb({
@@ -14,19 +14,13 @@ function FacultyBreadcrumb({
   return (
     <p className="text-sm text-(--text-muted) mt-1">
       <BuildingIcon />{" "}
-      <Link
-        to={`/faculties/${faculty.id.toString()}`}
-        className="underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-      >
+      <TextLink to={`/faculties/${faculty.id.toString()}`}>
         {faculty.name}
-      </Link>
+      </TextLink>
       {" - "}
-      <Link
-        to={`/universities/${faculty.universityId.toString()}`}
-        className="underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-      >
+      <TextLink to={`/universities/${faculty.universityId.toString()}`}>
         {faculty.university.name}
-      </Link>
+      </TextLink>
       {faculty.university.acronym && ` (${faculty.university.acronym})`}
     </p>
   );

@@ -1,4 +1,5 @@
 import { use } from "react";
+import { TextLink } from "../sharedComponents/TextLink";
 import { useParams, Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../sharedComponents/Spinner";
@@ -6,7 +7,6 @@ import {
   BuildingIcon,
   CalendarIcon,
   MapPinIcon,
-  TagIcon,
 } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
@@ -14,6 +14,7 @@ import { ShareButton } from "./ShareButton";
 import { tCount } from "../../utils/pluralize";
 import { universityDetailResponseSchema } from "../../schemas/university";
 import { useEntityDetail } from "../../customHooks/useEntityDetail";
+import { UniversityMetaRow } from "../entityCards/UniversityMeta";
 import { DetailPageStatus } from "./DetailPageStatus";
 import { Button } from "../sharedComponents/Button";
 import { Helmet } from "react-helmet-async";
@@ -107,28 +108,18 @@ function UniversityDetailPage() {
               </h1>
               <ShareButton url={`/universities/${id ?? ""}`} />
             </div>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm text-(--text-secondary)">
-              <span>
-                <MapPinIcon /> {university.city}
-              </span>
-              <span>
-                <TagIcon /> {entityLabel}
-              </span>
-              <span
-                className={`px-1.5 py-0.5 rounded text-xs font-medium ${
-                  university.ownership === "PUBLIC"
-                    ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200"
-                    : "bg-(--surface-alt) text-(--text-secondary)"
-                }`}
-              >
-                {t(`universitiesPage.ownership.${university.ownership}`)}
-              </span>
+            <UniversityMetaRow
+              city={university.city}
+              entity={university.entity}
+              ownership={university.ownership}
+              className="gap-x-4 gap-y-1 mt-2"
+            >
               {university.foundedYear && (
                 <span>
                   <CalendarIcon /> {university.foundedYear}
                 </span>
               )}
-            </div>
+            </UniversityMetaRow>
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted) mt-2">
               <ContactLinks
                 website={university.website}
@@ -159,12 +150,12 @@ function UniversityDetailPage() {
                     key={faculty.id}
                     className="border border-(--border-color) rounded-lg p-3 bg-(--surface-2) hover:bg-(--hover-surface) transition-colors"
                   >
-                    <Link
+                    <TextLink
                       to={`/faculties/${faculty.id.toString()}`}
-                      className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      className="font-bold"
                     >
                       {faculty.name}
-                    </Link>
+                    </TextLink>
                     <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
                       {faculty.city && (
                         <span>

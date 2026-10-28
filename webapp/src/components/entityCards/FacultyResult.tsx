@@ -1,6 +1,6 @@
 import { LandmarkIcon, MapPinIcon } from "../sharedComponents/icons";
+import { TextLink } from "../sharedComponents/TextLink";
 import { useState, use } from "react";
-import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { ResultCard } from "./ResultCard";
@@ -79,12 +79,12 @@ function FacultyResult({
         }
       >
         <h3 className="font-bold">
-          <Link
+          <TextLink
             to={`/faculties/${faculty.id.toString()}`}
-            className="font-bold underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="font-bold"
           >
             {faculty.name}
-          </Link>
+          </TextLink>
         </h3>
         <p className="text-sm text-(--text-muted) mt-0.5">
           <LandmarkIcon /> {faculty.university.name}

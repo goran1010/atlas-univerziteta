@@ -6,9 +6,7 @@ import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
 
-let router: ReturnType<typeof createMemoryRouter>;
-
-function Wrapper({ initialEntry = "/search" }: { initialEntry?: string }) {
+function buildSearchRouter(initialEntry = "/search") {
   const routes = [
     {
       path: "/search",
@@ -21,11 +19,11 @@ function Wrapper({ initialEntry = "/search" }: { initialEntry?: string }) {
     },
   ];
 
-  router = createMemoryRouter(routes, {
-    initialEntries: [initialEntry],
-  });
+  return createMemoryRouter(routes, { initialEntries: [initialEntry] });
+}
 
-  return <RouterProvider router={router} />;
+function Wrapper({ initialEntry = "/search" }: { initialEntry?: string }) {
+  return <RouterProvider router={buildSearchRouter(initialEntry)} />;
 }
 
 const universityListItem = {
@@ -429,7 +427,8 @@ describe("UnifiedSearch URL navigation", () => {
 
   test("navigating to /search with new params while on it re-runs the search", async () => {
     givenSearchResults({ universities: [universityListItem] });
-    render(<Wrapper initialEntry="/search?q=medicina" />);
+    const router = buildSearchRouter("/search?q=medicina");
+    render(<RouterProvider router={router} />);
 
     await screen.findByRole("heading", { name: /^Universities/i });
     expect(searchRequests).toHaveLength(1);
