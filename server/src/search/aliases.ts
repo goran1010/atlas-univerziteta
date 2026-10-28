@@ -19,8 +19,18 @@ const ENUM_ALIASES: Record<string, string> = {
   INTEGRISANI: "INTEGRATED",
   STRUCN: "VOCATIONAL",
   SPECIJALISTICK: "SPECIALIST",
+  BOSN: "BIH",
+  HERCEGO: "BIH",
+  BOSNIA: "BIH",
+  SRBI: "SRB",
+  SERBIA: "SRB",
+  HRVAT: "HRV",
+  CROATIA: "HRV",
+  CRNOGOR: "MNE",
+  MONTENEGRO: "MNE",
 } as const;
 
+const COUNTRIES = ["BIH", "SRB", "HRV", "MNE"] as const;
 const ENTITIES = ["FBIH", "RS", "BD"] as const;
 const OWNERSHIPS = ["PUBLIC", "PRIVATE"] as const;
 const CYCLES = [
@@ -32,4 +42,4 @@ const CYCLES = [
   "SPECIALIST",
 ] as const;
 
-export { ENUM_ALIASES, ENTITIES, OWNERSHIPS, CYCLES };
+export { ENUM_ALIASES, COUNTRIES, ENTITIES, OWNERSHIPS, CYCLES };
