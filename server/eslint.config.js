@@ -10,8 +10,6 @@ export default defineConfig([
     files: ["**/*.ts"],
     extends: [
       js.configs.recommended,
-      tseslint.configs.strict,
-      tseslint.configs.stylistic,
       tseslint.configs.strictTypeChecked,
       tseslint.configs.stylisticTypeChecked,
     ],
@@ -27,6 +25,7 @@ export default defineConfig([
       globals: globals.node,
       parserOptions: {
         project: ["./tsconfig.json"],
+        tsconfigRootDir: import.meta.dirname,
       },
     },
   },

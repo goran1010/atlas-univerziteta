@@ -1,3 +1,4 @@
+/* eslint-disable no-console -- build script reports progress on stdout */
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 import { parseEnv } from "node:util";

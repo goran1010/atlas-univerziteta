@@ -36,7 +36,7 @@ jobs:
       - name: Check for deploy-relevant changes
         id: changes
         run: |
-          if git diff --name-only HEAD~1 HEAD | grep -qE '^server/|^docker-compose\.yml$|^Caddyfile$'; then
+          if git diff --name-only HEAD~1 HEAD | grep -qE '^server/|^docker-compose(\.prod)?\.yml$|^Caddyfile$'; then
             echo "should_deploy=true" >> "$GITHUB_OUTPUT"
           else
             echo "should_deploy=false" >> "$GITHUB_OUTPUT"
@@ -69,6 +69,6 @@ jobs:
           script: |
             cd /root/atlas-univerziteta
             git pull --ff-only
-            docker compose pull server
-            docker compose up -d
-            docker compose exec -T caddy caddy reload --config /etc/caddy/Caddyfile
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml pull server
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml exec -T caddy caddy reload --config /etc/caddy/Caddyfile

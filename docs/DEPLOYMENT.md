@@ -9,16 +9,13 @@
 
 See `.env.production.example` for the VPS environment variable reference and `docker-compose.yml` for the container setup.
 
-The VPS additionally keeps an untracked `docker-compose.override.yml` next to the compose file. It switches the `server` service from a local build to the published image, which is what lets the deploy job run `docker compose pull server`:
+In production the `server` service runs the image CI builds and pushes to ghcr, instead of building on the VPS. The committed `docker-compose.prod.yml` override switches the service to that image, and every compose command on the VPS passes both files:
 
-```yaml
-services:
-  server:
-    image: ghcr.io/goran1010/atlas-univerziteta-server:latest
-    build: !reset null
+```bash
+docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
-Recreate this file when setting up a new server - without it, deploys try to build the image on the VPS instead of pulling it.
+The deploy job does this automatically. Note that explicit `-f` flags make compose ignore any `docker-compose.override.yml` - a VPS set up before `docker-compose.prod.yml` was committed can delete that file.
 
 OAuth callbacks go directly to the API domain (better-auth builds them from `SERVER_URL`). Register these redirect URIs in the GitHub and Google OAuth app settings:
 
