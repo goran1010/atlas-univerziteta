@@ -1,20 +1,12 @@
 import { prisma } from "../db/prisma.js";
+import { getSessionUser } from "../auth/isAuthenticated.js";
 import { sendError, sendSuccess } from "../utils/response.js";
 import * as usersValidation from "../validation/usersValidation.js";
 
 import type { Request, Response } from "express";
 
 async function requestAdmin(req: Request, res: Response) {
-  const user = req.authSession?.user;
-
-  if (!user) {
-    sendError(res, {
-      status: 401,
-      code: "AUTH_REQUIRED",
-      message: "You must be logged in to request admin access.",
-    });
-    return;
-  }
+  const user = getSessionUser(req);
 
   if (user.role === "ADMIN") {
     sendError(res, {
@@ -42,16 +34,7 @@ async function requestAdmin(req: Request, res: Response) {
 }
 
 async function cancelAdminRequest(req: Request, res: Response) {
-  const user = req.authSession?.user;
-
-  if (!user) {
-    sendError(res, {
-      status: 401,
-      code: "AUTH_REQUIRED",
-      message: "You must be logged in to cancel an admin request.",
-    });
-    return;
-  }
+  const user = getSessionUser(req);
 
   await prisma.user.update({
     where: { id: user.id },

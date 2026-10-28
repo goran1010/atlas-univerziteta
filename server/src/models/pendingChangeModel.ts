@@ -17,13 +17,7 @@ interface ParentCrumb {
   name: string;
 }
 
-// For UPDATE/DELETE pending changes, batch-fetch the current entity data
-// from the corresponding table so the reviewer (admin or contributor) can
-// see what is being changed or removed, and resolve the parent hierarchy
-// so they can see where the entity sits in the academic tree.
-async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
-  pendingChanges: T[],
-) {
+function collectTargetIds(pendingChanges: PendingChangeWithTarget[]) {
   const targetIds: Record<targetType, number[]> = {
     UNIVERSITY: [],
     FACULTY: [],
@@ -37,6 +31,12 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
     }
   }
 
+  return targetIds;
+}
+
+// Batch-fetch the current rows of every UPDATE/DELETE target, with enough
+// relation data for both the currentEntity payloads and the breadcrumbs.
+async function loadTargets(targetIds: Record<targetType, number[]>) {
   const [universities, faculties, studyPrograms, tracks] = await Promise.all([
     targetIds.UNIVERSITY.length > 0
       ? prisma.university.findMany({
@@ -120,9 +120,20 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
       : [],
   ]);
 
-  // Build maps for currentEntity (strip relation fields from the response,
-  // flatten child counts so reviewers see what hangs off the entity)
-  const entityMaps: Record<targetType, Map<number, object>> = {
+  return { universities, faculties, studyPrograms, tracks };
+}
+
+type Targets = Awaited<ReturnType<typeof loadTargets>>;
+
+// currentEntity payloads: relation fields stripped, child counts flattened
+// so reviewers see what hangs off the entity
+function buildEntityMaps({
+  universities,
+  faculties,
+  studyPrograms,
+  tracks,
+}: Targets): Record<targetType, Map<number, object>> {
+  return {
     UNIVERSITY: new Map(
       universities.map((u) => [
         u.id,
@@ -183,9 +194,15 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
       ]),
     ),
   };
+}
 
-  // Build parent breadcrumb trails for UPDATE/DELETE targets
-  const parentContextMaps: Record<targetType, Map<number, ParentCrumb[]>> = {
+// breadcrumb trails for UPDATE/DELETE targets, from their fetched relations
+function buildTargetCrumbs({
+  faculties,
+  studyPrograms,
+  tracks,
+}: Targets): Record<targetType, Map<number, ParentCrumb[]>> {
+  return {
     UNIVERSITY: new Map(),
     FACULTY: new Map(
       faculties.map((f) => [
@@ -239,12 +256,16 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
       ]),
     ),
   };
+}
 
-  // For CREATE operations, resolve parentId to get parent context.
-  // parentId points to the direct parent:
-  //   FACULTY CREATE -> parentId = universityId
-  //   STUDY_PROGRAM CREATE -> parentId = facultyId
-  //   TRACK CREATE -> parentId = studyProgramId
+// For CREATE operations, resolve parentId to get parent context.
+// parentId points to the direct parent:
+//   FACULTY CREATE -> parentId = universityId
+//   STUDY_PROGRAM CREATE -> parentId = facultyId
+//   TRACK CREATE -> parentId = studyProgramId
+async function loadCreateParentCrumbs(
+  pendingChanges: PendingChangeWithTarget[],
+) {
   const createParentIds: Record<
     "UNIVERSITY" | "FACULTY" | "STUDY_PROGRAM",
     number[]
@@ -340,7 +361,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
     ]),
   );
 
-  function getCreateParentContext(
+  return function getCreateParentContext(
     pc: PendingChangeWithTarget,
   ): ParentCrumb[] | null {
     if (pc.parentId == null) return null;
@@ -351,7 +372,23 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
     if (pc.targetType === "TRACK")
       return parentStudyProgramMap.get(pc.parentId) ?? null;
     return null;
-  }
+  };
+}
+
+// For UPDATE/DELETE pending changes, attach the current entity data so the
+// reviewer (admin or contributor) can see what is being changed or removed,
+// and resolve the parent hierarchy so they can see where the entity sits in
+// the academic tree.
+async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
+  pendingChanges: T[],
+) {
+  const [targets, getCreateParentContext] = await Promise.all([
+    loadTargets(collectTargetIds(pendingChanges)),
+    loadCreateParentCrumbs(pendingChanges),
+  ]);
+
+  const entityMaps = buildEntityMaps(targets);
+  const targetCrumbs = buildTargetCrumbs(targets);
 
   return pendingChanges.map((pc) => ({
     ...pc,
@@ -365,7 +402,7 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
         : pc.typeOfChange === "CREATE"
           ? getCreateParentContext(pc)
           : pc.targetId != null
-            ? (parentContextMaps[pc.targetType].get(pc.targetId) ?? null)
+            ? (targetCrumbs[pc.targetType].get(pc.targetId) ?? null)
             : null,
   }));
 }

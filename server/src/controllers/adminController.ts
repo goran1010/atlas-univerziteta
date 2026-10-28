@@ -1,6 +1,6 @@
 import { prisma } from "../db/prisma.js";
 import { Prisma } from "../generated/prisma/client.js";
-import { approvePendingChange as applyPendingChange } from "../models/applyPendingChange.js";
+import { applyPendingChange } from "../models/applyPendingChange.js";
 
 import type { ApplyResult } from "../models/applyPendingChange.js";
 import { enrichWithCurrentEntity } from "../models/pendingChangeModel.js";

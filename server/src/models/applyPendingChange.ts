@@ -46,7 +46,7 @@ function parsePendingChangeData<T>(
   return null;
 }
 
-async function approvePendingChange({
+async function applyPendingChange({
   id,
 }: {
   id: string;
@@ -246,5 +246,5 @@ async function approvePendingChange({
   );
 }
 
-export { approvePendingChange };
+export { applyPendingChange };
 export type { ApplyResult };

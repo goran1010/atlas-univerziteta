@@ -30,9 +30,7 @@ async function searchSection<Item extends { id: number }>(
   filters: WhereClause[],
 ): Promise<{ items: Item[]; direct: number }> {
   if (tokens.length === 0) {
-    const items = await query.findMany({
-      AND: [...tokenWhere(tokens, fullMatcher), ...filters],
-    });
+    const items = await query.findMany({ AND: filters });
     return { items, direct: items.length };
   }
 
