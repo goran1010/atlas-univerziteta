@@ -36,7 +36,8 @@ interface FacultyFixture {
 interface UniversityFixture {
   name: string;
   city: string;
-  entity: Prisma.UniversityCreateInput["entity"];
+  country?: Prisma.UniversityCreateInput["country"];
+  entity?: Prisma.UniversityCreateInput["entity"];
   ownership: Prisma.UniversityCreateInput["ownership"];
   acronym?: string | null;
   foundedYear?: string | null;
@@ -75,7 +76,9 @@ function foldFacultyFixture(faculty: FacultyFixture) {
 
 function foldUniversityFixture(university: UniversityFixture) {
   return {
+    country: "BIH" as const,
     ...university,
+    entity: university.entity ?? null,
     ...universitySearchFields(university),
     ...(university.faculties && {
       faculties: {

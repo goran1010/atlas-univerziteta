@@ -42,6 +42,7 @@ async function createUniversity() {
     data: {
       name: `Test University ${entitySequence.toString()}`,
       city: "Test City",
+      country: "BIH",
       entity: "FBIH",
       ownership: "PUBLIC",
     },

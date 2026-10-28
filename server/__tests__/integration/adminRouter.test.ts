@@ -87,7 +87,7 @@ function createPendingChange({
 
 function createUniversity(name: string) {
   return prisma.university.create({
-    data: { name, city: "Test City", entity: "FBIH", ownership: "PUBLIC" },
+    data: { name, city: "Test City", country: "BIH", entity: "FBIH", ownership: "PUBLIC" },
   });
 }
 
