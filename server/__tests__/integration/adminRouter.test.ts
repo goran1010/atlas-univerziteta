@@ -9,6 +9,7 @@ import {
   getResponseArray,
 } from "../utils/responseHelpers.js";
 import { prisma } from "../../src/db/prisma.js";
+import { foldSearchText } from "../../src/search/fold.js";
 import { logger } from "../../src/utils/logger.js";
 
 import type { Agent, Response } from "supertest";
@@ -631,6 +632,189 @@ describe("Admin Router - POST /users/admin/approve-pending-change for TRACK", ()
         ects: 90,
       }),
     );
+  });
+});
+
+describe("Admin Router - POST /users/admin/approve-pending-change for trees", () => {
+  test("approving a university tree creates every node with parents and search fields", async () => {
+    const pendingChange = await createPendingChange({
+      targetType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      data: {
+        name: "Test Tree University",
+        city: "Test City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: [
+          {
+            name: "Test Tree Faculty",
+            city: "Test City",
+            studyPrograms: [
+              {
+                name: "Test Tree Program",
+                cycle: "FIRST",
+                ects: 180,
+                tracks: [{ name: "Test Tree Track", ects: 180 }],
+              },
+            ],
+          },
+          { name: "Test Tree Faculty Two" },
+        ],
+      },
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expectApproved(response);
+
+    // the client omits the folded search* columns by default; opt back in
+    // to check the tree create folded every level
+    const university = await prisma.university.findUnique({
+      where: { name: "Test Tree University" },
+      omit: { searchName: false },
+      include: {
+        faculties: {
+          orderBy: { name: "asc" },
+          omit: { searchName: false },
+          include: {
+            studyPrograms: {
+              omit: { searchName: false },
+              include: { tracks: { omit: { searchName: false } } },
+            },
+          },
+        },
+      },
+    });
+
+    expect(university?.searchName).toBe(foldSearchText("Test Tree University"));
+    expect(university?.faculties).toHaveLength(2);
+
+    const [facultyOne, facultyTwo] = university?.faculties ?? [];
+    expect(facultyOne?.name).toBe("Test Tree Faculty");
+    expect(facultyOne?.searchName).toBe(foldSearchText("Test Tree Faculty"));
+    expect(facultyTwo?.name).toBe("Test Tree Faculty Two");
+    expect(facultyTwo?.studyPrograms).toHaveLength(0);
+
+    const program = facultyOne?.studyPrograms[0];
+    expect(program).toEqual(
+      expect.objectContaining({
+        name: "Test Tree Program",
+        cycle: "FIRST",
+        ects: 180,
+        searchName: foldSearchText("Test Tree Program"),
+      }),
+    );
+    expect(program?.tracks).toHaveLength(1);
+    expect(program?.tracks[0]).toEqual(
+      expect.objectContaining({
+        name: "Test Tree Track",
+        ects: 180,
+        searchName: foldSearchText("Test Tree Track"),
+      }),
+    );
+
+    expect(
+      await prisma.pendingChange.findUnique({
+        where: { id: pendingChange.id },
+      }),
+    ).toBeNull();
+  });
+
+  test("approving a faculty subtree creates it under the parent university", async () => {
+    const university = await createUniversity("Test Subtree Parent");
+    const pendingChange = await createPendingChange({
+      targetType: "FACULTY",
+      typeOfChange: "CREATE",
+      parentId: university.id,
+      data: {
+        name: "Test Subtree Faculty",
+        studyPrograms: [
+          {
+            name: "Test Subtree Program",
+            cycle: "FIRST",
+            tracks: [{ name: "Test Subtree Track" }],
+          },
+        ],
+      },
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expectApproved(response);
+
+    const faculty = await prisma.faculty.findFirst({
+      where: { name: "Test Subtree Faculty" },
+      include: { studyPrograms: { include: { tracks: true } } },
+    });
+    expect(faculty?.universityId).toBe(university.id);
+    expect(faculty?.studyPrograms[0]?.tracks[0]?.name).toBe(
+      "Test Subtree Track",
+    );
+  });
+
+  test("a conflicting tree approval answers 409, creates nothing, and keeps the pending change", async () => {
+    await createUniversity("Test Collision University");
+    const pendingChange = await createPendingChange({
+      targetType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      data: {
+        name: "Test Collision University",
+        city: "Test City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: [{ name: "Test Collision Faculty" }],
+      },
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expect(response.status).toBe(409);
+    expect(response.body).toEqual({
+      error: {
+        code: "CONFLICT",
+        message: "A university with this name already exists.",
+      },
+    });
+    expect(
+      await prisma.faculty.findFirst({
+        where: { name: "Test Collision Faculty" },
+      }),
+    ).toBeNull();
+    expect(
+      await prisma.pendingChange.findUnique({
+        where: { id: pendingChange.id },
+      }),
+    ).not.toBeNull();
+  });
+
+  test("a faculty name collision names the faculty constraint in the 409", async () => {
+    const university = await createUniversity("Test Faculty Conflict Uni");
+    await createFaculty(university.id, "Test Existing Faculty");
+
+    const pendingChange = await createPendingChange({
+      targetType: "FACULTY",
+      typeOfChange: "CREATE",
+      parentId: university.id,
+      data: {
+        name: "Test Existing Faculty",
+        studyPrograms: [{ name: "Test Conflict Program", cycle: "FIRST" }],
+      },
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expect(response.status).toBe(409);
+    expect(response.body).toEqual({
+      error: {
+        code: "CONFLICT",
+        message: "A faculty with this name already exists in that university.",
+      },
+    });
+    expect(
+      await prisma.studyProgram.findFirst({
+        where: { name: "Test Conflict Program" },
+      }),
+    ).toBeNull();
   });
 });
 

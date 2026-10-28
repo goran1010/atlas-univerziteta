@@ -134,24 +134,136 @@ const trackCreateDataSchema = z.strictObject({
   durationYears: durationYearsSchema.optional(),
 });
 
+// A CREATE may carry a whole subtree in the seed JSON structure (faculties >
+// studyPrograms > tracks); a flat create is simply a tree without children.
+// Approval applies the tree in one transaction, so sibling duplicates - which
+// would trip the DB unique constraints mid-apply - are rejected up front.
+const MAX_TREE_NODES = 800;
+
+const treeTooLargeError = `A tree submission can contain at most ${String(MAX_TREE_NODES)} items`;
+
+function duplicateIndexes<Item>(
+  items: Item[] | undefined,
+  keyOf: (item: Item) => string,
+): number[] {
+  const seen = new Set<string>();
+  const duplicates: number[] = [];
+  (items ?? []).forEach((item, index) => {
+    const key = keyOf(item);
+    if (seen.has(key)) duplicates.push(index);
+    seen.add(key);
+  });
+  return duplicates;
+}
+
+function countStudyProgramNodes(program: { tracks?: unknown[] | undefined }) {
+  return 1 + (program.tracks?.length ?? 0);
+}
+
+function countFacultyNodes(faculty: {
+  studyPrograms?: { tracks?: unknown[] | undefined }[] | undefined;
+}) {
+  let count = 1;
+  for (const program of faculty.studyPrograms ?? []) {
+    count += countStudyProgramNodes(program);
+  }
+  return count;
+}
+
+function countUniversityNodes(university: {
+  faculties?:
+    | { studyPrograms?: { tracks?: unknown[] | undefined }[] | undefined }[]
+    | undefined;
+}) {
+  let count = 1;
+  for (const faculty of university.faculties ?? []) {
+    count += countFacultyNodes(faculty);
+  }
+  return count;
+}
+
+const studyProgramTreeDataSchema = studyProgramCreateDataSchema
+  .extend({
+    tracks: z.array(trackCreateDataSchema).min(1).optional(),
+  })
+  .superRefine((program, ctx) => {
+    for (const index of duplicateIndexes(
+      program.tracks,
+      (track) => track.name,
+    )) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["tracks", index, "name"],
+        message: "Duplicate track name in this study program",
+      });
+    }
+
+    if (countStudyProgramNodes(program) > MAX_TREE_NODES) {
+      ctx.addIssue({ code: "custom", message: treeTooLargeError });
+    }
+  });
+
+const facultyTreeDataSchema = facultyCreateDataSchema
+  .extend({
+    studyPrograms: z.array(studyProgramTreeDataSchema).min(1).optional(),
+  })
+  .superRefine((faculty, ctx) => {
+    for (const index of duplicateIndexes(
+      faculty.studyPrograms,
+      (program) => `${program.cycle}:${program.name}`,
+    )) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["studyPrograms", index, "name"],
+        message:
+          "Duplicate study program (same name and cycle) in this faculty",
+      });
+    }
+
+    if (countFacultyNodes(faculty) > MAX_TREE_NODES) {
+      ctx.addIssue({ code: "custom", message: treeTooLargeError });
+    }
+  });
+
+const universityTreeDataSchema = universityCreateDataSchema
+  .extend({
+    faculties: z.array(facultyTreeDataSchema).min(1).optional(),
+  })
+  .superRefine((university, ctx) => {
+    for (const index of duplicateIndexes(
+      university.faculties,
+      (faculty) => faculty.name,
+    )) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["faculties", index, "name"],
+        message: "Duplicate faculty name in this university",
+      });
+    }
+
+    if (countUniversityNodes(university) > MAX_TREE_NODES) {
+      ctx.addIssue({ code: "custom", message: treeTooLargeError });
+    }
+  });
+
 const createEntitySchema = z.discriminatedUnion("targetType", [
   z.strictObject({
     targetType: z.literal("UNIVERSITY"),
-    data: universityCreateDataSchema,
+    data: universityTreeDataSchema,
     comment: commentSchema,
   }),
 
   z.strictObject({
     targetType: z.literal("FACULTY"),
     parentId: parentIdSchema,
-    data: facultyCreateDataSchema,
+    data: facultyTreeDataSchema,
     comment: commentSchema,
   }),
 
   z.strictObject({
     targetType: z.literal("STUDY_PROGRAM"),
     parentId: parentIdSchema,
-    data: studyProgramCreateDataSchema,
+    data: studyProgramTreeDataSchema,
     comment: commentSchema,
   }),
 
@@ -366,6 +478,9 @@ export {
   facultyCreateDataSchema,
   studyProgramCreateDataSchema,
   trackCreateDataSchema,
+  universityTreeDataSchema,
+  facultyTreeDataSchema,
+  studyProgramTreeDataSchema,
   universityEditDataSchema,
   facultyEditDataSchema,
   studyProgramEditDataSchema,
@@ -378,6 +493,9 @@ export type StudyProgramCreateData = z.infer<
   typeof studyProgramCreateDataSchema
 >;
 export type TrackCreateData = z.infer<typeof trackCreateDataSchema>;
+export type UniversityTreeData = z.infer<typeof universityTreeDataSchema>;
+export type FacultyTreeData = z.infer<typeof facultyTreeDataSchema>;
+export type StudyProgramTreeData = z.infer<typeof studyProgramTreeDataSchema>;
 export type UniversityEditData = z.infer<typeof universityEditDataSchema>;
 export type FacultyEditData = z.infer<typeof facultyEditDataSchema>;
 export type StudyProgramEditData = z.infer<typeof studyProgramEditDataSchema>;

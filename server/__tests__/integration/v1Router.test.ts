@@ -119,11 +119,6 @@ describe("GET /api/v1/search", () => {
         universities: [],
         faculties: [],
         studyPrograms: [],
-        totals: {
-          universities: 0,
-          faculties: 0,
-          studyPrograms: 0,
-        },
         direct: {
           universities: 0,
           faculties: 0,
@@ -386,7 +381,7 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
     await cleanup();
   });
 
-  test("caps unified sections at 25 with true totals; single type allows more", async () => {
+  test("returns every match, uncapped, in unified and single-type views", async () => {
     const marker = "CapTestUni";
     const cleanup = () =>
       prisma.university.deleteMany({ where: { name: { contains: marker } } });
@@ -409,9 +404,8 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
     const unifiedData = getResponseObject(
       getResponseObject(unified.body)["data"],
     );
-    expect(getResponseArray(unifiedData["universities"])).toHaveLength(25);
-    const totals = getResponseObject(unifiedData["totals"]);
-    expect(totals["universities"]).toBe(28);
+    expect(getResponseArray(unifiedData["universities"])).toHaveLength(28);
+    expect(unifiedData["totals"]).toBeUndefined();
 
     const singleType = await request(app).get(
       `/api/v1/search?searchTerm=${marker}&type=university`,
@@ -476,16 +470,27 @@ describe("GET /api/v1/search - context matching and numeric tokens", () => {
 });
 
 describe("GET /api/v1/search - empty browse", () => {
-  test("returns capped sections with totals when no term or filters given", async () => {
+  test("returns full sections when no term or filters given", async () => {
+    const [universityCount, facultyCount, studyProgramCount] =
+      await Promise.all([
+        prisma.university.count(),
+        prisma.faculty.count(),
+        prisma.studyProgram.count(),
+      ]);
+
     const response = await request(app).get("/api/v1/search");
     const responseBody = getResponseObject(response.body);
     const data = getResponseObject(responseBody["data"]);
 
     expect(response.status).toBe(200);
-    for (const key of ["universities", "faculties", "studyPrograms"]) {
-      expect(getResponseArray(data[key]).length).toBeLessThanOrEqual(25);
-    }
-    expect(data["totals"]).toBeDefined();
+    expect(getResponseArray(data["universities"])).toHaveLength(
+      universityCount,
+    );
+    expect(getResponseArray(data["faculties"])).toHaveLength(facultyCount);
+    expect(getResponseArray(data["studyPrograms"])).toHaveLength(
+      studyProgramCount,
+    );
+    expect(data["totals"]).toBeUndefined();
     expect(data["direct"]).toBeDefined();
   });
 });

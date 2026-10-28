@@ -19,8 +19,12 @@ function ContributionDashboard() {
             {t("contribution.needUser")}
           </h1>
           <div className="flex flex-wrap gap-3 justify-center">
-            <LinkButton to="/login">{t("access.goToLogin")}</LinkButton>
-            <LinkButton to="/">{t("access.goHome")}</LinkButton>
+            <LinkButton to="/login" className="w-full sm:w-auto">
+              {t("access.goToLogin")}
+            </LinkButton>
+            <LinkButton to="/" className="w-full sm:w-auto">
+              {t("access.goHome")}
+            </LinkButton>
           </div>
         </section>
       </>

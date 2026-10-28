@@ -22,23 +22,28 @@ interface StudyProgramFieldsProps {
     field: keyof ContributionFormDraft,
     value: string | number | undefined,
   ) => void;
+  idPrefix?: string;
 }
 
 function StudyProgramFields({
   data,
   typeOfChange,
   setDataField,
+  idPrefix = "",
 }: StudyProgramFieldsProps) {
   const { t } = use(RootContext);
 
   return (
     <>
       <div className="flex flex-col gap-1">
-        <Label htmlFor="dataCycle" required={typeOfChange === "CREATE"}>
+        <Label
+          htmlFor={`${idPrefix}dataCycle`}
+          required={typeOfChange === "CREATE"}
+        >
           {t("contribution.dataFields.cycle")}
         </Label>
         <Select
-          id="dataCycle"
+          id={`${idPrefix}dataCycle`}
           value={data.cycle ?? ""}
           onChange={(e) => {
             setDataField("cycle", e.target.value);
@@ -55,7 +60,7 @@ function StudyProgramFields({
       </div>
       <DataField
         label={t("contribution.dataFields.durationYears")}
-        id="dataDuration"
+        id={`${idPrefix}dataDuration`}
         type="number"
         min={1}
         max={10}
@@ -69,7 +74,7 @@ function StudyProgramFields({
       />
       <DataField
         label={t("contribution.dataFields.ects")}
-        id="dataEcts"
+        id={`${idPrefix}dataEcts`}
         type="number"
         min={1}
         value={data.ects ?? ""}
@@ -82,7 +87,7 @@ function StudyProgramFields({
       />
       <DataField
         label={t("contribution.dataFields.language")}
-        id="dataLanguage"
+        id={`${idPrefix}dataLanguage`}
         type="text"
         value={data.language ?? ""}
         onChange={(e) => {

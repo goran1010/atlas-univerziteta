@@ -9,6 +9,7 @@
     "login": "Prijava",
     "signup": "Registracija",
     "notFound": "Stranica nije pronađena",
+    "error": "Greška",
     "about": "O projektu"
   },
   "meta": {
@@ -141,7 +142,7 @@
       "apiV1Status": "Provjera statusa API v1.",
       "getAllUniversities": "Preuzimanje svih univerziteta, sortiranih po vlasništvu pa po nazivu. Uključuje broj fakulteta po univerzitetu.",
       "getUniversityById": "Preuzimanje univerziteta po ID-u s potpunim ugniježđenim detaljima (fakulteti, studijski programi i smjerovi). dataSourceUrl na svakoj stavci je URL sa kojeg su preuzeti njeni početni podaci.",
-      "search": "Pretraga univerziteta, fakulteta i studijskih programa (nazivi smjerova se pronalaze preko svog studijskog programa). Pojam za pretragu (min 2 karaktera) i filteri su opcioni; bez njih vraća ograničen popis svega. Pretražuje po nazivu, gradu, akronimu, ECTS/trajanju i nazivima povezanih jedinica (neosjetljivo na velika/mala slova i dijakritike).",
+      "search": "Pretraga univerziteta, fakulteta i studijskih programa (nazivi smjerova se pronalaze preko svog studijskog programa). Pojam za pretragu (min 2 karaktera) i filteri su opcioni; bez njih vraća potpun popis svega. Pretražuje po nazivu, gradu, akronimu, ECTS/trajanju i nazivima povezanih jedinica (neosjetljivo na velika/mala slova i dijakritike).",
       "searchTermParam": "Tekst za pretragu (2-100 karaktera). Opciono ako je naveden barem jedan filter.",
       "pageParam": "Broj stranice, počinje od 1 (podrazumevano 1).",
       "limitParam": "Broj stavki po stranici, 1-100 (podrazumevano 50).",
@@ -154,7 +155,7 @@
       "entityParam": "Filtriranje po entitetu: FBIH, RS ili BD.",
       "ownershipParam": "Filtriranje po vlasništvu: PUBLIC ili PRIVATE.",
       "cycleParam": "Filtriranje po ciklusu studija. Prihvata višestruke vrijednosti (npr. cycle=FIRST&cycle=SECOND). Vrijednosti: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
-      "typeParam": "Filter tipa rezultata: university, faculty ili studyProgram. Može se ponoviti. Sekcije su ograničene na 25 rezultata (100 kada je tražen tačno jedan tip) i uvijek vraćaju prave ukupne brojeve."
+      "typeParam": "Filter tipa rezultata: university, faculty ili studyProgram. Može se ponoviti. Svaka sekcija vraća sve rezultate."
     },
     "githubReadme": "GitHub README"
   },
@@ -176,11 +177,13 @@
     "noDataset": "Nema skupa",
     "selectDatasetError": "Morate izabrati skup podataka.",
     "addNewData": "Predloži izmjene",
+    "addTree": "Dodaj univerzitet ili fakultet (JSON)",
     "pendingChanges": "Moji prijedlozi",
     "noPendingChanges": "Nemate prijedloga koji čekaju pregled.",
     "change": "Izmjena",
     "comment": "Komentar za administratora",
     "entityType": "Vrsta stavke",
+    "nestedInTree": "obuhvaćeno",
     "actions": "Akcije",
     "searchResultsCountAria": "broj rezultata pretrage",
     "searchResults": "Rezultati pretrage",
@@ -243,7 +246,23 @@
     },
     "submitSuggestion": "Pošalji prijedlog",
     "deleteChange": "Povuci",
-    "dataLegend": "Podaci"
+    "dataLegend": "Podaci",
+    "tree": {
+      "jsonLabel": "JSON podaci",
+      "loadFile": "Učitaj .json datoteku",
+      "validate": "Provjeri",
+      "invalidJson": "Tekst nije ispravan JSON.",
+      "validationErrors": "Greške u podacima",
+      "looksLikeUniversity": "Ovo izgleda kao cijeli univerzitet. Promijenite tip stavke na Univerzitet.",
+      "preview": "Pregled"
+    },
+    "builder": {
+      "addFaculty": "Dodaj fakultet",
+      "addStudyProgram": "Dodaj studijski program",
+      "addTrack": "Dodaj smjer",
+      "remove": "Ukloni",
+      "unnamed": "Bez naziva"
+    }
   },
   "admin": {
     "needAdmin": "Morate biti admin da biste vidjeli admin kontrolnu tablu.",
@@ -271,7 +290,9 @@
   },
   "error": {
     "notFound": "Ovdje nema ničega.",
-    "goHome": "Idi na početnu stranicu"
+    "generic": "Došlo je do greške.",
+    "goHome": "Idi na početnu stranicu",
+    "reload": "Ponovo učitaj stranicu"
   },
   "footer": {
     "name": "Goran Jović",
@@ -388,6 +409,7 @@
     "noStudyPrograms": "Nema dostupnih studijskih programa.",
     "foundedYear": "Osnovan",
     "expand": "Proširi",
+    "hiddenTapToExpand": "skriveno - klikni za prikaz",
     "collapse": "Skupi",
     "viewInfo": "Pogledaj info",
     "ownership": {
@@ -398,14 +420,11 @@
     "filters": "Filteri",
     "resetSearch": "Poništi pretragu",
     "filterType": "Tip",
-    "showAll": "Prikaži sve",
     "contextMatch": {
       "university": "Pronađen preko svojih fakulteta ili studijskih programa",
       "faculty": "Pronađen preko svog univerziteta ili studijskih programa",
       "studyProgram": "Pronađen preko svog fakulteta, univerziteta ili smjerova"
     },
-    "showingFirst": "Prikazano prvih",
-    "showingOf": "od",
     "showAllPrograms": "Prikaži sve studijske programe",
     "filterEntity": "Entitet",
     "filterOwnership": "Vlasništvo",

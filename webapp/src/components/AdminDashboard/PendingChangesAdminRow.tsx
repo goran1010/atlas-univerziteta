@@ -10,7 +10,10 @@ import {
 } from "./utils/adminActions";
 import { PendingChangeDetail } from "./PendingChangeDetail";
 import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
+import { entityDetailPath } from "../../utils/entityDetailPath";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
+import { countNestedNodes } from "../../utils/countNestedNodes";
+import { LEVEL_BADGE } from "../../utils/levelColors";
 import type { Notification } from "../../types";
 import type { TypeOfChange } from "../../schemas/domain";
 import type { AdminPendingChange } from "../../schemas/pendingChange";
@@ -61,6 +64,12 @@ const PendingChangesAdminRow = memo(
 
     const currentEntity = data.currentEntity ?? null;
     const entityName = getChangedEntityName(data);
+    const currentPath =
+      data.typeOfChange !== "CREATE" && currentEntity
+        ? entityDetailPath(data.targetType, data.targetId)
+        : undefined;
+    const nestedCount =
+      data.typeOfChange === "CREATE" ? countNestedNodes(data.data) : 0;
 
     async function handleApprove() {
       setActiveAction("approve");
@@ -84,6 +93,7 @@ const PendingChangesAdminRow = memo(
         <ParentBreadcrumb
           crumbs={data.parentContext ?? []}
           current={entityName}
+          currentPath={currentPath}
         />
         <div className="grid gap-2 w-full p-1 sm:p-1 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)]">
           <div
@@ -108,9 +118,16 @@ const PendingChangesAdminRow = memo(
             <span className="sm:hidden font-semibold">
               {t("contribution.entityType")}
             </span>
-            <span className="font-mono font-medium text-(--text-primary) text-xs">
+            <span
+              className={`px-2 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[data.targetType]}`}
+            >
               {t(`contribution.entityTypes.${data.targetType}`)}
             </span>
+            {nestedCount > 0 && (
+              <span className="px-1.5 py-0.5 rounded text-xs font-semibold bg-(--surface-1) border border-(--border-color) text-(--text-secondary)">
+                +{nestedCount} {t("contribution.nestedInTree")}
+              </span>
+            )}
           </div>
           <div
             role="cell"
@@ -129,37 +146,39 @@ const PendingChangesAdminRow = memo(
         >
           <Button
             variant="secondary"
-            className="px-3 py-1.5 text-xs sm:max-w-30"
+            className="px-3 py-2 sm:py-1.5 text-xs w-full sm:w-auto sm:max-w-30"
             onClick={() => {
               setDialogOpen(true);
             }}
           >
             {t("universitiesPage.viewInfo")}
           </Button>
-          <Button
-            variant="success"
-            className="px-3 py-1.5 text-xs sm:max-w-25"
-            onClick={() => {
-              setConfirmAction("approve");
-            }}
-            type="button"
-            loading={activeAction === "approve"}
-            disabled={loading}
-          >
-            {t("form.approve")}
-          </Button>
-          <Button
-            variant="danger"
-            className="px-3 py-1.5 text-xs sm:max-w-25"
-            onClick={() => {
-              setConfirmAction("decline");
-            }}
-            type="button"
-            loading={activeAction === "decline"}
-            disabled={loading}
-          >
-            {t("form.reject")}
-          </Button>
+          <div className="flex w-full sm:w-auto gap-2">
+            <Button
+              variant="success"
+              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial sm:max-w-25"
+              onClick={() => {
+                setConfirmAction("approve");
+              }}
+              type="button"
+              loading={activeAction === "approve"}
+              disabled={loading}
+            >
+              {t("form.approve")}
+            </Button>
+            <Button
+              variant="danger"
+              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial sm:max-w-25"
+              onClick={() => {
+                setConfirmAction("decline");
+              }}
+              type="button"
+              loading={activeAction === "decline"}
+              disabled={loading}
+            >
+              {t("form.reject")}
+            </Button>
+          </div>
         </div>
 
         <ConfirmDialog
@@ -187,7 +206,21 @@ const PendingChangesAdminRow = memo(
           onClose={() => {
             setDialogOpen(false);
           }}
-          title={`${t(`contribution.changeTypes.${data.typeOfChange}`)} ${t(`contribution.entityTypes.${data.targetType}`)} - ${data.user.email}`}
+          title={
+            <>
+              <span
+                className={`px-1.5 py-0.5 rounded text-xs font-semibold ${BADGE[data.typeOfChange]}`}
+              >
+                {t(`contribution.changeTypes.${data.typeOfChange}`)}
+              </span>{" "}
+              <span
+                className={`px-1.5 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[data.targetType]}`}
+              >
+                {t(`contribution.entityTypes.${data.targetType}`)}
+              </span>{" "}
+              <span className="text-(--text-secondary)">{data.user.email}</span>
+            </>
+          }
           footer={
             <>
               <Button
@@ -224,6 +257,7 @@ const PendingChangesAdminRow = memo(
             currentEntity={currentEntity}
             parentContext={data.parentContext}
             comment={data.comment}
+            currentPath={currentPath}
           />
         </Dialog>
       </li>

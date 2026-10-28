@@ -9,16 +9,17 @@ interface TrackFieldsProps {
     field: keyof ContributionFormDraft,
     value: string | number | undefined,
   ) => void;
+  idPrefix?: string;
 }
 
-function TrackFields({ data, setDataField }: TrackFieldsProps) {
+function TrackFields({ data, setDataField, idPrefix = "" }: TrackFieldsProps) {
   const { t } = use(RootContext);
 
   return (
     <>
       <DataField
         label={t("contribution.dataFields.ects")}
-        id="dataTrackEcts"
+        id={`${idPrefix}dataTrackEcts`}
         type="number"
         min={1}
         value={data.ects ?? ""}
@@ -31,7 +32,7 @@ function TrackFields({ data, setDataField }: TrackFieldsProps) {
       />
       <DataField
         label={t("contribution.dataFields.durationYears")}
-        id="dataTrackDuration"
+        id={`${idPrefix}dataTrackDuration`}
         type="number"
         min={1}
         max={10}

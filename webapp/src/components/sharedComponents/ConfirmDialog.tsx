@@ -76,22 +76,22 @@ function ConfirmDialog({
       title={title}
       size="sm"
       footer={
-        <>
+        <div className="flex w-full gap-2 sm:w-auto">
           <Button
             variant="secondary"
-            className="px-4 py-1.5 text-sm"
+            className="px-4 py-2 sm:py-1.5 text-sm flex-1 sm:flex-initial"
             onClick={onCancel}
           >
             {t("confirm.cancel")}
           </Button>
           <Button
             variant={confirmVariant}
-            className="px-4 py-1.5 text-sm"
+            className="px-4 py-2 sm:py-1.5 text-sm flex-1 sm:flex-initial"
             onClick={onConfirm}
           >
             {confirmLabel}
           </Button>
-        </>
+        </div>
       }
     >
       <div className="flex items-center gap-3 py-2">

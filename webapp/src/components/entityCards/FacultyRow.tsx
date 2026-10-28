@@ -6,6 +6,7 @@ import { Button } from "../sharedComponents/Button";
 import { LinkButton } from "../sharedComponents/LinkButton";
 import { Dialog } from "../sharedComponents/Dialog";
 import { tCount } from "../../utils/pluralize";
+import { LEVEL_GUIDE } from "../../utils/levelColors";
 import { ContactLinks } from "../entityDetails/ContactLinks";
 import { ShareButton } from "../entityDetails/ShareButton";
 import { ResultGroup } from "../Search/ResultGroup";
@@ -51,7 +52,7 @@ function FacultyRow({
           {hasStudyPrograms && (
             <p className="text-xs text-(--text-muted) mt-0.5">
               <BookOpenIcon />{" "}
-              <span className="font-bold text-blue-600 dark:text-blue-400">
+              <span className="font-bold text-violet-600 dark:text-violet-400">
                 {faculty.studyPrograms.length}
               </span>{" "}
               {tCount(
@@ -73,7 +74,7 @@ function FacultyRow({
         <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
           <Button
             variant="secondary"
-            className="px-3 py-1.5 text-xs"
+            className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
             onClick={() => {
               setDialogOpen(true);
             }}
@@ -83,7 +84,7 @@ function FacultyRow({
           {hasStudyPrograms && (
             <DetailsToggleButton
               expanded={open}
-              className="px-3 py-1.5 text-xs"
+              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
               onClick={() => {
                 setOpen((p) => !p);
               }}
@@ -111,7 +112,7 @@ function FacultyRow({
             {hasStudyPrograms && (
               <span className="text-(--text-muted)">
                 <BookOpenIcon />{" "}
-                <span className="font-bold text-blue-600 dark:text-blue-400">
+                <span className="font-bold text-violet-600 dark:text-violet-400">
                   {faculty.studyPrograms.length}
                 </span>{" "}
                 {tCount(
@@ -133,7 +134,7 @@ function FacultyRow({
           <div className="flex justify-center">
             <LinkButton
               to={`/faculties/${faculty.id.toString()}`}
-              className="text-sm"
+              className="text-sm w-full sm:w-auto"
               onClick={() => {
                 setDialogOpen(false);
               }}
@@ -145,13 +146,13 @@ function FacultyRow({
       </Dialog>
       {open && hasStudyPrograms && (
         <div
-          className="ml-0.5 sm:ml-4 mt-1 border-l-2 border-indigo-200 dark:border-indigo-700 pl-1.5 sm:pl-3"
+          className={`ml-0.5 sm:ml-4 mt-1 ${LEVEL_GUIDE.STUDY_PROGRAM} pl-1.5 sm:pl-3`}
           onClick={(e) => {
             e.stopPropagation();
           }}
         >
           <p className="text-xs font-semibold uppercase tracking-wide text-(--text-muted) mb-1">
-            <span className="text-blue-600 dark:text-blue-400">
+            <span className="text-violet-600 dark:text-violet-400">
               {faculty.studyPrograms.length}
             </span>{" "}
             {tCount(
@@ -164,7 +165,7 @@ function FacultyRow({
             {groupBy(byCycleDisplayOrder(faculty.studyPrograms), (sp) =>
               t(`universitiesPage.cycles.${sp.cycle}`),
             ).map((g) => (
-              <ResultGroup key={g.key} label={g.key}>
+              <ResultGroup key={g.key} label={g.key} level="STUDY_PROGRAM">
                 {g.items.map((sp) => (
                   <StudyProgramRow
                     key={sp.id}

@@ -2,7 +2,6 @@ name: 🐛 Bug report
 description: Create a report to help us improve
 title: "<Short description of the bug>"
 labels: ["bug"]
-assignees: []
 body:
   - type: markdown
     attributes:
@@ -71,8 +70,6 @@ body:
         - label: Backend / API
         - label: Frontend / UI
         - label: Database / Data
-    validations:
-      required: false
 
   - type: textarea
     id: additional-context

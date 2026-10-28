@@ -6,6 +6,9 @@ import { Label } from "../sharedComponents/Label";
 import { Spinner } from "../sharedComponents/Spinner";
 import { SelectedEntityDetails } from "./SelectedEntityDetails";
 import { fetchPublic } from "../../utils/fetchPublic";
+import { LEVEL_TEXT } from "../../utils/levelColors";
+
+import type { EntityLevel } from "../../utils/levelColors";
 import {
   universityDetailResponseSchema,
   universityListResponseSchema,
@@ -28,6 +31,7 @@ export type PickedEntity =
 interface LevelSelectProps {
   id: string;
   label: string;
+  level: EntityLevel;
   value: string;
   disabled: boolean;
   emptyMessage: string;
@@ -39,6 +43,7 @@ interface LevelSelectProps {
 function LevelSelect({
   id,
   label,
+  level,
   value,
   disabled,
   emptyMessage,
@@ -49,7 +54,11 @@ function LevelSelect({
   const isEmpty = !disabled && options.length === 0;
   return (
     <div className="flex flex-col gap-1 items-center">
-      <Label htmlFor={id} required={!disabled && !isEmpty}>
+      <Label
+        htmlFor={id}
+        required={!disabled && !isEmpty}
+        className={LEVEL_TEXT[level]}
+      >
         {label}
       </Label>
       <Select
@@ -212,6 +221,7 @@ function TargetPicker({
         <LevelSelect
           id="pickerFaculty"
           label={t("contribution.entityTypes.FACULTY")}
+          level="FACULTY"
           value={selFaculty}
           disabled={!selUniversity || !detail}
           emptyMessage={t("contribution.picker.noChildren.FACULTY")}
@@ -223,6 +233,7 @@ function TargetPicker({
           <LevelSelect
             id="pickerStudyProgram"
             label={t("contribution.entityTypes.STUDY_PROGRAM")}
+            level="STUDY_PROGRAM"
             value={selProgram}
             disabled={!selFaculty}
             emptyMessage={t("contribution.picker.noChildren.STUDY_PROGRAM")}
@@ -238,6 +249,7 @@ function TargetPicker({
           <LevelSelect
             id="pickerLeaf"
             label={t("contribution.entityTypes.TRACK")}
+            level="TRACK"
             value={selTrack}
             disabled={!selProgram}
             emptyMessage={t("contribution.picker.noChildren.TRACK")}
@@ -262,6 +274,7 @@ function TargetPicker({
           <LevelSelect
             id="pickerUniversity"
             label={t("contribution.entityTypes.UNIVERSITY")}
+            level="UNIVERSITY"
             value={selUniversity}
             disabled={false}
             emptyMessage={t("universitiesPage.noResults")}

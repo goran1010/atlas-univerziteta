@@ -93,7 +93,6 @@ function givenSearchResults(
     universities: unknown[];
     faculties: unknown[];
     studyPrograms: unknown[];
-    totals: Record<string, number>;
     direct: Record<string, number>;
   }> = {},
 ) {
@@ -205,7 +204,6 @@ describe("UnifiedSearch", () => {
     givenSearchResults({
       universities: [universityListItem],
       studyPrograms: [studyProgramResult],
-      totals: { universities: 1, faculties: 0, studyPrograms: 1, tracks: 0 },
       direct: { universities: 0, faculties: 0, studyPrograms: 1, tracks: 0 },
     });
     const user = renderSearch();
@@ -217,10 +215,12 @@ describe("UnifiedSearch", () => {
     expect(headings[0]?.textContent).toMatch(/Study programs/);
     expect(headings[1]?.textContent).toMatch(/Universities/);
 
-    // the context-only universities section starts collapsed
+    // the context-only universities section starts collapsed as one
+    // whole-box expander button
     expect(screen.queryByText(/University of Mostar/i)).not.toBeInTheDocument();
-    const expandButtons = screen.getAllByRole("button", { name: "Expand" });
-    await user.click(expandButtons[expandButtons.length - 1]);
+    await user.click(
+      screen.getByRole("button", { name: /Universities.*tap to expand/i }),
+    );
 
     expect(
       await screen.findByText(/Matched through its faculties/i),
@@ -231,7 +231,6 @@ describe("UnifiedSearch", () => {
     givenSearchResults({
       universities: [universityListItem],
       studyPrograms: [studyProgramResult],
-      totals: { universities: 1, faculties: 0, studyPrograms: 1 },
       direct: { universities: 0, faculties: 0, studyPrograms: 0 },
     });
     const user = renderSearch();
@@ -244,26 +243,19 @@ describe("UnifiedSearch", () => {
     expect(screen.queryByText(/University of Mostar/i)).not.toBeInTheDocument();
   });
 
-  test("capped section offers Show all and re-queries with the type filter", async () => {
+  test("shows no truncation UI: the section count is the result count", async () => {
     givenSearchResults({
       universities: [universityListItem],
-      totals: { universities: 25, faculties: 0, studyPrograms: 0, tracks: 0 },
     });
     const user = renderSearch();
 
     await typeSearch(user, "univerzitet");
 
-    const showAll = await screen.findByRole("button", {
-      name: /Show all \(25\)/i,
-    });
-    await user.click(showAll);
-
-    await waitFor(() => {
-      expect(searchRequests).toHaveLength(2);
-    });
-    expect(searchRequests[1]?.searchParams.getAll("type")).toContain(
-      "university",
-    );
+    await screen.findByRole("heading", { name: /^Universities/i });
+    expect(
+      screen.queryByRole("button", { name: /Show all/i }),
+    ).not.toBeInTheDocument();
+    expect(screen.queryByText(/Showing first/i)).not.toBeInTheDocument();
   });
 
   test("applies entity and type filters from the filter panel to the query", async () => {

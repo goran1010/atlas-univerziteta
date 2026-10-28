@@ -16,63 +16,39 @@ import type { SearchToken } from "../search/tokenize.js";
 import type { WhereClause } from "../search/matchers.js";
 import type { Request, Response } from "express";
 
-// In the combined (unified) view each section is capped and reports its
-// true total; a request for exactly one type gets a higher bound (the UI
-// shows "shown / total" when truncated) that keeps the largest section
-// (1800+ study programs) from being returned in one response.
-const UNIFIED_SECTION_LIMIT = 25;
-const SINGLE_TYPE_LIMIT = 100;
-
 interface SectionQuery<Item> {
-  count: (where: WhereClause) => Promise<number>;
-  findMany: (where: WhereClause, take: number | undefined) => Promise<Item[]>;
+  findMany: (where: WhereClause) => Promise<Item[]>;
 }
 
-// Under the unified cap, entities matching every token in their OWN fields
-// fill the section first; context-only matches top it up. The cap decides
-// which items survive, so weak matches must not crowd out direct ones.
+// Entities matching every token in their OWN fields come first; context-only
+// matches follow, so the client can rank sections and flag weak matches.
 async function searchSection<Item extends { id: number }>(
   query: SectionQuery<Item>,
   tokens: SearchToken[],
   ownMatcher: (token: SearchToken) => WhereClause[],
   fullMatcher: (token: SearchToken) => WhereClause[],
   filters: WhereClause[],
-  limit: number | undefined,
-): Promise<{ items: Item[]; total: number; direct: number }> {
-  const fullWhere = { AND: [...tokenWhere(tokens, fullMatcher), ...filters] };
-
+): Promise<{ items: Item[]; direct: number }> {
   if (tokens.length === 0) {
-    const items = await query.findMany(fullWhere, limit);
-    const total =
-      limit === undefined ? items.length : await query.count(fullWhere);
-    return { items, total, direct: items.length };
+    const items = await query.findMany({
+      AND: [...tokenWhere(tokens, fullMatcher), ...filters],
+    });
+    return { items, direct: items.length };
   }
 
-  const [total, ownItems] = await Promise.all([
-    limit === undefined ? undefined : query.count(fullWhere),
-    query.findMany(
-      { AND: [...tokenWhere(tokens, ownMatcher), ...filters] },
-      limit,
-    ),
-  ]);
+  const ownItems = await query.findMany({
+    AND: [...tokenWhere(tokens, ownMatcher), ...filters],
+  });
 
-  if (limit !== undefined && ownItems.length >= limit) {
-    return { items: ownItems, total: total ?? ownItems.length, direct: limit };
-  }
+  const contextItems = await query.findMany({
+    AND: [
+      ...tokenWhere(tokens, fullMatcher),
+      ...filters,
+      { id: { notIn: ownItems.map((item) => item.id) } },
+    ],
+  });
 
-  const contextItems = await query.findMany(
-    {
-      AND: [
-        ...tokenWhere(tokens, fullMatcher),
-        ...filters,
-        { id: { notIn: ownItems.map((item) => item.id) } },
-      ],
-    },
-    limit === undefined ? undefined : limit - ownItems.length,
-  );
-
-  const items = [...ownItems, ...contextItems];
-  return { items, total: total ?? items.length, direct: ownItems.length };
+  return { items: [...ownItems, ...contextItems], direct: ownItems.length };
 }
 
 async function search(req: Request, res: Response) {
@@ -85,7 +61,6 @@ async function search(req: Request, res: Response) {
     universities: [],
     faculties: [],
     studyPrograms: [],
-    totals: { universities: 0, faculties: 0, studyPrograms: 0 },
     direct: { universities: 0, faculties: 0, studyPrograms: 0 },
   };
 
@@ -101,21 +76,17 @@ async function search(req: Request, res: Response) {
   const wanted = (kind: "university" | "faculty" | "studyProgram") =>
     type === undefined || type.includes(kind);
 
-  const limit = type?.length === 1 ? SINGLE_TYPE_LIMIT : UNIFIED_SECTION_LIMIT;
-
   const cycleFilter = cycle ? { in: cycle } : undefined;
 
-  const emptySection = { items: [], total: 0, direct: 0 };
+  const emptySection = { items: [], direct: 0 };
 
   const [universities, faculties, studyPrograms] = await Promise.all([
     wanted("university")
       ? searchSection(
           {
-            count: (where) => prisma.university.count({ where }),
-            findMany: (where, take) =>
+            findMany: (where) =>
               prisma.university.findMany({
                 where,
-                ...(take === undefined ? {} : { take }),
                 orderBy: [{ ownership: "asc" }, { name: "asc" }],
                 include: { _count: { select: { faculties: true } } },
               }),
@@ -127,17 +98,14 @@ async function search(req: Request, res: Response) {
             ...(entity ? [{ entity }] : []),
             ...(ownership ? [{ ownership }] : []),
           ],
-          limit,
         )
       : emptySection,
     wanted("faculty")
       ? searchSection(
           {
-            count: (where) => prisma.faculty.count({ where }),
-            findMany: (where, take) =>
+            findMany: (where) =>
               prisma.faculty.findMany({
                 where,
-                ...(take === undefined ? {} : { take }),
                 orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
                 include: {
                   university: true,
@@ -152,17 +120,14 @@ async function search(req: Request, res: Response) {
             ...(entity ? [{ university: { entity } }] : []),
             ...(ownership ? [{ university: { ownership } }] : []),
           ],
-          limit,
         )
       : emptySection,
     wanted("studyProgram")
       ? searchSection(
           {
-            count: (where) => prisma.studyProgram.count({ where }),
-            findMany: (where, take) =>
+            findMany: (where) =>
               prisma.studyProgram.findMany({
                 where,
-                ...(take === undefined ? {} : { take }),
                 orderBy: [{ cycle: "asc" }, { name: "asc" }],
                 include: {
                   faculty: {
@@ -190,7 +155,6 @@ async function search(req: Request, res: Response) {
             ...(entity ? [{ faculty: { university: { entity } } }] : []),
             ...(ownership ? [{ faculty: { university: { ownership } } }] : []),
           ],
-          limit,
         )
       : emptySection,
   ]);
@@ -201,11 +165,6 @@ async function search(req: Request, res: Response) {
       universities: universities.items,
       faculties: faculties.items,
       studyPrograms: studyPrograms.items,
-      totals: {
-        universities: universities.total,
-        faculties: faculties.total,
-        studyPrograms: studyPrograms.total,
-      },
       // items are ordered own-field matches first; these counts mark the
       // split so the client can flag context-only matches and rank sections
       direct: {

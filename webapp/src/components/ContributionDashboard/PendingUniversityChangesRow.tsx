@@ -7,7 +7,10 @@ import { ConfirmDialog } from "../sharedComponents/ConfirmDialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
 import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
+import { entityDetailPath } from "../../utils/entityDetailPath";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
+import { countNestedNodes } from "../../utils/countNestedNodes";
+import { LEVEL_BADGE } from "../../utils/levelColors";
 import type { PendingChange } from "../../schemas/pendingChange";
 
 interface BadgeStyles {
@@ -48,6 +51,12 @@ function PendingUniversityChangesRow({
 
   const isEven = index % 2 === 0;
   const entityName = getChangedEntityName(change);
+  const currentPath =
+    change.typeOfChange !== "CREATE" && change.currentEntity
+      ? entityDetailPath(change.targetType, change.targetId)
+      : undefined;
+  const nestedCount =
+    change.typeOfChange === "CREATE" ? countNestedNodes(change.data) : 0;
 
   return (
     <li
@@ -57,6 +66,7 @@ function PendingUniversityChangesRow({
       <ParentBreadcrumb
         crumbs={change.parentContext ?? []}
         current={entityName}
+        currentPath={currentPath}
       />
       <div className="grid gap-2 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]">
         <div
@@ -80,34 +90,43 @@ function PendingUniversityChangesRow({
           <span className="sm:hidden text-xs font-semibold text-(--text-muted)">
             {t("contribution.entityType")}
           </span>
-          <span className="text-xs font-mono text-(--text-secondary)">
+          <span
+            className={`px-2 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[change.targetType]}`}
+          >
             {t(`contribution.entityTypes.${change.targetType}`)}
           </span>
+          {nestedCount > 0 && (
+            <span className="px-1.5 py-0.5 rounded text-xs font-semibold bg-(--surface-1) border border-(--border-color) text-(--text-secondary)">
+              +{nestedCount} {t("contribution.nestedInTree")}
+            </span>
+          )}
         </div>
 
         <div
           role="cell"
           className="flex flex-col sm:flex-row justify-end items-center gap-2"
         >
-          <Button
-            variant="secondary"
-            className="px-3 py-1.5 text-xs"
-            onClick={() => {
-              setDialogOpen(true);
-            }}
-          >
-            {t("universitiesPage.viewInfo")}
-          </Button>
-          <Button
-            variant="danger"
-            className="px-3 py-1.5 text-xs"
-            loading={loading}
-            onClick={() => {
-              setConfirmOpen(true);
-            }}
-          >
-            {t("contribution.deleteChange")}
-          </Button>
+          <div className="flex w-full sm:w-auto gap-2">
+            <Button
+              variant="secondary"
+              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
+              onClick={() => {
+                setDialogOpen(true);
+              }}
+            >
+              {t("universitiesPage.viewInfo")}
+            </Button>
+            <Button
+              variant="danger"
+              className="px-3 py-2 sm:py-1.5 text-xs flex-1 sm:flex-initial"
+              loading={loading}
+              onClick={() => {
+                setConfirmOpen(true);
+              }}
+            >
+              {t("contribution.deleteChange")}
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -129,7 +148,20 @@ function PendingUniversityChangesRow({
         onClose={() => {
           setDialogOpen(false);
         }}
-        title={`${t(`contribution.changeTypes.${change.typeOfChange}`)} ${t(`contribution.entityTypes.${change.targetType}`)}`}
+        title={
+          <>
+            <span
+              className={`px-1.5 py-0.5 rounded text-xs font-semibold ${BADGE[change.typeOfChange]}`}
+            >
+              {t(`contribution.changeTypes.${change.typeOfChange}`)}
+            </span>{" "}
+            <span
+              className={`px-1.5 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[change.targetType]}`}
+            >
+              {t(`contribution.entityTypes.${change.targetType}`)}
+            </span>
+          </>
+        }
         footer={
           <Button
             variant="danger"
@@ -150,6 +182,7 @@ function PendingUniversityChangesRow({
           currentEntity={change.currentEntity ?? null}
           parentContext={change.parentContext}
           comment={change.comment}
+          currentPath={currentPath}
         />
       </Dialog>
     </li>

@@ -22,7 +22,7 @@ function StudyProgramResult({
   contextHint?: string;
 }) {
   return (
-    <ResultCard>
+    <ResultCard level="STUDY_PROGRAM">
       <h3 className="font-bold">
         <Link
           to={`/faculties/${program.faculty.id.toString()}?program=${program.id.toString()}`}

@@ -105,4 +105,67 @@ describe("PendingUniversityChangesRow", () => {
     // Row breadcrumb, the dialog's own breadcrumb, and the detail row
     expect(screen.getAllByText("University of Sarajevo")).toHaveLength(3);
   });
+
+  test("shows a nested count badge for a tree CREATE", () => {
+    render(
+      <Wrapper>
+        <PendingUniversityChangesRow
+          change={{
+            ...change,
+            targetType: "UNIVERSITY",
+            typeOfChange: "CREATE",
+            targetId: null,
+            data: {
+              name: "Tree University",
+              city: "Mostar",
+              entity: "FBIH",
+              ownership: "PRIVATE",
+              faculties: [
+                {
+                  name: "Fakultet A",
+                  studyPrograms: [
+                    {
+                      name: "Program X",
+                      cycle: "FIRST",
+                      tracks: [{ name: "Smjer 1" }],
+                    },
+                  ],
+                },
+                { name: "Fakultet B" },
+              ],
+            },
+          }}
+          index={0}
+          setPendingChanges={vi.fn()}
+        />
+      </Wrapper>,
+    );
+
+    expect(screen.getByText("+4 included")).toBeInTheDocument();
+  });
+
+  test("shows no nested count badge for a flat CREATE", () => {
+    render(
+      <Wrapper>
+        <PendingUniversityChangesRow
+          change={{
+            ...change,
+            targetType: "UNIVERSITY",
+            typeOfChange: "CREATE",
+            targetId: null,
+            data: {
+              name: "Flat University",
+              city: "Tuzla",
+              entity: "FBIH",
+              ownership: "PUBLIC",
+            },
+          }}
+          index={0}
+          setPendingChanges={vi.fn()}
+        />
+      </Wrapper>,
+    );
+
+    expect(screen.queryByText(/included/)).not.toBeInTheDocument();
+  });
 });

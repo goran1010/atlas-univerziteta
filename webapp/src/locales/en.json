@@ -9,6 +9,7 @@
     "login": "Log in",
     "signup": "Sign up",
     "notFound": "Page not found",
+    "error": "Error",
     "about": "About"
   },
   "meta": {
@@ -141,7 +142,7 @@
       "apiV1Status": "Check API v1 status.",
       "getAllUniversities": "Retrieve all universities, ordered by ownership then name. Includes a faculty count per university.",
       "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks). dataSourceUrl on each unit is the URL its initial data was obtained from.",
-      "search": "Search across universities, faculties, and study programs (track names match through their study program). Optional search term (min 2 characters) and filters; with neither, returns a capped listing of everything. Matches name, city, acronym, ECTS/duration, and related unit names (case-insensitive, diacritic-insensitive).",
+      "search": "Search across universities, faculties, and study programs (track names match through their study program). Optional search term (min 2 characters) and filters; with neither, returns a full listing of everything. Matches name, city, acronym, ECTS/duration, and related unit names (case-insensitive, diacritic-insensitive).",
       "searchTermParam": "Text to search for (2-100 characters). Optional if at least one filter is provided.",
       "pageParam": "Page number, starting at 1 (default 1).",
       "limitParam": "Items per page, 1-100 (default 50).",
@@ -154,7 +155,7 @@
       "entityParam": "Filter by entity: FBIH, RS, or BD.",
       "ownershipParam": "Filter by ownership: PUBLIC or PRIVATE.",
       "cycleParam": "Filter by study cycle. Accepts multiple values (e.g. cycle=FIRST&cycle=SECOND). Values: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
-      "typeParam": "Result type filter: university, faculty, or studyProgram. Repeatable. Sections are capped at 25 results (100 when exactly one type is requested) and always report true totals."
+      "typeParam": "Result type filter: university, faculty, or studyProgram. Repeatable. Each section returns every match."
     },
     "githubReadme": "GitHub README"
   },
@@ -177,11 +178,13 @@
     "actions": "Actions",
     "selectDatasetError": "You need to select a dataset.",
     "addNewData": "Propose changes",
+    "addTree": "Add university or faculty (JSON)",
     "pendingChanges": "My suggestions",
     "noPendingChanges": "You have no suggestions awaiting review.",
     "change": "Change",
     "comment": "Comment for the admin",
     "entityType": "Item type",
+    "nestedInTree": "included",
     "searchResultsCountAria": "search result count",
     "searchResults": "Search Results",
     "user": "User",
@@ -243,7 +246,23 @@
     },
     "submitSuggestion": "Submit suggestion",
     "deleteChange": "Withdraw",
-    "dataLegend": "Data"
+    "dataLegend": "Data",
+    "tree": {
+      "jsonLabel": "JSON data",
+      "loadFile": "Load a .json file",
+      "validate": "Validate",
+      "invalidJson": "The text is not valid JSON.",
+      "validationErrors": "Validation errors",
+      "looksLikeUniversity": "This looks like a whole university. Switch the item type to University.",
+      "preview": "Preview"
+    },
+    "builder": {
+      "addFaculty": "Add faculty",
+      "addStudyProgram": "Add study program",
+      "addTrack": "Add track",
+      "remove": "Remove",
+      "unnamed": "Unnamed"
+    }
   },
   "admin": {
     "needAdmin": "You need to be an admin to see the admin dashboard.",
@@ -271,7 +290,9 @@
   },
   "error": {
     "notFound": "There is nothing here.",
-    "goHome": "Go to Home Page"
+    "generic": "Something went wrong.",
+    "goHome": "Go to Home Page",
+    "reload": "Reload the page"
   },
   "footer": {
     "name": "Goran Jović",
@@ -388,6 +409,7 @@
     "noStudyPrograms": "No study programs available.",
     "foundedYear": "Founded",
     "expand": "Expand",
+    "hiddenTapToExpand": "hidden - tap to expand",
     "collapse": "Collapse",
     "viewInfo": "View info",
     "ownership": {
@@ -398,14 +420,11 @@
     "filters": "Filters",
     "resetSearch": "Reset search",
     "filterType": "Type",
-    "showAll": "Show all",
     "contextMatch": {
       "university": "Matched through its faculties or study programs",
       "faculty": "Matched through its university or study programs",
       "studyProgram": "Matched through its faculty, university, or tracks"
     },
-    "showingFirst": "Showing first",
-    "showingOf": "of",
     "showAllPrograms": "Show all study programs",
     "filterEntity": "Entity",
     "filterOwnership": "Ownership",

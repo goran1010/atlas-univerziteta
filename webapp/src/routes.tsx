@@ -18,6 +18,7 @@ const routeImports = {
   contributionDashboard: () =>
     import("./components/ContributionDashboard/ContributionDashboard"),
   addDataTab: () => import("./components/ContributionDashboard/AddDataTab"),
+  addTreeTab: () => import("./components/ContributionDashboard/AddTreeTab"),
   pendingChangesTab: () =>
     import("./components/ContributionDashboard/PendingChangesTab"),
   adminDashboard: () => import("./components/AdminDashboard/AdminDashboard"),
@@ -97,6 +98,12 @@ const routes = [
             path: "add",
             lazy: async () => ({
               Component: (await routeImports.addDataTab()).AddDataTab,
+            }),
+          },
+          {
+            path: "add-tree",
+            lazy: async () => ({
+              Component: (await routeImports.addTreeTab()).AddTreeTab,
             }),
           },
           {

@@ -1,4 +1,5 @@
 import { prisma } from "../db/prisma.js";
+import { Prisma } from "../generated/prisma/client.js";
 import { approvePendingChange as applyPendingChange } from "../models/applyPendingChange.js";
 import { enrichWithCurrentEntity } from "../models/pendingChangeModel.js";
 import { sendError, sendSuccess } from "../utils/response.js";
@@ -47,12 +48,45 @@ async function declinePendingChange(req: Request, res: Response) {
   });
 }
 
+// The DB unique constraints are the final duplicate check for approvals
+// (submission only validates within the payload). Name the collision so the
+// admin can write a useful decline reason instead of seeing a generic error.
+function uniqueConflictMessage(error: unknown): string | null {
+  if (!(error instanceof Prisma.PrismaClientKnownRequestError)) return null;
+  if (error.code !== "P2002") return null;
+
+  // depending on the driver, meta.target is the field list or the unique
+  // constraint name (e.g. "faculty_name_universityId_key")
+  // the violated constraint's location in meta depends on the driver (field
+  // list in `target` vs the pg adapter's nested constraint index name), but
+  // its name always carries the parent FK column, so match the whole meta
+  const metaText = JSON.stringify(error.meta ?? {});
+
+  if (metaText.includes("universityId")) {
+    return "A faculty with this name already exists in that university.";
+  }
+  if (metaText.includes("facultyId")) {
+    return "A study program with this name and cycle already exists in that faculty.";
+  }
+  if (metaText.includes("studyProgramId")) {
+    return "A track with this name already exists in that study program.";
+  }
+  return "A university with this name already exists.";
+}
+
 async function approvePendingChange(req: Request, res: Response) {
   const { id } = adminValidation.approvePendingChange(req.body);
 
-  const wasApplied = await applyPendingChange({
-    id,
-  });
+  let wasApplied: boolean;
+  try {
+    wasApplied = await applyPendingChange({ id });
+  } catch (error) {
+    const conflict = uniqueConflictMessage(error);
+    if (conflict === null) throw error;
+
+    sendError(res, { status: 409, code: "CONFLICT", message: conflict });
+    return;
+  }
 
   if (!wasApplied) {
     sendError(res, {

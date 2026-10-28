@@ -22,4 +22,5 @@ export {
   SunIcon,
   MoonIcon,
   MonitorIcon,
+  UploadIcon,
 } from "./ui";

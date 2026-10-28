@@ -72,7 +72,9 @@ app.use("/health", cors(), healthRouter);
 app.use("/api", cors(), rateLimiter.api, apiRouter);
 
 app.use(credentialedCors);
-app.use(express.json());
+// Whole-tree contributions (a full university) legitimately exceed the 100kb
+// default body cap - the largest real university is ~185KB of JSON.
+app.use(express.json({ limit: "512kb" }));
 app.use("/users", rateLimiter.users, verifyOrigin, usersRouter);
 
 app.use((_req, res) => {

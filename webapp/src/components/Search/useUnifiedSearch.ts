@@ -296,31 +296,6 @@ function useUnifiedSearch() {
     );
   }
 
-  // group narrows to one subgroup of a section (a cycle of study programs,
-  // an ownership of universities) using the matching server-side filter
-  function handleShowAll(
-    type: SearchType,
-    group?: { cycle?: StudyCycle; ownership?: Ownership },
-  ) {
-    const nextCycles = group?.cycle ? [group.cycle] : cycleFilters;
-    const nextOwnership = group?.ownership ?? ownershipFilter;
-    updateParams({
-      type,
-      ...(group?.cycle && { cycle: [group.cycle] }),
-      ...(group?.ownership && { ownership: group.ownership }),
-    });
-    // open the panel so the applied type filter is visible, not hidden state
-    setFiltersOpen(true);
-    triggerSearch(
-      searchInput,
-      entityFilter,
-      nextOwnership,
-      nextCycles,
-      [type],
-      browseAll,
-    );
-  }
-
   function handleBrowseAll() {
     updateParams({ browse: "all" });
     triggerSearch(
@@ -373,7 +348,6 @@ function useUnifiedSearch() {
     handleFilterChange,
     handleCycleChange,
     handleTypeChange,
-    handleShowAll,
     handleBrowseAll,
     handleClear,
     handleClearAll,

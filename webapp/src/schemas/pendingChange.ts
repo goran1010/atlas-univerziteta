@@ -7,14 +7,14 @@ import {
 } from "./domain";
 
 import {
-  facultyCreateDataSchema,
   facultyEditDataSchema,
-  studyProgramCreateDataSchema,
+  facultyTreeDataSchema,
   studyProgramEditDataSchema,
+  studyProgramTreeDataSchema,
   trackCreateDataSchema,
   trackEditDataSchema,
-  universityCreateDataSchema,
   universityEditDataSchema,
+  universityTreeDataSchema,
 } from "./contribution";
 
 const pendingChangeUserSchema = z
@@ -38,21 +38,21 @@ const pendingChangeSchema = z.union([
     typeOfChange: z.literal("CREATE"),
     targetId: z.null(),
     parentId: z.null(),
-    data: universityCreateDataSchema,
+    data: universityTreeDataSchema,
   }),
   pendingChangeBaseSchema.extend({
     targetType: z.literal("FACULTY"),
     typeOfChange: z.literal("CREATE"),
     targetId: z.null(),
     parentId: positiveIntegerSchema,
-    data: facultyCreateDataSchema,
+    data: facultyTreeDataSchema,
   }),
   pendingChangeBaseSchema.extend({
     targetType: z.literal("STUDY_PROGRAM"),
     typeOfChange: z.literal("CREATE"),
     targetId: z.null(),
     parentId: positiveIntegerSchema,
-    data: studyProgramCreateDataSchema,
+    data: studyProgramTreeDataSchema,
   }),
   pendingChangeBaseSchema.extend({
     targetType: z.literal("TRACK"),

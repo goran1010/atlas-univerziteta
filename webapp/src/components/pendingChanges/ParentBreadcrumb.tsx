@@ -1,22 +1,24 @@
 import { Link } from "react-router";
+import { DETAIL_PATHS } from "../../utils/entityDetailPath";
 
 import type { ParentCrumb } from "../../schemas/pendingChange";
-
-const DETAIL_PATHS: Partial<Record<ParentCrumb["targetType"], string>> = {
-  UNIVERSITY: "/universities",
-  FACULTY: "/faculties",
-};
 
 const linkClassName =
   "underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors";
 
 interface ParentBreadcrumbProps {
   crumbs: ParentCrumb[];
-  // The changed entity itself, shown as the final, non-linked segment
+  // The changed entity itself, shown as the final segment
   current?: string | null;
+  // when set, the final segment links to the entity's detail page
+  currentPath?: string | undefined;
 }
 
-function ParentBreadcrumb({ crumbs, current }: ParentBreadcrumbProps) {
+function ParentBreadcrumb({
+  crumbs,
+  current,
+  currentPath,
+}: ParentBreadcrumbProps) {
   if (crumbs.length === 0 && !current) return null;
 
   return (
@@ -43,7 +45,13 @@ function ParentBreadcrumb({ crumbs, current }: ParentBreadcrumbProps) {
       {current && (
         <span className="font-medium text-(--text-primary)">
           {crumbs.length > 0 && " › "}
-          {current}
+          {currentPath ? (
+            <Link to={currentPath} className={linkClassName}>
+              {current}
+            </Link>
+          ) : (
+            current
+          )}
         </span>
       )}
     </p>

@@ -1,4 +1,5 @@
 import { tCount } from "../../utils/pluralize";
+import { LEVEL_TEXT } from "../../utils/levelColors";
 
 import type { TFunction } from "../../types";
 
@@ -42,9 +43,7 @@ function TrackList({
   return (
     <p className="text-sm text-(--text-secondary) mt-1 leading-relaxed">
       <span className="text-xs font-semibold uppercase tracking-wide text-(--text-muted)">
-        <span className="text-blue-600 dark:text-blue-400">
-          {tracks.length}
-        </span>{" "}
+        <span className={LEVEL_TEXT.TRACK}>{tracks.length}</span>{" "}
         {tCount(t, "universitiesPage.trackCount", tracks.length)}:
       </span>{" "}
       {tracks.map((track, index) => (

@@ -119,6 +119,39 @@ test.describe("authenticated pages", () => {
     ).toBeVisible();
     await expectNoViolations(page);
   });
+
+  test("tree paste tab has no detectable a11y violations", async ({ page }) => {
+    await page.goto("/improve-data/add-tree");
+    await expect(
+      page.getByRole("textbox", { name: "JSON data" }),
+    ).toBeVisible();
+    await expectNoViolations(page);
+
+    // the validated preview renders the nested tree cards - scan those too
+    await page.getByRole("textbox", { name: "JSON data" }).fill(
+      JSON.stringify({
+        name: "A11y Tree University",
+        city: "Testograd",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: [
+          {
+            name: "A11y Faculty",
+            studyPrograms: [
+              {
+                name: "A11y Program",
+                cycle: "FIRST",
+                tracks: [{ name: "A11y Track" }],
+              },
+            ],
+          },
+        ],
+      }),
+    );
+    await page.getByRole("button", { name: "Validate" }).click();
+    await expect(page.getByText("Preview")).toBeVisible();
+    await expectNoViolations(page);
+  });
 });
 
 test.describe("admin pages", () => {

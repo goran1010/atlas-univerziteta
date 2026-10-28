@@ -154,13 +154,6 @@ const unifiedSearchResponseSchema = z.object({
     universities: z.array(universityListItemSchema),
     faculties: z.array(facultySearchResultSchema),
     studyPrograms: z.array(studyProgramSearchResultSchema),
-    totals: z
-      .object({
-        universities: z.number().int().nonnegative(),
-        faculties: z.number().int().nonnegative(),
-        studyPrograms: z.number().int().nonnegative(),
-      })
-      .optional(),
     direct: z
       .object({
         universities: z.number().int().nonnegative(),

@@ -9,7 +9,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     | "danger"
     | "update"
     | "warning"
-    | "ghost";
+    | "ghost"
+    | "toggle";
   loading?: boolean;
 }
 
@@ -27,6 +28,9 @@ function Button({
   const variantClasses = {
     primary: `bg-(--accent) text-slate-50 tracking-[0.01em] enabled:hover:bg-(--accent-hover) enabled:hover:shadow-[0_10px_20px_rgba(37,99,235,0.25)] ${DISABLED}`,
     secondary: `bg-(--surface-1) text-(--text-primary) border border-(--border-color) shadow-(--card-shadow-soft) enabled:hover:bg-(--hover-surface) enabled:hover:shadow-(--card-shadow) ${DISABLED}`,
+    // expand/collapse controls: outlined like secondary, accent text like the
+    // count badges, so they read as view toggles rather than actions
+    toggle: `bg-(--surface-1) text-(--accent-text) border border-(--border-color) shadow-(--card-shadow-soft) enabled:hover:bg-(--hover-surface) enabled:hover:shadow-(--card-shadow) ${DISABLED}`,
     success: `bg-green-700 text-green-50 shadow-[0_8px_16px_rgba(21,128,61,0.22)] enabled:hover:bg-green-800 ${DISABLED}`,
     danger: `bg-red-700 text-red-50 shadow-[0_8px_16px_rgba(185,28,28,0.22)] enabled:hover:bg-red-800 ${DISABLED}`,
     update: `bg-yellow-500 text-yellow-950 shadow-[0_8px_16px_rgba(202,138,4,0.22)] enabled:hover:bg-yellow-600 ${DISABLED}`,
