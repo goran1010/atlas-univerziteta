@@ -6,6 +6,8 @@ import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
 
+let router: ReturnType<typeof createMemoryRouter>;
+
 function Wrapper({ initialEntry = "/search" }: { initialEntry?: string }) {
   const routes = [
     {
@@ -19,7 +21,7 @@ function Wrapper({ initialEntry = "/search" }: { initialEntry?: string }) {
     },
   ];
 
-  const router = createMemoryRouter(routes, {
+  router = createMemoryRouter(routes, {
     initialEntries: [initialEntry],
   });
 
@@ -412,5 +414,33 @@ describe("UnifiedSearch", () => {
     expect(
       screen.getByRole("searchbox", { name: /Search/i }),
     ).not.toHaveFocus();
+  });
+});
+
+describe("UnifiedSearch URL navigation", () => {
+  beforeEach(() => {
+    searchRequests = [];
+    givenSearchResults();
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  test("navigating to /search with new params while on it re-runs the search", async () => {
+    givenSearchResults({ universities: [universityListItem] });
+    render(<Wrapper initialEntry="/search?q=medicina" />);
+
+    await screen.findByRole("heading", { name: /^Universities/i });
+    expect(searchRequests).toHaveLength(1);
+
+    await act(async () => {
+      await router.navigate("/search?q=pravo");
+    });
+
+    await waitFor(() => {
+      expect(searchRequests).toHaveLength(2);
+    });
+    expect(searchRequests[1]?.searchParams.get("searchTerm")).toBe("pravo");
   });
 });

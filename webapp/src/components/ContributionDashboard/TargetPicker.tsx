@@ -111,6 +111,8 @@ function TargetPicker({
   const [selTrack, setSelTrack] = useState("");
   const [loadingList, setLoadingList] = useState(true);
   const [loadingDetail, setLoadingDetail] = useState(false);
+  // guards detail responses against a university re-picked mid-flight
+  const detailRequestRef = useRef("");
 
   useEffect(() => {
     // the picker needs the complete directory, so walk every page (one page
@@ -154,6 +156,7 @@ function TargetPicker({
     setSelProgram("");
     setSelTrack("");
     setDetail(undefined);
+    detailRequestRef.current = value;
     onSelect(depth === 1 ? value : "");
     if (!value || depth === 1) return;
 
@@ -166,7 +169,7 @@ function TargetPicker({
       },
       { t, addNotification, setLoading: setLoadingDetail },
     );
-    if (result) setDetail(result.data);
+    if (result && detailRequestRef.current === value) setDetail(result.data);
   }
 
   function handleFacultyChange(value: string) {

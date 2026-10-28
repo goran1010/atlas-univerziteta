@@ -1,9 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { TargetPicker } from "../../../../src/components/ContributionDashboard/TargetPicker";
 import { getPickerDepth } from "../../../../src/components/ContributionDashboard/utils/getPickerDepth";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { delay } from "msw";
 import { server, http, HttpResponse } from "../../../utils/msw";
 
 const universitiesList = [
@@ -224,5 +225,41 @@ describe("TargetPicker", () => {
         /Could not load universities\. Check your connection and try again\./i,
       ),
     ).toBeInTheDocument();
+  });
+});
+
+describe("TargetPicker response ordering", () => {
+  test("ignores an out-of-order detail response after re-picking", async () => {
+    server.use(
+      http.get("*/api/v1/universities/:id", async ({ params }) => {
+        detailRequests++;
+        // the first university's reply arrives after the second's
+        if (String(params.id) === "1") await delay(200);
+        return HttpResponse.json({
+          message: "ok",
+          data: detailsById[String(params.id)],
+        });
+      }),
+    );
+    const user = userEvent.setup();
+    renderPicker(2);
+
+    const universitySelect = await screen.findByRole("combobox", {
+      name: /^University$/i,
+    });
+    await screen.findByRole("option", { name: /University of Sarajevo/i });
+    await user.selectOptions(universitySelect, "1");
+    await user.selectOptions(universitySelect, "2");
+
+    await waitFor(() => {
+      expect(detailRequests).toBe(2);
+    });
+    // let the stale slow response settle
+    await new Promise((resolve) => setTimeout(resolve, 300));
+
+    expect(
+      screen.queryByRole("option", { name: /Faculty of Electrical/i }),
+    ).not.toBeInTheDocument();
+    expect(screen.getByText(/No faculties available/i)).toBeInTheDocument();
   });
 });
