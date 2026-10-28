@@ -9,6 +9,7 @@ import { makeUser } from "../../../utils/makeUser";
 import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { UserData } from "../../../../src/types";
+import type { ProviderOverrides } from "../../../utils/rootContextProvider";
 
 import { authClient } from "../../../../src/utils/authClient";
 
@@ -69,9 +70,12 @@ function givenAdminRequestEndpoints() {
   );
 }
 
-function renderProfile(initialUser: UserData = makeUser()) {
+function renderProfile(
+  initialUser: UserData = makeUser(),
+  rootValue: ProviderOverrides = {},
+) {
   render(
-    <RootContextProvider initialUserData={initialUser}>
+    <RootContextProvider initialUserData={initialUser} rootValue={rootValue}>
       <MemoryRouter initialEntries={["/profile"]}>
         <Notifications />
         <Routes>
@@ -134,14 +138,19 @@ describe("Profile Component handle logout", () => {
     vi.mocked(authClient.signOut).mockResolvedValueOnce({
       error: null,
     });
-    renderProfile();
+    // the success toast auto-dismisses after 3s of real time and can vanish
+    // before findByText observes it under load; assert the notification
+    // request instead (toast rendering is covered by Notifications.test.tsx)
+    const addNotification = vi.fn();
+    renderProfile(makeUser(), { addNotification });
 
     const logoutButton = await clickLogout();
 
-    expect(
-      await screen.findByText(/Successfully logged out/i),
-    ).toBeInTheDocument();
     expect(await screen.findByText(/Home Page/i)).toBeInTheDocument();
+    expect(addNotification).toHaveBeenCalledWith({
+      type: "success",
+      message: "Successfully logged out.",
+    });
     expect(logoutButton).not.toBeInTheDocument();
   });
 

@@ -8,6 +8,14 @@ import * as rateLimiter from "../../src/utils/rateLimiter.js";
 // tests only verify each one is mounted on its route, not its behavior
 // (covered by the unit test).
 describe("rate limiter mounts", () => {
+  test("global limiter guards every request, even unknown routes", async () => {
+    vi.mocked(rateLimiter.global).mockClear();
+
+    await request(app).get("/no-such-route");
+
+    expect(rateLimiter.global).toHaveBeenCalled();
+  });
+
   test("strict auth limiter guards the credential endpoints", async () => {
     vi.mocked(rateLimiter.auth).mockClear();
 
