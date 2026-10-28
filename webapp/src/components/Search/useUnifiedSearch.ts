@@ -187,16 +187,18 @@ function useUnifiedSearch() {
         return;
       }
 
-      // a bare Browse All shows universities only (their cards drill down);
-      // the type filter state stays empty so typing searches everything
-      const browseOnly = !hasText && !hasAnyFilter && browse;
+      // Browse All shows universities only (their cards drill down), even
+      // when combined with other filters like country; if the user
+      // explicitly picked type filters those take precedence
+      const browseTypes =
+        browse && types.length === 0 ? ["university"] : types;
 
       void executeSearch(hasText ? trimmed : undefined, {
         country: country || undefined,
         entity: entity || undefined,
         ownership: ownership || undefined,
         cycle,
-        type: browseOnly ? ["university"] : types,
+        type: browseTypes,
       });
     },
     [executeSearch],
