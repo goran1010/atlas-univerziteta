@@ -8,6 +8,8 @@
     "profile": "My profile",
     "login": "Log in",
     "signup": "Sign up",
+    "forgotPassword": "Forgot password",
+    "resetPassword": "Reset password",
     "notFound": "Page not found",
     "error": "Error",
     "about": "About"
@@ -77,6 +79,21 @@
       "haveAccountPrefix": "Already have an account?",
       "heading": "Create your account",
       "blockedWhileLoggedIn": "You can't sign up while logged in. Redirected to the home page."
+    },
+    "forgotPassword": {
+      "linkText": "Forgot password?",
+      "heading": "Reset your password",
+      "description": "Enter your account email and we'll send you a link to reset your password.",
+      "submit": "Send reset link",
+      "sent": "If an account exists for this email, a password reset link is on its way. Check your email.",
+      "backToLogin": "Back to Log In"
+    },
+    "resetPassword": {
+      "heading": "Choose a new password",
+      "submit": "Reset password",
+      "invalidHeading": "This reset link is not valid",
+      "invalidDescription": "The link may have expired or already been used. Request a new one below.",
+      "requestNew": "Request a new link"
     }
   },
   "form": {
@@ -303,7 +320,7 @@
       "invalid": "Please enter a valid email address"
     },
     "password": {
-      "minLength": "Password must have at least 6 characters",
+      "minLength": "Password must have at least 8 characters",
       "required": "Password is required",
       "allowedCharacters": "Password can only contain letters, numbers, dashes, or underscores",
       "requiresNumber": "Password must contain at least one number",
@@ -334,7 +351,12 @@
       "registrationSuccess": "Registration successful! Check your email.",
       "logoutFailed": "Logout did not complete. Try again.",
       "logoutError": "Something went wrong during logout. Try again in a moment.",
-      "logoutSuccess": "Successfully logged out."
+      "logoutSuccess": "Successfully logged out.",
+      "resetRequestFailed": "Could not send the reset link. Try again.",
+      "resetRequestError": "Something went wrong requesting the reset link. Try again in a moment.",
+      "resetFailed": "Password reset failed. Try again.",
+      "resetSuccess": "Your password has been reset. Log in with your new password.",
+      "resetError": "Something went wrong resetting the password. Try again in a moment."
     },
     "admin": {
       "approveSuccess": "Pending change approved.",

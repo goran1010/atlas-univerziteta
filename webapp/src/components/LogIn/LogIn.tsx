@@ -1,4 +1,5 @@
 import { LinkButton } from "../sharedComponents/LinkButton";
+import { TextLink } from "../sharedComponents/TextLink";
 import { useSearchParams } from "react-router";
 import { useState, use, useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
@@ -68,6 +69,9 @@ function LogIn() {
             {t("auth.login.heading")}
           </h1>
           <LogInForm disabled={loading} onLoadingChange={setLoading} />
+          <TextLink to="/forgot-password" className="self-center text-sm">
+            {t("auth.forgotPassword.linkText")}
+          </TextLink>
           <DividerOr />
           <div className="flex flex-col gap-2">
             <GitHubLoginLink disabled={loading} onLoadingChange={setLoading} />

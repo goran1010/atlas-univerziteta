@@ -8,6 +8,8 @@
     "profile": "Moj profil",
     "login": "Prijava",
     "signup": "Registracija",
+    "forgotPassword": "Zaboravljena lozinka",
+    "resetPassword": "Resetovanje lozinke",
     "notFound": "Stranica nije pronađena",
     "error": "Greška",
     "about": "O projektu"
@@ -77,6 +79,21 @@
       "haveAccountPrefix": "Već imate nalog?",
       "heading": "Kreirajte svoj nalog",
       "blockedWhileLoggedIn": "Ne možete se registrovati dok ste prijavljeni. Preusmereni ste na početnu stranicu."
+    },
+    "forgotPassword": {
+      "linkText": "Zaboravili ste lozinku?",
+      "heading": "Resetujte lozinku",
+      "description": "Unesite email svog naloga i poslaćemo vam link za resetovanje lozinke.",
+      "submit": "Pošalji link",
+      "sent": "Ako nalog sa ovim emailom postoji, link za resetovanje lozinke je na putu. Provjerite email.",
+      "backToLogin": "Nazad na prijavu"
+    },
+    "resetPassword": {
+      "heading": "Odaberite novu lozinku",
+      "submit": "Resetuj lozinku",
+      "invalidHeading": "Ovaj link za resetovanje ne važi",
+      "invalidDescription": "Link je možda istekao ili je već iskorišten. Zatražite novi ispod.",
+      "requestNew": "Zatraži novi link"
     }
   },
   "form": {
@@ -303,7 +320,7 @@
       "invalid": "Unesite ispravnu email adresu"
     },
     "password": {
-      "minLength": "Lozinka mora imati najmanje 6 karaktera",
+      "minLength": "Lozinka mora imati najmanje 8 karaktera",
       "required": "Lozinka je obavezna",
       "allowedCharacters": "Lozinka može sadržavati samo slova, brojeve, crtice ili donje crte",
       "requiresNumber": "Lozinka mora sadržavati najmanje jedan broj",
@@ -334,7 +351,12 @@
       "registrationSuccess": "Registracija je uspješna. Provjerite email.",
       "logoutFailed": "Odjava nije uspjela. Pokušajte ponovo.",
       "logoutError": "Došlo je do greške tokom odjave. Pokušajte ponovo za koji trenutak.",
-      "logoutSuccess": "Uspješno ste odjavljeni."
+      "logoutSuccess": "Uspješno ste odjavljeni.",
+      "resetRequestFailed": "Slanje linka nije uspjelo. Pokušajte ponovo.",
+      "resetRequestError": "Došlo je do greške pri slanju linka. Pokušajte ponovo za koji trenutak.",
+      "resetFailed": "Resetovanje lozinke nije uspjelo. Pokušajte ponovo.",
+      "resetSuccess": "Lozinka je resetovana. Prijavite se novom lozinkom.",
+      "resetError": "Došlo je do greške pri resetovanju lozinke. Pokušajte ponovo za koji trenutak."
     },
     "admin": {
       "approveSuccess": "Izmjena na čekanju je odobrena.",
