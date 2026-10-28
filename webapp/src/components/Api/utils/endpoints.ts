@@ -277,11 +277,10 @@ const apiEndpoints: Endpoint[] = [
     "universities": [ ... ],
     "faculties": [ ... ],
     "studyPrograms": [ ... ],
-    "totals": { "universities": 4, "faculties": 20, "studyPrograms": 221 },
     "direct": { "universities": 4, "faculties": 20, "studyPrograms": 0 }
   }
 }`,
-    errorExample: `// no matches is NOT an error - a 200 with empty arrays and zero totals
+    errorExample: `// no matches is NOT an error - a 200 with empty arrays
 
 // 400 - invalid parameter (e.g. searchTerm of 1 character, unknown type value)
 { "error": { "code": "VALIDATION_ERROR", "message": "Request validation failed.", "issues": [...] } }`,

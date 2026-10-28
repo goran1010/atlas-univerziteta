@@ -21,8 +21,5 @@ const requestAdminResponseSchema = z.object({
 
 type AdminRequest = z.infer<typeof adminRequestSchema>;
 
-export {
-  adminRequestsResponseSchema,
-  requestAdminResponseSchema,
-};
+export { adminRequestsResponseSchema, requestAdminResponseSchema };
 export type { AdminRequest };

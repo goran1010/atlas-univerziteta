@@ -25,8 +25,6 @@
     "browsable",
     "cažin",
     "ccsz",
-    "čćšž",
-    "čćšžđ",
     "CREATEDB",
     "datname",
     "djordje",
@@ -60,6 +58,7 @@
     "Testograd",
     "TREC",
     "TREĆ",
+    "ugniježdenu",
     "uniatlas",
     "UNIBL",
     "UNSA",
@@ -68,7 +67,9 @@
     "upserts",
     "WCAG",
     "ćazin",
-    "čazin"
+    "čazin",
+    "čćšž",
+    "čćšžđ"
   ],
   "ignoreWords": [],
   "import": [
