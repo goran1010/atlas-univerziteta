@@ -50,7 +50,10 @@ Notes:
 
 ## Contributing a Whole University (JSON)
 
-Besides single-item suggestions, the app accepts a whole university in one submission: the university together with its faculties, their study programs, and their tracks. Open `/improve-data`, pick the "Add a whole university (JSON)" tab, paste or load the JSON, validate, check the preview, and submit. The submission is stored as one pending change and reviewed as one unit: an admin approves everything or declines everything.
+Besides single-item suggestions, the app accepts a whole university in one submission: the university together with its faculties, their study programs, and their tracks. There are two ways to build one, and both are stored as one pending change and reviewed as one unit: an admin approves everything or declines everything.
+
+- In the "Propose changes" tab, a create suggestion can nest children directly: add faculties to a university, study programs to a faculty, and tracks to a study program with the add buttons under the form.
+- In the "Add university or faculty (JSON)" tab, paste or load the same structure as JSON, validate, check the preview, and submit.
 
 You can also start one level lower: pick Faculty as the item type, choose the university it belongs under, and submit a faculty with its study programs and tracks.
 

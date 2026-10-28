@@ -16,7 +16,7 @@ The data is modeled as a nested academic hierarchy: university, its faculties, a
 
 - Public REST API under `/api/v1` - no authentication required
 - Unified search across universities, faculties, and study programs: multi-word queries where every word must match somewhere in the entity's hierarchy, case- and diacritic-insensitive, tolerant of Bosnian/Croatian/Serbian inflected forms, with ECTS/duration/founding-year matching and local-language filter words (e.g. "javna" finds public universities)
-- Relevance-ranked, grouped results with per-type filters, counts, and capped sections
+- Relevance-ranked, grouped results with per-type filters and counts
 - Detail pages for universities and faculties with shareable links and per-page social previews
 - Email/password signup with email verification, session login, and optional GitHub/Google OAuth (with automatic account linking)
 - Authenticated suggestions for creating, updating, or deleting data, reviewed by admins before applying - the review shows the current data, child counts, and the entity's place in the academic hierarchy
