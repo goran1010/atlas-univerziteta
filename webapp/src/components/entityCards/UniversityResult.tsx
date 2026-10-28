@@ -68,7 +68,10 @@ function UniversityResult({
     }
   }
 
-  const entityLabel = t(`universitiesPage.entities.${university.entity}`);
+  const countryLabel = t(`universitiesPage.countries.${university.country}`);
+  const entityLabel = university.entity
+    ? t(`universitiesPage.entities.${university.entity}`)
+    : undefined;
 
   // The university's own city first, the rest alphabetically. Grouped
   // display only kicks in when there is more than one city.
@@ -115,6 +118,7 @@ function UniversityResult({
           </h3>
           <UniversityMetaRow
             city={university.city}
+            country={university.country}
             entity={university.entity}
             ownership={university.ownership}
             className="gap-x-3 gap-y-0.5 mt-1"
@@ -189,8 +193,13 @@ function UniversityResult({
                 <MapPinIcon /> {university.city}
               </span>
               <span>
-                <TagIcon /> {entityLabel}
+                <TagIcon /> {countryLabel}
               </span>
+              {entityLabel && (
+                <span>
+                  <TagIcon /> {entityLabel}
+                </span>
+              )}
               <span
                 className={`px-1.5 py-0.5 rounded text-xs font-medium ${
                   university.ownership === "PUBLIC"

@@ -20,6 +20,7 @@ function universityDraft(university: UniversityDetail): ContributionFormDraft {
   return {
     name: university.name,
     city: university.city,
+    country: university.country,
     entity: university.entity,
     ownership: university.ownership,
     acronym: university.acronym,
