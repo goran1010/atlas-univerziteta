@@ -4,6 +4,7 @@ import { prismaAdapter } from "better-auth/adapters/prisma";
 import { prisma } from "../db/prisma.js";
 import { env } from "./env.js";
 import { sendConfirmationEmail } from "../email/confirmationEmail.js";
+import { sendResetPasswordEmail } from "../email/resetPasswordEmail.js";
 
 const auth = betterAuth({
   database: prismaAdapter(prisma, { provider: "postgresql" }),
@@ -13,6 +14,9 @@ const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
     requireEmailVerification: true,
+    sendResetPassword: async ({ user, url }) => {
+      await sendResetPasswordEmail(user.email, url);
+    },
   },
   emailVerification: {
     sendOnSignUp: true,

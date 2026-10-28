@@ -60,7 +60,9 @@ describe("sendConfirmationEmail", () => {
 
     await expect(
       sendConfirmationEmail("user@example.com", "https://example.com/confirm"),
-    ).rejects.toThrow("Confirmation email rejected: API key is invalid");
+    ).rejects.toThrow(
+      "Resend rejected the confirmation email: API key is invalid",
+    );
   });
 
   test("rethrows when the send itself fails", async () => {

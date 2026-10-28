@@ -7,6 +7,10 @@ vi.mock("../../src/email/confirmationEmail.js", () => ({
   sendConfirmationEmail: vi.fn().mockResolvedValue(undefined),
 }));
 
+vi.mock("../../src/email/resetPasswordEmail.js", () => ({
+  sendResetPasswordEmail: vi.fn().mockResolvedValue(undefined),
+}));
+
 vi.mock("pino", () => {
   return {
     default: () => ({

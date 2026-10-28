@@ -20,8 +20,13 @@ describe("rate limiter mounts", () => {
     vi.mocked(rateLimiter.auth).mockClear();
 
     await request(app).post("/api/auth/sign-in/email").send({});
+    expect(rateLimiter.auth).toHaveBeenCalledTimes(1);
 
-    expect(rateLimiter.auth).toHaveBeenCalled();
+    await request(app).post("/api/auth/request-password-reset").send({});
+    expect(rateLimiter.auth).toHaveBeenCalledTimes(2);
+
+    await request(app).post("/api/auth/reset-password").send({});
+    expect(rateLimiter.auth).toHaveBeenCalledTimes(3);
   });
 
   test("get-session hits the general auth limiter, not the strict one", async () => {
