@@ -1,0 +1,21 @@
+{
+  "name": "Sveučilište VERN'",
+  "acronym": "VERN",
+  "city": "Zagreb",
+  "country": "HRV",
+  "ownership": "PRIVATE",
+  "foundedYear": "2020",
+  "website": "https://vern.hr",
+  "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
+  "phone": "+385 91 48 25 003",
+  "email": null,
+  "faculties": [
+    { "name": "Odjel za primijenjenu matematiku i informacijske tehnologije", "city": "Zagreb" },
+    { "name": "Odjel za ekonomiju i marketing", "city": "Zagreb" },
+    { "name": "Odjel za poduzetništvo i menadžment", "city": "Zagreb" },
+    { "name": "Odjel za financije, računovodstvo i pravo", "city": "Zagreb" },
+    { "name": "Odjel za jezike i kulturu", "city": "Zagreb" },
+    { "name": "Odjel za psihologiju i komunikacije", "city": "Zagreb" },
+    { "name": "Odjel za turizam", "city": "Zagreb" }
+  ]
+}

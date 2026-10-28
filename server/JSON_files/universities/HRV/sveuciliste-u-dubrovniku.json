@@ -1,0 +1,21 @@
+{
+  "name": "Sveučilište u Dubrovniku",
+  "acronym": "UNIDU",
+  "city": "Dubrovnik",
+  "country": "HRV",
+  "ownership": "PUBLIC",
+  "foundedYear": "2003",
+  "website": "https://www.unidu.hr",
+  "address": null,
+  "phone": null,
+  "email": null,
+  "faculties": [
+    { "name": "Odjel za akvakulturu", "city": "Dubrovnik" },
+    { "name": "Odjel za elektrotehniku i informacijske tehnologije", "city": "Dubrovnik" },
+    { "name": "Odjel za ekonomiju i poslovnu ekonomiju", "city": "Dubrovnik" },
+    { "name": "Odjel za strojarske i tehničke znanosti", "city": "Dubrovnik" },
+    { "name": "Pomorski odjel", "city": "Dubrovnik" },
+    { "name": "Odjel za komunikologiju", "city": "Dubrovnik" },
+    { "name": "Odjel za umjetnost i restauraciju", "city": "Dubrovnik" }
+  ]
+}

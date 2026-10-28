@@ -1,0 +1,25 @@
+{
+  "name": "Univerzitet Donja Gorica",
+  "acronym": "UDG",
+  "city": "Podgorica",
+  "country": "MNE",
+  "ownership": "PRIVATE",
+  "foundedYear": "2007",
+  "website": "https://www.udg.edu.me",
+  "address": "Donja Gorica bb, 81000 Podgorica",
+  "phone": null,
+  "email": null,
+  "faculties": [
+    { "name": "Fakultet za međunarodnu ekonomiju, finansije i biznis", "city": "Podgorica" },
+    { "name": "Fakultet pravnih nauka", "city": "Podgorica" },
+    { "name": "Fakultet za informacione sisteme i tehnologije", "city": "Podgorica" },
+    { "name": "Humanističke studije", "city": "Podgorica" },
+    { "name": "Fakultet umjetnosti", "city": "Podgorica" },
+    { "name": "Fakultet politehničkih nauka", "city": "Podgorica" },
+    { "name": "Fakultet za sportski menadžment", "city": "Podgorica" },
+    { "name": "Fakultet za prehrambenu tehnologiju, bezbjednost hrane i ekologiju", "city": "Podgorica" },
+    { "name": "Fakultet za dizajn i multimediju", "city": "Podgorica" },
+    { "name": "Fakultet za kulturu i turizam", "city": "Podgorica" },
+    { "name": "Fakultet primijenjenih nauka", "city": "Podgorica" }
+  ]
+}

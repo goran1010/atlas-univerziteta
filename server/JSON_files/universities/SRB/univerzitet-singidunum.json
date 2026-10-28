@@ -1,0 +1,20 @@
+{
+  "name": "Univerzitet Singidunum",
+  "acronym": null,
+  "city": "Beograd",
+  "country": "SRB",
+  "ownership": "PRIVATE",
+  "foundedYear": "2005",
+  "website": "https://www.singidunum.ac.rs",
+  "address": "Danijelova 32, 11000 Beograd",
+  "phone": "+381 11 3094 041",
+  "email": "internationaloffice@singidunum.ac.rs",
+  "faculties": [
+    { "name": "Poslovni fakultet u Beogradu", "city": "Beograd" },
+    { "name": "Fakultet za turistički i hotelijerski menadžment", "city": "Beograd" },
+    { "name": "Fakultet za informatiku i računarstvo", "city": "Beograd" },
+    { "name": "Fakultet tehničkih nauka", "city": "Beograd" },
+    { "name": "Fakultet za fizičku kulturu i menadžment u sportu", "city": "Beograd" },
+    { "name": "Fakultet za medije i komunikacije", "city": "Beograd" }
+  ]
+}

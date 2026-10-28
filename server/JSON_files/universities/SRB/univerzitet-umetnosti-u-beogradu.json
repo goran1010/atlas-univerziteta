@@ -1,0 +1,18 @@
+{
+  "name": "Univerzitet umetnosti u Beogradu",
+  "acronym": null,
+  "city": "Beograd",
+  "country": "SRB",
+  "ownership": "PUBLIC",
+  "foundedYear": "1957",
+  "website": "https://www.arts.bg.ac.rs",
+  "address": "Kosančićev venac 29, 11000 Beograd",
+  "phone": "+381 11 262 5166",
+  "email": "iro@arts.bg.ac.rs",
+  "faculties": [
+    { "name": "Fakultet muzičke umetnosti", "city": "Beograd" },
+    { "name": "Fakultet likovnih umetnosti", "city": "Beograd" },
+    { "name": "Fakultet primenjenih umetnosti", "city": "Beograd" },
+    { "name": "Fakultet dramskih umetnosti", "city": "Beograd" }
+  ]
+}

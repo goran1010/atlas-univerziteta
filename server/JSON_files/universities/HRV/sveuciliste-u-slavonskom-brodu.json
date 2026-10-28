@@ -1,0 +1,18 @@
+{
+  "name": "Sveučilište u Slavonskom Brodu",
+  "acronym": "UNISB",
+  "city": "Slavonski Brod",
+  "country": "HRV",
+  "ownership": "PUBLIC",
+  "foundedYear": "2020",
+  "website": "https://www.unisb.hr",
+  "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
+  "phone": "+385 35 446 188",
+  "email": "info@unisb.hr",
+  "faculties": [
+    { "name": "Strojarski fakultet", "city": "Slavonski Brod" },
+    { "name": "Biotehnički odjel", "city": "Slavonski Brod" },
+    { "name": "Tehnički odjel", "city": "Slavonski Brod" },
+    { "name": "Odjel društveno-humanističkih znanosti", "city": "Slavonski Brod" }
+  ]
+}

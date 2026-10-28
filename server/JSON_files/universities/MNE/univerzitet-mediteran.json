@@ -1,0 +1,20 @@
+{
+  "name": "Univerzitet Mediteran",
+  "acronym": null,
+  "city": "Podgorica",
+  "country": "MNE",
+  "ownership": "PRIVATE",
+  "foundedYear": "2006",
+  "website": "https://unimediteran.net",
+  "address": "Bulevar Josipa Broza bb, 81000 Podgorica",
+  "phone": "+382 20 409 204",
+  "email": "rektorat@unimediteran.net",
+  "faculties": [
+    { "name": "Fakultet za turizam", "city": "Bar" },
+    { "name": "Fakultet za poslovne studije - Montenegro Business School", "city": "Podgorica" },
+    { "name": "Fakultet vizuelnih umjetnosti", "city": "Podgorica" },
+    { "name": "Fakultet za informacione tehnologije", "city": "Podgorica" },
+    { "name": "Fakultet za strane jezike", "city": "Podgorica" },
+    { "name": "Pravni fakultet", "city": "Podgorica" }
+  ]
+}

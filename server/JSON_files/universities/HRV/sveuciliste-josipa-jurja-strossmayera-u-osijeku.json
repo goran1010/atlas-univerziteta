@@ -1,0 +1,27 @@
+{
+  "name": "Sveučilište Josipa Jurja Strossmayera u Osijeku",
+  "acronym": "UNIOS",
+  "city": "Osijek",
+  "country": "HRV",
+  "ownership": "PUBLIC",
+  "foundedYear": "1975",
+  "website": "https://www.unios.hr",
+  "address": "Trg Svetog Trojstva 3, 31000 Osijek",
+  "phone": null,
+  "email": null,
+  "faculties": [
+    { "name": "Ekonomski fakultet", "city": "Osijek" },
+    { "name": "Pravni fakultet", "city": "Osijek" },
+    { "name": "Fakultet agrobiotehničkih znanosti", "city": "Osijek" },
+    { "name": "Prehrambeno-tehnološki fakultet", "city": "Osijek" },
+    { "name": "Građevinski i arhitektonski fakultet", "city": "Osijek" },
+    { "name": "Fakultet elektrotehnike, računarstva i informacijskih tehnologija", "city": "Osijek" },
+    { "name": "Strojarski fakultet", "city": "Slavonski Brod" },
+    { "name": "Filozofski fakultet", "city": "Osijek" },
+    { "name": "Fakultet za odgojne i obrazovne znanosti", "city": "Osijek" },
+    { "name": "Medicinski fakultet", "city": "Osijek" },
+    { "name": "Fakultet za dentalnu medicinu i zdravstvo", "city": "Osijek" },
+    { "name": "Katolički bogoslovni fakultet u Đakovu", "city": "Đakovo" },
+    { "name": "Akademija za umjetnost i kulturu", "city": "Osijek" }
+  ]
+}

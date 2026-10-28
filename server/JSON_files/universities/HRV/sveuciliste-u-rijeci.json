@@ -1,0 +1,26 @@
+{
+  "name": "Sveučilište u Rijeci",
+  "acronym": "UNIRI",
+  "city": "Rijeka",
+  "country": "HRV",
+  "ownership": "PUBLIC",
+  "foundedYear": "1973",
+  "website": "https://uniri.hr",
+  "address": "Trg braće Mažuranića 10, 51000 Rijeka",
+  "phone": "+385 51 406 500",
+  "email": "ured@uniri.hr",
+  "faculties": [
+    { "name": "Građevinski fakultet", "city": "Rijeka" },
+    { "name": "Ekonomski fakultet", "city": "Rijeka" },
+    { "name": "Tehnički fakultet", "city": "Rijeka" },
+    { "name": "Filozofski fakultet", "city": "Rijeka" },
+    { "name": "Pravni fakultet", "city": "Rijeka" },
+    { "name": "Pomorski fakultet", "city": "Rijeka" },
+    { "name": "Medicinski fakultet", "city": "Rijeka" },
+    { "name": "Učiteljski fakultet", "city": "Rijeka" },
+    { "name": "Fakultet za turizam i ugostiteljstvo", "city": "Opatija" },
+    { "name": "Fakultet informatike", "city": "Rijeka" },
+    { "name": "Fakultet matematike", "city": "Rijeka" },
+    { "name": "Akademija primijenjenih umjetnosti", "city": "Rijeka" }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Univerzitet Crne Gore",
+  "acronym": "UCG",
+  "city": "Podgorica",
+  "country": "MNE",
+  "ownership": "PUBLIC",
+  "foundedYear": "1974",
+  "website": "https://www.ucg.ac.me",
+  "address": "Cetinjski put 2, 81000 Podgorica",
+  "phone": "+382 20 414 255",
+  "email": "rektorat@ucg.ac.me",
+  "faculties": [
+    { "name": "Arhitektonski fakultet", "city": "Podgorica" },
+    { "name": "Biotehnički fakultet", "city": "Podgorica" },
+    { "name": "Građevinski fakultet", "city": "Podgorica" },
+    { "name": "Ekonomski fakultet", "city": "Podgorica" },
+    { "name": "Elektrotehnički fakultet", "city": "Podgorica" },
+    { "name": "Pravni fakultet", "city": "Podgorica" },
+    { "name": "Mašinski fakultet", "city": "Podgorica" },
+    { "name": "Medicinski fakultet", "city": "Podgorica" },
+    { "name": "Metalurško-tehnološki fakultet", "city": "Podgorica" },
+    { "name": "Prirodno-matematički fakultet", "city": "Podgorica" },
+    { "name": "Fakultet političkih nauka", "city": "Podgorica" },
+    { "name": "Filozofski fakultet", "city": "Nikšić" },
+    { "name": "Filološki fakultet", "city": "Nikšić" },
+    { "name": "Fakultet za sport i fizičko vaspitanje", "city": "Nikšić" },
+    { "name": "Fakultet dramskih umjetnosti", "city": "Cetinje" },
+    { "name": "Fakultet likovnih umjetnosti", "city": "Cetinje" },
+    { "name": "Muzička akademija", "city": "Cetinje" },
+    { "name": "Pomorski fakultet", "city": "Kotor" },
+    { "name": "Fakultet za turizam i hotelijerstvo", "city": "Kotor" }
+  ]
+}

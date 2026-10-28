@@ -1,0 +1,28 @@
+{
+  "name": "Univerzitet u Nišu",
+  "acronym": null,
+  "city": "Niš",
+  "country": "SRB",
+  "ownership": "PUBLIC",
+  "foundedYear": "1965",
+  "website": "https://www.ni.ac.rs",
+  "address": "Univerzitetski trg 2, 18000 Niš",
+  "phone": "+381 18 257 970",
+  "email": "uniuni@ni.ac.rs",
+  "faculties": [
+    { "name": "Filozofski fakultet", "city": "Niš" },
+    { "name": "Elektronski fakultet", "city": "Niš" },
+    { "name": "Medicinski fakultet", "city": "Niš" },
+    { "name": "Ekonomski fakultet", "city": "Niš" },
+    { "name": "Pravni fakultet", "city": "Niš" },
+    { "name": "Građevinsko-arhitektonski fakultet", "city": "Niš" },
+    { "name": "Mašinski fakultet", "city": "Niš" },
+    { "name": "Prirodno-matematički fakultet", "city": "Niš" },
+    { "name": "Fakultet sporta i fizičkog vaspitanja", "city": "Niš" },
+    { "name": "Fakultet zaštite na radu", "city": "Niš" },
+    { "name": "Tehnološki fakultet", "city": "Leskovac" },
+    { "name": "Fakultet umetnosti", "city": "Niš" },
+    { "name": "Pedagoški fakultet u Vranju", "city": "Vranje" },
+    { "name": "Agronomski fakultet u Kruševcu", "city": "Kruševac" }
+  ]
+}

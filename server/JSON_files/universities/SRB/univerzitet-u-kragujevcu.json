@@ -1,0 +1,26 @@
+{
+  "name": "Univerzitet u Kragujevcu",
+  "acronym": null,
+  "city": "Kragujevac",
+  "country": "SRB",
+  "ownership": "PUBLIC",
+  "foundedYear": "1976",
+  "website": "https://www.kg.ac.rs",
+  "address": "Jovana Cvijića bb, 34000 Kragujevac",
+  "phone": "+381 34 370 191",
+  "email": "unikg@kg.ac.rs",
+  "faculties": [
+    { "name": "Medicinski fakultet", "city": "Kragujevac" },
+    { "name": "Fakultet tehničkih nauka u Čačku", "city": "Čačak" },
+    { "name": "Ekonomski fakultet", "city": "Kragujevac" },
+    { "name": "Fakultet inženjerskih nauka", "city": "Kragujevac" },
+    { "name": "Prirodno-matematički fakultet", "city": "Kragujevac" },
+    { "name": "Filološko-umetnički fakultet", "city": "Kragujevac" },
+    { "name": "Pravni fakultet", "city": "Kragujevac" },
+    { "name": "Fakultet pedagoških nauka u Jagodini", "city": "Jagodina" },
+    { "name": "Fakultet za hotelijerstvo i turizam u Vrnjačkoj Banji", "city": "Vrnjačka Banja" },
+    { "name": "Fakultet pedagoških nauka u Užicu", "city": "Užice" },
+    { "name": "Fakultet za mašinstvo i građevinarstvo u Kraljevu", "city": "Kraljevo" },
+    { "name": "Agronomski fakultet u Čačku", "city": "Čačak" }
+  ]
+}

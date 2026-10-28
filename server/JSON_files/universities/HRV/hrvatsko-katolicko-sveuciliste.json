@@ -1,0 +1,19 @@
+{
+  "name": "Hrvatsko katoličko sveučilište",
+  "acronym": null,
+  "city": "Zagreb",
+  "country": "HRV",
+  "ownership": "PRIVATE",
+  "foundedYear": "2006",
+  "website": "https://www.unicath.hr",
+  "address": "Ilica 242, 10000 Zagreb",
+  "phone": null,
+  "email": null,
+  "faculties": [
+    { "name": "Odjel za komunikologiju", "city": "Zagreb" },
+    { "name": "Odjel za povijest", "city": "Zagreb" },
+    { "name": "Odjel za sestrinstvo", "city": "Zagreb" },
+    { "name": "Odjel za psihologiju", "city": "Zagreb" },
+    { "name": "Odjel za sociologiju", "city": "Zagreb" }
+  ]
+}

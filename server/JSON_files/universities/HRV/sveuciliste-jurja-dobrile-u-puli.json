@@ -1,0 +1,22 @@
+{
+  "name": "Sveučilište Jurja Dobrile u Puli",
+  "acronym": "UNIPU",
+  "city": "Pula",
+  "country": "HRV",
+  "ownership": "PUBLIC",
+  "foundedYear": "2006",
+  "website": "https://www.unipu.hr",
+  "address": null,
+  "phone": null,
+  "email": null,
+  "faculties": [
+    { "name": "Fakultet ekonomije i turizma Dr. Mijo Mirković", "city": "Pula" },
+    { "name": "Fakultet informatike", "city": "Pula" },
+    { "name": "Fakultet prirodnih znanosti", "city": "Pula" },
+    { "name": "Fakultet za odgojne i obrazovne znanosti", "city": "Pula" },
+    { "name": "Filozofski fakultet", "city": "Pula" },
+    { "name": "Medicinski fakultet", "city": "Pula" },
+    { "name": "Tehnički fakultet", "city": "Pula" },
+    { "name": "Muzička akademija", "city": "Pula" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Univerzitet odbrane u Beogradu",
+  "acronym": null,
+  "city": "Beograd",
+  "country": "SRB",
+  "ownership": "PUBLIC",
+  "foundedYear": "2011",
+  "website": "https://www.uo.mod.gov.rs",
+  "address": "Veljka Lukića Kurjaka 33, 11042 Beograd",
+  "phone": null,
+  "email": null,
+  "faculties": [
+    { "name": "Vojna akademija", "city": "Beograd" },
+    { "name": "Medicinski fakultet Vojnomedicinske akademije", "city": "Beograd" }
+  ]
+}

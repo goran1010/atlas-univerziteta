@@ -1,0 +1,26 @@
+{
+  "name": "Sveučilište u Splitu",
+  "acronym": "UNIST",
+  "city": "Split",
+  "country": "HRV",
+  "ownership": "PUBLIC",
+  "foundedYear": "1974",
+  "website": "https://www.unist.hr",
+  "address": "Ruđera Boškovića 31, 21000 Split",
+  "phone": "+385 21 558 200",
+  "email": "rektorat@unist.hr",
+  "faculties": [
+    { "name": "Fakultet građevinarstva, arhitekture i geodezije", "city": "Split" },
+    { "name": "Prirodoslovno-matematički fakultet", "city": "Split" },
+    { "name": "Ekonomski fakultet", "city": "Split" },
+    { "name": "Pravni fakultet", "city": "Split" },
+    { "name": "Katolički bogoslovni fakultet", "city": "Split" },
+    { "name": "Kemijsko-tehnološki fakultet", "city": "Split" },
+    { "name": "Medicinski fakultet", "city": "Split" },
+    { "name": "Kineziološki fakultet", "city": "Split" },
+    { "name": "Pomorski fakultet", "city": "Split" },
+    { "name": "Filozofski fakultet", "city": "Split" },
+    { "name": "Fakultet elektrotehnike, strojarstva i brodogradnje", "city": "Split" },
+    { "name": "Umjetnička akademija", "city": "Split" }
+  ]
+}

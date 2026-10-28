@@ -1,0 +1,28 @@
+{
+  "name": "Univerzitet u Novom Sadu",
+  "acronym": null,
+  "city": "Novi Sad",
+  "country": "SRB",
+  "ownership": "PUBLIC",
+  "foundedYear": "1960",
+  "website": "https://www.uns.ac.rs",
+  "address": "Dr Zorana Đinđića 1, 21102 Novi Sad",
+  "phone": "+381 21 485 2020",
+  "email": "rektorat@uns.ac.rs",
+  "faculties": [
+    { "name": "Poljoprivredni fakultet", "city": "Novi Sad" },
+    { "name": "Filozofski fakultet", "city": "Novi Sad" },
+    { "name": "Pravni fakultet", "city": "Novi Sad" },
+    { "name": "Tehnološki fakultet", "city": "Novi Sad" },
+    { "name": "Ekonomski fakultet u Subotici", "city": "Subotica" },
+    { "name": "Fakultet tehničkih nauka", "city": "Novi Sad" },
+    { "name": "Medicinski fakultet", "city": "Novi Sad" },
+    { "name": "Prirodno-matematički fakultet", "city": "Novi Sad" },
+    { "name": "Akademija umetnosti", "city": "Novi Sad" },
+    { "name": "Građevinski fakultet Subotica", "city": "Subotica" },
+    { "name": "Tehnički fakultet Mihajlo Pupin", "city": "Zrenjanin" },
+    { "name": "Fakultet sporta i fizičkog vaspitanja", "city": "Novi Sad" },
+    { "name": "Pedagoški fakultet u Somboru", "city": "Sombor" },
+    { "name": "Učiteljski fakultet na mađarskom nastavnom jeziku", "city": "Subotica" }
+  ]
+}
