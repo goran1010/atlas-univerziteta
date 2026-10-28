@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_call:
 
 jobs:
   format:
@@ -18,6 +19,7 @@ jobs:
         with:
           node-version: 24
           cache: npm
+          cache-dependency-path: "**/package-lock.json"
 
       - name: Install dependencies
         run: npm run install:all
@@ -43,6 +45,7 @@ jobs:
         with:
           node-version: 24
           cache: npm
+          cache-dependency-path: "**/package-lock.json"
 
       # root install only - cspell and its dictionaries are root devDependencies
       - name: Install dependencies
