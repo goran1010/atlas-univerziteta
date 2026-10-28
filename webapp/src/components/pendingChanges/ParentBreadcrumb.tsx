@@ -1,25 +1,10 @@
 import { Link } from "react-router";
+import { DETAIL_PATHS } from "../../utils/entityDetailPath";
 
 import type { ParentCrumb } from "../../schemas/pendingChange";
 
-const DETAIL_PATHS: Partial<Record<ParentCrumb["targetType"], string>> = {
-  UNIVERSITY: "/universities",
-  FACULTY: "/faculties",
-};
-
 const linkClassName =
   "underline underline-offset-3 decoration-1 hover:decoration-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors";
-
-// The detail page for an existing entity, or undefined for levels without
-// one (programs, tracks) - so the final breadcrumb segment can link too.
-function entityDetailPath(
-  targetType: string,
-  targetId: number | null | undefined,
-): string | undefined {
-  if (targetId == null) return undefined;
-  const path = DETAIL_PATHS[targetType as ParentCrumb["targetType"]];
-  return path ? `${path}/${targetId.toString()}` : undefined;
-}
 
 interface ParentBreadcrumbProps {
   crumbs: ParentCrumb[];
@@ -73,4 +58,4 @@ function ParentBreadcrumb({
   );
 }
 
-export { ParentBreadcrumb, entityDetailPath };
+export { ParentBreadcrumb };

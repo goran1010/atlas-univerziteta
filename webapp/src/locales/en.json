@@ -255,6 +255,13 @@
       "validationErrors": "Validation errors",
       "looksLikeUniversity": "This looks like a whole university. Switch the item type to University.",
       "preview": "Preview"
+    },
+    "builder": {
+      "addFaculty": "Add faculty",
+      "addStudyProgram": "Add study program",
+      "addTrack": "Add track",
+      "remove": "Remove",
+      "unnamed": "Unnamed"
     }
   },
   "admin": {

@@ -255,6 +255,13 @@
       "validationErrors": "Greške u podacima",
       "looksLikeUniversity": "Ovo izgleda kao cijeli univerzitet. Promijenite tip stavke na Univerzitet.",
       "preview": "Pregled"
+    },
+    "builder": {
+      "addFaculty": "Dodaj fakultet",
+      "addStudyProgram": "Dodaj studijski program",
+      "addTrack": "Dodaj smjer",
+      "remove": "Ukloni",
+      "unnamed": "Bez naziva"
     }
   },
   "admin": {

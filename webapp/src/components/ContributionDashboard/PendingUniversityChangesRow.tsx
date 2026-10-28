@@ -6,10 +6,8 @@ import { Dialog } from "../sharedComponents/Dialog";
 import { ConfirmDialog } from "../sharedComponents/ConfirmDialog";
 import { handleDiscardUniversityChange } from "./utils/handleDiscardUniversityChange";
 import { PendingChangeDetail } from "../AdminDashboard/PendingChangeDetail";
-import {
-  ParentBreadcrumb,
-  entityDetailPath,
-} from "../pendingChanges/ParentBreadcrumb";
+import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
+import { entityDetailPath } from "../../utils/entityDetailPath";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { countNestedNodes } from "../../utils/countNestedNodes";
 import { LEVEL_BADGE } from "../../utils/levelColors";

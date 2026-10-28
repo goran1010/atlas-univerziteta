@@ -9,10 +9,8 @@ import {
   handleDeclinePendingChange,
 } from "./utils/adminActions";
 import { PendingChangeDetail } from "./PendingChangeDetail";
-import {
-  ParentBreadcrumb,
-  entityDetailPath,
-} from "../pendingChanges/ParentBreadcrumb";
+import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
+import { entityDetailPath } from "../../utils/entityDetailPath";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { countNestedNodes } from "../../utils/countNestedNodes";
 import { LEVEL_BADGE } from "../../utils/levelColors";

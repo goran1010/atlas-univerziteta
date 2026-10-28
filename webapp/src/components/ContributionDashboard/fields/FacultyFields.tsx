@@ -9,16 +9,21 @@ interface FacultyFieldsProps {
     field: keyof ContributionFormDraft,
     value: string | number | undefined,
   ) => void;
+  idPrefix?: string;
 }
 
-function FacultyFields({ data, setDataField }: FacultyFieldsProps) {
+function FacultyFields({
+  data,
+  setDataField,
+  idPrefix = "",
+}: FacultyFieldsProps) {
   const { t } = use(RootContext);
 
   return (
     <>
       <DataField
         label={t("contribution.dataFields.city")}
-        id="dataFacultyCity"
+        id={`${idPrefix}dataFacultyCity`}
         type="text"
         value={data.city ?? ""}
         onChange={(e) => {
@@ -27,7 +32,7 @@ function FacultyFields({ data, setDataField }: FacultyFieldsProps) {
       />
       <DataField
         label={t("contribution.dataFields.website")}
-        id="dataFacultyWebsite"
+        id={`${idPrefix}dataFacultyWebsite`}
         type="url"
         value={data.website ?? ""}
         onChange={(e) => {
@@ -36,7 +41,7 @@ function FacultyFields({ data, setDataField }: FacultyFieldsProps) {
       />
       <DataField
         label={t("contribution.dataFields.address")}
-        id="dataFacultyAddress"
+        id={`${idPrefix}dataFacultyAddress`}
         type="text"
         value={data.address ?? ""}
         onChange={(e) => {
@@ -45,7 +50,7 @@ function FacultyFields({ data, setDataField }: FacultyFieldsProps) {
       />
       <DataField
         label={t("contribution.dataFields.phone")}
-        id="dataFacultyPhone"
+        id={`${idPrefix}dataFacultyPhone`}
         type="tel"
         value={data.phone ?? ""}
         onChange={(e) => {
@@ -54,7 +59,7 @@ function FacultyFields({ data, setDataField }: FacultyFieldsProps) {
       />
       <DataField
         label={t("contribution.dataFields.email")}
-        id="dataFacultyEmail"
+        id={`${idPrefix}dataFacultyEmail`}
         type="email"
         value={data.email ?? ""}
         onChange={(e) => {
