@@ -35,6 +35,16 @@ describe("env config", () => {
     expect(env.NODE_ENV).toBe("test");
   });
 
+  test("strips trailing slashes from WEBAPP_URL and SERVER_URL", async () => {
+    process.env["WEBAPP_URL"] = "http://localhost:5173/";
+    process.env["SERVER_URL"] = "http://localhost:3000//";
+
+    const { env } = await import("../../../src/config/env.js");
+
+    expect(env.WEBAPP_URL).toBe("http://localhost:5173");
+    expect(env.SERVER_URL).toBe("http://localhost:3000");
+  });
+
   test("throws if DATABASE_URL is missing", async () => {
     delete process.env["DATABASE_URL"];
     vi.resetModules();

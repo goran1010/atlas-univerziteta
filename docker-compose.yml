@@ -5,6 +5,9 @@ services:
   caddy:
     image: caddy:2
     restart: unless-stopped
+    depends_on:
+      server:
+        condition: service_healthy
     # Docker keeps container logs forever by default; cap each service at
     # 5 files of 10 MB, oldest dropped first
     logging:
@@ -37,6 +40,20 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    # node:24-slim ships no curl/wget; node's built-in fetch probes /health,
+    # which includes a database round-trip
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://localhost:3000/health').then((r) => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
       - WEBAPP_URL=https://${WEBAPP_DOMAIN}

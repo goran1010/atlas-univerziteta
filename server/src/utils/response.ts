@@ -8,6 +8,7 @@ type ErrorCode =
   | "ALREADY_ADMIN"
   | "NOT_FOUND"
   | "CONFLICT"
+  | "UNAVAILABLE"
   | "INVALID_STORED_DATA"
   | "CONTRIBUTION_LIMIT"
   | "NO_CHANGES"

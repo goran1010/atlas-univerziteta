@@ -17,8 +17,8 @@ class Env {
     this.NODE_ENV = Env.#getNodeEnv();
 
     this.DATABASE_URL = Env.#getEnv("DATABASE_URL");
-    this.WEBAPP_URL = Env.#getEnv("WEBAPP_URL");
-    this.SERVER_URL = Env.#getEnv("SERVER_URL");
+    this.WEBAPP_URL = Env.#getUrlEnv("WEBAPP_URL");
+    this.SERVER_URL = Env.#getUrlEnv("SERVER_URL");
     this.PORT = Env.#getNumberEnv("PORT");
 
     this.RESEND_API_KEY =
@@ -46,6 +46,12 @@ class Env {
     }
 
     return value;
+  }
+
+  // origins are compared verbatim (verifyOrigin, CORS, trustedOrigins), and
+  // a trailing slash never appears in a browser Origin header
+  static #getUrlEnv(name: string): string {
+    return Env.#getEnv(name).replace(/\/+$/, "");
   }
 
   static #getTestEnv(name: string): string | undefined {
