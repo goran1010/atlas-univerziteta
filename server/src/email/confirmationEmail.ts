@@ -2,21 +2,26 @@ import { Resend } from "resend";
 import { env } from "../config/env.js";
 import { logger } from "../utils/logger.js";
 
+// Throws on any failure: with required email verification, a silently lost
+// confirmation email leaves an account that can never log in, so the signup
+// request itself must fail loudly instead.
 async function sendConfirmationEmail(
   userEmail: string,
   confirmationLink: string,
-) {
+): Promise<void> {
   if (env.NODE_ENV !== "production") {
     logger.info(
       { to: userEmail, confirmationLink },
       "Dev mode - skipping email send. Click the link to confirm:",
     );
-    return { success: true, messageId: null };
+    return;
   }
 
+  const resend = new Resend(env.RESEND_API_KEY);
+
+  let response: Awaited<ReturnType<typeof resend.emails.send>>;
   try {
-    const resend = new Resend(env.RESEND_API_KEY);
-    const email = await resend.emails.send({
+    response = await resend.emails.send({
       from: `Atlas Univerziteta <${env.RESEND_FROM_EMAIL}>`,
       to: [userEmail],
       subject: "Confirm Your Email Address",
@@ -41,15 +46,28 @@ async function sendConfirmationEmail(
         </div>
       `,
     });
-
-    return { success: true, messageId: email.data };
   } catch (error: unknown) {
-    logger.error(error, "Error sending confirmation email");
-    if (error instanceof Error) {
-      return { success: false, error: error.message };
-    }
-    return { success: false, error: "An unknown error occurred." };
+    logger.error(
+      { to: userEmail, err: error },
+      "Error sending confirmation email",
+    );
+    throw error;
   }
+
+  // the SDK resolves on API errors (bad key, unverified domain) and reports
+  // them here instead of throwing
+  if (response.error) {
+    logger.error(
+      { to: userEmail, resendError: response.error },
+      "Resend rejected the confirmation email",
+    );
+    throw new Error(`Confirmation email rejected: ${response.error.message}`);
+  }
+
+  logger.info(
+    { to: userEmail, messageId: response.data.id },
+    "Confirmation email sent",
+  );
 }
 
 export { sendConfirmationEmail };

@@ -46,13 +46,17 @@ const auth = betterAuth({
     },
   },
   socialProviders: {
+    // refresh name/image from the provider on every sign-in, so accounts
+    // created before OAuth linking (or by email signup) get a photo too
     github: {
       clientId: env.GITHUB_CLIENT_ID,
       clientSecret: env.GITHUB_CLIENT_SECRET,
+      overrideUserInfoOnSignIn: true,
     },
     google: {
       clientId: env.GOOGLE_CLIENT_ID,
       clientSecret: env.GOOGLE_CLIENT_SECRET,
+      overrideUserInfoOnSignIn: true,
     },
   },
 });
