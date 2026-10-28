@@ -1,5 +1,6 @@
 import { LinkButton } from "../sharedComponents/LinkButton";
 import { RootContext } from "../../contextData/RootContext";
+import { formatDate } from "../../utils/formatDate";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { use, useState } from "react";
 import { Link, useNavigate } from "react-router";
@@ -16,7 +17,7 @@ import { Textarea } from "../sharedComponents/Textarea";
 import { Helmet } from "react-helmet-async";
 
 function Profile() {
-  const { userData, setUserData, t } = use(RootContext);
+  const { userData, setUserData, t, language } = use(RootContext);
   const { addNotification } = use(NotificationContext);
   const [loading, setLoading] = useState(false);
   const [adminRequestLoading, setAdminRequestLoading] = useState(false);
@@ -127,7 +128,7 @@ function Profile() {
                 {t("profile.memberSince")}
               </dt>
               <dd className="text-lg font-bold">
-                {new Date(userData.createdAt).toLocaleDateString()}
+                {formatDate(userData.createdAt, language)}
               </dd>
             </div>
             <div>
@@ -175,7 +176,7 @@ function Profile() {
               {userData.adminRequestedAt ? (
                 <>
                   <span className="px-4 py-2 rounded-full text-sm font-bold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">
-                    {`${t("profile.adminRequestPendingSince")} ${new Date(userData.adminRequestedAt).toLocaleDateString()}`}
+                    {`${t("profile.adminRequestPendingSince")} ${formatDate(userData.adminRequestedAt, language)}`}
                   </span>
                   {userData.adminRequestReason && (
                     <p className="text-sm italic text-(--text-secondary) whitespace-pre-wrap wrap-break-word">

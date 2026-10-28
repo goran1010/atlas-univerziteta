@@ -1,6 +1,7 @@
 import { use, useState } from "react";
 import { useOutletContext } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
+import { formatDate } from "../../utils/formatDate";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import { Button } from "../sharedComponents/Button";
@@ -34,7 +35,7 @@ function AdminRequestRow({
   const [confirmAction, setConfirmAction] = useState<
     "approve" | "decline" | null
   >(null);
-  const { t } = use(RootContext);
+  const { t, language } = use(RootContext);
   const loading = activeAction !== null;
 
   function setLoading(value: boolean) {
@@ -68,7 +69,7 @@ function AdminRequestRow({
             {t("admin.requestedAt")}
           </span>
           <span className="text-sm">
-            {new Date(adminRequest.adminRequestedAt).toLocaleDateString()}
+            {formatDate(adminRequest.adminRequestedAt, language)}
           </span>
         </div>
       </div>
