@@ -68,18 +68,25 @@ const commentSchema = z
   .max(1000, { error: "Comment must be 1000 characters or fewer" })
   .optional();
 
-const universityCreateDataSchema = z.strictObject({
-  name: z.string().trim().min(1, { error: "Name is required" }).max(200),
+const universityCreateDataSchema = z
+  .strictObject({
+    name: z.string().trim().min(1, { error: "Name is required" }).max(200),
 
-  city: z.string().trim().min(1, { error: "City is required" }).max(200),
+    city: z.string().trim().min(1, { error: "City is required" }).max(200),
 
-  entity: z.enum(["FBIH", "RS", "BD"], {
-    error: "Invalid entity - must be FBIH, RS, or BD",
-  }),
+    country: z.enum(["BIH", "SRB", "HRV", "MNE"], {
+      error: "Invalid country - must be BIH, SRB, HRV, or MNE",
+    }),
 
-  ownership: z.enum(["PUBLIC", "PRIVATE"], {
-    error: "Ownership must be PUBLIC or PRIVATE",
-  }),
+    entity: z
+      .enum(["FBIH", "RS", "BD"], {
+        error: "Invalid entity - must be FBIH, RS, or BD",
+      })
+      .optional(),
+
+    ownership: z.enum(["PUBLIC", "PRIVATE"], {
+      error: "Ownership must be PUBLIC or PRIVATE",
+    }),
 
   acronym: z.string().trim().min(1).max(20).optional(),
 
@@ -92,7 +99,11 @@ const universityCreateDataSchema = z.strictObject({
   phone: z.string().trim().min(1).max(50).optional(),
 
   email: z.email({ error: "Invalid email" }).max(254).optional(),
-});
+  })
+  .refine((u) => u.country !== "BIH" || u.entity !== undefined, {
+    message: "Entity is required for Bosnian universities",
+    path: ["entity"],
+  });
 
 const facultyCreateDataSchema = z.strictObject({
   name: z.string().trim().min(1, { error: "Name is required" }).max(200),
@@ -293,10 +304,17 @@ const universityEditDataSchema = z
       .max(200)
       .optional(),
 
+    country: z
+      .enum(["BIH", "SRB", "HRV", "MNE"], {
+        error: "Invalid country - must be BIH, SRB, HRV, or MNE",
+      })
+      .optional(),
+
     entity: z
       .enum(["FBIH", "RS", "BD"], {
         error: "Invalid entity - must be FBIH, RS, or BD",
       })
+      .nullable()
       .optional(),
 
     ownership: z
