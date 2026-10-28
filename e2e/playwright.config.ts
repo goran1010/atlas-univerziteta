@@ -34,7 +34,9 @@ export default defineConfig({
     {
       command: "npx tsx --env-file-if-exists=.env src/index.ts",
       cwd: "../server",
-      url: `${E2E_SERVER_URL}/health`,
+      // readiness must not require the database: web servers start before
+      // globalSetup creates it, and /health pings the database
+      url: E2E_SERVER_URL,
       reuseExistingServer: !process.env["CI"],
       timeout: 60_000,
       env: {
