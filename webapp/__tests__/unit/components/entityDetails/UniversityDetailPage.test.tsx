@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { HelmetProvider } from "react-helmet-async";
@@ -139,33 +140,58 @@ describe("UniversityDetailPage", () => {
     );
   });
 
-  test("shows an error notification when the request fails", async () => {
+  test("shows the error card with a working retry when the request fails", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => {
+      return;
+    });
+    let failures = 0;
     server.use(
-      http.get("*/api/v1/universities/:id", () =>
-        HttpResponse.json(
-          { error: { message: "Server exploded." } },
-          { status: 500 },
-        ),
-      ),
+      http.get("*/api/v1/universities/:id", () => {
+        failures++;
+        if (failures === 1) {
+          return HttpResponse.json(
+            { error: { message: "Server exploded." } },
+            { status: 500 },
+          );
+        }
+        return HttpResponse.json({ message: "ok", data: universityDetail });
+      }),
     );
     renderPage();
 
     expect(
-      await screen.findByText(
-        /Could not load the details\. Try again in a moment\./i,
-      ),
+      await screen.findByText("Could not load the data."),
+    ).toBeInTheDocument();
+
+    const user = userEvent.setup();
+    await user.click(screen.getByRole("button", { name: /Try again/i }));
+
+    expect(
+      await screen.findByRole("heading", { name: /University of Sarajevo/i }),
     ).toBeInTheDocument();
   });
 
-  test("shows an error notification when a successful response is malformed", async () => {
-    vi.spyOn(console, "error").mockImplementation(() => vi.fn());
+  test("shows the error card when a successful response is malformed", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => {
+      return;
+    });
     givenUniversity({ id: 1, name: "University of Sarajevo" });
     renderPage();
 
     expect(
-      await screen.findByText(
-        /Could not load the details\. Try again in a moment\./i,
-      ),
+      await screen.findByText("Could not load the data."),
     ).toBeInTheDocument();
+  });
+
+  test("says there are no faculties when the university has none", async () => {
+    givenUniversity({ ...universityDetail, faculties: [] });
+    renderPage();
+
+    expect(
+      await screen.findByText("No faculties available."),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText("No study programs available."),
+    ).not.toBeInTheDocument();
   });
 });

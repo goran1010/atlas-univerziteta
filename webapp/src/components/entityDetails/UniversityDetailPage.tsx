@@ -1,7 +1,6 @@
-import { useState, useEffect, useRef, use } from "react";
+import { use } from "react";
 import { useParams, Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
-import { NotificationContext } from "../../contextData/NotificationContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import {
   BuildingIcon,
@@ -13,61 +12,54 @@ import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
 import { tCount } from "../../utils/pluralize";
-import { fetchPublic } from "../../utils/fetchPublic";
 import { universityDetailResponseSchema } from "../../schemas/university";
+import { useEntityDetail } from "../../customHooks/useEntityDetail";
+import { DetailPageStatus } from "./DetailPageStatus";
+import { Button } from "../sharedComponents/Button";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../../utils/envConfig";
-
-import type { UniversityDetail } from "../../schemas/university";
 
 function UniversityDetailPage() {
   const { id } = useParams<{ id: string }>();
   const { t } = use(RootContext);
-  const { addNotification } = use(NotificationContext);
-  const [university, setUniversity] = useState<UniversityDetail>();
-  const [loading, setLoading] = useState(true);
+  const { state, retry } = useEntityDetail(
+    `/api/v1/universities/${id ?? ""}`,
+    universityDetailResponseSchema,
+    "load university details",
+  );
 
-  // notifications should use the language active when the fetch settles,
-  // without a language switch re-triggering the fetch
-  const tRef = useRef(t);
-  useEffect(() => {
-    tRef.current = t;
-  });
+  if (state.kind === "loading") return <Spinner page />;
 
-  useEffect(() => {
-    async function fetchUniversity() {
-      const result = await fetchPublic(
-        {
-          path: `/api/v1/universities/${id ?? ""}`,
-          responseSchema: universityDetailResponseSchema,
-          errorMessageKey: "messages.universities.detailsError",
-          logLabel: "load university details",
-          quiet404: true,
-        },
-        { t: (key) => tRef.current(key), addNotification, setLoading },
-      );
-      setUniversity(result ? result.data : undefined);
-    }
-    void fetchUniversity();
-  }, [id, addNotification]);
-
-  if (loading) return <Spinner page />;
-
-  if (!university) {
+  if (state.kind === "error") {
     return (
-      <div className="w-full mx-auto px-1 sm:px-4 py-8 text-center">
-        <p className="text-(--text-muted) text-lg">
-          {t("universitiesPage.noResults")}
-        </p>
-        <Link
-          to="/search"
-          className="text-(--accent-text) underline underline-offset-2 mt-2 inline-block"
-        >
-          {t("universitiesPage.search")}
-        </Link>
-      </div>
+      <DetailPageStatus
+        message={t("universitiesPage.detailError")}
+        action={
+          <Button variant="secondary" className="mt-3" onClick={retry}>
+            {t("universitiesPage.retry")}
+          </Button>
+        }
+      />
     );
   }
+
+  if (state.kind === "notFound") {
+    return (
+      <DetailPageStatus
+        message={t("universitiesPage.noResults")}
+        action={
+          <Link
+            to="/search"
+            className="text-(--accent-text) underline underline-offset-2 mt-2 inline-block"
+          >
+            {t("universitiesPage.search")}
+          </Link>
+        }
+      />
+    );
+  }
+
+  const university = state.data.data;
 
   const entityLabel = t(`universitiesPage.entities.${university.entity}`);
 
@@ -198,7 +190,7 @@ function UniversityDetailPage() {
               </ul>
             ) : (
               <p className="text-sm text-(--text-muted) italic">
-                {t("universitiesPage.noStudyPrograms")}
+                {t("universitiesPage.noFaculties")}
               </p>
             )}
           </div>

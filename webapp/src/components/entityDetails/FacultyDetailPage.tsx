@@ -1,7 +1,6 @@
-import { useState, useEffect, useRef, use } from "react";
+import { use } from "react";
 import { useParams, useSearchParams, Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
-import { NotificationContext } from "../../contextData/NotificationContext";
 import { Spinner } from "../sharedComponents/Spinner";
 import {
   AwardIcon,
@@ -20,62 +19,54 @@ import { TrackList } from "../entityCards/TrackList";
 import { groupBy } from "../../utils/groupBy";
 import { byCycleDisplayOrder } from "../../utils/cycleOrder";
 import { tCount } from "../../utils/pluralize";
-import { fetchPublic } from "../../utils/fetchPublic";
 import { facultyDetailResponseSchema } from "../../schemas/university";
+import { useEntityDetail } from "../../customHooks/useEntityDetail";
+import { DetailPageStatus } from "./DetailPageStatus";
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../../utils/envConfig";
-
-import type { FacultyDetail } from "../../schemas/university";
 
 function FacultyDetailPage() {
   const { id } = useParams<{ id: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
   const { t } = use(RootContext);
-  const { addNotification } = use(NotificationContext);
-  const [faculty, setFaculty] = useState<FacultyDetail>();
-  const [loading, setLoading] = useState(true);
+  const { state, retry } = useEntityDetail(
+    `/api/v1/faculties/${id ?? ""}`,
+    facultyDetailResponseSchema,
+    "load faculty details",
+  );
 
-  // notifications should use the language active when the fetch settles,
-  // without a language switch re-triggering the fetch
-  const tRef = useRef(t);
-  useEffect(() => {
-    tRef.current = t;
-  });
+  if (state.kind === "loading") return <Spinner page />;
 
-  useEffect(() => {
-    async function fetchFaculty() {
-      const result = await fetchPublic(
-        {
-          path: `/api/v1/faculties/${id ?? ""}`,
-          responseSchema: facultyDetailResponseSchema,
-          errorMessageKey: "messages.universities.detailsError",
-          logLabel: "load faculty details",
-          quiet404: true,
-        },
-        { t: (key) => tRef.current(key), addNotification, setLoading },
-      );
-      setFaculty(result ? result.data : undefined);
-    }
-    void fetchFaculty();
-  }, [id, addNotification]);
-
-  if (loading) return <Spinner page />;
-
-  if (!faculty) {
+  if (state.kind === "error") {
     return (
-      <div className="w-full mx-auto px-1 sm:px-4 py-8 text-center">
-        <p className="text-(--text-muted) text-lg">
-          {t("universitiesPage.noFacultyResults")}
-        </p>
-        <Link
-          to="/search"
-          className="text-(--accent-text) underline underline-offset-2 mt-2 inline-block"
-        >
-          {t("universitiesPage.search")}
-        </Link>
-      </div>
+      <DetailPageStatus
+        message={t("universitiesPage.detailError")}
+        action={
+          <Button variant="secondary" className="mt-3" onClick={retry}>
+            {t("universitiesPage.retry")}
+          </Button>
+        }
+      />
     );
   }
+
+  if (state.kind === "notFound") {
+    return (
+      <DetailPageStatus
+        message={t("universitiesPage.noFacultyResults")}
+        action={
+          <Link
+            to="/search"
+            className="text-(--accent-text) underline underline-offset-2 mt-2 inline-block"
+          >
+            {t("universitiesPage.search")}
+          </Link>
+        }
+      />
+    );
+  }
+
+  const faculty = state.data.data;
 
   // Arriving from a search result focuses the page on that program (and
   // highlights the clicked track); the URL keeps the view shareable.
