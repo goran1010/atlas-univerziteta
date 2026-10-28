@@ -14,7 +14,9 @@ const TABS = [
 
 function ContributionTabs() {
   const { t } = use(RootContext);
-  const [loading, setLoading] = useState(false);
+  // starts true: the list fetch always fires on mount, and a false start
+  // would flash the empty state first
+  const [loading, setLoading] = useState(true);
   const [refetchKey, setRefetchKey] = useState(0);
   const [pendingChanges, setPendingChanges] = useUsersList({
     path: "/users/contribution/pending-changes/universities",

@@ -86,63 +86,63 @@ const PendingChangesAdminRow = memo(
     return (
       <li
         role="row"
-        className={`rounded-md transition-colors hover:bg-(--hover-surface) ${
+        className={`grid gap-2 w-full p-1 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)] rounded-md transition-colors hover:bg-(--hover-surface) ${
           ROW_ACCENT[data.typeOfChange]
         } ${index % 2 === 0 ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
       >
-        <ParentBreadcrumb
-          crumbs={data.parentContext ?? []}
-          current={entityName}
-          currentPath={currentPath}
-        />
-        <div className="grid gap-2 w-full p-1 sm:p-1 sm:gap-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)]">
-          <div
-            role="cell"
-            className="flex justify-between sm:justify-center items-center"
+        <div role="cell" className="sm:col-span-3">
+          <ParentBreadcrumb
+            crumbs={data.parentContext ?? []}
+            current={entityName}
+            currentPath={currentPath}
+          />
+        </div>
+        <div
+          role="cell"
+          className="flex justify-between sm:justify-center items-center"
+        >
+          <span className="sm:hidden font-semibold">
+            {t("contribution.change")}
+          </span>
+          <span
+            className={`px-2 py-1 rounded-md text-xs font-semibold capitalize ${
+              BADGE[data.typeOfChange]
+            }`}
           >
-            <span className="sm:hidden font-semibold">
-              {t("contribution.change")}
-            </span>
-            <span
-              className={`px-2 py-1 rounded-md text-xs font-semibold capitalize ${
-                BADGE[data.typeOfChange]
-              }`}
-            >
-              {t(`contribution.changeTypes.${data.typeOfChange}`)}
-            </span>
-          </div>
-          <div
-            role="cell"
-            className="flex justify-between sm:justify-center items-center flex-wrap gap-1"
+            {t(`contribution.changeTypes.${data.typeOfChange}`)}
+          </span>
+        </div>
+        <div
+          role="cell"
+          className="flex justify-between sm:justify-center items-center flex-wrap gap-1"
+        >
+          <span className="sm:hidden font-semibold">
+            {t("contribution.entityType")}
+          </span>
+          <span
+            className={`px-2 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[data.targetType]}`}
           >
-            <span className="sm:hidden font-semibold">
-              {t("contribution.entityType")}
+            {t(`contribution.entityTypes.${data.targetType}`)}
+          </span>
+          {nestedCount > 0 && (
+            <span className="px-1.5 py-0.5 rounded text-xs font-semibold bg-(--surface-1) border border-(--border-color) text-(--text-secondary)">
+              +{nestedCount} {t("contribution.nestedInTree")}
             </span>
-            <span
-              className={`px-2 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[data.targetType]}`}
-            >
-              {t(`contribution.entityTypes.${data.targetType}`)}
-            </span>
-            {nestedCount > 0 && (
-              <span className="px-1.5 py-0.5 rounded text-xs font-semibold bg-(--surface-1) border border-(--border-color) text-(--text-secondary)">
-                +{nestedCount} {t("contribution.nestedInTree")}
-              </span>
-            )}
-          </div>
-          <div
-            role="cell"
-            className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0"
-          >
-            <span className="sm:hidden font-semibold">
-              {t("contribution.contributor")}
-            </span>
-            <span className="break-all">{data.user.email}</span>
-          </div>
+          )}
+        </div>
+        <div
+          role="cell"
+          className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0"
+        >
+          <span className="sm:hidden font-semibold">
+            {t("contribution.contributor")}
+          </span>
+          <span className="break-all">{data.user.email}</span>
         </div>
 
         <div
           role="cell"
-          className="flex flex-col sm:flex-row justify-center items-center gap-2 p-1"
+          className="sm:col-span-3 flex flex-col sm:flex-row justify-center items-center gap-2 p-1"
         >
           <Button
             variant="secondary"
@@ -179,87 +179,89 @@ const PendingChangesAdminRow = memo(
               {t("form.reject")}
             </Button>
           </div>
-        </div>
 
-        <ConfirmDialog
-          open={confirmAction !== null}
-          title={
-            confirmAction === "approve" ? t("form.approve") : t("form.reject")
-          }
-          confirmLabel={
-            confirmAction === "approve" ? t("form.approve") : t("form.reject")
-          }
-          confirmVariant={confirmAction === "approve" ? "success" : "danger"}
-          onConfirm={() => {
-            const action = confirmAction;
-            setConfirmAction(null);
-            if (action === "approve") void handleApprove();
-            if (action === "decline") void handleDecline();
-          }}
-          onCancel={() => {
-            setConfirmAction(null);
-          }}
-        />
-
-        <Dialog
-          open={dialogOpen}
-          onClose={() => {
-            setDialogOpen(false);
-          }}
-          title={
-            <>
-              <span
-                className={`px-1.5 py-0.5 rounded text-xs font-semibold ${BADGE[data.typeOfChange]}`}
-              >
-                {t(`contribution.changeTypes.${data.typeOfChange}`)}
-              </span>{" "}
-              <span
-                className={`px-1.5 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[data.targetType]}`}
-              >
-                {t(`contribution.entityTypes.${data.targetType}`)}
-              </span>{" "}
-              <span className="text-(--text-secondary)">{data.user.email}</span>
-            </>
-          }
-          footer={
-            <>
-              <Button
-                variant="success"
-                className="sm:w-auto"
-                onClick={() => {
-                  setConfirmAction("approve");
-                }}
-                type="button"
-                loading={activeAction === "approve"}
-                disabled={loading}
-              >
-                {t("form.approve")}
-              </Button>
-              <Button
-                variant="danger"
-                className="sm:w-auto"
-                onClick={() => {
-                  setConfirmAction("decline");
-                }}
-                type="button"
-                loading={activeAction === "decline"}
-                disabled={loading}
-              >
-                {t("form.reject")}
-              </Button>
-            </>
-          }
-        >
-          <PendingChangeDetail
-            targetType={data.targetType}
-            typeOfChange={data.typeOfChange}
-            data={data.data}
-            currentEntity={currentEntity}
-            parentContext={data.parentContext}
-            comment={data.comment}
-            currentPath={currentPath}
+          <ConfirmDialog
+            open={confirmAction !== null}
+            title={
+              confirmAction === "approve" ? t("form.approve") : t("form.reject")
+            }
+            confirmLabel={
+              confirmAction === "approve" ? t("form.approve") : t("form.reject")
+            }
+            confirmVariant={confirmAction === "approve" ? "success" : "danger"}
+            onConfirm={() => {
+              const action = confirmAction;
+              setConfirmAction(null);
+              if (action === "approve") void handleApprove();
+              if (action === "decline") void handleDecline();
+            }}
+            onCancel={() => {
+              setConfirmAction(null);
+            }}
           />
-        </Dialog>
+
+          <Dialog
+            open={dialogOpen}
+            onClose={() => {
+              setDialogOpen(false);
+            }}
+            title={
+              <>
+                <span
+                  className={`px-1.5 py-0.5 rounded text-xs font-semibold ${BADGE[data.typeOfChange]}`}
+                >
+                  {t(`contribution.changeTypes.${data.typeOfChange}`)}
+                </span>{" "}
+                <span
+                  className={`px-1.5 py-0.5 rounded text-xs font-semibold ${LEVEL_BADGE[data.targetType]}`}
+                >
+                  {t(`contribution.entityTypes.${data.targetType}`)}
+                </span>{" "}
+                <span className="text-(--text-secondary)">
+                  {data.user.email}
+                </span>
+              </>
+            }
+            footer={
+              <>
+                <Button
+                  variant="success"
+                  className="sm:w-auto"
+                  onClick={() => {
+                    setConfirmAction("approve");
+                  }}
+                  type="button"
+                  loading={activeAction === "approve"}
+                  disabled={loading}
+                >
+                  {t("form.approve")}
+                </Button>
+                <Button
+                  variant="danger"
+                  className="sm:w-auto"
+                  onClick={() => {
+                    setConfirmAction("decline");
+                  }}
+                  type="button"
+                  loading={activeAction === "decline"}
+                  disabled={loading}
+                >
+                  {t("form.reject")}
+                </Button>
+              </>
+            }
+          >
+            <PendingChangeDetail
+              targetType={data.targetType}
+              typeOfChange={data.typeOfChange}
+              data={data.data}
+              currentEntity={currentEntity}
+              parentContext={data.parentContext}
+              comment={data.comment}
+              currentPath={currentPath}
+            />
+          </Dialog>
+        </div>
       </li>
     );
   },

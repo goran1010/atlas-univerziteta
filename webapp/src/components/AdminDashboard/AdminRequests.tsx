@@ -47,40 +47,44 @@ function AdminRequestRow({
   return (
     <li
       role="row"
-      className={`rounded-md transition-colors hover:bg-(--hover-surface) ${
+      className={`grid gap-2 w-full p-1 sm:gap-1 sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] rounded-md transition-colors hover:bg-(--hover-surface) ${
         index % 2 === 0 ? "bg-(--surface-2)" : "bg-(--surface-alt)"
       }`}
     >
-      <div className="grid gap-2 w-full p-1 sm:gap-1 sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-        <div
-          role="cell"
-          className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0"
-        >
-          <span className="sm:hidden font-semibold">
-            {t("contribution.user")}
-          </span>
-          <span className="break-all">{adminRequest.email}</span>
-        </div>
-        <div
-          role="cell"
-          className="flex justify-between sm:justify-center items-center flex-wrap gap-1"
-        >
-          <span className="sm:hidden font-semibold">
-            {t("admin.requestedAt")}
-          </span>
-          <span className="text-sm">
-            {formatDate(adminRequest.adminRequestedAt, language)}
-          </span>
-        </div>
+      <div
+        role="cell"
+        className="flex justify-between sm:justify-center items-center flex-wrap gap-1 min-w-0"
+      >
+        <span className="sm:hidden font-semibold">
+          {t("contribution.user")}
+        </span>
+        <span className="break-all">{adminRequest.email}</span>
+      </div>
+      <div
+        role="cell"
+        className="flex justify-between sm:justify-center items-center flex-wrap gap-1"
+      >
+        <span className="sm:hidden font-semibold">
+          {t("admin.requestedAt")}
+        </span>
+        <span className="text-sm">
+          {formatDate(adminRequest.adminRequestedAt, language)}
+        </span>
       </div>
 
       {adminRequest.adminRequestReason && (
-        <p className="px-1 pb-1 text-sm text-(--text-secondary) whitespace-pre-wrap wrap-break-word">
+        <p
+          role="cell"
+          className="sm:col-span-2 px-1 pb-1 text-sm text-(--text-secondary) whitespace-pre-wrap wrap-break-word"
+        >
           {adminRequest.adminRequestReason}
         </p>
       )}
 
-      <div role="cell" className="flex justify-center sm:flex-row gap-2 p-1">
+      <div
+        role="cell"
+        className="sm:col-span-2 flex justify-center sm:flex-row gap-2 p-1"
+      >
         <Button
           variant="success"
           className="px-3 py-2 text-sm flex-1 sm:flex-initial sm:max-w-25"
@@ -105,32 +109,40 @@ function AdminRequestRow({
         >
           {t("form.reject")}
         </Button>
-      </div>
 
-      <ConfirmDialog
-        open={confirmAction !== null}
-        title={
-          confirmAction === "approve" ? t("form.approve") : t("form.reject")
-        }
-        confirmLabel={
-          confirmAction === "approve" ? t("form.approve") : t("form.reject")
-        }
-        confirmVariant={confirmAction === "approve" ? "success" : "danger"}
-        onConfirm={() => {
-          const action = confirmAction;
-          setConfirmAction(null);
-          setActiveAction(action);
-          if (action === "approve") {
-            void handleApproveAdminRequest(adminRequest, setAdminRequests, ctx);
+        <ConfirmDialog
+          open={confirmAction !== null}
+          title={
+            confirmAction === "approve" ? t("form.approve") : t("form.reject")
           }
-          if (action === "decline") {
-            void handleDeclineAdminRequest(adminRequest, setAdminRequests, ctx);
+          confirmLabel={
+            confirmAction === "approve" ? t("form.approve") : t("form.reject")
           }
-        }}
-        onCancel={() => {
-          setConfirmAction(null);
-        }}
-      />
+          confirmVariant={confirmAction === "approve" ? "success" : "danger"}
+          onConfirm={() => {
+            const action = confirmAction;
+            setConfirmAction(null);
+            setActiveAction(action);
+            if (action === "approve") {
+              void handleApproveAdminRequest(
+                adminRequest,
+                setAdminRequests,
+                ctx,
+              );
+            }
+            if (action === "decline") {
+              void handleDeclineAdminRequest(
+                adminRequest,
+                setAdminRequests,
+                ctx,
+              );
+            }
+          }}
+          onCancel={() => {
+            setConfirmAction(null);
+          }}
+        />
+      </div>
     </li>
   );
 }

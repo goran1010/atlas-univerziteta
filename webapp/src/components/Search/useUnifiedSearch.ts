@@ -201,7 +201,7 @@ function useUnifiedSearch() {
       setView({ kind: "idle" });
       return;
     }
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- triggerSearch syncs URL params into view state
+
     triggerSearch(
       urlQuery,
       entityFilter,
