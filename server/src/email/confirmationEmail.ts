@@ -54,8 +54,8 @@ async function sendConfirmationEmail(
     throw error;
   }
 
-  // the SDK resolves on API errors (bad key, unverified domain) and reports
-  // them here instead of throwing
+  // the SDK reports API errors (bad key, unverified domain) in the resolved
+  // response; only network failures throw
   if (response.error) {
     logger.error(
       { to: userEmail, resendError: response.error },
