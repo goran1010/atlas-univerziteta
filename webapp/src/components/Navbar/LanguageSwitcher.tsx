@@ -89,7 +89,7 @@ function LanguageSwitcher({
   function handleLanguageToggle() {
     const currentIndex = languageOrder.indexOf(language);
     const nextLanguage =
-      languageOrder[(currentIndex + 1) % languageOrder.length];
+      languageOrder[(currentIndex + 1) % languageOrder.length] ?? language;
 
     setLanguage(nextLanguage);
     addNotification({

@@ -19,7 +19,7 @@ function StudyProgramResult({
 }: {
   program: StudyProgramSearchResult;
   t: TFunction;
-  contextHint?: string;
+  contextHint?: string | undefined;
 }) {
   return (
     <ResultCard level="STUDY_PROGRAM">

@@ -11,8 +11,8 @@ function LabelPill({
   level,
 }: {
   label: string;
-  count?: number;
-  level?: EntityLevel;
+  count?: number | undefined;
+  level?: EntityLevel | undefined;
 }) {
   const colors = level
     ? LEVEL_BADGE[level]

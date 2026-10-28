@@ -34,7 +34,7 @@ function UniversityResult({
   contextHint,
 }: {
   university: UniversityListItem;
-  contextHint?: string;
+  contextHint?: string | undefined;
 }) {
   const hasFaculties = university._count.faculties > 0;
   const { t } = use(RootContext);

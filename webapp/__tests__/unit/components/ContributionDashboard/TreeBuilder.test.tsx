@@ -6,6 +6,7 @@ import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { ReactElement } from "react";
+import { nth } from "../../../utils/nth";
 
 let submissions: Record<string, unknown>[] = [];
 
@@ -23,11 +24,11 @@ beforeEach(() => {
           data: {
             id: "11111111-2222-4333-8444-555555555555",
             userId: "test-id",
-            targetType: body.targetType,
+            targetType: body["targetType"],
             typeOfChange: "CREATE",
             targetId: null,
             parentId: null,
-            data: body.data ?? {},
+            data: body["data"] ?? {},
             createdAt: new Date().toISOString(),
           },
         },
@@ -57,7 +58,7 @@ function renderForm(refetchPendingChanges = vi.fn()) {
 
 async function fillRootUniversity(user: ReturnType<typeof userEvent.setup>) {
   await user.type(
-    screen.getAllByRole("textbox", { name: /^Name/ })[0],
+    nth(screen.getAllByRole("textbox", { name: /^Name/ })),
     "Builder Uni",
   );
   await user.type(screen.getByRole("textbox", { name: /^City/ }), "Testograd");
@@ -84,9 +85,9 @@ describe("tree builder in AddUniversityEntity", () => {
 
     const nameBoxes = screen.getAllByRole("textbox", { name: /^Name/ });
     expect(nameBoxes).toHaveLength(4);
-    await user.type(nameBoxes[1], "Builder Faculty");
-    await user.type(nameBoxes[2], "Builder Program");
-    await user.type(nameBoxes[3], "Builder Track");
+    await user.type(nth(nameBoxes, 1), "Builder Faculty");
+    await user.type(nth(nameBoxes, 2), "Builder Program");
+    await user.type(nth(nameBoxes, 3), "Builder Track");
     await user.selectOptions(
       screen.getByRole("combobox", { name: /Study cycle/ }),
       "FIRST",
@@ -136,8 +137,8 @@ describe("tree builder in AddUniversityEntity", () => {
     await user.click(screen.getByRole("button", { name: "Add faculty" }));
 
     const nameBoxes = screen.getAllByRole("textbox", { name: /^Name/ });
-    await user.type(nameBoxes[1], "Same Faculty");
-    await user.type(nameBoxes[2], "Same Faculty");
+    await user.type(nth(nameBoxes, 1), "Same Faculty");
+    await user.type(nth(nameBoxes, 2), "Same Faculty");
 
     await user.click(
       screen.getByRole("button", { name: /Submit suggestion/i }),
@@ -159,7 +160,7 @@ describe("tree builder in AddUniversityEntity", () => {
     await user.click(screen.getByRole("button", { name: "Add study program" }));
     expect(screen.getAllByRole("textbox", { name: /^Name/ })).toHaveLength(3);
 
-    await user.click(screen.getAllByRole("button", { name: "Remove" })[0]);
+    await user.click(nth(screen.getAllByRole("button", { name: "Remove" })));
 
     expect(screen.getAllByRole("textbox", { name: /^Name/ })).toHaveLength(1);
 
@@ -170,7 +171,7 @@ describe("tree builder in AddUniversityEntity", () => {
       expect(submissions).toHaveLength(1);
     });
     // no children left, so the payload is the plain flat create
-    expect(submissions[0]?.data).toEqual({
+    expect(submissions[0]?.["data"]).toEqual({
       name: "Builder Uni",
       city: "Testograd",
       entity: "FBIH",
@@ -186,7 +187,7 @@ describe("tree builder in AddUniversityEntity", () => {
     await user.click(screen.getByRole("button", { name: "Add faculty" }));
 
     const nameBoxes = screen.getAllByRole("textbox", { name: /^Name/ });
-    await user.type(nameBoxes[1], "Folded Faculty");
+    await user.type(nth(nameBoxes, 1), "Folded Faculty");
 
     await user.click(screen.getByRole("button", { name: "Collapse" }));
     expect(screen.getAllByRole("textbox", { name: /^Name/ })).toHaveLength(1);

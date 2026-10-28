@@ -13,9 +13,9 @@ export default defineConfig({
   testDir: "./tests",
   globalSetup: "./setup/global-setup.ts",
   fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  forbidOnly: !!process.env["CI"],
+  retries: process.env["CI"] ? 2 : 0,
+  ...(process.env["CI"] ? { workers: 1 } : {}),
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
     baseURL: E2E_WEBAPP_URL,
@@ -35,7 +35,7 @@ export default defineConfig({
       command: "npx tsx --env-file-if-exists=.env src/index.ts",
       cwd: "../server",
       url: `${E2E_SERVER_URL}/health`,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: !process.env["CI"],
       timeout: 60_000,
       env: {
         ...definedProcessEnv(),
@@ -49,7 +49,7 @@ export default defineConfig({
       command: "npm run dev -- --port 5273 --strictPort",
       cwd: "../webapp",
       url: E2E_WEBAPP_URL,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: !process.env["CI"],
       timeout: 60_000,
       env: {
         ...definedProcessEnv(),

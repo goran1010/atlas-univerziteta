@@ -5,7 +5,7 @@ import type { LabelHTMLAttributes } from "react";
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   children: React.ReactNode;
   className?: string;
-  required?: boolean;
+  required?: boolean | undefined;
 }
 
 function Label({

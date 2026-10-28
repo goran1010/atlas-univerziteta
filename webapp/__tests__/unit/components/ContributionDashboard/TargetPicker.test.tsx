@@ -63,7 +63,7 @@ beforeEach(() => {
     }),
     http.get("*/api/v1/universities/:id", ({ params }) => {
       detailRequests++;
-      const detail = detailsById[String(params.id)];
+      const detail = detailsById[String(params["id"])];
       if (!detail) {
         return HttpResponse.json(
           { error: { message: "University not found." } },
@@ -234,10 +234,10 @@ describe("TargetPicker response ordering", () => {
       http.get("*/api/v1/universities/:id", async ({ params }) => {
         detailRequests++;
         // the first university's reply arrives after the second's
-        if (String(params.id) === "1") await delay(200);
+        if (String(params["id"]) === "1") await delay(200);
         return HttpResponse.json({
           message: "ok",
-          data: detailsById[String(params.id)],
+          data: detailsById[String(params["id"])],
         });
       }),
     );

@@ -464,9 +464,9 @@ interface PendingChangeDetailProps {
   targetType: string;
   typeOfChange: string;
   data: Record<string, unknown>;
-  currentEntity?: Record<string, unknown> | null;
-  parentContext?: ParentCrumb[] | null;
-  comment?: string | null;
+  currentEntity?: Record<string, unknown> | null | undefined;
+  parentContext?: ParentCrumb[] | null | undefined;
+  comment?: string | null | undefined;
   currentPath?: string | undefined;
 }
 

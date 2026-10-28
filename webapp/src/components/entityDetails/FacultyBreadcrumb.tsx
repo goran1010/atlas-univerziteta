@@ -8,7 +8,7 @@ function FacultyBreadcrumb({
     id: number;
     name: string;
     universityId: number;
-    university: { name: string; acronym?: string | null };
+    university: { name: string; acronym?: string | null | undefined };
   };
 }) {
   return (

@@ -3,6 +3,7 @@ import {
   SearchFailedError,
 } from "../../../../../src/components/Search/utils/search";
 import { server, http, HttpResponse } from "../../../../utils/msw";
+import { nth } from "../../../../utils/nth";
 
 const emptyResults = {
   universities: [],
@@ -39,7 +40,7 @@ describe("searchAll", () => {
       type: ["university", "faculty"],
     });
 
-    const params = requestUrls[0].searchParams;
+    const params = nth(requestUrls).searchParams;
     expect(params.get("searchTerm")).toBe("medicina");
     expect(params.get("entity")).toBe("FBIH");
     expect(params.get("ownership")).toBe("PUBLIC");
@@ -52,7 +53,7 @@ describe("searchAll", () => {
 
     await searchAll(undefined);
 
-    expect([...requestUrls[0].searchParams.keys()]).toEqual([]);
+    expect([...nth(requestUrls).searchParams.keys()]).toEqual([]);
   });
 
   test("returns the parsed result data on success", async () => {

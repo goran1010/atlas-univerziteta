@@ -62,11 +62,12 @@ beforeEach(() => {
           data: {
             id: "11111111-2222-4333-8444-555555555555",
             userId: "test-id",
-            targetType: body.targetType,
+            targetType: body["targetType"],
             typeOfChange: "CREATE",
             targetId: null,
-            parentId: body.parentId == null ? null : Number(body.parentId),
-            data: body.data ?? {},
+            parentId:
+              body["parentId"] == null ? null : Number(body["parentId"]),
+            data: body["data"] ?? {},
             createdAt: new Date().toISOString(),
           },
         },
@@ -250,8 +251,8 @@ describe("AddTreeEntity", () => {
     await waitFor(() => {
       expect(submissions).toHaveLength(1);
     });
-    expect(submissions[0]?.parentId).toBe(1);
-    expect(submissions[0]?.targetType).toBe("FACULTY");
+    expect(submissions[0]?.["parentId"]).toBe(1);
+    expect(submissions[0]?.["targetType"]).toBe("FACULTY");
   });
 
   test("loads JSON from a file into the textarea", async () => {

@@ -1,14 +1,14 @@
 // The name identifying what a pending change is about: the current name
 // from the database for UPDATE/DELETE, or the proposed name for CREATE.
 function getChangedEntityName(change: {
-  currentEntity?: Record<string, unknown> | null;
+  currentEntity?: Record<string, unknown> | null | undefined;
   data: Record<string, unknown>;
 }): string | null {
-  const currentName = change.currentEntity?.name;
+  const currentName = change.currentEntity?.["name"];
   if (typeof currentName === "string") return currentName;
 
-  if ("name" in change.data && typeof change.data.name === "string") {
-    return change.data.name;
+  if (typeof change.data["name"] === "string") {
+    return change.data["name"];
   }
 
   return null;

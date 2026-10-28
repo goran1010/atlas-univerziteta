@@ -11,7 +11,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     | "warning"
     | "ghost"
     | "toggle";
-  loading?: boolean;
+  loading?: boolean | undefined;
 }
 
 const DISABLED =

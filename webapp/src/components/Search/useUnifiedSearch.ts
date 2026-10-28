@@ -105,10 +105,10 @@ function useUnifiedSearch() {
     async (
       term: string | undefined,
       filters: {
-        entity?: string;
-        ownership?: string;
-        cycle?: string[];
-        type?: string[];
+        entity?: string | undefined;
+        ownership?: string | undefined;
+        cycle?: string[] | undefined;
+        type?: string[] | undefined;
       },
     ) => {
       // a newer search supersedes any in-flight one

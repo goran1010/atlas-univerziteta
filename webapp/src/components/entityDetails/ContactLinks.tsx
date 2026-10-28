@@ -19,11 +19,11 @@ function ContactLinks({
   email,
   dataSourceUrl,
 }: {
-  website?: string | null;
-  address?: string | null;
-  phone?: string | null;
-  email?: string | null;
-  dataSourceUrl?: string | null;
+  website?: string | null | undefined;
+  address?: string | null | undefined;
+  phone?: string | null | undefined;
+  email?: string | null | undefined;
+  dataSourceUrl?: string | null | undefined;
 }) {
   const { t } = use(RootContext);
 

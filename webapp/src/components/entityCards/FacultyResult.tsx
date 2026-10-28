@@ -30,7 +30,7 @@ function FacultyResult({
   contextHint,
 }: {
   faculty: FacultySearchResult;
-  contextHint?: string;
+  contextHint?: string | undefined;
 }) {
   const hasPrograms = (faculty._count?.studyPrograms ?? 0) > 0;
   const { t } = use(RootContext);

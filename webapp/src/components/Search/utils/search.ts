@@ -5,10 +5,10 @@ import type { ApiError } from "../../../schemas/api";
 import type { UnifiedSearchResults } from "../../../schemas/university";
 
 interface SearchFilters {
-  entity?: string;
-  ownership?: string;
-  cycle?: string[];
-  type?: string[];
+  entity?: string | undefined;
+  ownership?: string | undefined;
+  cycle?: string[] | undefined;
+  type?: string[] | undefined;
 }
 
 async function searchAll(
