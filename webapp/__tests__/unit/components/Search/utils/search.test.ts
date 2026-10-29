@@ -34,17 +34,13 @@ describe("searchAll", () => {
     givenSearchResponse();
 
     await searchAll("medicina", {
-      entity: "FBIH",
-      ownership: "PUBLIC",
-      cycle: ["FIRST", "SECOND"],
+      country: "SRB",
       type: ["university", "faculty"],
     });
 
     const params = nth(requestUrls).searchParams;
     expect(params.get("searchTerm")).toBe("medicina");
-    expect(params.get("entity")).toBe("FBIH");
-    expect(params.get("ownership")).toBe("PUBLIC");
-    expect(params.getAll("cycle")).toEqual(["FIRST", "SECOND"]);
+    expect(params.get("country")).toBe("SRB");
     expect(params.getAll("type")).toEqual(["university", "faculty"]);
   });
 

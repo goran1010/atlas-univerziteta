@@ -10,11 +10,80 @@
   "phone": "+382 20 409 204",
   "email": "rektorat@unimediteran.net",
   "faculties": [
-    { "name": "Fakultet za turizam", "city": "Bar" },
-    { "name": "Fakultet za poslovne studije - Montenegro Business School", "city": "Podgorica" },
-    { "name": "Fakultet vizuelnih umjetnosti", "city": "Podgorica" },
-    { "name": "Fakultet za informacione tehnologije", "city": "Podgorica" },
-    { "name": "Fakultet za strane jezike", "city": "Podgorica" },
-    { "name": "Pravni fakultet", "city": "Podgorica" }
+    {
+      "name": "Fakultet za turizam - Montenegro Tourism School",
+      "city": "Bar",
+      "website": "https://ftht.unimediteran.net",
+      "studyPrograms": [
+        { "name": "Turizam i hotelijerstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Turizam i hotelijerstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Fakultet za ekonomiju i biznis - Montenegro Business School",
+      "city": "Podgorica",
+      "website": "https://fps.unimediteran.net",
+      "studyPrograms": [
+        {
+          "name": "Ekonomija i biznis", "cycle": "FIRST", "durationYears": 3, "ects": 180,
+          "tracks": [
+            { "name": "Bankarstvo i osiguranje" },
+            { "name": "Računovodstvo i finansije" }
+          ]
+        },
+        {
+          "name": "Marketing menadžment", "cycle": "FIRST", "durationYears": 3, "ects": 180,
+          "tracks": [
+            { "name": "Međunarodni marketing" },
+            { "name": "Public relations" }
+          ]
+        },
+        { "name": "Marketing", "cycle": "SPECIALIST", "durationYears": 1, "ects": 60, "language": "Engleski" },
+        { "name": "Marketing (MBA)", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Engleski" }
+      ]
+    },
+    {
+      "name": "Fakultet vizuelnih umjetnosti",
+      "city": "Podgorica",
+      "website": "https://fvu.unimediteran.net",
+      "studyPrograms": [
+        { "name": "Vizuelne umjetnosti", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Vizuelne umjetnosti", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Fakultet za informacione tehnologije",
+      "city": "Podgorica",
+      "website": "https://fit.unimediteran.net",
+      "studyPrograms": [
+        {
+          "name": "Informacione tehnologije", "cycle": "FIRST", "durationYears": 3, "ects": 180,
+          "tracks": [
+            { "name": "Informaciono-komunikacione tehnologije" },
+            { "name": "Softverski inženjering" }
+          ]
+        },
+        { "name": "Informacione tehnologije", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Fakultet za strane jezike",
+      "city": "Podgorica",
+      "website": "https://fsj.unimediteran.net",
+      "studyPrograms": [
+        { "name": "Engleski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Engleski jezik i književnost", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Podgorica",
+      "website": "https://pf.unimediteran.net",
+      "studyPrograms": [
+        { "name": "Pravo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Pravo", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Pravo", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
+      ]
+    }
   ]
 }

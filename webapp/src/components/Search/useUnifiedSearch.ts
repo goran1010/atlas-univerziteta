@@ -5,7 +5,10 @@ import { NotificationContext } from "../../contextData/NotificationContext";
 import { searchAll, SearchFailedError } from "./utils/search";
 import { notificationMessage } from "../../utils/apiError";
 
+import { countrySchema } from "../../schemas/domain";
+
 import type { UnifiedSearchResults } from "../../schemas/university";
+import type { Country } from "../../schemas/domain";
 
 const SEARCH_DEBOUNCE_MS = 400;
 
@@ -26,6 +29,10 @@ function useUnifiedSearch() {
   const [searchInput, setSearchInput] = useState(
     () => searchParams.get("q") ?? "",
   );
+  const countryParsed = countrySchema.safeParse(searchParams.get("country"));
+  const countryFilter: Country | "" = countryParsed.success
+    ? countryParsed.data
+    : "";
   const browseAll = searchParams.get("browse") === "all";
   const hasSearchTerm = searchInput.trim().length > 0;
 
@@ -45,7 +52,11 @@ function useUnifiedSearch() {
   }
 
   const executeSearch = useCallback(
-    async (term: string | undefined, type?: string[]) => {
+    async (
+      term: string | undefined,
+      country?: string,
+      type?: string[],
+    ) => {
       abortRef.current?.abort();
       const controller = new AbortController();
       abortRef.current = controller;
@@ -54,7 +65,10 @@ function useUnifiedSearch() {
         setLoading(true);
         const results = await searchAll(
           term,
-          { type: type?.length ? type : undefined },
+          {
+            country: country || undefined,
+            type: type?.length ? type : undefined,
+          },
           controller.signal,
         );
         setView({ kind: "search", results, hadTerm: term !== undefined });
@@ -76,13 +90,14 @@ function useUnifiedSearch() {
   );
 
   const triggerSearch = useCallback(
-    (term: string, browse: boolean) => {
+    (term: string, country: string, browse: boolean) => {
       const trimmed = term.trim();
       const hasText = trimmed.length > 0;
+      const hasCountry = country !== "";
 
       if (hasText && trimmed.length < 2) return;
 
-      if (!hasText && !browse) {
+      if (!hasText && !hasCountry && !browse) {
         // eslint-disable-next-line react-x/set-state-in-effect -- reached synchronously from the params effect, whose purpose is syncing URL params into view state
         setView({ kind: "idle" });
         return;
@@ -90,7 +105,8 @@ function useUnifiedSearch() {
 
       void executeSearch(
         hasText ? trimmed : undefined,
-        browse ? ["university"] : undefined,
+        country || undefined,
+        browse && !hasText ? ["university"] : undefined,
       );
     },
     [executeSearch],
@@ -105,7 +121,7 @@ function useUnifiedSearch() {
       return;
     }
 
-    triggerSearch(urlQuery, browseAll);
+    triggerSearch(urlQuery, countryFilter, browseAll);
     // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps -- browseAll derives from paramsKey
   }, [paramsKey, triggerSearch]);
 
@@ -126,6 +142,10 @@ function useUnifiedSearch() {
     debounceRef.current = setTimeout(() => {
       updateParams({ q: value || null });
     }, SEARCH_DEBOUNCE_MS);
+  }
+
+  function handleCountryChange(value: string) {
+    updateParams({ country: value || null });
   }
 
   function handleBrowseAll() {
@@ -151,8 +171,10 @@ function useUnifiedSearch() {
     loading,
     inputRef,
     searchInput,
+    countryFilter,
     hasSearchTerm,
     handleInputChange,
+    handleCountryChange,
     handleBrowseAll,
     handleClear,
     handleClearAll,

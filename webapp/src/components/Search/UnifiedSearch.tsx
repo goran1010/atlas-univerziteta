@@ -4,6 +4,10 @@ import { Spinner } from "../sharedComponents/Spinner";
 import { SearchResults } from "./SearchResults";
 import { useUnifiedSearch } from "./useUnifiedSearch";
 
+import type { Country } from "../../schemas/domain";
+
+const COUNTRIES: Country[] = ["BIH", "SRB", "HRV", "MNE"];
+
 function UnifiedSearch() {
   const {
     t,
@@ -11,8 +15,10 @@ function UnifiedSearch() {
     loading,
     inputRef,
     searchInput,
+    countryFilter,
     hasSearchTerm,
     handleInputChange,
+    handleCountryChange,
     handleBrowseAll,
     handleClear,
     handleClearAll,
@@ -55,7 +61,26 @@ function UnifiedSearch() {
         </div>
       </div>
 
-      {(hasSearchTerm || view.kind !== "idle") && (
+      <div className="flex flex-wrap justify-center gap-2">
+        {COUNTRIES.map((c) => (
+          <button
+            key={c}
+            type="button"
+            onClick={() => {
+              handleCountryChange(countryFilter === c ? "" : c);
+            }}
+            className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) ${
+              countryFilter === c
+                ? "bg-(--accent) text-white border-(--accent)"
+                : "bg-(--surface-2) text-(--text-secondary) border-(--border-color) hover:border-(--accent) hover:text-(--accent-text)"
+            }`}
+          >
+            {t(`universitiesPage.countries.${c}`)}
+          </button>
+        ))}
+      </div>
+
+      {(hasSearchTerm || countryFilter !== "" || view.kind !== "idle") && (
         <Button
           variant="danger"
           className="text-xs px-3 py-2 sm:py-1.5 w-full max-w-xs sm:w-auto"

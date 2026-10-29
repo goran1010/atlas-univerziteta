@@ -10,16 +10,185 @@
   "phone": null,
   "email": null,
   "faculties": [
-    { "name": "Fakultet za međunarodnu ekonomiju, finansije i biznis", "city": "Podgorica" },
-    { "name": "Fakultet pravnih nauka", "city": "Podgorica" },
-    { "name": "Fakultet za informacione sisteme i tehnologije", "city": "Podgorica" },
-    { "name": "Humanističke studije", "city": "Podgorica" },
-    { "name": "Fakultet umjetnosti", "city": "Podgorica" },
-    { "name": "Fakultet politehničkih nauka", "city": "Podgorica" },
-    { "name": "Fakultet za sportski menadžment", "city": "Podgorica" },
-    { "name": "Fakultet za prehrambenu tehnologiju, bezbjednost hrane i ekologiju", "city": "Podgorica" },
-    { "name": "Fakultet za dizajn i multimediju", "city": "Podgorica" },
-    { "name": "Fakultet za kulturu i turizam", "city": "Podgorica" },
-    { "name": "Fakultet primijenjenih nauka", "city": "Podgorica" }
+    {
+      "name": "Fakultet za međunarodnu ekonomiju, finansije i biznis",
+      "city": "Podgorica",
+      "website": "https://fmefb.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Međunarodna ekonomija, finansije i biznis", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Preduzetništvo, menadžment i biznis", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        {
+          "name": "Preduzetnička ekonomija", "cycle": "SECOND", "durationYears": 2, "ects": 120,
+          "tracks": [
+            { "name": "Međunarodna ekonomija" },
+            { "name": "Računovodstvo i revizija" },
+            { "name": "Finansije i bankarstvo" }
+          ]
+        },
+        { "name": "Statistika (EMOS)", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Informacioni menadžment i AI u zdravstvu", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        {
+          "name": "Menadžment", "cycle": "SECOND", "durationYears": 2, "ects": 120,
+          "tracks": [
+            { "name": "FinTech" },
+            { "name": "Digitalni marketing" },
+            { "name": "Digitalna transformacija biznisa" },
+            { "name": "Globalni menadžment" },
+            { "name": "Liderstvo i menadžment" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultet pravnih nauka",
+      "city": "Podgorica",
+      "website": "https://fpn.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Pravo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        {
+          "name": "Pravosuđe i javna uprava", "cycle": "SECOND", "durationYears": 2, "ects": 120,
+          "tracks": [
+            { "name": "Krivičnopravni" },
+            { "name": "Građanskopravni" },
+            { "name": "Upravnopravni" }
+          ]
+        },
+        {
+          "name": "Međunarodno pravo", "cycle": "SECOND", "durationYears": 2, "ects": 120,
+          "tracks": [
+            { "name": "Pravo EU" },
+            { "name": "Međunarodnopravni" },
+            { "name": "Međunarodno i evropsko pravo" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za informacione sisteme i tehnologije",
+      "city": "Podgorica",
+      "website": "https://fist.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Informacioni sistemi i tehnologije", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        {
+          "name": "Informacioni sistemi", "cycle": "SECOND", "durationYears": 2, "ects": 120,
+          "tracks": [
+            { "name": "Softversko inženjerstvo" },
+            { "name": "Vještačka inteligencija" },
+            { "name": "AI i biznis" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Humanističke studije",
+      "city": "Podgorica",
+      "website": "https://hs.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Diplomatija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Bezbjednost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Komunikologija i mediji", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Evropske studije", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        {
+          "name": "Međunarodna politika i bezbjednost", "cycle": "SECOND", "durationYears": 2, "ects": 120,
+          "tracks": [
+            { "name": "Međunarodni odnosi" },
+            { "name": "Evropske politike" },
+            { "name": "Američke studije" },
+            { "name": "Balkanske i mediteranske studije" },
+            { "name": "Međunarodna bezbjednost" },
+            { "name": "Sajber bezbjednost" }
+          ]
+        },
+        { "name": "Rodne studije", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Komunikologija i mediji", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Politička teorija i politička analiza", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Fakultet umjetnosti",
+      "city": "Podgorica",
+      "website": "https://fu.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Umjetnost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Teorija moderne i savremene umjetnosti", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Politehnika",
+      "city": "Podgorica",
+      "website": "https://fp.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Elektrotehnika i računarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 }
+      ]
+    },
+    {
+      "name": "Fakultet za sportski menadžment",
+      "city": "Podgorica",
+      "website": "https://fsm.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Sportski menadžment", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Fitnes i leisure menadžment", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Menadžment sportske organizacije kluba", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Fakultet za prehrambenu tehnologiju, bezbjednost hrane i ekologiju",
+      "city": "Podgorica",
+      "website": "https://fptbhe.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Prehrambena tehnologija, bezbjednost hrane i ekologija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Prehrambena tehnologija", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Sanitarni inženjering u sektoru hrane", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Fakultet za dizajn i multimediju",
+      "city": "Podgorica",
+      "website": "https://fdm.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Modni dizajn", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Grafičko-multimedijalni dizajn", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Film i mediji", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Dizajn i multimedija", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Fakultet za kulturu i turizam",
+      "city": "Podgorica",
+      "website": "https://fkt.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Kultura i turizam", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Međunarodno hotelijerstvo i menadžment", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Kineske studije", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Kultura i turizam", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Međunarodno hotelijerstvo i menadžment", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Fakultet primijenjenih nauka",
+      "city": "Podgorica",
+      "website": "https://fprn.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Primijenjena matematika", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Primijenjena psihologija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Geodezija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Psihologija", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
+    },
+    {
+      "name": "Filološki fakultet",
+      "city": "Podgorica",
+      "website": "https://ff.udg.edu.me",
+      "studyPrograms": [
+        { "name": "Engleski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        {
+          "name": "Engleski jezik", "cycle": "SECOND", "durationYears": 2, "ects": 120,
+          "tracks": [
+            { "name": "Nastavnički modul" },
+            { "name": "Prevodilački modul" }
+          ]
+        }
+      ]
+    }
   ]
 }
