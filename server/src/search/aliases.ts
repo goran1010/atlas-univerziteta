@@ -20,8 +20,9 @@ const ENUM_ALIASES: Record<string, string> = {
   STRUCN: "VOCATIONAL",
   SPECIJALISTICK: "SPECIALIST",
   BOSN: "BIH",
-  HERCEGO: "BIH",
   BOSNIA: "BIH",
+  HERCEGOVINA: "BIH",
+  HERCEGOVIN: "BIH",
   SRBI: "SRB",
   SRBIJ: "SRB",
   SRBIJA: "SRB",
@@ -31,8 +32,11 @@ const ENUM_ALIASES: Record<string, string> = {
   HRVATSKA: "HRV",
   CROATIA: "HRV",
   CRNA: "MNE",
+  CRNE: "MNE",
   GORA: "MNE",
-  CRNOGOR: "MNE",
+  GORE: "MNE",
+  CRNOGORSK: "MNE",
+  CRNOGORSKI: "MNE",
   MONTENEGRO: "MNE",
 } as const;
 
