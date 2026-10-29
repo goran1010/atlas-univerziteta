@@ -6,60 +6,183 @@
   "ownership": "PRIVATE",
   "foundedYear": "2010",
   "website": "https://www.metropolitan.ac.rs",
-  "address": null,
-  "phone": null,
-  "email": null,
+  "address": "Tadeuša Košćuška 63, 11158 Beograd",
+  "phone": "+381 11 2030 885",
+  "email": "info@metropolitan.ac.rs",
   "faculties": [
     {
       "name": "Fakultet informacionih tehnologija",
       "city": "Beograd",
       "website": "https://www.metropolitan.ac.rs/fakultet-informacionih-tehnologija/",
       "studyPrograms": [
-        { "name": "Informacione tehnologije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Softversko inženjerstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Razvoj video igara", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Inteligentni i napredni softverski sistemi", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
         {
-          "name": "Informacione tehnologije i sistemi", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski",
+          "name": "Informacione tehnologije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Softversko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Razvoj video igara",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Inteligentni i napredni softverski sistemi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informacione tehnologije i sistemi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski",
           "tracks": [
-            { "name": "Informacioni sistemi organizacija" },
-            { "name": "Sajber bezbednost" }
+            {
+              "name": "Informacioni sistemi organizacija"
+            },
+            {
+              "name": "Sajber bezbednost"
+            }
           ]
         },
-        { "name": "Softversko inženjerstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Softversko inženjerstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Tadeuša Košćuška 63, 11158 Beograd",
+      "phone": "+381 11 2030 885",
+      "email": null
     },
     {
       "name": "Fakultet za menadžment",
       "city": "Beograd",
       "website": "https://www.metropolitan.ac.rs/fakultet-za-menadzment/",
       "studyPrograms": [
-        { "name": "Digitalni biznis i marketing", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Inženjerski i operacioni menadžment", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Digitalni biznis", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Menadžment i razvoj", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Digitalni biznis i marketing",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Inženjerski i operacioni menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Digitalni biznis",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Menadžment i razvoj",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Tadeuša Košćuška 63, 11158 Beograd",
+      "phone": "+381 11 2030 885",
+      "email": null
     },
     {
       "name": "Fakultet digitalnih umetnosti",
       "city": "Beograd",
       "website": "https://www.metropolitan.ac.rs/fakultet-digitalnih-umetnosti-2/",
       "studyPrograms": [
-        { "name": "Grafički dizajn", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Dizajn interaktivnih medija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Modni dizajn", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Vizuelne komunikacije", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Muzička produkcija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Dizajn novih medija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Grafički dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Dizajn interaktivnih medija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Modni dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vizuelne komunikacije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Muzička produkcija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Dizajn novih medija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Tadeuša Košćuška 63, 11158 Beograd",
+      "phone": "+381 11 2030 885",
+      "email": null
     },
     {
       "name": "Fakultet za strane jezike",
       "city": "Beograd",
       "website": "https://www.metropolitan.ac.rs/fakultet-za-strane-jezike/",
       "studyPrograms": [
-        { "name": "Engleski jezik u biznisu", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" }
-      ]
+        {
+          "name": "Engleski jezik u biznisu",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Tadeuša Košćuška 63, 11158 Beograd",
+      "phone": "+381 11 2030 885",
+      "email": null
     }
-  ]
+  ],
+  "dataSourceUrl": "https://www.metropolitan.ac.rs",
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29"
 }

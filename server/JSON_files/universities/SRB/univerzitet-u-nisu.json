@@ -43,7 +43,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.agrif.ni.ac.rs"
+      "website": "https://www.agrif.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Kosančićeva 4, 37000 Kruševac",
+      "phone": "+381 37 205 695",
+      "email": "poljfak@ni.ac.rs"
     },
     {
       "name": "Fakultet umetnosti",
@@ -106,7 +110,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.artf.ni.ac.rs"
+      "website": "https://www.artf.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Kneginje Ljubice 10, 18105 Niš",
+      "phone": "+381 18 522 396",
+      "email": "info@artf.ni.ac.rs"
     },
     {
       "name": "Građevinsko-arhitektonski fakultet",
@@ -169,7 +177,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.gaf.ni.ac.rs"
+      "website": "https://www.gaf.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Aleksandra Medvedeva 14, 18104 Niš",
+      "phone": "+381 18 588 200",
+      "email": "gaf@gaf.ni.ac.rs"
     },
     {
       "name": "Ekonomski fakultet",
@@ -204,7 +216,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.eknfak.ni.ac.rs"
+      "website": "https://www.eknfak.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Trg kralja Aleksandra Ujedinitelja 11, 18105 Niš",
+      "phone": "+381 18 528 601",
+      "email": "ekonomski@eknfak.ni.ac.rs"
     },
     {
       "name": "Elektronski fakultet",
@@ -267,7 +283,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.elfak.ni.ac.rs"
+      "website": "https://www.elfak.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Aleksandra Medvedeva 14, 18106 Niš",
+      "phone": "+381 18 529 105",
+      "email": "efinfo@elfak.ni.ac.rs"
     },
     {
       "name": "Pravni fakultet",
@@ -316,7 +336,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.prafak.ni.ac.rs"
+      "website": "https://www.prafak.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Trg kralja Aleksandra 11, 18000 Niš",
+      "phone": "+381 18 500 201",
+      "email": "pravni@prafak.ni.ac.rs"
     },
     {
       "name": "Mašinski fakultet",
@@ -393,7 +417,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.masfak.ni.ac.rs"
+      "website": "https://www.masfak.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Aleksandra Medvedeva 14, 18000 Niš",
+      "phone": "+381 18 588 255",
+      "email": "info@masfak.ni.ac.rs"
     },
     {
       "name": "Medicinski fakultet",
@@ -463,7 +491,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.medfak.ni.ac.rs"
+      "website": "https://www.medfak.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Bulevar Dr Zorana Đinđića 81, 18000 Niš",
+      "phone": "+381 18 422 6712",
+      "email": "contact@medfak.ni.ac.rs"
     },
     {
       "name": "Fakultet zaštite na radu",
@@ -540,7 +572,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.znrfak.ni.ac.rs"
+      "website": "https://www.znrfak.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Čarnojevića 10A, 18000 Niš",
+      "phone": "+381 18 529 701",
+      "email": "dekanat@znrfak.ni.ac.rs"
     },
     {
       "name": "Filozofski fakultet",
@@ -785,7 +821,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.filfak.ni.ac.rs"
+      "website": "https://www.filfak.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Ćirila i Metodija 2, 18000 Niš",
+      "phone": "+381 18 514 312",
+      "email": "info@filfak.ni.ac.rs"
     },
     {
       "name": "Prirodno-matematički fakultet",
@@ -953,7 +993,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.pmf.ni.ac.rs"
+      "website": "https://www.pmf.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Višegradska 33, 18106 Niš",
+      "phone": "+381 18 533 015",
+      "email": "pmfinfo@pmf.ni.ac.rs"
     },
     {
       "name": "Fakultet sporta i fizičkog vaspitanja",
@@ -995,7 +1039,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.fsfv.ni.ac.rs"
+      "website": "https://www.fsfv.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Čarnojevićeva 10A, 18000 Niš",
+      "phone": "+381 18 510 900",
+      "email": "info@fsfv.ni.ac.rs"
     },
     {
       "name": "Tehnološki fakultet",
@@ -1023,7 +1071,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.tf.ni.ac.rs"
+      "website": "https://www.tf.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Bulevar oslobođenja 124, 16000 Leskovac",
+      "phone": "+381 16 248 117",
+      "email": "tehfak@ni.ac.rs"
     },
     {
       "name": "Pedagoški fakultet u Vranju",
@@ -1072,7 +1124,14 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://www.pfvr.ni.ac.rs"
+      "website": "https://www.pfvr.ni.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Partizanska 14, 17500 Vranje",
+      "phone": "+381 17 431 960",
+      "email": "uciteljski@ucfak.ni.ac.rs"
     }
-  ]
+  ],
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://www.ni.ac.rs"
 }

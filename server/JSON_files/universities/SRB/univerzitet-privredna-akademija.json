@@ -15,75 +15,248 @@
       "city": "Novi Sad",
       "website": "https://www.pravni-fakultet.info",
       "studyPrograms": [
-        { "name": "Pravo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Pravo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Pravo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": null,
+      "phone": null,
+      "email": null
     },
     {
       "name": "Fakultet za ekonomiju i inženjerski menadžment",
       "city": "Novi Sad",
       "website": "https://www.fimek.edu.rs",
       "studyPrograms": [
-        { "name": "Ekonomija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Inženjerski menadžment", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Ekonomija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Inženjerski menadžment", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Ekonomija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Inženjerski menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Inženjerski menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": null,
+      "phone": null,
+      "email": null
     },
     {
       "name": "Stomatološki fakultet",
       "city": "Pančevo",
       "studyPrograms": [
-        { "name": "Stomatologija", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Srpski" }
-      ]
+        {
+          "name": "Stomatologija",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": null,
+      "phone": null,
+      "email": null
     },
     {
       "name": "Farmaceutski fakultet",
       "city": "Novi Sad",
       "studyPrograms": [
-        { "name": "Farmacija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Srpski" },
-        { "name": "Farmacija - medicinska biohemija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Srpski" }
-      ]
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Srpski"
+        },
+        {
+          "name": "Farmacija - medicinska biohemija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": null,
+      "phone": null,
+      "email": null
     },
     {
       "name": "Fakultet za primenjeni menadžment, ekonomiju i finansije",
       "city": "Beograd",
       "website": "https://www.mef.edu.rs",
       "studyPrograms": [
-        { "name": "Menadžment", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Ekonomija i finansije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Menadžment", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Ekonomija i finansije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Jevrejska 24/1, 11000 Beograd",
+      "phone": "+381 11 3282 473",
+      "email": "info@mef.edu.rs"
     },
     {
       "name": "Fakultet savremenih umetnosti",
       "city": "Beograd",
       "website": "https://www.fsu.edu.rs",
       "studyPrograms": [
-        { "name": "Savremene umetnosti", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Savremene umetnosti", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Savremene umetnosti",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Savremene umetnosti",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Svetozara Miletića 12, 11000 Beograd",
+      "phone": "+381 11 3391 911",
+      "email": "info@fsu.rs"
     },
     {
       "name": "Fakultet za evropske pravno-političke studije",
       "city": "Novi Sad",
       "studyPrograms": [
-        { "name": "Evropske studije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Evropske studije", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Evropske studije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Evropske studije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": null,
+      "phone": null,
+      "email": null
     },
     {
       "name": "Fakultet društvenih nauka",
       "city": "Beograd",
       "studyPrograms": [
-        { "name": "Ekonomija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Informacione tehnologije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Digitalni mediji i komunikacije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Ekonomija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Informacione tehnologije", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Digitalni mediji i komunikacije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": null,
+      "phone": null,
+      "email": null
     }
-  ]
+  ],
+  "dataSourceUrl": "https://www.privrednaakademija.edu.rs",
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29"
 }

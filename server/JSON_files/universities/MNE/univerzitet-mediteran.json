@@ -15,9 +15,23 @@
       "city": "Bar",
       "website": "https://ftht.unimediteran.net",
       "studyPrograms": [
-        { "name": "Turizam i hotelijerstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
-        { "name": "Turizam i hotelijerstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
-      ]
+        {
+          "name": "Turizam i hotelijerstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180
+        },
+        {
+          "name": "Turizam i hotelijerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120
+        }
+      ],
+      "address": "Josipa Broza bb, 85000 Bar",
+      "phone": "+382 20 409 232",
+      "email": "office@unimediteran.net",
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Fakultet za ekonomiju i biznis - Montenegro Business School",
@@ -25,31 +39,75 @@
       "website": "https://fps.unimediteran.net",
       "studyPrograms": [
         {
-          "name": "Ekonomija i biznis", "cycle": "FIRST", "durationYears": 3, "ects": 180,
+          "name": "Ekonomija i biznis",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
           "tracks": [
-            { "name": "Bankarstvo i osiguranje" },
-            { "name": "Računovodstvo i finansije" }
+            {
+              "name": "Bankarstvo i osiguranje"
+            },
+            {
+              "name": "Računovodstvo i finansije"
+            }
           ]
         },
         {
-          "name": "Marketing menadžment", "cycle": "FIRST", "durationYears": 3, "ects": 180,
+          "name": "Marketing menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
           "tracks": [
-            { "name": "Međunarodni marketing" },
-            { "name": "Public relations" }
+            {
+              "name": "Međunarodni marketing"
+            },
+            {
+              "name": "Public relations"
+            }
           ]
         },
-        { "name": "Marketing", "cycle": "SPECIALIST", "durationYears": 1, "ects": 60, "language": "Engleski" },
-        { "name": "Marketing (MBA)", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Engleski" }
-      ]
+        {
+          "name": "Marketing",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Engleski"
+        },
+        {
+          "name": "Marketing (MBA)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Engleski"
+        }
+      ],
+      "address": "Josipa Broza bb, 81000 Podgorica",
+      "phone": "+382 20 409 260",
+      "email": "office@unimediteran.net",
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Fakultet vizuelnih umjetnosti",
       "city": "Podgorica",
       "website": "https://fvu.unimediteran.net",
       "studyPrograms": [
-        { "name": "Vizuelne umjetnosti", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
-        { "name": "Vizuelne umjetnosti", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
-      ]
+        {
+          "name": "Vizuelne umjetnosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180
+        },
+        {
+          "name": "Vizuelne umjetnosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120
+        }
+      ],
+      "address": "Josipa Broza bb, 81000 Podgorica",
+      "phone": "+382 20 409 204",
+      "email": "fvu@unimediteran.net",
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Fakultet za informacione tehnologije",
@@ -57,33 +115,85 @@
       "website": "https://fit.unimediteran.net",
       "studyPrograms": [
         {
-          "name": "Informacione tehnologije", "cycle": "FIRST", "durationYears": 3, "ects": 180,
+          "name": "Informacione tehnologije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
           "tracks": [
-            { "name": "Informaciono-komunikacione tehnologije" },
-            { "name": "Softverski inženjering" }
+            {
+              "name": "Informaciono-komunikacione tehnologije"
+            },
+            {
+              "name": "Softverski inženjering"
+            }
           ]
         },
-        { "name": "Informacione tehnologije", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
-      ]
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120
+        }
+      ],
+      "address": "Josipa Broza bb, 81000 Podgorica",
+      "phone": "+382 20 409 200",
+      "email": "fit@unimediteran.net",
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Fakultet za strane jezike",
       "city": "Podgorica",
       "website": "https://fsj.unimediteran.net",
       "studyPrograms": [
-        { "name": "Engleski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
-        { "name": "Engleski jezik i književnost", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
-      ]
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120
+        }
+      ],
+      "address": "Josipa Broza bb, 81000 Podgorica",
+      "phone": "+382 20 409 204",
+      "email": "fsj@unimediteran.net",
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Pravni fakultet",
       "city": "Podgorica",
       "website": "https://pf.unimediteran.net",
       "studyPrograms": [
-        { "name": "Pravo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
-        { "name": "Pravo", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
-        { "name": "Pravo", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
-      ]
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120
+        },
+        {
+          "name": "Pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180
+        }
+      ],
+      "address": "Josipa Broza bb, 81000 Podgorica",
+      "phone": "+382 20 409 204",
+      "email": "pf@unimediteran.net",
+      "lastModified": "2026-10-29"
     }
-  ]
+  ],
+  "authority": "Agencija za kontrolu i obezbjeđenje kvaliteta visokog obrazovanja (AKOKVO)",
+  "dataSourceUrl": "https://unimediteran.net",
+  "lastModified": "2026-10-29"
 }

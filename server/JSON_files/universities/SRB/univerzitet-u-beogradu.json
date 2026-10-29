@@ -136,7 +136,8 @@
         }
       ],
       "address": "Kamenička 6, 11000 Beograd",
-      "phone": "+381 11 3021 240"
+      "phone": "+381 11 3021 240",
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Pravni fakultet",
@@ -187,7 +188,8 @@
         }
       ],
       "address": "Bulevar kralja Aleksandra 67, 11000 Beograd",
-      "phone": "+381 11 3027 600"
+      "phone": "+381 11 3027 600",
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Pravoslavni bogoslovski fakultet",
@@ -236,7 +238,11 @@
           "language": "Srpski"
         }
       ],
-      "website": "https://bfspc.bg.ac.rs"
+      "website": "https://bfspc.bg.ac.rs",
+      "lastModified": "2026-10-29",
+      "address": "Mije Kovačevića 11b, 11000 Beograd",
+      "phone": "+381 11 2762 732",
+      "email": "info@bfspc.bg.ac.rs"
     },
     {
       "name": "Pedagoški fakultet",
@@ -278,7 +284,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Kraljice Natalije 43, 11000 Beograd",
+      "phone": "+381 11 3615 225",
+      "email": "info@uf.bg.ac.rs"
     },
     {
       "name": "Fakultet bezbednosti",
@@ -315,7 +325,8 @@
         }
       ],
       "address": "Gospodara Vučića 50, 11000 Beograd",
-      "phone": "+381 11 6451 843"
+      "phone": "+381 11 6451 963",
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Fakultet za specijalnu edukaciju i rehabilitaciju",
@@ -385,7 +396,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Visokog Stevana 2, 11000 Beograd",
+      "phone": "+381 11 2183 036",
+      "email": "fasper@fasper.bg.ac.rs"
     },
     {
       "name": "Fakultet političkih nauka",
@@ -569,7 +584,9 @@
         }
       ],
       "address": "Jove Ilića 165, 11000 Beograd",
-      "phone": "+381 11 3092 999"
+      "phone": "+381 11 3092 999",
+      "lastModified": "2026-10-29",
+      "email": "info@fpn.bg.ac.rs"
     },
     {
       "name": "Fakultet sporta i fizičkog vaspitanja",
@@ -604,7 +621,11 @@
           "ects": 300,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Blagoja Parovića 156, 11000 Beograd",
+      "phone": "+381 11 3531 000",
+      "email": "info@dif.bg.ac.rs"
     },
     {
       "name": "Filozofski fakultet",
@@ -843,8 +864,10 @@
           "language": "Srpski"
         }
       ],
-      "address": "Čika Ljubina 18-20, 11000 Beograd",
-      "phone": "+381 11 3281 550"
+      "address": "Čika-Ljubina 18-20, 11000 Beograd",
+      "phone": "+381 11 2639 119",
+      "lastModified": "2026-10-29",
+      "email": "dekanat@f.bg.ac.rs"
     },
     {
       "name": "Filološki fakultet",
@@ -923,7 +946,9 @@
         }
       ],
       "address": "Studentski trg 3, 11000 Beograd",
-      "phone": "+381 11 2638 622"
+      "phone": "+381 11 2638 622",
+      "lastModified": "2026-10-29",
+      "email": "fil@fil.bg.ac.rs"
     },
     {
       "name": "Medicinski fakultet",
@@ -993,7 +1018,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Dr Subotića starijeg 8, 11000 Beograd",
+      "phone": "+381 11 3636 300",
+      "email": "info@med.bg.ac.rs"
     },
     {
       "name": "Stomatološki fakultet",
@@ -1014,7 +1043,10 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Rankeova 4, 11000 Beograd",
+      "phone": "+381 11 2685 288"
     },
     {
       "name": "Fakultet veterinarske medicine",
@@ -1035,7 +1067,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Bulevar oslobođenja 18, 11000 Beograd",
+      "phone": "+381 11 3611 809",
+      "email": "info@vet.bg.ac.rs"
     },
     {
       "name": "Farmaceutski fakultet",
@@ -1070,7 +1106,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Vojvode Stepe 450, 11000 Beograd",
+      "phone": "+381 11 3951 372",
+      "email": "info@pharmacy.bg.ac.rs"
     },
     {
       "name": "Biološki fakultet",
@@ -1147,7 +1187,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Studentski trg 16, 11000 Beograd",
+      "phone": "+381 11 2186 335",
+      "email": "biol@bio.bg.ac.rs"
     },
     {
       "name": "Geografski fakultet",
@@ -1238,7 +1282,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Studentski trg 3, 11000 Beograd",
+      "phone": "+381 11 2637 421",
+      "email": "info@gef.bg.ac.rs"
     },
     {
       "name": "Matematički fakultet",
@@ -1329,7 +1377,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Studentski trg 16, 11000 Beograd",
+      "phone": "+381 11 2027 801",
+      "email": "dekanat@matf.bg.ac.rs"
     },
     {
       "name": "Fakultet za fizičku hemiju",
@@ -1357,7 +1409,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Studentski trg, Braće Jugovića 12-16, 11000 Beograd",
+      "phone": "+381 11 3284 012",
+      "email": "info@ffh.bg.ac.rs"
     },
     {
       "name": "Fizički fakultet",
@@ -1434,7 +1490,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Studentski trg 12, 11000 Beograd",
+      "phone": "+381 11 3281 375",
+      "email": "info@ff.bg.ac.rs"
     },
     {
       "name": "Hemijski fakultet",
@@ -1504,7 +1564,11 @@
           "ects": 300,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Studentski trg 16, 11000 Beograd",
+      "phone": "+381 11 3282 111",
+      "email": "administration@chem.bg.ac.rs"
     },
     {
       "name": "Arhitektonski fakultet",
@@ -1553,7 +1617,11 @@
           "ects": 300,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Bulevar kralja Aleksandra 73/II, 11120 Beograd",
+      "phone": "+381 11 3225 254",
+      "email": "info@arh.bg.ac.rs"
     },
     {
       "name": "Građevinski fakultet",
@@ -1616,7 +1684,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Bulevar kralja Aleksandra 73, 11000 Beograd",
+      "phone": "+381 11 3370 102",
+      "email": "info@grf.bg.ac.rs"
     },
     {
       "name": "Elektrotehnički fakultet",
@@ -1658,7 +1730,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Bulevar kralja Aleksandra 73, 11000 Beograd",
+      "phone": "+381 11 3226 992",
+      "email": "info@etf.bg.ac.rs"
     },
     {
       "name": "Mašinski fakultet",
@@ -1702,7 +1778,9 @@
         }
       ],
       "address": "Kraljice Marije 16, 11120 Beograd",
-      "phone": "+381 11 3302 200"
+      "phone": "+381 11 3370 350",
+      "lastModified": "2026-10-29",
+      "email": "info@mas.bg.ac.rs"
     },
     {
       "name": "Poljoprivredni fakultet",
@@ -1821,7 +1899,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Nemanjina 6, 11000 Beograd",
+      "phone": "+381 11 4413 555",
+      "email": "info@agrif.bg.ac.rs"
     },
     {
       "name": "Rudarsko-geološki fakultet",
@@ -1983,8 +2065,10 @@
           "language": "Srpski"
         }
       ],
-      "address": "Đušina 7, 11120 Beograd",
-      "phone": "+381 11 3219 100"
+      "address": "Đušina 7, 11000 Beograd",
+      "phone": "+381 11 3219 100",
+      "lastModified": "2026-10-29",
+      "email": "info@rgf.bg.ac.rs"
     },
     {
       "name": "Saobraćajni fakultet",
@@ -2012,7 +2096,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Vojvode Stepe 305, 11000 Beograd",
+      "phone": "+381 11 3096 207",
+      "email": "info@sf.bg.ac.rs"
     },
     {
       "name": "Tehnički fakultet u Boru",
@@ -2103,7 +2191,9 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Vojske Jugoslavije 12, 19210 Bor"
     },
     {
       "name": "Tehnološko-metalurški fakultet",
@@ -2229,7 +2319,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Karnegijeva 4, 11000 Beograd",
+      "phone": "+381 11 3370 425",
+      "email": "info@tmf.bg.ac.rs"
     },
     {
       "name": "Fakultet organizacionih nauka",
@@ -2390,7 +2484,11 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Jove Ilića 154, 11000 Beograd",
+      "phone": "+381 11 3950 800",
+      "email": "info@fon.bg.ac.rs"
     },
     {
       "name": "Šumarski fakultet",
@@ -2495,7 +2593,14 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ]
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Kneza Višeslava 1, 11000 Beograd",
+      "phone": "+381 11 3053 990",
+      "email": "info@sfb.bg.ac.rs"
     }
-  ]
+  ],
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://www.bg.ac.rs"
 }

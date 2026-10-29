@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import { SearchIcon, XIcon } from "../sharedComponents/icons";
 import { Button } from "../sharedComponents/Button";
 import { Spinner } from "../sharedComponents/Spinner";
@@ -28,13 +27,7 @@ function UnifiedSearch() {
   return (
     <div className="flex flex-col gap-4 w-full items-center justify-center">
       <p className="text-sm text-center text-(--text-secondary) max-w-lg">
-        {t("universitiesPage.searchIntro")}{" "}
-        <Link
-          to="/about"
-          className="text-(--accent-text) hover:underline"
-        >
-          {t("nav.about")}
-        </Link>
+        {t("universitiesPage.searchIntro")}
       </p>
 
       <div className="flex flex-col sm:flex-row gap-2 w-full max-w-lg">

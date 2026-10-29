@@ -15,36 +15,173 @@
       "city": "Beograd",
       "website": "https://www.va.mod.gov.rs",
       "studyPrograms": [
-        { "name": "Kopnena vojska", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Vojnoelektronsko inženjerstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Vojnomašinsko inženjerstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Tehnološko inženjerstvo materijala i zaštite", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Vojnosaobraćajno inženjerstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Vojno vazduhoplovstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Ekonomija odbrane", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Protivvazduhoplovna odbrana", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Vojnoindustrijsko inženjerstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Vojne nauke", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Vojni menadžment", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Vojnoelektronsko inženjerstvo i odbrana u sajber prostoru", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Vojnoindustrijsko inženjerstvo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Vojnomašinsko inženjerstvo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Tehnološko inženjerstvo materijala i zaštite", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Vojnogeodetsko inženjerstvo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Vojne nauke", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" },
-        { "name": "Vojnoelektronsko inženjerstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" },
-        { "name": "Vojnomašinsko inženjerstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" },
-        { "name": "Tehnološko inženjerstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Kopnena vojska",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojnoelektronsko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojnomašinsko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Tehnološko inženjerstvo materijala i zaštite",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojnosaobraćajno inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojno vazduhoplovstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Ekonomija odbrane",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Protivvazduhoplovna odbrana",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojnoindustrijsko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojne nauke",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojni menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojnoelektronsko inženjerstvo i odbrana u sajber prostoru",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojnoindustrijsko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojnomašinsko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Tehnološko inženjerstvo materijala i zaštite",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojnogeodetsko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojne nauke",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojnoelektronsko inženjerstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vojnomašinsko inženjerstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Tehnološko inženjerstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Medicinski fakultet Vojnomedicinske akademije",
       "city": "Beograd",
       "website": "https://www.mfvma.mod.gov.rs",
       "studyPrograms": [
-        { "name": "Medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Srpski" },
-        { "name": "Medicina", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Srpski"
+        },
+        {
+          "name": "Medicina",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     }
-  ]
+  ],
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://www.uo.mod.gov.rs"
 }

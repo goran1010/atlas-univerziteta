@@ -15,38 +15,116 @@
       "city": "Beograd",
       "website": "https://www.fmu.bg.ac.rs",
       "studyPrograms": [
-        { "name": "Kompozicija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         {
-          "name": "Izvođačke umetnosti", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski",
+          "name": "Kompozicija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Izvođačke umetnosti",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski",
           "tracks": [
-            { "name": "Dirigovanje" },
-            { "name": "Solo pevanje" },
-            { "name": "Klavir" },
-            { "name": "Gudački instrumenti" },
-            { "name": "Duvački instrumenti" },
-            { "name": "Džez instrumenti i džez pevanje" },
-            { "name": "Gitara" },
-            { "name": "Harfa" },
-            { "name": "Orgulje" },
-            { "name": "Čembalo" },
-            { "name": "Udaraljke" }
+            {
+              "name": "Dirigovanje"
+            },
+            {
+              "name": "Solo pevanje"
+            },
+            {
+              "name": "Klavir"
+            },
+            {
+              "name": "Gudački instrumenti"
+            },
+            {
+              "name": "Duvački instrumenti"
+            },
+            {
+              "name": "Džez instrumenti i džez pevanje"
+            },
+            {
+              "name": "Gitara"
+            },
+            {
+              "name": "Harfa"
+            },
+            {
+              "name": "Orgulje"
+            },
+            {
+              "name": "Čembalo"
+            },
+            {
+              "name": "Udaraljke"
+            }
           ]
         },
         {
-          "name": "Nauke o muzičkoj umetnosti", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski",
+          "name": "Nauke o muzičkoj umetnosti",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski",
           "tracks": [
-            { "name": "Muzička pedagogija" },
-            { "name": "Muzikologija" },
-            { "name": "Etnomuzikologija i etnokoreologija" },
-            { "name": "Muzička teorija" }
+            {
+              "name": "Muzička pedagogija"
+            },
+            {
+              "name": "Muzikologija"
+            },
+            {
+              "name": "Etnomuzikologija i etnokoreologija"
+            },
+            {
+              "name": "Muzička teorija"
+            }
           ]
         },
-        { "name": "Izvođačke umetnosti", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Kompozicija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Muzička režija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Srpski" },
-        { "name": "Nauke o muzičkoj umetnosti", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Primenjena istraživanja muzike", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Izvođačke umetnosti",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Kompozicija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Muzička režija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Srpski"
+        },
+        {
+          "name": "Nauke o muzičkoj umetnosti",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Primenjena istraživanja muzike",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Kralja Milana 50, 11000 Beograd",
+      "phone": "+381 11 2659 466",
+      "email": "info@fmu.bg.ac.rs"
     },
     {
       "name": "Fakultet likovnih umetnosti",
@@ -54,17 +132,45 @@
       "website": "https://www.flu.bg.ac.rs",
       "studyPrograms": [
         {
-          "name": "Likovne umetnosti", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski",
+          "name": "Likovne umetnosti",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski",
           "tracks": [
-            { "name": "Slikarstvo" },
-            { "name": "Vajarstvo" },
-            { "name": "Grafika" },
-            { "name": "Novi mediji" }
+            {
+              "name": "Slikarstvo"
+            },
+            {
+              "name": "Vajarstvo"
+            },
+            {
+              "name": "Grafika"
+            },
+            {
+              "name": "Novi mediji"
+            }
           ]
         },
-        { "name": "Likovne umetnosti", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Likovne umetnosti", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Likovne umetnosti",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Likovne umetnosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Pariska 16, 11000 Beograd",
+      "phone": "+381 11 2181 214",
+      "email": "info@flu.bg.ac.rs"
     },
     {
       "name": "Fakultet primenjenih umetnosti",
@@ -72,79 +178,318 @@
       "website": "https://www.fpu.bg.ac.rs",
       "studyPrograms": [
         {
-          "name": "Vizuelne komunikacije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski",
+          "name": "Vizuelne komunikacije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski",
           "tracks": [
-            { "name": "Animacija" },
-            { "name": "Grafički dizajn" },
-            { "name": "Grafika i knjiga" },
-            { "name": "Digitalni grafički mediji" },
-            { "name": "Fotografija" }
+            {
+              "name": "Animacija"
+            },
+            {
+              "name": "Grafički dizajn"
+            },
+            {
+              "name": "Grafika i knjiga"
+            },
+            {
+              "name": "Digitalni grafički mediji"
+            },
+            {
+              "name": "Fotografija"
+            }
           ]
         },
         {
-          "name": "Dizajn", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski",
+          "name": "Dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski",
           "tracks": [
-            { "name": "Industrijski dizajn" },
-            { "name": "Tekstil" },
-            { "name": "Unutrašnja arhitektura i dizajn nameštaja" }
+            {
+              "name": "Industrijski dizajn"
+            },
+            {
+              "name": "Tekstil"
+            },
+            {
+              "name": "Unutrašnja arhitektura i dizajn nameštaja"
+            }
           ]
         },
         {
-          "name": "Primenjena umetnost", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Srpski",
+          "name": "Primenjena umetnost",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Srpski",
           "tracks": [
-            { "name": "Keramika" },
-            { "name": "Primenjeno vajarstvo" },
-            { "name": "Primenjeno slikarstvo" },
-            { "name": "Savremeno odevanje" },
-            { "name": "Scenografija" },
-            { "name": "Scenski kostim" }
+            {
+              "name": "Keramika"
+            },
+            {
+              "name": "Primenjeno vajarstvo"
+            },
+            {
+              "name": "Primenjeno slikarstvo"
+            },
+            {
+              "name": "Savremeno odevanje"
+            },
+            {
+              "name": "Scenografija"
+            },
+            {
+              "name": "Scenski kostim"
+            }
           ]
         },
         {
-          "name": "Konzervacija i restauracija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Srpski",
+          "name": "Konzervacija i restauracija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Srpski",
           "tracks": [
-            { "name": "Konzervacija i restauracija skulpture i arheoloških predmeta" },
-            { "name": "Konzervacija i restauracija slika i radova na papiru" }
+            {
+              "name": "Konzervacija i restauracija skulpture i arheoloških predmeta"
+            },
+            {
+              "name": "Konzervacija i restauracija slika i radova na papiru"
+            }
           ]
         },
-        { "name": "Vizuelne komunikacije", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Dizajn", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Primenjena umetnost", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Konzervacija i restauracija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Primenjena umetnost i dizajn", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Vizuelne komunikacije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Dizajn",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Primenjena umetnost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Konzervacija i restauracija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Primenjena umetnost i dizajn",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Kralja Petra 4, 11000 Beograd",
+      "phone": "+381 11 3285 082",
+      "email": "info@fpu.bg.ac.rs"
     },
     {
       "name": "Fakultet dramskih umetnosti",
       "city": "Beograd",
       "website": "https://fdu.bg.ac.rs",
       "studyPrograms": [
-        { "name": "Gluma", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Pozorišna režija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Dramaturgija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Menadžment kulture i medija i produkcija pozorišta", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Filmska i televizijska režija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Filmska i televizijska produkcija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Kamera", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Montaža", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Snimanje i dizajn zvuka", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Vizuelni efekti, animacija i gejm art", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Gluma", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Pozorišna režija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Dramaturgija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Menadžment kulturnih i medijskih industrija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Filmska i televizijska režija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Filmska i televizijska produkcija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Kamera", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Montaža", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Snimanje i dizajn zvuka", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Teorije dramskih umetnosti i medija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Reklama i mediji", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Digitalna transformacija medija i kulture", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Dramske i audiovizuelne umetnosti", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" },
-        { "name": "Teorija dramskih umetnosti, medija i kulture", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" },
-        { "name": "Menadžment kulture i medija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Gluma",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Pozorišna režija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Dramaturgija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Menadžment kulture i medija i produkcija pozorišta",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Filmska i televizijska režija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Filmska i televizijska produkcija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Kamera",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Montaža",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Snimanje i dizajn zvuka",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vizuelni efekti, animacija i gejm art",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Gluma",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Pozorišna režija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Dramaturgija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Menadžment kulturnih i medijskih industrija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Filmska i televizijska režija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Filmska i televizijska produkcija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Kamera",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Montaža",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Snimanje i dizajn zvuka",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Teorije dramskih umetnosti i medija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Reklama i mediji",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Digitalna transformacija medija i kulture",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Dramske i audiovizuelne umetnosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Teorija dramskih umetnosti, medija i kulture",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Menadžment kulture i medija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Bulevar umetnosti 20, 11070 Beograd",
+      "phone": "+381 11 2135 684",
+      "email": "info@fdu.bg.ac.rs"
     }
-  ]
+  ],
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://www.arts.bg.ac.rs"
 }

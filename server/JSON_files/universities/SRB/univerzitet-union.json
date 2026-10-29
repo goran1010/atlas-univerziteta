@@ -6,7 +6,7 @@
   "ownership": "PRIVATE",
   "foundedYear": "2005",
   "website": "https://www.union.edu.rs",
-  "address": null,
+  "address": "Kosančićev venac 2/5, 11000 Beograd",
   "phone": null,
   "email": null,
   "faculties": [
@@ -15,16 +15,74 @@
       "city": "Beograd",
       "website": "https://www.raf.edu.rs",
       "studyPrograms": [
-        { "name": "Računarske nauke", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Računarsko inženjerstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Računarski dizajn", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Informacione tehnologije", "cycle": "VOCATIONAL", "durationYears": 3, "ects": 180, "language": "Srpski" },
-        { "name": "Računarske nauke", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Računarsko inženjerstvo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Softversko inženjerstvo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Informacioni sistemi", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Računarski dizajn", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Računarske nauke",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Računarsko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Računarski dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Računarske nauke",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Računarsko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Softversko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informacioni sistemi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Računarski dizajn",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Knez Mihailova 6/VI, 11000 Beograd",
+      "phone": "+381 11 2627 613",
+      "email": "raf@raf.edu.rs"
     },
     {
       "name": "Beogradska bankarska akademija",
@@ -32,35 +90,108 @@
       "website": "https://www.bba.edu.rs",
       "studyPrograms": [
         {
-          "name": "Ekonomija, finansije i biznis", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski",
+          "name": "Ekonomija, finansije i biznis",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski",
           "tracks": [
-            { "name": "Finansije i bankarstvo" },
-            { "name": "Računovodstvo i revizija" },
-            { "name": "Digitalna ekonomija" }
+            {
+              "name": "Finansije i bankarstvo"
+            },
+            {
+              "name": "Računovodstvo i revizija"
+            },
+            {
+              "name": "Digitalna ekonomija"
+            }
           ]
         },
-        { "name": "Ekonomija, finansije i biznis", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Srpski" },
-        { "name": "Informacione tehnologije u finansijama", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Bankarstvo, finansije i biznis", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Marketing menadžment", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Ekonomija, finansije i biznis",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informacione tehnologije u finansijama",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Bankarstvo, finansije i biznis",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Marketing menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Zmaj Jovina 12, 11000 Beograd",
+      "phone": "+381 11 2621 730",
+      "email": "office@bba.edu.rs"
     },
     {
       "name": "Pravni fakultet Univerziteta Union",
       "city": "Beograd",
       "website": "https://pravnifakultet.edu.rs",
       "studyPrograms": [
-        { "name": "Pravo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Pravo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Pravo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Goce Delčeva 36, 11070 Beograd",
+      "phone": null,
+      "email": "office@pravnifakultet.edu.rs"
     },
     {
       "name": "Akademija lepih umetnosti Todoris",
       "city": "Beograd",
       "studyPrograms": [
-        { "name": "Likovna umetnost", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" }
-      ]
+        {
+          "name": "Likovna umetnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": null,
+      "phone": null,
+      "email": null
     }
-  ]
+  ],
+  "dataSourceUrl": "https://www.union.edu.rs",
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29"
 }

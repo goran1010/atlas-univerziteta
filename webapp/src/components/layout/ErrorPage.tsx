@@ -1,5 +1,4 @@
 import { isRouteErrorResponse, useRouteError } from "react-router";
-import { LinkButton } from "../sharedComponents/LinkButton";
 import { Button } from "../sharedComponents/Button";
 import { useLanguage } from "../../customHooks/useLanguage";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -43,9 +42,15 @@ function ErrorPage() {
                 {t("error.reload")}
               </Button>
             )}
-            <LinkButton to="/" className="flex-1 sm:flex-initial">
+            <Button
+              variant="secondary"
+              className="flex-1 sm:flex-initial"
+              onClick={() => {
+                window.location.href = "/";
+              }}
+            >
               {t("error.goHome")}
-            </LinkButton>
+            </Button>
           </div>
         </section>
       </main>

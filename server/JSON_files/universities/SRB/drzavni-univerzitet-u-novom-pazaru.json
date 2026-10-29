@@ -14,91 +14,284 @@
       "name": "Departman za pravne nauke",
       "city": "Novi Pazar",
       "studyPrograms": [
-        { "name": "Pravo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Pravo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Departman za ekonomske nauke",
       "city": "Novi Pazar",
       "studyPrograms": [
-        { "name": "Ekonomija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Poslovna informatika", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Ekonomija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Poslovna informatika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Departman za filološke nauke",
       "city": "Novi Pazar",
       "studyPrograms": [
-        { "name": "Srpska književnost i jezik", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Srpski" },
-        { "name": "Engleski jezik i književnost", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Srpski" },
-        { "name": "Srpska književnost i jezik", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Engleski jezik i književnost", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Srpska književnost i jezik",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Srpski"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Srpski"
+        },
+        {
+          "name": "Srpska književnost i jezik",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Departman za filozofske nauke",
       "city": "Novi Pazar",
       "studyPrograms": [
-        { "name": "Psihologija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Vaspitač u predškolskim ustanovama", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Psihologija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
-      ]
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vaspitač u predškolskim ustanovama",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Departman za matematičke nauke",
       "city": "Novi Pazar",
       "studyPrograms": [
-        { "name": "Matematika", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Matematika i fizika", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Informatika i matematika", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Informatika i fizika", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Matematika", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Matematika i fizika", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
-        { "name": "Matematika", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
-      ]
+        {
+          "name": "Matematika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika i matematika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika i fizika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Departman za tehničke nauke",
       "city": "Novi Pazar",
       "studyPrograms": [
-        { "name": "Arhitektura", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Građevinarstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Računarska tehnika", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Softversko inženjerstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" }
-      ]
+        {
+          "name": "Arhitektura",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Računarska tehnika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Softversko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Departman za hemijsko-tehnološke nauke",
       "city": "Novi Pazar",
       "studyPrograms": [
-        { "name": "Prehrambena tehnologija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" }
-      ]
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Departman za biomedicinske nauke",
       "city": "Novi Pazar",
       "studyPrograms": [
-        { "name": "Farmacija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Rehabilitacija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" }
-      ]
+        {
+          "name": "Farmacija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Rehabilitacija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Departman za umetnost",
       "city": "Novi Pazar",
       "studyPrograms": [
-        { "name": "Likovna umetnost", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Primenjena umetnost", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" }
-      ]
+        {
+          "name": "Likovna umetnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Primenjena umetnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Departman za multidisciplinarne nauke",
       "city": "Novi Pazar",
       "studyPrograms": [
-        { "name": "Sport i fizičko vaspitanje", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
-        { "name": "Poljoprivreda", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" }
-      ]
+        {
+          "name": "Sport i fizičko vaspitanje",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Poljoprivreda",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     }
-  ]
+  ],
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://www.dunp.np.ac.rs"
 }
