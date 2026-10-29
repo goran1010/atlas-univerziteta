@@ -14,94 +14,200 @@
       "name": "Odjel za medije i komunikaciju",
       "city": "Koprivnica",
       "studyPrograms": [
-        { "name": "Medijski dizajn", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Novinarstvo i odnosi s javnostima", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Medijski dizajn",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Novinarstvo i odnosi s javnostima",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za poslovnu ekonomiju i menadžment",
       "city": "Koprivnica",
       "studyPrograms": [
-        { "name": "Poslovna ekonomija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Poslovna ekonomija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za prehrambenu tehnologiju",
       "city": "Koprivnica",
       "studyPrograms": [
-        { "name": "Prehrambena tehnologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za logistiku i održivu mobilnost",
       "city": "Koprivnica",
       "studyPrograms": [
-        { "name": "Logistika i održiva mobilnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Logistika i održiva mobilnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za računarstvo i informatiku",
       "city": "Koprivnica",
       "studyPrograms": [
-        { "name": "Računarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za umjetničke studije",
       "city": "Koprivnica",
       "studyPrograms": [
-        { "name": "Medijske umjetnosti", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Medijske umjetnosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za elektrotehniku",
       "city": "Varaždin",
       "studyPrograms": [
-        { "name": "Elektrotehnika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Elektrotehnika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za graditeljstvo",
       "city": "Varaždin",
       "studyPrograms": [
-        { "name": "Graditeljstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Graditeljstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za strojarstvo",
       "city": "Varaždin",
       "studyPrograms": [
-        { "name": "Strojarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Strojarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za mehatroniku",
       "city": "Varaždin",
       "studyPrograms": [
-        { "name": "Mehatronika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Mehatronika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za multimediju",
       "city": "Varaždin",
       "studyPrograms": [
-        { "name": "Multimedija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Multimedija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za sestrinstvo",
       "city": "Varaždin",
       "studyPrograms": [
-        { "name": "Sestrinstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za fizioterapiju",
       "city": "Varaždin",
       "studyPrograms": [
-        { "name": "Fizioterapija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Fizioterapija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     }
-  ]
+  ],
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://www.unin.hr"
 }

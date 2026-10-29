@@ -14,53 +14,123 @@
       "name": "Odjel za primijenjenu matematiku i informacijske tehnologije",
       "city": "Zagreb",
       "studyPrograms": [
-        { "name": "Primijenjeno računarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Primijenjeno računarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Primijenjeno računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primijenjeno računarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za ekonomiju i marketing",
       "city": "Zagreb",
       "studyPrograms": [
-        { "name": "Ekonomija i marketing", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Ekonomija i marketing", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Ekonomija i marketing",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekonomija i marketing",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za poduzetništvo i menadžment",
       "city": "Zagreb",
       "studyPrograms": [
-        { "name": "Poduzetništvo i menadžment", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Poduzetništvo i menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za financije, računovodstvo i pravo",
       "city": "Zagreb",
       "studyPrograms": [
-        { "name": "Financije, računovodstvo i pravo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Financije, računovodstvo i pravo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za jezike i kulturu",
       "city": "Zagreb",
       "studyPrograms": [
-        { "name": "Jezici i kultura", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Jezici i kultura",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za psihologiju i komunikacije",
       "city": "Zagreb",
       "studyPrograms": [
-        { "name": "Psihologija i komunikacije", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Psihologija i komunikacije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     },
     {
       "name": "Odjel za turizam",
       "city": "Zagreb",
       "studyPrograms": [
-        { "name": "Turizam", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Turizam", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Turizam",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Turizam",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29"
     }
-  ]
+  ],
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://vern.hr"
 }
