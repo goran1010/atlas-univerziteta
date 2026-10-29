@@ -18,7 +18,6 @@ function foldSearchText(text: string): string {
     .replaceAll("dj", "d");
 }
 
-// for nullable sources: clearing a field clears its folded copy
 function foldSearchTextOrNull(text: string | null): string | null {
   return text === null ? null : foldSearchText(text);
 }

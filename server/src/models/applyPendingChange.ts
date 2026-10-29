@@ -225,7 +225,6 @@ async function applyPendingChange({
         return "APPLIED";
       }
 
-      // targetType === "TRACK" is the only remaining case
       if (typeOfChange === "DELETE") {
         if (targetId === null) return "INVALID_DATA";
 

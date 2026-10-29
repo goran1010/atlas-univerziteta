@@ -397,11 +397,9 @@ function AddUniversityEntity({
       <Button
         type="submit"
         variant={
-          typeOfChange === "CREATE"
-            ? "success"
-            : typeOfChange === "UPDATE"
-              ? "update"
-              : "danger"
+          ({ CREATE: "success", UPDATE: "update", DELETE: "danger" } as const)[
+            typeOfChange
+          ]
         }
         loading={loading}
         className="w-full max-w-xs self-center"

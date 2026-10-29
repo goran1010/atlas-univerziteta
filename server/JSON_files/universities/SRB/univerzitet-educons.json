@@ -191,9 +191,62 @@
       "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
       "phone": "+381 21 4893 610",
       "email": "info@educons.edu.rs"
+    },
+    {
+      "name": "Fakultet informacionih tehnologija",
+      "city": "Sremska Kamenica",
+      "website": "https://educons.edu.rs",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatičko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatičko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za projektni i inovacioni menadžment",
+      "city": "Beograd",
+      "website": "https://educons.edu.rs",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Projektni menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Projektni menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ]
     }
   ],
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
   "accreditationFrom": "2021-03-08",
-  "accreditationTo": "2028-03-08"
+  "accreditationTo": "2028-03-08",
+  "dataSourceUrl": null,
+  "lastModified": null
 }

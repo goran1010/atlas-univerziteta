@@ -11,152 +11,135 @@
   "email": "rektorat@unizd.hr",
   "faculties": [
     {
+      "name": "Odjel za anglistiku",
+      "website": "https://anglistika.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Anglistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Anglistika; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Anglistika; smjer: znanstveni",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
       "name": "Odjel za arheologiju",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Arheologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Arheologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
       "website": "https://arheologija.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za klasičnu filologiju",
-      "city": "Zadar",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Latinski jezik i rimska književnost",
+          "name": "Arheologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Grčki jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "website": "https://klfil.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za kroatistiku",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Hrvatski jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Hrvatski jezik i književnost",
+          "name": "Arheologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Arheologija istočnog Jadrana",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
         }
-      ],
-      "website": "https://kroatistika.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
     },
     {
       "name": "Odjel za ekologiju, agronomiju i akvakulturu",
-      "city": "Zadar",
+      "website": "https://eaa.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Ekologija i zaštita prirode",
+          "name": "Primijenjena ekologija u poljoprivredi",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Ekologija i zaštita prirode",
+          "name": "Podvodne znanosti i tehnologije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Održivo upravljanje vodenim ekosustavima",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Mediteranska poljoprivreda",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biotehnologija mora",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
         }
-      ],
-      "website": "https://eaa.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
     },
     {
       "name": "Odjel za ekonomiju",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Menadžment",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Menadžment",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
       "website": "https://ekonomija.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za anglistiku",
-      "city": "Zadar",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Engleski jezik i književnost",
+          "name": "Menadžment",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Engleski jezik i književnost",
+          "name": "Menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Održivi razvoj turizma",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "website": "https://anglistika.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
     },
     {
       "name": "Odjel za etnologiju i antropologiju",
-      "city": "Zadar",
+      "website": "https://etnologijaiantropologija.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Etnologija i antropologija",
@@ -172,15 +155,33 @@
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "website": "https://etnologijaiantropologija.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
+    },
+    {
+      "name": "Odjel za filozofiju",
+      "website": "https://filozofija.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Filozofija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filozofija; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
     },
     {
       "name": "Odjel za francuske i frankofonske studije",
-      "city": "Zadar",
+      "website": "https://ffs.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Francuski jezik i književnost",
@@ -188,16 +189,27 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Francuski jezik i književnost; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Francuski jezik i književnost; smjer: prevoditeljski",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
         }
-      ],
-      "website": "https://ffs.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
     },
     {
       "name": "Odjel za geografiju",
-      "city": "Zadar",
+      "website": "https://geografija.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Geografija",
@@ -207,21 +219,32 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Geografija",
+          "name": "Primijenjena geografija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primijenjena geografija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Geografija; smjer: nastavnički",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "website": "https://geografija.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
     },
     {
       "name": "Odjel za germanistiku",
-      "city": "Zadar",
+      "website": "https://germanistika.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Njemački jezik i književnost",
@@ -229,33 +252,27 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
-        }
-      ],
-      "website": "https://germanistika.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za zdravstvene studije",
-      "city": "Zadar",
-      "studyPrograms": [
+        },
         {
-          "name": "Sestrinstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
+          "name": "Njemački jezik i književnost; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Njemački jezik i književnost; smjer: prevoditeljski",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "website": "https://zdravstvo.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
     },
     {
       "name": "Odjel za hispanistiku i iberske studije",
-      "city": "Zadar",
+      "website": "https://his.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Španjolski jezik i književnost",
@@ -263,68 +280,31 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
-        }
-      ],
-      "website": "https://his.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za povijest",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Povijest",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
         },
         {
-          "name": "Povijest",
+          "name": "Hispanistika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "website": "https://povijest.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
     },
     {
-      "name": "Odjel za povijest umjetnosti",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Povijest umjetnosti",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Povijest umjetnosti",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "website": "https://pum.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za informacijske znanosti",
-      "city": "Zadar",
+      "name": "Odjel za informacijske znanosti i tehnologije",
+      "website": "https://iz.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Informacijske znanosti",
           "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informacijske tehnologije",
+          "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
@@ -337,158 +317,26 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Informacijske znanosti",
+          "name": "Društvo znanja i prijenos informacija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "website": "https://iz.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za talijanistiku",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Talijanski jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za lingvistiku",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Lingvistika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Lingvistika",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "website": "https://lingvistika.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za pedagogiju",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Pedagogija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Pedagogija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "website": "https://pedagogija.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za filozofiju",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Filozofija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Filozofija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "website": "https://filozofija.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za psihologiju",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Psihologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Psihologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "website": "https://psihologija.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
-    },
-    {
-      "name": "Odjel za sociologiju",
-      "city": "Zadar",
-      "studyPrograms": [
-        {
-          "name": "Sociologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Sociologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "website": "https://sociologija.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
     },
     {
       "name": "Odjel za izobrazbu učitelja i odgojitelja",
-      "city": "Zadar",
+      "website": "https://iuo.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
+        {
+          "name": "Učiteljski studij",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
         {
           "name": "Rani i predškolski odgoj i obrazovanje",
           "cycle": "FIRST",
@@ -497,21 +345,109 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Učiteljski studij",
-          "cycle": "INTEGRATED",
-          "durationYears": 5,
-          "ects": 300,
+          "name": "Rani i predškolski odgoj i obrazovanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "website": "https://iuo.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
+    },
+    {
+      "name": "Odjel za klasičnu filologiju",
+      "website": "https://klfil.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Grčki jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Latinski jezik i rimska književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Grčki jezik i književnost; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Latinski jezik i rimska književnost; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za kroatistiku",
+      "website": "https://kroatistika.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Hrvatski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Hrvatski jezik i književnost; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za lingvistiku",
+      "website": "https://lingvistika.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Jezik i komunikacija u višejezičnom društvu",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Lingvistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za mehatroniku i robotiku",
+      "website": "https://mehatronikairobotika.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Mehatronika i robotika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
     },
     {
       "name": "Odjel za nastavničke studije u Gospiću",
-      "city": "Gospić",
+      "website": "https://nstgospic.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Učiteljski studij",
@@ -519,16 +455,237 @@
           "durationYears": 5,
           "ects": 300,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Rani i predškolski odgoj i obrazovanje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
         }
-      ],
-      "website": "https://nstgospic.unizd.hr",
-      "address": "Dr. Ante Starčevića 12, 53000 Gospić",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
     },
     {
-      "name": "Odjel za turizam i komunikacijske znanosti",
-      "city": "Zadar",
+      "name": "Odjel za pedagogiju",
+      "website": "https://pedagogija.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Pedagogija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kvaliteta u odgoju i obrazovanju",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za povijest",
+      "website": "https://povijest.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Povijest",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Jadran - poveznica među kontinentima",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za povijest umjetnosti",
+      "website": "https://pum.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Povijest umjetnosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest umjetnosti; smjer: konzervatorski i muzejsko-galerijski",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest umjetnosti; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest umjetnosti; smjer: opći",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Humanističke znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za psihologiju",
+      "website": "https://psihologija.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za rusistiku",
+      "website": "https://ruski.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Ruski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ruski jezik i književnost; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ruski jezik i književnost; smjer: prevoditeljski",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za sociologiju",
+      "website": "https://sociologija.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Sociologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Međunarodni diplomski studij kulturne sociologije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
+        },
+        {
+          "name": "Sociologija regionalnog i lokalnog razvoja",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "English"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za talijanistiku",
+      "website": "https://talijanistika.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Talijanski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Talijanski jezik i književnost; smjer: prevoditeljski",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Suvremena talijanska filologija; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Prevoditeljski studij talijanistike",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za primijenjene komunikacijske znanosti",
+      "website": "https://tikz.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Kultura i turizam",
@@ -538,22 +695,54 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Kultura i turizam",
+          "name": "Digitalno komuniciranje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kulturna i prirodna baština u turizmu",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "website": "https://tikz.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
+    },
+    {
+      "name": "Odjel za zdravstvene studije",
+      "website": "https://zdravstvo.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
     },
     {
       "name": "Pomorski odjel",
-      "city": "Zadar",
+      "website": "https://pomorskiodjel.unizd.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
+        {
+          "name": "Brodostrojarstvo i tehnologija pomorskog prometa",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
         {
           "name": "Nautika i tehnologija pomorskog prometa",
           "cycle": "FIRST",
@@ -562,17 +751,48 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Brodsko strojarstvo",
+          "name": "Organizacija u pomorstvu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Teološko-katehetski odjel",
+      "website": "https://tko.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Teološko-katehetski studij",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Teološko-katehetski studij",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Studij logopedije",
+      "website": "https://logopedija.unizd.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Logopedija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "website": "https://pomorskiodjel.unizd.hr",
-      "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
-      "phone": "+385 23 200 665",
-      "email": "info@unizd.hr"
+      ]
     }
   ],
   "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"

@@ -1,148 +1,166 @@
 {
   "name": "Sveučilište VERN'",
-  "acronym": "VERN",
   "city": "Zagreb",
   "country": "HRV",
+  "entity": null,
   "ownership": "PRIVATE",
   "foundedYear": "2020",
   "website": "https://vern.hr",
   "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
   "phone": "+385 91 4825 003",
   "email": "info@vern.hr",
+  "accreditationFrom": null,
+  "accreditationTo": null,
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "dataSourceUrl": "https://vern.hr/studiji/",
+  "lastModified": null,
   "faculties": [
     {
-      "name": "Odjel za primijenjenu matematiku i informacijske tehnologije",
-      "city": "Zagreb",
+      "name": "Ekonomija i poslovanje",
+      "website": "https://vern.hr/studiji/",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Primijenjeno računarstvo",
+          "name": "Ekonomija poduzetništva",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Primijenjeno računarstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
-      "phone": "+385 91 4825 003",
-      "email": "info@vern.hr"
-    },
-    {
-      "name": "Odjel za ekonomiju i marketing",
-      "city": "Zagreb",
-      "studyPrograms": [
-        {
-          "name": "Ekonomija i marketing",
+          "name": "Turizam - turistički i hotelski menadžment",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Ekonomija i marketing",
+          "name": "Menadžment održivog razvoja turizma",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Upravljanje ljudskim potencijalima",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računovodstvo i financije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poduzetnički menadžment",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
-      "phone": "+385 91 4825 003",
-      "email": "info@vern.hr"
+      ]
     },
     {
-      "name": "Odjel za poduzetništvo i menadžment",
-      "city": "Zagreb",
+      "name": "Komunikacije i mediji",
+      "website": "https://vern.hr/studiji/",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Poduzetništvo i menadžment",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
-      "phone": "+385 91 4825 003",
-      "email": "info@vern.hr"
-    },
-    {
-      "name": "Odjel za financije, računovodstvo i pravo",
-      "city": "Zagreb",
-      "studyPrograms": [
-        {
-          "name": "Financije, računovodstvo i pravo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
-      "phone": "+385 91 4825 003",
-      "email": "info@vern.hr"
-    },
-    {
-      "name": "Odjel za jezike i kulturu",
-      "city": "Zagreb",
-      "studyPrograms": [
-        {
-          "name": "Jezici i kultura",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
-      "phone": "+385 91 4825 003",
-      "email": "info@vern.hr"
-    },
-    {
-      "name": "Odjel za psihologiju i komunikacije",
-      "city": "Zagreb",
-      "studyPrograms": [
-        {
-          "name": "Psihologija i komunikacije",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
-      "phone": "+385 91 4825 003",
-      "email": "info@vern.hr"
-    },
-    {
-      "name": "Odjel za turizam",
-      "city": "Zagreb",
-      "studyPrograms": [
-        {
-          "name": "Turizam",
+          "name": "Cyber komunikacije i znanost o mreži",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Turizam",
+          "name": "Odnosi s javnošću i studij medija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Novinarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Upravljanje poslovnim komunikacijama",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
-      "phone": "+385 91 4825 003",
-      "email": "info@vern.hr"
+      ]
+    },
+    {
+      "name": "Kreativne industrije",
+      "website": "https://vern.hr/studiji/",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Transmedijska dramaturgija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filmsko, televizijsko i multimedijsko oblikovanje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filmska i televizijska režija i produkcija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Računarstvo i tehnologije",
+      "website": "https://vern.hr/studiji/",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Internet stvari (IoT)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna informatika (POINT)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Tehnički menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "IT Menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
     }
-  ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
+  ]
 }

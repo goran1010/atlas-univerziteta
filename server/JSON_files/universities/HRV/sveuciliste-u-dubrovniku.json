@@ -1,21 +1,174 @@
 {
   "name": "Sveučilište u Dubrovniku",
-  "acronym": "UNIDU",
   "city": "Dubrovnik",
   "country": "HRV",
+  "entity": null,
   "ownership": "PUBLIC",
   "foundedYear": "2003",
   "website": "https://www.unidu.hr",
-  "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
+  "address": "Branitelja Dubrovnika 29, 20000 Dubrovnik",
   "phone": "+385 20 445 700",
-  "email": "rektorat@unidu.hr",
+  "email": "info@unidu.hr",
+  "accreditationFrom": null,
+  "accreditationTo": null,
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "dataSourceUrl": "https://www.unidu.hr/upisi-info/",
+  "lastModified": null,
   "faculties": [
     {
-      "name": "Odjel za akvakulturu",
-      "city": "Dubrovnik",
+      "name": "Pomorski fakultet",
+      "website": "https://www.unidu.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Akvakultura",
+          "name": "Nautika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodostrojarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pomorske tehnologije jahta i marina",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pomorstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pomorstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "website": "https://www.unidu.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Hotelijerstvo, restoraterstvo i gastronomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Financijski menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Hotelijerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Financijski menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija u digitalnom okruženju",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet elektrotehnike i primijenjenog računarstva",
+      "website": "https://www.unidu.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Elektrotehničke i komunikacijske tehnologije u pomorstvu",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primijenjeno računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehničke i komunikacijske tehnologije u pomorstvu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primijenjeno računarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za primijenjenu ekologiju",
+      "website": "https://www.unidu.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Primijenjena ekologija mora",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
@@ -27,100 +180,27 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
-        }
-      ],
-      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
-      "phone": "+385 20 445 700",
-      "email": "ured@unidu.hr"
-    },
-    {
-      "name": "Odjel za elektrotehniku i informacijske tehnologije",
-      "city": "Dubrovnik",
-      "studyPrograms": [
+        },
         {
-          "name": "Primijenjeno računarstvo",
-          "cycle": "FIRST",
+          "name": "Primijenjene znanosti o moru",
+          "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Primijenjeno računarstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
-      "phone": "+385 20 445 700",
-      "email": "ured@unidu.hr"
-    },
-    {
-      "name": "Odjel za ekonomiju i poslovnu ekonomiju",
-      "city": "Dubrovnik",
-      "studyPrograms": [
-        {
-          "name": "Poslovna ekonomija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Poslovna ekonomija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "address": "Lapadska obala 7, 20000 Dubrovnik",
-      "phone": "+385 20 445 938",
-      "email": "ured@unidu.hr"
-    },
-    {
-      "name": "Odjel za strojarske i tehničke znanosti",
-      "city": "Dubrovnik",
-      "studyPrograms": [
-        {
-          "name": "Brodostrojarstvo",
-          "cycle": "FIRST",
+          "name": "Molekularne bioznanosti",
+          "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
-      "phone": "+385 20 445 700",
-      "email": "ured@unidu.hr"
-    },
-    {
-      "name": "Pomorski odjel",
-      "city": "Dubrovnik",
-      "studyPrograms": [
-        {
-          "name": "Nautika i pomorski promet",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Pomorske znanosti",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
-      "phone": "+385 20 445 777",
-      "email": "srdjan.vujicic@unidu.hr"
+      ]
     },
     {
       "name": "Odjel za komunikologiju",
-      "city": "Dubrovnik",
+      "website": "https://www.unidu.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Mediji i kultura društva",
@@ -130,40 +210,83 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Odnosi s javnošću",
+          "name": "Mediji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Odnosi s javnostima",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
-      "phone": "+385 20 446 020",
-      "email": "mediji@unidu.hr"
+      ]
     },
     {
       "name": "Odjel za umjetnost i restauraciju",
-      "city": "Dubrovnik",
+      "website": "https://www.unidu.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Konzervacija i restauracija",
+          "name": "Konzervacija-restauracija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Konzervacija i restauracija",
+          "name": "Konzervacija-restauracija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
-      "phone": "+385 20 445 700",
-      "email": "ured@unidu.hr"
+      ]
+    },
+    {
+      "name": "Odjel za sestrinstvo",
+      "website": "https://www.unidu.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kliničko sestrinstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za povijest",
+      "website": "https://www.unidu.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Povijest Jadrana i Mediterana",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest stanovništva",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
     }
-  ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
+  ]
 }

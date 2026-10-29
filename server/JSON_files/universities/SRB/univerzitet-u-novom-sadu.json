@@ -2358,5 +2358,7 @@
   ],
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
   "accreditationFrom": "2021-06-25",
-  "accreditationTo": "2028-06-25"
+  "accreditationTo": "2028-06-25",
+  "dataSourceUrl": null,
+  "lastModified": null
 }

@@ -101,9 +101,8 @@ function UnifiedSearch() {
           ].join(", ")}`}
       </p>
 
-      {loading && view.kind === "idle" ? (
-        <Spinner page />
-      ) : view.kind === "idle" ? (
+      {loading && view.kind === "idle" && <Spinner page />}
+      {!loading && view.kind === "idle" && (
         <Button
           variant="secondary"
           className="px-6 py-2.5 w-full max-w-xs sm:w-auto"
@@ -111,7 +110,8 @@ function UnifiedSearch() {
         >
           {t("universitiesPage.browseAll")}
         </Button>
-      ) : (
+      )}
+      {view.kind !== "idle" && (
         <SearchResults results={view.results} hadTerm={view.hadTerm} t={t} />
       )}
     </div>

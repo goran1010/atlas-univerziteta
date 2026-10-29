@@ -11,289 +11,534 @@
   "email": "rektorat@unios.hr",
   "faculties": [
     {
-      "name": "Ekonomski fakultet",
-      "city": "Osijek",
-      "website": "https://www.efos.unios.hr",
+      "name": "Fakultet agrobiotehničkih znanosti Osijek",
+      "website": "https://www.fazos.unios.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Ekonomija",
+          "name": "Poljoprivreda",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Poslovna ekonomija",
-          "cycle": "FIRST",
+          "name": "Bilinogojstvo",
+          "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Ekonomija",
+          "name": "Zootehnika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Agrarno poduzetništvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Mehanizacija u poljoprivredi",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Agroekonomika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Poslovna ekonomija",
+          "name": "Bilinogojstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Ekonomija",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
+          "name": "Ekološka poljoprivreda",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Mehanizacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povrćarstvo i cvjećarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Voćarstvo, vinogradarstvo i vinarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Zootehnika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Digital Agriculture",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
         }
-      ],
-      "address": "Trg Ljudevita Gaja 7, 31000 Osijek",
-      "phone": "+385 31 224 400",
-      "email": "ured@efos.hr"
+      ]
     },
     {
-      "name": "Pravni fakultet",
-      "city": "Osijek",
-      "website": "https://www.pravos.unios.hr",
+      "name": "Građevinski i arhitektonski fakultet Osijek",
+      "website": "https://www.gfos.unios.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Pravo",
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Arhitektura i urbanizam",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet elektrotehnike, računarstva i informacijskih tehnologija Osijek",
+      "website": "https://www.ferit.unios.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Elektrotehnika i informacijska tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Automobilsko računarstvo i komunikacije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
+        }
+      ]
+    },
+    {
+      "name": "Prehrambeno-tehnološki fakultet Osijek",
+      "website": "https://www.ptfos.unios.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Prehrambeno inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Procesno inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Znanost o hrani i nutricionizam",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Medicinski fakultet Osijek",
+      "website": "https://www.mefos.unios.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Njemački"
+        },
+        {
+          "name": "Farmacija",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
           "language": "Hrvatski"
         },
         {
-          "name": "Pravo",
-          "cycle": "THIRD",
+          "name": "Medicinsko laboratorijska dijagnostika",
+          "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Medicinsko laboratorijska dijagnostika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biotehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
         }
-      ],
-      "address": "Stjepana Radića 13, 31000 Osijek",
-      "phone": "+385 31 224 500",
-      "email": "office@pravos.hr"
+      ]
     },
     {
-      "name": "Fakultet agrobiotehničkih znanosti",
-      "city": "Osijek",
-      "website": "https://www.fazos.unios.hr",
+      "name": "Fakultet za dentalnu medicinu i zdravstvo Osijek",
+      "website": "https://www.fdmz.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Poljoprivreda",
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sestrinstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Agrobiotehnologije",
+          "name": "Fizioterapija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Poljoprivreda",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Agrobiotehnologije",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Poljoprivredne znanosti",
-          "cycle": "THIRD",
+          "name": "Dentalna higijena",
+          "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primaljstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Vladimira Preloga 1, 31000 Osijek",
-      "phone": "+385 31 554 801",
-      "email": "dekanat@fazos.hr"
+      ]
     },
     {
-      "name": "Prehrambeno-tehnološki fakultet",
-      "city": "Osijek",
-      "website": "https://www.ptfos.unios.hr",
+      "name": "Odjel za biologiju",
+      "website": "https://www.biologija.unios.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Prehrambena tehnologija",
+          "name": "Biologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Prehrambeno inženjerstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Prehrambena tehnologija",
+          "name": "Biologija; smjer: znanstveni",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Prehrambeno inženjerstvo",
+          "name": "Biologija i kemija; smjer: nastavnički",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Prehrambena tehnologija",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
+          "name": "Zaštita prirode i okoliša",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Franje Kuhača 20, 31000 Osijek",
-      "phone": "+385 31 224 300",
-      "email": "office@ptfos.hr"
+      ]
     },
     {
-      "name": "Građevinski i arhitektonski fakultet",
-      "city": "Osijek",
-      "website": "https://www.gfos.unios.hr",
+      "name": "Odjel za kemiju",
+      "website": "https://www.kemija.unios.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Građevinarstvo",
+          "name": "Kemija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Arhitektura i urbanizam",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Građevinarstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Arhitektura i urbanizam",
+          "name": "Kemija; smjer: istraživački",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Vladimir Prelog 3, 31000 Osijek",
-      "phone": "+385 31 274 377",
-      "email": "gfos@gfos.hr"
+      ]
     },
     {
-      "name": "Fakultet elektrotehnike, računarstva i informacijskih tehnologija",
-      "city": "Osijek",
-      "website": "https://www.ferit.unios.hr",
+      "name": "Fakultet primijenjene matematike i informatike",
+      "website": "https://www.mathos.unios.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Elektrotehnika",
+          "name": "Matematika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Računarstvo",
+          "name": "Matematika i računarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Informacijske i komunikacijske tehnologije",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Elektrotehnika",
+          "name": "Matematika; modul: Financijska matematika i statistika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Računarstvo",
+          "name": "Matematika; modul: Matematika i računarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Elektrotehnika i računarstvo",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
+          "name": "Matematika i informatika; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Kneza Trpimira 2B, 31000 Osijek",
-      "phone": "+385 31 224 600",
-      "email": "etf@etfos.hr"
+      ]
     },
     {
-      "name": "Strojarski fakultet",
-      "city": "Slavonski Brod",
+      "name": "Odjel za fiziku",
+      "website": "https://www.fizika.unios.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Strojarstvo",
+          "name": "Fizika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Strojarstvo",
+          "name": "Fizika i informatika; smjer: nastavnički",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Ekonomski fakultet u Osijeku",
+      "website": "https://www.efos.unios.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Ekonomija i poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Strojarstvo",
-          "cycle": "THIRD",
+          "name": "Primijenjena ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za odgojne i obrazovne znanosti",
+      "website": "https://www.foozos.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Učiteljski studij",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Rani i predškolski odgoj i obrazovanje",
+          "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Edukacijska rehabilitacija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Logopedija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Rani i predškolski odgoj i obrazovanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Edukacijska rehabilitacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
         }
-      ],
-      "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
-      "phone": "+385 35 446 188",
-      "email": "sfsb@sfsb.hr",
-      "website": "https://sfsb.unisb.hr"
+      ]
     },
     {
-      "name": "Filozofski fakultet",
-      "city": "Osijek",
+      "name": "Filozofski fakultet Osijek",
       "website": "https://www.ffos.unios.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Hrvatski jezik i književnost",
@@ -317,7 +562,7 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Mađarski jezik i književnost",
+          "name": "Filozofija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
@@ -325,13 +570,6 @@
         },
         {
           "name": "Povijest",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Filozofija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
@@ -352,28 +590,91 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Informacijske znanosti",
+          "name": "Sociologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Hrvatski jezik i književnost",
+          "name": "Informatologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Mađarski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest umjetnosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Hrvatski jezik i književnost; nastavnički smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Engleski jezik i književnost",
+          "name": "Engleski jezik i književnost; nastavnički smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Povijest",
+          "name": "Engleski jezik i književnost; prevoditeljski smjer",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Njemački jezik i književnost; nastavnički smjer",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Njemački jezik i književnost; prevoditeljski smjer",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filozofija; nastavnički smjer",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest; nastavnički smjer",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest umjetnosti; nastavnički smjer",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pedagogija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
@@ -387,130 +688,262 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Informacijske znanosti",
+          "name": "Sociologija; nastavnički smjer",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informatologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informacijska tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Nakladništvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Mađarski jezik i književnost; komunikološki smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Lorenza Jägera 9, 31000 Osijek",
-      "phone": "+385 31 211 400",
-      "email": "helpdesk@ffos.hr"
+      ]
     },
     {
-      "name": "Fakultet za odgojne i obrazovne znanosti",
-      "city": "Osijek",
-      "website": "https://www.foozos.unios.hr",
+      "name": "Pravni fakultet Osijek",
+      "website": "https://www.pravos.unios.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Rani i predškolski odgoj i obrazovanje",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Učiteljski studij",
+          "name": "Pravo",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
           "language": "Hrvatski"
-        }
-      ],
-      "address": "Cara Hadrijana 10, 31000 Osijek",
-      "phone": "+385 31 321 700",
-      "email": "helpdesk@foozos.hr"
-    },
-    {
-      "name": "Medicinski fakultet",
-      "city": "Osijek",
-      "website": "https://www.mefos.unios.hr",
-      "studyPrograms": [
-        {
-          "name": "Medicina",
-          "cycle": "INTEGRATED",
-          "durationYears": 6,
-          "ects": 360,
-          "language": "Hrvatski"
         },
         {
-          "name": "Sestrinstvo",
+          "name": "Socijalni rad",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Medicinske znanosti",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "address": "Josipa Huttlera 4, 31000 Osijek",
-      "phone": "+385 31 512 800",
-      "email": "ured@mefos.hr"
-    },
-    {
-      "name": "Fakultet za dentalnu medicinu i zdravstvo",
-      "city": "Osijek",
-      "website": "https://www.fdmz.unios.hr",
-      "studyPrograms": [
-        {
-          "name": "Dentalna medicina",
-          "cycle": "INTEGRATED",
-          "durationYears": 6,
-          "ects": 360,
+          "name": "Socijalni rad",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Sestrinstvo",
-          "cycle": "FIRST",
+          "name": "Upravni studij",
+          "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Fizioterapija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
+          "name": "Javna uprava",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Crkvena 21, 31000 Osijek",
-      "phone": "+385 31 399 600",
-      "email": "info@fdmz.hr"
+      ]
     },
     {
       "name": "Katolički bogoslovni fakultet u Đakovu",
-      "city": "Đakovo",
       "website": "https://www.djkbf.unios.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Teologija",
+          "name": "Filozofsko-teološki studij",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
           "language": "Hrvatski"
         }
-      ],
-      "address": "Petra Preradovića 17, 31400 Đakovo",
-      "phone": "+385 31 802 400",
-      "email": "tajnistvo@djkbf.hr"
+      ]
     },
     {
-      "name": "Akademija za umjetnost i kulturu",
-      "city": "Osijek",
+      "name": "Akademija za umjetnost i kulturu u Osijeku",
       "website": "https://www.uaos.unios.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
+        {
+          "name": "Glazbena pedagogija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glazbena umjetnost i kultura",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pjevanje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Instrumentalni studiji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kompozicija s teorijom glazbe",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Gluma i lutkarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Dizajn za kazalište, film i televiziju",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kultura, mediji i menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
         {
           "name": "Likovna kultura",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glazbena pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pjevanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Gitarska pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Klavir",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kompozicija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Tamburaško umijeće",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Teorija glazbe",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Gluma",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Dizajn za izvedbenu i medijsku umjetnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Lutkarska animacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Suvremene izvedbene prakse",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Lutkarska režija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Mediji i odnosi s javnošću",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment u kulturi i kreativnim industrijama",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
         },
         {
@@ -521,23 +954,76 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Dramska umjetnost",
+          "name": "Ilustracija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Vizualna umjetnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Kineziološki fakultet Osijek",
+      "website": "https://www.kifos.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Kineziologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Glazbena umjetnost",
+          "name": "Kineziološka edukacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet turizma i ruralnog razvoja u Požegi",
+      "website": "https://www.ftrr.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Turizam",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Enogastronomija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektroničko poslovanje i programsko inženjerstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računovodstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
         }
-      ],
-      "address": "Kralja Petra Svačića 1f, 31000 Osijek",
-      "phone": "+385 31 253 333",
-      "email": "uaos@uaos.hr"
+      ]
     }
   ],
   "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"

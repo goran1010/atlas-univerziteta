@@ -11,193 +11,298 @@
   "email": "rektorat@unimediteran.net",
   "faculties": [
     {
-      "name": "Fakultet za turizam - Montenegro Tourism School",
-      "city": "Bar",
-      "website": "https://ftht.unimediteran.net",
-      "studyPrograms": [
-        {
-          "name": "Turizam i hotelijerstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Crnogorski"
-        },
-        {
-          "name": "Turizam i hotelijerstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Crnogorski"
-        }
-      ],
-      "address": "Josipa Broza bb, 85000 Bar",
-      "phone": "+382 20 409 232",
-      "email": "office@unimediteran.net"
-    },
-    {
-      "name": "Fakultet za ekonomiju i biznis - Montenegro Business School",
-      "city": "Podgorica",
+      "name": "Fakultet za ekonomiju i biznis",
       "website": "https://fps.unimediteran.net",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Ekonomija i biznis",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "tracks": [
-            {
-              "name": "Bankarstvo i osiguranje"
-            },
-            {
-              "name": "Računovodstvo i finansije"
-            }
-          ],
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Finansijski menadžment",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
           "language": "Crnogorski"
         },
         {
           "name": "Marketing menadžment",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "tracks": [
-            {
-              "name": "Međunarodni marketing"
-            },
-            {
-              "name": "Public relations"
-            }
-          ],
-          "language": "Crnogorski"
-        },
-        {
-          "name": "Marketing",
           "cycle": "SPECIALIST",
           "durationYears": 1,
           "ects": 60,
-          "language": "Engleski"
+          "language": "Crnogorski"
         },
         {
-          "name": "Marketing (MBA)",
-          "cycle": "SECOND",
+          "name": "Računovodstvo i revizija",
+          "cycle": "SPECIALIST",
           "durationYears": 1,
           "ects": 60,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Menadžment zaštićenih oblasti",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Finansijski menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Marketing menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "MBA Marketing",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Engleski"
-        }
-      ],
-      "address": "Josipa Broza bb, 81000 Podgorica",
-      "phone": "+382 20 409 260",
-      "email": "office@unimediteran.net"
-    },
-    {
-      "name": "Fakultet vizuelnih umjetnosti",
-      "city": "Podgorica",
-      "website": "https://fvu.unimediteran.net",
-      "studyPrograms": [
+        },
         {
-          "name": "Vizuelne umjetnosti",
-          "cycle": "FIRST",
+          "name": "Finansije, računovodstvo i revizija",
+          "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "Vizuelne umjetnosti",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Crnogorski"
-        }
-      ],
-      "address": "Josipa Broza bb, 81000 Podgorica",
-      "phone": "+382 20 409 204",
-      "email": "fvu@unimediteran.net"
-    },
-    {
-      "name": "Fakultet za informacione tehnologije",
-      "city": "Podgorica",
-      "website": "https://fit.unimediteran.net",
-      "studyPrograms": [
-        {
-          "name": "Informacione tehnologije",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "tracks": [
-            {
-              "name": "Informaciono-komunikacione tehnologije"
-            },
-            {
-              "name": "Softverski inženjering"
-            }
-          ],
-          "language": "Crnogorski"
-        },
-        {
-          "name": "Informacione tehnologije",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Crnogorski"
-        }
-      ],
-      "address": "Josipa Broza bb, 81000 Podgorica",
-      "phone": "+382 20 409 200",
-      "email": "fit@unimediteran.net"
-    },
-    {
-      "name": "Fakultet za strane jezike",
-      "city": "Podgorica",
-      "website": "https://fsj.unimediteran.net",
-      "studyPrograms": [
-        {
-          "name": "Engleski jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Crnogorski"
-        },
-        {
-          "name": "Engleski jezik i književnost",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Crnogorski"
-        }
-      ],
-      "address": "Josipa Broza bb, 81000 Podgorica",
-      "phone": "+382 20 409 204",
-      "email": "fsj@unimediteran.net"
-    },
-    {
-      "name": "Pravni fakultet",
-      "city": "Podgorica",
-      "website": "https://pf.unimediteran.net",
-      "studyPrograms": [
-        {
-          "name": "Pravo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Crnogorski"
-        },
-        {
-          "name": "Pravo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Crnogorski"
-        },
-        {
-          "name": "Pravo",
+          "name": "Marketing menadžment",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         }
-      ],
-      "address": "Josipa Broza bb, 81000 Podgorica",
-      "phone": "+382 20 409 204",
-      "email": "pf@unimediteran.net"
+      ]
+    },
+    {
+      "name": "Fakultet za turizam",
+      "website": "https://ftht.unimediteran.net",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Menadžment u turizmu",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Menadžment u hotelijerstvu",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Menadžment u turizmu",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Menadžment u hotelijerstvu",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Menadžment u turizmu i hotelijerstvu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Menadžment u turizmu i hotelijerstvu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Engleski"
+        },
+        {
+          "name": "Menadžment u turizmu",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za informacione tehnologije",
+      "website": "https://fit.unimediteran.net",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Crnogorski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet vizuelnih umjetnosti",
+      "website": "https://fvu.unimediteran.net",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Vizuelne umjetnosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Vizuelne umjetnosti",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Vizuelne umjetnosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za strane jezike",
+      "website": "https://fsj.unimediteran.net",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Poslovni engleski jezik",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "website": "https://pf.unimediteran.net",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Pravosudni studijski program",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Privrednopravni studijski program",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Privrednopravni",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Krivično-pravosudni",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Evropsko pravo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Krivično-pravosudni program",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Javna uprava",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Privrednopravni studijski program",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Evropsko pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        }
+      ]
     }
   ],
   "authority": "Agencija za kontrolu i obezbjeđenje kvaliteta visokog obrazovanja (AKOKVO)",
