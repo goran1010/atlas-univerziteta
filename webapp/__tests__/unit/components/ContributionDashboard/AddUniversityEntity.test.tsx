@@ -14,7 +14,8 @@ const universitiesList = [
     name: "University of Sarajevo",
     acronym: "UNSA",
     city: "Sarajevo",
-    entity: "FBIH",
+    country: "BIH",
+      entity: "FBIH",
     ownership: "PUBLIC",
   },
 ];
@@ -466,7 +467,8 @@ describe("AddUniversityEntity", () => {
       data: {
         name: "University of Sarajevo",
         city: "Sarajevo",
-        entity: "FBIH",
+        country: "BIH",
+      entity: "FBIH",
         ownership: "PUBLIC",
       },
     });

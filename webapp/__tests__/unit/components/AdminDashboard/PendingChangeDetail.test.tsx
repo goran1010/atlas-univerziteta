@@ -44,7 +44,8 @@ describe("PendingChangeDetail", () => {
       data: {
         name: "New University",
         city: "Mostar",
-        entity: "FBIH",
+        country: "BIH",
+      entity: "FBIH",
         ownership: "PUBLIC",
         website: "https://new.example",
       },
@@ -178,7 +179,8 @@ describe("PendingChangeDetail", () => {
       data: {
         name: "Tree University",
         city: "Mostar",
-        entity: "FBIH",
+        country: "BIH",
+      entity: "FBIH",
         ownership: "PRIVATE",
         faculties: [
           {
@@ -234,7 +236,8 @@ describe("PendingChangeDetail", () => {
       data: {
         name: "Flat University",
         city: "Tuzla",
-        entity: "FBIH",
+        country: "BIH",
+      entity: "FBIH",
         ownership: "PUBLIC",
       },
     });

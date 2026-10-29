@@ -19,7 +19,8 @@ const facultyDetail = {
     name: "University of Sarajevo",
     acronym: "UNSA",
     city: "Sarajevo",
-    entity: "FBIH",
+    country: "BIH",
+      entity: "FBIH",
     ownership: "PUBLIC",
   },
   studyPrograms: [

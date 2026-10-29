@@ -105,7 +105,8 @@ describe("tree builder in AddUniversityEntity", () => {
       data: {
         name: "Builder Uni",
         city: "Testograd",
-        entity: "FBIH",
+        country: "BIH",
+      entity: "FBIH",
         ownership: "PUBLIC",
         faculties: [
           {
@@ -174,6 +175,7 @@ describe("tree builder in AddUniversityEntity", () => {
     expect(submissions[0]?.["data"]).toEqual({
       name: "Builder Uni",
       city: "Testograd",
+      country: "BIH",
       entity: "FBIH",
       ownership: "PUBLIC",
     });

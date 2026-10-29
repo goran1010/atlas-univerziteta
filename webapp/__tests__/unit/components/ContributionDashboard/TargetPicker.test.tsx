@@ -13,14 +13,16 @@ const universitiesList = [
     name: "University of Sarajevo",
     acronym: "UNSA",
     city: "Sarajevo",
-    entity: "FBIH",
+    country: "BIH",
+      entity: "FBIH",
     ownership: "PUBLIC",
   },
   {
     id: 2,
     name: "Empty University",
     city: "Mostar",
-    entity: "FBIH",
+    country: "BIH",
+      entity: "FBIH",
     ownership: "PRIVATE",
   },
 ];

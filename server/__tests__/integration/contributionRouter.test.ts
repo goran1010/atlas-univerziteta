@@ -108,6 +108,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
       data: {
         name: "TestCity University",
         city: "TestCity",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         ects: 240,
@@ -128,6 +129,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
       data: {
         name: "Provenance University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         dataSourceUrl: "https://example.com/source",
@@ -148,6 +150,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
       data: {
         name: "TestCity University",
         city: "TestCity",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         website: "javascript:alert(1)",
@@ -171,6 +174,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
       data: {
         name: "a".repeat(201),
         city: "TestCity",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -191,6 +195,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
       data: {
         name: "Commented University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -232,6 +237,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
       data: {
         name: "Uncommented University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -252,6 +258,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
       data: {
         name: "Long Comment University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -272,6 +279,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
       data: {
         name: "TestCity University",
         city: "TestCity",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -301,7 +309,8 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
         data: {
           name: "TestCity University",
           city: "TestCity",
-          entity: "FBIH",
+          country: "BIH",
+        entity: "FBIH",
           ownership: "PUBLIC",
         },
       }),
@@ -377,7 +386,8 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
         data: {
           name: `Capped University ${i.toString()}`,
           city: "City",
-          entity: "FBIH",
+          country: "BIH",
+        entity: "FBIH",
           ownership: "PUBLIC",
         },
         userId: user.id,
@@ -398,7 +408,8 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
         data: {
           name: "One Too Many",
           city: "City",
-          entity: "FBIH",
+          country: "BIH",
+        entity: "FBIH",
           ownership: "PUBLIC",
         },
       }),
@@ -427,7 +438,8 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
         data: {
           name: `Almost Capped University ${i.toString()}`,
           city: "City",
-          entity: "FBIH",
+          country: "BIH",
+        entity: "FBIH",
           ownership: "PUBLIC",
         },
         userId: user.id,
@@ -439,6 +451,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
       data: {
         name: "Twentieth University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -472,7 +485,8 @@ describe("Contribution Router - tree submissions", () => {
     const tree = {
       name: "Tree University",
       city: "City",
-      entity: "FBIH",
+      country: "BIH",
+        entity: "FBIH",
       ownership: "PUBLIC",
       faculties: [
         {
@@ -553,6 +567,7 @@ describe("Contribution Router - tree submissions", () => {
       data: {
         name: "Duplicate Faculties University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: [{ name: "Same Faculty" }, { name: "Same Faculty" }],
@@ -601,6 +616,7 @@ describe("Contribution Router - tree submissions", () => {
       data: {
         name: "Duplicate Tracks University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: [
@@ -635,6 +651,7 @@ describe("Contribution Router - tree submissions", () => {
       data: {
         name: "Provenance Tree University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: [
@@ -660,6 +677,7 @@ describe("Contribution Router - tree submissions", () => {
       data: {
         name: "Empty Faculties University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: [],
@@ -688,6 +706,7 @@ describe("Contribution Router - tree submissions", () => {
       data: {
         name: "At Cap University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: facultiesFor(799),
@@ -700,6 +719,7 @@ describe("Contribution Router - tree submissions", () => {
       data: {
         name: "Above Cap University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: facultiesFor(800),
@@ -720,6 +740,7 @@ describe("Contribution Router - tree submissions", () => {
       data: {
         name: "Large Payload University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         // ~700 faculties at ~200 bytes each puts the body well past 100kb
@@ -1064,7 +1085,8 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
         data: {
           name: "Own University",
           city: "City",
-          entity: "FBIH",
+          country: "BIH",
+        entity: "FBIH",
           ownership: "PUBLIC",
         },
         user: { connect: { id: user.id } },
@@ -1077,7 +1099,8 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
         data: {
           name: "Other University",
           city: "City",
-          entity: "FBIH",
+          country: "BIH",
+        entity: "FBIH",
           ownership: "PUBLIC",
         },
         user: { connect: { id: otherUser.id } },
@@ -1113,7 +1136,8 @@ describe("Contribution Router - pending changes ordering", () => {
     const changeData = {
       name: "Ordered University",
       city: "City",
-      entity: "FBIH",
+      country: "BIH",
+        entity: "FBIH",
       ownership: "PUBLIC",
     };
     const newer = await prisma.pendingChange.create({
@@ -1187,7 +1211,8 @@ describe("Contribution Router - DELETE /users/contribution/pending-changes/unive
         data: {
           name: "Delete Me",
           city: "City",
-          entity: "FBIH",
+          country: "BIH",
+        entity: "FBIH",
           ownership: "PUBLIC",
         },
         user: { connect: { id: user.id } },
@@ -1222,7 +1247,8 @@ describe("Contribution Router - malicious input", () => {
         data: {
           name: "Evil Origin University",
           city: "City",
-          entity: "FBIH",
+          country: "BIH",
+        entity: "FBIH",
           ownership: "PUBLIC",
         },
       });
@@ -1244,7 +1270,8 @@ describe("Contribution Router - malicious input", () => {
         data: {
           name: "Matching Origin University",
           city: "City",
-          entity: "FBIH",
+          country: "BIH",
+        entity: "FBIH",
           ownership: "PUBLIC",
         },
       });
@@ -1258,7 +1285,8 @@ describe("Contribution Router - malicious input", () => {
 
     const response = await agent.post("/users/contribution/universities").send({
       targetType: "UNIVERSITY",
-      data: { name, city: "City", entity: "FBIH", ownership: "PUBLIC" },
+      data: { name, city: "City", country: "BIH",
+        entity: "FBIH", ownership: "PUBLIC" },
     });
 
     expect(response.status).toBe(201);
@@ -1285,6 +1313,7 @@ describe("Contribution Router - malicious input", () => {
       data: {
         name: "Unsafe URL University",
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         website,
@@ -1337,6 +1366,7 @@ describe("Contribution Router - malicious input", () => {
       data: {
         name: "x".repeat(600 * 1024),
         city: "City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },

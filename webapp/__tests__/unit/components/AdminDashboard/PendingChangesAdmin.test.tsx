@@ -32,7 +32,8 @@ const universityChange = {
   data: {
     name: "New University",
     city: "Sarajevo",
-    entity: "FBIH",
+    country: "BIH",
+      entity: "FBIH",
     ownership: "PUBLIC",
   },
   createdAt: "2026-05-07T10:20:30.000Z",

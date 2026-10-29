@@ -52,7 +52,8 @@ const validPendingChange = {
   data: {
     name: "University of Sarajevo",
     city: "Sarajevo",
-    entity: "FBIH",
+    country: "BIH",
+      entity: "FBIH",
     ownership: "PUBLIC",
   },
   userId: "user-1",

@@ -6,7 +6,8 @@ import {
 const validData = {
   name: "Test University",
   city: "Test City",
-  entity: "FBIH",
+  country: "BIH",
+      entity: "FBIH",
   ownership: "PUBLIC",
 };
 
