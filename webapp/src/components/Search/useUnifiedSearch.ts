@@ -102,7 +102,7 @@ function useUnifiedSearch() {
       void executeSearch(
         hasText ? trimmed : undefined,
         country || undefined,
-        browse && !hasText ? ["university"] : undefined,
+        !hasText ? ["university"] : undefined,
       );
     },
     [executeSearch],

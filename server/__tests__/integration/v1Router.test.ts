@@ -480,36 +480,17 @@ describe("GET /api/v1/search - empty browse", () => {
     expect(error["issues"]).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          message: "Provide a search term or at least one filter.",
+          message: "Provide a search term or at least one filter (country, entity, ownership).",
         }),
       ]),
     );
   });
 
-  test("returns full sections when browsing by type filters", async () => {
-    const [universityCount, facultyCount, studyProgramCount] =
-      await Promise.all([
-        prisma.university.count(),
-        prisma.faculty.count(),
-        prisma.studyProgram.count(),
-      ]);
-
+  test("rejects type-only queries without a narrowing filter", async () => {
     const response = await request(app).get(
       "/api/v1/search?type=university&type=faculty&type=studyProgram",
     );
-    const responseBody = getResponseObject(response.body);
-    const data = getResponseObject(responseBody["data"]);
-
-    expect(response.status).toBe(200);
-    expect(getResponseArray(data["universities"])).toHaveLength(
-      universityCount,
-    );
-    expect(getResponseArray(data["faculties"])).toHaveLength(facultyCount);
-    expect(getResponseArray(data["studyPrograms"])).toHaveLength(
-      studyProgramCount,
-    );
-    expect(data["totals"]).toBeUndefined();
-    expect(data["direct"]).toBeDefined();
+    expect(response.status).toBe(400);
   });
 });
 
@@ -594,17 +575,9 @@ describe("GET /api/v1/search - type filter", () => {
     expect(getResponseArray(data["studyPrograms"])).toHaveLength(0);
   });
 
-  test("supports type-only browsing without a search term", async () => {
+  test("rejects type-only browsing without a narrowing filter", async () => {
     const response = await request(app).get("/api/v1/search?type=university");
-    const responseBody = getResponseObject(response.body);
-    const data = getResponseObject(responseBody["data"]);
-
-    expect(response.status).toBe(200);
-    expect(
-      getResponseArray(data["universities"]).length,
-    ).toBeGreaterThanOrEqual(0);
-    expect(getResponseArray(data["faculties"])).toHaveLength(0);
-    expect(getResponseArray(data["studyPrograms"])).toHaveLength(0);
+    expect(response.status).toBe(400);
   });
 });
 

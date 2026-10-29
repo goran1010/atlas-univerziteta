@@ -76,16 +76,16 @@ const searchQuerySchema = z.object({
     .transform(toArray),
 });
 
-// a bare query would return the entire dataset in one response
+// type and cycle alone don't meaningfully narrow the result set (type picks
+// which sections to return, cycle only filters programs), so the guard
+// requires a search term or a filter that actually restricts the data
 const guardedSearchQuerySchema = searchQuerySchema.refine(
   (query) =>
     query.searchTerm !== undefined ||
     query.country !== undefined ||
     query.entity !== undefined ||
-    query.ownership !== undefined ||
-    query.cycle !== undefined ||
-    query.type !== undefined,
-  { message: "Provide a search term or at least one filter." },
+    query.ownership !== undefined,
+  { message: "Provide a search term or at least one filter (country, entity, ownership)." },
 );
 
 function searchQuery(input: unknown) {
