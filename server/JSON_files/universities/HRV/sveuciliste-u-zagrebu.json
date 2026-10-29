@@ -129,7 +129,9 @@
       ],
       "website": "https://www.pmf.hr",
       "lastModified": "2026-10-29",
-      "address": "Horvatovac 102a, 10000 Zagreb"
+      "address": "Horvatovac 102a, 10000 Zagreb",
+      "phone": "+385 1 460 6000",
+      "email": "dekanat@dekanat.pmf.hr"
     },
     {
       "name": "Arhitektonski fakultet",
@@ -159,7 +161,9 @@
       ],
       "website": "https://www.arhitekt.hr",
       "lastModified": "2026-10-29",
-      "address": "Fra Andrije Kačića Miošića 26, 10000 Zagreb"
+      "address": "Fra Andrije Kačića Miošića 26, 10000 Zagreb",
+      "phone": "+385 1 463 9222",
+      "email": "dekan@arhitekt.hr"
     },
     {
       "name": "Fakultet kemijskog inženjerstva i tehnologije",
@@ -203,7 +207,9 @@
       ],
       "website": "https://www.fkit.hr",
       "lastModified": "2026-10-29",
-      "address": "Marulićev trg 19, 10000 Zagreb"
+      "address": "Marulićev trg 19, 10000 Zagreb",
+      "phone": "+385 1 459 7281",
+      "email": "office@fkit.hr"
     },
     {
       "name": "Građevinski fakultet",
@@ -233,7 +239,9 @@
       ],
       "website": "https://www.grad.hr",
       "lastModified": "2026-10-29",
-      "address": "Fra Andrije Kačića Miošića 26, 10000 Zagreb"
+      "address": "Fra Andrije Kačića Miošića 26, 10000 Zagreb",
+      "phone": "+385 1 463 9222",
+      "email": "ured_dekana@grad.hr"
     },
     {
       "name": "Fakultet elektrotehnike i računarstva",
@@ -277,7 +285,9 @@
       ],
       "website": "https://www.fer.hr",
       "lastModified": "2026-10-29",
-      "address": "Unska 3, 10000 Zagreb"
+      "address": "Unska 3, 10000 Zagreb",
+      "phone": "+385 1 612 9999",
+      "email": "fer@fer.hr"
     },
     {
       "name": "Geotehnički fakultet",
@@ -300,7 +310,9 @@
       ],
       "website": "https://www.gfv.hr",
       "lastModified": "2026-10-29",
-      "address": "Hallerova aleja 7, 42000 Varaždin"
+      "address": "Hallerova aleja 7, 42000 Varaždin",
+      "phone": "+385 42 408 900",
+      "email": "ured.dekana@gfv.hr"
     },
     {
       "name": "Grafički fakultet",
@@ -330,7 +342,9 @@
       ],
       "website": "https://www.grf.hr",
       "lastModified": "2026-10-29",
-      "address": "Getaldićeva 2, 10000 Zagreb"
+      "address": "Getaldićeva 2, 10000 Zagreb",
+      "phone": "+385 1 237 1080",
+      "email": "info@grf.hr"
     },
     {
       "name": "Fakultet strojarstva i brodogradnje",
@@ -374,7 +388,9 @@
       ],
       "website": "https://www.fsb.hr",
       "lastModified": "2026-10-29",
-      "address": "Ivana Lučića 5, 10000 Zagreb"
+      "address": "Ivana Lučića 5, 10000 Zagreb",
+      "phone": "+385 1 616 8222",
+      "email": "fsb@fsb.hr"
     },
     {
       "name": "Metalurški fakultet",
@@ -397,7 +413,9 @@
       ],
       "website": "https://www.simet.hr",
       "lastModified": "2026-10-29",
-      "address": "Aleja narodnih heroja 3, 44000 Sisak"
+      "address": "Aleja narodnih heroja 3, 44000 Sisak",
+      "phone": "+385 44 533 378",
+      "email": "dekanat@siscia.simet.hr"
     },
     {
       "name": "Rudarsko-geološko-naftni fakultet",
@@ -448,7 +466,9 @@
       ],
       "website": "https://www.rgn.hr",
       "lastModified": "2026-10-29",
-      "address": "Pierottijeva 6, 10000 Zagreb"
+      "address": "Pierottijeva 6, 10000 Zagreb",
+      "phone": "+385 1 553 5700",
+      "email": "dekanat@rgn.hr"
     },
     {
       "name": "Tekstilno-tehnološki fakultet",
@@ -471,7 +491,9 @@
       ],
       "website": "https://www.ttf.hr",
       "lastModified": "2026-10-29",
-      "address": "Prilaz baruna Filipovića 28a, 10000 Zagreb"
+      "address": "Prilaz baruna Filipovića 28a, 10000 Zagreb",
+      "phone": "+385 1 483 6058",
+      "email": "fakultet@ttf.hr"
     },
     {
       "name": "Fakultet prometnih znanosti",
@@ -501,7 +523,9 @@
       ],
       "website": "https://www.fpz.unizg.hr",
       "lastModified": "2026-10-29",
-      "address": "Vukelićeva 4, 10000 Zagreb"
+      "address": "Vukelićeva 4, 10000 Zagreb",
+      "phone": "+385 1 238 0222",
+      "email": "fpz@fpz.hr"
     },
     {
       "name": "Farmaceutsko-biokemijski fakultet",
@@ -531,7 +555,9 @@
       ],
       "website": "https://www.pharma.hr",
       "lastModified": "2026-10-29",
-      "address": "Ante Kovačića 1, 10000 Zagreb"
+      "address": "Ante Kovačića 1, 10000 Zagreb",
+      "phone": "+385 1 485 6201",
+      "email": "dekanat@pharma.hr"
     },
     {
       "name": "Veterinarski fakultet",
@@ -554,7 +580,9 @@
       ],
       "website": "https://www.vef.hr",
       "lastModified": "2026-10-29",
-      "address": "Heinzelova 55, 10000 Zagreb"
+      "address": "Heinzelova 55, 10000 Zagreb",
+      "phone": "+385 1 239 0111",
+      "email": "fakultet@vef.hr"
     },
     {
       "name": "Stomatološki fakultet",
@@ -577,7 +605,9 @@
       ],
       "website": "https://www.sfzg.hr",
       "lastModified": "2026-10-29",
-      "address": "Gundulićeva 5, 10000 Zagreb"
+      "address": "Gundulićeva 5, 10000 Zagreb",
+      "phone": "+385 1 480 2111",
+      "email": "dekanat@sfzg.hr"
     },
     {
       "name": "Medicinski fakultet",
@@ -607,7 +637,9 @@
       ],
       "website": "https://www.mef.hr",
       "lastModified": "2026-10-29",
-      "address": "Šalata 3b, 10000 Zagreb"
+      "address": "Šalata 3b, 10000 Zagreb",
+      "phone": "+385 1 456 6777",
+      "email": "mf@mef.hr"
     },
     {
       "name": "Agronomski fakultet",
@@ -679,7 +711,9 @@
       ],
       "website": "https://www.agr.hr",
       "lastModified": "2026-10-29",
-      "address": "Svetošimunska 25, 10000 Zagreb"
+      "address": "Svetošimunska 25, 10000 Zagreb",
+      "phone": "+385 1 239 3777",
+      "email": "dekanat@agr.hr"
     },
     {
       "name": "Prehrambeno-biotehnološki fakultet",
@@ -737,7 +771,9 @@
       ],
       "website": "https://www.pbf.hr",
       "lastModified": "2026-10-29",
-      "address": "Pierottijeva 6, 10000 Zagreb"
+      "address": "Pierottijeva 6, 10000 Zagreb",
+      "phone": "+385 1 460 5000",
+      "email": "dekan@pbf.hr"
     },
     {
       "name": "Fakultet šumarstva i drvne tehnologije",
@@ -781,7 +817,9 @@
       ],
       "website": "https://www.sumfak.hr",
       "lastModified": "2026-10-29",
-      "address": "Svetošimunska 25, 10000 Zagreb"
+      "address": "Svetošimunska 25, 10000 Zagreb",
+      "phone": "+385 1 235 2555",
+      "email": "fakultet@sumfak.hr"
     },
     {
       "name": "Ekonomski fakultet",
@@ -825,7 +863,9 @@
       ],
       "website": "https://www.efzg.hr",
       "lastModified": "2026-10-29",
-      "address": "Kennedyjev trg 6, 10000 Zagreb"
+      "address": "Kennedyjev trg 6, 10000 Zagreb",
+      "phone": "+385 1 238 3333",
+      "email": "dean@efzg.hr"
     },
     {
       "name": "Kineziološki fakultet",
@@ -855,7 +895,9 @@
       ],
       "website": "https://www.kif.hr",
       "lastModified": "2026-10-29",
-      "address": "Horvaćanski zavoj 15, 10000 Zagreb"
+      "address": "Horvaćanski zavoj 15, 10000 Zagreb",
+      "phone": "+385 1 365 8666",
+      "email": "dekanat@kif.hr"
     },
     {
       "name": "Pravni fakultet",
@@ -906,7 +948,9 @@
       ],
       "website": "https://www.pravo.hr",
       "lastModified": "2026-10-29",
-      "address": "Trg Republike Hrvatske 14, 10000 Zagreb"
+      "address": "Trg Republike Hrvatske 14, 10000 Zagreb",
+      "phone": "+385 1 456 4332",
+      "email": "dekanat@pravo.hr"
     },
     {
       "name": "Fakultet organizacije i informatike",
@@ -943,7 +987,9 @@
       ],
       "website": "https://www.foi.hr",
       "lastModified": "2026-10-29",
-      "address": "Pavlinska 2, 42000 Varaždin"
+      "address": "Pavlinska 2, 42000 Varaždin",
+      "phone": "+385 42 390 800",
+      "email": "ured-dekana@foi.hr"
     },
     {
       "name": "Fakultet političkih znanosti",
@@ -987,7 +1033,9 @@
       ],
       "website": "https://www.fpzg.hr",
       "lastModified": "2026-10-29",
-      "address": "Lepušićeva 6, 10000 Zagreb"
+      "address": "Lepušićeva 6, 10000 Zagreb",
+      "phone": "+385 1 464 2000",
+      "email": "dekanat@fpzg.hr"
     },
     {
       "name": "Edukacijsko-rehabilitacijski fakultet",
@@ -1038,7 +1086,9 @@
       ],
       "website": "https://www.erf.hr",
       "lastModified": "2026-10-29",
-      "address": "Borongajska cesta 83f, 10000 Zagreb"
+      "address": "Borongajska cesta 83f, 10000 Zagreb",
+      "phone": "+385 1 245 7000",
+      "email": "dekan@erf.hr"
     },
     {
       "name": "Učiteljski fakultet",
@@ -1061,7 +1111,9 @@
       ],
       "website": "https://www.ufzg.hr",
       "lastModified": "2026-10-29",
-      "address": "Savska cesta 77, 10000 Zagreb"
+      "address": "Savska cesta 77, 10000 Zagreb",
+      "phone": "+385 1 632 7300",
+      "email": "dekanat@ufzg.hr"
     },
     {
       "name": "Katolički bogoslovni fakultet",
@@ -1091,7 +1143,9 @@
       ],
       "website": "https://www.kbf.unizg.hr",
       "lastModified": "2026-10-29",
-      "address": "Vlaška 38, 10000 Zagreb"
+      "address": "Vlaška 38, 10000 Zagreb",
+      "phone": "+385 1 489 0400",
+      "email": "kbf@theo.kbf.hr"
     },
     {
       "name": "Filozofski fakultet",
@@ -1296,7 +1350,9 @@
       ],
       "website": "https://www.ffzg.hr",
       "lastModified": "2026-10-29",
-      "address": "Ivana Lučića 3, 10000 Zagreb"
+      "address": "Ivana Lučića 3, 10000 Zagreb",
+      "phone": "+385 1 612 0111",
+      "email": "ffzg@ffzg.hr"
     },
     {
       "name": "Fakultet hrvatskih studija",
@@ -1319,7 +1375,9 @@
       ],
       "website": "https://www.hrstud.hr",
       "lastModified": "2026-10-29",
-      "address": "Borongajska cesta 83d, 10000 Zagreb"
+      "address": "Borongajska cesta 83d, 10000 Zagreb",
+      "phone": "+385 1 245 7600",
+      "email": "dekanat@hrstud.hr"
     },
     {
       "name": "Fakultet filozofije i religijskih znanosti",
@@ -1342,7 +1400,9 @@
       ],
       "website": "https://www.ffrz.hr",
       "lastModified": "2026-10-29",
-      "address": "Jordanovac 110, 10000 Zagreb"
+      "address": "Jordanovac 110, 10000 Zagreb",
+      "phone": "+385 1 236 0100",
+      "email": "info@ffrz.hr"
     },
     {
       "name": "Akademija dramske umjetnosti",
@@ -1407,7 +1467,9 @@
       ],
       "website": "https://www.adu.hr",
       "lastModified": "2026-10-29",
-      "address": "Trg Republike Hrvatske 5, 10000 Zagreb"
+      "address": "Trg Republike Hrvatske 5, 10000 Zagreb",
+      "phone": "+385 1 482 8507",
+      "email": "dekanat@pomet.adu.hr"
     },
     {
       "name": "Akademija likovnih umjetnosti",
@@ -1437,7 +1499,9 @@
       ],
       "website": "https://www.alu.hr",
       "lastModified": "2026-10-29",
-      "address": "Ilica 85, 10000 Zagreb"
+      "address": "Ilica 85, 10000 Zagreb",
+      "phone": "+385 1 377 7300",
+      "email": "alu@alu.hr"
     },
     {
       "name": "Muzička akademija",
@@ -1467,7 +1531,9 @@
       ],
       "website": "https://www.muza.unizg.hr",
       "lastModified": "2026-10-29",
-      "address": "Trg Republike Hrvatske 12, 10000 Zagreb"
+      "address": "Trg Republike Hrvatske 12, 10000 Zagreb",
+      "phone": "+385 1 481 0200",
+      "email": "muza@muza.hr"
     }
   ],
   "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",

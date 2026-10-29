@@ -36,7 +36,11 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "website": "https://sfsb.unisb.hr",
+      "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
+      "phone": "+385 35 446 188",
+      "email": "info@unisb.hr"
     },
     {
       "name": "Biotehnički odjel",
@@ -50,7 +54,10 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
+      "phone": "+385 35 446 188",
+      "email": "info@unisb.hr"
     },
     {
       "name": "Tehnički odjel",
@@ -64,7 +71,10 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
+      "phone": "+385 35 446 188",
+      "email": "info@unisb.hr"
     },
     {
       "name": "Odjel društveno-humanističkih znanosti",
@@ -92,7 +102,10 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
+      "phone": "+385 35 446 188",
+      "email": "info@unisb.hr"
     }
   ],
   "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",

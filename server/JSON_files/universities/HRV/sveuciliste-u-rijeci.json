@@ -38,7 +38,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Radmile Matejčić 3, 51000 Rijeka"
+      "address": "Radmile Matejčić 3, 51000 Rijeka",
+      "phone": "+385 51 265 900",
+      "email": "gradri@gradri.uniri.hr"
     },
     {
       "name": "Ekonomski fakultet",
@@ -68,7 +70,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Ivana Filipovića 4, 51000 Rijeka"
+      "address": "Ivana Filipovića 4, 51000 Rijeka",
+      "phone": "+385 51 355 111",
+      "email": "efri@efri.uniri.hr"
     },
     {
       "name": "Tehnički fakultet",
@@ -140,7 +144,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Vukovarska 58, 51000 Rijeka"
+      "address": "Vukovarska 58, 51000 Rijeka",
+      "phone": "+385 51 651 444",
+      "email": "ured@riteh.uniri.hr"
     },
     {
       "name": "Filozofski fakultet",
@@ -247,7 +253,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Sveučilišna avenija 4, 51000 Rijeka"
+      "address": "Sveučilišna avenija 4, 51000 Rijeka",
+      "phone": "+385 51 265 600",
+      "email": "dekanat@ffri.uniri.hr"
     },
     {
       "name": "Pravni fakultet",
@@ -270,7 +278,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Hahlić 6, 51000 Rijeka"
+      "address": "Hahlić 6, 51000 Rijeka",
+      "phone": "+385 51 359 500",
+      "email": "pravri@pravri.uniri.hr"
     },
     {
       "name": "Pomorski fakultet",
@@ -300,7 +310,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Studentska 2, 51000 Rijeka"
+      "address": "Studentska 2, 51000 Rijeka",
+      "phone": "+385 51 338 411",
+      "email": "pfri@pfri.uniri.hr"
     },
     {
       "name": "Medicinski fakultet",
@@ -337,7 +349,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Braće Branchetta 20/1, 51000 Rijeka"
+      "address": "Braće Branchetta 20/1, 51000 Rijeka",
+      "phone": "+385 51 651 111",
+      "email": "medri@medri.uniri.hr"
     },
     {
       "name": "Učiteljski fakultet",
@@ -360,7 +374,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Sveučilišna avenija 6, 51000 Rijeka"
+      "address": "Sveučilišna avenija 6, 51000 Rijeka",
+      "phone": "+385 51 265 800",
+      "email": "ufri@ufri.uniri.hr"
     },
     {
       "name": "Fakultet za turizam i ugostiteljstvo",
@@ -390,7 +406,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Primorska 42, 51414 Ika"
+      "address": "Primorska 42, 51414 Ika",
+      "phone": "+385 51 294 444",
+      "email": "fmtu@fmtu.uniri.hr"
     },
     {
       "name": "Fakultet informatike",
@@ -420,7 +438,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Radmile Matejčić 2, 51000 Rijeka"
+      "address": "Radmile Matejčić 2, 51000 Rijeka",
+      "phone": "+385 51 584 700",
+      "email": "ured@inf.uniri.hr"
     },
     {
       "name": "Fakultet matematike",
@@ -443,7 +463,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Radmile Matejčić 2, 51000 Rijeka"
+      "address": "Radmile Matejčić 2, 51000 Rijeka",
+      "phone": "+385 51 584 600",
+      "email": "ured@math.uniri.hr"
     },
     {
       "name": "Akademija primijenjenih umjetnosti",
@@ -466,7 +488,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Slavka Krautzeka 83, 51000 Rijeka"
+      "address": "Slavka Krautzeka 83, 51000 Rijeka",
+      "phone": "+385 51 228 649",
+      "email": "apuri@apuri.uniri.hr"
     }
   ],
   "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
