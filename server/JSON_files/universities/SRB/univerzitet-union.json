@@ -105,14 +105,14 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Ekonomija, finansije i biznis",
+          "name": "Ekonomija, finansije i biznis (4 godine)",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
           "language": "Srpski"
         },
         {
-          "name": "Ekonomija, finansije i biznis",
+          "name": "Ekonomija, finansije i biznis (3 godine)",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,

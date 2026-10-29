@@ -240,14 +240,14 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Medicina",
+          "name": "Medicina (hrvatski)",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
           "language": "Hrvatski"
         },
         {
-          "name": "Medicina",
+          "name": "Medicina (njemački)",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,

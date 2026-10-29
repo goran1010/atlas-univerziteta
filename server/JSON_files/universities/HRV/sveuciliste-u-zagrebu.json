@@ -1605,14 +1605,14 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Medicina",
+          "name": "Medicina (hrvatski)",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
           "language": "Hrvatski"
         },
         {
-          "name": "Medicina",
+          "name": "Medicina (engleski)",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
@@ -2144,14 +2144,14 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Dentalna medicina",
+          "name": "Dentalna medicina (hrvatski)",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
           "language": "Hrvatski"
         },
         {
-          "name": "Dentalna medicina",
+          "name": "Dentalna medicina (engleski)",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
