@@ -5,7 +5,7 @@ export type SystemLanguage = "en" | "sr";
 const BCS_LANGUAGE_CODES = new Set(["sr", "bs", "hr", "cnr"]);
 
 function setSystemLanguage(): SystemLanguage {
-  const browserLanguage = navigator.language.slice(0, 2);
+  const browserLanguage = navigator.language.split("-")[0] ?? "";
 
   if (BCS_LANGUAGE_CODES.has(browserLanguage)) {
     return "sr";
