@@ -147,6 +147,9 @@ const facultySearchResultSchema = z.object({
   universityId: positiveIntegerSchema,
   city: optionalTextSchema,
   website: optionalTextSchema,
+  address: optionalTextSchema,
+  phone: optionalTextSchema,
+  email: optionalTextSchema,
   _count: z.object({ studyPrograms: integerSchema.nonnegative() }).optional(),
   university: searchResultUniversitySchema,
 });

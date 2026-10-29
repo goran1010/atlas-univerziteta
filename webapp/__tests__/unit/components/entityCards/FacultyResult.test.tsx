@@ -14,6 +14,9 @@ const faculty: FacultySearchResult = {
   universityId: 1,
   city: "Sarajevo",
   website: "https://etf.unsa.ba",
+  address: "Zmaja od Bosne bb, 71000 Sarajevo",
+  phone: "+387 33 250 700",
+  email: "info@etf.unsa.ba",
   _count: { studyPrograms: 2 },
   university: {
     id: 1,

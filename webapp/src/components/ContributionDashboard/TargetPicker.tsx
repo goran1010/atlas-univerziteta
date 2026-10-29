@@ -6,6 +6,7 @@ import { Label } from "../sharedComponents/Label";
 import { Spinner } from "../sharedComponents/Spinner";
 import { SelectedEntityDetails } from "./SelectedEntityDetails";
 import { fetchPublic } from "../../utils/fetchPublic";
+import { groupBy } from "../../utils/groupBy";
 import { LEVEL_TEXT } from "../../utils/levelColors";
 
 import type { EntityLevel } from "../../utils/levelColors";
@@ -28,6 +29,11 @@ export type PickedEntity =
   | { type: "STUDY_PROGRAM"; data: UniversityDetailStudyProgram }
   | { type: "TRACK"; data: UniversityDetailTrack };
 
+interface SelectOption {
+  id: number;
+  label: string;
+}
+
 interface LevelSelectProps {
   id: string;
   label: string;
@@ -36,8 +42,17 @@ interface LevelSelectProps {
   disabled: boolean;
   emptyMessage: string;
   placeholder: string;
-  options: { id: number; label: string }[];
+  options: SelectOption[];
+  groups?: { label: string; options: SelectOption[] }[];
   onChange: (value: string) => void;
+}
+
+function renderOptions(options: SelectOption[]) {
+  return options.map((option) => (
+    <option key={option.id} value={option.id}>
+      {option.label}
+    </option>
+  ));
 }
 
 function LevelSelect({
@@ -49,6 +64,7 @@ function LevelSelect({
   emptyMessage,
   placeholder,
   options,
+  groups,
   onChange,
 }: LevelSelectProps) {
   const isEmpty = !disabled && options.length === 0;
@@ -72,11 +88,13 @@ function LevelSelect({
         }}
       >
         <option value="">{isEmpty ? emptyMessage : placeholder}</option>
-        {options.map((option) => (
-          <option key={option.id} value={option.id}>
-            {option.label}
-          </option>
-        ))}
+        {groups
+          ? groups.map((g) => (
+              <optgroup key={g.label} label={g.label}>
+                {renderOptions(g.options)}
+              </optgroup>
+            ))
+          : renderOptions(options)}
       </Select>
     </div>
   );
@@ -286,6 +304,14 @@ function TargetPicker({
               id: u.id,
               label: u.acronym ? `${u.name} (${u.acronym})` : u.name,
             }))}
+            groups={groupBy(
+              universities.map((u) => ({
+                id: u.id,
+                label: u.acronym ? `${u.name} (${u.acronym})` : u.name,
+                country: u.country,
+              })),
+              (u) => t(`universitiesPage.countries.${u.country}`),
+            ).map((g) => ({ label: g.key, options: g.items }))}
             onChange={(value) => void handleUniversityChange(value)}
           />
           {deeperLevels}
