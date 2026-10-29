@@ -62,7 +62,9 @@ async function getFaculties(req: Request, res: Response) {
         name: true,
         city: true,
         website: true,
-        university: { select: { id: true, name: true, acronym: true, country: true } },
+        university: {
+          select: { id: true, name: true, acronym: true, country: true },
+        },
       },
       skip: (page - 1) * limit,
       take: limit,

@@ -13,7 +13,7 @@ const universityDetail = {
   acronym: "UNSA",
   city: "Sarajevo",
   country: "BIH",
-      entity: "FBIH",
+  entity: "FBIH",
   ownership: "PUBLIC",
   foundedYear: "1949",
   website: "https://unsa.ba",

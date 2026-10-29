@@ -97,7 +97,6 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
       pushAddress(t("contribution.dataFields.address"), entity.data.address);
       pushPhone(t("contribution.dataFields.phone"), entity.data.phone);
       pushEmail(t("contribution.dataFields.email"), entity.data.email);
-      pushWebsite(t("universitiesPage.dataSource"), entity.data.dataSourceUrl);
       break;
     case "FACULTY":
       push(t("contribution.dataFields.city"), entity.data.city);
@@ -105,7 +104,6 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
       pushAddress(t("contribution.dataFields.address"), entity.data.address);
       pushPhone(t("contribution.dataFields.phone"), entity.data.phone);
       pushEmail(t("contribution.dataFields.email"), entity.data.email);
-      pushWebsite(t("universitiesPage.dataSource"), entity.data.dataSourceUrl);
       break;
     case "STUDY_PROGRAM":
       push(

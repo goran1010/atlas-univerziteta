@@ -1,4 +1,10 @@
-import { ENUM_ALIASES, COUNTRIES, ENTITIES, OWNERSHIPS, CYCLES } from "./aliases.js";
+import {
+  ENUM_ALIASES,
+  COUNTRIES,
+  ENTITIES,
+  OWNERSHIPS,
+  CYCLES,
+} from "./aliases.js";
 
 import type { SearchToken } from "./tokenize.js";
 

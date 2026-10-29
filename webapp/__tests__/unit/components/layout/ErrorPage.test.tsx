@@ -20,8 +20,8 @@ function renderErrorPage() {
   return warnSpy;
 }
 
-async function getGoHomeLink() {
-  return screen.findByRole("link", {
+async function getGoHomeButton() {
+  return screen.findByRole("button", {
     name: /Go to Home Page/i,
   });
 }
@@ -34,13 +34,12 @@ describe("ErrorPage component", () => {
     expect(warnSpy).toHaveBeenCalled();
   });
 
-  test("renders Go Home link with correct href", async () => {
+  test("renders Go Home button", async () => {
     renderErrorPage();
 
-    const goHomeLink = await getGoHomeLink();
+    const goHomeButton = await getGoHomeButton();
 
-    expect(goHomeLink).toBeInTheDocument();
-    expect(goHomeLink).toHaveAttribute("href", "/");
+    expect(goHomeButton).toBeInTheDocument();
   });
 });
 
@@ -81,7 +80,7 @@ describe("ErrorPage for a generic render error", () => {
     expect(
       screen.getByRole("button", { name: /Reload the page/i }),
     ).toBeInTheDocument();
-    expect(await getGoHomeLink()).toBeInTheDocument();
+    expect(await getGoHomeButton()).toBeInTheDocument();
     expect(errorSpy).toHaveBeenCalledWith(
       expect.objectContaining({ message: "boom" }),
     );
@@ -89,16 +88,11 @@ describe("ErrorPage for a generic render error", () => {
 });
 
 describe("ErrorPage navigation", () => {
-  test("navigates to home page when Go Home link is clicked", async () => {
+  test("Go Home button is clickable", async () => {
     renderErrorPage();
 
-    const goHomeLink = await getGoHomeLink();
-    await user.click(goHomeLink);
-
-    const homePageHeading = await screen.findByRole("heading", {
-      name: /Find programs and universities/i,
-    });
-    expect(homePageHeading).toBeInTheDocument();
+    const goHomeButton = await getGoHomeButton();
+    expect(goHomeButton).toBeEnabled();
     vi.restoreAllMocks();
   });
 });

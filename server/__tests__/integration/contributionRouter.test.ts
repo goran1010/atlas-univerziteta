@@ -310,7 +310,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
           name: "TestCity University",
           city: "TestCity",
           country: "BIH",
-        entity: "FBIH",
+          entity: "FBIH",
           ownership: "PUBLIC",
         },
       }),
@@ -387,7 +387,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
           name: `Capped University ${i.toString()}`,
           city: "City",
           country: "BIH",
-        entity: "FBIH",
+          entity: "FBIH",
           ownership: "PUBLIC",
         },
         userId: user.id,
@@ -409,7 +409,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
           name: "One Too Many",
           city: "City",
           country: "BIH",
-        entity: "FBIH",
+          entity: "FBIH",
           ownership: "PUBLIC",
         },
       }),
@@ -439,7 +439,7 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
           name: `Almost Capped University ${i.toString()}`,
           city: "City",
           country: "BIH",
-        entity: "FBIH",
+          entity: "FBIH",
           ownership: "PUBLIC",
         },
         userId: user.id,
@@ -486,7 +486,7 @@ describe("Contribution Router - tree submissions", () => {
       name: "Tree University",
       city: "City",
       country: "BIH",
-        entity: "FBIH",
+      entity: "FBIH",
       ownership: "PUBLIC",
       faculties: [
         {
@@ -1086,7 +1086,7 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
           name: "Own University",
           city: "City",
           country: "BIH",
-        entity: "FBIH",
+          entity: "FBIH",
           ownership: "PUBLIC",
         },
         user: { connect: { id: user.id } },
@@ -1100,7 +1100,7 @@ describe("Contribution Router - GET /users/contribution/pending-changes/universi
           name: "Other University",
           city: "City",
           country: "BIH",
-        entity: "FBIH",
+          entity: "FBIH",
           ownership: "PUBLIC",
         },
         user: { connect: { id: otherUser.id } },
@@ -1137,7 +1137,7 @@ describe("Contribution Router - pending changes ordering", () => {
       name: "Ordered University",
       city: "City",
       country: "BIH",
-        entity: "FBIH",
+      entity: "FBIH",
       ownership: "PUBLIC",
     };
     const newer = await prisma.pendingChange.create({
@@ -1212,7 +1212,7 @@ describe("Contribution Router - DELETE /users/contribution/pending-changes/unive
           name: "Delete Me",
           city: "City",
           country: "BIH",
-        entity: "FBIH",
+          entity: "FBIH",
           ownership: "PUBLIC",
         },
         user: { connect: { id: user.id } },
@@ -1248,7 +1248,7 @@ describe("Contribution Router - malicious input", () => {
           name: "Evil Origin University",
           city: "City",
           country: "BIH",
-        entity: "FBIH",
+          entity: "FBIH",
           ownership: "PUBLIC",
         },
       });
@@ -1271,7 +1271,7 @@ describe("Contribution Router - malicious input", () => {
           name: "Matching Origin University",
           city: "City",
           country: "BIH",
-        entity: "FBIH",
+          entity: "FBIH",
           ownership: "PUBLIC",
         },
       });
@@ -1285,8 +1285,13 @@ describe("Contribution Router - malicious input", () => {
 
     const response = await agent.post("/users/contribution/universities").send({
       targetType: "UNIVERSITY",
-      data: { name, city: "City", country: "BIH",
-        entity: "FBIH", ownership: "PUBLIC" },
+      data: {
+        name,
+        city: "City",
+        country: "BIH",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
     });
 
     expect(response.status).toBe(201);

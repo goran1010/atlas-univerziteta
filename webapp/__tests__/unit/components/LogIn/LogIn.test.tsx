@@ -276,7 +276,7 @@ describe("LogIn Form Submit", () => {
     await submitLogInForm({ email: "new@user.com", password: "Password123" });
 
     const homePageText = await screen.findByText(
-      /Universities and Study Programs in Bosnia and Herzegovina/i,
+      /Universities and Study Programs/i,
     );
     expect(homePageText).toBeInTheDocument();
   });

@@ -59,9 +59,7 @@ function Api() {
           </pre>
         </section>
         <section className="flex flex-col gap-4">
-          <h2 className="text-xl font-bold text-center">
-            {t("api.examples")}
-          </h2>
+          <h2 className="text-xl font-bold text-center">{t("api.examples")}</h2>
           <pre className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color)">
             {[
               `GET /api/v1/universities`,

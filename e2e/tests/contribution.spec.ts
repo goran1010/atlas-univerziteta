@@ -35,9 +35,7 @@ async function submitUniversityCreate(page: Page, universityName: string) {
   await page
     .getByRole("textbox", { name: "City", exact: true })
     .fill("Testograd");
-  await page
-    .getByRole("combobox", { name: "Country" })
-    .selectOption("BIH");
+  await page.getByRole("combobox", { name: "Country" }).selectOption("BIH");
   await page
     .getByRole("combobox", { name: "Entity", exact: true })
     .selectOption("FBIH");

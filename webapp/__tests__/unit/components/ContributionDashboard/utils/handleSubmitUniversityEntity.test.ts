@@ -20,7 +20,7 @@ const baseArgs = {
     name: "University of Sarajevo",
     city: "Sarajevo",
     country: "BIH",
-      entity: "FBIH",
+    entity: "FBIH",
     ownership: "PUBLIC",
   },
   onSuccess: vi.fn(),

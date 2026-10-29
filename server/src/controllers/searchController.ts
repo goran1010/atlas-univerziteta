@@ -85,7 +85,11 @@ async function search(req: Request, res: Response) {
             findMany: (where) =>
               prisma.university.findMany({
                 where,
-                orderBy: [{ country: "asc" }, { ownership: "asc" }, { name: "asc" }],
+                orderBy: [
+                  { country: "asc" },
+                  { ownership: "asc" },
+                  { name: "asc" },
+                ],
                 include: { _count: { select: { faculties: true } } },
               }),
           },

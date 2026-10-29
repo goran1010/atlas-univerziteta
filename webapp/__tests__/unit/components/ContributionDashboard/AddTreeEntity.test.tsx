@@ -11,7 +11,7 @@ const validTreeJson = JSON.stringify({
   name: "Paste University",
   city: "Mostar",
   country: "BIH",
-      entity: "FBIH",
+  entity: "FBIH",
   ownership: "PRIVATE",
   faculties: [
     {
@@ -44,7 +44,7 @@ beforeEach(() => {
             acronym: "UNSA",
             city: "Sarajevo",
             country: "BIH",
-      entity: "FBIH",
+            entity: "FBIH",
             ownership: "PUBLIC",
           },
         ],
@@ -132,7 +132,7 @@ describe("AddTreeEntity", () => {
         name: "Broken University",
         city: "Mostar",
         country: "BIH",
-      entity: "FBIH",
+        entity: "FBIH",
         ownership: "PRIVATE",
         faculties: [{ name: "Same" }, { name: "Same" }],
       }),

@@ -57,12 +57,13 @@ const PendingChangesAdminRow = memo(
 
     const currentEntity = data.currentEntity ?? null;
     const entityName = getChangedEntityName(data);
-    const country =
-      (data.data as Record<string, unknown> | null)?.["country"] ??
-      (currentEntity as Record<string, unknown> | null)?.["country"];
+    const rawCountry =
+      data.targetType === "UNIVERSITY"
+        ? (data.data as { country?: string } | null)?.country
+        : undefined;
     const countryLabel =
-      typeof country === "string"
-        ? t(`universitiesPage.countries.${country}`)
+      typeof rawCountry === "string"
+        ? t(`universitiesPage.countries.${rawCountry}`)
         : undefined;
     const currentPath =
       data.typeOfChange !== "CREATE" && currentEntity

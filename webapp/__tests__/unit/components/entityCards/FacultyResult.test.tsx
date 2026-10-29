@@ -38,6 +38,7 @@ const facultyDetail = {
     id: 1,
     name: "University of Sarajevo",
     city: "Sarajevo",
+    country: "BIH",
     entity: "FBIH",
     ownership: "PUBLIC",
   },

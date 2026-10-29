@@ -52,11 +52,7 @@ function useUnifiedSearch() {
   }
 
   const executeSearch = useCallback(
-    async (
-      term: string | undefined,
-      country?: string,
-      type?: string[],
-    ) => {
+    async (term: string | undefined, country?: string, type?: string[]) => {
       abortRef.current?.abort();
       const controller = new AbortController();
       abortRef.current = controller;
@@ -66,7 +62,7 @@ function useUnifiedSearch() {
         const results = await searchAll(
           term,
           {
-            country: country || undefined,
+            country: country ?? undefined,
             type: type?.length ? type : undefined,
           },
           controller.signal,

@@ -33,7 +33,7 @@ const universityChange = {
     name: "New University",
     city: "Sarajevo",
     country: "BIH",
-      entity: "FBIH",
+    entity: "FBIH",
     ownership: "PUBLIC",
   },
   createdAt: "2026-05-07T10:20:30.000Z",

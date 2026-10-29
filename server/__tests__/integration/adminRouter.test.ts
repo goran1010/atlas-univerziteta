@@ -87,7 +87,14 @@ function createPendingChange({
 
 function createUniversity(name: string) {
   return prisma.university.create({
-    data: { name, city: "Test City", country: "BIH", entity: "FBIH", ownership: "PUBLIC" },
+    data: {
+      name,
+      city: "Test City",
+      country: "BIH",
+      country: "BIH",
+        entity: "FBIH",
+      ownership: "PUBLIC",
+    },
   });
 }
 
@@ -130,6 +137,7 @@ describe("Admin Router - GET /users/admin/pending-changes", () => {
       data: {
         name: "Test Admin GET University",
         city: "Test City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -166,6 +174,7 @@ describe("Admin Router - DELETE /users/admin/decline-pending-change", () => {
       data: {
         name: "Test Decline University",
         city: "Test City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -264,6 +273,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change", () => {
       data: {
         name: "Test Twice-Approved University",
         city: "Test City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -475,6 +485,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
       data: {
         name: "Test Create University",
         city: "Test City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -498,6 +509,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
       data: {
         name: "Test Approve University Updated",
         city: "Test City Updated",
+        country: "BIH",
         entity: "RS",
         ownership: "PRIVATE",
       },
@@ -512,6 +524,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
       expect.objectContaining({
         name: "Test Approve University Updated",
         city: "Test City Updated",
+        country: "BIH",
         entity: "RS",
         ownership: "PRIVATE",
       }),
@@ -767,6 +780,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for trees", ()
       data: {
         name: "Test Tree University",
         city: "Test City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: [
@@ -884,6 +898,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for trees", ()
       data: {
         name: "Test Collision University",
         city: "Test City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: [{ name: "Test Collision Faculty" }],

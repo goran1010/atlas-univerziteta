@@ -88,17 +88,17 @@ const universityCreateDataSchema = z
       error: "Ownership must be PUBLIC or PRIVATE",
     }),
 
-  acronym: z.string().trim().min(1).max(20).optional(),
+    acronym: z.string().trim().min(1).max(20).optional(),
 
-  foundedYear: z.string().trim().min(1).max(20).optional(),
+    foundedYear: z.string().trim().min(1).max(20).optional(),
 
-  website: websiteSchema.optional(),
+    website: websiteSchema.optional(),
 
-  address: z.string().trim().min(1).max(300).optional(),
+    address: z.string().trim().min(1).max(300).optional(),
 
-  phone: z.string().trim().min(1).max(50).optional(),
+    phone: z.string().trim().min(1).max(50).optional(),
 
-  email: z.email({ error: "Invalid email" }).max(254).optional(),
+    email: z.email({ error: "Invalid email" }).max(254).optional(),
   })
   .refine((u) => u.country !== "BIH" || u.entity !== undefined, {
     message: "Entity is required for Bosnian universities",

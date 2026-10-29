@@ -32,7 +32,7 @@ const universityListItem = {
   acronym: "SUM",
   city: "Mostar",
   country: "BIH",
-      entity: "FBIH",
+  entity: "FBIH",
   ownership: "PRIVATE",
   foundedYear: "1977",
   website: "https://sum.ba",
@@ -45,7 +45,7 @@ const universityResult = {
   acronym: "SUM",
   city: "Mostar",
   country: "BIH",
-      entity: "FBIH",
+  entity: "FBIH",
   ownership: "PRIVATE",
   foundedYear: "1977",
   website: "https://sum.ba",
@@ -62,7 +62,7 @@ const facultyResult = {
     acronym: "UNSA",
     city: "Sarajevo",
     country: "BIH",
-      entity: "FBIH",
+    entity: "FBIH",
     ownership: "PUBLIC",
   },
 };
@@ -175,7 +175,7 @@ describe("UnifiedSearch", () => {
   test("explains which terms are searched", () => {
     renderSearch();
 
-    expect(screen.getByText(/Search across all data/i)).toBeInTheDocument();
+    expect(screen.getByText(/Search universities, faculties/i)).toBeInTheDocument();
   });
 
   test("debounced search triggers after typing and renders results", async () => {
@@ -262,67 +262,18 @@ describe("UnifiedSearch", () => {
     expect(screen.queryByText(/Showing first/i)).not.toBeInTheDocument();
   });
 
-  test("applies entity and type filters from the filter panel to the query", async () => {
+  test("clicking a country pill sends the country filter", async () => {
     givenSearchResults({ universities: [universityListItem] });
     const user = renderSearch();
 
-    await typeSearch(user, "sarajevo");
+    await user.click(
+      screen.getByRole("button", { name: /Bosnia and Herzegovina/i }),
+    );
+
     await waitFor(() => {
       expect(searchRequests).toHaveLength(1);
     });
-
-    await user.click(screen.getByRole("button", { name: /^Filters$/i }));
-
-    await user.click(screen.getByRole("button", { name: /^Entity$/i }));
-    await user.click(screen.getByRole("radio", { name: /Federation of B&H/i }));
-
-    await waitFor(() => {
-      expect(searchRequests).toHaveLength(2);
-    });
-    expect(searchRequests[1]?.searchParams.get("entity")).toBe("FBIH");
-
-    await user.click(screen.getByRole("button", { name: /^Type$/i }));
-    await user.click(screen.getByRole("checkbox", { name: /^Universities$/i }));
-
-    await waitFor(() => {
-      expect(searchRequests).toHaveLength(3);
-    });
-    expect(searchRequests[2]?.searchParams.get("entity")).toBe("FBIH");
-    expect(searchRequests[2]?.searchParams.getAll("type")).toEqual([
-      "university",
-    ]);
-    // the filters button shows the active filter count
-    expect(
-      screen.getByRole("button", { name: /Filters.*2/i }),
-    ).toBeInTheDocument();
-  });
-
-  test("clears a radio filter when the selected option is clicked again", async () => {
-    givenSearchResults({ universities: [universityListItem] });
-    const user = renderSearch();
-
-    await typeSearch(user, "sarajevo");
-    await user.click(screen.getByRole("button", { name: /^Filters$/i }));
-    await user.click(screen.getByRole("button", { name: /^Ownership$/i }));
-    const publicRadio = screen.getByRole("radio", { name: /^Public$/i });
-
-    await user.click(publicRadio);
-    await waitFor(() => {
-      expect(
-        searchRequests[searchRequests.length - 1]?.searchParams.get(
-          "ownership",
-        ),
-      ).toBe("PUBLIC");
-    });
-
-    await user.click(publicRadio);
-    await waitFor(() => {
-      expect(
-        searchRequests[searchRequests.length - 1]?.searchParams.has(
-          "ownership",
-        ),
-      ).toBe(false);
-    });
+    expect(searchRequests[0]?.searchParams.get("country")).toBe("BIH");
   });
 
   test("does not trigger search for short input (1 char)", async () => {
