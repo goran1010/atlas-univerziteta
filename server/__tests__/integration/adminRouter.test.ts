@@ -91,8 +91,7 @@ function createUniversity(name: string) {
       name,
       city: "Test City",
       country: "BIH",
-      country: "BIH",
-        entity: "FBIH",
+      entity: "FBIH",
       ownership: "PUBLIC",
     },
   });

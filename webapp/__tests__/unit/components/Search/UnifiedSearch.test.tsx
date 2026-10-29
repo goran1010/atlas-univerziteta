@@ -175,7 +175,9 @@ describe("UnifiedSearch", () => {
   test("explains which terms are searched", () => {
     renderSearch();
 
-    expect(screen.getByText(/Search universities, faculties/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Search universities, faculties/i),
+    ).toBeInTheDocument();
   });
 
   test("debounced search triggers after typing and renders results", async () => {

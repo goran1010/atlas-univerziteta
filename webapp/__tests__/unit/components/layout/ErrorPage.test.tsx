@@ -1,11 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter } from "react-router";
-import userEvent from "@testing-library/user-event";
 import { routes } from "../../../../src/routes";
 import { RouterProvider } from "react-router";
 import { ErrorPage } from "../../../../src/components/layout/ErrorPage";
-
-const user = userEvent.setup();
 
 function renderErrorPage() {
   // every test here renders an unmatched route on purpose, which makes
