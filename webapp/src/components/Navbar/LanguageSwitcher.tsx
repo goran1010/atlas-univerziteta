@@ -117,7 +117,7 @@ function LanguageSwitcher({
         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
     >
       <LanguageIcon language={language} />
-      <span className="hidden sm:inline">{t("nav.language")}</span>
+      <span className="hidden min-[360px]:inline">{t("nav.language")}</span>
     </button>
   );
 }
