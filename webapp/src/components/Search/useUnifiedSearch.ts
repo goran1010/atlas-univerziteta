@@ -88,10 +88,8 @@ function useUnifiedSearch() {
   const triggerSearch = useCallback(
     (term: string, country: string, browse: boolean) => {
       const trimmed = term.trim();
-      const hasText = trimmed.length > 0;
+      const hasText = trimmed.length >= 2;
       const hasCountry = country !== "";
-
-      if (hasText && trimmed.length < 2) return;
 
       if (!hasText && !hasCountry && !browse) {
         // eslint-disable-next-line react-x/set-state-in-effect -- reached synchronously from the params effect, whose purpose is syncing URL params into view state

@@ -66,6 +66,7 @@ function UnifiedSearch() {
           <button
             key={c}
             type="button"
+            aria-pressed={countryFilter === c}
             onClick={() => {
               handleCountryChange(countryFilter === c ? "" : c);
             }}
