@@ -49,7 +49,7 @@ describe("LanguageSwitcher", () => {
     {
       currentLanguage: "en",
       expectedNextLanguage: "sr",
-      expectedMessage: "Switched to Bosnian/Croatian/Serbian",
+      expectedMessage: "Switched to Bosnian/Croatian/Serbian/Montenegrin",
     },
     {
       currentLanguage: "sr",

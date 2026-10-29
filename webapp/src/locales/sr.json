@@ -55,12 +55,12 @@
   "language": {
     "system": "Sistemski",
     "english": "Engleski",
-    "bcs": "Bosanski/Hrvatski/Srpski",
+    "bcs": "Bosanski/Hrvatski/Srpski/Crnogorski",
     "switchAria": "Promijeni jezik",
     "switched": {
       "system": "Prebačeno na jezik sistema",
       "english": "Prebačeno na engleski",
-      "bcs": "Prebačeno na bosanski/hrvatski/srpski"
+      "bcs": "Prebačeno na bosanski/hrvatski/srpski/crnogorski"
     }
   },
   "auth": {
@@ -72,13 +72,13 @@
       "noAccountPrefix": "Nemate nalog?",
       "heading": "Prijava",
       "oauthFailed": "Prijava nije uspjela. Pokušajte ponovo.",
-      "alreadyLoggedIn": "Već ste prijavljeni. Preusmereni ste na početnu stranicu."
+      "alreadyLoggedIn": "Već ste prijavljeni. Preusmjereni ste na početnu stranicu."
     },
     "signup": {
       "linkText": "Registracija",
       "haveAccountPrefix": "Već imate nalog?",
       "heading": "Kreirajte svoj nalog",
-      "blockedWhileLoggedIn": "Ne možete se registrovati dok ste prijavljeni. Preusmereni ste na početnu stranicu."
+      "blockedWhileLoggedIn": "Ne možete se registrovati dok ste prijavljeni. Preusmjereni ste na početnu stranicu."
     },
     "forgotPassword": {
       "linkText": "Zaboravili ste lozinku?",
@@ -132,7 +132,7 @@
         "title": "Univerziteti"
       }
     },
-    "improveHeading": "Unaprijedite podatke",
+    "improveHeading": "Poboljšajte podatke",
     "improveDescription": "Znate nešto što nedostaje ili nije ispravno? Registrovani korisnici mogu predlagati izmjene - dodavanja, ispravke ili brisanja - koje admini pregledaju i primjenjuju.",
     "improveStep1": "Napravite besplatan nalog i potvrdite email",
     "improveStep2": "Idite na stranicu Poboljšaj podatke i pošaljite prijedlog",
@@ -152,7 +152,7 @@
     "publicIntro": "Javni REST endpoint-i su dostupni pod osnovnim URL-om ispod. Ovi endpoint-i ne zahtijevaju autentifikaciju.",
     "fullDocs": "Za kompletnu projektnu dokumentaciju, lokalno postavljanje i smjernice za doprinos, pogledajte",
     "dataObject": "Objekat univerziteta",
-    "dataObjectExample": "{\n  \"id\":          number                          - jedinstveni identifikator\n  \"name\":        string                          - zvanicni naziv\n  \"acronym\":     string | null                   - skracenica (npr. UNSA)\n  \"city\":        string                          - grad glavnog kampusa\n  \"country\":     \"BIH\" | \"SRB\" | \"HRV\" | \"MNE\"   - ISO 3166-1 alpha-3\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\" | null      - entitet u BiH\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - npr. \"1949\"\n  \"website\":     string | null                   - zvanicni URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - samo lista\n  \"faculties\":   Faculty[]                        - samo detalji\n}",
+    "dataObjectExample": "{\n  \"id\":          number                          - jedinstveni identifikator\n  \"name\":        string                          - zvanični naziv\n  \"acronym\":     string | null                   - skraćenica (npr. UNSA)\n  \"city\":        string                          - grad glavnog kampusa\n  \"country\":     \"BIH\" | \"SRB\" | \"HRV\" | \"MNE\"   - ISO 3166-1 alpha-3\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\" | null      - entitet u BiH\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - npr. \"1949\"\n  \"website\":     string | null                   - zvanični URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - samo lista\n  \"faculties\":   Faculty[]                        - samo detalji\n}",
     "examples": "Primjeri",
     "endpoints": "Endpoint-i",
     "endpointsData": {
@@ -162,8 +162,8 @@
       "getUniversityById": "Preuzimanje univerziteta po ID-u s potpunim ugniježđenim detaljima (fakulteti, studijski programi i smjerovi). dataSourceUrl na svakoj stavci je URL sa kojeg su preuzeti njeni početni podaci.",
       "search": "Pretraga univerziteta, fakulteta i studijskih programa (nazivi smjerova se pronalaze preko svog studijskog programa). Zahtijeva pojam za pretragu (min 2 karaktera) ili barem jedan filter (country, entity ili ownership). Pretražuje po nazivu, gradu, akronimu, ECTS/trajanju i nazivima povezanih jedinica (neosjetljivo na velika/mala slova i dijakritike).",
       "searchTermParam": "Tekst za pretragu (2-100 karaktera). Opciono ako je naveden country, entity ili ownership.",
-      "pageParam": "Broj stranice, počinje od 1 (podrazumevano 1).",
-      "limitParam": "Broj stavki po stranici, 1-100 (podrazumevano 50).",
+      "pageParam": "Broj stranice, počinje od 1 (podrazumijevano 1).",
+      "limitParam": "Broj stavki po stranici, 1-100 (podrazumijevano 50).",
       "getAllFaculties": "Preuzimanje svih fakulteta, sortiranih po nazivu univerziteta pa po nazivu fakulteta. Podržava country i entity filtere. Uključuje nadređeni univerzitet.",
       "getFacultyById": "Preuzimanje fakulteta po ID-u s ugniježđenim studijskim programima i smjerovima, te nadređenim univerzitetom.",
       "getAllStudyPrograms": "Preuzimanje svih studijskih programa, sortiranih po ciklusu pa po nazivu. Podržava country i entity filtere. Uključuje nadređeni fakultet i univerzitet.",
@@ -362,7 +362,7 @@
     "admin": {
       "approveSuccess": "Izmjena na čekanju je odobrena.",
       "approveError": "Došlo je do greške pri odobravanju izmjene na čekanju. Pokušajte ponovo.",
-      "declineSuccess": "Zahtjev je odbijen.",
+      "declineSuccess": "Izmjena na čekanju je odbijena.",
       "declineError": "Došlo je do greške pri odbijanju izmjene na čekanju. Pokušajte ponovo."
     },
     "universities": {
