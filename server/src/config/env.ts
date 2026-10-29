@@ -26,7 +26,8 @@ class Env {
         ? Env.#getEnv("RESEND_API_KEY")
         : process.env["RESEND_API_KEY"];
     this.RESEND_FROM_EMAIL =
-      process.env["RESEND_FROM_EMAIL"] ?? "onboarding@resend.dev";
+      // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing -- compose passes "" for unset vars, which ?? would keep
+      process.env["RESEND_FROM_EMAIL"] || "onboarding@resend.dev";
     this.BETTER_AUTH_SECRET = Env.#getEnv("BETTER_AUTH_SECRET");
 
     this.GITHUB_CLIENT_ID = Env.#getEnv("GITHUB_CLIENT_ID");
