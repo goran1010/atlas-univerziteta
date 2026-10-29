@@ -9,792 +9,314 @@
   "address": "Cetinjski put 2, 81000 Podgorica",
   "phone": "+382 20 414 255",
   "email": "rektorat@ucg.ac.me",
+  "dataSourceUrl": "https://www.ucg.ac.me",
+  "lastModified": "2026-10-29",
   "faculties": [
     {
       "name": "Arhitektonski fakultet",
       "city": "Podgorica",
       "website": "https://www.arh.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Arhitektura",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Arhitektura",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Arhitektura",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Džordža Vašingtona bb, 81000 Podgorica",
       "phone": "+382 20 269 262",
-      "email": "arhitektura@ucg.ac.me"
+      "email": "arhitektura@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Arhitektura", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Arhitektura", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Arhitektura", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
+      ]
     },
     {
       "name": "Biotehnički fakultet",
       "city": "Podgorica",
       "website": "https://www.btf.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Biljna proizvodnja",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Stočarska proizvodnja",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Biljna proizvodnja",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Stočarska proizvodnja",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Mihaila Lalića br. 15, 81000 Podgorica",
       "phone": "+382 20 268 437",
-      "email": "btf@ucg.ac.me"
+      "email": "btf@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Biljna proizvodnja", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Stočarska proizvodnja", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Biljna proizvodnja", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Stočarska proizvodnja", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
     },
     {
       "name": "Građevinski fakultet",
       "city": "Podgorica",
       "website": "https://www.gf.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Građevinarstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Građevinarstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Građevinarstvo",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Džordža Vašingtona bb, 81000 Podgorica",
       "phone": "+382 20 244 905",
-      "email": "gf@ucg.ac.me"
+      "email": "gf@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Građevinarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Građevinarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Građevinarstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
+      ]
     },
     {
       "name": "Ekonomski fakultet",
       "city": "Podgorica",
       "website": "https://www.ekonomija.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Preduzetništvo i biznis",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Finansije",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Menadžment",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Međunarodni biznis",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Marketing",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Kvantitativne metode u ekonomiji i ekonomika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Informacioni sistemi",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Ekonomija javne uprave",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Business and Economics in English (MONTEB)",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Engleski"
-        },
-        {
-          "name": "Preduzetnička ekonomija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Ekonomija",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Jovana Tomaševića br. 37, 81000 Podgorica",
       "phone": "+382 20 214 138",
-      "email": "ekonomija@ucg.ac.me"
+      "email": "ekonomija@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Preduzetništvo i biznis", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Finansije", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Menadžment", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Međunarodni biznis", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Marketing", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Kvantitativne metode u ekonomiji i ekonomika", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Informacioni sistemi", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Ekonomija javne uprave", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Business and Economics in English (MONTEB)", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Engleski" },
+        { "name": "Preduzetnička ekonomija", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Ekonomija", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
+      ]
     },
     {
       "name": "Elektrotehnički fakultet",
       "city": "Podgorica",
       "website": "https://www.etf.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Energetika i automatika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Elektronika, telekomunikacije i računari",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Primijenjeno računarstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Energetika i automatika",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Elektronika, telekomunikacije i računari",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Primijenjeno računarstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Elektrotehnika i računarstvo",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Džordža Vašingtona bb, 81000 Podgorica",
       "phone": "+382 20 245 839",
-      "email": "etf@ucg.ac.me"
+      "email": "etf@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Energetika i automatika", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Elektronika, telekomunikacije i računari", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Primijenjeno računarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Energetika i automatika", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Elektronika, telekomunikacije i računari", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Primijenjeno računarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Elektrotehnika i računarstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
+      ]
     },
     {
       "name": "Pravni fakultet",
       "city": "Podgorica",
       "website": "https://www.pf.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Pravo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Pravo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Pravo",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Ul. 13. jula br. 2, 81000 Podgorica",
       "phone": "+382 20 481 144",
-      "email": "pf@ucg.ac.me"
+      "email": "pf@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Pravo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Pravo", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Pravo", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
+      ]
     },
     {
       "name": "Mašinski fakultet",
       "city": "Podgorica",
       "website": "https://www.mf.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Mašinstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Mašinstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Mašinstvo",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Džordža Vašingtona bb, 81000 Podgorica",
       "phone": "+382 20 245 003",
-      "email": "mf@ucg.ac.me"
+      "email": "mf@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Mašinstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Mašinstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Mašinstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
+      ]
     },
     {
       "name": "Medicinski fakultet",
       "city": "Podgorica",
       "website": "https://www.med.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Medicina",
-          "cycle": "INTEGRATED",
-          "durationYears": 6,
-          "ects": 360
-        },
-        {
-          "name": "Stomatologija",
-          "cycle": "INTEGRATED",
-          "durationYears": 6,
-          "ects": 360
-        },
-        {
-          "name": "Farmacija",
-          "cycle": "INTEGRATED",
-          "durationYears": 5,
-          "ects": 300
-        },
-        {
-          "name": "Zdravstvena njega",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Fizioterapija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Zdravstvena njega",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Fizioterapija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Medicinske nauke",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Kruševac bb, 81000 Podgorica",
       "phone": "+382 20 246 651",
-      "email": "infomedf@ucg.ac.me"
+      "email": "infomedf@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360 },
+        { "name": "Stomatologija", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360 },
+        { "name": "Farmacija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300 },
+        { "name": "Zdravstvena njega", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Fizioterapija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Zdravstvena njega", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Fizioterapija", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Medicinske nauke", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
+      ]
     },
     {
       "name": "Metalurško-tehnološki fakultet",
       "city": "Podgorica",
       "website": "https://www.mtf.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Metalurgija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Hemijska tehnologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Zaštita životne sredine",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Metalurgija i materijali",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Hemijska tehnologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Džordža Vašingtona bb, 81000 Podgorica",
       "phone": "+382 20 245 406",
-      "email": "mtf@ucg.ac.me"
+      "email": "mtf@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Metalurgija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Hemijska tehnologija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Zaštita životne sredine", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Metalurgija i materijali", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Hemijska tehnologija", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
     },
     {
       "name": "Prirodno-matematički fakultet",
       "city": "Podgorica",
       "website": "https://www.pmf.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Matematika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Biologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Fizika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Matematika",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Biologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Džordža Vašingtona bb, 81000 Podgorica",
       "phone": "+382 20 245 204",
-      "email": "pmf@ucg.ac.me"
+      "email": "pmf@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Matematika", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Biologija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Fizika", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Matematika", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Biologija", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
     },
     {
       "name": "Fakultet političkih nauka",
       "city": "Podgorica",
       "website": "https://www.fpn.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Politikologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Socijalni rad",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Politikologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Politikologija",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Ul. 13. jula br. 2, 81000 Podgorica",
       "phone": "+382 20 481 169",
-      "email": "fpn@ucg.ac.me"
+      "email": "fpn@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Politikologija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Socijalni rad", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Politikologija", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Politikologija", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
+      ]
     },
     {
       "name": "Filozofski fakultet",
       "city": "Nikšić",
       "website": "https://www.ff.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Filozofija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Sociologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Psihologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Pedagogija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Istorija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Geografija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Predškolsko vaspitanje",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Filozofija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Sociologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Psihologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Danila Bojovića bb, 81400 Nikšić",
       "phone": "+382 40 243 921",
-      "email": "ff@ucg.ac.me"
+      "email": "ff@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Filozofija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Sociologija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Psihologija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Pedagogija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Istorija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Geografija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Predškolsko vaspitanje", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Filozofija", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Sociologija", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Psihologija", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
     },
     {
       "name": "Filološki fakultet",
       "city": "Nikšić",
       "website": "https://www.fil.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Crnogorski jezik i južnoslovenske književnosti",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Engleski jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Francuski jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Italijanski jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Ruski jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Njemački jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Crnogorski jezik i južnoslovenske književnosti",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Engleski jezik i književnost",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Danila Bojovića bb, 81400 Nikšić",
       "phone": "+382 40 224 008",
-      "email": "filoloski@ucg.ac.me"
+      "email": "filoloski@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Crnogorski jezik i južnoslovenske književnosti", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Engleski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Francuski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Italijanski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Ruski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Njemački jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Crnogorski jezik i južnoslovenske književnosti", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Engleski jezik i književnost", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
     },
     {
       "name": "Fakultet za sport i fizičko vaspitanje",
       "city": "Nikšić",
       "website": "https://www.sf.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Fizička kultura",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Sportsko novinarstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Obrazovanje trenera",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Fizička kultura",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Narodne omladine bb, 81400 Nikšić",
       "phone": "+382 40 235 207",
-      "email": "fakultetzasportnk@ucg.ac.me"
+      "email": "fakultetzasportnk@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Fizička kultura", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Sportsko novinarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Obrazovanje trenera", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Fizička kultura", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
     },
     {
       "name": "Fakultet dramskih umjetnosti",
       "city": "Cetinje",
       "website": "https://www.fdu.ucg.ac.me",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "lastModified": "2026-10-29",
       "studyPrograms": [
-        {
-          "name": "Gluma",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Režija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Produkcija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Gluma",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Režija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Produkcija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        }
-      ],
-      "lastModified": "2026-10-29"
+        { "name": "Gluma", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Režija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Produkcija", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Gluma", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Režija", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Produkcija", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
     },
     {
       "name": "Fakultet likovnih umjetnosti",
       "city": "Cetinje",
       "website": "https://www.flu.ucg.ac.me",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "lastModified": "2026-10-29",
       "studyPrograms": [
-        {
-          "name": "Slikarstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Vajarstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Grafika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Likovna umjetnost",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        }
-      ],
-      "lastModified": "2026-10-29"
+        { "name": "Slikarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Vajarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Grafika", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Likovna umjetnost", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
     },
     {
       "name": "Muzička akademija",
       "city": "Cetinje",
       "website": "https://www.ma.ucg.ac.me",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "lastModified": "2026-10-29",
       "studyPrograms": [
-        {
-          "name": "Muzička umjetnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Muzička umjetnost",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        }
-      ],
-      "lastModified": "2026-10-29"
+        { "name": "Muzička umjetnost", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Muzička umjetnost", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
     },
     {
       "name": "Pomorski fakultet",
       "city": "Kotor",
       "website": "https://www.pom.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Nautičke studije",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Brodsko mašinstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Pomorske nauke",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Put I Bokeljske brigade 44, 85331 Kotor",
       "phone": "+382 32 303 184",
-      "email": "pfkotor@ucg.ac.me"
+      "email": "pfkotor@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Nautičke studije", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Brodsko mašinstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Pomorske nauke", "cycle": "SECOND", "durationYears": 2, "ects": 120 }
+      ]
     },
     {
       "name": "Fakultet za turizam i hotelijerstvo",
       "city": "Kotor",
       "website": "https://www.fth.ucg.ac.me",
-      "studyPrograms": [
-        {
-          "name": "Turizam",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Hotelijerstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180
-        },
-        {
-          "name": "Turizam i hotelijerstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120
-        },
-        {
-          "name": "Turizam i hotelijerstvo",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180
-        }
-      ],
-      "lastModified": "2026-10-29",
       "address": "Stari grad br. 320, 85330 Kotor",
       "phone": "+382 32 322 686",
-      "email": "fth@ucg.ac.me"
+      "email": "fth@ucg.ac.me",
+      "lastModified": "2026-10-29",
+      "studyPrograms": [
+        { "name": "Turizam", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Hotelijerstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180 },
+        { "name": "Turizam i hotelijerstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120 },
+        { "name": "Turizam i hotelijerstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180 }
+      ]
     }
-  ],
-  "authority": "Agencija za kontrolu i obezbjeđenje kvaliteta visokog obrazovanja (AKOKVO)",
-  "dataSourceUrl": "https://www.ucg.ac.me",
-  "lastModified": "2026-10-29"
+  ]
 }

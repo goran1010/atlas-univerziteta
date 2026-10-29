@@ -6,9 +6,9 @@
   "ownership": "PUBLIC",
   "foundedYear": "2015",
   "website": "https://www.unin.hr",
-  "address": null,
-  "phone": null,
-  "email": null,
+  "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
+  "phone": "+385 48 499 923",
+  "email": "info@unin.hr",
   "faculties": [
     {
       "name": "Odjel za medije i komunikaciju",

@@ -6,9 +6,9 @@
   "ownership": "PRIVATE",
   "foundedYear": "2000",
   "website": "https://www.privrednaakademija.edu.rs",
-  "address": null,
-  "phone": null,
-  "email": null,
+  "address": "Cvećarska 2, 21107 Novi Sad",
+  "phone": "+381 21 531 020",
+  "email": "office@privrednaakademija.edu.rs",
   "faculties": [
     {
       "name": "Pravni fakultet za privredu i pravosuđe",

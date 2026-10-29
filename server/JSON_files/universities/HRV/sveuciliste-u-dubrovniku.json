@@ -6,9 +6,9 @@
   "ownership": "PUBLIC",
   "foundedYear": "2003",
   "website": "https://www.unidu.hr",
-  "address": null,
-  "phone": null,
-  "email": null,
+  "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
+  "phone": "+385 20 445 700",
+  "email": "rektorat@unidu.hr",
   "faculties": [
     {
       "name": "Odjel za akvakulturu",

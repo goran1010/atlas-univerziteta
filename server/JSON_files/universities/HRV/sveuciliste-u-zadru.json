@@ -6,9 +6,9 @@
   "ownership": "PUBLIC",
   "foundedYear": "2002",
   "website": "https://www.unizd.hr",
-  "address": null,
-  "phone": null,
-  "email": null,
+  "address": "Ulica Mihovila Pavlinovića 1, 23000 Zadar",
+  "phone": "+385 23 200 665",
+  "email": "rektorat@unizd.hr",
   "faculties": [
     {
       "name": "Odjel za arheologiju",
