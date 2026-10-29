@@ -113,11 +113,10 @@ test.describe("detail pages", () => {
     await expect(page).toHaveURL(/\/faculties\/\d+$/);
   });
 
-  test("URL deep-link with filters loads filtered results", async ({
+  test("URL deep-link with country filter loads filtered results", async ({
     page,
   }) => {
-    await page.goto("/search?ownership=PUBLIC");
-    // filter-only search returns a large payload; slow under parallel workers
+    await page.goto("/search?country=BIH");
     await expect(
       page.locator('main a[href^="/universities/"]').first(),
     ).toBeVisible({ timeout: 15000 });

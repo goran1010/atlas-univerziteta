@@ -38,7 +38,7 @@ test.describe("static pages", () => {
     await page.goto("/about");
     await expect(
       page.getByRole("heading", {
-        name: "Universities and Study Programs in Bosnia and Herzegovina",
+        name: "Universities and Study Programs",
       }),
     ).toBeVisible();
   });
