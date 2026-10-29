@@ -134,6 +134,52 @@ function parseUniversityFile(filePath: string): UniversitySeed {
   }
 }
 
+function validateSeedData(
+  filePaths: string[],
+  trees: UniversitySeed[],
+): void {
+  const errors: string[] = [];
+  const seenNames = new Map<string, string>();
+
+  for (const [i, tree] of trees.entries()) {
+    const file = path.relative(baseDir, filePaths[i] ?? "");
+    const folder = file.split(path.sep)[0] ?? "";
+
+    if (tree.country !== folder) {
+      errors.push(
+        `${file}: country "${tree.country}" does not match folder "${folder}"`,
+      );
+    }
+
+    const existing = seenNames.get(tree.name);
+    if (existing) {
+      errors.push(
+        `Duplicate university name "${tree.name}" in ${file} and ${existing}`,
+      );
+    }
+    seenNames.set(tree.name, file);
+
+    for (const faculty of tree.faculties ?? []) {
+      const seenPrograms = new Set<string>();
+      for (const program of faculty.studyPrograms ?? []) {
+        const key = `${program.name}::${program.cycle}`;
+        if (seenPrograms.has(key)) {
+          errors.push(
+            `${file}: duplicate program "${program.name}" (${program.cycle}) in faculty "${faculty.name}"`,
+          );
+        }
+        seenPrograms.add(key);
+      }
+    }
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Seed validation failed:\n${errors.map((e) => `  - ${e}`).join("\n")}`,
+    );
+  }
+}
+
 function toUniversityData(
   university: UniversitySeed,
 ): UniversityCreateManyInput {
@@ -165,6 +211,7 @@ function toUniversityData(
 async function main() {
   try {
     const universityTrees = universityFilePaths.map(parseUniversityFile);
+    validateSeedData(universityFilePaths, universityTrees);
     console.log("Seeding universities...");
 
     const upsertedUniversities = await Promise.all(
