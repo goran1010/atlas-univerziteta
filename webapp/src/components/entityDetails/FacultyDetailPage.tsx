@@ -142,6 +142,14 @@ function FacultyDetailPage() {
                   <MapPinIcon /> {faculty.city}
                 </span>
               )}
+              <span>
+                {t(`universitiesPage.countries.${faculty.university.country}`)}
+              </span>
+              {faculty.university.entity && (
+                <span>
+                  {t(`universitiesPage.entities.${faculty.university.entity}`)}
+                </span>
+              )}
             </div>
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted) mt-2">
               <ContactLinks

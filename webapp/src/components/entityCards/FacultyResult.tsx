@@ -89,6 +89,8 @@ function FacultyResult({
         <p className="text-sm text-(--text-muted) mt-0.5">
           <LandmarkIcon /> {faculty.university.name}
           {faculty.university.acronym && ` (${faculty.university.acronym})`}
+          {" - "}
+          {t(`universitiesPage.countries.${faculty.university.country}`)}
         </p>
         {faculty.city && (
           <p className="text-sm text-(--text-secondary) mt-0.5">
