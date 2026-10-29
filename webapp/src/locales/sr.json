@@ -194,6 +194,7 @@
     "needUser": "Morate biti registrovani korisnik da biste predložili izmjene sadržaja.",
     "addNewData": "Predloži izmjene",
     "addTree": "Dodaj univerzitet ili fakultet (JSON)",
+    "addTreeHint": "Koristite ovu karticu da dodate cijeli univerzitet ili fakultet sa svim studijskim programima i smjerovima odjednom, lijepljenjem ili učitavanjem JSON datoteke.",
     "pendingChanges": "Moji prijedlozi",
     "noPendingChanges": "Nemate prijedloga koji čekaju pregled.",
     "change": "Izmjena",

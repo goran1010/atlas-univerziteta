@@ -195,6 +195,7 @@
     "actions": "Actions",
     "addNewData": "Propose changes",
     "addTree": "Add university or faculty (JSON)",
+    "addTreeHint": "Use this tab to add a whole university or faculty with all its study programs and tracks at once, by pasting or loading a JSON file.",
     "pendingChanges": "My suggestions",
     "noPendingChanges": "You have no suggestions awaiting review.",
     "change": "Change",

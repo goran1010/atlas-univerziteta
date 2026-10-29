@@ -193,6 +193,9 @@ function AddTreeEntity({
       onSubmit={(e) => void handleSubmit(e)}
       className="flex flex-col gap-4 w-full max-w-lg"
     >
+      <p className="text-sm text-(--text-secondary) text-center">
+        {t("contribution.addTreeHint")}
+      </p>
       <div className="flex flex-col gap-1 items-center">
         <Label htmlFor="treeRootType" required>
           {t("contribution.entityType")}
