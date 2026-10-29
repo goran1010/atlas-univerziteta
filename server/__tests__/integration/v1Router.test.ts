@@ -480,7 +480,8 @@ describe("GET /api/v1/search - empty browse", () => {
     expect(error["issues"]).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          message: "Provide a search term or at least one filter (country, entity, ownership).",
+          message:
+            "Provide a search term or at least one filter (country, entity, ownership).",
         }),
       ]),
     );

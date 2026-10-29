@@ -7,7 +7,7 @@ Contributions of any kind are welcome - bug fixes, new features, documentation, 
 1. Fork the repository and create your branch from `main`
 2. Run `npm run install:all` to install dependencies
 3. Set up your local environment:
-   - Copy `server/.env.example` to `server/.env` and fill in your database, email service, BetterAuth secret, and (optionally) GitHub/Google OAuth credentials
+   - Copy `server/.env.example` to `server/.env` and fill in your database, email service, BetterAuth secret, and GitHub/Google OAuth credentials (all required - the server won't start without them)
    - Copy `webapp/.env.example` to `webapp/.env` and update `VITE_API_URL` if needed
 4. Set up the databases:
    - Run `npm run db:setup` to initialize the development database
@@ -59,7 +59,7 @@ You can also start one level lower: pick Faculty as the item type, choose the un
 
 The JSON mirrors the structure of the seed files. Children live in `faculties`, `studyPrograms`, and `tracks` arrays, and each level takes the same fields as the single-item form:
 
-- University: `name`, `city`, `entity` (`FBIH`, `RS`, `BD`), and `ownership` (`PUBLIC`, `PRIVATE`) are required; `acronym`, `foundedYear`, `website`, `address`, `phone`, and `email` are optional.
+- University: `name`, `city`, `country` (`BIH`, `SRB`, `HRV`, `MNE`), and `ownership` (`PUBLIC`, `PRIVATE`) are required; `entity` (`FBIH`, `RS`, `BD`) is required for BIH and rejected for other countries; `acronym`, `foundedYear`, `website`, `address`, `phone`, and `email` are optional.
 - Faculty: `name` is required; `city`, `website`, `address`, `phone`, and `email` are optional.
 - Study program: `name` and `cycle` (`FIRST`, `SECOND`, `THIRD`, `INTEGRATED`, `VOCATIONAL`, `SPECIALIST`) are required; `durationYears`, `ects`, and `language` are optional.
 - Track: `name` is required; `ects` and `durationYears` are optional.
@@ -70,6 +70,7 @@ Example:
 {
   "name": "Example University",
   "city": "Sarajevo",
+  "country": "BIH",
   "entity": "FBIH",
   "ownership": "PRIVATE",
   "faculties": [
@@ -93,7 +94,7 @@ Rules the validator enforces:
 
 - Sibling names must be unique: faculty names within a university, study program name and cycle pairs within a faculty, and track names within a study program. These mirror the database constraints, so an approved submission cannot half-fail.
 - A submission can hold at most 800 items in total, and the request body at most 512kb.
-- Unknown fields are rejected. Provenance fields that appear in the seed files (`dataSourceUrl`, `lastModified`, accreditation data) are not accepted in contributions.
+- Unknown fields are rejected. Seed-only fields (`dataSourceUrl`, `lastModified`, `accreditationFrom`, `accreditationTo`, `authority`, `isUniversityLevel`) are not accepted in contributions.
 
 If an approved submission collides with existing data, for example a university with the same name already exists, nothing is applied, the suggestion stays in the queue, and the admin sees which name collided.
 

@@ -87,7 +87,10 @@ const guardedSearchQuerySchema = searchQuerySchema.refine(
     query.country !== undefined ||
     query.entity !== undefined ||
     query.ownership !== undefined,
-  { message: "Provide a search term or at least one filter (country, entity, ownership)." },
+  {
+    message:
+      "Provide a search term or at least one filter (country, entity, ownership).",
+  },
 );
 
 function searchQuery(input: unknown) {

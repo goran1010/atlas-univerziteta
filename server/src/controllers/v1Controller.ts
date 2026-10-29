@@ -61,7 +61,12 @@ async function getFaculties(req: Request, res: Response) {
 
   const where = {
     ...(country || entity
-      ? { university: { ...(country ? { country } : {}), ...(entity ? { entity } : {}) } }
+      ? {
+          university: {
+            ...(country ? { country } : {}),
+            ...(entity ? { entity } : {}),
+          },
+        }
       : {}),
   };
 
@@ -98,7 +103,10 @@ async function getStudyPrograms(req: Request, res: Response) {
     ...(country || entity
       ? {
           faculty: {
-            university: { ...(country ? { country } : {}), ...(entity ? { entity } : {}) },
+            university: {
+              ...(country ? { country } : {}),
+              ...(entity ? { entity } : {}),
+            },
           },
         }
       : {}),
@@ -144,7 +152,10 @@ async function getTracks(req: Request, res: Response) {
       ? {
           studyProgram: {
             faculty: {
-              university: { ...(country ? { country } : {}), ...(entity ? { entity } : {}) },
+              university: {
+                ...(country ? { country } : {}),
+                ...(entity ? { entity } : {}),
+              },
             },
           },
         }
@@ -155,7 +166,11 @@ async function getTracks(req: Request, res: Response) {
     prisma.track.count({ where }),
     prisma.track.findMany({
       where,
-      orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }, { id: "asc" }],
+      orderBy: [
+        { studyProgram: { name: "asc" } },
+        { name: "asc" },
+        { id: "asc" },
+      ],
       select: {
         id: true,
         name: true,

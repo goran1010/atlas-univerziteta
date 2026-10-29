@@ -134,10 +134,7 @@ function parseUniversityFile(filePath: string): UniversitySeed {
   }
 }
 
-function validateSeedData(
-  filePaths: string[],
-  trees: UniversitySeed[],
-): void {
+function validateSeedData(filePaths: string[], trees: UniversitySeed[]): void {
   const errors: string[] = [];
   const seenNames = new Map<string, string>();
 

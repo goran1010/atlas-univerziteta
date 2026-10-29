@@ -11,7 +11,7 @@ Please check all items to confirm you understand the requirements. -->
 - [ ] I have read and followed the [CONTRIBUTING.md](../docs/CONTRIBUTING.md) guidelines
 - [ ] The `Description` section summarizes the reason for this PR
 - [ ] The `This PR` section has a bullet point list describing the changes in this PR
-- [ ] If this PR addresses an open issue, it is linked in the `Issue` section
+- [ ] If this PR addresses an open issue, it is linked in the `Related issues` section
 
 ## Type of change
 <!-- Replace the whitespace between the square brackets with an 'x', e.g. [x]. After you create the PR, they will become checkboxes that you can click on.
