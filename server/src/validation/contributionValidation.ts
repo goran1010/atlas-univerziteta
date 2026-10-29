@@ -103,6 +103,10 @@ const universityCreateDataSchema = z
   .refine((u) => u.country !== "BIH" || u.entity !== undefined, {
     message: "Entity is required for Bosnian universities",
     path: ["entity"],
+  })
+  .refine((u) => u.country === "BIH" || u.entity === undefined, {
+    message: "Entity is only valid for Bosnian universities",
+    path: ["entity"],
   });
 
 const facultyCreateDataSchema = z.strictObject({
@@ -337,7 +341,19 @@ const universityEditDataSchema = z
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
-  });
+  })
+  .refine(
+    (data) => {
+      if (data.country === undefined) return true;
+      if (data.country === "BIH") return data.entity !== null;
+      return data.entity === undefined || data.entity === null;
+    },
+    {
+      message:
+        "Entity is required for Bosnian universities and not valid for others",
+      path: ["entity"],
+    },
+  );
 
 const facultyEditDataSchema = z
   .strictObject({

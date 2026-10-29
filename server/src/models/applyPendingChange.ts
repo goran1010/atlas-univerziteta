@@ -106,6 +106,31 @@ async function applyPendingChange({
         );
         if (!data) return "INVALID_DATA";
 
+        const current = await tx.university.findUnique({
+          where: { id: targetId },
+          select: { country: true, entity: true },
+        });
+
+        if (current) {
+          const mergedCountry = data.country ?? current.country;
+          const mergedEntity =
+            data.entity !== undefined ? data.entity : current.entity;
+          if (mergedCountry === "BIH" && mergedEntity === null) {
+            logger.warn(
+              { pendingChangeId: id },
+              "Approval rejected: BIH university would have no entity after merge.",
+            );
+            return "INVALID_DATA";
+          }
+          if (mergedCountry !== "BIH" && mergedEntity !== null) {
+            logger.warn(
+              { pendingChangeId: id },
+              "Approval rejected: non-BIH university would keep an entity after merge.",
+            );
+            return "INVALID_DATA";
+          }
+        }
+
         if (!(await claim())) return "NOT_FOUND";
         await tx.university.update({
           where: { id: targetId },
