@@ -455,19 +455,13 @@
       "PRIVATE": "Private"
     },
     "clearSearch": "Clear search",
-    "filters": "Filters",
     "resetSearch": "Reset search",
-    "filterType": "Type",
     "contextMatch": {
       "university": "Matched through its faculties or study programs",
       "faculty": "Matched through its university or study programs",
       "studyProgram": "Matched through its faculty, university, or tracks"
     },
     "showAllPrograms": "Show all study programs",
-    "filterCountry": "Country",
-    "filterEntity": "Entity",
-    "filterOwnership": "Ownership",
-    "filterCycle": "Study cycle",
     "openFullPage": "Open full page",
     "shareLink": "Share link",
     "linkCopied": "Link copied to clipboard.",

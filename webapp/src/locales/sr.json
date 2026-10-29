@@ -144,7 +144,7 @@
     "forDevsNote": "Autentifikacija nije potrebna za javne endpoint-e.",
     "forDevsCta": "Pogledajte API dokumentaciju",
     "forDevsGithub": "Pogledajte na GitHub-u",
-    "openSource": "Ovo je projekat otvorenog koda. Pregledajte izvorni kod, upute za postavljanje i doprinesite na",
+    "openSource": "Ovo je open-source projekat. Pregledajte izvorni kod, upute za postavljanje i doprinesite na",
     "github": "GitHub"
   },
   "api": {
@@ -455,19 +455,13 @@
       "PRIVATE": "Privatni"
     },
     "clearSearch": "Obriši pretragu",
-    "filters": "Filteri",
     "resetSearch": "Poništi pretragu",
-    "filterType": "Tip",
     "contextMatch": {
       "university": "Pronađen preko svojih fakulteta ili studijskih programa",
       "faculty": "Pronađen preko svog univerziteta ili studijskih programa",
       "studyProgram": "Pronađen preko svog fakulteta, univerziteta ili smjerova"
     },
     "showAllPrograms": "Prikaži sve studijske programe",
-    "filterCountry": "Zemlja",
-    "filterEntity": "Entitet",
-    "filterOwnership": "Vlasništvo",
-    "filterCycle": "Ciklus studija",
     "openFullPage": "Otvori cijelu stranicu",
     "shareLink": "Podijeli link",
     "linkCopied": "Link kopiran u clipboard.",
