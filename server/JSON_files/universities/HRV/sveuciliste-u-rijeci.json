@@ -10,17 +10,127 @@
   "phone": "+385 51 406 500",
   "email": "ured@uniri.hr",
   "faculties": [
-    { "name": "Građevinski fakultet", "city": "Rijeka" },
-    { "name": "Ekonomski fakultet", "city": "Rijeka" },
-    { "name": "Tehnički fakultet", "city": "Rijeka" },
-    { "name": "Filozofski fakultet", "city": "Rijeka" },
-    { "name": "Pravni fakultet", "city": "Rijeka" },
-    { "name": "Pomorski fakultet", "city": "Rijeka" },
-    { "name": "Medicinski fakultet", "city": "Rijeka" },
-    { "name": "Učiteljski fakultet", "city": "Rijeka" },
-    { "name": "Fakultet za turizam i ugostiteljstvo", "city": "Opatija" },
-    { "name": "Fakultet informatike", "city": "Rijeka" },
-    { "name": "Fakultet matematike", "city": "Rijeka" },
-    { "name": "Akademija primijenjenih umjetnosti", "city": "Rijeka" }
+    {
+      "name": "Građevinski fakultet",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Građevinarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Građevinarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Građevinarstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Poslovna ekonomija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Poslovna ekonomija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Ekonomija i poslovna ekonomija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Tehnički fakultet",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Strojarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Elektrotehnika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Računarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Brodogradnja", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Strojarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Elektrotehnika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Računarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Brodogradnja", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Tehničke znanosti", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Filozofski fakultet",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Hrvatski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Engleski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Talijanski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Njemački jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Povijest", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Filozofija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Pedagogija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Psihologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Kulturalni studiji", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Hrvatski jezik i književnost", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Engleski jezik i književnost", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Povijest", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Filozofija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Psihologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Pravo", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
+        { "name": "Pravo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Pomorski fakultet",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Nautika i tehnologija pomorskog prometa", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Brodostrojarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Pomorske znanosti", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Medicinski fakultet",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Hrvatski" },
+        { "name": "Dentalna medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Hrvatski" },
+        { "name": "Sestrinstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Medicinske znanosti", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Učiteljski fakultet",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Rani i predškolski odgoj i obrazovanje", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Učiteljski studij", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Fakultet za turizam i ugostiteljstvo",
+      "city": "Opatija",
+      "studyPrograms": [
+        { "name": "Menadžment u turizmu i ugostiteljstvu", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Menadžment u turizmu i ugostiteljstvu", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Menadžment u turizmu i ugostiteljstvu", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Fakultet informatike",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Informatika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Informacijsko-komunikacijski sustavi", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Poslovna informatika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Fakultet matematike",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Matematika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Matematika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Akademija primijenjenih umjetnosti",
+      "city": "Rijeka",
+      "studyPrograms": [
+        { "name": "Primijenjena umjetnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Primijenjena umjetnost", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
+      ]
+    }
   ]
 }

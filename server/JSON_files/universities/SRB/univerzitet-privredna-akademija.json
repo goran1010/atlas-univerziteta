@@ -8,5 +8,82 @@
   "website": "https://www.privrednaakademija.edu.rs",
   "address": null,
   "phone": null,
-  "email": null
+  "email": null,
+  "faculties": [
+    {
+      "name": "Pravni fakultet za privredu i pravosuđe",
+      "city": "Novi Sad",
+      "website": "https://www.pravni-fakultet.info",
+      "studyPrograms": [
+        { "name": "Pravo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Pravo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Pravo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Fakultet za ekonomiju i inženjerski menadžment",
+      "city": "Novi Sad",
+      "website": "https://www.fimek.edu.rs",
+      "studyPrograms": [
+        { "name": "Ekonomija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Inženjerski menadžment", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Ekonomija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Inženjerski menadžment", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Ekonomija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Stomatološki fakultet",
+      "city": "Pančevo",
+      "studyPrograms": [
+        { "name": "Stomatologija", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Farmaceutski fakultet",
+      "city": "Novi Sad",
+      "studyPrograms": [
+        { "name": "Farmacija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Srpski" },
+        { "name": "Farmacija - medicinska biohemija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Fakultet za primenjeni menadžment, ekonomiju i finansije",
+      "city": "Beograd",
+      "website": "https://www.mef.edu.rs",
+      "studyPrograms": [
+        { "name": "Menadžment", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Ekonomija i finansije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Menadžment", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Fakultet savremenih umetnosti",
+      "city": "Beograd",
+      "website": "https://www.fsu.edu.rs",
+      "studyPrograms": [
+        { "name": "Savremene umetnosti", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Savremene umetnosti", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Fakultet za evropske pravno-političke studije",
+      "city": "Novi Sad",
+      "studyPrograms": [
+        { "name": "Evropske studije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Evropske studije", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Fakultet društvenih nauka",
+      "city": "Beograd",
+      "studyPrograms": [
+        { "name": "Ekonomija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Informacione tehnologije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Digitalni mediji i komunikacije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Ekonomija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Informacione tehnologije", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
+      ]
+    }
+  ]
 }

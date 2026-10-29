@@ -8,5 +8,18 @@
   "website": "https://www.libertas.hr",
   "address": null,
   "phone": null,
-  "email": null
+  "email": null,
+  "faculties": [
+    {
+      "name": "Libertas međunarodno sveučilište",
+      "city": "Zagreb",
+      "isUniversityLevel": true,
+      "studyPrograms": [
+        { "name": "Ekonomija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Ekonomija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
+        { "name": "Diplomacija i međunarodni odnosi", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Diplomacija i međunarodni odnosi", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
+      ]
+    }
+  ]
 }

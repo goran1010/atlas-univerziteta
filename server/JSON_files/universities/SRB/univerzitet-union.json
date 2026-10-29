@@ -8,5 +8,59 @@
   "website": "https://www.union.edu.rs",
   "address": null,
   "phone": null,
-  "email": null
+  "email": null,
+  "faculties": [
+    {
+      "name": "Računarski fakultet",
+      "city": "Beograd",
+      "website": "https://www.raf.edu.rs",
+      "studyPrograms": [
+        { "name": "Računarske nauke", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Računarsko inženjerstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Računarski dizajn", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Informacione tehnologije", "cycle": "VOCATIONAL", "durationYears": 3, "ects": 180, "language": "Srpski" },
+        { "name": "Računarske nauke", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Računarsko inženjerstvo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Softversko inženjerstvo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Informacioni sistemi", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Računarski dizajn", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Beogradska bankarska akademija",
+      "city": "Beograd",
+      "website": "https://www.bba.edu.rs",
+      "studyPrograms": [
+        {
+          "name": "Ekonomija, finansije i biznis", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski",
+          "tracks": [
+            { "name": "Finansije i bankarstvo" },
+            { "name": "Računovodstvo i revizija" },
+            { "name": "Digitalna ekonomija" }
+          ]
+        },
+        { "name": "Ekonomija, finansije i biznis", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Srpski" },
+        { "name": "Informacione tehnologije u finansijama", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Bankarstvo, finansije i biznis", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Marketing menadžment", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Pravni fakultet Univerziteta Union",
+      "city": "Beograd",
+      "website": "https://pravnifakultet.edu.rs",
+      "studyPrograms": [
+        { "name": "Pravo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Pravo", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Pravo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Akademija lepih umetnosti Todoris",
+      "city": "Beograd",
+      "studyPrograms": [
+        { "name": "Likovna umetnost", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" }
+      ]
+    }
+  ]
 }

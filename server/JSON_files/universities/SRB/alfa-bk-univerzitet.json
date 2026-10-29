@@ -6,7 +6,62 @@
   "ownership": "PRIVATE",
   "foundedYear": "1993",
   "website": "https://www.alfa.edu.rs",
-  "address": null,
+  "address": "Palmira Toljatija 3, 11070 Beograd",
   "phone": null,
-  "email": null
+  "email": null,
+  "faculties": [
+    {
+      "name": "Fakultet za finansije, bankarstvo i reviziju",
+      "city": "Beograd",
+      "studyPrograms": [
+        { "name": "Ekonomija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Trgovina", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Međunarodna trgovina i poslovanje", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Fakultet za matematiku i računarske nauke",
+      "city": "Beograd",
+      "website": "https://alfa.edu.rs/fakultet-za-matematiku-i-racunarske-nauke-univerzitet/",
+      "studyPrograms": [
+        { "name": "Računarske nauke", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Informaciono-komunikacione tehnologije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Računarske nauke", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Informaciono-komunikacione tehnologije", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Računarske nauke", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" },
+        { "name": "Informaciono-komunikacione tehnologije", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Fakultet za strane jezike",
+      "city": "Beograd",
+      "studyPrograms": [
+        { "name": "Anglistika", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Anglistika - lingvistika", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Fakultet za menadžment u sportu",
+      "city": "Beograd",
+      "studyPrograms": [
+        { "name": "Menadžment u sportu", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Menadžment u sportu", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
+      ]
+    },
+    {
+      "name": "Akademija umetnosti",
+      "city": "Beograd",
+      "studyPrograms": [
+        { "name": "Gluma", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Filmska i televizijska režija i montaža", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Fotografija i kamera", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Produkcija u umetnosti i medijima", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Muzička produkcija i dizajn zvuka", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
+        { "name": "Gluma za pozorište i ekran", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Kompjuterska muzika i multimedija", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Dokumentarne umetnosti", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
+        { "name": "Interdisciplinarne studije vizuelnih i izvođačkih umetnosti", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" }
+      ]
+    }
+  ]
 }

@@ -10,25 +10,98 @@
   "phone": null,
   "email": null,
   "faculties": [
-    { "name": "Odjel za medije i komunikaciju", "city": "Koprivnica" },
-    { "name": "Odjel za zaštitu okoliša, recikliranje i pakiranje", "city": "Koprivnica" },
-    { "name": "Odjel za komunikologiju, medije i novinarstvo", "city": "Koprivnica" },
-    { "name": "Odjel za logistiku i održivu mobilnost", "city": "Koprivnica" },
-    { "name": "Odjel za poslovnu ekonomiju i menadžment", "city": "Koprivnica" },
-    { "name": "Odjel za prehrambenu tehnologiju", "city": "Koprivnica" },
-    { "name": "Odjel za umjetničke studije", "city": "Koprivnica" },
-    { "name": "Odjel za računarstvo i informatiku", "city": "Koprivnica" },
-    { "name": "Odjel za ekonomiju", "city": "Varaždin" },
-    { "name": "Odjel za elektrotehniku", "city": "Varaždin" },
-    { "name": "Odjel za fizioterapiju", "city": "Varaždin" },
-    { "name": "Odjel za geodeziju i geomatiku", "city": "Varaždin" },
-    { "name": "Odjel za glazbu i medije", "city": "Varaždin" },
-    { "name": "Odjel za graditeljstvo", "city": "Varaždin" },
-    { "name": "Odjel za mehatroniku", "city": "Varaždin" },
-    { "name": "Odjel za multimediju", "city": "Varaždin" },
-    { "name": "Odjel za javno komuniciranje", "city": "Varaždin" },
-    { "name": "Odjel za sestrinstvo", "city": "Varaždin" },
-    { "name": "Odjel za strojarstvo", "city": "Varaždin" },
-    { "name": "Odjel za tehničku i gospodarsku logistiku", "city": "Varaždin" }
+    {
+      "name": "Odjel za medije i komunikaciju",
+      "city": "Koprivnica",
+      "studyPrograms": [
+        { "name": "Medijski dizajn", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Novinarstvo i odnosi s javnostima", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za poslovnu ekonomiju i menadžment",
+      "city": "Koprivnica",
+      "studyPrograms": [
+        { "name": "Poslovna ekonomija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
+        { "name": "Poslovna ekonomija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za prehrambenu tehnologiju",
+      "city": "Koprivnica",
+      "studyPrograms": [
+        { "name": "Prehrambena tehnologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za logistiku i održivu mobilnost",
+      "city": "Koprivnica",
+      "studyPrograms": [
+        { "name": "Logistika i održiva mobilnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za računarstvo i informatiku",
+      "city": "Koprivnica",
+      "studyPrograms": [
+        { "name": "Računarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za umjetničke studije",
+      "city": "Koprivnica",
+      "studyPrograms": [
+        { "name": "Medijske umjetnosti", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za elektrotehniku",
+      "city": "Varaždin",
+      "studyPrograms": [
+        { "name": "Elektrotehnika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za graditeljstvo",
+      "city": "Varaždin",
+      "studyPrograms": [
+        { "name": "Graditeljstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za strojarstvo",
+      "city": "Varaždin",
+      "studyPrograms": [
+        { "name": "Strojarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za mehatroniku",
+      "city": "Varaždin",
+      "studyPrograms": [
+        { "name": "Mehatronika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za multimediju",
+      "city": "Varaždin",
+      "studyPrograms": [
+        { "name": "Multimedija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za sestrinstvo",
+      "city": "Varaždin",
+      "studyPrograms": [
+        { "name": "Sestrinstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    },
+    {
+      "name": "Odjel za fizioterapiju",
+      "city": "Varaždin",
+      "studyPrograms": [
+        { "name": "Fizioterapija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
+      ]
+    }
   ]
 }
