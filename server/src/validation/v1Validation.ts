@@ -28,6 +28,8 @@ function getTrackById(input: unknown) {
 const listQuerySchema = z.object({
   page: z.coerce.number().int().min(1).default(1),
   limit: z.coerce.number().int().min(1).max(100).default(50),
+  country: z.enum(["BIH", "SRB", "HRV", "MNE"]).optional(),
+  entity: z.enum(["FBIH", "RS", "BD"]).optional(),
 });
 
 function listQuery(input: unknown) {
