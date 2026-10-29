@@ -90,13 +90,9 @@ test.describe("detail pages", () => {
   test("program search result opens the faculty page focused on that program", async ({
     page,
   }) => {
-    await page.goto("/search?type=studyProgram");
-    // large sections render their groups collapsed by default
-    const expandFirstGroup = page
-      .getByRole("button", { name: "Expand" })
-      .first();
-    await expect(expandFirstGroup).toBeVisible({ timeout: 15000 });
-    await expandFirstGroup.click();
+    await page.goto("/search");
+    // "grafika" is a study program name, giving a direct match in that section
+    await page.getByRole("searchbox", { name: "Search" }).fill("grafika");
 
     const firstProgramLink = page.locator('main a[href*="?program="]').first();
     await expect(firstProgramLink).toBeVisible({ timeout: 15000 });
