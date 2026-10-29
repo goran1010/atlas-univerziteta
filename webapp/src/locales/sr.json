@@ -192,9 +192,6 @@
   "contribution": {
     "title": "Poboljšajte podatke",
     "needUser": "Morate biti registrovani korisnik da biste predložili izmjene sadržaja.",
-    "chooseDataset": "Izaberite skup podataka:",
-    "noDataset": "Nema skupa",
-    "selectDatasetError": "Morate izabrati skup podataka.",
     "addNewData": "Predloži izmjene",
     "addTree": "Dodaj univerzitet ili fakultet (JSON)",
     "pendingChanges": "Moji prijedlozi",
@@ -204,14 +201,8 @@
     "entityType": "Vrsta stavke",
     "nestedInTree": "obuhvaćeno",
     "actions": "Akcije",
-    "searchResultsCountAria": "broj rezultata pretrage",
-    "searchResults": "Rezultati pretrage",
     "user": "Korisnik",
     "contributor": "Doprinosilac",
-    "dataset": {
-      "universities": "Univerziteti",
-      "universitiesPlaceholder": "Univerziteti - uskoro"
-    },
     "entityTypes": {
       "UNIVERSITY": "Univerzitet",
       "FACULTY": "Fakultet",
@@ -397,9 +388,8 @@
   "universitiesPage": {
     "title": "Nađite programe i univerzitete",
     "searchIntro": "Pretraživa baza univerziteta, fakulteta i studijskih programa u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori.",
-    "browseAll": "Pregledaj sve",
+    "browseAll": "Pregledaj sve univerzitete",
     "search": "Pretraži",
-    "searchHint": "Pretražite po nazivu, gradu, akronimu, zemlji, vlasništvu (JAVNI/PRIVATNI), ciklusu studija (PRVI, DRUGI…), jeziku ili nazivu nadređene jedinice.",
     "searchAllPlaceholder": "Pretraži po nazivu, gradu, zemlji, ciklusu…",
     "universitiesSection": "Univerziteti",
     "facultiesSection": "Fakulteti",
@@ -458,7 +448,7 @@
       "PRIVATE": "Privatni"
     },
     "clearSearch": "Obriši pretragu",
-    "resetSearch": "Poništi pretragu",
+    "resetSearch": "Poništi",
     "contextMatch": {
       "university": "Pronađen preko svojih fakulteta ili studijskih programa",
       "faculty": "Pronađen preko svog univerziteta ili studijskih programa",

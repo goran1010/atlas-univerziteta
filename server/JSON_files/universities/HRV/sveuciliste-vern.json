@@ -153,5 +153,7 @@
   ],
   "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
   "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://vern.hr"
+  "dataSourceUrl": "https://vern.hr",
+  "accreditationFrom": "2020-01-01",
+  "accreditationTo": "2025-01-01"
 }

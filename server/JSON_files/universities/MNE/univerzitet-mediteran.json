@@ -19,13 +19,15 @@
           "name": "Turizam i hotelijerstvo",
           "cycle": "FIRST",
           "durationYears": 3,
-          "ects": 180
+          "ects": 180,
+          "language": "Crnogorski"
         },
         {
           "name": "Turizam i hotelijerstvo",
           "cycle": "SECOND",
           "durationYears": 2,
-          "ects": 120
+          "ects": 120,
+          "language": "Crnogorski"
         }
       ],
       "address": "Josipa Broza bb, 85000 Bar",
@@ -50,7 +52,8 @@
             {
               "name": "Računovodstvo i finansije"
             }
-          ]
+          ],
+          "language": "Crnogorski"
         },
         {
           "name": "Marketing menadžment",
@@ -64,7 +67,8 @@
             {
               "name": "Public relations"
             }
-          ]
+          ],
+          "language": "Crnogorski"
         },
         {
           "name": "Marketing",
@@ -95,13 +99,15 @@
           "name": "Vizuelne umjetnosti",
           "cycle": "FIRST",
           "durationYears": 3,
-          "ects": 180
+          "ects": 180,
+          "language": "Crnogorski"
         },
         {
           "name": "Vizuelne umjetnosti",
           "cycle": "SECOND",
           "durationYears": 2,
-          "ects": 120
+          "ects": 120,
+          "language": "Crnogorski"
         }
       ],
       "address": "Josipa Broza bb, 81000 Podgorica",
@@ -126,13 +132,15 @@
             {
               "name": "Softverski inženjering"
             }
-          ]
+          ],
+          "language": "Crnogorski"
         },
         {
           "name": "Informacione tehnologije",
           "cycle": "SECOND",
           "durationYears": 2,
-          "ects": 120
+          "ects": 120,
+          "language": "Crnogorski"
         }
       ],
       "address": "Josipa Broza bb, 81000 Podgorica",
@@ -149,13 +157,15 @@
           "name": "Engleski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
-          "ects": 180
+          "ects": 180,
+          "language": "Crnogorski"
         },
         {
           "name": "Engleski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 2,
-          "ects": 120
+          "ects": 120,
+          "language": "Crnogorski"
         }
       ],
       "address": "Josipa Broza bb, 81000 Podgorica",
@@ -172,19 +182,22 @@
           "name": "Pravo",
           "cycle": "FIRST",
           "durationYears": 3,
-          "ects": 180
+          "ects": 180,
+          "language": "Crnogorski"
         },
         {
           "name": "Pravo",
           "cycle": "SECOND",
           "durationYears": 2,
-          "ects": 120
+          "ects": 120,
+          "language": "Crnogorski"
         },
         {
           "name": "Pravo",
           "cycle": "THIRD",
           "durationYears": 3,
-          "ects": 180
+          "ects": 180,
+          "language": "Crnogorski"
         }
       ],
       "address": "Josipa Broza bb, 81000 Podgorica",
@@ -195,5 +208,7 @@
   ],
   "authority": "Agencija za kontrolu i obezbjeđenje kvaliteta visokog obrazovanja (AKOKVO)",
   "dataSourceUrl": "https://unimediteran.net",
-  "lastModified": "2026-10-29"
+  "lastModified": "2026-10-29",
+  "accreditationFrom": "2019-06-24",
+  "accreditationTo": "2024-06-24"
 }

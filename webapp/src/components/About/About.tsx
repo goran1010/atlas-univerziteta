@@ -50,7 +50,7 @@ function About() {
           </h2>
           <p>{t("home.exploreDescription")}</p>
           <div className="flex flex-wrap gap-3 justify-center items-center">
-            <LinkButton to="/" className="w-full sm:w-auto">
+            <LinkButton to="/search" className="w-full sm:w-auto">
               {t("home.card.universities.title")}
             </LinkButton>
           </div>

@@ -47,6 +47,11 @@ function LanguageIcon({ language }: { language: Language }) {
             srcSet="/images/flags/rs.png 1x, /images/flags/rs@2x.png 2x"
             alt=""
           />
+          <Flag
+            src="/images/flags/me.png"
+            srcSet="/images/flags/me.png 1x, /images/flags/me@2x.png 2x"
+            alt=""
+          />
         </span>
       );
     default:

@@ -289,5 +289,7 @@
   ],
   "dataSourceUrl": "https://www.singidunum.ac.rs",
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29"
+  "lastModified": "2026-10-29",
+  "accreditationFrom": "2020-05-14",
+  "accreditationTo": "2027-05-14"
 }

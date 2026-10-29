@@ -192,10 +192,7 @@
   "contribution": {
     "title": "Improve the Data",
     "needUser": "You need to be a registered user to propose changes to the content.",
-    "chooseDataset": "Choose dataset:",
-    "noDataset": "No dataset",
     "actions": "Actions",
-    "selectDatasetError": "You need to select a dataset.",
     "addNewData": "Propose changes",
     "addTree": "Add university or faculty (JSON)",
     "pendingChanges": "My suggestions",
@@ -204,14 +201,8 @@
     "comment": "Comment for the admin",
     "entityType": "Item type",
     "nestedInTree": "included",
-    "searchResultsCountAria": "search result count",
-    "searchResults": "Search Results",
     "user": "User",
     "contributor": "Contributor",
-    "dataset": {
-      "universities": "Universities",
-      "universitiesPlaceholder": "Universities placeholder"
-    },
     "entityTypes": {
       "UNIVERSITY": "University",
       "FACULTY": "Faculty",
@@ -397,9 +388,8 @@
   "universitiesPage": {
     "title": "Find programs and universities",
     "searchIntro": "A searchable database of universities, faculties, and study programs across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro.",
-    "browseAll": "Browse all",
+    "browseAll": "Browse all universities",
     "search": "Search",
-    "searchHint": "Search by name, city, acronym, country, ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
     "searchAllPlaceholder": "Search by name, city, country, cycle…",
     "universitiesSection": "Universities",
     "facultiesSection": "Faculties",
@@ -458,7 +448,7 @@
       "PRIVATE": "Private"
     },
     "clearSearch": "Clear search",
-    "resetSearch": "Reset search",
+    "resetSearch": "Reset",
     "contextMatch": {
       "university": "Matched through its faculties or study programs",
       "faculty": "Matched through its university or study programs",

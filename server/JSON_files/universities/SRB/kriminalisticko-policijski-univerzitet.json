@@ -116,5 +116,7 @@
   ],
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
   "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.kpu.edu.rs"
+  "dataSourceUrl": "https://www.kpu.edu.rs",
+  "accreditationFrom": "2022-01-01",
+  "accreditationTo": "2029-01-01"
 }

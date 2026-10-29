@@ -2608,5 +2608,7 @@
   ],
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
   "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.bg.ac.rs"
+  "dataSourceUrl": "https://www.bg.ac.rs",
+  "accreditationFrom": "2021-01-01",
+  "accreditationTo": "2028-01-01"
 }

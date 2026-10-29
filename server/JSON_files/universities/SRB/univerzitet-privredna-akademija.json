@@ -262,5 +262,7 @@
   ],
   "dataSourceUrl": "https://www.privrednaakademija.edu.rs",
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29"
+  "lastModified": "2026-10-29",
+  "accreditationFrom": "2021-06-14",
+  "accreditationTo": "2028-06-14"
 }
