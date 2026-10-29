@@ -387,10 +387,10 @@
   },
   "universitiesPage": {
     "title": "Nađite programe i univerzitete",
-    "searchIntro": "Pretraživa baza univerziteta, fakulteta i studijskih programa u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori.",
+    "searchIntro": "Pretražite univerzitete, fakultete, studijske programe i smjerove u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori. Unesite naziv programa, grad, zemlju, ciklus studija, ECTS bodove ili riječi poput \"javni\" ili \"master\".",
     "browseAll": "Pregledaj sve univerzitete",
     "search": "Pretraži",
-    "searchAllPlaceholder": "Pretraži po nazivu, gradu, zemlji, ciklusu…",
+    "searchAllPlaceholder": "npr. informatika, medicina Srbija, master 120 ECTS…",
     "universitiesSection": "Univerziteti",
     "facultiesSection": "Fakulteti",
     "studyProgramsSection": "Studijski programi",

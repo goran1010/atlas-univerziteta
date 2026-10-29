@@ -387,10 +387,10 @@
   },
   "universitiesPage": {
     "title": "Find programs and universities",
-    "searchIntro": "A searchable database of universities, faculties, and study programs across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro.",
+    "searchIntro": "Search universities, faculties, study programs, and tracks across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro. Try a program name, city, country, study cycle, ECTS, or keywords like \"public\" or \"master\".",
     "browseAll": "Browse all universities",
     "search": "Search",
-    "searchAllPlaceholder": "Search by name, city, country, cycle…",
+    "searchAllPlaceholder": "e.g. informatika, medicina Srbija, master 120 ECTS…",
     "universitiesSection": "Universities",
     "facultiesSection": "Faculties",
     "studyProgramsSection": "Study programs",
