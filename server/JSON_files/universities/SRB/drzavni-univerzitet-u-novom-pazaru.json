@@ -29,7 +29,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vuka Karadžića bb, 36300 Novi Pazar",
       "phone": "+381 20 317 752",
       "email": "rektorat@np.ac.rs",
@@ -61,7 +60,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vuka Karadžića bb, 36300 Novi Pazar",
       "phone": "+381 20 317 752",
       "email": "rektorat@np.ac.rs",
@@ -100,7 +98,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vuka Karadžića bb, 36300 Novi Pazar",
       "phone": "+381 20 317 752",
       "email": "rektorat@np.ac.rs",
@@ -132,7 +129,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vuka Karadžića bb, 36300 Novi Pazar",
       "phone": "+381 20 317 752",
       "email": "rektorat@np.ac.rs",
@@ -192,7 +188,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vuka Karadžića bb, 36300 Novi Pazar",
       "phone": "+381 20 317 752",
       "email": "rektorat@np.ac.rs",
@@ -231,7 +226,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vuka Karadžića bb, 36300 Novi Pazar",
       "phone": "+381 20 317 752",
       "email": "rektorat@np.ac.rs",
@@ -249,7 +243,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vuka Karadžića bb, 36300 Novi Pazar",
       "phone": "+381 20 317 752",
       "email": "rektorat@np.ac.rs",
@@ -274,7 +267,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vuka Karadžića bb, 36300 Novi Pazar",
       "phone": "+381 20 317 752",
       "email": "rektorat@np.ac.rs",
@@ -299,7 +291,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vuka Karadžića bb, 36300 Novi Pazar",
       "phone": "+381 20 317 752",
       "email": "rektorat@np.ac.rs",
@@ -324,7 +315,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vuka Karadžića bb, 36300 Novi Pazar",
       "phone": "+381 20 317 752",
       "email": "rektorat@np.ac.rs",
@@ -332,6 +322,6 @@
     }
   ],
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.dunp.np.ac.rs"
+  "accreditationFrom": "2025-01-28",
+  "accreditationTo": "2032-01-28"
 }

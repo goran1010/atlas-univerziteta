@@ -100,7 +100,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
       "phone": "+381 20 316 634",
       "email": "umjetnost.filologija@uninp.edu.rs",
@@ -139,7 +138,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
       "phone": "+381 20 316 634",
       "email": "pedagogija.psihologija@uninp.edu.rs",
@@ -199,7 +197,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
       "phone": "+381 20 316 634",
       "email": "ekonomija.racunarstvo@uninp.edu.rs",
@@ -240,14 +237,13 @@
           ]
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
       "phone": "+381 20 316 634",
       "email": "pravo@uninp.edu.rs",
       "website": "https://www.uninp.edu.rs"
     }
   ],
-  "dataSourceUrl": "https://www.uninp.edu.rs",
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29"
+  "accreditationFrom": "2024-01-16",
+  "accreditationTo": "2031-01-16"
 }

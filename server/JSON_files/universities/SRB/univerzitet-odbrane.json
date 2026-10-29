@@ -156,7 +156,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Generala Pavla Jurišića Šturma 33, 11000 Beograd",
       "phone": "+381 11 3603 247",
       "email": "info@va.mod.gov.rs"
@@ -181,13 +180,12 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Crnotravska 17, 11000 Beograd",
       "phone": "+381 11 2661 122",
       "email": "info@vma.mod.gov.rs"
     }
   ],
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.uo.mod.gov.rs"
+  "accreditationFrom": "2022-02-25",
+  "accreditationTo": "2029-02-25"
 }

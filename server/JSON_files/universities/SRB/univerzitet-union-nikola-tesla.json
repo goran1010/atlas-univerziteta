@@ -43,7 +43,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -68,7 +67,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -93,7 +91,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -111,7 +108,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -136,7 +132,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -162,7 +157,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs"
@@ -179,7 +173,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -197,7 +190,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -215,14 +207,13 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Jurija Gagarina 149a, 11070 Beograd",
       "phone": "+381 11 3131 246",
       "email": "info@fpsp.edu.rs",
       "website": "https://unt.edu.rs"
     }
   ],
-  "dataSourceUrl": "https://unt.edu.rs",
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29"
+  "accreditationFrom": "2021-03-01",
+  "accreditationTo": "2028-03-01"
 }

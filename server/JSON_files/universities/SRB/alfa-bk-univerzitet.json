@@ -36,7 +36,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmira Toljatija 3, 11070 Beograd",
       "phone": "+381 11 2609 754",
       "email": "fbr@alfa.edu.rs",
@@ -90,7 +89,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmira Toljatija 3, 11070 Beograd",
       "phone": "+381 11 2609 754",
       "email": "fmrn@alfa.edu.rs"
@@ -114,7 +112,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmira Toljatija 3, 11070 Beograd",
       "phone": "+381 11 2609 754",
       "email": "fsj@alfa.edu.rs",
@@ -139,7 +136,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmira Toljatija 3, 11070 Beograd",
       "phone": "+381 11 2609 754",
       "email": "fms@alfa.edu.rs",
@@ -213,14 +209,13 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmira Toljatija 3, 11070 Beograd",
       "phone": "+381 11 2609 754",
       "email": "au@alfa.edu.rs",
       "website": "https://alfa.edu.rs/akademija-umetnosti/"
     }
   ],
-  "dataSourceUrl": "https://alfa.edu.rs",
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29"
+  "accreditationFrom": "2022-03-11",
+  "accreditationTo": "2029-03-11"
 }

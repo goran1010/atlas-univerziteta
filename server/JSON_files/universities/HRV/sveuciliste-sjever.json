@@ -29,7 +29,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://medkom.unin.hr",
       "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
       "phone": "+385 48 499 909",
@@ -54,7 +53,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://pem.unin.hr",
       "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
       "phone": "+385 48 499 909",
@@ -72,7 +70,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://prehrana.unin.hr",
       "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
       "phone": "+385 48 499 909",
@@ -90,7 +87,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://logistika.unin.hr",
       "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
       "phone": "+385 48 499 909",
@@ -108,7 +104,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://racunarstvo.unin.hr",
       "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
       "phone": "+385 48 499 909",
@@ -126,7 +121,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://umjetnost.unin.hr",
       "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
       "phone": "+385 48 499 909",
@@ -144,7 +138,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://elektrotehnika.unin.hr",
       "address": "104. brigade 1, 42000 Varaždin",
       "phone": "+385 42 493 312",
@@ -162,7 +155,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://graditeljstvo.unin.hr",
       "address": "104. brigade 1, 42000 Varaždin",
       "phone": "+385 42 493 312",
@@ -180,7 +172,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://strojarstvo.unin.hr",
       "address": "104. brigade 1, 42000 Varaždin",
       "phone": "+385 42 493 312",
@@ -198,7 +189,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://mehatronika.unin.hr",
       "address": "104. brigade 1, 42000 Varaždin",
       "phone": "+385 42 493 312",
@@ -216,7 +206,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://multimedija.unin.hr",
       "address": "104. brigade 1, 42000 Varaždin",
       "phone": "+385 42 493 312",
@@ -234,7 +223,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://sestrinstvo.unin.hr",
       "address": "104. brigade 1, 42000 Varaždin",
       "phone": "+385 42 493 312",
@@ -252,14 +240,11 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://fizioterapija.unin.hr",
       "address": "104. brigade 1, 42000 Varaždin",
       "phone": "+385 42 493 312",
       "email": "referada.vz@unin.hr"
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.unin.hr"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }

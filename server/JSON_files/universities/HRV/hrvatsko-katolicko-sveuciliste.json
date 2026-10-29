@@ -29,7 +29,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Ilica 242, 10000 Zagreb",
       "phone": "+385 1 3706 600",
       "email": "info@unicath.hr"
@@ -53,7 +52,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Ilica 242, 10000 Zagreb",
       "phone": "+385 1 3706 600",
       "email": "info@unicath.hr"
@@ -70,7 +68,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Ilica 242, 10000 Zagreb",
       "phone": "+385 1 3706 600",
       "email": "info@unicath.hr"
@@ -101,7 +98,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Ilica 242, 10000 Zagreb",
       "phone": "+385 1 3706 600",
       "email": "info@unicath.hr"
@@ -125,13 +121,10 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Ilica 242, 10000 Zagreb",
       "phone": "+385 1 3706 600",
       "email": "info@unicath.hr"
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.unicath.hr"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }

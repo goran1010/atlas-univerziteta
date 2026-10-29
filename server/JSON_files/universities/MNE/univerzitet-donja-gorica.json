@@ -88,8 +88,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "fmefb@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "fmefb@udg.edu.me"
     },
     {
       "name": "Fakultet pravnih nauka",
@@ -142,8 +141,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "fpn@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "fpn@udg.edu.me"
     },
     {
       "name": "Fakultet za informacione sisteme i tehnologije",
@@ -178,8 +176,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "fist@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "fist@udg.edu.me"
     },
     {
       "name": "Humanističke studije",
@@ -265,8 +262,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "hs@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "hs@udg.edu.me"
     },
     {
       "name": "Fakultet umjetnosti",
@@ -290,8 +286,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "fu@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "fu@udg.edu.me"
     },
     {
       "name": "Politehnika",
@@ -308,8 +303,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "fp@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "fp@udg.edu.me"
     },
     {
       "name": "Fakultet za sportski menadžment",
@@ -340,8 +334,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "fsm@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "fsm@udg.edu.me"
     },
     {
       "name": "Fakultet za prehrambenu tehnologiju, bezbjednost hrane i ekologiju",
@@ -372,8 +365,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "fptbhe@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "fptbhe@udg.edu.me"
     },
     {
       "name": "Fakultet za dizajn i multimediju",
@@ -411,8 +403,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "fdm@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "fdm@udg.edu.me"
     },
     {
       "name": "Fakultet za kulturu i turizam",
@@ -457,8 +448,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "fkt@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "fkt@udg.edu.me"
     },
     {
       "name": "Fakultet primijenjenih nauka",
@@ -496,8 +486,7 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "fprn@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "fprn@udg.edu.me"
     },
     {
       "name": "Filološki fakultet",
@@ -529,13 +518,10 @@
       ],
       "address": "Donja Gorica bb, 81000 Podgorica",
       "phone": "+382 20 410 777",
-      "email": "ff@udg.edu.me",
-      "lastModified": "2026-10-29"
+      "email": "ff@udg.edu.me"
     }
   ],
   "authority": "Agencija za kontrolu i obezbjeđenje kvaliteta visokog obrazovanja (AKOKVO)",
-  "dataSourceUrl": "https://www.udg.edu.me",
-  "lastModified": "2026-10-29",
   "accreditationFrom": "2025-09-02",
   "accreditationTo": "2030-09-02"
 }

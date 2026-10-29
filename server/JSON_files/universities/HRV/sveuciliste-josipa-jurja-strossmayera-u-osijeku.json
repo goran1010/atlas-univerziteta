@@ -51,7 +51,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Trg Ljudevita Gaja 7, 31000 Osijek",
       "phone": "+385 31 224 400",
       "email": "ured@efos.hr"
@@ -76,7 +75,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Stjepana Radića 13, 31000 Osijek",
       "phone": "+385 31 224 500",
       "email": "office@pravos.hr"
@@ -122,7 +120,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vladimira Preloga 1, 31000 Osijek",
       "phone": "+385 31 554 801",
       "email": "dekanat@fazos.hr"
@@ -168,7 +165,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Franje Kuhača 20, 31000 Osijek",
       "phone": "+385 31 224 300",
       "email": "office@ptfos.hr"
@@ -207,7 +203,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vladimir Prelog 3, 31000 Osijek",
       "phone": "+385 31 274 377",
       "email": "gfos@gfos.hr"
@@ -260,7 +255,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Kneza Trpimira 2B, 31000 Osijek",
       "phone": "+385 31 224 600",
       "email": "etf@etfos.hr"
@@ -291,7 +285,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
       "phone": "+385 35 446 188",
       "email": "sfsb@sfsb.hr",
@@ -401,7 +394,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Lorenza Jägera 9, 31000 Osijek",
       "phone": "+385 31 211 400",
       "email": "helpdesk@ffos.hr"
@@ -426,7 +418,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Hadrijana 10, 31000 Osijek",
       "phone": "+385 31 321 700",
       "email": "helpdesk@foozos.hr"
@@ -458,7 +449,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Josipa Huttlera 4, 31000 Osijek",
       "phone": "+385 31 512 800",
       "email": "ured@mefos.hr"
@@ -490,7 +480,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Crkvena 21, 31000 Osijek",
       "phone": "+385 31 399 600",
       "email": "info@fdmz.hr"
@@ -508,7 +497,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Petra Preradovića 17, 31400 Đakovo",
       "phone": "+385 31 802 400",
       "email": "tajnistvo@djkbf.hr"
@@ -547,13 +535,10 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Kralja Petra Svačića 1f, 31000 Osijek",
       "phone": "+385 31 253 333",
       "email": "uaos@uaos.hr"
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.unios.hr"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }

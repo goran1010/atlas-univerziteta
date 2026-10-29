@@ -121,7 +121,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Kralja Milana 50, 11000 Beograd",
       "phone": "+381 11 2659 466",
       "email": "info@fmu.bg.ac.rs"
@@ -167,7 +166,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Pariska 16, 11000 Beograd",
       "phone": "+381 11 2181 214",
       "email": "info@flu.bg.ac.rs"
@@ -297,7 +295,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Kralja Petra 4, 11000 Beograd",
       "phone": "+381 11 3285 082",
       "email": "info@fpu.bg.ac.rs"
@@ -483,13 +480,12 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Bulevar umetnosti 20, 11070 Beograd",
       "phone": "+381 11 2135 684",
       "email": "info@fdu.bg.ac.rs"
     }
   ],
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.arts.bg.ac.rs"
+  "accreditationFrom": "2024-09-17",
+  "accreditationTo": "2031-09-17"
 }

@@ -37,7 +37,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Radmile Matejčić 3, 51000 Rijeka",
       "phone": "+385 51 265 900",
       "email": "gradri@gradri.uniri.hr"
@@ -69,7 +68,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Ivana Filipovića 4, 51000 Rijeka",
       "phone": "+385 51 355 111",
       "email": "efri@efri.uniri.hr"
@@ -143,7 +141,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vukovarska 58, 51000 Rijeka",
       "phone": "+385 51 651 444",
       "email": "ured@riteh.uniri.hr"
@@ -252,7 +249,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Sveučilišna avenija 4, 51000 Rijeka",
       "phone": "+385 51 265 600",
       "email": "dekanat@ffri.uniri.hr"
@@ -277,7 +273,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Hahlić 6, 51000 Rijeka",
       "phone": "+385 51 359 500",
       "email": "pravri@pravri.uniri.hr"
@@ -309,7 +304,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Studentska 2, 51000 Rijeka",
       "phone": "+385 51 338 411",
       "email": "pfri@pfri.uniri.hr"
@@ -348,7 +342,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Braće Branchetta 20/1, 51000 Rijeka",
       "phone": "+385 51 651 111",
       "email": "medri@medri.uniri.hr"
@@ -373,7 +366,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Sveučilišna avenija 6, 51000 Rijeka",
       "phone": "+385 51 265 800",
       "email": "ufri@ufri.uniri.hr"
@@ -405,7 +397,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Primorska 42, 51414 Ika",
       "phone": "+385 51 294 444",
       "email": "fmtu@fmtu.uniri.hr"
@@ -437,7 +428,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Radmile Matejčić 2, 51000 Rijeka",
       "phone": "+385 51 584 700",
       "email": "ured@inf.uniri.hr"
@@ -462,7 +452,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Radmile Matejčić 2, 51000 Rijeka",
       "phone": "+385 51 584 600",
       "email": "ured@math.uniri.hr"
@@ -487,13 +476,10 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Slavka Krautzeka 83, 51000 Rijeka",
       "phone": "+385 51 228 649",
       "email": "apuri@apuri.uniri.hr"
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://uniri.hr"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }

@@ -67,8 +67,7 @@
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29"
+      ]
     },
     {
       "name": "Prirodoslovno-matematički fakultet",
@@ -125,7 +124,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Ruđera Boškovića 33, 21000 Split",
       "phone": "+385 21 619 222",
       "email": "dekanat@pmfst.hr"
@@ -173,8 +171,7 @@
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29"
+      ]
     },
     {
       "name": "Pravni fakultet",
@@ -196,7 +193,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Domovinskog rata 8, 21000 Split",
       "phone": "+385 21 393 500",
       "email": "dekanat@pravst.hr"
@@ -223,8 +219,7 @@
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29"
+      ]
     },
     {
       "name": "Kemijsko-tehnološki fakultet",
@@ -281,7 +276,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Ruđera Boškovića 35, 21000 Split",
       "phone": "+385 21 329 461",
       "email": "dekanat@ktf-split.hr"
@@ -327,7 +321,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Šoltanska 2, 21000 Split",
       "phone": "+385 21 557 918",
       "email": "office@mefst.hr"
@@ -359,7 +352,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Teslina 6, 21000 Split",
       "phone": "+385 21 302 440",
       "email": "dekanat@kifst.hr"
@@ -384,7 +376,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Ruđera Boškovića 37, 21000 Split",
       "phone": "+385 21 619 399",
       "email": "studentska.sluzba@pfst.hr"
@@ -495,8 +486,7 @@
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29"
+      ]
     },
     {
       "name": "Fakultet elektrotehnike, strojarstva i brodogradnje",
@@ -576,8 +566,7 @@
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29"
+      ]
     },
     {
       "name": "Umjetnička akademija",
@@ -613,13 +602,10 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Zagrebačka 3, 21000 Split",
       "phone": "+385 21 360 179",
       "email": "office@umas.hr"
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "dataSourceUrl": "https://www.unist.hr",
-  "lastModified": "2026-10-29"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }

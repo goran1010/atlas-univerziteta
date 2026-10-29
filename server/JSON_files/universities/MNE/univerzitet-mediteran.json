@@ -32,8 +32,7 @@
       ],
       "address": "Josipa Broza bb, 85000 Bar",
       "phone": "+382 20 409 232",
-      "email": "office@unimediteran.net",
-      "lastModified": "2026-10-29"
+      "email": "office@unimediteran.net"
     },
     {
       "name": "Fakultet za ekonomiju i biznis - Montenegro Business School",
@@ -87,8 +86,7 @@
       ],
       "address": "Josipa Broza bb, 81000 Podgorica",
       "phone": "+382 20 409 260",
-      "email": "office@unimediteran.net",
-      "lastModified": "2026-10-29"
+      "email": "office@unimediteran.net"
     },
     {
       "name": "Fakultet vizuelnih umjetnosti",
@@ -112,8 +110,7 @@
       ],
       "address": "Josipa Broza bb, 81000 Podgorica",
       "phone": "+382 20 409 204",
-      "email": "fvu@unimediteran.net",
-      "lastModified": "2026-10-29"
+      "email": "fvu@unimediteran.net"
     },
     {
       "name": "Fakultet za informacione tehnologije",
@@ -145,8 +142,7 @@
       ],
       "address": "Josipa Broza bb, 81000 Podgorica",
       "phone": "+382 20 409 200",
-      "email": "fit@unimediteran.net",
-      "lastModified": "2026-10-29"
+      "email": "fit@unimediteran.net"
     },
     {
       "name": "Fakultet za strane jezike",
@@ -170,8 +166,7 @@
       ],
       "address": "Josipa Broza bb, 81000 Podgorica",
       "phone": "+382 20 409 204",
-      "email": "fsj@unimediteran.net",
-      "lastModified": "2026-10-29"
+      "email": "fsj@unimediteran.net"
     },
     {
       "name": "Pravni fakultet",
@@ -202,11 +197,10 @@
       ],
       "address": "Josipa Broza bb, 81000 Podgorica",
       "phone": "+382 20 409 204",
-      "email": "pf@unimediteran.net",
-      "lastModified": "2026-10-29"
+      "email": "pf@unimediteran.net"
     }
   ],
   "authority": "Agencija za kontrolu i obezbjeđenje kvaliteta visokog obrazovanja (AKOKVO)",
-  "dataSourceUrl": "https://unimediteran.net",
-  "lastModified": "2026-10-29"
+  "accreditationFrom": "2024-08-07",
+  "accreditationTo": "2029-08-07"
 }

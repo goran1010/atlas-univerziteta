@@ -44,13 +44,10 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Trg J. F. Kennedyja 6b, 10000 Zagreb",
       "phone": "+385 1 4894 000",
       "email": "info@libertas.hr"
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.libertas.hr"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }

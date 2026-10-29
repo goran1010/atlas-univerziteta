@@ -43,7 +43,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://fet.unipu.hr",
       "address": "Preradovićeva 1, 52100 Pula",
       "phone": "+385 52 377 000",
@@ -68,7 +67,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://fipu.unipu.hr",
       "address": "Rovinjska 14, 52100 Pula",
       "phone": "+385 52 377 000",
@@ -93,7 +91,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://fpn.unipu.hr",
       "address": "Zagrebačka 30, 52100 Pula",
       "phone": "+385 52 377 000",
@@ -118,7 +115,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://fooz.unipu.hr",
       "address": "Istarskog razvoda 1, 52100 Pula",
       "phone": "+385 52 377 000",
@@ -185,7 +181,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://ffpu.unipu.hr",
       "address": "I. M. Ronjgova 1, 52100 Pula",
       "phone": "+385 52 377 000",
@@ -203,7 +198,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://mfpu.unipu.hr",
       "address": "Zagrebačka 30, 52100 Pula",
       "phone": "+385 52 377 000",
@@ -235,7 +229,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://tf.unipu.hr",
       "address": "Zagrebačka 30, 52100 Pula",
       "phone": "+385 52 377 000",
@@ -260,14 +253,11 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "website": "https://mapu.unipu.hr",
       "address": "Zagrebačka 30, 52100 Pula",
       "phone": "+385 52 377 000",
       "email": "ured@unipu.hr"
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.unipu.hr"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }

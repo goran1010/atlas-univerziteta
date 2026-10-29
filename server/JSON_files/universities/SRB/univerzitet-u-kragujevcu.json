@@ -73,7 +73,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "phone": "+381 32 303 400",
       "email": "afdekanat@kg.ac.rs"
     },
@@ -134,8 +133,7 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29"
+      ]
     },
     {
       "name": "Fakultet pedagoških nauka u Jagodini",
@@ -213,7 +211,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Milana Mijalkovića 14, 35000 Jagodina",
       "phone": "+381 35 822 3805",
       "email": "pefjagodina@pefja.kg.ac.rs"
@@ -345,7 +342,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "email": "kontakt@fink.rs"
     },
     {
@@ -396,7 +392,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Vojvođanska 5a, 36210 Vrnjačka Banja",
       "phone": "+381 36 515 0024",
       "email": "hitvb@kg.ac.rs"
@@ -437,8 +432,7 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29"
+      ]
     },
     {
       "name": "Fakultet za mašinstvo i građevinarstvo u Kraljevu",
@@ -488,7 +482,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Dositejeva 19, 36000 Kraljevo",
       "phone": "+381 36 383 269",
       "email": "office@mfkv.kg.ac.rs"
@@ -576,7 +569,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Svetozara Markovića 69, 34000 Kragujevac",
       "phone": "+381 34 306 800",
       "email": "dekanat@medf.kg.ac.rs"
@@ -776,7 +768,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Jovana Cvijića bb, 34000 Kragujevac",
       "phone": "+381 34 304 270",
       "email": "filum@kg.ac.rs"
@@ -934,7 +925,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Radoja Domanovića 12, 34000 Kragujevac",
       "phone": "+381 34 336 223",
       "email": "pmfkrag@kg.ac.rs"
@@ -994,7 +984,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Trg Svetog Save 36, 31000 Užice",
       "phone": "+381 31 521 952",
       "email": "fakultet@pfu.kg.ac.rs"
@@ -1133,11 +1122,10 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29"
+      ]
     }
   ],
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.kg.ac.rs"
+  "accreditationFrom": "2021-06-17",
+  "accreditationTo": "2028-06-17"
 }

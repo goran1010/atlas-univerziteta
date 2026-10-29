@@ -29,7 +29,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
       "phone": "+385 91 4825 003",
       "email": "info@vern.hr"
@@ -53,7 +52,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
       "phone": "+385 91 4825 003",
       "email": "info@vern.hr"
@@ -70,7 +68,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
       "phone": "+385 91 4825 003",
       "email": "info@vern.hr"
@@ -87,7 +84,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
       "phone": "+385 91 4825 003",
       "email": "info@vern.hr"
@@ -104,7 +100,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
       "phone": "+385 91 4825 003",
       "email": "info@vern.hr"
@@ -121,7 +116,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
       "phone": "+385 91 4825 003",
       "email": "info@vern.hr"
@@ -145,13 +139,10 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Palmotićeva ulica 82/1, 10000 Zagreb",
       "phone": "+385 91 4825 003",
       "email": "info@vern.hr"
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://vern.hr"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }

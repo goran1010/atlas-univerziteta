@@ -79,7 +79,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Knez Mihailova 6/VI, 11000 Beograd",
       "phone": "+381 11 2627 613",
       "email": "raf@raf.edu.rs"
@@ -136,7 +135,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Zmaj Jovina 12, 11000 Beograd",
       "phone": "+381 11 2621 730",
       "email": "office@bba.edu.rs"
@@ -168,7 +166,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Goce Delčeva 36, 11070 Beograd",
       "phone": "+381 11 3196 379",
       "email": "office@pravnifakultet.edu.rs"
@@ -185,16 +182,13 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Nemanjina 28, 11000 Beograd",
       "phone": "+381 11 3618 715",
       "email": "info@akademijaumetnosti.edu.rs",
       "website": "https://akademijaumetnosti.edu.rs"
     }
   ],
-  "dataSourceUrl": "https://www.union.edu.rs",
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29",
-  "accreditationFrom": "2021-07-05",
-  "accreditationTo": "2028-07-05"
+  "accreditationFrom": "2023-11-14",
+  "accreditationTo": "2030-11-14"
 }

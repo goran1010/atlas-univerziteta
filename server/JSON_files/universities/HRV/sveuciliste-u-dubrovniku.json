@@ -29,7 +29,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
       "phone": "+385 20 445 700",
       "email": "ured@unidu.hr"
@@ -53,7 +52,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
       "phone": "+385 20 445 700",
       "email": "ured@unidu.hr"
@@ -77,7 +75,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Lapadska obala 7, 20000 Dubrovnik",
       "phone": "+385 20 445 938",
       "email": "ured@unidu.hr"
@@ -94,7 +91,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
       "phone": "+385 20 445 700",
       "email": "ured@unidu.hr"
@@ -118,7 +114,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
       "phone": "+385 20 445 777",
       "email": "srdjan.vujicic@unidu.hr"
@@ -142,7 +137,6 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
       "phone": "+385 20 446 020",
       "email": "mediji@unidu.hr"
@@ -166,13 +160,10 @@
           "language": "Hrvatski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
       "phone": "+385 20 445 700",
       "email": "ured@unidu.hr"
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.unidu.hr"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }
