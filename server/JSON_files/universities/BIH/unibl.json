@@ -307,7 +307,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://unibl.org/uploads/files/Konkurs_upis%20studenata_26.27_.pdf",
           "lastModified": "2026-08-23"
         },
@@ -1120,7 +1120,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://unibl.org/uploads/files/Konkurs_upis%20studenata_26.27_.pdf",
           "lastModified": "2026-08-23"
         },

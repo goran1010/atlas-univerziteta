@@ -237,7 +237,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
           "lastModified": "2026-08-23"
         },
@@ -254,7 +254,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
           "lastModified": "2026-08-23"
         },
@@ -263,7 +263,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
           "lastModified": "2026-08-23"
         },
@@ -306,7 +306,7 @@
         {
           "name": "Physical education",
           "cycle": "SECOND",
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
           "ects": 60,
           "durationYears": 1,
@@ -323,7 +323,7 @@
         {
           "name": "Sports",
           "cycle": "SECOND",
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
           "ects": 120,
           "durationYears": 2,
@@ -368,7 +368,7 @@
         {
           "name": "Digital economy",
           "cycle": "SECOND",
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
           "ects": 60,
           "durationYears": 1,
@@ -385,7 +385,7 @@
         {
           "name": "Finance, banking and insurance",
           "cycle": "SECOND",
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
           "ects": 60,
           "durationYears": 1,
@@ -402,7 +402,7 @@
         {
           "name": "International economy",
           "cycle": "SECOND",
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-2/",
           "ects": 60,
           "durationYears": 1,
@@ -854,7 +854,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
           "lastModified": "2026-08-23"
         },
@@ -863,7 +863,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
           "lastModified": "2026-08-23"
         },
@@ -880,7 +880,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
           "lastModified": "2026-08-23"
         },
@@ -973,7 +973,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "ruski",
+          "language": "Ruski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
           "lastModified": "2026-08-23"
         }
@@ -1363,7 +1363,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.ues.rs.ba/nastava/vrste-i-nivoi-studija/studijski-programi-1/",
           "lastModified": "2026-08-23"
         },
