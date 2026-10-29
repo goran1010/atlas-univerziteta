@@ -152,7 +152,8 @@
     "publicIntro": "Public REST endpoints are available under the base URL below. These endpoints do not require authentication.",
     "fullDocs": "For full project documentation, local setup, and contributing guidelines, see the",
     "dataObject": "University object",
-    "dataObjectExample": "{\n  \"id\":          number   - unique identifier\n  \"name\":        string   - university name\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }  - list endpoint only\n  \"faculties\":   Faculty[]               - detail endpoint only\n}",
+    "dataObjectExample": "{\n  \"id\":          number                          - unique identifier\n  \"name\":        string                          - official name\n  \"acronym\":     string | null                   - short form (e.g. UNSA)\n  \"city\":        string                          - main campus city\n  \"country\":     \"BIH\" | \"SRB\" | \"HRV\" | \"MNE\"   - ISO 3166-1 alpha-3\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\" | null      - Bosnia subdivision\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - e.g. \"1949\"\n  \"website\":     string | null                   - official URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - list only\n  \"faculties\":   Faculty[]                        - detail only\n}",
+    "examples": "Quick examples",
     "endpoints": "Endpoints",
     "endpointsData": {
       "apiStatus": "Check API status.",
@@ -169,7 +170,8 @@
       "getStudyProgramById": "Retrieve a study program by ID with its tracks, parent faculty, and university.",
       "getAllTracks": "Retrieve all tracks, ordered by study program name then track name. Includes the full parent chain.",
       "getTrackById": "Retrieve a track by ID with its parent study program, faculty, and university.",
-      "entityParam": "Filter by entity: FBIH, RS, or BD.",
+      "countryParam": "Filter by country: BIH, SRB, HRV, or MNE.",
+      "entityParam": "Filter by entity (Bosnia only): FBIH, RS, or BD.",
       "ownershipParam": "Filter by ownership: PUBLIC or PRIVATE.",
       "cycleParam": "Filter by study cycle. Accepts multiple values (e.g. cycle=FIRST&cycle=SECOND). Values: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
       "typeParam": "Result type filter: university, faculty, or studyProgram. Repeatable. Each section returns every match."
@@ -394,10 +396,11 @@
   },
   "universitiesPage": {
     "title": "Find programs and universities",
+    "searchIntro": "A searchable database of universities, faculties, and study programs across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro.",
     "browseAll": "Browse all",
     "search": "Search",
-    "searchHint": "Search across all data - by name, city, acronym, country, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
-    "searchAllPlaceholder": "Search by name, city, cycle, entity…",
+    "searchHint": "Search by name, city, acronym, country, ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
+    "searchAllPlaceholder": "Search by name, city, country, cycle…",
     "universitiesSection": "Universities",
     "facultiesSection": "Faculties",
     "studyProgramsSection": "Study programs",

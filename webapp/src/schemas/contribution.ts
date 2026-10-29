@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import {
+  countrySchema,
   durationYearsSchema,
   ectsSchema,
   entitySchema,
@@ -28,7 +29,8 @@ const commentSchema = z.string().trim().min(1).max(1000).optional();
 const universityCreateDataSchema = z.strictObject({
   name: requiredNameSchema,
   city: requiredNameSchema,
-  entity: entitySchema,
+  country: countrySchema,
+  entity: entitySchema.optional(),
   ownership: ownershipSchema,
   acronym: acronymSchema.optional(),
   foundedYear: foundedYearSchema.optional(),
@@ -62,7 +64,8 @@ function nonEmptyObject<T extends z.ZodRawShape>(shape: T) {
 const universityEditDataSchema = nonEmptyObject({
   name: optionalNameSchema,
   city: optionalNameSchema,
-  entity: entitySchema.optional(),
+  country: countrySchema.optional(),
+  entity: entitySchema.nullable().optional(),
   ownership: ownershipSchema.optional(),
   acronym: acronymSchema.nullable().optional(),
   foundedYear: foundedYearSchema.nullable().optional(),
