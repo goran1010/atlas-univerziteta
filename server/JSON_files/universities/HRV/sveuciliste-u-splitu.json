@@ -13,6 +13,10 @@
     {
       "name": "Fakultet građevinarstva, arhitekture i geodezije",
       "city": "Split",
+      "website": "https://gradst.unist.hr",
+      "address": "Matice hrvatske 15, 21000 Split",
+      "phone": "+385 21 303 333",
+      "email": "dekan@gradst.hr",
       "studyPrograms": [
         { "name": "Građevinarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Arhitektura i urbanizam", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -26,6 +30,7 @@
     {
       "name": "Prirodoslovno-matematički fakultet",
       "city": "Split",
+      "website": "https://www.pmfst.unist.hr",
       "studyPrograms": [
         { "name": "Matematika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Fizika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -39,6 +44,10 @@
     {
       "name": "Ekonomski fakultet",
       "city": "Split",
+      "website": "https://www.efst.unist.hr",
+      "address": "Cvite Fiskovića 5, 21000 Split",
+      "phone": "+385 21 430 600",
+      "email": "dekanat@efst.hr",
       "studyPrograms": [
         { "name": "Ekonomija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Poslovna ekonomija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -50,6 +59,7 @@
     {
       "name": "Pravni fakultet",
       "city": "Split",
+      "website": "https://www.pravst.unist.hr",
       "studyPrograms": [
         { "name": "Pravo", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
         { "name": "Pravo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
@@ -58,6 +68,10 @@
     {
       "name": "Katolički bogoslovni fakultet",
       "city": "Split",
+      "website": "https://www.kbf.unist.hr",
+      "address": "Zrinsko-frankopanska 19, 21001 Split",
+      "phone": "+385 21 308 300",
+      "email": "office@kbf-st.hr",
       "studyPrograms": [
         { "name": "Teologija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
         { "name": "Teologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
@@ -66,6 +80,7 @@
     {
       "name": "Kemijsko-tehnološki fakultet",
       "city": "Split",
+      "website": "https://www.ktf.unist.hr",
       "studyPrograms": [
         { "name": "Kemija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Kemijska tehnologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -79,6 +94,7 @@
     {
       "name": "Medicinski fakultet",
       "city": "Split",
+      "website": "https://www.mefst.unist.hr",
       "studyPrograms": [
         { "name": "Medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Hrvatski" },
         { "name": "Medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Engleski" },
@@ -90,6 +106,7 @@
     {
       "name": "Kineziološki fakultet",
       "city": "Split",
+      "website": "https://www.kifst.unist.hr",
       "studyPrograms": [
         { "name": "Kineziologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Kineziologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
@@ -99,6 +116,7 @@
     {
       "name": "Pomorski fakultet",
       "city": "Split",
+      "website": "https://www.pfst.unist.hr",
       "studyPrograms": [
         { "name": "Pomorske znanosti", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Pomorske znanosti", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" }
@@ -107,6 +125,10 @@
     {
       "name": "Filozofski fakultet",
       "city": "Split",
+      "website": "https://www.ffst.unist.hr",
+      "address": "Sinjska 2, 21000 Split",
+      "phone": "+385 21 386 122",
+      "email": "dekanat@ffst.hr",
       "studyPrograms": [
         { "name": "Hrvatski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Engleski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -127,6 +149,10 @@
     {
       "name": "Fakultet elektrotehnike, strojarstva i brodogradnje",
       "city": "Split",
+      "website": "https://www.fesb.unist.hr",
+      "address": "Ruđera Boškovića 32, 21000 Split",
+      "phone": "+385 21 305 777",
+      "email": "dekanat@fesb.hr",
       "studyPrograms": [
         { "name": "Elektrotehnika i informacijska tehnologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Računarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -143,6 +169,7 @@
     {
       "name": "Umjetnička akademija",
       "city": "Split",
+      "website": "https://www.umas.unist.hr",
       "studyPrograms": [
         { "name": "Likovna umjetnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Glazbena umjetnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },

@@ -13,6 +13,8 @@
     {
       "name": "Agronomski fakultet u Čačku",
       "city": "Čačak",
+      "website": "https://www.afc.kg.ac.rs",
+      "address": "Cara Dušana 34, 32000 Čačak",
       "studyPrograms": [
         { "name": "Opšta agronomija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         { "name": "Prehrambena tehnologija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
@@ -27,6 +29,10 @@
     {
       "name": "Ekonomski fakultet",
       "city": "Kragujevac",
+      "website": "https://www.ekfak.kg.ac.rs",
+      "address": "Đure Pucara Starog 3, 34000 Kragujevac",
+      "phone": "+381 34 303 500",
+      "email": "ekfak@kg.ac.rs",
       "studyPrograms": [
         { "name": "Poslovna informatika", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         { "name": "Ekonomija i poslovno upravljanje", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
@@ -40,6 +46,7 @@
     {
       "name": "Fakultet pedagoških nauka u Jagodini",
       "city": "Jagodina",
+      "website": "https://www.pefja.kg.ac.rs",
       "studyPrograms": [
         { "name": "Vaspitač", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         { "name": "Učitelj razredne nastave", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
@@ -56,6 +63,9 @@
     {
       "name": "Fakultet inženjerskih nauka",
       "city": "Kragujevac",
+      "website": "https://www.fin.kg.ac.rs",
+      "address": "Sestre Janjić 6, 34000 Kragujevac",
+      "phone": "+381 34 335 990",
       "studyPrograms": [
         { "name": "Elektrotehnika i računarstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         { "name": "Inženjerstvo zaštite životne sredine", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
@@ -79,6 +89,7 @@
     {
       "name": "Fakultet za hotelijerstvo i turizam u Vrnjačkoj Banji",
       "city": "Vrnjačka Banja",
+      "website": "https://www.fht.kg.ac.rs",
       "studyPrograms": [
         { "name": "Menadžment gastronomije", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         { "name": "Hotelijerstvo i turizam", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
@@ -91,6 +102,10 @@
     {
       "name": "Pravni fakultet",
       "city": "Kragujevac",
+      "website": "https://www.jura.kg.ac.rs",
+      "address": "Jovana Cvijića 1, 34000 Kragujevac",
+      "phone": "+381 34 306 500",
+      "email": "faculty@jura.kg.ac.rs",
       "studyPrograms": [
         { "name": "Pravo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         { "name": "Pravo - unutrašnji poslovi i bezbednost", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
@@ -101,6 +116,7 @@
     {
       "name": "Fakultet za mašinstvo i građevinarstvo u Kraljevu",
       "city": "Kraljevo",
+      "website": "https://www.mfkv.kg.ac.rs",
       "studyPrograms": [
         { "name": "Građevinarstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         { "name": "Informacione tehnologije i sistemi", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
@@ -113,6 +129,7 @@
     {
       "name": "Fakultet medicinskih nauka",
       "city": "Kragujevac",
+      "website": "https://www.medf.kg.ac.rs",
       "studyPrograms": [
         { "name": "Vaspitač - medicinska sestra", "cycle": "VOCATIONAL", "durationYears": 3, "ects": 180, "language": "Srpski" },
         { "name": "Menadžment zdravstvenog sistema", "cycle": "SECOND", "durationYears": 1, "ects": 60, "language": "Srpski" },
@@ -130,6 +147,7 @@
     {
       "name": "Filološko-umetnički fakultet",
       "city": "Kragujevac",
+      "website": "https://www.filum.kg.ac.rs",
       "studyPrograms": [
         { "name": "Engleski jezik i književnost", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         { "name": "Likovna umetnost", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
@@ -163,6 +181,7 @@
     {
       "name": "Prirodno-matematički fakultet",
       "city": "Kragujevac",
+      "website": "https://www.pmf.kg.ac.rs",
       "studyPrograms": [
         { "name": "Biologija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         { "name": "Hemija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
@@ -190,6 +209,7 @@
     {
       "name": "Fakultet pedagoških nauka u Užicu",
       "city": "Užice",
+      "website": "https://www.pfu.kg.ac.rs",
       "studyPrograms": [
         { "name": "Pedagogija", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
         { "name": "Vaspitač", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },
@@ -203,6 +223,10 @@
     {
       "name": "Fakultet tehničkih nauka u Čačku",
       "city": "Čačak",
+      "website": "https://www.ftn.kg.ac.rs",
+      "address": "Svetog Save 65, 32000 Čačak",
+      "phone": "+381 32 302 700",
+      "email": "tfcacak@tfc.kg.ac.rs",
       "studyPrograms": [
         { "name": "Odevno inženjerstvo i dizajn", "cycle": "VOCATIONAL", "durationYears": 3, "ects": 180, "language": "Srpski" },
         { "name": "Računarsko i softversko inženjerstvo", "cycle": "FIRST", "durationYears": 4, "ects": 240, "language": "Srpski" },

@@ -13,6 +13,7 @@
     {
       "name": "Ekonomski fakultet",
       "city": "Osijek",
+      "website": "https://www.efos.unios.hr",
       "studyPrograms": [
         { "name": "Ekonomija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Poslovna ekonomija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -24,6 +25,7 @@
     {
       "name": "Pravni fakultet",
       "city": "Osijek",
+      "website": "https://www.pravos.unios.hr",
       "studyPrograms": [
         { "name": "Pravo", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
         { "name": "Pravo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
@@ -32,6 +34,7 @@
     {
       "name": "Fakultet agrobiotehničkih znanosti",
       "city": "Osijek",
+      "website": "https://www.fazos.unios.hr",
       "studyPrograms": [
         { "name": "Poljoprivreda", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Agrobiotehnologije", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -43,6 +46,7 @@
     {
       "name": "Prehrambeno-tehnološki fakultet",
       "city": "Osijek",
+      "website": "https://www.ptfos.unios.hr",
       "studyPrograms": [
         { "name": "Prehrambena tehnologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Prehrambeno inženjerstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -54,6 +58,7 @@
     {
       "name": "Građevinski i arhitektonski fakultet",
       "city": "Osijek",
+      "website": "https://www.gfos.unios.hr",
       "studyPrograms": [
         { "name": "Građevinarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Arhitektura i urbanizam", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -64,6 +69,7 @@
     {
       "name": "Fakultet elektrotehnike, računarstva i informacijskih tehnologija",
       "city": "Osijek",
+      "website": "https://www.ferit.unios.hr",
       "studyPrograms": [
         { "name": "Elektrotehnika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Računarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -85,6 +91,7 @@
     {
       "name": "Filozofski fakultet",
       "city": "Osijek",
+      "website": "https://www.ffos.unios.hr",
       "studyPrograms": [
         { "name": "Hrvatski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Engleski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -105,6 +112,7 @@
     {
       "name": "Fakultet za odgojne i obrazovne znanosti",
       "city": "Osijek",
+      "website": "https://www.foozos.unios.hr",
       "studyPrograms": [
         { "name": "Rani i predškolski odgoj i obrazovanje", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Učiteljski studij", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" }
@@ -113,6 +121,7 @@
     {
       "name": "Medicinski fakultet",
       "city": "Osijek",
+      "website": "https://www.mefos.unios.hr",
       "studyPrograms": [
         { "name": "Medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Hrvatski" },
         { "name": "Sestrinstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -122,6 +131,7 @@
     {
       "name": "Fakultet za dentalnu medicinu i zdravstvo",
       "city": "Osijek",
+      "website": "https://www.fdmz.unios.hr",
       "studyPrograms": [
         { "name": "Dentalna medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Hrvatski" },
         { "name": "Sestrinstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
@@ -131,6 +141,7 @@
     {
       "name": "Katolički bogoslovni fakultet u Đakovu",
       "city": "Đakovo",
+      "website": "https://www.djkbf.unios.hr",
       "studyPrograms": [
         { "name": "Teologija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" }
       ]
@@ -138,6 +149,7 @@
     {
       "name": "Akademija za umjetnost i kulturu",
       "city": "Osijek",
+      "website": "https://www.uaos.unios.hr",
       "studyPrograms": [
         { "name": "Likovna kultura", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
         { "name": "Likovna kultura", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },

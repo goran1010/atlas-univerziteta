@@ -13,536 +13,1395 @@
     {
       "name": "Prirodoslovno-matematički fakultet",
       "city": "Zagreb",
-      "website": "https://www.pmf.unizg.hr",
       "studyPrograms": [
-        { "name": "Matematika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Matematika - nastavnički smjer", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Geofizika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Geologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Geografija - istraživački smjer", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Biologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Molekularna biologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Znanosti o okolišu", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Kemija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Matematika i fizika - nastavnički", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Fizika - nastavnički", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Fizika i informatika - nastavnički", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Fizika i kemija - nastavnički", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Fizika i tehnika - nastavnički", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Fizika - istraživački", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Biologija i kemija - nastavnički", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Geografija i povijest - nastavnički", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Matematika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Geofizika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Geologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Geografija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Biologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Molekularna biologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Kemija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Matematika", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Fizika", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Kemija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Biologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Geologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Geografija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Oceanologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Matematika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kemija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Geologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kemija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Geologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kemija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.pmf.hr"
     },
     {
       "name": "Arhitektonski fakultet",
       "city": "Zagreb",
-      "website": "https://www.arh.unizg.hr",
       "studyPrograms": [
-        { "name": "Arhitektura i urbanizam", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Dizajn", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Arhitektura", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Arhitektura", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Dizajn", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Arhitektura i urbanizam", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Arhitektura i urbanizam",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Arhitektura i urbanizam",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Arhitektura i urbanizam",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.arhitekt.hr"
     },
     {
       "name": "Fakultet kemijskog inženjerstva i tehnologije",
       "city": "Zagreb",
-      "website": "https://www.fkit.unizg.hr",
       "studyPrograms": [
-        { "name": "Kemijsko inženjerstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Primijenjena kemija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Ekoinženjerstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Kemija i inženjerstvo materijala", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Kemijsko inženjerstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Primijenjena kemija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Ekoinženjerstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Kemija i inženjerstvo materijala", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Kemijsko inženjerstvo i primijenjena kemija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Kemijsko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primijenjena kemija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kemijsko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primijenjena kemija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kemijsko inženjerstvo i tehnologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.fkit.hr"
     },
     {
       "name": "Građevinski fakultet",
       "city": "Zagreb",
-      "website": "https://www.grad.unizg.hr",
       "studyPrograms": [
-        { "name": "Građevinarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Građevinarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Građevinarstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.grad.hr"
     },
     {
       "name": "Fakultet elektrotehnike i računarstva",
       "city": "Zagreb",
-      "website": "https://www.fer.unizg.hr",
       "studyPrograms": [
-        { "name": "Elektrotehnika i informacijska tehnologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Računarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Electrical Engineering and Information Technology", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Engleski" },
-        { "name": "Computing", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Engleski" },
-        { "name": "Elektrotehnika i informacijska tehnologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Računarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Electrical Engineering and Information Technology", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Engleski" },
-        { "name": "Computing", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Engleski" },
-        { "name": "Elektrotehnika i računarstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Elektrotehnika i informacijska tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika i informacijska tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika i računarstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.fer.hr"
     },
     {
       "name": "Geotehnički fakultet",
       "city": "Varaždin",
-      "website": "https://www.gfv.unizg.hr",
       "studyPrograms": [
-        { "name": "Inženjerstvo okoliša", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Inženjerstvo okoliša", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Inženjerstvo okoliša", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Inženjerstvo okoliša",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Inženjerstvo okoliša",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.gfv.hr"
     },
     {
       "name": "Grafički fakultet",
       "city": "Zagreb",
-      "website": "https://www.grf.unizg.hr",
       "studyPrograms": [
-        { "name": "Grafička tehnologija - tehničko-tehnološki smjer", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Grafička tehnologija - dizajn grafičkih proizvoda", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Grafička tehnologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Grafička tehnologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Grafička tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Grafička tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Grafičko inženjerstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.grf.hr"
     },
     {
       "name": "Fakultet strojarstva i brodogradnje",
       "city": "Zagreb",
-      "website": "https://www.fsb.unizg.hr",
       "studyPrograms": [
-        { "name": "Strojarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Brodogradnja", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Zrakoplovno inženjerstvo i svemirska tehnika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Mehatronika i robotika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Strojarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Brodogradnja", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Zrakoplovno inženjerstvo i svemirska tehnika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Mehatronika i robotika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Strojarstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Brodogradnja", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Strojarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodogradnja",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodogradnja",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo i brodogradnja",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.fsb.hr"
     },
     {
       "name": "Metalurški fakultet",
       "city": "Sisak",
-      "website": "https://www.simet.unizg.hr",
       "studyPrograms": [
-        { "name": "Metalurgija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Sigurnost, zdravlje na radu i radni okoliš", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Metalurgija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Metalurgija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Metalurgija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Metalurgija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.simet.hr"
     },
     {
       "name": "Rudarsko-geološko-naftni fakultet",
       "city": "Zagreb",
-      "website": "https://www.rgn.unizg.hr",
       "studyPrograms": [
-        { "name": "Rudarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Geološko inženjerstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Naftno i geoenergetsko inženjerstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Rudarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Geološko inženjerstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Naftno i geoenergetsko inženjerstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Rudarstvo, geološko i naftno inženjerstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Rudarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Geološko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Naftno rudarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Rudarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Geološko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Naftno rudarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.rgn.hr"
     },
     {
       "name": "Tekstilno-tehnološki fakultet",
       "city": "Zagreb",
-      "website": "https://www.ttf.unizg.hr",
       "studyPrograms": [
-        { "name": "Tekstilna tehnologija i inženjerstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Tekstilni i modni dizajn", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Tekstilna tehnologija i inženjerstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Tekstilni i modni dizajn", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Tekstilna znanost i tehnologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Tekstilna tehnologija i inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Tekstilna tehnologija i inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.ttf.hr"
     },
     {
       "name": "Fakultet prometnih znanosti",
       "city": "Zagreb",
-      "website": "https://www.fpz.unizg.hr",
       "studyPrograms": [
-        { "name": "Promet", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Inteligentni transportni sustavi i logistika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Aeronautika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Promet", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Inteligentni transportni sustavi i logistika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Aeronautika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Promet", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
-    },
-    {
-      "name": "Geodetski fakultet",
-      "city": "Zagreb",
-      "website": "https://www.geof.unizg.hr",
-      "studyPrograms": [
-        { "name": "Geodezija i geoinformatika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Geodezija i geoinformatika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Geodezija i geoinformatika", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Promet",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Promet",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Promet",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.fpz.unizg.hr"
     },
     {
       "name": "Farmaceutsko-biokemijski fakultet",
       "city": "Zagreb",
-      "website": "https://www.pharma.unizg.hr",
       "studyPrograms": [
-        { "name": "Farmacija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Medicinska biokemija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Farmaceutske znanosti", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Medicinska biokemija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Farmaceutske znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.pharma.hr"
     },
     {
       "name": "Veterinarski fakultet",
       "city": "Zagreb",
-      "website": "https://www.vef.unizg.hr",
       "studyPrograms": [
-        { "name": "Veterinarska medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Hrvatski" },
-        { "name": "Veterinarska medicina", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Veterinarska medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Veterinarske znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.vef.hr"
     },
     {
       "name": "Stomatološki fakultet",
       "city": "Zagreb",
-      "website": "https://www.sfzg.unizg.hr",
       "studyPrograms": [
-        { "name": "Dentalna medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Hrvatski" },
-        { "name": "Dentalna medicina", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Dentalna medicina",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.sfzg.hr"
     },
     {
       "name": "Medicinski fakultet",
       "city": "Zagreb",
-      "website": "https://mef.unizg.hr",
       "studyPrograms": [
-        { "name": "Medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Hrvatski" },
-        { "name": "Medicina", "cycle": "INTEGRATED", "durationYears": 6, "ects": 360, "language": "Engleski" },
-        { "name": "Biomedicina i zdravstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biomedicina i zdravstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.mef.hr"
     },
     {
       "name": "Agronomski fakultet",
       "city": "Zagreb",
-      "website": "https://www.agr.unizg.hr",
       "studyPrograms": [
-        { "name": "Agrarna ekonomika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Agroekologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Animalne znanosti", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Biljne znanosti", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Ekološka poljoprivreda", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Hortikultura", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Krajobrazna arhitektura", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Poljoprivredna tehnika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Fitomedicina", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Agrarna ekonomika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Agroekologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Animalne znanosti", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Biljne znanosti", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Hortikultura", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Krajobrazna arhitektura", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Fitomedicina", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Poljoprivredne znanosti", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Agrarna ekonomika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biljne znanosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Animalne znanosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Krajobrazna arhitektura",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Agrarna ekonomika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biljne znanosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Animalne znanosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Krajobrazna arhitektura",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poljoprivredne znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.agr.hr"
     },
     {
       "name": "Prehrambeno-biotehnološki fakultet",
       "city": "Zagreb",
-      "website": "https://www.pbf.unizg.hr",
       "studyPrograms": [
-        { "name": "Prehrambena tehnologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Biotehnologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Nutricionizam", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Prehrambena tehnologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Biotehnologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Nutricionizam", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Prehrambena tehnologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Biotehnologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biotehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Nutricionizam",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biotehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Nutricionizam",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Prehrambena tehnologija i biotehnologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.pbf.hr"
     },
     {
       "name": "Fakultet šumarstva i drvne tehnologije",
       "city": "Zagreb",
-      "website": "https://www.sumfak.unizg.hr",
       "studyPrograms": [
-        { "name": "Šumarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Urbano šumarstvo, zaštita prirode i okoliša", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Drvna tehnologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Šumarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Urbano šumarstvo, zaštita prirode i okoliša", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Drvna tehnologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Šumarstvo", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Drvna tehnologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Šumarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Drvna tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Šumarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Drvna tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Šumarske znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.sumfak.hr"
     },
     {
       "name": "Ekonomski fakultet",
       "city": "Zagreb",
-      "website": "https://www.efzg.unizg.hr",
       "studyPrograms": [
-        { "name": "Business", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Engleski" },
-        { "name": "Economics", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Engleski" },
-        { "name": "Poslovna ekonomija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Ekonomija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Ekonomija i poslovna ekonomija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekonomija i poslovna ekonomija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.efzg.hr"
     },
     {
       "name": "Kineziološki fakultet",
       "city": "Zagreb",
-      "website": "https://www.kif.unizg.hr",
       "studyPrograms": [
-        { "name": "Kineziologija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Kineziologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Kineziologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kineziologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kineziologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.kif.hr"
     },
     {
       "name": "Pravni fakultet",
       "city": "Zagreb",
-      "website": "https://www.pravo.unizg.hr",
       "studyPrograms": [
-        { "name": "Socijalni rad", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Pravo", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Socijalni rad", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Pravne znanosti", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Socijalni rad i socijalna politika", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
-    },
-    {
-      "name": "Fakultet političkih znanosti",
-      "city": "Zagreb",
-      "website": "https://www.fpzg.unizg.hr",
-      "studyPrograms": [
-        { "name": "Politologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Novinarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Politologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Novinarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Politologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
-    },
-    {
-      "name": "Edukacijsko-rehabilitacijski fakultet",
-      "city": "Zagreb",
-      "website": "https://www.erf.unizg.hr",
-      "studyPrograms": [
-        { "name": "Logopedija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Socijalna pedagogija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Rehabilitacija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Logopedija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Socijalna pedagogija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Rehabilitacija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Prevencijska znanost", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Logopedija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
-    },
-    {
-      "name": "Učiteljski fakultet",
-      "city": "Zagreb",
-      "website": "https://www.ufzg.unizg.hr",
-      "studyPrograms": [
-        { "name": "Rani i predškolski odgoj i obrazovanje", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Učiteljski studij", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Rani i predškolski odgoj i obrazovanje", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Pedagogija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Pravo",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Javna uprava",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.pravo.hr"
     },
     {
       "name": "Fakultet organizacije i informatike",
       "city": "Varaždin",
-      "website": "https://www.foi.unizg.hr",
       "studyPrograms": [
-        { "name": "Informacijski i poslovni sustavi", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Ekonomika poduzetništva", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Informacijsko i programsko inženjerstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Organizacija poslovnih sustava", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Baze podataka i baza znanja", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Ekonomika poduzetništva", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Informacijske znanosti", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Informacijski i poslovni sustavi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekonomika poduzetništva",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informacijski i poslovni sustavi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Organizacija i informatika",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.foi.hr"
     },
     {
-      "name": "Fakultet hrvatskih studija",
+      "name": "Fakultet političkih znanosti",
       "city": "Zagreb",
-      "website": "https://www.hrstud.unizg.hr",
       "studyPrograms": [
-        { "name": "Komunikologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Psihologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Sociologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Filozofija i kultura", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Kroatologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Latinski jezik", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Povijest", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Komunikologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Psihologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Kroatologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Povijest", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Kroatologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Komunikologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Politologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Novinarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Novinarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.fpzg.hr"
     },
     {
-      "name": "Filozofski fakultet",
+      "name": "Edukacijsko-rehabilitacijski fakultet",
       "city": "Zagreb",
-      "website": "https://www.ffzg.unizg.hr",
       "studyPrograms": [
-        { "name": "Anglistika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Arheologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Etnologija i kulturna antropologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Filozofija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Fonetika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Francuski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Germanistika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Grčki jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Hungarologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Indologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Informacijske znanosti", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Japanologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Južnoslavenski jezici i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Komparativna književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Kroatistika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Latinski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Lingvistika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Nederlandistika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Pedagogija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Povijest", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Povijest umjetnosti", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Psihologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Ruski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Sinologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Sociologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Španjolski jezik i književnost", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Talijanistika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Turkologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Anglistika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Arheologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Etnologija i kulturna antropologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Filozofija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Germanistika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Informacijske znanosti", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Komparativna književnost", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Kroatistika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Lingvistika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Pedagogija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Povijest", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Povijest umjetnosti", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Psihologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Sociologija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Književnost, izvedbene umjetnosti, film i kultura", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Lingvistika", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Filozofija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Povijest", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Arheologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Etnologija i kulturna antropologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Informacijske i komunikacijske znanosti", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Pedagogija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Psihologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Sociologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Povijest umjetnosti", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Logopedija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Rehabilitacija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Socijalna pedagogija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Logopedija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Rehabilitacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Socijalna pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.erf.hr"
+    },
+    {
+      "name": "Učiteljski fakultet",
+      "city": "Zagreb",
+      "studyPrograms": [
+        {
+          "name": "Rani i predškolski odgoj i obrazovanje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Učiteljski studij",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.ufzg.hr"
     },
     {
       "name": "Katolički bogoslovni fakultet",
       "city": "Zagreb",
-      "website": "https://www.kbf.unizg.hr",
       "studyPrograms": [
-        { "name": "Teološko-religijske znanosti", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Protestantska teologija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Filozofsko-teološki studij", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Religijska pedagogija i katehetika", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Teologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Teologija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Religijske znanosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Teologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.kbf.unizg.hr"
+    },
+    {
+      "name": "Filozofski fakultet",
+      "city": "Zagreb",
+      "studyPrograms": [
+        {
+          "name": "Anglistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Germanistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Romanistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kroatistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Komparativna književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Arheologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Etnologija i kulturna antropologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informacijske i komunikacijske znanosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest umjetnosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Anglistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kroatistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Arheologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Lingvistika",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Književnost, izvedbene umjetnosti, film i kultura",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.ffzg.hr"
+    },
+    {
+      "name": "Fakultet hrvatskih studija",
+      "city": "Zagreb",
+      "studyPrograms": [
+        {
+          "name": "Hrvatski studiji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Hrvatski studiji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.hrstud.hr"
     },
     {
       "name": "Fakultet filozofije i religijskih znanosti",
       "city": "Zagreb",
-      "website": "https://www.ffrz.unizg.hr",
       "studyPrograms": [
-        { "name": "Filozofija i religijske znanosti", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Filozofija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Filozofija i religijske znanosti", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Filozofija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Filozofija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Filozofija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.ffrz.hr"
     },
     {
       "name": "Akademija dramske umjetnosti",
       "city": "Zagreb",
-      "website": "https://www.adu.unizg.hr",
       "studyPrograms": [
-        { "name": "Gluma", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Kazališna režija i radiofonija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Dramaturgija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Filmska i TV režija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Snimanje", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Montaža", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Produkcija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Suvremeni ples", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Baletna pedagogija", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Gluma", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Kazališna režija i radiofonija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Dramaturgija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Filmska i TV režija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Snimanje", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Montaža", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Produkcija", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Kazališna umjetnost", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Filmska umjetnost", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Gluma i mediji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Dramaturgija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filmsko i televizijsko snimanje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Montaža",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Režija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Gluma i mediji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Dramaturgija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Režija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.adu.hr"
     },
     {
       "name": "Akademija likovnih umjetnosti",
       "city": "Zagreb",
-      "website": "https://www.alu.unizg.hr",
       "studyPrograms": [
-        { "name": "Slikarstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Grafika", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Kiparstvo", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Likovna kultura", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Animirani film i novi mediji", "cycle": "FIRST", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Konzervacija i restauracija - slikarstvo", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Konzervacija i restauracija - kiparstvo", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Slikarstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Grafika", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Kiparstvo", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Novi mediji", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Likovna kultura", "cycle": "SECOND", "durationYears": 2, "ects": 120, "language": "Hrvatski" },
-        { "name": "Likovna umjetnost", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Likovna umjetnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Likovna umjetnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Likovna umjetnost",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.alu.hr"
     },
     {
       "name": "Muzička akademija",
       "city": "Zagreb",
-      "website": "https://www.muza.unizg.hr",
       "studyPrograms": [
-        { "name": "Kompozicija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Muzička teorija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Muzikologija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Dirigiranje", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Pjevanje", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Instrumentalni studij", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Muzička pedagogija", "cycle": "INTEGRATED", "durationYears": 5, "ects": 300, "language": "Hrvatski" },
-        { "name": "Muzikologija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" },
-        { "name": "Muzička pedagogija", "cycle": "THIRD", "durationYears": 3, "ects": 180, "language": "Hrvatski" }
-      ]
+        {
+          "name": "Glazba",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glazba",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glazba",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "website": "https://www.muza.unizg.hr"
     }
   ]
 }
