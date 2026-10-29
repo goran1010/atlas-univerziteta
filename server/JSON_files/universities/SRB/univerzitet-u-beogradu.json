@@ -16,14 +16,14 @@
       "website": "https://www.ekof.bg.ac.rs",
       "studyPrograms": [
         {
-          "name": "Ekonomija, poslovno upravljanje i statistika",
+          "name": "Ekonomija, poslovno upravljanje i statistika (4 godine)",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
           "language": "Srpski"
         },
         {
-          "name": "Ekonomija, poslovno upravljanje i statistika",
+          "name": "Ekonomija, poslovno upravljanje i statistika (3 godine)",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,

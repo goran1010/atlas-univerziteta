@@ -292,14 +292,14 @@
       "website": "https://www.mefst.unist.hr",
       "studyPrograms": [
         {
-          "name": "Medicina",
+          "name": "Medicina (hrvatski)",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
           "language": "Hrvatski"
         },
         {
-          "name": "Medicina",
+          "name": "Medicina (engleski)",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,

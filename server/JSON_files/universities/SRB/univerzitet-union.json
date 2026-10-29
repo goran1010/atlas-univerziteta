@@ -90,7 +90,7 @@
       "website": "https://www.bba.edu.rs",
       "studyPrograms": [
         {
-          "name": "Ekonomija, finansije i biznis",
+          "name": "Ekonomija, finansije i biznis (4 godine)",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
@@ -108,7 +108,7 @@
           ]
         },
         {
-          "name": "Ekonomija, finansije i biznis",
+          "name": "Ekonomija, finansije i biznis (3 godine)",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
