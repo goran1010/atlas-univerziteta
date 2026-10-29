@@ -78,6 +78,13 @@ enum typeOfChange {
   CREATE
 }
 
+enum country {
+  BIH
+  SRB
+  HRV
+  MNE
+}
+
 enum entity {
   FBIH
   RS
@@ -110,7 +117,8 @@ model University {
   searchAcronym     String?
   city              String
   searchCity        String    @default("")
-  entity            entity
+  country           country
+  entity            entity?
   ownership         ownership
   foundedYear       String?
   website           String?

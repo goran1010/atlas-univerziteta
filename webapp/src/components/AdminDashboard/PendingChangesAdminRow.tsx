@@ -57,6 +57,14 @@ const PendingChangesAdminRow = memo(
 
     const currentEntity = data.currentEntity ?? null;
     const entityName = getChangedEntityName(data);
+    const rawCountry =
+      data.targetType === "UNIVERSITY"
+        ? (data.data as { country?: string } | null)?.country
+        : undefined;
+    const countryLabel =
+      typeof rawCountry === "string"
+        ? t(`universitiesPage.countries.${rawCountry}`)
+        : undefined;
     const currentPath =
       data.typeOfChange !== "CREATE" && currentEntity
         ? entityDetailPath(data.targetType, data.targetId)
@@ -83,12 +91,17 @@ const PendingChangesAdminRow = memo(
           ROW_ACCENT[data.typeOfChange]
         } ${index % 2 === 0 ? "bg-(--surface-2)" : "bg-(--surface-alt)"}`}
       >
-        <div role="cell" className="sm:col-span-3">
+        <div role="cell" className="sm:col-span-3 flex items-center gap-2">
           <ParentBreadcrumb
             crumbs={data.parentContext ?? []}
             current={entityName}
             currentPath={currentPath}
           />
+          {countryLabel && (
+            <span className="shrink-0 px-1.5 py-0.5 rounded text-xs font-medium bg-(--surface-1) text-(--text-muted) border border-(--border-color)">
+              {countryLabel}
+            </span>
+          )}
         </div>
         <div
           role="cell"

@@ -2,7 +2,7 @@ export type SystemLanguage = "en" | "sr";
 
 // the "sr" bundle holds the shared BCS text, so all three of its
 // standard-language codes resolve to it
-const BCS_LANGUAGE_CODES = new Set(["sr", "bs", "hr"]);
+const BCS_LANGUAGE_CODES = new Set(["sr", "bs", "hr", "cnr"]);
 
 function setSystemLanguage(): SystemLanguage {
   const browserLanguage = navigator.language.slice(0, 2);

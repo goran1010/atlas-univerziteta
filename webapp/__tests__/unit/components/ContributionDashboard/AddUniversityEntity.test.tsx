@@ -14,6 +14,7 @@ const universitiesList = [
     name: "University of Sarajevo",
     acronym: "UNSA",
     city: "Sarajevo",
+    country: "BIH",
     entity: "FBIH",
     ownership: "PUBLIC",
   },
@@ -171,7 +172,7 @@ describe("AddUniversityEntity", () => {
     expect(screen.getByLabelText(/Name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/City/i)).toBeInTheDocument();
     expect(
-      screen.getByRole("combobox", { name: /^Entity$/i }),
+      screen.getByRole("combobox", { name: /^Country$/i }),
     ).toBeInTheDocument();
     expect(screen.getByLabelText(/Ownership/i)).toBeInTheDocument();
     expect(
@@ -446,6 +447,10 @@ describe("AddUniversityEntity", () => {
     await user.type(screen.getByLabelText(/Name/i), "University of Sarajevo");
     await user.type(screen.getByLabelText(/City/i), "Sarajevo");
     await user.selectOptions(
+      screen.getByRole("combobox", { name: /^Country$/i }),
+      "BIH",
+    );
+    await user.selectOptions(
       screen.getByRole("combobox", { name: /^Entity$/i }),
       "FBIH",
     );
@@ -466,6 +471,7 @@ describe("AddUniversityEntity", () => {
       data: {
         name: "University of Sarajevo",
         city: "Sarajevo",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },
@@ -488,6 +494,10 @@ describe("AddUniversityEntity", () => {
 
     await user.type(screen.getByLabelText(/Name/i), "Commented University");
     await user.type(screen.getByLabelText(/City/i), "Sarajevo");
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /^Country$/i }),
+      "BIH",
+    );
     await user.selectOptions(
       screen.getByRole("combobox", { name: /^Entity$/i }),
       "FBIH",

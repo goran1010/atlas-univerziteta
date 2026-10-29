@@ -5,9 +5,7 @@ import type { ApiError } from "../../../schemas/api";
 import type { UnifiedSearchResults } from "../../../schemas/university";
 
 interface SearchFilters {
-  entity?: string | undefined;
-  ownership?: string | undefined;
-  cycle?: string[] | undefined;
+  country?: string | undefined;
   type?: string[] | undefined;
 }
 
@@ -18,13 +16,7 @@ async function searchAll(
 ): Promise<UnifiedSearchResults> {
   const params = new URLSearchParams();
   if (term) params.set("searchTerm", term);
-  if (filters?.entity) params.set("entity", filters.entity);
-  if (filters?.ownership) params.set("ownership", filters.ownership);
-  if (filters?.cycle) {
-    for (const c of filters.cycle) {
-      params.append("cycle", c);
-    }
-  }
+  if (filters?.country) params.set("country", filters.country);
   if (filters?.type) {
     for (const type of filters.type) {
       params.append("type", type);

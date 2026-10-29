@@ -1,0 +1,255 @@
+{
+  "name": "Internacionalni univerzitet u Novom Pazaru",
+  "acronym": "UNINP",
+  "city": "Novi Pazar",
+  "country": "SRB",
+  "ownership": "PRIVATE",
+  "foundedYear": "2002",
+  "website": "https://www.uninp.edu.rs",
+  "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
+  "phone": "+381 20 316 634",
+  "email": "rektorat@uninp.edu.rs",
+  "faculties": [
+    {
+      "name": "Departman za umjetnost i filološke nauke",
+      "city": "Novi Pazar",
+      "studyPrograms": [
+        {
+          "name": "Slikarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Modni dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Njemački jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Srpski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Bosanski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Likovna umjetnost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Dizajn",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski",
+          "tracks": [
+            {
+              "name": "Modni dizajn"
+            },
+            {
+              "name": "Grafički dizajn"
+            }
+          ]
+        },
+        {
+          "name": "Jezik, književnosti i kultura",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Likovna umjetnost",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
+      "phone": "+381 20 316 634",
+      "email": "umjetnost.filologija@uninp.edu.rs",
+      "website": "https://www.uninp.edu.rs"
+    },
+    {
+      "name": "Departman za pedagoške i psihološke nauke",
+      "city": "Novi Pazar",
+      "studyPrograms": [
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vaspitač djece predškolskog uzrasta",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Vaspitač djece predškolskog uzrasta",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
+      "phone": "+381 20 316 634",
+      "email": "pedagogija.psihologija@uninp.edu.rs",
+      "website": "https://www.uninp.edu.rs"
+    },
+    {
+      "name": "Departman za ekonomske i računarske nauke",
+      "city": "Novi Pazar",
+      "studyPrograms": [
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Poslovna informatika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
+      "phone": "+381 20 316 634",
+      "email": "ekonomija.racunarstvo@uninp.edu.rs",
+      "website": "https://www.uninp.edu.rs"
+    },
+    {
+      "name": "Departman za pravne nauke",
+      "city": "Novi Pazar",
+      "studyPrograms": [
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski",
+          "tracks": [
+            {
+              "name": "Opšte pravo"
+            },
+            {
+              "name": "Pravo unutrašnjih poslova"
+            }
+          ]
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski",
+          "tracks": [
+            {
+              "name": "Opšte pravo"
+            },
+            {
+              "name": "Pravo unutrašnjih poslova"
+            }
+          ]
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
+      "phone": "+381 20 316 634",
+      "email": "pravo@uninp.edu.rs",
+      "website": "https://www.uninp.edu.rs"
+    }
+  ],
+  "dataSourceUrl": "https://www.uninp.edu.rs",
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29",
+  "accreditationFrom": "2024-01-01",
+  "accreditationTo": "2031-01-01"
+}

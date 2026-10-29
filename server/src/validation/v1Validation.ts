@@ -63,6 +63,7 @@ const searchQuerySchema = z.object({
       message: "Search term must not exceed 100 characters.",
     })
     .optional(),
+  country: z.enum(["BIH", "SRB", "HRV", "MNE"]).optional(),
   entity: z.enum(["FBIH", "RS", "BD"]).optional(),
   ownership: z.enum(["PUBLIC", "PRIVATE"]).optional(),
   cycle: z
@@ -79,6 +80,7 @@ const searchQuerySchema = z.object({
 const guardedSearchQuerySchema = searchQuerySchema.refine(
   (query) =>
     query.searchTerm !== undefined ||
+    query.country !== undefined ||
     query.entity !== undefined ||
     query.ownership !== undefined ||
     query.cycle !== undefined ||

@@ -1,9 +1,12 @@
 import { SearchIcon, XIcon } from "../sharedComponents/icons";
 import { Button } from "../sharedComponents/Button";
 import { Spinner } from "../sharedComponents/Spinner";
-import { FilterPanel } from "./FilterPanel";
 import { SearchResults } from "./SearchResults";
 import { useUnifiedSearch } from "./useUnifiedSearch";
+
+import type { Country } from "../../schemas/domain";
+
+const COUNTRIES: Country[] = ["BIH", "SRB", "HRV", "MNE"];
 
 function UnifiedSearch() {
   const {
@@ -12,18 +15,10 @@ function UnifiedSearch() {
     loading,
     inputRef,
     searchInput,
-    entityFilter,
-    ownershipFilter,
-    cycleFilters,
-    typeFilters,
-    filtersOpen,
-    setFiltersOpen,
-    hasFilters,
+    countryFilter,
     hasSearchTerm,
     handleInputChange,
-    handleFilterChange,
-    handleCycleChange,
-    handleTypeChange,
+    handleCountryChange,
     handleBrowseAll,
     handleClear,
     handleClearAll,
@@ -32,7 +27,7 @@ function UnifiedSearch() {
   return (
     <div className="flex flex-col gap-4 w-full items-center justify-center">
       <p className="text-sm text-center text-(--text-secondary) max-w-lg">
-        {t("universitiesPage.searchHint")}
+        {t("universitiesPage.searchIntro")}
       </p>
 
       <div className="flex flex-col sm:flex-row gap-2 w-full max-w-lg">
@@ -66,22 +61,26 @@ function UnifiedSearch() {
         </div>
       </div>
 
-      <FilterPanel
-        entityFilter={entityFilter}
-        ownershipFilter={ownershipFilter}
-        cycleFilters={cycleFilters}
-        typeFilters={typeFilters}
-        filtersOpen={filtersOpen}
-        onToggleFilters={() => {
-          setFiltersOpen((prev) => !prev);
-        }}
-        onFilterChange={handleFilterChange}
-        onCycleChange={handleCycleChange}
-        onTypeChange={handleTypeChange}
-        t={t}
-      />
+      <div className="flex flex-wrap justify-center gap-2">
+        {COUNTRIES.map((c) => (
+          <button
+            key={c}
+            type="button"
+            onClick={() => {
+              handleCountryChange(countryFilter === c ? "" : c);
+            }}
+            className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) ${
+              countryFilter === c
+                ? "bg-(--accent) text-white border-(--accent)"
+                : "bg-(--surface-2) text-(--text-secondary) border-(--border-color) hover:border-(--accent) hover:text-(--accent-text)"
+            }`}
+          >
+            {t(`universitiesPage.countries.${c}`)}
+          </button>
+        ))}
+      </div>
 
-      {(hasFilters || hasSearchTerm || view.kind !== "idle") && (
+      {(hasSearchTerm || countryFilter !== "" || view.kind !== "idle") && (
         <Button
           variant="danger"
           className="text-xs px-3 py-2 sm:py-1.5 w-full max-w-xs sm:w-auto"

@@ -63,6 +63,10 @@ async function fillRootUniversity(user: ReturnType<typeof userEvent.setup>) {
   );
   await user.type(screen.getByRole("textbox", { name: /^City/ }), "Testograd");
   await user.selectOptions(
+    screen.getByRole("combobox", { name: /^Country/ }),
+    "BIH",
+  );
+  await user.selectOptions(
     screen.getByRole("combobox", { name: /^Entity/ }),
     "FBIH",
   );
@@ -105,6 +109,7 @@ describe("tree builder in AddUniversityEntity", () => {
       data: {
         name: "Builder Uni",
         city: "Testograd",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: [
@@ -174,6 +179,7 @@ describe("tree builder in AddUniversityEntity", () => {
     expect(submissions[0]?.["data"]).toEqual({
       name: "Builder Uni",
       city: "Testograd",
+      country: "BIH",
       entity: "FBIH",
       ownership: "PUBLIC",
     });

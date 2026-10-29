@@ -15,8 +15,8 @@
     "about": "O projektu"
   },
   "meta": {
-    "home": "Istražite univerzitete, fakultete, studijske programe i smjerove u Bosni i Hercegovini kroz besplatan javni skup podataka, pretraživi web interfejs i REST API.",
-    "universities": "Istražite univerzitete i studijske programe u Bosni i Hercegovini.",
+    "home": "Istražite univerzitete, fakultete, studijske programe i smjerove u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori kroz besplatan javni skup podataka, pretraživi web interfejs i REST API.",
+    "universities": "Istražite univerzitete i studijske programe u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori.",
     "api": "REST API dokumentacija za Atlas Univerziteta. Pristupite podacima o univerzitetima i studijskim programima programski.",
     "login": "Prijavite se na vaš Atlas Univerziteta nalog kako biste doprinijeli podacima i pratili vaše prijave.",
     "signup": "Napravite besplatan Atlas Univerziteta nalog i počnite doprinositi podacima o univerzitetima."
@@ -122,11 +122,11 @@
     "changesAwaiting": "Izmjene koje čekaju vaš pregled"
   },
   "home": {
-    "heading": "Univerziteti i studijski programi u Bosni i Hercegovini",
-    "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o Bosni i Hercegovini. Fokus je na univerzitetima - institucijama, fakultetima, studijskim programima i smjerovima.",
+    "heading": "Univerziteti i studijski programi",
+    "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o visokom obrazovanju. Fokus je na univerzitetima - institucijama, fakultetima, studijskim programima i smjerovima - u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori.",
     "summary": "Koristite Atlas Univerziteta za pregled profila univerziteta, poređenje akademske ponude i pristup strukturiranim javnim podacima kroz jednostavan interfejs ili direktno kroz API.",
     "exploreHeading": "Istražite podatke",
-    "exploreDescription": "Pregledajte univerzitete širom Bosne i Hercegovine. Pogledajte fakultete, studijske programe i smjerove. Pretražujte po nazivu, gradu, akronimu, entitetu, vlasništvu, ciklusu studija i više.",
+    "exploreDescription": "Pregledajte univerzitete u više zemalja. Pogledajte fakultete, studijske programe i smjerove. Pretražujte po nazivu, gradu, akronimu, zemlji, entitetu, vlasništvu, ciklusu studija i više.",
     "card": {
       "universities": {
         "title": "Univerziteti"
@@ -144,7 +144,7 @@
     "forDevsNote": "Autentifikacija nije potrebna za javne endpoint-e.",
     "forDevsCta": "Pogledajte API dokumentaciju",
     "forDevsGithub": "Pogledajte na GitHub-u",
-    "openSource": "Ovo je projekat otvorenog koda. Pregledajte izvorni kod, upute za postavljanje i doprinesite na",
+    "openSource": "Ovo je open-source projekat. Pregledajte izvorni kod, upute za postavljanje i doprinesite na",
     "github": "GitHub"
   },
   "api": {
@@ -152,7 +152,8 @@
     "publicIntro": "Javni REST endpoint-i su dostupni pod osnovnim URL-om ispod. Ovi endpoint-i ne zahtijevaju autentifikaciju.",
     "fullDocs": "Za kompletnu projektnu dokumentaciju, lokalno postavljanje i smjernice za doprinos, pogledajte",
     "dataObject": "Objekat univerziteta",
-    "dataObjectExample": "{\n  \"id\":          number   - jedinstveni identifikator\n  \"name\":        string   - naziv univerziteta\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }  - samo lista\n  \"faculties\":   Faculty[]               - samo detalji\n}",
+    "dataObjectExample": "{\n  \"id\":          number                          - jedinstveni identifikator\n  \"name\":        string                          - zvanicni naziv\n  \"acronym\":     string | null                   - skracenica (npr. UNSA)\n  \"city\":        string                          - grad glavnog kampusa\n  \"country\":     \"BIH\" | \"SRB\" | \"HRV\" | \"MNE\"   - ISO 3166-1 alpha-3\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\" | null      - entitet u BiH\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - npr. \"1949\"\n  \"website\":     string | null                   - zvanicni URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - samo lista\n  \"faculties\":   Faculty[]                        - samo detalji\n}",
+    "examples": "Primjeri",
     "endpoints": "Endpoint-i",
     "endpointsData": {
       "apiStatus": "Provjera statusa API-ja.",
@@ -169,7 +170,8 @@
       "getStudyProgramById": "Preuzimanje studijskog programa po ID-u s njegovim smjerovima, nadređenim fakultetom i univerzitetom.",
       "getAllTracks": "Preuzimanje svih smjerova, sortiranih po nazivu studijskog programa pa po nazivu smjera. Uključuje cjelokupni lanac nadređenih jedinica.",
       "getTrackById": "Preuzimanje smjera po ID-u s nadređenim studijskim programom, fakultetom i univerzitetom.",
-      "entityParam": "Filtriranje po entitetu: FBIH, RS ili BD.",
+      "countryParam": "Filtriranje po zemlji: BIH, SRB, HRV ili MNE.",
+      "entityParam": "Filtriranje po entitetu (samo BiH): FBIH, RS ili BD.",
       "ownershipParam": "Filtriranje po vlasništvu: PUBLIC ili PRIVATE.",
       "cycleParam": "Filtriranje po ciklusu studija. Prihvata višestruke vrijednosti (npr. cycle=FIRST&cycle=SECOND). Vrijednosti: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
       "typeParam": "Filter tipa rezultata: university, faculty ili studyProgram. Može se ponoviti. Svaka sekcija vraća sve rezultate."
@@ -190,11 +192,9 @@
   "contribution": {
     "title": "Poboljšajte podatke",
     "needUser": "Morate biti registrovani korisnik da biste predložili izmjene sadržaja.",
-    "chooseDataset": "Izaberite skup podataka:",
-    "noDataset": "Nema skupa",
-    "selectDatasetError": "Morate izabrati skup podataka.",
     "addNewData": "Predloži izmjene",
     "addTree": "Dodaj univerzitet ili fakultet (JSON)",
+    "addTreeHint": "Koristite ovu karticu da dodate cijeli univerzitet ili fakultet sa svim studijskim programima i smjerovima odjednom, lijepljenjem ili učitavanjem JSON datoteke.",
     "pendingChanges": "Moji prijedlozi",
     "noPendingChanges": "Nemate prijedloga koji čekaju pregled.",
     "change": "Izmjena",
@@ -202,14 +202,8 @@
     "entityType": "Vrsta stavke",
     "nestedInTree": "obuhvaćeno",
     "actions": "Akcije",
-    "searchResultsCountAria": "broj rezultata pretrage",
-    "searchResults": "Rezultati pretrage",
     "user": "Korisnik",
     "contributor": "Doprinosilac",
-    "dataset": {
-      "universities": "Univerziteti",
-      "universitiesPlaceholder": "Univerziteti - uskoro"
-    },
     "entityTypes": {
       "UNIVERSITY": "Univerzitet",
       "FACULTY": "Fakultet",
@@ -235,6 +229,7 @@
     "dataFields": {
       "name": "Naziv",
       "city": "Grad",
+      "country": "Zemlja",
       "entity": "Entitet",
       "cycle": "Studijski ciklus",
       "durationYears": "Trajanje (godine)",
@@ -255,6 +250,12 @@
       "INTEGRATED": "INTEGRISANI - Bachelor+Master",
       "VOCATIONAL": "STRUČNI",
       "SPECIALIST": "SPECIJALISTIČKI - Specialist"
+    },
+    "countries": {
+      "BIH": "Bosna i Hercegovina",
+      "SRB": "Srbija",
+      "HRV": "Hrvatska",
+      "MNE": "Crna Gora"
     },
     "entities": {
       "FBIH": "FBIH - Federacija BiH",
@@ -387,10 +388,10 @@
   },
   "universitiesPage": {
     "title": "Nađite programe i univerzitete",
-    "browseAll": "Pregledaj sve",
+    "searchIntro": "Pretražite univerzitete, fakultete, studijske programe i smjerove u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori. Unesite naziv programa, grad, zemlju, ciklus studija, ECTS bodove ili riječi poput \"javni\" ili \"master\".",
+    "browseAll": "Pregledaj sve univerzitete",
     "search": "Pretraži",
-    "searchHint": "Pretražite sve podatke - po nazivu, gradu, akronimu, entitetu (FBIH/RS/BD), vlasništvu (JAVNI/PRIVATNI), ciklusu studija (PRVI, DRUGI…), jeziku ili nazivu nadređene jedinice.",
-    "searchAllPlaceholder": "Pretraži po nazivu, gradu, ciklusu, entitetu…",
+    "searchAllPlaceholder": "npr. informatika, medicina Srbija, master 120 ECTS…",
     "universitiesSection": "Univerziteti",
     "facultiesSection": "Fakulteti",
     "studyProgramsSection": "Studijski programi",
@@ -398,6 +399,12 @@
     "noFacultyResults": "Nisu pronađeni fakulteti.",
     "noResultsAtAll": "Nema rezultata pretrage.",
     "searchResultsAnnouncement": "Rezultati pretrage:",
+    "countries": {
+      "BIH": "Bosna i Hercegovina",
+      "SRB": "Srbija",
+      "HRV": "Hrvatska",
+      "MNE": "Crna Gora"
+    },
     "entities": {
       "FBIH": "Federacija BiH",
       "RS": "Republika Srpska",
@@ -442,18 +449,13 @@
       "PRIVATE": "Privatni"
     },
     "clearSearch": "Obriši pretragu",
-    "filters": "Filteri",
-    "resetSearch": "Poništi pretragu",
-    "filterType": "Tip",
+    "resetSearch": "Poništi",
     "contextMatch": {
       "university": "Pronađen preko svojih fakulteta ili studijskih programa",
       "faculty": "Pronađen preko svog univerziteta ili studijskih programa",
       "studyProgram": "Pronađen preko svog fakulteta, univerziteta ili smjerova"
     },
     "showAllPrograms": "Prikaži sve studijske programe",
-    "filterEntity": "Entitet",
-    "filterOwnership": "Vlasništvo",
-    "filterCycle": "Ciklus studija",
     "openFullPage": "Otvori cijelu stranicu",
     "shareLink": "Podijeli link",
     "linkCopied": "Link kopiran u clipboard.",

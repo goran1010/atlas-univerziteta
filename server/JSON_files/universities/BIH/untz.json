@@ -1,0 +1,1157 @@
+{
+  "country": "BIH",
+  "name": "Univerzitet u Tuzli",
+  "acronym": "UNTZ",
+  "city": "Tuzla",
+  "entity": "FBIH",
+  "ownership": "PUBLIC",
+  "foundedYear": "1976",
+  "website": "https://www.untz.ba",
+  "address": "Dr. Tihomila Markovića 1, 75000 Tuzla",
+  "phone": "+387 35 300 500",
+  "email": "rektorat@untz.ba",
+  "accreditationFrom": "2007-08-15",
+  "accreditationTo": "2033-03-19",
+  "authority": "Ministarstvo obrazovanja i nauke Tuzlanskog kantona",
+  "dataSourceUrl": "https://untz.ba/kontakt/",
+  "lastModified": "2026-08-29",
+  "faculties": [
+    {
+      "name": "Akademija dramskih umjetnosti",
+      "city": "Tuzla",
+      "website": "http://www.adu.untz.ba",
+      "address": "Armije Bosne i Hercegovine bb, Univerzitetski kampus, 75000 Tuzla",
+      "phone": "+387 35 277 690",
+      "email": "adu@untz.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Gluma",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Produkcija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Gluma",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Produkcija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "http://adu.untz.ba/web/bs/"
+    },
+    {
+      "name": "Edukacijsko-rehabilitacijski fakultet",
+      "city": "Tuzla",
+      "website": "http://www.erf.untz.ba",
+      "address": "Univerzitetska 1, 75000 Tuzla",
+      "phone": "+387 35 320 666",
+      "email": "erf@untz.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Audologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Logopedija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Poremećaji u ponašanju",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Socijalna pedagogija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Specijalna edukacija i rehabilitacija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Surdoaudiologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Logopedija i audiologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Poremećaji u ponašanju",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Specijalna edukacija i rehabilitacija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Specijalna edukacija i rehabilitacija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "http://erf.untz.ba/web/"
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "city": "Tuzla",
+      "website": "http://www.ef.untz.ba",
+      "address": "Urfeta Vejzagića 8, 75000 Tuzla",
+      "phone": "+387 35 320 820",
+      "email": "ef@untz.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Ekonomija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Menadžment u turizmu",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Ekonomija i biznis",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "https://ef1.untz.ba/"
+    },
+    {
+      "name": "Fakultet elektrotehnike",
+      "city": "Tuzla",
+      "website": "https://fet.ba",
+      "address": "Franjevačka 2, 75000 Tuzla",
+      "phone": "+387 35 259 600",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Elektrotehnika i računarstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "tracks": [
+            {
+              "name": "Automatika i robotika",
+              "dataSourceUrl": "https://fet.ba/doc/Studijskiprogram-FET-ER-II-2021.pdf",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Elektroenergetske mreže i sistemi",
+              "dataSourceUrl": "https://fet.ba/doc/Studijskiprogram-FET-ER-II-2021.pdf",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Elektrotehnika i sistemi konverzije energije",
+              "dataSourceUrl": "https://fet.ba/doc/Studijskiprogram-FET-ER-II-2021.pdf",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Računarstvo i informatika",
+              "dataSourceUrl": "https://fet.ba/doc/Studijskiprogram-FET-ER-II-2021.pdf",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Telekomunikacije",
+              "dataSourceUrl": "https://fet.ba/doc/Studijskiprogram-FET-ER-II-2021.pdf",
+              "lastModified": "2026-08-29"
+            }
+          ],
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Elektrotehnika i računarstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "tracks": [
+            {
+              "name": "Automatika i robotika",
+              "dataSourceUrl": "https://fet.ba/i-ciklus/",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Elektroenergetske mreže i sistemi",
+              "dataSourceUrl": "https://fet.ba/i-ciklus/",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Elektrotehnika i sistemi konverzije energije",
+              "dataSourceUrl": "https://fet.ba/i-ciklus/",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Računarstvo i informatika",
+              "dataSourceUrl": "https://fet.ba/i-ciklus/",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Telekomunikacije",
+              "dataSourceUrl": "https://fet.ba/i-ciklus/",
+              "lastModified": "2026-08-29"
+            }
+          ],
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Tehnički odgoj i informatika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Elektrotehnika i računarstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "https://fet.ba/"
+    },
+    {
+      "name": "Fakultet za tjelesni odgoj i sport",
+      "city": "Tuzla",
+      "website": "https://ftos.untz.ba",
+      "address": "2. oktobra 1, 75000 Tuzla",
+      "phone": "+387 35 278 535",
+      "email": "ftos@untz.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Sportski trener",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Tjelesni odgoj i sport",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Sportski trener",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Tjelesni odgoj i sport",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Kineziologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "https://ftos.untz.ba/"
+    },
+    {
+      "name": "Farmaceutski fakultet",
+      "city": "Tuzla",
+      "website": "http://www.farmacy.untz.ba",
+      "address": "Urfeta Vejzagića 8, 75000 Tuzla",
+      "phone": "+387 35 320 990",
+      "email": "dekanat.frmf@untz.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijskih-programi-integrisanog-i-i-ii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Kozmetologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Farmaceutske nauke/znanosti",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "http://frmf.untz.ba/web/bs/pocetna/"
+    },
+    {
+      "name": "Filozofski fakultet",
+      "city": "Tuzla",
+      "website": "https://ff.untz.ba",
+      "address": "Dr. Tihomila Markovića 1, 75000 Tuzla",
+      "phone": "+387 35 306 330",
+      "email": "dekan.ff@untz.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Anglistika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Angloamerički književni studiji",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Angloamerički književno-kulturalni studiji",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Bosanskohercegovačka književnost u književnohistorijskom kontekstu",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Historija Bosne i Hercegovine",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Lingvistika bosanskog jezika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Lingvistika engleskog jezika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Lingvistika njemačkog jezika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Lingvistika turskog jezika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Metodika nastave bosanskog jezika i književnosti",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Metodika nastave engleskog jezika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Metodika nastave njemačkog jezika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Njemačka književnost",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Njemački jezik, njemačka književnost i prevodilaštvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Novi vijek i savremeno doba",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Povijest bosanskog jezika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Predškolski odgoj i obrazovanje",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Prevođenje engleskog jezika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Socijalna politika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Stari i srednji vijek",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Tehnički odgoj i informatika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Turska književnost",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Žurnalistika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Bosanski jezik i književnost",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Filozofija-Sociologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Historija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Njemački jezik i književnost",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Predškolski odgoj i obrazovanje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Turski jezik i književnost",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Žurnalistika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Historija Bosne i Hercegovine u XIX i XX stoljeću",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Književnost",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Komunikologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Lingvistika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Prostor današnje Bosne i Hercegovine u vrijeme rimske uprave",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "https://ff.untz.ba/"
+    },
+    {
+      "name": "Mašinski fakultet",
+      "city": "Tuzla",
+      "website": "http://www.mf.untz.ba",
+      "address": "Urfeta Vejzagića 4, 75000 Tuzla",
+      "email": "dekanat.msf@untz.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Energetika i termofluidni inženjering",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Održiva energija i okolina",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Proizvodno mašinstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Termoenergetika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Energetika i termo-fluidni inženjering",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Proizvodno mašinstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Doktorski studij iz područja mašinstva",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "http://mf.untz.ba/"
+    },
+    {
+      "name": "Medicinski fakultet",
+      "city": "Tuzla",
+      "website": "https://mfuntz.edu.ba",
+      "address": "Univerzitetska 1, 75000 Tuzla",
+      "phone": "+387 35 320 600",
+      "email": "info@mfuntz.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Zdravstveni studiji",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Opšta medicina",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijskih-programi-integrisanog-i-i-ii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Zdravstveni studiji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Biomedicina i zdravstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "https://mfuntz.edu.ba/"
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Tuzla",
+      "website": "http://www.pf.untz.ba",
+      "address": "Muhameda Hevaija-Uskufija 7, 75000 Tuzla",
+      "phone": "+387 35 250 657",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Master studij iz oblasti prava",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Studij iz područja javne uprave",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Studij iz područja prava",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Doktorski studij iz područja prava",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "http://pf.untz.ba/"
+    },
+    {
+      "name": "Prirodno-matematički fakultet",
+      "city": "Tuzla",
+      "website": "http://www.pmf.untz.ba",
+      "address": "Urfeta Vejzagića 4, 75000 Tuzla",
+      "phone": "+387 35 320 860",
+      "email": "pmf@untz.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Biologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Edukacija u biologiji",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Edukacija u fizici",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Edukacija u geografiji",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Edukacija u hemiji",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Edukacija u matematici",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Ekomonitoring i bioindikacija voda",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Hemija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Primjenjena biologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Primjenjena fizika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Primjenjena hemija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Primjenjena matematika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Turizmologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Biologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Hemija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Turizmologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Biologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Hemija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "http://pmf.untz.ba/"
+    },
+    {
+      "name": "Rudarsko-geološko-građevinski fakultet",
+      "city": "Tuzla",
+      "website": "https://rggf.untz.ba",
+      "address": "Urfeta Vejzagića 2, 75000 Tuzla",
+      "phone": "+387 35 320 550",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Bušotinska eksploatacija mineralnih sirovina",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Geologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Rudarstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Sigurnost i pomoć",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Bušotinska eksploatacija mineralnih sirovina",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Geologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Rudarstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Sigurnost i pomoć",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Geologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "tracks": [
+            {
+              "name": "Građevinske konstrukcije"
+            },
+            {
+              "name": "Hidrotehnika"
+            }
+          ],
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Rudarstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        }
+      ],
+      "dataSourceUrl": "https://rggf.untz.ba/"
+    },
+    {
+      "name": "Tehnološki fakultet",
+      "city": "Tuzla",
+      "website": "https://tf.untz.ba",
+      "address": "Urfeta Vejzagića 8, 75000 Tuzla",
+      "phone": "+387 35 320 740",
+      "email": "dekanat.tf@untz.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Agronomija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Hemijsko inženjerstvo i tehnologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Inženjerstvo zaštite okoline",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Zaštita na radu",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-ii-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Agronomija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Hemijsko inženjerstvo i tehnologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Inženjerstvo zaštite okoline",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Zaštita na radu",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-i-ciklusa-studija/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Doktorski studij iz biotehničkih nauka - područje agronomije",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Primjenjena hemija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "lastModified": "2026-08-23"
+        },
+        {
+          "name": "Studijski program trećeg ciklusa - doktorskog studija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://untz.ba/studijski-programi/studijski-programi-iii-ciklusa/",
+          "ects": 180,
+          "durationYears": 3,
+          "lastModified": "2026-08-29",
+          "tracks": [
+            {
+              "name": "Hemijsko inženjerstvo",
+              "dataSourceUrl": "https://tf.untz.ba/wp-content/uploads/2023/10/III_ciklus-studija-u-primjeni-od-ak.2023.-2024..pdf",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Inženjerstvo zaštite okoline",
+              "dataSourceUrl": "https://tf.untz.ba/wp-content/uploads/2023/10/III_ciklus-studija-u-primjeni-od-ak.2023.-2024..pdf",
+              "lastModified": "2026-08-29"
+            },
+            {
+              "name": "Prehrambeno inženjerstvo",
+              "dataSourceUrl": "https://tf.untz.ba/wp-content/uploads/2023/10/III_ciklus-studija-u-primjeni-od-ak.2023.-2024..pdf",
+              "lastModified": "2026-08-29"
+            }
+          ]
+        }
+      ],
+      "dataSourceUrl": "https://tf.untz.ba/"
+    }
+  ]
+}

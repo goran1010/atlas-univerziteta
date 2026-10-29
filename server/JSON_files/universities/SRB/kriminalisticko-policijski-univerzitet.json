@@ -1,0 +1,122 @@
+{
+  "name": "Kriminalističko-policijski univerzitet",
+  "acronym": "KPU",
+  "city": "Beograd",
+  "country": "SRB",
+  "ownership": "PUBLIC",
+  "foundedYear": "1993",
+  "website": "https://www.kpu.edu.rs",
+  "address": "Cara Dušana 196, 11080 Beograd",
+  "phone": "+381 11 3107 100",
+  "email": "info@kpu.edu.rs",
+  "faculties": [
+    {
+      "name": "Kriminalističko-policijski univerzitet",
+      "city": "Beograd",
+      "website": "https://www.kpu.edu.rs",
+      "isUniversityLevel": true,
+      "studyPrograms": [
+        {
+          "name": "Kriminalistika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Kriminalistika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika i računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Forenzičko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Kriminalistika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika i računarstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Nacionalna bezbednost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Upravljanje bezbednosnim rizicima prirodnih katastrofa",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Forenzičko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Kriminalistika",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Kriminalistika i pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Forenzičko inženjerstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Cara Dušana 196, 11080 Beograd",
+      "phone": "+381 11 3107 100",
+      "email": "info@kpu.edu.rs"
+    }
+  ],
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://www.kpu.edu.rs",
+  "accreditationFrom": "2022-01-01",
+  "accreditationTo": "2029-01-01"
+}

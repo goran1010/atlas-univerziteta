@@ -34,7 +34,7 @@ const ROUTES: { path: string; ready: (page: Page) => Locator }[] = [
     path: "/about",
     ready: (p) =>
       p.getByRole("heading", {
-        name: "Universities and Study Programs in Bosnia and Herzegovina",
+        name: "Universities and Study Programs",
       }),
   },
   {
@@ -116,6 +116,7 @@ test.describe("authenticated pages", () => {
       JSON.stringify({
         name: "A11y Tree University",
         city: "Testograd",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
         faculties: [

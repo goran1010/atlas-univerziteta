@@ -15,7 +15,7 @@ describe("About component", () => {
 
     expect(
       await screen.findByRole("heading", {
-        name: /Universities and Study Programs in Bosnia and Herzegovina/i,
+        name: /Universities and Study Programs/i,
         level: 1,
       }),
     ).toBeInTheDocument();

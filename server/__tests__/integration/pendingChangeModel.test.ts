@@ -13,6 +13,7 @@ beforeAll(async () => {
       name: "Test Enrich University",
       acronym: "TEU",
       city: "Test City",
+      country: "BIH",
       entity: "FBIH",
       ownership: "PUBLIC",
       foundedYear: "1950",
@@ -274,6 +275,7 @@ describe("enrichWithCurrentEntity", () => {
       data: {
         name: "Test Enrich Missing",
         city: "Test City",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PUBLIC",
       },

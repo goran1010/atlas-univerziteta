@@ -1,0 +1,786 @@
+{
+  "country": "BIH",
+  "name": "Evropski univerzitet, Brčko distrikt BiH",
+  "acronym": "EUBD",
+  "city": "Brčko",
+  "entity": "BD",
+  "ownership": "PRIVATE",
+  "foundedYear": "2011-12-28",
+  "website": "https://eubd.edu.ba",
+  "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+  "phone": "+387 49 590 605",
+  "email": "info@eubd.edu.ba",
+  "accreditationFrom": "2022-03-07",
+  "accreditationTo": "2027-09-06",
+  "authority": "Vlada Brčko distrikta BiH, Odjel za obrazovanje",
+  "dataSourceUrl": "https://eubd.edu.ba/kontakt-2/",
+  "lastModified": "2026-08-29",
+  "faculties": [
+    {
+      "name": "Ekonomski fakultet",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/ekonomski-fakultet/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Ekonomija - opšti smjer",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Opsti-smjer.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Menadžment i preduzetništvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Menadzment-i-preduzetnistvo.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Turizam i ekologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Turizam-i-ekologija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Računovodstvo i revizija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Racunovodstvo-i-revizija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Ekonomija - opšti smjer",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Ekonomija - opšti smjer",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        }
+      ],
+      "dataSourceUrl": "https://eubd.edu.ba/ekonomski-fakultet/"
+    },
+    {
+      "name": "Fakultet političkih nauka",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/fakultet-politickih-nauka/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Politologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Politologija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Međunarodni odnosi i diplomatija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Medjunarodni-odnosi-i-diplomatija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Socijalni-rad.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Politologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Socijalni rad",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        }
+      ],
+      "dataSourceUrl": "https://eubd.edu.ba/fakultet-politickih-nauka/"
+    },
+    {
+      "name": "Fakultet za medicinu, farmaciju i zdravstvo",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/fakultet-zdravstvenih-nauka/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Sestrinstvo.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Fizioterapija i radna terapija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Fizioterapija-i-radna-terapija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Sanitarni-inzenjering.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Farmacija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Fakultet-za-medicinu-farmaciju-i-zdravstvo-Medicina.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Stomatologija",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Stomatologija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Radiologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Radiologija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Menadžment u sportu",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Menadzment-u-sportu.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Sportski trener",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Sportski-trener.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Fizioterapija i radna terapija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Radiologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Menadžment u sportu",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Sportski trener",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Fizioterapija i radna terapija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Sanitarni inženjering",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Biomedicina i zdravstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Stomatologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Radiologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Menadžment u sportu",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Sportski trener",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        }
+      ],
+      "dataSourceUrl": "https://eubd.edu.ba/fakultet-zdravstvenih-nauka/"
+    },
+    {
+      "name": "Pedagoški fakultet",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/pedagoski-fakultet/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Informatika i tehnika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Informatika-i-tehnika.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Vaspitač predškolskih ustanova",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Vaspitac-predskolskih-ustanova.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Razredna-nastava.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Razredna nastava sa engleskim jezikom za osnovne škole",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Razredna-nastava-sa-engleskim-jezikom.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Razredna nastava sa defektologijom",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Razredna-nastava-sa-defektologijom.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Psihologija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Historija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Istorija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Geografija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Matematika-i-fizika.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Informatika i tehnika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Razredna nastava - pedagogija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Historija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Informatika i tehnika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Razredna nastava - pedagogija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Historija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        }
+      ],
+      "dataSourceUrl": "https://eubd.edu.ba/pedagoski-fakultet/"
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/pravni-fakultet/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Opšte pravo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Opste-pravo.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Bezbjednost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Bezbjednost.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Forenzika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Forenzika.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Opšte pravo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Forenzika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Opšte pravo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Forenzika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        }
+      ],
+      "dataSourceUrl": "https://eubd.edu.ba/pravni-fakultet/"
+    },
+    {
+      "name": "Tehnički fakultet",
+      "city": "Brčko",
+      "website": "https://eubd.edu.ba/tehnicki-fakultet/",
+      "address": "Bijeljinska cesta 72-74, 76100 Brčko",
+      "phone": "+387 49 590 605",
+      "email": "info@eubd.edu.ba",
+      "lastModified": "2026-08-29",
+      "studyPrograms": [
+        {
+          "name": "Arhitektura",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Arhitektura.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Gradjevinarstvo.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Geodezija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Geodezija.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Poljoprivreda",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Poljoprivreda.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Inženjerska informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Inzenjerska-informatika.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "IT menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-IT-menadzment.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Dizajn i multimedija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Multimedija-i-dizajn.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Automatika i robotika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Automatika-i-robotika.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Elektroenergetika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Elektroenergetika.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Mehatronika.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Industrijsko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Industrijsko-inzenjerstvo.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Drumski saobraćaj",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Drumski-saobracaj.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Bezbjednost u saobraćaju",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://eubd.edu.ba/NPP/Osnovne-akademske-studije-Bezbjednost-u-saobracaju.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Geodezija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Poljoprivreda",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Inženjerska informatika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "IT menadžment",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Dizajn i multimedija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Automatika i robotika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Elektroenergetika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Industrijsko inženjerstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Saobraćaj",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Geodezija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Poljoprivreda",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Inženjerska informatika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "IT menadžment",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Dizajn i multimedija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Automatika i robotika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Elektroenergetika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Industrijsko inženjerstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        },
+        {
+          "name": "Saobraćaj",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://eubd.edu.ba/Konkursi/Konkurs%20za%20upis%20studenata%20u%202026%202027%20godinu%20Brcko.pdf",
+          "lastModified": "2026-08-25"
+        }
+      ],
+      "dataSourceUrl": "https://eubd.edu.ba/tehnicki-fakultet/"
+    }
+  ]
+}

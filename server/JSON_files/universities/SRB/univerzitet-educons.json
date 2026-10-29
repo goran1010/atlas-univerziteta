@@ -1,0 +1,208 @@
+{
+  "name": "Univerzitet Educons",
+  "acronym": null,
+  "city": "Sremska Kamenica",
+  "country": "SRB",
+  "ownership": "PRIVATE",
+  "foundedYear": "2002",
+  "website": "https://www.educons.edu.rs",
+  "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
+  "phone": "+381 21 4893 610",
+  "email": "info@educons.edu.rs",
+  "faculties": [
+    {
+      "name": "Fakultet poslovne ekonomije",
+      "city": "Sremska Kamenica",
+      "website": "https://educons.edu.rs/fakulteti/poslovna-ekonomija/",
+      "studyPrograms": [
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Regionalni razvoj i upravljanje projektima",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
+      "phone": "+381 21 4893 610",
+      "email": "info@educons.edu.rs"
+    },
+    {
+      "name": "Fakultet za zaštitu životne sredine",
+      "city": "Sremska Kamenica",
+      "website": "https://educons.edu.rs/fakulteti/zastita-zivotne-sredine/",
+      "studyPrograms": [
+        {
+          "name": "Zaštita životne sredine",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Zaštita životne sredine",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
+      "phone": "+381 21 4893 610",
+      "email": "info@educons.edu.rs"
+    },
+    {
+      "name": "Fakultet ekološke poljoprivrede",
+      "city": "Sremska Kamenica",
+      "website": "https://educons.edu.rs/fakulteti/ekoloska-poljoprivreda/",
+      "studyPrograms": [
+        {
+          "name": "Ekološka poljoprivreda",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Ekološka poljoprivreda",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
+      "phone": "+381 21 4893 610",
+      "email": "info@educons.edu.rs"
+    },
+    {
+      "name": "Fakultet za digitalnu produkciju",
+      "city": "Sremska Kamenica",
+      "website": "https://educons.edu.rs/fakulteti/digitalna/",
+      "studyPrograms": [
+        {
+          "name": "Digitalna produkcija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Digitalna produkcija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
+      "phone": "+381 21 4893 610",
+      "email": "info@educons.edu.rs"
+    },
+    {
+      "name": "Učiteljski fakultet",
+      "city": "Sremska Kamenica",
+      "website": "https://educons.edu.rs/fakulteti/uciteljski-fakultet/",
+      "studyPrograms": [
+        {
+          "name": "Učitelj",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Učitelj",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
+      "phone": "+381 21 4893 610",
+      "email": "info@educons.edu.rs"
+    },
+    {
+      "name": "Fakultet za studije bezbednosti",
+      "city": "Sremska Kamenica",
+      "website": "https://educons.edu.rs/fakulteti/studije-bezbednosti/",
+      "studyPrograms": [
+        {
+          "name": "Menadžment bezbednosti",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Menadžment bezbednosti",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
+      "phone": "+381 21 4893 610",
+      "email": "info@educons.edu.rs"
+    },
+    {
+      "name": "Fakultet za sport i psihologiju (TIMS)",
+      "city": "Novi Sad",
+      "website": "https://tfrims.edu.rs",
+      "studyPrograms": [
+        {
+          "name": "Sport",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Turizam",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
+      "phone": "+381 21 4893 610",
+      "email": "info@educons.edu.rs"
+    }
+  ],
+  "dataSourceUrl": "https://www.educons.edu.rs",
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29",
+  "accreditationFrom": "2021-01-01",
+  "accreditationTo": "2028-01-01"
+}

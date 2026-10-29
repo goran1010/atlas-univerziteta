@@ -30,6 +30,7 @@ export interface HandleSubmitUniversityEntityParams {
 // other field is treated as leaving it unchanged
 const CLEARABLE_FIELDS: Record<TargetType, ReadonlySet<string>> = {
   UNIVERSITY: new Set([
+    "entity",
     "acronym",
     "foundedYear",
     "website",
@@ -45,6 +46,7 @@ const CLEARABLE_FIELDS: Record<TargetType, ReadonlySet<string>> = {
 const DRAFT_KEYS = [
   "name",
   "city",
+  "country",
   "entity",
   "ownership",
   "acronym",

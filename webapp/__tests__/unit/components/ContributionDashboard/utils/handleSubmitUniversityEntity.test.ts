@@ -19,6 +19,7 @@ const baseArgs = {
   data: {
     name: "University of Sarajevo",
     city: "Sarajevo",
+    country: "BIH",
     entity: "FBIH",
     ownership: "PUBLIC",
   },
@@ -45,6 +46,7 @@ function makePendingChange(
     data: {
       name: "University of Sarajevo",
       city: "Sarajevo",
+      country: "BIH",
       entity: "FBIH",
       ownership: "PUBLIC",
     },

@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
 import type {
+  Country,
   Entity,
   TargetType,
   Ownership,
@@ -11,6 +12,7 @@ import type { PendingChange } from "../../schemas/pendingChange";
 export interface ContributionFormDraft {
   name?: string | undefined;
   city?: string | undefined;
+  country?: Country | undefined;
   entity?: Entity | undefined;
   ownership?: Ownership | undefined;
   acronym?: string | undefined;

@@ -87,6 +87,7 @@ describe("PendingUniversityChangesRow", () => {
             data: {
               name: "University of Sarajevo",
               city: "Sarajevo",
+              country: "BIH",
               entity: "FBIH",
               ownership: "PUBLIC",
             },
@@ -118,6 +119,7 @@ describe("PendingUniversityChangesRow", () => {
             data: {
               name: "Tree University",
               city: "Mostar",
+              country: "BIH",
               entity: "FBIH",
               ownership: "PRIVATE",
               faculties: [
@@ -156,6 +158,7 @@ describe("PendingUniversityChangesRow", () => {
             data: {
               name: "Flat University",
               city: "Tuzla",
+              country: "BIH",
               entity: "FBIH",
               ownership: "PUBLIC",
             },

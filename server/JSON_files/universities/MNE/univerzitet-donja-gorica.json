@@ -1,0 +1,541 @@
+{
+  "name": "Univerzitet Donja Gorica",
+  "acronym": "UDG",
+  "city": "Podgorica",
+  "country": "MNE",
+  "ownership": "PRIVATE",
+  "foundedYear": "2007",
+  "website": "https://www.udg.edu.me",
+  "address": "Oktoih 1, 81000 Podgorica",
+  "phone": "+382 20 410 777",
+  "email": "udg@udg.edu.me",
+  "faculties": [
+    {
+      "name": "Fakultet za međunarodnu ekonomiju, finansije i biznis",
+      "city": "Podgorica",
+      "website": "https://fmefb.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Međunarodna ekonomija, finansije i biznis",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Preduzetništvo, menadžment i biznis",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Preduzetnička ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "tracks": [
+            {
+              "name": "Međunarodna ekonomija"
+            },
+            {
+              "name": "Računovodstvo i revizija"
+            },
+            {
+              "name": "Finansije i bankarstvo"
+            }
+          ],
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Statistika (EMOS)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Informacioni menadžment i AI u zdravstvu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "tracks": [
+            {
+              "name": "FinTech"
+            },
+            {
+              "name": "Digitalni marketing"
+            },
+            {
+              "name": "Digitalna transformacija biznisa"
+            },
+            {
+              "name": "Globalni menadžment"
+            },
+            {
+              "name": "Liderstvo i menadžment"
+            }
+          ],
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "fmefb@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Fakultet pravnih nauka",
+      "city": "Podgorica",
+      "website": "https://fpn.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Pravosuđe i javna uprava",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "tracks": [
+            {
+              "name": "Krivičnopravni"
+            },
+            {
+              "name": "Građanskopravni"
+            },
+            {
+              "name": "Upravnopravni"
+            }
+          ],
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Međunarodno pravo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "tracks": [
+            {
+              "name": "Pravo EU"
+            },
+            {
+              "name": "Međunarodnopravni"
+            },
+            {
+              "name": "Međunarodno i evropsko pravo"
+            }
+          ],
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "fpn@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Fakultet za informacione sisteme i tehnologije",
+      "city": "Podgorica",
+      "website": "https://fist.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Informacioni sistemi i tehnologije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Informacioni sistemi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "tracks": [
+            {
+              "name": "Softversko inženjerstvo"
+            },
+            {
+              "name": "Vještačka inteligencija"
+            },
+            {
+              "name": "AI i biznis"
+            }
+          ],
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "fist@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Humanističke studije",
+      "city": "Podgorica",
+      "website": "https://hs.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Diplomatija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Bezbjednost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Komunikologija i mediji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Evropske studije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Međunarodna politika i bezbjednost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "tracks": [
+            {
+              "name": "Međunarodni odnosi"
+            },
+            {
+              "name": "Evropske politike"
+            },
+            {
+              "name": "Američke studije"
+            },
+            {
+              "name": "Balkanske i mediteranske studije"
+            },
+            {
+              "name": "Međunarodna bezbjednost"
+            },
+            {
+              "name": "Sajber bezbjednost"
+            }
+          ],
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Rodne studije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Komunikologija i mediji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Politička teorija i politička analiza",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "hs@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Fakultet umjetnosti",
+      "city": "Podgorica",
+      "website": "https://fu.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Umjetnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Teorija moderne i savremene umjetnosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "fu@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Politehnika",
+      "city": "Podgorica",
+      "website": "https://fp.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Elektrotehnika i računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "fp@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Fakultet za sportski menadžment",
+      "city": "Podgorica",
+      "website": "https://fsm.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Sportski menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Fitnes i leisure menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Menadžment sportske organizacije kluba",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "fsm@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Fakultet za prehrambenu tehnologiju, bezbjednost hrane i ekologiju",
+      "city": "Podgorica",
+      "website": "https://fptbhe.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Prehrambena tehnologija, bezbjednost hrane i ekologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Sanitarni inženjering u sektoru hrane",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "fptbhe@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Fakultet za dizajn i multimediju",
+      "city": "Podgorica",
+      "website": "https://fdm.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Modni dizajn",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Grafičko-multimedijalni dizajn",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Film i mediji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Dizajn i multimedija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "fdm@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Fakultet za kulturu i turizam",
+      "city": "Podgorica",
+      "website": "https://fkt.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Kultura i turizam",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Međunarodno hotelijerstvo i menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Kineske studije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Kultura i turizam",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Međunarodno hotelijerstvo i menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "fkt@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Fakultet primijenjenih nauka",
+      "city": "Podgorica",
+      "website": "https://fprn.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Primijenjena matematika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Primijenjena psihologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Geodezija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "fprn@udg.edu.me",
+      "lastModified": "2026-10-29"
+    },
+    {
+      "name": "Filološki fakultet",
+      "city": "Podgorica",
+      "website": "https://ff.udg.edu.me",
+      "studyPrograms": [
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Crnogorski"
+        },
+        {
+          "name": "Engleski jezik",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "tracks": [
+            {
+              "name": "Nastavnički modul"
+            },
+            {
+              "name": "Prevodilački modul"
+            }
+          ],
+          "language": "Crnogorski"
+        }
+      ],
+      "address": "Donja Gorica bb, 81000 Podgorica",
+      "phone": "+382 20 410 777",
+      "email": "ff@udg.edu.me",
+      "lastModified": "2026-10-29"
+    }
+  ],
+  "authority": "Agencija za kontrolu i obezbjeđenje kvaliteta visokog obrazovanja (AKOKVO)",
+  "dataSourceUrl": "https://www.udg.edu.me",
+  "lastModified": "2026-10-29",
+  "accreditationFrom": "2025-09-02",
+  "accreditationTo": "2030-09-02"
+}

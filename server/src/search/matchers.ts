@@ -1,4 +1,10 @@
-import { ENUM_ALIASES, ENTITIES, OWNERSHIPS, CYCLES } from "./aliases.js";
+import {
+  ENUM_ALIASES,
+  COUNTRIES,
+  ENTITIES,
+  OWNERSHIPS,
+  CYCLES,
+} from "./aliases.js";
 
 import type { SearchToken } from "./tokenize.js";
 
@@ -39,6 +45,7 @@ function universityOwnMatch(token: SearchToken): WhereClause[] {
     foldedContains("searchName", token.stem),
     foldedContains("searchCity", token.stem),
     foldedContains("searchAcronym", token.stem),
+    ...enumMatch("country", COUNTRIES, token.word, token.stem),
     ...enumMatch("entity", ENTITIES, token.word, token.stem),
     ...enumMatch("ownership", OWNERSHIPS, token.word, token.stem),
   ];

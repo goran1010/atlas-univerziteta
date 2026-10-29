@@ -25,12 +25,13 @@ async function getUniversities(req: Request, res: Response) {
   const [total, universities] = await Promise.all([
     prisma.university.count(),
     prisma.university.findMany({
-      orderBy: [{ ownership: "asc" }, { name: "asc" }],
+      orderBy: [{ country: "asc" }, { ownership: "asc" }, { name: "asc" }],
       select: {
         id: true,
         name: true,
         acronym: true,
         city: true,
+        country: true,
         entity: true,
         ownership: true,
         foundedYear: true,
@@ -61,7 +62,9 @@ async function getFaculties(req: Request, res: Response) {
         name: true,
         city: true,
         website: true,
-        university: { select: { id: true, name: true, acronym: true } },
+        university: {
+          select: { id: true, name: true, acronym: true, country: true },
+        },
       },
       skip: (page - 1) * limit,
       take: limit,
@@ -93,7 +96,7 @@ async function getStudyPrograms(req: Request, res: Response) {
           select: {
             id: true,
             name: true,
-            university: { select: { id: true, name: true } },
+            university: { select: { id: true, name: true, country: true } },
           },
         },
       },
@@ -129,7 +132,7 @@ async function getTracks(req: Request, res: Response) {
               select: {
                 id: true,
                 name: true,
-                university: { select: { id: true, name: true } },
+                university: { select: { id: true, name: true, country: true } },
               },
             },
           },

@@ -62,14 +62,22 @@ const apiEndpoints: Endpoint[] = [
   "message": "Universities retrieved successfully.",
   "data": [
     {
-      "id": 17, "name": "Univerzitet u Sarajevu", "acronym": "UNSA",
-      "city": "Sarajevo", "entity": "FBIH", "ownership": "PUBLIC",
-      "foundedYear": "1949", "website": "https://www.unsa.ba",
+      "id": 17,
+      "name": "Univerzitet u Sarajevu",
+      "acronym": "UNSA",
+      "city": "Sarajevo",
+      "country": "BIH",
+      "entity": "FBIH",
+      "ownership": "PUBLIC",
+      "foundedYear": "1949",
+      "website": "https://www.unsa.ba",
       "_count": { "faculties": 27 }
     },
     ...
   ],
-  "page": 1, "totalPages": 1, "total": 22
+  "page": 1,
+  "totalPages": 1,
+  "total": 53
 }`,
     errorExample: null,
   },
@@ -81,9 +89,15 @@ const apiEndpoints: Endpoint[] = [
     successExample: `{
   "message": "University retrieved successfully.",
   "data": {
-    "id": 17, "name": "Univerzitet u Sarajevu", "acronym": "UNSA",
-    "city": "Sarajevo", "entity": "FBIH", "ownership": "PUBLIC",
-    "foundedYear": "1949", "website": "https://www.unsa.ba",
+    "id": 17,
+    "name": "Univerzitet u Sarajevu",
+    "acronym": "UNSA",
+    "city": "Sarajevo",
+    "country": "BIH",
+    "entity": "FBIH",
+    "ownership": "PUBLIC",
+    "foundedYear": "1949",
+    "website": "https://www.unsa.ba",
     "address": "Obala Kulina bana 7/II, 71000 Sarajevo",
     "phone": "+387 33 565 100", "email": "javnost@unsa.ba",
     "accreditationFrom": "2007-08-15T00:00:00.000Z",
@@ -249,6 +263,11 @@ const apiEndpoints: Endpoint[] = [
         name: "searchTerm",
         required: false,
         descriptionKey: "api.endpointsData.searchTermParam",
+      },
+      {
+        name: "country",
+        required: false,
+        descriptionKey: "api.endpointsData.countryParam",
       },
       {
         name: "entity",

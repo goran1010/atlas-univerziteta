@@ -15,8 +15,8 @@
     "about": "About"
   },
   "meta": {
-    "home": "Explore universities, faculties, study programs, and tracks in Bosnia and Herzegovina with a free public dataset, searchable web interface, and REST API.",
-    "universities": "Explore universities and study programs in Bosnia and Herzegovina.",
+    "home": "Explore universities, faculties, study programs, and tracks across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro with a free public dataset, searchable web interface, and REST API.",
+    "universities": "Explore universities and study programs across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro.",
     "api": "REST API documentation for Atlas Univerziteta. Access universities and study programs data programmatically.",
     "login": "Log in to your Atlas Univerziteta account to contribute data and track your submissions.",
     "signup": "Create a free Atlas Univerziteta account to start contributing university data."
@@ -122,11 +122,11 @@
     "changesAwaiting": "Changes awaiting your review"
   },
   "home": {
-    "heading": "Universities and Study Programs in Bosnia and Herzegovina",
-    "intro": "A free, open-source project building a structured, searchable database of public data about Bosnia and Herzegovina. Focused on universities - institutions, faculties, study programs, and tracks.",
+    "heading": "Universities and Study Programs",
+    "intro": "A free, open-source project building a structured, searchable database of public higher-education data. Focused on universities - institutions, faculties, study programs, and tracks - across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro.",
     "summary": "Use Atlas Univerziteta to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
-    "exploreDescription": "Browse universities across Bosnia and Herzegovina. View faculties, study programs, and tracks. Search by name, city, acronym, entity, ownership, study cycle, and more.",
+    "exploreDescription": "Browse universities across multiple countries. View faculties, study programs, and tracks. Search by name, city, acronym, country, entity, ownership, study cycle, and more.",
     "card": {
       "universities": {
         "title": "Universities"
@@ -152,7 +152,8 @@
     "publicIntro": "Public REST endpoints are available under the base URL below. These endpoints do not require authentication.",
     "fullDocs": "For full project documentation, local setup, and contributing guidelines, see the",
     "dataObject": "University object",
-    "dataObjectExample": "{\n  \"id\":          number   - unique identifier\n  \"name\":        string   - university name\n  \"acronym\":     string | null\n  \"city\":        string\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\"\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null\n  \"website\":     string | null\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }  - list endpoint only\n  \"faculties\":   Faculty[]               - detail endpoint only\n}",
+    "dataObjectExample": "{\n  \"id\":          number                          - unique identifier\n  \"name\":        string                          - official name\n  \"acronym\":     string | null                   - short form (e.g. UNSA)\n  \"city\":        string                          - main campus city\n  \"country\":     \"BIH\" | \"SRB\" | \"HRV\" | \"MNE\"   - ISO 3166-1 alpha-3\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\" | null      - Bosnia subdivision\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - e.g. \"1949\"\n  \"website\":     string | null                   - official URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - list only\n  \"faculties\":   Faculty[]                        - detail only\n}",
+    "examples": "Quick examples",
     "endpoints": "Endpoints",
     "endpointsData": {
       "apiStatus": "Check API status.",
@@ -169,7 +170,8 @@
       "getStudyProgramById": "Retrieve a study program by ID with its tracks, parent faculty, and university.",
       "getAllTracks": "Retrieve all tracks, ordered by study program name then track name. Includes the full parent chain.",
       "getTrackById": "Retrieve a track by ID with its parent study program, faculty, and university.",
-      "entityParam": "Filter by entity: FBIH, RS, or BD.",
+      "countryParam": "Filter by country: BIH, SRB, HRV, or MNE.",
+      "entityParam": "Filter by entity (Bosnia only): FBIH, RS, or BD.",
       "ownershipParam": "Filter by ownership: PUBLIC or PRIVATE.",
       "cycleParam": "Filter by study cycle. Accepts multiple values (e.g. cycle=FIRST&cycle=SECOND). Values: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
       "typeParam": "Result type filter: university, faculty, or studyProgram. Repeatable. Each section returns every match."
@@ -190,26 +192,18 @@
   "contribution": {
     "title": "Improve the Data",
     "needUser": "You need to be a registered user to propose changes to the content.",
-    "chooseDataset": "Choose dataset:",
-    "noDataset": "No dataset",
     "actions": "Actions",
-    "selectDatasetError": "You need to select a dataset.",
     "addNewData": "Propose changes",
     "addTree": "Add university or faculty (JSON)",
+    "addTreeHint": "Use this tab to add a whole university or faculty with all its study programs and tracks at once, by pasting or loading a JSON file.",
     "pendingChanges": "My suggestions",
     "noPendingChanges": "You have no suggestions awaiting review.",
     "change": "Change",
     "comment": "Comment for the admin",
     "entityType": "Item type",
     "nestedInTree": "included",
-    "searchResultsCountAria": "search result count",
-    "searchResults": "Search Results",
     "user": "User",
     "contributor": "Contributor",
-    "dataset": {
-      "universities": "Universities",
-      "universitiesPlaceholder": "Universities placeholder"
-    },
     "entityTypes": {
       "UNIVERSITY": "University",
       "FACULTY": "Faculty",
@@ -235,6 +229,7 @@
     "dataFields": {
       "name": "Name",
       "city": "City",
+      "country": "Country",
       "entity": "Entity",
       "cycle": "Study cycle",
       "durationYears": "Duration (years)",
@@ -255,6 +250,12 @@
       "INTEGRATED": "INTEGRATED - Bachelor+Master",
       "VOCATIONAL": "VOCATIONAL",
       "SPECIALIST": "SPECIALIST - Specialist Study"
+    },
+    "countries": {
+      "BIH": "Bosnia and Herzegovina",
+      "SRB": "Serbia",
+      "HRV": "Croatia",
+      "MNE": "Montenegro"
     },
     "entities": {
       "FBIH": "FBIH - Federation of B&H",
@@ -387,10 +388,10 @@
   },
   "universitiesPage": {
     "title": "Find programs and universities",
-    "browseAll": "Browse all",
+    "searchIntro": "Search universities, faculties, study programs, and tracks across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro. Try a program name, city, country, study cycle, ECTS, or keywords like \"public\" or \"master\".",
+    "browseAll": "Browse all universities",
     "search": "Search",
-    "searchHint": "Search across all data - by name, city, acronym, entity (FBIH/RS/BD), ownership (PUBLIC/PRIVATE), study cycle (FIRST, SECOND…), language, or parent unit name.",
-    "searchAllPlaceholder": "Search by name, city, cycle, entity…",
+    "searchAllPlaceholder": "e.g. informatika, medicina Srbija, master 120 ECTS…",
     "universitiesSection": "Universities",
     "facultiesSection": "Faculties",
     "studyProgramsSection": "Study programs",
@@ -398,6 +399,12 @@
     "noFacultyResults": "No faculties found.",
     "noResultsAtAll": "No results found.",
     "searchResultsAnnouncement": "Search results:",
+    "countries": {
+      "BIH": "Bosnia and Herzegovina",
+      "SRB": "Serbia",
+      "HRV": "Croatia",
+      "MNE": "Montenegro"
+    },
     "entities": {
       "FBIH": "Federation of B&H",
       "RS": "Republika Srpska",
@@ -442,18 +449,13 @@
       "PRIVATE": "Private"
     },
     "clearSearch": "Clear search",
-    "filters": "Filters",
-    "resetSearch": "Reset search",
-    "filterType": "Type",
+    "resetSearch": "Reset",
     "contextMatch": {
       "university": "Matched through its faculties or study programs",
       "faculty": "Matched through its university or study programs",
       "studyProgram": "Matched through its faculty, university, or tracks"
     },
     "showAllPrograms": "Show all study programs",
-    "filterEntity": "Entity",
-    "filterOwnership": "Ownership",
-    "filterCycle": "Study cycle",
     "openFullPage": "Open full page",
     "shareLink": "Share link",
     "linkCopied": "Link copied to clipboard.",

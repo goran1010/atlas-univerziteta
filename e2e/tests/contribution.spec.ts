@@ -35,6 +35,7 @@ async function submitUniversityCreate(page: Page, universityName: string) {
   await page
     .getByRole("textbox", { name: "City", exact: true })
     .fill("Testograd");
+  await page.getByRole("combobox", { name: "Country" }).selectOption("BIH");
   await page
     .getByRole("combobox", { name: "Entity", exact: true })
     .selectOption("FBIH");
@@ -107,6 +108,7 @@ test("whole tree JSON contribution approval round-trip", async ({
   const tree = {
     name: universityName,
     city: "Testograd",
+    country: "BIH",
     entity: "FBIH",
     ownership: "PUBLIC",
     faculties: [
@@ -202,6 +204,7 @@ test("tree JSON validation errors block submission", async ({ browser }) => {
     JSON.stringify({
       name: "E2E Broken Tree University",
       city: "Testograd",
+      country: "BIH",
       entity: "FBIH",
       ownership: "PUBLIC",
       faculties: [{ name: "Same Faculty" }, { name: "Same Faculty" }],

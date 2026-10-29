@@ -1,0 +1,58 @@
+{
+  "name": "Libertas međunarodno sveučilište",
+  "acronym": null,
+  "city": "Zagreb",
+  "country": "HRV",
+  "ownership": "PRIVATE",
+  "foundedYear": "2008",
+  "website": "https://www.libertas.hr",
+  "address": "Trg J. F. Kennedyja 6b, 10000 Zagreb",
+  "phone": "+385 1 4894 000",
+  "email": "info@libertas.hr",
+  "faculties": [
+    {
+      "name": "Libertas međunarodno sveučilište",
+      "city": "Zagreb",
+      "isUniversityLevel": true,
+      "studyPrograms": [
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Diplomacija i međunarodni odnosi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Diplomacija i međunarodni odnosi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Trg J. F. Kennedyja 6b, 10000 Zagreb",
+      "phone": "+385 1 4894 000",
+      "email": "info@libertas.hr"
+    }
+  ],
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://www.libertas.hr",
+  "accreditationFrom": "2019-01-01",
+  "accreditationTo": "2024-01-01"
+}

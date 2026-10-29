@@ -90,13 +90,9 @@ test.describe("detail pages", () => {
   test("program search result opens the faculty page focused on that program", async ({
     page,
   }) => {
-    await page.goto("/search?type=studyProgram");
-    // large sections render their groups collapsed by default
-    const expandFirstGroup = page
-      .getByRole("button", { name: "Expand" })
-      .first();
-    await expect(expandFirstGroup).toBeVisible({ timeout: 15000 });
-    await expandFirstGroup.click();
+    await page.goto("/search");
+    // "grafika" is a study program name, giving a direct match in that section
+    await page.getByRole("searchbox", { name: "Search" }).fill("grafika");
 
     const firstProgramLink = page.locator('main a[href*="?program="]').first();
     await expect(firstProgramLink).toBeVisible({ timeout: 15000 });
@@ -113,11 +109,10 @@ test.describe("detail pages", () => {
     await expect(page).toHaveURL(/\/faculties\/\d+$/);
   });
 
-  test("URL deep-link with filters loads filtered results", async ({
+  test("URL deep-link with country filter loads filtered results", async ({
     page,
   }) => {
-    await page.goto("/search?ownership=PUBLIC");
-    // filter-only search returns a large payload; slow under parallel workers
+    await page.goto("/search?country=BIH");
     await expect(
       page.locator('main a[href^="/universities/"]').first(),
     ).toBeVisible({ timeout: 15000 });

@@ -30,13 +30,13 @@ type TreeData = UniversityTreeData | FacultyTreeData;
 const TREE_ROOT_TYPES: TreeRootType[] = ["UNIVERSITY", "FACULTY"];
 
 // the placeholders show the full field set per level; only name, city,
-// entity, ownership and cycle are required
+// country, ownership and cycle are required (entity required for BIH)
 const FACULTY_PLACEHOLDER = `{
   "name": "...",
   "city": "...",
   "website": "https://...",
   "address": "...",
-  "phone": "+387 ...",
+  "phone": "+3.. ...",
   "email": "...",
   "studyPrograms": [
     {
@@ -57,12 +57,13 @@ const JSON_PLACEHOLDER: Record<TreeRootType, string> = {
   "name": "...",
   "acronym": "...",
   "city": "...",
-  "entity": "FBIH | RS | BD",
+  "country": "BIH | SRB | HRV | MNE",
+  "entity": "FBIH | RS | BD (BIH only)",
   "ownership": "PUBLIC | PRIVATE",
   "foundedYear": "...",
   "website": "https://...",
   "address": "...",
-  "phone": "+387 ...",
+  "phone": "+3.. ...",
   "email": "...",
   "faculties": [
 ${FACULTY_PLACEHOLDER.split("\n")
@@ -192,6 +193,9 @@ function AddTreeEntity({
       onSubmit={(e) => void handleSubmit(e)}
       className="flex flex-col gap-4 w-full max-w-lg"
     >
+      <p className="text-sm text-(--text-secondary) text-center">
+        {t("contribution.addTreeHint")}
+      </p>
       <div className="flex flex-col gap-1 items-center">
         <Label htmlFor="treeRootType" required>
           {t("contribution.entityType")}

@@ -49,6 +49,12 @@ function entityFieldSpecs(targetType: string, t: TFunction): FieldSpec[] {
         { key: "acronym", label: t("contribution.dataFields.acronym") },
         city,
         {
+          key: "country",
+          label: t("contribution.dataFields.country"),
+          translate: (value, translator) =>
+            translator(`contribution.countries.${value}`),
+        },
+        {
           key: "entity",
           label: t("contribution.dataFields.entity"),
           translate: (value, translator) =>

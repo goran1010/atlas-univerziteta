@@ -89,6 +89,8 @@ function FacultyResult({
         <p className="text-sm text-(--text-muted) mt-0.5">
           <LandmarkIcon /> {faculty.university.name}
           {faculty.university.acronym && ` (${faculty.university.acronym})`}
+          {" - "}
+          {t(`universitiesPage.countries.${faculty.university.country}`)}
         </p>
         {faculty.city && (
           <p className="text-sm text-(--text-secondary) mt-0.5">
@@ -96,7 +98,12 @@ function FacultyResult({
           </p>
         )}
         <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
-          <ContactLinks website={faculty.website} />
+          <ContactLinks
+            website={faculty.website}
+            address={faculty.address}
+            phone={faculty.phone}
+            email={faculty.email}
+          />
         </div>
         {contextHint && (
           <p className="text-xs italic text-(--text-muted) mt-1">
@@ -142,7 +149,12 @@ function FacultyResult({
             </p>
           )}
           <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
-            <ContactLinks website={faculty.website} />
+            <ContactLinks
+              website={faculty.website}
+              address={faculty.address}
+              phone={faculty.phone}
+              email={faculty.email}
+            />
           </div>
           <div className="flex justify-center">
             <LinkButton

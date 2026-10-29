@@ -59,6 +59,20 @@ function Api() {
           </pre>
         </section>
         <section className="flex flex-col gap-4">
+          <h2 className="text-xl font-bold text-center">{t("api.examples")}</h2>
+          <pre className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color)">
+            {[
+              `GET /api/v1/universities`,
+              `GET /api/v1/universities?page=2&limit=10`,
+              `GET /api/v1/universities/17`,
+              `GET /api/v1/search?searchTerm=medicina`,
+              `GET /api/v1/search?country=SRB`,
+              `GET /api/v1/search?searchTerm=pravo&country=BIH`,
+              `GET /api/v1/search?searchTerm=informatika&type=studyProgram`,
+            ].join("\n")}
+          </pre>
+        </section>
+        <section className="flex flex-col gap-4">
           <h2 className="text-xl font-bold text-center">
             {t("api.endpoints")}
           </h2>

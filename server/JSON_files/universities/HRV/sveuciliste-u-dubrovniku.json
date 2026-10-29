@@ -1,0 +1,180 @@
+{
+  "name": "Sveučilište u Dubrovniku",
+  "acronym": "UNIDU",
+  "city": "Dubrovnik",
+  "country": "HRV",
+  "ownership": "PUBLIC",
+  "foundedYear": "2003",
+  "website": "https://www.unidu.hr",
+  "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
+  "phone": "+385 20 445 700",
+  "email": "rektorat@unidu.hr",
+  "faculties": [
+    {
+      "name": "Odjel za akvakulturu",
+      "city": "Dubrovnik",
+      "studyPrograms": [
+        {
+          "name": "Akvakultura",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Marikultura",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
+      "phone": "+385 20 445 700",
+      "email": "ured@unidu.hr"
+    },
+    {
+      "name": "Odjel za elektrotehniku i informacijske tehnologije",
+      "city": "Dubrovnik",
+      "studyPrograms": [
+        {
+          "name": "Primijenjeno računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primijenjeno računarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
+      "phone": "+385 20 445 700",
+      "email": "ured@unidu.hr"
+    },
+    {
+      "name": "Odjel za ekonomiju i poslovnu ekonomiju",
+      "city": "Dubrovnik",
+      "studyPrograms": [
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Lapadska obala 7, 20000 Dubrovnik",
+      "phone": "+385 20 445 938",
+      "email": "ured@unidu.hr"
+    },
+    {
+      "name": "Odjel za strojarske i tehničke znanosti",
+      "city": "Dubrovnik",
+      "studyPrograms": [
+        {
+          "name": "Brodostrojarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
+      "phone": "+385 20 445 700",
+      "email": "ured@unidu.hr"
+    },
+    {
+      "name": "Pomorski odjel",
+      "city": "Dubrovnik",
+      "studyPrograms": [
+        {
+          "name": "Nautika i pomorski promet",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pomorske znanosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
+      "phone": "+385 20 445 777",
+      "email": "srdjan.vujicic@unidu.hr"
+    },
+    {
+      "name": "Odjel za komunikologiju",
+      "city": "Dubrovnik",
+      "studyPrograms": [
+        {
+          "name": "Mediji i kultura društva",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Odnosi s javnošću",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
+      "phone": "+385 20 446 020",
+      "email": "mediji@unidu.hr"
+    },
+    {
+      "name": "Odjel za umjetnost i restauraciju",
+      "city": "Dubrovnik",
+      "studyPrograms": [
+        {
+          "name": "Konzervacija i restauracija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Konzervacija i restauracija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Branitelja Dubrovnika 41, 20000 Dubrovnik",
+      "phone": "+385 20 445 700",
+      "email": "ured@unidu.hr"
+    }
+  ],
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://www.unidu.hr",
+  "accreditationFrom": "2019-01-01",
+  "accreditationTo": "2024-01-01"
+}

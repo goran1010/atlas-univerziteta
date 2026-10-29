@@ -17,6 +17,7 @@ beforeAll(async () => {
     data: {
       name: "Test V1 University",
       city: "Test City",
+      country: "BIH",
       entity: "FBIH",
       ownership: "PUBLIC",
       faculties: {

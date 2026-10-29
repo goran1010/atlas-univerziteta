@@ -1,0 +1,295 @@
+{
+  "name": "Univerzitet Singidunum",
+  "acronym": null,
+  "city": "Beograd",
+  "country": "SRB",
+  "ownership": "PRIVATE",
+  "foundedYear": "2005",
+  "website": "https://www.singidunum.ac.rs",
+  "address": "Danijelova 32, 11000 Beograd",
+  "phone": "+381 11 3094 094",
+  "email": "office@singidunum.ac.rs",
+  "faculties": [
+    {
+      "name": "Poslovni fakultet u Beogradu",
+      "city": "Beograd",
+      "website": "https://pfb.singidunum.ac.rs",
+      "studyPrograms": [
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Interna revizija i forenzika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Menadžment javnog sektora",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Danijelova 32, 11000 Beograd",
+      "phone": "+381 11 3094 094",
+      "email": "pfb@singidunum.ac.rs"
+    },
+    {
+      "name": "Fakultet za turistički i hotelijerski menadžment",
+      "city": "Beograd",
+      "website": "https://fthm.singidunum.ac.rs",
+      "studyPrograms": [
+        {
+          "name": "Turizam i hotelijerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Turizam, hotelijerstvo i ekonomija hrane",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Poslovni sistemi u turizmu i hotelijerstvu",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Danijelova 32, 11000 Beograd",
+      "phone": "+381 11 3094 094",
+      "email": "fthm@singidunum.ac.rs"
+    },
+    {
+      "name": "Fakultet za informatiku i računarstvo",
+      "city": "Beograd",
+      "website": "https://fir.singidunum.ac.rs",
+      "studyPrograms": [
+        {
+          "name": "Informatika i računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informacione tehnologije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Računarske nauke",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Softversko i informaciono inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Primenjena veštačka inteligencija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Engleski"
+        },
+        {
+          "name": "Softversko i informaciono inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Nauka o podacima",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Danijelova 32, 11000 Beograd",
+      "phone": "+381 11 3094 094",
+      "email": "fir@singidunum.ac.rs"
+    },
+    {
+      "name": "Fakultet tehničkih nauka",
+      "city": "Beograd",
+      "website": "https://fim.singidunum.ac.rs",
+      "studyPrograms": [
+        {
+          "name": "Inženjerski menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Elektrotehnika i računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Životna sredina i održivi razvoj",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Inženjerski menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Elektrotehnika i računarstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Životna sredina i održivi razvoj",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Inteligentne elektroenergetske mreže",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Digitalni sistemi emitovanja i komunikacije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Danijelova 32, 11000 Beograd",
+      "phone": "+381 11 3094 094",
+      "email": "fim@singidunum.ac.rs"
+    },
+    {
+      "name": "Fakultet za fizičku kulturu i menadžment u sportu",
+      "city": "Beograd",
+      "website": "https://ffkms.singidunum.ac.rs",
+      "studyPrograms": [
+        {
+          "name": "Menadžment u sportu",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Fizičko vaspitanje i sport",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Danijelova 32, 11000 Beograd",
+      "phone": "+381 11 3094 094",
+      "email": "ffkms@singidunum.ac.rs"
+    },
+    {
+      "name": "Fakultet za medije i komunikacije",
+      "city": "Beograd",
+      "website": "https://fmk.singidunum.ac.rs",
+      "studyPrograms": [
+        {
+          "name": "Savremena psihologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Anglistika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Međunarodni odnosi i diplomatija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Bezbednost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Primenjena anglistika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Nacionalna i međunarodna bezbednost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Karađorđeva 65, 11000 Beograd",
+      "phone": "+381 11 262 6474",
+      "email": "fmk@singidunum.ac.rs"
+    }
+  ],
+  "dataSourceUrl": "https://www.singidunum.ac.rs",
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29",
+  "accreditationFrom": "2020-05-14",
+  "accreditationTo": "2027-05-14"
+}

@@ -10,6 +10,7 @@ import type { ReactElement } from "react";
 const validTreeJson = JSON.stringify({
   name: "Paste University",
   city: "Mostar",
+  country: "BIH",
   entity: "FBIH",
   ownership: "PRIVATE",
   faculties: [
@@ -42,6 +43,7 @@ beforeEach(() => {
             name: "University of Sarajevo",
             acronym: "UNSA",
             city: "Sarajevo",
+            country: "BIH",
             entity: "FBIH",
             ownership: "PUBLIC",
           },
@@ -129,6 +131,7 @@ describe("AddTreeEntity", () => {
       JSON.stringify({
         name: "Broken University",
         city: "Mostar",
+        country: "BIH",
         entity: "FBIH",
         ownership: "PRIVATE",
         faculties: [{ name: "Same" }, { name: "Same" }],

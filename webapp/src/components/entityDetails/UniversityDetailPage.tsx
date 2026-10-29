@@ -62,7 +62,10 @@ function UniversityDetailPage() {
 
   const university = state.data.data;
 
-  const entityLabel = t(`universitiesPage.entities.${university.entity}`);
+  const countryLabel = t(`universitiesPage.countries.${university.country}`);
+  const entityLabel = university.entity
+    ? t(`universitiesPage.entities.${university.entity}`)
+    : undefined;
 
   return (
     <>
@@ -70,7 +73,7 @@ function UniversityDetailPage() {
         <title>{`${university.name} | ${t("title.app")}`}</title>
         <meta
           name="description"
-          content={`${university.name} - ${university.city}, ${entityLabel}`}
+          content={`${university.name} - ${university.city}, ${countryLabel}${entityLabel ? `, ${entityLabel}` : ""}`}
         />
         <link rel="canonical" href={`${SITE_URL}/universities/${id ?? ""}/`} />
         <meta
@@ -79,7 +82,7 @@ function UniversityDetailPage() {
         />
         <meta
           property="og:description"
-          content={`${university.name} - ${university.city}, ${entityLabel}`}
+          content={`${university.name} - ${university.city}, ${countryLabel}${entityLabel ? `, ${entityLabel}` : ""}`}
         />
         <meta
           property="og:url"
@@ -110,6 +113,7 @@ function UniversityDetailPage() {
             </div>
             <UniversityMetaRow
               city={university.city}
+              country={university.country}
               entity={university.entity}
               ownership={university.ownership}
               className="gap-x-4 gap-y-1 mt-2"

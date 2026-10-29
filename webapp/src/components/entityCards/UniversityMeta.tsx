@@ -3,7 +3,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { MapPinIcon, TagIcon } from "../sharedComponents/icons";
 
 import type { ReactNode } from "react";
-import type { Entity, Ownership } from "../../schemas/domain";
+import type { Country, Entity, Ownership } from "../../schemas/domain";
 
 function OwnershipPill({ ownership }: { ownership: Ownership }) {
   const { t } = use(RootContext);
@@ -24,13 +24,15 @@ function OwnershipPill({ ownership }: { ownership: Ownership }) {
 // append their own extras (faculty count, founded year) as children
 function UniversityMetaRow({
   city,
+  country,
   entity,
   ownership,
   className,
   children,
 }: {
   city: string;
-  entity: Entity;
+  country: Country;
+  entity?: Entity | undefined;
   ownership: Ownership;
   className: string;
   children?: ReactNode;
@@ -44,8 +46,13 @@ function UniversityMetaRow({
         <MapPinIcon /> {city}
       </span>
       <span>
-        <TagIcon /> {t(`universitiesPage.entities.${entity}`)}
+        <TagIcon /> {t(`universitiesPage.countries.${country}`)}
       </span>
+      {entity && (
+        <span>
+          <TagIcon /> {t(`universitiesPage.entities.${entity}`)}
+        </span>
+      )}
       <OwnershipPill ownership={ownership} />
       {children}
     </div>

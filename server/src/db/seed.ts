@@ -27,15 +27,19 @@ if (!connectionString) {
 const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });
 
-const universitiesDirPath = path.resolve(
-  __dirname,
-  "../../JSON_files/universities",
-);
+const baseDir = path.resolve(__dirname, "../../JSON_files/universities");
 
-const universityFileNames = fs
-  .readdirSync(universitiesDirPath)
-  .filter((fileName) => fileName.endsWith(".json"))
-  .sort();
+const universityFilePaths = fs
+  .readdirSync(baseDir, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .flatMap((dir) =>
+    fs
+      .readdirSync(path.join(baseDir, dir.name))
+      .filter((f) => f.endsWith(".json"))
+      .sort()
+      .map((f) => path.join(baseDir, dir.name, f)),
+  );
 
 const optionalTextSchema = z.string().trim().min(1).nullish();
 
@@ -89,41 +93,44 @@ const facultySeedSchema = z.strictObject({
   studyPrograms: z.array(studyProgramSeedSchema).min(1).optional(),
 });
 
-const universitySeedSchema = z.strictObject({
-  name: z.string().trim().min(1),
-  acronym: optionalTextSchema,
-  city: z.string().trim().min(1),
-  entity: z.enum(["FBIH", "RS", "BD"]),
-  ownership: z.enum(["PUBLIC", "PRIVATE"]),
-  foundedYear: optionalTextSchema,
-  website: optionalTextSchema,
-  address: optionalTextSchema,
-  phone: optionalTextSchema,
-  email: optionalTextSchema,
-  accreditationFrom: optionalDateSchema,
-  accreditationTo: optionalDateSchema,
-  authority: optionalTextSchema,
-  dataSourceUrl: optionalUrlSchema,
-  lastModified: optionalDateSchema,
-  faculties: z.array(facultySeedSchema).min(1),
-});
+const universitySeedSchema = z
+  .strictObject({
+    country: z.enum(["BIH", "SRB", "HRV", "MNE"]),
+    name: z.string().trim().min(1),
+    acronym: optionalTextSchema,
+    city: z.string().trim().min(1),
+    entity: z.enum(["FBIH", "RS", "BD"]).optional(),
+    ownership: z.enum(["PUBLIC", "PRIVATE"]),
+    foundedYear: optionalTextSchema,
+    website: optionalTextSchema,
+    address: optionalTextSchema,
+    phone: optionalTextSchema,
+    email: optionalTextSchema,
+    accreditationFrom: optionalDateSchema,
+    accreditationTo: optionalDateSchema,
+    authority: optionalTextSchema,
+    dataSourceUrl: optionalUrlSchema,
+    lastModified: optionalDateSchema,
+    faculties: z.array(facultySeedSchema).min(1).optional(),
+  })
+  .refine((u) => u.country !== "BIH" || u.entity !== undefined, {
+    message: "Entity is required for Bosnian universities",
+    path: ["entity"],
+  });
 
 type UniversitySeed = z.infer<typeof universitySeedSchema>;
 
-function parseUniversityFile(fileName: string): UniversitySeed {
-  const jsonData = fs.readFileSync(
-    path.join(universitiesDirPath, fileName),
-    "utf-8",
-  );
-
+function parseUniversityFile(filePath: string): UniversitySeed {
+  const jsonData = fs.readFileSync(filePath, "utf-8");
   const raw: unknown = JSON.parse(jsonData);
 
   try {
     return universitySeedSchema.parse(raw);
   } catch (error) {
-    throw new Error(`Invalid university seed file: ${fileName}`, {
-      cause: error,
-    });
+    throw new Error(
+      `Invalid university seed file: ${path.relative(baseDir, filePath)}`,
+      { cause: error },
+    );
   }
 }
 
@@ -139,7 +146,8 @@ function toUniversityData(
       city: university.city,
       acronym: university.acronym ?? null,
     }),
-    entity: university.entity,
+    country: university.country,
+    entity: university.entity ?? null,
     ownership: university.ownership,
     foundedYear: university.foundedYear ?? null,
     website: university.website ?? null,
@@ -156,7 +164,7 @@ function toUniversityData(
 
 async function main() {
   try {
-    const universityTrees = universityFileNames.map(parseUniversityFile);
+    const universityTrees = universityFilePaths.map(parseUniversityFile);
     console.log("Seeding universities...");
 
     const upsertedUniversities = await Promise.all(
@@ -187,7 +195,7 @@ async function main() {
         throw new Error(`Unknown university: ${tree.name}`);
       }
 
-      return tree.faculties.map((faculty) => {
+      return (tree.faculties ?? []).map((faculty) => {
         const dataSourceUrl = faculty.dataSourceUrl ?? null;
         const lastModified = faculty.lastModified ?? null;
         const isUniversityLevel = faculty.isUniversityLevel ?? false;
@@ -245,7 +253,7 @@ async function main() {
         throw new Error(`Unknown university: ${tree.name}`);
       }
 
-      return tree.faculties.flatMap((faculty) => {
+      return (tree.faculties ?? []).flatMap((faculty) => {
         const facultyId = facultyIdByUniversityAndName.get(
           `${universityId.toString()}:${faculty.name}`,
         );
@@ -309,7 +317,7 @@ async function main() {
           return [];
         }
 
-        return tree.faculties.flatMap((faculty) => {
+        return (tree.faculties ?? []).flatMap((faculty) => {
           const facultyId = facultyIdByUniversityAndName.get(
             `${universityId.toString()}:${faculty.name}`,
           );

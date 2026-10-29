@@ -1,0 +1,230 @@
+{
+  "name": "Univerzitet Union - Nikola Tesla",
+  "acronym": null,
+  "city": "Beograd",
+  "country": "SRB",
+  "ownership": "PRIVATE",
+  "foundedYear": "2010",
+  "website": "https://unt.edu.rs",
+  "address": "Cara Dušana 62-64, 11158 Beograd",
+  "phone": "+381 11 2180 271",
+  "email": "info@unionnikolatesla.ac.rs",
+  "faculties": [
+    {
+      "name": "Fakultet za graditeljski menadžment",
+      "city": "Beograd",
+      "studyPrograms": [
+        {
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Arhitektura i urbanizam",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Opšte građevinarstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Arhitektura i urbanizam",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Cara Dušana 62-64, 11000 Beograd",
+      "phone": "+381 11 2180 271",
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
+    },
+    {
+      "name": "Fakultet za ekologiju i zaštitu životne sredine",
+      "city": "Beograd",
+      "studyPrograms": [
+        {
+          "name": "Zaštita životne sredine",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Zaštita životne sredine",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Cara Dušana 62-64, 11000 Beograd",
+      "phone": "+381 11 2180 271",
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
+    },
+    {
+      "name": "Fakultet za međunarodnu politiku i bezbednost",
+      "city": "Beograd",
+      "studyPrograms": [
+        {
+          "name": "Međunarodna politika i bezbednost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Međunarodna politika i bezbednost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Cara Dušana 62-64, 11000 Beograd",
+      "phone": "+381 11 2180 271",
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
+    },
+    {
+      "name": "Fakultet za preduzetnički biznis",
+      "city": "Beograd",
+      "studyPrograms": [
+        {
+          "name": "Preduzetnički biznis i menadžment nekretnina",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Cara Dušana 62-64, 11000 Beograd",
+      "phone": "+381 11 2180 271",
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
+    },
+    {
+      "name": "Fakultet za informacione tehnologije i inženjerstvo",
+      "city": "Beograd",
+      "studyPrograms": [
+        {
+          "name": "Informatika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Cara Dušana 62-64, 11000 Beograd",
+      "phone": "+381 11 2180 271",
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
+    },
+    {
+      "name": "Fakultet za ekonomiju i finansije",
+      "city": "Beograd",
+      "website": "https://unt.edu.rs/en/o-univerzitetu/fakulteti/fakultet-za-ekonomiju-i-finansije/",
+      "studyPrograms": [
+        {
+          "name": "Ekonomija i finansije",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Finansije",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Cara Dušana 62-64, 11000 Beograd",
+      "phone": "+381 11 2180 271",
+      "email": "info@unionnikolatesla.edu.rs"
+    },
+    {
+      "name": "Fakultet za sport",
+      "city": "Beograd",
+      "studyPrograms": [
+        {
+          "name": "Sport",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Cara Dušana 62-64, 11000 Beograd",
+      "phone": "+381 11 2180 271",
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
+    },
+    {
+      "name": "Fakultet za menadžment",
+      "city": "Beograd",
+      "studyPrograms": [
+        {
+          "name": "Menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Cara Dušana 62-64, 11000 Beograd",
+      "phone": "+381 11 2180 271",
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
+    },
+    {
+      "name": "Fakultet za poslovne studije i pravo",
+      "city": "Beograd",
+      "studyPrograms": [
+        {
+          "name": "Poslovne studije i pravo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "address": "Jurija Gagarina 149a, 11070 Beograd",
+      "phone": "+381 11 3131 246",
+      "email": "info@fpsp.edu.rs",
+      "website": "https://unt.edu.rs"
+    }
+  ],
+  "dataSourceUrl": "https://unt.edu.rs",
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "lastModified": "2026-10-29",
+  "accreditationFrom": "2021-01-01",
+  "accreditationTo": "2028-01-01"
+}

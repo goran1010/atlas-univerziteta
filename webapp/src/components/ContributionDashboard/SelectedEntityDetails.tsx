@@ -79,9 +79,15 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
     case "UNIVERSITY":
       push(t("contribution.dataFields.city"), entity.data.city);
       push(
-        t("contribution.dataFields.entity"),
-        t(`contribution.entities.${entity.data.entity}`),
+        t("contribution.dataFields.country"),
+        t(`contribution.countries.${entity.data.country}`),
       );
+      if (entity.data.entity) {
+        push(
+          t("contribution.dataFields.entity"),
+          t(`contribution.entities.${entity.data.entity}`),
+        );
+      }
       push(
         t("contribution.dataFields.ownership"),
         t(`universitiesPage.ownership.${entity.data.ownership}`),

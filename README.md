@@ -2,7 +2,7 @@
 
 **English** | [Bosanski / Hrvatski / Srpski](#bosanski--hrvatski--srpski)
 
-An open-source directory of higher-education data for Bosnia and Herzegovina: a public REST API, a searchable webapp, and an authenticated contribution workflow with admin moderation.
+An open-source directory of higher-education data for Bosnia and Herzegovina, Serbia, Croatia, and Montenegro: a public REST API, a searchable webapp, and an authenticated contribution workflow with admin moderation.
 
 - Live webapp: <https://atlasuniverziteta.com/>
 - Live REST API: <https://api.atlasuniverziteta.com/>
@@ -47,7 +47,7 @@ GET /api/v1/universities        also /universities/:id
 GET /api/v1/faculties           also /faculties/:id
 GET /api/v1/study-programs      also /study-programs/:id
 GET /api/v1/tracks              also /tracks/:id
-GET /api/v1/search?searchTerm=&entity=&ownership=&cycle=&type=
+GET /api/v1/search?searchTerm=&country=&entity=&ownership=&cycle=&type=
 ```
 
 Responses return `{ "message", "data" }`; errors return `{ "error": { "code", "message" } }`. List endpoints are paginated - `?page=&limit=` (up to 100 per page) with `page`, `totalPages`, and `total` in the response. Interactive documentation with examples lives at [atlasuniverziteta.com/api-docs](https://atlasuniverziteta.com/api-docs).
@@ -68,7 +68,7 @@ See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) - code, documentation, bug reports
 
 GNU Affero General Public License v3.0 - see [LICENSE.md](./LICENSE.md).
 
-University data sourced from [Agencija za razvoj visokog obrazovanja i osiguranje kvaliteta BiH (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu).
+Bosnian university data sourced from [Agencija za razvoj visokog obrazovanja i osiguranje kvaliteta BiH (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu).
 
 Author: Goran Jović - [@goran1010](https://github.com/goran1010) · [contributors](https://github.com/goran1010/atlas-univerziteta/contributors)
 
@@ -78,7 +78,7 @@ Author: Goran Jović - [@goran1010](https://github.com/goran1010) · [contributo
 
 [English](#atlas-univerziteta) | **Bosanski / Hrvatski / Srpski**
 
-Atlas Univerziteta je projekat otvorenog koda sa podacima o visokom obrazovanju u Bosni i Hercegovini: javni REST API, web aplikacija sa pretragom i sistem prijedloga izmjena uz administratorsku provjeru.
+Atlas Univerziteta je open-source projekat sa podacima o visokom obrazovanju u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori: javni REST API, web aplikacija sa pretragom i sistem prijedloga izmjena uz administratorsku provjeru.
 
 - Web aplikacija: <https://atlasuniverziteta.com/>
 - REST API: <https://api.atlasuniverziteta.com/>
@@ -106,6 +106,6 @@ Komande su iste kao u [engleskom dijelu](#quick-start) - potrebni su Node.js 24.
 
 ### Doprinos projektu
 
-Pogledajte [CONTRIBUTING.md](./docs/CONTRIBUTING.md). Prijedloge podataka možete slati i direktno kroz aplikaciju, pod "Poboljšaj podatke". Podaci o univerzitetima preuzeti su od [Agencije za razvoj visokog obrazovanja i osiguranje kvaliteta BiH (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu).
+Pogledajte [CONTRIBUTING.md](./docs/CONTRIBUTING.md). Prijedloge podataka možete slati i direktno kroz aplikaciju, pod "Poboljšaj podatke". Podaci o univerzitetima u BiH preuzeti su od [Agencije za razvoj visokog obrazovanja i osiguranje kvaliteta BiH (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu).
 
 Licenca: GNU Affero General Public License v3.0 - [LICENSE.md](./LICENSE.md).

@@ -19,6 +19,7 @@ const facultyDetail = {
     name: "University of Sarajevo",
     acronym: "UNSA",
     city: "Sarajevo",
+    country: "BIH",
     entity: "FBIH",
     ownership: "PUBLIC",
   },

@@ -1,0 +1,275 @@
+{
+  "name": "Sveučilište Jurja Dobrile u Puli",
+  "acronym": "UNIPU",
+  "city": "Pula",
+  "country": "HRV",
+  "ownership": "PUBLIC",
+  "foundedYear": "2006",
+  "website": "https://www.unipu.hr",
+  "address": "Zagrebačka 30, 52100 Pula",
+  "phone": "+385 52 377 000",
+  "email": "ured@unipu.hr",
+  "faculties": [
+    {
+      "name": "Fakultet ekonomije i turizma Dr. Mijo Mirković",
+      "city": "Pula",
+      "studyPrograms": [
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Turizam i razvoj",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Turizam i razvoj",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "website": "https://fet.unipu.hr",
+      "address": "Preradovićeva 1, 52100 Pula",
+      "phone": "+385 52 377 000",
+      "email": "ured@unipu.hr"
+    },
+    {
+      "name": "Fakultet informatike",
+      "city": "Pula",
+      "studyPrograms": [
+        {
+          "name": "Informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "website": "https://fipu.unipu.hr",
+      "address": "Rovinjska 14, 52100 Pula",
+      "phone": "+385 52 377 000",
+      "email": "ured@unipu.hr"
+    },
+    {
+      "name": "Fakultet prirodnih znanosti",
+      "city": "Pula",
+      "studyPrograms": [
+        {
+          "name": "Znanost o moru",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Znanost o moru",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "website": "https://fpn.unipu.hr",
+      "address": "Zagrebačka 30, 52100 Pula",
+      "phone": "+385 52 377 000",
+      "email": "ured@unipu.hr"
+    },
+    {
+      "name": "Fakultet za odgojne i obrazovne znanosti",
+      "city": "Pula",
+      "studyPrograms": [
+        {
+          "name": "Rani i predškolski odgoj i obrazovanje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Učiteljski studij",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "website": "https://fooz.unipu.hr",
+      "address": "Istarskog razvoda 1, 52100 Pula",
+      "phone": "+385 52 377 000",
+      "email": "ured@unipu.hr"
+    },
+    {
+      "name": "Filozofski fakultet",
+      "city": "Pula",
+      "studyPrograms": [
+        {
+          "name": "Hrvatski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Talijanski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Hrvatski jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Talijanski jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "website": "https://ffpu.unipu.hr",
+      "address": "I. M. Ronjgova 1, 52100 Pula",
+      "phone": "+385 52 377 000",
+      "email": "ured@unipu.hr"
+    },
+    {
+      "name": "Medicinski fakultet",
+      "city": "Pula",
+      "studyPrograms": [
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "website": "https://mfpu.unipu.hr",
+      "address": "Zagrebačka 30, 52100 Pula",
+      "phone": "+385 52 377 000",
+      "email": "ured@unipu.hr"
+    },
+    {
+      "name": "Tehnički fakultet",
+      "city": "Pula",
+      "studyPrograms": [
+        {
+          "name": "Elektrotehnika i računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika i računarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "website": "https://tf.unipu.hr",
+      "address": "Zagrebačka 30, 52100 Pula",
+      "phone": "+385 52 377 000",
+      "email": "ured@unipu.hr"
+    },
+    {
+      "name": "Muzička akademija",
+      "city": "Pula",
+      "studyPrograms": [
+        {
+          "name": "Glazba",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glazba",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ],
+      "lastModified": "2026-10-29",
+      "website": "https://mapu.unipu.hr",
+      "address": "Zagrebačka 30, 52100 Pula",
+      "phone": "+385 52 377 000",
+      "email": "ured@unipu.hr"
+    }
+  ],
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "lastModified": "2026-10-29",
+  "dataSourceUrl": "https://www.unipu.hr",
+  "accreditationFrom": "2019-01-01",
+  "accreditationTo": "2024-01-01"
+}
