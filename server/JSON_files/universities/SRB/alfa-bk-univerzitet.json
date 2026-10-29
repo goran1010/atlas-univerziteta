@@ -39,7 +39,8 @@
       "lastModified": "2026-10-29",
       "address": "Palmira Toljatija 3, 11070 Beograd",
       "phone": "+381 11 2609 754",
-      "email": null
+      "email": "fbr@alfa.edu.rs",
+      "website": "https://alfa.edu.rs/fakultet-za-finansije-bankarstvo-i-reviziju/"
     },
     {
       "name": "Fakultet za matematiku i računarske nauke",
@@ -92,7 +93,7 @@
       "lastModified": "2026-10-29",
       "address": "Palmira Toljatija 3, 11070 Beograd",
       "phone": "+381 11 2609 754",
-      "email": null
+      "email": "fmrn@alfa.edu.rs"
     },
     {
       "name": "Fakultet za strane jezike",
@@ -116,7 +117,8 @@
       "lastModified": "2026-10-29",
       "address": "Palmira Toljatija 3, 11070 Beograd",
       "phone": "+381 11 2609 754",
-      "email": null
+      "email": "fsj@alfa.edu.rs",
+      "website": "https://alfa.edu.rs/fakultet-za-strane-jezike/"
     },
     {
       "name": "Fakultet za menadžment u sportu",
@@ -140,7 +142,8 @@
       "lastModified": "2026-10-29",
       "address": "Palmira Toljatija 3, 11070 Beograd",
       "phone": "+381 11 2609 754",
-      "email": null
+      "email": "fms@alfa.edu.rs",
+      "website": "https://alfa.edu.rs/fakultet-za-menadzment-u-sportu/"
     },
     {
       "name": "Akademija umetnosti",
@@ -213,7 +216,8 @@
       "lastModified": "2026-10-29",
       "address": "Palmira Toljatija 3, 11070 Beograd",
       "phone": "+381 11 2609 754",
-      "email": null
+      "email": "au@alfa.edu.rs",
+      "website": "https://alfa.edu.rs/akademija-umetnosti/"
     }
   ],
   "dataSourceUrl": "https://alfa.edu.rs",

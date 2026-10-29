@@ -170,7 +170,7 @@
       ],
       "lastModified": "2026-10-29",
       "address": "Goce Delčeva 36, 11070 Beograd",
-      "phone": null,
+      "phone": "+381 11 3196 379",
       "email": "office@pravnifakultet.edu.rs"
     },
     {
@@ -186,9 +186,10 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Nemanjina 28, 11000 Beograd",
+      "phone": "+381 11 3618 715",
+      "email": "info@akademijaumetnosti.edu.rs",
+      "website": "https://akademijaumetnosti.edu.rs"
     }
   ],
   "dataSourceUrl": "https://www.union.edu.rs",

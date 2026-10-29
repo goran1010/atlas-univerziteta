@@ -261,7 +261,10 @@
         }
       ],
       "website": "https://www.akademija.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Đure Jakšića 7, 21000 Novi Sad",
+      "phone": "+381 21 422 176",
+      "email": "aofarts@uns.ac.rs"
     },
     {
       "name": "Poljoprivredni fakultet",
@@ -483,7 +486,10 @@
         }
       ],
       "website": "https://www.gf.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Kozaračka 2a, 24000 Subotica",
+      "phone": "+381 24 554 300",
+      "email": "dekanat@gf.uns.ac.rs"
     },
     {
       "name": "Ekonomski fakultet u Subotici",
@@ -656,7 +662,10 @@
         }
       ],
       "website": "https://www.pef.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Podgorička 4, 25000 Sombor",
+      "phone": "+381 25 22 030",
+      "email": "pefsombor@uns.ac.rs"
     },
     {
       "name": "Pravni fakultet",
@@ -1418,7 +1427,10 @@
         }
       ],
       "website": "https://www.pmf.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Trg Dositeja Obradovića 3, 21000 Novi Sad",
+      "phone": "+381 21 455 630",
+      "email": "dekanpmf@uns.ac.rs"
     },
     {
       "name": "Fakultet sporta i fizičkog vaspitanja",
@@ -1454,7 +1466,10 @@
         }
       ],
       "website": "https://www.fsfv.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Lovćenska 16, 21000 Novi Sad",
+      "phone": "+381 21 450 188",
+      "email": "fsfvns@uns.ac.rs"
     },
     {
       "name": "Fakultet tehničkih nauka",
@@ -2233,7 +2248,10 @@
         }
       ],
       "website": "https://www.magister.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Štrosmajerova 11, 24000 Subotica",
+      "phone": "+381 24 624 444",
+      "email": "magister@magister.uns.ac.rs"
     },
     {
       "name": "Tehnički fakultet Mihajlo Pupin",
@@ -2346,7 +2364,10 @@
         }
       ],
       "website": "https://www.tfzr.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Đure Đakovića bb, 23000 Zrenjanin",
+      "phone": "+381 23 550 515",
+      "email": "tfzr@tfzr.uns.ac.rs"
     }
   ],
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",

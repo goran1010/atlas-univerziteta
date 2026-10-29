@@ -101,9 +101,10 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
+      "phone": "+381 20 316 634",
+      "email": "umjetnost.filologija@uninp.edu.rs",
+      "website": "https://www.uninp.edu.rs"
     },
     {
       "name": "Departman za pedagoške i psihološke nauke",
@@ -139,9 +140,10 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
+      "phone": "+381 20 316 634",
+      "email": "pedagogija.psihologija@uninp.edu.rs",
+      "website": "https://www.uninp.edu.rs"
     },
     {
       "name": "Departman za ekonomske i računarske nauke",
@@ -198,9 +200,10 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
+      "phone": "+381 20 316 634",
+      "email": "ekonomija.racunarstvo@uninp.edu.rs",
+      "website": "https://www.uninp.edu.rs"
     },
     {
       "name": "Departman za pravne nauke",
@@ -238,9 +241,10 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Dimitrija Tucovića bb, 36300 Novi Pazar",
+      "phone": "+381 20 316 634",
+      "email": "pravo@uninp.edu.rs",
+      "website": "https://www.uninp.edu.rs"
     }
   ],
   "dataSourceUrl": "https://www.uninp.edu.rs",

@@ -69,7 +69,7 @@
       "lastModified": "2026-10-29",
       "address": "Tadeuša Košćuška 63, 11158 Beograd",
       "phone": "+381 11 2030 885",
-      "email": null
+      "email": "fit@metropolitan.ac.rs"
     },
     {
       "name": "Fakultet za menadžment",
@@ -108,7 +108,7 @@
       "lastModified": "2026-10-29",
       "address": "Tadeuša Košćuška 63, 11158 Beograd",
       "phone": "+381 11 2030 885",
-      "email": null
+      "email": "fm@metropolitan.ac.rs"
     },
     {
       "name": "Fakultet digitalnih umetnosti",
@@ -161,7 +161,7 @@
       "lastModified": "2026-10-29",
       "address": "Tadeuša Košćuška 63, 11158 Beograd",
       "phone": "+381 11 2030 885",
-      "email": null
+      "email": "fdu@metropolitan.ac.rs"
     },
     {
       "name": "Fakultet za strane jezike",
@@ -179,7 +179,7 @@
       "lastModified": "2026-10-29",
       "address": "Tadeuša Košćuška 63, 11158 Beograd",
       "phone": "+381 11 2030 885",
-      "email": null
+      "email": "fsj@metropolitan.ac.rs"
     }
   ],
   "dataSourceUrl": "https://www.metropolitan.ac.rs",

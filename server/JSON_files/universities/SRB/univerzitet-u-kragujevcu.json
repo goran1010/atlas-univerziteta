@@ -73,7 +73,9 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "phone": "+381 32 303 400",
+      "email": "afdekanat@kg.ac.rs"
     },
     {
       "name": "Ekonomski fakultet",
@@ -211,7 +213,10 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Milana Mijalkovića 14, 35000 Jagodina",
+      "phone": "+381 35 822 3805",
+      "email": "pefjagodina@pefja.kg.ac.rs"
     },
     {
       "name": "Fakultet inženjerskih nauka",
@@ -340,7 +345,8 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "email": "kontakt@fink.rs"
     },
     {
       "name": "Fakultet za hotelijerstvo i turizam u Vrnjačkoj Banji",
@@ -390,7 +396,10 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Vojvođanska 5a, 36210 Vrnjačka Banja",
+      "phone": "+381 36 515 0024",
+      "email": "hitvb@kg.ac.rs"
     },
     {
       "name": "Pravni fakultet",
@@ -479,7 +488,10 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Dositejeva 19, 36000 Kraljevo",
+      "phone": "+381 36 383 269",
+      "email": "office@mfkv.kg.ac.rs"
     },
     {
       "name": "Fakultet medicinskih nauka",
@@ -564,7 +576,10 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Svetozara Markovića 69, 34000 Kragujevac",
+      "phone": "+381 34 306 800",
+      "email": "dekanat@medf.kg.ac.rs"
     },
     {
       "name": "Filološko-umetnički fakultet",
@@ -761,7 +776,10 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Jovana Cvijića bb, 34000 Kragujevac",
+      "phone": "+381 34 304 270",
+      "email": "filum@kg.ac.rs"
     },
     {
       "name": "Prirodno-matematički fakultet",
@@ -916,7 +934,10 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Radoja Domanovića 12, 34000 Kragujevac",
+      "phone": "+381 34 336 223",
+      "email": "pmfkrag@kg.ac.rs"
     },
     {
       "name": "Fakultet pedagoških nauka u Užicu",
@@ -973,7 +994,10 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "address": "Trg Svetog Save 36, 31000 Užice",
+      "phone": "+381 31 521 952",
+      "email": "fakultet@pfu.kg.ac.rs"
     },
     {
       "name": "Fakultet tehničkih nauka u Čačku",

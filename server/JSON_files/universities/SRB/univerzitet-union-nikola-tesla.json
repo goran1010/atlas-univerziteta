@@ -46,7 +46,8 @@
       "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
-      "email": "info@unionnikolatesla.edu.rs"
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
     },
     {
       "name": "Fakultet za ekologiju i zaštitu životne sredine",
@@ -70,7 +71,8 @@
       "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
-      "email": "info@unionnikolatesla.edu.rs"
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
     },
     {
       "name": "Fakultet za međunarodnu politiku i bezbednost",
@@ -94,7 +96,8 @@
       "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
-      "email": "info@unionnikolatesla.edu.rs"
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
     },
     {
       "name": "Fakultet za preduzetnički biznis",
@@ -111,7 +114,8 @@
       "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
-      "email": "info@unionnikolatesla.edu.rs"
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
     },
     {
       "name": "Fakultet za informacione tehnologije i inženjerstvo",
@@ -135,7 +139,8 @@
       "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
-      "email": "info@unionnikolatesla.edu.rs"
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
     },
     {
       "name": "Fakultet za ekonomiju i finansije",
@@ -177,7 +182,8 @@
       "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
-      "email": "info@unionnikolatesla.edu.rs"
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
     },
     {
       "name": "Fakultet za menadžment",
@@ -194,7 +200,8 @@
       "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
-      "email": "info@unionnikolatesla.edu.rs"
+      "email": "info@unionnikolatesla.edu.rs",
+      "website": "https://unt.edu.rs"
     },
     {
       "name": "Fakultet za poslovne studije i pravo",
@@ -211,7 +218,8 @@
       "lastModified": "2026-10-29",
       "address": "Jurija Gagarina 149a, 11070 Beograd",
       "phone": "+381 11 3131 246",
-      "email": "info@fpsp.edu.rs"
+      "email": "info@fpsp.edu.rs",
+      "website": "https://unt.edu.rs"
     }
   ],
   "dataSourceUrl": "https://unt.edu.rs",

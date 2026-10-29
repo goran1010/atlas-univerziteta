@@ -137,7 +137,8 @@
       ],
       "address": "Kamenička 6, 11000 Beograd",
       "phone": "+381 11 3021 240",
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "email": "dekanat@ekof.bg.ac.rs"
     },
     {
       "name": "Pravni fakultet",
@@ -189,7 +190,8 @@
       ],
       "address": "Bulevar kralja Aleksandra 67, 11000 Beograd",
       "phone": "+381 11 3027 600",
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "email": "dekanat@ius.bg.ac.rs"
     },
     {
       "name": "Pravoslavni bogoslovski fakultet",
@@ -326,7 +328,8 @@
       ],
       "address": "Gospodara Vučića 50, 11000 Beograd",
       "phone": "+381 11 6451 963",
-      "lastModified": "2026-10-29"
+      "lastModified": "2026-10-29",
+      "email": "dekanat@fb.bg.ac.rs"
     },
     {
       "name": "Fakultet za specijalnu edukaciju i rehabilitaciju",
@@ -1046,7 +1049,8 @@
       ],
       "lastModified": "2026-10-29",
       "address": "Rankeova 4, 11000 Beograd",
-      "phone": "+381 11 2685 288"
+      "phone": "+381 11 2685 288",
+      "email": "dekanat@stomf.bg.ac.rs"
     },
     {
       "name": "Fakultet veterinarske medicine",
@@ -2193,7 +2197,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": "Vojske Jugoslavije 12, 19210 Bor"
+      "address": "Vojske Jugoslavije 12, 19210 Bor",
+      "email": "info@tfbor.bg.ac.rs",
+      "phone": "+381 30 421 749"
     },
     {
       "name": "Tehnološko-metalurški fakultet",

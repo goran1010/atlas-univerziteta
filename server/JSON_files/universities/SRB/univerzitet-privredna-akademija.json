@@ -38,9 +38,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Geri Karolja 1, 21000 Novi Sad",
+      "phone": "+381 21 400 499",
+      "email": "office@pravni-fakultet.info"
     },
     {
       "name": "Fakultet za ekonomiju i inženjerski menadžment",
@@ -84,9 +84,9 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Cvećarska 2, 21000 Novi Sad",
+      "phone": "+381 21 531 020",
+      "email": "info@fimek.edu.rs"
     },
     {
       "name": "Stomatološki fakultet",
@@ -101,9 +101,10 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Trg Mladenaca 5, 26000 Pančevo",
+      "phone": "+381 21 210 1925",
+      "email": "info@stom.edu.rs",
+      "website": "https://www.stom.edu.rs"
     },
     {
       "name": "Farmaceutski fakultet",
@@ -125,9 +126,10 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Trg Mladenaca 5, 21000 Novi Sad",
+      "phone": "+381 21 210 1925",
+      "email": "info@farmacija.edu.rs",
+      "website": "https://www.farmacija.edu.rs"
     },
     {
       "name": "Fakultet za primenjeni menadžment, ekonomiju i finansije",
@@ -206,9 +208,10 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Narodnog fronta 53, 21000 Novi Sad",
+      "phone": "+381 21 472 2884",
+      "email": "info@fepps.edu.rs",
+      "website": "https://www.fepps.edu.rs"
     },
     {
       "name": "Fakultet društvenih nauka",
@@ -251,9 +254,10 @@
         }
       ],
       "lastModified": "2026-10-29",
-      "address": null,
-      "phone": null,
-      "email": null
+      "address": "Bulevar umetnosti 2, 11070 Beograd",
+      "phone": "+381 11 4140 420",
+      "email": "info@fdn.edu.rs",
+      "website": "https://www.fdn.edu.rs"
     }
   ],
   "dataSourceUrl": "https://www.privrednaakademija.edu.rs",
