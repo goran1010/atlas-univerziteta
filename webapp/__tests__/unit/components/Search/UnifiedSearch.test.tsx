@@ -92,6 +92,8 @@ const studyProgramResult = {
 
 let searchRequests: URL[] = [];
 
+let listRequests: URL[];
+
 function givenSearchResults(
   data: Partial<{
     universities: unknown[];
@@ -116,6 +118,21 @@ function givenSearchResults(
   );
 }
 
+function givenUniversityList(universities: unknown[] = []) {
+  server.use(
+    http.get("*/api/v1/universities", ({ request }) => {
+      listRequests.push(new URL(request.url));
+      return HttpResponse.json({
+        message: "Universities retrieved successfully.",
+        data: universities,
+        page: 1,
+        totalPages: 1,
+        total: universities.length,
+      });
+    }),
+  );
+}
+
 function renderSearch() {
   render(<Wrapper />);
   return userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
@@ -134,7 +151,9 @@ async function typeSearch(
 describe("UnifiedSearch", () => {
   beforeEach(() => {
     searchRequests = [];
+    listRequests = [];
     givenSearchResults();
+    givenUniversityList();
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
@@ -145,31 +164,26 @@ describe("UnifiedSearch", () => {
   });
 
   test("shows Browse All button on initial visit, clicking it loads universities", async () => {
-    givenSearchResults({ universities: [universityListItem] });
+    givenUniversityList([universityListItem]);
     const user = renderSearch();
 
     const browseButton = screen.getByRole("button", { name: /Browse All/i });
     expect(browseButton).toBeInTheDocument();
-    expect(searchRequests).toHaveLength(0);
+    expect(listRequests).toHaveLength(0);
 
     await user.click(browseButton);
 
     expect(
       await screen.findByText(/University of Mostar/i),
     ).toBeInTheDocument();
-    expect(searchRequests).toHaveLength(1);
-    // browsing shows universities only...
-    expect(searchRequests[0]?.searchParams.getAll("type")).toContain(
-      "university",
-    );
+    expect(listRequests).toHaveLength(1);
 
     await typeSearch(user, "sarajevo");
 
     await waitFor(() => {
-      expect(searchRequests).toHaveLength(2);
+      expect(searchRequests).toHaveLength(1);
     });
-    // ...but must not stick as a filter once the user types a term
-    expect(searchRequests[1]?.searchParams.has("type")).toBe(false);
+    expect(searchRequests[0]?.searchParams.has("type")).toBe(false);
   });
 
   test("explains which terms are searched", () => {
@@ -265,7 +279,7 @@ describe("UnifiedSearch", () => {
   });
 
   test("clicking a country pill sends the country filter", async () => {
-    givenSearchResults({ universities: [universityListItem] });
+    givenUniversityList([universityListItem]);
     const user = renderSearch();
 
     await user.click(
@@ -273,9 +287,9 @@ describe("UnifiedSearch", () => {
     );
 
     await waitFor(() => {
-      expect(searchRequests).toHaveLength(1);
+      expect(listRequests).toHaveLength(1);
     });
-    expect(searchRequests[0]?.searchParams.get("country")).toBe("BIH");
+    expect(listRequests[0]?.searchParams.get("country")).toBe("BIH");
   });
 
   test("does not trigger search for short input (1 char)", async () => {

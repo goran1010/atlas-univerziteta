@@ -13,8 +13,8 @@ function useNotification() {
 
   const addNotification = useCallback(
     ({ id, type, message, duration, persistent = false }: Notification) => {
-      let resolvedDuration = DEFAULT_DURATION;
-      if (duration !== undefined && duration !== null) {
+      let resolvedDuration: number | null = DEFAULT_DURATION;
+      if (duration !== undefined) {
         resolvedDuration = duration;
       } else if (type === "error" || type === "warning") {
         resolvedDuration = ALERT_DURATION;
