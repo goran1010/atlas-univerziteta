@@ -1091,7 +1091,7 @@
         {
           "name": "Medical Studies in English",
           "cycle": "INTEGRATED",
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "ects": 360,
           "durationYears": 6,

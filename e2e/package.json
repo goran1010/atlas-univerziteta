@@ -11,6 +11,7 @@
     "test:headed": "playwright test --headed",
     "report": "playwright show-report",
     "codegen": "playwright codegen http://localhost:5173",
+    "capture-og": "npx tsx capture-og-images.ts",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

@@ -1,7 +1,0 @@
-node_modules
-server/node_modules
-webapp/node_modules
-e2e/node_modules
-.git
-.env
-*.log

@@ -333,7 +333,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/bachelor_in_business_studies_2015_web.pdf",
           "lastModified": "2026-08-23"
         },
@@ -365,11 +365,11 @@
           "lastModified": "2026-08-23"
         },
         {
-          "name": "Zajednički master program u saradnju sa Ekonomskim fakultetom Univerzitet u Ljubljani menadžmenta “Javni sektor i ekonomija okoliša”",
+          "name": "Zajednički master program u saradnji sa Ekonomskim fakultetom Univerziteta u Ljubljani menadžmenta \"Javni sektor i ekonomija okoliša\"",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/ljubljana_-_brosura_0.pdf",
           "lastModified": "2026-08-23"
         },
@@ -399,7 +399,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/islamsko_bankarstvo_-_npp.pdf",
           "lastModified": "2026-08-23"
         },
@@ -408,7 +408,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/doktorski-course-catalogue_2012_0.pdf",
           "lastModified": "2026-08-23"
         },
@@ -417,7 +417,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/doktorski-course-catalogue_2012_0.pdf",
           "lastModified": "2026-08-23"
         },
@@ -591,7 +591,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "bosanski",
+          "language": "Bosanski",
           "dataSourceUrl": "http://fin.unsa.ba/datoteke/2016/FIN-I_ciklus-revizija_NPP-2016.pdf",
           "lastModified": "2026-08-23"
         },
@@ -600,7 +600,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "bosanski",
+          "language": "Bosanski",
           "dataSourceUrl": "http://fin.unsa.ba/datoteke/2016/FIN-I_ciklus-revizija_NPP-2016.pdf",
           "lastModified": "2026-08-23"
         },
@@ -609,16 +609,16 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "bosanski",
+          "language": "Bosanski",
           "dataSourceUrl": "http://fin.unsa.ba/silabusi/dodiplomski/studij-za-imame-npp.pdf",
           "lastModified": "2026-08-23"
         },
         {
-          "name": "Masters program in Islamic studies “Islam in Europe”",
+          "name": "Masters program in Islamic studies \"Islam in Europe\"",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "http://fin.unsa.ba/index.php/izdvojeno/4713-master-in-islamic-studies",
           "lastModified": "2026-08-23"
         },
@@ -627,7 +627,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "bosanski",
+          "language": "Bosanski",
           "dataSourceUrl": "http://fin.unsa.ba/datoteke/2016/FIN-II_ciklus-revizija_NPP-2016.pdf",
           "lastModified": "2026-08-23"
         },
@@ -654,7 +654,7 @@
           "cycle": "THIRD",
           "durationYears": 1,
           "ects": 60,
-          "language": "bosanski",
+          "language": "Bosanski",
           "dataSourceUrl": "http://fin.unsa.ba/datoteke/doktorski/doktorske-studije-elaborat.pdf",
           "lastModified": "2026-08-23"
         }
@@ -872,7 +872,7 @@
           "lastModified": "2026-08-23"
         },
         {
-          "name": "Doktorski studij iz oblasti „Kineziologija“",
+          "name": "Doktorski studij iz oblasti \"Kineziologija\"",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -1562,7 +1562,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "bosanski, hrvatski i srpski",
+          "language": "Bosanski, hrvatski, srpski",
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1580,7 +1580,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "bosanski, hrvatski i srpski",
+          "language": "Bosanski, hrvatski, srpski",
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1589,7 +1589,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "bosanski, hrvatski i srpski",
+          "language": "Bosanski, hrvatski, srpski",
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1706,7 +1706,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "bosanski, hrvatski i srpski",
+          "language": "Bosanski, hrvatski, srpski",
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "lastModified": "2026-08-23"
         },
@@ -1715,7 +1715,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "bosanski, hrvatski i srpski",
+          "language": "Bosanski, hrvatski, srpski",
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "lastModified": "2026-08-23"
         },
@@ -1733,7 +1733,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "bosanski, hrvatski i srpski",
+          "language": "Bosanski, hrvatski, srpski",
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "lastModified": "2026-08-23"
         },
@@ -1751,7 +1751,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "bosanski, hrvatski i srpski",
+          "language": "Bosanski, hrvatski, srpski",
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "lastModified": "2026-08-23"
         },
@@ -3348,7 +3348,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "hrvatski",
+          "language": "Hrvatski",
           "dataSourceUrl": "https://kbf.unsa.ba/integrirani-filozofsko-teoloski-studij/",
           "lastModified": "2026-08-23"
         },
@@ -3624,7 +3624,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "https://mf.unsa.ba/medical-study-in-english/",
           "lastModified": "2026-08-23"
         },
@@ -5027,7 +5027,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "http://cis.unsa.ba/bs/erma-2/"
         },
         {
@@ -5035,7 +5035,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "http://cis.unsa.ba/bs/medunarodna-i-regionalna-sigurnost/"
         },
         {
@@ -5043,7 +5043,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "engleski",
+          "language": "Engleski",
           "dataSourceUrl": "http://cis.unsa.ba/bs/zastita-od-prirodnih-katastrofa/"
         },
         {

@@ -1,5 +1,8 @@
 import { fetchPublicResponse } from "../../../utils/fetchPublic";
-import { unifiedSearchResponseSchema } from "../../../schemas/university";
+import {
+  unifiedSearchResponseSchema,
+  universityListResponseSchema,
+} from "../../../schemas/university";
 
 import type { ApiError } from "../../../schemas/api";
 import type { UnifiedSearchResults } from "../../../schemas/university";
@@ -37,6 +40,38 @@ async function searchAll(
   throw new SearchFailedError(outcome.error);
 }
 
+async function browseUniversities(
+  country: string | undefined,
+  signal?: AbortSignal,
+): Promise<UnifiedSearchResults> {
+  const params = new URLSearchParams({ limit: "100" });
+  if (country) params.set("country", country);
+
+  const outcome = await fetchPublicResponse(
+    `/api/v1/universities?${params.toString()}`,
+    universityListResponseSchema,
+    signal,
+  );
+
+  if (outcome.ok) {
+    return {
+      universities: outcome.result.data,
+      faculties: [],
+      studyPrograms: [],
+      direct: {
+        universities: outcome.result.data.length,
+        faculties: 0,
+        studyPrograms: 0,
+      },
+    };
+  }
+
+  if (outcome.error) {
+    console.warn("Browse failed:", outcome.error.message);
+  }
+  throw new SearchFailedError(outcome.error);
+}
+
 class SearchFailedError extends Error {
   readonly serverError: ApiError | null;
 
@@ -51,4 +86,4 @@ class SearchFailedError extends Error {
   }
 }
 
-export { searchAll, SearchFailedError };
+export { searchAll, browseUniversities, SearchFailedError };

@@ -11,132 +11,9 @@
   "email": "rektorat@unist.hr",
   "faculties": [
     {
-      "name": "Fakultet građevinarstva, arhitekture i geodezije",
-      "city": "Split",
-      "website": "https://gradst.unist.hr",
-      "address": "Matice hrvatske 15, 21000 Split",
-      "phone": "+385 21 303 333",
-      "email": "dekan@gradst.hr",
-      "studyPrograms": [
-        {
-          "name": "Građevinarstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Arhitektura i urbanizam",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Geodezija i geoinformatika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Građevinarstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Arhitektura i urbanizam",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Građevinarstvo",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Arhitektura",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29"
-    },
-    {
-      "name": "Prirodoslovno-matematički fakultet",
-      "city": "Split",
-      "website": "https://www.pmfst.unist.hr",
-      "studyPrograms": [
-        {
-          "name": "Matematika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Fizika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Biologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Kemija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Matematika",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Fizika",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Biologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Ruđera Boškovića 33, 21000 Split",
-      "phone": "+385 21 619 222",
-      "email": "dekanat@pmfst.hr"
-    },
-    {
       "name": "Ekonomski fakultet",
-      "city": "Split",
       "website": "https://www.efst.unist.hr",
-      "address": "Cvite Fiskovića 5, 21000 Split",
-      "phone": "+385 21 430 600",
-      "email": "dekanat@efst.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Ekonomija",
@@ -153,6 +30,27 @@
           "language": "Hrvatski"
         },
         {
+          "name": "Turizam",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment malog poduzeća",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Turističko poslovanje",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
           "name": "Ekonomija",
           "cycle": "SECOND",
           "durationYears": 2,
@@ -167,235 +65,172 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Ekonomija",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29"
-    },
-    {
-      "name": "Pravni fakultet",
-      "city": "Split",
-      "website": "https://www.pravst.unist.hr",
-      "studyPrograms": [
-        {
-          "name": "Pravo",
-          "cycle": "INTEGRATED",
-          "durationYears": 5,
-          "ects": 300,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Pravo",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Domovinskog rata 8, 21000 Split",
-      "phone": "+385 21 393 500",
-      "email": "dekanat@pravst.hr"
-    },
-    {
-      "name": "Katolički bogoslovni fakultet",
-      "city": "Split",
-      "website": "https://www.kbf.unist.hr",
-      "address": "Zrinsko-frankopanska 19, 21001 Split",
-      "phone": "+385 21 308 300",
-      "email": "office@kbf-st.hr",
-      "studyPrograms": [
-        {
-          "name": "Teologija",
-          "cycle": "INTEGRATED",
-          "durationYears": 5,
-          "ects": 300,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Teologija",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29"
-    },
-    {
-      "name": "Kemijsko-tehnološki fakultet",
-      "city": "Split",
-      "website": "https://www.ktf.unist.hr",
-      "studyPrograms": [
-        {
-          "name": "Kemija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Kemijska tehnologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Prehrambena tehnologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Kemija",
+          "name": "Turizam i hotelijerstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Kemijska tehnologija",
-          "cycle": "SECOND",
+          "name": "Menadžment",
+          "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Prehrambena tehnologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Kemijsko inženjerstvo",
+          "name": "Ekonomija i poslovna ekonomija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Ruđera Boškovića 35, 21000 Split",
-      "phone": "+385 21 329 461",
-      "email": "dekanat@ktf-split.hr"
+      ]
     },
     {
-      "name": "Medicinski fakultet",
-      "city": "Split",
-      "website": "https://www.mefst.unist.hr",
+      "name": "Fakultet elektrotehnike, strojarstva i brodogradnje",
+      "website": "https://www.fesb.unist.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Medicina",
-          "cycle": "INTEGRATED",
-          "durationYears": 6,
-          "ects": 360,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Medicina",
-          "cycle": "INTEGRATED",
-          "durationYears": 6,
-          "ects": 360,
-          "language": "Engleski"
-        },
-        {
-          "name": "Dentalna medicina",
-          "cycle": "INTEGRATED",
-          "durationYears": 6,
-          "ects": 360,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Farmacija",
-          "cycle": "INTEGRATED",
-          "durationYears": 5,
-          "ects": 300,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Medicinske znanosti",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Šoltanska 2, 21000 Split",
-      "phone": "+385 21 557 918",
-      "email": "office@mefst.hr"
-    },
-    {
-      "name": "Kineziološki fakultet",
-      "city": "Split",
-      "website": "https://www.kifst.unist.hr",
-      "studyPrograms": [
-        {
-          "name": "Kineziologija",
+          "name": "Elektrotehnika i informacijska tehnologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Kineziologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Kineziologija",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Teslina 6, 21000 Split",
-      "phone": "+385 21 302 440",
-      "email": "dekanat@kifst.hr"
-    },
-    {
-      "name": "Pomorski fakultet",
-      "city": "Split",
-      "website": "https://www.pfst.unist.hr",
-      "studyPrograms": [
-        {
-          "name": "Pomorske znanosti",
+          "name": "Računarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Pomorske znanosti",
+          "name": "Brodogradnja",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Industrijsko inženjerstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika i informacijska tehnologija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodogradnja",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Automatika i sustavi",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektronika i računalno inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Komunikacijska i informacijska tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Industrijsko inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodogradnja",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika i informacijska tehnologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Ruđera Boškovića 37, 21000 Split",
-      "phone": "+385 21 619 399",
-      "email": "studentska.sluzba@pfst.hr"
+      ]
     },
     {
       "name": "Filozofski fakultet",
-      "city": "Split",
       "website": "https://www.ffst.unist.hr",
-      "address": "Sinjska 2, 21000 Split",
-      "phone": "+385 21 386 122",
-      "email": "dekanat@ffst.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Hrvatski jezik i književnost",
@@ -426,6 +261,13 @@
           "language": "Hrvatski"
         },
         {
+          "name": "Povijest umjetnosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
           "name": "Povijest",
           "cycle": "FIRST",
           "durationYears": 3,
@@ -447,18 +289,25 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Psihologija",
+          "name": "Pedagogija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Pedagogija",
+          "name": "Rani i predškolski odgoj i obrazovanje",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Psychology",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "English"
         },
         {
           "name": "Hrvatski jezik i književnost",
@@ -469,6 +318,27 @@
         },
         {
           "name": "Engleski jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Talijanski jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Njemački jezik i književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest umjetnosti",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
@@ -489,139 +359,1064 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Psihologija",
+          "name": "Sociologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Rani i predškolski odgoj i obrazovanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Psychology",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
+        },
+        {
+          "name": "Učiteljski studij",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Humanističke znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29"
+      ]
     },
     {
-      "name": "Fakultet elektrotehnike, strojarstva i brodogradnje",
-      "city": "Split",
-      "website": "https://www.fesb.unist.hr",
-      "address": "Ruđera Boškovića 32, 21000 Split",
-      "phone": "+385 21 305 777",
-      "email": "dekanat@fesb.hr",
+      "name": "Fakultet građevinarstva, arhitekture i geodezije",
+      "website": "https://gradst.unist.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Elektrotehnika i informacijska tehnologija",
+          "name": "Građevinarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Računarstvo",
+          "name": "Arhitektura i urbanizam",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Strojarstvo",
+          "name": "Geodezija i geoinformatika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Brodogradnja",
-          "cycle": "FIRST",
+          "name": "Građevinarstvo",
+          "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Elektrotehnika i informacijska tehnologija",
+          "name": "Građevinarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Računarstvo",
+          "name": "Arhitektura i urbanizam",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Strojarstvo",
+          "name": "Geodezija i geoinformatika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Brodogradnja",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Elektrotehnika i informacijska tehnologija",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Strojarstvo",
+          "name": "Građevinarstvo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29"
+      ]
+    },
+    {
+      "name": "Katolički bogoslovni fakultet",
+      "website": "https://www.kbf.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Filozofsko-teološki studij",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Teološko-katehetski studij",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Teološko-katehetski studij",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Teološko-religijske znanosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Teološko-religijske znanosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kršćanstvo i suvremena kultura",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest teologije i kršćanskih institucija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Kemijsko-tehnološki fakultet",
+      "website": "https://www.ktf.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Kemijska tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kemija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kemijska tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Prehrambena tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kemija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Chemical and Environmental Technology",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
+        },
+        {
+          "name": "Kemijsko inženjerstvo u razvoju materijala i zaštiti okoliša",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Kineziološki fakultet",
+      "website": "https://web.kifst.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Kineziologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kineziologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kineziologija (3 godine)",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kineziologija (2 godine)",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "International Basketball Coaching and Management",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
+        },
+        {
+          "name": "Kineziologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Medicinski fakultet",
+      "website": "https://mefst.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Medical Studies in English",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "English"
+        },
+        {
+          "name": "Medicina utemeljena na dokazima",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biologija novotvorina",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Translacijska istraživanja u biomedicini",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Pomorski fakultet",
+      "website": "https://www.pfst.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Pomorska nautika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodostrojarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pomorske elektrotehničke i informatičke tehnologije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pomorski menadžment",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pomorske tehnologije jahta i marina",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pomorska nautika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodostrojarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pomorske elektrotehničke i informatičke tehnologije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pomorski menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Tehnologije u pomorstvu",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "website": "https://www.pravst.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Pravo",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Upravni studij (3 godine)",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Upravni studij (2 godine)",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pravne znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Prirodoslovno-matematički fakultet",
+      "website": "https://www.pmfst.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Matematika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Matematika i informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informatika i tehnika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biologija i kemija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Matematika i informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Matematika i fizika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informatika i tehnika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biologija i kemija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Molekularna biologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Podatkovna znanost i inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Istraživanje u edukaciji u području prirodnih i tehničkih znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biofizika",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
     },
     {
       "name": "Umjetnička akademija",
-      "city": "Split",
       "website": "https://www.umas.unist.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Likovna umjetnost",
+          "name": "Slikarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Glazbena umjetnost",
+          "name": "Kiparstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Likovna umjetnost",
+          "name": "Likovna kultura i likovna umjetnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filmska i medijska umjetnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Dizajn vizualnih komunikacija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Slikarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Glazbena umjetnost",
+          "name": "Kiparstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Likovna kultura i likovna umjetnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Film, medijska umjetnost i animacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Dizajn vizualnih komunikacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Konzervacija-restauracija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kompozicija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glazbena teorija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glazbena pedagogija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glasovir",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Solo pjevanje",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Violina",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Viola",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Violončelo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Gitara",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Flauta",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Klarinet",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Saksofon",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kompozicija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glazbena teorija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glazbena pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Glasovir",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Solo pjevanje",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Violina",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Viola",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Violončelo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Gitara",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Flauta",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Klarinet",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Saksofon",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Gluma",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Gluma",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet znanosti o moru",
+      "website": "https://more.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Biologija i tehnologija mora",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Morsko ribarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekologija i zaštita mora",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Marine Fishery",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
+        },
+        {
+          "name": "Primijenjene znanosti o moru",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Sveučilišni odjel za stručne studije",
+      "website": "https://www.oss.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Elektroenergetika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektronika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Konstrukcijsko strojarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računovodstvo i financije (3 godine)",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment trgovine i turizma (3 godine)",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primijenjeno računarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računovodstvo i financije (2 godine)",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment trgovine i turizma (2 godine)",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za forenzičke znanosti",
+      "website": "https://forenzika.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Forenzika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Forenzika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Zagrebačka 3, 21000 Split",
-      "phone": "+385 21 360 179",
-      "email": "office@umas.hr"
+      ]
+    },
+    {
+      "name": "Fakultet zdravstvenih znanosti",
+      "website": "https://fzz.unist.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primaljstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Radiološka tehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Medicinsko laboratorijska dijagnostika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Radiološka tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "dataSourceUrl": "https://www.unist.hr",
-  "lastModified": "2026-10-29",
-  "accreditationFrom": "2019-01-01",
-  "accreditationTo": "2024-01-01"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }

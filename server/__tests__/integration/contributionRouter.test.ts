@@ -317,6 +317,55 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     );
   });
 
+  test("rejects a BIH university CREATE without entity", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Entity Test BIH",
+        city: "Sarajevo",
+        country: "BIH",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expect(response.status).toBe(400);
+  });
+
+  test("rejects a non-BIH university CREATE with entity", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Entity Test SRB",
+        city: "Beograd",
+        country: "SRB",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expect(response.status).toBe(400);
+  });
+
+  test("accepts a non-BIH university CREATE without entity", async () => {
+    const { agent } = await createLoggedInAgent();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      data: {
+        name: "Entity Test SRB OK",
+        city: "Beograd",
+        country: "SRB",
+        ownership: "PUBLIC",
+      },
+    });
+
+    expect(response.status).toBe(201);
+  });
+
   test("responds with status 404 when a child create parent does not exist", async () => {
     const { agent } = await createLoggedInAgent();
 

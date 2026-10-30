@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { parseRequest } from "./parseRequest.js";
+import { COUNTRIES, ENTITIES } from "../search/aliases.js";
 
 const positiveIdParam = z
   .string()
@@ -28,6 +29,8 @@ function getTrackById(input: unknown) {
 const listQuerySchema = z.object({
   page: z.coerce.number().int().min(1).default(1),
   limit: z.coerce.number().int().min(1).max(100).default(50),
+  country: z.enum(COUNTRIES).optional(),
+  entity: z.enum(ENTITIES).optional(),
 });
 
 function listQuery(input: unknown) {
@@ -63,8 +66,8 @@ const searchQuerySchema = z.object({
       message: "Search term must not exceed 100 characters.",
     })
     .optional(),
-  country: z.enum(["BIH", "SRB", "HRV", "MNE"]).optional(),
-  entity: z.enum(["FBIH", "RS", "BD"]).optional(),
+  country: z.enum(COUNTRIES).optional(),
+  entity: z.enum(ENTITIES).optional(),
   ownership: z.enum(["PUBLIC", "PRIVATE"]).optional(),
   cycle: z
     .union([studyCycleEnum, z.array(studyCycleEnum).min(1)])
@@ -76,16 +79,19 @@ const searchQuerySchema = z.object({
     .transform(toArray),
 });
 
-// a bare query would return the entire dataset in one response
+// type and cycle alone don't meaningfully narrow the result set (type picks
+// which sections to return, cycle only filters programs), so the guard
+// requires a search term or a filter that actually restricts the data
 const guardedSearchQuerySchema = searchQuerySchema.refine(
   (query) =>
     query.searchTerm !== undefined ||
     query.country !== undefined ||
     query.entity !== undefined ||
-    query.ownership !== undefined ||
-    query.cycle !== undefined ||
-    query.type !== undefined,
-  { message: "Provide a search term or at least one filter." },
+    query.ownership !== undefined,
+  {
+    message:
+      "Provide a search term or at least one filter (country, entity, ownership).",
+  },
 );
 
 function searchQuery(input: unknown) {

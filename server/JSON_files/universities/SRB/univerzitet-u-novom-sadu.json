@@ -261,7 +261,6 @@
         }
       ],
       "website": "https://www.akademija.uns.ac.rs",
-      "lastModified": "2026-10-29",
       "address": "Đure Jakšića 7, 21000 Novi Sad",
       "phone": "+381 21 422 176",
       "email": "aofarts@uns.ac.rs"
@@ -442,8 +441,7 @@
       "website": "https://polj.uns.ac.rs",
       "address": "Trg Dositeja Obradovića 8, 21102 Novi Sad",
       "phone": "+381 21 485 3500",
-      "email": "dean@polj.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "email": "dean@polj.uns.ac.rs"
     },
     {
       "name": "Građevinski fakultet Subotica",
@@ -486,7 +484,6 @@
         }
       ],
       "website": "https://www.gf.uns.ac.rs",
-      "lastModified": "2026-10-29",
       "address": "Kozaračka 2a, 24000 Subotica",
       "phone": "+381 24 554 300",
       "email": "dekanat@gf.uns.ac.rs"
@@ -583,8 +580,7 @@
       "website": "https://www.ef.uns.ac.rs",
       "address": "Segedinski put 9-11, 24000 Subotica",
       "phone": "+381 24 628 000",
-      "email": "dekanat@ef.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "email": "dekanat@ef.uns.ac.rs"
     },
     {
       "name": "Pedagoški fakultet u Somboru",
@@ -662,7 +658,6 @@
         }
       ],
       "website": "https://www.pef.uns.ac.rs",
-      "lastModified": "2026-10-29",
       "address": "Podgorička 4, 25000 Sombor",
       "phone": "+381 25 22 030",
       "email": "pefsombor@uns.ac.rs"
@@ -717,8 +712,7 @@
       "website": "https://www.pf.uns.ac.rs",
       "address": "Trg Dositeja Obradovića 1, 21102 Novi Sad",
       "phone": "+381 21 6350 023",
-      "email": "dekanat@pf.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "email": "dekanat@pf.uns.ac.rs"
     },
     {
       "name": "Medicinski fakultet",
@@ -812,8 +806,7 @@
       "website": "https://www.mf.uns.ac.rs",
       "address": "Hajduk Veljkova 3, 21137 Novi Sad",
       "phone": "+381 21 420 677",
-      "email": "dekanmf@uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "email": "dekanmf@uns.ac.rs"
     },
     {
       "name": "Filozofski fakultet",
@@ -1033,8 +1026,7 @@
       "website": "https://www.ff.uns.ac.rs",
       "address": "Dr Zorana Đinđića 2, 21102 Novi Sad",
       "phone": "+381 21 485 3900",
-      "email": "dekanat@ff.uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "email": "dekanat@ff.uns.ac.rs"
     },
     {
       "name": "Prirodno-matematički fakultet",
@@ -1427,7 +1419,6 @@
         }
       ],
       "website": "https://www.pmf.uns.ac.rs",
-      "lastModified": "2026-10-29",
       "address": "Trg Dositeja Obradovića 3, 21000 Novi Sad",
       "phone": "+381 21 455 630",
       "email": "dekanpmf@uns.ac.rs"
@@ -1466,7 +1457,6 @@
         }
       ],
       "website": "https://www.fsfv.uns.ac.rs",
-      "lastModified": "2026-10-29",
       "address": "Lovćenska 16, 21000 Novi Sad",
       "phone": "+381 21 450 188",
       "email": "fsfvns@uns.ac.rs"
@@ -2081,8 +2071,7 @@
       "website": "https://www.ftn.uns.ac.rs",
       "address": "Trg Dositeja Obradovića 6, 21102 Novi Sad",
       "phone": "+381 21 485 2055",
-      "email": "ftndean@uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "email": "ftndean@uns.ac.rs"
     },
     {
       "name": "Tehnološki fakultet",
@@ -2197,8 +2186,7 @@
       "website": "https://www.tf.uns.ac.rs",
       "address": "Bulevar Cara Lazara 1, 21102 Novi Sad",
       "phone": "+381 21 485 3600",
-      "email": "deantf@uns.ac.rs",
-      "lastModified": "2026-10-29"
+      "email": "deantf@uns.ac.rs"
     },
     {
       "name": "Učiteljski fakultet na mađarskom nastavnom jeziku",
@@ -2248,7 +2236,6 @@
         }
       ],
       "website": "https://www.magister.uns.ac.rs",
-      "lastModified": "2026-10-29",
       "address": "Štrosmajerova 11, 24000 Subotica",
       "phone": "+381 24 624 444",
       "email": "magister@magister.uns.ac.rs"
@@ -2364,15 +2351,14 @@
         }
       ],
       "website": "https://www.tfzr.uns.ac.rs",
-      "lastModified": "2026-10-29",
       "address": "Đure Đakovića bb, 23000 Zrenjanin",
       "phone": "+381 23 550 515",
       "email": "tfzr@tfzr.uns.ac.rs"
     }
   ],
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.uns.ac.rs",
-  "accreditationFrom": "2021-01-01",
-  "accreditationTo": "2028-01-01"
+  "accreditationFrom": "2021-06-25",
+  "accreditationTo": "2028-06-25",
+  "dataSourceUrl": null,
+  "lastModified": null
 }

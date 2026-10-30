@@ -2,7 +2,11 @@ import { useState, use, useEffect, useRef, useCallback } from "react";
 import { useSearchParams } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
-import { searchAll, SearchFailedError } from "./utils/search";
+import {
+  searchAll,
+  browseUniversities,
+  SearchFailedError,
+} from "./utils/search";
 import { notificationMessage } from "../../utils/apiError";
 
 import { countrySchema } from "../../schemas/domain";
@@ -52,21 +56,20 @@ function useUnifiedSearch() {
   }
 
   const executeSearch = useCallback(
-    async (term: string | undefined, country?: string, type?: string[]) => {
+    async (term: string | undefined, country?: string) => {
       abortRef.current?.abort();
       const controller = new AbortController();
       abortRef.current = controller;
 
       try {
         setLoading(true);
-        const results = await searchAll(
-          term,
-          {
-            country: country ?? undefined,
-            type: type?.length ? type : undefined,
-          },
-          controller.signal,
-        );
+        const results = term
+          ? await searchAll(
+              term,
+              { country: country ?? undefined },
+              controller.signal,
+            )
+          : await browseUniversities(country, controller.signal);
         setView({ kind: "search", results, hadTerm: term !== undefined });
       } catch (error) {
         if (controller.signal.aborted) return;
@@ -88,10 +91,8 @@ function useUnifiedSearch() {
   const triggerSearch = useCallback(
     (term: string, country: string, browse: boolean) => {
       const trimmed = term.trim();
-      const hasText = trimmed.length > 0;
+      const hasText = trimmed.length >= 2;
       const hasCountry = country !== "";
-
-      if (hasText && trimmed.length < 2) return;
 
       if (!hasText && !hasCountry && !browse) {
         // eslint-disable-next-line react-x/set-state-in-effect -- reached synchronously from the params effect, whose purpose is syncing URL params into view state
@@ -99,11 +100,7 @@ function useUnifiedSearch() {
         return;
       }
 
-      void executeSearch(
-        hasText ? trimmed : undefined,
-        country || undefined,
-        browse && !hasText ? ["university"] : undefined,
-      );
+      void executeSearch(hasText ? trimmed : undefined, country || undefined);
     },
     [executeSearch],
   );

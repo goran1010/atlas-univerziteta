@@ -1,18 +1,198 @@
 {
   "name": "Sveučilište Sjever",
-  "acronym": "UNIN",
   "city": "Koprivnica",
   "country": "HRV",
   "ownership": "PUBLIC",
   "foundedYear": "2015",
   "website": "https://www.unin.hr",
   "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
-  "phone": "+385 48 499 923",
+  "phone": "+385 48 499 900",
   "email": "info@unin.hr",
+  "accreditationFrom": null,
+  "accreditationTo": null,
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "dataSourceUrl": "https://www.unin.hr/popis-studijskih-programa/",
+  "lastModified": null,
   "faculties": [
     {
-      "name": "Odjel za medije i komunikaciju",
-      "city": "Koprivnica",
+      "name": "Odjel za elektrotehniku",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Elektrotehnika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za multimediju",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Multimedija, oblikovanje i primjena",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Multimedija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za strojarstvo",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Proizvodno strojarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za logistiku i održivu mobilnost",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Logistika i mobilnost",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Održiva mobilnost i logistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za graditeljstvo",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Graditeljstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Graditeljstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za sestrinstvo",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Sestrinstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sestrinstvo - menadžment u sestrinstvu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za mehatroniku",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Mehatronika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za fizioterapiju",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Fizioterapija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za geodeziju i geomatiku",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Geodezija i geomatika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za glazbu",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Glazba i mediji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za medijski dizajn",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Medijski dizajn",
@@ -22,25 +202,42 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Novinarstvo i odnosi s javnostima",
+          "name": "Medijski dizajn",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za komunikologiju, medije i novinarstvo",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Komunikologija, mediji i novinarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Novinarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://medkom.unin.hr",
-      "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
-      "phone": "+385 48 499 909",
-      "email": "referada.kc1@unin.hr"
+      ]
     },
     {
-      "name": "Odjel za poslovnu ekonomiju i menadžment",
-      "city": "Koprivnica",
+      "name": "Odjel za poslovnu ekonomiju",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Poslovna ekonomija",
+          "name": "Poslovanje i menadžment",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
@@ -52,17 +249,34 @@
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Međunarodni ekonomski odnosi i menadžment",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://pem.unin.hr",
-      "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
-      "phone": "+385 48 499 909",
-      "email": "referada.kc1@unin.hr"
+      ]
+    },
+    {
+      "name": "Odjel za odnose s javnostima",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Odnosi s javnostima",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
     },
     {
       "name": "Odjel za prehrambenu tehnologiju",
-      "city": "Koprivnica",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Prehrambena tehnologija",
@@ -71,197 +285,56 @@
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://prehrana.unin.hr",
-      "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
-      "phone": "+385 48 499 909",
-      "email": "referada.kc1@unin.hr"
+      ]
     },
     {
-      "name": "Odjel za logistiku i održivu mobilnost",
-      "city": "Koprivnica",
+      "name": "Odjel za ambalažu, recikliranje i zaštitu okoliša",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Logistika i održiva mobilnost",
+          "name": "Zaštita okoliša, recikliranje i ambalaža",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Ambalaža, recikliranje i zaštita okoliša",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://logistika.unin.hr",
-      "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
-      "phone": "+385 48 499 909",
-      "email": "referada.kc1@unin.hr"
+      ]
     },
     {
       "name": "Odjel za računarstvo i informatiku",
-      "city": "Koprivnica",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Računarstvo",
+          "name": "Računarstvo i informatika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://racunarstvo.unin.hr",
-      "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
-      "phone": "+385 48 499 909",
-      "email": "referada.kc1@unin.hr"
+      ]
     },
     {
-      "name": "Odjel za umjetničke studije",
-      "city": "Koprivnica",
+      "name": "Odjel za obrazovne i komunikacijske znanosti",
+      "website": "https://www.unin.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Medijske umjetnosti",
-          "cycle": "FIRST",
+          "name": "Obrazovne i komunikacijske znanosti",
+          "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://umjetnost.unin.hr",
-      "address": "Trg dr. Žarka Dolinara 1, 48000 Koprivnica",
-      "phone": "+385 48 499 909",
-      "email": "referada.kc1@unin.hr"
-    },
-    {
-      "name": "Odjel za elektrotehniku",
-      "city": "Varaždin",
-      "studyPrograms": [
-        {
-          "name": "Elektrotehnika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://elektrotehnika.unin.hr",
-      "address": "104. brigade 1, 42000 Varaždin",
-      "phone": "+385 42 493 312",
-      "email": "referada.vz@unin.hr"
-    },
-    {
-      "name": "Odjel za graditeljstvo",
-      "city": "Varaždin",
-      "studyPrograms": [
-        {
-          "name": "Graditeljstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://graditeljstvo.unin.hr",
-      "address": "104. brigade 1, 42000 Varaždin",
-      "phone": "+385 42 493 312",
-      "email": "referada.vz@unin.hr"
-    },
-    {
-      "name": "Odjel za strojarstvo",
-      "city": "Varaždin",
-      "studyPrograms": [
-        {
-          "name": "Strojarstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://strojarstvo.unin.hr",
-      "address": "104. brigade 1, 42000 Varaždin",
-      "phone": "+385 42 493 312",
-      "email": "referada.vz@unin.hr"
-    },
-    {
-      "name": "Odjel za mehatroniku",
-      "city": "Varaždin",
-      "studyPrograms": [
-        {
-          "name": "Mehatronika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://mehatronika.unin.hr",
-      "address": "104. brigade 1, 42000 Varaždin",
-      "phone": "+385 42 493 312",
-      "email": "referada.vz@unin.hr"
-    },
-    {
-      "name": "Odjel za multimediju",
-      "city": "Varaždin",
-      "studyPrograms": [
-        {
-          "name": "Multimedija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://multimedija.unin.hr",
-      "address": "104. brigade 1, 42000 Varaždin",
-      "phone": "+385 42 493 312",
-      "email": "referada.vz@unin.hr"
-    },
-    {
-      "name": "Odjel za sestrinstvo",
-      "city": "Varaždin",
-      "studyPrograms": [
-        {
-          "name": "Sestrinstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://sestrinstvo.unin.hr",
-      "address": "104. brigade 1, 42000 Varaždin",
-      "phone": "+385 42 493 312",
-      "email": "referada.vz@unin.hr"
-    },
-    {
-      "name": "Odjel za fizioterapiju",
-      "city": "Varaždin",
-      "studyPrograms": [
-        {
-          "name": "Fizioterapija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://fizioterapija.unin.hr",
-      "address": "104. brigade 1, 42000 Varaždin",
-      "phone": "+385 42 493 312",
-      "email": "referada.vz@unin.hr"
+      ]
     }
-  ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.unin.hr",
-  "accreditationFrom": "2019-01-01",
-  "accreditationTo": "2024-01-01"
+  ]
 }

@@ -13,12 +13,12 @@ function useNotification() {
 
   const addNotification = useCallback(
     ({ id, type, message, duration, persistent = false }: Notification) => {
-      const resolvedDuration =
-        duration !== undefined
-          ? duration
-          : type === "error" || type === "warning"
-            ? ALERT_DURATION
-            : DEFAULT_DURATION;
+      let resolvedDuration: number | null = DEFAULT_DURATION;
+      if (duration !== undefined) {
+        resolvedDuration = duration;
+      } else if (type === "error" || type === "warning") {
+        resolvedDuration = ALERT_DURATION;
+      }
       const notificationId = id ?? crypto.randomUUID();
       const newNotification = {
         id: notificationId,

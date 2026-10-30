@@ -43,7 +43,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -68,7 +67,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -93,7 +91,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -111,7 +108,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -136,7 +132,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -162,7 +157,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs"
@@ -179,7 +173,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -197,7 +190,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Cara Dušana 62-64, 11000 Beograd",
       "phone": "+381 11 2180 271",
       "email": "info@unionnikolatesla.edu.rs",
@@ -215,16 +207,81 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Jurija Gagarina 149a, 11070 Beograd",
       "phone": "+381 11 3131 246",
       "email": "info@fpsp.edu.rs",
       "website": "https://unt.edu.rs"
+    },
+    {
+      "name": "Fakultet za informatiku i računarstvo",
+      "city": "Beograd",
+      "website": "https://unt.edu.rs",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Informatika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za diplomatiju i bezbednost",
+      "city": "Beograd",
+      "website": "https://unt.edu.rs",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Diplomatija i bezbednost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Diplomatija i bezbednost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet primenjenih nauka",
+      "city": "Niš",
+      "website": "https://unt.edu.rs",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ]
     }
   ],
-  "dataSourceUrl": "https://unt.edu.rs",
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29",
-  "accreditationFrom": "2021-01-01",
-  "accreditationTo": "2028-01-01"
+  "accreditationFrom": "2021-03-01",
+  "accreditationTo": "2028-03-01",
+  "dataSourceUrl": null,
+  "lastModified": null
 }

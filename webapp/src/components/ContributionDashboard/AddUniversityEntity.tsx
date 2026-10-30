@@ -24,11 +24,15 @@ import {
   buildStudyProgramPayload,
   buildTrackPayload,
 } from "./utils/treeDrafts";
+import { z } from "zod";
 import {
   facultyTreeDataSchema,
   studyProgramTreeDataSchema,
   universityTreeDataSchema,
 } from "../../schemas/contribution";
+import { mapZodIssues } from "./utils/validateTreePayload";
+import { ValidationIssueList } from "./ValidationIssueList";
+import type { ValidationIssue } from "./utils/validateTreePayload";
 import type { TargetType, TypeOfChange } from "../../schemas/domain";
 import type { ContributionFormDraft, ContributionFormState } from "./types";
 import type {
@@ -71,9 +75,7 @@ function AddUniversityEntity({
   const [childFaculties, setChildFaculties] = useState<FacultyDraft[]>([]);
   const [childPrograms, setChildPrograms] = useState<StudyProgramDraft[]>([]);
   const [childTracks, setChildTracks] = useState<TrackDraft[]>([]);
-  const [treeIssues, setTreeIssues] = useState<
-    { path: string; message: string }[]
-  >([]);
+  const [treeIssues, setTreeIssues] = useState<ValidationIssue[]>([]);
   // guards prefill responses against a target re-picked mid-flight
   const targetIdRef = useRef("");
 
@@ -142,55 +144,32 @@ function AddUniversityEntity({
   function buildTreeSubmission(): ContributionFormDraft | null {
     if (typeOfChange !== "CREATE") return data;
 
+    function validateTree(schema: z.ZodType, payload: unknown) {
+      const result = schema.safeParse(payload);
+      if (result.success) return result.data as ContributionFormDraft;
+      setTreeIssues(mapZodIssues(result.error));
+      return null;
+    }
+
     if (targetType === "UNIVERSITY" && childFaculties.length > 0) {
-      const result = universityTreeDataSchema.safeParse({
+      return validateTree(universityTreeDataSchema, {
         ...data,
         faculties: childFaculties.map(buildFacultyPayload),
       });
-      if (!result.success) {
-        setTreeIssues(
-          result.error.issues.map((issue) => ({
-            path: issue.path.map(String).join("."),
-            message: issue.message,
-          })),
-        );
-        return null;
-      }
-      return result.data;
     }
 
     if (targetType === "FACULTY" && childPrograms.length > 0) {
-      const result = facultyTreeDataSchema.safeParse({
+      return validateTree(facultyTreeDataSchema, {
         ...data,
         studyPrograms: childPrograms.map(buildStudyProgramPayload),
       });
-      if (!result.success) {
-        setTreeIssues(
-          result.error.issues.map((issue) => ({
-            path: issue.path.map(String).join("."),
-            message: issue.message,
-          })),
-        );
-        return null;
-      }
-      return result.data;
     }
 
     if (targetType === "STUDY_PROGRAM" && childTracks.length > 0) {
-      const result = studyProgramTreeDataSchema.safeParse({
+      return validateTree(studyProgramTreeDataSchema, {
         ...data,
         tracks: childTracks.map(buildTrackPayload),
       });
-      if (!result.success) {
-        setTreeIssues(
-          result.error.issues.map((issue) => ({
-            path: issue.path.map(String).join("."),
-            message: issue.message,
-          })),
-        );
-        return null;
-      }
-      return result.data;
     }
 
     return data;
@@ -360,27 +339,7 @@ function AddUniversityEntity({
           }}
         />
       )}
-      {treeIssues.length > 0 && (
-        <div
-          role="alert"
-          className="flex flex-col gap-1 rounded-lg border border-red-300 dark:border-red-800 bg-red-50 dark:bg-red-900/20 p-2 sm:p-3"
-        >
-          <p className="text-xs font-semibold text-red-800 dark:text-red-300">
-            {t("contribution.tree.validationErrors")}
-          </p>
-          <ul className="text-xs font-mono text-red-700 dark:text-red-300 flex flex-col gap-0.5">
-            {treeIssues.map((issue, index) => (
-              <li
-                key={`${issue.path}-${index.toString()}`}
-                className="break-all"
-              >
-                {issue.path ? `${issue.path}: ` : ""}
-                {issue.message}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <ValidationIssueList issues={treeIssues} />
       <div className="flex flex-col gap-1">
         <Label htmlFor="contributionComment">{t("contribution.comment")}</Label>
         <Textarea
@@ -397,11 +356,9 @@ function AddUniversityEntity({
       <Button
         type="submit"
         variant={
-          typeOfChange === "CREATE"
-            ? "success"
-            : typeOfChange === "UPDATE"
-              ? "update"
-              : "danger"
+          ({ CREATE: "success", UPDATE: "update", DELETE: "danger" } as const)[
+            typeOfChange
+          ]
         }
         loading={loading}
         className="w-full max-w-xs self-center"

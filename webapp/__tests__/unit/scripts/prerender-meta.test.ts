@@ -2,6 +2,7 @@ import {
   escapeHtml,
   renderRouteHtml,
   addSitemapEntries,
+  buildUniversityDescription,
 } from "../../../scripts/prerender-meta-lib.ts";
 
 // mirrors the tag shapes in index.html, including multi-line attributes
@@ -114,6 +115,32 @@ describe("renderRouteHtml", () => {
     expect(withImage).not.toContain("og-image-home.png");
     expect(countOccurrences(withImage, "og-image-search.png")).toBe(2);
     expect(countOccurrences(withoutImage, "og-image-home.png")).toBe(2);
+  });
+});
+
+describe("buildUniversityDescription", () => {
+  test("includes entity for BIH universities", () => {
+    expect(
+      buildUniversityDescription(
+        "Univerzitet u Sarajevu",
+        "Sarajevo",
+        "Bosnia and Herzegovina",
+        "Federation of B&H",
+      ),
+    ).toBe(
+      "Univerzitet u Sarajevu - Sarajevo, Federation of B&H, Bosnia and Herzegovina",
+    );
+  });
+
+  test("omits entity for non-BIH universities", () => {
+    expect(
+      buildUniversityDescription(
+        "Sveučilište u Zagrebu",
+        "Zagreb",
+        "Croatia",
+        null,
+      ),
+    ).toBe("Sveučilište u Zagrebu - Zagreb, Croatia");
   });
 });
 

@@ -2,7 +2,11 @@
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 import { parseEnv } from "node:util";
-import { renderRouteHtml, addSitemapEntries } from "./prerender-meta-lib.ts";
+import {
+  renderRouteHtml,
+  addSitemapEntries,
+  buildUniversityDescription,
+} from "./prerender-meta-lib.ts";
 import type { MetaRoute } from "./prerender-meta-lib.ts";
 
 const distDir = join(import.meta.dirname, "..", "dist");
@@ -168,7 +172,8 @@ interface UniversityListItem {
   id: number;
   name: string;
   city: string;
-  entity: string;
+  country: string;
+  entity: string | null;
 }
 
 interface FacultyListItem {
@@ -194,11 +199,21 @@ if (!apiUrl) {
 
     for (const university of universities) {
       const url = `/universities/${String(university.id)}`;
-      const entityLabel = t(`universitiesPage.entities.${university.entity}`);
+      const countryLabel = t(
+        `universitiesPage.countries.${university.country}`,
+      );
+      const entityLabel = university.entity
+        ? t(`universitiesPage.entities.${university.entity}`)
+        : null;
       renderRoute({
         path: url.slice(1),
         title: `${university.name} | ${APP_NAME}`,
-        description: `${university.name} - ${university.city}, ${entityLabel}`,
+        description: buildUniversityDescription(
+          university.name,
+          university.city,
+          countryLabel,
+          entityLabel,
+        ),
         url,
       });
       entityUrls.push(url);

@@ -15,8 +15,8 @@
     "about": "About"
   },
   "meta": {
-    "home": "Explore universities, faculties, study programs, and tracks across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro with a free public dataset, searchable web interface, and REST API.",
-    "universities": "Explore universities and study programs across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro.",
+    "home": "Explore universities, faculties, study programs, and tracks with a free public dataset, searchable web interface, and REST API.",
+    "universities": "Explore universities and study programs.",
     "api": "REST API documentation for Atlas Univerziteta. Access universities and study programs data programmatically.",
     "login": "Log in to your Atlas Univerziteta account to contribute data and track your submissions.",
     "signup": "Create a free Atlas Univerziteta account to start contributing university data."
@@ -123,7 +123,7 @@
   },
   "home": {
     "heading": "Universities and Study Programs",
-    "intro": "A free, open-source project building a structured, searchable database of public higher-education data. Focused on universities - institutions, faculties, study programs, and tracks - across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro.",
+    "intro": "A free, open-source project building a structured, searchable database of public higher-education data. Focused on universities - institutions, faculties, study programs, and tracks.",
     "summary": "Use Atlas Univerziteta to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
     "exploreDescription": "Browse universities across multiple countries. View faculties, study programs, and tracks. Search by name, city, acronym, country, entity, ownership, study cycle, and more.",
@@ -158,17 +158,17 @@
     "endpointsData": {
       "apiStatus": "Check API status.",
       "apiV1Status": "Check API v1 status.",
-      "getAllUniversities": "Retrieve all universities, ordered by ownership then name. Includes a faculty count per university.",
+      "getAllUniversities": "Retrieve all universities, ordered by country, ownership, then name. Supports country and entity query filters. Includes a faculty count per university.",
       "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks). dataSourceUrl on each unit is the URL its initial data was obtained from.",
-      "search": "Search across universities, faculties, and study programs (track names match through their study program). Optional search term (min 2 characters) and filters; with neither, returns a full listing of everything. Matches name, city, acronym, ECTS/duration, and related unit names (case-insensitive, diacritic-insensitive).",
-      "searchTermParam": "Text to search for (2-100 characters). Optional if at least one filter is provided.",
+      "search": "Search across universities, faculties, and study programs (track names match through their study program). Requires a search term (min 2 characters) or at least one narrowing filter (country, entity, or ownership). Matches name, city, acronym, ECTS/duration, and related unit names (case-insensitive, diacritic-insensitive).",
+      "searchTermParam": "Text to search for (2-100 characters). Optional if country, entity, or ownership is provided.",
       "pageParam": "Page number, starting at 1 (default 1).",
       "limitParam": "Items per page, 1-100 (default 50).",
-      "getAllFaculties": "Retrieve all faculties, ordered by university name then faculty name. Includes the parent university.",
+      "getAllFaculties": "Retrieve all faculties, ordered by university name then faculty name. Supports country and entity query filters. Includes the parent university.",
       "getFacultyById": "Retrieve a faculty by ID with nested study programs and tracks, plus the parent university.",
-      "getAllStudyPrograms": "Retrieve all study programs, ordered by cycle then name. Includes the parent faculty and university.",
+      "getAllStudyPrograms": "Retrieve all study programs, ordered by cycle then name. Supports country and entity query filters. Includes the parent faculty and university.",
       "getStudyProgramById": "Retrieve a study program by ID with its tracks, parent faculty, and university.",
-      "getAllTracks": "Retrieve all tracks, ordered by study program name then track name. Includes the full parent chain.",
+      "getAllTracks": "Retrieve all tracks, ordered by study program name then track name. Supports country and entity query filters. Includes the full parent chain.",
       "getTrackById": "Retrieve a track by ID with its parent study program, faculty, and university.",
       "countryParam": "Filter by country: BIH, SRB, HRV, or MNE.",
       "entityParam": "Filter by entity (Bosnia only): FBIH, RS, or BD.",
@@ -250,12 +250,6 @@
       "INTEGRATED": "INTEGRATED - Bachelor+Master",
       "VOCATIONAL": "VOCATIONAL",
       "SPECIALIST": "SPECIALIST - Specialist Study"
-    },
-    "countries": {
-      "BIH": "Bosnia and Herzegovina",
-      "SRB": "Serbia",
-      "HRV": "Croatia",
-      "MNE": "Montenegro"
     },
     "entities": {
       "FBIH": "FBIH - Federation of B&H",
@@ -388,7 +382,7 @@
   },
   "universitiesPage": {
     "title": "Find programs and universities",
-    "searchIntro": "Search universities, faculties, study programs, and tracks across Bosnia and Herzegovina, Serbia, Croatia, and Montenegro. Try a program name, city, country, study cycle, ECTS, or keywords like \"public\" or \"master\".",
+    "searchIntro": "Search universities, faculties, study programs, and tracks. Try a program name, city, country, study cycle, ECTS, or keywords like \"public\" or \"master\".",
     "browseAll": "Browse all universities",
     "search": "Search",
     "searchAllPlaceholder": "e.g. informatika, medicina Srbija, master 120 ECTS…",

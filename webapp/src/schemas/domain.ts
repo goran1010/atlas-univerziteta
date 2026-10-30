@@ -32,7 +32,12 @@ export type StudyCycle = z.infer<typeof studyCycleSchema>;
 export type TypeOfChange = "CREATE" | "UPDATE" | "DELETE";
 export type SearchType = z.infer<typeof searchTypeSchema>;
 
+const COUNTRIES = countrySchema.options;
+const ENTITIES = entitySchema.options;
+
 export {
+  COUNTRIES,
+  ENTITIES,
   countrySchema,
   durationYearsSchema,
   ectsSchema,

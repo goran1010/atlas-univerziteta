@@ -51,7 +51,6 @@ function App() {
         <>
           <ScrollRestoration />
 
-          {/* A11y: Accessibility features */}
           <RouteAnnouncer />
           <SkipNavbarLink t={t} />
 

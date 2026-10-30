@@ -1,19 +1,23 @@
 {
   "name": "Univerzitet Metropolitan",
-  "acronym": null,
   "city": "Beograd",
   "country": "SRB",
   "ownership": "PRIVATE",
-  "foundedYear": "2010",
+  "foundedYear": "2005",
   "website": "https://www.metropolitan.ac.rs",
   "address": "Tadeuša Košćuška 63, 11158 Beograd",
   "phone": "+381 11 2030 885",
   "email": "info@metropolitan.ac.rs",
+  "accreditationFrom": "2025-01-21",
+  "accreditationTo": "2032-01-21",
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "dataSourceUrl": "https://www.metropolitan.ac.rs/osnovne-studije/",
+  "lastModified": null,
   "faculties": [
     {
       "name": "Fakultet informacionih tehnologija",
-      "city": "Beograd",
-      "website": "https://www.metropolitan.ac.rs/fakultet-informacionih-tehnologija/",
+      "website": "https://www.metropolitan.ac.rs",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Informacione tehnologije",
@@ -48,41 +52,15 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski",
-          "tracks": [
-            {
-              "name": "Informacioni sistemi organizacija"
-            },
-            {
-              "name": "Sajber bezbednost"
-            }
-          ]
-        },
-        {
-          "name": "Softversko inženjerstvo",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
           "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Tadeuša Košćuška 63, 11158 Beograd",
-      "phone": "+381 11 2030 885",
-      "email": "fit@metropolitan.ac.rs"
+      ]
     },
     {
       "name": "Fakultet za menadžment",
-      "city": "Beograd",
-      "website": "https://www.metropolitan.ac.rs/fakultet-za-menadzment/",
+      "website": "https://www.metropolitan.ac.rs",
+      "isUniversityLevel": false,
       "studyPrograms": [
-        {
-          "name": "Digitalni biznis i marketing",
-          "cycle": "FIRST",
-          "durationYears": 4,
-          "ects": 240,
-          "language": "Srpski"
-        },
         {
           "name": "Inženjerski i operacioni menadžment",
           "cycle": "FIRST",
@@ -91,29 +69,18 @@
           "language": "Srpski"
         },
         {
-          "name": "Digitalni biznis",
-          "cycle": "SECOND",
-          "durationYears": 1,
-          "ects": 60,
-          "language": "Srpski"
-        },
-        {
-          "name": "Menadžment i razvoj",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
+          "name": "Digitalni biznis i marketing",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
           "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Tadeuša Košćuška 63, 11158 Beograd",
-      "phone": "+381 11 2030 885",
-      "email": "fm@metropolitan.ac.rs"
+      ]
     },
     {
       "name": "Fakultet digitalnih umetnosti",
-      "city": "Beograd",
-      "website": "https://www.metropolitan.ac.rs/fakultet-digitalnih-umetnosti-2/",
+      "website": "https://www.metropolitan.ac.rs",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Grafički dizajn",
@@ -135,56 +102,78 @@
           "durationYears": 4,
           "ects": 240,
           "language": "Srpski"
+        }
+      ]
+    },
+    {
+      "name": "FEFA - Fakultet za ekonomiju, finansije i administraciju",
+      "website": "https://fefa.edu.rs",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
         },
         {
-          "name": "Vizuelne komunikacije",
+          "name": "Kreativna produkcija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Ekonomija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
           "language": "Srpski"
         },
         {
-          "name": "Muzička produkcija",
+          "name": "Kreativna produkcija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
           "language": "Srpski"
         },
         {
-          "name": "Dizajn novih medija",
+          "name": "Digitalna transformacija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Ekonomija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Tadeuša Košćuška 63, 11158 Beograd",
-      "phone": "+381 11 2030 885",
-      "email": "fdu@metropolitan.ac.rs"
+      ]
     },
     {
-      "name": "Fakultet za strane jezike",
-      "city": "Beograd",
-      "website": "https://www.metropolitan.ac.rs/fakultet-za-strane-jezike/",
+      "name": "FUTURA - Fakultet za primenjenu ekologiju",
+      "website": "https://www.futura.edu.rs",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Engleski jezik u biznisu",
+          "name": "Životna sredina i održivi razvoj",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
           "language": "Srpski"
+        },
+        {
+          "name": "Životna sredina i održivi razvoj",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Tadeuša Košćuška 63, 11158 Beograd",
-      "phone": "+381 11 2030 885",
-      "email": "fsj@metropolitan.ac.rs"
+      ]
     }
-  ],
-  "dataSourceUrl": "https://www.metropolitan.ac.rs",
-  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29",
-  "accreditationFrom": "2022-01-01",
-  "accreditationTo": "2029-01-01"
+  ]
 }

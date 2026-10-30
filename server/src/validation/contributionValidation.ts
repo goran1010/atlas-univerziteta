@@ -1,11 +1,12 @@
 import { z } from "zod";
 
 import { parseRequest } from "./parseRequest.js";
+import { COUNTRIES, ENTITIES } from "../search/aliases.js";
 
 const targetTypeSchema = z.enum(
   ["UNIVERSITY", "FACULTY", "STUDY_PROGRAM", "TRACK"],
   {
-    error: "Invalid entity type",
+    error: "Invalid target type",
   },
 );
 
@@ -74,12 +75,12 @@ const universityCreateDataSchema = z
 
     city: z.string().trim().min(1, { error: "City is required" }).max(200),
 
-    country: z.enum(["BIH", "SRB", "HRV", "MNE"], {
+    country: z.enum(COUNTRIES, {
       error: "Invalid country - must be BIH, SRB, HRV, or MNE",
     }),
 
     entity: z
-      .enum(["FBIH", "RS", "BD"], {
+      .enum(ENTITIES, {
         error: "Invalid entity - must be FBIH, RS, or BD",
       })
       .optional(),
@@ -102,6 +103,10 @@ const universityCreateDataSchema = z
   })
   .refine((u) => u.country !== "BIH" || u.entity !== undefined, {
     message: "Entity is required for Bosnian universities",
+    path: ["entity"],
+  })
+  .refine((u) => u.country === "BIH" || u.entity === undefined, {
+    message: "Entity is only valid for Bosnian universities",
     path: ["entity"],
   });
 
@@ -305,13 +310,13 @@ const universityEditDataSchema = z
       .optional(),
 
     country: z
-      .enum(["BIH", "SRB", "HRV", "MNE"], {
+      .enum(COUNTRIES, {
         error: "Invalid country - must be BIH, SRB, HRV, or MNE",
       })
       .optional(),
 
     entity: z
-      .enum(["FBIH", "RS", "BD"], {
+      .enum(ENTITIES, {
         error: "Invalid entity - must be FBIH, RS, or BD",
       })
       .nullable()
@@ -337,7 +342,19 @@ const universityEditDataSchema = z
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
-  });
+  })
+  .refine(
+    (data) => {
+      if (data.country === undefined) return true;
+      if (data.country === "BIH") return data.entity !== null;
+      return data.entity === undefined || data.entity === null;
+    },
+    {
+      message:
+        "Entity is required for Bosnian universities and not valid for others",
+      path: ["entity"],
+    },
+  );
 
 const facultyEditDataSchema = z
   .strictObject({

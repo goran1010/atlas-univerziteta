@@ -1,18 +1,23 @@
 {
   "name": "Sveučilište u Slavonskom Brodu",
-  "acronym": "UNISB",
   "city": "Slavonski Brod",
   "country": "HRV",
   "ownership": "PUBLIC",
   "foundedYear": "2020",
   "website": "https://www.unisb.hr",
   "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
-  "phone": "+385 35 446 188",
-  "email": "info@unisb.hr",
+  "phone": "+385 35 493 100",
+  "email": "ured@unisb.hr",
+  "accreditationFrom": null,
+  "accreditationTo": null,
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "dataSourceUrl": "https://www.unisb.hr/popis-studija/",
+  "lastModified": null,
   "faculties": [
     {
       "name": "Strojarski fakultet",
-      "city": "Slavonski Brod",
+      "website": "https://www.unisb.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Strojarstvo",
@@ -29,64 +34,26 @@
           "language": "Hrvatski"
         },
         {
+          "name": "Razvoj proizvoda i tehnologija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
           "name": "Strojarstvo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "website": "https://sfsb.unisb.hr",
-      "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
-      "phone": "+385 35 446 188",
-      "email": "info@unisb.hr"
-    },
-    {
-      "name": "Biotehnički odjel",
-      "city": "Slavonski Brod",
-      "studyPrograms": [
-        {
-          "name": "Bilinogojstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
-      "phone": "+385 35 446 188",
-      "email": "info@unisb.hr"
-    },
-    {
-      "name": "Tehnički odjel",
-      "city": "Slavonski Brod",
-      "studyPrograms": [
-        {
-          "name": "Proizvodno strojarstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
-      "phone": "+385 35 446 188",
-      "email": "info@unisb.hr"
+      ]
     },
     {
       "name": "Odjel društveno-humanističkih znanosti",
-      "city": "Slavonski Brod",
+      "website": "https://www.unisb.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
-        {
-          "name": "Rani i predškolski odgoj i obrazovanje",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
         {
           "name": "Učiteljski studij",
           "cycle": "INTEGRATED",
@@ -95,22 +62,104 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Ekonomija i menadžment",
+          "name": "Rani i predškolski odgoj i obrazovanje",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Rani i predškolski odgoj i obrazovanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Trg Ivane Brlić-Mažuranić 2, 35000 Slavonski Brod",
-      "phone": "+385 35 446 188",
-      "email": "info@unisb.hr"
+      ]
+    },
+    {
+      "name": "Tehnički odjel",
+      "website": "https://www.unisb.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Proizvodno strojarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informatika i informacijske tehnologije",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Energetika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Biotehnički odjel",
+      "website": "https://www.unisb.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Ekoinženjerstvo i zaštita prirode",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Bilinogojstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Ekološka poljoprivreda i ruralni razvoj",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
     }
-  ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.unisb.hr",
-  "accreditationFrom": "2020-01-01",
-  "accreditationTo": "2025-01-01"
+  ]
 }

@@ -11,48 +11,93 @@
   "email": "ured@uniri.hr",
   "faculties": [
     {
-      "name": "Građevinski fakultet",
-      "city": "Rijeka",
-      "website": "https://gradri.uniri.hr",
+      "name": "Akademija primijenjenih umjetnosti",
+      "website": "https://apuri.uniri.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Građevinarstvo",
+          "name": "Likovna pedagogija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Građevinarstvo",
+          "name": "Primijenjena umjetnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Gluma i mediji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Grafički dizajn i vizualne komunikacije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Likovna pedagogija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Građevinarstvo",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
+          "name": "Primijenjene umjetnosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Vizualne komunikacije i grafički dizajn",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Gluma",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Radmile Matejčić 3, 51000 Rijeka",
-      "phone": "+385 51 265 900",
-      "email": "gradri@gradri.uniri.hr"
+      ]
     },
     {
       "name": "Ekonomski fakultet",
-      "city": "Rijeka",
       "website": "https://www.efri.uniri.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
+        {
+          "name": "Ekonomija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
         {
           "name": "Poslovna ekonomija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija - International Business",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "English"
         },
         {
           "name": "Poslovna ekonomija",
@@ -62,96 +107,368 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Ekonomija i poslovna ekonomija",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
+          "name": "Poslovna ekonomija - International Business",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Ivana Filipovića 4, 51000 Rijeka",
-      "phone": "+385 51 355 111",
-      "email": "efri@efri.uniri.hr"
+      ]
     },
     {
-      "name": "Tehnički fakultet",
-      "city": "Rijeka",
-      "website": "https://www.riteh.uniri.hr",
+      "name": "Fakultet biotehnologije i razvoja lijekova",
+      "website": "https://biotech.uniri.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Strojarstvo",
+          "name": "Biotehnologija i istraživanje lijekova",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Elektrotehnika",
+          "name": "Istraživanje i razvoj lijekova",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biotehnologija u medicini",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Medicinska kemija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Biotechnology for the Life Sciences",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet dentalne medicine",
+      "website": "https://fdmri.uniri.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Dental Medicine",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "English"
+        },
+        {
+          "name": "Dentalna higijena",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Računarstvo",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Brodogradnja",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Strojarstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Elektrotehnika",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Računarstvo",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Brodogradnja",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Tehničke znanosti",
-          "cycle": "THIRD",
+          "name": "Dentalna tehnika",
+          "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Vukovarska 58, 51000 Rijeka",
-      "phone": "+385 51 651 444",
-      "email": "ured@riteh.uniri.hr"
+      ]
+    },
+    {
+      "name": "Fakultet informatike i digitalnih tehnologija",
+      "website": "https://www.inf.uniri.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za fiziku",
+      "website": "https://phy.uniri.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Fizika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizika i matematika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizika i filozofija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizika i informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Inženjerstvo i fizika materijala",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za logopediju",
+      "website": "https://logri.uniri.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Logopedija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Logopedija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za matematiku",
+      "website": "https://math.uniri.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Matematika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Matematika i informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Diskretna matematika i primjene",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Discrete Mathematics and Its Applications",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "English"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za menadžment u turizmu i ugostiteljstvu",
+      "website": "https://fthm.uniri.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Poslovna ekonomija u turizmu i ugostiteljstvu",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Hospitality Management",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "English"
+        },
+        {
+          "name": "Menadžment održivog razvoja",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Marketing u turizmu",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment u turizmu",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment u hotelijerstvu",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Održivi razvoj turizma",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet zdravstvenih studija",
+      "website": "https://fzsri.uniri.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Sestrinstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primaljstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Radiološka tehnologija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sestrinstvo - Promicanje i zaštita mentalnog zdravlja",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sestrinstvo - Menadžment u sestrinstvu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sestrinstvo - Javno zdravstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sestrinstvo - Gerontologija i palijativna skrb starijih",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Klinički nutricionizam",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Primaljstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
     },
     {
       "name": "Filozofski fakultet",
-      "city": "Rijeka",
       "website": "https://ffri.uniri.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Hrvatski jezik i književnost",
@@ -161,35 +478,7 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Engleski jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Talijanski jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Njemački jezik i književnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Povijest",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Filozofija",
+          "name": "Psihologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
@@ -203,17 +492,87 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Psihologija",
+          "name": "Kulturologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Kulturalni studiji",
+          "name": "Engleski jezik i književnost (dvopredmetni)",
           "cycle": "FIRST",
           "durationYears": 3,
-          "ects": 180,
+          "ects": 90,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Njemački jezik i književnost (dvopredmetni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 90,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Talijanski jezik i književnost (dvopredmetni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 90,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Filozofija (dvopredmetni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 90,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest (dvopredmetni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 90,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest umjetnosti (dvopredmetni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 90,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Hrvatski jezik i književnost (dvopredmetni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 90,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pedagogija (dvopredmetni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 90,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Kulturologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
           "language": "Hrvatski"
         },
         {
@@ -224,68 +583,165 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Engleski jezik i književnost",
+          "name": "Prevoditeljski studij",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Povijest",
+          "name": "Cognitive Sciences - Cognition and the Mind",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "language": "English"
         },
         {
-          "name": "Filozofija",
+          "name": "Engleski jezik i književnost (dvopredmetni)",
           "cycle": "SECOND",
           "durationYears": 2,
-          "ects": 120,
+          "ects": 60,
           "language": "Hrvatski"
         },
         {
-          "name": "Psihologija",
+          "name": "Filozofija (dvopredmetni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Hrvatski jezik i književnost (dvopredmetni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Njemački jezik i književnost (dvopredmetni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Pedagogija (dvopredmetni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest (dvopredmetni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest i interpretacija baštine (dvopredmetni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Povijest umjetnosti (dvopredmetni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 60,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Talijanski jezik i književnost (dvopredmetni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 60,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Građevinski fakultet",
+      "website": "https://gradri.uniri.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Građevinarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Građevinarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Građevinarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Sveučilišna avenija 4, 51000 Rijeka",
-      "phone": "+385 51 265 600",
-      "email": "dekanat@ffri.uniri.hr"
+      ]
     },
     {
-      "name": "Pravni fakultet",
-      "city": "Rijeka",
-      "website": "https://pravri.uniri.hr",
+      "name": "Medicinski fakultet",
+      "website": "https://medri.uniri.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Pravo",
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Medicine",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "English"
+        },
+        {
+          "name": "Farmacija",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
           "language": "Hrvatski"
         },
         {
-          "name": "Pravo",
-          "cycle": "THIRD",
+          "name": "Sanitarno inženjerstvo",
+          "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Medicinsko laboratorijska dijagnostika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sanitarno inženjerstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Hahlić 6, 51000 Rijeka",
-      "phone": "+385 51 359 500",
-      "email": "pravri@pravri.uniri.hr"
+      ]
     },
     {
       "name": "Pomorski fakultet",
-      "city": "Rijeka",
-      "website": "https://pfri.uniri.hr",
+      "website": "https://www.pfri.uniri.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Nautika i tehnologija pomorskog prometa",
@@ -302,62 +758,194 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Pomorske znanosti",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Studentska 2, 51000 Rijeka",
-      "phone": "+385 51 338 411",
-      "email": "pfri@pfri.uniri.hr"
-    },
-    {
-      "name": "Medicinski fakultet",
-      "city": "Rijeka",
-      "website": "https://medri.uniri.hr",
-      "studyPrograms": [
-        {
-          "name": "Medicina",
-          "cycle": "INTEGRATED",
-          "durationYears": 6,
-          "ects": 360,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Dentalna medicina",
-          "cycle": "INTEGRATED",
-          "durationYears": 6,
-          "ects": 360,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Sestrinstvo",
+          "name": "Elektroničke i informatičke tehnologije u pomorstvu",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Medicinske znanosti",
-          "cycle": "THIRD",
+          "name": "Promet i mobilnost",
+          "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
+        },
+        {
+          "name": "Logistika i menadžment u pomorstvu i prometu",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Nautika i tehnologija pomorskog prometa",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodostrojarstvo i tehnologija pomorskog prometa",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektroničke i informatičke tehnologije u pomorstvu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Tehnologija i organizacija prometa",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Logistika i menadžment u pomorstvu i prometu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Braće Branchetta 20/1, 51000 Rijeka",
-      "phone": "+385 51 651 111",
-      "email": "medri@medri.uniri.hr"
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "website": "https://pravri.uniri.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Pravo",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Upravni studij",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Javna uprava",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Tehnički fakultet",
+      "website": "https://riteh.uniri.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Strojarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodogradnja",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Mehatronika i robotika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodogradnja",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Strojarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Brodogradnja",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Računarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
     },
     {
       "name": "Učiteljski fakultet",
-      "city": "Rijeka",
       "website": "https://ufri.uniri.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
+        {
+          "name": "Učiteljski studij",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Hrvatski"
+        },
         {
           "name": "Rani i predškolski odgoj i obrazovanje",
           "cycle": "FIRST",
@@ -366,136 +954,14 @@
           "language": "Hrvatski"
         },
         {
-          "name": "Učiteljski studij",
-          "cycle": "INTEGRATED",
-          "durationYears": 5,
-          "ects": 300,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Sveučilišna avenija 6, 51000 Rijeka",
-      "phone": "+385 51 265 800",
-      "email": "ufri@ufri.uniri.hr"
-    },
-    {
-      "name": "Fakultet za turizam i ugostiteljstvo",
-      "city": "Opatija",
-      "website": "https://fmtu.uniri.hr",
-      "studyPrograms": [
-        {
-          "name": "Menadžment u turizmu i ugostiteljstvu",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Menadžment u turizmu i ugostiteljstvu",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Menadžment u turizmu i ugostiteljstvu",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Primorska 42, 51414 Ika",
-      "phone": "+385 51 294 444",
-      "email": "fmtu@fmtu.uniri.hr"
-    },
-    {
-      "name": "Fakultet informatike",
-      "city": "Rijeka",
-      "website": "https://www.inf.uniri.hr",
-      "studyPrograms": [
-        {
-          "name": "Informatika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Informacijsko-komunikacijski sustavi",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Poslovna informatika",
+          "name": "Rani i predškolski odgoj i obrazovanje",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Radmile Matejčić 2, 51000 Rijeka",
-      "phone": "+385 51 584 700",
-      "email": "ured@inf.uniri.hr"
-    },
-    {
-      "name": "Fakultet matematike",
-      "city": "Rijeka",
-      "website": "https://math.uniri.hr",
-      "studyPrograms": [
-        {
-          "name": "Matematika",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Matematika",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Radmile Matejčić 2, 51000 Rijeka",
-      "phone": "+385 51 584 600",
-      "email": "ured@math.uniri.hr"
-    },
-    {
-      "name": "Akademija primijenjenih umjetnosti",
-      "city": "Rijeka",
-      "website": "https://apuri.uniri.hr",
-      "studyPrograms": [
-        {
-          "name": "Primijenjena umjetnost",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Primijenjena umjetnost",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Slavka Krautzeka 83, 51000 Rijeka",
-      "phone": "+385 51 228 649",
-      "email": "apuri@apuri.uniri.hr"
+      ]
     }
   ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://uniri.hr",
-  "accreditationFrom": "2019-01-01",
-  "accreditationTo": "2024-01-01"
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)"
 }

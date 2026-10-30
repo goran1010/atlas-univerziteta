@@ -6,6 +6,7 @@ import { z } from "zod";
 
 import { env } from "../config/env.js";
 import { PrismaClient } from "../generated/prisma/client.js";
+import { COUNTRIES, ENTITIES } from "../search/aliases.js";
 import {
   universitySearchFields,
   facultySearchFields,
@@ -95,11 +96,11 @@ const facultySeedSchema = z.strictObject({
 
 const universitySeedSchema = z
   .strictObject({
-    country: z.enum(["BIH", "SRB", "HRV", "MNE"]),
+    country: z.enum(COUNTRIES),
     name: z.string().trim().min(1),
     acronym: optionalTextSchema,
     city: z.string().trim().min(1),
-    entity: z.enum(["FBIH", "RS", "BD"]).optional(),
+    entity: z.enum(ENTITIES).optional(),
     ownership: z.enum(["PUBLIC", "PRIVATE"]),
     foundedYear: optionalTextSchema,
     website: optionalTextSchema,
@@ -130,6 +131,50 @@ function parseUniversityFile(filePath: string): UniversitySeed {
     throw new Error(
       `Invalid university seed file: ${path.relative(baseDir, filePath)}`,
       { cause: error },
+    );
+  }
+}
+
+function validateSeedData(filePaths: string[], trees: UniversitySeed[]): void {
+  const errors: string[] = [];
+  const seenNames = new Map<string, string>();
+
+  for (const [i, tree] of trees.entries()) {
+    const file = path.relative(baseDir, filePaths[i] ?? "");
+    const folder = file.split(path.sep)[0] ?? "";
+
+    if (tree.country !== folder) {
+      errors.push(
+        `${file}: country "${tree.country}" does not match folder "${folder}"`,
+      );
+    }
+
+    const nameCountryKey = `${tree.name}::${tree.country}`;
+    const existing = seenNames.get(nameCountryKey);
+    if (existing) {
+      errors.push(
+        `Duplicate university "${tree.name}" (${tree.country}) in ${file} and ${existing}`,
+      );
+    }
+    seenNames.set(nameCountryKey, file);
+
+    for (const faculty of tree.faculties ?? []) {
+      const seenPrograms = new Set<string>();
+      for (const program of faculty.studyPrograms ?? []) {
+        const key = `${program.name}::${program.cycle}`;
+        if (seenPrograms.has(key)) {
+          errors.push(
+            `${file}: duplicate program "${program.name}" (${program.cycle}) in faculty "${faculty.name}"`,
+          );
+        }
+        seenPrograms.add(key);
+      }
+    }
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Seed validation failed:\n${errors.map((e) => `  - ${e}`).join("\n")}`,
     );
   }
 }
@@ -165,31 +210,40 @@ function toUniversityData(
 async function main() {
   try {
     const universityTrees = universityFilePaths.map(parseUniversityFile);
+    validateSeedData(universityFilePaths, universityTrees);
     console.log("Seeding universities...");
 
     const upsertedUniversities = await Promise.all(
       universityTrees.map(toUniversityData).map((data) =>
         prisma.university.upsert({
-          where: { name: data.name },
+          where: { name_country: { name: data.name, country: data.country } },
           create: data,
           update: data,
         }),
       ),
     );
+    const { count: removedUniversities } = await prisma.university.deleteMany({
+      where: { id: { notIn: upsertedUniversities.map((u) => u.id) } },
+    });
     console.log(
-      `Upserted ${upsertedUniversities.length.toString()} universities.`,
+      `Upserted ${upsertedUniversities.length.toString()} universities` +
+        (removedUniversities > 0
+          ? `, removed ${removedUniversities.toString()} orphans.`
+          : "."),
     );
     console.log("Seeding faculties...");
 
-    const universityIdByName = new Map(
+    const universityIdByKey = new Map(
       upsertedUniversities.map((university) => [
-        university.name,
+        `${university.name}::${university.country}`,
         university.id,
       ]),
     );
 
     const facultyUpserts = universityTrees.flatMap((tree) => {
-      const universityId = universityIdByName.get(tree.name);
+      const universityId = universityIdByKey.get(
+        `${tree.name}::${tree.country}`,
+      );
 
       if (universityId === undefined) {
         throw new Error(`Unknown university: ${tree.name}`);
@@ -236,7 +290,18 @@ async function main() {
     });
 
     const upsertedFaculties = await Promise.all(facultyUpserts);
-    console.log(`Upserted ${upsertedFaculties.length.toString()} faculties.`);
+    const { count: removedFaculties } = await prisma.faculty.deleteMany({
+      where: {
+        universityId: { in: upsertedUniversities.map((u) => u.id) },
+        id: { notIn: upsertedFaculties.map((f) => f.id) },
+      },
+    });
+    console.log(
+      `Upserted ${upsertedFaculties.length.toString()} faculties` +
+        (removedFaculties > 0
+          ? `, removed ${removedFaculties.toString()} orphans.`
+          : "."),
+    );
     console.log("Seeding study programs...");
 
     const facultyIdByUniversityAndName = new Map(
@@ -247,7 +312,9 @@ async function main() {
     );
 
     const studyProgramUpserts = universityTrees.flatMap((tree) => {
-      const universityId = universityIdByName.get(tree.name);
+      const universityId = universityIdByKey.get(
+        `${tree.name}::${tree.country}`,
+      );
 
       if (universityId === undefined) {
         throw new Error(`Unknown university: ${tree.name}`);
@@ -304,14 +371,25 @@ async function main() {
     });
 
     const upsertedStudyPrograms = await Promise.all(studyProgramUpserts);
+    const { count: removedPrograms } = await prisma.studyProgram.deleteMany({
+      where: {
+        facultyId: { in: upsertedFaculties.map((f) => f.id) },
+        id: { notIn: upsertedStudyPrograms.map((p) => p.id) },
+      },
+    });
     console.log(
-      `Upserted ${upsertedStudyPrograms.length.toString()} study programs.`,
+      `Upserted ${upsertedStudyPrograms.length.toString()} study programs` +
+        (removedPrograms > 0
+          ? `, removed ${removedPrograms.toString()} orphans.`
+          : "."),
     );
     console.log("Seeding tracks...");
 
     const tracksByProgramKey = new Map(
       universityTrees.flatMap((tree) => {
-        const universityId = universityIdByName.get(tree.name);
+        const universityId = universityIdByKey.get(
+          `${tree.name}::${tree.country}`,
+        );
 
         if (universityId === undefined) {
           return [];
@@ -374,7 +452,18 @@ async function main() {
     });
 
     const upsertedTracks = await Promise.all(trackUpserts);
-    console.log(`Upserted ${upsertedTracks.length.toString()} tracks.`);
+    const { count: removedTracks } = await prisma.track.deleteMany({
+      where: {
+        studyProgramId: { in: upsertedStudyPrograms.map((p) => p.id) },
+        id: { notIn: upsertedTracks.map((t) => t.id) },
+      },
+    });
+    console.log(
+      `Upserted ${upsertedTracks.length.toString()} tracks` +
+        (removedTracks > 0
+          ? `, removed ${removedTracks.toString()} orphans.`
+          : "."),
+    );
   } catch (error: unknown) {
     console.error("Error seeding database:", error);
     process.exitCode = 1;

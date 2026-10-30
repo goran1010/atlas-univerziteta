@@ -60,6 +60,113 @@ describe("GET /api/v1/universities", () => {
   });
 });
 
+describe("GET /api/v1/universities - country and entity filters", () => {
+  const marker = "CountryFilterTest";
+
+  const cleanup = async () => {
+    const rows = await prisma.university.findMany({
+      where: { name: { contains: marker } },
+    });
+    for (const row of rows) {
+      await prisma.university.delete({ where: { id: row.id } });
+    }
+  };
+
+  test("filters universities by country", async () => {
+    await cleanup();
+    await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `${marker} BIH Uni`,
+        city: "Sarajevo",
+        country: "BIH",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      }),
+    });
+    await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `${marker} SRB Uni`,
+        city: "Beograd",
+        country: "SRB",
+        ownership: "PUBLIC",
+      }),
+    });
+
+    const bihResponse = await request(app).get(
+      "/api/v1/universities?country=BIH",
+    );
+    const bihData = getResponseArray(
+      getResponseObject(bihResponse.body)["data"],
+    );
+
+    expect(bihResponse.status).toBe(200);
+    expect(bihData.some((u) => u["name"] === `${marker} BIH Uni`)).toBe(true);
+    expect(bihData.some((u) => u["name"] === `${marker} SRB Uni`)).toBe(false);
+
+    const srbResponse = await request(app).get(
+      "/api/v1/universities?country=SRB",
+    );
+    const srbData = getResponseArray(
+      getResponseObject(srbResponse.body)["data"],
+    );
+
+    expect(srbData.some((u) => u["name"] === `${marker} SRB Uni`)).toBe(true);
+    expect(srbData.some((u) => u["name"] === `${marker} BIH Uni`)).toBe(false);
+
+    await cleanup();
+  });
+
+  test("filters universities by entity", async () => {
+    await cleanup();
+    await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `${marker} FBIH Uni`,
+        city: "Sarajevo",
+        country: "BIH",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+      }),
+    });
+    await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `${marker} RS Uni`,
+        city: "Banja Luka",
+        country: "BIH",
+        entity: "RS",
+        ownership: "PUBLIC",
+      }),
+    });
+
+    const response = await request(app).get("/api/v1/universities?entity=FBIH");
+    const data = getResponseArray(getResponseObject(response.body)["data"]);
+
+    expect(data.some((u) => u["name"] === `${marker} FBIH Uni`)).toBe(true);
+    expect(data.some((u) => u["name"] === `${marker} RS Uni`)).toBe(false);
+
+    await cleanup();
+  });
+
+  test("pagination total reflects the filter", async () => {
+    await cleanup();
+    await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `${marker} HRV Uni`,
+        city: "Zagreb",
+        country: "HRV",
+        ownership: "PUBLIC",
+      }),
+    });
+
+    const filtered = await request(app).get("/api/v1/universities?country=HRV");
+    const body = getResponseObject(filtered.body);
+    const data = getResponseArray(body["data"]);
+
+    expect(Number(body["total"])).toBe(data.length);
+
+    await cleanup();
+  });
+});
+
 describe("GET /api/v1/search", () => {
   // generous timeout: the whole suite shares one postgres and this file's
   // searches are the heaviest queries in it
@@ -480,36 +587,18 @@ describe("GET /api/v1/search - empty browse", () => {
     expect(error["issues"]).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          message: "Provide a search term or at least one filter.",
+          message:
+            "Provide a search term or at least one filter (country, entity, ownership).",
         }),
       ]),
     );
   });
 
-  test("returns full sections when browsing by type filters", async () => {
-    const [universityCount, facultyCount, studyProgramCount] =
-      await Promise.all([
-        prisma.university.count(),
-        prisma.faculty.count(),
-        prisma.studyProgram.count(),
-      ]);
-
+  test("rejects type-only queries without a narrowing filter", async () => {
     const response = await request(app).get(
       "/api/v1/search?type=university&type=faculty&type=studyProgram",
     );
-    const responseBody = getResponseObject(response.body);
-    const data = getResponseObject(responseBody["data"]);
-
-    expect(response.status).toBe(200);
-    expect(getResponseArray(data["universities"])).toHaveLength(
-      universityCount,
-    );
-    expect(getResponseArray(data["faculties"])).toHaveLength(facultyCount);
-    expect(getResponseArray(data["studyPrograms"])).toHaveLength(
-      studyProgramCount,
-    );
-    expect(data["totals"]).toBeUndefined();
-    expect(data["direct"]).toBeDefined();
+    expect(response.status).toBe(400);
   });
 });
 
@@ -594,17 +683,67 @@ describe("GET /api/v1/search - type filter", () => {
     expect(getResponseArray(data["studyPrograms"])).toHaveLength(0);
   });
 
-  test("supports type-only browsing without a search term", async () => {
+  test("rejects type-only browsing without a narrowing filter", async () => {
     const response = await request(app).get("/api/v1/search?type=university");
-    const responseBody = getResponseObject(response.body);
-    const data = getResponseObject(responseBody["data"]);
+    expect(response.status).toBe(400);
+  });
+});
 
-    expect(response.status).toBe(200);
-    expect(
-      getResponseArray(data["universities"]).length,
-    ).toBeGreaterThanOrEqual(0);
-    expect(getResponseArray(data["faculties"])).toHaveLength(0);
-    expect(getResponseArray(data["studyPrograms"])).toHaveLength(0);
+describe("GET /api/v1/study-programs - pagination with duplicate names", () => {
+  const marker = "PaginationDupTest";
+
+  test("paginating over same-named programs returns each exactly once", async () => {
+    const uni = await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `${marker} University`,
+        city: "Test City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: {
+          create: Array.from({ length: 4 }, (_, i) => ({
+            name: `${marker} Faculty ${String(i)}`,
+            studyPrograms: {
+              create: {
+                name: "Psihologija",
+                cycle: "FIRST" as const,
+              },
+            },
+          })),
+        },
+      }),
+    });
+
+    const allIds: number[] = [];
+    let page = 1;
+    let totalPages = 1;
+
+    while (page <= totalPages) {
+      const response = await request(app).get(
+        `/api/v1/study-programs?limit=2&page=${String(page)}&country=BIH`,
+      );
+      const body = getResponseObject(response.body);
+      const data = getResponseArray(body["data"]);
+      totalPages = Number(body["totalPages"]);
+
+      for (const item of data) {
+        allIds.push(Number(item["id"]));
+      }
+      page++;
+    }
+
+    const programIds = (
+      await prisma.studyProgram.findMany({
+        where: { faculty: { universityId: uni.id } },
+        select: { id: true },
+      })
+    ).map((p) => p.id);
+
+    expect(programIds).toHaveLength(4);
+    for (const id of programIds) {
+      expect(allIds.filter((aid) => aid === id)).toHaveLength(1);
+    }
+
+    await prisma.university.delete({ where: { id: uni.id } });
   });
 });
 

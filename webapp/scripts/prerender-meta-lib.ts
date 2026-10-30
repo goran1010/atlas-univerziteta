@@ -107,6 +107,18 @@ function addSitemapEntries(xml: string, urls: string[], today: string): string {
   return xml.replace("</urlset>", () => `${entries}</urlset>`);
 }
 
+function buildUniversityDescription(
+  name: string,
+  city: string,
+  countryLabel: string,
+  entityLabel: string | null,
+): string {
+  const location = entityLabel
+    ? `${city}, ${entityLabel}, ${countryLabel}`
+    : `${city}, ${countryLabel}`;
+  return `${name} - ${location}`;
+}
+
 export {
   escapeHtml,
   replaceTitle,
@@ -115,6 +127,7 @@ export {
   replaceOgUrlPath,
   renderRouteHtml,
   addSitemapEntries,
+  buildUniversityDescription,
 };
 
 export type { MetaRoute };

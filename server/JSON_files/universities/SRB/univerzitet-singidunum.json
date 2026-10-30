@@ -44,7 +44,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Danijelova 32, 11000 Beograd",
       "phone": "+381 11 3094 094",
       "email": "pfb@singidunum.ac.rs"
@@ -76,7 +75,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Danijelova 32, 11000 Beograd",
       "phone": "+381 11 3094 094",
       "email": "fthm@singidunum.ac.rs"
@@ -136,13 +134,12 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Danijelova 32, 11000 Beograd",
       "phone": "+381 11 3094 094",
       "email": "fir@singidunum.ac.rs"
     },
     {
-      "name": "Fakultet tehničkih nauka",
+      "name": "Tehnički fakultet",
       "city": "Beograd",
       "website": "https://fim.singidunum.ac.rs",
       "studyPrograms": [
@@ -203,7 +200,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Danijelova 32, 11000 Beograd",
       "phone": "+381 11 3094 094",
       "email": "fim@singidunum.ac.rs"
@@ -228,7 +224,6 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Danijelova 32, 11000 Beograd",
       "phone": "+381 11 3094 094",
       "email": "ffkms@singidunum.ac.rs"
@@ -281,15 +276,57 @@
           "language": "Srpski"
         }
       ],
-      "lastModified": "2026-10-29",
       "address": "Karađorđeva 65, 11000 Beograd",
       "phone": "+381 11 262 6474",
       "email": "fmk@singidunum.ac.rs"
+    },
+    {
+      "name": "Fakultet Despot Stefan Lazarević",
+      "city": "Beograd",
+      "website": "https://singidunum.ac.rs",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Anglistika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Međunarodni odnosi i diplomatija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Bezbednost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Savremena psihologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        }
+      ]
     }
   ],
-  "dataSourceUrl": "https://www.singidunum.ac.rs",
   "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29",
-  "accreditationFrom": "2020-05-14",
-  "accreditationTo": "2027-05-14"
+  "accreditationFrom": "2020-05-20",
+  "accreditationTo": "2027-05-20",
+  "dataSourceUrl": "https://singidunum.ac.rs/studije",
+  "lastModified": null
 }

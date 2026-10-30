@@ -115,6 +115,7 @@ describe("enrichWithCurrentEntity", () => {
       name: "Test Enrich University",
       acronym: "TEU",
       city: "Test City",
+      country: "BIH",
       entity: "FBIH",
       ownership: "PUBLIC",
       foundedYear: "1950",

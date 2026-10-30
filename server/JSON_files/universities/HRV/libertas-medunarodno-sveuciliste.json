@@ -1,6 +1,5 @@
 {
   "name": "Libertas međunarodno sveučilište",
-  "acronym": null,
   "city": "Zagreb",
   "country": "HRV",
   "ownership": "PRIVATE",
@@ -9,50 +8,131 @@
   "address": "Trg J. F. Kennedyja 6b, 10000 Zagreb",
   "phone": "+385 1 4894 000",
   "email": "info@libertas.hr",
+  "accreditationFrom": null,
+  "accreditationTo": null,
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "dataSourceUrl": "https://www.libertas.hr/studiji/",
+  "lastModified": null,
   "faculties": [
     {
       "name": "Libertas međunarodno sveučilište",
       "city": "Zagreb",
+      "website": "https://www.libertas.hr/studiji/",
       "isUniversityLevel": true,
       "studyPrograms": [
         {
-          "name": "Ekonomija",
+          "name": "Poslovna ekonomija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Turistički i hotelski menadžment",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment poslovne sigurnosti",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment športa i športskih djelatnosti",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Međunarodni odnosi (diplomacija)",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Ekonomija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
-          "language": "Hrvatski"
-        },
-        {
-          "name": "Diplomacija i međunarodni odnosi",
+          "name": "Međunarodno poslovanje",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Diplomacija i međunarodni odnosi",
+          "name": "Fizioterapija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment unutarnje i međunarodne trgovine",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment bankarstva, osiguranja i financija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Turistički i hotelski menadžment",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Međunarodni odnosi i diplomacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija i globalizacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Međunarodni odnosi",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Poslovna ekonomija i održivi razvoj",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Menadžment kvalitete u zdravstvu",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Trg J. F. Kennedyja 6b, 10000 Zagreb",
-      "phone": "+385 1 4894 000",
-      "email": "info@libertas.hr"
+      ]
     }
-  ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.libertas.hr",
-  "accreditationFrom": "2019-01-01",
-  "accreditationTo": "2024-01-01"
+  ]
 }

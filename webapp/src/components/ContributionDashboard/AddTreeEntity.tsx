@@ -15,7 +15,10 @@ import {
   facultyTreeDataSchema,
   universityTreeDataSchema,
 } from "../../schemas/contribution";
+import { mapZodIssues } from "./utils/validateTreePayload";
+import { ValidationIssueList } from "./ValidationIssueList";
 
+import type { ValidationIssue } from "./utils/validateTreePayload";
 import type { ChangeEvent, SubmitEvent } from "react";
 import type {
   FacultyTreeData,
@@ -73,11 +76,6 @@ ${FACULTY_PLACEHOLDER.split("\n")
 }`,
   FACULTY: FACULTY_PLACEHOLDER,
 };
-
-interface ValidationIssue {
-  path: string;
-  message: string;
-}
 
 function parseTree(rootType: TreeRootType, raw: unknown) {
   if (rootType === "UNIVERSITY") return universityTreeDataSchema.safeParse(raw);
@@ -142,10 +140,7 @@ function AddTreeEntity({
 
     const result = parseTree(rootType, raw);
     if (!result.success) {
-      const issuesFound = result.error.issues.map((issue) => ({
-        path: issue.path.map(String).join("."),
-        message: issue.message,
-      }));
+      const issuesFound = mapZodIssues(result.error);
 
       // the most common mix-up: a whole university pasted while the item
       // type is still Faculty - name it instead of listing unrecognized keys
@@ -265,24 +260,7 @@ function AddTreeEntity({
           {t("contribution.tree.invalidJson")}
         </p>
       )}
-      {issues.length > 0 && (
-        <div
-          role="alert"
-          className="flex flex-col gap-1 rounded-lg border border-red-300 dark:border-red-800 bg-red-50 dark:bg-red-900/20 p-2 sm:p-3"
-        >
-          <p className="text-xs font-semibold text-red-800 dark:text-red-300">
-            {t("contribution.tree.validationErrors")}
-          </p>
-          <ul className="text-xs font-mono text-red-700 dark:text-red-300 flex flex-col gap-0.5">
-            {issues.map((issue, index) => (
-              <li key={`${issue.path}-${String(index)}`} className="break-all">
-                {issue.path ? `${issue.path}: ` : ""}
-                {issue.message}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <ValidationIssueList issues={issues} />
       <Button
         type="button"
         variant="secondary"

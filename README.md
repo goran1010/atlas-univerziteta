@@ -21,7 +21,7 @@ The data is modeled as a nested academic hierarchy: university, its faculties, a
 - Email/password signup with email verification, session login, and optional GitHub/Google OAuth (with automatic account linking)
 - Authenticated suggestions for creating, updating, or deleting data, reviewed by admins before applying - the review shows the current data, child counts, and the entity's place in the academic hierarchy
 - Whole-university suggestions: one reviewed submission can hold a university with its faculties, study programs, and tracks - built in a nested form or pasted as JSON
-- Data provenance built in: every university and faculty links to the official page it was sourced from, and addresses open directly in Google Maps
+- Data provenance: BiH data sourced per program from official accreditation records; other countries sourced from university websites and national registries - addresses open directly in Google Maps
 - Zod validation on both ends, WCAG-checked UI in English and the local language
 
 ## Quick start
@@ -68,7 +68,12 @@ See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) - code, documentation, bug reports
 
 GNU Affero General Public License v3.0 - see [LICENSE.md](./LICENSE.md).
 
-Bosnian university data sourced from [Agencija za razvoj visokog obrazovanja i osiguranje kvaliteta BiH (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu).
+Data sources:
+
+- BiH: [Agencija za razvoj visokog obrazovanja i osiguranje kvaliteta BiH (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu)
+- Serbia: [Nacionalno akreditaciono telo (NAT)](https://nat.rs/)
+- Croatia: [Agencija za znanost i visoko obrazovanje (AZVO)](https://www.azvo.hr/) and university websites
+- Montenegro: [Agencija za kontrolu i obezbjeđenje kvaliteta visokog obrazovanja (AKOKVO)](https://akokvo.me/)
 
 Author: Goran Jović - [@goran1010](https://github.com/goran1010) · [contributors](https://github.com/goran1010/atlas-univerziteta/contributors)
 
@@ -97,7 +102,7 @@ Podaci prate akademsku hijerarhiju: univerzitet, njegovi fakulteti i njihovi stu
 - Registracija uz potvrdu emailom, prijava sesijom i opciona GitHub/Google prijava (sa automatskim povezivanjem naloga)
 - Prijavljeni korisnici predlažu dodavanje, izmjenu ili brisanje podataka; administratori pri pregledu vide trenutne podatke, broj podređenih stavki i mjesto u akademskoj hijerarhiji prije primjene
 - Prijedlozi cijelog univerziteta: jedna prijava može sadržati univerzitet sa fakultetima, studijskim programima i smjerovima - kroz ugniježdenu formu ili lijepljenjem JSON-a
-- Porijeklo podataka: svaki univerzitet i fakultet vodi na zvaničnu stranicu sa koje su podaci preuzeti, a adrese se otvaraju direktno u Google mapama
+- Porijeklo podataka: podaci za BiH preuzeti po programu iz akreditacijskih registara; ostale zemlje iz univerzitetskih stranica i nacionalnih registara - adrese se otvaraju direktno u Google mapama
 - Validacija podataka na obje strane, pristupačnost provjerena po WCAG standardu, interfejs na engleskom i našem jeziku
 
 ### Pokretanje
@@ -106,6 +111,6 @@ Komande su iste kao u [engleskom dijelu](#quick-start) - potrebni su Node.js 24.
 
 ### Doprinos projektu
 
-Pogledajte [CONTRIBUTING.md](./docs/CONTRIBUTING.md). Prijedloge podataka možete slati i direktno kroz aplikaciju, pod "Poboljšaj podatke". Podaci o univerzitetima u BiH preuzeti su od [Agencije za razvoj visokog obrazovanja i osiguranje kvaliteta BiH (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu).
+Pogledajte [CONTRIBUTING.md](./docs/CONTRIBUTING.md). Prijedloge podataka možete slati i direktno kroz aplikaciju, pod "Poboljšaj podatke". Izvori podataka su navedeni u [engleskom dijelu](#license).
 
 Licenca: GNU Affero General Public License v3.0 - [LICENSE.md](./LICENSE.md).

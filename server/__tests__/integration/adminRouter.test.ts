@@ -807,7 +807,7 @@ describe("Admin Router - POST /users/admin/approve-pending-change for trees", ()
     // the client omits the folded search* columns by default; opt back in
     // to check the tree create folded every level
     const university = await prisma.university.findUnique({
-      where: { name: "Test Tree University" },
+      where: { name_country: { name: "Test Tree University", country: "BIH" } },
       omit: { searchName: false },
       include: {
         faculties: {

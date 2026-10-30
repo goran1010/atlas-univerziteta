@@ -4,7 +4,6 @@ import { TargetPicker } from "../../../../src/components/ContributionDashboard/T
 import { getPickerDepth } from "../../../../src/components/ContributionDashboard/utils/getPickerDepth";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
-import { delay } from "msw";
 import { server, http, HttpResponse } from "../../../utils/msw";
 
 const universitiesList = [
@@ -232,11 +231,15 @@ describe("TargetPicker", () => {
 
 describe("TargetPicker response ordering", () => {
   test("ignores an out-of-order detail response after re-picking", async () => {
+    let resolveStale!: () => void;
+    const staleReady = new Promise<void>((r) => {
+      resolveStale = r;
+    });
+
     server.use(
       http.get("*/api/v1/universities/:id", async ({ params }) => {
+        if (String(params["id"]) === "1") await staleReady;
         detailRequests++;
-        // the first university's reply arrives after the second's
-        if (String(params["id"]) === "1") await delay(200);
         return HttpResponse.json({
           message: "ok",
           data: detailsById[String(params["id"])],
@@ -253,11 +256,12 @@ describe("TargetPicker response ordering", () => {
     await user.selectOptions(universitySelect, "1");
     await user.selectOptions(universitySelect, "2");
 
+    await screen.findByText(/No faculties available/i);
+
+    resolveStale();
     await waitFor(() => {
       expect(detailRequests).toBe(2);
     });
-    // let the stale slow response settle
-    await new Promise((resolve) => setTimeout(resolve, 300));
 
     expect(
       screen.queryByRole("option", { name: /Faculty of Electrical/i }),

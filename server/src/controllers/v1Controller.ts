@@ -20,11 +20,17 @@ function pagination(page: number, limit: number, total: number) {
 }
 
 async function getUniversities(req: Request, res: Response) {
-  const { page, limit } = v1Validation.listQuery(req.query);
+  const { page, limit, country, entity } = v1Validation.listQuery(req.query);
+
+  const where = {
+    ...(country ? { country } : {}),
+    ...(entity ? { entity } : {}),
+  };
 
   const [total, universities] = await Promise.all([
-    prisma.university.count(),
+    prisma.university.count({ where }),
     prisma.university.findMany({
+      where,
       orderBy: [{ country: "asc" }, { ownership: "asc" }, { name: "asc" }],
       select: {
         id: true,
@@ -51,11 +57,23 @@ async function getUniversities(req: Request, res: Response) {
 }
 
 async function getFaculties(req: Request, res: Response) {
-  const { page, limit } = v1Validation.listQuery(req.query);
+  const { page, limit, country, entity } = v1Validation.listQuery(req.query);
+
+  const where = {
+    ...(country || entity
+      ? {
+          university: {
+            ...(country ? { country } : {}),
+            ...(entity ? { entity } : {}),
+          },
+        }
+      : {}),
+  };
 
   const [total, faculties] = await Promise.all([
-    prisma.faculty.count(),
+    prisma.faculty.count({ where }),
     prisma.faculty.findMany({
+      where,
       orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
       select: {
         id: true,
@@ -79,12 +97,26 @@ async function getFaculties(req: Request, res: Response) {
 }
 
 async function getStudyPrograms(req: Request, res: Response) {
-  const { page, limit } = v1Validation.listQuery(req.query);
+  const { page, limit, country, entity } = v1Validation.listQuery(req.query);
+
+  const where = {
+    ...(country || entity
+      ? {
+          faculty: {
+            university: {
+              ...(country ? { country } : {}),
+              ...(entity ? { entity } : {}),
+            },
+          },
+        }
+      : {}),
+  };
 
   const [total, studyPrograms] = await Promise.all([
-    prisma.studyProgram.count(),
+    prisma.studyProgram.count({ where }),
     prisma.studyProgram.findMany({
-      orderBy: [{ cycle: "asc" }, { name: "asc" }],
+      where,
+      orderBy: [{ cycle: "asc" }, { name: "asc" }, { id: "asc" }],
       select: {
         id: true,
         name: true,
@@ -113,12 +145,32 @@ async function getStudyPrograms(req: Request, res: Response) {
 }
 
 async function getTracks(req: Request, res: Response) {
-  const { page, limit } = v1Validation.listQuery(req.query);
+  const { page, limit, country, entity } = v1Validation.listQuery(req.query);
+
+  const where = {
+    ...(country || entity
+      ? {
+          studyProgram: {
+            faculty: {
+              university: {
+                ...(country ? { country } : {}),
+                ...(entity ? { entity } : {}),
+              },
+            },
+          },
+        }
+      : {}),
+  };
 
   const [total, tracks] = await Promise.all([
-    prisma.track.count(),
+    prisma.track.count({ where }),
     prisma.track.findMany({
-      orderBy: [{ studyProgram: { name: "asc" } }, { name: "asc" }],
+      where,
+      orderBy: [
+        { studyProgram: { name: "asc" } },
+        { name: "asc" },
+        { id: "asc" },
+      ],
       select: {
         id: true,
         name: true,
@@ -162,9 +214,9 @@ async function getUniversityById(req: Request, res: Response) {
         orderBy: { name: "asc" },
         include: {
           studyPrograms: {
-            orderBy: [{ cycle: "asc" }, { name: "asc" }],
+            orderBy: [{ cycle: "asc" }, { name: "asc" }, { id: "asc" }],
             include: {
-              tracks: { orderBy: { name: "asc" } },
+              tracks: { orderBy: [{ name: "asc" }, { id: "asc" }] },
             },
           },
         },
@@ -193,9 +245,9 @@ async function getFacultyById(req: Request, res: Response) {
     include: {
       university: true,
       studyPrograms: {
-        orderBy: [{ cycle: "asc" }, { name: "asc" }],
+        orderBy: [{ cycle: "asc" }, { name: "asc" }, { id: "asc" }],
         include: {
-          tracks: { orderBy: { name: "asc" } },
+          tracks: { orderBy: [{ name: "asc" }, { id: "asc" }] },
         },
       },
     },
@@ -223,7 +275,7 @@ async function getStudyProgramById(req: Request, res: Response) {
       faculty: {
         include: { university: true },
       },
-      tracks: { orderBy: { name: "asc" } },
+      tracks: { orderBy: [{ name: "asc" }, { id: "asc" }] },
     },
   });
   if (!studyProgram) {

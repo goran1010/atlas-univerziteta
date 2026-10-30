@@ -111,7 +111,7 @@ enum studyCycle {
 // without them simply cannot be found through search.
 model University {
   id                Int       @id @default(autoincrement())
-  name              String    @unique
+  name              String
   searchName        String    @default("")
   acronym           String?
   searchAcronym     String?
@@ -132,7 +132,7 @@ model University {
   lastModified      DateTime?
   faculties         Faculty[]
 
-  @@unique([name, city])
+  @@unique([name, country])
   @@map("university")
 }
 
@@ -153,8 +153,8 @@ model Faculty {
   lastModified      DateTime?
   studyPrograms     StudyProgram[]
 
-  // the unique above starts with name, so FK lookups need their own index
   @@unique([name, universityId])
+  // the unique starts with name, so FK lookups by universityId need their own index
   @@index([universityId])
   @@map("faculty")
 }

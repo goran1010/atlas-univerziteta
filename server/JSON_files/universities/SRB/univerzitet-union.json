@@ -1,19 +1,23 @@
 {
   "name": "Univerzitet Union",
-  "acronym": null,
   "city": "Beograd",
   "country": "SRB",
   "ownership": "PRIVATE",
   "foundedYear": "2005",
   "website": "https://www.union.edu.rs",
   "address": "Kosančićev venac 2/5, 11000 Beograd",
-  "phone": null,
-  "email": null,
+  "phone": "+381 11 263 2826",
+  "email": "info@union.edu.rs",
+  "accreditationFrom": "2023-11-14",
+  "accreditationTo": "2030-11-14",
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "dataSourceUrl": "https://www.union.edu.rs",
+  "lastModified": null,
   "faculties": [
     {
       "name": "Računarski fakultet",
-      "city": "Beograd",
-      "website": "https://www.raf.edu.rs",
+      "website": "https://raf.edu.rs",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Računarske nauke",
@@ -38,9 +42,9 @@
         },
         {
           "name": "Informacione tehnologije",
-          "cycle": "VOCATIONAL",
-          "durationYears": 3,
-          "ects": 180,
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
           "language": "Srpski"
         },
         {
@@ -77,52 +81,51 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Srpski"
+        },
+        {
+          "name": "Računarske nauke",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
+        },
+        {
+          "name": "Računarsko inženjerstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Knez Mihailova 6/VI, 11000 Beograd",
-      "phone": "+381 11 2627 613",
-      "email": "raf@raf.edu.rs"
+      ]
     },
     {
-      "name": "Beogradska bankarska akademija",
-      "city": "Beograd",
+      "name": "Beogradska bankarska akademija - Fakultet za bankarstvo, osiguranje i finansije",
       "website": "https://www.bba.edu.rs",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Ekonomija, finansije i biznis",
+          "name": "Ekonomija, finansije i biznis (4 godine)",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski",
-          "tracks": [
-            {
-              "name": "Finansije i bankarstvo"
-            },
-            {
-              "name": "Računovodstvo i revizija"
-            },
-            {
-              "name": "Digitalna ekonomija"
-            }
-          ]
+          "language": "Srpski"
         },
         {
-          "name": "Ekonomija, finansije i biznis",
+          "name": "Ekonomija, finansije i biznis (3 godine)",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Srpski"
         },
         {
-          "name": "Informacione tehnologije u finansijama",
+          "name": "Bankarstvo, finansije i biznis",
           "cycle": "SECOND",
-          "durationYears": 1,
-          "ects": 60,
+          "durationYears": 2,
+          "ects": 120,
           "language": "Srpski"
         },
         {
-          "name": "Bankarstvo, finansije i biznis",
+          "name": "Informacione tehnologije u finansijama",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
@@ -134,17 +137,20 @@
           "durationYears": 1,
           "ects": 60,
           "language": "Srpski"
+        },
+        {
+          "name": "Finansije",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Zmaj Jovina 12, 11000 Beograd",
-      "phone": "+381 11 2621 730",
-      "email": "office@bba.edu.rs"
+      ]
     },
     {
       "name": "Pravni fakultet Univerziteta Union",
-      "city": "Beograd",
-      "website": "https://pravnifakultet.edu.rs",
+      "website": "https://www.pravnifakultet.edu.rs",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Pravo",
@@ -167,34 +173,77 @@
           "ects": 180,
           "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Goce Delčeva 36, 11070 Beograd",
-      "phone": "+381 11 3196 379",
-      "email": "office@pravnifakultet.edu.rs"
+      ]
     },
     {
-      "name": "Akademija lepih umetnosti Todoris",
-      "city": "Beograd",
+      "name": "Fakultet za pravne i poslovne studije dr Lazar Vrkatić",
+      "website": "https://www.pravni-fakultet.edu.rs",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Likovna umetnost",
+          "name": "Pravo",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
           "language": "Srpski"
+        },
+        {
+          "name": "Engleski jezik",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Bezbednost i kriminalistika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Poslovna psihologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Srpski"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Engleski jezik",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Bezbednost i kriminalistika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Poslovna psihologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
+        },
+        {
+          "name": "Psihoterapija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Srpski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Nemanjina 28, 11000 Beograd",
-      "phone": "+381 11 3618 715",
-      "email": "info@akademijaumetnosti.edu.rs",
-      "website": "https://akademijaumetnosti.edu.rs"
+      ]
     }
-  ],
-  "dataSourceUrl": "https://www.union.edu.rs",
-  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
-  "lastModified": "2026-10-29",
-  "accreditationFrom": "2021-07-05",
-  "accreditationTo": "2028-07-05"
+  ]
 }

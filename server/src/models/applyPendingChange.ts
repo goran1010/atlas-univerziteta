@@ -23,8 +23,20 @@ import {
 
 import { z } from "zod";
 
-// INVALID_DATA keeps the row in the queue so the admin can decline it
+import type { PrismaClient } from "../generated/prisma/client.js";
+
+type Tx = Parameters<Parameters<PrismaClient["$transaction"]>[0]>[0];
 type ApplyResult = "APPLIED" | "NOT_FOUND" | "INVALID_DATA";
+
+interface ApplyContext {
+  tx: Tx;
+  id: string;
+  data: unknown;
+  targetId: number | null;
+  parentId: number | null;
+  typeOfChange: string;
+  claim: () => Promise<boolean>;
+}
 
 function parsePendingChangeData<T>(
   schema: z.ZodType<T>,
@@ -46,13 +58,178 @@ function parsePendingChangeData<T>(
   return null;
 }
 
+async function applyUniversity(ctx: ApplyContext): Promise<ApplyResult> {
+  const { tx, id, data, targetId, typeOfChange, claim } = ctx;
+
+  if (typeOfChange === "DELETE") {
+    if (targetId === null) return "INVALID_DATA";
+    if (!(await claim())) return "NOT_FOUND";
+    await tx.university.delete({ where: { id: targetId } });
+    return "APPLIED";
+  }
+
+  if (typeOfChange === "CREATE") {
+    const parsed = parsePendingChangeData(universityTreeDataSchema, data, id);
+    if (!parsed) return "INVALID_DATA";
+    if (!(await claim())) return "NOT_FOUND";
+    await tx.university.create({
+      data: toUniversityTreeCreateInput(parsed),
+    });
+    return "APPLIED";
+  }
+
+  if (targetId === null) return "INVALID_DATA";
+
+  const parsed = parsePendingChangeData(universityEditDataSchema, data, id);
+  if (!parsed) return "INVALID_DATA";
+
+  const current = await tx.university.findUnique({
+    where: { id: targetId },
+    select: { country: true, entity: true },
+  });
+
+  if (current) {
+    const mergedCountry = parsed.country ?? current.country;
+    const mergedEntity =
+      parsed.entity !== undefined ? parsed.entity : current.entity;
+    if (mergedCountry === "BIH" && mergedEntity === null) {
+      logger.warn(
+        { pendingChangeId: id },
+        "Approval rejected: BIH university would have no entity after merge.",
+      );
+      return "INVALID_DATA";
+    }
+    if (mergedCountry !== "BIH" && mergedEntity !== null) {
+      logger.warn(
+        { pendingChangeId: id },
+        "Approval rejected: non-BIH university would keep an entity after merge.",
+      );
+      return "INVALID_DATA";
+    }
+  }
+
+  if (!(await claim())) return "NOT_FOUND";
+  await tx.university.update({
+    where: { id: targetId },
+    data: toUniversityUpdateInput(parsed),
+  });
+  return "APPLIED";
+}
+
+async function applyFaculty(ctx: ApplyContext): Promise<ApplyResult> {
+  const { tx, id, data, targetId, parentId, typeOfChange, claim } = ctx;
+
+  if (typeOfChange === "DELETE") {
+    if (targetId === null) return "INVALID_DATA";
+    if (!(await claim())) return "NOT_FOUND";
+    await tx.faculty.delete({ where: { id: targetId } });
+    return "APPLIED";
+  }
+
+  if (typeOfChange === "CREATE") {
+    if (parentId === null) return "INVALID_DATA";
+    const parsed = parsePendingChangeData(facultyTreeDataSchema, data, id);
+    if (!parsed) return "INVALID_DATA";
+    if (!(await claim())) return "NOT_FOUND";
+    await tx.faculty.create({
+      data: toFacultyTreeCreateInput(parsed, parentId),
+    });
+    return "APPLIED";
+  }
+
+  if (targetId === null) return "INVALID_DATA";
+
+  const parsed = parsePendingChangeData(facultyEditDataSchema, data, id);
+  if (!parsed) return "INVALID_DATA";
+
+  if (!(await claim())) return "NOT_FOUND";
+  await tx.faculty.update({
+    where: { id: targetId },
+    data: toFacultyUpdateInput(parsed),
+  });
+  return "APPLIED";
+}
+
+async function applyStudyProgram(ctx: ApplyContext): Promise<ApplyResult> {
+  const { tx, id, data, targetId, parentId, typeOfChange, claim } = ctx;
+
+  if (typeOfChange === "DELETE") {
+    if (targetId === null) return "INVALID_DATA";
+    if (!(await claim())) return "NOT_FOUND";
+    await tx.studyProgram.delete({ where: { id: targetId } });
+    return "APPLIED";
+  }
+
+  if (typeOfChange === "CREATE") {
+    if (parentId === null) return "INVALID_DATA";
+    const parsed = parsePendingChangeData(studyProgramTreeDataSchema, data, id);
+    if (!parsed) return "INVALID_DATA";
+    if (!(await claim())) return "NOT_FOUND";
+    await tx.studyProgram.create({
+      data: toStudyProgramTreeCreateInput(parsed, parentId),
+    });
+    return "APPLIED";
+  }
+
+  if (targetId === null) return "INVALID_DATA";
+
+  const parsed = parsePendingChangeData(studyProgramEditDataSchema, data, id);
+  if (!parsed) return "INVALID_DATA";
+
+  if (!(await claim())) return "NOT_FOUND";
+  await tx.studyProgram.update({
+    where: { id: targetId },
+    data: toStudyProgramUpdateInput(parsed),
+  });
+  return "APPLIED";
+}
+
+async function applyTrack(ctx: ApplyContext): Promise<ApplyResult> {
+  const { tx, id, data, targetId, parentId, typeOfChange, claim } = ctx;
+
+  if (typeOfChange === "DELETE") {
+    if (targetId === null) return "INVALID_DATA";
+    if (!(await claim())) return "NOT_FOUND";
+    await tx.track.delete({ where: { id: targetId } });
+    return "APPLIED";
+  }
+
+  if (typeOfChange === "CREATE") {
+    if (parentId === null) return "INVALID_DATA";
+    const parsed = parsePendingChangeData(trackCreateDataSchema, data, id);
+    if (!parsed) return "INVALID_DATA";
+    if (!(await claim())) return "NOT_FOUND";
+    await tx.track.create({
+      data: toTrackCreateInput(parsed, parentId),
+    });
+    return "APPLIED";
+  }
+
+  if (targetId === null) return "INVALID_DATA";
+
+  const parsed = parsePendingChangeData(trackEditDataSchema, data, id);
+  if (!parsed) return "INVALID_DATA";
+
+  if (!(await claim())) return "NOT_FOUND";
+  await tx.track.update({
+    where: { id: targetId },
+    data: toTrackUpdateInput(parsed),
+  });
+  return "APPLIED";
+}
+
+const HANDLERS: Record<string, (ctx: ApplyContext) => Promise<ApplyResult>> = {
+  UNIVERSITY: applyUniversity,
+  FACULTY: applyFaculty,
+  STUDY_PROGRAM: applyStudyProgram,
+  TRACK: applyTrack,
+};
+
 async function applyPendingChange({
   id,
 }: {
   id: string;
 }): Promise<ApplyResult> {
-  // a whole-university tree is up to 800 nested inserts, more than Prisma's
-  // 5s default transaction budget allows on a slow disk
   return prisma.$transaction(
     async (tx) => {
       const pendingChange = await tx.pendingChange.findUnique({
@@ -65,182 +242,23 @@ async function applyPendingChange({
 
       const { targetType, typeOfChange, targetId, parentId } = pendingChange;
 
-      // Of two concurrent approvals, the second blocks on this delete and
-      // finds the row gone; a failure after the claim rolls it back.
       const claim = async () => {
         const { count } = await tx.pendingChange.deleteMany({ where: { id } });
         return count > 0;
       };
 
-      if (targetType === "UNIVERSITY") {
-        if (typeOfChange === "DELETE") {
-          if (targetId === null) return "INVALID_DATA";
+      const handler = HANDLERS[targetType];
+      if (!handler) return "INVALID_DATA";
 
-          if (!(await claim())) return "NOT_FOUND";
-          await tx.university.delete({ where: { id: targetId } });
-          return "APPLIED";
-        }
-
-        if (typeOfChange === "CREATE") {
-          const data = parsePendingChangeData(
-            universityTreeDataSchema,
-            pendingChange.data,
-            id,
-          );
-          if (!data) return "INVALID_DATA";
-
-          if (!(await claim())) return "NOT_FOUND";
-          // one nested create, so the whole tree lands or nothing does
-          await tx.university.create({
-            data: toUniversityTreeCreateInput(data),
-          });
-          return "APPLIED";
-        }
-
-        if (targetId === null) return "INVALID_DATA";
-
-        const data = parsePendingChangeData(
-          universityEditDataSchema,
-          pendingChange.data,
-          id,
-        );
-        if (!data) return "INVALID_DATA";
-
-        if (!(await claim())) return "NOT_FOUND";
-        await tx.university.update({
-          where: { id: targetId },
-          data: toUniversityUpdateInput(data),
-        });
-        return "APPLIED";
-      }
-
-      if (targetType === "FACULTY") {
-        if (typeOfChange === "DELETE") {
-          if (targetId === null) return "INVALID_DATA";
-
-          if (!(await claim())) return "NOT_FOUND";
-          await tx.faculty.delete({ where: { id: targetId } });
-          return "APPLIED";
-        }
-
-        if (typeOfChange === "CREATE") {
-          if (parentId === null) return "INVALID_DATA";
-
-          const data = parsePendingChangeData(
-            facultyTreeDataSchema,
-            pendingChange.data,
-            id,
-          );
-          if (!data) return "INVALID_DATA";
-
-          if (!(await claim())) return "NOT_FOUND";
-          await tx.faculty.create({
-            data: toFacultyTreeCreateInput(data, parentId),
-          });
-          return "APPLIED";
-        }
-
-        if (targetId === null) return "INVALID_DATA";
-
-        const data = parsePendingChangeData(
-          facultyEditDataSchema,
-          pendingChange.data,
-          id,
-        );
-        if (!data) return "INVALID_DATA";
-
-        if (!(await claim())) return "NOT_FOUND";
-        await tx.faculty.update({
-          where: { id: targetId },
-          data: toFacultyUpdateInput(data),
-        });
-        return "APPLIED";
-      }
-
-      if (targetType === "STUDY_PROGRAM") {
-        if (typeOfChange === "DELETE") {
-          if (targetId === null) return "INVALID_DATA";
-
-          if (!(await claim())) return "NOT_FOUND";
-          await tx.studyProgram.delete({ where: { id: targetId } });
-          return "APPLIED";
-        }
-
-        if (typeOfChange === "CREATE") {
-          if (parentId === null) return "INVALID_DATA";
-
-          const data = parsePendingChangeData(
-            studyProgramTreeDataSchema,
-            pendingChange.data,
-            id,
-          );
-          if (!data) return "INVALID_DATA";
-
-          if (!(await claim())) return "NOT_FOUND";
-          await tx.studyProgram.create({
-            data: toStudyProgramTreeCreateInput(data, parentId),
-          });
-          return "APPLIED";
-        }
-
-        if (targetId === null) return "INVALID_DATA";
-
-        const data = parsePendingChangeData(
-          studyProgramEditDataSchema,
-          pendingChange.data,
-          id,
-        );
-        if (!data) return "INVALID_DATA";
-
-        if (!(await claim())) return "NOT_FOUND";
-        await tx.studyProgram.update({
-          where: { id: targetId },
-          data: toStudyProgramUpdateInput(data),
-        });
-        return "APPLIED";
-      }
-
-      // targetType === "TRACK" is the only remaining case
-      if (typeOfChange === "DELETE") {
-        if (targetId === null) return "INVALID_DATA";
-
-        if (!(await claim())) return "NOT_FOUND";
-        await tx.track.delete({ where: { id: targetId } });
-        return "APPLIED";
-      }
-
-      if (typeOfChange === "CREATE") {
-        if (parentId === null) return "INVALID_DATA";
-
-        const data = parsePendingChangeData(
-          trackCreateDataSchema,
-          pendingChange.data,
-          id,
-        );
-        if (!data) return "INVALID_DATA";
-
-        if (!(await claim())) return "NOT_FOUND";
-        await tx.track.create({
-          data: toTrackCreateInput(data, parentId),
-        });
-        return "APPLIED";
-      }
-
-      if (targetId === null) return "INVALID_DATA";
-
-      const data = parsePendingChangeData(
-        trackEditDataSchema,
-        pendingChange.data,
+      return handler({
+        tx,
         id,
-      );
-      if (!data) return "INVALID_DATA";
-
-      if (!(await claim())) return "NOT_FOUND";
-      await tx.track.update({
-        where: { id: targetId },
-        data: toTrackUpdateInput(data),
+        data: pendingChange.data,
+        targetId,
+        parentId,
+        typeOfChange,
+        claim,
       });
-      return "APPLIED";
     },
     { timeout: 20_000 },
   );

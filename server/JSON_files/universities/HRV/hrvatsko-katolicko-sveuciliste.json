@@ -1,6 +1,5 @@
 {
   "name": "Hrvatsko katoličko sveučilište",
-  "acronym": null,
   "city": "Zagreb",
   "country": "HRV",
   "ownership": "PRIVATE",
@@ -9,58 +8,100 @@
   "address": "Ilica 242, 10000 Zagreb",
   "phone": "+385 1 3706 600",
   "email": "info@unicath.hr",
+  "accreditationFrom": null,
+  "accreditationTo": null,
+  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
+  "dataSourceUrl": "https://www.unicath.hr/sites/default/files/2025-09/INFORMACIJSKI%20PAKET%202025-2026%20_0.pdf",
+  "lastModified": null,
   "faculties": [
     {
-      "name": "Odjel za komunikologiju",
-      "city": "Zagreb",
+      "name": "Odjel za povijest",
+      "website": "https://www.unicath.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Komunikologija",
+          "name": "Povijest",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Komunikologija",
+          "name": "Povijest",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Ilica 242, 10000 Zagreb",
-      "phone": "+385 1 3706 600",
-      "email": "info@unicath.hr"
+      ]
     },
     {
-      "name": "Odjel za povijest",
-      "city": "Zagreb",
+      "name": "Odjel za psihologiju",
+      "website": "https://www.unicath.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "Povijest",
+          "name": "Psihologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
         },
         {
-          "name": "Povijest",
+          "name": "Psihologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Ilica 242, 10000 Zagreb",
-      "phone": "+385 1 3706 600",
-      "email": "info@unicath.hr"
+      ]
+    },
+    {
+      "name": "Odjel za sociologiju",
+      "website": "https://www.unicath.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Sociologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
+    },
+    {
+      "name": "Odjel za komunikologiju",
+      "website": "https://www.unicath.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Komunikologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        },
+        {
+          "name": "Komunikologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Hrvatski"
+        }
+      ]
     },
     {
       "name": "Odjel za sestrinstvo",
-      "city": "Zagreb",
+      "website": "https://www.unicath.hr",
+      "isUniversityLevel": false,
       "studyPrograms": [
         {
           "name": "Sestrinstvo",
@@ -68,72 +109,50 @@
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Ilica 242, 10000 Zagreb",
-      "phone": "+385 1 3706 600",
-      "email": "info@unicath.hr"
-    },
-    {
-      "name": "Odjel za psihologiju",
-      "city": "Zagreb",
-      "studyPrograms": [
-        {
-          "name": "Psihologija",
-          "cycle": "FIRST",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
         },
         {
-          "name": "Psihologija",
+          "name": "Sestrinstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Hrvatski"
         },
         {
-          "name": "Psihologija",
-          "cycle": "THIRD",
-          "durationYears": 3,
-          "ects": 180,
-          "language": "Hrvatski"
-        }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Ilica 242, 10000 Zagreb",
-      "phone": "+385 1 3706 600",
-      "email": "info@unicath.hr"
-    },
-    {
-      "name": "Odjel za sociologiju",
-      "city": "Zagreb",
-      "studyPrograms": [
-        {
-          "name": "Sociologija",
+          "name": "Primaljstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Hrvatski"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Medicinski fakultet",
+      "website": "https://www.unicath.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
         {
-          "name": "Sociologija",
-          "cycle": "SECOND",
-          "durationYears": 2,
-          "ects": 120,
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
           "language": "Hrvatski"
         }
-      ],
-      "lastModified": "2026-10-29",
-      "address": "Ilica 242, 10000 Zagreb",
-      "phone": "+385 1 3706 600",
-      "email": "info@unicath.hr"
+      ]
+    },
+    {
+      "name": "Odjel za računarstvo",
+      "website": "https://www.unicath.hr",
+      "isUniversityLevel": false,
+      "studyPrograms": [
+        {
+          "name": "Računarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Hrvatski"
+        }
+      ]
     }
-  ],
-  "authority": "Agencija za znanost i visoko obrazovanje (AZVO)",
-  "lastModified": "2026-10-29",
-  "dataSourceUrl": "https://www.unicath.hr",
-  "accreditationFrom": "2019-01-01",
-  "accreditationTo": "2024-01-01"
+  ]
 }

@@ -12,11 +12,13 @@ function Spinner({ size = "md", page = false }: SpinnerProps) {
   const { t } = use(RootContext);
 
   const sizeClass = size === "sm" ? "h-4" : "h-12 max-h-[70%]";
-  const wrapperClass = page
-    ? "flex-1 self-stretch w-full min-h-[40vh] flex justify-center items-center"
-    : size === "sm"
-      ? "inline-flex items-center"
-      : "w-full h-full flex justify-center items-center";
+  let wrapperClass = "w-full h-full flex justify-center items-center";
+  if (page) {
+    wrapperClass =
+      "flex-1 self-stretch w-full min-h-[40vh] flex justify-center items-center";
+  } else if (size === "sm") {
+    wrapperClass = "inline-flex items-center";
+  }
 
   return (
     <div role="status" aria-label={t("loading")} className={wrapperClass}>

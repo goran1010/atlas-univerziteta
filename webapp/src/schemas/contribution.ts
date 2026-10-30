@@ -26,19 +26,28 @@ const websiteSchema = z.url({ protocol: /^https?$/ }).max(254);
 
 const commentSchema = z.string().trim().min(1).max(1000).optional();
 
-const universityCreateDataSchema = z.strictObject({
-  name: requiredNameSchema,
-  city: requiredNameSchema,
-  country: countrySchema,
-  entity: entitySchema.optional(),
-  ownership: ownershipSchema,
-  acronym: acronymSchema.optional(),
-  foundedYear: foundedYearSchema.optional(),
-  website: websiteSchema.optional(),
-  address: addressSchema.optional(),
-  phone: phoneSchema.optional(),
-  email: emailSchema.optional(),
-});
+const universityCreateDataSchema = z
+  .strictObject({
+    name: requiredNameSchema,
+    city: requiredNameSchema,
+    country: countrySchema,
+    entity: entitySchema.optional(),
+    ownership: ownershipSchema,
+    acronym: acronymSchema.optional(),
+    foundedYear: foundedYearSchema.optional(),
+    website: websiteSchema.optional(),
+    address: addressSchema.optional(),
+    phone: phoneSchema.optional(),
+    email: emailSchema.optional(),
+  })
+  .refine((u) => u.country !== "BIH" || u.entity !== undefined, {
+    message: "Entity is required for Bosnian universities",
+    path: ["entity"],
+  })
+  .refine((u) => u.country === "BIH" || u.entity === undefined, {
+    message: "Entity is only valid for Bosnian universities",
+    path: ["entity"],
+  });
 
 const facultyCreateDataSchema = z.strictObject({
   name: requiredNameSchema,
@@ -73,7 +82,18 @@ const universityEditDataSchema = nonEmptyObject({
   address: addressSchema.nullable().optional(),
   phone: phoneSchema.nullable().optional(),
   email: emailSchema.nullable().optional(),
-});
+}).refine(
+  (data) => {
+    if (data.country === undefined) return true;
+    if (data.country === "BIH") return data.entity !== null;
+    return data.entity === undefined || data.entity === null;
+  },
+  {
+    message:
+      "Entity is required for Bosnian universities and not valid for others",
+    path: ["entity"],
+  },
+);
 
 const facultyEditDataSchema = nonEmptyObject({
   name: optionalNameSchema,

@@ -46,6 +46,7 @@ async function loadTargets(targetIds: Record<targetType, number[]>) {
             name: true,
             acronym: true,
             city: true,
+            country: true,
             entity: true,
             ownership: true,
             foundedYear: true,
@@ -142,6 +143,7 @@ function buildEntityMaps({
           name: u.name,
           acronym: u.acronym,
           city: u.city,
+          country: u.country,
           entity: u.entity,
           ownership: u.ownership,
           foundedYear: u.foundedYear,
@@ -258,11 +260,6 @@ function buildTargetCrumbs({
   };
 }
 
-// For CREATE operations, resolve parentId to get parent context.
-// parentId points to the direct parent:
-//   FACULTY CREATE -> parentId = universityId
-//   STUDY_PROGRAM CREATE -> parentId = facultyId
-//   TRACK CREATE -> parentId = studyProgramId
 async function loadCreateParentCrumbs(
   pendingChanges: PendingChangeWithTarget[],
 ) {
@@ -390,21 +387,23 @@ async function enrichWithCurrentEntity<T extends PendingChangeWithTarget>(
   const entityMaps = buildEntityMaps(targets);
   const targetCrumbs = buildTargetCrumbs(targets);
 
-  return pendingChanges.map((pc) => ({
-    ...pc,
-    currentEntity:
+  return pendingChanges.map((pc) => {
+    const currentEntity =
       pc.targetId != null
         ? (entityMaps[pc.targetType].get(pc.targetId) ?? null)
-        : null,
-    parentContext:
-      pc.targetType === "UNIVERSITY"
-        ? null
-        : pc.typeOfChange === "CREATE"
-          ? getCreateParentContext(pc)
-          : pc.targetId != null
-            ? (targetCrumbs[pc.targetType].get(pc.targetId) ?? null)
-            : null,
-  }));
+        : null;
+
+    let parentContext: ReturnType<typeof getCreateParentContext> | null = null;
+    if (pc.targetType !== "UNIVERSITY") {
+      if (pc.typeOfChange === "CREATE") {
+        parentContext = getCreateParentContext(pc);
+      } else if (pc.targetId != null) {
+        parentContext = targetCrumbs[pc.targetType].get(pc.targetId) ?? null;
+      }
+    }
+
+    return { ...pc, currentEntity, parentContext };
+  });
 }
 
 export { enrichWithCurrentEntity };

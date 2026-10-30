@@ -37,7 +37,7 @@ describe("setInitialLanguage", () => {
     expect(result).toBe("sr");
   });
 
-  test.each(["bs", "bs-BA", "hr", "hr-HR"])(
+  test.each(["bs", "bs-BA", "hr", "hr-HR", "cnr", "cnr-ME"])(
     "maps BCS browser locale %s to the sr bundle",
     (locale) => {
       setNavigatorLanguage(locale);

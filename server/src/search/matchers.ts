@@ -1,6 +1,6 @@
 import {
   ENUM_ALIASES,
-  COUNTRIES,
+  COUNTRY_ALIASES,
   ENTITIES,
   OWNERSHIPS,
   CYCLES,
@@ -30,6 +30,14 @@ function enumMatch(
   return [];
 }
 
+function countryMatch(word: string, stem: string): WhereClause[] {
+  for (const form of [word.toUpperCase(), stem.toUpperCase()]) {
+    const country = COUNTRY_ALIASES[form];
+    if (country) return [{ country }];
+  }
+  return [];
+}
+
 // Every entity is searchable through its own fields, its ancestors and its
 // descendants: "banja luka informatika" reaches a study program through its
 // university's city, and the same university is found through the program.
@@ -45,7 +53,7 @@ function universityOwnMatch(token: SearchToken): WhereClause[] {
     foldedContains("searchName", token.stem),
     foldedContains("searchCity", token.stem),
     foldedContains("searchAcronym", token.stem),
-    ...enumMatch("country", COUNTRIES, token.word, token.stem),
+    ...countryMatch(token.word, token.stem),
     ...enumMatch("entity", ENTITIES, token.word, token.stem),
     ...enumMatch("ownership", OWNERSHIPS, token.word, token.stem),
   ];
