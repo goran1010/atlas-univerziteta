@@ -689,6 +689,64 @@ describe("GET /api/v1/search - type filter", () => {
   });
 });
 
+describe("GET /api/v1/study-programs - pagination with duplicate names", () => {
+  const marker = "PaginationDupTest";
+
+  test("paginating over same-named programs returns each exactly once", async () => {
+    const uni = await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `${marker} University`,
+        city: "Test City",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: {
+          create: Array.from({ length: 4 }, (_, i) => ({
+            name: `${marker} Faculty ${String(i)}`,
+            studyPrograms: {
+              create: {
+                name: "Psihologija",
+                cycle: "FIRST" as const,
+              },
+            },
+          })),
+        },
+      }),
+    });
+
+    const allIds: number[] = [];
+    let page = 1;
+    let totalPages = 1;
+
+    while (page <= totalPages) {
+      const response = await request(app).get(
+        `/api/v1/study-programs?limit=2&page=${String(page)}&country=BIH`,
+      );
+      const body = getResponseObject(response.body);
+      const data = getResponseArray(body["data"]);
+      totalPages = Number(body["totalPages"]);
+
+      for (const item of data) {
+        allIds.push(Number(item["id"]));
+      }
+      page++;
+    }
+
+    const programIds = (
+      await prisma.studyProgram.findMany({
+        where: { faculty: { universityId: uni.id } },
+        select: { id: true },
+      })
+    ).map((p) => p.id);
+
+    expect(programIds).toHaveLength(4);
+    for (const id of programIds) {
+      expect(allIds.filter((aid) => aid === id)).toHaveLength(1);
+    }
+
+    await prisma.university.delete({ where: { id: uni.id } });
+  });
+});
+
 describe("GET /api/v1/universities/:id", () => {
   test("responds with status 200 and a university by id", async () => {
     const uniInDb = await prisma.university.create({
