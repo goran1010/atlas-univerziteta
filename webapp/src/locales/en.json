@@ -15,8 +15,8 @@
     "about": "About"
   },
   "meta": {
-    "home": "Explore universities, faculties, study programs, and tracks across the region with a free public dataset, searchable web interface, and REST API.",
-    "universities": "Explore universities and study programs across the region.",
+    "home": "Explore universities, faculties, study programs, and tracks with a free public dataset, searchable web interface, and REST API.",
+    "universities": "Explore universities and study programs.",
     "api": "REST API documentation for Atlas Univerziteta. Access universities and study programs data programmatically.",
     "login": "Log in to your Atlas Univerziteta account to contribute data and track your submissions.",
     "signup": "Create a free Atlas Univerziteta account to start contributing university data."
@@ -123,7 +123,7 @@
   },
   "home": {
     "heading": "Universities and Study Programs",
-    "intro": "A free, open-source project building a structured, searchable database of public higher-education data. Focused on universities - institutions, faculties, study programs, and tracks - across the region.",
+    "intro": "A free, open-source project building a structured, searchable database of public higher-education data. Focused on universities - institutions, faculties, study programs, and tracks.",
     "summary": "Use Atlas Univerziteta to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
     "exploreDescription": "Browse universities across multiple countries. View faculties, study programs, and tracks. Search by name, city, acronym, country, entity, ownership, study cycle, and more.",
@@ -382,7 +382,7 @@
   },
   "universitiesPage": {
     "title": "Find programs and universities",
-    "searchIntro": "Search universities, faculties, study programs, and tracks across the region. Try a program name, city, country, study cycle, ECTS, or keywords like \"public\" or \"master\".",
+    "searchIntro": "Search universities, faculties, study programs, and tracks. Try a program name, city, country, study cycle, ECTS, or keywords like \"public\" or \"master\".",
     "browseAll": "Browse all universities",
     "search": "Search",
     "searchAllPlaceholder": "e.g. informatika, medicina Srbija, master 120 ECTS…",

@@ -17,5 +17,5 @@
     "skipLibCheck": true,
     "types": ["node"]
   },
-  "include": ["playwright.config.ts", "tests", "utils", "setup"]
+  "include": ["playwright.config.ts", "tests", "utils", "setup", "capture-og-images.ts"]
 }
