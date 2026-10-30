@@ -15,8 +15,8 @@
     "about": "O projektu"
   },
   "meta": {
-    "home": "Istražite univerzitete, fakultete, studijske programe i smjerove u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori kroz besplatan javni skup podataka, pretraživi web interfejs i REST API.",
-    "universities": "Istražite univerzitete i studijske programe u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori.",
+    "home": "Istražite univerzitete, fakultete, studijske programe i smjerove kroz besplatan javni skup podataka, pretraživi web interfejs i REST API.",
+    "universities": "Istražite univerzitete i studijske programe u regionu.",
     "api": "REST API dokumentacija za Atlas Univerziteta. Pristupite podacima o univerzitetima i studijskim programima programski.",
     "login": "Prijavite se na vaš Atlas Univerziteta nalog kako biste doprinijeli podacima i pratili vaše prijave.",
     "signup": "Napravite besplatan Atlas Univerziteta nalog i počnite doprinositi podacima o univerzitetima."
@@ -123,7 +123,7 @@
   },
   "home": {
     "heading": "Univerziteti i studijski programi",
-    "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o visokom obrazovanju. Fokus je na univerzitetima - institucijama, fakultetima, studijskim programima i smjerovima - u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori.",
+    "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o visokom obrazovanju. Fokus je na univerzitetima - institucijama, fakultetima, studijskim programima i smjerovima - u regionu.",
     "summary": "Koristite Atlas Univerziteta za pregled profila univerziteta, poređenje akademske ponude i pristup strukturiranim javnim podacima kroz jednostavan interfejs ili direktno kroz API.",
     "exploreHeading": "Istražite podatke",
     "exploreDescription": "Pregledajte univerzitete u više zemalja. Pogledajte fakultete, studijske programe i smjerove. Pretražujte po nazivu, gradu, akronimu, zemlji, entitetu, vlasništvu, ciklusu studija i više.",
@@ -382,7 +382,7 @@
   },
   "universitiesPage": {
     "title": "Nađite programe i univerzitete",
-    "searchIntro": "Pretražite univerzitete, fakultete, studijske programe i smjerove u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori. Unesite naziv programa, grad, zemlju, ciklus studija, ECTS bodove ili riječi poput \"javni\" ili \"master\".",
+    "searchIntro": "Pretražite univerzitete, fakultete, studijske programe i smjerove u regionu. Unesite naziv programa, grad, zemlju, ciklus studija, ECTS bodove ili riječi poput \"javni\" ili \"master\".",
     "browseAll": "Pregledaj sve univerzitete",
     "search": "Pretraži",
     "searchAllPlaceholder": "npr. informatika, medicina Srbija, master 120 ECTS…",
