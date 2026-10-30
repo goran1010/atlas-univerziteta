@@ -55,12 +55,12 @@
   "language": {
     "system": "System",
     "english": "English",
-    "bcs": "Bosnian/Croatian/Serbian/Montenegrin",
+    "bcs": "Bosnian/Croatian/Serbian",
     "switchAria": "Toggle language",
     "switched": {
       "system": "Switched to system language",
       "english": "Switched to English",
-      "bcs": "Switched to Bosnian/Croatian/Serbian/Montenegrin"
+      "bcs": "Switched to Bosnian/Croatian/Serbian"
     }
   },
   "auth": {

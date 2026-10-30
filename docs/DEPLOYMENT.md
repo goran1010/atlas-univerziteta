@@ -28,6 +28,8 @@ https://api.atlasuniverziteta.com/api/auth/callback/google
 
 `npm run db:seed` reads JSON files from `server/JSON_files/universities/<COUNTRY>/` and syncs them into the database: new rows are created, existing rows are updated, and rows no longer in the JSON files are deleted (children cascade). `npm run db:reset` drops everything and re-seeds from scratch.
 
+To re-seed production after a data change, pull the latest code on the VPS and run `./server/scripts/seed-prod.sh`.
+
 ## Adding a country
 
 Checklist for adding a new country to the platform:
