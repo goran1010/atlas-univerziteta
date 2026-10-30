@@ -149,13 +149,14 @@ function validateSeedData(filePaths: string[], trees: UniversitySeed[]): void {
       );
     }
 
-    const existing = seenNames.get(tree.name);
+    const nameCountryKey = `${tree.name}::${tree.country}`;
+    const existing = seenNames.get(nameCountryKey);
     if (existing) {
       errors.push(
-        `Duplicate university name "${tree.name}" in ${file} and ${existing}`,
+        `Duplicate university "${tree.name}" (${tree.country}) in ${file} and ${existing}`,
       );
     }
-    seenNames.set(tree.name, file);
+    seenNames.set(nameCountryKey, file);
 
     for (const faculty of tree.faculties ?? []) {
       const seenPrograms = new Set<string>();
@@ -215,7 +216,7 @@ async function main() {
     const upsertedUniversities = await Promise.all(
       universityTrees.map(toUniversityData).map((data) =>
         prisma.university.upsert({
-          where: { name: data.name },
+          where: { name_country: { name: data.name, country: data.country } },
           create: data,
           update: data,
         }),
@@ -232,15 +233,17 @@ async function main() {
     );
     console.log("Seeding faculties...");
 
-    const universityIdByName = new Map(
+    const universityIdByKey = new Map(
       upsertedUniversities.map((university) => [
-        university.name,
+        `${university.name}::${university.country}`,
         university.id,
       ]),
     );
 
     const facultyUpserts = universityTrees.flatMap((tree) => {
-      const universityId = universityIdByName.get(tree.name);
+      const universityId = universityIdByKey.get(
+        `${tree.name}::${tree.country}`,
+      );
 
       if (universityId === undefined) {
         throw new Error(`Unknown university: ${tree.name}`);
@@ -309,7 +312,9 @@ async function main() {
     );
 
     const studyProgramUpserts = universityTrees.flatMap((tree) => {
-      const universityId = universityIdByName.get(tree.name);
+      const universityId = universityIdByKey.get(
+        `${tree.name}::${tree.country}`,
+      );
 
       if (universityId === undefined) {
         throw new Error(`Unknown university: ${tree.name}`);
@@ -382,7 +387,9 @@ async function main() {
 
     const tracksByProgramKey = new Map(
       universityTrees.flatMap((tree) => {
-        const universityId = universityIdByName.get(tree.name);
+        const universityId = universityIdByKey.get(
+          `${tree.name}::${tree.country}`,
+        );
 
         if (universityId === undefined) {
           return [];

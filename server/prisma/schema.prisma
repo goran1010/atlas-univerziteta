@@ -111,7 +111,7 @@ enum studyCycle {
 // without them simply cannot be found through search.
 model University {
   id                Int       @id @default(autoincrement())
-  name              String    @unique
+  name              String
   searchName        String    @default("")
   acronym           String?
   searchAcronym     String?
@@ -132,7 +132,7 @@ model University {
   lastModified      DateTime?
   faculties         Faculty[]
 
-  @@unique([name, city])
+  @@unique([name, country])
   @@map("university")
 }
 
