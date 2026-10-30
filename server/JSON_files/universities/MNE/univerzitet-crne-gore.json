@@ -16,14 +16,14 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "ARHITEKTURA",
+          "name": "Arhitektura",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
           "language": "Crnogorski"
         },
         {
-          "name": "ARHITEKTURA I URBANIZAM",
+          "name": "Arhitektura i urbanizam",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -37,91 +37,91 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "BILJNA PROIZVODNJA",
+          "name": "Biljna proizvodnja",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "ANIMALNA PROIZVODNJA",
+          "name": "Animalna proizvodnja",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "KONTINENTALNO VOĆARSTVO I LJEKOVITO BILJE",
+          "name": "Kontinentalno voćarstvo i ljekovito bilje",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "MEDITERANSKO VOĆARSTVO",
+          "name": "Mediteransko voćarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "VOĆARSTVO, VINOGRADARSTVO I VINARSTVO",
+          "name": "Voćarstvo, vinogradarstvo i vinarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "ZAŠTITA BILJA",
+          "name": "Zaštita bilja",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "RASADNIČARSTVO",
+          "name": "Rasadničarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "AGROBIZNIS I RURALNI RAZVOJ",
+          "name": "Agrobiznis i ruralni razvoj",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "BEZBJEDNOST HRANE",
+          "name": "Bezbjednost hrane",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "RATARSTVO I POVRTARSTVO",
+          "name": "Ratarstvo i povrtarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "TEHNOLOGIJE U ANIMALNOJ PROIZVODNJI",
+          "name": "Tehnologije u animalnoj proizvodnji",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "KONTINENTALNO VOĆARSTVO I LJEKOVITO BILJE",
+          "name": "Kontinentalno voćarstvo i ljekovito bilje",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "BIOTEHNIKA",
+          "name": "Biotehnika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -135,49 +135,49 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "EKONOMIJA",
+          "name": "Ekonomija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "BUSINESS AND ECONOMICS",
+          "name": "Business and economics",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Engleski"
         },
         {
-          "name": "MENADŽMENT",
+          "name": "Menadžment",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "EKONOMIJA",
+          "name": "Ekonomija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "POSLOVNA EKONOMIJA",
+          "name": "Poslovna ekonomija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MENADŽMENT",
+          "name": "Menadžment",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "EKONOMIJA",
+          "name": "Ekonomija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -191,70 +191,70 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "ENERGETIKA I AUTOMATIKA",
+          "name": "Energetika i automatika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "ELEKTRONIKA, TELEKOMUNIKACIJE I RAČUNARI",
+          "name": "Elektronika, telekomunikacije i računari",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "STUDIJE PRIMIJENJENOG RAČUNARSTVA",
+          "name": "Studije primijenjenog računarstva",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "ELEKTROENERGETSKI SISTEMI",
+          "name": "Elektroenergetski sistemi",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "AUTOMATIKA I INDUSTRIJSKA ELEKTROTEHNIKA",
+          "name": "Automatika i industrijska elektrotehnika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "ELEKTRONIKA",
+          "name": "Elektronika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "TELEKOMUNIKACIJE",
+          "name": "Telekomunikacije",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "RAČUNARI",
+          "name": "Računari",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "PRIMIJENJENO RAČUNARSTVO",
+          "name": "Primijenjeno računarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "ELEKTROTEHNIKA",
+          "name": "Elektrotehnika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -268,49 +268,49 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "GLUMA",
+          "name": "Gluma",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "FILM I MEDIJI",
+          "name": "Film i mediji",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "DRAMA I POZORIŠTE",
+          "name": "Drama i pozorište",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "GLUMA",
+          "name": "Gluma",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "PRODUKCIJA",
+          "name": "Produkcija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "DRAMATURGIJA",
+          "name": "Dramaturgija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "REŽIJA",
+          "name": "Režija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
@@ -324,63 +324,63 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "SLIKARSTVO",
+          "name": "Slikarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "VAJARSTVO",
+          "name": "Vajarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "GRAFIČKI DIZAJN",
+          "name": "Grafički dizajn",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "GRAFIKA",
+          "name": "Grafika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "KONZERVACIJA I RESTAURACIJA",
+          "name": "Konzervacija i restauracija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "SLIKARSTVO",
+          "name": "Slikarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "VAJARSTVO",
+          "name": "Vajarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "GRAFIČKI DIZAJN",
+          "name": "Grafički dizajn",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "KONZERVACIJA I RESTAURACIJA",
+          "name": "Konzervacija i restauracija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
@@ -394,56 +394,56 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "POLITIKOLOGIJA - MEĐUNARODNI ODNOSI",
+          "name": "Politikologija - Međunarodni odnosi",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "SOCIJALNA POLITIKA I SOCIJALNI RAD",
+          "name": "Socijalna politika i socijalni rad",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "MEDIJSKE STUDIJE I NOVINARSTVO",
+          "name": "Medijske studije i novinarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "KOMPARATIVNA POLITIKA",
+          "name": "Komparativna politika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MEĐUNARODNI ODNOSI",
+          "name": "Međunarodni odnosi",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "NOVINARSTVO",
+          "name": "Novinarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "SOCIJALNA POLITIKA I SOCIJALNI RAD",
+          "name": "Socijalna politika i socijalni rad",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "POLITIČKE NAUKE",
+          "name": "Političke nauke",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -457,35 +457,35 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "FIZIČKA KULTURA I ZDRAVI STILOVI ŽIVOTA",
+          "name": "Fizička kultura i zdravi stilovi života",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "SPORTSKI NOVINARI I TRENERI",
+          "name": "Sportski novinari i treneri",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "FIZIČKA KULTURA I ZDRAVI STILOVI ŽIVOTA",
+          "name": "Fizička kultura i zdravi stilovi života",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "SPORT, FITNESS I TURIZAM",
+          "name": "Sport, fitness i turizam",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "FIZIČKA KULTURA",
+          "name": "Fizička kultura",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -499,28 +499,28 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "TURIZAM I HOTELIJERSTVO",
+          "name": "Turizam i hotelijerstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "TURIZAM",
+          "name": "Turizam",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MEĐUNARODNO HOTELIJERSTVO",
+          "name": "Međunarodno hotelijerstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "TURIZAM",
+          "name": "Turizam",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -534,112 +534,112 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "CRNOGORSKI JEZIK I JUŽNOSLOVENSKE KNJIŽEVNOSTI",
+          "name": "Crnogorski jezik i južnoslovenske književnosti",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "SRPSKI JEZIK I JUŽNOSLOVENSKE KNJIŽEVNOSTI",
+          "name": "Srpski jezik i južnoslovenske književnosti",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "RUSKI JEZIK I KNJIŽEVNOST",
+          "name": "Ruski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "ENGLESKI JEZIK I KNJIŽEVNOST",
+          "name": "Engleski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "ITALIJANSKI JEZIK I KNJIŽEVNOST",
+          "name": "Italijanski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "FRANCUSKI JEZIK I KNJIŽEVNOST",
+          "name": "Francuski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "NJEMAČKI JEZIK I KNJIŽEVNOST",
+          "name": "Njemački jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "CRNOGORSKI JEZIK I JUŽNOSLOVENSKE KNJIŽEVNOSTI",
+          "name": "Crnogorski jezik i južnoslovenske književnosti",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "SRPSKI JEZIK I JUŽNOSLOVENSKE KNJIŽEVNOSTI",
+          "name": "Srpski jezik i južnoslovenske književnosti",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "RUSKI JEZIK I KNJIŽEVNOST",
+          "name": "Ruski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "ENGLESKI JEZIK I KNJIŽEVNOST",
+          "name": "Engleski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "ITALIJANSKI JEZIK I KNJIŽEVNOST",
+          "name": "Italijanski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "FRANCUSKI JEZIK I KNJIŽEVNOST",
+          "name": "Francuski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "NJEMAČKI JEZIK I KNJIŽEVNOST",
+          "name": "Njemački jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "PREVODILAŠTVO - ENGLESKI JEZIK",
+          "name": "Prevodilaštvo - Engleski jezik",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "JEZIK I KNJIŽEVNOST",
+          "name": "Jezik i književnost",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -653,168 +653,168 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "FILOZOFIJA",
+          "name": "Filozofija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "SOCIOLOGIJA",
+          "name": "Sociologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "PSIHOLOGIJA",
+          "name": "Psihologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "PEDAGOGIJA",
+          "name": "Pedagogija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "ISTORIJA",
+          "name": "Istorija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "GEOGRAFIJA",
+          "name": "Geografija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "PREDŠKOLSKO OBRAZOVANJE I VASPITANJE",
+          "name": "Predškolsko obrazovanje i vaspitanje",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "SPECIJALNA EDUKACIJA I REHABILITACIJA",
+          "name": "Specijalna edukacija i rehabilitacija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "OBRAZOVANJE UČITELJA",
+          "name": "Obrazovanje učitelja",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
           "language": "Crnogorski"
         },
         {
-          "name": "OBRAZOVANJE UČITELJA NA ALBANSKOM JEZIKU",
+          "name": "Obrazovanje učitelja na albanskom jeziku",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
           "language": "Crnogorski"
         },
         {
-          "name": "FILOZOFIJA",
+          "name": "Filozofija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "PREDŠKOLSKO VASPITANJE I OBRAZOVANJE",
+          "name": "Predškolsko vaspitanje i obrazovanje",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "SOCIOLOGIJA",
+          "name": "Sociologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "PSIHOLOGIJA",
+          "name": "Psihologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "PEDAGOGIJA",
+          "name": "Pedagogija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "ISTORIJA",
+          "name": "Istorija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "GEOGRAFIJA",
+          "name": "Geografija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "INKLUZIVNO OBRAZOVANJE",
+          "name": "Inkluzivno obrazovanje",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "FILOZOFIJA",
+          "name": "Filozofija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "SOCIOLOGIJA",
+          "name": "Sociologija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "PEDAGOGIJA",
+          "name": "Pedagogija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "ISTORIJA",
+          "name": "Istorija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "GEOGRAFIJA",
+          "name": "Geografija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "METODIKA NASTAVE",
+          "name": "Metodika nastave",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -828,35 +828,35 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "GRAĐEVINARSTVO",
+          "name": "Građevinarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "GRAĐEVINARSTVO KONSTRUKCIJE",
+          "name": "Građevinarstvo konstrukcije",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "GRAĐEVINARSTVO INFRASTRUKTURE",
+          "name": "Građevinarstvo infrastrukture",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MENADŽMENT U GRAĐEVINARSTVU",
+          "name": "Menadžment u građevinarstvu",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "GRAĐEVINARSTVO",
+          "name": "Građevinarstvo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -870,63 +870,63 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "MAŠINSTVO",
+          "name": "Mašinstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "DRUMSKI SAOBRAĆAJ",
+          "name": "Drumski saobraćaj",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "MEHATRONIKA",
+          "name": "Mehatronika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "MAŠINSTVO",
+          "name": "Mašinstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "ENERGETSKA EFIKASNOST",
+          "name": "Energetska efikasnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "KVALITET I STANDARDIZACIJA",
+          "name": "Kvalitet i standardizacija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "DRUMSKI SAOBRAĆAJ",
+          "name": "Drumski saobraćaj",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MEHATRONIKA",
+          "name": "Mehatronika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MAŠINSTVO",
+          "name": "Mašinstvo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -940,70 +940,70 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "MEDICINA",
+          "name": "Medicina",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
           "language": "Crnogorski"
         },
         {
-          "name": "STOMATOLOGIJA",
+          "name": "Stomatologija",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
           "language": "Crnogorski"
         },
         {
-          "name": "FARMACIJA",
+          "name": "Farmacija",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
           "language": "Crnogorski"
         },
         {
-          "name": "PRIMIJENJENA FIZIOTERAPIJA",
+          "name": "Primijenjena fizioterapija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "VISOKA MEDICINSKA ŠKOLA",
+          "name": "Visoka medicinska škola",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "ZDRAVSTVENA NJEGA",
+          "name": "Zdravstvena njega",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "FIZIOTERAPIJA",
+          "name": "Fizioterapija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MEDICINA",
+          "name": "Medicina",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "STOMATOLOGIJA",
+          "name": "Stomatologija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "FARMACIJA",
+          "name": "Farmacija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -1017,56 +1017,56 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "TEHNOLOŠKO INŽENJERSTVO",
+          "name": "Tehnološko inženjerstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "ŽIVOTNA SREDINA I ODRŽIVI RAZVOJ",
+          "name": "Životna sredina i održivi razvoj",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "PREHRAMBENO I BIOPROCESNO INŽENJERSTVO",
+          "name": "Prehrambeno i bioprocesno inženjerstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "HEMIJSKA TEHNOLOGIJA",
+          "name": "Hemijska tehnologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "ZAŠTITA ŽIVOTNE SREDINE",
+          "name": "Zaštita životne sredine",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "METALURGIJA I MATERIJALI",
+          "name": "Metalurgija i materijali",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "HEMIJSKA TEHNOLOGIJA",
+          "name": "Hemijska tehnologija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "METALURGIJA I MATERIJALI",
+          "name": "Metalurgija i materijali",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -1080,28 +1080,28 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "OPŠTA MUZIČKA PEDAGOGIJA",
+          "name": "Opšta muzička pedagogija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "IZVOĐAČKE UMJETNOSTI",
+          "name": "Izvođačke umjetnosti",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "OPŠTA MUZIČKA PEDAGOGIJA",
+          "name": "Opšta muzička pedagogija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "IZVOĐAČKE UMJETNOSTI",
+          "name": "Izvođačke umjetnosti",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
@@ -1115,70 +1115,70 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "NAUTIKA",
+          "name": "Nautika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "NAUTIKA I POMORSKI SAOBRAĆAJ",
+          "name": "Nautika i pomorski saobraćaj",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "BRODOMAŠINSTVO",
+          "name": "Brodomašinstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "POMORSKA ELEKTROTEHNIKA",
+          "name": "Pomorska elektrotehnika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "MENADŽMENT U POMORSTVU I LOGISTIKA",
+          "name": "Menadžment u pomorstvu i logistika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "POMORSKE NAUKE",
+          "name": "Pomorske nauke",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MENADŽMENT U POMORSTVU I LOGISTIKA",
+          "name": "Menadžment u pomorstvu i logistika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MARITIME ENVIRONMENTAL PROTECTION AND MANAGEMENT",
+          "name": "Maritime environmental protection and management",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Engleski"
         },
         {
-          "name": "POMORSKE NAUKE",
+          "name": "Pomorske nauke",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "MENADŽMENT U POMORSTVU I LOGISTIKA",
+          "name": "Menadžment u pomorstvu i logistika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -1192,56 +1192,56 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "PRAVNE NAUKE",
+          "name": "Pravne nauke",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "KRIVIČNO PRAVO",
+          "name": "Krivično pravo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MEĐUNARODNO PRAVO",
+          "name": "Međunarodno pravo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "GRAĐANSKO PRAVO",
+          "name": "Građansko pravo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "POSLOVNO PRAVO",
+          "name": "Poslovno pravo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "PRAVNE NAUKE - KRIVIČNO PRAVO",
+          "name": "Pravne nauke - Krivično pravo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "PRAVNE NAUKE - GRAĐANSKO PRAVO",
+          "name": "Pravne nauke - Građansko pravo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "PRAVNE NAUKE - MEĐUNARODNO PRAVO",
+          "name": "Pravne nauke - Međunarodno pravo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
@@ -1255,126 +1255,126 @@
       "isUniversityLevel": false,
       "studyPrograms": [
         {
-          "name": "MATEMATIKA",
+          "name": "Matematika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "MATEMATIKA I RAČUNARSKE NAUKE",
+          "name": "Matematika i računarske nauke",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "RAČUNARSKE NAUKE",
+          "name": "Računarske nauke",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "FIZIKA",
+          "name": "Fizika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "BIOLOGIJA",
+          "name": "Biologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "HEMIJA",
+          "name": "Hemija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "RAČUNARSTVO I INFORMACIONE TEHNOLOGIJE",
+          "name": "Računarstvo i informacione tehnologije",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "MATEMATIKA",
+          "name": "Matematika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MATEMATIKA I RAČUNARSKE NAUKE",
+          "name": "Matematika i računarske nauke",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "RAČUNARSKE NAUKE",
+          "name": "Računarske nauke",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "FIZIKA",
+          "name": "Fizika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "BIOLOGIJA",
+          "name": "Biologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "RAČUNARSTVO I INFORMACIONE TEHNOLOGIJE",
+          "name": "Računarstvo i informacione tehnologije",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
           "language": "Crnogorski"
         },
         {
-          "name": "MATEMATIKA",
+          "name": "Matematika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "RAČUNARSKE NAUKE",
+          "name": "Računarske nauke",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "FIZIKA",
+          "name": "Fizika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "BIOLOGIJA",
+          "name": "Biologija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
           "language": "Crnogorski"
         },
         {
-          "name": "ZAŠTITA ŽIVOTNE SREDINE",
+          "name": "Zaštita životne sredine",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,

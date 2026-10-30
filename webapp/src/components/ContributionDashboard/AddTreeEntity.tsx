@@ -15,7 +15,9 @@ import {
   facultyTreeDataSchema,
   universityTreeDataSchema,
 } from "../../schemas/contribution";
+import { mapZodIssues } from "./utils/validateTreePayload";
 
+import type { ValidationIssue } from "./utils/validateTreePayload";
 import type { ChangeEvent, SubmitEvent } from "react";
 import type {
   FacultyTreeData,
@@ -73,11 +75,6 @@ ${FACULTY_PLACEHOLDER.split("\n")
 }`,
   FACULTY: FACULTY_PLACEHOLDER,
 };
-
-interface ValidationIssue {
-  path: string;
-  message: string;
-}
 
 function parseTree(rootType: TreeRootType, raw: unknown) {
   if (rootType === "UNIVERSITY") return universityTreeDataSchema.safeParse(raw);
@@ -142,10 +139,7 @@ function AddTreeEntity({
 
     const result = parseTree(rootType, raw);
     if (!result.success) {
-      const issuesFound = result.error.issues.map((issue) => ({
-        path: issue.path.map(String).join("."),
-        message: issue.message,
-      }));
+      const issuesFound = mapZodIssues(result.error);
 
       // the most common mix-up: a whole university pasted while the item
       // type is still Faculty - name it instead of listing unrecognized keys

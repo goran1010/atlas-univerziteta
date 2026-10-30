@@ -16,10 +16,8 @@ import type { SearchToken } from "../search/tokenize.js";
 import type { WhereClause } from "../search/matchers.js";
 import type { Request, Response } from "express";
 
-const MAX_RESULTS_PER_SECTION = 100;
-
 interface SectionQuery<Item> {
-  findMany: (where: WhereClause, take: number) => Promise<Item[]>;
+  findMany: (where: WhereClause) => Promise<Item[]>;
 }
 
 // Entities matching every token in their OWN fields come first; context-only
@@ -31,32 +29,22 @@ async function searchSection<Item extends { id: number }>(
   fullMatcher: (token: SearchToken) => WhereClause[],
   filters: WhereClause[],
 ): Promise<{ items: Item[]; direct: number }> {
-  const limit = MAX_RESULTS_PER_SECTION;
-
   if (tokens.length === 0) {
-    const items = await query.findMany({ AND: filters }, limit);
+    const items = await query.findMany({ AND: filters });
     return { items, direct: items.length };
   }
 
-  const ownItems = await query.findMany(
-    { AND: [...tokenWhere(tokens, ownMatcher), ...filters] },
-    limit,
-  );
+  const ownItems = await query.findMany({
+    AND: [...tokenWhere(tokens, ownMatcher), ...filters],
+  });
 
-  const remaining = limit - ownItems.length;
-  const contextItems =
-    remaining > 0
-      ? await query.findMany(
-          {
-            AND: [
-              ...tokenWhere(tokens, fullMatcher),
-              ...filters,
-              { id: { notIn: ownItems.map((item) => item.id) } },
-            ],
-          },
-          remaining,
-        )
-      : [];
+  const contextItems = await query.findMany({
+    AND: [
+      ...tokenWhere(tokens, fullMatcher),
+      ...filters,
+      { id: { notIn: ownItems.map((item) => item.id) } },
+    ],
+  });
 
   return { items: [...ownItems, ...contextItems], direct: ownItems.length };
 }
@@ -94,10 +82,9 @@ async function search(req: Request, res: Response) {
     wanted("university")
       ? searchSection(
           {
-            findMany: (where, take) =>
+            findMany: (where) =>
               prisma.university.findMany({
                 where,
-                take,
                 orderBy: [
                   { country: "asc" },
                   { ownership: "asc" },
@@ -119,10 +106,9 @@ async function search(req: Request, res: Response) {
     wanted("faculty")
       ? searchSection(
           {
-            findMany: (where, take) =>
+            findMany: (where) =>
               prisma.faculty.findMany({
                 where,
-                take,
                 orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
                 include: {
                   university: true,
@@ -143,10 +129,9 @@ async function search(req: Request, res: Response) {
     wanted("studyProgram")
       ? searchSection(
           {
-            findMany: (where, take) =>
+            findMany: (where) =>
               prisma.studyProgram.findMany({
                 where,
-                take,
                 orderBy: [{ cycle: "asc" }, { name: "asc" }],
                 include: {
                   faculty: {
