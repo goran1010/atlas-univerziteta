@@ -8,8 +8,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     | "success"
     | "danger"
     | "update"
-    | "warning"
-    | "ghost"
+    | "outline"
+    | "outline-warn"
     | "toggle";
   loading?: boolean | undefined;
 }
@@ -34,8 +34,8 @@ function Button({
     success: `bg-green-700 text-green-50 shadow-[0_8px_16px_rgba(21,128,61,0.22)] enabled:hover:bg-green-800 ${DISABLED}`,
     danger: `bg-red-700 text-red-50 shadow-[0_8px_16px_rgba(185,28,28,0.22)] enabled:hover:bg-red-800 ${DISABLED}`,
     update: `bg-yellow-500 text-yellow-950 shadow-[0_8px_16px_rgba(202,138,4,0.22)] enabled:hover:bg-yellow-600 ${DISABLED}`,
-    warning: `bg-amber-700 text-amber-50 shadow-[0_8px_16px_rgba(202,138,4,0.2)] enabled:hover:bg-amber-800 ${DISABLED}`,
-    ghost: `text-(--text-secondary) enabled:hover:text-(--text-primary) enabled:hover:bg-(--hover-surface) ${DISABLED}`,
+    outline: `bg-transparent text-(--accent-text) border border-(--accent) enabled:hover:bg-(--accent)/10 ${DISABLED}`,
+    "outline-warn": `bg-transparent text-amber-600 border border-amber-400 enabled:hover:bg-amber-500/10 dark:text-amber-400 dark:border-amber-600 dark:enabled:hover:bg-amber-500/10 ${DISABLED}`,
   };
 
   const variantClass = variantClasses[variant] || variantClasses.primary;

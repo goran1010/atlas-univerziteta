@@ -383,7 +383,7 @@
   "universitiesPage": {
     "title": "Nađite programe i univerzitete",
     "searchIntro": "Pretražite univerzitete, fakultete, studijske programe i smjerove. Unesite naziv programa, grad, zemlju, ciklus studija, ECTS bodove ili riječi poput \"javni\" ili \"master\".",
-    "browseAll": "Pregledaj sve univerzitete",
+    "browseAll": "Pretraži sve univerzitete",
     "search": "Pretraži",
     "searchAllPlaceholder": "npr. informatika, medicina Srbija, master 120 ECTS…",
     "universitiesSection": "Univerziteti",

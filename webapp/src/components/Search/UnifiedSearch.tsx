@@ -81,8 +81,8 @@ function UnifiedSearch() {
 
       {(hasSearchTerm || countryFilter !== "" || view.kind !== "idle") && (
         <Button
-          variant="danger"
-          className="text-xs px-3 py-2 sm:py-1.5 w-full max-w-xs sm:w-auto"
+          variant="outline-warn"
+          className="px-4 py-1.5 w-full max-w-xs sm:w-auto"
           onClick={handleClearAll}
         >
           {t("universitiesPage.resetSearch")}
@@ -102,7 +102,7 @@ function UnifiedSearch() {
       {loading && view.kind === "idle" && <Spinner page />}
       {!loading && view.kind === "idle" && (
         <Button
-          variant="secondary"
+          variant="outline"
           className="px-6 py-2.5 w-full max-w-xs sm:w-auto"
           onClick={handleBrowseAll}
         >

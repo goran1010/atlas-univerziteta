@@ -17,8 +17,8 @@ function renderErrorPage() {
   return warnSpy;
 }
 
-async function getGoHomeButton() {
-  return screen.findByRole("button", {
+async function getGoHomeLink() {
+  return screen.findByRole("link", {
     name: /Go to Home Page/i,
   });
 }
@@ -31,12 +31,12 @@ describe("ErrorPage component", () => {
     expect(warnSpy).toHaveBeenCalled();
   });
 
-  test("renders Go Home button", async () => {
+  test("renders Go Home link", async () => {
     renderErrorPage();
 
-    const goHomeButton = await getGoHomeButton();
+    const goHomeLink = await getGoHomeLink();
 
-    expect(goHomeButton).toBeInTheDocument();
+    expect(goHomeLink).toBeInTheDocument();
   });
 });
 
@@ -77,7 +77,7 @@ describe("ErrorPage for a generic render error", () => {
     expect(
       screen.getByRole("button", { name: /Reload the page/i }),
     ).toBeInTheDocument();
-    expect(await getGoHomeButton()).toBeInTheDocument();
+    expect(await getGoHomeLink()).toBeInTheDocument();
     expect(errorSpy).toHaveBeenCalledWith(
       expect.objectContaining({ message: "boom" }),
     );
@@ -85,11 +85,11 @@ describe("ErrorPage for a generic render error", () => {
 });
 
 describe("ErrorPage navigation", () => {
-  test("Go Home button is clickable", async () => {
+  test("Go Home link points to home", async () => {
     renderErrorPage();
 
-    const goHomeButton = await getGoHomeButton();
-    expect(goHomeButton).toBeEnabled();
+    const goHomeLink = await getGoHomeLink();
+    expect(goHomeLink).toHaveAttribute("href", "/");
     vi.restoreAllMocks();
   });
 });
