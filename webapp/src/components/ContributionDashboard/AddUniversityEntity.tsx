@@ -31,6 +31,7 @@ import {
   universityTreeDataSchema,
 } from "../../schemas/contribution";
 import { mapZodIssues } from "./utils/validateTreePayload";
+import { ValidationIssueList } from "./ValidationIssueList";
 import type { ValidationIssue } from "./utils/validateTreePayload";
 import type { TargetType, TypeOfChange } from "../../schemas/domain";
 import type { ContributionFormDraft, ContributionFormState } from "./types";
@@ -338,27 +339,7 @@ function AddUniversityEntity({
           }}
         />
       )}
-      {treeIssues.length > 0 && (
-        <div
-          role="alert"
-          className="flex flex-col gap-1 rounded-lg border border-red-300 dark:border-red-800 bg-red-50 dark:bg-red-900/20 p-2 sm:p-3"
-        >
-          <p className="text-xs font-semibold text-red-800 dark:text-red-300">
-            {t("contribution.tree.validationErrors")}
-          </p>
-          <ul className="text-xs font-mono text-red-700 dark:text-red-300 flex flex-col gap-0.5">
-            {treeIssues.map((issue, index) => (
-              <li
-                key={`${issue.path}-${index.toString()}`}
-                className="break-all"
-              >
-                {issue.path ? `${issue.path}: ` : ""}
-                {issue.message}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <ValidationIssueList issues={treeIssues} />
       <div className="flex flex-col gap-1">
         <Label htmlFor="contributionComment">{t("contribution.comment")}</Label>
         <Textarea

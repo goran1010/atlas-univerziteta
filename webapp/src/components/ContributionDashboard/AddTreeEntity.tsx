@@ -16,6 +16,7 @@ import {
   universityTreeDataSchema,
 } from "../../schemas/contribution";
 import { mapZodIssues } from "./utils/validateTreePayload";
+import { ValidationIssueList } from "./ValidationIssueList";
 
 import type { ValidationIssue } from "./utils/validateTreePayload";
 import type { ChangeEvent, SubmitEvent } from "react";
@@ -259,24 +260,7 @@ function AddTreeEntity({
           {t("contribution.tree.invalidJson")}
         </p>
       )}
-      {issues.length > 0 && (
-        <div
-          role="alert"
-          className="flex flex-col gap-1 rounded-lg border border-red-300 dark:border-red-800 bg-red-50 dark:bg-red-900/20 p-2 sm:p-3"
-        >
-          <p className="text-xs font-semibold text-red-800 dark:text-red-300">
-            {t("contribution.tree.validationErrors")}
-          </p>
-          <ul className="text-xs font-mono text-red-700 dark:text-red-300 flex flex-col gap-0.5">
-            {issues.map((issue, index) => (
-              <li key={`${issue.path}-${String(index)}`} className="break-all">
-                {issue.path ? `${issue.path}: ` : ""}
-                {issue.message}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <ValidationIssueList issues={issues} />
       <Button
         type="button"
         variant="secondary"

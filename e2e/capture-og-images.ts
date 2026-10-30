@@ -8,34 +8,69 @@ const OUT_DIR = join(import.meta.dirname, "..", "webapp", "public", "images", "o
 const WIDTH = 1200;
 const HEIGHT = 630;
 
-const PAGES: { path: string; filename: string }[] = [
-  { path: "/", filename: "og-image-home.png" },
-  { path: "/search", filename: "og-image-search.png" },
-  { path: "/about", filename: "og-image-about.png" },
-  { path: "/api-docs", filename: "og-image-api-docs.png" },
-  { path: "/login", filename: "og-image-login.png" },
-  { path: "/signup", filename: "og-image-signup.png" },
+const PAGES: { path: string; name: string }[] = [
+  { path: "/", name: "home" },
+  { path: "/search", name: "search" },
+  { path: "/about", name: "about" },
+  { path: "/api-docs", name: "api-docs" },
+  { path: "/login", name: "login" },
+  { path: "/signup", name: "signup" },
 ];
+
+async function capturePage(
+  context: Awaited<ReturnType<typeof chromium.launch>>["contexts"][number],
+  path: string,
+  filename: string,
+) {
+  const page = await context.newPage();
+  await page.goto(`${BASE_URL}${path}`, { waitUntil: "networkidle" });
+  await page.screenshot({ path: join(OUT_DIR, filename) });
+  console.log(`  ${filename}`);
+  await page.close();
+}
 
 async function main() {
   const browser = await chromium.launch();
-  const context = await browser.newContext({
+
+  const contextOptions = {
     viewport: { width: WIDTH, height: HEIGHT },
     deviceScaleFactor: 2,
+    colorScheme: "dark" as const,
+  };
+
+  // English screenshots
+  console.log(`Capturing English OG images from ${BASE_URL}`);
+  const enContext = await browser.newContext({
+    ...contextOptions,
+    locale: "en-US",
   });
-
-  console.log(`Capturing OG images from ${BASE_URL}`);
-
-  for (const { path, filename } of PAGES) {
-    const page = await context.newPage();
-    await page.goto(`${BASE_URL}${path}`, { waitUntil: "networkidle" });
-    await page.screenshot({ path: join(OUT_DIR, filename) });
-    console.log(`  ${filename}`);
-    await page.close();
+  for (const { path, name } of PAGES) {
+    await capturePage(enContext, path, `og-image-${name}.png`);
   }
+  await enContext.close();
+
+  // BCS screenshots: set language via localStorage before navigating
+  console.log("Capturing BCS OG images");
+  const srContext = await browser.newContext({
+    ...contextOptions,
+    locale: "en-US",
+    storageState: {
+      cookies: [],
+      origins: [
+        {
+          origin: BASE_URL,
+          localStorage: [{ name: "language", value: "sr" }],
+        },
+      ],
+    },
+  });
+  for (const { path, name } of PAGES) {
+    await capturePage(srContext, path, `og-image-${name}-sr.png`);
+  }
+  await srContext.close();
 
   await browser.close();
-  console.log(`Done - ${String(PAGES.length)} images saved to ${OUT_DIR}`);
+  console.log(`Done - ${String(PAGES.length * 2)} images saved to ${OUT_DIR}`);
 }
 
 await main();
