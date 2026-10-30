@@ -26,17 +26,7 @@ https://api.atlasuniverziteta.com/api/auth/callback/google
 
 ## Seeding the database
 
-The seed script (`npm run db:seed`) reads JSON files from `server/JSON_files/universities/<COUNTRY>/` and upserts them into the database. It runs locally (development, test, CI) but not in production - the production Docker image contains only `dist/` and has no seed script.
-
-**Re-seed behavior:**
-
-- **Upsert + cleanup** - the seed matches universities by name, faculties by name + universityId, study programs by name + facultyId + cycle, and tracks by name + studyProgramId. Existing rows are updated; new rows are created. After each level, rows that no longer appear in the JSON files are deleted (children cascade).
-- **`npm run db:reset`** drops all tables, re-runs migrations, and re-seeds from scratch.
-- **Validation** - the seed validates all files before touching the database: university names must be globally unique, `(name, cycle)` pairs must be unique within each faculty, and each file's `country` must match its parent folder.
-
-**Seeding production** after a data change:
-
-Since the production image has no seed script, connect to the production database from a local checkout that has the updated JSON files, set `DATABASE_URL` to the production connection string, and run `npm run db:seed`. Alternatively, run `npm run db:reset` for a clean slate (this drops all user data and pending changes).
+`npm run db:seed` reads JSON files from `server/JSON_files/universities/<COUNTRY>/` and syncs them into the database: new rows are created, existing rows are updated, and rows no longer in the JSON files are deleted (children cascade). `npm run db:reset` drops everything and re-seeds from scratch.
 
 ## Adding a country
 
