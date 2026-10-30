@@ -43,10 +43,7 @@ function ErrorPage() {
                 {t("error.reload")}
               </Button>
             )}
-            <LinkButton
-              to="/"
-              className="flex-1 sm:flex-initial"
-            >
+            <LinkButton to="/" className="flex-1 sm:flex-initial">
               {t("error.goHome")}
             </LinkButton>
           </div>

@@ -69,11 +69,7 @@ async function applyUniversity(ctx: ApplyContext): Promise<ApplyResult> {
   }
 
   if (typeOfChange === "CREATE") {
-    const parsed = parsePendingChangeData(
-      universityTreeDataSchema,
-      data,
-      id,
-    );
+    const parsed = parsePendingChangeData(universityTreeDataSchema, data, id);
     if (!parsed) return "INVALID_DATA";
     if (!(await claim())) return "NOT_FOUND";
     await tx.university.create({
@@ -166,11 +162,7 @@ async function applyStudyProgram(ctx: ApplyContext): Promise<ApplyResult> {
 
   if (typeOfChange === "CREATE") {
     if (parentId === null) return "INVALID_DATA";
-    const parsed = parsePendingChangeData(
-      studyProgramTreeDataSchema,
-      data,
-      id,
-    );
+    const parsed = parsePendingChangeData(studyProgramTreeDataSchema, data, id);
     if (!parsed) return "INVALID_DATA";
     if (!(await claim())) return "NOT_FOUND";
     await tx.studyProgram.create({
@@ -181,11 +173,7 @@ async function applyStudyProgram(ctx: ApplyContext): Promise<ApplyResult> {
 
   if (targetId === null) return "INVALID_DATA";
 
-  const parsed = parsePendingChangeData(
-    studyProgramEditDataSchema,
-    data,
-    id,
-  );
+  const parsed = parsePendingChangeData(studyProgramEditDataSchema, data, id);
   if (!parsed) return "INVALID_DATA";
 
   if (!(await claim())) return "NOT_FOUND";

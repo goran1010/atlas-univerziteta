@@ -18,10 +18,7 @@ function ValidationIssueList({ issues }: { issues: ValidationIssue[] }) {
       </p>
       <ul className="text-xs font-mono text-red-700 dark:text-red-300 flex flex-col gap-0.5">
         {issues.map((issue, index) => (
-          <li
-            key={`${issue.path}-${String(index)}`}
-            className="break-all"
-          >
+          <li key={`${issue.path}-${String(index)}`} className="break-all">
             {issue.path ? `${issue.path}: ` : ""}
             {issue.message}
           </li>

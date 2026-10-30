@@ -111,6 +111,6 @@ test("an unknown route shows the 404 page", async ({ page }) => {
 
   await expect(page.getByText("There is nothing here.")).toBeVisible();
   await expect(
-    page.getByRole("button", { name: "Go to Home Page" }),
+    page.getByRole("link", { name: "Go to Home Page" }),
   ).toBeVisible();
 });

@@ -3,7 +3,14 @@ import { chromium } from "playwright";
 import { join } from "node:path";
 
 const BASE_URL = process.argv[2] ?? "https://atlasuniverziteta.com";
-const OUT_DIR = join(import.meta.dirname, "..", "webapp", "public", "images", "og-images");
+const OUT_DIR = join(
+  import.meta.dirname,
+  "..",
+  "webapp",
+  "public",
+  "images",
+  "og-images",
+);
 
 const WIDTH = 1200;
 const HEIGHT = 630;
@@ -17,8 +24,10 @@ const PAGES: { path: string; name: string }[] = [
   { path: "/signup", name: "signup" },
 ];
 
+import type { BrowserContext } from "playwright";
+
 async function capturePage(
-  context: Awaited<ReturnType<typeof chromium.launch>>["contexts"][number],
+  context: BrowserContext,
   path: string,
   filename: string,
 ) {
