@@ -1,16 +1,14 @@
 import { describe, test, expect } from "vitest";
 import { tokenizeSearchTerm } from "../../../src/search/tokenize.js";
-import { ENUM_ALIASES } from "../../../src/search/aliases.js";
+import { COUNTRY_ALIASES } from "../../../src/search/aliases.js";
 
 function resolvedCountry(phrase: string): string | undefined {
   const tokens = tokenizeSearchTerm(phrase);
   for (const token of tokens) {
     if (token.kind !== "text") continue;
     for (const form of [token.word.toUpperCase(), token.stem.toUpperCase()]) {
-      const candidate = ENUM_ALIASES[form] ?? form;
-      if (["BIH", "SRB", "HRV", "MNE"].includes(candidate)) {
-        return candidate;
-      }
+      const country = COUNTRY_ALIASES[form];
+      if (country) return country;
     }
   }
   return undefined;

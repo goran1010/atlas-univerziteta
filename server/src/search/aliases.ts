@@ -19,6 +19,11 @@ const ENUM_ALIASES: Record<string, string> = {
   INTEGRISANI: "INTEGRATED",
   STRUCN: "VOCATIONAL",
   SPECIJALISTICK: "SPECIALIST",
+} as const;
+
+// Country aliases are resolved separately so short country codes (AND, FIN,
+// POL) can't false-match ordinary words through the general enum path
+const COUNTRY_ALIASES: Record<string, string> = {
   BOSN: "BIH",
   BOSNIA: "BIH",
   HERCEGOVINA: "BIH",
@@ -52,4 +57,11 @@ const CYCLES = [
   "SPECIALIST",
 ] as const;
 
-export { ENUM_ALIASES, COUNTRIES, ENTITIES, OWNERSHIPS, CYCLES };
+export {
+  ENUM_ALIASES,
+  COUNTRY_ALIASES,
+  COUNTRIES,
+  ENTITIES,
+  OWNERSHIPS,
+  CYCLES,
+};
