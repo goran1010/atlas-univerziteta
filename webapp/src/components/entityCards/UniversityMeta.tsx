@@ -20,8 +20,8 @@ function OwnershipPill({ ownership }: { ownership: Ownership }) {
   );
 }
 
-// the city / entity / ownership strip under a university name; callers
-// append their own extras (faculty count, founded year) as children
+// the city / country / entity / ownership strip under a university name;
+// callers append their own extras (faculty count, founded year) as children
 function UniversityMetaRow({
   city,
   country,

@@ -153,8 +153,8 @@ model Faculty {
   lastModified      DateTime?
   studyPrograms     StudyProgram[]
 
-  // the unique above starts with name, so FK lookups need their own index
   @@unique([name, universityId])
+  // the unique starts with name, so FK lookups by universityId need their own index
   @@index([universityId])
   @@map("faculty")
 }

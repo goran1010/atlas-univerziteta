@@ -5,7 +5,7 @@ import { parseRequest } from "./parseRequest.js";
 const targetTypeSchema = z.enum(
   ["UNIVERSITY", "FACULTY", "STUDY_PROGRAM", "TRACK"],
   {
-    error: "Invalid entity type",
+    error: "Invalid target type",
   },
 );
 

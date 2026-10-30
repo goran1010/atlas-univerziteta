@@ -1,8 +1,8 @@
-// Bosnian/Serbian terms and common synonyms mapped to the English enum
-// values, so search matches in both languages. Local words are keyed by
-// their STEM so every gender/case form matches (javna/javni/javno -> JAVN);
-// words the stemmer leaves alone (prvi, master) are keyed as typed. Tokens
-// arrive diacritic-folded, so only ASCII spellings are keyed.
+// Local terms and common synonyms mapped to enum values so search matches
+// in both English and the local languages. Words are keyed by their stem
+// or full form, whichever the tokenizer produces (javna/javni/javno ->
+// JAVN; prvi, master -> as-is). Tokens arrive diacritic-folded, so only
+// ASCII spellings are keyed.
 const ENUM_ALIASES: Record<string, string> = {
   JAVN: "PUBLIC",
   PRIVATN: "PRIVATE",
