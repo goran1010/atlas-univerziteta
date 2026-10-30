@@ -4,9 +4,7 @@ import { Spinner } from "../sharedComponents/Spinner";
 import { SearchResults } from "./SearchResults";
 import { useUnifiedSearch } from "./useUnifiedSearch";
 
-import type { Country } from "../../schemas/domain";
-
-const COUNTRIES: Country[] = ["BIH", "SRB", "HRV", "MNE"];
+import { COUNTRIES } from "../../schemas/domain";
 
 function UnifiedSearch() {
   const {

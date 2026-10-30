@@ -6,6 +6,7 @@ import { z } from "zod";
 
 import { env } from "../config/env.js";
 import { PrismaClient } from "../generated/prisma/client.js";
+import { COUNTRIES, ENTITIES } from "../search/aliases.js";
 import {
   universitySearchFields,
   facultySearchFields,
@@ -95,11 +96,11 @@ const facultySeedSchema = z.strictObject({
 
 const universitySeedSchema = z
   .strictObject({
-    country: z.enum(["BIH", "SRB", "HRV", "MNE"]),
+    country: z.enum(COUNTRIES),
     name: z.string().trim().min(1),
     acronym: optionalTextSchema,
     city: z.string().trim().min(1),
-    entity: z.enum(["FBIH", "RS", "BD"]).optional(),
+    entity: z.enum(ENTITIES).optional(),
     ownership: z.enum(["PUBLIC", "PRIVATE"]),
     foundedYear: optionalTextSchema,
     website: optionalTextSchema,

@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import { parseRequest } from "./parseRequest.js";
+import { COUNTRIES, ENTITIES } from "../search/aliases.js";
 
 const targetTypeSchema = z.enum(
   ["UNIVERSITY", "FACULTY", "STUDY_PROGRAM", "TRACK"],
@@ -74,12 +75,12 @@ const universityCreateDataSchema = z
 
     city: z.string().trim().min(1, { error: "City is required" }).max(200),
 
-    country: z.enum(["BIH", "SRB", "HRV", "MNE"], {
+    country: z.enum(COUNTRIES, {
       error: "Invalid country - must be BIH, SRB, HRV, or MNE",
     }),
 
     entity: z
-      .enum(["FBIH", "RS", "BD"], {
+      .enum(ENTITIES, {
         error: "Invalid entity - must be FBIH, RS, or BD",
       })
       .optional(),
@@ -309,13 +310,13 @@ const universityEditDataSchema = z
       .optional(),
 
     country: z
-      .enum(["BIH", "SRB", "HRV", "MNE"], {
+      .enum(COUNTRIES, {
         error: "Invalid country - must be BIH, SRB, HRV, or MNE",
       })
       .optional(),
 
     entity: z
-      .enum(["FBIH", "RS", "BD"], {
+      .enum(ENTITIES, {
         error: "Invalid entity - must be FBIH, RS, or BD",
       })
       .nullable()

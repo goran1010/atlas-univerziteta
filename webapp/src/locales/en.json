@@ -251,12 +251,6 @@
       "VOCATIONAL": "VOCATIONAL",
       "SPECIALIST": "SPECIALIST - Specialist Study"
     },
-    "countries": {
-      "BIH": "Bosnia and Herzegovina",
-      "SRB": "Serbia",
-      "HRV": "Croatia",
-      "MNE": "Montenegro"
-    },
     "entities": {
       "FBIH": "FBIH - Federation of B&H",
       "RS": "RS - Republika Srpska",

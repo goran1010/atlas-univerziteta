@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { parseRequest } from "./parseRequest.js";
+import { COUNTRIES, ENTITIES } from "../search/aliases.js";
 
 const positiveIdParam = z
   .string()
@@ -28,8 +29,8 @@ function getTrackById(input: unknown) {
 const listQuerySchema = z.object({
   page: z.coerce.number().int().min(1).default(1),
   limit: z.coerce.number().int().min(1).max(100).default(50),
-  country: z.enum(["BIH", "SRB", "HRV", "MNE"]).optional(),
-  entity: z.enum(["FBIH", "RS", "BD"]).optional(),
+  country: z.enum(COUNTRIES).optional(),
+  entity: z.enum(ENTITIES).optional(),
 });
 
 function listQuery(input: unknown) {
@@ -65,8 +66,8 @@ const searchQuerySchema = z.object({
       message: "Search term must not exceed 100 characters.",
     })
     .optional(),
-  country: z.enum(["BIH", "SRB", "HRV", "MNE"]).optional(),
-  entity: z.enum(["FBIH", "RS", "BD"]).optional(),
+  country: z.enum(COUNTRIES).optional(),
+  entity: z.enum(ENTITIES).optional(),
   ownership: z.enum(["PUBLIC", "PRIVATE"]).optional(),
   cycle: z
     .union([studyCycleEnum, z.array(studyCycleEnum).min(1)])

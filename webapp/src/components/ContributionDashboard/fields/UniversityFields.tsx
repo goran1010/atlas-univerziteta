@@ -4,10 +4,8 @@ import { DataField } from "../DataField";
 import { Label } from "../../sharedComponents/Label";
 import { Select } from "../../sharedComponents/Select";
 import type { ContributionFormDraft } from "../types";
-import type { TypeOfChange, Country, Entity } from "../../../schemas/domain";
-
-const COUNTRIES: Country[] = ["BIH", "SRB", "HRV", "MNE"];
-const ENTITIES: Entity[] = ["FBIH", "RS", "BD"];
+import { COUNTRIES, ENTITIES } from "../../../schemas/domain";
+import type { TypeOfChange } from "../../../schemas/domain";
 
 interface UniversityFieldsProps {
   data: ContributionFormDraft;
@@ -68,7 +66,7 @@ function UniversityFields({
             <option value="">-</option>
             {COUNTRIES.map((c) => (
               <option key={c} value={c}>
-                {t(`contribution.countries.${c}`)}
+                {t(`universitiesPage.countries.${c}`)}
               </option>
             ))}
           </Select>

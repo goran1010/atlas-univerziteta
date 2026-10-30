@@ -80,7 +80,7 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
       push(t("contribution.dataFields.city"), entity.data.city);
       push(
         t("contribution.dataFields.country"),
-        t(`contribution.countries.${entity.data.country}`),
+        t(`universitiesPage.countries.${entity.data.country}`),
       );
       if (entity.data.entity) {
         push(

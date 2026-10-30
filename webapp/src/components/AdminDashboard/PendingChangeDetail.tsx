@@ -52,7 +52,7 @@ function entityFieldSpecs(targetType: string, t: TFunction): FieldSpec[] {
           key: "country",
           label: t("contribution.dataFields.country"),
           translate: (value, translator) =>
-            translator(`contribution.countries.${value}`),
+            translator(`universitiesPage.countries.${value}`),
         },
         {
           key: "entity",
