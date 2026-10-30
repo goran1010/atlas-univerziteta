@@ -220,8 +220,14 @@ async function main() {
         }),
       ),
     );
+    const { count: removedUniversities } = await prisma.university.deleteMany({
+      where: { id: { notIn: upsertedUniversities.map((u) => u.id) } },
+    });
     console.log(
-      `Upserted ${upsertedUniversities.length.toString()} universities.`,
+      `Upserted ${upsertedUniversities.length.toString()} universities` +
+        (removedUniversities > 0
+          ? `, removed ${removedUniversities.toString()} orphans.`
+          : "."),
     );
     console.log("Seeding faculties...");
 
@@ -280,7 +286,18 @@ async function main() {
     });
 
     const upsertedFaculties = await Promise.all(facultyUpserts);
-    console.log(`Upserted ${upsertedFaculties.length.toString()} faculties.`);
+    const { count: removedFaculties } = await prisma.faculty.deleteMany({
+      where: {
+        universityId: { in: upsertedUniversities.map((u) => u.id) },
+        id: { notIn: upsertedFaculties.map((f) => f.id) },
+      },
+    });
+    console.log(
+      `Upserted ${upsertedFaculties.length.toString()} faculties` +
+        (removedFaculties > 0
+          ? `, removed ${removedFaculties.toString()} orphans.`
+          : "."),
+    );
     console.log("Seeding study programs...");
 
     const facultyIdByUniversityAndName = new Map(
@@ -348,8 +365,17 @@ async function main() {
     });
 
     const upsertedStudyPrograms = await Promise.all(studyProgramUpserts);
+    const { count: removedPrograms } = await prisma.studyProgram.deleteMany({
+      where: {
+        facultyId: { in: upsertedFaculties.map((f) => f.id) },
+        id: { notIn: upsertedStudyPrograms.map((p) => p.id) },
+      },
+    });
     console.log(
-      `Upserted ${upsertedStudyPrograms.length.toString()} study programs.`,
+      `Upserted ${upsertedStudyPrograms.length.toString()} study programs` +
+        (removedPrograms > 0
+          ? `, removed ${removedPrograms.toString()} orphans.`
+          : "."),
     );
     console.log("Seeding tracks...");
 
@@ -418,7 +444,18 @@ async function main() {
     });
 
     const upsertedTracks = await Promise.all(trackUpserts);
-    console.log(`Upserted ${upsertedTracks.length.toString()} tracks.`);
+    const { count: removedTracks } = await prisma.track.deleteMany({
+      where: {
+        studyProgramId: { in: upsertedStudyPrograms.map((p) => p.id) },
+        id: { notIn: upsertedTracks.map((t) => t.id) },
+      },
+    });
+    console.log(
+      `Upserted ${upsertedTracks.length.toString()} tracks` +
+        (removedTracks > 0
+          ? `, removed ${removedTracks.toString()} orphans.`
+          : "."),
+    );
   } catch (error: unknown) {
     console.error("Error seeding database:", error);
     process.exitCode = 1;

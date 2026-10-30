@@ -69,6 +69,7 @@ See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) - code, documentation, bug reports
 GNU Affero General Public License v3.0 - see [LICENSE.md](./LICENSE.md).
 
 Data sources:
+
 - BiH: [Agencija za razvoj visokog obrazovanja i osiguranje kvaliteta BiH (HEA)](https://www.hea.gov.ba/Content/Read/lista-akreditiranih-vsu)
 - Serbia: [Nacionalno akreditaciono telo (NAT)](https://nat.rs/)
 - Croatia: [Agencija za znanost i visoko obrazovanje (AZVO)](https://www.azvo.hr/) and university websites

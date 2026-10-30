@@ -24,6 +24,35 @@ https://api.atlasuniverziteta.com/api/auth/callback/github
 https://api.atlasuniverziteta.com/api/auth/callback/google
 ```
 
+## Seeding the database
+
+The seed script (`npm run db:seed`) reads JSON files from `server/JSON_files/universities/<COUNTRY>/` and upserts them into the database. It runs locally (development, test, CI) but not in production - the production Docker image contains only `dist/` and has no seed script.
+
+**Re-seed behavior:**
+
+- **Upsert + cleanup** - the seed matches universities by name, faculties by name + universityId, study programs by name + facultyId + cycle, and tracks by name + studyProgramId. Existing rows are updated; new rows are created. After each level, rows that no longer appear in the JSON files are deleted (children cascade).
+- **`npm run db:reset`** drops all tables, re-runs migrations, and re-seeds from scratch.
+- **Validation** - the seed validates all files before touching the database: university names must be globally unique, `(name, cycle)` pairs must be unique within each faculty, and each file's `country` must match its parent folder.
+
+**Seeding production** after a data change:
+
+Since the production image has no seed script, connect to the production database from a local checkout that has the updated JSON files, set `DATABASE_URL` to the production connection string, and run `npm run db:seed`. Alternatively, run `npm run db:reset` for a clean slate (this drops all user data and pending changes).
+
+## Adding a country
+
+Checklist for adding a new country to the platform:
+
+1. **Prisma enum** - add the ISO 3166-1 alpha-3 code to `enum country` in `server/prisma/schema.prisma` and run `npm run db:migrate`
+2. **JSON data** - create `server/JSON_files/universities/<CODE>/` with one JSON file per university (see existing files for the format)
+3. **Server validation** - add the code to the country enum in `server/src/validation/contributionValidation.ts` (create and edit schemas) and `server/src/validation/v1Validation.ts` (search and list query schemas)
+4. **Seed schema** - add the code to the country enum in `server/src/db/seed.ts`
+5. **Search aliases** - add local-language aliases (stems the tokenizer produces) to `server/src/search/aliases.ts`
+6. **Webapp schema** - add the code to `countrySchema` in `webapp/src/schemas/domain.ts`
+7. **Locale maps** - add a display name in both `webapp/src/locales/en.json` and `webapp/src/locales/sr.json` under `universitiesPage.countries` and `contribution.countries`
+8. **Entity rule** - if the country has subdivisions like BiH's entities, add them to the entity enum and validation; otherwise the country works without an entity
+9. **Accreditation** - research the national accreditation body and add real accreditation dates to the JSON files
+10. **Seed and test** - run `npm run db:seed` and `npm run test:all` to verify
+
 ## Share previews and prerendered meta
 
 The webapp is an SPA, and social crawlers (Discord, Facebook, X) do not run JavaScript. `webapp/scripts/prerender-meta.ts` runs as the last build step and writes a static `dist/<route>/index.html` per page with the right `<title>`, description, and Open Graph tags baked in - Netlify serves those files before falling back to the SPA shell.
