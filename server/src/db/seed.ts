@@ -6,7 +6,12 @@ import { z } from "zod";
 
 import { env } from "../config/env.js";
 import { PrismaClient } from "../generated/prisma/client.js";
-import { COUNTRIES, ENTITIES } from "../validation/countries.js";
+import {
+  COUNTRIES,
+  ENTITIES,
+  ENTITY_RULE_MESSAGE,
+  entityFitsCountry,
+} from "../validation/countries.js";
 import {
   universitySearchFields,
   facultySearchFields,
@@ -114,8 +119,8 @@ const universitySeedSchema = z
     lastModified: optionalDateSchema,
     faculties: z.array(facultySeedSchema).min(1).optional(),
   })
-  .refine((u) => u.country !== "BIH" || u.entity !== undefined, {
-    message: "Entity is required for Bosnian universities",
+  .refine((u) => entityFitsCountry(u.country, u.entity), {
+    message: ENTITY_RULE_MESSAGE,
     path: ["entity"],
   });
 

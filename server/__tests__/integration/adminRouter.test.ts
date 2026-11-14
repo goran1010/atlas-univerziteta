@@ -529,6 +529,72 @@ describe("Admin Router - POST /users/admin/approve-pending-change for UNIVERSITY
       }),
     );
   });
+
+  test("Responds with status 422 if an approved edit would leave a non-BIH university with an entity", async () => {
+    const university = await createUniversity("Test Keeps Entity University");
+    const pendingChange = await createPendingChange({
+      targetType: "UNIVERSITY",
+      typeOfChange: "UPDATE",
+      targetId: university.id,
+      data: { country: "SRB" },
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expect(response.status).toBe(422);
+    expect(
+      await prisma.university.findUnique({ where: { id: university.id } }),
+    ).toEqual(expect.objectContaining({ country: "BIH", entity: "FBIH" }));
+    expect(logger.warn).toHaveBeenCalledWith(
+      expect.objectContaining({
+        pendingChangeId: pendingChange.id,
+        country: "SRB",
+        entity: "FBIH",
+      }),
+      "Approval rejected: entity does not fit the country after merge.",
+    );
+  });
+
+  test("Responds with status 422 if an approved edit would leave a BIH university without an entity", async () => {
+    const university = await prisma.university.create({
+      data: {
+        name: "Test No Entity University",
+        city: "Test City",
+        country: "SRB",
+        ownership: "PUBLIC",
+      },
+    });
+    const pendingChange = await createPendingChange({
+      targetType: "UNIVERSITY",
+      typeOfChange: "UPDATE",
+      targetId: university.id,
+      data: { country: "BIH" },
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expect(response.status).toBe(422);
+    expect(
+      await prisma.university.findUnique({ where: { id: university.id } }),
+    ).toEqual(expect.objectContaining({ country: "SRB", entity: null }));
+  });
+
+  test("Responds with status 200 if an approved edit moves a university out of BIH and clears the entity", async () => {
+    const university = await createUniversity("Test Moved University");
+    const pendingChange = await createPendingChange({
+      targetType: "UNIVERSITY",
+      typeOfChange: "UPDATE",
+      targetId: university.id,
+      data: { country: "SRB", entity: null },
+    });
+
+    const response = await approve(pendingChange.id);
+
+    expectApproved(response);
+    expect(
+      await prisma.university.findUnique({ where: { id: university.id } }),
+    ).toEqual(expect.objectContaining({ country: "SRB", entity: null }));
+  });
 });
 
 describe("Admin Router - POST /users/admin/approve-pending-change for FACULTY", () => {

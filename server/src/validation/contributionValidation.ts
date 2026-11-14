@@ -1,7 +1,12 @@
 import { z } from "zod";
 
 import { parseRequest } from "./parseRequest.js";
-import { COUNTRIES, ENTITIES } from "./countries.js";
+import {
+  COUNTRIES,
+  ENTITIES,
+  ENTITY_RULE_MESSAGE,
+  entityFitsCountry,
+} from "./countries.js";
 
 const targetTypeSchema = z.enum(
   ["UNIVERSITY", "FACULTY", "STUDY_PROGRAM", "TRACK"],
@@ -76,12 +81,12 @@ const universityCreateDataSchema = z
     city: z.string().trim().min(1, { error: "City is required" }).max(200),
 
     country: z.enum(COUNTRIES, {
-      error: "Invalid country - must be BIH, SRB, HRV, or MNE",
+      error: `Invalid country - must be one of ${COUNTRIES.join(", ")}`,
     }),
 
     entity: z
       .enum(ENTITIES, {
-        error: "Invalid entity - must be FBIH, RS, or BD",
+        error: `Invalid entity - must be one of ${ENTITIES.join(", ")}`,
       })
       .optional(),
 
@@ -101,12 +106,8 @@ const universityCreateDataSchema = z
 
     email: z.email({ error: "Invalid email" }).max(254).optional(),
   })
-  .refine((u) => u.country !== "BIH" || u.entity !== undefined, {
-    message: "Entity is required for Bosnian universities",
-    path: ["entity"],
-  })
-  .refine((u) => u.country === "BIH" || u.entity === undefined, {
-    message: "Entity is only valid for Bosnian universities",
+  .refine((u) => entityFitsCountry(u.country, u.entity), {
+    message: ENTITY_RULE_MESSAGE,
     path: ["entity"],
   });
 
@@ -311,13 +312,13 @@ const universityEditDataSchema = z
 
     country: z
       .enum(COUNTRIES, {
-        error: "Invalid country - must be BIH, SRB, HRV, or MNE",
+        error: `Invalid country - must be one of ${COUNTRIES.join(", ")}`,
       })
       .optional(),
 
     entity: z
       .enum(ENTITIES, {
-        error: "Invalid entity - must be FBIH, RS, or BD",
+        error: `Invalid entity - must be one of ${ENTITIES.join(", ")}`,
       })
       .nullable()
       .optional(),
@@ -343,17 +344,14 @@ const universityEditDataSchema = z
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
   })
+  // an edit that leaves country or entity out is checked against the merged
+  // row when it is approved
   .refine(
-    (data) => {
-      if (data.country === undefined) return true;
-      if (data.country === "BIH") return data.entity !== null;
-      return data.entity === undefined || data.entity === null;
-    },
-    {
-      message:
-        "Entity is required for Bosnian universities and not valid for others",
-      path: ["entity"],
-    },
+    (data) =>
+      data.country === undefined ||
+      data.entity === undefined ||
+      entityFitsCountry(data.country, data.entity),
+    { message: ENTITY_RULE_MESSAGE, path: ["entity"] },
   );
 
 const facultyEditDataSchema = z

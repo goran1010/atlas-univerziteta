@@ -10,5 +10,26 @@ const SUBDIVISIONS = {
 
 const ENTITIES = Object.values(SUBDIVISIONS).flat();
 
-export { COUNTRIES, SUBDIVISIONS, ENTITIES };
+const subdivisionsByCountry: Partial<Record<string, readonly string[]>> =
+  SUBDIVISIONS;
+
+function entityFitsCountry(
+  country: string,
+  entity: string | null | undefined,
+): boolean {
+  const entities = subdivisionsByCountry[country];
+  if (entities === undefined) return entity === undefined || entity === null;
+  return entity !== undefined && entity !== null && entities.includes(entity);
+}
+
+const ENTITY_RULE_MESSAGE =
+  "Entity must be one of the country's subdivisions, and is only set for countries that have them";
+
+export {
+  COUNTRIES,
+  SUBDIVISIONS,
+  ENTITIES,
+  ENTITY_RULE_MESSAGE,
+  entityFitsCountry,
+};
 export type { Country };

@@ -982,6 +982,45 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
     expect(response.status).toBe(201);
   });
 
+  test("rejects a university edit to BIH that clears the entity", async () => {
+    const { agent } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const response = await agent.put("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      data: { country: "BIH", entity: null },
+    });
+
+    expect(response.status).toBe(400);
+  });
+
+  test("rejects a university edit to a non-BIH country with an entity", async () => {
+    const { agent } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const response = await agent.put("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      data: { country: "SRB", entity: "FBIH" },
+    });
+
+    expect(response.status).toBe(400);
+  });
+
+  test("accepts a university edit to a non-BIH country that clears the entity", async () => {
+    const { agent } = await createLoggedInAgent();
+    const university = await createUniversity();
+
+    const response = await agent.put("/users/contribution/universities").send({
+      targetType: "UNIVERSITY",
+      targetId: university.id,
+      data: { country: "SRB", entity: null },
+    });
+
+    expect(response.status).toBe(201);
+  });
+
   test("responds with status 404 when an edit target does not exist", async () => {
     const { agent } = await createLoggedInAgent();
 
