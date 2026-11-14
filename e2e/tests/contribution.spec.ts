@@ -87,7 +87,7 @@ test("contribution approval round-trip", async ({ browser }) => {
     adminPage.getByText("There are no pending changes at the moment."),
   ).toBeVisible();
 
-  await adminPage.goto("/search");
+  await adminPage.goto("/");
   await adminPage.getByRole("searchbox", { name: "Search" }).fill(suffix);
   // generous timeout: random suffixes expand to many variants,
   // making this search slow under parallel workers
@@ -183,7 +183,7 @@ test("whole tree JSON contribution approval round-trip", async ({
   );
   expect(rows).toEqual([{ track: trackName }]);
 
-  await adminPage.goto("/search");
+  await adminPage.goto("/");
   await adminPage.getByRole("searchbox", { name: "Search" }).fill(suffix);
   // the university, faculty, program and track cards all carry the
   // university name, so any single match proves the tree is searchable
@@ -321,7 +321,7 @@ test("contribution rejection round-trip", async ({ browser }) => {
   ).toBeVisible();
 
   // the rejected university must never appear in the data
-  await adminPage.goto("/search");
+  await adminPage.goto("/");
   await adminPage.getByRole("searchbox", { name: "Search" }).fill(suffix);
   await expect(adminPage.getByText("No results found.")).toBeVisible({
     timeout: 15000,

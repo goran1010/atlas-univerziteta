@@ -15,18 +15,8 @@ function renderRoute(route: string) {
 }
 
 describe("Loading components when visiting an address", () => {
-  test("visit home page renders the universities page", async () => {
+  test("visit home page renders the search page", async () => {
     renderRoute("/");
-
-    const heading = await screen.findByRole("heading", {
-      name: /Find programs and universities/i,
-      level: 1,
-    });
-    expect(heading).not.toBeNull();
-  });
-
-  test.each(["/home"])("redirects %s to the home page", async (route) => {
-    renderRoute(route);
 
     const heading = await screen.findByRole("heading", {
       name: /Find programs and universities/i,

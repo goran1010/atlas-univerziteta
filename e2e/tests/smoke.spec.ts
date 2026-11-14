@@ -1,23 +1,22 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("search page", () => {
-  test("home redirects to the search page", async ({ page }) => {
+test.describe("home page", () => {
+  test("shows the search page", async ({ page }) => {
     await page.goto("/");
-    await expect(page).toHaveURL(/\/search$/);
     await expect(
       page.getByRole("heading", { name: "Find programs and universities" }),
     ).toBeVisible();
   });
 
   test("shows Browse All button on initial load", async ({ page }) => {
-    await page.goto("/search");
+    await page.goto("/");
     await expect(
       page.getByRole("button", { name: /Browse All/i }),
     ).toBeVisible();
   });
 
   test("Browse All loads universities", async ({ page }) => {
-    await page.goto("/search");
+    await page.goto("/");
     await page.getByRole("button", { name: /Browse All/i }).click();
     await expect(
       page.locator('main a[href^="/universities/"]').first(),
@@ -25,7 +24,7 @@ test.describe("search page", () => {
   });
 
   test("realtime search returns results", async ({ page }) => {
-    await page.goto("/search");
+    await page.goto("/");
     await page.getByRole("searchbox", { name: "Search" }).fill("univerzitet");
     await expect(
       page.locator('main a[href^="/universities/"]').first(),
@@ -70,7 +69,7 @@ test.describe("auth pages", () => {
   });
 
   test("navigation links work", async ({ page }) => {
-    await page.goto("/search");
+    await page.goto("/");
     await page.getByRole("link", { name: "About" }).click();
     await expect(page).toHaveURL(/\/about$/);
     await page.getByRole("link", { name: "Log In" }).click();

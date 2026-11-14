@@ -21,7 +21,7 @@ test.describe("detail pages", () => {
   test("clicking a university navigates to its detail page", async ({
     page,
   }) => {
-    await page.goto("/search");
+    await page.goto("/");
     await page.getByRole("button", { name: /Browse All/i }).click();
 
     const firstUniLink = page.locator('main a[href^="/universities/"]').first();
@@ -90,7 +90,7 @@ test.describe("detail pages", () => {
   test("program search result opens the faculty page focused on that program", async ({
     page,
   }) => {
-    await page.goto("/search");
+    await page.goto("/");
     // "grafika" is a study program name, giving a direct match in that section
     await page.getByRole("searchbox", { name: "Search" }).fill("grafika");
 
@@ -112,7 +112,7 @@ test.describe("detail pages", () => {
   test("URL deep-link with country filter loads filtered results", async ({
     page,
   }) => {
-    await page.goto("/search?country=BIH");
+    await page.goto("/?country=BIH");
     await expect(
       page.locator('main a[href^="/universities/"]').first(),
     ).toBeVisible({ timeout: 15000 });

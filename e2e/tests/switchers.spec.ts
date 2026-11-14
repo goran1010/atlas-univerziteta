@@ -6,7 +6,7 @@ import { test, expect } from "@playwright/test";
 test("language switcher cycles to Serbian and persists across reloads", async ({
   page,
 }) => {
-  await page.goto("/search");
+  await page.goto("/");
   await expect(
     page.getByRole("heading", { name: "Find programs and universities" }),
   ).toBeVisible();
@@ -29,7 +29,7 @@ test("language switcher cycles to Serbian and persists across reloads", async ({
 test("theme switcher applies dark mode and persists across reloads", async ({
   page,
 }) => {
-  await page.goto("/search");
+  await page.goto("/");
   await expect(
     page.getByRole("heading", { name: "Find programs and universities" }),
   ).toBeVisible();

@@ -1,30 +1,22 @@
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
-import { HomeLayout } from "../../../../src/components/layout/HomeLayout";
-import { UnifiedSearch } from "../../../../src/components/Search/UnifiedSearch";
+import { HomePage } from "../../../../src/components/HomePage/HomePage";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
-import { Navigate } from "react-router";
 
-function Wrapper({ initialEntry = "/search" }: { initialEntry?: string }) {
+function Wrapper() {
   const routes = [
     {
       path: "/",
       element: (
         <RootContextProvider>
-          <HomeLayout />
+          <HomePage />
         </RootContextProvider>
       ),
-      children: [
-        { index: true, element: <Navigate to="search" replace /> },
-        { path: "search", element: <UnifiedSearch /> },
-      ],
     },
   ];
 
-  const router = createMemoryRouter(routes, {
-    initialEntries: [initialEntry],
-  });
+  const router = createMemoryRouter(routes, { initialEntries: ["/"] });
 
   return <RouterProvider router={router} />;
 }
@@ -49,7 +41,7 @@ beforeEach(() => {
   );
 });
 
-describe("Universities page", () => {
+describe("Home page", () => {
   test("renders the page title and search input", async () => {
     render(<Wrapper />);
 

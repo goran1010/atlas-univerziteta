@@ -26,7 +26,7 @@ async function expectNoViolations(page: Page) {
 
 const ROUTES: { path: string; ready: (page: Page) => Locator }[] = [
   {
-    path: "/search",
+    path: "/",
     ready: (p) =>
       p.getByRole("heading", { name: "Find programs and universities" }),
   },
@@ -60,7 +60,7 @@ for (const { path, ready } of ROUTES) {
 }
 
 test("search results have no detectable a11y violations", async ({ page }) => {
-  await page.goto("/search");
+  await page.goto("/");
   await page.getByRole("searchbox", { name: "Search" }).fill("univerzitet");
   await expect(
     page.locator('main a[href^="/universities/"]').first(),

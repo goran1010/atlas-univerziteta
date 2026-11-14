@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router";
+import { NavLink } from "react-router";
 import { Status } from "./Status";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
@@ -15,8 +15,6 @@ function menuItemClass({ isActive }: { isActive: boolean }) {
   return `${baseClass} ${isActive ? activeClass : ""}`;
 }
 
-const HOME_PATHS = ["/", "/search"];
-
 interface MobileMenuProps {
   setIsMenuOpen: SetIsMenuOpen;
   userData: UserData | null;
@@ -24,8 +22,6 @@ interface MobileMenuProps {
 
 function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
   const { t } = use(RootContext);
-  const { pathname } = useLocation();
-  const isHome = HOME_PATHS.includes(pathname);
 
   return (
     <div
@@ -35,8 +31,9 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
       <ul className="flex flex-col items-center">
         <li className="w-full">
           <NavLink
-            className={() => `${baseClass} ${isHome ? activeClass : ""}`}
-            to="/search"
+            className={menuItemClass}
+            to="/"
+            end
             onClick={() => {
               setIsMenuOpen(false);
             }}

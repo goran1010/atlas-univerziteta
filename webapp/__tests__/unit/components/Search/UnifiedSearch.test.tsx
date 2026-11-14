@@ -6,10 +6,10 @@ import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
 
-function buildSearchRouter(initialEntry = "/search") {
+function buildSearchRouter(initialEntry = "/") {
   const routes = [
     {
-      path: "/search",
+      path: "/",
       element: (
         <RootContextProvider>
           <Notifications />
@@ -22,7 +22,7 @@ function buildSearchRouter(initialEntry = "/search") {
   return createMemoryRouter(routes, { initialEntries: [initialEntry] });
 }
 
-function Wrapper({ initialEntry = "/search" }: { initialEntry?: string }) {
+function Wrapper({ initialEntry = "/" }: { initialEntry?: string }) {
   return <RouterProvider router={buildSearchRouter(initialEntry)} />;
 }
 
@@ -396,16 +396,16 @@ describe("UnifiedSearch URL navigation", () => {
     vi.restoreAllMocks();
   });
 
-  test("navigating to /search with new params while on it re-runs the search", async () => {
+  test("navigating to the search page with new params while on it re-runs the search", async () => {
     givenSearchResults({ universities: [universityListItem] });
-    const router = buildSearchRouter("/search?q=medicina");
+    const router = buildSearchRouter("/?q=medicina");
     render(<RouterProvider router={router} />);
 
     await screen.findByRole("heading", { name: /^Universities/i });
     expect(searchRequests).toHaveLength(1);
 
     await act(async () => {
-      await router.navigate("/search?q=pravo");
+      await router.navigate("/?q=pravo");
     });
 
     await waitFor(() => {

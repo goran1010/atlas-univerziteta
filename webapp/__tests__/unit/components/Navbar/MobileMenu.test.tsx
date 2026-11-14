@@ -14,12 +14,17 @@ beforeEach(() => {
 interface WrapperProps {
   userData: UserData | null;
   setIsMenuOpen: SetIsMenuOpen;
+  initialEntry?: string;
 }
 
-function Wrapper({ userData, setIsMenuOpen }: WrapperProps) {
+function Wrapper({
+  userData,
+  setIsMenuOpen,
+  initialEntry = "/",
+}: WrapperProps) {
   return (
     <RootContextProvider rootValue={{ userData, setUserData: vi.fn() }}>
-      <MemoryRouter>
+      <MemoryRouter initialEntries={[initialEntry]}>
         <MobileMenu setIsMenuOpen={setIsMenuOpen} userData={userData} />
       </MemoryRouter>
     </RootContextProvider>
@@ -41,6 +46,29 @@ describe("MobileMenu", () => {
     expect(
       screen.queryByRole("link", { name: /^Admin$/i }),
     ).not.toBeInTheDocument();
+  });
+
+  test("marks Home as the current page on the home page", () => {
+    render(<Wrapper userData={null} setIsMenuOpen={vi.fn()} />);
+
+    expect(screen.getByRole("link", { name: /Home/i })).toHaveAttribute(
+      "aria-current",
+      "page",
+    );
+  });
+
+  test("does not mark Home as the current page on other pages", () => {
+    render(
+      <Wrapper userData={null} setIsMenuOpen={vi.fn()} initialEntry="/about" />,
+    );
+
+    expect(screen.getByRole("link", { name: /Home/i })).not.toHaveAttribute(
+      "aria-current",
+    );
+    expect(screen.getByRole("link", { name: /About/i })).toHaveAttribute(
+      "aria-current",
+      "page",
+    );
   });
 
   test("renders improve data link for authenticated user", () => {

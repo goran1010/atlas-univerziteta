@@ -2,12 +2,11 @@ import { Navigate } from "react-router";
 import { App } from "./App";
 import { ErrorPage } from "./components/layout/ErrorPage";
 import { Spinner } from "./components/sharedComponents/Spinner";
-import { HomeLayout } from "./components/layout/HomeLayout";
-import { UnifiedSearch } from "./components/Search/UnifiedSearch";
+import { HomePage } from "./components/HomePage/HomePage";
 import { UniversityDetailPage } from "./components/entityDetails/UniversityDetailPage";
 import { FacultyDetailPage } from "./components/entityDetails/FacultyDetailPage";
 
-// The public search and detail pages stay in the main bundle - they are the
+// The home and detail pages stay in the main bundle - they are the
 // landing pages. Everything else splits into route chunks, but all of them
 // are warmed right after the landing page goes idle (prefetchLazyRoutes), so
 // navigation never waits on a download; route.lazy stays as the fallback for
@@ -57,17 +56,7 @@ const routes = [
     // shown while a lazy route's chunk loads on a direct/initial visit
     hydrateFallbackElement: <Spinner page />,
     children: [
-      {
-        element: <HomeLayout />,
-        children: [
-          { index: true, element: <Navigate to="search" replace /> },
-          { path: "search", element: <UnifiedSearch /> },
-        ],
-      },
-      {
-        element: <Navigate to="/search" replace />,
-        path: "home",
-      },
+      { index: true, element: <HomePage /> },
       {
         element: <UniversityDetailPage />,
         path: "universities/:id",

@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router";
+import { NavLink } from "react-router";
 import { Status } from "./Status";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
@@ -20,21 +20,14 @@ function menuLinkClass({ isActive }: { isActive: boolean }) {
   return `${baseClass} ${isActive ? activeClass : ""}`;
 }
 
-const HOME_PATHS = ["/", "/search"];
-
 function StandardMenu({ setIsMenuOpen, userData }: StandardMenuProps) {
   const { t } = use(RootContext);
-  const { pathname } = useLocation();
-  const isHome = HOME_PATHS.includes(pathname);
 
   return (
     <div className="hidden md:flex justify-between">
       <ul className="flex h-full gap-1">
         <li>
-          <NavLink
-            className={() => `${baseClass} ${isHome ? activeClass : ""}`}
-            to="/search"
-          >
+          <NavLink className={menuLinkClass} to="/" end>
             {t("nav.home")}
           </NavLink>
         </li>
