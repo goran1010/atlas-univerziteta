@@ -53,6 +53,7 @@ function EndpointCard({ endpoint }: { endpoint: Endpoint }) {
                   </td>
                   <td className="pt-1">
                     {p.descriptionKey && t(p.descriptionKey)}
+                    {p.values && ` ${p.values.join(", ")}`}
                   </td>
                 </tr>
               ))}

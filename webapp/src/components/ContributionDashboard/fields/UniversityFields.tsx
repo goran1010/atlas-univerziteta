@@ -4,7 +4,7 @@ import { DataField } from "../DataField";
 import { Label } from "../../sharedComponents/Label";
 import { Select } from "../../sharedComponents/Select";
 import type { ContributionFormDraft } from "../types";
-import { COUNTRIES, ENTITIES } from "../../../schemas/domain";
+import { COUNTRIES, subdivisionsOf } from "../../../schemas/domain";
 import type { TypeOfChange } from "../../../schemas/domain";
 
 interface UniversityFieldsProps {
@@ -22,6 +22,8 @@ function UniversityFields({
   setDataField,
 }: UniversityFieldsProps) {
   const { t } = use(RootContext);
+  const entities =
+    data.country === undefined ? undefined : subdivisionsOf(data.country);
 
   return (
     <>
@@ -59,7 +61,7 @@ function UniversityFields({
             onChange={(e) => {
               const value = e.target.value;
               setDataField("country", value || undefined);
-              if (value !== "BIH") setDataField("entity", undefined);
+              setDataField("entity", undefined);
             }}
             required={typeOfChange === "CREATE"}
           >
@@ -71,7 +73,7 @@ function UniversityFields({
             ))}
           </Select>
         </div>
-        {data.country === "BIH" && (
+        {entities && (
           <div className="flex flex-col gap-1">
             <Label
               htmlFor="dataEntity"
@@ -89,7 +91,7 @@ function UniversityFields({
               required={typeOfChange === "CREATE"}
             >
               <option value="">-</option>
-              {ENTITIES.map((en) => (
+              {entities.map((en) => (
                 <option key={en} value={en}>
                   {t(`contribution.entities.${en}`)}
                 </option>

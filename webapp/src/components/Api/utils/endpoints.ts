@@ -1,9 +1,12 @@
+import { COUNTRIES, ENTITIES } from "../../../schemas/domain";
+
 import type { TranslationKey } from "../../../types";
 
 export interface EndpointParam {
   name?: string;
   required?: boolean;
   descriptionKey?: TranslationKey;
+  values?: readonly string[];
 }
 
 export interface Endpoint {
@@ -27,6 +30,26 @@ const paginationParams: EndpointParam[] = [
     required: false,
     descriptionKey: "api.endpointsData.limitParam",
   },
+];
+
+const countryParam: EndpointParam = {
+  name: "country",
+  required: false,
+  descriptionKey: "api.endpointsData.countryParam",
+  values: COUNTRIES,
+};
+
+const entityParam: EndpointParam = {
+  name: "entity",
+  required: false,
+  descriptionKey: "api.endpointsData.entityParam",
+  values: ENTITIES,
+};
+
+const listParams: EndpointParam[] = [
+  ...paginationParams,
+  countryParam,
+  entityParam,
 ];
 
 const notFoundError = (entity: string) =>
@@ -59,7 +82,7 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/universities",
     descriptionKey: "api.endpointsData.getAllUniversities",
-    params: paginationParams,
+    params: listParams,
     successExample: `{
   "message": "Universities retrieved successfully.",
   "data": [
@@ -126,7 +149,7 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/faculties",
     descriptionKey: "api.endpointsData.getAllFaculties",
-    params: paginationParams,
+    params: listParams,
     successExample: `{
   "message": "Faculties retrieved successfully.",
   "data": [
@@ -172,7 +195,7 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/study-programs",
     descriptionKey: "api.endpointsData.getAllStudyPrograms",
-    params: paginationParams,
+    params: listParams,
     successExample: `{
   "message": "Study programs retrieved successfully.",
   "data": [
@@ -218,7 +241,7 @@ const apiEndpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/tracks",
     descriptionKey: "api.endpointsData.getAllTracks",
-    params: paginationParams,
+    params: listParams,
     successExample: `{
   "message": "Tracks retrieved successfully.",
   "data": [
@@ -266,16 +289,8 @@ const apiEndpoints: Endpoint[] = [
         required: false,
         descriptionKey: "api.endpointsData.searchTermParam",
       },
-      {
-        name: "country",
-        required: false,
-        descriptionKey: "api.endpointsData.countryParam",
-      },
-      {
-        name: "entity",
-        required: false,
-        descriptionKey: "api.endpointsData.entityParam",
-      },
+      countryParam,
+      entityParam,
       {
         name: "ownership",
         required: false,

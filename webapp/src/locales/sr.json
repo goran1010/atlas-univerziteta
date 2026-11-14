@@ -147,7 +147,7 @@
     "publicIntro": "Javni REST endpoint-i su dostupni pod osnovnim URL-om ispod. Ovi endpoint-i ne zahtijevaju autentifikaciju.",
     "fullDocs": "Za kompletnu projektnu dokumentaciju, lokalno postavljanje i smjernice za doprinos, pogledajte",
     "dataObject": "Objekat univerziteta",
-    "dataObjectExample": "{\n  \"id\":          number                          - jedinstveni identifikator\n  \"name\":        string                          - zvanični naziv\n  \"acronym\":     string | null                   - skraćenica (npr. UNSA)\n  \"city\":        string                          - grad glavnog kampusa\n  \"country\":     \"BIH\" | \"SRB\" | \"HRV\" | \"MNE\"   - ISO 3166-1 alpha-3\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\" | null      - entitet u BiH\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - npr. \"1949\"\n  \"website\":     string | null                   - zvanični URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - samo lista\n  \"faculties\":   Faculty[]                        - samo detalji\n}",
+    "dataObjectExample": "{\n  \"id\":          number                          - jedinstveni identifikator\n  \"name\":        string                          - zvanični naziv\n  \"acronym\":     string | null                   - skraćenica (npr. UNSA)\n  \"city\":        string                          - grad glavnog kampusa\n  \"country\":     string                          - ISO 3166-1 alpha-3 kod zemlje\n  \"entity\":      string | null                   - entitet, null za zemlje bez njih\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - npr. \"1949\"\n  \"website\":     string | null                   - zvanični URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - samo lista\n  \"faculties\":   Faculty[]                        - samo detalji\n}",
     "examples": "Primjeri",
     "endpoints": "Endpoint-i",
     "endpointsData": {
@@ -165,8 +165,8 @@
       "getStudyProgramById": "Preuzimanje studijskog programa po ID-u s njegovim smjerovima, nadređenim fakultetom i univerzitetom.",
       "getAllTracks": "Preuzimanje svih smjerova, sortiranih po nazivu studijskog programa pa po nazivu smjera. Podržava country i entity filtere. Uključuje cjelokupni lanac nadređenih jedinica.",
       "getTrackById": "Preuzimanje smjera po ID-u s nadređenim studijskim programom, fakultetom i univerzitetom.",
-      "countryParam": "Filtriranje po zemlji: BIH, SRB, HRV ili MNE.",
-      "entityParam": "Filtriranje po entitetu (samo BiH): FBIH, RS ili BD.",
+      "countryParam": "Filtriranje po kodu zemlje:",
+      "entityParam": "Filtriranje po entitetu, za zemlje koje ih imaju:",
       "ownershipParam": "Filtriranje po vlasništvu: PUBLIC ili PRIVATE.",
       "cycleParam": "Filtriranje po ciklusu studija. Prihvata višestruke vrijednosti (npr. cycle=FIRST&cycle=SECOND). Vrijednosti: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
       "typeParam": "Filter tipa rezultata: university, faculty ili studyProgram. Može se ponoviti. Svaka sekcija vraća sve rezultate."

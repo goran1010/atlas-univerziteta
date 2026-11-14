@@ -1,9 +1,11 @@
 import { z } from "zod";
 
 import {
+  ENTITY_RULE_MESSAGE,
   countrySchema,
   durationYearsSchema,
   ectsSchema,
+  entityFitsCountry,
   entitySchema,
   targetTypeSchema,
   ownershipSchema,
@@ -40,12 +42,8 @@ const universityCreateDataSchema = z
     phone: phoneSchema.optional(),
     email: emailSchema.optional(),
   })
-  .refine((u) => u.country !== "BIH" || u.entity !== undefined, {
-    message: "Entity is required for Bosnian universities",
-    path: ["entity"],
-  })
-  .refine((u) => u.country === "BIH" || u.entity === undefined, {
-    message: "Entity is only valid for Bosnian universities",
+  .refine((u) => entityFitsCountry(u.country, u.entity), {
+    message: ENTITY_RULE_MESSAGE,
     path: ["entity"],
   });
 
@@ -82,18 +80,16 @@ const universityEditDataSchema = nonEmptyObject({
   address: addressSchema.nullable().optional(),
   phone: phoneSchema.nullable().optional(),
   email: emailSchema.nullable().optional(),
-}).refine(
-  (data) => {
-    if (data.country === undefined) return true;
-    if (data.country === "BIH") return data.entity !== null;
-    return data.entity === undefined || data.entity === null;
-  },
-  {
-    message:
-      "Entity is required for Bosnian universities and not valid for others",
-    path: ["entity"],
-  },
-);
+})
+  // an edit that leaves country or entity out is checked against the merged
+  // row when it is approved
+  .refine(
+    (data) =>
+      data.country === undefined ||
+      data.entity === undefined ||
+      entityFitsCountry(data.country, data.entity),
+    { message: ENTITY_RULE_MESSAGE, path: ["entity"] },
+  );
 
 const facultyEditDataSchema = nonEmptyObject({
   name: optionalNameSchema,

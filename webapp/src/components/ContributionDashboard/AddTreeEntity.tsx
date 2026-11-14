@@ -17,6 +17,7 @@ import {
 } from "../../schemas/contribution";
 import { mapZodIssues } from "./utils/validateTreePayload";
 import { ValidationIssueList } from "./ValidationIssueList";
+import { COUNTRIES, SUBDIVISIONS } from "../../schemas/domain";
 
 import type { ValidationIssue } from "./utils/validateTreePayload";
 import type { ChangeEvent, SubmitEvent } from "react";
@@ -32,8 +33,13 @@ type TreeData = UniversityTreeData | FacultyTreeData;
 
 const TREE_ROOT_TYPES: TreeRootType[] = ["UNIVERSITY", "FACULTY"];
 
+const ENTITY_HINT = Object.entries(SUBDIVISIONS)
+  .map(([country, entities]) => `${entities.join(" | ")} (${country} only)`)
+  .join(", ");
+
 // the placeholders show the full field set per level; only name, city,
-// country, ownership and cycle are required (entity required for BIH)
+// country, ownership and cycle are required (entity too where the country
+// has subdivisions)
 const FACULTY_PLACEHOLDER = `{
   "name": "...",
   "city": "...",
@@ -60,8 +66,8 @@ const JSON_PLACEHOLDER: Record<TreeRootType, string> = {
   "name": "...",
   "acronym": "...",
   "city": "...",
-  "country": "BIH | SRB | HRV | MNE",
-  "entity": "FBIH | RS | BD (BIH only)",
+  "country": "${COUNTRIES.join(" | ")}",
+  "entity": "${ENTITY_HINT}",
   "ownership": "PUBLIC | PRIVATE",
   "foundedYear": "...",
   "website": "https://...",
