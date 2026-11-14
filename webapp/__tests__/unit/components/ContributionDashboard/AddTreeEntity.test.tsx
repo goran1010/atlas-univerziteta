@@ -240,13 +240,17 @@ describe("AddTreeEntity", () => {
     expect(screen.getByText("Preview")).toBeInTheDocument();
     expect(submitButton).toBeDisabled();
 
-    const universitySelect = await screen.findByRole("combobox", {
-      name: /^University$/i,
-    });
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /^Country$/i }),
+      "BIH",
+    );
     await screen.findByRole("option", {
       name: /University of Sarajevo \(UNSA\)/i,
     });
-    await user.selectOptions(universitySelect, "1");
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /^University$/i }),
+      "1",
+    );
 
     expect(submitButton).toBeEnabled();
     await user.click(submitButton);

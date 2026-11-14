@@ -269,7 +269,11 @@ test("user can submit an update suggestion for an existing university", async ({
     .getByRole("combobox", { name: "Change", exact: true })
     .selectOption("UPDATE");
 
-  // pick the first real university from the seeded list
+  // pick the first real university from the seeded BiH list
+  await userPage
+    .getByRole("group", { name: "Which item do you want to change?" })
+    .getByRole("combobox", { name: "Country" })
+    .selectOption("BIH");
   const universityPicker = userPage.getByRole("combobox", {
     name: "University",
     exact: true,

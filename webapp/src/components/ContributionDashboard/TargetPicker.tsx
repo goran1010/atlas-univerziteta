@@ -6,8 +6,8 @@ import { Label } from "../sharedComponents/Label";
 import { Spinner } from "../sharedComponents/Spinner";
 import { SelectedEntityDetails } from "./SelectedEntityDetails";
 import { fetchPublic } from "../../utils/fetchPublic";
-import { groupBy } from "../../utils/groupBy";
 import { LEVEL_TEXT } from "../../utils/levelColors";
+import { COUNTRIES, countrySchema } from "../../schemas/domain";
 
 import type { EntityLevel } from "../../utils/levelColors";
 import {
@@ -16,6 +16,7 @@ import {
 } from "../../schemas/university";
 
 import type { ReactNode } from "react";
+import type { Country } from "../../schemas/domain";
 import type {
   UniversityDetail,
   UniversityDetailFaculty,
@@ -43,16 +44,7 @@ interface LevelSelectProps {
   emptyMessage: string;
   placeholder: string;
   options: SelectOption[];
-  groups?: { label: string; options: SelectOption[] }[];
   onChange: (value: string) => void;
-}
-
-function renderOptions(options: SelectOption[]) {
-  return options.map((option) => (
-    <option key={option.id} value={option.id}>
-      {option.label}
-    </option>
-  ));
 }
 
 function LevelSelect({
@@ -64,7 +56,6 @@ function LevelSelect({
   emptyMessage,
   placeholder,
   options,
-  groups,
   onChange,
 }: LevelSelectProps) {
   const isEmpty = !disabled && options.length === 0;
@@ -88,13 +79,11 @@ function LevelSelect({
         }}
       >
         <option value="">{isEmpty ? emptyMessage : placeholder}</option>
-        {groups
-          ? groups.map((g) => (
-              <optgroup key={g.label} label={g.label}>
-                {renderOptions(g.options)}
-              </optgroup>
-            ))
-          : renderOptions(options)}
+        {options.map((option) => (
+          <option key={option.id} value={option.id}>
+            {option.label}
+          </option>
+        ))}
       </Select>
     </div>
   );
@@ -123,19 +112,24 @@ function TargetPicker({
 
   const [universities, setUniversities] = useState<UniversityListItem[]>([]);
   const [detail, setDetail] = useState<UniversityDetail | undefined>(undefined);
+  const [selCountry, setSelCountry] = useState<Country | "">("");
   const [selUniversity, setSelUniversity] = useState("");
   const [selFaculty, setSelFaculty] = useState("");
   const [selProgram, setSelProgram] = useState("");
   const [selTrack, setSelTrack] = useState("");
-  const [loadingList, setLoadingList] = useState(true);
+  const [loadingList, setLoadingList] = useState(false);
   const [loadingDetail, setLoadingDetail] = useState(false);
   // guards detail responses against a university re-picked mid-flight
   const detailRequestRef = useRef("");
 
   useEffect(() => {
-    // the picker needs the complete directory, so walk every page (one page
-    // in practice - the max page size covers every university in the country)
-    async function fetchUniversities() {
+    if (selCountry === "") return;
+    // discards the pages of a country re-picked mid-flight
+    let ignore = false;
+
+    // the picker needs every university of the country, so walk every page
+    // (one page in practice - the max page size covers a whole country)
+    async function fetchUniversities(country: Country) {
       setLoadingList(true);
       try {
         const items: UniversityListItem[] = [];
@@ -144,7 +138,7 @@ function TargetPicker({
         while (page <= totalPages) {
           const result = await fetchPublic(
             {
-              path: `/api/v1/universities?limit=100&page=${page.toString()}`,
+              path: `/api/v1/universities?country=${country}&limit=100&page=${page.toString()}`,
               responseSchema: universityListResponseSchema,
               errorMessageKey: "messages.universities.loadError",
               logLabel: "load universities",
@@ -155,18 +149,29 @@ function TargetPicker({
               setLoading: () => undefined,
             },
           );
-          if (!result) return;
+          if (!result || ignore) return;
           items.push(...result.data);
           totalPages = result.totalPages;
           page += 1;
         }
         setUniversities(items);
       } finally {
-        setLoadingList(false);
+        if (!ignore) setLoadingList(false);
       }
     }
-    void fetchUniversities();
-  }, [addNotification]);
+    void fetchUniversities(selCountry);
+
+    return () => {
+      ignore = true;
+    };
+  }, [selCountry, addNotification]);
+
+  function handleCountryChange(value: string) {
+    const country = countrySchema.safeParse(value);
+    setSelCountry(country.success ? country.data : "");
+    setUniversities([]);
+    void handleUniversityChange("");
+  }
 
   async function handleUniversityChange(value: string) {
     setSelUniversity(value);
@@ -288,6 +293,27 @@ function TargetPicker({
       <legend className="text-xs font-semibold px-1 text-(--text-secondary)">
         {legend}
       </legend>
+      <div className="flex flex-col gap-1 items-center">
+        <Label htmlFor="pickerCountry" required>
+          {t("contribution.dataFields.country")}
+        </Label>
+        <Select
+          id="pickerCountry"
+          name="pickerCountry"
+          value={selCountry}
+          required
+          onChange={(e) => {
+            handleCountryChange(e.target.value);
+          }}
+        >
+          <option value="">{t("contribution.picker.placeholder")}</option>
+          {COUNTRIES.map((c) => (
+            <option key={c} value={c}>
+              {t(`universitiesPage.countries.${c}`)}
+            </option>
+          ))}
+        </Select>
+      </div>
       {loadingList ? (
         <Spinner />
       ) : (
@@ -297,21 +323,13 @@ function TargetPicker({
             label={t("contribution.entityTypes.UNIVERSITY")}
             level="UNIVERSITY"
             value={selUniversity}
-            disabled={false}
+            disabled={selCountry === ""}
             emptyMessage={t("universitiesPage.noResults")}
             placeholder={t("contribution.picker.placeholder")}
             options={universities.map((u) => ({
               id: u.id,
               label: u.acronym ? `${u.name} (${u.acronym})` : u.name,
             }))}
-            groups={groupBy(
-              universities.map((u) => ({
-                id: u.id,
-                label: u.acronym ? `${u.name} (${u.acronym})` : u.name,
-                country: u.country,
-              })),
-              (u) => t(`universitiesPage.countries.${u.country}`),
-            ).map((g) => ({ label: g.key, options: g.items }))}
             onChange={(value) => void handleUniversityChange(value)}
           />
           {deeperLevels}

@@ -120,14 +120,23 @@ function Wrapper({ children }: { children: ReactElement }) {
   );
 }
 
+// an update form has its own Country field, so the picker's is found by
+// its fieldset
 async function pickUniversity(user: ReturnType<typeof userEvent.setup>) {
-  const universitySelect = await screen.findByRole("combobox", {
-    name: /^University$/i,
+  const picker = screen.getByRole("group", {
+    name: /Which item do you want to change|Where should the new item be added/i,
   });
+  await user.selectOptions(
+    within(picker).getByRole("combobox", { name: /^Country$/i }),
+    "BIH",
+  );
   await screen.findByRole("option", {
     name: /University of Sarajevo \(UNSA\)/i,
   });
-  await user.selectOptions(universitySelect, "1");
+  await user.selectOptions(
+    screen.getByRole("combobox", { name: /^University$/i }),
+    "1",
+  );
 }
 
 async function pickFaculty(user: ReturnType<typeof userEvent.setup>) {
@@ -418,7 +427,10 @@ describe("AddUniversityEntity", () => {
 
     await startUniversityUpdate(user);
     await user.selectOptions(
-      screen.getByRole("combobox", { name: /^Country$/i }),
+      within(screen.getByRole("group", { name: /^Data$/i })).getByRole(
+        "combobox",
+        { name: /^Country$/i },
+      ),
       "SRB",
     );
     await user.click(

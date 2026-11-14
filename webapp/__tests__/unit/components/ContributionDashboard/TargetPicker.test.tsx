@@ -46,14 +46,17 @@ const detailsById: Record<string, unknown> = {
 };
 
 let universitiesRequests = 0;
+let universitiesRequestUrls: URL[] = [];
 let detailRequests = 0;
 
 beforeEach(() => {
   universitiesRequests = 0;
+  universitiesRequestUrls = [];
   detailRequests = 0;
   server.use(
-    http.get("*/api/v1/universities", () => {
+    http.get("*/api/v1/universities", ({ request }) => {
       universitiesRequests++;
+      universitiesRequestUrls.push(new URL(request.url));
       return HttpResponse.json({
         message: "ok",
         data: universitiesList,
@@ -95,6 +98,21 @@ function renderPicker(
   return onSelect;
 }
 
+async function pickCountry(
+  user: ReturnType<typeof userEvent.setup>,
+  country = "BIH",
+) {
+  await user.selectOptions(
+    screen.getByRole("combobox", { name: /^Country$/i }),
+    country,
+  );
+}
+
+async function findLoadedUniversitySelect() {
+  await screen.findByRole("option", { name: /University of Sarajevo/i });
+  return screen.getByRole("combobox", { name: /^University$/i });
+}
+
 describe("getPickerDepth", () => {
   test.each([
     ["UNIVERSITY", "CREATE", 0],
@@ -112,6 +130,47 @@ describe("getPickerDepth", () => {
 });
 
 describe("TargetPicker", () => {
+  test("loads no universities until a country is picked", () => {
+    renderPicker(1);
+
+    expect(
+      screen.getByRole("combobox", { name: /^University$/i }),
+    ).toBeDisabled();
+    expect(universitiesRequests).toBe(0);
+  });
+
+  test("loads the picked country's universities", async () => {
+    renderPicker(1);
+    const user = userEvent.setup();
+
+    await pickCountry(user, "BIH");
+    const universitySelect = await findLoadedUniversitySelect();
+
+    expect(universitySelect).toBeEnabled();
+    expect(universitiesRequestUrls[0]?.searchParams.get("country")).toBe("BIH");
+  });
+
+  test("clears the picked university and reports no id when the country changes", async () => {
+    const onSelect = renderPicker(1);
+    const user = userEvent.setup();
+
+    await pickCountry(user, "BIH");
+    await user.selectOptions(await findLoadedUniversitySelect(), "1");
+    expect(onSelect).toHaveBeenLastCalledWith("1");
+
+    await pickCountry(user, "SRB");
+
+    expect(onSelect).toHaveBeenLastCalledWith("");
+    await waitFor(() => {
+      expect(universitiesRequestUrls.at(-1)?.searchParams.get("country")).toBe(
+        "SRB",
+      );
+    });
+    expect(
+      await screen.findByRole("combobox", { name: /^University$/i }),
+    ).toHaveValue("");
+  });
+
   test("walks every page of the university directory", async () => {
     server.use(
       http.get("*/api/v1/universities", ({ request }) => {
@@ -131,23 +190,19 @@ describe("TargetPicker", () => {
       }),
     );
     renderPicker(1);
+    await pickCountry(userEvent.setup());
 
-    const universitySelect = await screen.findByRole("combobox", {
-      name: /^University$/i,
-    });
+    await screen.findByRole("option", { name: /Second Page University/i });
 
     expect(universitiesRequests).toBe(2);
-    expect(universitySelect).toContainHTML("Second Page University");
   });
 
   test("reports the university id at depth 1 without fetching details", async () => {
     const onSelect = renderPicker(1);
     const user = userEvent.setup();
 
-    const universitySelect = await screen.findByRole("combobox", {
-      name: /^University$/i,
-    });
-    await user.selectOptions(universitySelect, "1");
+    await pickCountry(user);
+    await user.selectOptions(await findLoadedUniversitySelect(), "1");
 
     expect(onSelect).toHaveBeenLastCalledWith("1");
     expect(universitiesRequests).toBe(1);
@@ -158,10 +213,8 @@ describe("TargetPicker", () => {
     const onSelect = renderPicker(2);
     const user = userEvent.setup();
 
-    const universitySelect = await screen.findByRole("combobox", {
-      name: /^University$/i,
-    });
-    await user.selectOptions(universitySelect, "1");
+    await pickCountry(user);
+    await user.selectOptions(await findLoadedUniversitySelect(), "1");
 
     expect(onSelect).toHaveBeenLastCalledWith("");
 
@@ -180,10 +233,8 @@ describe("TargetPicker", () => {
     renderPicker(2);
     const user = userEvent.setup();
 
-    const universitySelect = await screen.findByRole("combobox", {
-      name: /^University$/i,
-    });
-    await user.selectOptions(universitySelect, "2");
+    await pickCountry(user);
+    await user.selectOptions(await findLoadedUniversitySelect(), "2");
 
     const facultySelect = await screen.findByRole("combobox", {
       name: /^Faculty$/i,
@@ -196,10 +247,8 @@ describe("TargetPicker", () => {
     renderPicker(2, vi.fn(), true);
     const user = userEvent.setup();
 
-    await user.selectOptions(
-      await screen.findByRole("combobox", { name: /^University$/i }),
-      "1",
-    );
+    await pickCountry(user);
+    await user.selectOptions(await findLoadedUniversitySelect(), "1");
     await screen.findByRole("option", {
       name: /Faculty of Electrical Engineering/i,
     });
@@ -220,6 +269,7 @@ describe("TargetPicker", () => {
     );
 
     renderPicker(1);
+    await pickCountry(userEvent.setup());
 
     expect(
       await screen.findByText(
@@ -249,10 +299,8 @@ describe("TargetPicker response ordering", () => {
     const user = userEvent.setup();
     renderPicker(2);
 
-    const universitySelect = await screen.findByRole("combobox", {
-      name: /^University$/i,
-    });
-    await screen.findByRole("option", { name: /University of Sarajevo/i });
+    await pickCountry(user);
+    const universitySelect = await findLoadedUniversitySelect();
     await user.selectOptions(universitySelect, "1");
     await user.selectOptions(universitySelect, "2");
 
@@ -267,5 +315,52 @@ describe("TargetPicker response ordering", () => {
       screen.queryByRole("option", { name: /Faculty of Electrical/i }),
     ).not.toBeInTheDocument();
     expect(screen.getByText(/No faculties available/i)).toBeInTheDocument();
+  });
+
+  test("ignores an out-of-order university list after re-picking the country", async () => {
+    let resolveStale!: () => void;
+    const staleReady = new Promise<void>((r) => {
+      resolveStale = r;
+    });
+    let staleServed = false;
+
+    server.use(
+      http.get("*/api/v1/universities", async ({ request }) => {
+        const country = new URL(request.url).searchParams.get("country");
+        if (country === "BIH") {
+          await staleReady;
+          staleServed = true;
+        }
+        const data =
+          country === "BIH"
+            ? universitiesList
+            : [{ ...universitiesList[0], id: 7, name: "Serbian University" }];
+        return HttpResponse.json({
+          message: "ok",
+          data,
+          page: 1,
+          totalPages: 1,
+          total: data.length,
+        });
+      }),
+    );
+    const user = userEvent.setup();
+    renderPicker(1);
+
+    await pickCountry(user, "BIH");
+    await pickCountry(user, "SRB");
+    await screen.findByRole("option", { name: /Serbian University/i });
+
+    resolveStale();
+    await waitFor(() => {
+      expect(staleServed).toBe(true);
+    });
+
+    expect(
+      screen.queryByRole("option", { name: /University of Sarajevo/i }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByRole("option", { name: /Serbian University/i }),
+    ).toBeInTheDocument();
   });
 });
