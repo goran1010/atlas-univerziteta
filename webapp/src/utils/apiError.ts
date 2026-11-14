@@ -1,9 +1,9 @@
 import type { ApiError } from "../schemas/api";
-import type { TFunction } from "../types";
+import type { TFunction, TranslationKey } from "../types";
 
 // Notification messages for API error codes whose cause and fix are the same
 // wherever they occur; other codes fall back to the caller's own message key.
-const CODE_MESSAGE_KEYS: Record<string, string> = {
+const CODE_MESSAGE_KEYS: Record<string, TranslationKey> = {
   RATE_LIMITED: "messages.apiError.rateLimited",
   AUTH_REQUIRED: "messages.apiError.authRequired",
   FORBIDDEN: "messages.apiError.forbidden",
@@ -14,8 +14,8 @@ const CODE_MESSAGE_KEYS: Record<string, string> = {
 
 function notificationMessageKey(
   code: string | undefined,
-  fallbackKey: string,
-): string {
+  fallbackKey: TranslationKey,
+): TranslationKey {
   if (!code) return fallbackKey;
   return CODE_MESSAGE_KEYS[code] ?? fallbackKey;
 }
@@ -26,7 +26,7 @@ function notificationMessageKey(
 // already specific, so nothing is appended to those.
 function notificationMessage(
   t: TFunction,
-  fallbackKey: string,
+  fallbackKey: TranslationKey,
   serverError: ApiError | null | undefined,
 ): string {
   const summary = t(notificationMessageKey(serverError?.code, fallbackKey));

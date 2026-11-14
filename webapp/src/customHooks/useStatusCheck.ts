@@ -1,13 +1,10 @@
 import { useEffect, useState, useRef } from "react";
 import { authClient } from "../utils/authClient";
 
-import type { AddNotification } from "../types";
+import type { AddNotification, TFunction } from "../types";
 import type { UserData } from "../types";
 
-function useStatusCheck(
-  addNotification: AddNotification,
-  t: (key: string) => string,
-) {
+function useStatusCheck(addNotification: AddNotification, t: TFunction) {
   const [userData, setUserData] = useState<UserData>(null);
   const tRef = useRef(t);
 

@@ -1,4 +1,4 @@
-import type { TFunction } from "../types";
+import type { TFunction, TranslationKey } from "../types";
 
 // Sets validity silently: the red border appears via the :user-invalid
 // styles on Input once the user has interacted with the field, and the
@@ -6,7 +6,7 @@ import type { TFunction } from "../types";
 // never mid-keystroke.
 function applyValidity(
   input: HTMLInputElement,
-  validationKey: string | null,
+  validationKey: TranslationKey | null,
   t: TFunction,
 ) {
   if (validationKey) {

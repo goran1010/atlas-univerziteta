@@ -14,6 +14,7 @@ import { LEVEL_BADGE } from "../../utils/levelColors";
 import type { UnifiedSearchResults } from "../../schemas/university";
 import type { SearchType } from "../../schemas/domain";
 import type { EntityLevel } from "../../utils/levelColors";
+import type { TFunction, TranslationKey } from "../../types";
 
 const SECTION_LEVEL: Record<SearchType, EntityLevel> = {
   university: "UNIVERSITY",
@@ -105,7 +106,7 @@ function SearchResults({
 }: {
   results: UnifiedSearchResults;
   hadTerm?: boolean;
-  t: (key: string) => string;
+  t: TFunction;
 }) {
   const noResultsAtAll =
     results.universities.length === 0 &&
@@ -230,7 +231,7 @@ function SearchResults({
     }
   }
 
-  const HEADING_KEYS: Record<SearchType, string> = {
+  const HEADING_KEYS: Record<SearchType, TranslationKey> = {
     university: "universitiesPage.universitiesSection",
     faculty: "universitiesPage.facultiesSection",
     studyProgram: "universitiesPage.studyProgramsSection",

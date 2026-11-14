@@ -51,7 +51,9 @@ function EndpointCard({ endpoint }: { endpoint: Endpoint }) {
                   <td className="pt-1 pr-4">
                     {p.required ? t("endpoint.yes") : t("endpoint.no")}
                   </td>
-                  <td className="pt-1">{t(p.descriptionKey ?? "")}</td>
+                  <td className="pt-1">
+                    {p.descriptionKey && t(p.descriptionKey)}
+                  </td>
                 </tr>
               ))}
             </tbody>

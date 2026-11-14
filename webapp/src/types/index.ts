@@ -1,4 +1,5 @@
 import type { SystemLanguage } from "../utils/setInitialLanguage";
+import type en from "../locales/en.json";
 
 export type UserData = {
   id: string;
@@ -15,7 +16,12 @@ export type UserData = {
 
 export type Language = SystemLanguage | "system";
 export type SetLanguage = (language: Language) => void;
-export type TFunction = (key: string) => string;
+type KeyPaths<T> = {
+  [K in keyof T & string]: T[K] extends string ? K : `${K}.${KeyPaths<T[K]>}`;
+}[keyof T & string];
+
+export type TranslationKey = KeyPaths<typeof en>;
+export type TFunction = (key: TranslationKey) => string;
 
 export type TypeNotification = "success" | "error" | "info" | "warning";
 

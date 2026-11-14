@@ -3,16 +3,16 @@ import { readResponseError } from "../schemas/api";
 import { notificationMessage } from "./apiError";
 
 import type { z } from "zod";
-import type { RequestContext } from "../types";
+import type { RequestContext, TranslationKey } from "../types";
 
 interface ApiMutationConfig<Schema extends z.ZodType> {
   path: string;
   method: "POST" | "PUT" | "DELETE";
   body?: unknown;
   responseSchema: Schema;
-  successMessageKey: string;
-  errorMessageKey: string;
-  caughtErrorMessageKey?: string;
+  successMessageKey: TranslationKey;
+  errorMessageKey: TranslationKey;
+  caughtErrorMessageKey?: TranslationKey;
   logLabel: string;
 }
 

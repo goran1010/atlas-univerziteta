@@ -11,7 +11,7 @@ interface TranslationMap {
   [key: string]: TranslationValue;
 }
 
-const translations: Record<SystemLanguage, TranslationMap> = { en, sr };
+const translations: Record<SystemLanguage, typeof en> = { en, sr };
 
 function getSavedLanguage(): Language {
   const savedLanguage = localStorage.getItem("language");

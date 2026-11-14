@@ -23,7 +23,7 @@ function RootContextProbe() {
   return (
     <div>
       <output data-testid="language">{context.language}</output>
-      <output data-testid="translation">{context.t("test.key")}</output>
+      <output data-testid="translation">{context.t("nav.home")}</output>
       <output data-testid="notification-count">{notifications.length}</output>
       <output data-testid="user">
         {context.userData ? context.userData.email : "null"}
@@ -37,7 +37,7 @@ describe("RootContext", () => {
     render(<RootContextProbe />);
 
     expect(screen.getByTestId("language")).toHaveTextContent("en");
-    expect(screen.getByTestId("translation")).toHaveTextContent("test.key");
+    expect(screen.getByTestId("translation")).toHaveTextContent("nav.home");
     expect(screen.getByTestId("notification-count")).toHaveTextContent("0");
     expect(screen.getByTestId("user")).toHaveTextContent("null");
   });

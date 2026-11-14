@@ -1,6 +1,9 @@
-import type { TFunction } from "../types";
+import type { TFunction, TranslationKey } from "../types";
 
 type PluralForm = "one" | "few" | "other";
+
+type PluralBase<Key> = Key extends `${infer Base}_other` ? Base : never;
+type PluralKey = PluralBase<TranslationKey>;
 
 function slavicPluralForm(count: number): PluralForm {
   const abs = Math.abs(count);
@@ -17,12 +20,8 @@ function slavicPluralForm(count: number): PluralForm {
   return "other";
 }
 
-function tCount(t: TFunction, key: string, count: number): string {
-  const form = slavicPluralForm(count);
-  const pluralKey = `${key}_${form}`;
-  const translated = t(pluralKey);
-  if (translated !== pluralKey) return translated;
-  return t(key);
+function tCount(t: TFunction, key: PluralKey, count: number): string {
+  return t(`${key}_${slavicPluralForm(count)}`);
 }
 
 export { tCount };

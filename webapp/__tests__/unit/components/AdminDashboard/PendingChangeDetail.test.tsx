@@ -61,6 +61,17 @@ describe("PendingChangeDetail", () => {
     ).toHaveAttribute("href", "https://new.example");
   });
 
+  test("shows enum values that have no translation as they are", () => {
+    renderDetail({
+      targetType: "UNIVERSITY",
+      typeOfChange: "CREATE",
+      data: { name: "New University", country: "XYZ", ownership: "MIXED" },
+    });
+
+    expect(screen.getByText("XYZ")).toBeInTheDocument();
+    expect(screen.getByText("MIXED")).toBeInTheDocument();
+  });
+
   test("shows a current vs proposed diff table for UPDATE", () => {
     renderDetail({
       targetType: "FACULTY",

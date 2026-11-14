@@ -15,6 +15,7 @@ import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { countNestedNodes } from "../../utils/countNestedNodes";
 import { CHANGE_TYPE_BADGE } from "../../utils/changeTypeBadges";
 import { LEVEL_BADGE } from "../../utils/levelColors";
+import { countrySchema } from "../../schemas/domain";
 import type { Notification } from "../../types";
 import type { TypeOfChange } from "../../schemas/domain";
 import type { AdminPendingChange } from "../../schemas/pendingChange";
@@ -61,10 +62,10 @@ const PendingChangesAdminRow = memo(
       data.targetType === "UNIVERSITY"
         ? (data.data as { country?: string } | null)?.country
         : undefined;
-    const countryLabel =
-      typeof rawCountry === "string"
-        ? t(`universitiesPage.countries.${rawCountry}`)
-        : undefined;
+    const country = countrySchema.safeParse(rawCountry);
+    const countryLabel = country.success
+      ? t(`universitiesPage.countries.${country.data}`)
+      : rawCountry;
     const currentPath =
       data.typeOfChange !== "CREATE" && currentEntity
         ? entityDetailPath(data.targetType, data.targetId)

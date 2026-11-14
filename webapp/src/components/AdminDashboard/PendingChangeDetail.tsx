@@ -5,6 +5,12 @@ import { ExternalLink } from "../sharedComponents/ExternalLink";
 import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
 import { LEVEL_GUIDE, LEVEL_TEXT } from "../../utils/levelColors";
+import {
+  countrySchema,
+  entitySchema,
+  ownershipSchema,
+  studyCycleSchema,
+} from "../../schemas/domain";
 
 import type { EntityLevel } from "../../utils/levelColors";
 
@@ -51,20 +57,32 @@ function entityFieldSpecs(targetType: string, t: TFunction): FieldSpec[] {
         {
           key: "country",
           label: t("contribution.dataFields.country"),
-          translate: (value, translator) =>
-            translator(`universitiesPage.countries.${value}`),
+          translate: (value, translator) => {
+            const country = countrySchema.safeParse(value);
+            return country.success
+              ? translator(`universitiesPage.countries.${country.data}`)
+              : value;
+          },
         },
         {
           key: "entity",
           label: t("contribution.dataFields.entity"),
-          translate: (value, translator) =>
-            translator(`contribution.entities.${value}`),
+          translate: (value, translator) => {
+            const entity = entitySchema.safeParse(value);
+            return entity.success
+              ? translator(`contribution.entities.${entity.data}`)
+              : value;
+          },
         },
         {
           key: "ownership",
           label: t("contribution.dataFields.ownership"),
-          translate: (value, translator) =>
-            translator(`universitiesPage.ownership.${value}`),
+          translate: (value, translator) => {
+            const ownership = ownershipSchema.safeParse(value);
+            return ownership.success
+              ? translator(`universitiesPage.ownership.${ownership.data}`)
+              : value;
+          },
         },
         { key: "foundedYear", label: t("universitiesPage.foundedYear") },
         website,
@@ -89,8 +107,12 @@ function entityFieldSpecs(targetType: string, t: TFunction): FieldSpec[] {
         {
           key: "cycle",
           label: t("contribution.dataFields.cycle"),
-          translate: (value, translator) =>
-            translator(`contribution.cycles.${value}`),
+          translate: (value, translator) => {
+            const cycle = studyCycleSchema.safeParse(value);
+            return cycle.success
+              ? translator(`contribution.cycles.${cycle.data}`)
+              : value;
+          },
         },
         durationYears,
         ects,

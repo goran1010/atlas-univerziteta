@@ -7,11 +7,12 @@ import { notificationMessageKey } from "../utils/apiError";
 
 import type { Dispatch, SetStateAction } from "react";
 import type { ZodType } from "zod";
+import type { TranslationKey } from "../types";
 
 interface UseUsersListOptions<Item> {
   path: string;
   responseSchema: ZodType<{ data: Item[] }>;
-  errorMessageKey: string;
+  errorMessageKey: TranslationKey;
   logLabel: string;
   setLoading: (loading: boolean) => void;
   enabled?: boolean | undefined;

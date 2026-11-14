@@ -3,7 +3,7 @@ import { GlobeIcon } from "../sharedComponents/icons";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
 
-import type { Language, SetLanguage } from "../../types";
+import type { Language, SetLanguage, TranslationKey } from "../../types";
 
 const languageOrder: Language[] = ["system", "en", "sr"];
 
@@ -54,7 +54,7 @@ function LanguageIcon({ language }: { language: Language }) {
   }
 }
 
-function getLabelKey(language: Language): string {
+function getLabelKey(language: Language): TranslationKey {
   switch (language) {
     case "system":
       return "language.system";
@@ -65,7 +65,7 @@ function getLabelKey(language: Language): string {
   }
 }
 
-function getNotificationKey(language: Language): string {
+function getNotificationKey(language: Language): TranslationKey {
   switch (language) {
     case "system":
       return "language.switched.system";

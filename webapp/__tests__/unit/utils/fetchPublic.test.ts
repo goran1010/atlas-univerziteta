@@ -4,15 +4,19 @@ import {
   fetchPublicResponse,
 } from "../../../src/utils/fetchPublic";
 
+import type { FetchPublicConfig } from "../../../src/utils/fetchPublic";
+
 const fetchMock = vi.fn();
 
 const responseSchema = z.object({ data: z.object({ name: z.string() }) });
 
-function createConfig(overrides = {}) {
+function createConfig(
+  overrides: Partial<FetchPublicConfig<typeof responseSchema>> = {},
+): FetchPublicConfig<typeof responseSchema> {
   return {
     path: "/api/v1/example",
     responseSchema,
-    errorMessageKey: "messages.example.error",
+    errorMessageKey: "messages.universities.detailsError",
     logLabel: "load example",
     ...overrides,
   };
@@ -84,7 +88,7 @@ describe("fetchPublic", () => {
     expect(result).toBeNull();
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.example.error",
+      message: "messages.universities.detailsError",
     });
     expect(ctx.setLoading).toHaveBeenLastCalledWith(false);
   });

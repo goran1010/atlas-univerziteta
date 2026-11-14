@@ -4,7 +4,7 @@ import { notificationMessage } from "./apiError";
 
 import type { z } from "zod";
 import type { ApiError } from "../schemas/api";
-import type { RequestContext } from "../types";
+import type { RequestContext, TranslationKey } from "../types";
 
 // GET counterpart of apiMutation: the shared fetch/parse/notify block for
 // public reads.
@@ -39,7 +39,7 @@ async function fetchPublicResponse<Schema extends z.ZodType>(
 interface FetchPublicConfig<Schema extends z.ZodType> {
   path: string;
   responseSchema: Schema;
-  errorMessageKey: string;
+  errorMessageKey: TranslationKey;
   logLabel: string;
   // detail pages: a missing entity is an expected state, not a toast
   quiet404?: boolean;
@@ -85,3 +85,4 @@ async function fetchPublic<Schema extends z.ZodType>(
 }
 
 export { fetchPublic, fetchPublicResponse };
+export type { FetchPublicConfig };

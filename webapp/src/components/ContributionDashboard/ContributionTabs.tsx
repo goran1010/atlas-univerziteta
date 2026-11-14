@@ -10,7 +10,7 @@ const TABS = [
   { key: "addNewData", to: "/improve-data/add" },
   { key: "addTree", to: "/improve-data/add-tree" },
   { key: "pendingChanges", to: "/improve-data/pending" },
-];
+] as const;
 
 function ContributionTabs() {
   const { t } = use(RootContext);

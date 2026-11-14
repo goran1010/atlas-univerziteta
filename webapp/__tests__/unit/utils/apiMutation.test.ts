@@ -2,19 +2,22 @@ import { z } from "zod";
 import { apiMutation } from "../../../src/utils/apiMutation";
 
 import type { RequestContext } from "../../../src/types";
+import type { ApiMutationConfig } from "../../../src/utils/apiMutation";
 
 const fetchMock = vi.fn();
 
 const responseSchema = z.object({ message: z.string() });
 
-function createConfig(overrides = {}) {
+function createConfig(
+  overrides: Partial<ApiMutationConfig<typeof responseSchema>> = {},
+): ApiMutationConfig<typeof responseSchema> {
   return {
     path: "/example-path",
     method: "POST" as const,
     body: { id: "change-1" },
     responseSchema,
-    successMessageKey: "messages.example.success",
-    errorMessageKey: "messages.example.error",
+    successMessageKey: "messages.universities.addSuccess",
+    errorMessageKey: "messages.universities.addError",
     logLabel: "run example action",
     ...overrides,
   };
@@ -61,7 +64,7 @@ describe("apiMutation", () => {
     expect(result).toEqual({ message: "Done." });
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "success",
-      message: "messages.example.success",
+      message: "messages.universities.addSuccess",
     });
     expect(ctx.setLoading).toHaveBeenNthCalledWith(1, true);
     expect(ctx.setLoading).toHaveBeenLastCalledWith(false);
@@ -102,7 +105,7 @@ describe("apiMutation", () => {
     );
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.example.error (Rejected on the server.)",
+      message: "messages.universities.addError (Rejected on the server.)",
     });
   });
 
@@ -143,7 +146,7 @@ describe("apiMutation", () => {
 
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.example.error",
+      message: "messages.universities.addError",
     });
     expect(ctx.setLoading).toHaveBeenLastCalledWith(false);
   });
@@ -163,7 +166,7 @@ describe("apiMutation", () => {
     expect(result).toBeNull();
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.example.error",
+      message: "messages.universities.addError",
     });
     expect(consoleErrorSpy).toHaveBeenCalled();
   });
@@ -177,13 +180,15 @@ describe("apiMutation", () => {
     const ctx = createCtx();
 
     await apiMutation(
-      createConfig({ caughtErrorMessageKey: "messages.example.caught" }),
+      createConfig({
+        caughtErrorMessageKey: "messages.universities.loadError",
+      }),
       ctx,
     );
 
     expect(ctx.addNotification).toHaveBeenCalledWith({
       type: "error",
-      message: "messages.example.caught",
+      message: "messages.universities.loadError",
     });
     expect(consoleErrorSpy).toHaveBeenCalledWith(
       "Error trying to run example action:",

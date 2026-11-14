@@ -1,20 +1,22 @@
+import type { TranslationKey } from "../../../types";
+
+export interface EndpointParam {
+  name?: string;
+  required?: boolean;
+  descriptionKey?: TranslationKey;
+}
+
 export interface Endpoint {
   method: "GET" | "POST" | "PUT" | "DELETE";
   path: string;
-  descriptionKey: string;
-  params?:
-    | {
-        name?: string;
-        required?: boolean;
-        descriptionKey?: string;
-      }[]
-    | null;
+  descriptionKey: TranslationKey;
+  params?: EndpointParam[] | null;
   requestExample?: string | null;
   successExample?: string | null;
   errorExample?: string | null;
 }
 
-const paginationParams = [
+const paginationParams: EndpointParam[] = [
   {
     name: "page",
     required: false,
