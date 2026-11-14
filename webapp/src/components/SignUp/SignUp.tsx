@@ -22,7 +22,7 @@ function SignUp() {
         type: "warning",
         message: t("auth.signup.blockedWhileLoggedIn"),
       });
-      void navigate("/home");
+      void navigate("/");
     }
   }, [userData, navigate, addNotification, t]);
 

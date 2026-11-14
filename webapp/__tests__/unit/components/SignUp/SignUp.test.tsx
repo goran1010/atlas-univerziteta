@@ -92,7 +92,6 @@ describe("Render SignUp Component", () => {
             <Notifications />
             <Routes>
               <Route path="/" element={<div>Home Page</div>} />
-              <Route path="/home" element={<div>Home Page</div>} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/login" element={<LogIn />} />
             </Routes>

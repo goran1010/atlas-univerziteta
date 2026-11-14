@@ -57,7 +57,7 @@ function FacultyDetailPage() {
         message={t("universitiesPage.noFacultyResults")}
         action={
           <Link
-            to="/search"
+            to="/"
             className="text-(--accent-text) underline underline-offset-2 mt-2 inline-block"
           >
             {t("universitiesPage.search")}
@@ -109,7 +109,7 @@ function FacultyDetailPage() {
       <div className="w-full mx-auto px-1 sm:px-4 py-4">
         <Breadcrumb
           items={[
-            { label: t("universitiesPage.search"), to: "/search" },
+            { label: t("universitiesPage.search"), to: "/" },
             {
               label: faculty.university.name,
               to: `/universities/${faculty.university.id.toString()}`,

@@ -39,7 +39,7 @@ function LogIn() {
           message: t("auth.login.alreadyLoggedIn"),
         });
       }
-      void navigate("/home");
+      void navigate("/");
       return;
     }
   }, [userData, navigate, addNotification, t]);

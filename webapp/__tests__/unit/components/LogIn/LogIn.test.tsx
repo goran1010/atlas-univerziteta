@@ -59,7 +59,6 @@ beforeEach(() => {
           <Notifications />
           <Routes>
             <Route path="/" element={<About />} />
-            <Route path="/home" element={<About />} />
             <Route path="/login" element={<LogIn />} />
           </Routes>
         </MemoryRouter>
@@ -112,7 +111,6 @@ describe("Render LogIn Component", () => {
             <Notifications />
             <Routes>
               <Route path="/" element={<About />} />
-              <Route path="/home" element={<About />} />
               <Route path="/login" element={<LogIn />} />
             </Routes>
           </MemoryRouter>

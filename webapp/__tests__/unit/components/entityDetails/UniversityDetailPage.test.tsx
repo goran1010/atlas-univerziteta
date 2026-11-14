@@ -59,7 +59,7 @@ function renderPage(route = "/universities/1") {
   const router = createMemoryRouter(
     [
       { path: "/universities/:id", element: <UniversityDetailPage /> },
-      { path: "/search", element: <div>Search page</div> },
+      { path: "/", element: <div>Search page</div> },
     ],
     { initialEntries: [route] },
   );
@@ -137,7 +137,7 @@ describe("UniversityDetailPage", () => {
     ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /Search/i })).toHaveAttribute(
       "href",
-      "/search",
+      "/",
     );
   });
 
