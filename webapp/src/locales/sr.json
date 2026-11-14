@@ -15,6 +15,7 @@
   },
   "meta": {
     "home": "Istražite univerzitete, fakultete, studijske programe i smjerove kroz besplatan javni skup podataka, pretraživi web interfejs i REST API.",
+    "about": "Saznajte više o projektu Atlas Univerziteta: besplatnoj bazi univerziteta i studijskih programa otvorenog koda, o tome kako pomoći u poboljšanju podataka i o javnom REST API-ju.",
     "api": "REST API dokumentacija za Atlas Univerziteta. Pristupite podacima o univerzitetima i studijskim programima programski.",
     "login": "Prijavite se na vaš Atlas Univerziteta nalog kako biste doprinijeli podacima i pratili vaše prijave.",
     "signup": "Napravite besplatan Atlas Univerziteta nalog i počnite doprinositi podacima o univerzitetima."

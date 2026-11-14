@@ -46,7 +46,7 @@ const routes: Route[] = [
   {
     path: "about",
     title: `${t("title.about")} | ${APP_NAME}`,
-    description: t("meta.home"),
+    description: t("meta.about"),
     url: "/about",
     image: "og-image-about.png",
   },

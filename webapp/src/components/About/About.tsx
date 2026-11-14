@@ -14,14 +14,14 @@ function About() {
     <>
       <Helmet>
         <title>{pageTitle}</title>
-        <meta name="description" content={t("meta.home")} />
+        <meta name="description" content={t("meta.about")} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${SITE_URL}/about/`} />
         <meta property="og:url" content={`${SITE_URL}/about/`} />
         <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={t("meta.home")} />
+        <meta property="og:description" content={t("meta.about")} />
         <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={t("meta.home")} />
+        <meta name="twitter:description" content={t("meta.about")} />
       </Helmet>
 
       <div className="w-full mx-auto px-2 sm:px-4 flex flex-col gap-12 py-10 text-(--text-primary)">

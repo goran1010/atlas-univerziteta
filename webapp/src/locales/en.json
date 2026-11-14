@@ -15,6 +15,7 @@
   },
   "meta": {
     "home": "Explore universities, faculties, study programs, and tracks with a free public dataset, searchable web interface, and REST API.",
+    "about": "Learn about Atlas Univerziteta, a free, open-source database of universities and study programs, how to help improve its data, and its public REST API.",
     "api": "REST API documentation for Atlas Univerziteta. Access universities and study programs data programmatically.",
     "login": "Log in to your Atlas Univerziteta account to contribute data and track your submissions.",
     "signup": "Create a free Atlas Univerziteta account to start contributing university data."
