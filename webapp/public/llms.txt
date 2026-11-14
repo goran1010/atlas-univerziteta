@@ -4,8 +4,7 @@ Atlas Univerziteta is a free, open-source directory of universities, faculties, 
 
 ## Public pages
 
-- [Home](https://atlasuniverziteta.com/)
-- [Search](https://atlasuniverziteta.com/search)
+- [Home and search](https://atlasuniverziteta.com/)
 - [About](https://atlasuniverziteta.com/about)
 - [API Docs](https://atlasuniverziteta.com/api-docs)
 
