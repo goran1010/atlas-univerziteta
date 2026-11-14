@@ -23,7 +23,7 @@ test("language switcher cycles to Serbian and persists across reloads", async ({
   await expect(
     page.getByRole("heading", { name: "Nađite programe i univerzitete" }),
   ).toBeVisible();
-  await expect(page.locator("html")).toHaveAttribute("lang", "sr");
+  await expect(page.locator("html")).toHaveAttribute("lang", "sr-Latn");
 });
 
 test("theme switcher applies dark mode and persists across reloads", async ({

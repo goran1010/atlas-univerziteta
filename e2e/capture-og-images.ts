@@ -57,8 +57,8 @@ async function main() {
   }
   await enContext.close();
 
-  // BCS screenshots: set language via localStorage before navigating
-  console.log("Capturing BCS OG images");
+  // Serbian screenshots: set language via localStorage before navigating
+  console.log("Capturing Serbian OG images");
   const srContext = await browser.newContext({
     ...contextOptions,
     locale: "en-US",

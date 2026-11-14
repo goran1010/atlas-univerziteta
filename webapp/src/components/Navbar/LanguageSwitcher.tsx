@@ -61,7 +61,7 @@ function getLabelKey(language: Language): TranslationKey {
     case "en":
       return "language.english";
     case "sr":
-      return "language.bcs";
+      return "language.serbian";
   }
 }
 
@@ -72,7 +72,7 @@ function getNotificationKey(language: Language): TranslationKey {
     case "en":
       return "language.switched.english";
     case "sr":
-      return "language.switched.bcs";
+      return "language.switched.serbian";
   }
 }
 

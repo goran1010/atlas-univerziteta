@@ -1,55 +1,58 @@
 import { setSystemLanguage } from "../../../src/utils/setInitialLanguage";
 
-let originalNavigatorLanguage: string;
+let originalNavigatorLanguages: readonly string[];
 
 beforeEach(() => {
-  originalNavigatorLanguage = navigator.language;
+  originalNavigatorLanguages = navigator.languages;
 });
 
 afterEach(() => {
-  Object.defineProperty(window.navigator, "language", {
-    value: originalNavigatorLanguage,
+  Object.defineProperty(window.navigator, "languages", {
+    value: originalNavigatorLanguages,
     configurable: true,
   });
 });
 
-function setNavigatorLanguage(language: string) {
-  Object.defineProperty(window.navigator, "language", {
-    value: language,
+function setNavigatorLanguages(languages: string[]) {
+  Object.defineProperty(window.navigator, "languages", {
+    value: languages,
     configurable: true,
   });
 }
 
 describe("setInitialLanguage", () => {
-  test("returns en when browser language starts with en", () => {
-    setNavigatorLanguage("en-US");
+  test("returns en when the browser prefers English", () => {
+    setNavigatorLanguages(["en-US"]);
 
-    const result = setSystemLanguage();
-
-    expect(result).toBe("en");
+    expect(setSystemLanguage()).toBe("en");
   });
 
-  test("returns sr when browser language starts with sr", () => {
-    setNavigatorLanguage("sr-Latn");
+  test("returns sr when the browser prefers Serbian", () => {
+    setNavigatorLanguages(["sr-Latn"]);
 
-    const result = setSystemLanguage();
-
-    expect(result).toBe("sr");
+    expect(setSystemLanguage()).toBe("sr");
   });
 
   test.each(["bs", "bs-BA", "hr", "hr-HR", "cnr", "cnr-ME"])(
-    "maps BCS browser locale %s to the sr bundle",
+    "maps browser locale %s to the sr bundle",
     (locale) => {
-      setNavigatorLanguage(locale);
+      setNavigatorLanguages([locale]);
+
       expect(setSystemLanguage()).toBe("sr");
     },
   );
 
-  test("falls back to en for unsupported browser language", () => {
-    setNavigatorLanguage("fr-FR");
+  test("takes the first preference the app has a bundle for", () => {
+    setNavigatorLanguages(["de-DE", "hr-HR", "en"]);
+    expect(setSystemLanguage()).toBe("sr");
 
-    const result = setSystemLanguage();
+    setNavigatorLanguages(["de-DE", "en-GB", "sr"]);
+    expect(setSystemLanguage()).toBe("en");
+  });
 
-    expect(result).toBe("en");
+  test("falls back to en when no preference has a bundle", () => {
+    setNavigatorLanguages(["fr-FR", "de"]);
+
+    expect(setSystemLanguage()).toBe("en");
   });
 });

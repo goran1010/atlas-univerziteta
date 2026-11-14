@@ -3,7 +3,7 @@ import { formatDate } from "../../../src/utils/formatDate";
 describe("formatDate", () => {
   const date = new Date(2026, 9, 28);
 
-  test("formats with BCS conventions for the sr bundle", () => {
+  test("formats with Serbian Latin conventions for the sr bundle", () => {
     expect(formatDate(date, "sr")).toBe(date.toLocaleDateString("sr-Latn"));
   });
 

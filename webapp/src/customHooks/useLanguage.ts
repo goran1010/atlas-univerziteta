@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import en from "../locales/en.json";
 import sr from "../locales/sr.json";
-import { setSystemLanguage } from "../utils/setInitialLanguage";
+import { LANGUAGE_TAGS, setSystemLanguage } from "../utils/setInitialLanguage";
 import type { SystemLanguage } from "../utils/setInitialLanguage";
 import type { Language, TFunction } from "../types";
 
@@ -35,7 +35,7 @@ function useLanguage() {
 
   useEffect(() => {
     localStorage.setItem("language", language);
-    document.documentElement.lang = resolvedLanguage;
+    document.documentElement.lang = LANGUAGE_TAGS[resolvedLanguage];
   }, [language, resolvedLanguage]);
 
   const t: TFunction = useCallback(
