@@ -6,7 +6,7 @@ import { z } from "zod";
 
 import { env } from "../config/env.js";
 import { PrismaClient } from "../generated/prisma/client.js";
-import { COUNTRIES, ENTITIES } from "../search/aliases.js";
+import { COUNTRIES, ENTITIES } from "../validation/countries.js";
 import {
   universitySearchFields,
   facultySearchFields,

@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { parseRequest } from "./parseRequest.js";
-import { COUNTRIES, ENTITIES } from "../search/aliases.js";
+import { COUNTRIES, ENTITIES } from "./countries.js";
 
 const positiveIdParam = z
   .string()

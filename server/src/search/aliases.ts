@@ -45,8 +45,6 @@ const COUNTRY_ALIASES: Record<string, string> = {
   MONTENEGRO: "MNE",
 } as const;
 
-const COUNTRIES = ["BIH", "SRB", "HRV", "MNE"] as const;
-const ENTITIES = ["FBIH", "RS", "BD"] as const;
 const OWNERSHIPS = ["PUBLIC", "PRIVATE"] as const;
 const CYCLES = [
   "FIRST",
@@ -57,11 +55,4 @@ const CYCLES = [
   "SPECIALIST",
 ] as const;
 
-export {
-  ENUM_ALIASES,
-  COUNTRY_ALIASES,
-  COUNTRIES,
-  ENTITIES,
-  OWNERSHIPS,
-  CYCLES,
-};
+export { ENUM_ALIASES, COUNTRY_ALIASES, OWNERSHIPS, CYCLES };

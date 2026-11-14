@@ -1,10 +1,10 @@
 import {
   ENUM_ALIASES,
   COUNTRY_ALIASES,
-  ENTITIES,
   OWNERSHIPS,
   CYCLES,
 } from "./aliases.js";
+import { ENTITIES } from "../validation/countries.js";
 
 import type { SearchToken } from "./tokenize.js";
 
