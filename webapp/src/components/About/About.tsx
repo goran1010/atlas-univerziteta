@@ -27,18 +27,18 @@ function About() {
       <div className="w-full mx-auto px-2 sm:px-4 flex flex-col gap-12 py-10 text-(--text-primary)">
         <header className="flex flex-col gap-3">
           <h1 className="text-3xl font-bold text-center">
-            {t("home.heading")}
+            {t("about.heading")}
           </h1>
-          <p>{t("home.intro")}</p>
-          <p>{t("home.summary")}</p>
+          <p>{t("about.intro")}</p>
+          <p>{t("about.summary")}</p>
           <p className="text-sm text-(--text-muted)">
-            {t("home.openSource")}{" "}
+            {t("about.openSource")}{" "}
             <ExternalLink
               href="https://github.com/goran1010/atlas-univerziteta"
               className="inline-flex items-center gap-1 align-middle"
             >
               <GitHubIcon size={14} />
-              {t("home.github")}
+              {t("about.github")}
             </ExternalLink>
             .
           </p>
@@ -46,34 +46,34 @@ function About() {
 
         <section className="flex flex-col gap-4">
           <h2 className="text-xl font-bold text-center">
-            {t("home.exploreHeading")}
+            {t("about.exploreHeading")}
           </h2>
-          <p>{t("home.exploreDescription")}</p>
+          <p>{t("about.exploreDescription")}</p>
           <div className="flex flex-wrap gap-3 justify-center items-center">
             <LinkButton to="/" className="w-full sm:w-auto">
-              {t("home.card.universities.title")}
+              {t("about.exploreCta")}
             </LinkButton>
           </div>
         </section>
 
         <section className="flex flex-col gap-4">
           <h2 className="text-xl font-bold text-center">
-            {t("home.improveHeading")}
+            {t("about.improveHeading")}
           </h2>
-          <p>{t("home.improveDescription")}</p>
+          <p>{t("about.improveDescription")}</p>
           <ol className="list-decimal list-inside space-y-1">
-            <li>{t("home.improveStep1")}</li>
-            <li>{t("home.improveStep2")}</li>
-            <li>{t("home.improveStep3")}</li>
+            <li>{t("about.improveStep1")}</li>
+            <li>{t("about.improveStep2")}</li>
+            <li>{t("about.improveStep3")}</li>
           </ol>
           <div className="flex flex-wrap gap-3 justify-center items-center">
             {userData ? (
               <LinkButton to="/improve-data" className="w-full sm:w-auto">
-                {t("home.improveContribute")}
+                {t("about.improveContribute")}
               </LinkButton>
             ) : (
               <LinkButton to="/signup" className="w-full sm:w-auto">
-                {t("home.improveSignUp")}
+                {t("about.improveSignUp")}
               </LinkButton>
             )}
           </div>
@@ -81,20 +81,22 @@ function About() {
 
         <section className="flex flex-col gap-4">
           <h2 className="text-xl font-bold self-center">
-            {t("home.forDevsHeading")}
+            {t("about.forDevsHeading")}
           </h2>
-          <p>{t("home.forDevsDescription")}</p>
-          <p className="text-sm text-(--text-muted)">{t("home.forDevsNote")}</p>
+          <p>{t("about.forDevsDescription")}</p>
+          <p className="text-sm text-(--text-muted)">
+            {t("about.forDevsNote")}
+          </p>
           <div className="flex flex-wrap gap-3 justify-center items-center">
             <LinkButton to="/api-docs" className="w-full sm:w-auto">
-              {t("home.forDevsCta")}
+              {t("about.forDevsCta")}
             </LinkButton>
             <ExternalLink
               href="https://github.com/goran1010/atlas-univerziteta"
               className="inline-flex items-center justify-center gap-1.5"
             >
               <GitHubIcon />
-              {t("home.forDevsGithub")}
+              {t("about.forDevsGithub")}
             </ExternalLink>
           </div>
         </section>

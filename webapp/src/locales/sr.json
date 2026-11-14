@@ -119,17 +119,13 @@
     "suggestionsAwaiting": "Prijedlozi koji čekaju pregled",
     "changesAwaiting": "Izmjene koje čekaju vaš pregled"
   },
-  "home": {
+  "about": {
     "heading": "Univerziteti i studijski programi",
     "intro": "Besplatan open-source projekat koji gradi strukturiranu, pretraživu bazu javnih podataka o visokom obrazovanju. Fokus je na univerzitetima - institucijama, fakultetima, studijskim programima i smjerovima.",
     "summary": "Koristite Atlas Univerziteta za pregled profila univerziteta, poređenje akademske ponude i pristup strukturiranim javnim podacima kroz jednostavan interfejs ili direktno kroz API.",
     "exploreHeading": "Istražite podatke",
     "exploreDescription": "Pregledajte univerzitete u više zemalja. Pogledajte fakultete, studijske programe i smjerove. Pretražujte po nazivu, gradu, akronimu, zemlji, entitetu, vlasništvu, ciklusu studija i više.",
-    "card": {
-      "universities": {
-        "title": "Univerziteti"
-      }
-    },
+    "exploreCta": "Univerziteti",
     "improveHeading": "Poboljšajte podatke",
     "improveDescription": "Znate nešto što nedostaje ili nije ispravno? Registrovani korisnici mogu predlagati izmjene - dodavanja, ispravke ili brisanja - koje admini pregledaju i primjenjuju.",
     "improveStep1": "Napravite besplatan nalog i potvrdite email",

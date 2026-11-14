@@ -119,17 +119,13 @@
     "suggestionsAwaiting": "Suggestions awaiting review",
     "changesAwaiting": "Changes awaiting your review"
   },
-  "home": {
+  "about": {
     "heading": "Universities and Study Programs",
     "intro": "A free, open-source project building a structured, searchable database of public higher-education data. Focused on universities - institutions, faculties, study programs, and tracks.",
     "summary": "Use Atlas Univerziteta to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
     "exploreDescription": "Browse universities across multiple countries. View faculties, study programs, and tracks. Search by name, city, acronym, country, entity, ownership, study cycle, and more.",
-    "card": {
-      "universities": {
-        "title": "Universities"
-      }
-    },
+    "exploreCta": "Universities",
     "improveHeading": "Improve the Data",
     "improveDescription": "Know something that's missing or incorrect? Registered users can suggest changes - additions, edits, or deletions - which are reviewed and applied by admins.",
     "improveStep1": "Create a free account and confirm your email",
