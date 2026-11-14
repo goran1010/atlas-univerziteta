@@ -59,21 +59,21 @@ describe("escapeHtml", () => {
 
 describe("renderRouteHtml", () => {
   const route = {
-    title: "Pretraga | Atlas Univerziteta",
-    description: "Pretraga univerziteta",
-    url: "/search",
+    title: "About | Atlas Univerziteta",
+    description: "About the project",
+    url: "/about",
   };
 
   test("replaces title, description, and og/twitter meta tags", () => {
     const html = renderRouteHtml(FIXTURE, route);
 
-    expect(html).toContain("<title>Pretraga | Atlas Univerziteta</title>");
-    expect(
-      countOccurrences(html, 'content="Pretraga | Atlas Univerziteta"'),
-    ).toBe(2);
-    expect(countOccurrences(html, 'content="Pretraga univerziteta"')).toBe(3);
+    expect(html).toContain("<title>About | Atlas Univerziteta</title>");
+    expect(countOccurrences(html, 'content="About | Atlas Univerziteta"')).toBe(
+      2,
+    );
+    expect(countOccurrences(html, 'content="About the project"')).toBe(3);
     expect(html).toContain(
-      '<meta property="og:url" content="https://atlasuniverziteta.com/search/"',
+      '<meta property="og:url" content="https://atlasuniverziteta.com/about/"',
     );
   });
 
@@ -108,12 +108,12 @@ describe("renderRouteHtml", () => {
   test("swaps the og image only when one is passed", () => {
     const withImage = renderRouteHtml(FIXTURE, {
       ...route,
-      image: "og-image-search.png",
+      image: "og-image-about.png",
     });
     const withoutImage = renderRouteHtml(FIXTURE, route);
 
     expect(withImage).not.toContain("og-image-home.png");
-    expect(countOccurrences(withImage, "og-image-search.png")).toBe(2);
+    expect(countOccurrences(withImage, "og-image-about.png")).toBe(2);
     expect(countOccurrences(withoutImage, "og-image-home.png")).toBe(2);
   });
 });

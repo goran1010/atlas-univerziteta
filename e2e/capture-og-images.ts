@@ -17,7 +17,6 @@ const HEIGHT = 630;
 
 const PAGES: { path: string; name: string }[] = [
   { path: "/", name: "home" },
-  { path: "/search", name: "search" },
   { path: "/about", name: "about" },
   { path: "/api-docs", name: "api-docs" },
   { path: "/login", name: "login" },

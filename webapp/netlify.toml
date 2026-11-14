@@ -23,6 +23,12 @@
   force = true
 
 [[redirects]]
+  from = "/search"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/"
   status = 200

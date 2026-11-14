@@ -44,13 +44,6 @@ interface Route extends MetaRoute {
 // screenshot has not been added yet
 const routes: Route[] = [
   {
-    path: "search",
-    title: `${t("title.universities")} | ${APP_NAME}`,
-    description: t("meta.universities"),
-    url: "/search",
-    image: "og-image-search.png",
-  },
-  {
     path: "about",
     title: `${t("title.about")} | ${APP_NAME}`,
     description: t("meta.home"),

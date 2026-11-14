@@ -2,7 +2,6 @@
   "title": {
     "app": "Atlas Univerziteta",
     "api": "API docs",
-    "universities": "Search",
     "contribute": "Improve data",
     "admin": "Admin dashboard",
     "profile": "My profile",
@@ -16,7 +15,6 @@
   },
   "meta": {
     "home": "Explore universities, faculties, study programs, and tracks with a free public dataset, searchable web interface, and REST API.",
-    "universities": "Explore universities and study programs.",
     "api": "REST API documentation for Atlas Univerziteta. Access universities and study programs data programmatically.",
     "login": "Log in to your Atlas Univerziteta account to contribute data and track your submissions.",
     "signup": "Create a free Atlas Univerziteta account to start contributing university data."

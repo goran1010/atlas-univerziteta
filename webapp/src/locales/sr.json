@@ -2,7 +2,6 @@
   "title": {
     "app": "Atlas Univerziteta",
     "api": "API dokumentacija",
-    "universities": "Pretraga",
     "contribute": "Poboljšajte podatke",
     "admin": "Admin kontrolna tabla",
     "profile": "Moj profil",
@@ -16,7 +15,6 @@
   },
   "meta": {
     "home": "Istražite univerzitete, fakultete, studijske programe i smjerove kroz besplatan javni skup podataka, pretraživi web interfejs i REST API.",
-    "universities": "Istražite univerzitete i studijske programe.",
     "api": "REST API dokumentacija za Atlas Univerziteta. Pristupite podacima o univerzitetima i studijskim programima programski.",
     "login": "Prijavite se na vaš Atlas Univerziteta nalog kako biste doprinijeli podacima i pratili vaše prijave.",
     "signup": "Napravite besplatan Atlas Univerziteta nalog i počnite doprinositi podacima o univerzitetima."
