@@ -438,6 +438,8 @@
       "PRIVATE": "Privatni"
     },
     "clearSearch": "Obriši pretragu",
+    "countryFilter": "Zemlja",
+    "allCountries": "Sve zemlje",
     "resetSearch": "Poništi",
     "contextMatch": {
       "university": "Pronađen preko svojih fakulteta ili studijskih programa",

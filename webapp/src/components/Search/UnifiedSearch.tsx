@@ -1,5 +1,6 @@
 import { SearchIcon, XIcon } from "../sharedComponents/icons";
 import { Button } from "../sharedComponents/Button";
+import { Select } from "../sharedComponents/Select";
 import { Spinner } from "../sharedComponents/Spinner";
 import { SearchResults } from "./SearchResults";
 import { useUnifiedSearch } from "./useUnifiedSearch";
@@ -59,25 +60,20 @@ function UnifiedSearch() {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-2">
+      <Select
+        aria-label={t("universitiesPage.countryFilter")}
+        value={countryFilter}
+        onChange={(e) => {
+          handleCountryChange(e.target.value);
+        }}
+      >
+        <option value="">{t("universitiesPage.allCountries")}</option>
         {COUNTRIES.map((c) => (
-          <button
-            key={c}
-            type="button"
-            aria-pressed={countryFilter === c}
-            onClick={() => {
-              handleCountryChange(countryFilter === c ? "" : c);
-            }}
-            className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) ${
-              countryFilter === c
-                ? "bg-(--accent) text-white border-(--accent)"
-                : "bg-(--surface-2) text-(--text-secondary) border-(--border-color) hover:border-(--accent) hover:text-(--accent-text)"
-            }`}
-          >
+          <option key={c} value={c}>
             {t(`universitiesPage.countries.${c}`)}
-          </button>
+          </option>
         ))}
-      </div>
+      </Select>
 
       {(hasSearchTerm || countryFilter !== "" || view.kind !== "idle") && (
         <Button

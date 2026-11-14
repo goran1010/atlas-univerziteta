@@ -278,18 +278,48 @@ describe("UnifiedSearch", () => {
     expect(screen.queryByText(/Showing first/i)).not.toBeInTheDocument();
   });
 
-  test("clicking a country pill sends the country filter", async () => {
+  test("picking a country browses that country's universities", async () => {
     givenUniversityList([universityListItem]);
     const user = renderSearch();
 
-    await user.click(
-      screen.getByRole("button", { name: /Bosnia and Herzegovina/i }),
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /^Country$/i }),
+      "BIH",
     );
 
     await waitFor(() => {
       expect(listRequests).toHaveLength(1);
     });
     expect(listRequests[0]?.searchParams.get("country")).toBe("BIH");
+  });
+
+  test("picking All countries drops the country filter from the search", async () => {
+    const user = renderSearch();
+    const countrySelect = screen.getByRole("combobox", { name: /^Country$/i });
+
+    await user.selectOptions(countrySelect, "SRB");
+    await typeSearch(user, "pravo");
+    await waitFor(() => {
+      expect(searchRequests.at(-1)?.searchParams.get("country")).toBe("SRB");
+    });
+
+    await user.selectOptions(countrySelect, "");
+    await waitFor(() => {
+      expect(searchRequests.at(-1)?.searchParams.has("country")).toBe(false);
+    });
+    expect(countrySelect).toHaveValue("");
+  });
+
+  test("preselects the country from a deep link", async () => {
+    givenUniversityList([universityListItem]);
+    render(<Wrapper initialEntry="/?country=BIH" />);
+
+    expect(
+      await screen.findByRole("combobox", { name: /^Country$/i }),
+    ).toHaveValue("BIH");
+    await waitFor(() => {
+      expect(listRequests[0]?.searchParams.get("country")).toBe("BIH");
+    });
   });
 
   test("does not trigger search for short input (1 char)", async () => {

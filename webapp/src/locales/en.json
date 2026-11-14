@@ -438,6 +438,8 @@
       "PRIVATE": "Private"
     },
     "clearSearch": "Clear search",
+    "countryFilter": "Country",
+    "allCountries": "All countries",
     "resetSearch": "Reset",
     "contextMatch": {
       "university": "Matched through its faculties or study programs",
