@@ -32,18 +32,19 @@ To re-seed production after a data change, pull the latest code on the VPS and r
 
 ## Adding a country
 
-Checklist for adding a new country to the platform:
+Country and entity codes are plain strings in the database, validated in application code, so adding a country needs no migration. A country's code is its ISO 3166-1 alpha-3 code, or the widely used user-assigned code where there is none, and it names the data folder and appears in the API.
 
-1. **Prisma enum** - add the ISO 3166-1 alpha-3 code to `enum country` in `server/prisma/schema.prisma` and run `npm run db:migrate`
-2. **JSON data** - create `server/JSON_files/universities/<CODE>/` with one JSON file per university (see existing files for the format)
-3. **Server validation** - add the code to the country enum in `server/src/validation/contributionValidation.ts` (create and edit schemas) and `server/src/validation/v1Validation.ts` (search and list query schemas)
-4. **Seed schema** - add the code to the country enum in `server/src/db/seed.ts`
-5. **Search aliases** - add local-language aliases (stems the tokenizer produces) to `server/src/search/aliases.ts`
-6. **Webapp schema** - add the code to `countrySchema` in `webapp/src/schemas/domain.ts`
-7. **Locale maps** - add a display name in both `webapp/src/locales/en.json` and `webapp/src/locales/sr.json` under `universitiesPage.countries` and `contribution.countries`
-8. **Entity rule** - if the country has subdivisions like BiH's entities, add them to the entity enum and validation; otherwise the country works without an entity
-9. **Accreditation** - research the national accreditation body and add real accreditation dates to the JSON files
-10. **Seed and test** - run `npm run db:seed` and `npm run test:all` to verify
+1. **Server list** - add the code to `COUNTRIES` in `server/src/validation/countries.ts`; the seed, contributions, approval and the v1 API all validate against it
+2. **Subdivisions** - only if every university belongs to a subdivision, as BiH's do to its entities: add the country with its subdivision codes to `SUBDIVISIONS` in the same file. The entity is then required for that country and rejected for every other
+3. **Search aliases** - add the country's local, English and common names to `COUNTRY_ALIASES` in `server/src/search/aliases.ts`, keyed by the stems the tokenizer produces, and add the phrases to `server/__tests__/unit/search/aliases.test.ts`; add new stems to `.cspell.json` if the spell check flags them
+4. **Webapp list** - add the code to `countrySchema`, and the subdivisions to `SUBDIVISIONS`, in `webapp/src/schemas/domain.ts`
+5. **Labels** - add the display name under `universitiesPage.countries` in both `webapp/src/locales/en.json` and `webapp/src/locales/sr.json`, and subdivision names under `universitiesPage.entities` and `contribution.entities`; the webapp typecheck fails until every code has its labels
+6. **Data** - create `server/JSON_files/universities/<CODE>/` with one JSON file per university (see [CONTRIBUTING](./CONTRIBUTING.md) for the format); the seed rejects a file whose `country` does not match its folder
+7. **Accreditation** - take `authority` and the accreditation dates from the national accreditation body's register; leave a date out rather than guess it
+8. **Sources** - credit the accreditation body in the README's data sources list
+9. **Verify** - run `npm run db:seed` and `npm run test:all`
+
+Deploy order: the webapp's read schemas accept only the country codes it knows, so an older webapp fails to load a university with a new code. After merging, let both the Netlify and the VPS deploys finish, and only then re-seed production with `./server/scripts/seed-prod.sh`.
 
 ## Share previews and prerendered meta
 

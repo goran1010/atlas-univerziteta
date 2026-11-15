@@ -59,7 +59,7 @@ You can also start one level lower: pick Faculty as the item type, choose the un
 
 The JSON mirrors the structure of the seed files. Children live in `faculties`, `studyPrograms`, and `tracks` arrays, and each level takes the same fields as the single-item form:
 
-- University: `name`, `city`, `country` (`BIH`, `SRB`, `HRV`, `MNE`), and `ownership` (`PUBLIC`, `PRIVATE`) are required; `entity` (`FBIH`, `RS`, `BD`) is required for BIH and rejected for other countries; `acronym`, `foundedYear`, `website`, `address`, `phone`, and `email` are optional.
+- University: `name`, `city`, `country` (a country code the platform supports, such as `BIH` or `SRB`), and `ownership` (`PUBLIC`, `PRIVATE`) are required; `entity` is required for countries divided into subdivisions and rejected for the rest - currently only BIH (`FBIH`, `RS`, `BD`); `acronym`, `foundedYear`, `website`, `address`, `phone`, and `email` are optional.
 - Faculty: `name` is required; `city`, `website`, `address`, `phone`, and `email` are optional.
 - Study program: `name` and `cycle` (`FIRST`, `SECOND`, `THIRD`, `INTEGRATED`, `VOCATIONAL`, `SPECIALIST`) are required; `durationYears`, `ects`, and `language` are optional.
 - Track: `name` is required; `ects` and `durationYears` are optional.
