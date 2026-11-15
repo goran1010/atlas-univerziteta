@@ -1,0 +1,48 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Bujqësor i Tiranës",
+  "acronym": "UBT",
+  "city": "Tiranë",
+  "ownership": "PUBLIC",
+  "foundedYear": "1951",
+  "website": "https://www.ubt.edu.al",
+  "address": "Rruga Pajsi Vodica, Kodër Kamëz, Tiranë",
+  "phone": "+355 4 2227804",
+  "email": "info@ubt.edu.al",
+  "accreditationFrom": "2021-12-16",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://www.ubt.edu.al/about-aut",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Bujqësisë dhe Mjedisit",
+      "website": "https://www.ubt.edu.al/fbm",
+      "dataSourceUrl": "https://www.ubt.edu.al/fakultetet",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Ekonomisë dhe Agrobiznesit",
+      "website": "https://www.ubt.edu.al/fea",
+      "dataSourceUrl": "https://www.ubt.edu.al/fakultetet",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Bioteknologjisë dhe Ushqimit",
+      "website": "https://www.ubt.edu.al/fbu",
+      "dataSourceUrl": "https://www.ubt.edu.al/fakultetet",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Pyjore",
+      "website": "https://www.ubt.edu.al/fshp",
+      "dataSourceUrl": "https://www.ubt.edu.al/fakultetet",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Mjekësisë Veterinare",
+      "website": "https://www.ubt.edu.al/fmv",
+      "dataSourceUrl": "https://www.ubt.edu.al/fakultetet",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

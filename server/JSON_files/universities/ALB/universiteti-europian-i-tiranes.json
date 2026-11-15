@@ -1,0 +1,48 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Europian i Tiranës",
+  "acronym": "UET",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "foundedYear": "2006",
+  "website": "https://uet.edu.al",
+  "address": "Rruga Xhanfize Keko, Kompleksi Xhura, Tiranë",
+  "phone": "+355 682016616",
+  "email": "info@uet.edu.al",
+  "accreditationFrom": "2023-09-22",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://uet.edu.al/rreth-uet/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Ekonomisë, Biznesit dhe Zhvillimit",
+      "website": "https://uet.edu.al/fakulteti-i-ekonomise-biznesit-dhe-zhvillimit/",
+      "dataSourceUrl": "https://uet.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Juridike, Politike dhe Marrëdhënieve Ndërkombëtare",
+      "website": "https://uet.edu.al/fakulteti-i-shkencave-juridike-politike-dhe-marredhenieve-nderkombetare/",
+      "dataSourceUrl": "https://uet.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Humane, Edukimi dhe Artet Liberale",
+      "website": "https://uet.edu.al/fakulteti-i-shkencave-humane-edukimi-dhe-artet-liberale/",
+      "dataSourceUrl": "https://uet.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë, Informatikës e Arkitekturës",
+      "website": "https://uet.edu.al/fakulteti-i-inxhinierise-informatikes-e-arkitektures/",
+      "dataSourceUrl": "https://uet.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Mjekësore Teknike",
+      "website": "https://uet.edu.al/fakulteti-i-shkencave-mjekesore-teknike/",
+      "dataSourceUrl": "https://uet.edu.al/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

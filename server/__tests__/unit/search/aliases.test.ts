@@ -16,6 +16,12 @@ function resolvedCountry(phrase: string): string | undefined {
 
 describe("country alias phrases resolve through the tokenizer", () => {
   test.each([
+    ["Albanija", "ALB"],
+    ["Albaniji", "ALB"],
+    ["Albania", "ALB"],
+    ["albanski", "ALB"],
+    ["Shqipëria", "ALB"],
+    ["Shqipërisë", "ALB"],
     ["Bosna", "BIH"],
     ["Bosna i Hercegovina", "BIH"],
     ["Hercegovina", "BIH"],

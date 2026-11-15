@@ -2,7 +2,7 @@
 
 **English** | [Bosanski / Hrvatski / Srpski](#bosanski--hrvatski--srpski)
 
-An open-source directory of higher-education data for Bosnia and Herzegovina, Serbia, Croatia, and Montenegro: a public REST API, a searchable webapp, and an authenticated contribution workflow with admin moderation.
+An open-source directory of higher-education data for Bosnia and Herzegovina, Serbia, Croatia, Montenegro, and Albania: a public REST API, a searchable webapp, and an authenticated contribution workflow with admin moderation.
 
 - Live webapp: <https://atlasuniverziteta.com/>
 - Live REST API: <https://api.atlasuniverziteta.com/>
@@ -74,6 +74,7 @@ Data sources:
 - Serbia: [Nacionalno akreditaciono telo (NAT)](https://nat.rs/)
 - Croatia: [Agencija za znanost i visoko obrazovanje (AZVO)](https://www.azvo.hr/) and university websites
 - Montenegro: [Agencija za kontrolu i obezbjeđenje kvaliteta visokog obrazovanja (AKOKVO)](https://akokvo.me/)
+- Albania: [Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)](https://www.ascal.al/sq/lista-e-ial/ial) and university websites
 
 Author: Goran Jović - [@goran1010](https://github.com/goran1010) · [contributors](https://github.com/goran1010/atlas-univerziteta/contributors)
 
@@ -83,7 +84,7 @@ Author: Goran Jović - [@goran1010](https://github.com/goran1010) · [contributo
 
 [English](#atlas-univerziteta) | **Bosanski / Hrvatski / Srpski**
 
-Atlas Univerziteta je open-source projekat sa podacima o visokom obrazovanju u Bosni i Hercegovini, Srbiji, Hrvatskoj i Crnoj Gori: javni REST API, web aplikacija sa pretragom i sistem prijedloga izmjena uz administratorsku provjeru.
+Atlas Univerziteta je open-source projekat sa podacima o visokom obrazovanju u Bosni i Hercegovini, Srbiji, Hrvatskoj, Crnoj Gori i Albaniji: javni REST API, web aplikacija sa pretragom i sistem prijedloga izmjena uz administratorsku provjeru.
 
 - Web aplikacija: <https://atlasuniverziteta.com/>
 - REST API: <https://api.atlasuniverziteta.com/>

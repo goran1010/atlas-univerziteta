@@ -1,0 +1,36 @@
+{
+  "country": "ALB",
+  "name": "Universiteti i Mjekësisë, Tiranë",
+  "acronym": "UMT",
+  "city": "Tiranë",
+  "ownership": "PUBLIC",
+  "foundedYear": "2013",
+  "website": "https://www.umed.edu.al",
+  "address": "Rruga e Dibrës, Nr 371, 1005 Tiranë",
+  "phone": "+355 42364432",
+  "email": "info@umed.edu.al",
+  "accreditationFrom": "2023-01-27",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://umed.edu.al/kontakto/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Mjekësisë",
+      "website": "https://www.fakultetimjekesise.edu.al/",
+      "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Mjekësisë Dentare",
+      "website": "https://fmd.edu.al/",
+      "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise-dentare-2/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Mjekësore Teknike",
+      "website": "https://fshmt.edu.al/",
+      "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

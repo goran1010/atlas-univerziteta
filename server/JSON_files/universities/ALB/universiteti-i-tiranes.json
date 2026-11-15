@@ -1,0 +1,69 @@
+{
+  "country": "ALB",
+  "name": "Universiteti i Tiranës",
+  "acronym": "UT",
+  "city": "Tiranë",
+  "ownership": "PUBLIC",
+  "foundedYear": "1957",
+  "website": "https://www.unitir.edu.al",
+  "address": "Bulevardi Dëshmorët e Kombit, Sheshi Nënë Tereza, Tiranë",
+  "email": "info@unitir.edu.al",
+  "accreditationFrom": "2023-01-27",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://unitir.edu.al/kontakt/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Drejtësisë",
+      "website": "http://fdut.edu.al/",
+      "dataSourceUrl": "https://unitir.edu.al/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Ekonomisë",
+      "website": "http://feut.edu.al/",
+      "dataSourceUrl": "https://unitir.edu.al/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Gjuhëve të Huaja",
+      "website": "http://fgjh.edu.al/",
+      "dataSourceUrl": "https://unitir.edu.al/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Historisë dhe Filologjisë",
+      "website": "https://www.fhf.edu.al/",
+      "dataSourceUrl": "https://unitir.edu.al/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave të Natyrës",
+      "website": "http://www.fshn.edu.al/",
+      "dataSourceUrl": "https://unitir.edu.al/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Sociale",
+      "website": "https://fshs-ut.edu.al/",
+      "dataSourceUrl": "https://unitir.edu.al/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Instituti i Studimeve Evropiane",
+      "website": "https://unitir.edu.al/instituti-i-studimeve-europiane/",
+      "dataSourceUrl": "https://unitir.edu.al/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Filiali Sarandë",
+      "city": "Sarandë",
+      "website": "https://unitir.edu.al/filiali-sarande/",
+      "address": "Rruga Studenti, Lagjia Nr 3, Sarandë",
+      "phone": "+355 85226076",
+      "email": "unitirfilialisarande@gmail.com",
+      "dataSourceUrl": "https://unitir.edu.al/filiali-sarande/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

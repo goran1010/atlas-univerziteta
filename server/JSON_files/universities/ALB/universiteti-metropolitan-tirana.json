@@ -1,0 +1,35 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Metropolitan Tirana",
+  "acronym": "UMT",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "website": "https://umt.edu.al",
+  "address": "Rruga Sotir Kolea, Qyteti Studenti, Tiranë",
+  "phone": "+355 69 60 09 938",
+  "email": "info@umt.edu.al",
+  "accreditationFrom": "2023-01-27",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://umt.edu.al/fakultetet/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Shkencave Kompjuterike dhe IT",
+      "website": "https://umt.edu.al/fakulteti-i-shkencave-kompjuterike-dhe-it/",
+      "dataSourceUrl": "https://umt.edu.al/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë dhe Arkitekturës",
+      "website": "https://umt.edu.al/fakulteti-i-inxhinierise-dhe-arkitektures/",
+      "dataSourceUrl": "https://umt.edu.al/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Ekonomisë",
+      "website": "https://umt.edu.al/fakulteti-i-ekonomise/",
+      "dataSourceUrl": "https://umt.edu.al/fakultetet/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

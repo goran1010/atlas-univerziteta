@@ -1,0 +1,36 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Eqrem Çabej Gjirokastër",
+  "acronym": "UGJ",
+  "city": "Gjirokastër",
+  "ownership": "PUBLIC",
+  "foundedYear": "1991",
+  "website": "https://uogj.edu.al",
+  "address": "Rruga Studenti 30, Gjirokastër",
+  "phone": "+355 842 63 408",
+  "email": "rektori@uogj.edu.al",
+  "accreditationFrom": "2021-12-16",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://uogj.edu.al/uogj/historiku/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Edukimit dhe Shkencave Shoqërore",
+      "website": "https://uogj.edu.al/fakultetet/fakultetin-e-edukimit-dhe-shkencave-shoqerore/",
+      "dataSourceUrl": "https://uogj.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Ekonomik",
+      "website": "https://uogj.edu.al/fakultetet/fakulteti-ekonomik/",
+      "dataSourceUrl": "https://uogj.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave të Natyrës",
+      "website": "https://uogj.edu.al/fakultetet/fakulteti-i-shkencave-te-natyres/",
+      "dataSourceUrl": "https://uogj.edu.al/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

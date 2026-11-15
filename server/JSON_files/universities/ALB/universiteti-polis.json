@@ -1,0 +1,35 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Polis",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "foundedYear": "2006",
+  "website": "https://universitetipolis.edu.al",
+  "address": "Rruga Bylis 12, Autostrada Tiranë-Durrës, Km 5, Kashar",
+  "phone": "+355 42407420",
+  "email": "contact@universitetipolis.edu.al",
+  "accreditationFrom": "2024-04-19",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://universitetipolis.edu.al/historiku/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti Arkitekturë dhe Dizajn",
+      "website": "https://universitetipolis.edu.al/fad/",
+      "dataSourceUrl": "https://universitetipolis.edu.al/fakultetet-stafi/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Planifikim, Mjedis dhe Menaxhim Urban",
+      "website": "https://universitetipolis.edu.al/fpmmu/",
+      "dataSourceUrl": "https://universitetipolis.edu.al/fakultetet-stafi/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Kërkim dhe Zhvillim",
+      "website": "https://universitetipolis.edu.al/fkzh/",
+      "dataSourceUrl": "https://universitetipolis.edu.al/fakultetet-stafi/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

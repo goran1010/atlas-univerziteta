@@ -1,0 +1,35 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Western Balkans",
+  "acronym": "WBU",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "website": "https://www.wbu.edu.al",
+  "address": "Autostrada Tiranë-Durrës, Km 7, Kashar, Tiranë",
+  "phone": "+355 67 60 20 600",
+  "email": "info@wbu.edu.al",
+  "accreditationFrom": "2024-04-19",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://www.wbu.edu.al/sq",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Mjekësisë Dentare",
+      "website": "https://www.wbu.edu.al/sq/faculty/faculty-of-dental-medicine",
+      "dataSourceUrl": "https://www.wbu.edu.al/sq",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Mjekësisë",
+      "website": "https://www.wbu.edu.al/sq/faculty/faculty-of-technical-medical-sciences",
+      "dataSourceUrl": "https://www.wbu.edu.al/sq",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Ekonomisë, Teknologjisë dhe Inovacionit",
+      "website": "https://www.wbu.edu.al/sq/faculty/faculty-of-economics-technology-and-innovation",
+      "dataSourceUrl": "https://www.wbu.edu.al/sq",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

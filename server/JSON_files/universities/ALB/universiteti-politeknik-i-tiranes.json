@@ -1,0 +1,60 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Politeknik i Tiranës",
+  "acronym": "UPT",
+  "city": "Tiranë",
+  "ownership": "PUBLIC",
+  "foundedYear": "1951",
+  "website": "https://www.upt.edu.al",
+  "address": "Bulevardi Dëshmorët e Kombit, Sheshi Nënë Tereza, Tiranë",
+  "phone": "+355 4 222 79 14",
+  "email": "info@upt.al",
+  "accreditationFrom": "2022-01-07",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://upt.edu.al/kontakt/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Inxhinierisë Elektrike",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-inxhinierise-elektrike/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë Mekanike",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-inxhinierise-mekanike/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë së Ndërtimit",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-inxhinierise-se-ndertimit/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Arkitekturës dhe Urbanistikës",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-arkitektures-dhe-urbanistikes/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Teknologjisë së Informacionit",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-teknologjise-se-informacionit/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë Matematike dhe Inxhinierisë Fizike",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-inxhinierise-matematike-dhe-inxhinierise-fizike/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Gjeologjisë dhe Minierave",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-gjeologjise-dhe-minierave/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

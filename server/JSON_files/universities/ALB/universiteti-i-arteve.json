@@ -1,0 +1,36 @@
+{
+  "country": "ALB",
+  "name": "Universiteti i Arteve",
+  "acronym": "UART",
+  "city": "Tiranë",
+  "ownership": "PUBLIC",
+  "foundedYear": "1966",
+  "website": "https://www.uart.edu.al",
+  "address": "Bulevardi Dëshmorët e Kombit, Sheshi Nënë Tereza, Tiranë",
+  "phone": "+355 4 2225488",
+  "email": "rektori@uart.edu.al",
+  "accreditationFrom": "2022-03-24",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://www.uart.edu.al/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Muzikës",
+      "website": "https://www.uart.edu.al/index.php?pg=faqe&id=5",
+      "dataSourceUrl": "https://www.uart.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Arteve të Bukura",
+      "website": "https://www.uart.edu.al/index.php?pg=faqe&id=6",
+      "dataSourceUrl": "https://www.uart.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Artit Skenik",
+      "website": "https://www.uart.edu.al/index.php?pg=faqe&id=7",
+      "dataSourceUrl": "https://www.uart.edu.al/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

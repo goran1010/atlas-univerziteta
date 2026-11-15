@@ -1,0 +1,52 @@
+{
+  "country": "ALB",
+  "name": "Universiteti i Shkodrës Luigj Gurakuqi",
+  "acronym": "UNISHK",
+  "city": "Shkodër",
+  "ownership": "PUBLIC",
+  "website": "https://www.unishk.edu.al",
+  "address": "Sheshi 2 Prilli, Shkodër",
+  "email": "info@unishk.edu.al",
+  "accreditationFrom": "2020-01-24",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://www.unishk.edu.al/kontakt",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Shkencave të Natyrës",
+      "website": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet/fakulteti-i-shkencave-te-natyres",
+      "dataSourceUrl": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave të Edukimit",
+      "website": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet/fakulteti-i-shkencave-te-edukimit",
+      "dataSourceUrl": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Shoqërore",
+      "website": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet/fakulteti-i-shkencave-te-shoqerore",
+      "dataSourceUrl": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Drejtësisë",
+      "website": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet/fakulteti-i-drejtesise",
+      "dataSourceUrl": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Ekonomik",
+      "website": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet/fakulteti-i-ekonomik",
+      "dataSourceUrl": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Gjuhëve të Huaja",
+      "website": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet/fakulteti-i-gjuheve-te-huaja",
+      "dataSourceUrl": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

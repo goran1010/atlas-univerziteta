@@ -1,0 +1,46 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Fan S. Noli",
+  "acronym": "UNIKO",
+  "city": "Korçë",
+  "ownership": "PUBLIC",
+  "foundedYear": "1992",
+  "website": "https://unkorce.edu.al",
+  "address": "Shëtitorja Rilindasit, 7001 Korçë",
+  "phone": "+355 822 42230",
+  "email": "rektorati@unkorce.edu.al",
+  "accreditationFrom": "2023-01-27",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://unkorce.edu.al/historiku",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Edukimit dhe i Filologjisë",
+      "website": "https://unkorce.edu.al/fakulteti-i-edukimit-dhe-filologjise-2/",
+      "dataSourceUrl": "https://unkorce.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Bujqësisë",
+      "website": "https://unkorce.edu.al/fakulteti-i-bujqesise-3/",
+      "dataSourceUrl": "https://unkorce.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Ekonomisë",
+      "city": "Korçë",
+      "website": "https://unkorce.edu.al/fakulteti-i-ekonomise-3/",
+      "address": "Shëtitorja Rilindasit, 7001 Korçë",
+      "phone": "+355 822 42201",
+      "email": "fekonomise@unkorce.edu.al",
+      "dataSourceUrl": "https://unkorce.edu.al/fakulteti-i-ekonomise-3/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Natyrore dhe Shkencave Humane",
+      "website": "https://unkorce.edu.al/fakulteti-i-shkencave-natyrore-dhe-shkencave-humane-3/",
+      "dataSourceUrl": "https://unkorce.edu.al/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

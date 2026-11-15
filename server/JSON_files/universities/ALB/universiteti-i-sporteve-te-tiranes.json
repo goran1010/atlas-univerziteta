@@ -1,0 +1,35 @@
+{
+  "country": "ALB",
+  "name": "Universiteti i Sporteve të Tiranës",
+  "acronym": "UST",
+  "city": "Tiranë",
+  "ownership": "PUBLIC",
+  "website": "https://ust.edu.al",
+  "address": "Rruga Muhamet Gjollesha, Tiranë",
+  "phone": "+355 4 2226652",
+  "email": "contact@ust.edu.al",
+  "accreditationFrom": "2022-01-07",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://ust.edu.al/kontakt/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Shkencave të Lëvizjes",
+      "website": "https://fshl.ust.edu.al/",
+      "dataSourceUrl": "https://ust.edu.al/njesite-kryesore/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave të Rehabilitimit",
+      "website": "https://fshr.ust.edu.al/",
+      "dataSourceUrl": "https://ust.edu.al/njesite-kryesore/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Veprimtarisë Fizike dhe Rekreacionit",
+      "website": "https://fvfr.ust.edu.al/",
+      "dataSourceUrl": "https://ust.edu.al/njesite-kryesore/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

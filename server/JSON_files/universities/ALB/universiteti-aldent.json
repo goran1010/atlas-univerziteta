@@ -1,0 +1,36 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Aldent",
+  "acronym": "UAL",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "foundedYear": "2003",
+  "website": "https://ual.edu.al",
+  "address": "Rruga e Dibrës, Nr. 235, Tiranë",
+  "phone": "+355 69 20 75 216",
+  "email": "info@ual.edu.al",
+  "accreditationFrom": "2023-01-27",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Shkencave të Stomatologjisë",
+      "website": "https://ual.edu.al/sq/faculty/fakulteti-i-shkencave-dentare/",
+      "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Mjekësore",
+      "website": "https://ual.edu.al/sq/faculty/fakulteti-i-shkencave-mjekesore/",
+      "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Teknike Mjekësore",
+      "website": "https://ual.edu.al/sq/faculty/fakulteti-i-shkencave-mjekesore-dhe-teknike/",
+      "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

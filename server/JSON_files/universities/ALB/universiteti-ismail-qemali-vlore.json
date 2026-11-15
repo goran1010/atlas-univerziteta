@@ -1,0 +1,49 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Ismail Qemali Vlorë",
+  "acronym": "UNIVLORA",
+  "city": "Vlorë",
+  "ownership": "PUBLIC",
+  "website": "https://univlora.edu.al",
+  "address": "Lagjia Pavarësia, Rruga Kosova, 9401 Vlorë",
+  "phone": "+355 33 222288",
+  "email": "info@univlora.edu.al",
+  "accreditationFrom": "2020-11-27",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://univlora.edu.al/kontakt",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Ekonomisë",
+      "city": "Vlorë",
+      "website": "https://univlora.edu.al/historiku-fe",
+      "address": "Godina A, Lagjia Pavarësia, Rruga Kosova, 9401 Vlorë",
+      "dataSourceUrl": "https://univlora.edu.al/kontakt",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shëndetit",
+      "city": "Vlorë",
+      "website": "https://univlora.edu.al/historiku-fsh",
+      "address": "Rruga Sulejman Delvina, 9401 Vlorë",
+      "dataSourceUrl": "https://univlora.edu.al/kontakt",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Humane",
+      "city": "Vlorë",
+      "website": "https://univlora.edu.al/historiku-fshh",
+      "address": "Godina B, Rruga Sulejman Delvina, 9401 Vlorë",
+      "dataSourceUrl": "https://univlora.edu.al/kontakt",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Teknike dhe Natyrore",
+      "city": "Vlorë",
+      "website": "https://univlora.edu.al/historiku-fshtn",
+      "address": "Godina C, Lagjia Pavarësia, Rruga Kosova, 9401 Vlorë",
+      "dataSourceUrl": "https://univlora.edu.al/kontakt",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "country": "ALB",
+  "name": "Universiteti EPOKA",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "foundedYear": "2007",
+  "website": "https://www.epoka.edu.al",
+  "address": "Rruga Tiranë-Rinas, Km 12, 1032 Vorë, Tiranë",
+  "phone": "+355 4 2232 086",
+  "email": "info@epoka.edu.al",
+  "accreditationFrom": "2021-12-16",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://www.epoka.edu.al/content/NTgx/About-Us/Mission-Vision",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Arkitekturës dhe Inxhinierisë",
+      "city": "Tiranë",
+      "website": "https://fae.epoka.edu.al/",
+      "address": "Rruga Tiranë-Rinas, Km 12, 1039 Tiranë",
+      "phone": "+355 4 22 32 086",
+      "email": "fae@epoka.edu.al",
+      "dataSourceUrl": "https://fae.epoka.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Ekonomike dhe Administrative",
+      "website": "https://feas.epoka.edu.al/",
+      "dataSourceUrl": "https://www.epoka.edu.al/sq",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Drejtësisë dhe Shkencave Sociale",
+      "website": "https://flss.epoka.edu.al/",
+      "dataSourceUrl": "https://www.epoka.edu.al/sq",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

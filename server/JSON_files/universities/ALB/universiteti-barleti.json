@@ -1,0 +1,42 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Barleti",
+  "acronym": "UniBa",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "foundedYear": "2005",
+  "website": "https://umb.edu.al",
+  "address": "Rruga Frang Bardhi, Selitë, Tiranë",
+  "phone": "+355 69 40 96 362",
+  "email": "info@umb.edu.al",
+  "accreditationFrom": "2024-11-15",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://umb.edu.al/rreth-uniba.html",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Ekonomisë, Qeverisjes dhe Drejtësisë",
+      "website": "https://feqd.umb.edu.al/",
+      "dataSourceUrl": "https://umb.edu.al/fakultetet-dhe-qendrat.html",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave të Aplikuara dhe Industrive Kreative",
+      "website": "https://fshaik.umb.edu.al/",
+      "dataSourceUrl": "https://umb.edu.al/fakultetet-dhe-qendrat.html",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Sociale, Turizmit dhe Sportit",
+      "website": "https://fshsts.umb.edu.al/",
+      "dataSourceUrl": "https://umb.edu.al/fakultetet-dhe-qendrat.html",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Mjekësore",
+      "website": "https://fshm.umb.edu.al/",
+      "dataSourceUrl": "https://umb.edu.al/fakultetet-dhe-qendrat.html",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

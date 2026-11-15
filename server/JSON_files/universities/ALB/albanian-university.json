@@ -1,0 +1,36 @@
+{
+  "country": "ALB",
+  "name": "Albanian University",
+  "acronym": "AU",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "foundedYear": "2004",
+  "website": "https://albanianuniversity.edu.al",
+  "address": "Bulevardi Zogu i Parë, Tiranë",
+  "phone": "+355 42 271601",
+  "email": "info@albanianuniversity.edu.al",
+  "accreditationFrom": "2023-05-26",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://albanianuniversity.edu.al/sq/historiku/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Shkencave Mjekësore",
+      "website": "https://albanianuniversity.edu.al/sq/category/fakultetet/fakulteti-i-shkencave-mjekesore/",
+      "dataSourceUrl": "https://albanianuniversity.edu.al/sq/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave të Aplikuara dhe Ekonomike",
+      "website": "https://albanianuniversity.edu.al/sq/category/fakultetet/fakulteti-i-shkencave-te-aplikuara-dhe-ekonomike/",
+      "dataSourceUrl": "https://albanianuniversity.edu.al/sq/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Shoqërore",
+      "website": "https://albanianuniversity.edu.al/sq/category/fakultetet/fakulteti-i-shkencave-shoqerore/",
+      "dataSourceUrl": "https://albanianuniversity.edu.al/sq/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

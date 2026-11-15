@@ -1,0 +1,41 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Luarasi",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "foundedYear": "2003",
+  "website": "https://luarasi-univ.edu.al",
+  "address": "Rruga e Elbasanit, Nd. 59, H. 1, 1010 Tiranë",
+  "phone": "+355 696026900",
+  "email": "info@luarasi-univ.edu.al",
+  "accreditationFrom": "2024-12-13",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://luarasi-univ.edu.al/sq/historiku-new/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Drejtësisë",
+      "website": "https://luarasi-univ.edu.al/sq/fakulteti-i-drejtesise/",
+      "dataSourceUrl": "https://luarasi-univ.edu.al/sq/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Ekonomik",
+      "website": "https://luarasi-univ.edu.al/sq/fakulteti-ekonomik-new/",
+      "dataSourceUrl": "https://luarasi-univ.edu.al/sq/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Teknologjisë së Informacionit dhe Inovacionit",
+      "website": "https://luarasi-univ.edu.al/sq/fakulteti-i-teknologjise-se-infromacionit-dhe-inovacionit/",
+      "dataSourceUrl": "https://luarasi-univ.edu.al/sq/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Mjekësore",
+      "website": "https://luarasi-univ.edu.al/sq/bachelor-fakulteti-i-mjekesise/",
+      "dataSourceUrl": "https://luarasi-univ.edu.al/sq/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

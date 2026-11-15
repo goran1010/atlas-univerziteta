@@ -1,0 +1,42 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Mesdhetar i Shqipërisë",
+  "acronym": "UMSH",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "foundedYear": "2007",
+  "website": "https://www.umsh.edu.al",
+  "address": "Bulevardi Gjergj Fishta 52, 1023 Tiranë",
+  "phone": "+355 68 606 1004",
+  "email": "info@umsh.edu.al",
+  "accreditationFrom": "2024-01-13",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://www.umsh.edu.al/c/12/kontakt",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Shkencave Ekonomike",
+      "website": "https://www.umsh.edu.al/c/100/fakulteti-i-shkencave-ekonomike",
+      "dataSourceUrl": "https://www.umsh.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Drejtësisë dhe Shkencave Humane",
+      "website": "https://www.umsh.edu.al/c/102/fakulteti-i-drejtesise-dhe-shkencave-humane",
+      "dataSourceUrl": "https://www.umsh.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Informatikës",
+      "website": "https://www.umsh.edu.al/c/219/fakulteti-i-informatikes",
+      "dataSourceUrl": "https://www.umsh.edu.al/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Mjekësore",
+      "website": "https://www.umsh.edu.al/c/225/fakulteti-i-shkencave-mjekesore",
+      "dataSourceUrl": "https://www.umsh.edu.al/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

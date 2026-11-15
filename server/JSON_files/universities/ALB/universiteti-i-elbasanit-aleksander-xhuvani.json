@@ -1,0 +1,48 @@
+{
+  "country": "ALB",
+  "name": "Universiteti i Elbasanit Aleksandër Xhuvani",
+  "acronym": "UE",
+  "city": "Elbasan",
+  "ownership": "PUBLIC",
+  "foundedYear": "1991",
+  "website": "https://uniel.edu.al",
+  "address": "Rruga Ismail Zyma, Elbasan",
+  "phone": "+355 54 252593",
+  "email": "info@uniel.edu.al",
+  "accreditationFrom": "2020-11-27",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://uniel.edu.al/kontakte",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Shkencave Humane",
+      "website": "https://uniel.edu.al/fakultetet/fakulteti-i-shkencave-humane",
+      "dataSourceUrl": "https://uniel.edu.al/fakultetet-ue",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave të Natyrës",
+      "website": "https://uniel.edu.al/fakultetet/fakulteti-i-shkencave-te-natyres",
+      "dataSourceUrl": "https://uniel.edu.al/fakultetet-ue",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave të Edukimit",
+      "website": "https://uniel.edu.al/fakultetet/fakulteti-i-shkencave-te-edukimit",
+      "dataSourceUrl": "https://uniel.edu.al/fakultetet-ue",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Biznesit dhe i Drejtësisë",
+      "website": "https://uniel.edu.al/fakultetet/fakulteti-i-biznesit-dhe-i-drejtesise",
+      "dataSourceUrl": "https://uniel.edu.al/fakultetet-ue",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Mjekësore Teknike",
+      "website": "https://uniel.edu.al/fakultetet/fakulteti-i-shkencave-mjekesore-teknike",
+      "dataSourceUrl": "https://uniel.edu.al/fakultetet-ue",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

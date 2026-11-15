@@ -24,6 +24,13 @@ const ENUM_ALIASES: Record<string, string> = {
 // Country aliases are resolved separately so short country codes (AND, FIN,
 // POL) can't false-match ordinary words through the general enum path
 const COUNTRY_ALIASES: Record<string, string> = {
+  ALBAN: "ALB",
+  ALBANI: "ALB",
+  ALBANIJ: "ALB",
+  ALBANIAN: "ALB",
+  ALBANSK: "ALB",
+  SHQIPERI: "ALB",
+  SHQIPERIS: "ALB",
   BOSN: "BIH",
   BOSNIA: "BIH",
   HERCEGOVINA: "BIH",

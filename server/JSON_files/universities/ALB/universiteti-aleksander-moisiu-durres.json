@@ -1,0 +1,48 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Aleksandër Moisiu Durrës",
+  "acronym": "UAMD",
+  "city": "Durrës",
+  "ownership": "PUBLIC",
+  "foundedYear": "2006",
+  "website": "https://uamd.edu.al",
+  "address": "Lagjia 1, Rruga e Currilave, Durrës",
+  "phone": "+355 52 239161",
+  "email": "info@uamd.edu.al",
+  "accreditationFrom": "2022-03-24",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Biznesit",
+      "website": "https://uamd.edu.al/fakulteti-i-biznesit/",
+      "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Edukimit",
+      "website": "https://uamd.edu.al/fakulteti-i-edukimit/",
+      "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Politike Juridike",
+      "website": "https://uamd.edu.al/fakulteti-i-shkencave-politike-juridike/",
+      "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Studimeve Profesionale",
+      "website": "https://uamd.edu.al/fakulteti-i-studimeve-profesionale/",
+      "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Teknologjisë së Informacionit",
+      "website": "https://uamd.edu.al/fakulteti-i-teknologjise-se-informacionit/",
+      "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}
