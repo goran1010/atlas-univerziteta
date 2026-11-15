@@ -1,0 +1,94 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet Sv. Kliment Ohridski Bitola",
+  "acronym": "UKLO",
+  "city": "Bitola",
+  "ownership": "PUBLIC",
+  "foundedYear": "1979",
+  "website": "https://www.uklo.edu.mk",
+  "address": "1vi Maj bb, 7000 Bitola",
+  "phone": "+389 47 223 788",
+  "email": "contact@uklo.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://uklo.edu.mk/blog/istorijat/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Ekonomski fakultet - Prilep",
+      "city": "Prilep",
+      "website": "https://eccfp.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za biotehnički nauki - Bitola",
+      "city": "Bitola",
+      "website": "https://fbn.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Tehnički fakultet - Bitola",
+      "city": "Bitola",
+      "website": "https://tfb.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Pedagoški fakultet - Bitola",
+      "city": "Bitola",
+      "website": "https://pfbt.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za turizam i ugostitelstvo - Ohrid",
+      "city": "Ohrid",
+      "website": "https://ftu.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za bezbednost - Skopje",
+      "city": "Skopje",
+      "website": "https://fb.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Praven fakultet - Kičevo",
+      "city": "Kičevo",
+      "website": "https://pfk.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Tehnološko-tehnički fakultet - Veles",
+      "city": "Veles",
+      "website": "https://ttfv.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Visoka medicinska škola - Bitola",
+      "city": "Bitola",
+      "website": "https://vmsb.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Veterinaren fakultet - Bitola",
+      "city": "Bitola",
+      "website": "https://vfb.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za informatički i komunikaciski tehnologii - Bitola",
+      "city": "Bitola",
+      "website": "https://fikt.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

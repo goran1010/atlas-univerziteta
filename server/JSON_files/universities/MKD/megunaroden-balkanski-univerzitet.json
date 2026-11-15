@@ -1,0 +1,57 @@
+{
+  "country": "MKD",
+  "name": "Meǵunaroden Balkanski univerzitet",
+  "acronym": "IBU",
+  "city": "Skopje",
+  "ownership": "PRIVATE",
+  "website": "https://www.ibu.edu.mk",
+  "address": "Makedonsko-Kosovska Brigada 9 br. 29, 1000 Skopje",
+  "phone": "+389 2 55 15 000",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za Ekonomski i administrativni nauki",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-economics-and-administrative-sciences",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za Inženerstvo",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-engineering",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za Umetnost i dizajn",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-art-and-design",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za Humanistički i opštestveni nauki",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-humanities-and-social-sciences",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za Pravo",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-law",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za Dentalna medicina",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-dental-medicine",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Stručna medicinska škola",
+      "website": "https://www.ibu.edu.mk/faculties/vocational-medical-school",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

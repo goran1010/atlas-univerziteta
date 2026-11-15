@@ -1,0 +1,45 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet za turizam i menadžment",
+  "acronym": "UTMS",
+  "city": "Skopje",
+  "ownership": "PRIVATE",
+  "website": "https://www.utms.edu.mk",
+  "address": "Bul. Partizanski odredi br. 99, Skopje",
+  "email": "contact@utms.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://www.utms.edu.mk/contact-mk",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za informatika",
+      "website": "http://fi.utms.edu.mk/",
+      "dataSourceUrl": "http://fi.utms.edu.mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "website": "http://ef.utms.edu.mk/",
+      "dataSourceUrl": "http://ef.utms.edu.mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za turizam",
+      "website": "http://ft.utms.edu.mk/",
+      "dataSourceUrl": "http://ft.utms.edu.mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za menadžment na čovečki resursi",
+      "website": "http://fmcr.utms.edu.mk/",
+      "dataSourceUrl": "http://fmcr.utms.edu.mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za meǵunaroden marketing menadžment",
+      "website": "http://fmmm.utms.edu.mk/",
+      "dataSourceUrl": "http://fmmm.utms.edu.mk/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

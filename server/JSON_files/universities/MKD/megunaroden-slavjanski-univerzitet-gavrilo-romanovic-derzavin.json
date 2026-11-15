@@ -1,0 +1,41 @@
+{
+  "country": "MKD",
+  "name": "Meǵunaroden Slavjanski univerzitet Gavrilo Romanovič Deržavin",
+  "acronym": "MSU",
+  "city": "Sveti Nikole",
+  "ownership": "PRIVATE",
+  "foundedYear": "2004",
+  "website": "https://www.msu.edu.mk",
+  "address": "Ul. Maršal Tito 77, 2220 Sveti Nikole",
+  "phone": "+389 32 440 330",
+  "email": "info@msu.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://msu.edu.mk/za-univerzitetot/kontakt/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za ekonomija i organizacija na pretpriemništvo",
+      "website": "https://msu.edu.mk/fakulteti/feiop/",
+      "dataSourceUrl": "https://msu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za psihologija",
+      "website": "https://msu.edu.mk/fakulteti/fp/",
+      "dataSourceUrl": "https://msu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za tehnički nauki i informatika",
+      "website": "https://msu.edu.mk/fakulteti/ftni/",
+      "dataSourceUrl": "https://msu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za pravni nauki",
+      "website": "https://msu.edu.mk/fakulteti/fpn/",
+      "dataSourceUrl": "https://msu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

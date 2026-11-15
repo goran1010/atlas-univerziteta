@@ -1,0 +1,95 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet vo Tetovo",
+  "acronym": "UT",
+  "city": "Tetovo",
+  "ownership": "PUBLIC",
+  "foundedYear": "1994",
+  "website": "https://unite.edu.mk",
+  "address": "Ul. Ilindenska bb, 1200 Tetovo",
+  "phone": "+389 44 356 500",
+  "email": "international@unite.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://unite.edu.mk/mk/za-nas/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za biznis administracija",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-biznis-administracija",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za umetnosti",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za zemjodelstvo i biotehnologija",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-zemjodelstvo-i-biotehnologija",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Filološki fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Filozofski fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Praven fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za fizička kultura",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-fizicka-kultura",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Pedagoški fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Prirodno-matematički fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za medicinski nauki",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za primeneti nauki",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za prehranbena tehnologija i ishrana",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-prehranbrena-tehnologija-i-ishrana",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

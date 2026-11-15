@@ -1,0 +1,136 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet Goce Delčev Štip",
+  "acronym": "UGD",
+  "city": "Štip",
+  "ownership": "PUBLIC",
+  "foundedYear": "2007",
+  "website": "https://www.ugd.edu.mk",
+  "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+  "phone": "+389 32 550 000",
+  "email": "contact@ugd.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://www.ugd.edu.mk/za-ugd/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Muzička akademija",
+      "website": "https://ma.ugd.edu.mk/",
+      "dataSourceUrl": "https://www.ugd.edu.mk/fakulteti-akademii/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Likovna akademija",
+      "website": "https://la.ugd.edu.mk/",
+      "dataSourceUrl": "https://www.ugd.edu.mk/fakulteti-akademii/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Filmska akademija",
+      "website": "https://fa.ugd.edu.mk/",
+      "dataSourceUrl": "https://www.ugd.edu.mk/fakulteti-akademii/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za prirodni i tehnički nauki",
+      "website": "https://fptn.ugd.edu.mk/",
+      "address": "Ul. Goce Delčev br. 89, 2000 Štip",
+      "phone": "+389 32 550 083",
+      "email": "contact-fptn@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za informatika",
+      "website": "https://fi.ugd.edu.mk/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 064",
+      "email": "contact-fi@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Zemjodelski fakultet",
+      "website": "https://zf.ugd.edu.mk/",
+      "address": "Ul. Goce Delčev br. 89, 2000 Štip",
+      "phone": "+389 32 550 071",
+      "email": "contact-zf@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Mašinski fakultet",
+      "website": "https://mf.ugd.edu.mk/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 033",
+      "email": "contact-mf@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Elektrotehnički fakultet",
+      "website": "https://etf.ugd.edu.mk/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 900",
+      "email": "contact-etf@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Tehnološko-tehnički fakultet",
+      "website": "https://ttf.ugd.edu.mk/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 594",
+      "email": "contact-ttf@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za medicinski nauki",
+      "website": "https://fmn.ugd.edu.mk/",
+      "address": "Klinička bolnica Štip, ul. Ljuben Ivanov br. 25, 2000 Štip",
+      "phone": "+389 32 550 078",
+      "email": "contact-fmn@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "website": "https://ef.ugd.edu.mk/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 661",
+      "email": "contact-ef@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Praven fakultet",
+      "website": "https://pf.ugd.edu.mk/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 081",
+      "email": "contact-pf@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za turizam i biznis logistika",
+      "city": "Gevgelija",
+      "website": "https://ftbl.ugd.edu.mk/",
+      "address": "Ul. 7mi Noemvri bb, Gevgelija",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za obrazovni nauki",
+      "website": "https://fon.ugd.edu.mk/",
+      "dataSourceUrl": "https://www.ugd.edu.mk/fakulteti-akademii/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Filološki fakultet",
+      "website": "https://ff.ugd.edu.mk/",
+      "dataSourceUrl": "https://www.ugd.edu.mk/fakulteti-akademii/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

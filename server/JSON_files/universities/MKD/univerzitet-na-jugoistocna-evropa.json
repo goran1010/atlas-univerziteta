@@ -1,0 +1,58 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet na Jugoistočna Evropa",
+  "acronym": "SEEU",
+  "city": "Tetovo",
+  "ownership": "PRIVATE",
+  "foundedYear": "2001",
+  "website": "https://www.seeu.edu.mk",
+  "address": "Ilindenska br. 335, 1200 Tetovo",
+  "phone": "+389 44 356 000",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://www.seeu.edu.mk/en/about/history",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za biznis i ekonomija",
+      "website": "https://www.seeu.edu.mk/mk/faculties/be",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Praven fakultet",
+      "website": "https://www.seeu.edu.mk/mk/faculties/Law",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za jazici, kulturi i komunikacija",
+      "website": "https://www.seeu.edu.mk/mk/faculties/LCC",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za sovremeni opštestveni nauki",
+      "website": "https://www.seeu.edu.mk/mk/faculties/css",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za sovremeni nauki i tehnologii",
+      "website": "https://www.seeu.edu.mk/mk/faculties/cst",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za zdravstveni nauki",
+      "website": "https://www.seeu.edu.mk/mk/faculties/hs",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za tehnički nauki",
+      "website": "https://www.seeu.edu.mk/mk/faculties/ts",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

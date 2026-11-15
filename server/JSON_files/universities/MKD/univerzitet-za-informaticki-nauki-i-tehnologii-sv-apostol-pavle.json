@@ -1,0 +1,46 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet za informatički nauki i tehnologii Sv. Apostol Pavle",
+  "acronym": "UIST",
+  "city": "Ohrid",
+  "ownership": "PUBLIC",
+  "website": "https://uist.edu.mk",
+  "address": "Partizanska bb, 6000 Ohrid",
+  "phone": "+389 46 511 000",
+  "email": "contact@uist.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://uist.edu.mk/about/uist/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Faculty of Information Systems, Visualization, Multimedia and Animation",
+      "website": "https://uist.edu.mk/academics/bachelors/isvma/",
+      "dataSourceUrl": "https://uist.edu.mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Faculty of Computer Science and Engineering",
+      "website": "https://uist.edu.mk/academics/bachelors/cse/",
+      "dataSourceUrl": "https://uist.edu.mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Faculty of Communication Networks and Security",
+      "website": "https://uist.edu.mk/academics/bachelors/cns/",
+      "dataSourceUrl": "https://uist.edu.mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Faculty of Information and Communication Sciences",
+      "website": "https://uist.edu.mk/academics/bachelors/ics/",
+      "dataSourceUrl": "https://uist.edu.mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Faculty of Applied IT, Machine Intelligence and Robotics",
+      "website": "https://uist.edu.mk/academics/bachelors/aitmir/",
+      "dataSourceUrl": "https://uist.edu.mk/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

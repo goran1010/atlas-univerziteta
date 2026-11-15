@@ -1,0 +1,65 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet Majka Tereza",
+  "acronym": "UNT",
+  "city": "Skopje",
+  "ownership": "PUBLIC",
+  "foundedYear": "2015",
+  "website": "https://unt.edu.mk",
+  "address": "Rr. 1669 nr. 11A, 1010 Shkup",
+  "phone": "+389 75225873",
+  "email": "info@unt.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://unt.edu.mk/sq/sample-page/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za Gradežništvo i Arhitektura",
+      "website": "https://unt.edu.mk/sq/fakultetet/fakulteti-i-ndertimtarise-dhe-arkitektures/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za informatički nauki",
+      "website": "https://unt.edu.mk/sq/fakulteti-i-shkencave-te-informatikes-programet-studimore/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za tehnički nauki",
+      "website": "https://unt.edu.mk/sq/fakultetet/fakulteti-i-shkencave-teknike/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za socijalni nauki",
+      "website": "https://unt.edu.mk/sq/fakulteti-i-shkencave-sociale/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za tehnološki nauki",
+      "website": "https://unt.edu.mk/sq/fakultetet/fakulteti-i-shkencave-teknologjike/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za humanistički nauki",
+      "website": "https://unt.edu.mk/sq/fakulteti-i-shkencave-humane/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "website": "https://unt.edu.mk/sq/fakulteti-ekonomik-4/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Praven fakultet",
+      "website": "https://unt.edu.mk/sq/fakulteti-juridik-2/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

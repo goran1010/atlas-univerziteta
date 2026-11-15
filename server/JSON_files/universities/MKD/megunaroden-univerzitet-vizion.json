@@ -1,0 +1,40 @@
+{
+  "country": "MKD",
+  "name": "Meǵunaroden univerzitet Vizion",
+  "acronym": "IVU",
+  "city": "Gostivar",
+  "ownership": "PRIVATE",
+  "foundedYear": "2014",
+  "website": "https://www.vision.edu.mk",
+  "address": "Ul. Major Č. Filiposki br. 1, Gostivar",
+  "phone": "+389 42 222 325",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://www.vision.edu.mk/en/history-of-university",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za inženerstvo i arhitektura",
+      "website": "https://www.vision.edu.mk/mk/faculties/engineering-and-architecture",
+      "dataSourceUrl": "https://www.vision.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za opštestveni nauki",
+      "website": "https://www.vision.edu.mk/mk/faculties/social-sciences",
+      "dataSourceUrl": "https://www.vision.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Praven fakultet",
+      "website": "https://www.vision.edu.mk/mk/faculties/law",
+      "dataSourceUrl": "https://www.vision.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za zdravstveni nauki",
+      "website": "https://www.vision.edu.mk/mk/faculties/health-sciences",
+      "dataSourceUrl": "https://www.vision.edu.mk/mk",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

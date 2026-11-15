@@ -1,0 +1,52 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet Amerikan Koledž",
+  "acronym": "UACS",
+  "city": "Skopje",
+  "ownership": "PRIVATE",
+  "website": "https://www.uacs.edu.mk",
+  "address": "Blvd. Treta Makedonska Brigada no. 60, 1000 Skopje",
+  "phone": "+389 2 2463 156",
+  "email": "info@uacs.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://www.uacs.edu.mk/contact-us",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "School of Business Economics and Management",
+      "website": "https://www.uacs.edu.mk/programs/undergraduate/school-of-business-economics-and-management",
+      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "School of Architecture and Design",
+      "website": "https://www.uacs.edu.mk/programs/undergraduate/school-of-architecture-and-design",
+      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "School of Computer Science and Information Technology",
+      "website": "https://www.uacs.edu.mk/programs/undergraduate/school-of-computer-science-and-information-technology",
+      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "School of Political Science",
+      "website": "https://www.uacs.edu.mk/programs/undergraduate/school-of-political-science",
+      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Department of Psychology",
+      "website": "https://www.uacs.edu.mk/programs/undergraduate/department-of-psychology",
+      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "School of Foreign Languages",
+      "website": "https://www.uacs.edu.mk/programs/undergraduate/school-of-foreign-languages",
+      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}
