@@ -13,39 +13,33 @@
   "lastModified": "2026-11-15",
   "faculties": [
     {
-      "name": "School of Business Economics and Management",
+      "name": "Fakultet za delovna ekonomija i organizacioni nauki",
       "website": "https://www.uacs.edu.mk/programs/undergraduate/school-of-business-economics-and-management",
-      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "School of Architecture and Design",
+      "name": "Fakultet za arhitektura i dizajn",
       "website": "https://www.uacs.edu.mk/programs/undergraduate/school-of-architecture-and-design",
-      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "School of Computer Science and Information Technology",
+      "name": "Fakultet za kompjuterska tehnika i informatika",
       "website": "https://www.uacs.edu.mk/programs/undergraduate/school-of-computer-science-and-information-technology",
-      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "School of Political Science",
+      "name": "Fakultet za politički nauki",
       "website": "https://www.uacs.edu.mk/programs/undergraduate/school-of-political-science",
-      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "Department of Psychology",
-      "website": "https://www.uacs.edu.mk/programs/undergraduate/department-of-psychology",
-      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
-      "lastModified": "2026-11-15"
-    },
-    {
-      "name": "School of Foreign Languages",
+      "name": "Fakultet za stranski jazici",
       "website": "https://www.uacs.edu.mk/programs/undergraduate/school-of-foreign-languages",
-      "dataSourceUrl": "https://www.uacs.edu.mk/our-schools",
+      "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
       "lastModified": "2026-11-15"
     }
   ]

@@ -16,16 +16,19 @@
   "faculties": [
     {
       "name": "Fakulteti i Ekonomisë dhe Biznesit",
+      "website": "https://www.unyt.edu.al/page/faculty-of-economy-and-business",
       "dataSourceUrl": "https://www.ascal.al/sq/lista-e-ial/ial/universiteti-i-new-york-ut-ne-tirane/",
       "lastModified": "2026-11-15"
     },
     {
       "name": "Fakulteti i Inxhinierisë dhe Arkitekturës",
+      "website": "https://www.unyt.edu.al/page/faculty-of-engineering-and-architecture",
       "dataSourceUrl": "https://www.ascal.al/sq/lista-e-ial/ial/universiteti-i-new-york-ut-ne-tirane/",
       "lastModified": "2026-11-15"
     },
     {
       "name": "Fakulteti i Drejtësisë dhe Shkencave Shoqërore",
+      "website": "https://www.unyt.edu.al/page/faculty-of-law-and-social-sciences",
       "dataSourceUrl": "https://www.ascal.al/sq/lista-e-ial/ial/universiteti-i-new-york-ut-ne-tirane/",
       "lastModified": "2026-11-15"
     }

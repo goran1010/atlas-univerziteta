@@ -1,9 +1,11 @@
 {
   "country": "XKX",
-  "name": "Universiteti i Prishtinës",
+  "name": "Universiteti i Prishtinës Hasan Prishtina",
   "acronym": "UP",
   "city": "Prishtinë",
   "ownership": "PUBLIC",
+  "foundedYear": "1969",
+  "website": "https://www.uni-pr.edu",
   "accreditationFrom": "2025-10-01",
   "accreditationTo": "2030-09-30",
   "authority": "Agjencia e Kosovës për Akreditim (AKA)",
@@ -46,8 +48,8 @@
       "lastModified": "2026-11-15"
     },
     {
-      "name": "Fakulteti i Ndërtimtarisë",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-ndertimtarise/",
+      "name": "Fakulteti i Inxhinierisë Ndërtimore",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
       "lastModified": "2026-11-15"
     },
     {
@@ -71,8 +73,8 @@
       "lastModified": "2026-11-15"
     },
     {
-      "name": "Fakulteti i Bujqësisë dhe Vetërinarisë",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-bujqesise-dhe-veterinarise",
+      "name": "Fakulteti i Bujqësisë dhe Veterinarisë",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
       "lastModified": "2026-11-15"
     },
     {

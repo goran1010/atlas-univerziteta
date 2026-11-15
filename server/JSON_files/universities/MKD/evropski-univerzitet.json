@@ -1,9 +1,51 @@
 {
   "country": "MKD",
   "name": "Evropski univerzitet",
+  "acronym": "EURM",
   "city": "Skopje",
   "ownership": "PRIVATE",
+  "website": "https://www.eu.edu.mk",
+  "address": "Bul. Kliment Ohridski 68, 1000 Skopje",
+  "phone": "+389 2 3202 020",
   "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
-  "dataSourceUrl": "https://akvo.mk/wp-content/uploads/akvo-docs/V-O-U/1-VISOKOOBRAZOVNI-USTANOVI.pdf",
-  "lastModified": "2026-11-15"
+  "dataSourceUrl": "https://www.eu.edu.mk/kontakt_apliciraj/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za dentalna medicina",
+      "website": "https://www.eu.edu.mk/fs-misija/",
+      "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za detektivi i kriminalistika",
+      "website": "https://www.eu.edu.mk/fdk-misija/",
+      "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za art i dizajn",
+      "website": "https://www.eu.edu.mk/fad-misija/",
+      "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za informatika",
+      "website": "https://www.eu.edu.mk/fi-misija/",
+      "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za ekonomski nauki",
+      "website": "https://www.eu.edu.mk/fen-misija/",
+      "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za pravni nauki",
+      "website": "https://www.eu.edu.mk/fakultet-za-pravni-nauki/",
+      "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15"
+    }
+  ]
 }

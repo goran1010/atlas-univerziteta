@@ -16,19 +16,28 @@
     {
       "name": "Muzička akademija",
       "website": "https://ma.ugd.edu.mk/",
-      "dataSourceUrl": "https://www.ugd.edu.mk/fakulteti-akademii/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 081",
+      "email": "contact-ma@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
       "lastModified": "2026-11-15"
     },
     {
       "name": "Likovna akademija",
       "website": "https://la.ugd.edu.mk/",
-      "dataSourceUrl": "https://www.ugd.edu.mk/fakulteti-akademii/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 062",
+      "email": "contact-la@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
       "lastModified": "2026-11-15"
     },
     {
       "name": "Filmska akademija",
       "website": "https://fa.ugd.edu.mk/",
-      "dataSourceUrl": "https://www.ugd.edu.mk/fakulteti-akademii/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 062",
+      "email": "contact-fa@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
       "lastModified": "2026-11-15"
     },
     {
@@ -117,19 +126,27 @@
       "city": "Gevgelija",
       "website": "https://ftbl.ugd.edu.mk/",
       "address": "Ul. 7mi Noemvri bb, Gevgelija",
+      "phone": "+389 32 550 350",
+      "email": "contact-ftbl@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
       "lastModified": "2026-11-15"
     },
     {
       "name": "Fakultet za obrazovni nauki",
       "website": "https://fon.ugd.edu.mk/",
-      "dataSourceUrl": "https://www.ugd.edu.mk/fakulteti-akademii/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 062",
+      "email": "contact-fon@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
       "lastModified": "2026-11-15"
     },
     {
       "name": "Filološki fakultet",
       "website": "https://ff.ugd.edu.mk/",
-      "dataSourceUrl": "https://www.ugd.edu.mk/fakulteti-akademii/",
+      "address": "Ul. Krste Misirkov br. 10-A, 2000 Štip",
+      "phone": "+389 32 550 068",
+      "email": "contact-ff@ugd.edu.mk",
+      "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
       "lastModified": "2026-11-15"
     }
   ]

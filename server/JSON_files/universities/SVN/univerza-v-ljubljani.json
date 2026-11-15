@@ -35,6 +35,7 @@
     {
       "name": "Akademija za likovno umetnost in oblikovanje",
       "city": "Ljubljana",
+      "website": "https://www.aluo.uni-lj.si/",
       "address": "Erjavčeva cesta 23, 1000 Ljubljana",
       "email": "dekanat@aluo.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a35",
@@ -241,6 +242,7 @@
     {
       "name": "Zdravstvena fakulteta",
       "city": "Ljubljana",
+      "website": "https://www.zf.uni-lj.si/",
       "address": "Zdravstvena pot 5, 1000 Ljubljana",
       "email": "dekanat@vsz.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973aa0",

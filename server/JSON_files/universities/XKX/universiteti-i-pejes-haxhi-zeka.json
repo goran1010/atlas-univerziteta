@@ -1,11 +1,49 @@
 {
   "country": "XKX",
   "name": "Universiteti i Pejës Haxhi Zeka",
+  "acronym": "UHZ",
   "city": "Pejë",
   "ownership": "PUBLIC",
+  "foundedYear": "2011",
+  "website": "https://unhz.eu",
+  "address": "Rr. UÇK-së, 30000 Pejë",
+  "phone": "+383 39 410 970",
+  "email": "info@unhz.eu",
   "accreditationFrom": "2023-10-01",
   "accreditationTo": "2028-09-30",
   "authority": "Agjencia e Kosovës për Akreditim (AKA)",
-  "dataSourceUrl": "https://akreditimi.rks-gov.net/vendime-per-institucione-publike/universiteti-haxhi-zeka",
-  "lastModified": "2026-11-15"
+  "dataSourceUrl": "https://unhz.eu/contacts/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Biznesit",
+      "website": "https://unhz.eu/fakulteti-i-biznesit/",
+      "dataSourceUrl": "https://unhz.eu/fakulteti-i-biznesit/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Menaxhimit në Turizëm, Hotelieri dhe Mjedis",
+      "website": "https://unhz.eu/fmthm/",
+      "dataSourceUrl": "https://unhz.eu/fmthm/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Agrobiznesit",
+      "website": "https://unhz.eu/fakulteti-i-agrobiznesit/",
+      "dataSourceUrl": "https://unhz.eu/fakulteti-i-agrobiznesit/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Juridik",
+      "website": "https://unhz.eu/fakulteti-juridik/",
+      "dataSourceUrl": "https://unhz.eu/fakulteti-juridik/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Arteve",
+      "website": "https://unhz.eu/fakulteti-i-arteve/",
+      "dataSourceUrl": "https://unhz.eu/fakulteti-i-arteve/",
+      "lastModified": "2026-11-15"
+    }
+  ]
 }

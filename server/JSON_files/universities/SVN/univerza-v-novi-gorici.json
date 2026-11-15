@@ -4,6 +4,7 @@
   "acronym": "UNG",
   "city": "Nova Gorica",
   "ownership": "PRIVATE",
+  "foundedYear": "1995",
   "website": "http://www.ung.si",
   "address": "Vipavska cesta 13, 5000 Nova Gorica",
   "email": "info@ung.si",
@@ -16,6 +17,7 @@
     {
       "name": "Akademija umetnosti",
       "city": "Nova Gorica",
+      "website": "https://ung.si/sl/fakultete/akademija-umetnosti/",
       "address": "Vipavska cesta 13, 5000 Nova Gorica",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a32",
       "lastModified": "2026-11-15"
@@ -23,6 +25,7 @@
     {
       "name": "Fakulteta za humanistiko",
       "city": "Nova Gorica",
+      "website": "https://ung.si/sl/fakultete/fakulteta-za-humanistiko/",
       "address": "Vipavska cesta 13, 5000 Nova Gorica",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a51",
       "lastModified": "2026-11-15"
@@ -30,6 +33,7 @@
     {
       "name": "Fakulteta za naravoslovje",
       "city": "Ajdovščina",
+      "website": "https://ung.si/sl/fakultete/fakulteta-za-naravoslovje/",
       "address": "Vipavska cesta 11C, 5270 Ajdovščina",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a5d",
       "lastModified": "2026-11-15"
@@ -37,6 +41,7 @@
     {
       "name": "Fakulteta za podiplomski študij",
       "city": "Nova Gorica",
+      "website": "https://ung.si/sl/fakultete/fakulteta-za-podiplomski-studij/",
       "address": "Vipavska cesta 13, 5000 Nova Gorica",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a61",
       "lastModified": "2026-11-15"
@@ -44,6 +49,7 @@
     {
       "name": "Fakulteta za vinogradništvo in vinarstvo",
       "city": "Vipava",
+      "website": "https://ung.si/sl/fakultete/fakulteta-za-vinogradnistvo-in-vinarstvo/",
       "address": "Glavni trg 8, 5271 Vipava",
       "email": "info.vsvv@ung.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a73",
@@ -52,6 +58,7 @@
     {
       "name": "Fakulteta za znanosti o okolju",
       "city": "Nova Gorica",
+      "website": "https://ung.si/sl/fakultete/fakulteta-za-znanosti-o-okolju/",
       "address": "Vipavska cesta 13, 5000 Nova Gorica",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a78",
       "lastModified": "2026-11-15"
@@ -59,6 +66,7 @@
     {
       "name": "Poslovno-tehniška fakulteta",
       "city": "Nova Gorica",
+      "website": "https://ung.si/sl/fakultete/poslovno-tehniska-fakulteta/",
       "address": "Vipavska cesta 13, 5000 Nova Gorica",
       "email": "info.ptf@ung.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a8a",

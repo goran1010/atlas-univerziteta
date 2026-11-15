@@ -8,6 +8,9 @@
   "website": "https://uni-gjilan.net",
   "address": "Zija Shemsiu nr. 183, 60000 Gjilan",
   "phone": "+383 280 390 112",
+  "accreditationFrom": "2024-10-01",
+  "accreditationTo": "2029-09-30",
+  "authority": "Agjencia e Kosovës për Akreditim (AKA)",
   "dataSourceUrl": "https://uni-gjilan.net/kontakti/",
   "lastModified": "2026-11-15",
   "faculties": [

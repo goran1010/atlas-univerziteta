@@ -26,6 +26,7 @@
     {
       "name": "Fakulteta za elektrotehniko, računalništvo in informatiko",
       "city": "Maribor",
+      "website": "https://feri.um.si/",
       "address": "Koroška cesta 46, 2000 Maribor",
       "email": "feri@um.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a4a",

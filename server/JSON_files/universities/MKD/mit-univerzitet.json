@@ -3,8 +3,56 @@
   "name": "MIT Univerzitet",
   "city": "Skopje",
   "ownership": "PRIVATE",
+  "foundedYear": "2007",
   "website": "https://www.mit.edu.mk",
+  "address": "Treta Makedonska Brigada 66a, 1000 Skopje",
+  "phone": "+389 76 319 319",
+  "email": "contact@mit.edu.mk",
   "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
-  "dataSourceUrl": "https://akvo.mk/wp-content/uploads/akvo-docs/V-O-U/1-VISOKOOBRAZOVNI-USTANOVI.pdf",
-  "lastModified": "2026-11-15"
+  "dataSourceUrl": "https://www.mit.edu.mk/contact",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za dentalna medicina",
+      "website": "https://www.mit.edu.mk/fakulteti/fakultet-za-dentalna-medicina",
+      "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za psihologija",
+      "website": "https://www.mit.edu.mk/fakulteti/fakultet-za-psihologija",
+      "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za arhitektura",
+      "website": "https://www.mit.edu.mk/fakulteti/fakultet-za-arhitektura",
+      "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za pravni nauki, meǵunarodni odnosi i diplomatija",
+      "website": "https://www.mit.edu.mk/fakulteti/fakultet-za-pravni-nauki-megunarodni-odnosi-i-diplomatija",
+      "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za bezbednosni nauki",
+      "website": "https://www.mit.edu.mk/fakulteti/fakultet-za-bezbednosni-nauki",
+      "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "website": "https://www.mit.edu.mk/fakulteti/ekomonski-fakultet",
+      "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Koledž za medicinska kozmetologija i fizioterapija",
+      "website": "https://www.mit.edu.mk/fakulteti/koledz-za-medicinska-kozmetologija-i-fizioterapija",
+      "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
+      "lastModified": "2026-11-15"
+    }
+  ]
 }

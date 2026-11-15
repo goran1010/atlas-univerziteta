@@ -16,19 +16,19 @@
   "faculties": [
     {
       "name": "Fakulteti i Shkencave Mjekësore",
-      "website": "https://albanianuniversity.edu.al/sq/category/fakultetet/fakulteti-i-shkencave-mjekesore/",
+      "website": "https://albanianuniversity.edu.al/sq/fakulteti-i-shkencave-mjekesore/",
       "dataSourceUrl": "https://albanianuniversity.edu.al/sq/",
       "lastModified": "2026-11-15"
     },
     {
       "name": "Fakulteti i Shkencave të Aplikuara dhe Ekonomike",
-      "website": "https://albanianuniversity.edu.al/sq/category/fakultetet/fakulteti-i-shkencave-te-aplikuara-dhe-ekonomike/",
+      "website": "https://albanianuniversity.edu.al/sq/fakulteti-i-shkencave-te-aplikuara-dhe-ekonomike/",
       "dataSourceUrl": "https://albanianuniversity.edu.al/sq/",
       "lastModified": "2026-11-15"
     },
     {
       "name": "Fakulteti i Shkencave Shoqërore",
-      "website": "https://albanianuniversity.edu.al/sq/category/fakultetet/fakulteti-i-shkencave-shoqerore/",
+      "website": "https://albanianuniversity.edu.al/sq/fakulteti-i-shkencave-shoqerore/",
       "dataSourceUrl": "https://albanianuniversity.edu.al/sq/",
       "lastModified": "2026-11-15"
     }

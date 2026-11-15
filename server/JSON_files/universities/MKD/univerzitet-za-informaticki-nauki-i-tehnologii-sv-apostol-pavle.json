@@ -4,6 +4,7 @@
   "acronym": "UIST",
   "city": "Ohrid",
   "ownership": "PUBLIC",
+  "foundedYear": "2009",
   "website": "https://uist.edu.mk",
   "address": "Partizanska bb, 6000 Ohrid",
   "phone": "+389 46 511 000",
@@ -13,33 +14,33 @@
   "lastModified": "2026-11-15",
   "faculties": [
     {
-      "name": "Faculty of Information Systems, Visualization, Multimedia and Animation",
+      "name": "Fakultet za informatički sistemi, vizuelizacija, digitalna, multimedijalna i animaciska tehnika",
       "website": "https://uist.edu.mk/academics/bachelors/isvma/",
-      "dataSourceUrl": "https://uist.edu.mk/",
+      "dataSourceUrl": "https://uist.edu.mk/info-center/accreditations/",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "Faculty of Computer Science and Engineering",
+      "name": "Fakultet za kompjuterski nauki i inženerstvo",
       "website": "https://uist.edu.mk/academics/bachelors/cse/",
-      "dataSourceUrl": "https://uist.edu.mk/",
+      "dataSourceUrl": "https://uist.edu.mk/info-center/accreditations/",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "Faculty of Communication Networks and Security",
+      "name": "Fakultet za komunikaciski mreži i bezbednost",
       "website": "https://uist.edu.mk/academics/bachelors/cns/",
-      "dataSourceUrl": "https://uist.edu.mk/",
+      "dataSourceUrl": "https://uist.edu.mk/info-center/accreditations/",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "Faculty of Information and Communication Sciences",
+      "name": "Fakultet za informatički i komunikaciski nauki",
       "website": "https://uist.edu.mk/academics/bachelors/ics/",
-      "dataSourceUrl": "https://uist.edu.mk/",
+      "dataSourceUrl": "https://uist.edu.mk/info-center/accreditations/",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "Faculty of Applied IT, Machine Intelligence and Robotics",
+      "name": "Fakultet za primeneti informatički tehnologii, mašinska inteligencija i robotika",
       "website": "https://uist.edu.mk/academics/bachelors/aitmir/",
-      "dataSourceUrl": "https://uist.edu.mk/",
+      "dataSourceUrl": "https://uist.edu.mk/%d0%94%d0%b5%d0%bc%d0%be%d0%bd%d1%81%d1%82%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b8-%d0%bd%d0%b0-%d0%bf%d1%80%d0%b2-%d1%86%d0%b8%d0%ba%d0%bb%d1%83%d1%81-%d1%81%d1%82%d1%83%d0%b4%d0%b8%d0%b8-%d0%b7%d0%b0/",
       "lastModified": "2026-11-15"
     }
   ]

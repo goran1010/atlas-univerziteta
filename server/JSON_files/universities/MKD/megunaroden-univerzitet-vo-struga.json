@@ -6,34 +6,35 @@
   "ownership": "PRIVATE",
   "foundedYear": "2007",
   "website": "https://iust.edu.mk",
+  "address": "Ezerski Lozja 1, 6330 Struga",
   "phone": "+389 46 786 160",
   "email": "info@eust.edu.mk",
   "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
-  "dataSourceUrl": "https://iust.edu.mk/rreth-nesh/",
+  "dataSourceUrl": "https://iust.edu.mk/mk/contact-mk/",
   "lastModified": "2026-11-15",
   "faculties": [
     {
-      "name": "Fakulteti i Shkencave Politike",
-      "website": "https://iust.edu.mk/fakultetet/fakulteti-i-shkencave-politike/",
-      "dataSourceUrl": "https://iust.edu.mk/fakultetet/",
+      "name": "Fakultet za politički nauki",
+      "website": "https://iust.edu.mk/mk/faculties-mk/political-sciences-mk/",
+      "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "Fakulteti i Shkencave Ekonomike",
-      "website": "https://iust.edu.mk/fakultetet/fakulteti-i-shkencave-ekonomike/",
-      "dataSourceUrl": "https://iust.edu.mk/fakultetet/",
+      "name": "Fakultet za ekonomski nauki",
+      "website": "https://iust.edu.mk/mk/faculties-mk/economics-mk/",
+      "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "Fakulteti i Shkencave Juridike",
-      "website": "https://iust.edu.mk/fakultetet/fakulteti-i-shkencave-juridike/",
-      "dataSourceUrl": "https://iust.edu.mk/fakultetet/",
+      "name": "Fakultet za pravni nauki",
+      "website": "https://iust.edu.mk/mk/faculties-mk/law-mk/",
+      "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/",
       "lastModified": "2026-11-15"
     },
     {
-      "name": "Fakulteti i Teknologjisë Informative",
-      "website": "https://iust.edu.mk/fakultetet/fakulteti-i-teknologjise-informative/",
-      "dataSourceUrl": "https://iust.edu.mk/fakultetet/",
+      "name": "Fakultet za informatički tehnologii",
+      "website": "https://iust.edu.mk/mk/faculties-mk/it-mk/",
+      "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/",
       "lastModified": "2026-11-15"
     }
   ]

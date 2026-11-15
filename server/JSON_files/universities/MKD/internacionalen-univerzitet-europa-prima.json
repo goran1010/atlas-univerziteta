@@ -1,0 +1,31 @@
+{
+  "country": "MKD",
+  "name": "Internacionalen univerzitet Europa Prima",
+  "city": "Skopje",
+  "ownership": "PRIVATE",
+  "foundedYear": "2007",
+  "website": "https://www.europaprima.com",
+  "address": "Ul. Nikola Rusinski br. 1, 1000 Skopje",
+  "phone": "+389 2 3061 543",
+  "email": "info@europaprima.com",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://www.europaprima.com/kontakt/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za teatarski umetnosti",
+      "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za filmski umetnosti",
+      "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za primeneta muzika",
+      "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

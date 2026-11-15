@@ -1,9 +1,47 @@
 {
   "country": "MKD",
   "name": "Amerikanski univerzitet na Evropa - FON",
+  "acronym": "AUE-FON",
   "city": "Skopje",
   "ownership": "PRIVATE",
+  "foundedYear": "2003",
+  "website": "https://aue.mk",
+  "address": "Ul. Kiro Gligorov 5, 1000 Skopje",
+  "phone": "+389 2 2445 503",
+  "email": "info@fon.edu.mk",
   "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
-  "dataSourceUrl": "https://akvo.mk/wp-content/uploads/akvo-docs/V-O-U/1-VISOKOOBRAZOVNI-USTANOVI.pdf",
-  "lastModified": "2026-11-15"
+  "dataSourceUrl": "https://aue.mk/content.aspx?cid=13&ln=mk",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za informatika",
+      "website": "https://aue.mk/content.aspx?cid=33&ln=mk",
+      "dataSourceUrl": "https://aue.mk/content.aspx?cid=25&ln=mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za pravni i politički nauki",
+      "website": "https://aue.mk/content.aspx?cid=27&ln=mk",
+      "dataSourceUrl": "https://aue.mk/content.aspx?cid=25&ln=mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za ekonomski nauki",
+      "website": "https://aue.mk/content.aspx?cid=32&ln=mk",
+      "dataSourceUrl": "https://aue.mk/content.aspx?cid=25&ln=mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za detektivi i bezbednost",
+      "website": "https://aue.mk/content.aspx?cid=30&ln=mk",
+      "dataSourceUrl": "https://aue.mk/content.aspx?cid=25&ln=mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za dizajn i multimedija",
+      "website": "https://aue.mk/content.aspx?cid=35&ln=mk",
+      "dataSourceUrl": "https://aue.mk/content.aspx?cid=25&ln=mk",
+      "lastModified": "2026-11-15"
+    }
+  ]
 }

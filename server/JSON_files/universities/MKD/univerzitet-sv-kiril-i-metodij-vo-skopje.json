@@ -25,7 +25,7 @@
     {
       "name": "Gradežen fakultet",
       "city": "Skopje",
-      "website": "http://www.gf.ukim.edu.mk",
+      "website": "https://gf.ukim.edu.mk",
       "address": "Bul. Partizanski odredi br. 24, 1000 Skopje",
       "phone": "+389 2 3116 066",
       "email": "dekan@gf.ukim.edu.mk",
@@ -94,7 +94,7 @@
     {
       "name": "Stomatološki fakultet",
       "city": "Skopje",
-      "website": "http://www.stomfak.ukim.edu.mk",
+      "website": "https://stomfak.ukim.edu.mk",
       "address": "Ul. Majka Tereza br. 43, 1000 Skopje",
       "phone": "+389 2 3115 647",
       "email": "sfs@stomfak.ukim.edu.mk",
@@ -104,7 +104,6 @@
     {
       "name": "Tehnološko-metalurški fakultet",
       "city": "Skopje",
-      "website": "http://www.tmf.ukim.edu.mk",
       "address": "Ul. Ruǵer Boškoviḱ br. 16, 1000 Skopje",
       "phone": "+389 2 3088 201",
       "email": "dekanat@tmf.ukim.edu.mk",
@@ -133,7 +132,7 @@
     {
       "name": "Fakultet za dramski umetnosti",
       "city": "Skopje",
-      "website": "http://www.fdu.ukim.edu.mk",
+      "website": "https://fdu.ukim.edu.mk",
       "address": "Ul. Ruǵer Boškoviḱ br. 22, 1000 Skopje",
       "phone": "+389 2 3061 188",
       "email": "fdu@ukim.edu.mk",

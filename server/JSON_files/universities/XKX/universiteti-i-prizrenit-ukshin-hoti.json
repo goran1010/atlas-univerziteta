@@ -6,10 +6,13 @@
   "ownership": "PUBLIC",
   "foundedYear": "2009",
   "website": "https://uni-prizren.com",
+  "address": "Rruga e Shkronjave 1, 20000 Prizren",
+  "phone": "+383 29 232 140",
+  "email": "rektorati@uni-prizren.com",
   "accreditationFrom": "2026-10-01",
   "accreditationTo": "2031-09-30",
   "authority": "Agjencia e Kosovës për Akreditim (AKA)",
-  "dataSourceUrl": "https://uni-prizren.com/",
+  "dataSourceUrl": "https://old.uni-prizren.com/repository/docs/broshura/ALB-broshura_me_permiresime1.pdf",
   "lastModified": "2026-11-15",
   "faculties": [
     {
