@@ -6,7 +6,16 @@ const targetTypeSchema = z.enum([
   "STUDY_PROGRAM",
   "TRACK",
 ]);
-const countrySchema = z.enum(["ALB", "BIH", "HRV", "MKD", "MNE", "SRB", "SVN"]);
+const countrySchema = z.enum([
+  "ALB",
+  "BIH",
+  "HRV",
+  "MKD",
+  "MNE",
+  "SRB",
+  "SVN",
+  "XKX",
+]);
 
 // countries whose universities each belong to one subdivision; a country
 // missing from this map takes no entity

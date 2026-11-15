@@ -1,0 +1,48 @@
+{
+  "country": "XKX",
+  "name": "Universiteti i Shkencave të Aplikuara në Ferizaj",
+  "acronym": "UShAF",
+  "city": "Ferizaj",
+  "ownership": "PUBLIC",
+  "foundedYear": "2015",
+  "website": "https://ushaf.net",
+  "address": "Rr. Universiteti, p.n., 70000 Ferizaj",
+  "phone": "+383 290 310 010",
+  "accreditationFrom": "2023-10-01",
+  "accreditationTo": "2028-09-30",
+  "authority": "Agjencia e Kosovës për Akreditim (AKA)",
+  "dataSourceUrl": "https://ushaf.net/historiku/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Inxhinierisë dhe Informatikë",
+      "website": "https://ushaf.net/fii/",
+      "dataSourceUrl": "https://ushaf.net/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Turizmit dhe Ambientit",
+      "website": "https://ushaf.net/fta/",
+      "dataSourceUrl": "https://ushaf.net/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Arkitekturës, Dizajnit dhe Teknologjisë së Drurit",
+      "website": "https://ushaf.net/fadtd/",
+      "dataSourceUrl": "https://ushaf.net/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Menaxhmentit",
+      "website": "https://ushaf.net/fm/",
+      "dataSourceUrl": "https://ushaf.net/kontakti/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Arteve të Aplikuara",
+      "website": "https://ushaf.net/faa-2/",
+      "dataSourceUrl": "https://ushaf.net/kontakti/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

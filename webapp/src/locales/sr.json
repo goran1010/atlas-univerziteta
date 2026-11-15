@@ -147,7 +147,7 @@
     "publicIntro": "Javni REST endpoint-i su dostupni pod osnovnim URL-om ispod. Ovi endpoint-i ne zahtijevaju autentifikaciju.",
     "fullDocs": "Za kompletnu projektnu dokumentaciju, lokalno postavljanje i smjernice za doprinos, pogledajte",
     "dataObject": "Objekat univerziteta",
-    "dataObjectExample": "{\n  \"id\":          number                          - jedinstveni identifikator\n  \"name\":        string                          - zvanični naziv\n  \"acronym\":     string | null                   - skraćenica (npr. UNSA)\n  \"city\":        string                          - grad glavnog kampusa\n  \"country\":     string                          - ISO 3166-1 alpha-3 kod zemlje\n  \"entity\":      string | null                   - entitet, null za zemlje bez njih\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - npr. \"1949\"\n  \"website\":     string | null                   - zvanični URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - samo lista\n  \"faculties\":   Faculty[]                        - samo detalji\n}",
+    "dataObjectExample": "{\n  \"id\":          number                          - jedinstveni identifikator\n  \"name\":        string                          - zvanični naziv\n  \"acronym\":     string | null                   - skraćenica (npr. UNSA)\n  \"city\":        string                          - grad glavnog kampusa\n  \"country\":     string                          - ISO 3166-1 alpha-3 kod zemlje (XKX za Kosovo, koje ga nema)\n  \"entity\":      string | null                   - entitet, null za zemlje bez njih\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - npr. \"1949\"\n  \"website\":     string | null                   - zvanični URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - samo lista\n  \"faculties\":   Faculty[]                        - samo detalji\n}",
     "examples": "Primjeri",
     "endpoints": "Endpoint-i",
     "endpointsData": {
@@ -395,7 +395,8 @@
       "HRV": "Hrvatska",
       "MKD": "Sjeverna Makedonija",
       "MNE": "Crna Gora",
-      "SVN": "Slovenija"
+      "SVN": "Slovenija",
+      "XKX": "Kosovo"
     },
     "entities": {
       "FBIH": "Federacija BiH",

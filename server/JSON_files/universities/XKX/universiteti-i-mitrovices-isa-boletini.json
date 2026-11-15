@@ -1,0 +1,54 @@
+{
+  "country": "XKX",
+  "name": "Universiteti i Mitrovicës Isa Boletini",
+  "acronym": "UIBM",
+  "city": "Mitrovicë",
+  "ownership": "PUBLIC",
+  "foundedYear": "2013",
+  "website": "https://umib.net",
+  "address": "Rr. Ukshin Kovaçica, 40000 Mitrovicë",
+  "phone": "+383 28 515 516",
+  "accreditationFrom": "2023-10-01",
+  "accreditationTo": "2026-09-30",
+  "authority": "Agjencia e Kosovës për Akreditim (AKA)",
+  "dataSourceUrl": "https://umib.net/historiku/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Gjeoshkencave",
+      "website": "https://umib.net/fakulteti-gjeoshkencave/",
+      "dataSourceUrl": "https://umib.net/historiku/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Teknologjisë Ushqimore",
+      "website": "https://umib.net/fakulteti-teknologji-ushqimore/",
+      "dataSourceUrl": "https://umib.net/historiku/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë Mekanike dhe Kompjuterike",
+      "website": "https://umib.net/fakulteti-inxhinierise-mekanike-dhe-kompjuterike/",
+      "dataSourceUrl": "https://umib.net/historiku/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Juridik",
+      "website": "https://umib.net/fakulteti-juridik/",
+      "dataSourceUrl": "https://umib.net/historiku/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Ekonomik",
+      "website": "https://umib.net/fakulteti-ekonomik/",
+      "dataSourceUrl": "https://umib.net/historiku/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Edukimit",
+      "website": "https://umib.net/fakulteti-edukimit/",
+      "dataSourceUrl": "https://umib.net/historiku/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

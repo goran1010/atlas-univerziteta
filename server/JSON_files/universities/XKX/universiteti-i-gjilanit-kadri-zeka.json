@@ -1,0 +1,51 @@
+{
+  "country": "XKX",
+  "name": "Universiteti i Gjilanit Kadri Zeka",
+  "acronym": "UKZ",
+  "city": "Gjilan",
+  "ownership": "PUBLIC",
+  "foundedYear": "2013",
+  "website": "https://uni-gjilan.net",
+  "address": "Zija Shemsiu nr. 183, 60000 Gjilan",
+  "phone": "+383 280 390 112",
+  "dataSourceUrl": "https://uni-gjilan.net/kontakti/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Edukimit",
+      "website": "https://uni-gjilan.net/fakultetet/fakulteti-i-edukimit/",
+      "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Juridik",
+      "website": "https://uni-gjilan.net/fakultetet/fakulteti-juridik/",
+      "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Ekonomik",
+      "website": "https://uni-gjilan.net/fakultetet/fakulteti-ekonomik/",
+      "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Kompjuterike",
+      "website": "https://uni-gjilan.net/fakultetet/fakulteti-i-shkencave-kompjuterike/",
+      "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Aplikative",
+      "website": "https://uni-gjilan.net/fakultetet/fakulteti-i-shkencave-aplikative/",
+      "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Sociale",
+      "website": "https://uni-gjilan.net/fakultetet/fakulteti-i-shkencave-sociale/",
+      "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

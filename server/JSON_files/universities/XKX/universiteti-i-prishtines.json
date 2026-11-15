@@ -1,0 +1,84 @@
+{
+  "country": "XKX",
+  "name": "Universiteti i Prishtinës",
+  "acronym": "UP",
+  "city": "Prishtinë",
+  "ownership": "PUBLIC",
+  "accreditationFrom": "2025-10-01",
+  "accreditationTo": "2030-09-30",
+  "authority": "Agjencia e Kosovës për Akreditim (AKA)",
+  "dataSourceUrl": "https://akreditimi.rks-gov.net/5789-2/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Arteve",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-arteve/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Edukimit Fizik dhe i Sportit",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-edukimit-fizik",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Filologjisë",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-filologjise",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fiek",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë Mekanike",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fim",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Mjekësisë",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-mjekesise",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Shkencave Matematike-Natyrore",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fshmn",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Ndërtimtarisë",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-ndertimtarise/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Arkitekturës",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-arkitektures",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Edukimit",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-edukimit",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Ekonomik",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-ekonomik",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Juridik",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-juridik",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti i Bujqësisë dhe Vetërinarisë",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-bujqesise-dhe-veterinarise",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteti Filozofik",
+      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-filozofik",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

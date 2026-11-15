@@ -1,4 +1,13 @@
-const COUNTRIES = ["ALB", "BIH", "HRV", "MKD", "MNE", "SRB", "SVN"] as const;
+const COUNTRIES = [
+  "ALB",
+  "BIH",
+  "HRV",
+  "MKD",
+  "MNE",
+  "SRB",
+  "SVN",
+  "XKX",
+] as const;
 
 type Country = (typeof COUNTRIES)[number];
 
