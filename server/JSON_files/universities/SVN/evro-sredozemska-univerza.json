@@ -1,0 +1,12 @@
+{
+  "country": "SVN",
+  "name": "Evro-sredozemska univerza",
+  "acronym": "EMUNI",
+  "city": "Koper",
+  "ownership": "PUBLIC",
+  "website": "http://www.emuni.si",
+  "address": "Pristaniška ulica 14, 6000 Koper",
+  "email": "university@emuni.si",
+  "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a42",
+  "lastModified": "2026-11-15"
+}

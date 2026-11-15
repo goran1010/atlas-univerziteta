@@ -1,0 +1,170 @@
+{
+  "country": "SVN",
+  "name": "Univerza v Mariboru",
+  "acronym": "UM",
+  "city": "Maribor",
+  "ownership": "PUBLIC",
+  "foundedYear": "1975",
+  "website": "https://www.um.si",
+  "address": "Slomškov trg 15, 2000 Maribor",
+  "email": "rektorat@um.si",
+  "accreditationFrom": "2022-09-29",
+  "accreditationTo": "2028-09-30",
+  "authority": "Nacionalna agencija Republike Slovenije za kakovost v visokem šolstvu (NAKVIS)",
+  "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a91",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Ekonomsko-poslovna fakulteta",
+      "city": "Maribor",
+      "website": "http://www.epf.um.si",
+      "address": "Razlagova ulica 14, 2000 Maribor",
+      "email": "epf@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a40",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za elektrotehniko, računalništvo in informatiko",
+      "city": "Maribor",
+      "address": "Koroška cesta 46, 2000 Maribor",
+      "email": "feri@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a4a",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za energetiko",
+      "city": "Krško",
+      "website": "http://www.fe.um.si",
+      "address": "Hočevarjev trg 1, 8270 Krško",
+      "email": "fe@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a4b",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za gradbeništvo, prometno inženirstvo in arhitekturo",
+      "city": "Maribor",
+      "website": "http://www.fgpa.um.si/",
+      "address": "Smetanova ulica 17, 2000 Maribor",
+      "email": "fgpa@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a4e",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za kemijo in kemijsko tehnologijo",
+      "city": "Maribor",
+      "website": "http://www.fkkt.um.si/",
+      "address": "Smetanova ulica 17, 2000 Maribor",
+      "email": "fkkt@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a55",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za kmetijstvo in biosistemske vede",
+      "city": "Hoče",
+      "website": "http://fkbv.um.si/",
+      "address": "Pivola 10, 2311 Hoče",
+      "email": "fkbv@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a56",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za logistiko",
+      "city": "Celje",
+      "website": "http://fl.um.si/",
+      "address": "Mariborska cesta 7, 3000 Celje",
+      "email": "info.fl@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a58",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za naravoslovje in matematiko",
+      "city": "Maribor",
+      "website": "http://www.fnm.um.si",
+      "address": "Koroška cesta 160, 2000 Maribor",
+      "email": "dekanat.fnm@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a5e",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za organizacijske vede",
+      "city": "Kranj",
+      "website": "http://www.fov.um.si/",
+      "address": "Kidričeva cesta 55A, 4000 Kranj",
+      "email": "dekanat.fov@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a60",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za strojništvo",
+      "city": "Maribor",
+      "website": "http://www.fs.um.si",
+      "address": "Smetanova ulica 17, 2000 Maribor",
+      "email": "fs@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a6a",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za turizem",
+      "city": "Brežice",
+      "website": "http://www.ft.um.si",
+      "address": "Cesta prvih borcev 36, 8250 Brežice",
+      "email": "ft@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a6e",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za varnostne vede",
+      "city": "Ljubljana",
+      "website": "http://www.fvv.um.si/",
+      "address": "Kotnikova ulica 8, 1000 Ljubljana",
+      "email": "fvv@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a71",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za zdravstvene vede",
+      "city": "Maribor",
+      "website": "http://www.fzv.um.si/",
+      "address": "Žitna ulica 15, 2000 Maribor",
+      "email": "fzv@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a76",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Filozofska fakulteta",
+      "city": "Maribor",
+      "website": "http://www.ff.um.si/",
+      "address": "Koroška cesta 160, 2000 Maribor",
+      "email": "ff@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a7a",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Medicinska fakulteta",
+      "city": "Maribor",
+      "website": "http://www.mf.um.si/",
+      "address": "Taborska ulica 8, 2000 Maribor",
+      "email": "mf@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a7f",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Pedagoška fakulteta",
+      "city": "Maribor",
+      "website": "http://www.pef.um.si/",
+      "address": "Koroška cesta 160, 2000 Maribor",
+      "email": "dekanat.pef@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a88",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Pravna fakulteta",
+      "city": "Maribor",
+      "website": "http://www.pf.um.si",
+      "address": "Mladinska ulica 9, 2000 Maribor",
+      "email": "info.pf@um.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a8c",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

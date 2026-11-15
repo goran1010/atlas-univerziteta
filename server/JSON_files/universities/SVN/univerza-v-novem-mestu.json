@@ -1,0 +1,88 @@
+{
+  "country": "SVN",
+  "name": "Univerza v Novem mestu",
+  "acronym": "UNM",
+  "city": "Novo mesto",
+  "ownership": "PUBLIC",
+  "foundedYear": "2026",
+  "website": "https://uni-nm.si",
+  "address": "Glavni trg 7, 8000 Novo mesto",
+  "accreditationFrom": "2026-01-14",
+  "accreditationTo": "2033-09-30",
+  "authority": "Nacionalna agencija Republike Slovenije za kakovost v visokem šolstvu (NAKVIS)",
+  "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/6968a97fe03f81b96ca05c5c",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteta za ekonomijo in informatiko",
+      "city": "Novo mesto",
+      "website": "http://fei.uni-nm.si/",
+      "address": "Na Loko 2, 8000 Novo mesto",
+      "email": "referat.fei@uni-nm.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a48",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za industrijski inženiring Novo mesto",
+      "city": "Novo mesto",
+      "website": "http://www.fini-unm.si",
+      "address": "Šegova ulica 112, 8000 Novo mesto",
+      "email": "referat@fini-unm.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a52",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za informacijske študije",
+      "city": "Novo mesto",
+      "website": "http://www.fis.unm.si",
+      "address": "Ljubljanska cesta 31A, 8000 Novo mesto",
+      "email": "info@fis.unm.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a53",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za organizacijske študije v Novem mestu",
+      "city": "Novo mesto",
+      "website": "https://www.fos-unm.si/si/",
+      "address": "Ulica talcev 3, 8000 Novo mesto",
+      "email": "info@fos-unm.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a5f",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za poslovne in upravne vede",
+      "city": "Novo mesto",
+      "website": "http://fpuv.uni-nm.si/",
+      "address": "Na Loko 2, 8000 Novo mesto",
+      "email": "fpuv.nm@guest.arnes.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a63",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za strojništvo",
+      "city": "Novo mesto",
+      "website": "http://fs.uni-nm.si/",
+      "address": "Na Loko 2, 8000 Novo mesto",
+      "email": "fs@fs-unm.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a68",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za zdravstvene vede",
+      "city": "Novo mesto",
+      "website": "http://fzv.uni-nm.si",
+      "address": "Na Loko 2, 8000 Novo mesto",
+      "email": "fzv.nm@guest.arnes.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a75",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Visoka šola za upravljanje podeželja Grm Novo mesto",
+      "city": "Novo mesto",
+      "website": "http://vsgrm.unm.si/",
+      "address": "Ljubljanska cesta 28, 8000 Novo mesto",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a9c",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

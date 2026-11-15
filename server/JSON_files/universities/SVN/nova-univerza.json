@@ -1,0 +1,49 @@
+{
+  "country": "SVN",
+  "name": "Nova univerza",
+  "acronym": "NU",
+  "city": "Ljubljana",
+  "ownership": "PRIVATE",
+  "website": "https://www.nova-uni.si/",
+  "address": "Mestni trg 23, 1000 Ljubljana",
+  "email": "rektorat@nova-uni.si",
+  "accreditationFrom": "2025-03-20",
+  "accreditationTo": "2028-09-30",
+  "authority": "Nacionalna agencija Republike Slovenije za kakovost v visokem šolstvu (NAKVIS)",
+  "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a85",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Evropska pravna fakulteta",
+      "city": "Nova Gorica",
+      "website": "http://www.evro-pf.si",
+      "address": "Delpinova ulica 18B, 5000 Nova Gorica",
+      "email": "info@epf.nova-uni.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a43",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za državne in evropske študije",
+      "city": "Kranj",
+      "address": "Žanova ulica 3, 4000 Kranj",
+      "email": "info@fds.nova-uni.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a47",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za psihoterapijo",
+      "city": "Ljubljana",
+      "address": "Mestni trg 23, 1000 Ljubljana",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/68da6c7a9cbc73d21a3f7525",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za slovenske in mednarodne študije",
+      "city": "Ljubljana",
+      "address": "Mestni trg 23, 1000 Ljubljana",
+      "email": "referat@fsms.nova-uni.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a66",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

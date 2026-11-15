@@ -1,0 +1,36 @@
+{
+  "country": "SVN",
+  "name": "Univerza Alma Mater Europaea",
+  "acronym": "UAMEU",
+  "city": "Maribor",
+  "ownership": "PRIVATE",
+  "website": "https://www.almamater.si/",
+  "address": "Slovenska ulica 17, 2000 Maribor",
+  "phone": "+386 2 250 19 99",
+  "email": "info@almamater.si",
+  "accreditationFrom": "2024-03-21",
+  "accreditationTo": "2029-09-30",
+  "authority": "Nacionalna agencija Republike Slovenije za kakovost v visokem šolstvu (NAKVIS)",
+  "dataSourceUrl": "https://www.almamater.si/kontakt/univerza",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Univerza Alma Mater Europaea - Fakulteta ISH",
+      "city": "Ljubljana",
+      "website": "http://www.ish.si",
+      "address": "Kardeljeva ploščad 1, 1000 Ljubljana",
+      "email": "ish@ish.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a39",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Univerza Alma Mater Europaea - Fakulteta ECM",
+      "city": "Maribor",
+      "website": "http://www.almamater.si/",
+      "address": "Slovenska ulica 17, 2000 Maribor",
+      "email": "info@almamater.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a38",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

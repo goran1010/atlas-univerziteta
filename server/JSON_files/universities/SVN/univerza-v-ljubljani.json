@@ -1,0 +1,250 @@
+{
+  "country": "SVN",
+  "name": "Univerza v Ljubljani",
+  "acronym": "UL",
+  "city": "Ljubljana",
+  "ownership": "PUBLIC",
+  "foundedYear": "1919",
+  "website": "http://www.uni-lj.si",
+  "address": "Kongresni trg 12, 1000 Ljubljana",
+  "email": "rektorat@uni-lj.si",
+  "accreditationFrom": "2022-04-21",
+  "accreditationTo": "2027-09-30",
+  "authority": "Nacionalna agencija Republike Slovenije za kakovost v visokem šolstvu (NAKVIS)",
+  "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a90",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Akademija za glasbo",
+      "city": "Ljubljana",
+      "website": "http://www.ag.uni-lj.si",
+      "address": "Kongresni trg 1, 1000 Ljubljana",
+      "email": "dekanat@ag.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a33",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Akademija za gledališče, radio, film in televizijo",
+      "city": "Ljubljana",
+      "website": "http://www.agrft.uni-lj.si",
+      "address": "Trubarjeva cesta 3, 1000 Ljubljana",
+      "email": "dekanat@agrft.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a34",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Akademija za likovno umetnost in oblikovanje",
+      "city": "Ljubljana",
+      "address": "Erjavčeva cesta 23, 1000 Ljubljana",
+      "email": "dekanat@aluo.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a35",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Biotehniška fakulteta",
+      "city": "Ljubljana",
+      "website": "http://www.bf.uni-lj.si",
+      "address": "Jamnikarjeva ulica 101, 1000 Ljubljana",
+      "email": "dekanat@bf.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a3d",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Ekonomska fakulteta",
+      "city": "Ljubljana",
+      "website": "http://www.ef.uni-lj.si",
+      "address": "Kardeljeva ploščad 17, 1000 Ljubljana",
+      "email": "info@ef.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a3f",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za arhitekturo",
+      "city": "Ljubljana",
+      "website": "http://www.fa.uni-lj.si",
+      "address": "Zoisova cesta 12, 1000 Ljubljana",
+      "email": "dekanat@fa.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a44",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za družbene vede",
+      "city": "Ljubljana",
+      "website": "http://www.fdv.uni-lj.si",
+      "address": "Kardeljeva ploščad 5, 1000 Ljubljana",
+      "email": "fdv.faculty@fdv.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a46",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za elektrotehniko",
+      "city": "Ljubljana",
+      "website": "http://www.fe.uni-lj.si",
+      "address": "Tržaška cesta 25, 1000 Ljubljana",
+      "email": "dekanat@fe.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a49",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za farmacijo",
+      "city": "Ljubljana",
+      "website": "http://www.ffa.uni-lj.si",
+      "address": "Aškerčeva cesta 7, 1000 Ljubljana",
+      "email": "tajnistvo@ffa.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a4c",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za gradbeništvo in geodezijo",
+      "city": "Ljubljana",
+      "website": "http://www.fgg.uni-lj.si/",
+      "address": "Jamova cesta 2, 1000 Ljubljana",
+      "email": "info@fgg.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a4d",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za kemijo in kemijsko tehnologijo",
+      "city": "Ljubljana",
+      "website": "http://www.fkkt.uni-lj.si",
+      "address": "Večna pot 113, 1000 Ljubljana",
+      "email": "info@fkkt.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a54",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za matematiko in fiziko",
+      "city": "Ljubljana",
+      "website": "http://www.fmf.uni-lj.si",
+      "address": "Jadranska ulica 19, 1000 Ljubljana",
+      "email": "fmf@fmf.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a5a",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za pomorstvo in promet",
+      "city": "Portorož",
+      "website": "http://www.fpp.uni-lj.si",
+      "address": "Pot pomorščakov 4, 6320 Portorož - Portorose",
+      "email": "dekanat@fpp.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a62",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za računalništvo in informatiko",
+      "city": "Ljubljana",
+      "website": "http://www.fri.uni-lj.si",
+      "address": "Večna pot 113, 1000 Ljubljana",
+      "email": "tajnistvo@fri.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a65",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za socialno delo",
+      "city": "Ljubljana",
+      "website": "https://www.fsd.uni-lj.si/",
+      "address": "Topniška ulica 31, 1000 Ljubljana",
+      "email": "info@fsd.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a67",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za strojništvo",
+      "city": "Ljubljana",
+      "website": "http://www.fs.uni-lj.si",
+      "address": "Aškerčeva cesta 6, 1000 Ljubljana",
+      "email": "dekanat@fs.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a69",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za šport",
+      "city": "Ljubljana",
+      "website": "http://www.fsp.uni-lj.si",
+      "address": "Gortanova ulica 22, 1000 Ljubljana",
+      "email": "dekanat@fsp.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a6b",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za upravo",
+      "city": "Ljubljana",
+      "website": "http://www.fu.uni-lj.si",
+      "address": "Gosarjeva ulica 5, 1000 Ljubljana",
+      "email": "info@fu.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a70",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Filozofska fakulteta",
+      "city": "Ljubljana",
+      "website": "http://www.ff.uni-lj.si",
+      "address": "Aškerčeva cesta 2, 1000 Ljubljana",
+      "email": "info@ff.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a79",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Medicinska fakulteta",
+      "city": "Ljubljana",
+      "website": "http://www.mf.uni-lj.si",
+      "address": "Vrazov trg 2, 1000 Ljubljana",
+      "email": "dekanat@mf.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a80",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Naravoslovnotehniška fakulteta",
+      "city": "Ljubljana",
+      "website": "http://www.ntf.uni-lj.si",
+      "address": "Aškerčeva cesta 12, 1000 Ljubljana",
+      "email": "info@ntf.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a84",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Pedagoška fakulteta",
+      "city": "Ljubljana",
+      "website": "http://www.pef.uni-lj.si",
+      "address": "Kardeljeva ploščad 16, 1000 Ljubljana",
+      "email": "pisarna@pef.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a87",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Pravna fakulteta",
+      "city": "Ljubljana",
+      "website": "http://www.pf.uni-lj.si/",
+      "address": "Poljanski nasip 2, 1000 Ljubljana",
+      "email": "pf-dekanat@pf.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a8b",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Teološka fakulteta",
+      "city": "Ljubljana",
+      "website": "http://www.teof.uni-lj.si",
+      "address": "Poljanska cesta 4, 1000 Ljubljana",
+      "email": "dekanat@teof.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a8e",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Veterinarska fakulteta",
+      "city": "Ljubljana",
+      "website": "http://www.vf.uni-lj.si",
+      "address": "Cesta v Mestni log 51, 1000 Ljubljana",
+      "email": "dekanat@vf.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a94",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Zdravstvena fakulteta",
+      "city": "Ljubljana",
+      "address": "Zdravstvena pot 5, 1000 Ljubljana",
+      "email": "dekanat@vsz.uni-lj.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973aa0",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

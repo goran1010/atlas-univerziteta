@@ -61,6 +61,10 @@ const COUNTRY_ALIASES: Record<string, string> = {
   CRNOGORSK: "MNE",
   CRNOGORSKI: "MNE",
   MONTENEGRO: "MNE",
+  SLOVEN: "SVN",
+  SLOVENI: "SVN",
+  SLOVENIJ: "SVN",
+  SLOVENSK: "SVN",
 } as const;
 
 const OWNERSHIPS = ["PUBLIC", "PRIVATE"] as const;

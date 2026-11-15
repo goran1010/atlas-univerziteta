@@ -1,0 +1,80 @@
+{
+  "country": "SVN",
+  "name": "Univerza na Primorskem",
+  "acronym": "UP",
+  "city": "Koper",
+  "ownership": "PUBLIC",
+  "website": "http://www.upr.si",
+  "address": "Titov trg 4, 6000 Koper - Capodistria",
+  "email": "info@upr.si",
+  "accreditationFrom": "2022-03-17",
+  "accreditationTo": "2027-09-30",
+  "authority": "Nacionalna agencija Republike Slovenije za kakovost v visokem šolstvu (NAKVIS)",
+  "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a8f",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteta za humanistične študije",
+      "city": "Koper",
+      "website": "http://www.fhs.upr.si",
+      "address": "Titov trg 5, 6000 Koper - Capodistria",
+      "email": "info@fhs.upr.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a50",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za management",
+      "city": "Koper",
+      "website": "http://www.fm-kp.si/",
+      "address": "Cankarjeva ulica 5, 6000 Koper - Capodistria",
+      "email": "info@fm-kp.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a59",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za matematiko, naravoslovje in informacijske tehnologije",
+      "city": "Koper",
+      "website": "http://www.famnit.upr.si/",
+      "address": "Glagoljaška ulica 8, 6000 Koper - Capodistria",
+      "email": "info@famnit.upr.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a5b",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za tehnologijo polimerov",
+      "city": "Slovenj Gradec",
+      "website": "http://www.ftpo.eu",
+      "address": "Ozare 19, 2380 Slovenj Gradec",
+      "email": "referat@ftpo.eu",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a6c",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za turistične študije - Turistica",
+      "city": "Portorož",
+      "website": "http://www.turistica.si",
+      "address": "Obala 11A, 6320 Portorož - Portorose",
+      "email": "info@turistica.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a6d",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za vede o zdravju",
+      "city": "Izola",
+      "website": "https://fvz.upr.si/",
+      "address": "Polje 42, 6310 Izola - Isola",
+      "email": "info@vszi.upr.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a72",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Pedagoška fakulteta",
+      "city": "Koper",
+      "website": "http://www.pef.upr.si",
+      "address": "Cankarjeva ulica 5, 6000 Koper - Capodistria",
+      "email": "info@pef.upr.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a86",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}
