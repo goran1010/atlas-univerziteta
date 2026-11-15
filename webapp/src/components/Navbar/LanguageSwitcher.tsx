@@ -7,51 +7,17 @@ import type { Language, SetLanguage, TranslationKey } from "../../types";
 
 const languageOrder: Language[] = ["system", "en", "sr"];
 
-function Flag({
-  src,
-  srcSet,
-  alt,
-}: {
-  src: string;
-  srcSet?: string;
-  alt: string;
-}) {
-  return (
-    <img
-      src={src}
-      srcSet={srcSet}
-      alt={alt}
-      width="20"
-      height="15"
-      className="inline-block rounded-sm border border-(--border-color)"
-      aria-hidden="true"
-    />
-  );
-}
-
 function LanguageIcon({ language }: { language: Language }) {
-  switch (language) {
-    case "en":
-      return <Flag src="/images/flags/gb.svg" alt="" />;
-    case "sr":
-      return (
-        <span className="inline-flex gap-0.5">
-          <Flag src="/images/flags/ba.svg" alt="" />
-          <Flag
-            src="/images/flags/hr.png"
-            srcSet="/images/flags/hr.png 1x, /images/flags/hr@2x.png 2x"
-            alt=""
-          />
-          <Flag
-            src="/images/flags/rs.png"
-            srcSet="/images/flags/rs.png 1x, /images/flags/rs@2x.png 2x"
-            alt=""
-          />
-        </span>
-      );
-    default:
-      return <GlobeIcon className="text-lg" />;
-  }
+  if (language === "system") return <GlobeIcon className="text-lg" />;
+
+  return (
+    <span
+      aria-hidden="true"
+      className="rounded-sm border border-(--border-color) px-1 text-xs font-bold leading-tight tracking-wide"
+    >
+      {language.toUpperCase()}
+    </span>
+  );
 }
 
 function getLabelKey(language: Language): TranslationKey {

@@ -84,4 +84,25 @@ describe("LanguageSwitcher", () => {
       });
     },
   );
+
+  test.each<{ language: Language; code: string; name: RegExp }>([
+    { language: "en", code: "EN", name: /English/i },
+    { language: "sr", code: "SR", name: /Serbian/i },
+  ])(
+    "shows $code as text for $language and names the language",
+    ({ language, code, name }) => {
+      render(
+        <Wrapper
+          addNotification={vi.fn()}
+          setLanguage={vi.fn()}
+          language={language}
+        />,
+      );
+
+      const languageButton = screen.getByRole("button", { name });
+
+      expect(languageButton).toHaveTextContent(code);
+      expect(languageButton.querySelector("img")).toBeNull();
+    },
+  );
 });
