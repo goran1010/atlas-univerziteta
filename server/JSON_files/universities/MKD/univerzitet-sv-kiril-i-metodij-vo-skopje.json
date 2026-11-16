@@ -10,8 +10,8 @@
   "phone": "+389 2 3293 293",
   "email": "ukim@ukim.edu.mk",
   "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
-  "dataSourceUrl": "https://archive.ukim.edu.mk/",
-  "lastModified": "2026-11-15",
+  "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+  "lastModified": "2026-11-16",
   "faculties": [
     {
       "name": "Arhitektonski fakultet",
@@ -19,8 +19,8 @@
       "website": "http://www.arh.ukim.edu.mk",
       "address": "Bul. Partizanski odredi br. 24, 1000 Skopje",
       "phone": "+389 2 3116 328",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=6",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Gradežen fakultet",
@@ -29,8 +29,8 @@
       "address": "Bul. Partizanski odredi br. 24, 1000 Skopje",
       "phone": "+389 2 3116 066",
       "email": "dekan@gf.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=7",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Ekonomski fakultet",
@@ -38,9 +38,9 @@
       "website": "http://www.eccf.ukim.edu.mk",
       "address": "Bul. Goce Delčev br. 9V, 1000 Skopje",
       "phone": "+389 2 3286 800",
-      "email": "dekan@eccf.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=8",
-      "lastModified": "2026-11-15"
+      "email": "contact@eccf.ukim.edu.mk",
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Mašinski fakultet",
@@ -48,8 +48,8 @@
       "website": "http://www.mf.ukim.edu.mk",
       "address": "Karpoš II bb, 1000 Skopje",
       "phone": "+389 2 3099 200",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=9",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Medicinski fakultet",
@@ -58,8 +58,8 @@
       "address": "Ul. 50 Divizija br. 6, 1000 Skopje",
       "phone": "+389 2 3165 155",
       "email": "medf@medf.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=10",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Pedagoški fakultet Sv. Kliment Ohridski",
@@ -68,8 +68,8 @@
       "address": "Ul. Drezdenska br. 56, 1000 Skopje",
       "phone": "+389 2 3066 774",
       "email": "arhiva@pfsko.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=11",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Praven fakultet Justinijan Prvi",
@@ -78,8 +78,8 @@
       "address": "Bul. Goce Delčev br. 9B, 1000 Skopje",
       "phone": "+389 2 3117 244",
       "email": "praven@pf.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=12",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Prirodno-matematički fakultet",
@@ -88,8 +88,8 @@
       "address": "Arhimedova br. 3, 1000 Skopje",
       "phone": "+389 2 3249 999",
       "email": "dekan@pmf.ukim.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=13",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Stomatološki fakultet",
@@ -98,8 +98,8 @@
       "address": "Ul. Majka Tereza br. 43, 1000 Skopje",
       "phone": "+389 2 3115 647",
       "email": "sfs@stomfak.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=15",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Tehnološko-metalurški fakultet",
@@ -107,8 +107,8 @@
       "address": "Ul. Ruǵer Boškoviḱ br. 16, 1000 Skopje",
       "phone": "+389 2 3088 201",
       "email": "dekanat@tmf.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=14",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Fakultet za veterinarna medicina",
@@ -117,8 +117,8 @@
       "address": "Ul. Lazar Pop-Trajkov 5-7, 1000 Skopje",
       "phone": "+389 2 3240 700",
       "email": "contact@fvm.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=16",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Fakultet za dizajn i tehnologii na mebel i enterier",
@@ -126,8 +126,8 @@
       "website": "http://www.fdtme.ukim.edu.mk/",
       "address": "Ul. 16-ta Makedonska brigada br. 3, 1000 Skopje",
       "phone": "+389 2 6154 660",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=46",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Fakultet za dramski umetnosti",
@@ -136,8 +136,8 @@
       "address": "Ul. Ruǵer Boškoviḱ br. 22, 1000 Skopje",
       "phone": "+389 2 3061 188",
       "email": "fdu@ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=17",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Fakultet za elektrotehnika i informaciski tehnologii",
@@ -146,8 +146,8 @@
       "address": "Karpoš II bb, 1000 Skopje",
       "phone": "+389 2 3099 191",
       "email": "dekan@feit.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=18",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Fakultet za zemjodelski nauki i hrana",
@@ -156,8 +156,8 @@
       "address": "Ul. 16-ta Makedonska brigada br. 3, 1000 Skopje",
       "phone": "+389 2 3255 100",
       "email": "dekan@fznh.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=19",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Fakultet za informatički nauki i kompjutersko inženerstvo",
@@ -165,18 +165,18 @@
       "website": "http://www.finki.ukim.mk/",
       "address": "Ul. Ruǵer Boškoviḱ 16, 1000 Skopje",
       "email": "contact@finki.ukim.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=48",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Fakultet za likovni umetnosti",
       "city": "Skopje",
       "website": "http://www.flu.ukim.edu.mk",
-      "address": "Ul. Bitpazarska bb, 1000 Skopje",
+      "address": "Ul. Pokriena Čaršija 66, 1000 Skopje",
       "phone": "+389 2 3066 779",
-      "email": "dekan@flu.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=20",
-      "lastModified": "2026-11-15"
+      "email": "info@flu.ukim.edu.mk",
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Fakultet za muzička umetnost",
@@ -185,8 +185,8 @@
       "address": "Ul. Pitu Guli br. 1, 1000 Skopje",
       "phone": "+389 2 3134 345",
       "email": "fmu@fmu.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=21",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Fakultet za fizičko obrazovanie, sport i zdravje",
@@ -194,9 +194,9 @@
       "website": "http://www.ffosz.ukim.edu.mk",
       "address": "Ul. Dimče Mirčev br. 3",
       "phone": "+389 2 3113 654",
-      "email": "admin@ffosz.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=51",
-      "lastModified": "2026-11-15"
+      "email": "dekan@ffosz.ukim.edu.mk",
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Fakultet za šumarski nauki, pejzažna arhitektura i ekoinženering Hans Em",
@@ -205,8 +205,8 @@
       "address": "Ul. 16-ta Makedonska brigada br. 1, 1000 Skopje",
       "phone": "+389 2 3135 033",
       "email": "dekan@sf.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=26",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Farmacevtski fakultet",
@@ -214,9 +214,9 @@
       "website": "http://www.ff.ukim.edu.mk",
       "address": "Ul. Vodnjanska br. 17, 1000 Skopje",
       "phone": "+389 2 3119 694",
-      "email": "contact@ff.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=1",
-      "lastModified": "2026-11-15"
+      "email": "zost@ff.ukim.edu.mk",
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Filozofski fakultet",
@@ -225,8 +225,8 @@
       "address": "Bul. Goce Delčev br. 9A, 1000 Skopje",
       "phone": "+389 2 3116 520",
       "email": "dekan@fzf.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=23",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     },
     {
       "name": "Filološki fakultet Blaže Koneski",
@@ -235,8 +235,8 @@
       "address": "Bul. Goce Delčev br. 9A, 1000 Skopje",
       "phone": "+389 2 3240 400",
       "email": "dekanat@flf.ukim.edu.mk",
-      "dataSourceUrl": "https://archive.ukim.edu.mk/mk_struktura_contact.php?inst=24",
-      "lastModified": "2026-11-15"
+      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
+      "lastModified": "2026-11-16"
     }
   ]
 }
