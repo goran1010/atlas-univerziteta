@@ -16,22 +16,198 @@
     {
       "name": "Fakulteti i Farmacisë",
       "dataSourceUrl": "https://www.ascal.al/sq/lista-e-ial/ial/universiteti-katolik-zoja-e-keshillit-te-mire/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Farmaci",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=79",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shëndet Publik, Diagnozë Molekulare e Sëmundjeve Infektive dhe Farmakovigjilancë",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3783",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Informator mjeko-shkencor për produktet farmaceutike dhe pajisjet mjekësore (Master Ekzekutiv)",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4062",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Mjekësisë",
       "dataSourceUrl": "https://www.ascal.al/sq/lista-e-ial/ial/universiteti-katolik-zoja-e-keshillit-te-mire/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=69",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieristikë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=70",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Infermieristike dhe Obstetrike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1388",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Rehabilituese të Profesioneve Shëndetësore",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2684",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjekësi",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=75",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Odontoiatri dhe Proteza Dentare",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=76",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Anesteziologji, reanimacion dhe terapi intensive",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3118",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gastroenterologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3116",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjinekologji dhe obstretikë",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3120",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kirurgji e përgjithshme",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3113",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kirurgji Maksilofaciale",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3862",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kirurgji Plastike, Rikonstruktive dhe Estetike",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3938",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Nefrologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3122",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ortopedi dhe traumatologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3114",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Otorinolaringoiatri",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3919",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca të të ushqyerit",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3119",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Sëmundje të aparatit kardiovaskular",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3117",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Urologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3936",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Ekonomike, Politike dhe Sociale",
       "dataSourceUrl": "https://www.ascal.al/sq/lista-e-ial/ial/universiteti-katolik-zoja-e-keshillit-te-mire/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Ekonomi Ndërmarrjeje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=71",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomi dhe Menaxhim",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1270",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financial and Risk Management (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3575",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Management for Global and Sustainable Business",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3701",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave të Aplikuara",
       "dataSourceUrl": "https://www.ascal.al/sq/lista-e-ial/ial/universiteti-katolik-zoja-e-keshillit-te-mire/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arkitekturë",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3727",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitektura Mesdhetare: Projekti, Njohja dhe Ruajtja e Trashëgimisë Kulturore",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4076",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Restoration, Conservation and Management of Architectural Heritage (Master Ekzekutiv)",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3717",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

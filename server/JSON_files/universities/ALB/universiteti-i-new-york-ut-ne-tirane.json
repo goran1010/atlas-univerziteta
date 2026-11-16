@@ -18,19 +18,295 @@
       "name": "Fakulteti i Ekonomisë dhe Biznesit",
       "website": "https://www.unyt.edu.al/page/faculty-of-economy-and-business",
       "dataSourceUrl": "https://www.ascal.al/sq/lista-e-ial/ial/universiteti-i-new-york-ut-ne-tirane/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3556",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Marketing",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3556",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Ekonomi Biznesi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3556",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3556",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Banking dhe Financë të Aplikuar",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3464",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomiks dhe Financë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3462",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Ekonomiks",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3462",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Financë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3462",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Kontabilitet",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3462",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1778",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "I Përgjithshëm",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1778",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1778",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim i Burimeve Njerëzore; ç. Marketing",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1778",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim i Sistemeve të Informacionit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1778",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Bankë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1778",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Financë dhe Kontabilitet",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1116",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3951",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3951",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Kontabilitet",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3951",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Ekonomiks",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3951",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Financë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3951",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Marketing",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3951",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Shkenca Ekonomike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1516",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim; ç. Marketing",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1516",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Biznes Ndërkombëtar",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1516",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Fakulteti i Inxhinierisë dhe Arkitekturës",
       "website": "https://www.unyt.edu.al/page/faculty-of-engineering-and-architecture",
       "dataSourceUrl": "https://www.ascal.al/sq/lista-e-ial/ial/universiteti-i-new-york-ut-ne-tirane/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3546",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Dizajn Grafik",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3546",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Dizajn Interier",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3546",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Shkenca Kompjuterike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3553",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inteligjencë Artificiale",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3885",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Kompjuterike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1122",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitekturë",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3463",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Kompjuterike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3924",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Drejtësisë dhe Shkencave Shoqërore",
       "website": "https://www.unyt.edu.al/page/faculty-of-law-and-social-sciences",
       "dataSourceUrl": "https://www.ascal.al/sq/lista-e-ial/ial/universiteti-i-new-york-ut-ne-tirane/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Gjuhë dhe Letërsi Turke",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3864",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikologji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3461",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Politike/Marrëdhënie Ndërkombëtare",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3554",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Marrëdhënie Ndërkombëtare",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3554",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Politikat dhe Legjislacioni i Bashkimit Evropian",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3554",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "E Drejtë Ndërkombëtare Tregtare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3486",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Marrëdhënie Ndërkombëtare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1128",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi e gjuhës turke (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3883",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikologji",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3487",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Psikologji Klinike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3487",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Psikologji Shkollore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3487",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Psikologji Ligjore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3487",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Drejtësi",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3962",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Politike dhe Marrëdhënie Ndërkombëtare",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3882",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

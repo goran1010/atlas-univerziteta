@@ -18,19 +18,220 @@
       "name": "Fakulteti i Shkencave Kompjuterike dhe IT",
       "website": "https://umt.edu.al/fakulteti-i-shkencave-kompjuterike-dhe-it/",
       "dataSourceUrl": "https://umt.edu.al/fakultetet/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Inteligjencë Artificiale",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3764",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Kompjuterike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2696",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Software",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3218",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inteligjencë Artificiale",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3921",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Data Science",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3921",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Cybersecurity",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3921",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Informatike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1345",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Software Engineering",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3596",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inteligjenca Artificiale dhe Sistemet Inteligjente",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3744",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Dizajn dhe Zhvillim Software",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3455",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Inxhinierisë dhe Arkitekturës",
       "website": "https://umt.edu.al/fakulteti-i-inxhinierise-dhe-arkitektures/",
       "dataSourceUrl": "https://umt.edu.al/fakultetet/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri Ndërtimi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=430",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Ndërtimi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1216",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Inxhinieri Strukturash",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1216",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Inxhinieri Infrastrukturë Transporti",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1216",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Arkitekturë",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2902",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Arkitekt",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2902",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Bio-Arkitekt",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2902",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Arkitekt-Restaurues; ç. Arkitekt-Inxhinier",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2902",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Arkitekt-Interier",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2902",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Arkitekturë e ndërtime të qëndrueshme dhe përmirësimi i standardeve mjedisore",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4181",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Dizajn grafik",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3096",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Topografi dhe Gis",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3211",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Ekonomisë",
       "website": "https://umt.edu.al/fakulteti-i-ekonomise/",
       "dataSourceUrl": "https://umt.edu.al/fakultetet/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3431",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3431",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Marketing",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3431",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Sipërmarrje dhe Inovacion",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3431",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Financë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3899",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Kontabilitet",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3899",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "FinTech",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3899",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Ekonomik - MBA",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1347",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Financiare dhe Menaxhim Risku",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3328",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Marketing Dixhital (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3327",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim në Turizëm, Hoteleri dhe Evente",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3165",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

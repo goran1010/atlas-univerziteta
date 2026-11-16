@@ -18,19 +18,478 @@
       "name": "Fakulteti i Muzikës",
       "website": "https://www.uart.edu.al/index.php?pg=faqe&id=5",
       "dataSourceUrl": "https://www.uart.edu.al/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Bas-tub",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1087",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Dirizhim",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2144",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fagot",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1083",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fizarmonikë Klasike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1629",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Flaut",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1080",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kanto",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1088",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kitarë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1078",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Klarinetë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1082",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kompozim",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1070",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kontrabas",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1079",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Korno",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1084",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Muzikologji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1071",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Muzikë Jazz",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3733",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Oboe",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1081",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pedagogji Muzikore",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1089",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Perkusion",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3732",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Piano",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1074",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Trombonë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1086",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Trombë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1085",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Violinë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2145",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Violonçel",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1076",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Violë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1077",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Bastub dhe Mësuesi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3616",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Dirizhim dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3630",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fagotë dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3624",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fizarmonikë dhe Mësuesi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3615",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Flaut dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3622",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kanto dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3629",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kitarë dhe Mësuesi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3614",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Klarinetë dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3625",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kompozim dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3631",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kontrabas dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3621",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Korno dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3626",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Muzikologji dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3632",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Muzikë Jazz dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4129",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Piano Jazz",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4129",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Saksofon Jazz",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4129",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Bateri dhe Perkusion Jazz",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4129",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Bas Elektrik Jazz",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4129",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Kontrabaz Jazz",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4129",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Oboe dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3623",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pedagogji Muzikore dhe Mësuesi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3613",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Piano dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3617",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Trombon dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3628",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Trombë dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3627",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Violinçel dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3620",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Violinë dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3618",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Violë dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3619",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Muzikologji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3655",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Arteve të Bukura",
       "website": "https://www.uart.edu.al/index.php?pg=faqe&id=6",
       "dataSourceUrl": "https://www.uart.edu.al/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fotografi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3521",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pikturë Grafikë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2146",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pikturë Kavalet",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2150",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pikturë Monumentale",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2148",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pikturë Multimedia",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2147",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pikturë Tekstilë dhe Modë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2149",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Skulpturë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1068",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Skulpturë Qeramikë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2151",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pikturë Grafik dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3638",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pikturë Kavaleti dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3640",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pikturë Monumentale dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3639",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pikturë Multimedia dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3642",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pikturë Tekstili dhe Modë dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3641",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Skulpturë dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3643",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Skulpturë Qeramike dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3644",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arte Pamore",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3859",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Artit Skenik",
       "website": "https://www.uart.edu.al/index.php?pg=faqe&id=7",
       "dataSourceUrl": "https://www.uart.edu.al/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Aktrim",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1063",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Koreografi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1066",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Regji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1064",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Regji Filmi dhe Televizioni",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1062",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Skenografi - Kostumografi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1065",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Aktrim dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3633",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Koreografi dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3636",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Regji Filmi dhe Televizioni dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3637",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Regji Teatri dhe Spektakli dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3634",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Skenografi - Kostumografi dhe Mësuesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3635",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arte Skenike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3651",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

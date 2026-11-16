@@ -17,19 +17,122 @@
       "name": "Fakulteti Arkitekturë dhe Dizajn",
       "website": "https://universitetipolis.edu.al/fad/",
       "dataSourceUrl": "https://universitetipolis.edu.al/fakultetet-stafi/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Art dhe Dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1281",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Ndërtimi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2643",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitekturë Dixhitale (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3589",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Dizajn i Aplikuar",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1295",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Ndërtimi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2716",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Strukturë dhe Gjeoteknikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2716",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Arkitekturë dhe Dizajn Urban",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1283",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti Planifikim, Mjedis dhe Menaxhim Urban",
       "website": "https://universitetipolis.edu.al/fpmmu/",
       "dataSourceUrl": "https://universitetipolis.edu.al/fakultetet-stafi/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3676",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Studime Mjedisore",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1282",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3587",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Mjedisor Urban",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1298",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Planifikim Territori dhe GIS (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3588",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Planifikim dhe Menaxhim Urban",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1294",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti Kërkim dhe Zhvillim",
       "website": "https://universitetipolis.edu.al/fkzh/",
       "dataSourceUrl": "https://universitetipolis.edu.al/fakultetet-stafi/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arkitekturë dhe Planifikim Urban",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1227",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Restaurim, Konservim dhe Valorizim të Trashëgimisë Kulturore (Master Ekzekutiv)",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3585",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Efiçencë Energjitike",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2642",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

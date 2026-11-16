@@ -18,19 +18,115 @@
       "name": "Fakulteti i Shkencave të Stomatologjisë",
       "website": "https://ual.edu.al/sq/faculty/fakulteti-i-shkencave-dentare/",
       "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Teknika Laboratorike Dentare",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=246",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Stomatologji",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=247",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Stomatologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1379",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Kirurgji Orale",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1379",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Ortodonti",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1379",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Asistencë Dentare",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3535",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Mjekësore",
       "website": "https://ual.edu.al/sq/faculty/fakulteti-i-shkencave-mjekesore/",
       "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Farmaci",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=248",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Teknike Mjekësore",
       "website": "https://ual.edu.al/sq/faculty/fakulteti-i-shkencave-mjekesore-dhe-teknike/",
       "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=244",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri e Përgjithshme",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=245",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknik Imazherie dhe Radioterapi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3229",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknikë Laboratori Mjekësor",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2732",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fizioterapi klinike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1343",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri Klinike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3091",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknik Imazherie",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4098",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknikë Laboratori Mjekësor",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3578",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

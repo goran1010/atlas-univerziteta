@@ -18,31 +18,535 @@
       "name": "Fakulteti i Shkencave Humane",
       "website": "https://uniel.edu.al/fakultetet/fakulteti-i-shkencave-humane",
       "dataSourceUrl": "https://uniel.edu.al/fakultetet-ue",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Gazetari",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2474",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gazetari dhe Gjuhë Angleze",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=829",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjuhë Angleze",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=817",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjuhë Frënge",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=809",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjuhë Gjermane",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=818",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjuhë Italiane",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2473",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjuhë Shqipe Letërsi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=804",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Histori - Gjeografi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=810",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjuhësi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=814",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Studime historike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2493",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Trashëgimi Kulturore",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=806",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Albanologji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=808",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Gjuhësi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=808",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Histori",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=807",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Operator turistik",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3552",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Operator turistik në gjuhë gjermane",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3444",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Sekretarë të Specializuar dhe Administrativë",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3207",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave të Natyrës",
       "website": "https://uniel.edu.al/fakultetet/fakulteti-i-shkencave-te-natyres",
       "dataSourceUrl": "https://uniel.edu.al/fakultetet-ue",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biologji - Kimi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=831",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fizikë Kompjuterike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=837",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Matematikë - Fizikë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=833",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Matematikë Informatikë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=838",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Studime mjedisore",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3551",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologjitë e Informacionit",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=834",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Matematikë e zbatuar",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=830",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mbrojtje Mjedisi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=836",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologji Informacioni (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2443",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Logjistikë",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3206",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mekatronikë",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3228",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknik mjedisi",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3443",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologji Laboratori",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=835",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave të Edukimit",
       "website": "https://uniel.edu.al/fakultetet/fakulteti-i-shkencave-te-edukimit",
       "dataSourceUrl": "https://uniel.edu.al/fakultetet-ue",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Edukim Fizik dhe Sporte",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1153",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Arsimin Fillor Kl. I-VI",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=845",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Arsimin Parashkollor",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=846",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikologji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=864",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Drejtim dhe Administrim Arsimi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2520",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mesuesi AMU Edukatë Qytetare Gjeografi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2439",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Minor në Histori",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2439",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Mesuesi AMU Edukatë Qytetare-Histori (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2438",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Minor në Gjeografi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2438",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Mësuesi në Biologji-Kimi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3946",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi në Edukim fizik, Sport dhe Shëndet",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3907",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi në gjuhë e huaj, gjuhë frënge",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3904",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi në Histori-Gjeografi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3952",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi në Matematikë-Fizikë",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3944",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi në Matematikë-TIK",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3915",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Arsimin Fillor (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3861",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Arsimin Special (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3605",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për gjuhë angleze",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3908",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Gjuhë Shqipe dhe Letërsi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3906",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikologji Edukimi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2521",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikologji në Institucione (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=859",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Edukatorë për fëmijët (0-3 vjeç)",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3341",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Biznesit dhe i Drejtësisë",
       "website": "https://uniel.edu.al/fakultetet/fakulteti-i-biznesit-dhe-i-drejtesise",
       "dataSourceUrl": "https://uniel.edu.al/fakultetet-ue",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Administrim - Biznes",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1154",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomi dhe e Drejtë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1588",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë - Kontabilitet",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1587",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Informatikë Ekonomike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1590",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Administrim Biznesi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2497",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Drejtim Bankar",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2501",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomia dhe e Drejta në Sektorin Publik (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2494",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomia dhe e Drejta në Tregjet Ndërkombëtare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2499",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2495",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Informatikë Ekonomike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3559",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Informatikë Ekonomike (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2498",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kontabilitet (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2496",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kontabilitet dhe auditim",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2503",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2502",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Drejtësi",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3447",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Mjekësore Teknike",
       "website": "https://uniel.edu.al/fakultetet/fakulteti-i-shkencave-mjekesore-teknike",
       "dataSourceUrl": "https://uniel.edu.al/fakultetet-ue",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=841",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Imazheri",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=843",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri - Mami",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=840",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri e përgjithshme",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=839",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Logopedi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=842",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknik Laboratori",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=844",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fizioterapi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3265",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2506",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri Kirurgjikale (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2505",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Logopedi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3261",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mami",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2507",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Infermieror (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1155",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknik Imazherie (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3259",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknik Laboratori (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3262",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Mjekësore Teknike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3646",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

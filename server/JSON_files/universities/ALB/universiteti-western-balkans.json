@@ -18,19 +18,266 @@
       "name": "Fakulteti i Mjekësisë Dentare",
       "website": "https://www.wbu.edu.al/sq/faculty/faculty-of-dental-medicine",
       "dataSourceUrl": "https://www.wbu.edu.al/sq",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Teknik Dentar",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3784",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Stomatologji",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3662",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Mjekësisë",
       "website": "https://www.wbu.edu.al/sq/faculty/faculty-of-technical-medical-sciences",
       "dataSourceUrl": "https://www.wbu.edu.al/sq",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3665",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3667",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknik Imazherie",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3674",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknik Laboratori",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3673",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Imazheri Mjekësore dhe Radioterapi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4176",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Imazheri Diagnostike e Avancuar",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4176",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Radioterapi dhe Dozimetri",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4176",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Mjekësi Nukleare",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4176",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Infermieri",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3719",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Infermieristikë në Pediatri",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3719",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Infermieristikë në Kirurgji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3719",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Infermieristikë në Kujdesin Intensiv",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3719",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Infermieristikë në Urgjencë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3719",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Infermieristikë në Obsetrikë dhe Gjinekologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3719",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Shkenca Mjekësore Laboratorike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4175",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Diagnostikë Klinike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4175",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Shkenca Forensike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4175",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Farmaci",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3874",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjekësi",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3755",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Ekonomisë, Teknologjisë dhe Inovacionit",
       "website": "https://www.wbu.edu.al/sq/faculty/faculty-of-economics-technology-and-innovation",
       "dataSourceUrl": "https://www.wbu.edu.al/sq",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Bioteknologji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3666",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Biznes dhe Teknologji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3798",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomiks dhe Shkenca e të Dhënave",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3788",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë dhe Teknologji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3786",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Biomjekësore",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3660",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Software",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3787",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim i Kujdesit Shëndetësor",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3663",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Kompjuterike dhe Inteligjencë Artificiale",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3661",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Siguri Kibernetike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3785",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Analitikë Biznesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4157",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Spitalor",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3691",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Nanoteknologji",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3799",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Kompjuterike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4057",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Inxhinieri Software",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4057",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Siguri Kibernetike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4057",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Inteligjencë Artificiale dhe Analizë të dhënash",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4057",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Biznes dhe Teknologji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4194",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Administrim Biznesi (Master Ekzekutiv)",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4066",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Sipërmarrje dhe Inovacion",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4066",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Lidership",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4066",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

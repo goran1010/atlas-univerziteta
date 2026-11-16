@@ -18,31 +18,989 @@
       "name": "Fakulteti i Bujqësisë dhe Mjedisit",
       "website": "https://www.ubt.edu.al/fbm",
       "dataSourceUrl": "https://www.ubt.edu.al/fakultetet",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Agrobiologji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3478",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitekturë Peisazhi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3815",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Biologji Marine dhe Akuakulturë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3436",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Bioteknologji Zooveterinare",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3481",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Agrare",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3428",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Agronomi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3428",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Hortikulturë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1569",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Mbrojtje Bimësh",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1568",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Agrare - Agromekanizim",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1575",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Agromjedisi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1574",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Mjedisi dhe Uji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3974",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim Uji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3974",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim i Burimeve Natyrore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3974",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Planifikim dhe Arkitekturë Peizazhi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4152",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Bujqësore dhe Siguri Ushqimi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3972",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Agronomi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3972",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Hortikulturë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3972",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Mbrojtje Bimësh",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3972",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Zootekni",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3972",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Akuakulturë dhe Peshkim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3972",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Shkenca mjedisore",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3163",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim i burimeve natyrore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3163",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Teknologji Informacioni në Bujqësi dhe Mjedis (IT)",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3970",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Zootekni dhe Siguria e Produkteve Blegtorale",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3427",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Agronomi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4100",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Agronomi e përgjithshme",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4100",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Hortikulturë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4100",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Mjekësi bimore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4100",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Akuakulturë dhe Peshkim Detar (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3840",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitekturë Peisazhi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3955",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitekturë Peisazhi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2262",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Biznes Blegtoral (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=775",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Digjitalizim dhe Automatizim në Bujqësi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4121",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Energjitë e rinovueshme",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2793",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Agrare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3435",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Hortikulturë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3435",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Mbrojtja e Bimëve",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3435",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Shkencat Agronomike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3435",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Zootekni dhe siguria e produkteve blegtorale",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3435",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Akuakulturë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3435",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Agromjedisi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=754",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri mjedisi dhe menaxhim uji",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4116",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim uji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4116",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim i burimeve natyrore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4116",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Komunikim dhe Ekstension Bujqësor (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3281",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mbrojtja Kimike dhe Fitofarmacia (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=769",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim i Burimeve Natyrore",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3572",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Mjedisi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=752",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhimi i Kullimit, Ujitjes dhe Mekanizimit",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1273",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjekësi Bimore",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2260",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Planifikim dhe Arkitekturë Peizazhi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4151",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Arkitekturë Peizazhi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4151",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Planifikim Peizazhi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4151",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Resurset Gjenetike të Bimëve",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2259",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Zooteknike dhe Akuakulturë",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4146",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Zootekni dhe Siguria e Produkteve Shtazore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4146",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Akuakulturë dhe Peshkim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4146",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Teknologji e Avancuar në Hortikulturë (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=758",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologjia e Kultivimit të Bimëve (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=763",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologjitë e Prodhimit në Akuakulturë (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3330",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Zhvillim Rural dhe Mjedisor i Qëndrueshëm (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2261",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Mjedisore",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3610",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkencat Bujqësore",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3961",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhimi i Cilësisë dhe Standardeve në Sistemet Agroushqimore (Master Ekzekutiv)",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4120",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknolog Bujqësor",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3525",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologjitë e Akuakulturës dhe Peshkimit",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3668",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Ekonomisë dhe Agrobiznesit",
       "website": "https://www.ubt.edu.al/fea",
       "dataSourceUrl": "https://www.ubt.edu.al/fakultetet",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Ekonomi dhe Politikat e Zhvillimit Rural",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3441",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomiks",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3971",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Ekonomi dhe Politikat e Zhvillimit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3971",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Ekonomiks i Aplikuar",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3971",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Ekonomiks i Aplikuar",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3439",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë - Kontabilitet",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1563",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë dhe Kontabilitet",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4145",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Informatikë Biznesi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4117",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Agrobiznesi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1560",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Biznesi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3978",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim Agrobiznesi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3978",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim i Turizmit Rural",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3978",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Menaxhimi i Turizmit Rural",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1565",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomi Agrare dhe Politika Evropiane",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4150",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomi dhe Agrobiznes",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=784",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomi dhe Agrobiznes (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=789",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Financë Kontabilitet",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=789",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Ekonomi dhe Politikat e Zhvillimit të Qëndrueshëm (Ekonomia Cirkulare)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3712",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomi dhe Politikë Agrare (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=783",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Ekonomi dhe Politikë Agrare",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=783",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Ekonomi Qarkulluese",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4149",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë Bankë (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3342",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë dhe Kontabilitet",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4153",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Financë-Bankë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4153",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Kontabilitet-Auditim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4153",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Financë-Kontabilitet",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3910",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Informatikë Biznesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4147",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Data Science dhe Inteligjencë Artificiale në Ekonomi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4147",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Zhvillim Software dhe Sisteme Biznesi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4147",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Kontabilitet dhe Auditim (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3329",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Marketing i Ushqimit dhe Biznesi Digjital",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4119",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Marketingu i Ushqimit dhe Biznesi Digjital",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3757",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Agrobiznesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4118",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4118",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Sipërmarrje dhe Inovacion",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4118",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Administrim i Ndërmarjeve",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=781",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Marketing",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=781",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Menaxhim i Ndërmarjeve (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=780",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim i Ndërmarjeve të Agrobiznesit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=780",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Menaxhim i Turizmit Rural (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3283",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Informacioni në Agrobiznes (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3282",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Sipërmarrje dhe Inovacion në Ekonomi Cirkulare (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3928",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Turizëm i Qëndrueshëm dhe Zhvillim Rural",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4144",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomi dhe Agrobiznes",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3645",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Planifikim dhe zhvillim ekonomik territorial i zonave rurale (Master Ekzekutiv)",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3504",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Agroturizëm dhe Mikpritje",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3523",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Sistemesh Informacioni",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3526",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Bioteknologjisë dhe Ushqimit",
       "website": "https://www.ubt.edu.al/fbu",
       "dataSourceUrl": "https://www.ubt.edu.al/fakultetet",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri Agroushqimore",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3816",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Teknologji Agroushqimore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3816",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Vreshtari Enologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1578",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Shkencat e Ushqimit dhe të Ushqyerit",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3220",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologji Ushqimore",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3977",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ushqimi dhe Shkencat e të Ushqyerit",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3973",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Analizat e Ushqimeve (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2792",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Bioteknologji Ushqimore",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2641",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Cilësia dhe Siguria Ushqimore (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2271",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Agroushqimore",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=800",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Vreshtari - Enologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=800",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknologji Agroushqimore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=800",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Ushqimore",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4143",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Teknologji Ushqimore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4143",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknologji e Pijeve Alkoolike dhe Joalkoolike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4143",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Bioteknologji Ushqimore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4143",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Shkencat e të Ushqyerit",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4142",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkencat e Ushqimit dhe të Ushqyerit",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3956",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Sistemet e Qëndrueshme të Prodhimit të Ushqimeve",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3720",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Inxhinieri, Cilësi dhe Siguri Ushqimore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3720",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim i Sistemeve të Prodhimit të Ushqimeve",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3720",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Shkenca dhe Bioteknologjia Ushqimore",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3611",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Pyjore",
       "website": "https://www.ubt.edu.al/fshp",
       "dataSourceUrl": "https://www.ubt.edu.al/fakultetet",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dizajni i Interierit dhe Inxhinieri Druri",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3975",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Inxhinieri Teknologji Druri",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3975",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Dizajni i Mobiljeve dhe Interierit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3975",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Pyjore",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3976",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim i Ekosistemeve Pyjore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3976",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Mbrojtja e Natyrës dhe Biodiversitetit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3976",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim i Zonave të Mbrojtura dhe Qeverisja e Parqeve Urbane dhe Periurbane",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3808",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Përpunim Druri",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3959",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri përpunim druri",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3223",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Dizajn i mobiljeve dhe interierit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3223",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Dizajn dhe Teknologji Druri",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4148",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Pyjore",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=795",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Përpunimi Druri",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3948",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Dizajni dhe Teknologjia e Mobilimit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3948",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Konstruksione druri (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3288",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim i Integruar i Pyjeve me Bazë Komuniteti (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3284",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhimi i Ekosistemeve Pyjore",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4103",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkencat Pyjore",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=796",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Qeverisja e Qëndrueshme e Burimeve Pyjore dhe Kullosore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=796",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknologjia e Drurit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=796",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Fakulteti i Mjekësisë Veterinare",
       "website": "https://www.ubt.edu.al/fmv",
       "dataSourceUrl": "https://www.ubt.edu.al/fakultetet",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Mjekësi Veterinare",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4192",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Veterinare",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3960",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Siguri ushqimore dhe shëndet publik veterinar",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3863",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Veterinar",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2897",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

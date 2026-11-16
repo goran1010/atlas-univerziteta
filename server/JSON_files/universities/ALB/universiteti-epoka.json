@@ -21,19 +21,259 @@
       "phone": "+355 4 22 32 086",
       "email": "fae@epoka.edu.al",
       "dataSourceUrl": "https://fae.epoka.edu.al/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri elektronike dhe komunikimi dixhital",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1768",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Kompjuterike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1808",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Ndërtimi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4133",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Softueri",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3452",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitekturë",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=281",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ineligjencë Artificiale dhe Inxhinieri e të Dhënave",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4168",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Elektronike dhe Komunikacioni",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1770",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Kompjuterike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=282",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Ndërtimi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=287",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Inxhinieri e Strukturave të Ndërtimit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=287",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim i Ndërtimeve",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=287",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Inxhinieri e Resurseve Ujore; ç. Inxhinieri e Materialeve të Ndërtimit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=287",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Ndërtimi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1819",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim risku dhe mbrojtje ndaj zjarrit në inxhinierinë e ndërtimit (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3332",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Projektim Interier",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4134",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitekturë",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1811",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitekturë",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4182",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Kompjuterike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1230",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Ndërtimi",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1229",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Ekonomike dhe Administrative",
       "website": "https://feas.epoka.edu.al/",
       "dataSourceUrl": "https://www.epoka.edu.al/sq",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1767",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomiks",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2647",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë - Bankë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2561",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Informatikë ekonomike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1106",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kontabilitet dhe Teknologji Financiare",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4167",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Marketing Ndërkombëtar dhe Menaxhim Logjistik",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1368",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Administrim - biznes",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=285",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4031",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomiks",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=288",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë - bankë",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=284",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fintech",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4022",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inteligjencë Biznesi dhe Shkenca e të Dhënave",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4045",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Administrim Biznes",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1233",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomiks",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1231",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Financë - Bankë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1231",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Fakulteti i Drejtësisë dhe Shkencave Sociale",
       "website": "https://flss.epoka.edu.al/",
       "dataSourceUrl": "https://www.epoka.edu.al/sq",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Shkenca Politike dhe Marrëdhënie Ndërkombëtare",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1809",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca politike dhe marrëdhënie ndërkombëtare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=283",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Politike dhe Marrëdhënie Ndërkombëtare (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1822",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Drejtësi",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3086",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Politike dhe Marrëdhënie Ndërkombëtare",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1232",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

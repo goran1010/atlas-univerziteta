@@ -18,25 +18,391 @@
       "name": "Fakulteti i Shkencave Ekonomike",
       "website": "https://www.umsh.edu.al/c/100/fakulteti-i-shkencave-ekonomike",
       "dataSourceUrl": "https://www.umsh.edu.al/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Shkenca Ekonomike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1225",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Administrim Biznesi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1225",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Financë Bankë dhe Kontabilitet",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1225",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Biznes dhe Ligj",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1225",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3506",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Sipërmarrja dhe Inovacioni",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3506",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Marketing Shitje dhe Komunikim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3506",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Auditim i Brendshëm dhe Kontrolli Financiar (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3604",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë Bankë",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3594",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Banka dhe Tregje Financiare",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3594",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknologjitë e Reja Financiare",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3594",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Menaxhim Biznesi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1098",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim Turizmi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1098",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhimi i Pasurisë së Paluajtshme",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1098",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim Arti; ç. Menaxhim Shëndeti",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1098",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim Arsimi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1098",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Shkenca Ekonomike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3648",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim dhe Marketing i Turizmit",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3858",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Drejtësisë dhe Shkencave Humane",
       "website": "https://www.umsh.edu.al/c/102/fakulteti-i-drejtesise-dhe-shkencave-humane",
       "dataSourceUrl": "https://www.umsh.edu.al/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Komunikim dhe Marrëdhënie me Publikun",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3524",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Marrëdhënie dhe Institucionet Ndërkombëtare",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3528",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për arsimin fillor",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3742",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për arsimin parashkollor",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3684",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikologji e Përgjithshme",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4092",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Politike dhe Administrative",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3527",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Politikat e Integrimit dhe Qeverisje",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3527",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Administratë Publike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3527",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "E Drejtë Civile dhe Tregtare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2729",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "E Drejtë Publike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2728",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Hartim, Menaxhim Projektesh (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3579",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Marrëdhënie Ndërkombëtare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3954",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Siguri Ndërkombëtare",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3954",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Biznes Ndërkombëtar",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3954",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Komunikim Ndërkombëtar",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3954",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Marrëdhënie Ndërkombëtare (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1096",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Studime Mesdhetare",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1096",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Studime Europiane",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1096",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Mësuesi për Arsimin Fillor (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4047",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Arsimin Special (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4197",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikologji",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3723",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Psikologji Organizative",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3723",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Psikologji Komunitare",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3723",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Këshillim dhe Psikoterapi me Orientim Njohës Sjellor",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3723",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Shkenca Politike dhe Administrative (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1095",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Politikat Sociale",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1095",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Administratë Publike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1095",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Qeverisje Vendore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1095",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Studime Politike dhe Strategjitë Ekonomike të Zhvillimit",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3419",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Drejtësi",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3606",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Informatikës",
       "website": "https://www.umsh.edu.al/c/219/fakulteti-i-informatikes",
       "dataSourceUrl": "https://www.umsh.edu.al/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Informatikë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3741",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Informatikë Biznesi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3741",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Inxhinieri Informatike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3741",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknologji Informacioni",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3741",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inteligjencë Artificiale",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4013",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologji informacioni dhe aplikime informatike",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3473",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Specialist rrjetesh kompjuterike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3473",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknik për pajisje elektronike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3473",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknik për software dhe digjitalizim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3473",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Mjekësore",
       "website": "https://www.umsh.edu.al/c/225/fakulteti-i-shkencave-mjekesore",
       "dataSourceUrl": "https://www.umsh.edu.al/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3852",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri e Përgjithshme",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3850",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknik Laboratori",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3851",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kontrolli dhe Parandalimi i Infeksioneve",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4138",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

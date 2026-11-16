@@ -17,25 +17,153 @@
       "name": "Fakulteti i Drejtësisë",
       "website": "https://luarasi-univ.edu.al/sq/fakulteti-i-drejtesise/",
       "dataSourceUrl": "https://luarasi-univ.edu.al/sq/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "E drejtë civile dhe tregtare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=24",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "E drejtë penale",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=23",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Siguria dhe Rendi Publik (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3127",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Drejtësi",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3479",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti Ekonomik",
       "website": "https://luarasi-univ.edu.al/sq/fakulteti-ekonomik-new/",
       "dataSourceUrl": "https://luarasi-univ.edu.al/sq/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Administrim Biznes",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1202",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Business and Management",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3895",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3884",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë Bankë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1203",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Bankat dhe Tregjet Financiare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1207",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Ekzekutiv",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1206",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Potenciale për Zhvillimin Ekonomik Kombëtar",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4073",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Teknologjisë së Informacionit dhe Inovacionit",
       "website": "https://luarasi-univ.edu.al/sq/fakulteti-i-teknologjise-se-infromacionit-dhe-inovacionit/",
       "dataSourceUrl": "https://luarasi-univ.edu.al/sq/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Data Science and Business Analytics",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3896",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologji Informacioni dhe Inovacioni",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3166",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Siguria kibernetike dhe e informacionit (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3192",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Siguria Kibernetike dhe Inteligjenca Artificiale",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4014",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologji Informacioni dhe Inovacioni",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3191",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Mjekësore",
       "website": "https://luarasi-univ.edu.al/sq/bachelor-fakulteti-i-mjekesise/",
       "dataSourceUrl": "https://luarasi-univ.edu.al/sq/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Infermieri",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3548",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4187",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Farmaci",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3549",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Stomatologji",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3550",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

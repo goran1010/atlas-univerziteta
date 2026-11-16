@@ -18,19 +18,127 @@
       "name": "Fakulteti i Shkencave të Lëvizjes",
       "website": "https://fshl.ust.edu.al/",
       "dataSourceUrl": "https://ust.edu.al/njesite-kryesore/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Shkencat e lëvizjes",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1092",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi në Edukimin Fizik e Shëndetësor",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3735",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Sportive",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4179",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Trajner i Përgatitjes Fizike (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3571",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Trajnimi Sportiv dhe të Ushqyerit (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4189",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Sportive",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3650",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave të Rehabilitimit",
       "website": "https://fshr.ust.edu.al/",
       "dataSourceUrl": "https://ust.edu.al/njesite-kryesore/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dietologji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4172",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca të Rehabilitimit",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3483",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fizioterapi Klinike dhe Rehabilitim",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4158",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Rehabilitim Fizioterapeutik në Sport (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3821",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Rehabilitim të Profesioneve të Shëndetit",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4190",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Veprimtarisë Fizike dhe Rekreacionit",
       "website": "https://fvfr.ust.edu.al/",
       "dataSourceUrl": "https://ust.edu.al/njesite-kryesore/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Aktivitete në Natyrë dhe Turizëm Sportiv",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4159",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fushat e veprimtarisë fizike, të shëndetit dhe të rekreacionit",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1091",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Aktiviteti Fizik dhe Rekreacioni - Trajner Fitnesi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2589",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Aktiviteti Fizik dhe Shëndeti",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1491",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim në Sport dhe Turizëm (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3087",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Aktiviteti Fizik dhe Shëndeti",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3649",
+          "lastModified": "2026-11-16"
+        }
+      ]
     }
   ]
 }

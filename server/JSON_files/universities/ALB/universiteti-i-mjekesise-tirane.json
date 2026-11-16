@@ -18,19 +18,718 @@
       "name": "Fakulteti i Mjekësisë",
       "website": "https://www.fakultetimjekesise.edu.al/",
       "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Shëndet Publik",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1554",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Shëndetësor (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2731",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shëndet Publik",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2099",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shëndet Publik (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2097",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Farmaci",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1762",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjekësi e Përgjithshme",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=557",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Anatomi",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4078",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Farmaci",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4082",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fiziologji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4084",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kirurgji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4080",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Kirurgji e përgjithshme dhe nënspecialitete",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4080",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Otorinolaringologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4080",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Kirurgji e përgjithshme dhe nënspecialitete",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3802",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjekësi Interne",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Gastroenterologji/Hepatologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Endokrinologji/Diabetologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Pneumologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Hematologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Alergologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Nefrologji Dializë Transplant",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Reumatologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Studime të thelluara në Kardiologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Mjekësi Familje",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Sëmundje Infektive",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Dermatologji Venerologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Mjekësi Laboratorike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4091",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Morfologji Klinike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=569",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Neurologji dhe Neurokirurgji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4083",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Obstetrikë dhe Gjinekologji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4079",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Obstetrikë-Gjinekologji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3801",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Oftalmologji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4086",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pediatri",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4088",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikiatri dhe Shëndet Mendor",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4090",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Radiologji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4089",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shëndet Publik",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4081",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Studime të Thelluara dhe Kërkime në Otorinolaringologji",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=563",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Alergologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2058",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Anatomi Patologjike",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2059",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Anestezi Reanimacion",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2060",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Dermatologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2061",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Diagnozë me Imazhe",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2065",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Endokrinologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2062",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gastrohepatologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2063",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Hematologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2064",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kardiokirurgji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2066",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kardiologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2067",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kirurgji e Përgjithshme",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2068",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kirurgji Pediatrike (Master Ekzekutiv)",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3880",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kirurgji plastike, rikonstruktive dhe estetike",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3129",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Laborator Klinik - Biokimik",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2070",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Farmaceutik dhe Inovacion (Master Ekzekutiv)",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4111",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mikrobiologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2071",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjek Familjeje",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2072",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjekësi Interne",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=578",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjekësi Ligjore",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2074",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjekësi Transfuzive",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1830",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjekësi Urgjence",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=576",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Nefrologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3482",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Neurokirurgji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=577",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Neurologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2076",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Obstetrikë - Gjinekologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2079",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Okulistikë",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2080",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Onkologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2081",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "ORL (Otorinolaringologji)",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2078",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ortopedi - Traumatologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2082",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pediatri",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2083",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pneumologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2085",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikiatri",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2086",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikiatri e Fëmijëve dhe e Adoleshentëve",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2087",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Reumatologji",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2088",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shëndet Publik",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2090",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Sëmundje Infektive",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2089",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Toksikologji Klinike",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2092",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Mjekësisë Dentare",
       "website": "https://fmd.edu.al/",
       "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise-dentare-2/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Higjenist Dentar",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3226",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknikë Dentare",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3222",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Higjenë Dentare dhe Terapi Parodontale jo Kirurgjikale (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3803",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Stomatologji",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=558",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mjekësi Dentare",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4085",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Shkenca Dentare",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4085",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknologji Dentare dhe Ortodonci",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4085",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Kirurgji Oromaksilofaciale",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4085",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Implanto Protetikë (Master Ekzekutiv)",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3725",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kirurgji Oro-Maksilo Faciale",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2069",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ortodonci",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3734",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Pedodonti",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2084",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Terapi Stomatologjike",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2091",
+          "lastModified": "2026-11-16"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Mjekësore Teknike",
       "website": "https://fshmt.edu.al/",
       "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2057",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri e Përgjithshme",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1555",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Logopedi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1558",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mami",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1556",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknikë imazherie",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1559",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknikë laboratori",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1557",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fizioterapi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=638",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Fizioterapi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3080",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=636",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri Familje (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3574",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Kujdes Paliativ (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3313",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Logopedi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2564",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Logopedi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2563",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mami",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=640",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mami (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3083",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Infermieror (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3082",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknikë imazherie",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=639",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknikë imazherie (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3081",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknikë laboratori",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=637",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknikë laboratori (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3084",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Lëndët Klinike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=642",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Lëndët Paraklinike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2056",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Infermierore",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2100",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Infermieri",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2100",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknikë Imazherie",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2100",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Fizioterapi; ç. Logopedi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2100",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknikë Laboratori",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2100",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Mami",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2100",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Shkenca Mjekësore Teknike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4087",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Fizioterapi dhe Rehabilitim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4087",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Infermieri dhe Mami",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4087",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Teknologji Mjekësore Diagnostikuese dhe Trajtuese",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4087",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
