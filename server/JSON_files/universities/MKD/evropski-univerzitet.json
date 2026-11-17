@@ -15,37 +15,189 @@
       "name": "Fakultet za dentalna medicina",
       "website": "https://www.eu.edu.mk/fs-misija/",
       "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.eu.edu.mk/fs-misija/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Stručni studii za zabni tehničari",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2010,
+          "ects": 180,
+          "dataSourceUrl": "https://www.eu.edu.mk/strucni-studii-zabni-tehnicari/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za detektivi i kriminalistika",
       "website": "https://www.eu.edu.mk/fdk-misija/",
       "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Bezbednost",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.eu.edu.mk/fdk-vtor-ciklus/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za art i dizajn",
       "website": "https://www.eu.edu.mk/fad-misija/",
       "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Enterier dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://www.eu.edu.mk/fad-prv-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://www.eu.edu.mk/fad-prv-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Moden dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://www.eu.edu.mk/fad-prv-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Enterier dizajn",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.eu.edu.mk/fad-vtor-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.eu.edu.mk/fad-vtor-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Moden dizajn",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.eu.edu.mk/fad-vtor-ciklus/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za informatika",
       "website": "https://www.eu.edu.mk/fi-misija/",
       "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biznis informatika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://www.eu.edu.mk/fi-prv-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biznis informatika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.eu.edu.mk/%d1%84%d0%b0%d0%ba%d1%83%d0%bb%d1%82%d0%b5%d1%82-%d0%b7%d0%b0-%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%82%d0%b8%d0%ba%d0%b0-%d0%b2%d1%82%d0%be%d1%80-%d1%86%d0%b8%d0%ba%d0%bb%d1%83%d1%81-%d0%bd/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za ekonomski nauki",
       "website": "https://www.eu.edu.mk/fen-misija/",
       "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biznis menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://www.eu.edu.mk/fen-prv-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansisko-bankarski i smetkovodstven menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://www.eu.edu.mk/fen-prv-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biznis menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.eu.edu.mk/fen-vtor-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.eu.edu.mk/fen-vtor-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Marketing",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.eu.edu.mk/fen-vtor-ciklus/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Zdravstven i farmacevtski menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.eu.edu.mk/fen-vtor-ciklus/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za pravni nauki",
       "website": "https://www.eu.edu.mk/fakultet-za-pravni-nauki/",
       "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kazneno pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.eu.edu.mk/fpn-vtor-ciklus/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     }
   ]
 }
