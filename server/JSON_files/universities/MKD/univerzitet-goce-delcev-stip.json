@@ -20,7 +20,177 @@
       "phone": "+389 32 550 081",
       "email": "contact-ma@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Džez bas",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Džez gitara",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Džez peenje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Džez pijano",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Džez saksofon",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Džez tapani i perkusii",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Etnokoreologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Flejta",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Gitara",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Klarinet",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Muzičar izveduvač - Harmonika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Muzičar izveduvač - Saksofon",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Muzička teorija i pedagogija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Pijano",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Solo peenje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Violina",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Džez bas",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Džez gitara",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Džez pijano",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Džez saksafon",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Etnoharmonika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Etnokoreologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Muzička teorija i pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Narodni instrumenti",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Etnokoreologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Likovna akademija",
@@ -29,7 +199,15 @@
       "phone": "+389 32 550 062",
       "email": "contact-la@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Klasično slikarstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Filmska akademija",
@@ -38,7 +216,15 @@
       "phone": "+389 32 550 062",
       "email": "contact-fa@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Baletska pedagogija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Fakultet za prirodni i tehnički nauki",
@@ -47,7 +233,141 @@
       "phone": "+389 32 550 083",
       "email": "contact-fptn@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dizajn na enterier i mebel",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Geologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Industriska logistika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Inženerstvo za zaštita na životna sredina",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kompjuterski dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Rudarstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Naoǵališta na mineralni surovini",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Pejzažna arhitektura",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Podgotovka na mineralni surovini",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Geologija i geofizika",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Hidrogeologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Inženerstvo za zaštita na rabotna sredina",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Inženerstvo za zaštita na životna sredina",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Naoǵališta na mineralni surovini",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Petrologija mineralogija i geohemija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Podgotovka na mineralni surovini",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Podzemna eksploatacija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Površinska eksploatacija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Fakultet za informatika",
@@ -56,7 +376,122 @@
       "phone": "+389 32 550 064",
       "email": "contact-fi@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Computer Engineering and Technologies",
+          "cycle": "FIRST",
+          "language": "Angliski",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kompjuterski nauki",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kompjutersko inženerstvo i tehnologii",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Matematika - nastavna",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Bioinformatika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Finansiska i aktuarska matematika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Informaciski sistemi i tehnologii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Inteligentni veb tehnologii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kompjuterska bezbednost i digitalna forenzika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Matematičko-informatičko obrazovanie",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Presmetkovsno inženerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Robotika i inteligentni sistemi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Softversko inženerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kompjuterski nauki i inženerstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Zemjodelski fakultet",
@@ -65,7 +500,158 @@
       "phone": "+389 32 550 071",
       "email": "contact-zf@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fitomedicina",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Gradinarstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kvalitet i bezbednost na hrana",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Lozarstvo i vinarstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Poledelstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Rastitelna biotehnologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Lozarstvo i ovoštarstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17",
+          "tracks": [
+            {
+              "name": "Lozarstvo",
+              "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+              "lastModified": "2026-11-17"
+            }
+          ]
+        },
+        {
+          "name": "Prehrambena tehnologija i prerabotka na animalni proizvodi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17",
+          "tracks": [
+            {
+              "name": "Enologija",
+              "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+              "lastModified": "2026-11-17"
+            },
+            {
+              "name": "Bezbednost na hrana",
+              "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+              "lastModified": "2026-11-17"
+            }
+          ]
+        },
+        {
+          "name": "Rastitelno proizvodstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17",
+          "tracks": [
+            {
+              "name": "Održlivo rastitelno proizvodstvo",
+              "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+              "lastModified": "2026-11-17"
+            }
+          ]
+        },
+        {
+          "name": "Rstitelna biotehnologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Zaštita na rastenijata i životnata sredina",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17",
+          "tracks": [
+            {
+              "name": "Fitomedicina- zaštita na rastenijata",
+              "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+              "lastModified": "2026-11-17"
+            }
+          ]
+        },
+        {
+          "name": "Bezbednost na hrana",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Lozarstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Nauka za zemjišteto i hidrologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Rastitelna biotehnologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Rastitelno proizvodstvo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Mašinski fakultet",
@@ -74,7 +660,29 @@
       "phone": "+389 32 550 033",
       "email": "contact-mf@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Mašinski dizajn i proizvodstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Mašinsko inženerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Elektrotehnički fakultet",
@@ -83,7 +691,31 @@
       "phone": "+389 32 550 900",
       "email": "contact-etf@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Elektroenergetika i obnovlivi izvori na energija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Nekonvencionalni izvori na energija i tehnologii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Regulacija i upravuvanje so tehnološki procesi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Tehnološko-tehnički fakultet",
@@ -92,7 +724,51 @@
       "phone": "+389 32 550 594",
       "email": "contact-ttf@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dizajn i tehnologija na tekstil i obleka",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Inženerstvo na materijali, tehnologii i inovacii",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Prehranbena tehnologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Dizajn i tehnologija na modna obleka",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Menadžment i kontrola na kvalitet",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Nauka i tehnologija za kompozitni materijali",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Fakultet za medicinski nauki",
@@ -101,7 +777,190 @@
       "phone": "+389 32 550 078",
       "email": "contact-fmn@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Akušerki",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Dentalna medicina",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Farmacija na angliski jazik",
+          "cycle": "FIRST",
+          "language": "Angliski",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Fizioterapevti",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Medicinski laboranti",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Medicinski sestri/tehničari",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Optometrija i očna optika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Opšta medicina",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Zaben tehničar/protetičar",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Diplomirana stručna medicinska sestra / tehničar specijalizirana za prevencija na infektivni i neinfektivni zaboluvanja",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Diplomirana stručna medicinska sestra/tehničar specijalizirana za anestetičar",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Diplomirana stručna medicinska sestra/tehničar specijalizirana za instrumentarka",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Diplomirana stručna medicinska sestra/tehničar specijalizirana za intenzivna nega",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Diplomirana stručna medicinska sestra/tehničar specijalizirana za semejna i patronažna sestra",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Fitoterapija i suplementacija - akademska smecijalizacija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalistički stručni studii po fizikalna medicina i rehabilitacija so kineziterapija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalistički stručni studii po nevrorehabilitacija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalistički stručni studii po optometrija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalistički stručni studii po tradicionalna kineska medicina",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalistički stručni studii po transfuziologija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalistički stručni studii za hemisko-biohemiska laboratorija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalistički stručni studii za mikrobiološka laboratorija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalistički stručni studii za sanitarno-hemiska laboratorija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalistički stručni studii za zaben tehničar - protetičar",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Ekonomski fakultet",
@@ -110,7 +969,97 @@
       "phone": "+389 32 550 661",
       "email": "contact-ef@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Bussines Economic",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "language": "Angliski",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Finansii",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Menadžment i marketing",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Meǵunarodna ekonomija i biznis",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Smetkovodstvo i revizija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Finansii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Marketing menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "MBA-Menadžmen",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "MBA-Menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Meǵuna ekonomija i biznis",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Smetkovodstvo i revizija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Ekonomski nauki",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Praven fakultet",
@@ -119,7 +1068,115 @@
       "phone": "+389 32 550 081",
       "email": "contact-pf@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "International Law and international relations",
+          "cycle": "FIRST",
+          "language": "Angliski",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Komunikaciski studii i odnosi so javnosta",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Politički studii",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Pravni studii",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Delovno pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Demokraski institucii i čovekovi prava",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Graǵansko pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Javna administracija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kazneno pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Meǵunarodno i evropsko pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Delovno pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Graǵansko pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kazneno pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Politički sistemi",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Fakultet za turizam i biznis logistika",
@@ -129,7 +1186,33 @@
       "phone": "+389 32 550 350",
       "email": "contact-ftbl@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biznis administracija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Biznis logistika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Hotelsko - restoranski menadžment",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Turizam i ugostitelstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Fakultet za obrazovni nauki",
@@ -138,7 +1221,97 @@
       "phone": "+389 32 550 062",
       "email": "contact-fon@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Istorija - nastavna nasoka",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Oddelenska nastava",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Predučilišno vospituvanje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Istorija, mitovi, indentiteti",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Metodika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Obrazovanie na nastavnici i profesiolnalen razvoj",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Obrazovni politiki i obrazoen menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Učilišna pedagogija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Vospitanieto i obrazovanieto vo raniot detski razvoj",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-tret-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalistički studii Steknuvanje na nastavnički kompetencii",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     },
     {
       "name": "Filološki fakultet",
@@ -147,7 +1320,109 @@
       "phone": "+389 32 550 068",
       "email": "contact-ff@ugd.edu.mk",
       "dataSourceUrl": "https://www.ugd.edu.mk/kontakti/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Angliski jazik i kniževnost - nastavna nasoka",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Angliski jazik i kniževnost - preveduvanje i tolkuvanje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Germanski jazik i kniževnost - nastavna nasoka",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Germanski jazik i kniževnost - preveduvanje i tolkuvanje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Italijanski jazik i kniževnost - nastavna nasoka",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Italijanski jazik i kniževnost - preveduvanje i tolkuvanje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Makedonski jazik i kniževnost - nastavna nasoka",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Makedonski jazik i kniževnost - primeneta nasoka",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Turski jazik i kniževnost - nastavna nasoka",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Turski jazik i kniževnost - preveduvanje i tolkuvanje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Angliska filologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Germanska filologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Italijanska filologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Makedonska filologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Turska filologija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/07/konkurs-vtor-ciklus-studii-2026-27.pdf",
+          "lastModified": "2026-11-17"
+        }
+      ]
     }
   ]
 }

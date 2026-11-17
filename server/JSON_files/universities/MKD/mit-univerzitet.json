@@ -16,43 +16,220 @@
       "name": "Fakultet za dentalna medicina",
       "website": "https://www.mit.edu.mk/fakulteti/fakultet-za-dentalna-medicina",
       "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dentalna implantologija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "language": "Makedonski",
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dentalna implantologija (na angliski jazik)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "language": "Angliski",
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
+          "ects": 360,
+          "language": "Makedonski",
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dentalna medicina (na angliski jazik)",
+          "cycle": "INTEGRATED",
+          "ects": 360,
+          "language": "Angliski",
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za psihologija",
       "website": "https://www.mit.edu.mk/fakulteti/fakultet-za-psihologija",
       "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Klinička psihologija i psihološko sovetuvanje",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija na obrazovanie",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija na organizacinsko odnesuvanje",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za arhitektura",
       "website": "https://www.mit.edu.mk/fakulteti/fakultet-za-arhitektura",
       "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arhitektura",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dizajn",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Proektiranje",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Urbanizam",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za pravni nauki, meǵunarodni odnosi i diplomatija",
       "website": "https://www.mit.edu.mk/fakulteti/fakultet-za-pravni-nauki-megunarodni-odnosi-i-diplomatija",
       "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Pravni nauki (180 EKTS)",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://www.mit.edu.mk/fakulteti/fakultet-za-pravni-nauki-megunarodni-odnosi-i-diplomatija",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravni nauki (240 EKTS)",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.mit.edu.mk/fakulteti/fakultet-za-pravni-nauki-megunarodni-odnosi-i-diplomatija",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravni nauki",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.mit.edu.mk/fakulteti/fakultet-za-pravni-nauki-megunarodni-odnosi-i-diplomatija",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za bezbednosni nauki",
       "website": "https://www.mit.edu.mk/fakulteti/fakultet-za-bezbednosni-nauki",
       "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Bezbednost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Bezbednost",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Ekonomski fakultet",
       "website": "https://www.mit.edu.mk/fakulteti/ekomonski-fakultet",
       "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Ekonomski nauki",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansii, bankarstvo i osiguruvanje",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Marketing",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Smetkovodstvo i revizija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Koledž za medicinska kozmetologija i fizioterapija",
       "website": "https://www.mit.edu.mk/fakulteti/koledz-za-medicinska-kozmetologija-i-fizioterapija",
       "dataSourceUrl": "https://www.mit.edu.mk/za-univerzitetot",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Estetika i kozmetologija",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.mit.edu.mk/fakulteti/koledz-za-medicinska-kozmetologija-i-fizioterapija",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Velnes, spa i fizioterapija",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.mit.edu.mk/fakulteti/koledz-za-medicinska-kozmetologija-i-fizioterapija",
+          "lastModified": "2026-11-18"
+        }
+      ]
     }
   ]
 }

@@ -17,31 +17,141 @@
       "name": "Fakultet za informatički sistemi, vizuelizacija, digitalna, multimedijalna i animaciska tehnika",
       "website": "https://uist.edu.mk/academics/bachelors/isvma/",
       "dataSourceUrl": "https://uist.edu.mk/info-center/accreditations/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Information Systems, Visualization, Multimedia and Animation (180 ECTS)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/isvma/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Information Systems, Visualization, Multimedia and Animation (240 ECTS)",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/isvma/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za kompjuterski nauki i inženerstvo",
       "website": "https://uist.edu.mk/academics/bachelors/cse/",
       "dataSourceUrl": "https://uist.edu.mk/info-center/accreditations/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Computer Science and Engineering (180 ECTS)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/cse/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Computer Science and Engineering (240 ECTS)",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/cse/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Computer Technology and Informatics",
+          "cycle": "SECOND",
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/masters/cse-master/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za komunikaciski mreži i bezbednost",
       "website": "https://uist.edu.mk/academics/bachelors/cns/",
       "dataSourceUrl": "https://uist.edu.mk/info-center/accreditations/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Communication Networks and Security (180 ECTS)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/cns/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Communication Networks and Security (240 ECTS)",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/cns/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Information Sciences and Technologies",
+          "cycle": "SECOND",
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/masters/cns-master/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za informatički i komunikaciski nauki",
       "website": "https://uist.edu.mk/academics/bachelors/ics/",
       "dataSourceUrl": "https://uist.edu.mk/info-center/accreditations/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Digital Business Analytics",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/ics/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Digital Business Analytics",
+          "cycle": "SECOND",
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/masters/ics-master/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za primeneti informatički tehnologii, mašinska inteligencija i robotika",
       "website": "https://uist.edu.mk/academics/bachelors/aitmir/",
       "dataSourceUrl": "https://uist.edu.mk/%d0%94%d0%b5%d0%bc%d0%be%d0%bd%d1%81%d1%82%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b8-%d0%bd%d0%b0-%d0%bf%d1%80%d0%b2-%d1%86%d0%b8%d0%ba%d0%bb%d1%83%d1%81-%d1%81%d1%82%d1%83%d0%b4%d0%b8%d0%b8-%d0%b7%d0%b0/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Applied IT, Machine Intelligence and Robotics",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/aitmir/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Information and Network Security, Privacy and Data Protection",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uist.edu.mk/academics/masters/aitmir-master/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     }
   ]
 }
