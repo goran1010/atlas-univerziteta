@@ -17,25 +17,91 @@
       "name": "Fakultet za politički nauki",
       "website": "https://iust.edu.mk/mk/faculties-mk/political-sciences-mk/",
       "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Diplomatija i meǵunarodni odnosi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/political-sciences-mk/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za ekonomski nauki",
       "website": "https://iust.edu.mk/mk/faculties-mk/economics-mk/",
       "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Ekonomija i biznis",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://iust.edu.mk/wp-content/uploads/2024/06/Ekonomija-i-biznis-1-ciklus-4-godini.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Marketing i finansiski menadžment",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/economics-mk/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Ekonomija i biznis",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://iust.edu.mk/wp-content/uploads/2024/06/Ekonomija-i-biznis-2-ciklus-1-godina.pdf",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za pravni nauki",
       "website": "https://iust.edu.mk/mk/faculties-mk/law-mk/",
       "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Javna administracija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/law-mk/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kriminalistika i detektivi",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://iust.edu.mk/wp-content/uploads/2024/06/Kriminalistika-i-detektivi-1-ciklus-4-godini.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravosudstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/law-mk/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kriminalistika i detektivi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://iust.edu.mk/wp-content/uploads/2024/06/Kriminalistika-i-detektivi-2-ciklus-1-godina.pdf",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za informatički tehnologii",
       "website": "https://iust.edu.mk/mk/faculties-mk/it-mk/",
       "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kompjuterski nauki",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://iust.edu.mk/mk/faculties-mk/it-mk/",
+          "lastModified": "2026-11-18"
+        }
+      ]
     }
   ]
 }

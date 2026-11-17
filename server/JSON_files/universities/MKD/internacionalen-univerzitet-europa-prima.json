@@ -15,17 +15,201 @@
     {
       "name": "Fakultet za teatarski umetnosti",
       "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Teatarski umetnosti",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Teatarska režija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Akterska igra",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Dramaturgija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "name": "Scenski umetnosti",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Teatarska režija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Akterska igra",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Dramaturgija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Fakultet za filmski umetnosti",
       "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Filmski umetnosti",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Filmska i TV režija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Filmska i TV kamera",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Filmska i TV montaža",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Fotografija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Produkcija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Animacija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Zvučen inženering",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "name": "Audiovizuelni umetnosti",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Filmska i TV režija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Filmska i TV kamera",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Filmska i TV montaža",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Fotografija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Produkcija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Animacija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Zvučen inženering",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Fakultet za primeneta muzika",
       "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Muzička umetnost",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Kompozicija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Vokalen oddel",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Instrumentalen oddel",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "name": "Muzička umetnost",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Kompozicija",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Vokalen oddel",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Instrumentalen oddel",
+              "dataSourceUrl": "https://www.europaprima.com/fakulteti/studiski-programi/",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

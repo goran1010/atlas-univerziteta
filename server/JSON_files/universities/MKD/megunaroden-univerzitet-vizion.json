@@ -16,25 +16,147 @@
       "name": "Fakultet za inženerstvo i arhitektura",
       "website": "https://www.vision.edu.mk/mk/faculties/engineering-and-architecture",
       "dataSourceUrl": "https://www.vision.edu.mk/mk",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arhitektura i dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/engineering-and-architecture",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Enterierna arhitektura",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/engineering-and-architecture",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Gradežno inženerstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/engineering-and-architecture",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjutersko inženerstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/engineering-and-architecture",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Arhitektura i dizajn",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/engineering-and-architecture",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjutersko inženerstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/engineering-and-architecture",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Softversko inženerstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/engineering-and-architecture",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za opštestveni nauki",
       "website": "https://www.vision.edu.mk/mk/faculties/social-sciences",
       "dataSourceUrl": "https://www.vision.edu.mk/mk",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/social-sciences",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Klinička psihologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/social-sciences",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Praven fakultet",
       "website": "https://www.vision.edu.mk/mk/faculties/law",
       "dataSourceUrl": "https://www.vision.edu.mk/mk",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/law",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodni odnosi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/law",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodno pravo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/law",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/law",
+          "lastModified": "2026-11-18"
+        }
+      ]
     },
     {
       "name": "Fakultet za zdravstveni nauki",
       "website": "https://www.vision.edu.mk/mk/faculties/health-sciences",
       "dataSourceUrl": "https://www.vision.edu.mk/mk",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Farmacija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/health-sciences",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/health-sciences",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Opšto sestrinstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/health-sciences",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/health-sciences",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Primeneti klinički zdravstveni nauki",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/health-sciences",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sestrinstvo",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.vision.edu.mk/mk/faculties/health-sciences",
+          "lastModified": "2026-11-18"
+        }
+      ]
     }
   ]
 }
