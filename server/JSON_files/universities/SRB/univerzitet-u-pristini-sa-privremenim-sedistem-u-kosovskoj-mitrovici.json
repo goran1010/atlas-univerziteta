@@ -1,0 +1,756 @@
+{
+  "country": "SRB",
+  "name": "Univerzitet u Prištini sa privremenim sedištem u Kosovskoj Mitrovici",
+  "city": "Kosovska Mitrovica",
+  "ownership": "PUBLIC",
+  "foundedYear": "1969",
+  "website": "https://pr.ac.rs",
+  "address": "Filipa Višnjića bb, 38220 Kosovska Mitrovica",
+  "phone": "+381 28 422 340",
+  "email": "rektorat@pr.ac.rs",
+  "accreditationFrom": "2022-09-13",
+  "accreditationTo": "2029-09-13",
+  "authority": "Nacionalno akreditaciono telo (NAT) / Komisija za akreditaciju i proveru kvaliteta (KAPK)",
+  "dataSourceUrl": "https://pr.ac.rs/univerzitet/o-univerzitetu/istorijat/",
+  "lastModified": "2026-11-20",
+  "faculties": [
+    {
+      "name": "Ekonomski fakultet",
+      "city": "Kosovska Mitrovica",
+      "website": "http://ekonomski.pr.ac.rs/",
+      "address": "Kolašinska 156, 38220 Kosovska Mitrovica",
+      "phone": "+381 28 497 934",
+      "email": "eko@pr.ac.rs",
+      "dataSourceUrl": "https://pr.ac.rs/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Poslovna ekonomija (2 modula)",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Finansije, bankarstvo i računovodstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Marketing i menadžment",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Poslovna ekonomija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Medicinski fakultet",
+      "city": "Kosovska Mitrovica",
+      "website": "https://med.pr.ac.rs/",
+      "address": "Čika Jovina bb, 38220 Kosovska Mitrovica",
+      "phone": "+381 28 498 298",
+      "email": "medicinski@pr.ac.rs",
+      "dataSourceUrl": "https://pr.ac.rs/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Zdravstvena nega",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Medicina na srpskom i engleskom jeziku",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Stomatologija",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Medicinske nauke",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Strukovna medicinska sestra",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Strukovni fizioterapeut",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zubni tehničar-protetičar",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Poljoprivredni fakultet",
+      "city": "Lešak",
+      "website": "http://agr.pr.ac.rs/",
+      "address": "Kopaonička bb, 38228 Lešak",
+      "phone": "+381 28 88 261",
+      "email": "poljfak@verat.net",
+      "dataSourceUrl": "https://pr.ac.rs/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biljna proizvodnja",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Stočarstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biljna proizvodnja",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Stočarstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Agronomija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Pravni fakultet",
+      "city": "Kosovska Mitrovica",
+      "website": "https://pravni.pr.ac.rs/",
+      "address": "Lole Ribara br. 29, 38220 Kosovska Mitrovica",
+      "phone": "+381 28 425 339",
+      "email": "pra@pr.ac.rs",
+      "dataSourceUrl": "https://pr.ac.rs/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Prava",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Javna uprava i administracija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prava - opšti smer",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prava",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prava",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Prirodno-matematički fakultet",
+      "city": "Kosovska Mitrovica",
+      "website": "https://prirodnomatematicki.pr.ac.rs/",
+      "address": "Lole Ribara br. 29, 38220 Kosovska Mitrovica",
+      "phone": "+381 28 425 396",
+      "email": "pmfkm@pr.ac.rs",
+      "dataSourceUrl": "https://pr.ac.rs/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Hemija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Hemija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Hemija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Učiteljski fakultet",
+      "city": "Leposavić",
+      "website": "https://uf-pz.net/",
+      "address": "Nemanjina bb, 38218 Leposavić",
+      "phone": "+381 25 84 164",
+      "email": "ufp@pr.ac.rs",
+      "dataSourceUrl": "https://pr.ac.rs/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Razredna nastava",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Vaspitač u predškolskim ustanovama",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Razredna nastava",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Vaspitač u predškolskim ustanovama",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za sport i fizičko vaspitanje",
+      "city": "Leposavić",
+      "website": "https://fsfv-pr.rs/",
+      "address": "Dositeja Obradovića bb, 38218 Leposavić",
+      "phone": "+381 28 84 700",
+      "email": "dif@pr.ac.rs",
+      "dataSourceUrl": "https://pr.ac.rs/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizičkog vaspitanja i sporta",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizičko vaspitanje i sport (studije na daljinu)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizičko vaspitanje, rekreacija i zdravlje",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizičkog vaspitanja i sporta",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet tehničkih nauka",
+      "city": "Kosovska Mitrovica",
+      "website": "https://ftn.pr.ac.rs",
+      "address": "Kneza Miloša br. 7, 38220 Kosovska Mitrovica",
+      "phone": "+381 28 425 320",
+      "email": "office@ftnkm.rs",
+      "dataSourceUrl": "https://pr.ac.rs/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arhitektura",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Drumski saobraćaj i transport",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Elektrotehničko i računarsko inženjerstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Građevinsko inženjerstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inženjerstvo zaštite životne sredine i zaštite na radu",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mašinsko inženjerstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Rudarsko inženjerstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tehnološko inženjerstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Elektrotehničko i računarsko inženjerstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Građevinsko inženjerstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inženjerstvo zaštite životne sredine i zaštite na radu",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mašinsko inženjerstvo (1 modul)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mašinsko inženjerstvo (4 modula)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Rudarsko inženjerstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tehnološko inženjerstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Elektrotehničko i računarsko inženjerstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mašinsko inženjerstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tehnološko inženjerstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Održivost i otpornost građene sredine",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet umetnosti",
+      "city": "Zvečan",
+      "website": "http://art.pr.ac.rs/",
+      "address": "Kralja Petra I br. 117, 38227 Zvečan",
+      "phone": "+381 28 497 924",
+      "email": "umetnost@pr.ac.rs",
+      "dataSourceUrl": "https://pr.ac.rs/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Gluma",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grafika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Izvođačke umetnosti (3 modula)",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Muzička pedagogija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Slikarstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Vajarstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gluma",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grafika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Izvođačke umetnosti (3 modula)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Muzička pedagogija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Slikarstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Vajarstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Vizuelne umetnosti",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Filozofski fakultet",
+      "city": "Kosovska Mitrovica",
+      "website": "http://fifa.pr.ac.rs/",
+      "address": "Filipa Višnjića bb, 38220 Kosovska Mitrovica",
+      "phone": "+381 28 425 473",
+      "email": "fifa@pr.ac.rs",
+      "dataSourceUrl": "https://pr.ac.rs/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Istorija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Istorija umetnosti",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ruski jezik i književnost",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Srpska književnost i jezik",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Srpski jezik i književnost",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Engleski jezik i književnost",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Istorija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Istorija umetnosti",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ruski jezik i književnost (2 modula)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Srpska književnost i jezik",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Srpski jezik i književnost",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Istorija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Jezik i književnost",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.nat.rs/wp-content/uploads/2026/11/Vodi%C4%8D-za-studente-03.11.2026.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    }
+  ]
+}

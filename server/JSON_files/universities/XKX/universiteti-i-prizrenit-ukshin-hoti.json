@@ -19,37 +19,192 @@
       "name": "Fakulteti i Shkencave Kompjuterike",
       "website": "https://fshk.uni-prizren.com/",
       "dataSourceUrl": "https://uni-prizren.com/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Teknologjitë e Informacionit dhe Telekomunikim (në gjuhën shqipe, turke dhe boshnjake)",
+          "cycle": "FIRST",
+          "ects": 180,
+          "language": "Shqip/Turqisht/Boshnjakisht",
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkenca Kompjuterike dhe Teknologji Komunikim",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Dizajn Softueri",
+          "cycle": "VOCATIONAL",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave të Jetës dhe Mjedisit",
       "website": "https://fshjm.uni-prizren.com/",
       "dataSourceUrl": "https://uni-prizren.com/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Agrobiznes",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkencat e Pyjeve dhe të Mjedisit",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhim në Agrobiznes",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkencat Pyjore dhe Ekologji Pyjore",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti Juridik",
       "website": "https://juridiku.uni-prizren.com/",
       "dataSourceUrl": "https://uni-prizren.com/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Juridik i Përgjithshëm",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Legjislacion dhe Institucionet e Bashkimit Europian",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Qeverisje Demokratike dhe Sundim i Ligjit",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Filologjisë",
       "website": "https://filologjia.uni-prizren.com/",
       "dataSourceUrl": "https://uni-prizren.com/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Gjuhë dhe Letërsi Angleze",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë dhe Letërsi Gjermane",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë dhe Letërsi Shqipe",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhësi Aplikative",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti Ekonomik",
       "website": "https://ekonomiku.uni-prizren.com/",
       "dataSourceUrl": "https://uni-prizren.com/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhment Nderkombëtar",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Edukimit",
       "website": "https://edukimi.uni-prizren.com/",
       "dataSourceUrl": "https://uni-prizren.com/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Programi Fillor (në Gjuhën Shqipe, Boshnjake dhe Turke)",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Shqip/Boshnjakisht/Turqisht",
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Edukim dhe Mësimdhënie në Matematikë në Gjuhën Turke",
+          "cycle": "SECOND",
+          "ects": 60,
+          "language": "Turqisht",
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkencat e Edukimit, specializimi Mesimdhenie dhe Kurrikule",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     }
   ]
 }

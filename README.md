@@ -77,7 +77,7 @@ Data sources:
 - Albania: [Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)](https://www.ascal.al/sq/lista-e-ial/ial) and university websites
 - North Macedonia: [Agencija za kvalitet vo visokoto obrazovanie (AKVO)](https://akvo.mk/dokumenti/visokoobrazovni-ustanovi-republika-severna-makedonija/) and university websites
 - Slovenia: [Nacionalna agencija Republike Slovenije za kakovost v visokem šolstvu (NAKVIS)](https://portal.nakvis.si/javne-evidence/visokosolski-zavodi)
-- Kosovo: [Agjencia e Kosovës për Akreditim (AKA)](https://akreditimi.rks-gov.net/decision_v1) and university websites; the University of Pristina in Kosovska Mitrovica from [Nacionalno akreditaciono telo (NAT)](https://nat.rs/)
+- Kosovo: [Agjencia e Kosovës për Akreditim (AKA)](https://akreditimi.rks-gov.net/decision_v1) and university websites
 
 Author: Goran Jović - [@goran1010](https://github.com/goran1010) · [contributors](https://github.com/goran1010/atlas-univerziteta/contributors)
 

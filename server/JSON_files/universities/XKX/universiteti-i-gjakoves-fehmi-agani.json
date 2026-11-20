@@ -21,7 +21,16 @@
       "address": "Rr. Mbretëresha Teutë, n.n., 50000 Gjakovë",
       "phone": "+383 38 200 20 835",
       "dataSourceUrl": "https://uni-gjk.org/al/kontakt",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Edukim Fillor",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Filologjisë",
@@ -30,7 +39,37 @@
       "address": "Rr. Mbretëresha Teutë, n.n., 50000 Gjakovë",
       "phone": "+383 38 200 20 836",
       "dataSourceUrl": "https://uni-gjk.org/al/kontakt",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Gjuhe Shqipe dhe Letersi",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë Angleze - Përkthim dhe Interpretim",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë Shqipe",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Studime Letrare",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Mjekësisë",
@@ -39,7 +78,37 @@
       "address": "Rr. Mithat Frashëri, p.n., 50000 Gjakovë",
       "phone": "+383 38 200 20 847",
       "dataSourceUrl": "https://uni-gjk.org/al/kontakt",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kujdesi Shëndetësor në Komunitet",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkencat Shëndetësore në Sport dhe Turizëm",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shëndeti Publik",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhimi Shëndetsor",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Sociale",
@@ -48,7 +117,16 @@
       "address": "Rr. Mbretëresha Teutë, n.n., 50000 Gjakovë",
       "phone": "+383 38 200 20 831",
       "dataSourceUrl": "https://uni-gjk.org/al/kontakt",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kujdesi dhe Mireqenia Sociale",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Aplikative",
@@ -57,7 +135,16 @@
       "address": "Rr. Mbretëresha Teutë, n.n., 50000 Gjakovë",
       "phone": "+383 38 200 20 831",
       "dataSourceUrl": "https://uni-gjk.org/al/kontakt",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Informatikë Inxhinierike",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     }
   ]
 }

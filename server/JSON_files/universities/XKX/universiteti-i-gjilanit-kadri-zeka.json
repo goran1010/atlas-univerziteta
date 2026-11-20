@@ -18,25 +18,131 @@
       "name": "Fakulteti i Edukimit",
       "website": "https://uni-gjilan.net/fakultetet/fakulteti-i-edukimit/",
       "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arsimi Parashkollor",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Edukim Fillor",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mësimdhënie dhe Kurrikula në Programin Fillor",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mësimdhënie e Gjuhës Angleze",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mësimdhënie e Gjuhës dhe Letërsisë Shqipe",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti Juridik",
       "website": "https://uni-gjilan.net/fakultetet/fakulteti-juridik/",
       "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "E-Qeverisja",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Juridik Penal",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti Ekonomik",
       "website": "https://uni-gjilan.net/fakultetet/fakulteti-ekonomik/",
       "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Financë dhe Kontabilitet i Aplikuar",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Marketing dhe Menaxhim i Shitjes",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Analizat Ekonomika dhe Politikat Zhvillimore",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "E-Qeverisja",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Kompjuterike",
       "website": "https://uni-gjilan.net/fakultetet/fakulteti-i-shkencave-kompjuterike/",
       "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Shkenca Kompjuterike",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "E-Qeverisja",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sistemet e Kontrollit dhe Inteligjenca Artificiale",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Shkencave Aplikative",
@@ -48,7 +154,16 @@
       "name": "Fakulteti i Shkencave Sociale",
       "website": "https://uni-gjilan.net/fakultetet/fakulteti-i-shkencave-sociale/",
       "dataSourceUrl": "https://uni-gjilan.net/fakultetet/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Marrëdhënie Ndërkombëtare dhe Studime Europiane",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     }
   ]
 }

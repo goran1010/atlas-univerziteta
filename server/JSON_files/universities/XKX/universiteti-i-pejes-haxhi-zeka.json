@@ -19,31 +19,223 @@
       "name": "Fakulteti i Biznesit",
       "website": "https://unhz.eu/fakulteti-i-biznesit/",
       "dataSourceUrl": "https://unhz.eu/fakulteti-i-biznesit/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Menaxhim Biznesi (në Gjuhën Shqipe dhe Boshnjake)",
+          "cycle": "FIRST",
+          "ects": 180,
+          "language": "Shqip/Boshnjakisht",
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20",
+          "tracks": [
+            {
+              "name": "Banka dhe Financa",
+              "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Administrim Biznesi",
+              "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+              "lastModified": "2026-11-20"
+            }
+          ]
+        },
+        {
+          "name": "Teknologji Informacioni në Biznes dhe Ekonomi",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Informatikë në Biznes",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhim Biznesi (në Gjuhën Shqipe dhe Boshnjake)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "language": "Shqip/Boshnjakisht",
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20",
+          "tracks": [
+            {
+              "name": "Menaxhim Biznesi",
+              "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Banka dhe Financa",
+              "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+              "lastModified": "2026-11-20"
+            }
+          ]
+        },
+        {
+          "name": "Menaxhim i Burimeve Njerëzore",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhimi i Riskut dhe Sigurimet",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biznes dhe Ekonomi",
+          "cycle": "THIRD",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Menaxhimit në Turizëm, Hotelieri dhe Mjedis",
       "website": "https://unhz.eu/fmthm/",
       "dataSourceUrl": "https://unhz.eu/fmthm/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Menaxhim në Turizëm dhe Hotelieri (Gjuhë Shqipe dhe Gjuhë Boshnjake)",
+          "cycle": "FIRST",
+          "ects": 180,
+          "language": "Shqip/Boshnjakisht",
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhimi i Marketingut Turistik (gjuhe shqipe dhe gjuhe boshnjake)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "language": "Shqip/Boshnjakisht",
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhment dhe Turizëm te Qëndrueshëm",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Agrobiznesit",
       "website": "https://unhz.eu/fakulteti-i-agrobiznesit/",
       "dataSourceUrl": "https://unhz.eu/fakulteti-i-agrobiznesit/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Ekologji e Aplikuar ne Agrobiznes",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teknologji e Prodhimit Bimor",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teknologji Ushqimore",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhim Mjedisi",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sistemet e Qëndrueshme të Prodhimit Ushqimor",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti Juridik",
       "website": "https://unhz.eu/fakulteti-juridik/",
       "dataSourceUrl": "https://unhz.eu/fakulteti-juridik/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Juridik i Përgjithshëm",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "E Drejta Civile dhe Biznesore",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "E Drejta dhe Siguria",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteti i Arteve",
       "website": "https://unhz.eu/fakulteti-i-arteve/",
       "dataSourceUrl": "https://unhz.eu/fakulteti-i-arteve/",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Art Performues",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Arti Muzikor",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Art Performues",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Edukim Muzikor",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
     }
   ]
 }
