@@ -1290,6 +1290,12 @@
           "lastModified": "2026-11-18"
         },
         {
+          "name": "Kozmetika so estetika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Medicinski sestri/tehničari",
           "cycle": "FIRST",
           "ects": 180,
@@ -1307,13 +1313,6 @@
           "name": "Farmacija",
           "cycle": "INTEGRATED",
           "ects": 300,
-          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
-          "lastModified": "2026-11-18"
-        },
-        {
-          "name": "Kozmetika so estetika",
-          "cycle": "INTEGRATED",
-          "ects": 360,
           "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
           "lastModified": "2026-11-18"
         },

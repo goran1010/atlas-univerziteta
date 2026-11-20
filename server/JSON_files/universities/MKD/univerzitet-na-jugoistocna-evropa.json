@@ -469,6 +469,12 @@
               "lastModified": "2026-11-18"
             }
           ]
+        },
+        {
+          "name": "Arhitektura i dizajn",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-20"
         }
       ]
     },

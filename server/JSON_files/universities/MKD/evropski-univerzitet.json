@@ -40,6 +40,14 @@
       "lastModified": "2026-11-15",
       "studyPrograms": [
         {
+          "name": "Kriminalistika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://www.eu.edu.mk/fdk-prv-ciklus/",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Bezbednost",
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.eu.edu.mk/fdk-vtor-ciklus/",
@@ -189,6 +197,14 @@
       "dataSourceUrl": "https://www.eu.edu.mk/fakulteti/",
       "lastModified": "2026-11-15",
       "studyPrograms": [
+        {
+          "name": "Pravni studii",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.eu.edu.mk/fpn-prv-ciklus/",
+          "lastModified": "2026-11-20"
+        },
         {
           "name": "Kazneno pravo",
           "cycle": "SECOND",

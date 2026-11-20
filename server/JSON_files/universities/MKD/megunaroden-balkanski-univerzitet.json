@@ -420,9 +420,9 @@
       "studyPrograms": [
         {
           "name": "Dentalna medicina",
-          "cycle": "FIRST",
+          "cycle": "INTEGRATED",
           "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
-          "lastModified": "2026-11-18"
+          "lastModified": "2026-11-20"
         }
       ]
     },

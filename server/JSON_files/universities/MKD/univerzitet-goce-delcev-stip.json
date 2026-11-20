@@ -786,12 +786,6 @@
           "lastModified": "2026-11-17"
         },
         {
-          "name": "Dentalna medicina",
-          "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
-          "lastModified": "2026-11-17"
-        },
-        {
           "name": "Farmacija",
           "cycle": "FIRST",
           "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
@@ -829,16 +823,22 @@
           "lastModified": "2026-11-17"
         },
         {
-          "name": "Opšta medicina",
+          "name": "Zaben tehničar/protetičar",
           "cycle": "FIRST",
           "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
           "lastModified": "2026-11-17"
         },
         {
-          "name": "Zaben tehničar/protetičar",
-          "cycle": "FIRST",
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
           "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Opšta medicina",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Diplomirana stručna medicinska sestra / tehničar specijalizirana za prevencija na infektivni i neinfektivni zaboluvanja",
