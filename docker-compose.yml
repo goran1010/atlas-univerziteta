@@ -40,7 +40,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    # node:24-slim ships no curl/wget; node's built-in fetch probes /health,
+    # node:26-slim ships no curl/wget; node's built-in fetch probes /health,
     # which includes a database round-trip
     healthcheck:
       test:

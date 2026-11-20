@@ -35,7 +35,7 @@ npm run db:setup && npm run db:seed
 npm run dev:all
 ```
 
-Requires Node.js 24.x and PostgreSQL. Full instructions, environment variables, and testing: [docs/SETUP.md](./docs/SETUP.md). Hosting layout and share-preview builds: [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md).
+Requires Node.js 26.x and PostgreSQL. Full instructions, environment variables, and testing: [docs/SETUP.md](./docs/SETUP.md). Hosting layout and share-preview builds: [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md).
 
 ## API in brief
 
@@ -111,7 +111,7 @@ Podaci prate akademsku hijerarhiju: univerzitet, njegovi fakulteti i njihovi stu
 
 ### Pokretanje
 
-Komande su iste kao u [engleskom dijelu](#quick-start) - potrebni su Node.js 24.x i PostgreSQL. Detaljna uputstva se nalaze u [docs/SETUP.md](./docs/SETUP.md) (na engleskom).
+Komande su iste kao u [engleskom dijelu](#quick-start) - potrebni su Node.js 26.x i PostgreSQL. Detaljna uputstva se nalaze u [docs/SETUP.md](./docs/SETUP.md) (na engleskom).
 
 ### Doprinos projektu
 
