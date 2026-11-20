@@ -133,6 +133,37 @@
           "lastModified": "2026-11-16"
         }
       ]
+    },
+    {
+      "name": "Departamenti i Teknologjisë së Informacionit",
+      "dataSourceUrl": "https://www.ascal.al/sq/fakulteti/?id=1605",
+      "lastModified": "2026-11-20",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri Software dhe Inteligjencë Artificiale",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4004",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkenca kompjuterike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3346",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkenca Kompjuterike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3573",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mirëmbajtje Rrjete Kompjuterike",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3345",
+          "lastModified": "2026-11-20"
+        }
+      ]
     }
   ]
 }

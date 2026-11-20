@@ -50,6 +50,12 @@
           "lastModified": "2026-11-16"
         },
         {
+          "name": "Biznes dhe Tregti Elektronike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3545",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Ekonomiks dhe Financë",
           "cycle": "FIRST",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3462",
@@ -71,6 +77,12 @@
               "lastModified": "2026-11-16"
             }
           ]
+        },
+        {
+          "name": "Informatikë Biznesi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3457",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Administrim Biznesi",
@@ -186,6 +198,12 @@
           ]
         },
         {
+          "name": "Inxhinieri Softuer",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3547",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Shkenca Kompjuterike",
           "cycle": "FIRST",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3553",
@@ -202,6 +220,12 @@
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1122",
           "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkencë të Dhënash dhe Analitikë Biznesi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3818",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Arkitekturë",

@@ -56,6 +56,12 @@
           "lastModified": "2026-11-16"
         },
         {
+          "name": "Infermieristikë në Kujdesin Parësor: Kompetenca Digjitale, Menaxheriale dhe Klinike për Infermierin e Familjes dhe të Komunitetit (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4067",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Shkenca Infermieristike dhe Obstetrike",
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1388",
@@ -78,6 +84,12 @@
           "cycle": "INTEGRATED",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=76",
           "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Mjekësore dhe Kirurgjikale",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4075",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Anesteziologji, reanimacion dhe terapi intensive",

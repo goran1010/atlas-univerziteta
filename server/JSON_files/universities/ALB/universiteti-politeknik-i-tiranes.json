@@ -203,6 +203,12 @@
           "lastModified": "2026-11-16"
         },
         {
+          "name": "Menaxhim Energjie",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2798",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Inxhinieri Mekanike",
           "cycle": "THIRD",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3920",

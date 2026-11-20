@@ -95,6 +95,12 @@
       "lastModified": "2026-11-15",
       "studyPrograms": [
         {
+          "name": "Dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1170",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Financë- Bankë",
           "cycle": "FIRST",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=31",
@@ -147,6 +153,12 @@
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1168",
           "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Interier Dizajn (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3319",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Inxhinieri Elektronike",

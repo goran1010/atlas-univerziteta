@@ -1001,6 +1001,27 @@
           "lastModified": "2026-11-16"
         }
       ]
+    },
+    {
+      "name": "Universiteti Bujqësor i Tiranës",
+      "website": "https://www.ubt.edu.al",
+      "isUniversityLevel": true,
+      "dataSourceUrl": "https://www.ascal.al/sq/fakulteti/?id=727",
+      "lastModified": "2026-11-20",
+      "studyPrograms": [
+        {
+          "name": "Kopshtari",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3429",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zooveterinari",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3426",
+          "lastModified": "2026-11-20"
+        }
+      ]
     }
   ]
 }

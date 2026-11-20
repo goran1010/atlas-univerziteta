@@ -89,10 +89,61 @@
       "lastModified": "2026-11-15",
       "studyPrograms": [
         {
+          "name": "Inxhinieri Elektrike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3217",
+          "lastModified": "2026-11-20",
+          "tracks": [
+            {
+              "name": "Sistemet e fuqisë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3217",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Elektronikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3217",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Komunikime Dixhitale",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3217",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Kontroll Inxhinierik",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3217",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Makineri Elektrike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3217",
+              "lastModified": "2026-11-20"
+            }
+          ]
+        },
+        {
           "name": "Inxhinieri Ndërtimi",
           "cycle": "FIRST",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=430",
           "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Elektrike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3432",
+          "lastModified": "2026-11-20",
+          "tracks": [
+            {
+              "name": "Energjetikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3432",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Automatizim Industrie",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3432",
+              "lastModified": "2026-11-20"
+            }
+          ]
         },
         {
           "name": "Inxhinieri Ndërtimi",
@@ -111,6 +162,12 @@
               "lastModified": "2026-11-16"
             }
           ]
+        },
+        {
+          "name": "Renewable Energy and Management",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4049",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Arkitekturë",
@@ -208,6 +265,18 @@
           ]
         },
         {
+          "name": "Informatikë Ekonomike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3227",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Business Analitics and Artificial Intelligence",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3873",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Ekonomik - MBA",
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1347",
@@ -224,6 +293,12 @@
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3327",
           "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim në Inxhinieri",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2617",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Menaxhim në Turizëm, Hoteleri dhe Evente",

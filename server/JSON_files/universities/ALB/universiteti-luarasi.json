@@ -76,10 +76,22 @@
           "lastModified": "2026-11-16"
         },
         {
+          "name": "Informatikë ekonomike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3167",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Bankat dhe Tregjet Financiare",
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1207",
           "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Informatikë Ekonomike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3909",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Menaxhim Ekzekutiv",

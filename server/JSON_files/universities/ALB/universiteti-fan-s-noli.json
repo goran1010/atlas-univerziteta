@@ -326,6 +326,12 @@
           "lastModified": "2026-11-16"
         },
         {
+          "name": "Histori - Gjeografi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=961",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Infermieri e Përgjithshme",
           "cycle": "FIRST",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=974",
@@ -384,6 +390,12 @@
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3869",
           "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi në Histori-Gjeografi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3900",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Mësuesi në Matematikë-Fizikë",

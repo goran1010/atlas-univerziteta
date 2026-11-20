@@ -342,10 +342,34 @@
           ]
         },
         {
+          "name": "Informatikë",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3743",
+          "lastModified": "2026-11-20",
+          "tracks": [
+            {
+              "name": "Sistemet e Informacionit në Biznes",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3743",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Inxhinieri Software",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3743",
+              "lastModified": "2026-11-20"
+            }
+          ]
+        },
+        {
           "name": "Inteligjencë Artificiale",
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4013",
           "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Sistemet e Informacionit në Biznes (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2856",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Teknologji informacioni dhe aplikime informatike",

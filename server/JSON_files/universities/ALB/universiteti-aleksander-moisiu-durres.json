@@ -790,6 +790,31 @@
           "lastModified": "2026-11-16"
         }
       ]
+    },
+    {
+      "name": "Qëndra e Edukimit në Vazhdim",
+      "dataSourceUrl": "https://www.ascal.al/sq/fakulteti/?id=366",
+      "lastModified": "2026-11-20",
+      "studyPrograms": [
+        {
+          "name": "Edukim në Vazhdim",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2380",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Edukator për moshën 0-3 vjeçare",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3539",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gerontologji",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3767",
+          "lastModified": "2026-11-20"
+        }
+      ]
     }
   ]
 }

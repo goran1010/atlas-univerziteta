@@ -241,6 +241,12 @@
           "lastModified": "2026-11-16"
         },
         {
+          "name": "Punonjës Social",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=861",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Drejtim dhe Administrim Arsimi (Master profesional)",
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2520",
@@ -345,6 +351,24 @@
           "lastModified": "2026-11-16"
         },
         {
+          "name": "Punë Sociale me Fëmijët dhe Familjen (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=858",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shërbim Prove (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1401",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shërbime Sociale",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1402",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Edukatorë për fëmijët (0-3 vjeç)",
           "cycle": "VOCATIONAL",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3341",
@@ -365,10 +389,22 @@
           "lastModified": "2026-11-16"
         },
         {
+          "name": "Administrim Biznesi dhe Inxhinieri",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1592",
+          "lastModified": "2026-11-20"
+        },
+        {
           "name": "Ekonomi dhe e Drejtë",
           "cycle": "FIRST",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1588",
           "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomi Turizmi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1591",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Financë - Kontabilitet",
@@ -435,6 +471,18 @@
           "cycle": "SECOND",
           "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2503",
           "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Marketing",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2500",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Marketing (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=862",
+          "lastModified": "2026-11-20"
         },
         {
           "name": "Menaxhim",
