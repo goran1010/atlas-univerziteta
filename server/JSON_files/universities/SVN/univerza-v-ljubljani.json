@@ -21,7 +21,65 @@
       "address": "Kongresni trg 1, 1000 Ljubljana",
       "email": "dekanat@ag.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a33",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Glasbena pedagogika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513daf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Glasbena umetnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513db2",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Glasbena pedagogika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f1f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Glasbena umetnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f20",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Glasbeno-teoretska pedagogika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f21",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Instrumentalna in pevska pedagogika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f32",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistika in družboslovje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514070",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Umetnost",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://www.uni-lj.si/assets/Sluzba-za-doktorski-studij/Razpis-za-vpis-v-doktorske-studijske-programe/Razpis-po-programih/PDF-v-slovenscini/Interdisciplinarni-doktorski-studijski-program-UMETNOST.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Akademija za gledališče, radio, film in televizijo",
@@ -30,7 +88,107 @@
       "address": "Trubarjeva cesta 3, 1000 Ljubljana",
       "email": "dekanat@agrft.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a34",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dramaturgija in scenske umetnosti",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d62",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Dramska igra",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d63",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Film in televizija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d86",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gledališka režija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513db3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Dramaturgija in scenske umetnosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ed3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Dramska igra",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ed4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Filmski in televizijski študiji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ef3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Filmsko in televizijsko ustvarjanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ef4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gledališka in radijska režija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f22",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Oblike govora",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f73",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Scensko oblikovanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fcf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Umetnost giba",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51401a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistika in družboslovje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514070",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Umetnost",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://www.uni-lj.si/assets/Sluzba-za-doktorski-studij/Razpis-za-vpis-v-doktorske-studijske-programe/Razpis-po-programih/PDF-v-slovenscini/Interdisciplinarni-doktorski-studijski-program-UMETNOST.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Akademija za likovno umetnost in oblikovanje",
@@ -39,7 +197,93 @@
       "address": "Erjavčeva cesta 23, 1000 Ljubljana",
       "email": "dekanat@aluo.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a35",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Industrijsko in unikatno oblikovanje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dbd",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kiparstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dcb",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Konserviranje in restavriranje likovnih del",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dda",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Oblikovanje vizualnih komunikacij",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e02",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Slikarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e55",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Industrijsko in unikatno oblikovanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f2e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kiparstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f43",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Konserviranje in restavriranje likovnih del",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f4a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Oblikovanje vizualnih komunikacij",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f75",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Slikarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fd9",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistika in družboslovje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514070",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Umetnost",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://www.uni-lj.si/assets/Sluzba-za-doktorski-studij/Razpis-za-vpis-v-doktorske-studijske-programe/Razpis-po-programih/PDF-v-slovenscini/Interdisciplinarni-doktorski-studijski-program-UMETNOST.pdf",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Biotehniška fakulteta",
@@ -48,7 +292,268 @@
       "address": "Jamnikarjeva ulica 101, 1000 Ljubljana",
       "email": "dekanat@bf.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a3d",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d47",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biotehnologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d4a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gozdarstvo in obnovljivi gozdni viri",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513db5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kmetijstvo - agronomija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dcc",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kmetijstvo - zootehnika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dce",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Krajinska arhitektura",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ddc",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Lesarstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513de6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mikrobiologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513df4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Živilstvo in prehrana",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eb1",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Agronomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eb3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bioekonomika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/67dc22c889ad20d57a084654",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bioinformatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/679225bf43603120bdfb381b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biološko izobraževanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ec1",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biotehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ec4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekologija in biodiverziteta",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ee3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekonomika naravnih virov",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ee5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gozdarstvo in upravljanje gozdnih ekosistemov",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f23",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Hortikultura",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f2a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Krajinska arhitektura",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f4b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Lesarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f53",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mikrobiologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f66",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Molekulska in funkcionalna biologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f67",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ohranjanje narave in naravnih vrednot",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f78",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prehrana",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fa0",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Strukturna in funkcionalna biologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ffe",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Uporabna statistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51402f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Znanost o živalih",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514047",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Živilstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514048",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biomedicina",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514057",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bioznanosti",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514058",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Statistika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gozdarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513db4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kmetijstvo - agronomija in hortikultura",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dcd",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kmetijstvo - živinoreja",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dcf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Lesarsko inženirstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513de5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tehnologije lesa in vlaknatih kompozitov",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e7e",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Ekonomska fakulteta",
@@ -57,7 +562,170 @@
       "address": "Kardeljeva ploščad 17, 1000 Ljubljana",
       "email": "info@ef.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a3f",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Univerzitetna poslovna in ekonomska šola",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e96",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bančni in finančni management",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ebd",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Denar in finance",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ec7",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekonomija s podatkovno analizo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ee4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekonomika javnega sektorja in okolja",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f3c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kvantitativne finance in aktuarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f4f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Management",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f55",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Management in ekonomika v zdravstvenem varstvu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f56",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Management v športu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f57",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mednarodno poslovanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f62",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Oskrbovalne verige in logistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f9b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Podjetništvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f8d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Poslovna informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f9a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Poslovodenje in organizacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f9c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Računovodstvo in revizija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fbb",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Trajnostni turistični management",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514019",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Trženje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514016",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Turistični management",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514018",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Uporabna statistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51402f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekonomske in poslovne vede",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514064",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Statistika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Visoka poslovna šola",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e9f",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za arhitekturo",
@@ -66,7 +734,37 @@
       "address": "Zoisova cesta 12, 1000 Ljubljana",
       "email": "dekanat@fa.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a44",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Urbanizem",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e9e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Urbanizem",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514039",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ebc",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514056",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za družbene vede",
@@ -75,7 +773,205 @@
       "address": "Kardeljeva ploščad 5, 1000 Ljubljana",
       "email": "fdv.faculty@fdv.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a46",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Družboslovna informatika (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d6e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Komunikologija - Medijske in komunikacijske študije (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dd1",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Komunikologija - Tržno komuniciranje in odnosi z javnostmi (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dd9",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kulturologija - Študije kultur in ustvarjalnosti (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ddf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mednarodni odnosi (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513def",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Novinarstvo (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e00",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Obramboslovje (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e03",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Politologija - Javne politike in uprava (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e14",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Politologija - Študije politike in države (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e1a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e6a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija - Kadrovski menedžment (3 letni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e68",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Družboslovna informatika (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513edd",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Evropske študije (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ef0",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Komunikologija - Medijske in komunikacijske študije (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f46",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kulturne študije (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f4d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mednarodni odnosi (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f61",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Novinarstvo (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f72",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Obramboslovje in varnostne študije (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f77",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Politologija - Politična teorija, globalizacijske in strateške študije (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f93",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Politologija - Primerjalne javne politike in uprava (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f94",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ff0",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija - Menedžment človeških virov, znanja in organizacij (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fee",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tržno komuniciranje in odnosi z javnostmi (2 letni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514017",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Uporabna statistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51402f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Človekove pravice in demokratizacija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ec6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistika in družboslovje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514070",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Statistika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za elektrotehniko",
@@ -84,7 +980,72 @@
       "address": "Tržaška cesta 25, 1000 Ljubljana",
       "email": "dekanat@fe.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a49",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Elektrotehnika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d78",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Multimedija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513df5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eec",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Multimedija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f68",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Uporabna statistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51402f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bioznanosti",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514058",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514069",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Statistika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Aplikativna elektrotehnika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d41",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za farmacijo",
@@ -93,7 +1054,58 @@
       "address": "Aškerčeva cesta 7, 1000 Ljubljana",
       "email": "tajnistvo@ffa.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a4c",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kozmetologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ddb",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Laboratorijska biomedicina",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513de0",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Industrijska farmacija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f2d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Laboratorijska biomedicina",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f50",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ef2",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biomedicina",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514057",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biofarmacevtsko inženirstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/69368098180c8fa368e2c534",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za gradbeništvo in geodezijo",
@@ -102,7 +1114,93 @@
       "address": "Jamova cesta 2, 1000 Ljubljana",
       "email": "info@fgg.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a4d",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Geodezija in geoinformatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d9b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gradbeništvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513db6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Vodarstvo in okoljsko inženirstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ea0",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Geodezija in geoinformatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f13",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gradbeništvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f24",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prostorsko načrtovanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fb2",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Stavbarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ff9",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Vodarstvo in okoljsko inženirstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51403b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grajeno okolje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51406e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Geodetsko inženirstvo in upravljanje nepremičnin",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e78",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Operativno gradbeništvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e08",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za kemijo in kemijsko tehnologijo",
@@ -111,7 +1209,107 @@
       "address": "Večna pot 113, 1000 Ljubljana",
       "email": "info@fkkt.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a54",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biokemija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d46",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kemija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dc6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kemijsko inženirstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dc8",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tehniška varnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e79",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biokemija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ec0",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kemija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f3f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kemijsko inženirstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f40",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kemijsko izobraževanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f41",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tehniška varnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514008",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biomedicina",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514057",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kemijske znanosti",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514076",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Znanost in inženirstvo materialov",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140bd",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kemijska tehnologija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dc7",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za matematiko in fiziko",
@@ -120,7 +1318,141 @@
       "address": "Jadranska ulica 19, 1000 Ljubljana",
       "email": "fmf@fmf.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a5a",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Finančna matematika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d8d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d90",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513de9",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Računalništvo in matematika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e3e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Finančna matematika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eff",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f02",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Jedrska tehnika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f3d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f59",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Medicinska fizika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f5b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagoška fizika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f83",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Računalništvo in matematika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Uporabna statistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51402f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagoška matematika",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f84",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Matematika in fizika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51407a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Statistika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Znanost in inženirstvo materialov",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140bd",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Aplikativna fizika",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d92",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Aplikativna matematika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e1c",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za pomorstvo in promet",
@@ -129,7 +1461,65 @@
       "address": "Pot pomorščakov 4, 6320 Portorož - Portorose",
       "email": "dekanat@fpp.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a62",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Tehnologija prometa in logistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e7d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pomorstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f99",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Promet",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fb0",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pomorstvo in promet",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514089",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Navtika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dfc",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pomorsko strojništvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513de2",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prometna tehnologija in transportna logistika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e2d",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za računalništvo in informatiko",
@@ -138,7 +1528,107 @@
       "address": "Večna pot 113, 1000 Ljubljana",
       "email": "tajnistvo@fri.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a65",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Multimedija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513df5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Računalništvo in informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e33",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Računalništvo in matematika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e3e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Upravna informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e9d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kognitivna znanost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f44",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Multimedija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f68",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagoško računalništvo in informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f85",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Računalništvo in informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fb5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Računalništvo in matematika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Umetna inteligenca (Erasmus Mundus Joint Master in Artificial Intelligence (EMAI))",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/6756cfac31e830d46a2baa55",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Uporabna statistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51402f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bioznanosti",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514058",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Računalništvo in informatika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514093",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Računalništvo in informatika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e34",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za socialno delo",
@@ -147,7 +1637,58 @@
       "address": "Topniška ulica 31, 1000 Ljubljana",
       "email": "info@fsd.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a67",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Socialno delo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e63",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Duševno zdravje v skupnosti",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ede",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Socialno delo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fe5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Socialno delo s starimi ljudmi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fe6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Socialno delo z družino",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fe7",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Socialno vključevanje in pravičnost na področju hendikepa, etničnosti in spola",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fe8",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistika in družboslovje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514070",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za strojništvo",
@@ -156,7 +1697,57 @@
       "address": "Aškerčeva cesta 6, 1000 Ljubljana",
       "email": "dekanat@fs.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a69",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Strojništvo - Razvojno raziskovalni program",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e70",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Strojništvo - razvojno raziskovalni program",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ffb",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tribologija površin in kontaktov - TRIBOS",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514015",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bioznanosti",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514058",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Strojništvo",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Strojništvo - Projektno aplikativni program",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e6f",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za šport",
@@ -165,7 +1756,58 @@
       "address": "Gortanova ulica 22, 1000 Ljubljana",
       "email": "dekanat@fsp.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a6b",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kineziologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dc9",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Športna vzgoja",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e72",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Športno treniranje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e74",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kineziologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f42",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Management v športu",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f57",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Športna vzgoja",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514002",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kineziologija",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514078",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Fakulteta za upravo",
@@ -174,7 +1816,51 @@
       "address": "Gosarjeva ulica 5, 1000 Ljubljana",
       "email": "info@fu.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a70",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Upravljanje javnega sektorja",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e9c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Upravna informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e9d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Management v upravi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f58",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Uprava - Upravljanje javnega sektorja",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514030",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Upravljanje in ekonomika javnega sektorja",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140b9",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Uprava",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e98",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Filozofska fakulteta",
@@ -183,7 +1869,555 @@
       "address": "Aškerčeva cesta 2, 1000 Ljubljana",
       "email": "info@ff.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a79",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Anglistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d3e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Antični in humanistični študiji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d40",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Arheologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d42",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Azijske študije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e52",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bibliotekarstvo in informatika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d44",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Etnologija in kulturna antropologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d83",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d88",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Francistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d98",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513da8",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Germanistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dad",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grški jezik, književnost in kultura",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513db9",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Hispanistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e71",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Italijanski jezik in književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dbf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Južnoslovanski študiji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dc5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Latinski jezik, književnost in kultura",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513de3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Muzikologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513df7",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagogika in andragogika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e0d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagogika in andragogika (dvopredmetni)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e0e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Polonistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e1b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Portugalski jezik in književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/61c35d87c714cef3bbd3143c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prevajalstvo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e1f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Primerjalna književnost in literarna teorija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e20",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Primerjalno jezikoslovje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e29",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Primerjalno slovansko jezikoslovje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e2a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e31",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Rusistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e47",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Slovakistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e57",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Slovenistika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e59",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e66",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija kulture",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e6c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Splošno jezikoslovje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e6e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Umetnostna zgodovina",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e8d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zgodovina",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ea3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Češki jezik in književnost",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d4e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Andragogika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eb4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Anglistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eb6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Antični in humanistični študiji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Arheologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ebb",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Azijske študije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fd7",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bibliotekarstvo, informacijski in založniški študiji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ebf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Digitalno jezikoslovje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/61c45740c714cef3bbd3144d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Etnologija in kulturna antropologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eed",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Filozofija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513efa",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Francistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f05",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f14",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Germanistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f19",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grški jezik, književnost in kultura",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f27",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Hispanistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f29",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Italijanistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f33",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Južnoslovanski študiji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f3e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kognitivna znanost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f44",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kreol - Kulturna raznolikost in transnacionalni procesi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f4c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Latinski jezik, književnost in kultura",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f51",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Muzikologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f6a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagogika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f81",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagogika (dvopredmetni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f82",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Polonistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f96",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prevajanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fa1",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prevajanje (slovenščina - angleščina - nemščina - skupni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fa3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Primerjalna književnost in literarna teorija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fa4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Primerjalno jezikoslovje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fad",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Primerjalno slovansko jezikoslovje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fae",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fb4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Rusistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fc4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Slovakistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fda",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Slovenistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fdc",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fec",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologija kulture",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ff2",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Splošno jezikoslovje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ff6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Srednjeevropske študije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ff8",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tolmačenje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514012",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Umetnostna zgodovina",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514027",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zgodovina",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51403f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zgodovina (dvopredmetni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514041",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Češki jezik in književnost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ec5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistika in družboslovje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514070",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Statistika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Medicinska fakulteta",
@@ -192,7 +2426,58 @@
       "address": "Vrazov trg 2, 1000 Ljubljana",
       "email": "dekanat@mf.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a80",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kognitivna znanost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f44",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Uporabna statistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51402f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ecf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Medicina",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f5a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biomedicina",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514057",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Statistika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Naravoslovnotehniška fakulteta",
@@ -201,7 +2486,149 @@
       "address": "Aškerčeva cesta 12, 1000 Ljubljana",
       "email": "info@ntf.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a84",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Geologija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513daa",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Geotehnologija in okolje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dab",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grafične in interaktivne komunikacije",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513db8",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inženirstvo materialov",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dbe",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Načrtovanje tekstilij in oblačil",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513df8",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Oblikovanje tekstilij in oblačil",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e01",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Geologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f16",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Geotehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f17",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grafične in interaktivne komunikacije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f25",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Metalurgija in materiali",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f65",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Načrtovanje tekstilij in oblačil",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f6c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Oblikovanje tekstilij in oblačil",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f74",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grajeno okolje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51406e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tekstilstvo, grafika in tekstilno oblikovanje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ab",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Znanost in inženirstvo materialov",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140bd",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Geotehnologija in rudarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dac",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Grafična in medijska tehnika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513db7",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Metalurške tehnologije",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513df2",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Tekstilno in oblačilno inženirstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e7f",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Pedagoška fakulteta",
@@ -210,7 +2637,149 @@
       "address": "Kardeljeva ploščad 16, 1000 Ljubljana",
       "email": "pisarna@pef.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a87",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dvopredmetni učitelj",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d6f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Likovna pedagogika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513de7",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Logopedija in surdopedagogika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513de8",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Razredni pouk",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e45",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Socialna pedagogika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e62",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Specialna in rehabilitacijska pedagogika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e6d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Edukacijske politike",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513edf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inkluzivna pedagogika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f31",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kognitivna znanost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f44",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Logopedija in surdopedagogika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f54",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Muzejska pedagogika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f69",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pedagoško računalništvo in informatika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f85",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pomoč z umetnostjo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f98",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Poučevanje",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f9d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Predšolska vzgoja",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f9f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Socialna pedagogika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fe4",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Specialna in rehabilitacijska pedagogika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ff5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Supervizija, osebno in organizacijsko svetovanje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fff",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Izobraževanje učiteljev in edukacijske vede",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514074",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Predšolska vzgoja",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e1e",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Pravna fakulteta",
@@ -219,7 +2788,44 @@
       "address": "Poljanski nasip 2, 1000 Ljubljana",
       "email": "pf-dekanat@pf.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a8b",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e1d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f9e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/619e017ea4c81921be29c2cf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51408b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Teološka fakulteta",
@@ -228,7 +2834,72 @@
       "address": "Poljanska cesta 4, 1000 Ljubljana",
       "email": "dekanat@teof.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a8e",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Teološki in religijski študiji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e85",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teološki študiji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e86",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Človek in medosebni odnosi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/63ad4b0aed3fc6cc1443ebd5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Religiologija in etika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fc3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514010",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zakonski in družinski študiji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51403c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teologija",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51400d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistika in družboslovje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514070",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teologija",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ad",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Veterinarska fakulteta",
@@ -237,7 +2908,30 @@
       "address": "Cesta v Mestni log 51, 1000 Ljubljana",
       "email": "dekanat@vf.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a94",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Veterinarstvo",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51403a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biomedicina",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514057",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Varstvo okolja",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140ba",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Zdravstvena fakulteta",
@@ -246,7 +2940,100 @@
       "address": "Zdravstvena pot 5, 1000 Ljubljana",
       "email": "dekanat@vsz.uni-lj.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973aa0",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapija",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/6493ea51b954c5b4adf1a1c6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sanitarno inženirstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e51",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f04",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Radiološka tehnologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fbe",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sanitarno inženirstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fce",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zdravstvena nega",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51403e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Babištvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d43",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Delovna terapija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d4f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d97",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Laboratorijska zobna protetika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513de1",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ortotika in protetika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e0c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Radiološka tehnologija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e3f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zdravstvena nega",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ea1",
+          "lastModified": "2026-11-20"
+        }
+      ]
     }
   ]
 }

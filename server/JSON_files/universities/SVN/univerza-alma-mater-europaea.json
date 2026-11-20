@@ -22,7 +22,30 @@
       "address": "Kardeljeva ploščad 1, 1000 Ljubljana",
       "email": "ish@ish.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a39",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Humanistični študiji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e9b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistične znanosti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ff3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistične znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a3",
+          "lastModified": "2026-11-20"
+        }
+      ]
     },
     {
       "name": "Univerza Alma Mater Europaea - Fakulteta ECM",
@@ -31,7 +54,148 @@
       "address": "Slovenska ulica 17, 2000 Maribor",
       "email": "info@almamater.si",
       "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a38",
-      "lastModified": "2026-11-15"
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arhivistika in dokumentologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514007",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekoremediacije in trajnostni razvoj",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f64",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Evropske poslovne študije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f36",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Management poslovnih sistemov",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f35",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Psihoterapevtska znanost",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/6ad9ffd159da9206152ef98a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Socialna gerontologija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fe9",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Spletna znanost in tehnologije",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514052",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zdravstvene vede",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514014",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Arhivske znanosti",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140c0",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140bc",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Projektni management",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140b7",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Socialna gerontologija",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Strateški komunikacijski management",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140b1",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Uporabna umetna inteligenca",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/63b6cfa021895ffb3f26bac9",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Arhivistika",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e97",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizioterapija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e0a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Management poslovnih sistemov",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dc1",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Socialna gerontologija",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e48",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Spletne in informacijske tehnologije",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ea6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zdravstvena nega",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e0b",
+          "lastModified": "2026-11-20"
+        }
+      ]
     }
   ]
 }

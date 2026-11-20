@@ -9,5 +9,75 @@
   "address": "Pristaniška ulica 14, 6000 Koper",
   "email": "university@emuni.si",
   "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a42",
-  "lastModified": "2026-11-15"
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Evro-sredozemska univerza",
+      "city": "Koper",
+      "website": "http://www.emuni.si",
+      "address": "Pristaniška ulica 14, 6000 Koper",
+      "email": "university@emuni.si",
+      "isUniversityLevel": true,
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a42",
+      "lastModified": "2026-11-20",
+      "studyPrograms": [
+        {
+          "name": "Digitalizacija in človekove pravice",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/67dc220789ad20d57a0845bf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekoremediacije in trajnostni razvoj",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f64",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kinezologija človekovega delovanja",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/61c35cbec714cef3bbd3143b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Medkulturno poslovno komuniciranje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/6adb5e5ce9143fefa9763bc0",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Okolje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f03",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Poslovno in digitalno pravo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/69cbae413980716c1cd2eba5",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sredozemska geopolitika in geoekonomija",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/69cbaf9e3980716c1cd2f008",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kineziologija za kakovost življenja",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/67dd18da89ad20d57a12f431",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    }
+  ]
 }
