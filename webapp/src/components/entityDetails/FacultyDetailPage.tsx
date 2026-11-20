@@ -14,6 +14,7 @@ import { ContactLinks } from "./ContactLinks";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
+import { ImproveDataLink } from "./ImproveDataLink";
 import { Button } from "../sharedComponents/Button";
 import { ResultGroup } from "../Search/ResultGroup";
 import { TrackList } from "../entityCards/TrackList";
@@ -160,6 +161,7 @@ function FacultyDetailPage() {
                 dataSourceUrl={faculty.dataSourceUrl}
               />
             </div>
+            <ImproveDataLink />
           </div>
 
           <div className="border-t border-(--border-color) pt-4">

@@ -81,6 +81,17 @@ describe("UniversityDetailPage", () => {
     expect(screen.getByRole("status")).toBeInTheDocument();
   });
 
+  test("offers a way to suggest a correction", async () => {
+    givenUniversity(universityDetail);
+    renderPage();
+
+    expect(
+      await screen.findByRole("link", {
+        name: /Log in to suggest a correction/i,
+      }),
+    ).toHaveAttribute("href", "/login");
+  });
+
   test("renders the university with breadcrumb and faculty list", async () => {
     givenUniversity(universityDetail);
     renderPage();

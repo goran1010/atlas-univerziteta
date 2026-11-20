@@ -456,7 +456,10 @@
     "shareLink": "Podijeli link",
     "linkCopied": "Link kopiran u clipboard.",
     "linkCopyFailed": "Nije moguće kopirati link.",
-    "dataSource": "Izvor podataka"
+    "dataSource": "Izvor podataka",
+    "improvePrompt": "Vidiš netačan podatak?",
+    "improveLink": "Predloži ispravku",
+    "improveLogin": "Prijavi se da predložiš ispravku"
   },
   "access": {
     "goToLogin": "Prijavi se",

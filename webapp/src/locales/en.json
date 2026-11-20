@@ -456,7 +456,10 @@
     "shareLink": "Share link",
     "linkCopied": "Link copied to clipboard.",
     "linkCopyFailed": "Could not copy link.",
-    "dataSource": "Data source"
+    "dataSource": "Data source",
+    "improvePrompt": "See something inaccurate?",
+    "improveLink": "Suggest a correction",
+    "improveLogin": "Log in to suggest a correction"
   },
   "access": {
     "goToLogin": "Log In",
