@@ -3125,11 +3125,11 @@
       "name": "Farmacevtski fakultet",
       "city": "Skopje",
       "website": "http://www.ff.ukim.edu.mk",
-      "address": "Ul. Vodnjanska br. 17, 1000 Skopje",
-      "phone": "+389 2 3119 694",
-      "email": "zost@ff.ukim.edu.mk",
-      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
-      "lastModified": "2026-11-16",
+      "address": "Ul. Majka Tereza br. 47, 1000 Skopje",
+      "phone": "+389 2 3126 032",
+      "email": "contact@ff.ukim.edu.mk",
+      "dataSourceUrl": "http://www.ff.ukim.edu.mk/",
+      "lastModified": "2026-11-20",
       "studyPrograms": [
         {
           "name": "Dietetika so dietoterapija",
