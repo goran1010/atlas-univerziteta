@@ -95,7 +95,6 @@ function useUnifiedSearch() {
       const hasCountry = country !== "";
 
       if (!hasText && !hasCountry && !browse) {
-        // eslint-disable-next-line react-x/set-state-in-effect -- reached synchronously from the params effect, whose purpose is syncing URL params into view state
         setView({ kind: "idle" });
         return;
       }
@@ -114,6 +113,7 @@ function useUnifiedSearch() {
       return;
     }
 
+    // eslint-disable-next-line react-x/set-state-in-effect -- triggerSearch sets view state synchronously; syncing URL params into view state is this effect's purpose
     triggerSearch(urlQuery, countryFilter, browseAll);
     // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps -- browseAll derives from paramsKey
   }, [paramsKey, triggerSearch]);

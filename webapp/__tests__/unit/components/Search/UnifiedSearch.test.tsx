@@ -389,12 +389,10 @@ describe("UnifiedSearch", () => {
       matches,
       media: "(pointer: fine)",
       onchange: null,
-      addListener: vi.fn(),
-      removeListener: vi.fn(),
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
       dispatchEvent: () => true,
-    };
+    } as unknown as MediaQueryList;
   }
 
   test("autofocuses the search input on fine-pointer devices", () => {

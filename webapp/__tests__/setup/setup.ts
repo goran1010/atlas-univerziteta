@@ -15,18 +15,16 @@ afterAll(() => {
   server.close();
 });
 
-const media: MediaQueryList = {
+const media = {
   matches: false,
   media: "(prefers-color-scheme: dark)",
   onchange: null,
-  addListener: vi.fn(),
-  removeListener: vi.fn(),
   addEventListener: vi.fn(),
   removeEventListener: vi.fn(),
   dispatchEvent: () => {
     return true;
   },
-};
+} as unknown as MediaQueryList;
 
 // Mocking window.matchMedia for tests that rely on it,
 // since jsdom doesn't implement it by default.
