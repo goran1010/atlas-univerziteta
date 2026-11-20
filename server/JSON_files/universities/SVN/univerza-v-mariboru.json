@@ -27,6 +27,7 @@
           "name": "Ekonomske in poslovne vede",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d56",
           "lastModified": "2026-11-20"
         },
@@ -34,6 +35,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d7e",
           "lastModified": "2026-11-20"
         },
@@ -41,6 +43,7 @@
           "name": "Ekonomske in poslovne vede",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ecd",
           "lastModified": "2026-11-20"
         },
@@ -48,6 +51,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ef5",
           "lastModified": "2026-11-20"
         },
@@ -55,6 +59,7 @@
           "name": "Ekonomske in poslovne vede",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51405d",
           "lastModified": "2026-11-20"
         },
@@ -62,6 +67,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/60488f9aebb3bf320ecdb960",
           "lastModified": "2026-11-20"
         },
@@ -69,6 +75,7 @@
           "name": "Poslovna ekonomija",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e13",
           "lastModified": "2026-11-20"
         }
@@ -87,6 +94,7 @@
           "name": "Elektrotehnika",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d57",
           "lastModified": "2026-11-20"
         },
@@ -94,6 +102,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d7e",
           "lastModified": "2026-11-20"
         },
@@ -101,6 +110,7 @@
           "name": "Informatika in podatkovne tehnologije",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d9d",
           "lastModified": "2026-11-20"
         },
@@ -108,6 +118,7 @@
           "name": "Medijske komunikacije",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dfd",
           "lastModified": "2026-11-20"
         },
@@ -115,6 +126,7 @@
           "name": "Mehatronika",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e04",
           "lastModified": "2026-11-20"
         },
@@ -122,6 +134,7 @@
           "name": "Računalništvo in informacijske tehnologije",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e40",
           "lastModified": "2026-11-20"
         },
@@ -129,6 +142,7 @@
           "name": "Telekomunikacije",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e53",
           "lastModified": "2026-11-20"
         },
@@ -136,6 +150,7 @@
           "name": "Bioinformatika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eca",
           "lastModified": "2026-11-20"
         },
@@ -143,6 +158,7 @@
           "name": "Elektrotehnika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ece",
           "lastModified": "2026-11-20"
         },
@@ -150,6 +166,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ef5",
           "lastModified": "2026-11-20"
         },
@@ -157,6 +174,7 @@
           "name": "Informatika in podatkovne tehnologije",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f0a",
           "lastModified": "2026-11-20"
         },
@@ -164,6 +182,7 @@
           "name": "Medijske komunikacije",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f79",
           "lastModified": "2026-11-20"
         },
@@ -171,6 +190,7 @@
           "name": "Mehatronika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f7c",
           "lastModified": "2026-11-20"
         },
@@ -178,6 +198,7 @@
           "name": "Računalništvo in informacijske tehnologije",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fbd",
           "lastModified": "2026-11-20"
         },
@@ -185,6 +206,7 @@
           "name": "Telekomunikacije",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fd3",
           "lastModified": "2026-11-20"
         },
@@ -192,6 +214,7 @@
           "name": "Elektrotehnika",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51405e",
           "lastModified": "2026-11-20"
         },
@@ -199,6 +222,7 @@
           "name": "Medijske komunikacije",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51407d",
           "lastModified": "2026-11-20"
         },
@@ -206,6 +230,7 @@
           "name": "Računalništvo in informatika",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514098",
           "lastModified": "2026-11-20"
         },
@@ -213,6 +238,7 @@
           "name": "Elektrotehnika",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d58",
           "lastModified": "2026-11-20"
         },
@@ -220,6 +246,7 @@
           "name": "Informatika in tehnologije komuniciranja",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d9e",
           "lastModified": "2026-11-20"
         },
@@ -227,6 +254,7 @@
           "name": "Mehatronika",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e05",
           "lastModified": "2026-11-20"
         },
@@ -234,6 +262,7 @@
           "name": "Računalništvo in informacijske tehnologije",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e41",
           "lastModified": "2026-11-20"
         }
@@ -252,6 +281,7 @@
           "name": "Energetika",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d59",
           "lastModified": "2026-11-20"
         },
@@ -259,6 +289,7 @@
           "name": "Energetika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ed5",
           "lastModified": "2026-11-20"
         },
@@ -266,6 +297,7 @@
           "name": "Energetika",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514061",
           "lastModified": "2026-11-20"
         },
@@ -273,6 +305,7 @@
           "name": "Energetika",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d5a",
           "lastModified": "2026-11-20"
         }
@@ -291,6 +324,7 @@
           "name": "Arhitektura",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d51",
           "lastModified": "2026-11-20"
         },
@@ -298,6 +332,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d7e",
           "lastModified": "2026-11-20"
         },
@@ -305,6 +340,7 @@
           "name": "Gradbeništvo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d8c",
           "lastModified": "2026-11-20"
         },
@@ -312,6 +348,7 @@
           "name": "Prometno inženirstvo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e37",
           "lastModified": "2026-11-20"
         },
@@ -319,6 +356,7 @@
           "name": "Arhitektura",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ec9",
           "lastModified": "2026-11-20"
         },
@@ -326,6 +364,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ef5",
           "lastModified": "2026-11-20"
         },
@@ -333,6 +372,7 @@
           "name": "Gradbeništvo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f08",
           "lastModified": "2026-11-20"
         },
@@ -340,6 +380,7 @@
           "name": "Prometno inženirstvo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fb7",
           "lastModified": "2026-11-20"
         },
@@ -347,6 +388,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/60488f9aebb3bf320ecdb960",
           "lastModified": "2026-11-20"
         },
@@ -354,6 +396,7 @@
           "name": "Gradbeništvo",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51406b",
           "lastModified": "2026-11-20"
         },
@@ -361,6 +404,7 @@
           "name": "Prometno inženirstvo",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514094",
           "lastModified": "2026-11-20"
         },
@@ -368,6 +412,7 @@
           "name": "Gradbeništvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d94",
           "lastModified": "2026-11-20"
         },
@@ -375,6 +420,7 @@
           "name": "Prometno inženirstvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e38",
           "lastModified": "2026-11-20"
         }
@@ -393,6 +439,7 @@
           "name": "Kemija",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dbc",
           "lastModified": "2026-11-20"
         },
@@ -400,6 +447,7 @@
           "name": "Kemijsko inženirstvo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dca",
           "lastModified": "2026-11-20"
         },
@@ -407,6 +455,7 @@
           "name": "Kemija",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f2c",
           "lastModified": "2026-11-20"
         },
@@ -414,6 +463,7 @@
           "name": "Kemijsko inženirstvo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f47",
           "lastModified": "2026-11-20"
         },
@@ -421,6 +471,7 @@
           "name": "Kemija in kemijsko inženirstvo",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514077",
           "lastModified": "2026-11-20"
         },
@@ -428,6 +479,7 @@
           "name": "Kemijska tehnologija",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dd2",
           "lastModified": "2026-11-20"
         }
@@ -446,6 +498,7 @@
           "name": "Agrikultura in okolje",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d4c",
           "lastModified": "2026-11-20"
         },
@@ -453,6 +506,7 @@
           "name": "Agrarna ekonomika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eb2",
           "lastModified": "2026-11-20"
         },
@@ -460,6 +514,7 @@
           "name": "Kmetijstvo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f48",
           "lastModified": "2026-11-20"
         },
@@ -467,6 +522,7 @@
           "name": "Varnost hrane v prehrambeni verigi",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fed",
           "lastModified": "2026-11-20"
         },
@@ -474,6 +530,7 @@
           "name": "Agrarna ekonomika",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514055",
           "lastModified": "2026-11-20"
         },
@@ -481,6 +538,7 @@
           "name": "Kmetijstvo",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514079",
           "lastModified": "2026-11-20"
         },
@@ -488,6 +546,7 @@
           "name": "Agrarna ekonomika in razvoj podeželja",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d4b",
           "lastModified": "2026-11-20"
         },
@@ -495,6 +554,7 @@
           "name": "Agronomija - okrasne rastline, zelenjava in poljščine",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d4d",
           "lastModified": "2026-11-20"
         },
@@ -502,6 +562,7 @@
           "name": "Biosistemsko inženirstvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d53",
           "lastModified": "2026-11-20"
         },
@@ -509,6 +570,7 @@
           "name": "Ekološko kmetijstvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d55",
           "lastModified": "2026-11-20"
         },
@@ -516,6 +578,7 @@
           "name": "Vinogradništvo, vinarstvo in sadjarstvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e7c",
           "lastModified": "2026-11-20"
         },
@@ -523,6 +586,7 @@
           "name": "Živinoreja",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ead",
           "lastModified": "2026-11-20"
         }
@@ -541,6 +605,7 @@
           "name": "Logistika sistemov",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513deb",
           "lastModified": "2026-11-20"
         },
@@ -548,6 +613,7 @@
           "name": "Logistika sistemov",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f5e",
           "lastModified": "2026-11-20"
         },
@@ -555,6 +621,7 @@
           "name": "Logistika sistemov",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51407b",
           "lastModified": "2026-11-20"
         },
@@ -562,6 +629,7 @@
           "name": "Gospodarska in tehniška logistika",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d7d",
           "lastModified": "2026-11-20"
         }
@@ -580,6 +648,7 @@
           "name": "Biologija",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d52",
           "lastModified": "2026-11-20"
         },
@@ -587,6 +656,7 @@
           "name": "Ekologija z naravovarstvom",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d54",
           "lastModified": "2026-11-20"
         },
@@ -594,6 +664,7 @@
           "name": "Fizika",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d79",
           "lastModified": "2026-11-20"
         },
@@ -601,6 +672,7 @@
           "name": "Matematika",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513df9",
           "lastModified": "2026-11-20"
         },
@@ -608,6 +680,7 @@
           "name": "Biologija in ekologija z naravovarstvom",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ecb",
           "lastModified": "2026-11-20"
         },
@@ -615,6 +688,7 @@
           "name": "Fizika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ee8",
           "lastModified": "2026-11-20"
         },
@@ -622,6 +696,7 @@
           "name": "Izobraževalna matematika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f18",
           "lastModified": "2026-11-20"
         },
@@ -629,6 +704,7 @@
           "name": "Izobraževalna tehnika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f1a",
           "lastModified": "2026-11-20"
         },
@@ -636,6 +712,7 @@
           "name": "Matematika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f6d",
           "lastModified": "2026-11-20"
         },
@@ -643,6 +720,7 @@
           "name": "Predmetni učitelj",
           "cycle": "INTEGRATED",
           "durationYears": 5,
+          "ects": 300,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fa7",
           "lastModified": "2026-11-20"
         },
@@ -650,6 +728,7 @@
           "name": "Ekološke znanosti",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51405c",
           "lastModified": "2026-11-20"
         },
@@ -657,6 +736,7 @@
           "name": "Fizika",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514066",
           "lastModified": "2026-11-20"
         },
@@ -664,6 +744,7 @@
           "name": "Matematika",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51407c",
           "lastModified": "2026-11-20"
         },
@@ -671,6 +752,7 @@
           "name": "Tehnika - področje izobraževanja",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51409d",
           "lastModified": "2026-11-20"
         }
@@ -689,6 +771,7 @@
           "name": "Inženiring poslovnih sistemov",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513da0",
           "lastModified": "2026-11-20"
         },
@@ -696,6 +779,7 @@
           "name": "Organizacija in management informacijskih sistemov",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e0f",
           "lastModified": "2026-11-20"
         },
@@ -703,6 +787,7 @@
           "name": "Organizacija in management kadrovskih in izobraževalnih sistemov",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e10",
           "lastModified": "2026-11-20"
         },
@@ -710,6 +795,7 @@
           "name": "Inženiring poslovnih sistemov",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f0c",
           "lastModified": "2026-11-20"
         },
@@ -717,6 +803,7 @@
           "name": "Management v zdravstvu in socialnem varstvu",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f6b",
           "lastModified": "2026-11-20"
         },
@@ -724,6 +811,7 @@
           "name": "Organizacija in management informacijskih sistemov",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f86",
           "lastModified": "2026-11-20"
         },
@@ -731,6 +819,7 @@
           "name": "Organizacija in management kadrovskih in izobraževalnih sistemov",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f87",
           "lastModified": "2026-11-20"
         },
@@ -738,6 +827,7 @@
           "name": "Organizacija in management informacijskih sistemov",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514081",
           "lastModified": "2026-11-20"
         },
@@ -745,6 +835,7 @@
           "name": "Organizacija in management kadrovskih in izobraževalnih sistemov",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514082",
           "lastModified": "2026-11-20"
         },
@@ -752,6 +843,7 @@
           "name": "Organizacija in management poslovnih in delovnih sistemov",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514083",
           "lastModified": "2026-11-20"
         },
@@ -759,6 +851,7 @@
           "name": "Inženiring poslovnih sistemov",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d9f",
           "lastModified": "2026-11-20"
         },
@@ -766,6 +859,7 @@
           "name": "Krizni management",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dd4",
           "lastModified": "2026-11-20"
         },
@@ -773,6 +867,7 @@
           "name": "Management v športu",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ded",
           "lastModified": "2026-11-20"
         },
@@ -780,6 +875,7 @@
           "name": "Organizacija in management informacijskih sistemov",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e09",
           "lastModified": "2026-11-20"
         },
@@ -787,6 +883,7 @@
           "name": "Organizacija in management kadrovskih in izobraževalnih sistemov",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e11",
           "lastModified": "2026-11-20"
         }
@@ -805,6 +902,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d7e",
           "lastModified": "2026-11-20"
         },
@@ -812,6 +910,7 @@
           "name": "Mehatronika",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e04",
           "lastModified": "2026-11-20"
         },
@@ -819,6 +918,7 @@
           "name": "Oblikovanje in tekstilni materiali",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e07",
           "lastModified": "2026-11-20"
         },
@@ -826,6 +926,7 @@
           "name": "Okoljsko inženirstvo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e4f",
           "lastModified": "2026-11-20"
         },
@@ -833,6 +934,7 @@
           "name": "Strojništvo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e4b",
           "lastModified": "2026-11-20"
         },
@@ -840,6 +942,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ef5",
           "lastModified": "2026-11-20"
         },
@@ -847,6 +950,7 @@
           "name": "Inženirsko oblikovanje izdelkov",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f0d",
           "lastModified": "2026-11-20"
         },
@@ -854,6 +958,7 @@
           "name": "Mehatronika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f7c",
           "lastModified": "2026-11-20"
         },
@@ -861,6 +966,7 @@
           "name": "Napredni inženirski materiali",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/68e752c4965011f4d156aa9a",
           "lastModified": "2026-11-20"
         },
@@ -868,6 +974,7 @@
           "name": "Oblikovanje in tekstilni materiali",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f7e",
           "lastModified": "2026-11-20"
         },
@@ -875,6 +982,7 @@
           "name": "Okoljsko inženirstvo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fcd",
           "lastModified": "2026-11-20"
         },
@@ -882,6 +990,7 @@
           "name": "Strojništvo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fcc",
           "lastModified": "2026-11-20"
         },
@@ -889,6 +998,7 @@
           "name": "Doktorska šola Fakultete za strojništvo",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51405a",
           "lastModified": "2026-11-20"
         },
@@ -896,6 +1006,7 @@
           "name": "Gospodarsko inženirstvo",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/60488f9aebb3bf320ecdb960",
           "lastModified": "2026-11-20"
         },
@@ -903,6 +1014,7 @@
           "name": "Mehatronika",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e05",
           "lastModified": "2026-11-20"
         },
@@ -910,6 +1022,7 @@
           "name": "Strojništvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e4d",
           "lastModified": "2026-11-20"
         },
@@ -917,6 +1030,7 @@
           "name": "Tehnologije tekstilnega oblikovanja",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e50",
           "lastModified": "2026-11-20"
         }
@@ -935,6 +1049,7 @@
           "name": "Turizem: sodelovanje in razvoj",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e61",
           "lastModified": "2026-11-20"
         },
@@ -942,6 +1057,7 @@
           "name": "Turistične destinacije in doživetja",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fe2",
           "lastModified": "2026-11-20"
         },
@@ -949,6 +1065,7 @@
           "name": "Sodobne turistične študije",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/619e0264a4c81921be29c2d0",
           "lastModified": "2026-11-20"
         },
@@ -956,6 +1073,7 @@
           "name": "Sodobne turistične prakse",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e4a",
           "lastModified": "2026-11-20"
         }
@@ -974,6 +1092,7 @@
           "name": "Varstvoslovje",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e77",
           "lastModified": "2026-11-20"
         },
@@ -981,6 +1100,7 @@
           "name": "Varstvoslovje",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514005",
           "lastModified": "2026-11-20"
         },
@@ -988,6 +1108,7 @@
           "name": "Varstvoslovje",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a8",
           "lastModified": "2026-11-20"
         },
@@ -995,6 +1116,7 @@
           "name": "Informacijska varnost",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d9c",
           "lastModified": "2026-11-20"
         },
@@ -1002,6 +1124,7 @@
           "name": "Varnost in policijsko delo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e75",
           "lastModified": "2026-11-20"
         }
@@ -1020,6 +1143,7 @@
           "name": "Bioinformatika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eca",
           "lastModified": "2026-11-20"
         },
@@ -1027,6 +1151,7 @@
           "name": "Management v zdravstvu in socialnem varstvu",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f6b",
           "lastModified": "2026-11-20"
         },
@@ -1034,6 +1159,7 @@
           "name": "Zdravstvena nega",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51400c",
           "lastModified": "2026-11-20"
         },
@@ -1041,6 +1167,7 @@
           "name": "Zdravstvena nega",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140b2",
           "lastModified": "2026-11-20"
         },
@@ -1048,6 +1175,7 @@
           "name": "Zdravstvena nega",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e84",
           "lastModified": "2026-11-20"
         }
@@ -1066,6 +1194,7 @@
           "name": "Angleški jezik in književnost",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d50",
           "lastModified": "2026-11-20"
         },
@@ -1073,6 +1202,7 @@
           "name": "Filozofija",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d75",
           "lastModified": "2026-11-20"
         },
@@ -1080,6 +1210,7 @@
           "name": "Geografija",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d7a",
           "lastModified": "2026-11-20"
         },
@@ -1087,6 +1218,7 @@
           "name": "Germanistika",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d7b",
           "lastModified": "2026-11-20"
         },
@@ -1094,6 +1226,7 @@
           "name": "Madžarski jezik s književnostjo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513dec",
           "lastModified": "2026-11-20"
         },
@@ -1101,6 +1234,7 @@
           "name": "Nemški jezik in književnost",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e06",
           "lastModified": "2026-11-20"
         },
@@ -1108,6 +1242,7 @@
           "name": "Pedagogika",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e12",
           "lastModified": "2026-11-20"
         },
@@ -1115,6 +1250,7 @@
           "name": "Prevajalske študije",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e32",
           "lastModified": "2026-11-20"
         },
@@ -1122,6 +1258,7 @@
           "name": "Prevajalske študije - madžarščina",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e35",
           "lastModified": "2026-11-20"
         },
@@ -1129,6 +1266,7 @@
           "name": "Prevajalske študije - nemščina",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e36",
           "lastModified": "2026-11-20"
         },
@@ -1136,6 +1274,7 @@
           "name": "Psihologija",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e39",
           "lastModified": "2026-11-20"
         },
@@ -1143,6 +1282,7 @@
           "name": "Slovenski jezik in književnost",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e44",
           "lastModified": "2026-11-20"
         },
@@ -1150,6 +1290,7 @@
           "name": "Sociologija",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e49",
           "lastModified": "2026-11-20"
         },
@@ -1157,6 +1298,7 @@
           "name": "Umetnostna zgodovina",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e64",
           "lastModified": "2026-11-20"
         },
@@ -1164,6 +1306,7 @@
           "name": "Zgodovina",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e92",
           "lastModified": "2026-11-20"
         },
@@ -1171,6 +1314,7 @@
           "name": "Anglistika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f91",
           "lastModified": "2026-11-20"
         },
@@ -1178,6 +1322,7 @@
           "name": "Filozofija",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ee6",
           "lastModified": "2026-11-20"
         },
@@ -1185,6 +1330,7 @@
           "name": "Geografija",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ee9",
           "lastModified": "2026-11-20"
         },
@@ -1192,6 +1338,7 @@
           "name": "Madžarski jezik s književnostjo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f60",
           "lastModified": "2026-11-20"
         },
@@ -1199,6 +1346,7 @@
           "name": "Medkulturna germanistika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f7b",
           "lastModified": "2026-11-20"
         },
@@ -1206,6 +1354,7 @@
           "name": "Nemščina kot tuji jezik",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f7d",
           "lastModified": "2026-11-20"
         },
@@ -1213,6 +1362,7 @@
           "name": "Pedagogika",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f8c",
           "lastModified": "2026-11-20"
         },
@@ -1220,6 +1370,7 @@
           "name": "Prevajanje in tolmačenje",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fb6",
           "lastModified": "2026-11-20"
         },
@@ -1227,6 +1378,7 @@
           "name": "Psihologija",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fbc",
           "lastModified": "2026-11-20"
         },
@@ -1234,6 +1386,7 @@
           "name": "Slovenski jezik in književnost",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fc2",
           "lastModified": "2026-11-20"
         },
@@ -1241,6 +1394,7 @@
           "name": "Sociologija",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fc9",
           "lastModified": "2026-11-20"
         },
@@ -1248,6 +1402,7 @@
           "name": "Umetnostna zgodovina",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513feb",
           "lastModified": "2026-11-20"
         },
@@ -1255,6 +1410,7 @@
           "name": "Zgodovina",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514049",
           "lastModified": "2026-11-20"
         },
@@ -1262,6 +1418,7 @@
           "name": "Anglistične študije",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/65b7c4b9aa2046ed110298bc",
           "lastModified": "2026-11-20"
         },
@@ -1269,6 +1426,7 @@
           "name": "Filozofija",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514065",
           "lastModified": "2026-11-20"
         },
@@ -1276,6 +1434,7 @@
           "name": "Geografija",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514067",
           "lastModified": "2026-11-20"
         },
@@ -1283,6 +1442,7 @@
           "name": "Germanistične študije",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514068",
           "lastModified": "2026-11-20"
         },
@@ -1290,6 +1450,7 @@
           "name": "Pedagogika",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514085",
           "lastModified": "2026-11-20"
         },
@@ -1297,6 +1458,7 @@
           "name": "Psihologija",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514095",
           "lastModified": "2026-11-20"
         },
@@ -1304,6 +1466,7 @@
           "name": "Slovenistične študije",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514099",
           "lastModified": "2026-11-20"
         },
@@ -1311,6 +1474,7 @@
           "name": "Sociologija",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51409b",
           "lastModified": "2026-11-20"
         },
@@ -1318,6 +1482,7 @@
           "name": "Umetnostna zgodovina",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140a1",
           "lastModified": "2026-11-20"
         },
@@ -1325,6 +1490,7 @@
           "name": "Zgodovina",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140b8",
           "lastModified": "2026-11-20"
         }
@@ -1343,6 +1509,7 @@
           "name": "Varnost hrane v prehrambeni verigi",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fed",
           "lastModified": "2026-11-20"
         },
@@ -1350,6 +1517,7 @@
           "name": "Dentalna medicina",
           "cycle": "INTEGRATED",
           "durationYears": 6,
+          "ects": 360,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ecc",
           "lastModified": "2026-11-20"
         },
@@ -1357,6 +1525,7 @@
           "name": "Farmacija",
           "cycle": "INTEGRATED",
           "durationYears": 5,
+          "ects": 300,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/676524249dafff2edc1c6ab7",
           "lastModified": "2026-11-20"
         },
@@ -1364,6 +1533,7 @@
           "name": "Splošna medicina",
           "cycle": "INTEGRATED",
           "durationYears": 6,
+          "ects": 360,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fca",
           "lastModified": "2026-11-20"
         },
@@ -1371,6 +1541,7 @@
           "name": "Biomedicinska tehnologija",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514059",
           "lastModified": "2026-11-20"
         }
@@ -1389,6 +1560,7 @@
           "name": "Glasbena pedagogika",
           "cycle": "FIRST",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d7c",
           "lastModified": "2026-11-20"
         },
@@ -1396,6 +1568,7 @@
           "name": "Likovna pedagogika",
           "cycle": "FIRST",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513de4",
           "lastModified": "2026-11-20"
         },
@@ -1403,6 +1576,7 @@
           "name": "Razredni pouk",
           "cycle": "FIRST",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e42",
           "lastModified": "2026-11-20"
         },
@@ -1410,6 +1584,7 @@
           "name": "Glasbena pedagogika",
           "cycle": "SECOND",
           "durationYears": 1,
+          "ects": 60,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513eeb",
           "lastModified": "2026-11-20"
         },
@@ -1417,6 +1592,7 @@
           "name": "Inkluzija v vzgoji in izobraževanju",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f0b",
           "lastModified": "2026-11-20"
         },
@@ -1424,6 +1600,7 @@
           "name": "Likovna pedagogika",
           "cycle": "SECOND",
           "durationYears": 1,
+          "ects": 60,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f5d",
           "lastModified": "2026-11-20"
         },
@@ -1431,6 +1608,7 @@
           "name": "Predšolska vzgoja",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513faf",
           "lastModified": "2026-11-20"
         },
@@ -1438,6 +1616,7 @@
           "name": "Razredni pouk",
           "cycle": "SECOND",
           "durationYears": 1,
+          "ects": 60,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513fbf",
           "lastModified": "2026-11-20"
         },
@@ -1445,6 +1624,7 @@
           "name": "Razredni pouk",
           "cycle": "INTEGRATED",
           "durationYears": 5,
+          "ects": 300,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/66dea09f6fdc848d5ac9caa3",
           "lastModified": "2026-11-20"
         },
@@ -1452,6 +1632,7 @@
           "name": "Edukacijske vede",
           "cycle": "THIRD",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51405b",
           "lastModified": "2026-11-20"
         },
@@ -1459,6 +1640,7 @@
           "name": "Predšolska vzgoja",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e28",
           "lastModified": "2026-11-20"
         },
@@ -1466,6 +1648,7 @@
           "name": "Športno treniranje",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e4e",
           "lastModified": "2026-11-20"
         }
@@ -1484,6 +1667,7 @@
           "name": "Pravo",
           "cycle": "FIRST",
           "durationYears": 3,
+          "ects": 180,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e16",
           "lastModified": "2026-11-20"
         },
@@ -1491,6 +1675,7 @@
           "name": "Evropske pravne študije",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ee1",
           "lastModified": "2026-11-20"
         },
@@ -1498,6 +1683,7 @@
           "name": "Pravo",
           "cycle": "SECOND",
           "durationYears": 2,
+          "ects": 120,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f92",
           "lastModified": "2026-11-20"
         },
@@ -1505,6 +1691,7 @@
           "name": "Pravo",
           "cycle": "THIRD",
           "durationYears": 4,
+          "ects": 240,
           "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51408a",
           "lastModified": "2026-11-20"
         }
