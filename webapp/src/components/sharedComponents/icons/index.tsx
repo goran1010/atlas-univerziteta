@@ -23,4 +23,5 @@ export {
   MoonIcon,
   MonitorIcon,
   UploadIcon,
+  AlertCircleIcon,
 } from "./ui";

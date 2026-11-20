@@ -303,7 +303,8 @@
   },
   "footer": {
     "name": "Goran Jović",
-    "email": "goran1010jovic@gmail.com"
+    "email": "goran1010jovic@gmail.com",
+    "reportIssue": "Prijavi problem"
   },
   "validation": {
     "email": {
