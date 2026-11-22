@@ -82,8 +82,10 @@
         {
           "name": "Inxhinieri Mjedisi dhe Uji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3974",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/imu",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Menaxhim Uji",
@@ -100,14 +102,18 @@
         {
           "name": "Planifikim dhe Arkitekturë Peizazhi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4152",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/ap",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Bujqësore dhe Siguri Ushqimi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3972",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/shbsu",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Agronomi",
@@ -152,8 +158,10 @@
         {
           "name": "Teknologji Informacioni në Bujqësi dhe Mjedis (IT)",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3970",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/tibm",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Zootekni dhe Siguria e Produkteve Blegtorale",
@@ -426,8 +434,10 @@
         {
           "name": "Ekonomiks",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3971",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/ekn",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Ekonomi dhe Politikat e Zhvillimit",
@@ -462,8 +472,10 @@
         {
           "name": "Informatikë Biznesi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4117",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/ib",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Agrobiznesi",
@@ -474,8 +486,10 @@
         {
           "name": "Menaxhim Biznesi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3978",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/bm",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Menaxhim Agrobiznesi",
@@ -735,14 +749,18 @@
         {
           "name": "Teknologji Ushqimore",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3977",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/tu",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ushqimi dhe Shkencat e të Ushqyerit",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3973",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/ushu",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Analizat e Ushqimeve (Master profesional)",
@@ -850,8 +868,10 @@
         {
           "name": "Dizajni i Interierit dhe Inxhinieri Druri",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3975",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/diid",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Inxhinieri Teknologji Druri",
@@ -868,8 +888,10 @@
         {
           "name": "Inxhinieri Pyjore",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3976",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.ubt.edu.al/bachelor/ip",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Menaxhim i Ekosistemeve Pyjore",

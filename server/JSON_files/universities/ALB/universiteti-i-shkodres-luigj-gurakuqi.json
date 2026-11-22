@@ -428,8 +428,10 @@
         {
           "name": "Drejtësi",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3450",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://www.unishk.edu.al/universiteti-luigj-gurakuqi/fakultetet/fakulteti-i-drejtesise",
+          "lastModified": "2026-11-22"
         }
       ]
     },

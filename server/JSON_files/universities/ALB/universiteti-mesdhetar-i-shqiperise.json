@@ -307,8 +307,9 @@
         {
           "name": "Drejtësi",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3606",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "dataSourceUrl": "https://www.umsh.edu.al/c/102/fakulteti-i-drejtesise-dhe-shkencave-humane",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -362,8 +363,11 @@
         {
           "name": "Inteligjencë Artificiale",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4013",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip/Anglisht",
+          "dataSourceUrl": "https://www.umsh.edu.al/c/221/fakulteti-i-informatikes",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Sistemet e Informacionit në Biznes (Master profesional)",
