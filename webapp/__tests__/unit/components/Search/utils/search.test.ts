@@ -1,4 +1,5 @@
 import {
+  browseUniversities,
   searchAll,
   SearchFailedError,
 } from "../../../../../src/components/Search/utils/search";
@@ -102,5 +103,65 @@ describe("searchAll", () => {
     const failure = await pending.catch((error: unknown) => error);
     expect(failure).toBeInstanceOf(Error);
     expect((failure as Error).name).toBe("AbortError");
+  });
+});
+
+function university(id: number) {
+  return {
+    id,
+    name: `University ${String(id)}`,
+    acronym: null,
+    city: "Mostar",
+    country: "BIH",
+    entity: null,
+    ownership: "PUBLIC",
+    foundedYear: null,
+    website: null,
+    _count: { faculties: 1 },
+  };
+}
+
+function givenUniversityPages(pages: ReturnType<typeof university>[][]) {
+  server.use(
+    http.get("*/api/v1/universities", ({ request }) => {
+      const url = new URL(request.url);
+      requestUrls.push(url);
+      const page = Number(url.searchParams.get("page"));
+      return HttpResponse.json({
+        message: "Universities retrieved successfully.",
+        data: pages[page - 1],
+        page,
+        totalPages: pages.length,
+        total: pages.flat().length,
+      });
+    }),
+  );
+}
+
+describe("browseUniversities", () => {
+  test("requests every page and returns all universities", async () => {
+    givenUniversityPages([[university(1), university(2)], [university(3)]]);
+
+    const results = await browseUniversities("BIH");
+
+    expect(results.universities.map((u) => u.id)).toEqual([1, 2, 3]);
+    expect(results.direct?.universities).toBe(3);
+    expect(requestUrls.map((url) => url.searchParams.get("page"))).toEqual([
+      "1",
+      "2",
+    ]);
+    for (const url of requestUrls) {
+      expect(url.searchParams.get("country")).toBe("BIH");
+      expect(url.searchParams.get("limit")).toBe("100");
+    }
+  });
+
+  test("makes a single request when everything fits on one page", async () => {
+    givenUniversityPages([[university(1)]]);
+
+    const results = await browseUniversities(undefined);
+
+    expect(results.universities).toHaveLength(1);
+    expect(requestUrls).toHaveLength(1);
   });
 });

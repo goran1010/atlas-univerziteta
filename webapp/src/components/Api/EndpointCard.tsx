@@ -32,7 +32,10 @@ function EndpointCard({ endpoint }: { endpoint: Endpoint }) {
       </p>
 
       {endpoint.params && (
-        <div className="rounded-md border border-(--border-color) p-3 overflow-x-auto">
+        <div
+          tabIndex={0}
+          className="rounded-md border border-(--border-color) p-3 overflow-x-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+        >
           <p className="text-sm font-semibold mb-1">
             {t("endpoint.queryParameters")}
           </p>
@@ -53,6 +56,7 @@ function EndpointCard({ endpoint }: { endpoint: Endpoint }) {
                   </td>
                   <td className="pt-1">
                     {p.descriptionKey && t(p.descriptionKey)}
+                    {p.values && ` ${p.values.join(", ")}`}
                   </td>
                 </tr>
               ))}
@@ -66,7 +70,10 @@ function EndpointCard({ endpoint }: { endpoint: Endpoint }) {
           <p className="text-sm font-semibold mb-1">
             {t("endpoint.requestBody")}
           </p>
-          <pre className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color)">
+          <pre
+            tabIndex={0}
+            className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
             {endpoint.requestExample}
           </pre>
         </div>
@@ -77,7 +84,10 @@ function EndpointCard({ endpoint }: { endpoint: Endpoint }) {
           <p className="text-sm font-semibold mb-1">
             {t("endpoint.successResponse")}
           </p>
-          <pre className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color)">
+          <pre
+            tabIndex={0}
+            className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
             {endpoint.successExample}
           </pre>
         </div>
@@ -88,7 +98,10 @@ function EndpointCard({ endpoint }: { endpoint: Endpoint }) {
           <p className="text-sm font-semibold mb-1">
             {t("endpoint.errorResponses")}
           </p>
-          <pre className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color)">
+          <pre
+            tabIndex={0}
+            className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
             {endpoint.errorExample}
           </pre>
         </div>

@@ -11,6 +11,7 @@ import {
 import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
+import { ImproveDataLink } from "./ImproveDataLink";
 import { tCount } from "../../utils/pluralize";
 import { universityDetailResponseSchema } from "../../schemas/university";
 import { useEntityDetail } from "../../customHooks/useEntityDetail";
@@ -133,6 +134,7 @@ function UniversityDetailPage() {
                 dataSourceUrl={university.dataSourceUrl}
               />
             </div>
+            <ImproveDataLink />
           </div>
 
           <div className="border-t border-(--border-color) pt-4">

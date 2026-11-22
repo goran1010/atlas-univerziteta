@@ -1,0 +1,451 @@
+{
+  "country": "MKD",
+  "name": "Meǵunaroden Balkanski univerzitet",
+  "acronym": "IBU",
+  "city": "Skopje",
+  "ownership": "PRIVATE",
+  "foundedYear": "2006",
+  "website": "https://www.ibu.edu.mk",
+  "address": "Makedonsko-Kosovska Brigada 9 br. 29, 1000 Skopje",
+  "phone": "+389 2 55 15 000",
+  "email": "info@ibu.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+  "lastModified": "2026-11-20",
+  "faculties": [
+    {
+      "name": "Fakultet za Ekonomski i administrativni nauki",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-economics-and-administrative-sciences",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Bankarstvo i finansii",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "E-biznis",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Gastronomija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Hotelski menadžment i turizam",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Bankarstvo i finansii",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biznis Administracija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Održliva ekonomija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Upravuvanje vo zdravstvoto",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/doctoral",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/doctoral",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za Inženerstvo",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-engineering",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arhitektura",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Gradežništvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Industriski menadžment",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Inženerstvo za veštačka inteligencija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjutersko inženerstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Podatočno inženerstvo",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Gradežništvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Industrisko inženerstvo i menadžment",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjutersko inženerstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nauka za podatoci i mašinsko učenje",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Podatočno inženerstvo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/doctoral",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjutersko inženerstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/doctoral",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za Umetnost i dizajn",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-art-and-design",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Animacija i video produkcija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dizajn, enterier i mebel",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Moden dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Vizuelna umetnost",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Moden dizajn",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Vizuelna umetnost",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za Humanistički i opštestveni nauki",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-humanities-and-social-sciences",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Angliski jazik",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Oddelenska nastava na turski jazik",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Odnosi so javnost i marketing komunikacii",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihološko sovetuvanje i nasočuvanje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Turski jazik",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Angliski jazik",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Klinička Psihologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastava po turski jazik",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Odnosi so javnost",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Profesionalna Orientacija i Sovetuvanje za Kariera",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Turski jazik i kniževnost",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Angliski Jazik i Literatura",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/doctoral",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Doktor na nauki po psihologija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/doctoral",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Turski jazik i kniževnost",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/doctoral",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za Pravo",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-law",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Politički nauki i meǵunarodni odnosi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravni studii",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Administrativno Pravo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Balkanski Studii",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Delovno Pravo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kazneno Pravo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodna Politika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodno pravo",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/master",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Balkanski Studii",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/doctoral",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodno Pravo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/admission/doctoral",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za Dentalna medicina",
+      "website": "https://www.ibu.edu.mk/faculties/faculty-of-dental-medicine",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Stručna medicinska škola",
+      "website": "https://www.ibu.edu.mk/faculties/vocational-medical-school",
+      "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Akušerka",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Medicinska sestra",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://ibu.edu.mk/mk/pages/bachelor/programs",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

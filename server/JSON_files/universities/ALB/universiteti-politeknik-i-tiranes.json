@@ -1,0 +1,791 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Politeknik i Tiranës",
+  "acronym": "UPT",
+  "city": "Tiranë",
+  "ownership": "PUBLIC",
+  "foundedYear": "1951",
+  "website": "https://www.upt.edu.al",
+  "address": "Bulevardi Dëshmorët e Kombit, Sheshi Nënë Tereza, Tiranë",
+  "phone": "+355 4 222 79 14",
+  "email": "info@upt.al",
+  "accreditationFrom": "2022-01-07",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://upt.edu.al/kontakt/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Inxhinierisë Elektrike",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-inxhinierise-elektrike/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri Elektrike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3608",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Energjitikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3608",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Automatizim i Industrisë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3607",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Mekatronike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2212",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Elektroenergjitikë (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3704",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri elektrike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1419",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Automatizimi i industrisë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1419",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Energjetikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1419",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Elektrike (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2230",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Automatizimi i Industrisë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2230",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Mekatronike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3570",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Elektrike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3845",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Automatizimi i Industrisë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3845",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Energjitikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3658",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë Mekanike",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-inxhinierise-mekanike/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri Ekonomike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1430",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Materiale",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2207",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Mekanike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2208",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Tekstile e Modë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2209",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Ekonomike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2204",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Materiale",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1413",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Materiale",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1413",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Metalurgji dhe fonderi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1413",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Materiale (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2241",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Mekanike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1414",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Energjetikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1414",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Konstruksion Makinash dhe Mjete Lëvizëse",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1414",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Prodhim dhe Menaxhim Industrial",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1414",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri tekstili dhe mode",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1410",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Transporti (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2239",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Energjie",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2798",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inxhinieri Mekanike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3920",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Inxhinieri e Materialeve",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3920",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë së Ndërtimit",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-inxhinierise-se-ndertimit/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri Gjeodet",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1416",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Mjedisi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1405",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Ndërtimi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1403",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinierinë Hidroteknike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1404",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Gjeodezi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1439",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Gjeodezi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2217",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Hidroteknike (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2216",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Hidroteknikë",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1438",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Mjedisi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1437",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Trajtim Uji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1437",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Energjetikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1437",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Mjedisi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2215",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Ndërtimi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1436",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Gjeoteknikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1436",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Ndërtim dhe Administrim",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1435",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Strukturist",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1435",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Infrastrukturë e Transportit",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1435",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Gjeodezi",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3657",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Civile",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4183",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Inxhinieri strukturash dhe infrastrukturë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4183",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Ndërtimi",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4069",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Inxhinieri Mjedisi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4069",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Konstruksione Mekanike dhe Vlerësimi i Integritetit Strukturor",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3846",
+          "lastModified": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Arkitekturës dhe Urbanistikës",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-arkitektures-dhe-urbanistikes/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arkitekturë Interieri dhe Dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2845",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitekturë Interieri dhe Dizajn",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4135",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Restaurim monumentesh kulture (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2846",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Arkitekturë",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1433",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Arkitekt",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1433",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Urbanist",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1433",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Arkitekturë dhe Urbanistikë",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4077",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Arkitekturë dhe Dizajn",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4077",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Trashëgimi dhe Teknologji Arkitekture",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4077",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Urbanistikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4077",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Teknologjisë së Informacionit",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-teknologjise-se-informacionit/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri Elektronike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1452",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Informatike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1453",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Kompjuterike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4055",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri të Sistemeve Elektronike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4056",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri të Telekomunikacioneve",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1585",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inteligjencë Artificiale dhe Optimizim",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3809",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri elektronike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1447",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri informatike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1449",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Software (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3810",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri telekomunikacioni",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1448",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologji Informacioni (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2219",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologjitë e Informacionit dhe Komunikimit",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3752",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Inxhinieri Informatike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3752",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Telekomunikacion dhe Inxhinieri Informacioni",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3752",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë Matematike dhe Inxhinierisë Fizike",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-inxhinierise-matematike-dhe-inxhinierise-fizike/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri Matematike dhe Data Science",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4001",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinierinë Fizike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1422",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinierinë Matematike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1423",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Fizike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3493",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Fizikan Mjekësor",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3493",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Inxhinier Fizike",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3493",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Matematike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1457",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Matematike (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2699",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Aktuaristikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2699",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Matematike në Aktuaristikë",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4009",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Matematike në Analiza Sistemesh (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1455",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Fizike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3844",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Matematike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3911",
+          "lastModified": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Gjeologjisë dhe Minierave",
+      "website": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/fakulteti-i-gjeologjise-dhe-minierave/",
+      "dataSourceUrl": "https://upt.edu.al/drejtimi-akademik-administrativ/fakultetet/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri e Burimeve Minerare",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3497",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri e Naftës dhe Gazit",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3498",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Gjeoinformatike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1445",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Gjeologjike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1431",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Gjeomjedisi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1446",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri e Burimeve Minerare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3501",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Pasurimi i Mineraleve dhe riciklimi i mbetjeve",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3501",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Inxhinieri Minerare dhe Markshajderi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3500",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri e Burimeve Minerare (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4054",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Inxhinieri Minerare dhe Përpunim Mineralesh",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4054",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Gjeomatikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2880",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri e Gjeomjedisit",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2191",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri e Naftës, dhe Gazit",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3502",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Gjeologjike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1425",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Gjeoinformatikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1425",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Gjeologji inxhinierike dhe hidrogjeologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1425",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Gjeologjia e vendburimeve të hidrokarbureve",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1425",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Vendburimet e mineraleve të dobishme - Petrologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1425",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Gjeologjike (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3492",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Vendburimet e Mineraleve të Dobishme - Petrologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3492",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Gjeologji Inxhinierike dhe Hidrogjeologji",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3491",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Gjeologji e Vendburimeve Hidrokarbure",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3490",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Gjeoinformatikë",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3489",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri Gjeomjedisi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2222",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinierinë e Naftës dhe Gazit (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2881",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjeologjia dhe Mjedisi",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3659",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri e burimeve minerare",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3932",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Inxhinieri Nafte dhe Gazi",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3656",
+          "lastModified": "2026-11-16"
+        }
+      ]
+    }
+  ]
+}

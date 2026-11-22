@@ -1,0 +1,1078 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet Sv. Kliment Ohridski Bitola",
+  "acronym": "UKLO",
+  "city": "Bitola",
+  "ownership": "PUBLIC",
+  "foundedYear": "1979",
+  "website": "https://www.uklo.edu.mk",
+  "address": "1vi Maj bb, 7000 Bitola",
+  "phone": "+389 47 223 788",
+  "email": "contact@uklo.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://uklo.edu.mk/blog/istorijat/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Ekonomski fakultet - Prilep",
+      "city": "Prilep",
+      "website": "https://eccfp.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Bankarstvo i finansisii",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "E-biznis",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Marketing",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Meǵunaroden biznis",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Smetkovodstvo i revizija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Bankarstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Biznis administracija - menadžment",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "E-biznis",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Marketing menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Meǵunarodna ekonomija i biznis",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Smetkovodstvo, finansii i revizija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Biznis informatika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Finansii",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Marketing",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Meǵunaroden biznis",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za biotehnički nauki - Bitola",
+      "city": "Bitola",
+      "website": "https://fbn.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Agromenadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Hrana i dietetika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kvalitet i bezbednost na hrana",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Zootehnika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Agromenadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kvalitet i bezbednost na hrana",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Tehnologija na animalni proizvodi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Zootehnika (dvegodišni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Zootehnika (ednogodišni)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Tehnologija i bezbednost na prehranbeni proizvodi",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "name": "Tehnički fakultet - Bitola",
+      "city": "Bitola",
+      "website": "https://tfb.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Elektroenergetski sistemi i obvnovlivi izvori na energija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Grafičko inženerstvo i dizajn",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Industrisko inženerstvo i menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Inženerstvo za zaštita na životnata i rabotnata sredina",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Mašinstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Soobraḱajno-transportno inženerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Elektrotehnika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Grafičko inženerstvo i dizajn",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Industrisko inženerstvo i menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Inženerstvo za zaštita na životnata i rabotna sredina",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Mašinstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Soobraḱajno-transportno inženerstvo (Paten soobraḱaj i transport)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Industrisko inženerstvo i menadžment",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Mašinstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Soobraḱajno-transportno inženerstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "name": "Pedagoški fakultet - Bitola",
+      "city": "Bitola",
+      "website": "https://pfbt.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Angliski jazik i kniževsnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Informatika i tehničko obrazovanie",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Makedonski jazik i kniževnost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Nastavnik za oddelenska nastava",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Socijalna i rehabilitaciska pedagogija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Vospituvač",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Angliski jazik i kniževnost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "English Language and Literature",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Informatika i tehničko obrazovanie",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Makedonski jazik i kniževnost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Menadžment vo obrazovanieto",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Nastavnik za oddelenska nastava",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Obrazovanie na nadarenite i talentiranite",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Vospituvač",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Menadžment vo obrazovanieto",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Nadarenost i talentiranost",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Nastava po jazik",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Obrazovni nauki",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za turizam i ugostitelstvo - Ohrid",
+      "city": "Ohrid",
+      "website": "https://ftu.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Carina i špedicija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Carina i špedicija (na angliski jazik)",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Gastronomija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Hotelsko-restoranski menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Menadžment vo uslužen sektor",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Osiguruvanje i menadžment so rizik",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Turizam",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Turizam (na angliski jazik)",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Carina i špedicija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Carina i špedicija (na angliski jazik)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Osiguruvanje",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Turizam",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Menadžment vo uslužen sektor",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Turizam",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za bezbednost - Skopje",
+      "city": "Skopje",
+      "website": "https://fb.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Bezbednost",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kriminalistika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kriminologija i kriminalna politika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Bezbednost (dvegodišni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Bezbednost (ednogodišni)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kriminalistika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kriminologija i kriminalna politika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Krizen menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Bezbednost",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Bezbednost",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "name": "Praven fakultet - Kičevo",
+      "city": "Kičevo",
+      "website": "https://pfk.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Politički nauki i diplomatija - Bitola",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Politički nauki i diplomatija - Kičevo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Politički nauki i diplomatija - Struga",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Pravni studii - Bitola",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Pravni studii - Kičevo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Pravni studii - Struga",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Administrativno pravo i administracija - Bitola",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Administrativno pravo i administracija - Kičevo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Biznis pravo - Bitola",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Biznis pravo - Kičevo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kazneno pravo i kriminologija - Bitola",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kazneno pravo i kriminologija - Kičevo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Meǵunarodno pravo i meǵunarodni odnosi - Bitola",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Meǵunarodno pravo i meǵunarodni odnosi - Kičevo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Čovekovi prava i demokratija - Bitola",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Čovekovi prava i demokratija - Kičevo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Administrativno pravo i administracija",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Kazneno pravo i krivična pravda",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Meǵunarodno pravo i meǵunarodna politika",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "name": "Tehnološko-tehnički fakultet - Veles",
+      "city": "Veles",
+      "website": "https://ttfv.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Nutricionizam - Bitola",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Nutricionizam - Veles",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Prehranbena tehnologija i biotehnologija - Veles",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Nutricionizam (dvegodišni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Nutricionizam (ednogodišni)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Upravuvanje so kvalitet i bezbednost na hrana",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Inovativni tehnologii za hrana i nutricionizam",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "name": "Visoka medicinska škola - Bitola",
+      "city": "Bitola",
+      "website": "https://vmsb.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Specijalizacija za biohemiski analizi",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalizacija za gerontologija so palijativna griža",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalizacija za kompjuterizirana tomografija i magnetna rezonanca",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalizacija za mentalno zdravje",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalizacija za onkologija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalizacija za rehabilitacija vo hirurgija, travmatologija i ortopedija",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalizacija za rehabilitacija vo nevrologija",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Specijalizacija za semejna i patronažna griža",
+          "cycle": "SPECIALIST",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Akušerki",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Fizioterapevti",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Medicinska sestra/tehničar",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Medicinsko-laboratoriski analitičar",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Radiološki tehnolozi",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "name": "Veterinaren fakultet - Bitola",
+      "city": "Bitola",
+      "website": "https://vfb.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Veterinarna medicina",
+          "cycle": "INTEGRATED",
+          "ects": 360,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za informatički i komunikaciski tehnologii - Bitola",
+      "city": "Bitola",
+      "website": "https://fikt.uklo.edu.mk/",
+      "dataSourceUrl": "https://uklo.edu.mk/edinici/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Informatika i kompjuterska tehnika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Informatički nauki i komunikacisko inženerstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Informatika i kompjuterska tehnika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Informatički nauki i komunikacisko inženerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Informatički nauki i komunikacisko inženerstvo (na angliski jazik)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Angliski",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
+          "lastModified": "2026-11-17"
+        },
+        {
+          "name": "Informatički nauki i kompjutersko inženerstvo",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://uklo.edu.mk/studii/tret-ciklus-doktorski-studii/",
+          "lastModified": "2026-11-17"
+        }
+      ]
+    }
+  ]
+}

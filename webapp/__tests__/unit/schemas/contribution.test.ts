@@ -1,5 +1,6 @@
 import {
   universityCreateDataSchema,
+  universityEditDataSchema,
   universityTreeDataSchema,
 } from "../../../src/schemas/contribution";
 
@@ -31,6 +32,31 @@ describe("universityCreateDataSchema field length caps", () => {
     ]) {
       expect(universityCreateDataSchema.safeParse(data).success).toBe(false);
     }
+  });
+});
+
+describe("university entity rule", () => {
+  test.each([
+    ["BIH with its entity", { country: "BIH", entity: "FBIH" }, true],
+    ["BIH without an entity", { country: "BIH", entity: undefined }, false],
+    ["SRB without an entity", { country: "SRB", entity: undefined }, true],
+    ["SRB with an entity", { country: "SRB", entity: "FBIH" }, false],
+  ])("create: %s", (_label, fields, accepted) => {
+    const result = universityCreateDataSchema.safeParse({
+      ...validData,
+      ...fields,
+    });
+
+    expect(result.success).toBe(accepted);
+  });
+
+  test.each([
+    ["BIH leaving the entity out", { country: "BIH" }, true],
+    ["BIH clearing the entity", { country: "BIH", entity: null }, false],
+    ["SRB clearing the entity", { country: "SRB", entity: null }, true],
+    ["SRB with an entity", { country: "SRB", entity: "FBIH" }, false],
+  ])("edit: %s", (_label, data, accepted) => {
+    expect(universityEditDataSchema.safeParse(data).success).toBe(accepted);
   });
 });
 

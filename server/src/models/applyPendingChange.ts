@@ -20,6 +20,7 @@ import {
   universityTreeDataSchema,
   universityEditDataSchema,
 } from "../validation/contributionValidation.js";
+import { entityFitsCountry } from "../validation/countries.js";
 
 import { z } from "zod";
 
@@ -92,17 +93,10 @@ async function applyUniversity(ctx: ApplyContext): Promise<ApplyResult> {
     const mergedCountry = parsed.country ?? current.country;
     const mergedEntity =
       parsed.entity !== undefined ? parsed.entity : current.entity;
-    if (mergedCountry === "BIH" && mergedEntity === null) {
+    if (!entityFitsCountry(mergedCountry, mergedEntity)) {
       logger.warn(
-        { pendingChangeId: id },
-        "Approval rejected: BIH university would have no entity after merge.",
-      );
-      return "INVALID_DATA";
-    }
-    if (mergedCountry !== "BIH" && mergedEntity !== null) {
-      logger.warn(
-        { pendingChangeId: id },
-        "Approval rejected: non-BIH university would keep an entity after merge.",
+        { pendingChangeId: id, country: mergedCountry, entity: mergedEntity },
+        "Approval rejected: entity does not fit the country after merge.",
       );
       return "INVALID_DATA";
     }

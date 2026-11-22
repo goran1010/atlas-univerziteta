@@ -1,0 +1,1413 @@
+{
+  "country": "XKX",
+  "name": "Universiteti i Prishtinës Hasan Prishtina",
+  "acronym": "UP",
+  "city": "Prishtinë",
+  "ownership": "PUBLIC",
+  "foundedYear": "1969",
+  "website": "https://www.uni-pr.edu",
+  "accreditationFrom": "2025-10-01",
+  "accreditationTo": "2030-09-30",
+  "authority": "Agjencia e Kosovës për Akreditim (AKA)",
+  "dataSourceUrl": "https://uni-pr.edu/en/programs",
+  "lastModified": "2026-11-20",
+  "faculties": [
+    {
+      "name": "Fakulteti i Arteve",
+      "website": "https://arte.uni-pr.edu/",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 247 129",
+      "email": "arte@uni-pr.edu",
+      "dataSourceUrl": "https://arte.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Artet Dramatike (me 7 specializime)",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Artet Vizuale (me 6 specializime)",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bachelor i Muzikës (me specializim në Kompozim)",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Bachelor i Muzikës në Performim (me 5 specializime)",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Artet Dramatike (me 7 specializime)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Artet Vizuale (me 6 specializime)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Master i Muzikës në Edukim",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Master i Muzikës në Kompozim (me specializim në Kompozim)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Master i Muzikës në Performim",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20",
+          "tracks": [
+            {
+              "name": "Piano",
+              "dataSourceUrl": "https://uni-pr.edu/en/programs",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Solo Këndim",
+              "dataSourceUrl": "https://uni-pr.edu/en/programs",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Dirigjim",
+              "dataSourceUrl": "https://uni-pr.edu/en/programs",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Instrumente me Harqe dhe Tela/Kitarë",
+              "dataSourceUrl": "https://uni-pr.edu/en/programs",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Instrumente Frymore",
+              "dataSourceUrl": "https://uni-pr.edu/en/programs",
+              "lastModified": "2026-11-20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Edukimit Fizik dhe i Sportit",
+      "website": "https://fefs.uni-pr.edu/",
+      "address": "Rr. Eqrem Çabej, 10000 Prishtinë",
+      "phone": "+383 38 243 747",
+      "email": "fefs@uni-pr.edu",
+      "dataSourceUrl": "https://fefs.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Edukimi Fizik dhe Sport",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Edukimi Fizik dhe Sport",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Trajner Sportiv",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Filologjisë",
+      "website": "https://filologjia.uni-pr.edu/",
+      "address": "Rr. George Bush, 10000 Prishtinë",
+      "phone": "+383 38 222 970",
+      "email": "filologjia@uni-pr.edu",
+      "dataSourceUrl": "https://filologjia.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Ballkanistikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip/BSKM (Gjuhë boshnjake/serbe/kroate/malazeze)",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gazetari",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë dhe Letërsi Angleze",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë dhe Letërsi Frënge",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Frëngjisht-Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë dhe Letërsi Gjermane",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Gjermanisht",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë dhe Letërsi Turke",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Turqisht",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë Shqipe",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Letërsi Shqipe",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Orientalistikë",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gazetari dhe marrëdhënie me publikun",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjermanishtja si Gjuhë e Huaj",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Gjermanisht",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë Angleze - Programi i integruar i gjuhësisë",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë dhe Letërsi Frënge",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Frëngjisht-Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë dhe Letërsi Gjermane",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Gjermanisht",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë dhe Letërsi Turke",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhë Shqipe",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Letërsi Angleze",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Letërsi Shqipe",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Studime Kulturore Orientale",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjuhësi",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Letërsi",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike",
+      "website": "https://fiek.uni-pr.edu/",
+      "address": "Bregu i Diellit, 10000 Prishtinë",
+      "phone": "+383 38 554 896",
+      "email": "fiek@uni-pr.edu",
+      "dataSourceUrl": "https://fiek.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Elektroenergjetikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Elektronikë, Automatikë dhe Robotikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inxhinieri Kompjuterike dhe Softuerike",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teknologjitë e Informacionit dhe Komunikimit",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Elektroenergjetikë dhe Menaxhimi i Energjisë",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Elektronikë, Automatikë dhe Robotikë",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inxhineri Kompjuterike dhe Softuerike",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teknologjitë e Informacionit dhe Komunikimit",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inxhinieri Elektrike dhe Kompjuterike",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë Mekanike",
+      "website": "https://fim.uni-pr.edu/",
+      "address": "Rr. Agim Ramadani, Ndërtesa e Fakulteteve Teknike, 10000 Prishtinë",
+      "phone": "+383 38 552 126",
+      "email": "fim@uni-pr.edu",
+      "dataSourceUrl": "https://fim.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Dizajn Inxhinierik dhe Automjete",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Komunikacion dhe Transport",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mekatronikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prodhimtari dhe Inxhinieri Industriale",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Termoenergjetika dhe Energjia e Ripërtërishme",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Dizajn Inxhinierik dhe Automjete",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Komunikacion Rrugor",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mekatronikë",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Termoenergjetika dhe Energjia e Ripërtërishme (me 2 specializime)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Mjekësisë",
+      "website": "https://mjekesia.uni-pr.edu/",
+      "address": "Bulevardi i Dëshmorëve, 10000 Prishtinë",
+      "phone": "+383 38 512 221",
+      "email": "mjekesia@uni-pr.edu",
+      "dataSourceUrl": "https://mjekesia.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapi dhe Rehabilitim",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Infermieri",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizioterapi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Farmaci",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mjekësi e Përgjithshme",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Stomatologji",
+          "cycle": "INTEGRATED",
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mjekësi Klinike",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mjekësi Paraklinike",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shëndet Publik",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Stomatologji",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Shkencave Matematike-Natyrore",
+      "website": "https://fshmn.uni-pr.edu/",
+      "address": "Rr. Nëna Terezë, 10000 Prishtinë",
+      "phone": "+383 38 249 872",
+      "email": "fshmn@uni-pr.edu",
+      "dataSourceUrl": "https://fshmn.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Biologji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biologji Molekulare",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekologji dhe Mbrojtje e Mjedisit",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjeografi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kimi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kimi Inxhinierike",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kimi Ushqimore",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Matematikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Matematikë Financiare në Banka dhe Sigurime",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkencë Kompjuterike",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Biologji (me 2 specializime)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekologji dhe Mbrojtje e Mjedisit",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizikë",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjeografi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kimi Analitike dhe Kimi Mjedisore",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kimi Organike",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Matematikë me Zbatime",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkenca e Materialeve",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkencë Kompjuterike",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kimi",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë së Ndërtimit",
+      "website": "https://fin.uni-pr.edu/",
+      "address": "Rr. Agim Ramadani, Ndërtesa e Fakulteteve Teknike, 10000 Prishtinë",
+      "phone": "+383 38 554 899",
+      "email": "fin@uni-pr.edu",
+      "dataSourceUrl": "https://fin.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Gjeodezi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Hidroteknikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inxhinieria e Ambientit",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Konstruktiv",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gjeodezi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Konstruktiv",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhimi i Integruar i Resurseve Ujore",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Arkitekturës",
+      "website": "https://fa.uni-pr.edu/",
+      "address": "Rr. Arkitekt Karl Gega, Nr. 1, 10000 Prishtinë",
+      "phone": "+383 38 224 751",
+      "email": "arkitektura@uni-pr.edu",
+      "dataSourceUrl": "https://fa.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Arkitekturë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Arkitekturë (5 specializime)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Efiçiencë e Energjisë",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Edukimit",
+      "website": "https://edukimi.uni-pr.edu/",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 229 201",
+      "email": "edukimi@uni-pr.edu",
+      "dataSourceUrl": "https://edukimi.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Edukimi Fillor",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Edukimi në Fëmijëri të Hershme",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teknologjia Arsimore",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Master i Edukimit për STEAM",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Master i Mësimdhënies Lëndore (me 7 specializime)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Master i Shkencave të Edukimit (me 4 specializime)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Master në Inovacion dhe Cilësi në Edukim",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Doktoratë në Shkencat e Edukimit (Program i përbashkët/ Doktoratë e dyfishtë)",
+          "cycle": "THIRD",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Ekonomisë",
+      "website": "https://ekonomiku.uni-pr.edu/",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 221 895",
+      "email": "ekonomiku@uni-pr.edu",
+      "dataSourceUrl": "https://ekonomiku.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Banka dhe Financa",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekonomi e Aplikuar dhe Menaxhment (në Gjuhën Angleze)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekonomiks",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kontabilitet",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Marketing",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhment",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Banka dhe Financa",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekonomiks",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kontabilitet",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Marketing",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhment",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti Juridik",
+      "website": "https://juridiku.uni-pr.edu/",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 229 063",
+      "email": "juridiku@uni-pr.edu",
+      "dataSourceUrl": "https://juridiku.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Juridik",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "E Drejta Civile dhe Pronësore",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "E Drejta Financiare",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "E Drejta Kushtetuese Administrative",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "E Drejta Ndërkombëtare",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "E Drejta Penale",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kontrata dhe e Drejta Komerciale",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Studime të Avancuara Evropiane",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Të Drejtat e Njeriut, E Drejtë Penale Ndërkombëtare dhe Drejtësi Tranzicionale",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Bujqësisë dhe Veterinarisë",
+      "website": "https://fbv.uni-pr.edu/",
+      "address": "Bulevardi Bill Clinton, 10000 Prishtinë",
+      "phone": "+383 38 603 668",
+      "email": "fbv@uni-pr.edu",
+      "dataSourceUrl": "https://fbv.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Ekonomi e Bujqësisë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prodhim Bimor",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Prodhim Shtazor",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teknologji Ushqimore me Bioteknologji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Ekonomia e Bujqësisë dhe Ushqimit",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mbrojtje e Bimëve, Fitomedicinë",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pemëtari-Vreshtari",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkenca Bimore",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkencat e Aplikuara në Zootekni",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkencat e Ushqimit",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mjekësi Veterinare",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti Filozofik",
+      "website": "https://filozofiku.uni-pr.edu/",
+      "address": "Rr. Eqrem Çabej, Nr. 21, 10000 Prishtinë",
+      "phone": "+383 38 224 783",
+      "email": "filozofiku@uni-pr.edu",
+      "dataSourceUrl": "https://filozofiku.uni-pr.edu/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Antropologji dhe Trashëgimi Kulturore",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Filozofi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Histori",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Psikologji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Punë Sociale",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkencë Politike",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20",
+          "tracks": [
+            {
+              "name": "Marrëdhënie Ndërkombëtare dhe Diplomaci",
+              "dataSourceUrl": "https://uni-pr.edu/en/programs",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Administrim Publik",
+              "dataSourceUrl": "https://uni-pr.edu/en/programs",
+              "lastModified": "2026-11-20"
+            }
+          ]
+        },
+        {
+          "name": "Sociologji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Arkivistika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Filozofi Politike",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Histori Koha e Re",
+          "cycle": "SECOND",
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Marrëdhënie Ndërkombëtare dhe Diplomaci",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Psikologji Klinike dhe Komuniteti",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Psikologji Shkollore dhe Këshillim",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Sociologji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Trashëgimi Kulturore",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    }
+  ],
+  "address": "Rr. George Bush, Nr. 31, Prishtinë",
+  "phone": "+383 38 244 183",
+  "email": "info@uni-pr.edu"
+}

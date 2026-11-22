@@ -39,7 +39,7 @@ describe("isAuthenticated", () => {
     const session = { user: { id: "1", role: "USER" }, session: {} };
     getSessionMock.mockResolvedValue(session);
 
-    const req = { headers: {} } as Request;
+    const req = { headers: {} } as unknown as Request;
     const { res, statusMock, jsonMock } = createMockResponse();
     const next = vi.fn() as unknown as NextFunction;
 
@@ -54,7 +54,7 @@ describe("isAuthenticated", () => {
   test("responds with status 401 when no session exists", async () => {
     getSessionMock.mockResolvedValue(null);
 
-    const req = { headers: {} } as Request;
+    const req = { headers: {} } as unknown as Request;
     const { res, statusMock, jsonMock } = createMockResponse();
     const next = vi.fn() as unknown as NextFunction;
 
@@ -74,7 +74,7 @@ describe("isAuthenticated", () => {
     const authError = new Error("session lookup failed");
     getSessionMock.mockRejectedValue(authError);
 
-    const req = { headers: {} } as Request;
+    const req = { headers: {} } as unknown as Request;
     const { res } = createMockResponse();
     const next = vi.fn() as unknown as NextFunction;
 

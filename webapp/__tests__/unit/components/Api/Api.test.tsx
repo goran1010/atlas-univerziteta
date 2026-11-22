@@ -3,6 +3,7 @@ import { Api } from "../../../../src/components/Api/Api";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { apiEndpoints } from "../../../../src/components/Api/utils/endpoints";
 import { PUBLIC_API_URL } from "../../../../src/utils/envConfig";
+import { COUNTRIES } from "../../../../src/schemas/domain";
 
 function MockLanguageProvider({ children }: { children: React.ReactNode }) {
   return <RootContextProvider>{children}</RootContextProvider>;
@@ -56,6 +57,18 @@ describe("Api component", () => {
     for (const ep of apiEndpoints) {
       expect(screen.getAllByText(ep.path).length).toBeGreaterThan(0);
     }
+  });
+
+  test("lists the valid country codes on every endpoint with a country filter", () => {
+    renderApi();
+    const withCountryFilter = apiEndpoints.filter((ep) =>
+      ep.params?.some((param) => param.name === "country"),
+    );
+
+    expect(withCountryFilter.length).toBeGreaterThan(1);
+    expect(
+      screen.getAllByText(`Filter by country code: ${COUNTRIES.join(", ")}`),
+    ).toHaveLength(withCountryFilter.length);
   });
 
   test("does not render authenticated endpoint docs", () => {

@@ -24,6 +24,13 @@ const ENUM_ALIASES: Record<string, string> = {
 // Country aliases are resolved separately so short country codes (AND, FIN,
 // POL) can't false-match ordinary words through the general enum path
 const COUNTRY_ALIASES: Record<string, string> = {
+  ALBAN: "ALB",
+  ALBANI: "ALB",
+  ALBANIJ: "ALB",
+  ALBANIAN: "ALB",
+  ALBANSK: "ALB",
+  SHQIPERI: "ALB",
+  SHQIPERIS: "ALB",
   BOSN: "BIH",
   BOSNIA: "BIH",
   HERCEGOVINA: "BIH",
@@ -36,6 +43,17 @@ const COUNTRY_ALIASES: Record<string, string> = {
   HRVATSK: "HRV",
   HRVATSKA: "HRV",
   CROATIA: "HRV",
+  MAKEDON: "MKD",
+  MAKEDONIJ: "MKD",
+  MAKEDONSK: "MKD",
+  MACEDONI: "MKD",
+  MAQEDON: "MKD",
+  MAQEDONI: "MKD",
+  MAQEDONIS: "MKD",
+  NORTH: "MKD",
+  SEVERN: "MKD",
+  SJEVERN: "MKD",
+  VERIUT: "MKD",
   CRNA: "MNE",
   CRNE: "MNE",
   GORA: "MNE",
@@ -43,10 +61,15 @@ const COUNTRY_ALIASES: Record<string, string> = {
   CRNOGORSK: "MNE",
   CRNOGORSKI: "MNE",
   MONTENEGRO: "MNE",
+  SLOVEN: "SVN",
+  SLOVENI: "SVN",
+  SLOVENIJ: "SVN",
+  SLOVENSK: "SVN",
+  KOSOV: "XKX",
+  KOSOVES: "XKX",
+  KOSOVSK: "XKX",
 } as const;
 
-const COUNTRIES = ["BIH", "SRB", "HRV", "MNE"] as const;
-const ENTITIES = ["FBIH", "RS", "BD"] as const;
 const OWNERSHIPS = ["PUBLIC", "PRIVATE"] as const;
 const CYCLES = [
   "FIRST",
@@ -57,11 +80,4 @@ const CYCLES = [
   "SPECIALIST",
 ] as const;
 
-export {
-  ENUM_ALIASES,
-  COUNTRY_ALIASES,
-  COUNTRIES,
-  ENTITIES,
-  OWNERSHIPS,
-  CYCLES,
-};
+export { ENUM_ALIASES, COUNTRY_ALIASES, OWNERSHIPS, CYCLES };

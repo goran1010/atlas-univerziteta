@@ -4,7 +4,7 @@ Local development setup for Atlas Univerziteta. For hosting and production confi
 
 ## Prerequisites
 
-- Node.js 24.x and npm
+- Node.js 26.x and npm
 - PostgreSQL
 
 You will also need:

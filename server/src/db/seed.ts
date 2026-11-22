@@ -6,7 +6,13 @@ import { z } from "zod";
 
 import { env } from "../config/env.js";
 import { PrismaClient } from "../generated/prisma/client.js";
-import { COUNTRIES, ENTITIES } from "../search/aliases.js";
+import {
+  COUNTRIES,
+  ENTITIES,
+  ENTITY_RULE_MESSAGE,
+  entityFitsCountry,
+} from "../validation/countries.js";
+import { durationYearsSchema } from "../validation/contributionValidation.js";
 import {
   universitySearchFields,
   facultySearchFields,
@@ -58,7 +64,7 @@ const optionalDateSchema = z.iso
 const trackSeedSchema = z.strictObject({
   name: z.string().trim().min(1),
   ects: z.number().int().positive().nullish(),
-  durationYears: z.number().int().positive().nullish(),
+  durationYears: durationYearsSchema.nullish(),
   dataSourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
 });
@@ -73,7 +79,7 @@ const studyProgramSeedSchema = z.strictObject({
     "VOCATIONAL",
     "SPECIALIST",
   ]),
-  durationYears: z.number().int().positive().nullish(),
+  durationYears: durationYearsSchema.nullish(),
   ects: z.number().int().positive().nullish(),
   language: optionalTextSchema,
   dataSourceUrl: optionalUrlSchema,
@@ -114,8 +120,8 @@ const universitySeedSchema = z
     lastModified: optionalDateSchema,
     faculties: z.array(facultySeedSchema).min(1).optional(),
   })
-  .refine((u) => u.country !== "BIH" || u.entity !== undefined, {
-    message: "Entity is required for Bosnian universities",
+  .refine((u) => entityFitsCountry(u.country, u.entity), {
+    message: ENTITY_RULE_MESSAGE,
     path: ["entity"],
   });
 

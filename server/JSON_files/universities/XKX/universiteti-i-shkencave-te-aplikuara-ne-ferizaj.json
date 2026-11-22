@@ -1,0 +1,128 @@
+{
+  "country": "XKX",
+  "name": "Universiteti i Shkencave të Aplikuara në Ferizaj",
+  "acronym": "UShAF",
+  "city": "Ferizaj",
+  "ownership": "PUBLIC",
+  "foundedYear": "2015",
+  "website": "https://ushaf.net",
+  "address": "Rr. Universiteti, p.n., 70000 Ferizaj",
+  "phone": "+383 290 310 010",
+  "accreditationFrom": "2023-10-01",
+  "accreditationTo": "2028-09-30",
+  "authority": "Agjencia e Kosovës për Akreditim (AKA)",
+  "dataSourceUrl": "https://ushaf.net/historiku/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Inxhinierisë dhe Informatikë",
+      "website": "https://ushaf.net/fii/",
+      "dataSourceUrl": "https://ushaf.net/kontakti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Informatika e Aplikuar",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inxhinieria Industriale me Informatikë",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inxhinieria dhe Menaxhimi i Prodhimit",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Turizmit dhe Ambientit",
+      "website": "https://ushaf.net/fta/",
+      "dataSourceUrl": "https://ushaf.net/kontakti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Menaxhment i Hotelierisë dhe Turizmit",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhimi dhe Inovacioni në Turizëm",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Arkitekturës, Dizajnit dhe Teknologjisë së Drurit",
+      "website": "https://ushaf.net/fadtd/",
+      "dataSourceUrl": "https://ushaf.net/kontakti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arkitekturë e Interierit dhe Dizajni i Mobilieve",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Arkitektura e Gjelber dhe Dizajni i Interierit",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Menaxhmentit",
+      "website": "https://ushaf.net/fm/",
+      "dataSourceUrl": "https://ushaf.net/kontakti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Menaxhimi i Biznesit dhe Ndërmarrësia",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Menaxhimi i Ndërmarrësisë dhe Inovacionit",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Arteve të Aplikuara",
+      "website": "https://ushaf.net/faa-2/",
+      "dataSourceUrl": "https://ushaf.net/kontakti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dizajn Grafik dhe Multimedia",
+          "cycle": "VOCATIONAL",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    }
+  ]
+}

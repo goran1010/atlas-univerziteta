@@ -1,0 +1,842 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Ismail Qemali Vlorë",
+  "acronym": "UNIVLORA",
+  "city": "Vlorë",
+  "ownership": "PUBLIC",
+  "foundedYear": "1994",
+  "website": "https://univlora.edu.al",
+  "address": "Lagjia Pavarësia, Rruga Kosova, 9401 Vlorë",
+  "phone": "+355 33 222288",
+  "email": "info@univlora.edu.al",
+  "accreditationFrom": "2020-11-27",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://univlora.edu.al/kontakt",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Ekonomisë",
+      "city": "Vlorë",
+      "website": "https://univlora.edu.al/historiku-fe",
+      "address": "Godina A, Lagjia Pavarësia, Rruga Kosova, 9401 Vlorë",
+      "dataSourceUrl": "https://univlora.edu.al/kontakt",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Ekonomiks",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Financë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Kontabilitet",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Marketing",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Menaxhim Turizmi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Administrim Biznesi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Administrim Publik",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Ekonomiks",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Ekonomiks në Sipërmarrje (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Financë",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Financë (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Kontabilitet (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Marketing (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Marketing Digjital",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Pasuri të Paluajtshme (Real Estate)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Projektim dhe Menaxhim i Sistemeve Turistike dhe Kulturore",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Sipërmarrje në Turizëm (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=992",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Operator Turistik",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
+          "lastModified": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Shëndetit",
+      "city": "Vlorë",
+      "website": "https://univlora.edu.al/historiku-fsh",
+      "address": "Rruga Sulejman Delvina, 9401 Vlorë",
+      "dataSourceUrl": "https://univlora.edu.al/kontakt",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Infermieri e Përgjithshme",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shendetit",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Infermieri-Mami",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shendetit",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Teknik Laboratori",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shendetit",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Infermieri Kirurgjikale (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shendetit",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Infermieri Patologjike (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shendetit",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Infermieri Pediatrike (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shendetit",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Shkenca Infermierore",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shendetit",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Asistencë në Geriatri",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shendetit",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Dermoestetikë Profesionale",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shendetit",
+          "lastModified": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Shkencave Humane",
+      "city": "Vlorë",
+      "website": "https://univlora.edu.al/historiku-fshh",
+      "address": "Godina B, Rruga Sulejman Delvina, 9401 Vlorë",
+      "dataSourceUrl": "https://univlora.edu.al/kontakt",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Gjuhë Angleze",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip/Anglisht",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Gjuhë Italiane",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1757",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjuhë Shqipe dhe Letërsi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Gjuhësi e aplikuar në fushën e Turizmit",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Histori Gjeografi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Media, Komunikim dhe Trashëgimi Kulturore",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22",
+          "tracks": [
+            {
+              "name": "Gazetari dhe Multimedia",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3530",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Trashëgimi Kulturore",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3530",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Mësuesi për Arsimin Fillor",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mësuesi për Arsimin Parashkollor",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Pedagogji e Specializuar",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "E Drejtë Penale (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Edukim",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Marrëdhënie Ndërkombëtare",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mësimdhënie e Gjuhës Shqipe dhe Letërsisë",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mësuesi në Gjuhë e Huaj, Gjuhë Angleze",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mësuesi në Histori - Gjeografi (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3558",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Arsimin Fillor (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mësuesi për ciklin e lartë të arsimit bazë në lëndën Gjuhë Italiane (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Pedagogji e Specializuar Sociale",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Përkthim dhe Interpretim",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Shkenca Administrative (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Udhërrëfim dhe Komunikim Turistik (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3812",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Drejtësi",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Studime Gjuhësore, Letrare dhe Kulturore",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3647",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Udhërrëfyes Turistik për Rajonin e Jugut",
+          "cycle": "VOCATIONAL",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shkencave-humane",
+          "lastModified": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Shkencave Teknike dhe Natyrore",
+      "city": "Vlorë",
+      "website": "https://univlora.edu.al/historiku-fshtn",
+      "address": "Godina C, Lagjia Pavarësia, Rruga Kosova, 9401 Vlorë",
+      "dataSourceUrl": "https://univlora.edu.al/kontakt",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biologji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Computer Engineering",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://univlora.edu.al/english-language-programs-in-faculty-of-technical-and-natural-sciences",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Fizikë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2325",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Informatikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Inxhinieri Elektrike",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Inxhinieri Mekanike",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Inxhinieri Navale",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Kimi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Matematikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Matematikë - Fizikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Matematikë - Informatikë",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Matematikë Financë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1730",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Navigacion",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Navigacion dhe peshkim detar",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3418",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Aktuaristike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1731",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Arkitekturore për Trashëgiminë (Architecture Sciences for Heritage)",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://univlora.edu.al/english-language-programs-in-faculty-of-technical-and-natural-sciences",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Shkenca Kompjuterike",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Shkencat Kompjutacionale",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1735",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologji Informacioni",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Akuakulturë dhe Peshkim Detar (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3841",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Biologji Mjedisore",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Inxhinieri Armatimi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22",
+          "tracks": [
+            {
+              "name": "Aviacion",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4052",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Navale",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4052",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Maritime Environmental Protection and Management",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://univlora.edu.al/english-language-programs-in-faculty-of-technical-and-natural-sciences",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mësimdhënie e Kimisë në Arsimin e Mesëm të Lartë",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mësimdhënie e Kimisë në Arsimin e Mesëm të Ulët (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mësuesi për Arsimin e Mesëm në Biologji (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22",
+          "tracks": [
+            {
+              "name": "Minor në Kimi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2356",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Mësuesi për Arsimin e Mesëm në Lëndën Informatikë (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mësuesi për Arsimin e Mesëm në Lëndën Matematikë (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Operacione Industriale dhe Navale (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Shkenca Kompjuterike",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Studime të Avancuara Detare (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Matematikë",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4195",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Akuakulturë dhe higjenë e produkteve të peshkimit",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Programim Web dhe Dizenjim Digjital",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Specialist në Shërbime dhe Operacione Detare",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Teknik Laboratori Kimik",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shkencave-teknike-dhe-natyrore",
+          "lastModified": "2026-11-22"
+        }
+      ]
+    }
+  ]
+}

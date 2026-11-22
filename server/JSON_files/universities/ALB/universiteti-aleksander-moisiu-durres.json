@@ -1,0 +1,855 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Aleksandër Moisiu Durrës",
+  "acronym": "UAMD",
+  "city": "Durrës",
+  "ownership": "PUBLIC",
+  "foundedYear": "2006",
+  "website": "https://uamd.edu.al",
+  "address": "Lagjia 1, Rruga e Currilave, Durrës",
+  "phone": "+355 52 239161",
+  "email": "info@uamd.edu.al",
+  "accreditationFrom": "2022-03-24",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Biznesit",
+      "website": "https://uamd.edu.al/fakulteti-i-biznesit/",
+      "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Accounting",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4171",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Administrim Biznes",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1685",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Bankë - Financë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2574",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomia Qarkulluese dhe Zhvillimi i Qëndrueshëm",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3887",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë Kontabilitet",
+          "cycle": "FIRST",
+          "language": "Shqip/Anglisht",
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-finances-dhe-kontabilitetit/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Informatika Ekonomike",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uamd.edu.al/bachelor-informatika-ekonomike/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "International Business Management",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://uamd.edu.al/bachelor-ne-international-business-management-program-i-perbashket-uamd-ipb/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Komunikim dhe Marketing Digjital",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3503",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Marketing",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2368",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Turizëm",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3375",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Menaxhim Turizëm Arkeologjik",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3375",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Menaxhim Hotel-Restorant",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3373",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Shkenca Ekonomike",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uamd.edu.al/bachelor-shkenca-ekonomike/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Turizëm",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3670",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Bankë - Financë",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3381",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Bankë - Financë (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3377",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Drejtim i SME-ve (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3376",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Ekonomi Biznes",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3380",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Environmental, Cultural and Tourism Economics",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4063",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Financë Kontabilitet",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3299",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Guidë Turistike Shqiptare (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3302",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Industria e Sigurimeve dhe Drejtimi i Rrezikut",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2399",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Biznes",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3382",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Biznes (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3378",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim i Sipërmarrjeve Turistike (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3702",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Marketing",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3383",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Marketing (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3379",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Sigurim Jete, jo Jetë dhe Sigurimet Detare (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2393",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Ekonomike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3654",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Guidë Turistike",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-turizmit/",
+          "lastModified": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Edukimit",
+      "website": "https://uamd.edu.al/fakulteti-i-edukimit/",
+      "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Filozofi - Sociologji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3389",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjuhë Angleze",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1664",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjuhë Gjermane dhe Angleze",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3993",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gjuhë Letërsi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3782",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi në Arsimin Fillor",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3872",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Arsimin Parashkollor",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3888",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikologji",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3391",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Punë Sociale",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3999",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Didaktikë (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2375",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim dhe Supervizim i Institucioneve Arsimore",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2381",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësues i Shkencave Sociale",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4115",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësues për Arsimin e Mesëm të Ulët në Gjuhë Shqipe dhe Letërsi - Gjuhë Angleze",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3396",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Arsim Special (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3922",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Arsimin Fillor (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3912",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi për Gjuhë Shqipe dhe Letërsi",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3923",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi, Gjuhë e Huaj, Gjuhë Angleze",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3926",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mësuesi, Gjuhë e huaj, Gjuhë gjermane",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4008",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikologji Klinike",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4058",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Psikologji Shkollore dhe Zhvillimore (Master profesional)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-psikologjise/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Redaktori (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3582",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shërbime Sociale dhe Komunitare (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3603",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Didaktikë e Gjuhëve të Huaja",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3998",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Edukimi",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4180",
+          "lastModified": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Shkencave Politike Juridike",
+      "website": "https://uamd.edu.al/fakulteti-i-shkencave-politike-juridike/",
+      "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Administrim Publik",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1646",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Bashkëpunim dhe Zhvillim Ekonomik",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3671",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Gazetari dhe Marrëdhënie me Publikun",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3772",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Histori dhe Marrëdhënie Ndërkombëtare",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3669",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Komunikim, Teknologji dhe Media Digjitale",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4114",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Ndërkombëtare dhe Diplomatike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3760",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Comparitive and European Law/E Drejtë Evropiane dhe e Krahasuar",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uamd.edu.al/master-shkencor-e-drejte-evropiane-dhe-e-krahasuar-dilpome-e-dyfishte-ne-bashkepunim-me-universitetin-e-romes-sapienza/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "E Drejtë e Pronës (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2388",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "E Drejtë Ndërkombëtare Tregtare (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2387",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "E Drejtë Private",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2391",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "E Drejtë Publike Ndërkombëtare",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2392",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Histori",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3325",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Komunikim Publik (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3303",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Marrëdhënie Ndërkombëtare dhe Diplomaci",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.uamd.edu.al//marredhenie-nderkombetare-dhe-diplomaci/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Politika dhe Administrim",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3388",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Administrim Financiar",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3388",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Administrim Publik",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3387",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Politika dhe Administrim (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3386",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Drejtim Turizmi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3386",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Administrim Financiar",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3385",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Administrim Publik",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3384",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Politika Ndërkombëtare për Zhvillimin e Qëndrueshëm",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4136",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Politikat Publike (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3272",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Drejtësi",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-drejtesise/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Drejtësi",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4198",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "E Drejtë Private",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4198",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "E drejtë publike",
+          "cycle": "THIRD",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3856",
+          "lastModified": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Studimeve Profesionale",
+      "website": "https://uamd.edu.al/fakulteti-i-studimeve-profesionale/",
+      "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapi",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1652",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Higjenist Dentar",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4096",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri e Përgjithshme",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1650",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Mami",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1651",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Hoteleri - Turizëm",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2361",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhim Sipërmarrje dhe Inovacion",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4170",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Menaxhimi i bankave",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1684",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Navigacion dhe Menaxhim Detar",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1653",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknik Laboratori",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3992",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Akuakulturë dhe Peshkim Detar (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3842",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Infermieri Kirurgjikale (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3505",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Logjistikë dhe Siguri Detare (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3305",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Maritime Environmental Protection and Management",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://uamd.edu.al/maritime-environmental-protection-and-management-program/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Terapia Manuale dhe Fizioterapia Muskuloskeletike (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3994",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Asistent Administrativ",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-studimeve-te-integruara-me-praktiken/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Asistent Ligjor",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-studimeve-te-integruara-me-praktiken/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Hidroteknikë, Ujësjellës Kanalizime",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Informatikë-Praktike",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-te-aplikuara-dhe-te-natyres/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mekanik i Impianteve Industriale e Bujqësore",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Mekanikë detare",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Menaxhim Ndërtimi",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Menaxhim Transporti Detar/Tokësor",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Ndihmës Dentist",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-teknike-mjekesore/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Specialist i sistemeve të kondicionimit",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Specialist Rrjetesh Kompjuterike",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-te-aplikuara-dhe-te-natyres/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Teknikë Elektrike",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Teknologji Automobilash",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Teknologjisë së Informacionit",
+      "website": "https://uamd.edu.al/fakulteti-i-teknologjise-se-informacionit/",
+      "dataSourceUrl": "https://uamd.edu.al/misioni-dhe-vizioni/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Matematikë - Informatikë",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4016",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Multimedia dhe Televizion Digjital",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3991",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Kompjuterike",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4028",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Sisteme Informacioni",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3967",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Teknologji Informacioni",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4027",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Multimedia dhe Televizion Dixhital (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3324",
+          "lastModified": "2026-11-16",
+          "tracks": [
+            {
+              "name": "Përpunim Imazhi",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3324",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Produksion dhe Postproduksion",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3324",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Animim 3D",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3324",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Mësuesi në Matematikë- Informatikë",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3300",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Quantum Information Technology",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uamd.edu.al/master-shkencor-ne-quantum-information-technology/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Shkenca Kompjuterike të Aplikuara",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2376",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Shkenca Kompjuterike të Aplikuara (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2377",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Sistemet e Planifikimit të Burimeve të Ndërmarrjes (Master profesional)",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3304",
+          "lastModified": "2026-11-16"
+        },
+        {
+          "name": "Aplikacion Web dhe Dizenjim Grafik",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-shkencave-kompjuterike/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Specialist Pajisjesh Elektronike",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-teknologjise-se-informacionit/",
+          "lastModified": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "name": "Qëndra e Edukimit në Vazhdim",
+      "dataSourceUrl": "https://www.ascal.al/sq/fakulteti/?id=366",
+      "lastModified": "2026-11-20",
+      "studyPrograms": [
+        {
+          "name": "Edukim në Vazhdim",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2380",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Edukator për moshën 0-3 vjeçare",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3539",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gerontologji",
+          "cycle": "VOCATIONAL",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3767",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    }
+  ]
+}

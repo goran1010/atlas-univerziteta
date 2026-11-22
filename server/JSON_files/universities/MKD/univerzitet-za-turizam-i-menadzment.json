@@ -1,0 +1,144 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet za turizam i menadžment",
+  "acronym": "UTMS",
+  "city": "Skopje",
+  "ownership": "PRIVATE",
+  "website": "https://www.utms.edu.mk",
+  "address": "Bul. Partizanski odredi br. 99, Skopje",
+  "phone": "+389 2 3093 209",
+  "email": "contact@utms.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://www.utms.edu.mk/contact-mk",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za informatika",
+      "website": "http://fi.utms.edu.mk/",
+      "dataSourceUrl": "http://fi.utms.edu.mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Informatika",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "http://fi.utms.edu.mk/studii/programa-na-dodiplomski-studii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Informatika (dvegodišni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "http://fi.utms.edu.mk/studii/programa-na-poslediplomski-studii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Informatika (ednogodišni)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "http://fi.utms.edu.mk/studii/programa-na-poslediplomski-studii",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "website": "http://ef.utms.edu.mk/",
+      "dataSourceUrl": "http://ef.utms.edu.mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Finansii, bankarstvo i osiguruvanje",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "http://ef.utms.edu.mk/studii/programa-na-dodiplomski-studii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Ekonomija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "http://ef.utms.edu.mk/studii/programa-na-poslediplomski-studii",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za turizam",
+      "website": "http://ft.utms.edu.mk/",
+      "dataSourceUrl": "http://ft.utms.edu.mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Turizam",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "http://ft.utms.edu.mk/studii/programa-na-dodiplomski-studii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Turizam",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "http://ft.utms.edu.mk/studii/programa-na-poslediplomski-studii",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za menadžment na čovečki resursi",
+      "website": "http://fmcr.utms.edu.mk/",
+      "dataSourceUrl": "http://fmcr.utms.edu.mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Menadžment na čovečki resursi",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "http://fmcr.utms.edu.mk/studii/programa-na-dodiplomski-studii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Menadžment na čovečki resursi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "http://fmcr.utms.edu.mk/studii/programa-na-poslediplomski-studii",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za meǵunaroden marketing menadžment",
+      "website": "http://fmmm.utms.edu.mk/",
+      "dataSourceUrl": "http://fmmm.utms.edu.mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Meǵunaroden marketing menadžment",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "http://fmmm.utms.edu.mk/studii/programa-na-dodiplomski-studii",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunaroden marketing menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "http://fmmm.utms.edu.mk/studii/programa-na-poslediplomski-studii",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

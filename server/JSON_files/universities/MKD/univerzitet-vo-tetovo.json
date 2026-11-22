@@ -1,0 +1,1506 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet vo Tetovo",
+  "acronym": "UT",
+  "city": "Tetovo",
+  "ownership": "PUBLIC",
+  "foundedYear": "1994",
+  "website": "https://unite.edu.mk",
+  "address": "Ul. Ilindenska bb, 1200 Tetovo",
+  "phone": "+389 44 356 500",
+  "email": "international@unite.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://unite.edu.mk/mk/za-nas/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za biznis administracija",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-biznis-administracija",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biznis administracija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-biznis-administracija",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Delovna informatika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-biznis-administracija",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Javna administracija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-biznis-administracija",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biznis administracija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-biznis-administracija",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Javna administracija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-biznis-administracija",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za umetnosti",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dramska umetnost - Akterstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dramska umetnost - Filmska režija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dramska umetnost - Kinematografija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dramska umetnost - Montaža",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Likovna umetnost - Grafika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Likovna umetnost - Grafički dizajn",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Likovna umetnost - Likovna pedagogija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Likovna umetnost - Slikarstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Likovna umetnost - Vajarstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Muzička umetnost - Kompozicija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Muzička umetnost - Muzikologija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Muzička umetnost - Muzička pedagogija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Muzička umetnost - Pijano",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Muzička umetnost - Solo peenje",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Muzička umetnost - Viola",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Muzička umetnost - Violina",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Grafika",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Slikarstvo",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Vajarstvo",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-umetnosti",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za zemjodelstvo i biotehnologija",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-zemjodelstvo-i-biotehnologija",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Agrobiznis",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-zemjodelstvo-i-biotehnologija",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Rastitelno proizvodstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-zemjodelstvo-i-biotehnologija",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Veterinarna medicina",
+          "cycle": "INTEGRATED",
+          "ects": 300,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-zemjodelstvo-i-biotehnologija",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Ekonomija i biznis",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansii i smetkovodstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansiska istraga i kontrola",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Marketing menadžment",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Turizam i ugostitelstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Špedicija i osiguruvanje",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansii i smetkovodstvo",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansii, banki i osiguruvanje",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Marketing",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Marketing i menadžment",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Menadžment",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Menadžment na čovečki resursi",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Smetkovodstvo i revizija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Turizam",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/ekonomski-fakultet",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Filološki fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Albanski jazik i kniževnost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Angliski jazik i kniževnost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Francuski jazik i kniževnost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Germanski jazik i kniževnost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Makedonski jazik i kniževnost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Albanska kniževnost",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Albanski jazik",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Angliska kniževnost (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Angliska kniževnost (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Angliski jazik (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Angliski jazik (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Francuski jazik",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Germanski jazik",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Jazična redaktura",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Makedonska kniževnost",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Makedonski jazik",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Metodika na albanskiot jazik i kniževnost",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Metodika na angliskiot jazik (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Metodika na angliskiot jazik (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Metodika na germanskiot jazik",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filoloski-fakultet",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Filozofski fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Filozofija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Istorija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Orientalna filologija - Arapski jazik i kniževnost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Orientalna filologija - Turski jazik i kniževnost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sociologija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Arapski jazik i kniževnost",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Istorija na najnoviot vek",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Istorija na noviot vek",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Istorija na sredniot vek",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Klinička i sovetodavna psihologija (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Klinička i sovetodavna psihologija (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kultura i religija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Obrazovna i edukativna psihologija (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Obrazovna i edukativna psihologija (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Organizaciska psihologija i razvoj na kariera (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Organizaciska psihologija i razvoj na kariera (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija na sovetuvanje so psihoterapija (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija na sovetuvanje so psihoterapija (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Socijalna psihologija (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Socijalna psihologija (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sociologija (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sociologija (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sovremena filozofija (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sovremena filozofija (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Turski jazik i kniževnost",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/filozofski-fakultet",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Praven fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kriminalistika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Novinarstvo i mediumi",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Politički studii",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravni studii",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Bezbednost i kriminalistika",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Graǵansko pravo (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Graǵansko pravo (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kazneno pravo (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kazneno pravo (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kriminalistika",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodni odnosi i diplomatija",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodni odnosi i evropski studii",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodno pravo",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Novinarstvo i mediumi (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Novinarstvo i mediumi (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Upravno-ustavno pravo (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Upravno-ustavno pravo (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/praven-fakultet",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za fizička kultura",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-fizicka-kultura",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizička kultura i zdravje",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-fizicka-kultura",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sportski trener - Borečki sportovi",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-fizicka-kultura",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sportski trener - Fudbal",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-fizicka-kultura",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sportski trener - Košarka",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-fizicka-kultura",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sportski trener - Odbojka",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-fizicka-kultura",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sportski trener - Skijanje",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-fizicka-kultura",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Fizičko obrazovanie (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-fizicka-kultura",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Fizičko obrazovanie (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-fizicka-kultura",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Pedagoški fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Logopedija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Oddelenska nastava",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Predučilišno vospituvanje",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Profesionalna pedagogija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Specijalna edukacija i rehabilitacija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Autizam i intelektualna poprečenost",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Elementarno obrazovanie",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Inkluzivno obrazovanie",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Logopedija i oštetuvanje na sluhot (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Logopedija i oštetuvanje na sluhot (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Menadžment vo obrazovanie",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pedagogija - nasoka Predučilišno vospituvanje",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Socijalna pedagogija (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Socijalna pedagogija (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/pedagoski-fakultet",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Prirodno-matematički fakultet",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Analitička biohemija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biologija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biologija - Biohemija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biologija-Hemija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Ekologija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Fizika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Fizika-Hemija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Hemija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Informatika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Informatika - Biznis informatika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Informatika - Kompjuterski nauki",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Matematika - Finansiska matematika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Primeneta fizika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Primeneta hemija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Primeneta matematika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biologija - Biohemija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biologija - Botanika",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biologija - Zoologija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Ekologija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Fizika na materijalite",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Geografija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Hemija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Hemija na okolina",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjuterski nauki (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjuterski nauki (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Matematika",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Medicinska fizika",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastavna fizika (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastavna fizika (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastavna hemija (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastavna hemija (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastavna informatika (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastavna informatika (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastavna matematika (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastavna matematika (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nauka na podatoci",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nauka za materijali",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Teoriska fizika",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prirodno-matematicki-nauki",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za medicinski nauki",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Akušerstvo",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Fizioterapevti",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kozmetika so estetika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Medicinski sestri/tehničari",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dentalna medicina",
+          "cycle": "INTEGRATED",
+          "ects": 300,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Farmacija",
+          "cycle": "INTEGRATED",
+          "ects": 300,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Opšta medicina",
+          "cycle": "INTEGRATED",
+          "ects": 360,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Medicinski laboratoriski tehničar - specijalistički studii po biohemiska laboratorija",
+          "cycle": "SPECIALIST",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Opšta medicinska sestra/tehničar - specijalistički studii po intenzivna nega",
+          "cycle": "SPECIALIST",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Opšta medicinska sestra/tehničar - specijalistički studii po mentalno zdravje",
+          "cycle": "SPECIALIST",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Opšta medicinska sestra/tehničar - specijalistički studii po semejna nega i patronaža",
+          "cycle": "SPECIALIST",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Opšta medicinska sestra/tehničar - specijalistički studii za instrumentarium",
+          "cycle": "SPECIALIST",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-medicinski-nauki",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za primeneti nauki",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Dizajn i enterier vo arhitektura",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Gradežništvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Gradežništvo - Patna infrastruktura",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Mehatronika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Soobraḱajno-transportno inženerstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Arhitektura (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Arhitektura (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Gradežništvo (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Gradežništvo (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Mehatronika (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Mehatronika (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Soobraḱajno-transportno inženerstvo",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Arhitektura",
+          "cycle": "INTEGRATED",
+          "ects": 300,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-primeneti-nauki",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za prehranbena tehnologija i ishrana",
+      "website": "https://unite.edu.mk/mk/faculty/fakultet-za-prehranbrena-tehnologija-i-ishrana",
+      "dataSourceUrl": "https://unite.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Menadžiranje so kvalitet i bezbednost na hrana",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prehranbrena-tehnologija-i-ishrana",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nutricionizam",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prehranbrena-tehnologija-i-ishrana",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Prehranbena tehnologija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prehranbrena-tehnologija-i-ishrana",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nutricionizam",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prehranbrena-tehnologija-i-ishrana",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Prehranbena tehnologija",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://unite.edu.mk/mk/faculty/fakultet-za-prehranbrena-tehnologija-i-ishrana",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

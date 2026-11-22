@@ -35,7 +35,10 @@ function Api() {
             {t("api.title")}
           </h1>
           <p>{t("api.publicIntro")}</p>
-          <pre className="mt-3 bg-(--surface-alt) rounded p-3 text-sm font-mono overflow-x-auto border border-(--border-color)">
+          <pre
+            tabIndex={0}
+            className="mt-3 bg-(--surface-alt) rounded p-3 text-sm font-mono overflow-x-auto border border-(--border-color) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
             {PUBLIC_API_URL}
           </pre>
           <p className="mt-2 text-sm text-(--text-muted)">
@@ -54,13 +57,19 @@ function Api() {
           <h2 className="text-xl font-bold text-center">
             {t("api.dataObject")}
           </h2>
-          <pre className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color)">
+          <pre
+            tabIndex={0}
+            className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
             {t("api.dataObjectExample")}
           </pre>
         </section>
         <section className="flex flex-col gap-4">
           <h2 className="text-xl font-bold text-center">{t("api.examples")}</h2>
-          <pre className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color)">
+          <pre
+            tabIndex={0}
+            className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
             {[
               `GET /api/v1/universities`,
               `GET /api/v1/universities?page=2&limit=10`,

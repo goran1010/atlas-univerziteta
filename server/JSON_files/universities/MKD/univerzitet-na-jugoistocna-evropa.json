@@ -1,0 +1,552 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet na Jugoistočna Evropa",
+  "acronym": "SEEU",
+  "city": "Tetovo",
+  "ownership": "PRIVATE",
+  "foundedYear": "2001",
+  "website": "https://www.seeu.edu.mk",
+  "address": "Ilindenska br. 335, 1200 Tetovo",
+  "phone": "+389 44 356 000",
+  "email": "rectorate@seeu.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://www.seeu.edu.mk/en/about/history",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za biznis i ekonomija",
+      "website": "https://www.seeu.edu.mk/mk/faculties/be",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biznis analitika i primeneta veštačka inteligencija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Energija, ekonomija i životna sredina",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansii, bankarstvo i smetkovodstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Marketing i inovacionen menadžment",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biznis administracija - MBA",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Biznis analitika",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansii",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Marketing i inovacionen menadžment",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Zelena ekonomija i održliv razvoj",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Praven fakultet",
+      "website": "https://www.seeu.edu.mk/mk/faculties/Law",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Pravni studii",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravni studii - Carinsko pravo i osiguruvanje",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravni studii - Kriminalistika i bezbednost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravni studii - Pravna informatika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Graǵansko pravo (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Graǵansko pravo (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kriminalistika i bezbednost (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kriminalistika i bezbednost (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Krivično pravo (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Krivično pravo (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodno pravo",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Ustavno i upravno pravo",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Ustavno pravo",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za jazici, kulturi i komunikacija",
+      "website": "https://www.seeu.edu.mk/mk/faculties/LCC",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Angliski jazik i literatura",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Germanski jazik i literatura",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodni komunikacii",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Oddelenska nastava",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pedagogija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Albanološki studii (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Albanološki studii (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Germanski studii (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Germanski studii (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodni komunikacii (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodni komunikacii (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastava po angliski jazik (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Nastava po angliski jazik (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Vodstvo i upravuvanje vo obrazovanieto (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Vodstvo i upravuvanje vo obrazovanieto (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za sovremeni opštestveni nauki",
+      "website": "https://www.seeu.edu.mk/mk/faculties/css",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Javen menadžment i javni politiki",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunardoni odnosi",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Politički nauki",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Specijalna edukacija i rehabilitacija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Javna administracija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Politički nauki",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Upravuvanje i menadžment vo javniot sektor",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za sovremeni nauki i tehnologii",
+      "website": "https://www.seeu.edu.mk/mk/faculties/cst",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Digitalen dizajn",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjuterski nauki (180 EKTS)",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjuterski nauki (240 EKTS)",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Kompjuterski nauki",
+              "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Softversko inženerstvo",
+              "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Nauka za podatoci",
+              "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Obrazovanie",
+              "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "name": "Vnatrešen dizajn",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjuterski nauki (120 EKTS)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Kompjuterski nauki",
+              "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Nauka za podatoci",
+              "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Softversko inženerstvo",
+              "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "name": "Kompjuterski nauki (60 EKTS)",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Kompjuterski nauki",
+              "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Nauka za podatoci",
+              "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Softversko inženerstvo",
+              "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "name": "Arhitektura i dizajn",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za zdravstveni nauki",
+      "website": "https://www.seeu.edu.mk/mk/faculties/hs",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Opšta medicinska sestra",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Opšta medicinska sestra (na angliski jazik)",
+          "cycle": "FIRST",
+          "language": "Angliski",
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Studii za fizioterapija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Studii za fizioterapija (na angliski jazik)",
+          "cycle": "FIRST",
+          "language": "Angliski",
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Klinička rehabilitacija od oblasta na nevrorazvojni narušuvanja i nevrodegenerativni bolesti",
+          "cycle": "SPECIALIST",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Zdrastvena nega vo zaednicata od oblasta na nevrogeriatrija i palijativna nega",
+          "cycle": "SPECIALIST",
+          "ects": 60,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za tehnički nauki",
+      "website": "https://www.seeu.edu.mk/mk/faculties/ts",
+      "dataSourceUrl": "https://www.seeu.edu.mk/mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Arhitektura i dizajn",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Arhitektura i dizajn",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

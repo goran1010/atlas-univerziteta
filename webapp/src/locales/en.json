@@ -54,12 +54,12 @@
   "language": {
     "system": "System",
     "english": "English",
-    "bcs": "Bosnian/Croatian/Serbian",
+    "serbian": "Serbian",
     "switchAria": "Toggle language",
     "switched": {
       "system": "Switched to system language",
       "english": "Switched to English",
-      "bcs": "Switched to Bosnian/Croatian/Serbian"
+      "serbian": "Switched to Serbian"
     }
   },
   "auth": {
@@ -147,7 +147,7 @@
     "publicIntro": "Public REST endpoints are available under the base URL below. These endpoints do not require authentication.",
     "fullDocs": "For full project documentation, local setup, and contributing guidelines, see the",
     "dataObject": "University object",
-    "dataObjectExample": "{\n  \"id\":          number                          - unique identifier\n  \"name\":        string                          - official name\n  \"acronym\":     string | null                   - short form (e.g. UNSA)\n  \"city\":        string                          - main campus city\n  \"country\":     \"BIH\" | \"SRB\" | \"HRV\" | \"MNE\"   - ISO 3166-1 alpha-3\n  \"entity\":      \"FBIH\" | \"RS\" | \"BD\" | null      - Bosnia subdivision\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - e.g. \"1949\"\n  \"website\":     string | null                   - official URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - list only\n  \"faculties\":   Faculty[]                        - detail only\n}",
+    "dataObjectExample": "{\n  \"id\":          number                          - unique identifier\n  \"name\":        string                          - official name\n  \"acronym\":     string | null                   - short form (e.g. UNSA)\n  \"city\":        string                          - main campus city\n  \"country\":     string                          - ISO 3166-1 alpha-3 country code (XKX for Kosovo, which has none)\n  \"entity\":      string | null                   - subdivision, null for countries without them\n  \"ownership\":   \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\": string | null                   - e.g. \"1949\"\n  \"website\":     string | null                   - official URL\n  \"address\":     string | null\n  \"phone\":       string | null\n  \"email\":       string | null\n  \"_count\":      { \"faculties\": number }          - list only\n  \"faculties\":   Faculty[]                        - detail only\n}",
     "examples": "Quick examples",
     "endpoints": "Endpoints",
     "endpointsData": {
@@ -165,8 +165,8 @@
       "getStudyProgramById": "Retrieve a study program by ID with its tracks, parent faculty, and university.",
       "getAllTracks": "Retrieve all tracks, ordered by study program name then track name. Supports country and entity query filters. Includes the full parent chain.",
       "getTrackById": "Retrieve a track by ID with its parent study program, faculty, and university.",
-      "countryParam": "Filter by country: BIH, SRB, HRV, or MNE.",
-      "entityParam": "Filter by entity (Bosnia only): FBIH, RS, or BD.",
+      "countryParam": "Filter by country code:",
+      "entityParam": "Filter by entity, for countries with subdivisions:",
       "ownershipParam": "Filter by ownership: PUBLIC or PRIVATE.",
       "cycleParam": "Filter by study cycle. Accepts multiple values (e.g. cycle=FIRST&cycle=SECOND). Values: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
       "typeParam": "Result type filter: university, faculty, or studyProgram. Repeatable. Each section returns every match."
@@ -303,7 +303,8 @@
   },
   "footer": {
     "name": "Goran Jović",
-    "email": "goran1010jovic@gmail.com"
+    "email": "goran1010jovic@gmail.com",
+    "reportIssue": "Report an issue"
   },
   "validation": {
     "email": {
@@ -389,10 +390,14 @@
     "noResultsAtAll": "No results found.",
     "searchResultsAnnouncement": "Search results:",
     "countries": {
+      "ALB": "Albania",
       "BIH": "Bosnia and Herzegovina",
       "SRB": "Serbia",
       "HRV": "Croatia",
-      "MNE": "Montenegro"
+      "MKD": "North Macedonia",
+      "MNE": "Montenegro",
+      "SVN": "Slovenia",
+      "XKX": "Kosovo"
     },
     "entities": {
       "FBIH": "Federation of B&H",
@@ -438,6 +443,8 @@
       "PRIVATE": "Private"
     },
     "clearSearch": "Clear search",
+    "countryFilter": "Country",
+    "allCountries": "All countries",
     "resetSearch": "Reset",
     "contextMatch": {
       "university": "Matched through its faculties or study programs",
@@ -449,7 +456,10 @@
     "shareLink": "Share link",
     "linkCopied": "Link copied to clipboard.",
     "linkCopyFailed": "Could not copy link.",
-    "dataSource": "Data source"
+    "dataSource": "Data source",
+    "improvePrompt": "See something inaccurate?",
+    "improveLink": "Suggest a correction",
+    "improveLogin": "Log in to suggest a correction"
   },
   "access": {
     "goToLogin": "Log In",

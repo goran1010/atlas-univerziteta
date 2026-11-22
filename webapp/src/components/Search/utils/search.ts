@@ -40,11 +40,18 @@ async function searchAll(
   throw new SearchFailedError(outcome.error);
 }
 
-async function browseUniversities(
+// the API's largest page; Browse All requests every page to list them all
+const BROWSE_PAGE_SIZE = 100;
+
+async function fetchUniversityPage(
+  page: number,
   country: string | undefined,
   signal?: AbortSignal,
-): Promise<UnifiedSearchResults> {
-  const params = new URLSearchParams({ limit: "100" });
+) {
+  const params = new URLSearchParams({
+    limit: String(BROWSE_PAGE_SIZE),
+    page: String(page),
+  });
   if (country) params.set("country", country);
 
   const outcome = await fetchPublicResponse(
@@ -53,23 +60,36 @@ async function browseUniversities(
     signal,
   );
 
-  if (outcome.ok) {
-    return {
-      universities: outcome.result.data,
-      faculties: [],
-      studyPrograms: [],
-      direct: {
-        universities: outcome.result.data.length,
-        faculties: 0,
-        studyPrograms: 0,
-      },
-    };
-  }
+  if (outcome.ok) return outcome.result;
 
   if (outcome.error) {
     console.warn("Browse failed:", outcome.error.message);
   }
   throw new SearchFailedError(outcome.error);
+}
+
+async function browseUniversities(
+  country: string | undefined,
+  signal?: AbortSignal,
+): Promise<UnifiedSearchResults> {
+  const firstPage = await fetchUniversityPage(1, country, signal);
+  const otherPages = await Promise.all(
+    Array.from({ length: firstPage.totalPages - 1 }, (_, index) =>
+      fetchUniversityPage(index + 2, country, signal),
+    ),
+  );
+  const universities = [firstPage, ...otherPages].flatMap((page) => page.data);
+
+  return {
+    universities,
+    faculties: [],
+    studyPrograms: [],
+    direct: {
+      universities: universities.length,
+      faculties: 0,
+      studyPrograms: 0,
+    },
+  };
 }
 
 class SearchFailedError extends Error {

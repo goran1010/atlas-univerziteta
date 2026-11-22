@@ -1,0 +1,218 @@
+{
+  "country": "XKX",
+  "name": "Universiteti i Mitrovicës Isa Boletini",
+  "acronym": "UIBM",
+  "city": "Mitrovicë",
+  "ownership": "PUBLIC",
+  "foundedYear": "2013",
+  "website": "https://umib.net",
+  "address": "Rr. Ukshin Kovaçica, 40000 Mitrovicë",
+  "phone": "+383 28 515 516",
+  "email": "info@umib.net",
+  "accreditationFrom": "2026-10-01",
+  "accreditationTo": "2031-09-30",
+  "authority": "Agjencia e Kosovës për Akreditim (AKA)",
+  "dataSourceUrl": "https://umib.net/kontakt/",
+  "lastModified": "2026-11-22",
+  "faculties": [
+    {
+      "name": "Fakulteti i Gjeoshkencave",
+      "website": "https://umib.net/fakulteti-gjeoshkencave/",
+      "phone": "+383 28 530 446",
+      "dataSourceUrl": "https://umib.net/kontakt/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Gjeologji",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inxhinieria Minerare",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Materiale dhe Metalurgji",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Hidrogjeologji dhe Gjeologji Inxhinierike",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Materiale dhe Metalurgji",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Vendburimet Minerale",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Zhvillimi i Qëndrueshëm i Minierave",
+          "cycle": "SECOND",
+          "ects": 60,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Teknologjisë Ushqimore",
+      "website": "https://umib.net/fakulteti-teknologji-ushqimore/",
+      "phone": "+383 28 530 446",
+      "dataSourceUrl": "https://umib.net/kontakt/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri dhe Teknologji Ushqimore",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teknologji",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20",
+          "tracks": [
+            {
+              "name": "Inxhinieri Mjedisore",
+              "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Inxhinieri Kimike",
+              "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+              "lastModified": "2026-11-20"
+            }
+          ]
+        },
+        {
+          "name": "Inxhinieri dhe Teknologji Ushqimore",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teknologji (me specializim Inxhinieri e Mbrojtjes Mjedisore)",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Inxhinierisë Mekanike dhe Kompjuterike",
+      "website": "https://umib.net/fakulteti-inxhinierise-mekanike-dhe-kompjuterike/",
+      "phone": "+383 28 534 179",
+      "dataSourceUrl": "https://umib.net/kontakt/",
+      "lastModified": "2026-11-22",
+      "studyPrograms": [
+        {
+          "name": "Inxhinieri Ekonomike",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Inxhinieri Mekanike",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Shkenca Kompjuterike dhe Inxhinieri",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Cloud and Edge Computing",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Teknologji Prodhuese dhe Menaxhment",
+          "cycle": "SECOND",
+          "ects": 120,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti Juridik",
+      "website": "https://umib.net/fakulteti-juridik/",
+      "dataSourceUrl": "https://umib.net/historiku/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Juridik",
+          "cycle": "FIRST",
+          "ects": 240,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti Ekonomik",
+      "website": "https://umib.net/fakulteti-ekonomik/",
+      "dataSourceUrl": "https://umib.net/historiku/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biznes dhe Menaxhment",
+          "cycle": "FIRST",
+          "ects": 180,
+          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+          "lastModified": "2026-11-20",
+          "tracks": [
+            {
+              "name": "Banka, Financa dhe Kontabilitet",
+              "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+              "lastModified": "2026-11-20"
+            },
+            {
+              "name": "Menaxhment dhe Ndërmarrësi",
+              "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
+              "lastModified": "2026-11-20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Edukimit",
+      "website": "https://umib.net/fakulteti-edukimit/",
+      "dataSourceUrl": "https://umib.net/historiku/",
+      "lastModified": "2026-11-15"
+    }
+  ]
+}

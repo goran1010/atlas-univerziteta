@@ -1,0 +1,232 @@
+{
+  "country": "MKD",
+  "name": "Amerikanski univerzitet na Evropa - FON",
+  "acronym": "AUE-FON",
+  "city": "Skopje",
+  "ownership": "PRIVATE",
+  "foundedYear": "2003",
+  "website": "https://aue.mk",
+  "address": "Ul. Kiro Gligorov 5, 1000 Skopje",
+  "phone": "+389 2 2445 503",
+  "email": "info@fon.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://aue.mk/content.aspx?cid=13&ln=mk",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za informatika",
+      "website": "https://aue.mk/content.aspx?cid=33&ln=mk",
+      "dataSourceUrl": "https://aue.mk/content.aspx?cid=25&ln=mk",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za pravni i politički nauki",
+      "website": "https://aue.mk/content.aspx?cid=27&ln=mk",
+      "dataSourceUrl": "https://aue.mk/content.aspx?cid=25&ln=mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Politički nauki",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=27&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravni nauki",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=27&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Politički nauki",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=27&ln=mk",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za ekonomski nauki",
+      "website": "https://aue.mk/content.aspx?cid=32&ln=mk",
+      "dataSourceUrl": "https://aue.mk/content.aspx?cid=25&ln=mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Delovna ekonomija",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Marketing",
+              "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Biznis menadžment",
+              "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Finansii",
+              "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "name": "Sportski menadžment",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Delovna ekonomija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Biznis menadžment",
+              "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Marketing",
+              "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Finansii i bankarstvo",
+              "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "name": "Sportski menadžment",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Delovna ekonomija",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+          "lastModified": "2026-11-18",
+          "tracks": [
+            {
+              "name": "Biznis menadžment",
+              "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Marketing",
+              "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+              "lastModified": "2026-11-18"
+            },
+            {
+              "name": "Finansii",
+              "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+              "lastModified": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "name": "Sportski menadžment",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=32&ln=mk",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za detektivi i bezbednost",
+      "website": "https://aue.mk/content.aspx?cid=30&ln=mk",
+      "dataSourceUrl": "https://aue.mk/content.aspx?cid=25&ln=mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kriminalistika",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=30&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Bezbednost",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=30&ln=mk",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za dizajn i multimedija",
+      "website": "https://aue.mk/content.aspx?cid=35&ln=mk",
+      "dataSourceUrl": "https://aue.mk/content.aspx?cid=25&ln=mk",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Grafički dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=35&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Moden dizajn",
+          "cycle": "FIRST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=35&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dizajn na akrhitektonski prostor",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=35&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=35&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Moden dizajn",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=35&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Multimedija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=35&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Dizajn na akrhitektonski prostor",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=35&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Grafički dizajn",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=35&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Moden dizajn",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=35&ln=mk",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Multimedija",
+          "cycle": "SPECIALIST",
+          "dataSourceUrl": "https://aue.mk/content.aspx?cid=35&ln=mk",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

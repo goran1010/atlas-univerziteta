@@ -1,0 +1,382 @@
+{
+  "country": "MKD",
+  "name": "Univerzitet Majka Tereza",
+  "acronym": "UNT",
+  "city": "Skopje",
+  "ownership": "PUBLIC",
+  "foundedYear": "2015",
+  "website": "https://unt.edu.mk",
+  "address": "Rr. 1669 nr. 11A, 1010 Shkup",
+  "phone": "+389 75225873",
+  "email": "info@unt.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://unt.edu.mk/sq/sample-page/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za Gradežništvo i Arhitektura",
+      "website": "https://unt.edu.mk/sq/fakultetet/fakulteti-i-ndertimtarise-dhe-arkitektures/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakultet za informatički nauki",
+      "website": "https://unt.edu.mk/sq/fakulteti-i-shkencave-te-informatikes-programet-studimore/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kompjuterski nauki i inženerstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Primeneto programiranje",
+          "cycle": "FIRST",
+          "ects": 180,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Matematičko-informatičko obrazovanie (dvegodišni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Matematičko-informatičko obrazovanie (ednogodišni)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Primeneto softversko inženerstvo (dvegodišni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Primeneto softversko inženerstvo (ednogodišni)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za tehnički nauki",
+      "website": "https://unt.edu.mk/sq/fakultetet/fakulteti-i-shkencave-teknike/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Bezbednost pri rabota",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Industriski menadžment",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Inžinierstvo za zaštita na životna sredina",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Ekonomsko inženerstvo i menadžment",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Soobraḱajno-transportno inženerstvo (dvegodišni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Soobraḱajno-transportno inženerstvo (ednogodišni)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za socijalni nauki",
+      "website": "https://unt.edu.mk/sq/fakulteti-i-shkencave-sociale/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Javna administracija i upravuvanje so čovečki resursi",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Mediumi i interkulturna komunikacija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Primeneta ekonomija i pretpriemništvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Socijalna rabota i socijalna politika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sport i sportski nauki",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Balkanski i Evoraziski studii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Javni politiki i upravuvanje",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Mediumi i interkulturna komunikacija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Socijalna politika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Socijalna rabota",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Sport i sportski nauki",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za tehnološki nauki",
+      "website": "https://unt.edu.mk/sq/fakultetet/fakulteti-i-shkencave-teknologjike/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Biohemisko inženerstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Hemisko inženerstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Tekstil dizajn i modeliranje",
+          "cycle": "FIRST",
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Hemisko inženerstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za humanistički nauki",
+      "website": "https://unt.edu.mk/sq/fakulteti-i-shkencave-humane/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Angliski jazik i kniževnost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Germanski jazik i kniževnost",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Ekonomski fakultet",
+      "website": "https://unt.edu.mk/sq/fakulteti-ekonomik-4/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Carina, špedicija i osiguruvanje",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansii i smetkovodstvo",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Marketing i menadžment",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Finansii i smetkovodstvo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "MBA Menadžment (dvegodišni)",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "MBA Menadžment (ednogodišni)",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/Master-AL-MK-2026-2027-final.pdf",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Praven fakultet",
+      "website": "https://unt.edu.mk/sq/fakulteti-juridik-2/",
+      "dataSourceUrl": "https://unt.edu.mk/mk/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Kriminalistika",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Pravni studii",
+          "cycle": "FIRST",
+          "ects": 240,
+          "language": "Albanski i makedonski",
+          "dataSourceUrl": "http://unt.edu.mk/wp-content/uploads/2026/07/SHQ-MK-KONKURS-2026-2027-UNT-SHQIP-final.pdf",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "country": "SVN",
+  "name": "Univerza v Novi Gorici",
+  "acronym": "UNG",
+  "city": "Nova Gorica",
+  "ownership": "PRIVATE",
+  "foundedYear": "1995",
+  "website": "http://www.ung.si",
+  "address": "Vipavska cesta 13, 5000 Nova Gorica",
+  "email": "info@ung.si",
+  "accreditationFrom": "2026-05-21",
+  "accreditationTo": "2030-09-30",
+  "authority": "Nacionalna agencija Republike Slovenije za kakovost v visokem šolstvu (NAKVIS)",
+  "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a93",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Akademija umetnosti",
+      "city": "Nova Gorica",
+      "website": "https://ung.si/sl/fakultete/akademija-umetnosti/",
+      "address": "Vipavska cesta 13, 5000 Nova Gorica",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a32",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Medijske umetnosti in prakse",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51401b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Digitalne umetnosti in prakse",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e76",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteta za humanistiko",
+      "city": "Nova Gorica",
+      "website": "https://ung.si/sl/fakultete/fakulteta-za-humanistiko/",
+      "address": "Vipavska cesta 13, 5000 Nova Gorica",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a51",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Jezik in literatura v digitalnem svetu",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d77",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kulturna zgodovina",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d6b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "CREATES - Skupni Erasmus Mundus magistrski študij Kreativne kulture in družbe",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/6a073c0256dc9541f922fe29",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Digitalna humanistika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514033",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistični študiji",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ef7",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Migracije in medkulturni odnosi",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513efd",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteta za naravoslovje",
+      "city": "Ajdovščina",
+      "website": "https://ung.si/sl/fakultete/fakulteta-za-naravoslovje/",
+      "address": "Vipavska cesta 11C, 5270 Ajdovščina",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a5d",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizika in astrofizika",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d8f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Fizika in astrofizika",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f01",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Znanost o materialih",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514037",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteta za podiplomski študij",
+      "city": "Nova Gorica",
+      "website": "https://ung.si/sl/fakultete/fakulteta-za-podiplomski-studij/",
+      "address": "Vipavska cesta 13, 5000 Nova Gorica",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a61",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51406a",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Humanistika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514071",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Kognitivne znanosti jezika",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514092",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Krasoslovje",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51406c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Materiali",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140bf",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Molekularna genetika in biotehnologija",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514063",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Znanosti o okolju",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51406f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Študiji kulturne dediščine",
+          "cycle": "THIRD",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514080",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteta za vinogradništvo in vinarstvo",
+      "city": "Vipava",
+      "website": "https://ung.si/sl/fakultete/fakulteta-za-vinogradnistvo-in-vinarstvo/",
+      "address": "Glavni trg 8, 5271 Vipava",
+      "email": "info.vsvv@ung.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a73",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Vinogradništvo in vinarstvo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514046",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Vinogradništvo in vinarstvo",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d66",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteta za znanosti o okolju",
+      "city": "Nova Gorica",
+      "website": "https://ung.si/sl/fakultete/fakulteta-za-znanosti-o-okolju/",
+      "address": "Vipavska cesta 13, 5000 Nova Gorica",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a78",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Okolje",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d95",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Okolje",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513f03",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Poslovno-tehniška fakulteta",
+      "city": "Nova Gorica",
+      "website": "https://ung.si/sl/fakultete/poslovno-tehniska-fakulteta/",
+      "address": "Vipavska cesta 13, 5000 Nova Gorica",
+      "email": "info.ptf@ung.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a8a",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Gospodarski inženiring",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513edb",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Načrtovanje in vodenje odprtega izobraževanja",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51404d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Gospodarski inženiring",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d6c",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    }
+  ]
+}

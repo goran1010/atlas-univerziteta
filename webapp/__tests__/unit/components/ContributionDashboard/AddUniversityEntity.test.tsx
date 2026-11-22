@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { AddUniversityEntity } from "../../../../src/components/ContributionDashboard/AddUniversityEntity";
 import { Notifications } from "../../../../src/components/Notifications";
@@ -120,14 +120,23 @@ function Wrapper({ children }: { children: ReactElement }) {
   );
 }
 
+// an update form has its own Country field, so the picker's is found by
+// its fieldset
 async function pickUniversity(user: ReturnType<typeof userEvent.setup>) {
-  const universitySelect = await screen.findByRole("combobox", {
-    name: /^University$/i,
+  const picker = screen.getByRole("group", {
+    name: /Which item do you want to change|Where should the new item be added/i,
   });
+  await user.selectOptions(
+    within(picker).getByRole("combobox", { name: /^Country$/i }),
+    "BIH",
+  );
   await screen.findByRole("option", {
     name: /University of Sarajevo \(UNSA\)/i,
   });
-  await user.selectOptions(universitySelect, "1");
+  await user.selectOptions(
+    screen.getByRole("combobox", { name: /^University$/i }),
+    "1",
+  );
 }
 
 async function pickFaculty(user: ReturnType<typeof userEvent.setup>) {
@@ -179,6 +188,38 @@ describe("AddUniversityEntity", () => {
       screen.getByRole("button", { name: /Submit Suggestion/i }),
     ).toBeInTheDocument();
     expect(universitiesRequests).toBe(0);
+  });
+
+  test("shows the entity select only for a country with subdivisions and clears it on country change", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+    const user = userEvent.setup();
+
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: /Item type/i }),
+      "UNIVERSITY",
+    );
+    const country = screen.getByRole("combobox", { name: /^Country$/i });
+
+    await user.selectOptions(country, "BIH");
+    const entity = screen.getByRole("combobox", { name: /^Entity$/i });
+    expect(
+      within(entity)
+        .getAllByRole("option")
+        .map((option) => option.getAttribute("value")),
+    ).toEqual(["", "FBIH", "RS", "BD"]);
+    await user.selectOptions(entity, "RS");
+
+    await user.selectOptions(country, "SRB");
+    expect(
+      screen.queryByRole("combobox", { name: /^Entity$/i }),
+    ).not.toBeInTheDocument();
+
+    await user.selectOptions(country, "BIH");
+    expect(screen.getByRole("combobox", { name: /^Entity$/i })).toHaveValue("");
   });
 
   test("renders the entity picker and hides data fields for delete changes", async () => {
@@ -373,6 +414,36 @@ describe("AddUniversityEntity", () => {
       targetType: "UNIVERSITY",
       targetId: 1,
       data: { acronym: null },
+    });
+  });
+
+  test("clears the entity when an update moves a university to a country without subdivisions", async () => {
+    render(
+      <Wrapper>
+        <AddUniversityEntity refetchPendingChanges={vi.fn()} />
+      </Wrapper>,
+    );
+    const user = userEvent.setup();
+
+    await startUniversityUpdate(user);
+    await user.selectOptions(
+      within(screen.getByRole("group", { name: /^Data$/i })).getByRole(
+        "combobox",
+        { name: /^Country$/i },
+      ),
+      "SRB",
+    );
+    await user.click(
+      screen.getByRole("button", { name: /Submit Suggestion/i }),
+    );
+
+    expect(
+      await screen.findByText(/Suggestion submitted./i),
+    ).toBeInTheDocument();
+    expect(submissions[0]?.body).toEqual({
+      targetType: "UNIVERSITY",
+      targetId: 1,
+      data: { country: "SRB", entity: null },
     });
   });
 

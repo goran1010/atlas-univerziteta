@@ -1,6 +1,6 @@
 # Build stage: installs devDependencies (TypeScript) and compiles; the
 # production stage copies out only the result.
-FROM node:24-slim AS build
+FROM node:26-slim AS build
 
 WORKDIR /app
 
@@ -20,7 +20,7 @@ RUN npx prisma generate && npx tsc --build tsconfig.build.json
 
 # Production stage: only what the server needs at runtime - no TypeScript
 # compiler, no devDeps.
-FROM node:24-slim AS production
+FROM node:26-slim AS production
 
 # Prisma needs OpenSSL to talk to the database.
 RUN apt-get update -y && apt-get install -y --no-install-recommends openssl && rm -rf /var/lib/apt/lists/*

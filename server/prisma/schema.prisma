@@ -78,19 +78,6 @@ enum typeOfChange {
   CREATE
 }
 
-enum country {
-  BIH
-  SRB
-  HRV
-  MNE
-}
-
-enum entity {
-  FBIH
-  RS
-  BD
-}
-
 enum ownership {
   PUBLIC
   PRIVATE
@@ -117,8 +104,10 @@ model University {
   searchAcronym     String?
   city              String
   searchCity        String    @default("")
-  country           country
-  entity            entity?
+  // plain strings validated against src/validation/countries.ts, so adding a
+  // country needs no migration
+  country           String
+  entity            String?
   ownership         ownership
   foundedYear       String?
   website           String?

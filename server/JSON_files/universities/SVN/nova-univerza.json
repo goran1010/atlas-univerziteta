@@ -1,0 +1,203 @@
+{
+  "country": "SVN",
+  "name": "Nova univerza",
+  "acronym": "NU",
+  "city": "Ljubljana",
+  "ownership": "PRIVATE",
+  "foundedYear": "2008",
+  "website": "https://www.nova-uni.si/",
+  "address": "Mestni trg 23, 1000 Ljubljana",
+  "email": "rektorat@nova-uni.si",
+  "accreditationFrom": "2025-03-20",
+  "accreditationTo": "2028-09-30",
+  "authority": "Nacionalna agencija Republike Slovenije za kakovost v visokem šolstvu (NAKVIS)",
+  "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a85",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Evropska pravna fakulteta",
+      "city": "Nova Gorica",
+      "website": "http://www.evro-pf.si",
+      "address": "Delpinova ulica 18B, 5000 Nova Gorica",
+      "email": "info@epf.nova-uni.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a43",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Pravo",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513d5f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Alternativno reševanje sporov",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51401e",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Civilno in gospodarsko pravo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514025",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ed2",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pravo in management nepremičnin",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ef8",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pravo",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514072",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pravo in management nepremičnin",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae514073",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Pravo in management infrastrukture in nepremičnin",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e54",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteta za državne in evropske študije",
+      "city": "Kranj",
+      "website": "https://fds.nova-uni.si/",
+      "address": "Žanova ulica 3, 4000 Kranj",
+      "email": "info@fds.nova-uni.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a47",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Javna uprava",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513da6",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Javna uprava",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ec2",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mednarodne in diplomatske študije",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513ec3",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mednarodni management",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/670e144489225c281a27590b",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Javna uprava",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51408d",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Mednarodne in diplomatske študije",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140af",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Državne in evropske študije",
+          "cycle": "VOCATIONAL",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e8b",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteta za psihoterapijo",
+      "city": "Ljubljana",
+      "website": "https://fp.nova-uni.si/",
+      "address": "Mestni trg 23, 1000 Ljubljana",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/68da6c7a9cbc73d21a3f7525",
+      "lastModified": "2026-11-15"
+    },
+    {
+      "name": "Fakulteta za slovenske in mednarodne študije",
+      "city": "Ljubljana",
+      "website": "https://fsms.nova-uni.si/",
+      "address": "Mestni trg 23, 1000 Ljubljana",
+      "email": "referat@fsms.nova-uni.si",
+      "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/higher-education-institutions/5fc50a979282e1b9b1973a66",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Slovenski študiji",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae513e8f",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Slovenski študiji II",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae51404c",
+          "lastModified": "2026-11-20"
+        },
+        {
+          "name": "Slovenski študiji III",
+          "cycle": "THIRD",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://api.portal.nakvis.si/api/v1/study-programmes/601294465f658a74ae5140c2",
+          "lastModified": "2026-11-20"
+        }
+      ]
+    }
+  ]
+}

@@ -81,6 +81,8 @@
   --text-primary: #0f172a;
   --text-secondary: #334155;
   --text-muted: #475569;
+  /* chevron in --text-muted; a background image cannot read CSS variables */
+  --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 8 5 5 5-5'/%3E%3C/svg%3E");
   --surface-1: rgba(255, 255, 255, 0.92);
   --surface-2: rgba(255, 255, 255, 0.97);
   --surface-3: #e6edf8;
@@ -107,6 +109,7 @@
   --text-primary: #e2e8f0;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
+  --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 8 5 5 5-5'/%3E%3C/svg%3E");
   --surface-1: rgba(15, 23, 42, 0.74);
   --surface-2: rgba(15, 23, 42, 0.92);
   --surface-3: #1f2937;

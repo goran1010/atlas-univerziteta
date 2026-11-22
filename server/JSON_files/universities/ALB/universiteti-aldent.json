@@ -1,0 +1,168 @@
+{
+  "country": "ALB",
+  "name": "Universiteti Aldent",
+  "acronym": "UAL",
+  "city": "Tiranë",
+  "ownership": "PRIVATE",
+  "foundedYear": "2003",
+  "website": "https://ual.edu.al",
+  "address": "Rruga e Dibrës, Nr. 235, Tiranë",
+  "phone": "+355 69 20 75 216",
+  "email": "info@ual.edu.al",
+  "accreditationFrom": "2023-01-27",
+  "authority": "Agjencia e Sigurimit të Cilësisë në Arsimin e Lartë (ASCAL)",
+  "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakulteti i Shkencave të Stomatologjisë",
+      "website": "https://ual.edu.al/sq/faculty/fakulteti-i-shkencave-dentare/",
+      "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Teknika Laboratorike Dentare",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/teknik-laboratori-dentar/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Stomatologji",
+          "cycle": "INTEGRATED",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/master-i-shkencave-ne-stomatologji/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Stomatologji",
+          "cycle": "SPECIALIST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/specializim-afatgjate-ne-stomatologji/",
+          "lastModified": "2026-11-22",
+          "tracks": [
+            {
+              "name": "Kirurgji Orale",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1379",
+              "lastModified": "2026-11-16"
+            },
+            {
+              "name": "Ortodonti",
+              "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1379",
+              "lastModified": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "name": "Asistencë Dentare",
+          "cycle": "VOCATIONAL",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/asistent-profesional-dentar/",
+          "lastModified": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Shkencave Mjekësore",
+      "website": "https://ual.edu.al/sq/faculty/fakulteti-i-shkencave-mjekesore/",
+      "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Farmaci",
+          "cycle": "INTEGRATED",
+          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=248",
+          "lastModified": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "name": "Fakulteti i Shkencave Teknike Mjekësore",
+      "website": "https://ual.edu.al/sq/faculty/fakulteti-i-shkencave-mjekesore-dhe-teknike/",
+      "dataSourceUrl": "https://ual.edu.al/sq/historia-dhe-profili-institucional/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Fizioterapi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/bachelor-ne-fizioterapi/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Infermieri e Përgjithshme",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/infermieri/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Teknik Imazherie dhe Radioterapi",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/teknik-i-imazherise-mjekesore-dhe-radioterapise/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Teknikë Laboratori Mjekësor",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/teknik-i-laboratorit-mjekesor/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Fizioterapi klinike",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/master-i-shkencave-ne-fizioterapi/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Infermieri Klinike",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/master-i-shkencave-ne-infermieri-klinike/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Teknik Imazherie",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/master-i-shkencave-ne-teknik-i-laboratorit-mjekesor-2/",
+          "lastModified": "2026-11-22"
+        },
+        {
+          "name": "Teknikë Laboratori Mjekësor",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://ual.edu.al/sq/rt-program/master-i-shkencave-ne-teknik-i-laboratorit-mjekesor/",
+          "lastModified": "2026-11-22"
+        }
+      ]
+    }
+  ]
+}

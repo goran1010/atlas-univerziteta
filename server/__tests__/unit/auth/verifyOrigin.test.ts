@@ -23,7 +23,7 @@ function createRequest(method: string, origin?: string) {
   return {
     method,
     headers: origin === undefined ? {} : { origin },
-  } as Request;
+  } as unknown as Request;
 }
 
 describe("verifyOrigin", () => {

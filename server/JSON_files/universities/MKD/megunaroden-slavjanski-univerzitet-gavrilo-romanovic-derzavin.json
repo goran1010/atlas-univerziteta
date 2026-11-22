@@ -1,0 +1,234 @@
+{
+  "country": "MKD",
+  "name": "Meǵunaroden Slavjanski univerzitet Gavrilo Romanovič Deržavin",
+  "acronym": "MSU",
+  "city": "Sveti Nikole",
+  "ownership": "PRIVATE",
+  "foundedYear": "2004",
+  "website": "https://www.msu.edu.mk",
+  "address": "Ul. Maršal Tito 77, 2220 Sveti Nikole",
+  "phone": "+389 32 440 330",
+  "email": "info@msu.edu.mk",
+  "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
+  "dataSourceUrl": "https://msu.edu.mk/za-univerzitetot/kontakt/",
+  "lastModified": "2026-11-15",
+  "faculties": [
+    {
+      "name": "Fakultet za ekonomija i organizacija na pretpriemništvo",
+      "website": "https://msu.edu.mk/fakulteti/feiop/",
+      "dataSourceUrl": "https://msu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Finansii i bankarstvo",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/feiop/dodiplomski/fb/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Menadžment i biznis",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/feiop/dodiplomski/mb/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Marketing",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/feiop/poslediplomski/mm/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Menadžment na čovečki resursi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/feiop/poslediplomski/mcr/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Primeneti finansii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/feiop/poslediplomski/pf/",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za psihologija",
+      "website": "https://msu.edu.mk/fakulteti/fp/",
+      "dataSourceUrl": "https://msu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Opšta psihologija",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fp/dodiplomski/op/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Klinička i sovetodavna psihologija",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fp/poslediplomski/ksp/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija na obrazovanie",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fp/poslediplomski/po/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Psihologija vo socijalna zaštita",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fp/poslediplomski/psz/",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za tehnički nauki i informatika",
+      "website": "https://msu.edu.mk/fakulteti/ftni/",
+      "dataSourceUrl": "https://msu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Bezbednost od požar",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/ftni/dodiplomski/bp/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Bezbednost pri rabota",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/ftni/dodiplomski/bpr/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjuterski sistemi i mreži",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/ftni/dodiplomski/ksm/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Softverski tehnologii",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/ftni/dodiplomski/st/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Upravuvanje so otpad",
+          "cycle": "FIRST",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/ftni/dodiplomski/uo/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Bezbednost pri rabota",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/ftni/poslediplomski/bpr/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kompjuterski sistemi i mreži",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/ftni/poslediplomski/ksm/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Softverski tehnologii",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/ftni/poslediplomski/st/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Upravuvanje so otpad",
+          "cycle": "SECOND",
+          "durationYears": 2,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/ftni/poslediplomski/uo/",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Fakultet za pravni nauki",
+      "website": "https://msu.edu.mk/fakulteti/fpn/",
+      "dataSourceUrl": "https://msu.edu.mk/fakulteti/",
+      "lastModified": "2026-11-15",
+      "studyPrograms": [
+        {
+          "name": "Pravni studii",
+          "cycle": "FIRST",
+          "durationYears": 4,
+          "ects": 240,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fpn/dodiplomski/ps/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Administrativno pravo i javna administracija",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fpn/poslediplomski/apja/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Delovno pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fpn/poslediplomski/dp/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Financial Crime and Criminal Justice",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fpn/poslediplomski/fccj/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Graǵansko pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fpn/poslediplomski/gp/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Kazneno pravo",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fpn/poslediplomski/kp/",
+          "lastModified": "2026-11-18"
+        },
+        {
+          "name": "Meǵunarodno pravo i meǵunarodni odnosi",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://msu.edu.mk/fakulteti/fpn/poslediplomski/mp/",
+          "lastModified": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}
