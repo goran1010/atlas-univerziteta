@@ -23,8 +23,9 @@
         {
           "name": "Administrim Biznesi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3556",
-          "lastModified": "2026-11-16",
+          "ects": 180,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/bachelor-in-business-administration",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Marketing",
@@ -46,20 +47,26 @@
         {
           "name": "Banking dhe Financë të Aplikuar",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3464",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/bachelor-in-applied-banking-and-finance",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Biznes dhe Tregti Elektronike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3545",
-          "lastModified": "2026-11-20"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/bs-in-e-business-and-e-commerce",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ekonomiks dhe Financë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3462",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/bachelor-in-economics",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Ekonomiks",
@@ -81,14 +88,18 @@
         {
           "name": "Informatikë Biznesi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3457",
-          "lastModified": "2026-11-20"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/bs-in-business-informatics-and-e-business",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Administrim Biznesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1778",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/msc-in-business-administration",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "I Përgjithshëm",
@@ -120,14 +131,18 @@
         {
           "name": "Financë dhe Kontabilitet",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1116",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/msc-in-finance-and-accounting",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Administrim Biznesi",
           "cycle": "THIRD",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3951",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.unyt.edu.al/page/phd-business-administration",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Menaxhim",
@@ -200,32 +215,41 @@
         {
           "name": "Inxhinieri Softuer",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3547",
-          "lastModified": "2026-11-20"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/bachelor-in-software-engineering",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Kompjuterike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3553",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.unyt.edu.al/page/bachelor-in-computer-science",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inteligjencë Artificiale",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3885",
-          "lastModified": "2026-11-16"
+          "ects": 120,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/msc-in-artificial-intelligence",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Kompjuterike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1122",
-          "lastModified": "2026-11-16"
+          "ects": 120,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/msc-in-computer-science",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkencë të Dhënash dhe Analitikë Biznesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3818",
-          "lastModified": "2026-11-20"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/pm-data-science-and-business-analytics",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Arkitekturë",
@@ -250,20 +274,26 @@
         {
           "name": "Gjuhë dhe Letërsi Turke",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3864",
-          "lastModified": "2026-11-16"
+          "ects": 180,
+          "language": "Turqisht",
+          "dataSourceUrl": "https://www.unyt.edu.al/page/turkish-language-literature",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Psikologji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3461",
-          "lastModified": "2026-11-16"
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.unyt.edu.al/page/bachelor-in-psychology",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Politike/Marrëdhënie Ndërkombëtare",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3554",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/bachelor-in-international-relations",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Marrëdhënie Ndërkombëtare",
@@ -280,26 +310,34 @@
         {
           "name": "E Drejtë Ndërkombëtare Tregtare",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3486",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.unyt.edu.al/page/msc-in-international-commercial-law",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Marrëdhënie Ndërkombëtare",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1128",
-          "lastModified": "2026-11-16"
+          "ects": 120,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/msc-in-international-relations",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi e gjuhës turke (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3883",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Turqisht",
+          "dataSourceUrl": "https://www.unyt.edu.al/page/professional-master-program-in-teaching-of-turkish-language",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Psikologji",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3487",
-          "lastModified": "2026-11-16",
+          "ects": 120,
+          "dataSourceUrl": "https://www.unyt.edu.al/page/msc-in-psychology",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Psikologji Klinike",
@@ -321,8 +359,11 @@
         {
           "name": "Drejtësi",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3962",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.unyt.edu.al/page/p-law",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Politike dhe Marrëdhënie Ndërkombëtare",
