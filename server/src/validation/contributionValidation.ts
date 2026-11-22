@@ -507,6 +507,7 @@ export {
   editEntity,
   deleteEntity,
   deletePendingChange,
+  durationYearsSchema,
   trackCreateDataSchema,
   universityTreeDataSchema,
   facultyTreeDataSchema,

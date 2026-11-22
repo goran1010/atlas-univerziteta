@@ -850,23 +850,29 @@
         {
           "name": "Arkitekturë",
           "cycle": "FIRST",
+          "durationYears": 3,
           "ects": 180,
-          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
-          "lastModified": "2026-11-20"
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Arkitekturë (5 specializime)",
           "cycle": "SECOND",
+          "durationYears": 2,
           "ects": 120,
-          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
-          "lastModified": "2026-11-20"
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Efiçiencë e Energjisë",
           "cycle": "SECOND",
+          "durationYears": 2,
           "ects": 120,
-          "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
-          "lastModified": "2026-11-20"
+          "language": "Shqip",
+          "dataSourceUrl": "https://uni-pr.edu/en/programs",
+          "lastModified": "2026-11-22"
         }
       ]
     },

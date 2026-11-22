@@ -12,6 +12,7 @@ import {
   ENTITY_RULE_MESSAGE,
   entityFitsCountry,
 } from "../validation/countries.js";
+import { durationYearsSchema } from "../validation/contributionValidation.js";
 import {
   universitySearchFields,
   facultySearchFields,
@@ -63,7 +64,7 @@ const optionalDateSchema = z.iso
 const trackSeedSchema = z.strictObject({
   name: z.string().trim().min(1),
   ects: z.number().int().positive().nullish(),
-  durationYears: z.number().int().positive().nullish(),
+  durationYears: durationYearsSchema.nullish(),
   dataSourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
 });
@@ -78,7 +79,7 @@ const studyProgramSeedSchema = z.strictObject({
     "VOCATIONAL",
     "SPECIALIST",
   ]),
-  durationYears: z.number().int().positive().nullish(),
+  durationYears: durationYearsSchema.nullish(),
   ects: z.number().int().positive().nullish(),
   language: optionalTextSchema,
   dataSourceUrl: optionalUrlSchema,

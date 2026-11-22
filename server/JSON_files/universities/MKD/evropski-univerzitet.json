@@ -26,10 +26,10 @@
         {
           "name": "Stručni studii za zabni tehničari",
           "cycle": "VOCATIONAL",
-          "durationYears": 2010,
+          "durationYears": 3,
           "ects": 180,
           "dataSourceUrl": "https://www.eu.edu.mk/strucni-studii-zabni-tehnicari/",
-          "lastModified": "2026-11-18"
+          "lastModified": "2026-11-22"
         }
       ]
     },
