@@ -1551,11 +1551,12 @@
     {
       "name": "Tehnološko-metalurški fakultet",
       "city": "Skopje",
+      "website": "https://tmf.ukim.edu.mk",
       "address": "Ul. Ruǵer Boškoviḱ br. 16, 1000 Skopje",
       "phone": "+389 2 3088 201",
       "email": "dekanat@tmf.ukim.edu.mk",
       "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
-      "lastModified": "2026-11-16",
+      "lastModified": "2026-11-20",
       "studyPrograms": [
         {
           "name": "Biotehnologija",

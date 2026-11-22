@@ -8,9 +8,10 @@
   "website": "https://www.ibu.edu.mk",
   "address": "Makedonsko-Kosovska Brigada 9 br. 29, 1000 Skopje",
   "phone": "+389 2 55 15 000",
+  "email": "info@ibu.edu.mk",
   "authority": "Agencija za kvalitet vo visokoto obrazovanie (AKVO)",
   "dataSourceUrl": "https://www.ibu.edu.mk/mk/",
-  "lastModified": "2026-11-15",
+  "lastModified": "2026-11-20",
   "faculties": [
     {
       "name": "Fakultet za Ekonomski i administrativni nauki",
