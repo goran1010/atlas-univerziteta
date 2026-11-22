@@ -26,56 +26,83 @@
         {
           "name": "Inxhinieri elektronike dhe komunikimi dixhital",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1768",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-ECE/NDQ0/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Kompjuterike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1808",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-CEN/NDM2/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Ndërtimi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4133",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-CE/NDE4/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Softueri",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3452",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-SWE/NDEw/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Arkitekturë",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=281",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-ARCH/NDE0/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ineligjencë Artificiale dhe Inxhinieri e të Dhënave",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4168",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-AI-%26-DE/MTA1Nw==/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Elektronike dhe Komunikacioni",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1770",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-ECE/NDQ2/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Kompjuterike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=282",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-CEN/NDQy/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Ndërtimi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=287",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-CE/NDI0/Overview",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Inxhinieri e Strukturave të Ndërtimit",
@@ -97,44 +124,65 @@
         {
           "name": "Inxhinieri Ndërtimi (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1819",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PM-CE/NDIw/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim risku dhe mbrojtje ndaj zjarrit në inxhinierinë e ndërtimit (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3332",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PM-DRM-%26-FSE/NDM0/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Projektim Interier",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4134",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-ID/MTA2MQ==/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Arkitekturë",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1811",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PICD-ARCH/NDEy/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Arkitekturë",
           "cycle": "THIRD",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4182",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-ARCH/NDE2/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Kompjuterike",
           "cycle": "THIRD",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1230",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-CEN/NDQw/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Ndërtimi",
           "cycle": "THIRD",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1229",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-CE/NDIy/Overview",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -147,38 +195,55 @@
         {
           "name": "Administrim Biznesi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1767",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-BUS/Mzgy/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ekonomiks",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2647",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-ECO/Mzc2/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Financë - Bankë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2561",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-BAF/NDA0/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Informatikë ekonomike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1106",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-BINF/Mzkw/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kontabilitet dhe Teknologji Financiare",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4167",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-AFT/MTA1OQ==/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Marketing Ndërkombëtar dhe Menaxhim Logjistik",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1368",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-IML/Mzky/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Administrim - biznes",
@@ -189,44 +254,65 @@
         {
           "name": "Administrim Biznesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4031",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-BUS/Mzg0/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ekonomiks",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=288",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-ECO/Mzc4/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Financë - bankë",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=284",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-BAF/NDA2/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fintech",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4022",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-FINT/MTAwNg==/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inteligjencë Biznesi dhe Shkenca e të Dhënave",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4045",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-BIDS/MTAwNA==/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Administrim Biznes",
           "cycle": "THIRD",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1233",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-BUS/Mzg4/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ekonomiks",
           "cycle": "THIRD",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1231",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-ECO-ECO/Mzgw/Overview",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Financë - Bankë",
@@ -246,32 +332,47 @@
         {
           "name": "Shkenca Politike dhe Marrëdhënie Ndërkombëtare",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1809",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-PIR/Mzk2/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca politike dhe marrëdhënie ndërkombëtare",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=283",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-PIR/Mzk4/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Politike dhe Marrëdhënie Ndërkombëtare (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1822",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PM-PIR/NDAw/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Drejtësi",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3086",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PICD-LAW/Mzk0/Overview",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Politike dhe Marrëdhënie Ndërkombëtare",
           "cycle": "THIRD",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1232",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-PIR/NDAy/Overview",
+          "lastModified": "2026-11-22"
         }
       ]
     }

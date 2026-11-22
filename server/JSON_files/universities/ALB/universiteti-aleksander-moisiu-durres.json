@@ -47,20 +47,26 @@
         {
           "name": "Financë Kontabilitet",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1677",
-          "lastModified": "2026-11-16"
+          "language": "Shqip/Anglisht",
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-finances-dhe-kontabilitetit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Informatika Ekonomike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3794",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uamd.edu.al/bachelor-informatika-ekonomike/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "International Business Management",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4015",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://uamd.edu.al/bachelor-ne-international-business-management-program-i-perbashket-uamd-ipb/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Komunikim dhe Marketing Digjital",
@@ -95,8 +101,10 @@
         {
           "name": "Shkenca Ekonomike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1647",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uamd.edu.al/bachelor-shkenca-ekonomike/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Turizëm",
@@ -197,8 +205,9 @@
         {
           "name": "Guidë Turistike",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3537",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-turizmit/",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -319,8 +328,10 @@
         {
           "name": "Psikologji Shkollore dhe Zhvillimore (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3311",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-psikologjise/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Redaktori (Master profesional)",
@@ -393,8 +404,10 @@
         {
           "name": "Comparitive and European Law/E Drejtë Evropiane dhe e Krahasuar",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3804",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uamd.edu.al/master-shkencor-e-drejte-evropiane-dhe-e-krahasuar-dilpome-e-dyfishte-ne-bashkepunim-me-universitetin-e-romes-sapienza/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "E Drejtë e Pronës (Master profesional)",
@@ -435,8 +448,9 @@
         {
           "name": "Marrëdhënie Ndërkombëtare dhe Diplomaci",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3612",
-          "lastModified": "2026-11-16"
+          "ects": 120,
+          "dataSourceUrl": "https://www.uamd.edu.al//marredhenie-nderkombetare-dhe-diplomaci/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Politika dhe Administrim",
@@ -494,8 +508,10 @@
         {
           "name": "Drejtësi",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3860",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-drejtesise/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Drejtësi",
@@ -599,8 +615,10 @@
         {
           "name": "Maritime Environmental Protection and Management",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3806",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://uamd.edu.al/maritime-environmental-protection-and-management-program/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Terapia Manuale dhe Fizioterapia Muskuloskeletike (Master profesional)",
@@ -611,80 +629,93 @@
         {
           "name": "Asistent Administrativ",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1478",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-studimeve-te-integruara-me-praktiken/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Asistent Ligjor",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1477",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-studimeve-te-integruara-me-praktiken/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Hidroteknikë, Ujësjellës Kanalizime",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1473",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Informatikë-Praktike",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1398",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-te-aplikuara-dhe-te-natyres/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mekanik i Impianteve Industriale e Bujqësore",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3474",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mekanikë detare",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3475",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Ndërtimi",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1475",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Transporti Detar/Tokësor",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1476",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ndihmës Dentist",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1474",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-teknike-mjekesore/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Specialist i sistemeve të kondicionimit",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3476",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Specialist Rrjetesh Kompjuterike",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1480",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-te-aplikuara-dhe-te-natyres/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknikë Elektrike",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1393",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknologji Automobilash",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1479",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://uamd.edu.al/departamenti-i-shkencave-inxhinierike-dhe-detare/",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -756,8 +787,10 @@
         {
           "name": "Quantum Information Technology",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3805",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uamd.edu.al/master-shkencor-ne-quantum-information-technology/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Kompjuterike të Aplikuara",
@@ -780,14 +813,16 @@
         {
           "name": "Aplikacion Web dhe Dizenjim Grafik",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3465",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-shkencave-kompjuterike/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Specialist Pajisjesh Elektronike",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3969",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-teknologjise-se-informacionit/",
+          "lastModified": "2026-11-22"
         }
       ]
     },

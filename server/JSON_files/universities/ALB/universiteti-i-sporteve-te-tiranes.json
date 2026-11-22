@@ -23,8 +23,10 @@
         {
           "name": "Shkencat e lëvizjes",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1092",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://ust.edu.al/programi-i-studimit-bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi në Edukimin Fizik e Shëndetësor",
@@ -41,8 +43,10 @@
         {
           "name": "Trajner i Përgatitjes Fizike (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3571",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "http://fshl.ust.edu.al/master-profesional/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Trajnimi Sportiv dhe të Ushqyerit (Master profesional)",
@@ -53,8 +57,9 @@
         {
           "name": "Shkenca Sportive",
           "cycle": "THIRD",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3650",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://fshl.ust.edu.al/doktoratura/publikime/",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -67,14 +72,18 @@
         {
           "name": "Dietologji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4172",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://ust.edu.al/programi-i-studimit-bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca të Rehabilitimit",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3483",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://ust.edu.al/programi-i-studimit-bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fizioterapi Klinike dhe Rehabilitim",
@@ -105,14 +114,18 @@
         {
           "name": "Aktivitete në Natyrë dhe Turizëm Sportiv",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4159",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://ust.edu.al/programi-i-studimit-bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fushat e veprimtarisë fizike, të shëndetit dhe të rekreacionit",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1091",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://ust.edu.al/programi-i-studimit-bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Aktiviteti Fizik dhe Rekreacioni - Trajner Fitnesi (Master profesional)",
@@ -135,8 +148,9 @@
         {
           "name": "Aktiviteti Fizik dhe Shëndeti",
           "cycle": "THIRD",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3649",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "http://fvfr.ust.edu.al/doktoratura/",
+          "lastModified": "2026-11-22"
         }
       ]
     }

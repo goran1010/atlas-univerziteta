@@ -14,10 +14,11 @@
   "faculties": [
     {
       "name": "Fakulteti i Arteve",
+      "website": "https://arte.uni-pr.edu/",
       "address": "Rr. Agim Ramadani, 10000 Prishtinë",
       "phone": "+383 38 247 129",
       "email": "arte@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://arte.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -129,10 +130,11 @@
     },
     {
       "name": "Fakulteti i Edukimit Fizik dhe i Sportit",
+      "website": "https://fefs.uni-pr.edu/",
       "address": "Rr. Eqrem Çabej, 10000 Prishtinë",
       "phone": "+383 38 243 747",
       "email": "fefs@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://fefs.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -164,10 +166,11 @@
     },
     {
       "name": "Fakulteti i Filologjisë",
+      "website": "https://filologjia.uni-pr.edu/",
       "address": "Rr. George Bush, 10000 Prishtinë",
       "phone": "+383 38 222 970",
       "email": "filologjia@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://filologjia.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -351,10 +354,11 @@
     },
     {
       "name": "Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike",
-      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
-      "phone": "+383 38 542 525",
+      "website": "https://fiek.uni-pr.edu/",
+      "address": "Bregu i Diellit, 10000 Prishtinë",
+      "phone": "+383 38 554 896",
       "email": "fiek@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://fiek.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -435,10 +439,11 @@
     },
     {
       "name": "Fakulteti i Inxhinierisë Mekanike",
-      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "website": "https://fim.uni-pr.edu/",
+      "address": "Rr. Agim Ramadani, Ndërtesa e Fakulteteve Teknike, 10000 Prishtinë",
       "phone": "+383 38 552 126",
       "email": "fim@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://fim.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -522,10 +527,11 @@
     },
     {
       "name": "Fakulteti i Mjekësisë",
+      "website": "https://mjekesia.uni-pr.edu/",
       "address": "Bulevardi i Dëshmorëve, 10000 Prishtinë",
-      "phone": "+383 38 512 223",
+      "phone": "+383 38 512 221",
       "email": "mjekesia@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://mjekesia.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -616,10 +622,11 @@
     },
     {
       "name": "Fakulteti i Shkencave Matematike-Natyrore",
+      "website": "https://fshmn.uni-pr.edu/",
       "address": "Rr. Nëna Terezë, 10000 Prishtinë",
-      "phone": "+383 38 226 104",
+      "phone": "+383 38 249 872",
       "email": "fshmn@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://fshmn.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -795,10 +802,11 @@
     },
     {
       "name": "Fakulteti i Inxhinierisë së Ndërtimit",
-      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "website": "https://fin.uni-pr.edu/",
+      "address": "Rr. Agim Ramadani, Ndërtesa e Fakulteteve Teknike, 10000 Prishtinë",
       "phone": "+383 38 554 899",
       "email": "fin@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://fin.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -868,10 +876,11 @@
     },
     {
       "name": "Fakulteti i Arkitekturës",
-      "address": "Rr. Arkitekt Karl Gega, 10000 Prishtinë",
+      "website": "https://fa.uni-pr.edu/",
+      "address": "Rr. Arkitekt Karl Gega, Nr. 1, 10000 Prishtinë",
       "phone": "+383 38 224 751",
       "email": "arkitektura@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://fa.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -905,10 +914,11 @@
     },
     {
       "name": "Fakulteti i Edukimit",
+      "website": "https://edukimi.uni-pr.edu/",
       "address": "Rr. Agim Ramadani, 10000 Prishtinë",
       "phone": "+383 38 229 201",
       "email": "edukimi@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://edukimi.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -971,10 +981,11 @@
     },
     {
       "name": "Fakulteti i Ekonomisë",
+      "website": "https://ekonomiku.uni-pr.edu/",
       "address": "Rr. Agim Ramadani, 10000 Prishtinë",
-      "phone": "+383 38 228 966",
+      "phone": "+383 38 221 895",
       "email": "ekonomiku@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://ekonomiku.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -1070,10 +1081,11 @@
     },
     {
       "name": "Fakulteti Juridik",
+      "website": "https://juridiku.uni-pr.edu/",
       "address": "Rr. Agim Ramadani, 10000 Prishtinë",
-      "phone": "+383 38 229 744",
+      "phone": "+383 38 229 063",
       "email": "juridiku@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://juridiku.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -1143,10 +1155,11 @@
     },
     {
       "name": "Fakulteti i Bujqësisë dhe Veterinarisë",
-      "address": "Rr. Tahir Zajmi, 10000 Prishtinë",
+      "website": "https://fbv.uni-pr.edu/",
+      "address": "Bulevardi Bill Clinton, 10000 Prishtinë",
       "phone": "+383 38 603 668",
       "email": "fbv@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://fbv.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {
@@ -1241,10 +1254,11 @@
     },
     {
       "name": "Fakulteti Filozofik",
+      "website": "https://filozofiku.uni-pr.edu/",
       "address": "Rr. Eqrem Çabej, Nr. 21, 10000 Prishtinë",
       "phone": "+383 38 224 783",
       "email": "filozofiku@uni-pr.edu",
-      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "dataSourceUrl": "https://filozofiku.uni-pr.edu/",
       "lastModified": "2026-11-22",
       "studyPrograms": [
         {

@@ -23,20 +23,26 @@
         {
           "name": "Shëndet Publik",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1554",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise/fakulteti-i-mjekesise-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Shëndetësor (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2731",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise/fakulteti-i-mjekesise-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shëndet Publik",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2099",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise/fakulteti-i-mjekesise-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shëndet Publik (Master profesional)",
@@ -47,14 +53,18 @@
         {
           "name": "Farmaci",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1762",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise/fakulteti-i-mjekesise-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mjekësi e Përgjithshme",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=557",
-          "lastModified": "2026-11-16"
+          "durationYears": 6,
+          "ects": 360,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise/fakulteti-i-mjekesise-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Anatomi",
@@ -459,14 +469,18 @@
         {
           "name": "Higjenist Dentar",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3226",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise-dentare/fakulteti-i-mjekesise-dentare-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknikë Dentare",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3222",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise-dentare/fakulteti-i-mjekesise-dentare-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Higjenë Dentare dhe Terapi Parodontale jo Kirurgjikale (Master profesional)",
@@ -477,8 +491,10 @@
         {
           "name": "Stomatologji",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=558",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-mjekesise-dentare/fakulteti-i-mjekesise-dentare-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mjekësi Dentare",
@@ -544,56 +560,74 @@
         {
           "name": "Fizioterapi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2057",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Infermieri e Përgjithshme",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1555",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Logopedi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1558",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mami",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1556",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknikë imazherie",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1559",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknikë laboratori",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1557",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fizioterapi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=638",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fizioterapi (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3080",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Infermieri",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=636",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Infermieri Familje (Master profesional)",
@@ -610,8 +644,10 @@
         {
           "name": "Logopedi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2564",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Logopedi (Master profesional)",
@@ -622,44 +658,58 @@
         {
           "name": "Mami",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=640",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mami (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3083",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Infermieror (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3082",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknikë imazherie",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=639",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknikë imazherie (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3081",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknikë laboratori",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=637",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknikë laboratori (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3084",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://umed.edu.al/rreth-nesh/fakultetet/fakulteti-i-shkencave-mjekesore-teknike/fakulteti-i-shkencave-mjekesore-teknike-programet-e-studimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Lëndët Klinike",

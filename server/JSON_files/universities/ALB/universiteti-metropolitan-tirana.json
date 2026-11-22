@@ -23,26 +23,38 @@
         {
           "name": "Inteligjencë Artificiale",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3764",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://umt.edu.al/inteligjence-artificiale/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Kompjuterike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2696",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/inxhinieri-kompjuterike/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Software",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3218",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://umt.edu.al/inxhinieri-software/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inteligjencë Artificiale",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3921",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://umt.edu.al/master-i-shkencave-ne-inteligjence-artificiale/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Data Science",
@@ -59,14 +71,20 @@
         {
           "name": "Inxhinieri Informatike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1345",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/master-shkencor-inxhinieri-informatike/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Software Engineering",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3596",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://umt.edu.al/master-i-shkencave-inxhinieri-software/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inteligjenca Artificiale dhe Sistemet Inteligjente",
@@ -77,8 +95,11 @@
         {
           "name": "Dizajn dhe Zhvillim Software",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3455",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/program-profesional-ne-dizajn-dhe-zhvillim-software/",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -91,8 +112,11 @@
         {
           "name": "Inxhinieri Elektrike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3217",
-          "lastModified": "2026-11-20",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/inxhinieri-elektrike/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Sistemet e fuqisë",
@@ -124,14 +148,20 @@
         {
           "name": "Inxhinieri Ndërtimi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=430",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/inxhinieri-ndertimi/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Elektrike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3432",
-          "lastModified": "2026-11-20",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/master-i-shkencave-inxhinieri-elektrike/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Energjetikë",
@@ -148,8 +178,11 @@
         {
           "name": "Inxhinieri Ndërtimi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1216",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/master-shkencor-inxhinieri-ndertimi/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Inxhinieri Strukturash",
@@ -166,14 +199,20 @@
         {
           "name": "Renewable Energy and Management",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4049",
-          "lastModified": "2026-11-20"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://umt.edu.al/master-i-shkencave-ne-renewable-energy-and-management/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Arkitekturë",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2902",
-          "lastModified": "2026-11-16",
+          "durationYears": 5,
+          "ects": 300,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/arkitekture/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Arkitekt",
@@ -206,14 +245,19 @@
         {
           "name": "Dizajn grafik",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3096",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/program-profesional-ne-dizajn-grafik/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Topografi dhe Gis",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3211",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umt.edu.al/pranimet/",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -226,8 +270,11 @@
         {
           "name": "Administrim Biznesi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3431",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/administrim-biznesi/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Menaxhim",
@@ -249,8 +296,11 @@
         {
           "name": "Financë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3899",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/finance/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Kontabilitet",
@@ -267,44 +317,64 @@
         {
           "name": "Informatikë Ekonomike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3227",
-          "lastModified": "2026-11-20"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/informatike-ekonomike/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Business Analitics and Artificial Intelligence",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3873",
-          "lastModified": "2026-11-20"
+          "durationYears": 2,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://umt.edu.al/master-business-analytics-artificial-intelligence/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ekonomik - MBA",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1347",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/master-shkencor-ekonomi-mba/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Financiare dhe Menaxhim Risku",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3328",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/master-shkencor-inxhinieri-financiare-dhe-menaxhim-risku/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Marketing Dixhital (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3327",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/master-profesional-ne-digital-marketing/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim në Inxhinieri",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2617",
-          "lastModified": "2026-11-20"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/master-shkencor-menaxhim-ne-inxhinieri/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim në Turizëm, Hoteleri dhe Evente",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3165",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "https://umt.edu.al/program-profesional-ne-menaxhim-turizem-hoteleri-dhe-evente/",
+          "lastModified": "2026-11-22"
         }
       ]
     }

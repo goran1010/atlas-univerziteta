@@ -23,212 +23,247 @@
         {
           "name": "Bas-tub",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1087",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Dirizhim",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2144",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fagot",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1083",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fizarmonikë Klasike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1629",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Flaut",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1080",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kanto",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1088",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kitarë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1078",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Klarinetë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1082",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kompozim",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1070",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kontrabas",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1079",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Korno",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1084",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Muzikologji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1071",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Muzikë Jazz",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3733",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Oboe",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1081",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Pedagogji Muzikore",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1089",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Perkusion",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3732",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Piano",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1074",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Trombonë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1086",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Trombë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1085",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Violinë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2145",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Violonçel",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1076",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Violë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1077",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Bastub dhe Mësuesi (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3616",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Dirizhim dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3630",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fagotë dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3624",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fizarmonikë dhe Mësuesi (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3615",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Flaut dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3622",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kanto dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3629",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kitarë dhe Mësuesi (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3614",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Klarinetë dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3625",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kompozim dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3631",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kontrabas dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3621",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Korno dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3626",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Muzikologji dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3632",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Muzikë Jazz dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4129",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Piano Jazz",
@@ -260,50 +295,58 @@
         {
           "name": "Oboe dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3623",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Pedagogji Muzikore dhe Mësuesi (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3613",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Piano dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3617",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Trombon dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3628",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Trombë dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3627",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Violinçel dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3620",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Violinë dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3618",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Violë dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3619",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=5&niveli=9",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Muzikologji",
@@ -370,44 +413,58 @@
         {
           "name": "Pikturë Grafik dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3638",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=6&niveli=45",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Pikturë Kavaleti dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3640",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=6&niveli=45",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Pikturë Monumentale dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3639",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=6&niveli=45",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Pikturë Multimedia dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3642",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=6&niveli=45",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Pikturë Tekstili dhe Modë dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3641",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=6&niveli=45",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Skulpturë dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3643",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=6&niveli=45",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Skulpturë Qeramike dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3644",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=6&niveli=45",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Arte Pamore",
@@ -426,8 +483,10 @@
         {
           "name": "Aktrim",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1063",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=661&niveli=81",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Koreografi",
@@ -456,8 +515,10 @@
         {
           "name": "Aktrim dhe Mësuesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3633",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.uart.edu.al/index.php?pg=faqe&id=661&niveli=81",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Koreografi dhe Mësuesi",

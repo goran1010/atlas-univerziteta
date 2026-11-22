@@ -70,8 +70,10 @@
         {
           "name": "Drejtësi",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3422",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://unitir.edu.al/programe-te-integruara-te-studimeve-te-ciklit-te-dyte/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Drejtësi",
@@ -125,32 +127,43 @@
         {
           "name": "Administrim Biznesi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2028",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/bachelor/bachelor-ne-administrim-biznes",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ekonomiks",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2026",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/bachelor/bachelor-ne-ekonomiks",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Financë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2025",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "language": "Anglisht/Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/bachelor/bachelor-ne-finance-kontabilitet",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Informatikë Ekonomike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2027",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/bachelor/bachelor-ne-informatike-ekonomike",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Administrim Biznesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2042",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-administrim-biznesi",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Menaxhim",
@@ -167,32 +180,43 @@
         {
           "name": "Administrim Biznesi (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2735",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-profesional/master-profesional-ne-administrim-biznesi",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Administrim Publik",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2041",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-administrim-publik",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Administrim Publik (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2736",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-profesional/master-profesional-ne-administrim-publik",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Analizë dhe Administrim Fiskal",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4160",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-analize-dhe-administrim-fiskal",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ekonomiks",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2040",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-ekonomiks",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Financat e Ndërmarrjeve (Master profesional)",
@@ -203,8 +227,10 @@
         {
           "name": "Financë",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2037",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-finance",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Drejtues financiar",
@@ -226,20 +252,26 @@
         {
           "name": "Financë, Kontabilitet dhe Auditim",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4186",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-finance-kontabilitet-dhe-auditim",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kontabilitet dhe Auditim",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2036",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-kontabilitet-dhe-auditim",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kontabilitet dhe Auditim (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3507",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-profesional/master-profesional-ne-kontabilitet-dhe-auditim-kohe-e-plote",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kërkimet Operacionale",
@@ -250,8 +282,10 @@
         {
           "name": "Marketing",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2045",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-marketing",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Marketing (Master profesional)",
@@ -262,8 +296,10 @@
         {
           "name": "Menaxhim Risku",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3260",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-manaxhim-risku",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Turizmi (Master profesional)",
@@ -280,26 +316,34 @@
         {
           "name": "Siguria e Informacionit",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2797",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-siguri-informacioni",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Sisteme Informacioni në Ekonomi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2035",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-sisteme-informacioni-ne-ekonomi",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Sisteme Informacioni në Ekonomi (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2742",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-profesional/master-profesional-ne-sisteme-informacioni-ne-ekonomi",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Statistika Zyrtare",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3318",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-statistika-zyrtare",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Studime Ekonomike Evropiane (Master profesional)",
@@ -310,14 +354,18 @@
         {
           "name": "Teknologji Informacioni dhe Menaxhimi i Proceseve të Biznesit",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4185",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-teknologji-informacioni-dhe-menaxhimi-i-proceseve-te-biznesit",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Zhvillim Ekonomik dhe Marrëdhënie Ndërkombëtare",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4042",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "language": "Shqip",
+          "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-zhvillim-ekonomik-dhe-marredhenie-nderkombetare",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Ekonomike",
@@ -379,14 +427,20 @@
         {
           "name": "Gjuha dhe kultura italiane në botën digjitale",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4109",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Italisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuha-dhe-kultura-italiane-ne-boten-digjitale-universita-per-stranieri-di-perugia-itali/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Gjuhë Angleze",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4010",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-angleze/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Përkthim dhe Intepretim",
@@ -408,8 +462,11 @@
         {
           "name": "Gjuhë Frënge",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1923",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Frëngjisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-frenge-me-profil-gjuhe-dhe-komunikim/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "gjuhë dhe komunikim",
@@ -431,14 +488,19 @@
         {
           "name": "Gjuhë frënge dhe gjuhë e shenjave shqipe",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3876",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-frenge-dhe-gjuhe-e-shenjave-shqipe/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Gjuhë Greke",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2772",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Greqisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-greke-me-profil-gjuhe-letersi-dhe-qyteterim-grek/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "gjuhë",
@@ -460,14 +522,20 @@
         {
           "name": "Gjuhë Moderne dhe Teknologji Digjitale",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4127",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Gjermanisht/Frëngjisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-moderne-dhe-teknologji-digjitale/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Gjuhë Spanjolle",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1929",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Spanjisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-spanjolle-me-profil-gjuhe-letersi-dhe-qyteterim-hispanik/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "gjuhë-letërsi dhe qytetërim hispanik",
@@ -479,8 +547,11 @@
         {
           "name": "Gjuhë Turke",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1927",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Turqisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-turke-me-profil-gjuhe-letersi-dhe-qyteterim-turk/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "gjuhë",
@@ -502,8 +573,11 @@
         {
           "name": "Gjuhë, letësi dhe qytetërim gjermanishtfolës",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4107",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Gjermanisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-letersi-dhe-qyteterim-gjermanishtfoles-2/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Italianistikë",
@@ -531,8 +605,11 @@
         {
           "name": "Orientalistikë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4173",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip/Arabisht",
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-orientalistike/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Përkthim dhe Interpretim në Gjuhën Greke dhe Angleze",
@@ -555,44 +632,65 @@
         {
           "name": "Mësuesi, Gjuhë e Huaj, Gjuhë Angleze",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4162",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Anglisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-mesuesi-e-gjuhes-angleze-per-arsimin-e-mesem-te-larte/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi, Gjuhë e Huaj, Gjuhë Frënge",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4105",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Frëngjisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencava-mesuesi-e-gjuhes-frenge-per-arsimin-e-mesem-te-larte/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi, Gjuhë e Huaj, Gjuhë Gjermane",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4163",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Gjermanisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-mesuesi-e-gjuhes-gjermane-per-arsimin-e-mesem-te-larte/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi, Gjuhë e Huaj, Gjuhë Greke",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4102",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Greqisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-mesuesi-ne-gjuhen-greke-per-arsimin-e-mesem-te-larte/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi, Gjuhë e Huaj, Gjuhë Italiane",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4165",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Italisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-mesuesi-e-gjuhes-italiane-per-arsimin-e-mesem-te-larte/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi, Gjuhë e Huaj, Gjuhë Turke",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4128",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Turqisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-mesuesi-ne-gjuhen-turke-per-arsimin-e-mesem-te-larte/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Përkthim Pragmatik (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4161",
-          "lastModified": "2026-11-16",
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Anglisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/plani-mesimor-master-profesional-ne-perkthim-me-profil-perkthyes/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Përkthim i Specializuar",
@@ -604,14 +702,18 @@
         {
           "name": "Përkthim teknik - letrar dhe interpretim",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1935",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-perkthim-teknik-letrar-dhe-interpretim/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Trajtimi Automatik i Gjuhëve",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3700",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "language": "Frëngjisht/Anglisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-trajtimi-automatik-i-gjuheve-specialiteti-trajtim-automatik-dhe-gjuhesor-i-dokumenteve-te-shkruara/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Trajtimi Informatik dhe Gjuhësor i Dokumentave të Shkruara",
@@ -731,8 +833,11 @@
         {
           "name": "Gazetari Investigative (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3599",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip",
+          "dataSourceUrl": "https://fhf.edu.al/departamentet/departamenti-i-gazetarise-dhe-i-komunikimit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Gjeografi",
@@ -1273,50 +1378,66 @@
         {
           "name": "Administrim dhe politikë sociale",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1985",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pune-dhe-politika-sociale",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Filozofi dhe Etikë Sociale",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3986",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-filozofi",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Psikologji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1983",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pedagogji-psikologji",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Punë Sociale",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1982",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pune-dhe-politika-sociale",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Politike dhe Marrëdhënie Ndërkombëtare",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4164",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-shkenca-politike",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Sociologji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1987",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-sociologji/bachelor-sociologji",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Administrim i Shërbimeve Sociale",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2013",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pune-dhe-politika-sociale/master-administrimi-sherbimeve-sociale",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Administrimi i Institucioneve Sociale në Sistemin e Drejtësisë (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2790",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-sociologji",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Analizë e Politikës Sociale (Master profesional)",
@@ -1339,8 +1460,10 @@
         {
           "name": "Etika në institucione dhe lidership",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2785",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-filozofi",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Filozofi Praktike dhe Humane (Master profesional)",
@@ -1351,32 +1474,42 @@
         {
           "name": "Filozofi sociale",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2784",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-filozofi",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Komunikim për Ndryshim Social dhe të Sjelljes",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2016",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pune-dhe-politika-sociale",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Këshillim Psikologjik (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3139",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pedagogji-psikologji",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi në arsimin e mesëm në lëndët Shkencat Sociale",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2787",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pedagogji-psikologji",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Orientim Profesional (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3140",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pedagogji-psikologji",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Pedagogji e Specializuar Sociale (Master profesional)",
@@ -1393,8 +1526,10 @@
         {
           "name": "Psikologji",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3048",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pedagogji-psikologji",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Psikologji Shkollore",
@@ -1416,8 +1551,10 @@
         {
           "name": "Psikologji Ligjore (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3316",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pedagogji-psikologji",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Punë sociale",
@@ -1440,8 +1577,10 @@
         {
           "name": "Punë Sociale e Avancuar (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2009",
-          "lastModified": "2026-11-16",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pune-dhe-politika-sociale",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Punë Sociale në Arsim",
@@ -1458,8 +1597,10 @@
         {
           "name": "Qeverisja dhe Politikat Publike (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3138",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-shkenca-politike",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca politike",
@@ -1477,8 +1618,10 @@
         {
           "name": "Shkenca Politike-Integrimi dhe Qeverisja",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3134",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-shkenca-politike",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca të Edukimit",
@@ -1489,14 +1632,18 @@
         {
           "name": "Shërbime Sociale në Drejtësinë Penale",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2012",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pune-dhe-politika-sociale",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Sociologji e Zhvillimeve Shoqërore",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1995",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-sociologji/master-sociologji-e-zhvillimeve-shoqerore",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Sociologji edukimi (Master profesional)",
@@ -1507,20 +1654,26 @@
         {
           "name": "Studime Rajonale Politike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2014",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-shkenca-politike",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Zgjidhje e konflikteve me ndërmjetësim (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3317",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-sociologji/master-profesional-zgjidhje-e-konflikteve-me-ndermjetesim",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Çështje të Fëmijëve dhe të Familjes",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2015",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://fshs-ut.edu.al/programet-e-studimit-pune-dhe-politika-sociale",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Sociale",
@@ -1636,8 +1789,11 @@
         {
           "name": "Gjuhë Angleze",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2466",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht/Shqip",
+          "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-angleze-filiali-sarande/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Administrim Biznesi (Master profesional)",

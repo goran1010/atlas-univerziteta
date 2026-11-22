@@ -22,32 +22,41 @@
         {
           "name": "Art dhe Dizajn",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1281",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://universitetipolis.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Ndërtimi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2643",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://universitetipolis.edu.al/inxhinieri-ndertimi-2/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Arkitekturë Dixhitale (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3589",
-          "lastModified": "2026-11-16"
+          "ects": 60,
+          "dataSourceUrl": "https://universitetipolis.edu.al/master-profesional-i-avancuar-ne-arkitekture-dixhitale-2/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Dizajn i Aplikuar",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1295",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://universitetipolis.edu.al/master-i-shkencave-ne-dizajn-te-aplikuar/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Ndërtimi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2716",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://universitetipolis.edu.al/master-i-shkencave-ne-inxhinieri-ndertimi/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Strukturë dhe Gjeoteknikë",
@@ -59,8 +68,10 @@
         {
           "name": "Arkitekturë dhe Dizajn Urban",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1283",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://universitetipolis.edu.al/master-i-shkencave-ne-arkitekture-dhe-dizajn-urban/",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -73,8 +84,10 @@
         {
           "name": "Administrim Biznesi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3676",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://universitetipolis.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Studime Mjedisore",
@@ -85,26 +98,33 @@
         {
           "name": "Administrim Biznesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3587",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://universitetipolis.edu.al/master-i-shkencave-ne-administrim-biznesi-mba/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Mjedisor Urban",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1298",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://universitetipolis.edu.al/master-i-shkencave-ne-menaxhim-mjedisor-urban/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Planifikim Territori dhe GIS (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3588",
-          "lastModified": "2026-11-16"
+          "ects": 60,
+          "dataSourceUrl": "https://universitetipolis.edu.al/master/profesional/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Planifikim dhe Menaxhim Urban",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1294",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://universitetipolis.edu.al/master-i-shkencave-ne-planifikim-dhe-menaxhim-urban/",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -123,8 +143,10 @@
         {
           "name": "Restaurim, Konservim dhe Valorizim të Trashëgimisë Kulturore (Master Ekzekutiv)",
           "cycle": "SPECIALIST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3585",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://universitetipolis.edu.al/master-ekzekutiv-ne-restaurim/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Efiçencë Energjitike",
@@ -142,20 +164,26 @@
         {
           "name": "Inxhinieri Software dhe Inteligjencë Artificiale",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4004",
-          "lastModified": "2026-11-20"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://universitetipolis.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca kompjuterike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3346",
-          "lastModified": "2026-11-20"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://universitetipolis.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Kompjuterike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3573",
-          "lastModified": "2026-11-20"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://universitetipolis.edu.al/master-i-shkencave-ne-shkenca-kompjuterike/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mirëmbajtje Rrjete Kompjuterike",

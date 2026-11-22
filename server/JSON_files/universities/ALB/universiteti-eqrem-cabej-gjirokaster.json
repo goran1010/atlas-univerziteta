@@ -29,8 +29,10 @@
         {
           "name": "Gjuhë dhe Letërsi Shqipe",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=936",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "http://uogj.edu.al/fakultetet/fakultetin-e-edukimit-dhe-shkencave-shoqerore/feshsh-departamente/departamenti-i-gjuhes-shqipe/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Gjuhë,Letërsi e Qytetërim Grek",
@@ -65,8 +67,11 @@
         {
           "name": "Arkeologji, Histori dhe Administrim i Pasurive Kulturore",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3811",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "language": "Shqip/Italisht",
+          "dataSourceUrl": "https://uogj.edu.al/programe-dhe-diploma-te-dyfishta/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësues në Arsimin Special (Master profesional)",
@@ -119,8 +124,11 @@
         {
           "name": "Restoration, Conservation and Management of Architectural Heritage (Master Ekzekutiv)",
           "cycle": "SPECIALIST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3718",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "language": "Shqip/Italisht/Anglisht",
+          "dataSourceUrl": "https://uogj.edu.al/programe-dhe-diploma-te-dyfishta/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Edukatorë për zhvillimin dhe edukimin e fëmijërisë së hershme (0-3 vjeç)",
@@ -163,14 +171,20 @@
         {
           "name": "Menaxhim Digjital",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3780",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht/Italisht/Shqip",
+          "dataSourceUrl": "https://uogj.edu.al/programe-dhe-diploma-te-dyfishta/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim i Turizmit të Qëndrueshëm",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3779",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip/Anglisht",
+          "dataSourceUrl": "https://uogj.edu.al/programe-dhe-diploma-te-dyfishta/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Turizëm",
