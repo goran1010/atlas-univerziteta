@@ -36,7 +36,7 @@ In production, emails are sent via [Resend](https://resend.com). The default sen
 Data contributions happen in the Atlas Univerziteta app - suggestions are reviewed by admins and applied to the live dataset there. Use the workflow below:
 
 1. Create an account and confirm your email.
-2. Log in and open `/improve-data`.
+2. Log in and open `/improve-data`, or use "Suggest a correction" on a university or faculty page.
 3. Submit a suggestion to create, edit, or delete a university entity (University, Faculty, Study Program, or Track).
 4. Your suggestion is stored as a pending change.
 5. Admin users review pending changes and either approve or reject them.
@@ -47,6 +47,7 @@ Notes:
 - Approving a deletion also removes everything nested under the entity (a
   university's faculties, their study programs, and their tracks).
 - You can remove your own pending suggestion before review from the pending changes list in the dashboard.
+- To report a bug or a data problem on GitHub instead, use "Report an issue" in the site's footer; it opens this repository's issue templates.
 
 ## Contributing a Whole University (JSON)
 
