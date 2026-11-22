@@ -1,6 +1,7 @@
 import { API_URL } from "./envConfig";
 import { readResponseError } from "../schemas/api";
 import { notificationMessage } from "./apiError";
+import { InvalidResponseError, parseResponse } from "./parseResponse";
 
 import type { z } from "zod";
 import type { ApiError } from "../schemas/api";
@@ -14,7 +15,8 @@ type FetchPublicOutcome<Schema extends z.ZodType> =
   | { ok: false; status: number; error: ApiError | null };
 
 // Low level: fetch and parse, no UI concerns. For callers with their own
-// error handling (search throws its typed error from this).
+// error handling (search throws its typed error from this). A successful
+// body that does not fit responseSchema throws InvalidResponseError.
 async function fetchPublicResponse<Schema extends z.ZodType>(
   path: string,
   responseSchema: Schema,
@@ -27,7 +29,10 @@ async function fetchPublicResponse<Schema extends z.ZodType>(
   });
 
   if (response.ok) {
-    return { ok: true, result: responseSchema.parse(await response.json()) };
+    return {
+      ok: true,
+      result: parseResponse(path, responseSchema, await response.json()),
+    };
   }
   return {
     ok: false,
@@ -76,7 +81,11 @@ async function fetchPublic<Schema extends z.ZodType>(
     console.error(`Error trying to ${logLabel}:`, error);
     addNotification({
       type: "error",
-      message: t(errorMessageKey),
+      message: t(
+        error instanceof InvalidResponseError
+          ? "messages.apiError.invalidResponse"
+          : errorMessageKey,
+      ),
     });
     return null;
   } finally {

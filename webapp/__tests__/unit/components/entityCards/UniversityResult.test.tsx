@@ -5,6 +5,7 @@ import { UniversityResult } from "../../../../src/components/entityCards/Univers
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
+import { InvalidResponseError } from "../../../../src/utils/parseResponse";
 
 import type { UniversityListItem } from "../../../../src/schemas/university";
 
@@ -177,7 +178,7 @@ describe("UniversityResult", () => {
     );
   });
 
-  test("shows an error notification when a successful details response is malformed", async () => {
+  test("says the data could not be read, without 'try again', when a successful details response is malformed", async () => {
     const errorSpy = vi
       .spyOn(console, "error")
       .mockImplementation(() => vi.fn());
@@ -197,13 +198,14 @@ describe("UniversityResult", () => {
 
     expect(
       await screen.findByText(
-        /Could not load the details\. Try again in a moment\./i,
+        /The server sent data the site could not read\./i,
       ),
     ).toBeInTheDocument();
+    expect(screen.queryByText(/Try again/i)).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Expand/i })).toBeVisible();
     expect(errorSpy).toHaveBeenCalledWith(
       "Error trying to load university details:",
-      expect.any(Error),
+      expect.any(InvalidResponseError),
     );
   });
 
