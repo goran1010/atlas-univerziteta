@@ -23,8 +23,10 @@
         {
           "name": "Financë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3354",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Bankë",
@@ -56,14 +58,19 @@
         {
           "name": "Informatikë Ekonomike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3540",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Shqip/Anglisht",
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Biznesi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3360",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Menaxhim i Organizatave",
@@ -290,8 +297,10 @@
         {
           "name": "Menaxhim",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3351",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://uet.edu.al/diplome-profesionale/",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -304,8 +313,10 @@
         {
           "name": "Marrëdhënie Ndërkombëtare",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3359",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Siguri",
@@ -337,8 +348,10 @@
         {
           "name": "Shkenca Politike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3353",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Administratë Publike",
@@ -501,8 +514,9 @@
         {
           "name": "Drejtësi",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3467",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "dataSourceUrl": "https://uet.edu.al/programe-te-integruara/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Sociale dhe të Sjelljes",
@@ -521,8 +535,10 @@
         {
           "name": "Arte muzikore",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3251",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Piano",
@@ -554,8 +570,10 @@
         {
           "name": "Arte Pamore",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3372",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Grafikë- Dizajn",
@@ -587,8 +605,10 @@
         {
           "name": "Arte skenike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3348",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Regji",
@@ -620,14 +640,18 @@
         {
           "name": "Edukim Fizik dhe Sporte",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4169",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Komunikim",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3363",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Marrëdhënie Publike",
@@ -659,8 +683,10 @@
         {
           "name": "Psikologji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3366",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Shëndet mendor",
@@ -829,8 +855,10 @@
         {
           "name": "Inxhinieri Informatike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3347",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Inxhinieri Telekomunikacioni",
@@ -857,20 +885,26 @@
         {
           "name": "Inxhinieri Mekanike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3836",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Ndërtimi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3235",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknologji Informacioni",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3344",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Informatikë Ekonomike",
@@ -1076,8 +1110,9 @@
         {
           "name": "Arkitekturë",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4033",
-          "lastModified": "2026-11-16",
+          "durationYears": 5,
+          "dataSourceUrl": "https://uet.edu.al/programe-te-integruara/",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Urbanistikë",
@@ -1110,20 +1145,26 @@
         {
           "name": "Fizioterapi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3248",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Imazheri",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3234",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Infermieri",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3236",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://uet.edu.al/bachelor/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fizioterapi",

@@ -23,14 +23,18 @@
         {
           "name": "Teknik Dentar",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3784",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/dental-technician",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Stomatologji",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3662",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/dentistry",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -43,32 +47,42 @@
         {
           "name": "Fizioterapi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3665",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/physiotherapy",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Infermieri",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3667",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/nursing",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknik Imazherie",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3674",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/imaging-technician",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknik Laboratori",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3673",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/laboratory-technician",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Imazheri Mjekësore dhe Radioterapi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4176",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/msc-in-medical-imaging-and-radiotherapy",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Imazheri Diagnostike e Avancuar",
@@ -90,8 +104,10 @@
         {
           "name": "Infermieri",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3719",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/msc-in-nursing",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Infermieristikë në Pediatri",
@@ -123,8 +139,10 @@
         {
           "name": "Shkenca Mjekësore Laboratorike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4175",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/msc-in-medical-laboratory-sciences",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Diagnostikë Klinike",
@@ -141,14 +159,19 @@
         {
           "name": "Farmaci",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3874",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/pharmacy",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mjekësi",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3755",
-          "lastModified": "2026-11-16"
+          "durationYears": 6,
+          "ects": 360,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/medicine",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -161,20 +184,26 @@
         {
           "name": "Bioteknologji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3666",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/biotechnology",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Biznes dhe Teknologji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3798",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/business-and-technology",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Ekonomiks dhe Shkenca e të Dhënave",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3788",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/economics-and-data-science",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Financë dhe Teknologji",
@@ -185,56 +214,76 @@
         {
           "name": "Inxhinieri Biomjekësore",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3660",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/biomedical-engineering",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Inxhinieri Software",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3787",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/software-engineering",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim i Kujdesit Shëndetësor",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3663",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/health-care-management",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Kompjuterike dhe Inteligjencë Artificiale",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3661",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/computer-sciences-and-ai",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Siguri Kibernetike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3785",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "language": "Anglisht",
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/cyber-security",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Analitikë Biznesi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4157",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/msc-in-business-analytics",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Spitalor",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3691",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/msc-in-hospital-management",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Nanoteknologji",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3799",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/msc-in-nanotechnology",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Kompjuterike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4057",
-          "lastModified": "2026-11-16",
+          "ects": 120,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/msc-in-computer-science",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Inxhinieri Software",
@@ -262,8 +311,10 @@
         {
           "name": "Administrim Biznesi (Master Ekzekutiv)",
           "cycle": "SPECIALIST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4066",
-          "lastModified": "2026-11-16",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://www.wbu.edu.al/en/program/executive-master-in-business-administration",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Sipërmarrje dhe Inovacion",

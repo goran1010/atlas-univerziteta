@@ -23,26 +23,34 @@
         {
           "name": "Financë - Kontabilitet",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=94",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-finance-kontabilitet.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Financë dhe Teknologji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4003",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-finance-dhe-teknologji-fintech.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Marketing, Publicitet dhe Marrëdhënie me Publikun",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3208",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-marketing-publicitet-dhe-marredhenie-me-publikun.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Biznesi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=93",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-menaxhim-biznesi.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Politike",
@@ -88,14 +96,18 @@
         {
           "name": "Financë dhe Teknologji",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4035",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-finance-dhe-teknologji-fintech.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Kontabilitet - Financë",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1789",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-kontabilitet.html",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Kontabilitet",
@@ -117,14 +129,18 @@
         {
           "name": "Menaxhim dhe Transformim Digjital",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4126",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/menaxhim-biznesi-dhe-transformimi-dixhital.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Juridike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1791",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-e-drejte-penale-dhe-kriminologji.html",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "E Drejtë Penale dhe Kriminologji",
@@ -146,8 +162,10 @@
         {
           "name": "Studime Europiane",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1784",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-politika-evropiane-dhe-administrim-publik.html",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Politika Europiane dhe Administrim Publik",
@@ -164,8 +182,10 @@
         {
           "name": "Drejtësi",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3477",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-drejtesi-program-i-integruar.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Ekonomike dhe Juridike",
@@ -188,14 +208,16 @@
         {
           "name": "Asistent Administrativ dhe Ligjor",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4154",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/diploma-profesionale/asistent-administrativ-dhe-ligjor.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknik në Operacione Biznesi, Marketing dhe Shitje",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3241",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/diploma-profesionale/dp-teknik-ne-operacione-biznesi-marketing-dhe-shitje.html",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -208,8 +230,10 @@
         {
           "name": "Biznes Digjital",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3878",
-          "lastModified": "2026-11-16",
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-biznes-dixhital.html",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Inteligjenca artificiale dhe siguria kibernetike",
@@ -226,26 +250,34 @@
         {
           "name": "Dizajn interieri dhe produkti",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3790",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-dizajn-interieri-dhe-produkti.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Informatikë e Aplikuar",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1786",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-informatike-e-aplikuar.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Shkenca Kompjuterike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3775",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-shkenca-kompjuterike.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Informatikë e Aplikuar",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3580",
-          "lastModified": "2026-11-16",
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-informatike-e-aplikuar.html",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Inxhinieri softueri",
@@ -267,32 +299,40 @@
         {
           "name": "Inteligjencë Artificiale dhe Siguria Kibernetike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3916",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/inteligjence-artificiale-dhe-siguria-kibernetike.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Arkitekturë",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2182",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-arkitekture.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Dizajn Multimedia",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4064",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/diploma-profesionale/dp-dizajn-multimedia.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknik i Sistemeve dhe Rrjetave Kompjuterike",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3985",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/diploma-profesionale/dp-teknik-i-sistemeve-dhe-rrjetave-kompjuterike.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknik për pajisje elektronike dhe për TIK",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3195",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/diploma-profesionale/dp-teknik-per-pajisjet-elektronike-dhe-tik.html",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -305,32 +345,42 @@
         {
           "name": "Edukim Fizik e Sporte",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1222",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-edukim-fizik-dhe-sporte.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim në Turizëm, Rekreacion dhe Evente",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3210",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-menaxhim-ne-turizem-rekreacion-dhe-evente.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Psikologji",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=98",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-psikologji.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Arsim Special (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3698",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-profesional/mp-ne-arsim-special.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Edukim (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3609",
-          "lastModified": "2026-11-16",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-profesional/mp-mesimdhenia-dhe-te-nxenit.html",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Mësimdhënia e të Nxënit",
@@ -342,8 +392,10 @@
         {
           "name": "Menaxhim në turizëm, mikpritje dhe aktivitete çlodhëse (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3577",
-          "lastModified": "2026-11-16",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-profesional/mp-menaxhim-ne-turizem-mikpritje-dhe-rekreacion.html",
+          "lastModified": "2026-11-22",
           "tracks": [
             {
               "name": "Turizëm dhe udhëtime",
@@ -365,50 +417,65 @@
         {
           "name": "Mësuesi në Edukim Fizik dhe Sporte",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2874",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-mesuesi-ne-edukim-fizik-e-sporte.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi në Edukim Fizik dhe Sporte (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=2873",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-profesional/mp-mesuesi-ne-edukim-fizik-dhe-sporte.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi në Gjuhë dhe Komunikim (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3714",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-profesional/mp-mesuesi-ne-gjuhe-dhe-komunikim.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi në Shkenca Sociale (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3715",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-profesional/mp-mesuesi-ne-shkenca-sociale.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Mësuesi në Teknologji Informacioni dhe Komunikimi (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3696",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-profesional/mp-mesuesi-ne-teknologji-informacioni-dhe-komunikim.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Psikologji Klinike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3697",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-psikologji-klinike.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Puna Sociale në Sistemin Arsimor",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3737",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-pune-sociale-ne-sistemin-arsimor.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Operator dhe Këshillues në përkujdesje Shëndetsore",
           "cycle": "VOCATIONAL",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3198",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/diploma-profesionale/dp-operator-dhe-keshillues-ne-perkujdesje-shendetesore.html",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -421,32 +488,42 @@
         {
           "name": "Fizioterapi",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3690",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-fizioterapi.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Infermieri",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3689",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/bachelor/bsc-infermieri.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Fizioterapi",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4139",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-fizioterapi.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Farmaci",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3678",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-farmaci-program-i-integruar.html",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Stomatologji",
           "cycle": "INTEGRATED",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3768",
-          "lastModified": "2026-11-16"
+          "durationYears": 5,
+          "ects": 300,
+          "dataSourceUrl": "https://umb.edu.al/program-studimi/master-shkencor/msc-stomatologji-program-i-integruar.html",
+          "lastModified": "2026-11-22"
         }
       ]
     }

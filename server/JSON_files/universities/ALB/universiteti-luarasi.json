@@ -22,14 +22,18 @@
         {
           "name": "E drejtë civile dhe tregtare",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=24",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/master-i-shkencave-e-drejte-civile-dhe-tregtare/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "E drejtë penale",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=23",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/master-i-shkencave-e-drejte-penale/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Siguria dhe Rendi Publik (Master profesional)",
@@ -54,8 +58,10 @@
         {
           "name": "Administrim Biznes",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1202",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/bachelor-fakulteti-ekonomik-new/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Business and Management",
@@ -72,32 +78,41 @@
         {
           "name": "Financë Bankë",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1203",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/bachelor-fakulteti-ekonomik-new/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Informatikë ekonomike",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3167",
-          "lastModified": "2026-11-20"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/bachelor-fakulteti-teknologji-informacioni-dhe-inovacioni/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Bankat dhe Tregjet Financiare",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1207",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/master-i-shkencave-banka-dhe-tregjet-financiare/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Informatikë Ekonomike",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3909",
-          "lastModified": "2026-11-20"
+          "durationYears": 2,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/master-i-shkencave-informatike-ekonomike/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Menaxhim Ekzekutiv",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=1206",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/master-i-shkencave-menaxhim-ekzekutiv/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Potenciale për Zhvillimin Ekonomik Kombëtar",
@@ -122,26 +137,31 @@
         {
           "name": "Teknologji Informacioni dhe Inovacioni",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3166",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/bachelor-fakulteti-teknologji-informacioni-dhe-inovacioni/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Siguria kibernetike dhe e informacionit (Master profesional)",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3192",
-          "lastModified": "2026-11-16"
+          "durationYears": 1,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/master-profesional-siguria-kibernetike-dhe-informacionit/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Siguria Kibernetike dhe Inteligjenca Artificiale",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=4014",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/master-i-shkencave-siguri-kibernetike-dhe-inteligjence-artificiale/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Teknologji Informacioni dhe Inovacioni",
           "cycle": "SECOND",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3191",
-          "lastModified": "2026-11-16"
+          "durationYears": 2,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/master-i-shkencave-teknologji-informacioni-inovacioni/",
+          "lastModified": "2026-11-22"
         }
       ]
     },
@@ -154,8 +174,10 @@
         {
           "name": "Infermieri",
           "cycle": "FIRST",
-          "dataSourceUrl": "https://www.ascal.al/sq/programi/?id=3548",
-          "lastModified": "2026-11-16"
+          "durationYears": 3,
+          "ects": 180,
+          "dataSourceUrl": "https://luarasi-univ.edu.al/sq/bachelor-fakulteti-i-mjekesise/",
+          "lastModified": "2026-11-22"
         },
         {
           "name": "Infermieri",
