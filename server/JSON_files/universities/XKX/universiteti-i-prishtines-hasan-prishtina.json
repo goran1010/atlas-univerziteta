@@ -14,8 +14,11 @@
   "faculties": [
     {
       "name": "Fakulteti i Arteve",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-arteve/",
-      "lastModified": "2026-11-15",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 247 129",
+      "email": "arte@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Artet Dramatike (me 7 specializime)",
@@ -126,8 +129,11 @@
     },
     {
       "name": "Fakulteti i Edukimit Fizik dhe i Sportit",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-edukimit-fizik",
-      "lastModified": "2026-11-15",
+      "address": "Rr. Eqrem Çabej, 10000 Prishtinë",
+      "phone": "+383 38 243 747",
+      "email": "fefs@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Edukimi Fizik dhe Sport",
@@ -158,8 +164,11 @@
     },
     {
       "name": "Fakulteti i Filologjisë",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-filologjise",
-      "lastModified": "2026-11-15",
+      "address": "Rr. George Bush, 10000 Prishtinë",
+      "phone": "+383 38 222 970",
+      "email": "filologjia@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Ballkanistikë",
@@ -342,8 +351,11 @@
     },
     {
       "name": "Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fiek",
-      "lastModified": "2026-11-15",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 542 525",
+      "email": "fiek@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Elektroenergjetikë",
@@ -423,8 +435,11 @@
     },
     {
       "name": "Fakulteti i Inxhinierisë Mekanike",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fim",
-      "lastModified": "2026-11-15",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 552 126",
+      "email": "fim@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Dizajn Inxhinierik dhe Automjete",
@@ -507,8 +522,11 @@
     },
     {
       "name": "Fakulteti i Mjekësisë",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-mjekesise",
-      "lastModified": "2026-11-15",
+      "address": "Bulevardi i Dëshmorëve, 10000 Prishtinë",
+      "phone": "+383 38 512 223",
+      "email": "mjekesia@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Fizioterapi dhe Rehabilitim",
@@ -598,8 +616,11 @@
     },
     {
       "name": "Fakulteti i Shkencave Matematike-Natyrore",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fshmn",
-      "lastModified": "2026-11-15",
+      "address": "Rr. Nëna Terezë, 10000 Prishtinë",
+      "phone": "+383 38 226 104",
+      "email": "fshmn@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Biologji",
@@ -774,8 +795,11 @@
     },
     {
       "name": "Fakulteti i Inxhinierisë së Ndërtimit",
-      "dataSourceUrl": "https://uni-pr.edu/en/programs",
-      "lastModified": "2026-11-20",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 554 899",
+      "email": "fin@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Gjeodezi",
@@ -844,8 +868,11 @@
     },
     {
       "name": "Fakulteti i Arkitekturës",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-arkitektures",
-      "lastModified": "2026-11-15",
+      "address": "Rr. Arkitekt Karl Gega, 10000 Prishtinë",
+      "phone": "+383 38 224 751",
+      "email": "arkitektura@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Arkitekturë",
@@ -878,8 +905,11 @@
     },
     {
       "name": "Fakulteti i Edukimit",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-i-edukimit",
-      "lastModified": "2026-11-15",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 229 201",
+      "email": "edukimi@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Edukimi Fillor",
@@ -941,8 +971,11 @@
     },
     {
       "name": "Fakulteti i Ekonomisë",
-      "dataSourceUrl": "https://uni-pr.edu/en/programs",
-      "lastModified": "2026-11-20",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 228 966",
+      "email": "ekonomiku@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Banka dhe Financa",
@@ -1037,8 +1070,11 @@
     },
     {
       "name": "Fakulteti Juridik",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-juridik",
-      "lastModified": "2026-11-15",
+      "address": "Rr. Agim Ramadani, 10000 Prishtinë",
+      "phone": "+383 38 229 744",
+      "email": "juridiku@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Juridik",
@@ -1107,8 +1143,11 @@
     },
     {
       "name": "Fakulteti i Bujqësisë dhe Veterinarisë",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
-      "lastModified": "2026-11-15",
+      "address": "Rr. Tahir Zajmi, 10000 Prishtinë",
+      "phone": "+383 38 603 668",
+      "email": "fbv@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Ekonomi e Bujqësisë",
@@ -1202,8 +1241,11 @@
     },
     {
       "name": "Fakulteti Filozofik",
-      "dataSourceUrl": "https://akreditimi.rks-gov.net/fakulteti-filozofik",
-      "lastModified": "2026-11-15",
+      "address": "Rr. Eqrem Çabej, Nr. 21, 10000 Prishtinë",
+      "phone": "+383 38 224 783",
+      "email": "filozofiku@uni-pr.edu",
+      "dataSourceUrl": "https://uni-pr.edu/desk/inc/media/Broshura_.pdf",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Antropologji dhe Trashëgimi Kulturore",
