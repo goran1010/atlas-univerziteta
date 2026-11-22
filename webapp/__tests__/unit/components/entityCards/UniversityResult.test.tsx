@@ -207,8 +207,7 @@ describe("UniversityResult", () => {
     );
   });
 
-  test("rejects an out-of-range academic value in a successful details response", async () => {
-    vi.spyOn(console, "error").mockImplementation(() => vi.fn());
+  test("shows an out-of-range academic value instead of failing the details", async () => {
     givenDetails([
       {
         id: 11,
@@ -220,14 +219,7 @@ describe("UniversityResult", () => {
             name: "Computer Science",
             facultyId: 11,
             cycle: "FIRST",
-            tracks: [
-              {
-                id: 31,
-                name: "Software Track",
-                studyProgramId: 21,
-                ects: 0,
-              },
-            ],
+            durationYears: 2010,
           },
         ],
       },
@@ -237,12 +229,12 @@ describe("UniversityResult", () => {
     const user = userEvent.setup();
 
     await user.click(screen.getByRole("button", { name: /Expand/i }));
+    await user.click(await screen.findByRole("button", { name: /Expand/i }));
 
+    expect(await screen.findByText(/2010 years/i)).toBeInTheDocument();
     expect(
-      await screen.findByText(
-        /Could not load the details\. Try again in a moment\./i,
-      ),
-    ).toBeInTheDocument();
+      screen.queryByText(/Could not load the details/i),
+    ).not.toBeInTheDocument();
   });
 
   test("shows fallback notification when details request throws", async () => {
