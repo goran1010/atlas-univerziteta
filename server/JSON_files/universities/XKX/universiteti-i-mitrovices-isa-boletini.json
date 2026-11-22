@@ -8,17 +8,19 @@
   "website": "https://umib.net",
   "address": "Rr. Ukshin Kovaçica, 40000 Mitrovicë",
   "phone": "+383 28 515 516",
+  "email": "info@umib.net",
   "accreditationFrom": "2026-10-01",
   "accreditationTo": "2031-09-30",
   "authority": "Agjencia e Kosovës për Akreditim (AKA)",
-  "dataSourceUrl": "https://umib.net/historiku/",
-  "lastModified": "2026-11-15",
+  "dataSourceUrl": "https://umib.net/kontakt/",
+  "lastModified": "2026-11-22",
   "faculties": [
     {
       "name": "Fakulteti i Gjeoshkencave",
       "website": "https://umib.net/fakulteti-gjeoshkencave/",
-      "dataSourceUrl": "https://umib.net/historiku/",
-      "lastModified": "2026-11-15",
+      "phone": "+383 28 530 446",
+      "dataSourceUrl": "https://umib.net/kontakt/",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Gjeologji",
@@ -74,8 +76,9 @@
     {
       "name": "Fakulteti i Teknologjisë Ushqimore",
       "website": "https://umib.net/fakulteti-teknologji-ushqimore/",
-      "dataSourceUrl": "https://umib.net/historiku/",
-      "lastModified": "2026-11-15",
+      "phone": "+383 28 530 446",
+      "dataSourceUrl": "https://umib.net/kontakt/",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Inxhinieri dhe Teknologji Ushqimore",
@@ -122,8 +125,9 @@
     {
       "name": "Fakulteti i Inxhinierisë Mekanike dhe Kompjuterike",
       "website": "https://umib.net/fakulteti-inxhinierise-mekanike-dhe-kompjuterike/",
-      "dataSourceUrl": "https://umib.net/historiku/",
-      "lastModified": "2026-11-15",
+      "phone": "+383 28 534 179",
+      "dataSourceUrl": "https://umib.net/kontakt/",
+      "lastModified": "2026-11-22",
       "studyPrograms": [
         {
           "name": "Inxhinieri Ekonomike",
