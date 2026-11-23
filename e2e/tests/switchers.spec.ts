@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("language select switches to SR and persists across reloads", async ({
+test("language select switches to BHS and persists across reloads", async ({
   page,
 }) => {
   await page.goto("/");

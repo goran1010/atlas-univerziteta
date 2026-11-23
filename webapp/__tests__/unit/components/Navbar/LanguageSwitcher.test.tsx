@@ -32,7 +32,7 @@ describe("LanguageSwitcher", () => {
     ).toEqual([
       "Language: System",
       "Language: EN",
-      "Language: SR",
+      "Language: BHS",
       "Language: SQ",
       "Language: MK",
       "Language: SL",
@@ -49,7 +49,7 @@ describe("LanguageSwitcher", () => {
   );
 
   test.each<{ choice: Language; message: string }>([
-    { choice: "sr", message: "Switched to Serbian" },
+    { choice: "sr", message: "Switched to Bosnian/Croatian/Serbian" },
     { choice: "sq", message: "Switched to Albanian" },
     { choice: "mk", message: "Switched to Macedonian" },
     { choice: "sl", message: "Switched to Slovenian" },

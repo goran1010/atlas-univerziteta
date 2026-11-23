@@ -5,8 +5,18 @@ import { Select } from "../sharedComponents/Select";
 import { SYSTEM_LANGUAGES } from "../../utils/setInitialLanguage";
 
 import type { Language, SetLanguage } from "../../types";
+import type { SystemLanguage } from "../../utils/setInitialLanguage";
 
 const LANGUAGE_OPTIONS: Language[] = ["system", ...SYSTEM_LANGUAGES];
+
+// "sr" is the one interface for Bosnian, Croatian, and Serbian
+const LANGUAGE_CODES: Record<SystemLanguage, string> = {
+  en: "EN",
+  sr: "BHS",
+  sq: "SQ",
+  mk: "MK",
+  sl: "SL",
+};
 
 function LanguageSwitcher({
   setLanguage,
@@ -40,7 +50,7 @@ function LanguageSwitcher({
       {LANGUAGE_OPTIONS.map((option) => (
         <option key={option} value={option}>
           {label}:{" "}
-          {option === "system" ? t("language.system") : option.toUpperCase()}
+          {option === "system" ? t("language.system") : LANGUAGE_CODES[option]}
         </option>
       ))}
     </Select>
