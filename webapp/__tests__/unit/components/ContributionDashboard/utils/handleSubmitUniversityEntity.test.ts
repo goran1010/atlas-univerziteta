@@ -335,6 +335,34 @@ describe("buildEditDelta", () => {
     ).toEqual({ ects: 30 });
   });
 
+  test("sends an empty list to clear study program languages", () => {
+    expect(
+      buildEditDelta(
+        { name: "Program" },
+        { name: "Program", languages: ["bs", "en"] },
+        "STUDY_PROGRAM",
+      ),
+    ).toEqual({ languages: [] });
+  });
+
+  test("compares study program languages by content", () => {
+    const programBaseline = { name: "Program", languages: ["sq" as const] };
+    expect(
+      buildEditDelta(
+        { name: "Program", languages: ["sq"] },
+        programBaseline,
+        "STUDY_PROGRAM",
+      ),
+    ).toEqual({});
+    expect(
+      buildEditDelta(
+        { name: "Program", languages: ["sq", "en"] },
+        programBaseline,
+        "STUDY_PROGRAM",
+      ),
+    ).toEqual({ languages: ["sq", "en"] });
+  });
+
   test("ignores fields absent from both draft and baseline", () => {
     expect(buildEditDelta({ name: "Same" }, { name: "Same" }, "TRACK")).toEqual(
       {},

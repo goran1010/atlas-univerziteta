@@ -12,7 +12,8 @@ import type {
   StudyProgramDetail,
   TrackDetail,
 } from "../../../schemas/university";
-import type { TargetType } from "../../../schemas/domain";
+import { programLanguageSchema } from "../../../schemas/domain";
+import type { ProgramLanguage, TargetType } from "../../../schemas/domain";
 import type { RequestContext } from "../../../types";
 import type { ContributionFormDraft } from "../types";
 
@@ -44,11 +45,18 @@ function facultyDraft(faculty: FacultyDetail): ContributionFormDraft {
 }
 
 function studyProgramDraft(program: StudyProgramDetail): ContributionFormDraft {
+  const languages = program.languages.filter(
+    (code): code is ProgramLanguage =>
+      programLanguageSchema.safeParse(code).success,
+  );
   return {
     name: program.name,
     cycle: program.cycle,
     durationYears: program.durationYears,
     ects: program.ects,
+    // left out when empty, like other unset fields, so an untouched form
+    // submits no change
+    languages: languages.length > 0 ? languages : undefined,
   };
 }
 

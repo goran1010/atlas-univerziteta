@@ -62,7 +62,7 @@ The JSON mirrors the structure of the seed files. Children live in `faculties`, 
 
 - University: `name`, `city`, `country` (a country code the platform supports, such as `BIH` or `SRB`), and `ownership` (`PUBLIC`, `PRIVATE`) are required; `entity` is required for countries divided into subdivisions and rejected for the rest - currently only BIH (`FBIH`, `RS`, `BD`); `acronym`, `foundedYear`, `website`, `address`, `phone`, and `email` are optional.
 - Faculty: `name` is required; `city`, `website`, `address`, `phone`, and `email` are optional.
-- Study program: `name` and `cycle` (`FIRST`, `SECOND`, `THIRD`, `INTEGRATED`, `VOCATIONAL`, `SPECIALIST`) are required; `durationYears`, `ects`, and `language` are optional.
+- Study program: `name` and `cycle` (`FIRST`, `SECOND`, `THIRD`, `INTEGRATED`, `VOCATIONAL`, `SPECIALIST`) are required; `durationYears`, `ects`, and `languages` are optional. `languages` lists the languages the program is taught in as ISO 639 codes, each at most once: `bs`, `hr`, `sr`, `cnr` (Montenegrin), `sq`, `mk`, `sl`, `en`, `de`, `fr`, `it`, `ru`, `tr`, `ar`, `hu`, `el`, `es`. List the languages of instruction only, not a language the program teaches as its subject.
 - Track: `name` is required; `ects` and `durationYears` are optional.
 
 Example:
@@ -83,6 +83,7 @@ Example:
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
+          "languages": ["bs", "en"],
           "tracks": [{ "name": "Example Track" }]
         }
       ]

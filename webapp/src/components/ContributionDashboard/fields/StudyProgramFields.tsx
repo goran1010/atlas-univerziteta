@@ -3,8 +3,13 @@ import { RootContext } from "../../../contextData/RootContext";
 import { DataField } from "../DataField";
 import { Label } from "../../sharedComponents/Label";
 import { Select } from "../../sharedComponents/Select";
-import type { ContributionFormDraft } from "../types";
-import type { TypeOfChange, StudyCycle } from "../../../schemas/domain";
+import { PROGRAM_LANGUAGES } from "../../../schemas/domain";
+import type { ContributionFormDraft, DraftFieldValue } from "../types";
+import type {
+  ProgramLanguage,
+  TypeOfChange,
+  StudyCycle,
+} from "../../../schemas/domain";
 
 const CYCLES: StudyCycle[] = [
   "FIRST",
@@ -20,7 +25,7 @@ interface StudyProgramFieldsProps {
   typeOfChange: TypeOfChange;
   setDataField: (
     field: keyof ContributionFormDraft,
-    value: string | number | undefined,
+    value: DraftFieldValue,
   ) => void;
   idPrefix?: string;
 }
@@ -32,6 +37,15 @@ function StudyProgramFields({
   idPrefix = "",
 }: StudyProgramFieldsProps) {
   const { t } = use(RootContext);
+  const selectedLanguages = data.languages ?? [];
+
+  // a new pick goes last, so an existing order (main language first) stays
+  function toggleLanguage(code: ProgramLanguage, checked: boolean) {
+    const next = checked
+      ? [...selectedLanguages, code]
+      : selectedLanguages.filter((selected) => selected !== code);
+    setDataField("languages", next.length > 0 ? next : undefined);
+  }
 
   return (
     <>
@@ -85,15 +99,31 @@ function StudyProgramFields({
           );
         }}
       />
-      <DataField
-        label={t("contribution.dataFields.languages")}
-        id={`${idPrefix}dataLanguage`}
-        type="text"
-        value={data.language ?? ""}
-        onChange={(e) => {
-          setDataField("language", e.target.value || undefined);
-        }}
-      />
+      <fieldset className="flex flex-col gap-1 min-w-0">
+        <legend className="block text-sm font-medium mb-1 text-(--text-secondary)">
+          {t("contribution.dataFields.languages")}
+        </legend>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-1.5">
+          {PROGRAM_LANGUAGES.map((code) => (
+            <label
+              key={code}
+              className="flex items-center gap-2 text-sm cursor-pointer text-(--text-primary)"
+            >
+              <input
+                type="checkbox"
+                name={`${idPrefix}dataLanguages`}
+                value={code}
+                checked={selectedLanguages.includes(code)}
+                onChange={(e) => {
+                  toggleLanguage(code, e.target.checked);
+                }}
+                className="h-4 w-4 cursor-pointer accent-(--accent) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+              />
+              {t(`programLanguages.${code}`)}
+            </label>
+          ))}
+        </div>
+      </fieldset>
     </>
   );
 }

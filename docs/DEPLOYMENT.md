@@ -56,12 +56,25 @@ Country and entity codes are plain strings in the database, validated in applica
 3. **Search aliases** - add the country's local, English and common names to `COUNTRY_ALIASES` in `server/src/search/aliases.ts`, keyed by the stems the tokenizer produces, and add the phrases to `server/__tests__/unit/search/aliases.test.ts`; add new stems to `.cspell.json` if the spell check flags them
 4. **Webapp list** - add the code to `countrySchema`, and the subdivisions to `SUBDIVISIONS`, in `webapp/src/schemas/domain.ts`
 5. **Labels** - add the display name under `universitiesPage.countries` in both `webapp/src/locales/en.json` and `webapp/src/locales/sr.json`, and subdivision names under `universitiesPage.entities` and `contribution.entities`; the webapp typecheck fails until every code has its labels
-6. **Data** - create `server/JSON_files/universities/<CODE>/` with one JSON file per university (see [CONTRIBUTING](./CONTRIBUTING.md) for the format); the seed rejects a file whose `country` does not match its folder
-7. **Accreditation** - take `authority` and the accreditation dates from the national accreditation body's register; leave a date out rather than guess it
-8. **Sources** - credit the accreditation body in the README's data sources list
-9. **Verify** - run `npm run db:seed` and `npm run test:all`
+6. **Languages** - if the country's official languages are not program languages yet, add them as in [Adding a study program language](#adding-a-study-program-language)
+7. **Data** - create `server/JSON_files/universities/<CODE>/` with one JSON file per university (see [CONTRIBUTING](./CONTRIBUTING.md) for the format); the seed rejects a file whose `country` does not match its folder
+8. **Accreditation** - take `authority` and the accreditation dates from the national accreditation body's register; leave a date out rather than guess it
+9. **Sources** - credit the accreditation body in the README's data sources list
+10. **Verify** - run `npm run db:seed` and `npm run test:all`
 
 Deploy order: the webapp's read schemas accept only the country codes it knows, so an older webapp fails to load a university with a new code. After merging, let both the Netlify and the VPS deploys finish, and only then re-seed production with `./server/scripts/seed-prod.sh` (see the full-sync note in [Seeding the database](#seeding-the-database)).
+
+## Adding a study program language
+
+A study program lists the languages it is taught in as ISO 639 codes, the shortest code each language has (`cnr` for Montenegrin, which has no two-letter code). They are plain strings in the database, so adding a language needs no migration.
+
+1. **Server list** - add the code to `PROGRAM_LANGUAGES` in `server/src/validation/languages.ts`; the seed and contributions validate against it
+2. **Search names** - add the language's names in English, Bosnian/Croatian/Serbian, Albanian, Macedonian (in Cyrillic) and Slovenian to `LANGUAGE_NAMES` in `server/src/search/languageNames.ts`, so a search in any site language finds its programs; the server typecheck fails until every code has names
+3. **Webapp list** - add the code to `programLanguageSchema` in `webapp/src/schemas/domain.ts`, at the same position as on the server; the contribution form shows the checkboxes in this order
+4. **Labels** - add the language's name under `programLanguages` in every bundle in `webapp/src/locales/`; the webapp typecheck fails until every code has its label
+5. **Verify** - run `npm run test:all`
+
+The webapp shows a code it does not know yet as the bare code, so program pages keep loading whichever deploy lands first.
 
 ## Share previews and prerendered meta
 

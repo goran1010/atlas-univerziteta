@@ -4,6 +4,7 @@ import type {
   Entity,
   TargetType,
   Ownership,
+  ProgramLanguage,
   StudyCycle,
   TypeOfChange,
 } from "../../schemas/domain";
@@ -24,8 +25,10 @@ export interface ContributionFormDraft {
   cycle?: StudyCycle | undefined;
   durationYears?: number | undefined;
   ects?: number | undefined;
-  language?: string | undefined;
+  languages?: ProgramLanguage[] | undefined;
 }
+
+export type DraftFieldValue = string | number | ProgramLanguage[] | undefined;
 
 export interface ContributionFormState {
   targetType: TargetType;
