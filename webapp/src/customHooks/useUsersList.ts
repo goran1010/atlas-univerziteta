@@ -4,6 +4,7 @@ import { NotificationContext } from "../contextData/NotificationContext";
 import { API_URL } from "../utils/envConfig";
 import { readResponseError } from "../schemas/api";
 import { notificationMessageKey } from "../utils/apiError";
+import { InvalidResponseError, parseResponse } from "../utils/parseResponse";
 
 import type { Dispatch, SetStateAction } from "react";
 import type { ZodType } from "zod";
@@ -55,7 +56,11 @@ function useUsersList<Item>({
         });
 
         if (response.ok) {
-          const result = responseSchema.parse(await response.json());
+          const result = parseResponse(
+            path,
+            responseSchema,
+            await response.json(),
+          );
           setItems(result.data);
           return;
         }
@@ -74,7 +79,11 @@ function useUsersList<Item>({
         console.error(`Error trying to ${logLabel}:`, error);
         addNotification({
           type: "error",
-          message: tRef.current(errorMessageKey),
+          message: tRef.current(
+            error instanceof InvalidResponseError
+              ? "messages.apiError.invalidResponse"
+              : errorMessageKey,
+          ),
         });
       } finally {
         setLoading(false);

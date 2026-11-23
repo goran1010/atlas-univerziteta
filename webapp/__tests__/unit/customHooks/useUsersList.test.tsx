@@ -4,6 +4,7 @@ import { RootContextProvider } from "../../utils/rootContextProvider";
 import { makeUser } from "../../utils/makeUser";
 import { server, http, HttpResponse } from "../../utils/msw";
 import { adminPendingChangesResponseSchema } from "../../../src/schemas/pendingChange";
+import { InvalidResponseError } from "../../../src/utils/parseResponse";
 
 import type { AddNotification } from "../../../src/types";
 
@@ -102,11 +103,11 @@ describe("useUsersList", () => {
     expect(addNotification).not.toHaveBeenCalled();
   });
 
-  test("rejects data that does not match the schema", async () => {
+  test("says the data could not be read when a successful body does not fit the schema", async () => {
     const addNotification = vi.fn();
     givenResponse({
       message: "Pending changes retrieved successfully.",
-      data: [{ ...validPendingChange, data: { unexpected: "shape" } }],
+      data: [{ ...validPendingChange, id: 42 }],
     });
     const consoleErrorSpy = vi
       .spyOn(console, "error")
@@ -117,11 +118,14 @@ describe("useUsersList", () => {
     await waitFor(() => {
       expect(addNotification).toHaveBeenCalledWith({
         type: "error",
-        message: "messages.pendingChanges.fetchError",
+        message: "messages.apiError.invalidResponse",
       });
     });
     expect(screen.getByTestId("item-count")).toHaveTextContent("0");
-    expect(consoleErrorSpy).toHaveBeenCalled();
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      "Error trying to fetch pending changes:",
+      expect.any(InvalidResponseError),
+    );
   });
 
   test("uses the translated error message when the request fails", async () => {
