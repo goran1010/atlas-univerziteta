@@ -49,7 +49,6 @@ function studyProgramDraft(program: StudyProgramDetail): ContributionFormDraft {
     cycle: program.cycle,
     durationYears: program.durationYears,
     ects: program.ects,
-    language: program.language,
   };
 }
 

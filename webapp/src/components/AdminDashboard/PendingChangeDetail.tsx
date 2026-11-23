@@ -4,6 +4,7 @@ import { RootContext } from "../../contextData/RootContext";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 import { ParentBreadcrumb } from "../pendingChanges/ParentBreadcrumb";
 import { getChangedEntityName } from "../../utils/getChangedEntityName";
+import { programLanguageName } from "../../utils/programLanguageNames";
 import { LEVEL_GUIDE, LEVEL_TEXT } from "../../utils/levelColors";
 import {
   countrySchema,
@@ -116,7 +117,12 @@ function entityFieldSpecs(targetType: string, t: TFunction): FieldSpec[] {
         },
         durationYears,
         ects,
-        { key: "language", label: t("contribution.dataFields.language") },
+        {
+          key: "languages",
+          label: t("contribution.dataFields.languages"),
+          translate: (value, translator) =>
+            programLanguageName(translator, value),
+        },
         { key: "trackCount", label: t("admin.trackCount") },
       ];
     case "TRACK":
@@ -170,6 +176,14 @@ function formatValue(
         {raw}
       </ExternalLink>
     );
+  }
+
+  if (Array.isArray(raw)) {
+    const items = raw.filter((item) => typeof item === "string");
+    if (items.length === 0) return null;
+    return items
+      .map((item) => (spec.translate ? spec.translate(item, t) : item))
+      .join(", ");
   }
 
   if (typeof raw === "string" && spec.translate) return spec.translate(raw, t);
@@ -353,6 +367,7 @@ function comparable(value: unknown): string | null {
   if (typeof value === "string" || typeof value === "number") {
     return String(value);
   }
+  if (Array.isArray(value)) return value.join(",");
   return null;
 }
 
@@ -378,7 +393,11 @@ function buildDiffRows(
       const current = formatValue(currentRaw, spec, t);
 
       const proposedRaw = proposedData[spec.key];
-      if (proposedRaw === null) {
+      // an empty list is how an edit clears the languages
+      const isCleared =
+        proposedRaw === null ||
+        (Array.isArray(proposedRaw) && proposedRaw.length === 0);
+      if (isCleared) {
         return {
           label: spec.label,
           current,

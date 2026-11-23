@@ -154,6 +154,44 @@ describe("PendingChangeDetail", () => {
     expect(screen.getByText("180")).toBeInTheDocument();
   });
 
+  test("shows study program languages by name", () => {
+    renderDetail({
+      targetType: "STUDY_PROGRAM",
+      typeOfChange: "DELETE",
+      data: {},
+      currentEntity: {
+        name: "Computer Science",
+        cycle: "FIRST",
+        languages: ["bs", "hr", "sr"],
+      },
+    });
+
+    expect(screen.getByText("Bosnian, Croatian, Serbian")).toBeInTheDocument();
+  });
+
+  test("diffs study program languages, with an empty list as cleared", () => {
+    renderDetail({
+      targetType: "STUDY_PROGRAM",
+      typeOfChange: "UPDATE",
+      data: { languages: [] },
+      currentEntity: { name: "Computer Science", languages: ["en"] },
+    });
+    expect(screen.getByText("English")).toBeInTheDocument();
+    expect(screen.getByText(/cleared/i)).toBeInTheDocument();
+  });
+
+  test("shows changed study program languages by name", () => {
+    renderDetail({
+      targetType: "STUDY_PROGRAM",
+      typeOfChange: "UPDATE",
+      data: { languages: ["sq", "en"] },
+      currentEntity: { name: "Computer Science", languages: ["sq"] },
+    });
+    expect(screen.getByText("Albanian")).toBeInTheDocument();
+    expect(screen.getByText("Albanian, English")).toBeInTheDocument();
+    expect(screen.queryByText(/no change/i)).not.toBeInTheDocument();
+  });
+
   test("notes a deleted target for DELETE when the entity is gone", () => {
     renderDetail({
       targetType: "TRACK",

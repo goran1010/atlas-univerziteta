@@ -201,7 +201,7 @@ const apiEndpoints: Endpoint[] = [
   "data": [
     {
       "id": 1, "name": "Menadžment i preduzetništvo", "cycle": "FIRST",
-      "durationYears": 3, "ects": 180, "language": null,
+      "durationYears": 3, "ects": 180, "languages": [],
       "faculty": { "id": 2, "name": "Ekonomski fakultet",
         "university": { "id": 1, "name": "Evropski univerzitet, Brčko distrikt BiH" }
       }
@@ -221,7 +221,7 @@ const apiEndpoints: Endpoint[] = [
   "message": "Study program retrieved successfully.",
   "data": {
     "id": 190, "name": "Ekonomija", "facultyId": 18, "cycle": "FIRST",
-    "durationYears": 4, "ects": 240, "language": null,
+    "durationYears": 4, "ects": 240, "languages": [],
     "dataSourceUrl": "http://iubd.edu.ba/index.php/fakulteti/fakultet-za-menadzmentt/ekonomija",
     "lastModified": "2026-08-25T00:00:00.000Z",
     "faculty": { "id": 18, "name": "Fakultet za menadžment", ...,

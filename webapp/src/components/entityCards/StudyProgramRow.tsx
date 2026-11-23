@@ -1,6 +1,7 @@
 import { AwardIcon, ClockIcon, SpeechIcon } from "../sharedComponents/icons";
 import { TextLink } from "../sharedComponents/TextLink";
 import { tCount } from "../../utils/pluralize";
+import { programLanguageNames } from "../../utils/programLanguageNames";
 import { TrackList } from "./TrackList";
 
 import type { TFunction } from "../../types";
@@ -43,9 +44,9 @@ function StudyProgramRow({
                 <AwardIcon /> {program.ects} {t("universitiesPage.ects")}
               </span>
             )}
-            {program.language && (
+            {program.languages.length > 0 && (
               <span>
-                <SpeechIcon /> {program.language}
+                <SpeechIcon /> {programLanguageNames(t, program.languages)}
               </span>
             )}
           </div>

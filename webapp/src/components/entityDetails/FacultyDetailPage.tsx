@@ -21,6 +21,7 @@ import { TrackList } from "../entityCards/TrackList";
 import { groupBy } from "../../utils/groupBy";
 import { byCycleDisplayOrder } from "../../utils/cycleOrder";
 import { tCount } from "../../utils/pluralize";
+import { programLanguageNames } from "../../utils/programLanguageNames";
 import { facultyDetailResponseSchema } from "../../schemas/university";
 import { useEntityDetail } from "../../customHooks/useEntityDetail";
 import { DetailPageStatus } from "./DetailPageStatus";
@@ -235,9 +236,9 @@ function FacultyDetailPage() {
                               )}
                             </span>
                           )}
-                          {sp.language && (
+                          {sp.languages.length > 0 && (
                             <span className="text-(--text-muted)">
-                              {sp.language}
+                              {programLanguageNames(t, sp.languages)}
                             </span>
                           )}
                           {sp.dataSourceUrl && (

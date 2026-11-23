@@ -86,7 +86,7 @@ function StudyProgramFields({
         }}
       />
       <DataField
-        label={t("contribution.dataFields.language")}
+        label={t("contribution.dataFields.languages")}
         id={`${idPrefix}dataLanguage`}
         type="text"
         value={data.language ?? ""}
