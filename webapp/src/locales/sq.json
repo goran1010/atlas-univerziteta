@@ -459,6 +459,10 @@
     "linkCopied": "Lidhja u kopjua.",
     "linkCopyFailed": "Lidhja nuk mund të kopjohej.",
     "dataSource": "Burimi i të dhënave",
+    "accreditation": "Akreditimi",
+    "accreditingBody": "Institucioni akreditues",
+    "accreditationSince": "që nga",
+    "accreditationUntil": "deri më",
     "improvePrompt": "Shihni diçka të pasaktë?",
     "improveLink": "Sugjeroni një korrigjim",
     "improveLogin": "Hyni për të sugjeruar një korrigjim"

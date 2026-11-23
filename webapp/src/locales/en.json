@@ -459,6 +459,10 @@
     "linkCopied": "Link copied to clipboard.",
     "linkCopyFailed": "Could not copy link.",
     "dataSource": "Data source",
+    "accreditation": "Accreditation",
+    "accreditingBody": "Accrediting body",
+    "accreditationSince": "since",
+    "accreditationUntil": "until",
     "improvePrompt": "See something inaccurate?",
     "improveLink": "Suggest a correction",
     "improveLogin": "Log in to suggest a correction"

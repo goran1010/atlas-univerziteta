@@ -12,6 +12,7 @@ import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
 import { ImproveDataLink } from "./ImproveDataLink";
+import { AccreditationInfo } from "./AccreditationInfo";
 import { universityDetailResponseSchema } from "../../schemas/university";
 import { useEntityDetail } from "../../customHooks/useEntityDetail";
 import { UniversityMetaRow } from "../entityCards/UniversityMeta";
@@ -130,6 +131,11 @@ function UniversityDetailPage() {
                 </span>
               )}
             </UniversityMetaRow>
+            <AccreditationInfo
+              from={university.accreditationFrom}
+              to={university.accreditationTo}
+              authority={university.authority}
+            />
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
               <ContactLinks
                 website={university.website}

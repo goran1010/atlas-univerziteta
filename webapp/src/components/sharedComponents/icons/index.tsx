@@ -14,6 +14,7 @@ export {
   BookOpenIcon,
   TagIcon,
   CalendarIcon,
+  ShieldCheckIcon,
 } from "./entity";
 export {
   SearchIcon,

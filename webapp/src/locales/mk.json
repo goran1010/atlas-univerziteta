@@ -459,6 +459,10 @@
     "linkCopied": "Врската е копирана.",
     "linkCopyFailed": "Врската не можеше да се копира.",
     "dataSource": "Извор на податоците",
+    "accreditation": "Акредитација",
+    "accreditingBody": "Надлежна институција",
+    "accreditationSince": "од",
+    "accreditationUntil": "до",
     "improvePrompt": "Гледате нешто неточно?",
     "improveLink": "Предложете корекција",
     "improveLogin": "Најавете се за да предложите корекција"

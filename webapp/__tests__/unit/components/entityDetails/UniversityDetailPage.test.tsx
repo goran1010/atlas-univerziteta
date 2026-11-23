@@ -125,6 +125,52 @@ describe("UniversityDetailPage", () => {
     expect(screen.getByText(/1 study program/i)).toBeInTheDocument();
   });
 
+  test("shows the accreditation period and the accrediting body", async () => {
+    givenUniversity({
+      ...universityDetail,
+      accreditationFrom: "2021-06-17T00:00:00.000Z",
+      accreditationTo: "2028-06-17T00:00:00.000Z",
+      authority: "HEA",
+    });
+    renderPage();
+
+    expect(
+      await screen.findByText("Accreditation: June 17, 2021 - June 17, 2028"),
+    ).toBeInTheDocument();
+    expect(screen.getByText("Accrediting body: HEA")).toBeInTheDocument();
+  });
+
+  test("shows a start date alone as the date accreditation runs from", async () => {
+    givenUniversity({
+      ...universityDetail,
+      accreditationFrom: "2021-12-16T00:00:00.000Z",
+    });
+    renderPage();
+
+    expect(
+      await screen.findByText("Accreditation: since December 16, 2021"),
+    ).toBeInTheDocument();
+    expect(screen.queryByText(/Accrediting body/)).not.toBeInTheDocument();
+  });
+
+  test("shows the accrediting body alone when there are no dates", async () => {
+    givenUniversity({ ...universityDetail, authority: "AZVO" });
+    renderPage();
+
+    expect(
+      await screen.findByText("Accrediting body: AZVO"),
+    ).toBeInTheDocument();
+    expect(screen.queryByText(/^Accreditation:/)).not.toBeInTheDocument();
+  });
+
+  test("shows no accreditation without accreditation data", async () => {
+    givenUniversity(universityDetail);
+    renderPage();
+
+    await screen.findByRole("heading", { level: 1 });
+    expect(screen.queryByText(/Accredit/)).not.toBeInTheDocument();
+  });
+
   test("links the data source", async () => {
     givenUniversity(universityDetail);
     renderPage();

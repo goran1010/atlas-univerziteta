@@ -459,6 +459,10 @@
     "linkCopied": "Link kopiran u clipboard.",
     "linkCopyFailed": "Nije moguće kopirati link.",
     "dataSource": "Izvor podataka",
+    "accreditation": "Akreditacija",
+    "accreditingBody": "Nadležna institucija",
+    "accreditationSince": "od",
+    "accreditationUntil": "do",
     "improvePrompt": "Vidiš netačan podatak?",
     "improveLink": "Predloži ispravku",
     "improveLogin": "Prijavi se da predložiš ispravku"
