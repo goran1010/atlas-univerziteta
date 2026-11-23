@@ -12,7 +12,19 @@ import {
   ENTITY_RULE_MESSAGE,
   entityFitsCountry,
 } from "../validation/countries.js";
-import { durationYearsSchema } from "../validation/contributionValidation.js";
+import {
+  acronymSchema,
+  addressSchema,
+  citySchema,
+  durationYearsSchema,
+  ectsSchema,
+  emailSchema,
+  foundedYearSchema,
+  languageSchema,
+  nameSchema,
+  phoneSchema,
+  websiteSchema,
+} from "../validation/contributionValidation.js";
 import {
   universitySearchFields,
   facultySearchFields,
@@ -62,15 +74,15 @@ const optionalDateSchema = z.iso
   .nullish();
 
 const trackSeedSchema = z.strictObject({
-  name: z.string().trim().min(1),
-  ects: z.number().int().positive().nullish(),
+  name: nameSchema,
+  ects: ectsSchema.nullish(),
   durationYears: durationYearsSchema.nullish(),
   dataSourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
 });
 
 const studyProgramSeedSchema = z.strictObject({
-  name: z.string().trim().min(1),
+  name: nameSchema,
   cycle: z.enum([
     "FIRST",
     "SECOND",
@@ -80,20 +92,20 @@ const studyProgramSeedSchema = z.strictObject({
     "SPECIALIST",
   ]),
   durationYears: durationYearsSchema.nullish(),
-  ects: z.number().int().positive().nullish(),
-  language: optionalTextSchema,
+  ects: ectsSchema.nullish(),
+  language: languageSchema.nullish(),
   dataSourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
   tracks: z.array(trackSeedSchema).min(1).optional(),
 });
 
 const facultySeedSchema = z.strictObject({
-  name: z.string().trim().min(1),
-  city: optionalTextSchema,
-  website: optionalTextSchema,
-  address: optionalTextSchema,
-  phone: optionalTextSchema,
-  email: optionalTextSchema,
+  name: nameSchema,
+  city: citySchema.nullish(),
+  website: websiteSchema.nullish(),
+  address: addressSchema.nullish(),
+  phone: phoneSchema.nullish(),
+  email: emailSchema.nullish(),
   isUniversityLevel: z.boolean().optional(),
   dataSourceUrl: optionalUrlSchema,
   lastModified: optionalDateSchema,
@@ -103,16 +115,16 @@ const facultySeedSchema = z.strictObject({
 const universitySeedSchema = z
   .strictObject({
     country: z.enum(COUNTRIES),
-    name: z.string().trim().min(1),
-    acronym: optionalTextSchema,
-    city: z.string().trim().min(1),
+    name: nameSchema,
+    acronym: acronymSchema.nullish(),
+    city: citySchema,
     entity: z.enum(ENTITIES).optional(),
     ownership: z.enum(["PUBLIC", "PRIVATE"]),
-    foundedYear: optionalTextSchema,
-    website: optionalTextSchema,
-    address: optionalTextSchema,
-    phone: optionalTextSchema,
-    email: optionalTextSchema,
+    foundedYear: foundedYearSchema.nullish(),
+    website: websiteSchema.nullish(),
+    address: addressSchema.nullish(),
+    phone: phoneSchema.nullish(),
+    email: emailSchema.nullish(),
     accreditationFrom: optionalDateSchema,
     accreditationTo: optionalDateSchema,
     authority: optionalTextSchema,
