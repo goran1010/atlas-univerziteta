@@ -30,4 +30,36 @@ describe("foldSearchText", () => {
     expect(foldSearchText("Straße")).toBe("strasse");
     expect(foldSearchText("Ærø")).toBe("aero");
   });
+
+  test("transliterates Serbian Cyrillic", () => {
+    expect(foldSearchText("медицина")).toBe("medicina");
+    expect(foldSearchText("МЕДИЦИНА")).toBe("medicina");
+    expect(foldSearchText("Србија")).toBe("srbija");
+    expect(foldSearchText("Ниш")).toBe("nis");
+    expect(foldSearchText("Ћуприја")).toBe("cuprija");
+    expect(foldSearchText("Ђорђе")).toBe("dorde");
+    expect(foldSearchText("Љубљана")).toBe("ljubljana");
+    expect(foldSearchText("Његош")).toBe("njegos");
+    expect(foldSearchText("џез")).toBe("dzez");
+  });
+
+  test("transliterates Macedonian Cyrillic", () => {
+    expect(foldSearchText("Скопје")).toBe("skopje");
+    expect(foldSearchText("Ѓорче Петров")).toBe("gorce petrov");
+    expect(foldSearchText("Меѓународни")).toBe("megunarodni");
+    expect(foldSearchText("Сообраќај")).toBe("soobrakaj");
+    expect(foldSearchText("ѕвезда")).toBe("dzvezda");
+  });
+
+  test("folds Cyrillic and Latin spellings to the same form", () => {
+    expect(foldSearchText("Факултет техничких наука")).toBe(
+      foldSearchText("Fakultet tehničkih nauka"),
+    );
+    expect(foldSearchText("Меѓународни")).toBe(foldSearchText("Meǵunarodni"));
+    expect(foldSearchText("Сообраќајно")).toBe(foldSearchText("Soobraḱajno"));
+  });
+
+  test("leaves Latin text in mixed-script input untouched", () => {
+    expect(foldSearchText("ЕСПБ 180 ECTS")).toBe("espb 180 ects");
+  });
 });

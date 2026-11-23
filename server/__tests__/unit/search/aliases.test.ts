@@ -58,6 +58,15 @@ describe("country alias phrases resolve through the tokenizer", () => {
     ["makedonski", "MKD"],
     ["Maqedonisë", "MKD"],
     ["Maqedoni e Veriut", "MKD"],
+    ["Србија", "SRB"],
+    ["Србији", "SRB"],
+    ["Црна Гора", "MNE"],
+    ["Хрватска", "HRV"],
+    ["Босна и Херцеговина", "BIH"],
+    ["Северна Македонија", "MKD"],
+    ["Македонија", "MKD"],
+    ["Словенија", "SVN"],
+    ["Косово", "XKX"],
   ])("%s -> %s", (phrase, expected) => {
     expect(resolvedCountry(phrase)).toBe(expected);
   });

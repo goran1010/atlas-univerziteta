@@ -37,6 +37,7 @@
     "AZVO",
     "autofocuses",
     "banj",
+    "banjaluc",
     "BOSN",
     "bosn",
     "browsable",
@@ -148,6 +149,7 @@
     "šolstvu"
   ],
   "ignoreWords": [],
+  "ignoreRegExpList": ["/\\p{Script=Cyrillic}+/gu"],
   "import": [
     "@cspell/cspell-bundled-dicts",
     "@cspell/dict-hr-hr/cspell-ext.json",

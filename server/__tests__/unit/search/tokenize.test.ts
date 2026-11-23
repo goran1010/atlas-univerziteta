@@ -40,6 +40,15 @@ describe("tokenizeSearchTerm", () => {
     ]);
   });
 
+  test("transliterates Cyrillic before stemming", () => {
+    expect(tokenizeSearchTerm("медицине")).toEqual([
+      { kind: "text", word: "medicine", stem: "medicin" },
+    ]);
+    expect(tokenizeSearchTerm("у Бањалуци")).toEqual([
+      { kind: "text", word: "banjaluci", stem: "banjaluc" },
+    ]);
+  });
+
   test("drops text words shorter than two characters", () => {
     const tokens = tokenizeSearchTerm("fizika u sarajevu");
 
@@ -67,6 +76,15 @@ describe("tokenizeSearchTerm", () => {
     ]);
     expect(tokenizeSearchTerm("4 years")).toEqual([
       { kind: "duration", value: 4 },
+    ]);
+  });
+
+  test("pairs a number with a Cyrillic unit", () => {
+    expect(tokenizeSearchTerm("180 ЕСПБ")).toEqual([
+      { kind: "ects", value: 180 },
+    ]);
+    expect(tokenizeSearchTerm("3 године")).toEqual([
+      { kind: "duration", value: 3 },
     ]);
   });
 
