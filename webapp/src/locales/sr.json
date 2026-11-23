@@ -30,7 +30,6 @@
     "login": "Prijava",
     "language": "Jezik",
     "theme": "Tema",
-    "toggleThemeAria": "Prikaži meni za temu",
     "toggleMenuAria": "Prikaži navigacioni meni",
     "skipToContent": "Preskoči na sadržaj",
     "breadcrumb": "Putanja do stranice"
@@ -41,26 +40,12 @@
     "dismiss": "Zatvori obavijest"
   },
   "theme": {
-    "select": "Tema",
     "system": "Sistemska",
     "light": "Svijetla",
-    "dark": "Tamna",
-    "switched": {
-      "system": "Prebačeno na sistemsku temu",
-      "light": "Prebačeno na svijetlu temu",
-      "dark": "Prebačeno na tamnu temu"
-    }
+    "dark": "Tamna"
   },
   "language": {
-    "system": "Sistemski",
-    "english": "Engleski",
-    "serbian": "Srpski",
-    "switchAria": "Promijeni jezik",
-    "switched": {
-      "system": "Prebačeno na jezik sistema",
-      "english": "Prebačeno na engleski",
-      "serbian": "Prebačeno na srpski"
-    }
+    "system": "Sistemski"
   },
   "auth": {
     "or": "ILI",

@@ -30,7 +30,6 @@
     "login": "Log In",
     "language": "Language",
     "theme": "Theme",
-    "toggleThemeAria": "Toggle theme menu",
     "toggleMenuAria": "Toggle navigation menu",
     "skipToContent": "Skip to content",
     "breadcrumb": "Breadcrumb"
@@ -41,26 +40,12 @@
     "dismiss": "Dismiss notification"
   },
   "theme": {
-    "select": "Theme",
     "system": "System",
     "light": "Light",
-    "dark": "Dark",
-    "switched": {
-      "system": "Switched to system theme",
-      "light": "Switched to light theme",
-      "dark": "Switched to dark theme"
-    }
+    "dark": "Dark"
   },
   "language": {
-    "system": "System",
-    "english": "English",
-    "serbian": "Serbian",
-    "switchAria": "Toggle language",
-    "switched": {
-      "system": "Switched to system language",
-      "english": "Switched to English",
-      "serbian": "Switched to Serbian"
-    }
+    "system": "System"
   },
   "auth": {
     "or": "OR",

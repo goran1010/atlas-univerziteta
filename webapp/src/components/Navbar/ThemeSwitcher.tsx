@@ -1,55 +1,33 @@
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
-import { NotificationContext } from "../../contextData/NotificationContext";
 import { useTheme } from "../../customHooks/useTheme";
 import { THEMES } from "../../utils/theme";
-import { SunIcon, MoonIcon, MonitorIcon } from "../sharedComponents/icons";
-
-import type { Theme } from "../../utils/theme";
-
-function getThemeIcon(theme: Theme) {
-  switch (theme) {
-    case "light":
-      return <SunIcon />;
-    case "dark":
-      return <MoonIcon />;
-    default:
-      return <MonitorIcon />;
-  }
-}
+import { Select } from "../sharedComponents/Select";
 
 function ThemeSwitcher() {
   const { t } = use(RootContext);
-  const { addNotification } = use(NotificationContext);
   const { theme, setTheme } = useTheme();
-
-  function handleThemeToggle() {
-    const currentIndex = THEMES.indexOf(theme);
-    const nextTheme = THEMES[(currentIndex + 1) % THEMES.length] ?? theme;
-
-    setTheme(nextTheme);
-    addNotification({
-      type: "info",
-      message: t(`theme.switched.${nextTheme}`),
-    });
-  }
-
-  const themeLabel = t(`theme.${theme}`);
+  const label = t("nav.theme");
 
   return (
-    <button
-      type="button"
+    <Select
       id="theme-switcher"
-      aria-label={`${t("nav.toggleThemeAria")} - ${themeLabel}`}
-      onClick={handleThemeToggle}
-      className="min-w-20 w-full md:w-fit relative inline-flex items-center justify-center gap-1.5 rounded-md px-2 py-2 text-sm font-semibold transition transform hover:cursor-pointer
-        bg-(--surface-1) text-(--text-primary) border border-(--border-color) shadow-(--card-shadow-soft)
-        hover:bg-(--hover-surface) hover:shadow-(--card-shadow) active:scale-[0.98]
-        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+      aria-label={label}
+      // compact for the navbar; the ! makes these win over Select's own text
+      // size, padding and wrapping
+      className="md:flex-none truncate! text-xs! sm:text-sm! pl-2! pr-7! bg-position-[right_0.5rem_center]!"
+      value={theme}
+      onChange={(e) => {
+        const next = THEMES.find((option) => option === e.target.value);
+        if (next) setTheme(next);
+      }}
     >
-      {getThemeIcon(theme)}
-      <span>{t("nav.theme")}</span>
-    </button>
+      {THEMES.map((option) => (
+        <option key={option} value={option}>
+          {label}: {t(`theme.${option}`)}
+        </option>
+      ))}
+    </Select>
   );
 }
 

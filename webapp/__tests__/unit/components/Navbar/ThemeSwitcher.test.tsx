@@ -4,68 +4,60 @@ import { ThemeSwitcher } from "../../../../src/components/Navbar/ThemeSwitcher";
 import { ThemeProvider } from "../../../../src/contextData/ThemeProvider";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { AddNotification } from "../../../../src/types";
-
 beforeEach(() => {
   localStorage.clear();
   document.documentElement.classList.remove("dark");
 });
 
-function renderSwitcher(addNotification: AddNotification) {
-  return render(
+function renderSwitcher() {
+  const addNotification = vi.fn();
+  render(
     <RootContextProvider
-      rootValue={{
-        addNotification,
-        removeNotification: vi.fn(),
-      }}
+      rootValue={{ addNotification, removeNotification: vi.fn() }}
     >
       <ThemeProvider>
         <ThemeSwitcher />
       </ThemeProvider>
     </RootContextProvider>,
   );
+  return { addNotification, select: screen.getByRole("combobox") };
 }
 
 describe("ThemeSwitcher", () => {
+  test("names its purpose in every option and shows the current theme", () => {
+    localStorage.setItem("theme", "dark");
+    const { select } = renderSwitcher();
+
+    expect(select).toHaveAccessibleName("Theme");
+    expect(
+      screen.getAllByRole("option").map((option) => option.textContent),
+    ).toEqual(["Theme: System", "Theme: Light", "Theme: Dark"]);
+    expect(select).toHaveValue("dark");
+  });
+
   test.each([
-    {
-      storedTheme: null,
-      expectedNextTheme: "light",
-      expectedStored: "light",
-      expectedMessage: "Switched to light theme",
-    },
-    {
-      storedTheme: "light",
-      expectedNextTheme: "dark",
-      expectedStored: "dark",
-      expectedMessage: "Switched to dark theme",
-    },
-    {
-      storedTheme: "dark",
-      expectedNextTheme: "system",
-      expectedStored: null,
-      expectedMessage: "Switched to system theme",
-    },
+    { choice: "light", expectedStored: "light", isDark: false },
+    { choice: "dark", expectedStored: "dark", isDark: true },
   ])(
-    "cycles from $storedTheme to $expectedNextTheme on click",
-    async ({ storedTheme, expectedStored, expectedMessage }) => {
-      if (storedTheme !== null) localStorage.setItem("theme", storedTheme);
-      const addNotification = vi.fn();
+    "applies and stores $choice without a notification",
+    async ({ choice, expectedStored, isDark }) => {
+      const { select, addNotification } = renderSwitcher();
 
-      renderSwitcher(addNotification);
-
-      const themeButton = screen.getByRole("button", {
-        name: /Toggle theme/i,
-      });
-
-      expect(themeButton).toBeInTheDocument();
-      await userEvent.click(themeButton);
+      await userEvent.selectOptions(select, choice);
 
       expect(localStorage.getItem("theme")).toBe(expectedStored);
-      expect(addNotification).toHaveBeenCalledWith({
-        type: "info",
-        message: expectedMessage,
-      });
+      expect(document.documentElement.classList.contains("dark")).toBe(isDark);
+      expect(select).toHaveValue(choice);
+      expect(addNotification).not.toHaveBeenCalled();
     },
   );
+
+  test("going back to system clears the stored theme", async () => {
+    localStorage.setItem("theme", "dark");
+    const { select } = renderSwitcher();
+
+    await userEvent.selectOptions(select, "system");
+
+    expect(localStorage.getItem("theme")).toBeNull();
+  });
 });

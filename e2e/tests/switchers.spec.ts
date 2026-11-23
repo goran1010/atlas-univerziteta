@@ -1,9 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-// both switchers cycle from "system" (fresh browser), so two clicks land on
-// the second explicit option: system -> en -> sr, system -> light -> dark
-
-test("language switcher cycles to Serbian and persists across reloads", async ({
+test("language select switches to Bosnian/Croatian/Serbian and persists across reloads", async ({
   page,
 }) => {
   await page.goto("/");
@@ -11,9 +8,9 @@ test("language switcher cycles to Serbian and persists across reloads", async ({
     page.getByRole("heading", { name: "Find programs and universities" }),
   ).toBeVisible();
 
-  const toggle = page.getByRole("button", { name: /Toggle language/i });
-  await toggle.click();
-  await toggle.click();
+  await page
+    .getByRole("combobox", { name: "Language" })
+    .selectOption("Language: Bosanski / Hrvatski / Srpski");
 
   await expect(
     page.getByRole("heading", { name: "Nađite programe i univerzitete" }),
@@ -23,10 +20,11 @@ test("language switcher cycles to Serbian and persists across reloads", async ({
   await expect(
     page.getByRole("heading", { name: "Nađite programe i univerzitete" }),
   ).toBeVisible();
+  await expect(page.getByRole("combobox", { name: "Jezik" })).toHaveValue("sr");
   await expect(page.locator("html")).toHaveAttribute("lang", "sr-Latn");
 });
 
-test("theme switcher applies dark mode and persists across reloads", async ({
+test("theme select applies dark mode and persists across reloads", async ({
   page,
 }) => {
   await page.goto("/");
@@ -34,13 +32,14 @@ test("theme switcher applies dark mode and persists across reloads", async ({
     page.getByRole("heading", { name: "Find programs and universities" }),
   ).toBeVisible();
 
-  const toggle = page.getByRole("button", { name: /Toggle theme/i });
-  await toggle.click();
+  const themeSelect = page.getByRole("combobox", { name: "Theme" });
+  await themeSelect.selectOption("Theme: Light");
   await expect(page.locator("html")).not.toHaveClass(/dark/);
 
-  await toggle.click();
+  await themeSelect.selectOption("Theme: Dark");
   await expect(page.locator("html")).toHaveClass(/dark/);
 
   await page.reload();
   await expect(page.locator("html")).toHaveClass(/dark/);
+  await expect(themeSelect).toHaveValue("dark");
 });
