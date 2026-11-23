@@ -32,7 +32,7 @@ describe("About component", () => {
       screen.getByRole("link", { name: /View API Docs/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: /Universities/i }),
+      screen.getByRole("link", { name: /Search the data/i }),
     ).toBeInTheDocument();
   });
 });
