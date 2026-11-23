@@ -7,7 +7,7 @@ Contributions of any kind are welcome - bug fixes, new features, documentation, 
 1. Fork the repository and create your branch from `main`
 2. Run `npm run install:all` to install dependencies
 3. Set up your local environment:
-   - Copy `server/.env.example` to `server/.env` and fill in your database, email service, BetterAuth secret, and GitHub/Google OAuth credentials (all required - the server won't start without them)
+   - Copy `server/.env.example` to `server/.env` and fill in your database URLs and a BetterAuth secret. The email and OAuth values can stay as placeholders: `RESEND_API_KEY` is only used in production, and real GitHub/Google credentials are only needed in production or to try OAuth login locally
    - Copy `webapp/.env.example` to `webapp/.env` and update `VITE_API_URL` if needed
 4. Set up the databases:
    - Run `npm run db:setup` to initialize the development database

@@ -7,11 +7,11 @@ Local development setup for Atlas Univerziteta. For hosting and production confi
 - Node.js 26.x and npm
 - PostgreSQL
 
-You will also need:
+Optional for local development - the placeholders in `server/.env.example` work:
 
-- a Resend API key for signup confirmation emails (in dev mode, confirmation links are logged to the console instead)
-- GitHub OAuth credentials (create them at <https://github.com/settings/developers>)
-- Google OAuth credentials (create them at <https://console.cloud.google.com/apis/credentials>)
+- a Resend API key for signup confirmation emails - used only in production; elsewhere the server logs the confirmation link to the console instead
+- GitHub OAuth credentials (create them at <https://github.com/settings/developers>) - needed in production, and locally only to try GitHub login
+- Google OAuth credentials (create them at <https://console.cloud.google.com/apis/credentials>) - needed in production, and locally only to try Google login
 
 ## Installation
 
@@ -23,7 +23,7 @@ cp server/.env.example server/.env
 cp webapp/.env.example webapp/.env
 ```
 
-Fill in the server values and adjust the webapp server URL if needed.
+Fill in the database URLs and the BetterAuth secret in `server/.env` (the email and OAuth placeholders can stay as they are locally), and adjust the webapp server URL if needed.
 
 ## Environment variables
 
@@ -31,15 +31,15 @@ Fill in the server values and adjust the webapp server URL if needed.
 
 - `DATABASE_URL`: PostgreSQL connection string for development
 - `TEST_DATABASE_URL`: PostgreSQL connection for server tests (credentials/host only - the suite creates and drops its own databases, so the user needs `CREATEDB` rights)
-- `RESEND_API_KEY`: API key for confirmation emails
+- `RESEND_API_KEY`: API key for confirmation emails, required in production only (elsewhere the confirmation link is logged to the console)
 - `RESEND_FROM_EMAIL`: optional sender address for confirmation emails, defaults to `onboarding@resend.dev` (Resend's shared test domain)
 - `WEBAPP_URL`: webapp origin allowed by credentialed CORS and by the origin check on state-changing `/users` requests
 - `SERVER_URL`: public server base URL used in confirmation links
 - `PORT`: server port, usually `3000`
 - `BETTER_AUTH_SECRET`: BetterAuth secret (at least 32 characters, generate with `openssl rand -base64 32`)
 - `NODE_ENV`: runtime mode, usually `development`
-- `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET`: GitHub OAuth (required)
-- `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`: Google OAuth (required)
+- `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET`: GitHub OAuth; must be set, but the placeholders work unless you try GitHub login locally
+- `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`: Google OAuth; must be set, but the placeholders work unless you try Google login locally
 
 Local OAuth callback URLs to register with GitHub and Google: `http://localhost:3000/api/auth/callback/github` and `http://localhost:3000/api/auth/callback/google`.
 
