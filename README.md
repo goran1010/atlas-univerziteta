@@ -50,7 +50,7 @@ GET /api/v1/tracks              also /tracks/:id
 GET /api/v1/search?searchTerm=&country=&entity=&ownership=&cycle=&type=
 ```
 
-Responses return `{ "message", "data" }`; errors return `{ "error": { "code", "message" } }`. List endpoints are paginated - `?page=&limit=` (up to 100 per page) with `page`, `totalPages`, and `total` in the response. Interactive documentation with examples lives at [atlasuniverziteta.com/api-docs](https://atlasuniverziteta.com/api-docs).
+Responses return `{ "message", "data" }`; errors return `{ "error": { "code", "message" } }`. List endpoints are paginated - `?page=&limit=` (up to 100 per page) with `page`, `totalPages`, and `total` in the response - and accept `?country=&entity=` filters (faculties, study programs, and tracks by their university's country and entity). Interactive documentation with examples lives at [atlasuniverziteta.com/api-docs](https://atlasuniverziteta.com/api-docs).
 
 ## Testing
 

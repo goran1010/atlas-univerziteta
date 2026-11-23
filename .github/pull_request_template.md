@@ -8,7 +8,7 @@
 
 Please check all items to confirm you understand the requirements. -->
 
-- [ ] I have read and followed the [CONTRIBUTING.md](../docs/CONTRIBUTING.md) guidelines
+- [ ] I have read and followed the [CONTRIBUTING.md](https://github.com/goran1010/atlas-univerziteta/blob/main/docs/CONTRIBUTING.md) guidelines
 - [ ] The `Description` section summarizes the reason for this PR
 - [ ] The `This PR` section has a bullet point list describing the changes in this PR
 - [ ] If this PR addresses an open issue, it is linked in the `Related issues` section
