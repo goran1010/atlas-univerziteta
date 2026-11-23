@@ -23,17 +23,13 @@ function renderSwitcher(language: Language) {
 }
 
 describe("LanguageSwitcher", () => {
-  test("lists each language in itself after the select's name", () => {
+  test("lists each language by its code after the select's name", () => {
     const { select } = renderSwitcher("en");
 
     expect(select).toHaveAccessibleName("Language");
     expect(
       screen.getAllByRole("option").map((option) => option.textContent),
-    ).toEqual([
-      "Language: System",
-      "Language: English",
-      "Language: Bosanski / Hrvatski / Srpski",
-    ]);
+    ).toEqual(["Language: System", "Language: EN", "Language: SR"]);
   });
 
   test.each<Language>(["system", "en", "sr"])(
@@ -45,12 +41,15 @@ describe("LanguageSwitcher", () => {
     },
   );
 
-  test("sets the chosen language without a notification", async () => {
+  test.each<{ choice: Language; message: string }>([
+    { choice: "sr", message: "Switched to Serbian" },
+    { choice: "system", message: "Switched to system language" },
+  ])("sets $choice and announces it", async ({ choice, message }) => {
     const { select, setLanguage, addNotification } = renderSwitcher("en");
 
-    await userEvent.selectOptions(select, "sr");
+    await userEvent.selectOptions(select, choice);
 
-    expect(setLanguage).toHaveBeenCalledWith("sr");
-    expect(addNotification).not.toHaveBeenCalled();
+    expect(setLanguage).toHaveBeenCalledWith(choice);
+    expect(addNotification).toHaveBeenCalledWith({ type: "info", message });
   });
 });

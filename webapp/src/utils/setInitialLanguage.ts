@@ -9,13 +9,6 @@ const LANGUAGE_TAGS: Record<SystemLanguage, string> = {
   sr: "sr-Latn",
 };
 
-// each site language named in itself, so readers find theirs whichever
-// language the site is showing
-const LANGUAGE_NAMES: Record<SystemLanguage, string> = {
-  en: "English",
-  sr: "Bosanski / Hrvatski / Srpski",
-};
-
 // Bosnian, Croatian and Montenegrin readers get the Serbian bundle, the
 // closer of the two
 const SERBIAN_BUNDLE_CODES = new Set(["sr", "bs", "hr", "cnr"]);
@@ -29,4 +22,4 @@ function setSystemLanguage(): SystemLanguage {
   return "en";
 }
 
-export { SYSTEM_LANGUAGES, LANGUAGE_TAGS, LANGUAGE_NAMES, setSystemLanguage };
+export { SYSTEM_LANGUAGES, LANGUAGE_TAGS, setSystemLanguage };

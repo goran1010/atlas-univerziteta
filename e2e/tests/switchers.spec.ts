@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("language select switches to Bosnian/Croatian/Serbian and persists across reloads", async ({
+test("language select switches to SR and persists across reloads", async ({
   page,
 }) => {
   await page.goto("/");
@@ -8,9 +8,7 @@ test("language select switches to Bosnian/Croatian/Serbian and persists across r
     page.getByRole("heading", { name: "Find programs and universities" }),
   ).toBeVisible();
 
-  await page
-    .getByRole("combobox", { name: "Language" })
-    .selectOption("Language: Bosanski / Hrvatski / Srpski");
+  await page.getByRole("combobox", { name: "Language" }).selectOption("sr");
 
   await expect(
     page.getByRole("heading", { name: "Nađite programe i univerzitete" }),

@@ -1,10 +1,8 @@
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
+import { NotificationContext } from "../../contextData/NotificationContext";
 import { Select } from "../sharedComponents/Select";
-import {
-  LANGUAGE_NAMES,
-  SYSTEM_LANGUAGES,
-} from "../../utils/setInitialLanguage";
+import { SYSTEM_LANGUAGES } from "../../utils/setInitialLanguage";
 
 import type { Language, SetLanguage } from "../../types";
 
@@ -18,6 +16,7 @@ function LanguageSwitcher({
   language: Language;
 }) {
   const { t } = use(RootContext);
+  const { addNotification } = use(NotificationContext);
   const label = t("nav.language");
 
   return (
@@ -33,13 +32,18 @@ function LanguageSwitcher({
         const next = LANGUAGE_OPTIONS.find(
           (option) => option === e.target.value,
         );
-        if (next) setLanguage(next);
+        if (!next) return;
+        setLanguage(next);
+        addNotification({
+          type: "info",
+          message: t(`language.switched.${next}`),
+        });
       }}
     >
       {LANGUAGE_OPTIONS.map((option) => (
         <option key={option} value={option}>
           {label}:{" "}
-          {option === "system" ? t("language.system") : LANGUAGE_NAMES[option]}
+          {option === "system" ? t("language.system") : option.toUpperCase()}
         </option>
       ))}
     </Select>

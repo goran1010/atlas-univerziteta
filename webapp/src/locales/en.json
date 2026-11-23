@@ -45,7 +45,12 @@
     "dark": "Dark"
   },
   "language": {
-    "system": "System"
+    "system": "System",
+    "switched": {
+      "system": "Switched to system language",
+      "en": "Switched to English",
+      "sr": "Switched to Serbian"
+    }
   },
   "auth": {
     "or": "OR",

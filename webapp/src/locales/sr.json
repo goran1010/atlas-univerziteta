@@ -45,7 +45,12 @@
     "dark": "Tamna"
   },
   "language": {
-    "system": "Sistemski"
+    "system": "Sistemski",
+    "switched": {
+      "system": "Prebačeno na jezik sistema",
+      "en": "Prebačeno na engleski",
+      "sr": "Prebačeno na srpski"
+    }
   },
   "auth": {
     "or": "ILI",
