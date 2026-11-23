@@ -60,7 +60,8 @@ npm run dev:all    # server + webapp together
 `npm run db:refold` rewrites the folded `search*` columns from the source
 fields. App writes keep them in sync automatically; run it after editing
 entities with manual SQL, or once after a change to the fold rules in
-`server/src/search/fold.ts`.
+`server/src/search/fold.ts` or `fields.ts`. For production, see
+[DEPLOYMENT.md](./DEPLOYMENT.md#refolding-search-columns).
 
 Local defaults: server `http://localhost:3000`, webapp `http://localhost:5173`.
 

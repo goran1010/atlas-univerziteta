@@ -10,7 +10,7 @@ import {
 // Rewrites every row's folded search* columns from its source fields. App
 // writes keep the columns in sync (pendingChangeInputs.ts, seed.ts); run
 // this after editing entities with manual SQL, or once after changing the
-// fold rules in search/fold.ts.
+// fold rules in search/fold.ts or search/fields.ts.
 async function main() {
   try {
     const universities = await prisma.university.findMany();

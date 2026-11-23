@@ -30,6 +30,21 @@ https://api.atlasuniverziteta.com/api/auth/callback/google
 
 To re-seed production after a data change, pull the latest code on the VPS and run `./server/scripts/seed-prod.sh`.
 
+## Refolding search columns
+
+Search matches against `search*` columns that hold folded copies of the searchable fields (lowercase, without diacritics). The app and the seed fill them whenever they write a row, so the columns only go stale when:
+
+- the fold rules change (`server/src/search/fold.ts` or `server/src/search/fields.ts`)
+- rows are edited with manual SQL
+
+After either, refold every row once. On the VPS, once the new image is running:
+
+```bash
+./server/scripts/refold-prod.sh
+```
+
+Locally, `npm run db:refold` does the same against `DATABASE_URL`. Refolding only rewrites the `search*` columns, so it is safe to run again. A re-seed is no substitute: it skips rows added through the app, and for existing rows it rewrites only some of the folded columns (not names).
+
 ## Adding a country
 
 Country and entity codes are plain strings in the database, validated in application code, so adding a country needs no migration. A country's code is its ISO 3166-1 alpha-3 code, or the widely used user-assigned code where there is none, and it names the data folder and appears in the API.
