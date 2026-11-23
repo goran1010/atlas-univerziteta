@@ -5,6 +5,7 @@ import { UnifiedSearch } from "../../../../src/components/Search/UnifiedSearch";
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
+import { InvalidResponseError } from "../../../../src/utils/parseResponse";
 
 function buildSearchRouter(initialEntry = "/") {
   const routes = [
@@ -361,27 +362,79 @@ describe("UnifiedSearch", () => {
           { status: 500 },
         ),
     ],
-    ["a thrown request", () => HttpResponse.error()],
     [
-      "an invalid success payload",
-      () =>
+      "an error response without a JSON body",
+      () => new HttpResponse("Bad gateway", { status: 502 }),
+    ],
+    ["a thrown request", () => HttpResponse.error()],
+  ])(
+    "shows the search error message and logs on %s",
+    async (_label, resolver) => {
+      const errorSpy = vi
+        .spyOn(console, "error")
+        .mockImplementation(() => vi.fn());
+      server.use(http.get("*/api/v1/search", resolver));
+      const user = renderSearch();
+
+      await typeSearch(user, "sarajevo");
+
+      expect(
+        await screen.findByText(
+          /^Search did not complete\. Try again in a moment\./i,
+        ),
+      ).toBeInTheDocument();
+      expect(errorSpy).toHaveBeenCalledWith(
+        "Error trying to search:",
+        expect.any(Error),
+      );
+    },
+  );
+
+  test("says the data could not be read, without 'try again', on an invalid search payload", async () => {
+    const errorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => vi.fn());
+    server.use(
+      http.get("*/api/v1/search", () =>
         HttpResponse.json({
           message: "Search results retrieved successfully.",
         }),
-    ],
-  ])("shows the search error message on %s", async (_label, resolver) => {
-    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
-    vi.spyOn(console, "error").mockImplementation(() => vi.fn());
-    server.use(http.get("*/api/v1/search", resolver));
+      ),
+    );
     const user = renderSearch();
 
     await typeSearch(user, "sarajevo");
 
     expect(
       await screen.findByText(
-        /^Search did not complete\. Try again in a moment\./i,
+        /The server sent data the site could not read\./i,
       ),
     ).toBeInTheDocument();
+    expect(screen.queryByText(/Try again/i)).not.toBeInTheDocument();
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error trying to search:",
+      expect.any(InvalidResponseError),
+    );
+  });
+
+  test("says the data could not be read when Browse All gets an invalid payload", async () => {
+    const errorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => vi.fn());
+    givenUniversityList([{ ...universityListItem, country: "XXX" }]);
+    const user = renderSearch();
+
+    await user.click(screen.getByRole("button", { name: /Browse All/i }));
+
+    expect(
+      await screen.findByText(
+        /The server sent data the site could not read\./i,
+      ),
+    ).toBeInTheDocument();
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error trying to search:",
+      expect.any(InvalidResponseError),
+    );
   });
 
   function mediaQueryList(matches: boolean): MediaQueryList {

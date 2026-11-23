@@ -3,6 +3,7 @@ import {
   searchAll,
   SearchFailedError,
 } from "../../../../../src/components/Search/utils/search";
+import { InvalidResponseError } from "../../../../../src/utils/parseResponse";
 import { server, http, HttpResponse } from "../../../../utils/msw";
 import { nth } from "../../../../utils/nth";
 
@@ -61,8 +62,7 @@ describe("searchAll", () => {
     expect(data).toEqual(emptyResults);
   });
 
-  test("throws a SearchFailedError carrying the server error code", async () => {
-    vi.spyOn(console, "warn").mockImplementation(() => vi.fn());
+  test("throws a SearchFailedError carrying the status and server error", async () => {
     server.use(
       http.get("*/api/v1/search", () =>
         HttpResponse.json(
@@ -76,16 +76,32 @@ describe("searchAll", () => {
 
     expect(failure).toBeInstanceOf(SearchFailedError);
     expect((failure as SearchFailedError).code).toBe("RATE_LIMITED");
+    expect((failure as SearchFailedError).message).toBe(
+      "Search failed with status 429: Slow down.",
+    );
   });
 
-  test("throws when a successful response has an invalid payload", async () => {
+  test("describes a failure that has no error body", async () => {
+    server.use(
+      http.get(
+        "*/api/v1/search",
+        () => new HttpResponse("Bad gateway", { status: 502 }),
+      ),
+    );
+
+    await expect(searchAll("term")).rejects.toThrow(
+      "Search failed with status 502: no error details",
+    );
+  });
+
+  test("throws an InvalidResponseError when a successful response has an invalid payload", async () => {
     server.use(
       http.get("*/api/v1/search", () =>
         HttpResponse.json({ message: "ok", data: { universities: "nope" } }),
       ),
     );
 
-    await expect(searchAll("term")).rejects.toThrow();
+    await expect(searchAll("term")).rejects.toThrow(InvalidResponseError);
   });
 
   test("rejects with an abort error when its signal aborts", async () => {
