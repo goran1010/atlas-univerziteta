@@ -3,6 +3,7 @@ import en from "../locales/en.json";
 import sr from "../locales/sr.json";
 import sq from "../locales/sq.json";
 import mk from "../locales/mk.json";
+import sl from "../locales/sl.json";
 import {
   LANGUAGE_TAGS,
   SYSTEM_LANGUAGES,
@@ -18,7 +19,7 @@ interface TranslationMap {
   [key: string]: TranslationValue;
 }
 
-const translations: Record<SystemLanguage, typeof en> = { en, sr, sq, mk };
+const translations: Record<SystemLanguage, typeof en> = { en, sr, sq, mk, sl };
 
 const SAVED_LANGUAGES: Language[] = ["system", ...SYSTEM_LANGUAGES];
 

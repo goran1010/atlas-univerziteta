@@ -1,0 +1,498 @@
+{
+  "title": {
+    "app": "Atlas Univerziteta",
+    "api": "Dokumentacija API",
+    "contribute": "Izboljšajte podatke",
+    "admin": "Skrbniška plošča",
+    "profile": "Moj profil",
+    "login": "Prijava",
+    "signup": "Registracija",
+    "forgotPassword": "Pozabljeno geslo",
+    "resetPassword": "Ponastavitev gesla",
+    "notFound": "Strani ni mogoče najti",
+    "error": "Napaka",
+    "about": "O projektu"
+  },
+  "meta": {
+    "home": "Raziščite univerze, fakultete, študijske programe in smeri z brezplačno javno zbirko podatkov, spletnim vmesnikom z iskanjem in REST API.",
+    "about": "Spoznajte Atlas Univerziteta, brezplačno odprtokodno zbirko podatkov o univerzah in študijskih programih, kako lahko pomagate izboljšati podatke, in njen javni REST API.",
+    "api": "Dokumentacija REST API za Atlas Univerziteta. Programski dostop do podatkov o univerzah in študijskih programih.",
+    "login": "Prijavite se v svoj račun Atlas Univerziteta, da prispevate podatke in spremljate svoje predloge.",
+    "signup": "Ustvarite brezplačen račun Atlas Univerziteta in začnite prispevati podatke o univerzah."
+  },
+  "nav": {
+    "home": "Domov",
+    "about": "O projektu",
+    "apiDocs": "Dokumentacija API",
+    "improveData": "Izboljšajte podatke",
+    "admin": "Skrbnik",
+    "profile": "Profil",
+    "login": "Prijava",
+    "language": "Jezik",
+    "theme": "Tema",
+    "toggleMenuAria": "Odpri ali zapri navigacijski meni",
+    "skipToContent": "Preskoči na vsebino",
+    "breadcrumb": "Drobtinice"
+  },
+  "loading": "Nalaganje…",
+  "notifications": {
+    "title": "Obvestila",
+    "dismiss": "Zapri obvestilo"
+  },
+  "theme": {
+    "system": "Sistemska",
+    "light": "Svetla",
+    "dark": "Temna"
+  },
+  "language": {
+    "system": "Sistemski",
+    "switched": {
+      "system": "Preklopljeno na sistemski jezik",
+      "en": "Preklopljeno na angleščino",
+      "sr": "Preklopljeno na srbščino",
+      "sq": "Preklopljeno na albanščino",
+      "mk": "Preklopljeno na makedonščino",
+      "sl": "Preklopljeno na slovenščino"
+    }
+  },
+  "auth": {
+    "or": "ALI",
+    "continueWithGithub": "Nadaljujte z GitHubom",
+    "continueWithGoogle": "Nadaljujte z Googlom",
+    "login": {
+      "linkText": "Prijava",
+      "noAccountPrefix": "Še nimate računa?",
+      "heading": "Prijava",
+      "oauthFailed": "Prijava ni uspela. Poskusite znova.",
+      "alreadyLoggedIn": "Že ste prijavljeni. Preusmerjeni ste bili na domačo stran."
+    },
+    "signup": {
+      "linkText": "Registracija",
+      "haveAccountPrefix": "Že imate račun?",
+      "heading": "Ustvarite račun",
+      "blockedWhileLoggedIn": "Med prijavo se ne morete registrirati. Preusmerjeni ste bili na domačo stran."
+    },
+    "forgotPassword": {
+      "linkText": "Ste pozabili geslo?",
+      "heading": "Ponastavite geslo",
+      "description": "Vnesite e-poštni naslov svojega računa in poslali vam bomo povezavo za ponastavitev gesla.",
+      "submit": "Pošlji povezavo za ponastavitev",
+      "sent": "Če za ta e-poštni naslov obstaja račun, je povezava za ponastavitev gesla že na poti. Preverite svojo e-pošto.",
+      "backToLogin": "Nazaj na prijavo"
+    },
+    "resetPassword": {
+      "heading": "Izberite novo geslo",
+      "submit": "Ponastavi geslo",
+      "invalidHeading": "Ta povezava za ponastavitev ni veljavna",
+      "invalidDescription": "Povezava je morda potekla ali je bila že uporabljena. Spodaj zahtevajte novo.",
+      "requestNew": "Zahtevaj novo povezavo"
+    }
+  },
+  "form": {
+    "email": "E-pošta",
+    "password": "Geslo",
+    "confirmPassword": "Potrdite geslo",
+    "create": "Ustvari",
+    "approve": "Odobri",
+    "reject": "Zavrni",
+    "required": "obvezno"
+  },
+  "profile": {
+    "title": "Moj profil",
+    "emailAddress": "E-poštni naslov",
+    "currentRole": "Trenutna vloga",
+    "needLogin": "Za ogled profila morate biti prijavljeni.",
+    "logout": "Odjava",
+    "requestAdmin": "Zaprosi za skrbniški dostop",
+    "adminRequestReason": "Zakaj želite skrbniški dostop?",
+    "cancelAdminRequest": "Prekliči prošnjo za skrbnika",
+    "memberSince": "Član od",
+    "emailVerifiedBadge": "Potrjen",
+    "emailNotVerifiedBadge": "Ni potrjen",
+    "adminRequestPendingSince": "Prošnja za skrbnika čaka od",
+    "suggestionsAwaiting": "Predlogi, ki čakajo na pregled",
+    "changesAwaiting": "Spremembe, ki čakajo na vaš pregled"
+  },
+  "about": {
+    "heading": "Univerze in študijski programi",
+    "intro": "Brezplačen odprtokodni projekt, ki gradi strukturirano zbirko podatkov o javnem visokem šolstvu z možnostjo iskanja. Osredotočen na univerze - ustanove, fakultete, študijske programe in smeri.",
+    "summary": "Z Atlas Univerziteta lahko brskate po profilih univerz, primerjate študijsko ponudbo in dostopate do strukturiranih javnih podatkov prek preprostega vmesnika ali neposredno prek API.",
+    "exploreHeading": "Raziščite podatke",
+    "exploreDescription": "Brskajte po univerzah v več državah. Oglejte si fakultete, študijske programe in smeri. Iščite po imenu, mestu, kratici, državi, entiteti, lastništvu, študijski stopnji, učnem jeziku in drugem.",
+    "exploreCta": "Univerze",
+    "improveHeading": "Izboljšajte podatke",
+    "improveDescription": "Veste za kaj, kar manjka ali je napačno? Registrirani uporabniki lahko predlagajo spremembe - dodajanja, popravke ali izbrise -, ki jih pregledajo in uveljavijo skrbniki.",
+    "improveStep1": "Ustvarite brezplačen račun in potrdite svojo e-pošto",
+    "improveStep2": "Odprite stran Izboljšajte podatke in pošljite svoj predlog",
+    "improveStep3": "Skrbniki pregledajo predloge in odobrene spremembe uveljavijo v objavljenih podatkih",
+    "improveContribute": "Izboljšajte podatke",
+    "improveSignUp": "Ustvarite račun",
+    "forDevsHeading": "Za razvijalce",
+    "forDevsDescription": "Atlas Univerziteta ponuja brezplačen REST API brez preverjanja pristnosti. Pridobite vse univerze, iščite po imenu, mestu ali kratici, pridobite vse podrobnosti posamezne univerze ali iščite študijske programe v vseh ustanovah.",
+    "forDevsNote": "Javne končne točke ne zahtevajo preverjanja pristnosti.",
+    "forDevsCta": "Oglejte si dokumentacijo API",
+    "forDevsGithub": "Oglejte si na GitHubu",
+    "openSource": "To je odprtokodni projekt. Izvorno kodo, navodila za namestitev in možnost prispevanja najdete na",
+    "github": "GitHub"
+  },
+  "api": {
+    "title": "REST API",
+    "publicIntro": "Javne končne točke REST so na voljo na spodnjem osnovnem URL-ju. Te končne točke ne zahtevajo preverjanja pristnosti.",
+    "fullDocs": "Za celotno dokumentacijo projekta, lokalno namestitev in smernice za prispevanje glejte",
+    "dataObject": "Objekt univerze",
+    "dataObjectExample": "{\n  \"id\":                number                  - enolični identifikator\n  \"name\":              string                  - uradno ime\n  \"acronym\":           string | null           - kratica (npr. UNSA)\n  \"city\":              string                  - mesto glavnega kampusa\n  \"country\":           string                  - koda države ISO 3166-1 alpha-3 (XKX za Kosovo, ki kode nima)\n  \"entity\":            string | null           - entiteta, null za države brez njih\n  \"ownership\":         \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\":       string | null           - npr. \"1949\"\n  \"website\":           string | null           - uradni URL\n  \"address\":           string | null           - samo v podrobnostih\n  \"phone\":             string | null           - samo v podrobnostih\n  \"email\":             string | null           - samo v podrobnostih\n  \"accreditationFrom\": string | null           - datum ISO, samo v podrobnostih\n  \"accreditationTo\":   string | null           - datum ISO, samo v podrobnostih\n  \"authority\":         string | null           - akreditacijski organ, samo v podrobnostih\n  \"dataSourceUrl\":     string | null           - vir podatkov, samo v podrobnostih\n  \"lastModified\":      string | null           - datum ISO zadnjega preverjanja, samo v podrobnostih\n  \"_count\":            { \"faculties\": number } - samo na seznamu\n  \"faculties\":         Faculty[]               - samo v podrobnostih\n}",
+    "studyProgramObject": "Objekt študijskega programa",
+    "studyProgramObjectExample": "{\n  \"id\":            number        - enolični identifikator\n  \"name\":          string        - ime, kot ga objavlja univerza\n  \"facultyId\":     number        - samo v podrobnostih\n  \"cycle\":         \"FIRST\" | \"SECOND\" | \"THIRD\" | \"INTEGRATED\" | \"VOCATIONAL\" | \"SPECIALIST\"\n  \"durationYears\": number | null\n  \"ects\":          number | null\n  \"languages\":     string[]      - učni jeziki kot kode ISO 639 (cnr za črnogorščino), npr. [\"bs\", \"hr\", \"sr\"]; prazno, kadar niso znani\n  \"dataSourceUrl\": string | null - vir podatkov, samo v podrobnostih\n  \"lastModified\":  string | null - datum ISO zadnjega preverjanja, samo v podrobnostih\n  \"faculty\":       Faculty       - z univerzo; na seznamih samo id, name in university { id, name, country }\n  \"tracks\":        Track[]       - samo v podrobnostih\n}",
+    "examples": "Hitri primeri",
+    "endpoints": "Končne točke",
+    "endpointsData": {
+      "apiStatus": "Preveri stanje API.",
+      "apiV1Status": "Preveri stanje API v1.",
+      "getAllUniversities": "Vrne vse univerze, razvrščene po državi, lastništvu in nato imenu. Podpira filtra country in entity. Vključuje število fakultet posamezne univerze.",
+      "getUniversityById": "Vrne univerzo po ID z vsemi ugnezdenimi podrobnostmi (fakultete, študijski programi in smeri). dataSourceUrl pri posamezni enoti je URL, s katerega so bili pridobljeni njeni začetni podatki.",
+      "search": "Iskanje po univerzah, fakultetah in študijskih programih (imena smeri se najdejo prek njihovega študijskega programa). Zahteva iskalni niz (najmanj 2 znaka) ali vsaj en omejevalni filter (country, entity ali ownership). Ujema se z imenom, mestom, kratico, letom ustanovitve, ECTS/trajanjem, učnim jezikom programa (po njegovem imenu v katerem koli zajetem jeziku, npr. \"english\", \"engleski\", \"anglisht\") in imeni povezanih enot (ne glede na velike in male črke ali diakritične znake, vnos v latinici ali cirilici). Besede za lastništvo, študijsko stopnjo in trajanje delujejo v angleščini in v vsakem zajetem jeziku (npr. \"javna\", \"publik\", \"master\", \"3 vite\").",
+      "searchTermParam": "Besedilo za iskanje (2-100 znakov). Neobvezno, če je podan country, entity ali ownership.",
+      "pageParam": "Številka strani, od 1 naprej (privzeto 1).",
+      "limitParam": "Elementov na stran, 1-100 (privzeto 50).",
+      "getAllFaculties": "Vrne vse fakultete, razvrščene po imenu univerze in nato imenu fakultete. Podpira filtra country in entity. Vključuje nadrejeno univerzo.",
+      "getFacultyById": "Vrne fakulteto po ID z ugnezdenimi študijskimi programi in smermi ter nadrejeno univerzo.",
+      "getAllStudyPrograms": "Vrne vse študijske programe, razvrščene po stopnji in nato imenu. Podpira filtra country in entity. Vključuje nadrejeno fakulteto in univerzo.",
+      "getStudyProgramById": "Vrne študijski program po ID z njegovimi smermi, nadrejeno fakulteto in univerzo.",
+      "getAllTracks": "Vrne vse smeri, razvrščene po imenu študijskega programa in nato imenu smeri. Podpira filtra country in entity. Vključuje celotno verigo nadrejenih enot.",
+      "getTrackById": "Vrne smer po ID z njenim nadrejenim študijskim programom, fakulteto in univerzo.",
+      "countryParam": "Filtriranje po kodi države:",
+      "entityParam": "Filtriranje po entiteti, za države z upravnimi enotami:",
+      "ownershipParam": "Filtriranje po lastništvu: PUBLIC ali PRIVATE.",
+      "cycleParam": "Filtriranje po študijski stopnji. Sprejme več vrednosti (npr. cycle=FIRST&cycle=SECOND). Vrednosti: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
+      "typeParam": "Filter vrste rezultata: university, faculty ali studyProgram. Lahko se ponovi. Vsak razdelek vrne vsa ujemanja."
+    },
+    "githubReadme": "README na GitHubu"
+  },
+  "endpoint": {
+    "requestBody": "Telo zahteve",
+    "queryParameters": "Parametri poizvedbe",
+    "name": "Ime",
+    "required": "Obvezno",
+    "description": "Opis",
+    "yes": "Da",
+    "no": "Ne",
+    "successResponse": "Uspešen odgovor",
+    "errorResponses": "Odgovori z napako"
+  },
+  "contribution": {
+    "title": "Izboljšajte podatke",
+    "needUser": "Za predlaganje sprememb vsebine morate biti registriran uporabnik.",
+    "actions": "Dejanja",
+    "addNewData": "Predlagajte spremembe",
+    "addTree": "Dodajte univerzo ali fakulteto (JSON)",
+    "addTreeHint": "Na tem zavihku lahko naenkrat dodate celotno univerzo ali fakulteto z vsemi študijskimi programi in smermi, tako da prilepite ali naložite datoteko JSON.",
+    "pendingChanges": "Moji predlogi",
+    "noPendingChanges": "Nimate predlogov, ki bi čakali na pregled.",
+    "change": "Sprememba",
+    "comment": "Komentar za skrbnika",
+    "entityType": "Vrsta elementa",
+    "nestedInTree": "vključenih",
+    "user": "Uporabnik",
+    "contributor": "Prispevalec",
+    "entityTypes": {
+      "UNIVERSITY": "Univerza",
+      "FACULTY": "Fakulteta",
+      "STUDY_PROGRAM": "Študijski program",
+      "TRACK": "Smer"
+    },
+    "changeTypes": {
+      "CREATE": "Ustvari",
+      "UPDATE": "Posodobi",
+      "DELETE": "Izbriši"
+    },
+    "picker": {
+      "parent": "Kam naj se doda novi element?",
+      "target": "Kateri element želite spremeniti?",
+      "placeholder": "- izberite -",
+      "currentData": "Trenutni podatki",
+      "noChildren": {
+        "FACULTY": "Ni fakultet",
+        "STUDY_PROGRAM": "Ni študijskih programov",
+        "TRACK": "Ni smeri"
+      }
+    },
+    "dataFields": {
+      "name": "Ime",
+      "city": "Mesto",
+      "country": "Država",
+      "entity": "Entiteta",
+      "cycle": "Študijska stopnja",
+      "durationYears": "Trajanje (leta)",
+      "ects": "Kreditne točke ECTS",
+      "languages": "Jeziki",
+      "acronym": "Kratica",
+      "foundedYear": "Leto ustanovitve",
+      "website": "Spletna stran",
+      "address": "Naslov",
+      "phone": "Telefon",
+      "email": "E-pošta",
+      "ownership": "Lastništvo"
+    },
+    "cycles": {
+      "FIRST": "PRVA - dodiplomski",
+      "SECOND": "DRUGA - magistrski",
+      "THIRD": "TRETJA - doktorski",
+      "INTEGRATED": "ENOVITI - dodiplomski+magistrski",
+      "VOCATIONAL": "STROKOVNI",
+      "SPECIALIST": "SPECIALISTIČNI - specialistični študij"
+    },
+    "entities": {
+      "FBIH": "FBIH - Federacija BiH",
+      "RS": "RS - Republika Srbska",
+      "BD": "BD - Distrikt Brčko"
+    },
+    "submitSuggestion": "Pošlji predlog",
+    "deleteChange": "Umakni",
+    "dataLegend": "Podatki",
+    "tree": {
+      "jsonLabel": "Podatki JSON",
+      "loadFile": "Naloži datoteko .json",
+      "validate": "Preveri",
+      "invalidJson": "Besedilo ni veljaven JSON.",
+      "validationErrors": "Napake pri preverjanju",
+      "looksLikeUniversity": "To je videti kot celotna univerza. Vrsto elementa spremenite v Univerza.",
+      "preview": "Predogled"
+    },
+    "builder": {
+      "addFaculty": "Dodaj fakulteto",
+      "addStudyProgram": "Dodaj študijski program",
+      "addTrack": "Dodaj smer",
+      "remove": "Odstrani",
+      "unnamed": "Brez imena"
+    }
+  },
+  "admin": {
+    "needAdmin": "Za ogled skrbniške plošče morate biti skrbnik.",
+    "needLoginAndAdmin": "Za ogled skrbniške plošče morate biti prijavljeni in biti skrbnik.",
+    "dashboardTitle": "Skrbniška plošča",
+    "pendingChanges": "Čakajoče spremembe",
+    "noPendingChanges": "Trenutno ni čakajočih sprememb.",
+    "adminRequests": "Prošnje za skrbnika",
+    "noAdminRequests": "Trenutno ni prošenj za skrbnika.",
+    "requestedAt": "Zahtevano",
+    "proposedData": "Predlagani podatki",
+    "currentData": "Trenutni podatki",
+    "proposedChanges": "Predlagane spremembe",
+    "entityDeleted": "Ta element ne obstaja več",
+    "facultyCount": "Fakultete",
+    "studyProgramCount": "Študijski programi",
+    "trackCount": "Smeri",
+    "diff": {
+      "field": "Polje",
+      "current": "Trenutno",
+      "proposed": "Predlagano",
+      "cleared": "izbrisano",
+      "noChange": "brez spremembe"
+    }
+  },
+  "error": {
+    "notFound": "Tukaj ni ničesar.",
+    "generic": "Nekaj je šlo narobe.",
+    "goHome": "Na domačo stran",
+    "reload": "Ponovno naloži stran"
+  },
+  "footer": {
+    "name": "Goran Jović",
+    "email": "goran1010jovic@gmail.com",
+    "reportIssue": "Prijavite težavo"
+  },
+  "validation": {
+    "email": {
+      "invalid": "Vnesite veljaven e-poštni naslov"
+    },
+    "password": {
+      "minLength": "Geslo mora imeti vsaj 8 znakov",
+      "required": "Geslo je obvezno",
+      "allowedCharacters": "Geslo lahko vsebuje samo črke, številke, vezaje ali podčrtaje",
+      "requiresNumber": "Geslo mora vsebovati vsaj eno številko",
+      "mustMatch": "Geslo in potrditev gesla se morata ujemati"
+    }
+  },
+  "messages": {
+    "apiError": {
+      "rateLimited": "Preveč zahtev. Počakajte 15 minut in poskusite znova.",
+      "authRequired": "Za to morate biti prijavljeni. Prijavite se in poskusite znova.",
+      "forbidden": "Za to dejanje nimate dovoljenja.",
+      "alreadyAdmin": "Vlogo skrbnika že imate.",
+      "contributionLimit": "Na pregled vam čaka že 20 predlogov. Počakajte, da jih skrbnik pregleda.",
+      "noChanges": "Predlagani popravek se ujema s trenutnimi podatki - ni ničesar za spremeniti.",
+      "invalidResponse": "Strežnik je poslal podatke, ki jih stran ni mogla prebrati.",
+      "invalidMutationResponse": "Zahteva je bila izvedena, vendar odgovora strežnika ni bilo mogoče prebrati. Za ogled rezultata ponovno naložite stran."
+    },
+    "pendingChanges": {
+      "fetchError": "Pri nalaganju čakajočih sprememb je šlo nekaj narobe. Osvežite stran in poskusite znova."
+    },
+    "loginStatus": {
+      "error": "Stanja vaše prijave ni bilo mogoče preveriti. Osvežite stran in poskusite znova."
+    },
+    "auth": {
+      "loginFailed": "Prijava ni uspela. Preverite e-poštni naslov in geslo ter poskusite znova.",
+      "loginError": "Pri prijavi je šlo nekaj narobe. Čez trenutek poskusite znova.",
+      "loginSuccess": "Uspešno ste se prijavili.",
+      "registrationFailed": "Registracija ni uspela. Preverite svoje podatke in poskusite znova.",
+      "registrationError": "Pri registraciji je šlo nekaj narobe. Čez trenutek poskusite znova.",
+      "registrationSuccess": "Registracija je uspela! Preverite svojo e-pošto.",
+      "logoutFailed": "Odjava ni bila dokončana. Poskusite znova.",
+      "logoutError": "Pri odjavi je šlo nekaj narobe. Čez trenutek poskusite znova.",
+      "logoutSuccess": "Uspešno ste se odjavili.",
+      "resetRequestFailed": "Povezave za ponastavitev ni bilo mogoče poslati. Poskusite znova.",
+      "resetRequestError": "Pri zahtevi za povezavo za ponastavitev je šlo nekaj narobe. Čez trenutek poskusite znova.",
+      "resetFailed": "Ponastavitev gesla ni uspela. Poskusite znova.",
+      "resetSuccess": "Vaše geslo je ponastavljeno. Prijavite se z novim geslom.",
+      "resetError": "Pri ponastavitvi gesla je šlo nekaj narobe. Čez trenutek poskusite znova."
+    },
+    "admin": {
+      "approveSuccess": "Čakajoča sprememba je odobrena.",
+      "approveError": "Pri odobritvi čakajoče spremembe je šlo nekaj narobe. Poskusite znova.",
+      "declineSuccess": "Čakajoča sprememba je zavrnjena.",
+      "declineError": "Pri zavrnitvi čakajoče spremembe je šlo nekaj narobe. Poskusite znova."
+    },
+    "universities": {
+      "loadError": "Univerz ni bilo mogoče naložiti. Preverite povezavo in poskusite znova.",
+      "searchError": "Iskanje ni bilo dokončano. Čez trenutek poskusite znova.",
+      "detailsError": "Podrobnosti ni bilo mogoče naložiti. Čez trenutek poskusite znova.",
+      "addSuccess": "Predlog je poslan.",
+      "addError": "Pri pošiljanju predloga je šlo nekaj narobe. Poskusite znova.",
+      "deleteSuccess": "Čakajoča sprememba je umaknjena.",
+      "deleteError": "Pri umiku čakajoče spremembe je šlo nekaj narobe. Poskusite znova."
+    },
+    "adminRequest": {
+      "requestSuccess": "Zaprosili ste za skrbniški dostop. Skrbnik bo prošnjo pregledal.",
+      "requestError": "Pri prošnji za skrbniški dostop je šlo nekaj narobe. Poskusite znova.",
+      "cancelSuccess": "Prošnja za skrbnika je preklicana.",
+      "cancelError": "Pri preklicu prošnje za skrbnika je šlo nekaj narobe. Poskusite znova.",
+      "fetchError": "Prošenj za skrbnika ni bilo mogoče naložiti. Osvežite stran in poskusite znova.",
+      "approveSuccess": "Prošnja za skrbnika je odobrena.",
+      "approveError": "Pri odobritvi prošnje za skrbnika je šlo nekaj narobe. Poskusite znova.",
+      "declineSuccess": "Prošnja za skrbnika je zavrnjena.",
+      "declineError": "Pri zavrnitvi prošnje za skrbnika je šlo nekaj narobe. Poskusite znova."
+    }
+  },
+  "universitiesPage": {
+    "title": "Poiščite programe in univerze",
+    "searchIntro": "Iščite univerze, fakultete, študijske programe in smeri. Poskusite z imenom programa, mestom, državo, študijsko stopnjo, ECTS ali besedami, kot sta \"javna\" ali \"magistrski\".",
+    "browseAll": "Prebrskajte vse univerze",
+    "search": "Iskanje",
+    "searchAllPlaceholder": "npr. informatika, medicina Slovenija, magistrski 120 ECTS…",
+    "universitiesSection": "Univerze",
+    "facultiesSection": "Fakultete",
+    "studyProgramsSection": "Študijski programi",
+    "noResults": "Ni najdenih univerz.",
+    "noFacultyResults": "Ni najdenih fakultet.",
+    "noResultsAtAll": "Ni najdenih rezultatov.",
+    "searchResultsAnnouncement": "Rezultati iskanja:",
+    "countries": {
+      "ALB": "Albanija",
+      "BIH": "Bosna in Hercegovina",
+      "SRB": "Srbija",
+      "HRV": "Hrvaška",
+      "MKD": "Severna Makedonija",
+      "MNE": "Črna gora",
+      "SVN": "Slovenija",
+      "XKX": "Kosovo"
+    },
+    "entities": {
+      "FBIH": "Federacija BiH",
+      "RS": "Republika Srbska",
+      "BD": "Distrikt Brčko"
+    },
+    "faculties": "Fakultete",
+    "facultyCount": "fakultete",
+    "facultyCount_one": "fakulteta",
+    "facultyCount_two": "fakulteti",
+    "facultyCount_few": "fakultete",
+    "facultyCount_other": "fakultet",
+    "studyPrograms": "Študijski programi",
+    "studyProgramCount_one": "študijski program",
+    "studyProgramCount_two": "študijska programa",
+    "studyProgramCount_few": "študijski programi",
+    "studyProgramCount_other": "študijskih programov",
+    "trackCount_one": "smer",
+    "trackCount_two": "smeri",
+    "trackCount_few": "smeri",
+    "trackCount_other": "smeri",
+    "cycles": {
+      "FIRST": "Prva stopnja (dodiplomski)",
+      "SECOND": "Druga stopnja (magistrski)",
+      "THIRD": "Tretja stopnja (doktorski)",
+      "INTEGRATED": "Enoviti (dodiplomski + magistrski)",
+      "VOCATIONAL": "Strokovni",
+      "SPECIALIST": "Specialistični (specialistični študij)"
+    },
+    "ects": "ECTS",
+    "durationYears": "let",
+    "durationYears_one": "leto",
+    "durationYears_two": "leti",
+    "durationYears_few": "leta",
+    "durationYears_other": "let",
+    "noStudyPrograms": "Ni študijskih programov.",
+    "detailError": "Podatkov ni bilo mogoče naložiti.",
+    "retry": "Poskusi znova",
+    "noFaculties": "Ni fakultet.",
+    "foundedYear": "Ustanovljena",
+    "expand": "Razširi",
+    "hiddenTapToExpand": "skrito - tapnite za razširitev",
+    "collapse": "Strni",
+    "viewInfo": "Prikaži podatke",
+    "ownership": {
+      "PUBLIC": "Javna",
+      "PRIVATE": "Zasebna"
+    },
+    "clearSearch": "Počisti iskanje",
+    "countryFilter": "Država",
+    "allCountries": "Vse države",
+    "resetSearch": "Ponastavi",
+    "contextMatch": {
+      "university": "Najdena prek svojih fakultet ali študijskih programov",
+      "faculty": "Najdena prek svoje univerze ali študijskih programov",
+      "studyProgram": "Najden prek svoje fakultete, univerze ali smeri"
+    },
+    "showAllPrograms": "Prikaži vse študijske programe",
+    "openFullPage": "Odpri celotno stran",
+    "shareLink": "Deli povezavo",
+    "linkCopied": "Povezava je kopirana.",
+    "linkCopyFailed": "Povezave ni bilo mogoče kopirati.",
+    "dataSource": "Vir podatkov",
+    "improvePrompt": "Ste opazili netočnost?",
+    "improveLink": "Predlagajte popravek",
+    "improveLogin": "Prijavite se in predlagajte popravek"
+  },
+  "programLanguages": {
+    "bs": "bosanščina",
+    "hr": "hrvaščina",
+    "sr": "srbščina",
+    "cnr": "črnogorščina",
+    "sq": "albanščina",
+    "mk": "makedonščina",
+    "sl": "slovenščina",
+    "en": "angleščina",
+    "de": "nemščina",
+    "fr": "francoščina",
+    "it": "italijanščina",
+    "ru": "ruščina",
+    "tr": "turščina",
+    "ar": "arabščina",
+    "hu": "madžarščina",
+    "el": "grščina",
+    "es": "španščina"
+  },
+  "access": {
+    "goToLogin": "Prijava",
+    "goHome": "Na domačo stran"
+  },
+  "links": {
+    "opensInNewTab": "(odpre se v novem zavihku)"
+  },
+  "confirm": {
+    "cancel": "Prekliči",
+    "message": "Ali ste prepričani, da želite nadaljevati?"
+  },
+  "dialog": {
+    "close": "Zapri"
+  }
+}

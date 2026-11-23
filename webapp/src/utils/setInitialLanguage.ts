@@ -1,4 +1,4 @@
-const SYSTEM_LANGUAGES = ["en", "sr", "sq", "mk"] as const;
+const SYSTEM_LANGUAGES = ["en", "sr", "sq", "mk", "sl"] as const;
 
 export type SystemLanguage = (typeof SYSTEM_LANGUAGES)[number];
 
@@ -9,6 +9,7 @@ const LANGUAGE_TAGS: Record<SystemLanguage, string> = {
   sr: "sr-Latn",
   sq: "sq",
   mk: "mk",
+  sl: "sl",
 };
 
 // a browser language code's bundle; the sr bundle is written for Bosnian,
@@ -23,6 +24,7 @@ const BUNDLE_BY_CODE: Partial<Record<string, SystemLanguage>> = {
   sh: "sr",
   sq: "sq",
   mk: "mk",
+  sl: "sl",
 };
 
 function setSystemLanguage(): SystemLanguage {

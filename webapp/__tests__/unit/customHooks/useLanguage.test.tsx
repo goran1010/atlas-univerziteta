@@ -11,6 +11,7 @@ describe("useLanguage", () => {
     ["en", "en"],
     ["sq", "sq"],
     ["mk", "mk"],
+    ["sl", "sl"],
   ])("sets <html lang> for the %s bundle to %s", (language, tag) => {
     localStorage.setItem("language", language);
 
@@ -31,6 +32,23 @@ describe("useLanguage", () => {
       "vjet",
     );
     expect(localStorage.getItem("language")).toBe("sq");
+  });
+
+  test("counts in Slovenian with the dual", () => {
+    localStorage.setItem("language", "sl");
+
+    const { result } = renderHook(() => useLanguage());
+    const years = (count: number) =>
+      `${String(count)} ${result.current.tCount("universitiesPage.durationYears", count)}`;
+
+    expect([1, 2, 3, 5, 21, 102].map(years)).toEqual([
+      "1 leto",
+      "2 leti",
+      "3 leta",
+      "5 let",
+      "21 let",
+      "102 leti",
+    ]);
   });
 
   test("falls back to system for an unknown saved language", () => {

@@ -60,6 +60,15 @@ describe("setInitialLanguage", () => {
     },
   );
 
+  test.each(["sl", "sl-SI"])(
+    "maps browser locale %s to the sl bundle",
+    (locale) => {
+      setNavigatorLanguages([locale]);
+
+      expect(setSystemLanguage()).toBe("sl");
+    },
+  );
+
   test("takes the first preference the app has a bundle for", () => {
     setNavigatorLanguages(["de-DE", "hr-HR", "en"]);
     expect(setSystemLanguage()).toBe("sr");

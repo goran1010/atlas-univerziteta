@@ -35,10 +35,11 @@ describe("LanguageSwitcher", () => {
       "Language: SR",
       "Language: SQ",
       "Language: MK",
+      "Language: SL",
     ]);
   });
 
-  test.each<Language>(["system", "en", "sr", "sq", "mk"])(
+  test.each<Language>(["system", "en", "sr", "sq", "mk", "sl"])(
     "shows %s as the current choice",
     (language) => {
       const { select } = renderSwitcher(language);
@@ -51,6 +52,7 @@ describe("LanguageSwitcher", () => {
     { choice: "sr", message: "Switched to Serbian" },
     { choice: "sq", message: "Switched to Albanian" },
     { choice: "mk", message: "Switched to Macedonian" },
+    { choice: "sl", message: "Switched to Slovenian" },
     { choice: "system", message: "Switched to system language" },
   ])("sets $choice and announces it", async ({ choice, message }) => {
     const { select, setLanguage, addNotification } = renderSwitcher("en");
