@@ -24,7 +24,7 @@ describe("ResultGroup", () => {
   });
 
   test("collapsible group toggles its children", async () => {
-    const user = renderGroup({ collapsible: true });
+    const user = renderGroup({ collapsible: true, count: 6 });
 
     expect(screen.getByText("Computer Science")).toBeInTheDocument();
 
@@ -33,6 +33,27 @@ describe("ResultGroup", () => {
 
     await user.click(screen.getByRole("button", { name: /Expand/i }));
     expect(screen.getByText("Computer Science")).toBeInTheDocument();
+  });
+
+  test("hides the toggle on a group of five or fewer items", () => {
+    renderGroup({ collapsible: true, count: 5 });
+
+    expect(
+      screen.queryByRole("button", { name: /Collapse/i }),
+    ).not.toBeInTheDocument();
+    expect(screen.getByText("Computer Science")).toBeInTheDocument();
+  });
+
+  test("a small group that started collapsed can be collapsed again", async () => {
+    const user = renderGroup({
+      collapsible: true,
+      defaultCollapsed: true,
+      count: 2,
+    });
+
+    await user.click(screen.getByRole("button", { name: /Expand/i }));
+    await user.click(screen.getByRole("button", { name: /Collapse/i }));
+    expect(screen.queryByText("Computer Science")).not.toBeInTheDocument();
   });
 
   test("can start collapsed", async () => {
