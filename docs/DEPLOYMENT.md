@@ -81,12 +81,12 @@ The webapp shows a code it does not know yet as the bare code, so program pages 
 The interface has one translation bundle per language in `webapp/src/locales/`; the `sr` bundle serves Bosnian, Croatian, Montenegrin and Serbian readers.
 
 1. **Bundle** - copy `en.json` to `webapp/src/locales/<code>.json` and translate every value, keeping the keys. Every bundle is typed as `en.json`, so the typecheck fails while a key is missing. Counted words have `_one`, `_two`, `_few` and `_other` forms: fill each with the form the language uses, since `Intl.PluralRules` picks one per count
-2. **Language list** - in `webapp/src/utils/setInitialLanguage.ts`, add the code to `SYSTEM_LANGUAGES`, its BCP 47 tag to `LANGUAGE_TAGS` (with the script when the bare code means another one, as `sr-Latn` does), and the browser language codes that should get it to `BUNDLE_BY_CODE`; the language select shows it as its code in capitals
+2. **Language list** - in `webapp/src/utils/setInitialLanguage.ts`, add the code to `SYSTEM_LANGUAGES`, its BCP 47 tag to `LANGUAGE_TAGS` (with the script when the bare code means another one, as `sr-Latn` does), and the browser language codes that should get it to `BUNDLE_BY_CODE`; then, in `webapp/src/components/Navbar/LanguageSwitcher.tsx`, add the short code the language chip shows to `LANGUAGE_CODES` and the language's name in its own language to `LANGUAGE_NAMES`
 3. **Load it** - import the bundle into `translations` in `webapp/src/customHooks/useLanguage.ts`
 4. **Switch notice** - add `language.switched.<code>` to every bundle
 5. **Search** - add the language's name of every program language to `LANGUAGE_NAMES` in `server/src/search/languageNames.ts`, and its ownership, study cycle and duration words to `server/src/search/aliases.ts` and `server/src/search/tokenize.ts`
 6. **Fonts** - if the language needs characters the self-hosted Roboto subsets lack, add that subset to `webapp/public/fonts/` with a `@font-face` block and its `unicode-range` in `webapp/src/styles/index.css`
-7. **Tests** - add the code to the tests for `setInitialLanguage`, `useLanguage` and the language select
+7. **Tests** - add the code to the tests for `setInitialLanguage`, `useLanguage` and `LanguageSwitcher`
 8. **Review** - have a native speaker review the bundle before it is released
 9. **Verify** - run `npm run test:all` and open every page in the new language
 
