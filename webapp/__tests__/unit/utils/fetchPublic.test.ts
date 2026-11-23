@@ -3,6 +3,7 @@ import {
   fetchPublic,
   fetchPublicResponse,
 } from "../../../src/utils/fetchPublic";
+import { InvalidResponseError } from "../../../src/utils/parseResponse";
 
 import type { FetchPublicConfig } from "../../../src/utils/fetchPublic";
 
@@ -93,6 +94,29 @@ describe("fetchPublic", () => {
     expect(ctx.setLoading).toHaveBeenLastCalledWith(false);
   });
 
+  test("notifies without 'try again' and logs when a successful body does not fit the schema", async () => {
+    const errorSpy = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => vi.fn());
+    fetchMock.mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve({ data: { name: 42 } }),
+    });
+    const ctx = createCtx();
+
+    const result = await fetchPublic(createConfig(), ctx);
+
+    expect(result).toBeNull();
+    expect(ctx.addNotification).toHaveBeenCalledWith({
+      type: "error",
+      message: "messages.apiError.invalidResponse",
+    });
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error trying to load example:",
+      expect.any(InvalidResponseError),
+    );
+  });
+
   test("treats 404 as an expected state with quiet404", async () => {
     fetchMock.mockResolvedValue({
       ok: false,
@@ -128,5 +152,19 @@ describe("fetchPublicResponse", () => {
       status: 500,
       error: { code: "OOPS", message: "Broke." },
     });
+  });
+
+  test("throws an InvalidResponseError naming the path and field when a successful body does not fit", async () => {
+    fetchMock.mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve({ data: { name: 42 } }),
+    });
+
+    const request = fetchPublicResponse("/api/v1/example", responseSchema);
+
+    await expect(request).rejects.toThrow(InvalidResponseError);
+    await expect(request).rejects.toThrow(
+      /\/api\/v1\/example[\s\S]*data\.name/,
+    );
   });
 });

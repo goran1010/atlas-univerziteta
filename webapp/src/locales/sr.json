@@ -325,7 +325,9 @@
       "forbidden": "Nemate dozvolu za ovu radnju.",
       "alreadyAdmin": "Već imate admin ulogu.",
       "contributionLimit": "Već imate 20 prijedloga koji čekaju pregled. Sačekajte dok ih admin pregleda.",
-      "noChanges": "Predložena izmjena je ista kao trenutni podaci - nema šta da se mijenja."
+      "noChanges": "Predložena izmjena je ista kao trenutni podaci - nema šta da se mijenja.",
+      "invalidResponse": "Server je poslao podatke koje stranica ne može pročitati.",
+      "invalidMutationResponse": "Zahtjev je izvršen, ali odgovor servera nije moguće pročitati. Osvježite stranicu da vidite rezultat."
     },
     "pendingChanges": {
       "fetchError": "Došlo je do greške pri učitavanju izmjena na čekanju. Osvježite stranicu i pokušajte ponovo."

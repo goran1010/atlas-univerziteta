@@ -254,6 +254,7 @@ function AddTreeEntity({
         <input
           ref={fileInputRef}
           type="file"
+          name="treeFile"
           accept=".json,application/json"
           onChange={(e) => void handleFile(e)}
           className="hidden"

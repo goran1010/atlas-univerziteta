@@ -143,7 +143,7 @@ describe("ContributionDashboard", () => {
     ).toBeInTheDocument();
   });
 
-  test("rejects a malformed successful pending changes response", async () => {
+  test("says the data could not be read when a successful pending changes response is malformed", async () => {
     vi.spyOn(console, "error").mockImplementation(() => vi.fn());
     givenPendingChanges([{ id: "invalid-pending-change" }]);
     renderDashboard();
@@ -154,7 +154,7 @@ describe("ContributionDashboard", () => {
 
     expect(
       await screen.findByText(
-        /^Something went wrong while loading pending changes\. Refresh the page and try again\.$/i,
+        /^The server sent data the site could not read\.$/i,
       ),
     ).toBeInTheDocument();
     expect(

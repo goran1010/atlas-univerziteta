@@ -19,8 +19,9 @@
       "website": "http://www.arh.ukim.edu.mk",
       "address": "Bul. Partizanski odredi br. 24, 1000 Skopje",
       "phone": "+389 2 3116 328",
+      "email": "sekretar@arh.ukim.edu.mk",
       "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
-      "lastModified": "2026-11-16",
+      "lastModified": "2026-11-23",
       "studyPrograms": [
         {
           "name": "Arhitektura",
@@ -231,9 +232,8 @@
           "name": "E-biznis menadžment (dvogodišni)",
           "cycle": "SECOND",
           "durationYears": 2,
-          "ects": 60,
           "dataSourceUrl": "https://eccf.ukim.edu.mk/%D1%81%D1%82%D1%83%D0%B4%D0%B8%D0%B8/%D0%B2%D1%82%D0%BE%D1%80-%D1%86%D0%B8%D0%BA%D0%BB%D1%83%D1%81-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8-2/%D0%B5-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B8%D1%81-%D0%B4%D0%B2%D0%B5%D0%B3%D0%BE%D0%B4%D0%B8%D1%88%D0%BD%D0%B8/",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-23"
         },
         {
           "name": "E-biznis menadžment (ednogodišni)",
@@ -343,10 +343,11 @@
       "name": "Mašinski fakultet",
       "city": "Skopje",
       "website": "http://www.mf.ukim.edu.mk",
-      "address": "Karpoš II bb, 1000 Skopje",
+      "address": "Ul. Ruǵer Boškoviḱ br. 18, 1000 Skopje",
       "phone": "+389 2 3099 200",
-      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
-      "lastModified": "2026-11-16",
+      "email": "contact@mf.edu.mk",
+      "dataSourceUrl": "https://www.mf.ukim.edu.mk/mk/contact",
+      "lastModified": "2026-11-23",
       "studyPrograms": [
         {
           "name": "Avtomatizacija i upravuvački sistemi",
@@ -872,8 +873,8 @@
         {
           "name": "Meǵunarodni odnosi, diplomatija i evropski integracii",
           "cycle": "SECOND",
-          "dataSourceUrl": "http://pf.ukim.ediu.mk/politickistudii",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://pf.ukim.edu.mk/politichki-studii-2/",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Pravni studii",
@@ -1006,8 +1007,8 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "dataSourceUrl": "https://im-pmf.weebly.com/104010821090109110721088108910821072-1080-1092108010851072108510891080108910821072-1084107210901077108410721090108010821072.html",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://im.pmf.ukim.edu.mk/streams/view/21",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Astronomija i astrofizika",
@@ -1087,16 +1088,16 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "dataSourceUrl": "https://im-pmf.weebly.com/104010821088107710761080109010721094108011121072-201920201.html",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://im.pmf.ukim.edu.mk/streams/view/34",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Matematika - informatika",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "dataSourceUrl": "https://im-pmf.weebly.com/1052107210901077108410721090108010821072-10801085109210861088108410721090108010821072.html",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://im.pmf.ukim.edu.mk/streams/view/33",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Medicinska fizika",
@@ -1143,8 +1144,8 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "dataSourceUrl": "https://im-pmf.weebly.com/10531072108910901072107410851072-10841072109010771084107210901080108210721.html",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://im.pmf.ukim.edu.mk/streams/view/19",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Nutricionizam",
@@ -1183,8 +1184,8 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "dataSourceUrl": "https://im-pmf.weebly.com/105510881080108410771085107710901072-1084107210901077108410721090108010821072.html",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://im.pmf.ukim.edu.mk/streams/view/22",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Teoriska fizika",
@@ -1199,8 +1200,8 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "dataSourceUrl": "https://im-pmf.weebly.com/10581077108610881080108910821072-10841072109010771084107210901080108210721.html",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://im.pmf.ukim.edu.mk/streams/view/20",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Astronomija i astrofizika",
@@ -1299,16 +1300,16 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "dataSourceUrl": "http://im-pmf.weebly.com/10521072109010771084107210901080109510821080-10851072109110821080-1080-1087108810801084107710851080.html",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://im.pmf.ukim.edu.mk/streams/view/36",
+          "lastModified": "2026-11-23"
         },
         {
-          "name": "Matematičko obrazovanie vo osnovno i sredno učilište",
+          "name": "Matematičko obrazovanie",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "dataSourceUrl": "http://im-pmf.weebly.com/10521072109010771084107210901080109510821086-108610731088107210791086107410721085108010771.html",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://im.pmf.ukim.edu.mk/streams/view/27",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Medicinska fizika",
@@ -1383,16 +1384,16 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "dataSourceUrl": "http://im-pmf.weebly.com/105510881080108410771085107710901072-1084107210901077108410721090108010821072---105210571040105210521045.html",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://im.pmf.ukim.edu.mk/streams/view/28",
+          "lastModified": "2026-11-23"
         },
         {
-          "name": "Primeneta matematika-matematičko modeliranje i optimizacija",
+          "name": "Primeneta matematika - matematičko modeliranje i optimizacija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "dataSourceUrl": "http://im-pmf.weebly.com/105510881080108410771085107710901072-1084107210901077108410721090108010821072---mmo.html",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://im.pmf.ukim.edu.mk/streams/view/37",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Prostorno planiranje",
@@ -1785,8 +1786,9 @@
       "website": "http://www.fdtme.ukim.edu.mk/",
       "address": "Ul. 16-ta Makedonska brigada br. 3, 1000 Skopje",
       "phone": "+389 2 6154 660",
+      "email": "gruevski@fdtme.ukim.edu.mk",
       "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
-      "lastModified": "2026-11-16",
+      "lastModified": "2026-11-23",
       "studyPrograms": [
         {
           "name": "Dizajn na mebel i enterier",
@@ -2329,10 +2331,10 @@
         {
           "name": "Fitomedicina",
           "cycle": "SECOND",
-          "durationYears": 2,
+          "durationYears": 1,
           "ects": 60,
-          "dataSourceUrl": "https://ukim.edu.mk/studii/vtor-ciklus/fakultet-za-zemjodelski-nauki-i-hrana-studiski-programi-ii-ciklus/",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "http://www.fznh.ukim.edu.mk/studii/fitomedicina-magisterski",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Genetika i selekcija na hrana",
@@ -2345,10 +2347,10 @@
         {
           "name": "Kvalitet i bezbednost na hrana",
           "cycle": "SECOND",
-          "durationYears": 2,
+          "durationYears": 1,
           "ects": 60,
           "dataSourceUrl": "http://www.fznh.ukim.edu.mk/images/stories/studii/vtorciklus22/sp2022/8_6_23___kbh.pdf",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Lozarstvo i vinarstvo",
@@ -2391,12 +2393,12 @@
           "lastModified": "2026-11-17"
         },
         {
-          "name": "Održlivo ovoštarsko proivodstvo",
+          "name": "Održlivo ovoštarsko proizvodstvo",
           "cycle": "SECOND",
-          "durationYears": 2,
+          "durationYears": 1,
           "ects": 60,
-          "dataSourceUrl": "http://www.fznh.ukim.edu.mk/images/stories/studii/vtorciklus22/odrzlivoovostarskoproizvodstvo2__2022.pdf",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "http://www.fznh.ukim.edu.mk/studii/odrzhlivo-ovoshtarsko-proizvodstvo-magisterski",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Prerabotka na ovošje i zelenčuk",
@@ -2409,10 +2411,10 @@
         {
           "name": "Tehnologija na proizvodi od animalno poteklo i nutricionizam",
           "cycle": "SECOND",
-          "durationYears": 2,
+          "durationYears": 1,
           "ects": 60,
           "dataSourceUrl": "http://www.fznh.ukim.edu.mk/images/stories/studii/vtorciklus22/sp2022/animalnopoteklo.pdf",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Agroekonomika",
@@ -2457,9 +2459,10 @@
       "city": "Skopje",
       "website": "http://www.finki.ukim.mk/",
       "address": "Ul. Ruǵer Boškoviḱ 16, 1000 Skopje",
+      "phone": "+389 2 3070 377",
       "email": "contact@finki.ukim.mk",
-      "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
-      "lastModified": "2026-11-16",
+      "dataSourceUrl": "https://finki.ukim.mk/kontakt/",
+      "lastModified": "2026-11-23",
       "studyPrograms": [
         {
           "name": "Informatička edukacija",
@@ -2640,7 +2643,7 @@
       "phone": "+389 2 3066 779",
       "email": "info@flu.ukim.edu.mk",
       "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
-      "lastModified": "2026-11-16",
+      "lastModified": "2026-11-23",
       "studyPrograms": [
         {
           "name": "Grafika i transmediumski praktiki",
@@ -2675,28 +2678,36 @@
           "lastModified": "2026-11-17"
         },
         {
-          "name": "Studiska programa po grafika",
+          "name": "Slikarstvo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
           "dataSourceUrl": "http://www.flu.ukim.edu.mk/?p=6&i=idt-451",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-23"
         },
         {
-          "name": "Studiska programa po slikarstvo",
+          "name": "Grafika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
           "dataSourceUrl": "http://www.flu.ukim.edu.mk/?p=6&i=idt-451",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-23"
         },
         {
-          "name": "Studiska programa po vajarstvo",
+          "name": "Skulptura",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
           "dataSourceUrl": "http://www.flu.ukim.edu.mk/?p=6&i=idt-451",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Vizuelni komunikacii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "http://www.flu.ukim.edu.mk/?p=6&i=idt-451",
+          "lastModified": "2026-11-23"
         }
       ]
     },
@@ -3035,24 +3046,16 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "dataSourceUrl": "https://ffosz.ukim.edu.mk/nastaven-plan-vtor-cziklus-studii/#1587664667235-4a8dcb4a-0094",
-          "lastModified": "2026-11-17"
-        },
-        {
-          "name": "Sporstski turizam",
-          "cycle": "SECOND",
-          "durationYears": 1,
-          "ects": 60,
-          "dataSourceUrl": "https://ffosz.ukim.edu.mk/nastaven-plan-vtor-cziklus-studii/#1596360145379-6a77047b-3892",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://ffosz.ukim.edu.mk/",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Sportski menadžment",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "dataSourceUrl": "https://ffosz.ukim.edu.mk/nastaven-plan-vtor-cziklus-studii/#1548939030500-3a0b888d-9fd1",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://ffosz.ukim.edu.mk/",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Kineziologija",
@@ -3061,12 +3064,12 @@
           "lastModified": "2026-11-17"
         },
         {
-          "name": "Stručni studii za sportski treneri",
+          "name": "Sport",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "dataSourceUrl": "https://drive.google.com/drive/folders/1grphA_8bQl0WAMdH2zNdhxYFdJrS6XCS",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://ffosz.ukim.edu.mk/",
+          "lastModified": "2026-11-23"
         }
       ]
     },
@@ -3736,7 +3739,7 @@
       "phone": "+389 2 3240 400",
       "email": "dekanat@flf.ukim.edu.mk",
       "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
-      "lastModified": "2026-11-16",
+      "lastModified": "2026-11-23",
       "studyPrograms": [
         {
           "name": "Albanski jazik i kniževnost",
@@ -3932,52 +3935,142 @@
           ]
         },
         {
+          "name": "Makedonski jazik",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://flf.ukim.mk/%d0%bc%d0%b0%d0%ba%d0%b5%d0%b4%d0%be%d0%bd%d1%81%d0%ba%d0%b8-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%b2%d1%82%d0%be%d1%80-%d1%86%d0%b8%d0%ba%d0%bb%d1%83%d1%81-%d1%81%d1%82%d1%83%d0%b4%d0%b8%d0%b8/",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Makedonska kniževnost i kultura",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://flf.ukim.mk/%d0%bc%d0%b0%d0%ba%d0%b5%d0%b4%d0%be%d0%bd%d1%81%d0%ba%d0%b0-%d0%ba%d0%bd%d0%b8%d0%b6%d0%b5%d0%b2%d0%bd%d0%be%d1%81%d1%82-%d0%b2%d1%82%d0%be%d1%80-%d1%86%d0%b8%d0%ba%d0%bb%d1%83%d1%81/",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Nauka za jazik - Slavistika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://flf.ukim.mk/%d1%81%d0%bb%d0%b0%d0%b2%d0%b8%d1%81%d1%82%d0%b8%d0%ba%d0%b0-%d0%b2%d1%82%d0%be%d1%80-%d1%86%d0%b8%d0%ba%d0%bb%d1%83%d1%81/",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Nauka za jazik - Romanistika",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://flf.ukim.mk/%d1%80%d0%be%d0%bc%d0%b0%d0%bd%d0%b8%d1%81%d1%82%d0%b8%d0%ba%d0%b0-%d0%b2%d1%82%d0%be%d1%80-%d1%86%d0%b8%d0%ba%d0%bb%d1%83%d1%81-%d1%81%d1%82%d1%83%d0%b4%d0%b8%d0%b8/",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Nauka za jazik - Albanski jazik",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://flf.ukim.mk/%d0%b0%d0%bb%d0%b1%d0%b0%d0%bd%d1%81%d0%ba%d0%b8-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%bd%d0%b0%d1%83%d0%ba%d0%b0-%d0%b7%d0%b0-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%b2%d1%82%d0%be%d1%80-%d1%86%d0%b8%d0%ba/",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Nauka za jazik - Turski jazik",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://flf.ukim.mk/%d1%82%d1%83%d1%80%d1%81%d0%ba%d0%b8-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%bd%d0%b0%d1%83%d0%ba%d0%b0-%d0%b7%d0%b0-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%b2%d1%82%d0%be%d1%80-%d1%86%d0%b8%d0%ba%d0%bb%d1%83%d1%81",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Nauka za jazik - Germanski jazik",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://flf.ukim.mk/%d0%b3%d0%b5%d1%80%d0%bc%d0%b0%d0%bd%d1%81%d0%ba%d0%b8-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%bd%d0%b0%d1%83%d0%ba%d0%b0-%d0%b7%d0%b0-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%b2%d1%82%d0%be%d1%80-%d1%86%d0%b8",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Nauka za jazik - Angliski jazik",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://flf.ukim.mk/%d0%b0%d0%bd%d0%b3%d0%bb%d0%b8%d1%81%d0%ba%d0%b8-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%bd%d0%b0%d1%83%d0%ba%d0%b0-%d0%b7%d0%b0-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%b2%d1%82%d0%be%d1%80-%d1%86%d0%b8%d0%ba",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Slavistika i kulturološki studii",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://flf.ukim.mk/%d1%81%d0%bb%d0%b0%d0%b2%d0%b8%d1%81%d1%82%d0%b8%d0%ba%d0%b0-%d0%bd%d0%b0%d1%83%d0%ba%d0%b0-%d0%b7%d0%b0-%d0%ba%d0%bd%d0%b8%d0%b6%d0%b5%d0%b2%d0%bd%d0%be%d1%81%d1%82-%d0%b8-%d0%ba%d1%83%d0%bb%d1%82",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Nauka za kniževnost i kulturološki studii - Romanistika",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "dataSourceUrl": "https://flf.ukim.mk/%d1%80%d0%be%d0%bc%d0%b0%d0%bd%d0%b8%d1%81%d1%82%d0%b8%d0%ba%d0%b0-%d0%bd%d0%b0%d1%83%d0%ba%d0%b0-%d0%b7%d0%b0-%d0%ba%d0%bd%d0%b8%d0%b6%d0%b5%d0%b2%d0%bd%d0%be%d1%81%d1%82-%d0%b8-%d0%ba%d1%83%d0%bb",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Albanska kniževnost i kulturološki studii",
+          "cycle": "SECOND",
+          "dataSourceUrl": "https://flf.ukim.mk/%d0%b0%d0%bb%d0%b1%d0%b0%d0%bd%d1%81%d0%ba%d0%b8-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%ba%d1%83%d0%bb%d1%82%d1%83%d1%80%d0%be%d0%bb%d0%be%d1%88%d0%ba%d0%b8-%d1%81%d1%82%d1%83%d0%b4%d0%b8%d0%b8-%d0%b2",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Turska kniževnost i kulturološki studii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://flf.ukim.mk/%d1%82%d1%83%d1%80%d1%81%d0%ba%d0%b8-%d1%98%d0%b0%d0%b7%d0%b8%d0%ba-%d0%ba%d1%83%d0%bb%d1%82%d1%83%d1%80%d0%be%d0%bb%d0%be%d1%88%d0%ba%d0%b8-%d0%b2%d1%82%d0%be%d1%80-%d1%86%d0%b8%d0%ba%d0%bb%d1%83",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Germanska kniževnost i kulturološki studii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://flf.ukim.mk/%d0%b3%d0%b5%d1%80%d0%bc%d0%b0%d0%bd%d1%81%d0%ba%d0%b0-%d0%ba%d1%83%d0%bb%d1%82%d1%83%d1%80%d0%be%d0%bb%d0%be%d1%88%d0%ba%d0%b8-%d1%81%d1%82%d1%83%d0%b4%d0%b8%d0%b8",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Angliska kniževnost i kulturološki studii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://flf.ukim.mk/%d0%b0%d0%bd%d0%b3%d0%bb%d0%b8%d1%81%d0%ba%d0%b0-%d0%ba%d1%83%d0%bb%d1%82%d1%83%d1%80%d0%be%d0%bb%d0%be%d1%88%d0%ba%d0%b8-%d1%81%d1%82%d1%83%d0%b4%d0%b8%d0%b8-%d0%b2",
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Opšta i komparativna kniževnost",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "https://flf.ukim.mk/%d0%be%d0%ba%d0%ba-2-%d1%86%d0%b8%d0%ba%d0%bb%d1%83%d1%81-%d0%ba%d1%83%d0%bb%d1%82%d1%83%d1%80%d0%be%d0%bb%d0%be%d1%88%d0%ba%d0%b8-%d1%81%d1%82%d1%83%d0%b4%d0%b8%d0%b8",
+          "lastModified": "2026-11-23"
+        },
+        {
           "name": "Konferencisko tolkuvanje",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
           "dataSourceUrl": "https://flf.ukim.mk/wp-content/uploads/2020/05/Konferencisko-tolkuvanje_Vtor-ciklus_akreditirani-vo-2018-godina_FLF-WEB_v2.pdf",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-23",
+          "tracks": [
+            {
+              "name": "Dva jazika",
+              "dataSourceUrl": "https://flf.ukim.mk/%d0%ba%d0%be%d0%bd%d1%84%d0%b5%d1%80%d0%b5%d0%bd%d1%86%d0%b8%d1%81%d0%ba%d0%be-%d1%82%d0%be%d0%bb%d0%ba%d1%83%d0%b2%d0%b0%d1%9a%d0%b5",
+              "lastModified": "2026-11-23"
+            },
+            {
+              "name": "Samo B jazik",
+              "dataSourceUrl": "https://flf.ukim.mk/%d0%ba%d0%be%d0%bd%d1%84%d0%b5%d1%80%d0%b5%d0%bd%d1%86%d0%b8%d1%81%d0%ba%d0%be-%d1%82%d0%be%d0%bb%d0%ba%d1%83%d0%b2%d0%b0%d1%9a%d0%b5",
+              "lastModified": "2026-11-23"
+            }
+          ]
         },
         {
-          "name": "Makedonska kniževnost",
+          "name": "Didaktika i metodika na nastavata po germanski jazik",
           "cycle": "SECOND",
           "durationYears": 1,
-          "ects": 60,
-          "dataSourceUrl": "https://flf.ukim.mk/wp-content/uploads/2020/05/Makedonska-knizevnost_Vtor-ciklus_akreditirani-vo-2018-godina_FLF-WEB.pdf",
-          "lastModified": "2026-11-17"
+          "dataSourceUrl": "https://flf.ukim.mk/%d0%b4%d0%b8%d0%b4%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b0-%d0%b8-%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d0%b8%d0%ba%d0%b0-%d0%bd%d0%b0-%d0%bd%d0%b0%d1%81%d1%82%d0%b0%d0%b2%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b3-4/",
+          "lastModified": "2026-11-23"
         },
         {
-          "name": "Makedonski jazik",
+          "name": "Upravuvanje so evropski proekti so primena na stranski jazici",
           "cycle": "SECOND",
-          "durationYears": 1,
-          "ects": 60,
-          "dataSourceUrl": "https://flf.ukim.mk/wp-content/uploads/2020/05/Makedonski-jazik_Vtor-ciklus_akreditirani-vo-2018-godina_FLF-WEB.pdf",
-          "lastModified": "2026-11-17"
-        },
-        {
-          "name": "Naučna oblast: nauka za jazik na jazičnite grupi - angliski jazik - germanski jazik - romanistika (italijanski i francuski jazik) - slavistika - turski jazik - albanski jazik",
-          "cycle": "SECOND",
-          "durationYears": 1,
-          "ects": 60,
-          "dataSourceUrl": "https://flf.ukim.mk/wp-content/uploads/2020/05/Nauka-za-jazik_Vtor-ciklus_akreditirani-vo-2018-godina_FLF_WEB.pdf",
-          "lastModified": "2026-11-17"
-        },
-        {
-          "name": "Naučna oblast: nauka za kniževnost i kulturološki studii - angliska kniževnost i kulturološki studii - germanska kniževnost i kulturološki studii - romanistika (francuska i italijanska kniževnost) i kulturološki studii - slavistika i kulturološki studii - komparativna kniževnost i kulturološki studii - albanska kniževnost i kulturološki studii - turska kniževnost i kulturološki studii",
-          "cycle": "SECOND",
-          "durationYears": 1,
-          "ects": 60,
-          "dataSourceUrl": "https://flf.ukim.mk/wp-content/uploads/2020/05/%D0%9D%D0%B0%D1%83%D0%BA%D0%B0-%D0%B7%D0%B0-%D0%BA%D0%BD%D0%B8%D0%B6%D0%B5%D0%B2%D0%BD%D0%BE%D1%81%D1%82-%D0%B8-%D0%BA%D1%83%D0%BB%D1%82%D1%83%D1%80%D0%BE%D0%BB%D0%BE%D1%88%D0%BA%D0%B8-%D1%81%D1%82%D1%83%D0%B4%D0%B8%D0%B8-%D0%92%D1%82%D0%BE%D1%80-%D1%86%D0%B8%D0%BA%D0%BB%D1%83%D1%81-%D1%81%D1%82%D1%83%D0%B4%D0%B8%D0%B8-%D0%B0%D0%BA%D1%80%D0%B5%D0%B4%D0%B8%D1%82%D0%B8%D1%80%D0%B0%D0%BD%D0%B8-%D0%B2%D0%BE-2018-%D0%B3.pdf",
-          "lastModified": "2026-11-17"
-        },
-        {
-          "name": "Studii po didaktika i metodika na nastavata po germanski jazik",
-          "cycle": "SECOND",
-          "durationYears": 1,
-          "ects": 60,
-          "dataSourceUrl": "https://flf.ukim.mk/wp-content/uploads/2020/05/%D0%94%D0%B8%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-%D0%B8-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D0%B2%D0%B0%D1%82%D0%B0-%D0%BF%D0%BE-%D0%B3%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%B8-%D1%98%D0%B0%D0%B7%D0%B8%D0%BA-%D0%92%D1%82%D0%BE%D1%80-%D1%86%D0%B8%D0%BA%D0%BB%D1%83%D1%81-%D1%81%D1%82%D1%83%D0%B4%D0%B8%D0%B8-%D0%B0%D0%BA%D1%80%D0%B5%D0%B4%D0%B8%D1%82%D0%B8%D1%80%D0%B0%D0%BD%D0%B8-%D0%B2%D0%BE-2018.pdf",
-          "lastModified": "2026-11-17"
+          "durationYears": 2,
+          "ects": 120,
+          "dataSourceUrl": "https://flf.ukim.mk/upravuvanje-evropski-proekti-so-primena-na-stranski-jazici/",
+          "lastModified": "2026-11-23"
         },
         {
           "name": "Makedonistika - Makedonska kniževnost i kultura",

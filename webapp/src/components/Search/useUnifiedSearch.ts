@@ -8,17 +8,32 @@ import {
   SearchFailedError,
 } from "./utils/search";
 import { notificationMessage } from "../../utils/apiError";
+import { InvalidResponseError } from "../../utils/parseResponse";
 
 import { countrySchema } from "../../schemas/domain";
 
 import type { UnifiedSearchResults } from "../../schemas/university";
 import type { Country } from "../../schemas/domain";
+import type { TFunction } from "../../types";
 
 const SEARCH_DEBOUNCE_MS = 400;
 
 type ViewState =
   | { kind: "idle" }
   | { kind: "search"; results: UnifiedSearchResults; hadTerm: boolean };
+
+function searchErrorMessage(t: TFunction, error: unknown): string {
+  if (error instanceof InvalidResponseError) {
+    return t("messages.apiError.invalidResponse");
+  }
+  const serverError =
+    error instanceof SearchFailedError ? error.serverError : null;
+  return notificationMessage(
+    t,
+    "messages.universities.searchError",
+    serverError,
+  );
+}
 
 function useUnifiedSearch() {
   const { t } = use(RootContext);
@@ -73,13 +88,10 @@ function useUnifiedSearch() {
         setView({ kind: "search", results, hadTerm: term !== undefined });
       } catch (error) {
         if (controller.signal.aborted) return;
+        console.error("Error trying to search:", error);
         addNotification({
           type: "error",
-          message: notificationMessage(
-            t,
-            "messages.universities.searchError",
-            error instanceof SearchFailedError ? error.serverError : null,
-          ),
+          message: searchErrorMessage(t, error),
         });
       } finally {
         if (abortRef.current === controller) setLoading(false);

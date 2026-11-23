@@ -2,8 +2,6 @@ import { z } from "zod";
 
 import {
   countrySchema,
-  durationYearsSchema,
-  ectsSchema,
   entitySchema,
   integerSchema,
   ownershipSchema,
@@ -11,16 +9,24 @@ import {
   studyCycleSchema,
 } from "./domain";
 
+// Response schemas check types only. Input rules (non-empty names, 1-10
+// years, positive ECTS) stay with the contribution form, server validation
+// and seed: on read, one stored value outside them would fail the whole
+// response and hide every result in it.
 const optionalTextSchema = z
   .string()
   .nullish()
   .transform((value) => value ?? undefined);
 
+const optionalIntegerSchema = integerSchema
+  .nullish()
+  .transform((value) => value ?? undefined);
+
 const universitySchema = z.object({
   id: positiveIntegerSchema,
-  name: z.string().min(1),
+  name: z.string(),
   acronym: optionalTextSchema,
-  city: z.string().min(1),
+  city: z.string(),
   country: countrySchema,
   entity: entitySchema.nullish().transform((value) => value ?? undefined),
   ownership: ownershipSchema,
@@ -38,25 +44,21 @@ const universitySchema = z.object({
 
 const trackSchema = z.object({
   id: positiveIntegerSchema,
-  name: z.string().min(1),
+  name: z.string(),
   studyProgramId: positiveIntegerSchema,
-  ects: ectsSchema.nullish().transform((value) => value ?? undefined),
-  durationYears: durationYearsSchema
-    .nullish()
-    .transform((value) => value ?? undefined),
+  ects: optionalIntegerSchema,
+  durationYears: optionalIntegerSchema,
   dataSourceUrl: optionalTextSchema,
   lastModified: optionalTextSchema,
 });
 
 const studyProgramSchema = z.object({
   id: positiveIntegerSchema,
-  name: z.string().min(1),
+  name: z.string(),
   facultyId: positiveIntegerSchema,
   cycle: studyCycleSchema,
-  durationYears: durationYearsSchema
-    .nullish()
-    .transform((value) => value ?? undefined),
-  ects: ectsSchema.nullish().transform((value) => value ?? undefined),
+  durationYears: optionalIntegerSchema,
+  ects: optionalIntegerSchema,
   language: optionalTextSchema,
   dataSourceUrl: optionalTextSchema,
   lastModified: optionalTextSchema,
@@ -65,7 +67,7 @@ const studyProgramSchema = z.object({
 
 const facultySchema = z.object({
   id: positiveIntegerSchema,
-  name: z.string().min(1),
+  name: z.string(),
   universityId: positiveIntegerSchema,
   city: optionalTextSchema,
   website: optionalTextSchema,
@@ -103,9 +105,9 @@ const universityDetailResponseSchema = z.object({
 
 const searchResultUniversitySchema = z.object({
   id: positiveIntegerSchema,
-  name: z.string().min(1),
+  name: z.string(),
   acronym: optionalTextSchema,
-  city: z.string().min(1),
+  city: z.string(),
   country: countrySchema,
   entity: entitySchema.nullish().transform((value) => value ?? undefined),
   ownership: ownershipSchema,
@@ -113,29 +115,25 @@ const searchResultUniversitySchema = z.object({
 
 const studyProgramSearchResultSchema = z.object({
   id: positiveIntegerSchema,
-  name: z.string().min(1),
+  name: z.string(),
   facultyId: positiveIntegerSchema,
   cycle: studyCycleSchema,
-  ects: ectsSchema.nullish().transform((value) => value ?? undefined),
-  durationYears: durationYearsSchema
-    .nullish()
-    .transform((value) => value ?? undefined),
+  ects: optionalIntegerSchema,
+  durationYears: optionalIntegerSchema,
   tracks: z
     .array(
       z.object({
         id: positiveIntegerSchema,
-        name: z.string().min(1),
-        ects: ectsSchema.nullish().transform((value) => value ?? undefined),
-        durationYears: durationYearsSchema
-          .nullish()
-          .transform((value) => value ?? undefined),
+        name: z.string(),
+        ects: optionalIntegerSchema,
+        durationYears: optionalIntegerSchema,
       }),
     )
     .optional()
     .default([]),
   faculty: z.object({
     id: positiveIntegerSchema,
-    name: z.string().min(1),
+    name: z.string(),
     universityId: positiveIntegerSchema,
     university: searchResultUniversitySchema,
   }),
@@ -143,7 +141,7 @@ const studyProgramSearchResultSchema = z.object({
 
 const facultySearchResultSchema = z.object({
   id: positiveIntegerSchema,
-  name: z.string().min(1),
+  name: z.string(),
   universityId: positiveIntegerSchema,
   city: optionalTextSchema,
   website: optionalTextSchema,

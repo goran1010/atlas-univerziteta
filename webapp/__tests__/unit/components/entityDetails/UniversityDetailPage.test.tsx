@@ -6,6 +6,7 @@ import { UniversityDetailPage } from "../../../../src/components/entityDetails/U
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
+import { InvalidResponseError } from "../../../../src/utils/parseResponse";
 
 const universityDetail = {
   id: 1,
@@ -183,16 +184,23 @@ describe("UniversityDetailPage", () => {
     ).toBeInTheDocument();
   });
 
-  test("shows the error card when a successful response is malformed", async () => {
-    vi.spyOn(console, "error").mockImplementation(() => {
+  test("says the data could not be read, without a retry, when a successful response is malformed", async () => {
+    const errorSpy = vi.spyOn(console, "error").mockImplementation(() => {
       return;
     });
     givenUniversity({ id: 1, name: "University of Sarajevo" });
     renderPage();
 
     expect(
-      await screen.findByText("Could not load the data."),
+      await screen.findByText("The server sent data the site could not read."),
     ).toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: /Try again/i }),
+    ).not.toBeInTheDocument();
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error trying to load university details:",
+      expect.any(InvalidResponseError),
+    );
   });
 
   test("says there are no faculties when the university has none", async () => {

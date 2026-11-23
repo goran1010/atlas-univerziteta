@@ -37,6 +37,7 @@ function UnifiedSearch() {
           <input
             ref={inputRef}
             type="search"
+            name="q"
             value={searchInput}
             onChange={(e) => {
               handleInputChange(e.target.value);
@@ -61,6 +62,7 @@ function UnifiedSearch() {
       </div>
 
       <Select
+        name="country"
         aria-label={t("universitiesPage.countryFilter")}
         value={countryFilter}
         onChange={(e) => {

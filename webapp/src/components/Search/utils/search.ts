@@ -34,10 +34,7 @@ async function searchAll(
 
   if (outcome.ok) return outcome.result.data;
 
-  if (outcome.error) {
-    console.warn("Search failed:", outcome.error.message);
-  }
-  throw new SearchFailedError(outcome.error);
+  throw new SearchFailedError(outcome.status, outcome.error);
 }
 
 // the API's largest page; Browse All requests every page to list them all
@@ -62,10 +59,7 @@ async function fetchUniversityPage(
 
   if (outcome.ok) return outcome.result;
 
-  if (outcome.error) {
-    console.warn("Browse failed:", outcome.error.message);
-  }
-  throw new SearchFailedError(outcome.error);
+  throw new SearchFailedError(outcome.status, outcome.error);
 }
 
 async function browseUniversities(
@@ -95,8 +89,9 @@ async function browseUniversities(
 class SearchFailedError extends Error {
   readonly serverError: ApiError | null;
 
-  constructor(serverError: ApiError | null) {
-    super("Search failed");
+  constructor(status: number, serverError: ApiError | null) {
+    const details = serverError?.message ?? "no error details";
+    super(`Search failed with status ${String(status)}: ${details}`);
     this.name = "SearchFailedError";
     this.serverError = serverError;
   }

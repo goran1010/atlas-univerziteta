@@ -230,7 +230,7 @@ describe("handleSubmitUniversityEntity", () => {
     });
   });
 
-  test("does not call onSuccess when a successful response has invalid data", async () => {
+  test("warns that the suggestion went through, without onSuccess, when a successful response has invalid data", async () => {
     fetchMock.mockResolvedValue(
       createSuccessResponse({ id: "pending-change-1" }),
     );
@@ -248,8 +248,8 @@ describe("handleSubmitUniversityEntity", () => {
 
     expect(onSuccess).not.toHaveBeenCalled();
     expect(addNotification).toHaveBeenCalledWith({
-      type: "error",
-      message: "messages.universities.addError",
+      type: "warning",
+      message: "messages.apiError.invalidMutationResponse",
     });
     expect(consoleErrorSpy).toHaveBeenCalled();
   });

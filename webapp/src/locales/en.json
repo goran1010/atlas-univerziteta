@@ -325,7 +325,9 @@
       "forbidden": "You do not have permission for this action.",
       "alreadyAdmin": "You already have the admin role.",
       "contributionLimit": "You already have 20 suggestions awaiting review. Please wait until an admin reviews them.",
-      "noChanges": "The suggested edit matches the current data - nothing to change."
+      "noChanges": "The suggested edit matches the current data - nothing to change.",
+      "invalidResponse": "The server sent data the site could not read.",
+      "invalidMutationResponse": "The request went through, but the server's reply could not be read. Reload the page to see the result."
     },
     "pendingChanges": {
       "fetchError": "Something went wrong while loading pending changes. Refresh the page and try again."

@@ -1,6 +1,7 @@
 import { API_URL } from "./envConfig";
 import { readResponseError } from "../schemas/api";
 import { notificationMessage } from "./apiError";
+import { InvalidResponseError, parseResponse } from "./parseResponse";
 
 import type { z } from "zod";
 import type { RequestContext, TranslationKey } from "../types";
@@ -47,7 +48,7 @@ async function apiMutation<Schema extends z.ZodType>(
     const response = await fetch(`${API_URL}${path}`, options);
 
     if (response.ok) {
-      const result = responseSchema.parse(await response.json());
+      const result = parseResponse(path, responseSchema, await response.json());
       addNotification({
         type: "success",
         message: t(successMessageKey),
@@ -65,11 +66,20 @@ async function apiMutation<Schema extends z.ZodType>(
     });
     return null;
   } catch (error) {
+    console.error(`Error trying to ${logLabel}:`, error);
+    // the server already applied the request, so an error toast would
+    // invite a duplicate submission
+    if (error instanceof InvalidResponseError) {
+      addNotification({
+        type: "warning",
+        message: t("messages.apiError.invalidMutationResponse"),
+      });
+      return null;
+    }
     addNotification({
       type: "error",
       message: t(caughtErrorMessageKey),
     });
-    console.error(`Error trying to ${logLabel}:`, error);
     return null;
   } finally {
     setLoading(false);

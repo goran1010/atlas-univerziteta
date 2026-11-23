@@ -2,7 +2,7 @@ import { z } from "zod";
 
 const adminRequestSchema = z.object({
   id: z.string(),
-  email: z.email(),
+  email: z.string(),
   adminRequestedAt: z.string(),
   adminRequestReason: z.string().nullable().optional(),
 });

@@ -39,6 +39,12 @@ function FacultyDetailPage() {
 
   if (state.kind === "loading") return <Spinner page />;
 
+  if (state.kind === "invalidResponse") {
+    return (
+      <DetailPageStatus message={t("messages.apiError.invalidResponse")} />
+    );
+  }
+
   if (state.kind === "error") {
     return (
       <DetailPageStatus
