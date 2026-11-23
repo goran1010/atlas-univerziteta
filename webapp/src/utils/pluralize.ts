@@ -1,27 +1,22 @@
 import type { TFunction, TranslationKey } from "../types";
 
-type PluralForm = "one" | "few" | "other";
-
 type PluralBase<Key> = Key extends `${infer Base}_other` ? Base : never;
 type PluralKey = PluralBase<TranslationKey>;
+type TCountFunction = (key: PluralKey, count: number) => string;
 
-function slavicPluralForm(count: number): PluralForm {
-  const abs = Math.abs(count);
-  const lastDigit = abs % 10;
-  const lastTwoDigits = abs % 100;
+// Every bundle has a key's _one, _two, _few and _other forms, and each
+// language's plural rules pick the ones it uses: Slovenian needs all four
+// (2 is "two", 21 is "other"), BCS one/few/other, English, Albanian and
+// Macedonian one/other. No site language selects "zero" or "many".
+function createTCount(t: TFunction, languageTag: string): TCountFunction {
+  const rules = new Intl.PluralRules(languageTag);
 
-  if (lastDigit === 1 && lastTwoDigits !== 11) return "one";
-  if (
-    lastDigit >= 2 &&
-    lastDigit <= 4 &&
-    (lastTwoDigits < 12 || lastTwoDigits > 14)
-  )
-    return "few";
-  return "other";
+  return (key, count) => {
+    const form = rules.select(count);
+    const usedForm = form === "zero" || form === "many" ? "other" : form;
+    return t(`${key}_${usedForm}`);
+  };
 }
 
-function tCount(t: TFunction, key: PluralKey, count: number): string {
-  return t(`${key}_${slavicPluralForm(count)}`);
-}
-
-export { tCount };
+export { createTCount };
+export type { PluralKey, TCountFunction };

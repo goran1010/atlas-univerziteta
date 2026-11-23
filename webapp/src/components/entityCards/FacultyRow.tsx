@@ -1,11 +1,10 @@
 import { BookOpenIcon, MapPinIcon } from "../sharedComponents/icons";
 import { TextLink } from "../sharedComponents/TextLink";
-import { useState } from "react";
+import { use, useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
 import { LinkButton } from "../sharedComponents/LinkButton";
 import { Dialog } from "../sharedComponents/Dialog";
-import { tCount } from "../../utils/pluralize";
 import { LEVEL_GUIDE } from "../../utils/levelColors";
 import { ContactLinks } from "../entityDetails/ContactLinks";
 import { ShareButton } from "../entityDetails/ShareButton";
@@ -13,6 +12,8 @@ import { ResultGroup } from "../Search/ResultGroup";
 import { StudyProgramRow } from "./StudyProgramRow";
 import { byCycleDisplayOrder } from "../../utils/cycleOrder";
 import { groupBy } from "../../utils/groupBy";
+
+import { RootContext } from "../../contextData/RootContext";
 
 import type { TFunction } from "../../types";
 import type { UniversityDetailFaculty } from "../../schemas/university";
@@ -24,6 +25,7 @@ function FacultyRow({
   faculty: UniversityDetailFaculty;
   t: TFunction;
 }) {
+  const { tCount } = use(RootContext);
   const [open, setOpen] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
   const hasStudyPrograms = faculty.studyPrograms.length > 0;
@@ -53,7 +55,6 @@ function FacultyRow({
                 {faculty.studyPrograms.length}
               </span>{" "}
               {tCount(
-                t,
                 "universitiesPage.studyProgramCount",
                 faculty.studyPrograms.length,
               )}
@@ -113,7 +114,6 @@ function FacultyRow({
                   {faculty.studyPrograms.length}
                 </span>{" "}
                 {tCount(
-                  t,
                   "universitiesPage.studyProgramCount",
                   faculty.studyPrograms.length,
                 )}
@@ -153,7 +153,6 @@ function FacultyRow({
               {faculty.studyPrograms.length}
             </span>{" "}
             {tCount(
-              t,
               "universitiesPage.studyProgramCount",
               faculty.studyPrograms.length,
             )}

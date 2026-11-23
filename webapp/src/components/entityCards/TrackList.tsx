@@ -1,5 +1,7 @@
-import { tCount } from "../../utils/pluralize";
+import { use } from "react";
 import { LEVEL_TEXT } from "../../utils/levelColors";
+
+import { RootContext } from "../../contextData/RootContext";
 
 import type { TFunction } from "../../types";
 
@@ -21,6 +23,7 @@ function TrackList({
   t: TFunction;
   highlightedTrackId?: string | null;
 }) {
+  const { tCount } = use(RootContext);
   if (tracks.length === 0) return null;
 
   const trackMeta = (track: TrackListItem) => {
@@ -31,7 +34,6 @@ function TrackList({
     if (track.durationYears != null) {
       parts.push(
         `${track.durationYears.toString()} ${tCount(
-          t,
           "universitiesPage.durationYears",
           track.durationYears,
         )}`,
@@ -44,7 +46,7 @@ function TrackList({
     <p className="text-sm text-(--text-secondary) mt-1 leading-relaxed">
       <span className="text-xs font-semibold uppercase tracking-wide text-(--text-muted)">
         <span className={LEVEL_TEXT.TRACK}>{tracks.length}</span>{" "}
-        {tCount(t, "universitiesPage.trackCount", tracks.length)}:
+        {tCount("universitiesPage.trackCount", tracks.length)}:
       </span>{" "}
       {tracks.map((track, index) => (
         <span key={track.id}>

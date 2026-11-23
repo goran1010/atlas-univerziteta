@@ -1,8 +1,10 @@
+import { use } from "react";
 import { AwardIcon, ClockIcon, SpeechIcon } from "../sharedComponents/icons";
 import { TextLink } from "../sharedComponents/TextLink";
-import { tCount } from "../../utils/pluralize";
 import { programLanguageNames } from "../../utils/programLanguageNames";
 import { TrackList } from "./TrackList";
+
+import { RootContext } from "../../contextData/RootContext";
 
 import type { TFunction } from "../../types";
 import type { UniversityDetailStudyProgram } from "../../schemas/university";
@@ -16,6 +18,7 @@ function StudyProgramRow({
   facultyId: number;
   t: TFunction;
 }) {
+  const { tCount } = use(RootContext);
   const hasTracks = program.tracks.length > 0;
 
   return (
@@ -33,7 +36,6 @@ function StudyProgramRow({
               <span>
                 <ClockIcon /> {program.durationYears}{" "}
                 {tCount(
-                  t,
                   "universitiesPage.durationYears",
                   program.durationYears,
                 )}

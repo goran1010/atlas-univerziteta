@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import en from "../locales/en.json";
 import sr from "../locales/sr.json";
 import { LANGUAGE_TAGS, setSystemLanguage } from "../utils/setInitialLanguage";
+import { createTCount } from "../utils/pluralize";
 import type { SystemLanguage } from "../utils/setInitialLanguage";
 import type { Language, TFunction } from "../types";
 
@@ -55,7 +56,12 @@ function useLanguage() {
     [resolvedLanguage],
   );
 
-  return { language, setLanguage, t };
+  const tCount = useMemo(
+    () => createTCount(t, LANGUAGE_TAGS[resolvedLanguage]),
+    [t, resolvedLanguage],
+  );
+
+  return { language, setLanguage, t, tCount };
 }
 
 export { useLanguage };

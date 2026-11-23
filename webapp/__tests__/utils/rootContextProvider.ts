@@ -27,7 +27,7 @@ function RootContextProvider({
   initialUserData = null,
   rootValue = {},
 }: RootContextProviderProps) {
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage, t, tCount } = useLanguage();
   const [userData, setUserData] = useState(initialUserData);
   const { notifications, addNotification, removeNotification } =
     useNotification();
@@ -43,6 +43,7 @@ function RootContextProvider({
     language,
     setLanguage,
     t,
+    tCount,
     userData,
     setUserData,
     ...rootOverrides,

@@ -12,7 +12,6 @@ import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
 import { ImproveDataLink } from "./ImproveDataLink";
-import { tCount } from "../../utils/pluralize";
 import { universityDetailResponseSchema } from "../../schemas/university";
 import { useEntityDetail } from "../../customHooks/useEntityDetail";
 import { UniversityMetaRow } from "../entityCards/UniversityMeta";
@@ -23,7 +22,7 @@ import { SITE_URL } from "../../utils/envConfig";
 
 function UniversityDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const { t } = use(RootContext);
+  const { t, tCount } = use(RootContext);
   const { state, retry } = useEntityDetail(
     `/api/v1/universities/${id ?? ""}`,
     universityDetailResponseSchema,
@@ -150,7 +149,6 @@ function UniversityDetailPage() {
                 {university.faculties.length}
               </span>{" "}
               {tCount(
-                t,
                 "universitiesPage.facultyCount",
                 university.faculties.length,
               )}
@@ -178,7 +176,6 @@ function UniversityDetailPage() {
                         <span className="text-(--text-muted)">
                           {faculty.studyPrograms.length}{" "}
                           {tCount(
-                            t,
                             "universitiesPage.studyProgramCount",
                             faculty.studyPrograms.length,
                           )}

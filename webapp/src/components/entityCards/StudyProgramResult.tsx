@@ -1,3 +1,4 @@
+import { use } from "react";
 import { TextLink } from "../sharedComponents/TextLink";
 import {
   AwardIcon,
@@ -7,7 +8,8 @@ import {
 import { ResultCard } from "./ResultCard";
 import { FacultyBreadcrumb } from "../entityDetails/FacultyBreadcrumb";
 import { TrackList } from "./TrackList";
-import { tCount } from "../../utils/pluralize";
+
+import { RootContext } from "../../contextData/RootContext";
 
 import type { TFunction } from "../../types";
 import type { StudyProgramSearchResult } from "../../schemas/university";
@@ -21,6 +23,7 @@ function StudyProgramResult({
   t: TFunction;
   contextHint?: string | undefined;
 }) {
+  const { tCount } = use(RootContext);
   return (
     <ResultCard level="STUDY_PROGRAM">
       <h3 className="font-bold">
@@ -43,7 +46,7 @@ function StudyProgramResult({
         {program.durationYears != null && (
           <span>
             <ClockIcon /> {program.durationYears}{" "}
-            {tCount(t, "universitiesPage.durationYears", program.durationYears)}
+            {tCount("universitiesPage.durationYears", program.durationYears)}
           </span>
         )}
       </div>
