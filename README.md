@@ -2,7 +2,7 @@
 
 **English** | [Bosanski / Hrvatski / Srpski](#bosanski--hrvatski--srpski)
 
-An open-source directory of higher-education data for Bosnia and Herzegovina, Serbia, Croatia, Montenegro, Albania, North Macedonia, Slovenia, and Kosovo: a public REST API, a searchable webapp, and an authenticated contribution workflow with admin moderation.
+An open-source directory of higher-education data for Bosnia and Herzegovina, Serbia, Croatia, Montenegro, Albania, North Macedonia, Slovenia, and Kosovo - a public REST API, a searchable webapp, and an authenticated contribution workflow with admin moderation.
 
 - Live webapp: <https://atlasuniverziteta.com/>
 - Live REST API: <https://api.atlasuniverziteta.com/>
@@ -10,7 +10,7 @@ An open-source directory of higher-education data for Bosnia and Herzegovina, Se
 
 ![Atlas Univerziteta](./webapp/public/images/og-images/og-image-home.png)
 
-The data is modeled as a nested academic hierarchy: university, its faculties, and their study programs - each program carrying its tracks (smjerovi) as part of its data.
+The data is modeled as a nested academic hierarchy: university, its faculties, and their study programs - each program carrying its tracks as part of its data.
 
 ## Features
 
