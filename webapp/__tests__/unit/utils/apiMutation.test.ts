@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { apiMutation } from "../../../src/utils/apiMutation";
+import { InvalidResponseError } from "../../../src/utils/parseResponse";
 
 import type { RequestContext } from "../../../src/types";
 import type { ApiMutationConfig } from "../../../src/utils/apiMutation";
@@ -151,7 +152,7 @@ describe("apiMutation", () => {
     expect(ctx.setLoading).toHaveBeenLastCalledWith(false);
   });
 
-  test("returns null when a successful response is malformed", async () => {
+  test("warns that the request went through when a successful response is malformed", async () => {
     fetchMock.mockResolvedValue({
       ok: true,
       json: () => Promise.resolve({}),
@@ -164,11 +165,15 @@ describe("apiMutation", () => {
     const result = await apiMutation(createConfig(), ctx);
 
     expect(result).toBeNull();
+    expect(ctx.addNotification).toHaveBeenCalledTimes(1);
     expect(ctx.addNotification).toHaveBeenCalledWith({
-      type: "error",
-      message: "messages.universities.addError",
+      type: "warning",
+      message: "messages.apiError.invalidMutationResponse",
     });
-    expect(consoleErrorSpy).toHaveBeenCalled();
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      "Error trying to run example action:",
+      expect.any(InvalidResponseError),
+    );
   });
 
   test("uses the caught-error message when the request throws", async () => {
