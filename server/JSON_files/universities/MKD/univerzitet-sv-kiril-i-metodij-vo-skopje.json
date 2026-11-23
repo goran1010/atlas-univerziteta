@@ -2643,7 +2643,7 @@
       "phone": "+389 2 3066 779",
       "email": "info@flu.ukim.edu.mk",
       "dataSourceUrl": "https://ukim.edu.mk/sostav/fakulteti/",
-      "lastModified": "2026-11-16",
+      "lastModified": "2026-11-23",
       "studyPrograms": [
         {
           "name": "Grafika i transmediumski praktiki",
@@ -2678,28 +2678,36 @@
           "lastModified": "2026-11-17"
         },
         {
-          "name": "Studiska programa po grafika",
+          "name": "Slikarstvo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
           "dataSourceUrl": "http://www.flu.ukim.edu.mk/?p=6&i=idt-451",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-23"
         },
         {
-          "name": "Studiska programa po slikarstvo",
+          "name": "Grafika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
           "dataSourceUrl": "http://www.flu.ukim.edu.mk/?p=6&i=idt-451",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-23"
         },
         {
-          "name": "Studiska programa po vajarstvo",
+          "name": "Skulptura",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
           "dataSourceUrl": "http://www.flu.ukim.edu.mk/?p=6&i=idt-451",
-          "lastModified": "2026-11-17"
+          "lastModified": "2026-11-23"
+        },
+        {
+          "name": "Vizuelni komunikacii",
+          "cycle": "SECOND",
+          "durationYears": 1,
+          "ects": 60,
+          "dataSourceUrl": "http://www.flu.ukim.edu.mk/?p=6&i=idt-451",
+          "lastModified": "2026-11-23"
         }
       ]
     },
