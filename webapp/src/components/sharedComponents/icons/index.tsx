@@ -25,4 +25,9 @@ export {
   SunIcon,
   MoonIcon,
   MonitorIcon,
+  InfoIcon,
+  CodeIcon,
+  PencilIcon,
+  LogInIcon,
+  UserIcon,
 } from "./ui";

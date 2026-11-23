@@ -165,6 +165,108 @@ function MonitorIcon({ className = "" }: { className?: string }) {
   );
 }
 
+function InfoIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      height="1em"
+      width="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`inline align-[-0.125em] ${className}`}
+    >
+      <circle cx="12" cy="12" r="10" />
+      <line x1="12" y1="16" x2="12" y2="12" />
+      <line x1="12" y1="8" x2="12.01" y2="8" />
+    </svg>
+  );
+}
+
+function CodeIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      height="1em"
+      width="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`inline align-[-0.125em] ${className}`}
+    >
+      <polyline points="16 18 22 12 16 6" />
+      <polyline points="8 6 2 12 8 18" />
+    </svg>
+  );
+}
+
+function PencilIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      height="1em"
+      width="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`inline align-[-0.125em] ${className}`}
+    >
+      <path d="M12 20h9" />
+      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+    </svg>
+  );
+}
+
+function LogInIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      height="1em"
+      width="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`inline align-[-0.125em] ${className}`}
+    >
+      <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+      <polyline points="10 17 15 12 10 7" />
+      <line x1="15" y1="12" x2="3" y2="12" />
+    </svg>
+  );
+}
+
+function UserIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      height="1em"
+      width="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`inline align-[-0.125em] ${className}`}
+    >
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
+  );
+}
+
 export {
   SearchIcon,
   XIcon,
@@ -174,4 +276,9 @@ export {
   SunIcon,
   MoonIcon,
   MonitorIcon,
+  InfoIcon,
+  CodeIcon,
+  PencilIcon,
+  LogInIcon,
+  UserIcon,
 };
