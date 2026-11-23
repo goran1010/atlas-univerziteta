@@ -180,20 +180,16 @@ describe("render Navbar mobile menu", () => {
     ).toBeInTheDocument();
   });
 
-  test("keeps the menu open while a theme is picked from it", async () => {
+  test("keeps the theme and language selects in the bar, not the menu", async () => {
     render(<NavbarWrapper withUser={false} />);
 
-    const { menuButton, mobileMenu } = await openMobileMenu();
-    const themeSelect = within(mobileMenu).getByRole("combobox", {
-      name: "Theme",
-    });
+    const { mobileMenu } = await openMobileMenu();
 
-    await userEvent.click(themeSelect);
-    await userEvent.selectOptions(themeSelect, "dark");
-
-    expect(localStorage.getItem("theme")).toBe("dark");
-    expect(menuButton).toHaveAttribute("aria-expanded", "true");
-    expect(mobileMenu).toBeInTheDocument();
+    expect(screen.getByRole("combobox", { name: "Theme" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("combobox", { name: "Language" }),
+    ).toBeInTheDocument();
+    expect(within(mobileMenu).queryByRole("combobox")).not.toBeInTheDocument();
   });
 
   test("hides user-only links when user is not logged in", async () => {

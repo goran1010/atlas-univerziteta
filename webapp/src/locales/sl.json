@@ -41,14 +41,14 @@
     "dismiss": "Zapri obvestilo"
   },
   "theme": {
-    "system": "Samodejno",
+    "system": "Sistemska",
     "light": "Svetla",
     "dark": "Temna"
   },
   "language": {
-    "system": "Samodejno",
+    "system": "Sistemski",
     "switched": {
-      "system": "Preklopljeno na Samodejno (jezik brskalnika)",
+      "system": "Preklopljeno na sistemski jezik",
       "en": "Preklopljeno na angleščino",
       "sr": "Preklopljeno na bosanščino/hrvaščino/srbščino",
       "sq": "Preklopljeno na albanščino",

@@ -1,21 +1,25 @@
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
-import { Select } from "../sharedComponents/Select";
-import { SYSTEM_LANGUAGES } from "../../utils/setInitialLanguage";
+import { SwitcherChip } from "./SwitcherChip";
+import { GlobeIcon } from "../sharedComponents/icons";
+import {
+  LANGUAGE_TAGS,
+  SYSTEM_LANGUAGES,
+} from "../../utils/setInitialLanguage";
 
 import type { Language, SetLanguage } from "../../types";
 import type { SystemLanguage } from "../../utils/setInitialLanguage";
 
 const LANGUAGE_OPTIONS: Language[] = ["system", ...SYSTEM_LANGUAGES];
 
-// "sr" is the one interface for Bosnian, Croatian, and Serbian
-const LANGUAGE_CODES: Record<SystemLanguage, string> = {
-  en: "EN",
-  sr: "BHS",
-  sq: "SQ",
-  mk: "MK",
-  sl: "SL",
+// each language by its own name, the same in every interface
+const LANGUAGE_NAMES: Record<SystemLanguage, string> = {
+  en: "English",
+  sr: "Bosanski / Hrvatski / Srpski",
+  sq: "Shqip",
+  mk: "Македонски",
+  sl: "Slovenščina",
 };
 
 function LanguageSwitcher({
@@ -30,10 +34,9 @@ function LanguageSwitcher({
   const label = t("nav.language");
 
   return (
-    <Select
+    <SwitcherChip
       id="language-switcher"
       aria-label={label}
-      compact
       value={language}
       onChange={(e) => {
         const next = LANGUAGE_OPTIONS.find(
@@ -46,14 +49,25 @@ function LanguageSwitcher({
           message: t(`language.switched.${next}`),
         });
       }}
+      face={
+        <>
+          <GlobeIcon className="text-base" />
+          {label}
+        </>
+      }
     >
-      {LANGUAGE_OPTIONS.map((option) => (
-        <option key={option} value={option}>
-          {label}:{" "}
-          {option === "system" ? t("language.system") : LANGUAGE_CODES[option]}
-        </option>
-      ))}
-    </Select>
+      {LANGUAGE_OPTIONS.map((option) =>
+        option === "system" ? (
+          <option key={option} value={option}>
+            {t("language.system")}
+          </option>
+        ) : (
+          <option key={option} value={option} lang={LANGUAGE_TAGS[option]}>
+            {LANGUAGE_NAMES[option]}
+          </option>
+        ),
+      )}
+    </SwitcherChip>
   );
 }
 

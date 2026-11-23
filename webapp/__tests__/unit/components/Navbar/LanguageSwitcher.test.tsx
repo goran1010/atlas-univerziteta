@@ -23,20 +23,33 @@ function renderSwitcher(language: Language) {
 }
 
 describe("LanguageSwitcher", () => {
-  test("lists each language by its code after the select's name", () => {
+  test("lists each language by its own name, tagged with its language", () => {
     const { select } = renderSwitcher("en");
 
     expect(select).toHaveAccessibleName("Language");
-    expect(
-      screen.getAllByRole("option").map((option) => option.textContent),
-    ).toEqual([
-      "Language: Auto",
-      "Language: EN",
-      "Language: BHS",
-      "Language: SQ",
-      "Language: MK",
-      "Language: SL",
+    const options = screen.getAllByRole("option");
+    expect(options.map((option) => option.textContent)).toEqual([
+      "System",
+      "English",
+      "Bosanski / Hrvatski / Srpski",
+      "Shqip",
+      "Македонски",
+      "Slovenščina",
     ]);
+    expect(options.map((option) => option.getAttribute("lang"))).toEqual([
+      null,
+      "en",
+      "sr-Latn",
+      "sq",
+      "mk",
+      "sl",
+    ]);
+  });
+
+  test("shows the select's name on its chip", () => {
+    renderSwitcher("sr");
+
+    expect(screen.getByText("Language")).toBeInTheDocument();
   });
 
   test.each<Language>(["system", "en", "sr", "sq", "mk", "sl"])(
@@ -53,7 +66,7 @@ describe("LanguageSwitcher", () => {
     { choice: "sq", message: "Switched to Albanian" },
     { choice: "mk", message: "Switched to Macedonian" },
     { choice: "sl", message: "Switched to Slovenian" },
-    { choice: "system", message: "Switched to Auto (your browser's language)" },
+    { choice: "system", message: "Switched to system language" },
   ])("sets $choice and announces it", async ({ choice, message }) => {
     const { select, setLanguage, addNotification } = renderSwitcher("en");
 

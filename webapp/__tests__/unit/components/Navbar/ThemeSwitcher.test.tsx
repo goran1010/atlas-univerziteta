@@ -24,15 +24,16 @@ function renderSwitcher() {
 }
 
 describe("ThemeSwitcher", () => {
-  test("names its purpose in every option and shows the current theme", () => {
+  test("lists the themes and shows the current one on its chip", () => {
     localStorage.setItem("theme", "dark");
     const { select } = renderSwitcher();
 
     expect(select).toHaveAccessibleName("Theme");
     expect(
       screen.getAllByRole("option").map((option) => option.textContent),
-    ).toEqual(["Theme: Auto", "Theme: Light", "Theme: Dark"]);
+    ).toEqual(["System", "Light", "Dark"]);
     expect(select).toHaveValue("dark");
+    expect(screen.getByText("Theme")).toBeInTheDocument();
   });
 
   test.each([

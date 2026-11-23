@@ -41,14 +41,14 @@
     "dismiss": "Mbyll njoftimin"
   },
   "theme": {
-    "system": "Auto",
+    "system": "Sistemi",
     "light": "E çelët",
     "dark": "E errët"
   },
   "language": {
-    "system": "Auto",
+    "system": "Sistemi",
     "switched": {
-      "system": "U kalua në Auto (gjuha e shfletuesit)",
+      "system": "U kalua në gjuhën e sistemit",
       "en": "U kalua në anglisht",
       "sr": "U kalua në boshnjakisht/kroatisht/serbisht",
       "sq": "U kalua në shqip",

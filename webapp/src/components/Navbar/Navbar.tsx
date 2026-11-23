@@ -55,7 +55,7 @@ function Navbar({ closeMenu }: { closeMenu: UseCloseMenu }) {
       <Link
         to="/"
         aria-label={t("title.app")}
-        className="flex shrink-0 items-center gap-2 rounded-lg px-1 py-1 text-[0.9375rem] sm:text-base lg:text-lg hover:text-(--accent-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+        className="flex shrink-0 items-center gap-2 rounded-lg px-1 py-1 lg:text-lg hover:text-(--accent-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
       >
         <img
           src="/images/favicons/favicon.svg"
@@ -64,17 +64,15 @@ function Navbar({ closeMenu }: { closeMenu: UseCloseMenu }) {
           width={28}
           height={28}
         />
-        <span className="hidden min-[360px]:inline lg:hidden xl:inline">
+        <span className="hidden sm:inline lg:hidden xl:inline">
           {t("title.app")}
         </span>
       </Link>
 
       <StandardMenu setIsMenuOpen={setIsMenuOpen} userData={userData} />
 
-      <div className="ml-auto flex min-w-0 items-center gap-1 sm:gap-2">
-        <div className="hidden sm:flex">
-          <ThemeSwitcher />
-        </div>
+      <div className="ml-auto flex flex-1 items-center gap-1 sm:flex-none sm:gap-2">
+        <ThemeSwitcher />
         <LanguageSwitcher setLanguage={setLanguage} language={language} />
       </div>
     </nav>

@@ -41,14 +41,14 @@
     "dismiss": "Dismiss notification"
   },
   "theme": {
-    "system": "Auto",
+    "system": "System",
     "light": "Light",
     "dark": "Dark"
   },
   "language": {
-    "system": "Auto",
+    "system": "System",
     "switched": {
-      "system": "Switched to Auto (your browser's language)",
+      "system": "Switched to system language",
       "en": "Switched to English",
       "sr": "Switched to Bosnian/Croatian/Serbian",
       "sq": "Switched to Albanian",

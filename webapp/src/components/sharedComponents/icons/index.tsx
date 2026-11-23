@@ -21,4 +21,7 @@ export {
   ChevronDownIcon,
   UploadIcon,
   AlertCircleIcon,
+  SunIcon,
+  MoonIcon,
+  MonitorIcon,
 } from "./ui";
