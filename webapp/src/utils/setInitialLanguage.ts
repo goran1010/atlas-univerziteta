@@ -1,4 +1,4 @@
-const SYSTEM_LANGUAGES = ["en", "sr"] as const;
+const SYSTEM_LANGUAGES = ["en", "sr", "sq"] as const;
 
 export type SystemLanguage = (typeof SYSTEM_LANGUAGES)[number];
 
@@ -7,17 +7,27 @@ export type SystemLanguage = (typeof SYSTEM_LANGUAGES)[number];
 const LANGUAGE_TAGS: Record<SystemLanguage, string> = {
   en: "en",
   sr: "sr-Latn",
+  sq: "sq",
 };
 
-// Bosnian, Croatian and Montenegrin readers get the Serbian bundle, the
-// closer of the two
-const SERBIAN_BUNDLE_CODES = new Set(["sr", "bs", "hr", "cnr"]);
+// a browser language code's bundle; the sr bundle is written for Bosnian,
+// Croatian, Montenegrin and Serbian readers alike (sh is the old
+// Serbo-Croatian code)
+const BUNDLE_BY_CODE: Partial<Record<string, SystemLanguage>> = {
+  en: "en",
+  sr: "sr",
+  bs: "sr",
+  hr: "sr",
+  cnr: "sr",
+  sh: "sr",
+  sq: "sq",
+};
 
 function setSystemLanguage(): SystemLanguage {
   for (const tag of navigator.languages) {
     const code = tag.split("-")[0]?.toLowerCase() ?? "";
-    if (SERBIAN_BUNDLE_CODES.has(code)) return "sr";
-    if (code === "en") return "en";
+    const bundle = BUNDLE_BY_CODE[code];
+    if (bundle) return bundle;
   }
   return "en";
 }

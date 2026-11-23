@@ -1,0 +1,496 @@
+{
+  "title": {
+    "app": "Atlas Univerziteta",
+    "api": "Dokumentimi i API-së",
+    "contribute": "Përmirëso të dhënat",
+    "admin": "Paneli i administrimit",
+    "profile": "Profili im",
+    "login": "Hyr",
+    "signup": "Regjistrohu",
+    "forgotPassword": "Fjalëkalimi i harruar",
+    "resetPassword": "Rivendos fjalëkalimin",
+    "notFound": "Faqja nuk u gjet",
+    "error": "Gabim",
+    "about": "Rreth nesh"
+  },
+  "meta": {
+    "home": "Eksploroni universitete, fakultete, programe studimi dhe profile me një bazë të dhënash publike falas, një ndërfaqe me kërkim dhe një REST API.",
+    "about": "Mësoni për Atlas Univerziteta, një bazë të dhënash falas dhe me kod të hapur për universitetet dhe programet e studimit, si të ndihmoni në përmirësimin e të dhënave dhe për REST API-në publike.",
+    "api": "Dokumentimi i REST API-së së Atlas Univerziteta. Qasuni programatikisht në të dhënat e universiteteve dhe programeve të studimit.",
+    "login": "Hyni në llogarinë tuaj në Atlas Univerziteta për të kontribuar me të dhëna dhe për të ndjekur sugjerimet tuaja.",
+    "signup": "Krijoni një llogari falas në Atlas Univerziteta për të filluar të kontribuoni me të dhëna për universitetet."
+  },
+  "nav": {
+    "home": "Kreu",
+    "about": "Rreth nesh",
+    "apiDocs": "Dokumentimi i API-së",
+    "improveData": "Përmirëso të dhënat",
+    "admin": "Administrimi",
+    "profile": "Profili",
+    "login": "Hyr",
+    "language": "Gjuha",
+    "theme": "Tema",
+    "toggleMenuAria": "Hap ose mbyll menunë e navigimit",
+    "skipToContent": "Kalo te përmbajtja",
+    "breadcrumb": "Shtegu i navigimit"
+  },
+  "loading": "Duke u ngarkuar…",
+  "notifications": {
+    "title": "Njoftime",
+    "dismiss": "Mbyll njoftimin"
+  },
+  "theme": {
+    "system": "Sistemi",
+    "light": "E çelët",
+    "dark": "E errët"
+  },
+  "language": {
+    "system": "Sistemi",
+    "switched": {
+      "system": "U kalua në gjuhën e sistemit",
+      "en": "U kalua në anglisht",
+      "sr": "U kalua në serbisht",
+      "sq": "U kalua në shqip"
+    }
+  },
+  "auth": {
+    "or": "OSE",
+    "continueWithGithub": "Vazhdo me GitHub",
+    "continueWithGoogle": "Vazhdo me Google",
+    "login": {
+      "linkText": "Hyr",
+      "noAccountPrefix": "Nuk keni llogari?",
+      "heading": "Hyr",
+      "oauthFailed": "Hyrja dështoi. Ju lutemi provoni përsëri.",
+      "alreadyLoggedIn": "Jeni tashmë të kyçur. U ridrejtuat te faqja kryesore."
+    },
+    "signup": {
+      "linkText": "Regjistrohu",
+      "haveAccountPrefix": "Keni tashmë një llogari?",
+      "heading": "Krijoni llogarinë tuaj",
+      "blockedWhileLoggedIn": "Nuk mund të regjistroheni ndërsa jeni të kyçur. U ridrejtuat te faqja kryesore."
+    },
+    "forgotPassword": {
+      "linkText": "Keni harruar fjalëkalimin?",
+      "heading": "Rivendosni fjalëkalimin",
+      "description": "Shkruani email-in e llogarisë suaj dhe do t'ju dërgojmë një lidhje për të rivendosur fjalëkalimin.",
+      "submit": "Dërgo lidhjen e rivendosjes",
+      "sent": "Nëse ekziston një llogari me këtë email, lidhja për rivendosjen e fjalëkalimit është rrugës. Kontrolloni email-in tuaj.",
+      "backToLogin": "Kthehu te hyrja"
+    },
+    "resetPassword": {
+      "heading": "Zgjidhni një fjalëkalim të ri",
+      "submit": "Rivendos fjalëkalimin",
+      "invalidHeading": "Kjo lidhje rivendosjeje nuk është e vlefshme",
+      "invalidDescription": "Lidhja mund të ketë skaduar ose të jetë përdorur tashmë. Kërkoni një të re më poshtë.",
+      "requestNew": "Kërko një lidhje të re"
+    }
+  },
+  "form": {
+    "email": "Email",
+    "password": "Fjalëkalimi",
+    "confirmPassword": "Konfirmo fjalëkalimin",
+    "create": "Krijo",
+    "approve": "Mirato",
+    "reject": "Refuzo",
+    "required": "e detyrueshme"
+  },
+  "profile": {
+    "title": "Profili im",
+    "emailAddress": "Adresa e email-it",
+    "currentRole": "Roli aktual",
+    "needLogin": "Duhet të jeni të kyçur për të parë profilin tuaj.",
+    "logout": "Dil",
+    "requestAdmin": "Kërko qasje si administrator",
+    "adminRequestReason": "Pse dëshironi qasje si administrator?",
+    "cancelAdminRequest": "Anulo kërkesën për administrator",
+    "memberSince": "Anëtar që nga",
+    "emailVerifiedBadge": "I verifikuar",
+    "emailNotVerifiedBadge": "I paverifikuar",
+    "adminRequestPendingSince": "Kërkesa për administrator në pritje që nga",
+    "suggestionsAwaiting": "Sugjerime në pritje të shqyrtimit",
+    "changesAwaiting": "Ndryshime që presin shqyrtimin tuaj"
+  },
+  "about": {
+    "heading": "Universitete dhe programe studimi",
+    "intro": "Një projekt falas dhe me kod të hapur që ndërton një bazë të dhënash të strukturuar dhe të kërkueshme për arsimin e lartë publik. I përqendruar te universitetet - institucionet, fakultetet, programet e studimit dhe profilet.",
+    "summary": "Përdorni Atlas Univerziteta për të shfletuar profilet e universiteteve, për të krahasuar ofertat akademike dhe për të marrë të dhëna publike të strukturuara përmes një ndërfaqeje të thjeshtë ose drejtpërdrejt përmes API-së.",
+    "exploreHeading": "Eksploroni të dhënat",
+    "exploreDescription": "Shfletoni universitete në disa shtete. Shikoni fakultetet, programet e studimit dhe profilet. Kërkoni sipas emrit, qytetit, akronimit, shtetit, entitetit, pronësisë, ciklit të studimit, gjuhës së mësimdhënies dhe më shumë.",
+    "exploreCta": "Universitetet",
+    "improveHeading": "Përmirësoni të dhënat",
+    "improveDescription": "Dini diçka që mungon ose është e pasaktë? Përdoruesit e regjistruar mund të sugjerojnë ndryshime - shtime, modifikime ose fshirje - të cilat shqyrtohen dhe zbatohen nga administratorët.",
+    "improveStep1": "Krijoni një llogari falas dhe konfirmoni email-in tuaj",
+    "improveStep2": "Shkoni te faqja Përmirëso të dhënat dhe dërgoni sugjerimin tuaj",
+    "improveStep3": "Administratorët shqyrtojnë sugjerimet dhe zbatojnë ndryshimet e miratuara në të dhënat e publikuara",
+    "improveContribute": "Përmirëso të dhënat",
+    "improveSignUp": "Krijo një llogari",
+    "forDevsHeading": "Për zhvilluesit",
+    "forDevsDescription": "Atlas Univerziteta ofron një REST API falas dhe pa autentikim. Merrni të gjitha universitetet, kërkoni sipas emrit, qytetit ose akronimit, merrni të gjitha detajet e një universiteti ose kërkoni programe studimi në të gjitha institucionet.",
+    "forDevsNote": "Pikat publike të qasjes nuk kërkojnë autentikim.",
+    "forDevsCta": "Shiko dokumentimin e API-së",
+    "forDevsGithub": "Shiko në GitHub",
+    "openSource": "Ky është një projekt me kod të hapur. Shikoni kodin burimor, udhëzimet e instalimit dhe kontribuoni në",
+    "github": "GitHub"
+  },
+  "api": {
+    "title": "REST API",
+    "publicIntro": "Pikat publike REST të qasjes janë të disponueshme në URL-në bazë më poshtë. Këto pika nuk kërkojnë autentikim.",
+    "fullDocs": "Për dokumentimin e plotë të projektit, instalimin lokal dhe udhëzimet për kontribut, shikoni",
+    "dataObject": "Objekti i universitetit",
+    "dataObjectExample": "{\n  \"id\":                number                  - identifikues unik\n  \"name\":              string                  - emri zyrtar\n  \"acronym\":           string | null           - forma e shkurtër (p.sh. UNSA)\n  \"city\":              string                  - qyteti i kampusit kryesor\n  \"country\":           string                  - kodi ISO 3166-1 alpha-3 i shtetit (XKX për Kosovën, që nuk ka kod)\n  \"entity\":            string | null           - njësia administrative, null për shtetet pa to\n  \"ownership\":         \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\":       string | null           - p.sh. \"1949\"\n  \"website\":           string | null           - URL zyrtare\n  \"address\":           string | null           - vetëm në detaje\n  \"phone\":             string | null           - vetëm në detaje\n  \"email\":             string | null           - vetëm në detaje\n  \"accreditationFrom\": string | null           - datë ISO, vetëm në detaje\n  \"accreditationTo\":   string | null           - datë ISO, vetëm në detaje\n  \"authority\":         string | null           - organi akreditues, vetëm në detaje\n  \"dataSourceUrl\":     string | null           - burimi i të dhënave, vetëm në detaje\n  \"lastModified\":      string | null           - datë ISO e kontrollit të fundit, vetëm në detaje\n  \"_count\":            { \"faculties\": number } - vetëm në listë\n  \"faculties\":         Faculty[]               - vetëm në detaje\n}",
+    "studyProgramObject": "Objekti i programit të studimit",
+    "studyProgramObjectExample": "{\n  \"id\":            number        - identifikues unik\n  \"name\":          string        - emri siç e publikon universiteti\n  \"facultyId\":     number        - vetëm në detaje\n  \"cycle\":         \"FIRST\" | \"SECOND\" | \"THIRD\" | \"INTEGRATED\" | \"VOCATIONAL\" | \"SPECIALIST\"\n  \"durationYears\": number | null\n  \"ects\":          number | null\n  \"languages\":     string[]      - gjuhët e mësimdhënies si kode ISO 639 (cnr për malazezishten), p.sh. [\"bs\", \"hr\", \"sr\"]; bosh kur nuk dihen\n  \"dataSourceUrl\": string | null - burimi i të dhënave, vetëm në detaje\n  \"lastModified\":  string | null - datë ISO e kontrollit të fundit, vetëm në detaje\n  \"faculty\":       Faculty       - me universitetin e tij; në lista vetëm id, name dhe university { id, name, country }\n  \"tracks\":        Track[]       - vetëm në detaje\n}",
+    "examples": "Shembuj të shpejtë",
+    "endpoints": "Pikat e qasjes",
+    "endpointsData": {
+      "apiStatus": "Kontrollo statusin e API-së.",
+      "apiV1Status": "Kontrollo statusin e API v1.",
+      "getAllUniversities": "Merr të gjitha universitetet, të renditura sipas shtetit, pronësisë, pastaj emrit. Pranon filtrat country dhe entity. Përfshin numrin e fakulteteve për çdo universitet.",
+      "getUniversityById": "Merr një universitet sipas ID-së me të gjitha detajet e ndërthurura (fakultetet, programet e studimit dhe profilet). dataSourceUrl në çdo njësi është URL-ja nga e cila u morën të dhënat e saj fillestare.",
+      "search": "Kërko në universitete, fakultete dhe programe studimi (emrat e profileve gjenden përmes programit të tyre). Kërkon një term kërkimi (min. 2 karaktere) ose të paktën një filtër kufizues (country, entity ose ownership). Përputhet me emrin, qytetin, akronimin, vitin e themelimit, ECTS/kohëzgjatjen, gjuhën e mësimdhënies së një programi (sipas emrit të saj në cilëndo gjuhë të mbuluar, p.sh. \"english\", \"engleski\", \"anglisht\") dhe emrat e njësive të lidhura (pa dallim shkronjash të mëdha e të vogla dhe shenjash diakritike, me shkrim latin ose cirilik). Fjalët për pronësinë, ciklin e studimit dhe kohëzgjatjen funksionojnë në anglisht dhe në çdo gjuhë të mbuluar (p.sh. \"javna\", \"publik\", \"master\", \"3 vite\").",
+      "searchTermParam": "Teksti për kërkim (2-100 karaktere). Opsional nëse jepet country, entity ose ownership.",
+      "pageParam": "Numri i faqes, duke filluar nga 1 (parazgjedhur 1).",
+      "limitParam": "Elemente për faqe, 1-100 (parazgjedhur 50).",
+      "getAllFaculties": "Merr të gjitha fakultetet, të renditura sipas emrit të universitetit, pastaj emrit të fakultetit. Pranon filtrat country dhe entity. Përfshin universitetin prind.",
+      "getFacultyById": "Merr një fakultet sipas ID-së me programet e studimit dhe profilet e ndërthurura, si dhe universitetin prind.",
+      "getAllStudyPrograms": "Merr të gjitha programet e studimit, të renditura sipas ciklit, pastaj emrit. Pranon filtrat country dhe entity. Përfshin fakultetin dhe universitetin prind.",
+      "getStudyProgramById": "Merr një program studimi sipas ID-së me profilet e tij, fakultetin prind dhe universitetin.",
+      "getAllTracks": "Merr të gjitha profilet, të renditura sipas emrit të programit të studimit, pastaj emrit të profilit. Pranon filtrat country dhe entity. Përfshin të gjithë zinxhirin prind.",
+      "getTrackById": "Merr një profil sipas ID-së me programin e studimit prind, fakultetin dhe universitetin.",
+      "countryParam": "Filtro sipas kodit të shtetit:",
+      "entityParam": "Filtro sipas entitetit, për shtetet me njësi administrative:",
+      "ownershipParam": "Filtro sipas pronësisë: PUBLIC ose PRIVATE.",
+      "cycleParam": "Filtro sipas ciklit të studimit. Pranon disa vlera (p.sh. cycle=FIRST&cycle=SECOND). Vlerat: FIRST, SECOND, THIRD, INTEGRATED, VOCATIONAL, SPECIALIST.",
+      "typeParam": "Filtri i llojit të rezultatit: university, faculty ose studyProgram. Mund të përsëritet. Çdo seksion kthen të gjitha përputhjet."
+    },
+    "githubReadme": "README në GitHub"
+  },
+  "endpoint": {
+    "requestBody": "Trupi i kërkesës",
+    "queryParameters": "Parametrat e kërkesës",
+    "name": "Emri",
+    "required": "I detyrueshëm",
+    "description": "Përshkrimi",
+    "yes": "Po",
+    "no": "Jo",
+    "successResponse": "Përgjigje e suksesshme",
+    "errorResponses": "Përgjigje me gabim"
+  },
+  "contribution": {
+    "title": "Përmirësoni të dhënat",
+    "needUser": "Duhet të jeni përdorues i regjistruar për të propozuar ndryshime në përmbajtje.",
+    "actions": "Veprimet",
+    "addNewData": "Propozo ndryshime",
+    "addTree": "Shto universitet ose fakultet (JSON)",
+    "addTreeHint": "Përdorni këtë skedë për të shtuar njëherësh një universitet ose fakultet të tërë me të gjitha programet e studimit dhe profilet, duke ngjitur ose ngarkuar një skedar JSON.",
+    "pendingChanges": "Sugjerimet e mia",
+    "noPendingChanges": "Nuk keni sugjerime në pritje të shqyrtimit.",
+    "change": "Ndryshimi",
+    "comment": "Koment për administratorin",
+    "entityType": "Lloji i elementit",
+    "nestedInTree": "të përfshira",
+    "user": "Përdoruesi",
+    "contributor": "Kontribuuesi",
+    "entityTypes": {
+      "UNIVERSITY": "Universitet",
+      "FACULTY": "Fakultet",
+      "STUDY_PROGRAM": "Program studimi",
+      "TRACK": "Profil"
+    },
+    "changeTypes": {
+      "CREATE": "Krijo",
+      "UPDATE": "Përditëso",
+      "DELETE": "Fshi"
+    },
+    "picker": {
+      "parent": "Ku duhet të shtohet elementi i ri?",
+      "target": "Cilin element dëshironi të ndryshoni?",
+      "placeholder": "- zgjidhni -",
+      "currentData": "Të dhënat aktuale",
+      "noChildren": {
+        "FACULTY": "Nuk ka fakultete",
+        "STUDY_PROGRAM": "Nuk ka programe studimi",
+        "TRACK": "Nuk ka profile"
+      }
+    },
+    "dataFields": {
+      "name": "Emri",
+      "city": "Qyteti",
+      "country": "Shteti",
+      "entity": "Entiteti",
+      "cycle": "Cikli i studimit",
+      "durationYears": "Kohëzgjatja (vite)",
+      "ects": "Kredite ECTS",
+      "languages": "Gjuhët",
+      "acronym": "Akronimi",
+      "foundedYear": "Viti i themelimit",
+      "website": "Faqja e internetit",
+      "address": "Adresa",
+      "phone": "Telefoni",
+      "email": "Email",
+      "ownership": "Pronësia"
+    },
+    "cycles": {
+      "FIRST": "I PARË - Bachelor",
+      "SECOND": "I DYTË - Master",
+      "THIRD": "I TRETË - Doktoraturë",
+      "INTEGRATED": "I INTEGRUAR - Bachelor+Master",
+      "VOCATIONAL": "PROFESIONAL",
+      "SPECIALIST": "SPECIALIZIM - Studime specializimi"
+    },
+    "entities": {
+      "FBIH": "FBIH - Federata e BeH",
+      "RS": "RS - Republika Serbe",
+      "BD": "BD - Distrikti i Brçkos"
+    },
+    "submitSuggestion": "Dërgo sugjerimin",
+    "deleteChange": "Tërhiq",
+    "dataLegend": "Të dhënat",
+    "tree": {
+      "jsonLabel": "Të dhënat JSON",
+      "loadFile": "Ngarko një skedar .json",
+      "validate": "Valido",
+      "invalidJson": "Teksti nuk është JSON i vlefshëm.",
+      "validationErrors": "Gabime validimi",
+      "looksLikeUniversity": "Kjo duket si një universitet i tërë. Ndryshoni llojin e elementit në Universitet.",
+      "preview": "Parapamja"
+    },
+    "builder": {
+      "addFaculty": "Shto fakultet",
+      "addStudyProgram": "Shto program studimi",
+      "addTrack": "Shto profil",
+      "remove": "Hiq",
+      "unnamed": "Pa emër"
+    }
+  },
+  "admin": {
+    "needAdmin": "Duhet të jeni administrator për të parë panelin e administrimit.",
+    "needLoginAndAdmin": "Duhet të jeni të kyçur dhe administrator për të parë panelin e administrimit.",
+    "dashboardTitle": "Paneli i administrimit",
+    "pendingChanges": "Ndryshime në pritje",
+    "noPendingChanges": "Për momentin nuk ka ndryshime në pritje.",
+    "adminRequests": "Kërkesa për administrator",
+    "noAdminRequests": "Për momentin nuk ka kërkesa për administrator.",
+    "requestedAt": "Kërkuar më",
+    "proposedData": "Të dhënat e propozuara",
+    "currentData": "Të dhënat aktuale",
+    "proposedChanges": "Ndryshimet e propozuara",
+    "entityDeleted": "Ky element nuk ekziston më",
+    "facultyCount": "Fakultete",
+    "studyProgramCount": "Programe studimi",
+    "trackCount": "Profile",
+    "diff": {
+      "field": "Fusha",
+      "current": "Aktuale",
+      "proposed": "E propozuar",
+      "cleared": "e fshirë",
+      "noChange": "pa ndryshim"
+    }
+  },
+  "error": {
+    "notFound": "Këtu nuk ka asgjë.",
+    "generic": "Diçka shkoi keq.",
+    "goHome": "Shko te faqja kryesore",
+    "reload": "Ringarko faqen"
+  },
+  "footer": {
+    "name": "Goran Jović",
+    "email": "goran1010jovic@gmail.com",
+    "reportIssue": "Raporto një problem"
+  },
+  "validation": {
+    "email": {
+      "invalid": "Ju lutemi shkruani një adresë email-i të vlefshme"
+    },
+    "password": {
+      "minLength": "Fjalëkalimi duhet të ketë të paktën 8 karaktere",
+      "required": "Fjalëkalimi është i detyrueshëm",
+      "allowedCharacters": "Fjalëkalimi mund të përmbajë vetëm shkronja, numra, viza ose nënvizime",
+      "requiresNumber": "Fjalëkalimi duhet të përmbajë të paktën një numër",
+      "mustMatch": "Fjalëkalimi dhe konfirmimi i tij duhet të përputhen"
+    }
+  },
+  "messages": {
+    "apiError": {
+      "rateLimited": "Shumë kërkesa. Ju lutemi prisni 15 minuta, pastaj provoni përsëri.",
+      "authRequired": "Duhet të jeni të kyçur për këtë. Hyni dhe provoni përsëri.",
+      "forbidden": "Nuk keni leje për këtë veprim.",
+      "alreadyAdmin": "Ju e keni tashmë rolin e administratorit.",
+      "contributionLimit": "Keni tashmë 20 sugjerime në pritje të shqyrtimit. Ju lutemi prisni derisa një administrator t'i shqyrtojë.",
+      "noChanges": "Modifikimi i sugjeruar përputhet me të dhënat aktuale - nuk ka asgjë për të ndryshuar.",
+      "invalidResponse": "Serveri dërgoi të dhëna që faqja nuk mund t'i lexonte.",
+      "invalidMutationResponse": "Kërkesa u krye, por përgjigja e serverit nuk mund të lexohej. Ringarkoni faqen për të parë rezultatin."
+    },
+    "pendingChanges": {
+      "fetchError": "Diçka shkoi keq gjatë ngarkimit të ndryshimeve në pritje. Rifreskoni faqen dhe provoni përsëri."
+    },
+    "loginStatus": {
+      "error": "Statusi i hyrjes suaj nuk mund të kontrollohej. Rifreskoni faqen dhe provoni përsëri."
+    },
+    "auth": {
+      "loginFailed": "Hyrja dështoi. Kontrolloni email-in dhe fjalëkalimin, pastaj provoni përsëri.",
+      "loginError": "Diçka shkoi keq gjatë hyrjes. Provoni përsëri pas pak.",
+      "loginSuccess": "Hytë me sukses.",
+      "registrationFailed": "Regjistrimi dështoi. Kontrolloni të dhënat tuaja, pastaj provoni përsëri.",
+      "registrationError": "Diçka shkoi keq gjatë regjistrimit. Provoni përsëri pas pak.",
+      "registrationSuccess": "Regjistrimi u krye me sukses! Kontrolloni email-in tuaj.",
+      "logoutFailed": "Dalja nuk u përfundua. Provoni përsëri.",
+      "logoutError": "Diçka shkoi keq gjatë daljes. Provoni përsëri pas pak.",
+      "logoutSuccess": "Dolët me sukses.",
+      "resetRequestFailed": "Lidhja e rivendosjes nuk mund të dërgohej. Provoni përsëri.",
+      "resetRequestError": "Diçka shkoi keq gjatë kërkimit të lidhjes së rivendosjes. Provoni përsëri pas pak.",
+      "resetFailed": "Rivendosja e fjalëkalimit dështoi. Provoni përsëri.",
+      "resetSuccess": "Fjalëkalimi juaj u rivendos. Hyni me fjalëkalimin e ri.",
+      "resetError": "Diçka shkoi keq gjatë rivendosjes së fjalëkalimit. Provoni përsëri pas pak."
+    },
+    "admin": {
+      "approveSuccess": "Ndryshimi në pritje u miratua.",
+      "approveError": "Diçka shkoi keq gjatë miratimit të ndryshimit në pritje. Provoni përsëri.",
+      "declineSuccess": "Ndryshimi në pritje u refuzua.",
+      "declineError": "Diçka shkoi keq gjatë refuzimit të ndryshimit në pritje. Provoni përsëri."
+    },
+    "universities": {
+      "loadError": "Universitetet nuk mund të ngarkoheshin. Kontrolloni lidhjen dhe provoni përsëri.",
+      "searchError": "Kërkimi nuk u përfundua. Provoni përsëri pas pak.",
+      "detailsError": "Detajet nuk mund të ngarkoheshin. Provoni përsëri pas pak.",
+      "addSuccess": "Sugjerimi u dërgua.",
+      "addError": "Diçka shkoi keq gjatë dërgimit të sugjerimit. Provoni përsëri.",
+      "deleteSuccess": "Ndryshimi në pritje u hoq.",
+      "deleteError": "Diçka shkoi keq gjatë heqjes së ndryshimit në pritje. Provoni përsëri."
+    },
+    "adminRequest": {
+      "requestSuccess": "Qasja si administrator u kërkua. Një administrator do ta shqyrtojë.",
+      "requestError": "Diçka shkoi keq gjatë kërkimit të qasjes si administrator. Provoni përsëri.",
+      "cancelSuccess": "Kërkesa për administrator u anulua.",
+      "cancelError": "Diçka shkoi keq gjatë anulimit të kërkesës për administrator. Provoni përsëri.",
+      "fetchError": "Kërkesat për administrator nuk mund të ngarkoheshin. Rifreskoni faqen dhe provoni përsëri.",
+      "approveSuccess": "Kërkesa për administrator u miratua.",
+      "approveError": "Diçka shkoi keq gjatë miratimit të kërkesës për administrator. Provoni përsëri.",
+      "declineSuccess": "Kërkesa për administrator u refuzua.",
+      "declineError": "Diçka shkoi keq gjatë refuzimit të kërkesës për administrator. Provoni përsëri."
+    }
+  },
+  "universitiesPage": {
+    "title": "Gjeni programe dhe universitete",
+    "searchIntro": "Kërkoni universitete, fakultete, programe studimi dhe profile. Provoni emrin e një programi, qytet, shtet, cikël studimi, ECTS ose fjalë si \"publik\" ose \"master\".",
+    "browseAll": "Shfleto të gjitha universitetet",
+    "search": "Kërko",
+    "searchAllPlaceholder": "p.sh. informatikë, mjekësi Shqipëri, master 120 ECTS…",
+    "universitiesSection": "Universitete",
+    "facultiesSection": "Fakultete",
+    "studyProgramsSection": "Programe studimi",
+    "noResults": "Nuk u gjet asnjë universitet.",
+    "noFacultyResults": "Nuk u gjet asnjë fakultet.",
+    "noResultsAtAll": "Nuk u gjet asnjë rezultat.",
+    "searchResultsAnnouncement": "Rezultatet e kërkimit:",
+    "countries": {
+      "ALB": "Shqipëria",
+      "BIH": "Bosnja dhe Hercegovina",
+      "SRB": "Serbia",
+      "HRV": "Kroacia",
+      "MKD": "Maqedonia e Veriut",
+      "MNE": "Mali i Zi",
+      "SVN": "Sllovenia",
+      "XKX": "Kosova"
+    },
+    "entities": {
+      "FBIH": "Federata e BeH",
+      "RS": "Republika Serbe",
+      "BD": "Distrikti i Brçkos"
+    },
+    "faculties": "Fakultete",
+    "facultyCount": "fakultete",
+    "facultyCount_one": "fakultet",
+    "facultyCount_two": "fakultete",
+    "facultyCount_few": "fakultete",
+    "facultyCount_other": "fakultete",
+    "studyPrograms": "Programe studimi",
+    "studyProgramCount_one": "program studimi",
+    "studyProgramCount_two": "programe studimi",
+    "studyProgramCount_few": "programe studimi",
+    "studyProgramCount_other": "programe studimi",
+    "trackCount_one": "profil",
+    "trackCount_two": "profile",
+    "trackCount_few": "profile",
+    "trackCount_other": "profile",
+    "cycles": {
+      "FIRST": "I parë (Bachelor)",
+      "SECOND": "I dytë (Master)",
+      "THIRD": "I tretë (Doktoraturë)",
+      "INTEGRATED": "I integruar (Bachelor + Master)",
+      "VOCATIONAL": "Profesional",
+      "SPECIALIST": "Specializim (Studime specializimi)"
+    },
+    "ects": "ECTS",
+    "durationYears": "vjet",
+    "durationYears_one": "vit",
+    "durationYears_two": "vjet",
+    "durationYears_few": "vjet",
+    "durationYears_other": "vjet",
+    "noStudyPrograms": "Nuk ka programe studimi.",
+    "detailError": "Të dhënat nuk mund të ngarkoheshin.",
+    "retry": "Provo përsëri",
+    "noFaculties": "Nuk ka fakultete.",
+    "foundedYear": "Themeluar",
+    "expand": "Zgjero",
+    "hiddenTapToExpand": "të fshehura - prekni për t'i zgjeruar",
+    "collapse": "Mblidh",
+    "viewInfo": "Shiko informacionin",
+    "ownership": {
+      "PUBLIC": "Publik",
+      "PRIVATE": "Privat"
+    },
+    "clearSearch": "Pastro kërkimin",
+    "countryFilter": "Shteti",
+    "allCountries": "Të gjitha shtetet",
+    "resetSearch": "Rivendos",
+    "contextMatch": {
+      "university": "U gjet përmes fakulteteve ose programeve të studimit",
+      "faculty": "U gjet përmes universitetit ose programeve të studimit",
+      "studyProgram": "U gjet përmes fakultetit, universitetit ose profileve"
+    },
+    "showAllPrograms": "Shfaq të gjitha programet e studimit",
+    "openFullPage": "Hap faqen e plotë",
+    "shareLink": "Ndaj lidhjen",
+    "linkCopied": "Lidhja u kopjua.",
+    "linkCopyFailed": "Lidhja nuk mund të kopjohej.",
+    "dataSource": "Burimi i të dhënave",
+    "improvePrompt": "Shihni diçka të pasaktë?",
+    "improveLink": "Sugjeroni një korrigjim",
+    "improveLogin": "Hyni për të sugjeruar një korrigjim"
+  },
+  "programLanguages": {
+    "bs": "boshnjakisht",
+    "hr": "kroatisht",
+    "sr": "serbisht",
+    "cnr": "malazezisht",
+    "sq": "shqip",
+    "mk": "maqedonisht",
+    "sl": "sllovenisht",
+    "en": "anglisht",
+    "de": "gjermanisht",
+    "fr": "frëngjisht",
+    "it": "italisht",
+    "ru": "rusisht",
+    "tr": "turqisht",
+    "ar": "arabisht",
+    "hu": "hungarisht",
+    "el": "greqisht",
+    "es": "spanjisht"
+  },
+  "access": {
+    "goToLogin": "Hyr",
+    "goHome": "Shko te faqja kryesore"
+  },
+  "links": {
+    "opensInNewTab": "(hapet në skedë të re)"
+  },
+  "confirm": {
+    "cancel": "Anulo",
+    "message": "Jeni i sigurt që dëshironi të vazhdoni?"
+  },
+  "dialog": {
+    "close": "Mbyll"
+  }
+}

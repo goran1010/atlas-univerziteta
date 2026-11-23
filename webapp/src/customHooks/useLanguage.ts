@@ -1,7 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import en from "../locales/en.json";
 import sr from "../locales/sr.json";
-import { LANGUAGE_TAGS, setSystemLanguage } from "../utils/setInitialLanguage";
+import sq from "../locales/sq.json";
+import {
+  LANGUAGE_TAGS,
+  SYSTEM_LANGUAGES,
+  setSystemLanguage,
+} from "../utils/setInitialLanguage";
 import { createTCount } from "../utils/pluralize";
 import type { SystemLanguage } from "../utils/setInitialLanguage";
 import type { Language, TFunction } from "../types";
@@ -12,20 +17,15 @@ interface TranslationMap {
   [key: string]: TranslationValue;
 }
 
-const translations: Record<SystemLanguage, typeof en> = { en, sr };
+const translations: Record<SystemLanguage, typeof en> = { en, sr, sq };
+
+const SAVED_LANGUAGES: Language[] = ["system", ...SYSTEM_LANGUAGES];
 
 function getSavedLanguage(): Language {
   const savedLanguage = localStorage.getItem("language");
-
-  if (
-    savedLanguage === "en" ||
-    savedLanguage === "sr" ||
-    savedLanguage === "system"
-  ) {
-    return savedLanguage;
-  }
-
-  return "system";
+  return (
+    SAVED_LANGUAGES.find((language) => language === savedLanguage) ?? "system"
+  );
 }
 
 function useLanguage() {

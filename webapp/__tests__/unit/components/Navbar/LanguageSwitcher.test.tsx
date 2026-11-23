@@ -29,10 +29,15 @@ describe("LanguageSwitcher", () => {
     expect(select).toHaveAccessibleName("Language");
     expect(
       screen.getAllByRole("option").map((option) => option.textContent),
-    ).toEqual(["Language: System", "Language: EN", "Language: SR"]);
+    ).toEqual([
+      "Language: System",
+      "Language: EN",
+      "Language: SR",
+      "Language: SQ",
+    ]);
   });
 
-  test.each<Language>(["system", "en", "sr"])(
+  test.each<Language>(["system", "en", "sr", "sq"])(
     "shows %s as the current choice",
     (language) => {
       const { select } = renderSwitcher(language);
@@ -43,6 +48,7 @@ describe("LanguageSwitcher", () => {
 
   test.each<{ choice: Language; message: string }>([
     { choice: "sr", message: "Switched to Serbian" },
+    { choice: "sq", message: "Switched to Albanian" },
     { choice: "system", message: "Switched to system language" },
   ])("sets $choice and announces it", async ({ choice, message }) => {
     const { select, setLanguage, addNotification } = renderSwitcher("en");

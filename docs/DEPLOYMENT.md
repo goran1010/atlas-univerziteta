@@ -55,7 +55,7 @@ Country and entity codes are plain strings in the database, validated in applica
 2. **Subdivisions** - only if every university belongs to a subdivision, as BiH's do to its entities: add the country with its subdivision codes to `SUBDIVISIONS` in the same file. The entity is then required for that country and rejected for every other
 3. **Search aliases** - add the country's local, English and common names to `COUNTRY_ALIASES` in `server/src/search/aliases.ts`, keyed by the stems the tokenizer produces, and add the phrases to `server/__tests__/unit/search/aliases.test.ts`; add new stems to `.cspell.json` if the spell check flags them
 4. **Webapp list** - add the code to `countrySchema`, and the subdivisions to `SUBDIVISIONS`, in `webapp/src/schemas/domain.ts`
-5. **Labels** - add the display name under `universitiesPage.countries` in both `webapp/src/locales/en.json` and `webapp/src/locales/sr.json`, and subdivision names under `universitiesPage.entities` and `contribution.entities`; the webapp typecheck fails until every code has its labels
+5. **Labels** - add the display name under `universitiesPage.countries` in every bundle in `webapp/src/locales/`, and subdivision names under `universitiesPage.entities` and `contribution.entities`; the webapp typecheck fails until every code has its labels
 6. **Languages** - if the country's official languages are not program languages yet, add them as in [Adding a study program language](#adding-a-study-program-language)
 7. **Data** - create `server/JSON_files/universities/<CODE>/` with one JSON file per university (see [CONTRIBUTING](./CONTRIBUTING.md) for the format); the seed rejects a file whose `country` does not match its folder
 8. **Accreditation** - take `authority` and the accreditation dates from the national accreditation body's register; leave a date out rather than guess it
@@ -75,6 +75,20 @@ A study program lists the languages it is taught in as ISO 639 codes, the shorte
 5. **Verify** - run `npm run test:all`
 
 The webapp shows a code it does not know yet as the bare code, so program pages keep loading whichever deploy lands first.
+
+## Adding a site language
+
+The interface has one translation bundle per language in `webapp/src/locales/`; the `sr` bundle serves Bosnian, Croatian, Montenegrin and Serbian readers.
+
+1. **Bundle** - copy `en.json` to `webapp/src/locales/<code>.json` and translate every value, keeping the keys. Every bundle is typed as `en.json`, so the typecheck fails while a key is missing. Counted words have `_one`, `_two`, `_few` and `_other` forms: fill each with the form the language uses, since `Intl.PluralRules` picks one per count
+2. **Language list** - in `webapp/src/utils/setInitialLanguage.ts`, add the code to `SYSTEM_LANGUAGES`, its BCP 47 tag to `LANGUAGE_TAGS` (with the script when the bare code means another one, as `sr-Latn` does), and the browser language codes that should get it to `BUNDLE_BY_CODE`; the language select shows it as its code in capitals
+3. **Load it** - import the bundle into `translations` in `webapp/src/customHooks/useLanguage.ts`
+4. **Switch notice** - add `language.switched.<code>` to every bundle
+5. **Search** - add the language's name of every program language to `LANGUAGE_NAMES` in `server/src/search/languageNames.ts`, and its ownership, study cycle and duration words to `server/src/search/aliases.ts` and `server/src/search/tokenize.ts`
+6. **Fonts** - if the language needs characters the self-hosted Roboto subsets lack, add that subset to `webapp/public/fonts/` with a `@font-face` block and its `unicode-range` in `webapp/src/styles/index.css`
+7. **Tests** - add the code to the tests for `setInitialLanguage`, `useLanguage` and the language select
+8. **Review** - have a native speaker review the bundle before it is released
+9. **Verify** - run `npm run test:all` and open every page in the new language
 
 ## Share previews and prerendered meta
 
