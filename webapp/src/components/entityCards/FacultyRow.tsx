@@ -1,4 +1,4 @@
-import { BookOpenIcon } from "../sharedComponents/icons";
+import { BookOpenIcon, MapPinIcon } from "../sharedComponents/icons";
 import { TextLink } from "../sharedComponents/TextLink";
 import { use, useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
@@ -49,15 +49,24 @@ function FacultyRow({
               {faculty.name}
             </TextLink>
           </p>
-          {hasStudyPrograms && (
-            <p className="text-xs text-(--text-muted) mt-0.5">
-              <BookOpenIcon />{" "}
-              <span className="font-bold text-violet-600 dark:text-violet-400">
-                {faculty.studyPrograms.length}
-              </span>{" "}
-              {tCount(
-                "universitiesPage.studyProgramCount",
-                faculty.studyPrograms.length,
+          {(Boolean(faculty.city) || hasStudyPrograms) && (
+            <p className="flex flex-wrap gap-x-3 text-xs text-(--text-muted) mt-0.5">
+              {faculty.city && (
+                <span>
+                  <MapPinIcon /> {faculty.city}
+                </span>
+              )}
+              {hasStudyPrograms && (
+                <span>
+                  <BookOpenIcon />{" "}
+                  <span className="font-bold text-violet-600 dark:text-violet-400">
+                    {faculty.studyPrograms.length}
+                  </span>{" "}
+                  {tCount(
+                    "universitiesPage.studyProgramCount",
+                    faculty.studyPrograms.length,
+                  )}
+                </span>
               )}
             </p>
           )}

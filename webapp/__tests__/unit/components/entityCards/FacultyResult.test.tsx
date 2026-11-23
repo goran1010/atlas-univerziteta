@@ -104,6 +104,9 @@ describe("FacultyResult", () => {
       screen.getByText(/University of Sarajevo \(UNSA\)/i),
     ).toBeInTheDocument();
     expect(screen.getByText("Sarajevo")).toBeInTheDocument();
+    expect(screen.getByText(/Bosnia and Herzegovina/)).toBeInTheDocument();
+    expect(screen.getByText(/Federation of B&H/)).toBeInTheDocument();
+    expect(screen.getByText("Public")).toBeInTheDocument();
     expect(
       screen.getByText(/Matched through its study programs/i),
     ).toBeInTheDocument();

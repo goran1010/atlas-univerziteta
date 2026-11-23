@@ -96,6 +96,9 @@ const apiEndpoints: Endpoint[] = [
       "ownership": "PUBLIC",
       "foundedYear": "1949",
       "website": "https://www.unsa.ba",
+      "address": "Obala Kulina bana 7/II, 71000 Sarajevo",
+      "phone": "+387 33 565 100",
+      "email": "javnost@unsa.ba",
       "_count": { "faculties": 27 }
     },
     ...

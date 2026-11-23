@@ -1,4 +1,5 @@
-import { LandmarkIcon, MapPinIcon } from "../sharedComponents/icons";
+import { LandmarkIcon, MapPinIcon, TagIcon } from "../sharedComponents/icons";
+import { OwnershipPill } from "./UniversityMeta";
 import { TextLink } from "../sharedComponents/TextLink";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
@@ -87,14 +88,25 @@ function FacultyResult({
         <p className="text-sm text-(--text-muted) mt-0.5">
           <LandmarkIcon /> {faculty.university.name}
           {faculty.university.acronym && ` (${faculty.university.acronym})`}
-          {" - "}
-          {t(`universitiesPage.countries.${faculty.university.country}`)}
         </p>
-        {faculty.city && (
-          <p className="text-sm text-(--text-secondary) mt-0.5">
-            <MapPinIcon /> {faculty.city}
-          </p>
-        )}
+        <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
+          {faculty.city && (
+            <span>
+              <MapPinIcon /> {faculty.city}
+            </span>
+          )}
+          <span>
+            <TagIcon />{" "}
+            {t(`universitiesPage.countries.${faculty.university.country}`)}
+          </span>
+          {faculty.university.entity && (
+            <span>
+              <TagIcon />{" "}
+              {t(`universitiesPage.entities.${faculty.university.entity}`)}
+            </span>
+          )}
+          <OwnershipPill ownership={faculty.university.ownership} />
+        </div>
         <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
           <ContactLinks
             website={faculty.website}
