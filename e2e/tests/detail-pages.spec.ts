@@ -18,16 +18,21 @@ async function firstUniversityWithFaculties(request: APIRequestContext) {
 }
 
 test.describe("detail pages", () => {
-  test("clicking a university navigates to its detail page", async ({
+  test("a university's View info dialog opens its detail page", async ({
     page,
   }) => {
     await page.goto("/");
     await page.getByRole("button", { name: /Browse All/i }).click();
 
-    const firstUniLink = page.locator('main a[href^="/universities/"]').first();
-    await expect(firstUniLink).toBeVisible();
-    const uniName = await firstUniLink.textContent();
-    await firstUniLink.click();
+    const viewInfo = page.getByRole("button", { name: "View info" }).first();
+    await expect(viewInfo).toBeVisible();
+    await viewInfo.click();
+    const dialog = page.getByRole("dialog");
+    // the dialog title appends the acronym; the page heading styles it apart
+    const uniName = (
+      await dialog.getByRole("heading").first().textContent()
+    )?.replace(/ \([^)]*\)$/, "");
+    await dialog.getByRole("link", { name: "Open full page" }).click();
 
     await expect(page).toHaveURL(/\/universities\/\d+$/);
     await expect(
@@ -139,7 +144,7 @@ test.describe("detail pages", () => {
   }) => {
     await page.goto("/?country=BIH");
     await expect(
-      page.locator('main a[href^="/universities/"]').first(),
+      page.getByRole("button", { name: "View info" }).first(),
     ).toBeVisible({ timeout: 15000 });
   });
 });

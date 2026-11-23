@@ -1,4 +1,3 @@
-import { TextLink } from "../sharedComponents/TextLink";
 import { UniversityMetaRow } from "./UniversityMeta";
 import { BuildingIcon, CalendarIcon } from "../sharedComponents/icons";
 import { UniversityInfoDialog } from "./UniversityInfoDialog";
@@ -91,13 +90,7 @@ function UniversityResult({
       >
         <div>
           <h3 className="font-bold text-base leading-snug">
-            <TextLink
-              to={`/universities/${university.id.toString()}`}
-              variant="title"
-              className="font-bold"
-            >
-              {university.name}
-            </TextLink>
+            {university.name}
             {university.acronym && (
               <span className="ml-2 text-sm font-normal text-(--text-muted)">
                 ({university.acronym})

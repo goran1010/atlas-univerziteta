@@ -94,12 +94,20 @@ beforeEach(() => {
 });
 
 describe("FacultyResult", () => {
-  test("renders the faculty link, university and context hint", () => {
+  test("renders the faculty name, university and context hint", () => {
     renderResult(faculty, "Matched through its study programs");
 
     expect(
-      screen.getByRole("link", { name: /Faculty of Electrical Engineering/i }),
-    ).toHaveAttribute("href", "/faculties/11");
+      screen.getByRole("heading", {
+        name: "Faculty of Electrical Engineering",
+      }),
+    ).toBeInTheDocument();
+    // the full page is reached through "View info", not the name
+    expect(
+      screen.queryByRole("link", {
+        name: /Faculty of Electrical Engineering/i,
+      }),
+    ).not.toBeInTheDocument();
     expect(
       screen.getByText(/University of Sarajevo \(UNSA\)/i),
     ).toBeInTheDocument();

@@ -1,5 +1,4 @@
 import { BookOpenIcon, MapPinIcon } from "../sharedComponents/icons";
-import { TextLink } from "../sharedComponents/TextLink";
 import { use, useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
@@ -41,14 +40,7 @@ function FacultyRow({
         }`}
       >
         <div className="min-w-0">
-          <p className="font-semibold">
-            <TextLink
-              to={`/faculties/${faculty.id.toString()}`}
-              variant="title"
-            >
-              {faculty.name}
-            </TextLink>
-          </p>
+          <p className="font-semibold">{faculty.name}</p>
           {(Boolean(faculty.city) || hasStudyPrograms) && (
             <p className="flex flex-wrap gap-x-3 text-xs text-(--text-muted) mt-0.5">
               {faculty.city && (

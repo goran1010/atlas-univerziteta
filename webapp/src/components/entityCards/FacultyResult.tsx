@@ -1,6 +1,5 @@
 import { LandmarkIcon, MapPinIcon, TagIcon } from "../sharedComponents/icons";
 import { OwnershipPill } from "./UniversityMeta";
-import { TextLink } from "../sharedComponents/TextLink";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
@@ -76,15 +75,7 @@ function FacultyResult({
             : ""
         }
       >
-        <h3 className="font-bold">
-          <TextLink
-            to={`/faculties/${faculty.id.toString()}`}
-            variant="title"
-            className="font-bold"
-          >
-            {faculty.name}
-          </TextLink>
-        </h3>
+        <h3 className="font-bold">{faculty.name}</h3>
         <p className="text-sm text-(--text-muted) mt-0.5">
           <LandmarkIcon /> {faculty.university.name}
           {faculty.university.acronym && ` (${faculty.university.acronym})`}

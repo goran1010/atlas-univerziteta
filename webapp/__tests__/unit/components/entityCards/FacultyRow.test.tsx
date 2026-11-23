@@ -50,12 +50,17 @@ function renderRow(data: UniversityDetailFaculty = faculty) {
 }
 
 describe("FacultyRow", () => {
-  test("renders the faculty link and program count", () => {
+  test("renders the faculty name and program count", () => {
     renderRow();
 
     expect(
-      screen.getByRole("link", { name: /Faculty of Electrical Engineering/i }),
-    ).toHaveAttribute("href", "/faculties/11");
+      screen.getByText("Faculty of Electrical Engineering"),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole("link", {
+        name: /Faculty of Electrical Engineering/i,
+      }),
+    ).not.toBeInTheDocument();
     expect(screen.getByText("1")).toBeInTheDocument();
   });
 
