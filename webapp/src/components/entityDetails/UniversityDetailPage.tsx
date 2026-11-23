@@ -3,19 +3,13 @@ import { TextLink } from "../sharedComponents/TextLink";
 import { useParams, Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { Spinner } from "../sharedComponents/Spinner";
-import {
-  BuildingIcon,
-  CalendarIcon,
-  MapPinIcon,
-} from "../sharedComponents/icons";
+import { BuildingIcon, MapPinIcon } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
-import { ImproveDataLink } from "./ImproveDataLink";
-import { AccreditationInfo } from "./AccreditationInfo";
+import { UniversitySummary } from "./UniversitySummary";
 import { universityDetailResponseSchema } from "../../schemas/university";
 import { useEntityDetail } from "../../customHooks/useEntityDetail";
-import { UniversityMetaRow } from "../entityCards/UniversityMeta";
 import { DetailPageStatus } from "./DetailPageStatus";
 import { Button } from "../sharedComponents/Button";
 import { Helmet } from "react-helmet-async";
@@ -118,34 +112,7 @@ function UniversityDetailPage() {
               </h1>
               <ShareButton url={`/universities/${id ?? ""}`} />
             </div>
-            <UniversityMetaRow
-              city={university.city}
-              country={university.country}
-              entity={university.entity}
-              ownership={university.ownership}
-              className="gap-x-4 gap-y-1"
-            >
-              {university.foundedYear && (
-                <span>
-                  <CalendarIcon /> {university.foundedYear}
-                </span>
-              )}
-            </UniversityMetaRow>
-            <AccreditationInfo
-              from={university.accreditationFrom}
-              to={university.accreditationTo}
-              authority={university.authority}
-            />
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
-              <ContactLinks
-                website={university.website}
-                address={university.address}
-                phone={university.phone}
-                email={university.email}
-                dataSourceUrl={university.dataSourceUrl}
-              />
-            </div>
-            <ImproveDataLink />
+            <UniversitySummary university={university} />
           </div>
 
           <div className="border-t border-(--border-color) pt-4">

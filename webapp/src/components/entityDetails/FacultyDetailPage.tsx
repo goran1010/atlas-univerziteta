@@ -7,16 +7,12 @@ import {
   AwardIcon,
   ClockIcon,
   GraduationCapIcon,
-  MapPinIcon,
   BookOpenIcon,
-  TagIcon,
 } from "../sharedComponents/icons";
-import { ContactLinks } from "./ContactLinks";
-import { OwnershipPill } from "../entityCards/UniversityMeta";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
-import { ImproveDataLink } from "./ImproveDataLink";
+import { FacultySummary } from "./FacultySummary";
 import { Button } from "../sharedComponents/Button";
 import { ResultGroup } from "../Search/ResultGroup";
 import { TrackList } from "../entityCards/TrackList";
@@ -135,44 +131,7 @@ function FacultyDetailPage() {
               </h1>
               <ShareButton url={`/faculties/${id ?? ""}`} />
             </div>
-            <p className="text-sm text-(--text-secondary)">
-              <TextLink
-                to={`/universities/${faculty.university.id.toString()}`}
-                className="font-bold"
-              >
-                {faculty.university.name}
-                {faculty.university.acronym &&
-                  ` (${faculty.university.acronym})`}
-              </TextLink>
-            </p>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-secondary)">
-              {faculty.city && (
-                <span>
-                  <MapPinIcon /> {faculty.city}
-                </span>
-              )}
-              <span>
-                <TagIcon />{" "}
-                {t(`universitiesPage.countries.${faculty.university.country}`)}
-              </span>
-              {faculty.university.entity && (
-                <span>
-                  <TagIcon />{" "}
-                  {t(`universitiesPage.entities.${faculty.university.entity}`)}
-                </span>
-              )}
-              <OwnershipPill ownership={faculty.university.ownership} />
-            </div>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
-              <ContactLinks
-                website={faculty.website}
-                address={faculty.address}
-                phone={faculty.phone}
-                email={faculty.email}
-                dataSourceUrl={faculty.dataSourceUrl}
-              />
-            </div>
-            <ImproveDataLink />
+            <FacultySummary faculty={faculty} />
           </div>
 
           <div className="border-t border-(--border-color) pt-4">
