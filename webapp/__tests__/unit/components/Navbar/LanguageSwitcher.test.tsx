@@ -30,7 +30,7 @@ describe("LanguageSwitcher", () => {
     expect(
       screen.getAllByRole("option").map((option) => option.textContent),
     ).toEqual([
-      "Language: System",
+      "Language: Auto",
       "Language: EN",
       "Language: BHS",
       "Language: SQ",
@@ -53,7 +53,7 @@ describe("LanguageSwitcher", () => {
     { choice: "sq", message: "Switched to Albanian" },
     { choice: "mk", message: "Switched to Macedonian" },
     { choice: "sl", message: "Switched to Slovenian" },
-    { choice: "system", message: "Switched to system language" },
+    { choice: "system", message: "Switched to Auto (your browser's language)" },
   ])("sets $choice and announces it", async ({ choice, message }) => {
     const { select, setLanguage, addNotification } = renderSwitcher("en");
 

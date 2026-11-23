@@ -31,7 +31,7 @@ describe("ThemeSwitcher", () => {
     expect(select).toHaveAccessibleName("Theme");
     expect(
       screen.getAllByRole("option").map((option) => option.textContent),
-    ).toEqual(["Theme: System", "Theme: Light", "Theme: Dark"]);
+    ).toEqual(["Theme: Auto", "Theme: Light", "Theme: Dark"]);
     expect(select).toHaveValue("dark");
   });
 

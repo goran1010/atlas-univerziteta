@@ -41,14 +41,14 @@
     "dismiss": "Zatvori obavijest"
   },
   "theme": {
-    "system": "Sistemska",
+    "system": "Auto",
     "light": "Svijetla",
     "dark": "Tamna"
   },
   "language": {
-    "system": "Sistemski",
+    "system": "Auto",
     "switched": {
-      "system": "Prebačeno na jezik sistema",
+      "system": "Prebačeno na Auto (jezik preglednika)",
       "en": "Prebačeno na engleski",
       "sr": "Prebačeno na bosanski/hrvatski/srpski",
       "sq": "Prebačeno na albanski",

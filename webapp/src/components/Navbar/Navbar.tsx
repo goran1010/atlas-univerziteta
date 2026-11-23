@@ -55,7 +55,7 @@ function Navbar({ closeMenu }: { closeMenu: UseCloseMenu }) {
       <Link
         to="/"
         aria-label={t("title.app")}
-        className="flex shrink-0 items-center gap-2 rounded-lg px-1 py-1 lg:text-lg hover:text-(--accent-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+        className="flex shrink-0 items-center gap-2 rounded-lg px-1 py-1 text-[0.9375rem] sm:text-base lg:text-lg hover:text-(--accent-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
       >
         <img
           src="/images/favicons/favicon.svg"
