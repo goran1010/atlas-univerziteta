@@ -6,6 +6,7 @@ import { FacultyDetailPage } from "../../../../src/components/entityDetails/Facu
 import { Notifications } from "../../../../src/components/Notifications";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 import { server, http, HttpResponse } from "../../../utils/msw";
+import { InvalidResponseError } from "../../../../src/utils/parseResponse";
 
 const facultyDetail = {
   id: 11,
@@ -177,5 +178,24 @@ describe("FacultyDetailPage", () => {
     expect(
       screen.getByRole("button", { name: /Try again/i }),
     ).toBeInTheDocument();
+  });
+
+  test("says the data could not be read, without a retry, when a successful response is malformed", async () => {
+    const errorSpy = vi.spyOn(console, "error").mockImplementation(() => {
+      return;
+    });
+    givenFaculty({ id: 11, name: "Faculty of Electrical Engineering" });
+    renderPage();
+
+    expect(
+      await screen.findByText("The server sent data the site could not read."),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: /Try again/i }),
+    ).not.toBeInTheDocument();
+    expect(errorSpy).toHaveBeenCalledWith(
+      "Error trying to load faculty details:",
+      expect.any(InvalidResponseError),
+    );
   });
 });

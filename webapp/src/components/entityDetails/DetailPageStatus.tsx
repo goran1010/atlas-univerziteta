@@ -5,7 +5,7 @@ function DetailPageStatus({
   action,
 }: {
   message: string;
-  action: ReactNode;
+  action?: ReactNode;
 }) {
   return (
     <div className="w-full mx-auto px-1 sm:px-4 py-8 text-center">
