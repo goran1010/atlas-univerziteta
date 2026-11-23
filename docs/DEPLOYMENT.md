@@ -26,9 +26,11 @@ https://api.atlasuniverziteta.com/api/auth/callback/google
 
 ## Seeding the database
 
-`npm run db:seed` reads JSON files from `server/JSON_files/universities/<COUNTRY>/` and syncs them into the database: new rows are created, existing rows are updated, and rows no longer in the JSON files are deleted (children cascade). `npm run db:reset` drops everything and re-seeds from scratch.
+`npm run db:seed` reads JSON files from `server/JSON_files/universities/<COUNTRY>/` and syncs them into the database: new rows are created, existing rows are updated, and rows no longer in the JSON files are deleted (children cascade). `npm run db:reset` drops everything and reapplies the migrations, but does not seed - run `npm run db:seed` after it.
 
 To re-seed production after a data change, pull the latest code on the VPS and run `./server/scripts/seed-prod.sh`.
+
+Full sync: the seed overwrites edits approved in the app and deletes rows added through the app. Re-seed production only while it holds nothing but seed data; once it has in-app changes, adding data needs an additive seed mode, which does not exist yet.
 
 ## Refolding search columns
 
@@ -43,7 +45,7 @@ After either, refold every row once. On the VPS, once the new image is running:
 ./server/scripts/refold-prod.sh
 ```
 
-Locally, `npm run db:refold` does the same against `DATABASE_URL`. Refolding only rewrites the `search*` columns, so it is safe to run again. A re-seed is no substitute: it skips rows added through the app, and for existing rows it rewrites only some of the folded columns (not names).
+Locally, `npm run db:refold` does the same against `DATABASE_URL`. Refolding only rewrites the `search*` columns, so it is safe to run again. A re-seed is no substitute: it deletes rows added through the app, and for existing faculties, study programs and tracks it does not rewrite the folded names.
 
 ## Adding a country
 
@@ -59,7 +61,7 @@ Country and entity codes are plain strings in the database, validated in applica
 8. **Sources** - credit the accreditation body in the README's data sources list
 9. **Verify** - run `npm run db:seed` and `npm run test:all`
 
-Deploy order: the webapp's read schemas accept only the country codes it knows, so an older webapp fails to load a university with a new code. After merging, let both the Netlify and the VPS deploys finish, and only then re-seed production with `./server/scripts/seed-prod.sh`.
+Deploy order: the webapp's read schemas accept only the country codes it knows, so an older webapp fails to load a university with a new code. After merging, let both the Netlify and the VPS deploys finish, and only then re-seed production with `./server/scripts/seed-prod.sh` (see the full-sync note in [Seeding the database](#seeding-the-database)).
 
 ## Share previews and prerendered meta
 
