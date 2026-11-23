@@ -180,6 +180,22 @@ describe("render Navbar mobile menu", () => {
     ).toBeInTheDocument();
   });
 
+  test("keeps the menu open while a theme is picked from it", async () => {
+    render(<NavbarWrapper withUser={false} />);
+
+    const { menuButton, mobileMenu } = await openMobileMenu();
+    const themeSelect = within(mobileMenu).getByRole("combobox", {
+      name: "Theme",
+    });
+
+    await userEvent.click(themeSelect);
+    await userEvent.selectOptions(themeSelect, "dark");
+
+    expect(localStorage.getItem("theme")).toBe("dark");
+    expect(menuButton).toHaveAttribute("aria-expanded", "true");
+    expect(mobileMenu).toBeInTheDocument();
+  });
+
   test("hides user-only links when user is not logged in", async () => {
     render(<NavbarWrapper withUser={false} />);
 
@@ -194,6 +210,19 @@ describe("render Navbar mobile menu", () => {
     expect(
       within(mobileMenu).getByRole("link", { name: /^Log In$/i }),
     ).toBeInTheDocument();
+  });
+});
+
+describe("Navbar landmark and site name", () => {
+  test("names the main navigation and links the site name home", () => {
+    render(<NavbarWrapper withUser={false} />);
+
+    expect(
+      screen.getByRole("navigation", { name: "Main" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: "Atlas Univerziteta" }),
+    ).toHaveAttribute("href", "/");
   });
 });
 

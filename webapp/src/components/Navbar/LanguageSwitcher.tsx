@@ -24,7 +24,6 @@ function LanguageSwitcher({
       id="language-switcher"
       aria-label={label}
       compact
-      className="md:flex-none"
       value={language}
       onChange={(e) => {
         const next = LANGUAGE_OPTIONS.find(

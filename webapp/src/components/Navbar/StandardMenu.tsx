@@ -24,7 +24,7 @@ function StandardMenu({ setIsMenuOpen, userData }: StandardMenuProps) {
   const { t } = use(RootContext);
 
   return (
-    <div className="hidden md:flex justify-between">
+    <div className="hidden lg:flex">
       <ul className="flex h-full gap-1">
         <li>
           <NavLink className={menuLinkClass} to="/" end>

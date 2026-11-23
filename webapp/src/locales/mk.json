@@ -32,7 +32,8 @@
     "theme": "Тема",
     "toggleMenuAria": "Отвори или затвори го менито за навигација",
     "skipToContent": "Прескокни до содржината",
-    "breadcrumb": "Патека за навигација"
+    "breadcrumb": "Патека за навигација",
+    "main": "Главна"
   },
   "loading": "Се вчитува…",
   "notifications": {

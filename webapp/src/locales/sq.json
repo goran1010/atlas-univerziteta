@@ -32,7 +32,8 @@
     "theme": "Tema",
     "toggleMenuAria": "Hap ose mbyll menunë e navigimit",
     "skipToContent": "Kalo te përmbajtja",
-    "breadcrumb": "Shtegu i navigimit"
+    "breadcrumb": "Shtegu i navigimit",
+    "main": "Kryesore"
   },
   "loading": "Duke u ngarkuar…",
   "notifications": {

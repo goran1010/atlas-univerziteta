@@ -32,7 +32,8 @@
     "theme": "Tema",
     "toggleMenuAria": "Prikaži navigacioni meni",
     "skipToContent": "Preskoči na sadržaj",
-    "breadcrumb": "Putanja do stranice"
+    "breadcrumb": "Putanja do stranice",
+    "main": "Glavna"
   },
   "loading": "Učitavanje…",
   "notifications": {

@@ -32,7 +32,8 @@
     "theme": "Theme",
     "toggleMenuAria": "Toggle navigation menu",
     "skipToContent": "Skip to content",
-    "breadcrumb": "Breadcrumb"
+    "breadcrumb": "Breadcrumb",
+    "main": "Main"
   },
   "loading": "Loading…",
   "notifications": {

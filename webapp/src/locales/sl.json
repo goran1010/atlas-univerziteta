@@ -32,7 +32,8 @@
     "theme": "Tema",
     "toggleMenuAria": "Odpri ali zapri navigacijski meni",
     "skipToContent": "Preskoči na vsebino",
-    "breadcrumb": "Drobtinice"
+    "breadcrumb": "Drobtinice",
+    "main": "Glavna"
   },
   "loading": "Nalaganje…",
   "notifications": {

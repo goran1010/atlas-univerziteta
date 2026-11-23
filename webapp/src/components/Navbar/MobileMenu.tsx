@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import { Status } from "./Status";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 
@@ -92,6 +93,16 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
         )}
         <li className={`flex justify-center items-center`}>
           <Status setIsMenuOpen={setIsMenuOpen} />
+        </li>
+        {/* the navbar shows the theme select from sm up; any click in the
+            navbar closes this menu, so keep the select's clicks inside */}
+        <li
+          className="flex justify-center p-2 sm:hidden"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
+          <ThemeSwitcher id="mobile-theme-switcher" />
         </li>
       </ul>
     </div>
