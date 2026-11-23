@@ -1,4 +1,3 @@
-import { TextLink } from "../sharedComponents/TextLink";
 import { UniversityMetaRow } from "./UniversityMeta";
 import { BuildingIcon, CalendarIcon } from "../sharedComponents/icons";
 import { UniversityInfoDialog } from "./UniversityInfoDialog";
@@ -60,11 +59,6 @@ function UniversityResult({
     }
   }
 
-  const countryLabel = t(`universitiesPage.countries.${university.country}`);
-  const entityLabel = university.entity
-    ? t(`universitiesPage.entities.${university.entity}`)
-    : undefined;
-
   // The university's own city first, the rest alphabetically. Grouped
   // display only kicks in when there is more than one city.
   function compareCityGroups(a: { key: string }, b: { key: string }) {
@@ -96,12 +90,7 @@ function UniversityResult({
       >
         <div>
           <h3 className="font-bold text-base leading-snug">
-            <TextLink
-              to={`/universities/${university.id.toString()}`}
-              className="font-bold"
-            >
-              {university.name}
-            </TextLink>
+            {university.name}
             {university.acronym && (
               <span className="ml-2 text-sm font-normal text-(--text-muted)">
                 ({university.acronym})
@@ -174,8 +163,6 @@ function UniversityResult({
           onClose={() => {
             setDialogOpen(false);
           }}
-          countryLabel={countryLabel}
-          entityLabel={entityLabel}
         />
       </div>
       {expanded && detailData && (

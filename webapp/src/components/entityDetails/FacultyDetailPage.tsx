@@ -7,14 +7,13 @@ import {
   AwardIcon,
   ClockIcon,
   GraduationCapIcon,
-  MapPinIcon,
   BookOpenIcon,
 } from "../sharedComponents/icons";
-import { ContactLinks } from "./ContactLinks";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 import { Breadcrumb } from "./Breadcrumb";
+import { homeWithLastSearch } from "../../utils/lastSearch";
 import { ShareButton } from "./ShareButton";
-import { ImproveDataLink } from "./ImproveDataLink";
+import { FacultySummary } from "./FacultySummary";
 import { Button } from "../sharedComponents/Button";
 import { ResultGroup } from "../Search/ResultGroup";
 import { TrackList } from "../entityCards/TrackList";
@@ -116,7 +115,7 @@ function FacultyDetailPage() {
       <div className="w-full mx-auto px-1 sm:px-4 py-4">
         <Breadcrumb
           items={[
-            { label: t("nav.home"), to: "/" },
+            { label: t("nav.home"), to: homeWithLastSearch() },
             {
               label: faculty.university.name,
               to: `/universities/${faculty.university.id.toString()}`,
@@ -133,41 +132,7 @@ function FacultyDetailPage() {
               </h1>
               <ShareButton url={`/faculties/${id ?? ""}`} />
             </div>
-            <p className="text-sm text-(--text-secondary)">
-              <TextLink
-                to={`/universities/${faculty.university.id.toString()}`}
-                className="font-bold"
-              >
-                {faculty.university.name}
-                {faculty.university.acronym &&
-                  ` (${faculty.university.acronym})`}
-              </TextLink>
-            </p>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-secondary)">
-              {faculty.city && (
-                <span>
-                  <MapPinIcon /> {faculty.city}
-                </span>
-              )}
-              <span>
-                {t(`universitiesPage.countries.${faculty.university.country}`)}
-              </span>
-              {faculty.university.entity && (
-                <span>
-                  {t(`universitiesPage.entities.${faculty.university.entity}`)}
-                </span>
-              )}
-            </div>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
-              <ContactLinks
-                website={faculty.website}
-                address={faculty.address}
-                phone={faculty.phone}
-                email={faculty.email}
-                dataSourceUrl={faculty.dataSourceUrl}
-              />
-            </div>
-            <ImproveDataLink />
+            <FacultySummary faculty={faculty} />
           </div>
 
           <div className="border-t border-(--border-color) pt-4">
@@ -213,6 +178,7 @@ function FacultyDetailPage() {
                         <p className="font-semibold text-(--text-primary)">
                           <TextLink
                             to={`/faculties/${id ?? ""}?program=${sp.id.toString()}`}
+                            variant="title"
                           >
                             {sp.name}
                           </TextLink>

@@ -32,7 +32,8 @@
     "theme": "Tema",
     "toggleMenuAria": "Prikaži navigacioni meni",
     "skipToContent": "Preskoči na sadržaj",
-    "breadcrumb": "Putanja do stranice"
+    "breadcrumb": "Putanja do stranice",
+    "main": "Glavna"
   },
   "loading": "Učitavanje…",
   "notifications": {
@@ -49,7 +50,7 @@
     "switched": {
       "system": "Prebačeno na jezik sistema",
       "en": "Prebačeno na engleski",
-      "sr": "Prebačeno na srpski",
+      "sr": "Prebačeno na bosanski/hrvatski/srpski",
       "sq": "Prebačeno na albanski",
       "mk": "Prebačeno na makedonski",
       "sl": "Prebačeno na slovenski"
@@ -119,7 +120,7 @@
     "summary": "Koristite Atlas Univerziteta za pregled profila univerziteta, poređenje akademske ponude i pristup strukturiranim javnim podacima kroz jednostavan interfejs ili direktno kroz API.",
     "exploreHeading": "Istražite podatke",
     "exploreDescription": "Pregledajte univerzitete u više zemalja. Pogledajte fakultete, studijske programe i smjerove. Pretražujte po nazivu, gradu, akronimu, zemlji, entitetu, vlasništvu, ciklusu studija, jeziku nastave i više.",
-    "exploreCta": "Univerziteti",
+    "exploreCta": "Pretraži podatke",
     "improveHeading": "Poboljšajte podatke",
     "improveDescription": "Znate nešto što nedostaje ili nije ispravno? Registrovani korisnici mogu predlagati izmjene - dodavanja, ispravke ili brisanja - koje admini pregledaju i primjenjuju.",
     "improveStep1": "Napravite besplatan nalog i potvrdite email",
@@ -140,7 +141,7 @@
     "publicIntro": "Javni REST endpoint-i su dostupni pod osnovnim URL-om ispod. Ovi endpoint-i ne zahtijevaju autentifikaciju.",
     "fullDocs": "Za kompletnu projektnu dokumentaciju, lokalno postavljanje i smjernice za doprinos, pogledajte",
     "dataObject": "Objekat univerziteta",
-    "dataObjectExample": "{\n  \"id\":                number                  - jedinstveni identifikator\n  \"name\":              string                  - zvanični naziv\n  \"acronym\":           string | null           - skraćenica (npr. UNSA)\n  \"city\":              string                  - grad glavnog kampusa\n  \"country\":           string                  - ISO 3166-1 alpha-3 kod zemlje (XKX za Kosovo, koje ga nema)\n  \"entity\":            string | null           - entitet, null za zemlje bez njih\n  \"ownership\":         \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\":       string | null           - npr. \"1949\"\n  \"website\":           string | null           - zvanični URL\n  \"address\":           string | null           - samo detalji\n  \"phone\":             string | null           - samo detalji\n  \"email\":             string | null           - samo detalji\n  \"accreditationFrom\": string | null           - ISO datum, samo detalji\n  \"accreditationTo\":   string | null           - ISO datum, samo detalji\n  \"authority\":         string | null           - akreditacijsko tijelo, samo detalji\n  \"dataSourceUrl\":     string | null           - izvor podataka, samo detalji\n  \"lastModified\":      string | null           - ISO datum posljednje provjere, samo detalji\n  \"_count\":            { \"faculties\": number } - samo lista\n  \"faculties\":         Faculty[]               - samo detalji\n}",
+    "dataObjectExample": "{\n  \"id\":                number                  - jedinstveni identifikator\n  \"name\":              string                  - zvanični naziv\n  \"acronym\":           string | null           - skraćenica (npr. UNSA)\n  \"city\":              string                  - grad glavnog kampusa\n  \"country\":           string                  - ISO 3166-1 alpha-3 kod zemlje (XKX za Kosovo, koje ga nema)\n  \"entity\":            string | null           - entitet, null za zemlje bez njih\n  \"ownership\":         \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\":       string | null           - npr. \"1949\"\n  \"website\":           string | null           - zvanični URL\n  \"address\":           string | null\n  \"phone\":             string | null\n  \"email\":             string | null\n  \"accreditationFrom\": string | null           - ISO datum, samo detalji\n  \"accreditationTo\":   string | null           - ISO datum, samo detalji\n  \"authority\":         string | null           - akreditacijsko tijelo, samo detalji\n  \"dataSourceUrl\":     string | null           - izvor podataka, samo detalji\n  \"lastModified\":      string | null           - ISO datum posljednje provjere, samo detalji\n  \"_count\":            { \"faculties\": number } - samo lista\n  \"faculties\":         Faculty[]               - samo detalji\n}",
     "studyProgramObject": "Objekat studijskog programa",
     "studyProgramObjectExample": "{\n  \"id\":            number        - jedinstveni identifikator\n  \"name\":          string        - naziv kako ga objavljuje univerzitet\n  \"facultyId\":     number        - samo detalji\n  \"cycle\":         \"FIRST\" | \"SECOND\" | \"THIRD\" | \"INTEGRATED\" | \"VOCATIONAL\" | \"SPECIALIST\"\n  \"durationYears\": number | null\n  \"ects\":          number | null\n  \"languages\":     string[]      - jezici nastave kao ISO 639 kodovi (cnr za crnogorski), npr. [\"bs\", \"hr\", \"sr\"]; prazno kada nije poznato\n  \"dataSourceUrl\": string | null - izvor podataka, samo detalji\n  \"lastModified\":  string | null - ISO datum posljednje provjere, samo detalji\n  \"faculty\":       Faculty       - sa svojim univerzitetom; u listama samo id, name i university { id, name, country }\n  \"tracks\":        Track[]       - samo detalji\n}",
     "examples": "Primjeri",
@@ -150,7 +151,7 @@
       "apiV1Status": "Provjera statusa API v1.",
       "getAllUniversities": "Preuzimanje svih univerziteta, sortiranih po zemlji, vlasništvu pa po nazivu. Podržava country i entity filtere. Uključuje broj fakulteta po univerzitetu.",
       "getUniversityById": "Preuzimanje univerziteta po ID-u s potpunim ugniježđenim detaljima (fakulteti, studijski programi i smjerovi). dataSourceUrl na svakoj stavci je URL sa kojeg su preuzeti njeni početni podaci.",
-      "search": "Pretraga univerziteta, fakulteta i studijskih programa (nazivi smjerova se pronalaze preko svog studijskog programa). Zahtijeva pojam za pretragu (min 2 karaktera) ili barem jedan filter (country, entity ili ownership). Pretražuje po nazivu, gradu, akronimu, godini osnivanja, ECTS/trajanju, jeziku nastave programa (po nazivu jezika na bilo kojem obuhvaćenom jeziku, npr. \"english\", \"engleski\", \"anglisht\") i nazivima povezanih jedinica (neosjetljivo na velika/mala slova i dijakritike, unos latinicom ili ćirilicom). Riječi za vlasništvo, ciklus i trajanje rade na engleskom i svim obuhvaćenim jezicima (npr. \"javna\", \"publik\", \"master\", \"3 vite\").",
+      "search": "Pretraga univerziteta, fakulteta i studijskih programa (nazivi smjerova se pronalaze preko svog studijskog programa). Zahtijeva pojam za pretragu (min 2 karaktera) ili barem jedan filter (country, entity ili ownership). Pretražuje po nazivu, gradu, akronimu, godini osnivanja, ECTS/trajanju, jeziku nastave programa (po nazivu jezika na bilo kojem obuhvaćenom jeziku, npr. \"english\", \"engleski\", \"anglisht\") i nazivima povezanih jedinica (neosjetljivo na velika/mala slova i dijakritike, unos latinicom ili ćirilicom). Riječi za vlasništvo, ciklus i trajanje rade na engleskom i svim obuhvaćenim jezicima (npr. \"javna\", \"publik\", \"master\", \"3 vite\"). Fakulteti i studijski programi nose skraćene podatke o nadređenom: univerzitet { id, name, acronym, city, country, entity, ownership }, a program i fakultet { id, name, universityId, university } - ostatak daju endpoint-i za detalje.",
       "searchTermParam": "Tekst za pretragu (2-100 karaktera). Opciono ako je naveden country, entity ili ownership.",
       "pageParam": "Broj stranice, počinje od 1 (podrazumijevano 1).",
       "limitParam": "Broj stavki po stranici, 1-100 (podrazumijevano 50).",
@@ -416,6 +417,14 @@
     "trackCount_two": "smjera",
     "trackCount_few": "smjera",
     "trackCount_other": "smjerova",
+    "universityCount_one": "univerzitet",
+    "universityCount_two": "univerziteta",
+    "universityCount_few": "univerziteta",
+    "universityCount_other": "univerziteta",
+    "countryCount_one": "država",
+    "countryCount_two": "države",
+    "countryCount_few": "države",
+    "countryCount_other": "država",
     "cycles": {
       "FIRST": "Prvi (Bachelor)",
       "SECOND": "Drugi (Master)",
@@ -458,6 +467,10 @@
     "linkCopied": "Link kopiran u clipboard.",
     "linkCopyFailed": "Nije moguće kopirati link.",
     "dataSource": "Izvor podataka",
+    "accreditation": "Akreditacija",
+    "accreditingBody": "Nadležna institucija",
+    "accreditationSince": "od",
+    "accreditationUntil": "do",
     "improvePrompt": "Vidiš netačan podatak?",
     "improveLink": "Predloži ispravku",
     "improveLogin": "Prijavi se da predložiš ispravku"

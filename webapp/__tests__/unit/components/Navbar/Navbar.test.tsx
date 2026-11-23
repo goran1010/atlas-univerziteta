@@ -180,6 +180,18 @@ describe("render Navbar mobile menu", () => {
     ).toBeInTheDocument();
   });
 
+  test("keeps the theme and language selects in the bar, not the menu", async () => {
+    render(<NavbarWrapper withUser={false} />);
+
+    const { mobileMenu } = await openMobileMenu();
+
+    expect(screen.getByRole("combobox", { name: "Theme" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("combobox", { name: "Language" }),
+    ).toBeInTheDocument();
+    expect(within(mobileMenu).queryByRole("combobox")).not.toBeInTheDocument();
+  });
+
   test("hides user-only links when user is not logged in", async () => {
     render(<NavbarWrapper withUser={false} />);
 
@@ -194,6 +206,19 @@ describe("render Navbar mobile menu", () => {
     expect(
       within(mobileMenu).getByRole("link", { name: /^Log In$/i }),
     ).toBeInTheDocument();
+  });
+});
+
+describe("Navbar landmark and site name", () => {
+  test("names the main navigation and links the site name home", () => {
+    render(<NavbarWrapper withUser={false} />);
+
+    expect(
+      screen.getByRole("navigation", { name: "Main" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: "Atlas Univerziteta" }),
+    ).toHaveAttribute("href", "/");
   });
 });
 

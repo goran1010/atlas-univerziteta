@@ -32,7 +32,8 @@
     "theme": "Tema",
     "toggleMenuAria": "Hap ose mbyll menunë e navigimit",
     "skipToContent": "Kalo te përmbajtja",
-    "breadcrumb": "Shtegu i navigimit"
+    "breadcrumb": "Shtegu i navigimit",
+    "main": "Kryesore"
   },
   "loading": "Duke u ngarkuar…",
   "notifications": {
@@ -49,7 +50,7 @@
     "switched": {
       "system": "U kalua në gjuhën e sistemit",
       "en": "U kalua në anglisht",
-      "sr": "U kalua në serbisht",
+      "sr": "U kalua në boshnjakisht/kroatisht/serbisht",
       "sq": "U kalua në shqip",
       "mk": "U kalua në maqedonisht",
       "sl": "U kalua në sllovenisht"
@@ -119,7 +120,7 @@
     "summary": "Përdorni Atlas Univerziteta për të shfletuar profilet e universiteteve, për të krahasuar ofertat akademike dhe për të marrë të dhëna publike të strukturuara përmes një ndërfaqeje të thjeshtë ose drejtpërdrejt përmes API-së.",
     "exploreHeading": "Eksploroni të dhënat",
     "exploreDescription": "Shfletoni universitete në disa shtete. Shikoni fakultetet, programet e studimit dhe profilet. Kërkoni sipas emrit, qytetit, akronimit, shtetit, entitetit, pronësisë, ciklit të studimit, gjuhës së mësimdhënies dhe më shumë.",
-    "exploreCta": "Universitetet",
+    "exploreCta": "Kërko në të dhëna",
     "improveHeading": "Përmirësoni të dhënat",
     "improveDescription": "Dini diçka që mungon ose është e pasaktë? Përdoruesit e regjistruar mund të sugjerojnë ndryshime - shtime, modifikime ose fshirje - të cilat shqyrtohen dhe zbatohen nga administratorët.",
     "improveStep1": "Krijoni një llogari falas dhe konfirmoni email-in tuaj",
@@ -140,7 +141,7 @@
     "publicIntro": "Pikat publike REST të qasjes janë të disponueshme në URL-në bazë më poshtë. Këto pika nuk kërkojnë autentikim.",
     "fullDocs": "Për dokumentimin e plotë të projektit, instalimin lokal dhe udhëzimet për kontribut, shikoni",
     "dataObject": "Objekti i universitetit",
-    "dataObjectExample": "{\n  \"id\":                number                  - identifikues unik\n  \"name\":              string                  - emri zyrtar\n  \"acronym\":           string | null           - forma e shkurtër (p.sh. UNSA)\n  \"city\":              string                  - qyteti i kampusit kryesor\n  \"country\":           string                  - kodi ISO 3166-1 alpha-3 i shtetit (XKX për Kosovën, që nuk ka kod)\n  \"entity\":            string | null           - njësia administrative, null për shtetet pa to\n  \"ownership\":         \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\":       string | null           - p.sh. \"1949\"\n  \"website\":           string | null           - URL zyrtare\n  \"address\":           string | null           - vetëm në detaje\n  \"phone\":             string | null           - vetëm në detaje\n  \"email\":             string | null           - vetëm në detaje\n  \"accreditationFrom\": string | null           - datë ISO, vetëm në detaje\n  \"accreditationTo\":   string | null           - datë ISO, vetëm në detaje\n  \"authority\":         string | null           - organi akreditues, vetëm në detaje\n  \"dataSourceUrl\":     string | null           - burimi i të dhënave, vetëm në detaje\n  \"lastModified\":      string | null           - datë ISO e kontrollit të fundit, vetëm në detaje\n  \"_count\":            { \"faculties\": number } - vetëm në listë\n  \"faculties\":         Faculty[]               - vetëm në detaje\n}",
+    "dataObjectExample": "{\n  \"id\":                number                  - identifikues unik\n  \"name\":              string                  - emri zyrtar\n  \"acronym\":           string | null           - forma e shkurtër (p.sh. UNSA)\n  \"city\":              string                  - qyteti i kampusit kryesor\n  \"country\":           string                  - kodi ISO 3166-1 alpha-3 i shtetit (XKX për Kosovën, që nuk ka kod)\n  \"entity\":            string | null           - njësia administrative, null për shtetet pa to\n  \"ownership\":         \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\":       string | null           - p.sh. \"1949\"\n  \"website\":           string | null           - URL zyrtare\n  \"address\":           string | null\n  \"phone\":             string | null\n  \"email\":             string | null\n  \"accreditationFrom\": string | null           - datë ISO, vetëm në detaje\n  \"accreditationTo\":   string | null           - datë ISO, vetëm në detaje\n  \"authority\":         string | null           - organi akreditues, vetëm në detaje\n  \"dataSourceUrl\":     string | null           - burimi i të dhënave, vetëm në detaje\n  \"lastModified\":      string | null           - datë ISO e kontrollit të fundit, vetëm në detaje\n  \"_count\":            { \"faculties\": number } - vetëm në listë\n  \"faculties\":         Faculty[]               - vetëm në detaje\n}",
     "studyProgramObject": "Objekti i programit të studimit",
     "studyProgramObjectExample": "{\n  \"id\":            number        - identifikues unik\n  \"name\":          string        - emri siç e publikon universiteti\n  \"facultyId\":     number        - vetëm në detaje\n  \"cycle\":         \"FIRST\" | \"SECOND\" | \"THIRD\" | \"INTEGRATED\" | \"VOCATIONAL\" | \"SPECIALIST\"\n  \"durationYears\": number | null\n  \"ects\":          number | null\n  \"languages\":     string[]      - gjuhët e mësimdhënies si kode ISO 639 (cnr për malazezishten), p.sh. [\"bs\", \"hr\", \"sr\"]; bosh kur nuk dihen\n  \"dataSourceUrl\": string | null - burimi i të dhënave, vetëm në detaje\n  \"lastModified\":  string | null - datë ISO e kontrollit të fundit, vetëm në detaje\n  \"faculty\":       Faculty       - me universitetin e tij; në lista vetëm id, name dhe university { id, name, country }\n  \"tracks\":        Track[]       - vetëm në detaje\n}",
     "examples": "Shembuj të shpejtë",
@@ -150,7 +151,7 @@
       "apiV1Status": "Kontrollo statusin e API v1.",
       "getAllUniversities": "Merr të gjitha universitetet, të renditura sipas shtetit, pronësisë, pastaj emrit. Pranon filtrat country dhe entity. Përfshin numrin e fakulteteve për çdo universitet.",
       "getUniversityById": "Merr një universitet sipas ID-së me të gjitha detajet e ndërthurura (fakultetet, programet e studimit dhe profilet). dataSourceUrl në çdo njësi është URL-ja nga e cila u morën të dhënat e saj fillestare.",
-      "search": "Kërko në universitete, fakultete dhe programe studimi (emrat e profileve gjenden përmes programit të tyre). Kërkon një term kërkimi (min. 2 karaktere) ose të paktën një filtër kufizues (country, entity ose ownership). Përputhet me emrin, qytetin, akronimin, vitin e themelimit, ECTS/kohëzgjatjen, gjuhën e mësimdhënies së një programi (sipas emrit të saj në cilëndo gjuhë të mbuluar, p.sh. \"english\", \"engleski\", \"anglisht\") dhe emrat e njësive të lidhura (pa dallim shkronjash të mëdha e të vogla dhe shenjash diakritike, me shkrim latin ose cirilik). Fjalët për pronësinë, ciklin e studimit dhe kohëzgjatjen funksionojnë në anglisht dhe në çdo gjuhë të mbuluar (p.sh. \"javna\", \"publik\", \"master\", \"3 vite\").",
+      "search": "Kërko në universitete, fakultete dhe programe studimi (emrat e profileve gjenden përmes programit të tyre). Kërkon një term kërkimi (min. 2 karaktere) ose të paktën një filtër kufizues (country, entity ose ownership). Përputhet me emrin, qytetin, akronimin, vitin e themelimit, ECTS/kohëzgjatjen, gjuhën e mësimdhënies së një programi (sipas emrit të saj në cilëndo gjuhë të mbuluar, p.sh. \"english\", \"engleski\", \"anglisht\") dhe emrat e njësive të lidhura (pa dallim shkronjash të mëdha e të vogla dhe shenjash diakritike, me shkrim latin ose cirilik). Fjalët për pronësinë, ciklin e studimit dhe kohëzgjatjen funksionojnë në anglisht dhe në çdo gjuhë të mbuluar (p.sh. \"javna\", \"publik\", \"master\", \"3 vite\"). Fakultetet dhe programet e studimit mbartin një prind të shkurtuar: universitetin { id, name, acronym, city, country, entity, ownership }, dhe programi edhe fakultetin { id, name, universityId, university } - pjesën tjetër e japin pikat fundore të detajeve.",
       "searchTermParam": "Teksti për kërkim (2-100 karaktere). Opsional nëse jepet country, entity ose ownership.",
       "pageParam": "Numri i faqes, duke filluar nga 1 (parazgjedhur 1).",
       "limitParam": "Elemente për faqe, 1-100 (parazgjedhur 50).",
@@ -416,6 +417,14 @@
     "trackCount_two": "profile",
     "trackCount_few": "profile",
     "trackCount_other": "profile",
+    "universityCount_one": "universitet",
+    "universityCount_two": "universitete",
+    "universityCount_few": "universitete",
+    "universityCount_other": "universitete",
+    "countryCount_one": "shtet",
+    "countryCount_two": "shtete",
+    "countryCount_few": "shtete",
+    "countryCount_other": "shtete",
     "cycles": {
       "FIRST": "I parë (Bachelor)",
       "SECOND": "I dytë (Master)",
@@ -458,6 +467,10 @@
     "linkCopied": "Lidhja u kopjua.",
     "linkCopyFailed": "Lidhja nuk mund të kopjohej.",
     "dataSource": "Burimi i të dhënave",
+    "accreditation": "Akreditimi",
+    "accreditingBody": "Institucioni akreditues",
+    "accreditationSince": "që nga",
+    "accreditationUntil": "deri më",
     "improvePrompt": "Shihni diçka të pasaktë?",
     "improveLink": "Sugjeroni një korrigjim",
     "improveLogin": "Hyni për të sugjeruar një korrigjim"

@@ -5,6 +5,10 @@ import { LEVEL_BADGE } from "../../utils/levelColors";
 
 import type { EntityLevel } from "../../utils/levelColors";
 
+// a toggle on a group of a few items only adds noise; a group that started
+// out collapsed keeps it so it can be folded again
+const SHOW_TOGGLE_ABOVE = 5;
+
 function LabelPill({
   label,
   count,
@@ -48,6 +52,8 @@ function ResultGroup({
 }) {
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
   const { t } = use(RootContext);
+  const showToggle =
+    collapsible && (defaultCollapsed || (count ?? 0) > SHOW_TOGGLE_ABOVE);
 
   // collapsed, the whole box is one button: border to border expands it
   if (collapsed) {
@@ -74,7 +80,7 @@ function ResultGroup({
     <div className="relative mt-3 border border-(--border-color)/30 rounded-xl overflow-x-clip p-1 pt-7 sm:p-3 sm:pt-6 bg-(--surface-1)/40">
       <div className="absolute -top-3 left-3 right-3 flex items-center justify-between gap-1.5">
         <LabelPill label={label} count={count} level={level} />
-        {collapsible && (
+        {showToggle && (
           <CollapseToggle
             collapsed={collapsed}
             onClick={() => {

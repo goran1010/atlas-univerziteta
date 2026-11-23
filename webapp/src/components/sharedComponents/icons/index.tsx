@@ -14,6 +14,7 @@ export {
   BookOpenIcon,
   TagIcon,
   CalendarIcon,
+  ShieldCheckIcon,
 } from "./entity";
 export {
   SearchIcon,
@@ -21,4 +22,12 @@ export {
   ChevronDownIcon,
   UploadIcon,
   AlertCircleIcon,
+  SunIcon,
+  MoonIcon,
+  MonitorIcon,
+  InfoIcon,
+  CodeIcon,
+  PencilIcon,
+  LogInIcon,
+  UserIcon,
 } from "./ui";

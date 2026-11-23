@@ -93,7 +93,7 @@ function About() {
             </LinkButton>
             <ExternalLink
               href="https://github.com/goran1010/atlas-univerziteta"
-              className="inline-flex items-center justify-center gap-1.5"
+              className="inline-flex items-center justify-center gap-1.5 font-semibold"
             >
               <GitHubIcon />
               {t("about.forDevsGithub")}

@@ -4,6 +4,12 @@
 
 @import "tailwindcss";
 
+@theme {
+  --font-sans:
+    "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("/fonts/roboto-latin-400-normal.woff2") format("woff2");
@@ -125,6 +131,8 @@
   --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 8 5 5 5-5'/%3E%3C/svg%3E");
   --surface-1: rgba(255, 255, 255, 0.92);
   --surface-2: rgba(255, 255, 255, 0.97);
+  /* for controls that sit on a border line, which must not show through */
+  --surface-solid: #ffffff;
   --surface-3: #e6edf8;
   --surface-alt: #e8eef6;
   --border-color: rgba(59, 130, 246, 0.45);
@@ -152,6 +160,7 @@
   --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 8 5 5 5-5'/%3E%3C/svg%3E");
   --surface-1: rgba(15, 23, 42, 0.74);
   --surface-2: rgba(15, 23, 42, 0.92);
+  --surface-solid: #0f172a;
   --surface-3: #1f2937;
   --surface-alt: rgba(30, 41, 59, 0.8);
   --border-color: rgba(148, 163, 184, 0.33);
@@ -172,7 +181,7 @@
 
 @layer base {
   html {
-    font-size: clamp(16px, 1.2vw, 20px);
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
   }
 
   body {
@@ -194,23 +203,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    font-family:
-      "Roboto",
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
   }
 }
 

@@ -66,7 +66,7 @@ describe("GET /api/v1/universities pagination", () => {
     expect(error["code"]).toBe("VALIDATION_ERROR");
   });
 
-  test("list items carry the directory fields and no internal columns", async () => {
+  test("list items carry the directory and contact fields and no internal columns", async () => {
     const response = await request(app).get("/api/v1/universities?limit=1");
     const [item] = getResponseArray(getResponseObject(response.body)["data"]);
     const university = getResponseObject(item);
@@ -77,7 +77,10 @@ describe("GET /api/v1/universities pagination", () => {
       _count: { faculties: 0 },
     });
     expect(university).not.toHaveProperty("searchName");
-    expect(university).not.toHaveProperty("address");
+    expect(university).toHaveProperty("address");
+    expect(university).toHaveProperty("phone");
+    expect(university).toHaveProperty("email");
+    expect(university).not.toHaveProperty("authority");
   });
 });
 

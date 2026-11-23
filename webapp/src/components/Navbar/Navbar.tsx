@@ -1,4 +1,5 @@
 import { use } from "react";
+import { Link } from "react-router";
 import { RootContext } from "../../contextData/RootContext";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { MobileMenu } from "./MobileMenu";
@@ -14,13 +15,14 @@ function Navbar({ closeMenu }: { closeMenu: UseCloseMenu }) {
   return (
     <nav
       ref={navRef}
+      aria-label={t("nav.main")}
       onClick={() => {
         setIsMenuOpen(false);
       }}
-      className="z-40 w-full px-1 sm:px-2 py-2 font-bold flex md:justify-between items-center gap-1 sm:gap-2 md:gap-3 transition transform text-(--text-primary)
+      className="z-40 w-full px-1 sm:px-2 py-2 font-bold flex items-center gap-1 sm:gap-2 lg:gap-3 transition transform text-(--text-primary)
       border-b border-(--border-color) backdrop-blur sticky top-0 left-0 shadow-md"
     >
-      <div className="flex md:hidden items-center">
+      <div className="flex lg:hidden items-center">
         <button
           id="mobile-menu-toggle"
           type="button"
@@ -50,9 +52,27 @@ function Navbar({ closeMenu }: { closeMenu: UseCloseMenu }) {
         <MobileMenu setIsMenuOpen={setIsMenuOpen} userData={userData} />
       )}
 
-      <div className="flex items-center gap-1 sm:gap-2 flex-1 justify-center md:justify-between">
+      <Link
+        to="/"
+        aria-label={t("title.app")}
+        className="flex shrink-0 items-center gap-2 rounded-lg px-1 py-1 lg:text-lg hover:text-(--accent-text) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+      >
+        <img
+          src="/images/favicons/favicon.svg"
+          alt=""
+          className="h-7 w-7"
+          width={28}
+          height={28}
+        />
+        <span className="hidden sm:inline lg:hidden xl:inline">
+          {t("title.app")}
+        </span>
+      </Link>
+
+      <StandardMenu setIsMenuOpen={setIsMenuOpen} userData={userData} />
+
+      <div className="ml-auto flex flex-1 items-center gap-1 sm:flex-none sm:gap-2">
         <ThemeSwitcher />
-        <StandardMenu setIsMenuOpen={setIsMenuOpen} userData={userData} />
         <LanguageSwitcher setLanguage={setLanguage} language={language} />
       </div>
     </nav>

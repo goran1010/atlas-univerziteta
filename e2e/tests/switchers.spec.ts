@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("language select switches to SR and persists across reloads", async ({
+test("language select switches to BHS and persists across reloads", async ({
   page,
 }) => {
   await page.goto("/");
@@ -31,10 +31,10 @@ test("theme select applies dark mode and persists across reloads", async ({
   ).toBeVisible();
 
   const themeSelect = page.getByRole("combobox", { name: "Theme" });
-  await themeSelect.selectOption("Theme: Light");
+  await themeSelect.selectOption("light");
   await expect(page.locator("html")).not.toHaveClass(/dark/);
 
-  await themeSelect.selectOption("Theme: Dark");
+  await themeSelect.selectOption("dark");
   await expect(page.locator("html")).toHaveClass(/dark/);
 
   await page.reload();

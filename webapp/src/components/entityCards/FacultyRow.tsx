@@ -1,13 +1,10 @@
 import { BookOpenIcon, MapPinIcon } from "../sharedComponents/icons";
-import { TextLink } from "../sharedComponents/TextLink";
 import { use, useState } from "react";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
-import { LinkButton } from "../sharedComponents/LinkButton";
-import { Dialog } from "../sharedComponents/Dialog";
+import { FacultyInfoDialog } from "./FacultyInfoDialog";
 import { LEVEL_GUIDE } from "../../utils/levelColors";
 import { ContactLinks } from "../entityDetails/ContactLinks";
-import { ShareButton } from "../entityDetails/ShareButton";
 import { ResultGroup } from "../Search/ResultGroup";
 import { StudyProgramRow } from "./StudyProgramRow";
 import { byCycleDisplayOrder } from "../../utils/cycleOrder";
@@ -43,20 +40,25 @@ function FacultyRow({
         }`}
       >
         <div className="min-w-0">
-          <p className="font-semibold">
-            <TextLink to={`/faculties/${faculty.id.toString()}`}>
-              {faculty.name}
-            </TextLink>
-          </p>
-          {hasStudyPrograms && (
-            <p className="text-xs text-(--text-muted) mt-0.5">
-              <BookOpenIcon />{" "}
-              <span className="font-bold text-violet-600 dark:text-violet-400">
-                {faculty.studyPrograms.length}
-              </span>{" "}
-              {tCount(
-                "universitiesPage.studyProgramCount",
-                faculty.studyPrograms.length,
+          <p className="font-semibold">{faculty.name}</p>
+          {(Boolean(faculty.city) || hasStudyPrograms) && (
+            <p className="flex flex-wrap gap-x-3 text-xs text-(--text-muted) mt-0.5">
+              {faculty.city && (
+                <span>
+                  <MapPinIcon /> {faculty.city}
+                </span>
+              )}
+              {hasStudyPrograms && (
+                <span>
+                  <BookOpenIcon />{" "}
+                  <span className="font-bold text-violet-600 dark:text-violet-400">
+                    {faculty.studyPrograms.length}
+                  </span>{" "}
+                  {tCount(
+                    "universitiesPage.studyProgramCount",
+                    faculty.studyPrograms.length,
+                  )}
+                </span>
               )}
             </p>
           )}
@@ -90,57 +92,13 @@ function FacultyRow({
           )}
         </div>
       </div>
-      <Dialog
+      <FacultyInfoDialog
+        faculty={faculty}
         open={dialogOpen}
         onClose={() => {
           setDialogOpen(false);
         }}
-        title={faculty.name}
-        headerActions={
-          <ShareButton url={`/faculties/${faculty.id.toString()}`} />
-        }
-      >
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-secondary)">
-            {faculty.city && (
-              <span>
-                <MapPinIcon /> {faculty.city}
-              </span>
-            )}
-            {hasStudyPrograms && (
-              <span className="text-(--text-muted)">
-                <BookOpenIcon />{" "}
-                <span className="font-bold text-violet-600 dark:text-violet-400">
-                  {faculty.studyPrograms.length}
-                </span>{" "}
-                {tCount(
-                  "universitiesPage.studyProgramCount",
-                  faculty.studyPrograms.length,
-                )}
-              </span>
-            )}
-          </div>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
-            <ContactLinks
-              website={faculty.website}
-              address={faculty.address}
-              phone={faculty.phone}
-              email={faculty.email}
-            />
-          </div>
-          <div className="flex justify-center">
-            <LinkButton
-              to={`/faculties/${faculty.id.toString()}`}
-              className="text-sm w-full sm:w-auto"
-              onClick={() => {
-                setDialogOpen(false);
-              }}
-            >
-              {t("universitiesPage.openFullPage")}
-            </LinkButton>
-          </div>
-        </div>
-      </Dialog>
+      />
       {open && hasStudyPrograms && (
         <div
           className={`ml-0.5 sm:ml-4 mt-1 ${LEVEL_GUIDE.STUDY_PROGRAM} pl-1.5 sm:pl-3`}

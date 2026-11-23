@@ -13,11 +13,11 @@ const LEVEL_STRIP: Record<EntityLevel, string> = {
 
 const LEVEL_BADGE: Record<EntityLevel, string> = {
   UNIVERSITY:
-    "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200",
-  FACULTY: "bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-200",
+    "bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200",
+  FACULTY: "bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-200",
   STUDY_PROGRAM:
-    "bg-violet-100 text-violet-800 dark:bg-violet-900/40 dark:text-violet-200",
-  TRACK: "bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:text-amber-200",
+    "bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200",
+  TRACK: "bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200",
 };
 
 // the thin vertical guide along an expanded list of children

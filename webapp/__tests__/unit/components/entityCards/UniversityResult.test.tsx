@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import userEvent from "@testing-library/user-event";
 import { UniversityResult } from "../../../../src/components/entityCards/UniversityResult";
@@ -87,6 +87,38 @@ describe("UniversityResult", () => {
   beforeEach(() => {
     detailRequests = 0;
     givenDetails([]);
+  });
+
+  test("opens the info dialog with the page's details, loaded on open", async () => {
+    server.use(
+      http.get("*/api/v1/universities/:id", () =>
+        HttpResponse.json({
+          message: "University retrieved successfully.",
+          data: {
+            ...baseUniversity,
+            phone: "+387 33 221 044",
+            authority: "HEA",
+            faculties: nestedFaculties,
+          },
+        }),
+      ),
+    );
+    const user = userEvent.setup();
+    render(<Wrapper />);
+
+    await user.click(screen.getByRole("button", { name: /View info/i }));
+
+    const dialog = await screen.findByRole("dialog");
+    expect(
+      await within(dialog).findByText("Accrediting body: HEA"),
+    ).toBeInTheDocument();
+    expect(
+      within(dialog).getByRole("link", { name: /\+387 33 221 044/ }),
+    ).toBeInTheDocument();
+    expect(dialog).toHaveTextContent(/1\s+faculty/i);
+    expect(
+      within(dialog).getByRole("link", { name: /Open full page/i }),
+    ).toHaveAttribute("href", "/universities/1");
   });
 
   test("renders basic university metadata", () => {

@@ -32,7 +32,8 @@
     "theme": "Theme",
     "toggleMenuAria": "Toggle navigation menu",
     "skipToContent": "Skip to content",
-    "breadcrumb": "Breadcrumb"
+    "breadcrumb": "Breadcrumb",
+    "main": "Main"
   },
   "loading": "Loading…",
   "notifications": {
@@ -49,7 +50,7 @@
     "switched": {
       "system": "Switched to system language",
       "en": "Switched to English",
-      "sr": "Switched to Serbian",
+      "sr": "Switched to Bosnian/Croatian/Serbian",
       "sq": "Switched to Albanian",
       "mk": "Switched to Macedonian",
       "sl": "Switched to Slovenian"
@@ -119,7 +120,7 @@
     "summary": "Use Atlas Univerziteta to browse university profiles, compare academic offerings, and access structured public data through a simple interface or directly through the API.",
     "exploreHeading": "Explore the Data",
     "exploreDescription": "Browse universities across multiple countries. View faculties, study programs, and tracks. Search by name, city, acronym, country, entity, ownership, study cycle, language of instruction, and more.",
-    "exploreCta": "Universities",
+    "exploreCta": "Search the data",
     "improveHeading": "Improve the Data",
     "improveDescription": "Know something that's missing or incorrect? Registered users can suggest changes - additions, edits, or deletions - which are reviewed and applied by admins.",
     "improveStep1": "Create a free account and confirm your email",
@@ -140,7 +141,7 @@
     "publicIntro": "Public REST endpoints are available under the base URL below. These endpoints do not require authentication.",
     "fullDocs": "For full project documentation, local setup, and contributing guidelines, see the",
     "dataObject": "University object",
-    "dataObjectExample": "{\n  \"id\":                number                  - unique identifier\n  \"name\":              string                  - official name\n  \"acronym\":           string | null           - short form (e.g. UNSA)\n  \"city\":              string                  - main campus city\n  \"country\":           string                  - ISO 3166-1 alpha-3 country code (XKX for Kosovo, which has none)\n  \"entity\":            string | null           - subdivision, null for countries without them\n  \"ownership\":         \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\":       string | null           - e.g. \"1949\"\n  \"website\":           string | null           - official URL\n  \"address\":           string | null           - detail only\n  \"phone\":             string | null           - detail only\n  \"email\":             string | null           - detail only\n  \"accreditationFrom\": string | null           - ISO date, detail only\n  \"accreditationTo\":   string | null           - ISO date, detail only\n  \"authority\":         string | null           - accrediting body, detail only\n  \"dataSourceUrl\":     string | null           - source of the data, detail only\n  \"lastModified\":      string | null           - ISO date of the last check, detail only\n  \"_count\":            { \"faculties\": number } - list only\n  \"faculties\":         Faculty[]               - detail only\n}",
+    "dataObjectExample": "{\n  \"id\":                number                  - unique identifier\n  \"name\":              string                  - official name\n  \"acronym\":           string | null           - short form (e.g. UNSA)\n  \"city\":              string                  - main campus city\n  \"country\":           string                  - ISO 3166-1 alpha-3 country code (XKX for Kosovo, which has none)\n  \"entity\":            string | null           - subdivision, null for countries without them\n  \"ownership\":         \"PUBLIC\" | \"PRIVATE\"\n  \"foundedYear\":       string | null           - e.g. \"1949\"\n  \"website\":           string | null           - official URL\n  \"address\":           string | null\n  \"phone\":             string | null\n  \"email\":             string | null\n  \"accreditationFrom\": string | null           - ISO date, detail only\n  \"accreditationTo\":   string | null           - ISO date, detail only\n  \"authority\":         string | null           - accrediting body, detail only\n  \"dataSourceUrl\":     string | null           - source of the data, detail only\n  \"lastModified\":      string | null           - ISO date of the last check, detail only\n  \"_count\":            { \"faculties\": number } - list only\n  \"faculties\":         Faculty[]               - detail only\n}",
     "studyProgramObject": "Study program object",
     "studyProgramObjectExample": "{\n  \"id\":            number        - unique identifier\n  \"name\":          string        - name as the university publishes it\n  \"facultyId\":     number        - detail only\n  \"cycle\":         \"FIRST\" | \"SECOND\" | \"THIRD\" | \"INTEGRATED\" | \"VOCATIONAL\" | \"SPECIALIST\"\n  \"durationYears\": number | null\n  \"ects\":          number | null\n  \"languages\":     string[]      - languages of instruction as ISO 639 codes (cnr for Montenegrin), e.g. [\"bs\", \"hr\", \"sr\"]; empty when unknown\n  \"dataSourceUrl\": string | null - source of the data, detail only\n  \"lastModified\":  string | null - ISO date of the last check, detail only\n  \"faculty\":       Faculty       - with its university; in lists only id, name and university { id, name, country }\n  \"tracks\":        Track[]       - detail only\n}",
     "examples": "Quick examples",
@@ -150,7 +151,7 @@
       "apiV1Status": "Check API v1 status.",
       "getAllUniversities": "Retrieve all universities, ordered by country, ownership, then name. Supports country and entity query filters. Includes a faculty count per university.",
       "getUniversityById": "Retrieve a university by ID with full nested detail (faculties, study programs, and tracks). dataSourceUrl on each unit is the URL its initial data was obtained from.",
-      "search": "Search across universities, faculties, and study programs (track names match through their study program). Requires a search term (min 2 characters) or at least one narrowing filter (country, entity, or ownership). Matches name, city, acronym, founding year, ECTS/duration, a program's language of instruction (by its name in any covered language, e.g. \"english\", \"engleski\", \"anglisht\"), and related unit names (case-insensitive, diacritic-insensitive, Latin or Cyrillic input). Ownership, study cycle and duration words work in English and every covered language (e.g. \"javna\", \"publik\", \"master\", \"3 vite\").",
+      "search": "Search across universities, faculties, and study programs (track names match through their study program). Requires a search term (min 2 characters) or at least one narrowing filter (country, entity, or ownership). Matches name, city, acronym, founding year, ECTS/duration, a program's language of instruction (by its name in any covered language, e.g. \"english\", \"engleski\", \"anglisht\"), and related unit names (case-insensitive, diacritic-insensitive, Latin or Cyrillic input). Ownership, study cycle and duration words work in English and every covered language (e.g. \"javna\", \"publik\", \"master\", \"3 vite\"). Faculties and study programs carry a short parent: university { id, name, acronym, city, country, entity, ownership }, and a program's faculty { id, name, universityId, university } - the detail endpoints have the rest.",
       "searchTermParam": "Text to search for (2-100 characters). Optional if country, entity, or ownership is provided.",
       "pageParam": "Page number, starting at 1 (default 1).",
       "limitParam": "Items per page, 1-100 (default 50).",
@@ -416,6 +417,14 @@
     "trackCount_two": "tracks",
     "trackCount_few": "tracks",
     "trackCount_other": "tracks",
+    "universityCount_one": "university",
+    "universityCount_two": "universities",
+    "universityCount_few": "universities",
+    "universityCount_other": "universities",
+    "countryCount_one": "country",
+    "countryCount_two": "countries",
+    "countryCount_few": "countries",
+    "countryCount_other": "countries",
     "cycles": {
       "FIRST": "First (Bachelor)",
       "SECOND": "Second (Master)",
@@ -458,6 +467,10 @@
     "linkCopied": "Link copied to clipboard.",
     "linkCopyFailed": "Could not copy link.",
     "dataSource": "Data source",
+    "accreditation": "Accreditation",
+    "accreditingBody": "Accrediting body",
+    "accreditationSince": "since",
+    "accreditationUntil": "until",
     "improvePrompt": "See something inaccurate?",
     "improveLink": "Suggest a correction",
     "improveLogin": "Log in to suggest a correction"

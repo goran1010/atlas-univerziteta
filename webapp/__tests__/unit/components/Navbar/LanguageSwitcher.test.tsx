@@ -23,20 +23,41 @@ function renderSwitcher(language: Language) {
 }
 
 describe("LanguageSwitcher", () => {
-  test("lists each language by its code after the select's name", () => {
+  test("lists each language by its own name, tagged with its language", () => {
     const { select } = renderSwitcher("en");
 
     expect(select).toHaveAccessibleName("Language");
-    expect(
-      screen.getAllByRole("option").map((option) => option.textContent),
-    ).toEqual([
-      "Language: System",
-      "Language: EN",
-      "Language: SR",
-      "Language: SQ",
-      "Language: MK",
-      "Language: SL",
+    const options = screen.getAllByRole("option");
+    expect(options.map((option) => option.textContent)).toEqual([
+      "System",
+      "English",
+      "Bosanski / Hrvatski / Srpski",
+      "Shqip",
+      "Македонски",
+      "Slovenščina",
     ]);
+    expect(options.map((option) => option.getAttribute("lang"))).toEqual([
+      null,
+      "en",
+      "sr-Latn",
+      "sq",
+      "mk",
+      "sl",
+    ]);
+  });
+
+  test("shows the select's name and the current language's code on its chip", () => {
+    renderSwitcher("sr");
+
+    expect(screen.getByText("Language")).toBeInTheDocument();
+    expect(screen.getByText("BHS")).toBeInTheDocument();
+  });
+
+  test("shows no language code on its chip when following the system", () => {
+    renderSwitcher("system");
+
+    expect(screen.queryByText("EN")).not.toBeInTheDocument();
+    expect(screen.getByText("Language")).toBeInTheDocument();
   });
 
   test.each<Language>(["system", "en", "sr", "sq", "mk", "sl"])(
@@ -49,7 +70,7 @@ describe("LanguageSwitcher", () => {
   );
 
   test.each<{ choice: Language; message: string }>([
-    { choice: "sr", message: "Switched to Serbian" },
+    { choice: "sr", message: "Switched to Bosnian/Croatian/Serbian" },
     { choice: "sq", message: "Switched to Albanian" },
     { choice: "mk", message: "Switched to Macedonian" },
     { choice: "sl", message: "Switched to Slovenian" },

@@ -4,7 +4,7 @@ import { textLinkClassName } from "./TextLink";
 import type { ReactNode } from "react";
 import { RootContext } from "../../contextData/RootContext";
 
-const baseClassName = `font-bold ${textLinkClassName} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) rounded-sm`;
+const baseClassName = `${textLinkClassName} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring) rounded-sm`;
 
 // Hrefs can come from user-contributed data; anything outside these schemes
 // (javascript:, data:, ...) renders as plain text instead of a link.

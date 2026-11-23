@@ -1,12 +1,35 @@
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
-import { Select } from "../sharedComponents/Select";
-import { SYSTEM_LANGUAGES } from "../../utils/setInitialLanguage";
+import { SwitcherChip } from "./SwitcherChip";
+import { MonitorIcon } from "../sharedComponents/icons";
+import {
+  LANGUAGE_TAGS,
+  SYSTEM_LANGUAGES,
+} from "../../utils/setInitialLanguage";
 
 import type { Language, SetLanguage } from "../../types";
+import type { SystemLanguage } from "../../utils/setInitialLanguage";
 
 const LANGUAGE_OPTIONS: Language[] = ["system", ...SYSTEM_LANGUAGES];
+
+// "sr" is the one interface for Bosnian, Croatian, and Serbian
+const LANGUAGE_CODES: Record<SystemLanguage, string> = {
+  en: "EN",
+  sr: "BHS",
+  sq: "SQ",
+  mk: "MK",
+  sl: "SL",
+};
+
+// each language by its own name, the same in every interface
+const LANGUAGE_NAMES: Record<SystemLanguage, string> = {
+  en: "English",
+  sr: "Bosanski / Hrvatski / Srpski",
+  sq: "Shqip",
+  mk: "Македонски",
+  sl: "Slovenščina",
+};
 
 function LanguageSwitcher({
   setLanguage,
@@ -20,13 +43,9 @@ function LanguageSwitcher({
   const label = t("nav.language");
 
   return (
-    <Select
+    <SwitcherChip
       id="language-switcher"
       aria-label={label}
-      // compact for the navbar; the ! makes these win over Select's own text
-      // size, padding and wrapping. The extra vertical padding with the
-      // smaller phone text keeps it as tall as the menu button.
-      className="md:flex-none truncate! text-xs! sm:text-sm! pl-2! pr-7! py-2.5! sm:py-2! bg-position-[right_0.5rem_center]!"
       value={language}
       onChange={(e) => {
         const next = LANGUAGE_OPTIONS.find(
@@ -39,14 +58,31 @@ function LanguageSwitcher({
           message: t(`language.switched.${next}`),
         });
       }}
+      face={
+        <>
+          {language === "system" ? (
+            <MonitorIcon className="text-base" />
+          ) : (
+            <span className="rounded-sm border border-current px-0.5 text-[0.625rem] leading-3.5 font-bold">
+              {LANGUAGE_CODES[language]}
+            </span>
+          )}
+          {label}
+        </>
+      }
     >
-      {LANGUAGE_OPTIONS.map((option) => (
-        <option key={option} value={option}>
-          {label}:{" "}
-          {option === "system" ? t("language.system") : option.toUpperCase()}
-        </option>
-      ))}
-    </Select>
+      {LANGUAGE_OPTIONS.map((option) =>
+        option === "system" ? (
+          <option key={option} value={option}>
+            {t("language.system")}
+          </option>
+        ) : (
+          <option key={option} value={option} lang={LANGUAGE_TAGS[option]}>
+            {LANGUAGE_NAMES[option]}
+          </option>
+        ),
+      )}
+    </SwitcherChip>
   );
 }
 

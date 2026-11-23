@@ -19,7 +19,7 @@ test.describe("home page", () => {
     await page.goto("/");
     await page.getByRole("button", { name: /Browse All/i }).click();
     await expect(
-      page.locator('main a[href^="/universities/"]').first(),
+      page.getByRole("button", { name: "View info" }).first(),
     ).toBeVisible();
   });
 
@@ -27,7 +27,7 @@ test.describe("home page", () => {
     await page.goto("/");
     await page.getByRole("searchbox", { name: "Search" }).fill("univerzitet");
     await expect(
-      page.locator('main a[href^="/universities/"]').first(),
+      page.getByRole("button", { name: "View info" }).first(),
     ).toBeVisible({ timeout: 5000 });
   });
 });

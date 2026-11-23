@@ -1,4 +1,11 @@
 import { NavLink } from "react-router";
+import {
+  CodeIcon,
+  HomeIcon,
+  InfoIcon,
+  PencilIcon,
+  ShieldCheckIcon,
+} from "../sharedComponents/icons";
 import { Status } from "./Status";
 import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
@@ -38,7 +45,7 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
               setIsMenuOpen(false);
             }}
           >
-            {t("nav.home")}
+            <HomeIcon /> {t("nav.home")}
           </NavLink>
         </li>
         <li className="w-full">
@@ -49,7 +56,7 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
               setIsMenuOpen(false);
             }}
           >
-            {t("nav.apiDocs")}
+            <CodeIcon /> {t("nav.apiDocs")}
           </NavLink>
         </li>
         <li className="w-full">
@@ -60,7 +67,7 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
               setIsMenuOpen(false);
             }}
           >
-            {t("nav.about")}
+            <InfoIcon /> {t("nav.about")}
           </NavLink>
         </li>
 
@@ -73,7 +80,7 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
                 setIsMenuOpen(false);
               }}
             >
-              {t("nav.improveData")}
+              <PencilIcon /> {t("nav.improveData")}
             </NavLink>
           </li>
         )}
@@ -86,7 +93,7 @@ function MobileMenu({ setIsMenuOpen, userData }: MobileMenuProps) {
                 setIsMenuOpen(false);
               }}
             >
-              {t("nav.admin")}
+              <ShieldCheckIcon /> {t("nav.admin")}
             </NavLink>
           </li>
         )}

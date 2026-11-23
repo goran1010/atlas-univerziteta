@@ -1,15 +1,13 @@
-import { LandmarkIcon, MapPinIcon } from "../sharedComponents/icons";
-import { TextLink } from "../sharedComponents/TextLink";
+import { LandmarkIcon, MapPinIcon, TagIcon } from "../sharedComponents/icons";
+import { OwnershipPill } from "./UniversityMeta";
 import { useState, use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { ResultCard } from "./ResultCard";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
-import { LinkButton } from "../sharedComponents/LinkButton";
-import { Dialog } from "../sharedComponents/Dialog";
+import { FacultyInfoDialog } from "./FacultyInfoDialog";
 import { ContactLinks } from "../entityDetails/ContactLinks";
-import { ShareButton } from "../entityDetails/ShareButton";
 import { StudyProgramRow } from "./StudyProgramRow";
 import { ResultGroup } from "../Search/ResultGroup";
 import { LEVEL_GUIDE } from "../../utils/levelColors";
@@ -77,25 +75,29 @@ function FacultyResult({
             : ""
         }
       >
-        <h3 className="font-bold">
-          <TextLink
-            to={`/faculties/${faculty.id.toString()}`}
-            className="font-bold"
-          >
-            {faculty.name}
-          </TextLink>
-        </h3>
+        <h3 className="font-bold">{faculty.name}</h3>
         <p className="text-sm text-(--text-muted) mt-0.5">
           <LandmarkIcon /> {faculty.university.name}
           {faculty.university.acronym && ` (${faculty.university.acronym})`}
-          {" - "}
-          {t(`universitiesPage.countries.${faculty.university.country}`)}
         </p>
-        {faculty.city && (
-          <p className="text-sm text-(--text-secondary) mt-0.5">
-            <MapPinIcon /> {faculty.city}
-          </p>
-        )}
+        <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-sm text-(--text-secondary)">
+          {faculty.city && (
+            <span>
+              <MapPinIcon /> {faculty.city}
+            </span>
+          )}
+          <span>
+            <TagIcon />{" "}
+            {t(`universitiesPage.countries.${faculty.university.country}`)}
+          </span>
+          {faculty.university.entity && (
+            <span>
+              <TagIcon />{" "}
+              {t(`universitiesPage.entities.${faculty.university.entity}`)}
+            </span>
+          )}
+          <OwnershipPill ownership={faculty.university.ownership} />
+        </div>
         <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-(--text-muted) mt-0.5">
           <ContactLinks
             website={faculty.website}
@@ -131,43 +133,13 @@ function FacultyResult({
           />
         )}
       </div>
-      <Dialog
+      <FacultyInfoDialog
+        faculty={faculty}
         open={dialogOpen}
         onClose={() => {
           setDialogOpen(false);
         }}
-        title={faculty.name}
-        headerActions={
-          <ShareButton url={`/faculties/${faculty.id.toString()}`} />
-        }
-      >
-        <div className="flex flex-col gap-3">
-          {faculty.city && (
-            <p className="text-sm text-(--text-secondary)">
-              <MapPinIcon /> {faculty.city}
-            </p>
-          )}
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
-            <ContactLinks
-              website={faculty.website}
-              address={faculty.address}
-              phone={faculty.phone}
-              email={faculty.email}
-            />
-          </div>
-          <div className="flex justify-center">
-            <LinkButton
-              to={`/faculties/${faculty.id.toString()}`}
-              className="text-sm w-full sm:w-auto"
-              onClick={() => {
-                setDialogOpen(false);
-              }}
-            >
-              {t("universitiesPage.openFullPage")}
-            </LinkButton>
-          </div>
-        </div>
-      </Dialog>
+      />
       {expanded && detailData && (
         <div
           className="mt-3 border-t border-(--border-color) pt-3"

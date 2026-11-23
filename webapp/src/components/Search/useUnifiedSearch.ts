@@ -11,6 +11,7 @@ import { notificationMessage } from "../../utils/apiError";
 import { InvalidResponseError } from "../../utils/parseResponse";
 
 import { countrySchema } from "../../schemas/domain";
+import { rememberSearch } from "../../utils/lastSearch";
 
 import type { UnifiedSearchResults } from "../../schemas/university";
 import type { Country } from "../../schemas/domain";
@@ -129,6 +130,10 @@ function useUnifiedSearch() {
     triggerSearch(urlQuery, countryFilter, browseAll);
     // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps -- browseAll derives from paramsKey
   }, [paramsKey, triggerSearch]);
+
+  useEffect(() => {
+    rememberSearch(new URLSearchParams(paramsKey));
+  }, [paramsKey]);
 
   useEffect(() => {
     if (window.matchMedia("(pointer: fine)").matches) {

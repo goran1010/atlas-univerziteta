@@ -971,6 +971,17 @@ describe("GET /api/v1/universities/:id", () => {
   });
 });
 
+// the parent university fields a search result carries
+const NESTED_UNIVERSITY_KEYS = [
+  "acronym",
+  "city",
+  "country",
+  "entity",
+  "id",
+  "name",
+  "ownership",
+];
+
 describe("GET /api/v1/search - related entities", () => {
   test("responds with grouped faculties and study programs including parent data", async () => {
     const university = await prisma.university.create({
@@ -1011,14 +1022,26 @@ describe("GET /api/v1/search - related entities", () => {
     );
     const facultyUniversity = getResponseObject(faculty?.["university"]);
     expect(facultyUniversity["id"]).toBe(university.id);
+    expect(Object.keys(facultyUniversity).sort()).toEqual(
+      NESTED_UNIVERSITY_KEYS,
+    );
 
     const program = studyPrograms.find(
       (sp) => sp["name"] === "Test Integration Unified Search Program",
     );
     expect(program?.["cycle"]).toBe("FIRST");
     const programFaculty = getResponseObject(program?.["faculty"]);
+    expect(Object.keys(programFaculty).sort()).toEqual([
+      "id",
+      "name",
+      "university",
+      "universityId",
+    ]);
     const programUniversity = getResponseObject(programFaculty["university"]);
     expect(programUniversity["id"]).toBe(university.id);
+    expect(Object.keys(programUniversity).sort()).toEqual(
+      NESTED_UNIVERSITY_KEYS,
+    );
 
     await prisma.studyProgram.deleteMany({
       where: { faculty: { universityId: university.id } },

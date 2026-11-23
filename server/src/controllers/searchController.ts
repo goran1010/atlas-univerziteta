@@ -16,6 +16,19 @@ import type { SearchToken } from "../search/tokenize.js";
 import type { WhereClause } from "../search/matchers.js";
 import type { Request, Response } from "express";
 
+// what a result card shows of a parent university; the detail endpoints
+// carry the rest, and repeating every column for each of thousands of
+// programs made broad searches several megabytes
+const NESTED_UNIVERSITY_FIELDS = {
+  id: true,
+  name: true,
+  acronym: true,
+  city: true,
+  country: true,
+  entity: true,
+  ownership: true,
+} as const;
+
 interface SectionQuery<Item> {
   findMany: (where: WhereClause) => Promise<Item[]>;
 }
@@ -111,7 +124,7 @@ async function search(req: Request, res: Response) {
                 where,
                 orderBy: [{ university: { name: "asc" } }, { name: "asc" }],
                 include: {
-                  university: true,
+                  university: { select: NESTED_UNIVERSITY_FIELDS },
                   _count: { select: { studyPrograms: true } },
                 },
               }),
@@ -135,8 +148,11 @@ async function search(req: Request, res: Response) {
                 orderBy: [{ cycle: "asc" }, { name: "asc" }],
                 include: {
                   faculty: {
-                    include: {
-                      university: true,
+                    select: {
+                      id: true,
+                      name: true,
+                      universityId: true,
+                      university: { select: NESTED_UNIVERSITY_FIELDS },
                     },
                   },
                   tracks: {

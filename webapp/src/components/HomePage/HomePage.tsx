@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { RootContext } from "../../contextData/RootContext";
 import { SITE_URL } from "../../utils/envConfig";
 import { UnifiedSearch } from "../Search/UnifiedSearch";
+import { DatasetCounts } from "./DatasetCounts";
 
 function HomePage() {
   const { t } = use(RootContext);
@@ -26,6 +27,7 @@ function HomePage() {
         <h1 className="text-xl sm:text-2xl font-bold text-center text-(--text-secondary)">
           {t("universitiesPage.title")}
         </h1>
+        <DatasetCounts />
         <div className="w-full">
           <UnifiedSearch />
         </div>
