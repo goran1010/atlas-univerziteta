@@ -46,9 +46,17 @@ describe("LanguageSwitcher", () => {
     ]);
   });
 
-  test("shows the select's name on its chip", () => {
+  test("shows the select's name and the current language's code on its chip", () => {
     renderSwitcher("sr");
 
+    expect(screen.getByText("Language")).toBeInTheDocument();
+    expect(screen.getByText("BHS")).toBeInTheDocument();
+  });
+
+  test("shows no language code on its chip when following the system", () => {
+    renderSwitcher("system");
+
+    expect(screen.queryByText("EN")).not.toBeInTheDocument();
     expect(screen.getByText("Language")).toBeInTheDocument();
   });
 

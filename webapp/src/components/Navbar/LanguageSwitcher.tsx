@@ -2,7 +2,7 @@ import { use } from "react";
 import { RootContext } from "../../contextData/RootContext";
 import { NotificationContext } from "../../contextData/NotificationContext";
 import { SwitcherChip } from "./SwitcherChip";
-import { GlobeIcon } from "../sharedComponents/icons";
+import { MonitorIcon } from "../sharedComponents/icons";
 import {
   LANGUAGE_TAGS,
   SYSTEM_LANGUAGES,
@@ -12,6 +12,15 @@ import type { Language, SetLanguage } from "../../types";
 import type { SystemLanguage } from "../../utils/setInitialLanguage";
 
 const LANGUAGE_OPTIONS: Language[] = ["system", ...SYSTEM_LANGUAGES];
+
+// "sr" is the one interface for Bosnian, Croatian, and Serbian
+const LANGUAGE_CODES: Record<SystemLanguage, string> = {
+  en: "EN",
+  sr: "BHS",
+  sq: "SQ",
+  mk: "MK",
+  sl: "SL",
+};
 
 // each language by its own name, the same in every interface
 const LANGUAGE_NAMES: Record<SystemLanguage, string> = {
@@ -51,7 +60,13 @@ function LanguageSwitcher({
       }}
       face={
         <>
-          <GlobeIcon className="text-base" />
+          {language === "system" ? (
+            <MonitorIcon className="text-base" />
+          ) : (
+            <span className="rounded-sm border border-current px-0.5 text-[0.625rem] leading-3.5 font-bold">
+              {LANGUAGE_CODES[language]}
+            </span>
+          )}
           {label}
         </>
       }
