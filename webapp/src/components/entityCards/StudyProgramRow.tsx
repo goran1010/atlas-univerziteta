@@ -27,6 +27,7 @@ function StudyProgramRow({
         <div className="min-w-0">
           <TextLink
             to={`/faculties/${facultyId.toString()}?program=${program.id.toString()}`}
+            variant="title"
             className="font-medium"
           >
             {program.name}

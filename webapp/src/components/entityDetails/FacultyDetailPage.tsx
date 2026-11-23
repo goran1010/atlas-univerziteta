@@ -213,6 +213,7 @@ function FacultyDetailPage() {
                         <p className="font-semibold text-(--text-primary)">
                           <TextLink
                             to={`/faculties/${id ?? ""}?program=${sp.id.toString()}`}
+                            variant="title"
                           >
                             {sp.name}
                           </TextLink>

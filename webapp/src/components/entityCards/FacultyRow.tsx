@@ -44,7 +44,10 @@ function FacultyRow({
       >
         <div className="min-w-0">
           <p className="font-semibold">
-            <TextLink to={`/faculties/${faculty.id.toString()}`}>
+            <TextLink
+              to={`/faculties/${faculty.id.toString()}`}
+              variant="title"
+            >
               {faculty.name}
             </TextLink>
           </p>

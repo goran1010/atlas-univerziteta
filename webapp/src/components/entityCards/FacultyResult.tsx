@@ -80,6 +80,7 @@ function FacultyResult({
         <h3 className="font-bold">
           <TextLink
             to={`/faculties/${faculty.id.toString()}`}
+            variant="title"
             className="font-bold"
           >
             {faculty.name}

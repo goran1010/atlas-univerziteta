@@ -29,6 +29,7 @@ function StudyProgramResult({
       <h3 className="font-bold">
         <TextLink
           to={`/faculties/${program.faculty.id.toString()}?program=${program.id.toString()}`}
+          variant="title"
           className="font-bold"
         >
           {program.name}

@@ -162,6 +162,7 @@ function UniversityDetailPage() {
                   >
                     <TextLink
                       to={`/faculties/${faculty.id.toString()}`}
+                      variant="title"
                       className="font-bold"
                     >
                       {faculty.name}
