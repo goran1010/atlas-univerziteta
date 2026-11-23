@@ -671,6 +671,55 @@ describe("GET /api/v1/search - inflected terms", () => {
   });
 });
 
+describe("GET /api/v1/search - multi-word cities", () => {
+  test("one-word and two-word spellings both find the city", async () => {
+    const marker = "CitySpaceTest";
+    const cleanup = async () => {
+      await prisma.faculty.deleteMany({
+        where: { name: { contains: marker } },
+      });
+      await prisma.university.deleteMany({
+        where: { name: { contains: marker } },
+      });
+    };
+    await cleanup();
+
+    await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `Univerzitet ${marker}`,
+        city: "TestBanja TestLuka",
+        entity: "RS",
+        ownership: "PUBLIC",
+        faculties: {
+          create: { name: `Fakultet ${marker}`, city: "TestNovi TestSad" },
+        },
+      }),
+    });
+
+    async function namesFor(term: string, section: string) {
+      const response = await request(app).get(
+        `/api/v1/search?searchTerm=${encodeURIComponent(term)}`,
+      );
+      expect(response.status).toBe(200);
+      const data = getResponseObject(getResponseObject(response.body)["data"]);
+      return getResponseArray(data[section]).map((item) => item["name"]);
+    }
+
+    for (const term of ["TestBanjaTestLuka", "TestBanja TestLuka"]) {
+      expect(await namesFor(term, "universities"), term).toContain(
+        `Univerzitet ${marker}`,
+      );
+    }
+    for (const term of ["TestNoviTestSad", "TestNovi TestSad"]) {
+      expect(await namesFor(term, "faculties"), term).toContain(
+        `Fakultet ${marker}`,
+      );
+    }
+
+    await cleanup();
+  });
+});
+
 describe("GET /api/v1/search - type filter", () => {
   test("returns only the requested entity types", async () => {
     const response = await request(app).get(
