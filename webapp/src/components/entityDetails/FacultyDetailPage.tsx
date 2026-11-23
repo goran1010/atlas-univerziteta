@@ -9,8 +9,10 @@ import {
   GraduationCapIcon,
   MapPinIcon,
   BookOpenIcon,
+  TagIcon,
 } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
+import { OwnershipPill } from "../entityCards/UniversityMeta";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 import { Breadcrumb } from "./Breadcrumb";
 import { ShareButton } from "./ShareButton";
@@ -150,13 +152,16 @@ function FacultyDetailPage() {
                 </span>
               )}
               <span>
+                <TagIcon />{" "}
                 {t(`universitiesPage.countries.${faculty.university.country}`)}
               </span>
               {faculty.university.entity && (
                 <span>
+                  <TagIcon />{" "}
                   {t(`universitiesPage.entities.${faculty.university.entity}`)}
                 </span>
               )}
+              <OwnershipPill ownership={faculty.university.ownership} />
             </div>
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
               <ContactLinks

@@ -107,6 +107,8 @@ describe("FacultyDetailPage", () => {
     expect(
       screen.getByRole("link", { name: /University of Sarajevo \(UNSA\)/i }),
     ).toHaveAttribute("href", "/universities/1");
+    // ownership is the university's, shown as on the university page
+    expect(screen.getByText("Public")).toBeInTheDocument();
 
     expect(
       screen.getByRole("heading", { level: 2, name: /2.*study programs/i }),
