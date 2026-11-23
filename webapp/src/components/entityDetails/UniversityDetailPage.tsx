@@ -6,6 +6,7 @@ import { Spinner } from "../sharedComponents/Spinner";
 import { BuildingIcon, MapPinIcon } from "../sharedComponents/icons";
 import { ContactLinks } from "./ContactLinks";
 import { Breadcrumb } from "./Breadcrumb";
+import { homeWithLastSearch } from "../../utils/lastSearch";
 import { ShareButton } from "./ShareButton";
 import { UniversitySummary } from "./UniversitySummary";
 import { universityDetailResponseSchema } from "../../schemas/university";
@@ -94,7 +95,7 @@ function UniversityDetailPage() {
       <div className="w-full mx-auto px-1 sm:px-4 py-4">
         <Breadcrumb
           items={[
-            { label: t("nav.home"), to: "/" },
+            { label: t("nav.home"), to: homeWithLastSearch() },
             { label: university.name },
           ]}
         />

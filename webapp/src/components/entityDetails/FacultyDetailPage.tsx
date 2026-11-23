@@ -11,6 +11,7 @@ import {
 } from "../sharedComponents/icons";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
 import { Breadcrumb } from "./Breadcrumb";
+import { homeWithLastSearch } from "../../utils/lastSearch";
 import { ShareButton } from "./ShareButton";
 import { FacultySummary } from "./FacultySummary";
 import { Button } from "../sharedComponents/Button";
@@ -114,7 +115,7 @@ function FacultyDetailPage() {
       <div className="w-full mx-auto px-1 sm:px-4 py-4">
         <Breadcrumb
           items={[
-            { label: t("nav.home"), to: "/" },
+            { label: t("nav.home"), to: homeWithLastSearch() },
             {
               label: faculty.university.name,
               to: `/universities/${faculty.university.id.toString()}`,

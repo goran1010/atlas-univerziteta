@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { HelmetProvider } from "react-helmet-async";
 import userEvent from "@testing-library/user-event";
@@ -105,6 +105,9 @@ describe("FacultyDetailPage", () => {
     const breadcrumb = screen.getByRole("navigation", { name: /Breadcrumb/i });
     expect(breadcrumb).toHaveTextContent("University of Sarajevo");
     expect(
+      within(breadcrumb).getByRole("link", { name: "Home" }),
+    ).toHaveAttribute("href", "/");
+    expect(
       screen.getByRole("link", { name: /University of Sarajevo \(UNSA\)/i }),
     ).toHaveAttribute("href", "/universities/1");
     // ownership is the university's, shown as on the university page
@@ -118,6 +121,20 @@ describe("FacultyDetailPage", () => {
     expect(screen.getByText(/Software Track/i)).toBeInTheDocument();
     // programs are grouped by cycle
     expect(screen.getByText(/First \(Bachelor\)/i)).toBeInTheDocument();
+  });
+
+  test("points the Home breadcrumb at the search it was opened from", async () => {
+    sessionStorage.setItem("lastSearch", "q=elektro&country=BIH");
+    givenFaculty(facultyDetail);
+    renderPage();
+
+    const breadcrumb = await screen.findByRole("navigation", {
+      name: /Breadcrumb/i,
+    });
+    expect(
+      within(breadcrumb).getByRole("link", { name: "Home" }),
+    ).toHaveAttribute("href", "/?q=elektro&country=BIH");
+    sessionStorage.clear();
   });
 
   test("focuses one program from the query param and can show all again", async () => {

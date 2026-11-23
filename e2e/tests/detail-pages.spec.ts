@@ -109,6 +109,31 @@ test.describe("detail pages", () => {
     await expect(page).toHaveURL(/\/faculties\/\d+$/);
   });
 
+  test("the Home breadcrumb leads back to the search a detail page was opened from", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    await page.getByRole("searchbox", { name: "Search" }).fill("grafika");
+
+    const firstProgramLink = page.locator('main a[href*="?program="]').first();
+    await expect(firstProgramLink).toBeVisible({ timeout: 15000 });
+    await firstProgramLink.click();
+    await expect(page).toHaveURL(/\/faculties\/\d+/);
+
+    await page
+      .getByRole("navigation", { name: "Breadcrumb" })
+      .getByRole("link", { name: "Home" })
+      .click();
+
+    await expect(page).toHaveURL(/\/\?q=grafika$/);
+    await expect(page.getByRole("searchbox", { name: "Search" })).toHaveValue(
+      "grafika",
+    );
+    await expect(page.locator('main a[href*="?program="]').first()).toBeVisible(
+      { timeout: 15000 },
+    );
+  });
+
   test("URL deep-link with country filter loads filtered results", async ({
     page,
   }) => {
