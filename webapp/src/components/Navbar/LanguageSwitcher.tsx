@@ -23,10 +23,8 @@ function LanguageSwitcher({
     <Select
       id="language-switcher"
       aria-label={label}
-      // compact for the navbar; the ! makes these win over Select's own text
-      // size, padding and wrapping. The extra vertical padding with the
-      // smaller phone text keeps it as tall as the menu button.
-      className="md:flex-none truncate! text-xs! sm:text-sm! pl-2! pr-7! py-2.5! sm:py-2! bg-position-[right_0.5rem_center]!"
+      compact
+      className="md:flex-none"
       value={language}
       onChange={(e) => {
         const next = LANGUAGE_OPTIONS.find(
