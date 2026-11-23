@@ -8,7 +8,6 @@ import { NotificationContext } from "../../contextData/NotificationContext";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
 import { Spinner } from "../sharedComponents/Spinner";
-import { tCount } from "../../utils/pluralize";
 import { ContactLinks } from "../entityDetails/ContactLinks";
 import { FacultyRow } from "./FacultyRow";
 import { ResultGroup } from "../Search/ResultGroup";
@@ -30,7 +29,7 @@ function UniversityResult({
   contextHint?: string | undefined;
 }) {
   const hasFaculties = university._count.faculties > 0;
-  const { t } = use(RootContext);
+  const { t, tCount } = use(RootContext);
   const { addNotification } = use(NotificationContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<UniversityDetail>();
@@ -123,7 +122,6 @@ function UniversityResult({
                   {university._count.faculties}
                 </span>{" "}
                 {tCount(
-                  t,
                   "universitiesPage.facultyCount",
                   university._count.faculties,
                 )}
@@ -189,7 +187,6 @@ function UniversityResult({
                   {detailData.faculties.length}
                 </span>{" "}
                 {tCount(
-                  t,
                   "universitiesPage.facultyCount",
                   detailData.faculties.length,
                 )}

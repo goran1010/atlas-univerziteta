@@ -109,7 +109,7 @@ function toStudyProgramCreateFields(
       durationYears: data.durationYears,
     }),
     ...(data.ects !== undefined && { ects: data.ects }),
-    ...(data.language !== undefined && { language: data.language }),
+    ...(data.languages !== undefined && { languages: data.languages }),
     ...studyProgramSearchFields(data),
   };
 }
@@ -125,7 +125,7 @@ function toStudyProgramUpdateInput(
       durationYears: data.durationYears,
     }),
     ...(data.ects !== undefined && { ects: data.ects }),
-    ...(data.language !== undefined && { language: data.language }),
+    ...(data.languages !== undefined && { languages: data.languages }),
     ...studyProgramSearchFields(data),
   };
 }

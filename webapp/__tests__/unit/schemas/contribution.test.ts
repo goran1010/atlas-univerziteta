@@ -86,6 +86,37 @@ describe("universityTreeDataSchema", () => {
     expect(result.success).toBe(true);
   });
 
+  test("checks study program languages against the code list", () => {
+    function withLanguages(languages: string[]) {
+      return universityTreeDataSchema.safeParse({
+        ...validData,
+        faculties: [
+          {
+            name: "Fakultet A",
+            studyPrograms: [{ name: "Program X", cycle: "FIRST", languages }],
+          },
+        ],
+      });
+    }
+
+    expect(withLanguages(["sq", "en"]).success).toBe(true);
+
+    const unknown = withLanguages(["xx"]);
+    expect(unknown.error?.issues[0]?.path).toEqual([
+      "faculties",
+      0,
+      "studyPrograms",
+      0,
+      "languages",
+      0,
+    ]);
+
+    const repeated = withLanguages(["sq", "sq"]);
+    expect(repeated.error?.issues[0]?.message).toBe(
+      "Each language can be listed only once",
+    );
+  });
+
   test("rejects duplicate siblings with a path to the duplicate", () => {
     const duplicateFaculties = universityTreeDataSchema.safeParse({
       ...validData,

@@ -21,56 +21,56 @@
         {
           "name": "Biznis administracija i ekonomija",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Finansii i investicii",
           "cycle": "FIRST",
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Finansii i investicii (na angliski jazik)",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Marketing i digitalna transformacija",
           "cycle": "FIRST",
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Marketing i digitalna transformacija (na angliski jazik)",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Menadžment i inovacii",
           "cycle": "FIRST",
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Menadžment i inovacii (na angliski jazik)",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Smetkovodstvo i revizija",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -78,7 +78,7 @@
           "name": "Biznis administracija MBA",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -86,7 +86,7 @@
           "name": "Biznis administracija za izvršni direktori MBA",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -94,7 +94,7 @@
           "name": "Finansii i bankarstvo",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -102,7 +102,7 @@
           "name": "Finansii i bankarstvo (120 EKTS) (na angliski jazik)",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -110,7 +110,7 @@
           "name": "Finansii i bankarstvo (60 EKTS) (na angliski jazik)",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -118,7 +118,7 @@
           "name": "Marketing",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -126,7 +126,7 @@
           "name": "Marketing (120 EKTS) (na angliski jazik)",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -134,7 +134,7 @@
           "name": "Marketing (60 EKTS) (na angliski jazik)",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -142,7 +142,7 @@
           "name": "Menadžment",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -150,7 +150,7 @@
           "name": "Menadžment (120 EKTS) (na angliski jazik)",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -158,7 +158,7 @@
           "name": "Menadžment (60 EKTS) (na angliski jazik)",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -166,7 +166,7 @@
           "name": "Menadžment na čovečki resursi (120 EKTS)",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -174,7 +174,7 @@
           "name": "Menadžment na čovečki resursi (60 EKTS)",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -182,7 +182,7 @@
           "name": "Smetkovodstvo i revizija (120 EKTS)",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -190,7 +190,7 @@
           "name": "Smetkovodstvo i revizija (60 EKTS)",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -216,7 +216,7 @@
           "name": "Biznis administracija specijalistički",
           "cycle": "SPECIALIST",
           "ects": 60,
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -224,7 +224,7 @@
           "name": "Biznis administracija specijalistički (na angliski jazik)",
           "cycle": "SPECIALIST",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         }
@@ -239,21 +239,21 @@
         {
           "name": "Arhitektura",
           "cycle": "FIRST",
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Dizajn",
           "cycle": "FIRST",
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Vnatrešna arhitektura",
           "cycle": "FIRST",
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -261,7 +261,7 @@
           "name": "Arhitektura",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -269,7 +269,7 @@
           "name": "Vnatrešna arhitektura",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         }
@@ -284,14 +284,14 @@
         {
           "name": "Kompjuterski nauki",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Menadžment na informaciski sistemi",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -299,7 +299,7 @@
           "name": "Softversko inženerstvo (120 EKTS)",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -307,7 +307,7 @@
           "name": "Softversko inženerstvo (60 EKTS)",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         }
@@ -322,21 +322,21 @@
         {
           "name": "Ekonomska diplomatija",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Politički nauki i meǵunarodna komunikacija",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Psihologija",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -344,7 +344,7 @@
           "name": "Delovna i organizaciska psihologija",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -352,7 +352,7 @@
           "name": "Meǵunarodni odnosi i diplomatija (120 EKTS)",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -360,7 +360,7 @@
           "name": "Meǵunarodni odnosi i diplomatija (60 EKTS)",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },
@@ -368,7 +368,7 @@
           "name": "Zdravstvena psihologija i psihološko sovetuvanje",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         }
@@ -383,7 +383,7 @@
         {
           "name": "Nastava po angliski jazik i kniževnost",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uacs.edu.mk/files/studiski-programi-po-edinici-11.09.2026.pdf",
           "lastModified": "2026-11-18"
         },

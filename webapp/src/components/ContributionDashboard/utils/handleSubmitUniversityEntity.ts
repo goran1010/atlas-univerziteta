@@ -39,7 +39,7 @@ const CLEARABLE_FIELDS: Record<TargetType, ReadonlySet<string>> = {
     "email",
   ]),
   FACULTY: new Set(["city", "website", "address", "phone", "email"]),
-  STUDY_PROGRAM: new Set(["durationYears", "ects", "language"]),
+  STUDY_PROGRAM: new Set(["durationYears", "ects"]),
   TRACK: new Set(["ects", "durationYears"]),
 };
 
@@ -58,7 +58,7 @@ const DRAFT_KEYS = [
   "cycle",
   "durationYears",
   "ects",
-  "language",
+  "languages",
 ] as const;
 
 function buildEditDelta(
@@ -78,7 +78,9 @@ function buildEditDelta(
     const isEmptied = next === undefined || next === "";
 
     if (isEmptied) {
-      if (base !== undefined && clearable.has(key)) delta[key] = null;
+      // the server clears languages with an empty list, the rest with null
+      if (base !== undefined && key === "languages") delta[key] = [];
+      else if (base !== undefined && clearable.has(key)) delta[key] = null;
       continue;
     }
     if (base === undefined || String(next) !== String(base)) {

@@ -198,41 +198,29 @@ describe("render Navbar mobile menu", () => {
 });
 
 describe("Navbar switchers", () => {
-  test("theme button cycles through modes and updates localStorage", async () => {
+  test("theme select applies and stores the chosen theme", async () => {
     render(<NavbarWrapper />);
 
-    const themeButton = screen.getByRole("button", {
-      name: /Toggle theme/i,
-    });
+    const themeSelect = screen.getByRole("combobox", { name: "Theme" });
 
-    expect(themeButton).toBeInTheDocument();
-
-    await userEvent.click(themeButton);
-    expect(localStorage.getItem("theme")).toBe("light");
-
-    await userEvent.click(themeButton);
+    await userEvent.selectOptions(themeSelect, "dark");
     expect(localStorage.getItem("theme")).toBe("dark");
+    expect(document.documentElement.classList.contains("dark")).toBe(true);
 
-    await userEvent.click(themeButton);
+    await userEvent.selectOptions(themeSelect, "system");
     expect(localStorage.getItem("theme")).toBeNull();
   });
 
-  test("language button cycles through languages and updates localStorage", async () => {
+  test("language select translates the navbar and stores the choice", async () => {
     render(<NavbarWrapper />);
 
-    const languageButton = screen.getByRole("button", {
-      name: /Toggle language/i,
-    });
+    await userEvent.selectOptions(
+      screen.getByRole("combobox", { name: "Language" }),
+      "sr",
+    );
 
-    expect(languageButton).toBeInTheDocument();
-
-    await userEvent.click(languageButton);
     expect(localStorage.getItem("language")).toBe("sr");
-
-    await userEvent.click(languageButton);
-    expect(localStorage.getItem("language")).toBe("system");
-
-    await userEvent.click(languageButton);
-    expect(localStorage.getItem("language")).toBe("en");
+    expect(screen.getByRole("combobox", { name: "Jezik" })).toHaveValue("sr");
+    expect(screen.getByRole("combobox", { name: "Tema" })).toBeInTheDocument();
   });
 });

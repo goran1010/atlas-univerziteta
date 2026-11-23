@@ -428,7 +428,7 @@
           "name": "English Language and Literature",
           "cycle": "SECOND",
           "durationYears": 1,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
           "lastModified": "2026-11-17"
         },
@@ -520,7 +520,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
           "lastModified": "2026-11-17"
         },
@@ -569,7 +569,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uklo.edu.mk/studii/prv-ciklus-diplomski-studii/",
           "lastModified": "2026-11-17"
         },
@@ -584,7 +584,7 @@
           "name": "Carina i špedicija (na angliski jazik)",
           "cycle": "SECOND",
           "durationYears": 1,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
           "lastModified": "2026-11-17"
         },
@@ -1062,7 +1062,7 @@
           "name": "Informatički nauki i komunikacisko inženerstvo (na angliski jazik)",
           "cycle": "SECOND",
           "durationYears": 1,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uklo.edu.mk/studii/vtor-ciklus-postdiplomski-studii/",
           "lastModified": "2026-11-17"
         },

@@ -140,7 +140,7 @@
           "name": "Administrim Biznesi",
           "cycle": "THIRD",
           "durationYears": 3,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.unyt.edu.al/page/phd-business-administration",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -225,7 +225,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.unyt.edu.al/page/bachelor-in-computer-science",
           "lastModified": "2026-11-22"
         },
@@ -275,7 +275,7 @@
           "name": "Gjuhë dhe Letërsi Turke",
           "cycle": "FIRST",
           "ects": 180,
-          "language": "Turqisht",
+          "languages": ["tr"],
           "dataSourceUrl": "https://www.unyt.edu.al/page/turkish-language-literature",
           "lastModified": "2026-11-22"
         },
@@ -283,7 +283,7 @@
           "name": "Psikologji",
           "cycle": "FIRST",
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.unyt.edu.al/page/bachelor-in-psychology",
           "lastModified": "2026-11-22"
         },
@@ -312,7 +312,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.unyt.edu.al/page/msc-in-international-commercial-law",
           "lastModified": "2026-11-22"
         },
@@ -328,7 +328,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Turqisht",
+          "languages": ["tr"],
           "dataSourceUrl": "https://www.unyt.edu.al/page/professional-master-program-in-teaching-of-turkish-language",
           "lastModified": "2026-11-22"
         },
@@ -361,7 +361,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.unyt.edu.al/page/p-law",
           "lastModified": "2026-11-22"
         },

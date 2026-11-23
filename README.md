@@ -15,14 +15,15 @@ The data is modeled as a nested academic hierarchy: university, its faculties, a
 ## Features
 
 - Public REST API under `/api/v1` - no authentication required
-- Unified search across universities, faculties, and study programs: multi-word queries where every word must match somewhere in the entity's hierarchy, case- and diacritic-insensitive, tolerant of Bosnian/Croatian/Serbian inflected forms, with ECTS/duration/founding-year matching and local-language filter words (e.g. "javna" finds public universities)
+- Unified search across universities, faculties, and study programs: multi-word queries where every word must match somewhere in the entity's hierarchy, case- and diacritic-insensitive, Latin or Cyrillic input, tolerant of Bosnian/Croatian/Serbian inflected forms, with ECTS/duration/founding-year matching and filter words in English and every covered language (e.g. "javna" or "publik" finds public universities, "3 vite" three-year programs)
+- Study programs list their languages of instruction, searchable by the language's name in any covered language ("english", "engleski", "anglisht", "англиски")
 - Relevance-ranked, grouped results with per-type filters and counts
 - Detail pages for universities and faculties with shareable links and per-page social previews
 - Email/password signup with email verification, session login, and optional GitHub/Google OAuth (with automatic account linking)
 - Authenticated suggestions for creating, updating, or deleting data, reviewed by admins before applying - the review shows the current data, child counts, and the entity's place in the academic hierarchy
 - Whole-university suggestions: one reviewed submission can hold a university with its faculties, study programs, and tracks - built in a nested form or pasted as JSON
 - Data provenance: BiH data sourced per program from official accreditation records; other countries sourced from university websites and national registries - addresses open directly in Google Maps
-- Zod validation on both ends, WCAG-checked UI in English and the local language
+- Zod validation on both ends, WCAG-checked UI, available in English, Bosnian/Croatian/Serbian, Albanian, Macedonian, and Slovenian
 
 ## Quick start
 
@@ -50,7 +51,7 @@ GET /api/v1/tracks              also /tracks/:id
 GET /api/v1/search?searchTerm=&country=&entity=&ownership=&cycle=&type=
 ```
 
-Responses return `{ "message", "data" }`; errors return `{ "error": { "code", "message" } }`. List endpoints are paginated - `?page=&limit=` (up to 100 per page) with `page`, `totalPages`, and `total` in the response. Interactive documentation with examples lives at [atlasuniverziteta.com/api-docs](https://atlasuniverziteta.com/api-docs).
+Responses return `{ "message", "data" }`; errors return `{ "error": { "code", "message" } }`. List endpoints are paginated - `?page=&limit=` (up to 100 per page) with `page`, `totalPages`, and `total` in the response - and accept `?country=&entity=` filters (faculties, study programs, and tracks by their university's country and entity). Interactive documentation with examples lives at [atlasuniverziteta.com/api-docs](https://atlasuniverziteta.com/api-docs).
 
 ## Testing
 
@@ -100,14 +101,15 @@ Podaci prate akademsku hijerarhiju: univerzitet, njegovi fakulteti i njihovi stu
 ### Mogućnosti
 
 - Javni REST API pod `/api/v1` - bez prijave i bez ključeva
-- Objedinjena pretraga univerziteta, fakulteta i studijskih programa: više riječi odjednom (svaka riječ se traži kroz cijelu hijerarhiju), neosjetljiva na velika/mala slova i dijakritike, prepoznaje padeže i rodove (medicina/medicine/medicini, javna/javni/javno), kao i ECTS bodove, trajanje i godinu osnivanja
+- Objedinjena pretraga univerziteta, fakulteta i studijskih programa: više riječi odjednom (svaka riječ se traži kroz cijelu hijerarhiju), neosjetljiva na velika/mala slova i dijakritike, unos latinicom ili ćirilicom, prepoznaje padeže i rodove (medicina/medicine/medicini, javna/javni/javno), kao i ECTS bodove, trajanje i godinu osnivanja, a riječi za filtriranje rade na engleskom i svim obuhvaćenim jezicima (npr. "javna" ili "publik" za javne univerzitete, "3 vite" za trogodišnje programe)
+- Studijski programi navode jezike nastave, koji se pretražuju po nazivu jezika na bilo kojem obuhvaćenom jeziku ("engleski", "english", "anglisht", "англиски")
 - Rezultati rangirani po relevantnosti i grupisani po tipu, uz filtere i brojače
 - Stranice sa detaljima univerziteta i fakulteta, sa linkovima za dijeljenje i ispravnim pregledima na društvenim mrežama
 - Registracija uz potvrdu emailom, prijava sesijom i opciona GitHub/Google prijava (sa automatskim povezivanjem naloga)
 - Prijavljeni korisnici predlažu dodavanje, izmjenu ili brisanje podataka; administratori pri pregledu vide trenutne podatke, broj podređenih stavki i mjesto u akademskoj hijerarhiji prije primjene
 - Prijedlozi cijelog univerziteta: jedna prijava može sadržati univerzitet sa fakultetima, studijskim programima i smjerovima - kroz ugniježdenu formu ili lijepljenjem JSON-a
 - Porijeklo podataka: podaci za BiH preuzeti po programu iz akreditacijskih registara; ostale zemlje iz univerzitetskih stranica i nacionalnih registara - adrese se otvaraju direktno u Google mapama
-- Validacija podataka na obje strane, pristupačnost provjerena po WCAG standardu, interfejs na engleskom i našem jeziku
+- Validacija podataka na obje strane, pristupačnost provjerena po WCAG standardu, interfejs na engleskom, bosanskom/hrvatskom/srpskom, albanskom, makedonskom i slovenskom jeziku
 
 ### Pokretanje
 

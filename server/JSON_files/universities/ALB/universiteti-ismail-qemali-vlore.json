@@ -27,7 +27,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -36,7 +36,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -45,7 +45,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -54,7 +54,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -63,7 +63,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -72,7 +72,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -81,7 +81,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -90,7 +90,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -99,7 +99,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -108,7 +108,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -117,7 +117,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -126,7 +126,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -135,7 +135,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -144,7 +144,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -153,7 +153,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -162,7 +162,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -171,7 +171,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programet-e-studimit-fe",
           "lastModified": "2026-11-22"
         },
@@ -212,7 +212,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shendetit",
           "lastModified": "2026-11-22"
         },
@@ -221,7 +221,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shendetit",
           "lastModified": "2026-11-22"
         },
@@ -230,7 +230,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shendetit",
           "lastModified": "2026-11-22"
         },
@@ -239,7 +239,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shendetit",
           "lastModified": "2026-11-22"
         },
@@ -248,7 +248,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shendetit",
           "lastModified": "2026-11-22"
         },
@@ -257,7 +257,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shendetit",
           "lastModified": "2026-11-22"
         },
@@ -266,7 +266,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shendetit",
           "lastModified": "2026-11-22"
         },
@@ -275,7 +275,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shendetit",
           "lastModified": "2026-11-22"
         }
@@ -294,7 +294,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip/Anglisht",
+          "languages": ["sq", "en"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -309,7 +309,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -318,7 +318,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -327,7 +327,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -336,7 +336,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -357,7 +357,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -366,7 +366,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -375,7 +375,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -384,7 +384,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -393,7 +393,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -402,7 +402,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -411,7 +411,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -420,7 +420,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -435,7 +435,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -444,7 +444,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -453,7 +453,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -462,7 +462,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -471,7 +471,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -486,7 +486,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         },
@@ -501,7 +501,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shkencave-humane",
           "lastModified": "2026-11-22"
         }
@@ -520,7 +520,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -529,7 +529,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://univlora.edu.al/english-language-programs-in-faculty-of-technical-and-natural-sciences",
           "lastModified": "2026-11-22"
         },
@@ -544,7 +544,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -553,7 +553,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -570,7 +570,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -579,7 +579,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -588,7 +588,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -597,7 +597,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -606,7 +606,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -621,7 +621,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -642,7 +642,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://univlora.edu.al/english-language-programs-in-faculty-of-technical-and-natural-sciences",
           "lastModified": "2026-11-22"
         },
@@ -651,7 +651,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -666,7 +666,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/programe-bachelor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -681,7 +681,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -690,7 +690,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -711,7 +711,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://univlora.edu.al/english-language-programs-in-faculty-of-technical-and-natural-sciences",
           "lastModified": "2026-11-22"
         },
@@ -720,7 +720,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -729,7 +729,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -738,7 +738,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -754,7 +754,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -763,7 +763,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -772,7 +772,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -781,7 +781,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-shkencor-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -790,7 +790,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/master-profesional-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -805,7 +805,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -814,7 +814,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -823,7 +823,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         },
@@ -832,7 +832,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://univlora.edu.al/diploma-profesionale-fakulteti-i-shkencave-teknike-dhe-natyrore",
           "lastModified": "2026-11-22"
         }

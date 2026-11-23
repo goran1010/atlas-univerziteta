@@ -53,7 +53,7 @@ const FACULTY_PLACEHOLDER = `{
       "cycle": "FIRST | SECOND | THIRD | INTEGRATED | VOCATIONAL | SPECIALIST",
       "durationYears": 3,
       "ects": 180,
-      "language": "...",
+      "languages": ["bs", "en"],
       "tracks": [
         { "name": "...", "ects": 180, "durationYears": 3 }
       ]

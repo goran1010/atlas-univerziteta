@@ -128,7 +128,7 @@
           "name": "Administrim Biznesi",
           "cycle": "FIRST",
           "durationYears": 3,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/bachelor/bachelor-ne-administrim-biznes",
           "lastModified": "2026-11-22"
         },
@@ -136,7 +136,7 @@
           "name": "Ekonomiks",
           "cycle": "FIRST",
           "durationYears": 3,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/bachelor/bachelor-ne-ekonomiks",
           "lastModified": "2026-11-22"
         },
@@ -144,7 +144,7 @@
           "name": "Financë",
           "cycle": "FIRST",
           "durationYears": 3,
-          "language": "Anglisht/Shqip",
+          "languages": ["en", "sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/bachelor/bachelor-ne-finance-kontabilitet",
           "lastModified": "2026-11-22"
         },
@@ -152,7 +152,7 @@
           "name": "Informatikë Ekonomike",
           "cycle": "FIRST",
           "durationYears": 3,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/bachelor/bachelor-ne-informatike-ekonomike",
           "lastModified": "2026-11-22"
         },
@@ -161,7 +161,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-administrim-biznesi",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -182,7 +182,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-profesional/master-profesional-ne-administrim-biznesi",
           "lastModified": "2026-11-22"
         },
@@ -190,7 +190,7 @@
           "name": "Administrim Publik",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-administrim-publik",
           "lastModified": "2026-11-22"
         },
@@ -198,7 +198,7 @@
           "name": "Administrim Publik (Master profesional)",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-profesional/master-profesional-ne-administrim-publik",
           "lastModified": "2026-11-22"
         },
@@ -206,7 +206,7 @@
           "name": "Analizë dhe Administrim Fiskal",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-analize-dhe-administrim-fiskal",
           "lastModified": "2026-11-22"
         },
@@ -214,7 +214,7 @@
           "name": "Ekonomiks",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-ekonomiks",
           "lastModified": "2026-11-22"
         },
@@ -228,7 +228,7 @@
           "name": "Financë",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-finance",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -253,7 +253,7 @@
           "name": "Financë, Kontabilitet dhe Auditim",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-finance-kontabilitet-dhe-auditim",
           "lastModified": "2026-11-22"
         },
@@ -261,7 +261,7 @@
           "name": "Kontabilitet dhe Auditim",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-kontabilitet-dhe-auditim",
           "lastModified": "2026-11-22"
         },
@@ -269,7 +269,7 @@
           "name": "Kontabilitet dhe Auditim (Master profesional)",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-profesional/master-profesional-ne-kontabilitet-dhe-auditim-kohe-e-plote",
           "lastModified": "2026-11-22"
         },
@@ -283,7 +283,7 @@
           "name": "Marketing",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-marketing",
           "lastModified": "2026-11-22"
         },
@@ -297,7 +297,7 @@
           "name": "Menaxhim Risku",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-manaxhim-risku",
           "lastModified": "2026-11-22"
         },
@@ -317,7 +317,7 @@
           "name": "Siguria e Informacionit",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-siguri-informacioni",
           "lastModified": "2026-11-22"
         },
@@ -325,7 +325,7 @@
           "name": "Sisteme Informacioni në Ekonomi",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-sisteme-informacioni-ne-ekonomi",
           "lastModified": "2026-11-22"
         },
@@ -333,7 +333,7 @@
           "name": "Sisteme Informacioni në Ekonomi (Master profesional)",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-profesional/master-profesional-ne-sisteme-informacioni-ne-ekonomi",
           "lastModified": "2026-11-22"
         },
@@ -341,7 +341,7 @@
           "name": "Statistika Zyrtare",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-statistika-zyrtare",
           "lastModified": "2026-11-22"
         },
@@ -355,7 +355,7 @@
           "name": "Teknologji Informacioni dhe Menaxhimi i Proceseve të Biznesit",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-teknologji-informacioni-dhe-menaxhimi-i-proceseve-te-biznesit",
           "lastModified": "2026-11-22"
         },
@@ -363,7 +363,7 @@
           "name": "Zhvillim Ekonomik dhe Marrëdhënie Ndërkombëtare",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "http://feut.edu.al/programe-studimi/master/master-shkencor/msc-ne-zhvillim-ekonomik-dhe-marredhenie-nderkombetare",
           "lastModified": "2026-11-22"
         },
@@ -429,7 +429,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Italisht/Shqip",
+          "languages": ["it", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuha-dhe-kultura-italiane-ne-boten-digjitale-universita-per-stranieri-di-perugia-itali/",
           "lastModified": "2026-11-22"
         },
@@ -438,7 +438,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht/Shqip",
+          "languages": ["en", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-angleze/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -464,7 +464,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Frëngjisht/Shqip",
+          "languages": ["fr", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-frenge-me-profil-gjuhe-dhe-komunikim/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -498,7 +498,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Greqisht/Shqip",
+          "languages": ["el", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-greke-me-profil-gjuhe-letersi-dhe-qyteterim-grek/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -524,7 +524,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Gjermanisht/Frëngjisht/Shqip",
+          "languages": ["de", "fr", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-moderne-dhe-teknologji-digjitale/",
           "lastModified": "2026-11-22"
         },
@@ -533,7 +533,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Spanjisht/Shqip",
+          "languages": ["es", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-spanjolle-me-profil-gjuhe-letersi-dhe-qyteterim-hispanik/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -549,7 +549,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Turqisht/Shqip",
+          "languages": ["tr", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-turke-me-profil-gjuhe-letersi-dhe-qyteterim-turk/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -575,7 +575,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Gjermanisht/Shqip",
+          "languages": ["de", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-letersi-dhe-qyteterim-gjermanishtfoles-2/",
           "lastModified": "2026-11-22"
         },
@@ -607,7 +607,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip/Arabisht",
+          "languages": ["sq", "ar"],
           "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-orientalistike/",
           "lastModified": "2026-11-22"
         },
@@ -634,7 +634,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht/Shqip",
+          "languages": ["en", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-mesuesi-e-gjuhes-angleze-per-arsimin-e-mesem-te-larte/",
           "lastModified": "2026-11-22"
         },
@@ -643,7 +643,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Frëngjisht/Shqip",
+          "languages": ["fr", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencava-mesuesi-e-gjuhes-frenge-per-arsimin-e-mesem-te-larte/",
           "lastModified": "2026-11-22"
         },
@@ -652,7 +652,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Gjermanisht/Shqip",
+          "languages": ["de", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-mesuesi-e-gjuhes-gjermane-per-arsimin-e-mesem-te-larte/",
           "lastModified": "2026-11-22"
         },
@@ -661,7 +661,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Greqisht/Shqip",
+          "languages": ["el", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-mesuesi-ne-gjuhen-greke-per-arsimin-e-mesem-te-larte/",
           "lastModified": "2026-11-22"
         },
@@ -670,7 +670,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Italisht/Shqip",
+          "languages": ["it", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-mesuesi-e-gjuhes-italiane-per-arsimin-e-mesem-te-larte/",
           "lastModified": "2026-11-22"
         },
@@ -679,7 +679,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Turqisht/Shqip",
+          "languages": ["tr", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-mesuesi-ne-gjuhen-turke-per-arsimin-e-mesem-te-larte/",
           "lastModified": "2026-11-22"
         },
@@ -688,7 +688,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Anglisht/Shqip",
+          "languages": ["en", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/plani-mesimor-master-profesional-ne-perkthim-me-profil-perkthyes/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -711,7 +711,7 @@
           "name": "Trajtimi Automatik i Gjuhëve",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Frëngjisht/Anglisht/Shqip",
+          "languages": ["fr", "en", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/master-i-shkencave-ne-trajtimi-automatik-i-gjuheve-specialiteti-trajtim-automatik-dhe-gjuhesor-i-dokumenteve-te-shkruara/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -835,7 +835,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://fhf.edu.al/departamentet/departamenti-i-gazetarise-dhe-i-komunikimit/",
           "lastModified": "2026-11-22"
         },
@@ -1791,7 +1791,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht/Shqip",
+          "languages": ["en", "sq"],
           "dataSourceUrl": "https://fgjh.edu.al/bachelor-ne-gjuhe-angleze-filiali-sarande/",
           "lastModified": "2026-11-22"
         },

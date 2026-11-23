@@ -26,7 +26,7 @@ const studyProgramTreeReadSchema = z.object({
   cycle: studyCycleSchema,
   durationYears: integerSchema.optional(),
   ects: integerSchema.optional(),
-  language: z.string().optional(),
+  languages: z.array(z.string()).optional(),
   tracks: z.array(trackCreateReadSchema).optional(),
 });
 
@@ -66,7 +66,7 @@ const studyProgramEditReadSchema = z.object({
   cycle: studyCycleSchema.optional(),
   durationYears: integerSchema.nullable().optional(),
   ects: integerSchema.nullable().optional(),
-  language: z.string().nullable().optional(),
+  languages: z.array(z.string()).optional(),
 });
 
 const facultyEditReadSchema = z.object({

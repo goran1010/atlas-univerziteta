@@ -1,4 +1,4 @@
-import type { ContributionFormDraft } from "../types";
+import type { ContributionFormDraft, DraftFieldValue } from "../types";
 
 // Form drafts for the optional children of a CREATE: three concrete levels,
 // mirroring the tree schemas. Each node keeps a stable id so collapse state
@@ -35,7 +35,7 @@ function emptyFaculty(): FacultyDraft {
 function setDraftField(
   draft: ContributionFormDraft,
   field: keyof ContributionFormDraft,
-  value: string | number | undefined,
+  value: DraftFieldValue,
 ): ContributionFormDraft {
   if (value === undefined) {
     return Object.fromEntries(

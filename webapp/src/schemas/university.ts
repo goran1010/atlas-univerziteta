@@ -59,7 +59,8 @@ const studyProgramSchema = z.object({
   cycle: studyCycleSchema,
   durationYears: optionalIntegerSchema,
   ects: optionalIntegerSchema,
-  language: optionalTextSchema,
+  // the webapp deploys before the API, so a response can briefly lack it
+  languages: z.array(z.string()).optional().default([]),
   dataSourceUrl: optionalTextSchema,
   lastModified: optionalTextSchema,
   tracks: z.array(trackSchema).optional().default([]),

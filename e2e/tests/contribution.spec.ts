@@ -119,6 +119,7 @@ test("whole tree JSON contribution approval round-trip", async ({
             name: programName,
             cycle: "FIRST",
             ects: 180,
+            languages: ["sq", "en"],
             tracks: [{ name: trackName }],
           },
         ],
@@ -160,6 +161,7 @@ test("whole tree JSON contribution approval round-trip", async ({
   await expect(dialog.getByText("Faculties (1)")).toBeVisible();
   await expect(dialog.getByText(programName).first()).toBeVisible();
   await expect(dialog.getByText(trackName).first()).toBeVisible();
+  await expect(dialog.getByText("Albanian, English")).toBeVisible();
   await dialog.getByRole("button", { name: "Close" }).click();
 
   await adminPage.getByRole("button", { name: "Approve" }).click();
@@ -172,8 +174,8 @@ test("whole tree JSON contribution approval round-trip", async ({
   ).toBeVisible();
 
   // the whole subtree must be live, correctly linked level by level
-  const rows = await queryE2eDb<{ track: string }>(
-    `SELECT t.name AS track
+  const rows = await queryE2eDb<{ track: string; languages: string[] }>(
+    `SELECT t.name AS track, sp.languages
        FROM track t
        JOIN study_program sp ON sp.id = t."studyProgramId"
        JOIN faculty f ON f.id = sp."facultyId"
@@ -181,7 +183,7 @@ test("whole tree JSON contribution approval round-trip", async ({
       WHERE u.name = $1 AND f.name = $2 AND sp.name = $3`,
     [universityName, facultyName, programName],
   );
-  expect(rows).toEqual([{ track: trackName }]);
+  expect(rows).toEqual([{ track: trackName, languages: ["sq", "en"] }]);
 
   await adminPage.goto("/");
   await adminPage.getByRole("searchbox", { name: "Search" }).fill(suffix);

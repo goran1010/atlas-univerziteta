@@ -493,7 +493,7 @@
         {
           "name": "Opšta medicinska sestra (na angliski jazik)",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
           "lastModified": "2026-11-18"
         },
@@ -506,7 +506,7 @@
         {
           "name": "Studii za fizioterapija (na angliski jazik)",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.seeu.edu.mk/mk/future-students/academics",
           "lastModified": "2026-11-18"
         },

@@ -21,7 +21,7 @@ interface TrackFixture {
 interface StudyProgramFixture {
   name: string;
   cycle: Prisma.StudyProgramCreateInput["cycle"];
-  language?: string | null;
+  languages?: string[];
   ects?: number | null;
   durationYears?: number | null;
   tracks?: { create: TrackFixture | TrackFixture[] };

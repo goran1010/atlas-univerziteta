@@ -34,6 +34,27 @@ const studyCycleSchema = z.enum([
   "VOCATIONAL",
   "SPECIALIST",
 ]);
+// ISO 639 codes of the languages a program is taught in, in the server's
+// order (server/src/validation/languages.ts): regional languages first
+const programLanguageSchema = z.enum([
+  "bs",
+  "hr",
+  "sr",
+  "cnr",
+  "sq",
+  "mk",
+  "sl",
+  "en",
+  "de",
+  "fr",
+  "it",
+  "ru",
+  "tr",
+  "ar",
+  "hu",
+  "el",
+  "es",
+]);
 const searchTypeSchema = z.enum(["university", "faculty", "studyProgram"]);
 const userRoleSchema = z.enum(["ADMIN", "USER"]);
 
@@ -46,10 +67,12 @@ export type Entity = z.infer<typeof entitySchema>;
 export type TargetType = z.infer<typeof targetTypeSchema>;
 export type Ownership = z.infer<typeof ownershipSchema>;
 export type StudyCycle = z.infer<typeof studyCycleSchema>;
+export type ProgramLanguage = z.infer<typeof programLanguageSchema>;
 export type TypeOfChange = "CREATE" | "UPDATE" | "DELETE";
 export type SearchType = z.infer<typeof searchTypeSchema>;
 
 const COUNTRIES = countrySchema.options;
+const PROGRAM_LANGUAGES = programLanguageSchema.options;
 
 function subdivisionsOf(country: Country): readonly Entity[] | undefined {
   const subdivisionsByCountry: Partial<Record<Country, readonly Entity[]>> =
@@ -71,6 +94,7 @@ const ENTITY_RULE_MESSAGE =
 
 export {
   COUNTRIES,
+  PROGRAM_LANGUAGES,
   ENTITIES,
   SUBDIVISIONS,
   ENTITY_RULE_MESSAGE,
@@ -84,6 +108,7 @@ export {
   integerSchema,
   ownershipSchema,
   positiveIntegerSchema,
+  programLanguageSchema,
   searchTypeSchema,
   studyCycleSchema,
   userRoleSchema,

@@ -8,7 +8,6 @@ import {
 } from "../sharedComponents/icons";
 import { LinkButton } from "../sharedComponents/LinkButton";
 import { Dialog } from "../sharedComponents/Dialog";
-import { tCount } from "../../utils/pluralize";
 import { ContactLinks } from "../entityDetails/ContactLinks";
 import { ShareButton } from "../entityDetails/ShareButton";
 
@@ -27,7 +26,7 @@ function UniversityInfoDialog({
   countryLabel: string;
   entityLabel: string | undefined;
 }) {
-  const { t } = use(RootContext);
+  const { t, tCount } = use(RootContext);
 
   return (
     <Dialog
@@ -79,11 +78,7 @@ function UniversityInfoDialog({
           <span className="font-bold text-teal-600 dark:text-teal-400">
             {university._count.faculties}
           </span>{" "}
-          {tCount(
-            t,
-            "universitiesPage.facultyCount",
-            university._count.faculties,
-          )}
+          {tCount("universitiesPage.facultyCount", university._count.faculties)}
         </p>
         <div className="flex justify-center">
           <LinkButton

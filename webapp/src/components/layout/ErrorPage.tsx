@@ -31,11 +31,11 @@ function ErrorPage() {
           <h1 className="text-xl sm:text-2xl font-bold text-center text-(--text-secondary)">
             {t(isNotFound ? "error.notFound" : "error.generic")}
           </h1>
-          <div className="flex w-full flex-wrap gap-3 justify-center">
+          <div className="flex w-full max-w-xs flex-col gap-3">
             {!isNotFound && (
               <Button
                 variant="secondary"
-                className="flex-1 sm:flex-initial"
+                className="w-full"
                 onClick={() => {
                   window.location.reload();
                 }}
@@ -43,7 +43,7 @@ function ErrorPage() {
                 {t("error.reload")}
               </Button>
             )}
-            <LinkButton to="/" className="flex-1 sm:flex-initial">
+            <LinkButton to="/" className="w-full">
               {t("error.goHome")}
             </LinkButton>
           </div>

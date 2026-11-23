@@ -25,7 +25,7 @@
           "name": "Teknologjitë e Informacionit dhe Telekomunikim (në gjuhën shqipe, turke dhe boshnjake)",
           "cycle": "FIRST",
           "ects": 180,
-          "language": "Shqip/Turqisht/Boshnjakisht",
+          "languages": ["sq", "tr", "bs"],
           "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
           "lastModified": "2026-11-20"
         },
@@ -185,7 +185,7 @@
           "name": "Programi Fillor (në Gjuhën Shqipe, Boshnjake dhe Turke)",
           "cycle": "FIRST",
           "ects": 240,
-          "language": "Shqip/Boshnjakisht/Turqisht",
+          "languages": ["sq", "bs", "tr"],
           "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
           "lastModified": "2026-11-20"
         },
@@ -193,7 +193,7 @@
           "name": "Edukim dhe Mësimdhënie në Matematikë në Gjuhën Turke",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Turqisht",
+          "languages": ["tr"],
           "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
           "lastModified": "2026-11-20"
         },

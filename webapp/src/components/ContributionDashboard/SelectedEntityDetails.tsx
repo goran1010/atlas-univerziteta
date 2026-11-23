@@ -2,6 +2,7 @@ import { use } from "react";
 import { mapsHref, telHref } from "../../utils/contactHrefs";
 import { RootContext } from "../../contextData/RootContext";
 import { ExternalLink } from "../sharedComponents/ExternalLink";
+import { programLanguageNames } from "../../utils/programLanguageNames";
 
 import type { ReactNode } from "react";
 import type { PickedEntity } from "./TargetPicker";
@@ -115,7 +116,10 @@ function buildRows(entity: PickedEntity, t: TFunction): DetailRow[] {
         entity.data.durationYears,
       );
       push(t("contribution.dataFields.ects"), entity.data.ects);
-      push(t("contribution.dataFields.language"), entity.data.language);
+      push(
+        t("contribution.dataFields.languages"),
+        programLanguageNames(t, entity.data.languages),
+      );
       break;
     case "TRACK":
       push(t("contribution.dataFields.ects"), entity.data.ects);

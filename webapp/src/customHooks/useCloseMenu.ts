@@ -8,32 +8,22 @@ export interface UseCloseMenu {
   navRef: RefObject<HTMLElement | null>;
   isMenuOpen: boolean;
   setIsMenuOpen: SetIsMenuOpen;
-  isThemeMenuOpen: boolean;
-  setIsThemeMenuOpen: SetIsMenuOpen;
-  isLanguageMenuOpen: boolean;
-  setIsLanguageMenuOpen: SetIsMenuOpen;
 }
 
 function useCloseMenu(): UseCloseMenu {
   const navRef = useRef<HTMLElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
-  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (!isMenuOpen && !isThemeMenuOpen && !isLanguageMenuOpen) return;
+    if (!isMenuOpen) return;
 
     const handleClickAway = () => {
       setIsMenuOpen(false);
-      setIsThemeMenuOpen(false);
-      setIsLanguageMenuOpen(false);
     };
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsMenuOpen(false);
-        setIsThemeMenuOpen(false);
-        setIsLanguageMenuOpen(false);
       }
     };
 
@@ -44,17 +34,9 @@ function useCloseMenu(): UseCloseMenu {
       document.removeEventListener("click", handleClickAway);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isMenuOpen, isThemeMenuOpen, isLanguageMenuOpen]);
+  }, [isMenuOpen]);
 
-  return {
-    navRef,
-    isMenuOpen,
-    setIsMenuOpen,
-    isThemeMenuOpen,
-    setIsThemeMenuOpen,
-    isLanguageMenuOpen,
-    setIsLanguageMenuOpen,
-  };
+  return { navRef, isMenuOpen, setIsMenuOpen };
 }
 
 export { useCloseMenu };

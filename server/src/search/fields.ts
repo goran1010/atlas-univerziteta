@@ -5,6 +5,13 @@ import { foldSearchText, foldSearchTextOrNull } from "./fold.js";
 // fields produce no keys, so partial updates stay partial; null clears the
 // folded copy alongside its source field.
 
+// Query words never contain whitespace, so a stored city without it still
+// contains every word of "Banja Luka" and also matches the one-word spelling
+// "Banjaluka".
+function foldCity(city: string): string {
+  return foldSearchText(city).replace(/\s+/g, "");
+}
+
 function universitySearchFields(fields: {
   name?: string | undefined;
   city?: string | undefined;
@@ -15,7 +22,7 @@ function universitySearchFields(fields: {
       searchName: foldSearchText(fields.name),
     }),
     ...(fields.city !== undefined && {
-      searchCity: foldSearchText(fields.city),
+      searchCity: foldCity(fields.city),
     }),
     ...(fields.acronym !== undefined && {
       searchAcronym: foldSearchTextOrNull(fields.acronym),
@@ -32,21 +39,15 @@ function facultySearchFields(fields: {
       searchName: foldSearchText(fields.name),
     }),
     ...(fields.city !== undefined && {
-      searchCity: foldSearchTextOrNull(fields.city),
+      searchCity: fields.city === null ? null : foldCity(fields.city),
     }),
   };
 }
 
-function studyProgramSearchFields(fields: {
-  name?: string | undefined;
-  language?: string | null | undefined;
-}) {
+function studyProgramSearchFields(fields: { name?: string | undefined }) {
   return {
     ...(fields.name !== undefined && {
       searchName: foldSearchText(fields.name),
-    }),
-    ...(fields.language !== undefined && {
-      searchLanguage: foldSearchTextOrNull(fields.language),
     }),
   };
 }

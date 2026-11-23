@@ -149,19 +149,19 @@ model Faculty {
 }
 
 model StudyProgram {
-  id             Int        @id @default(autoincrement())
-  name           String
-  searchName     String     @default("")
-  facultyId      Int
-  faculty        Faculty    @relation(fields: [facultyId], references: [id], onDelete: Cascade)
-  cycle          studyCycle
-  durationYears  Int?
-  ects           Int?
-  language       String?
-  searchLanguage String?
-  dataSourceUrl  String?
-  lastModified   DateTime?
-  tracks         Track[]
+  id            Int        @id @default(autoincrement())
+  name          String
+  searchName    String     @default("")
+  facultyId     Int
+  faculty       Faculty    @relation(fields: [facultyId], references: [id], onDelete: Cascade)
+  cycle         studyCycle
+  durationYears Int?
+  ects          Int?
+  // ISO 639 codes validated against src/validation/languages.ts
+  languages     String[]   @default([])
+  dataSourceUrl String?
+  lastModified  DateTime?
+  tracks        Track[]
 
   @@unique([name, facultyId, cycle])
   @@index([facultyId])
@@ -211,8 +211,8 @@ model PendingChange {
   // contributor's note to the reviewing admin
   comment String?
 
-  user       user      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId     String
+  user      user     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
   createdAt DateTime @default(now())
 
   @@index([createdAt])

@@ -22,7 +22,7 @@
           "name": "Dentalna implantologija",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
           "lastModified": "2026-11-18"
         },
@@ -30,7 +30,7 @@
           "name": "Dentalna implantologija (na angliski jazik)",
           "cycle": "SECOND",
           "ects": 60,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
           "lastModified": "2026-11-18"
         },
@@ -38,7 +38,7 @@
           "name": "Dentalna medicina",
           "cycle": "INTEGRATED",
           "ects": 360,
-          "language": "Makedonski",
+          "languages": ["mk"],
           "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
           "lastModified": "2026-11-18"
         },
@@ -46,7 +46,7 @@
           "name": "Dentalna medicina (na angliski jazik)",
           "cycle": "INTEGRATED",
           "ects": 360,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.mit.edu.mk/akreditacii",
           "lastModified": "2026-11-18"
         }

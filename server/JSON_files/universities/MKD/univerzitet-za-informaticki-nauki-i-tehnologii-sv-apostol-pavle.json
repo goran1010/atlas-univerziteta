@@ -24,7 +24,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/isvma/",
           "lastModified": "2026-11-18"
         },
@@ -33,7 +33,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/isvma/",
           "lastModified": "2026-11-18"
         }
@@ -50,7 +50,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/cse/",
           "lastModified": "2026-11-18"
         },
@@ -59,14 +59,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/cse/",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Computer Technology and Informatics",
           "cycle": "SECOND",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/masters/cse-master/",
           "lastModified": "2026-11-18"
         }
@@ -83,7 +83,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/cns/",
           "lastModified": "2026-11-18"
         },
@@ -92,14 +92,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/cns/",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Information Sciences and Technologies",
           "cycle": "SECOND",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/masters/cns-master/",
           "lastModified": "2026-11-18"
         }
@@ -115,14 +115,14 @@
           "name": "Digital Business Analytics",
           "cycle": "FIRST",
           "durationYears": 4,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/ics/",
           "lastModified": "2026-11-18"
         },
         {
           "name": "Digital Business Analytics",
           "cycle": "SECOND",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/masters/ics-master/",
           "lastModified": "2026-11-18"
         }
@@ -138,7 +138,7 @@
           "name": "Applied IT, Machine Intelligence and Robotics",
           "cycle": "FIRST",
           "durationYears": 4,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/bachelors/aitmir/",
           "lastModified": "2026-11-18"
         },
@@ -147,7 +147,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://uist.edu.mk/academics/masters/aitmir-master/",
           "lastModified": "2026-11-18"
         }

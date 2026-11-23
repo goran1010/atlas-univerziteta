@@ -18,7 +18,6 @@ import { byCycleDisplayOrder } from "../../utils/cycleOrder";
 import { Spinner } from "../sharedComponents/Spinner";
 import { fetchPublic } from "../../utils/fetchPublic";
 import { facultyDetailResponseSchema } from "../../schemas/university";
-import { tCount } from "../../utils/pluralize";
 
 import type {
   FacultySearchResult,
@@ -33,7 +32,7 @@ function FacultyResult({
   contextHint?: string | undefined;
 }) {
   const hasPrograms = (faculty._count?.studyPrograms ?? 0) > 0;
-  const { t } = use(RootContext);
+  const { t, tCount } = use(RootContext);
   const { addNotification } = use(NotificationContext);
   const [expanded, setExpanded] = useState(false);
   const [detailData, setDetailData] = useState<FacultyDetail>();
@@ -183,7 +182,6 @@ function FacultyResult({
                   {detailData.studyPrograms.length}
                 </span>{" "}
                 {tCount(
-                  t,
                   "universitiesPage.studyProgramCount",
                   detailData.studyPrograms.length,
                 )}

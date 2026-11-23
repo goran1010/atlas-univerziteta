@@ -3,106 +3,63 @@ import userEvent from "@testing-library/user-event";
 import { LanguageSwitcher } from "../../../../src/components/Navbar/LanguageSwitcher";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
 
-import type { AddNotification } from "../../../../src/types";
-import type { SetLanguage } from "../../../../src/types";
 import type { Language } from "../../../../src/types";
-
-afterEach(() => {
-  vi.restoreAllMocks();
-});
 
 beforeEach(() => {
   localStorage.setItem("language", "en");
 });
 
-interface WrapperProps {
-  addNotification: AddNotification;
-  setLanguage: SetLanguage;
-  language: Language;
-}
-
-function Wrapper({ addNotification, setLanguage, language }: WrapperProps) {
-  return (
+function renderSwitcher(language: Language) {
+  const addNotification = vi.fn();
+  const setLanguage = vi.fn();
+  render(
     <RootContextProvider
-      rootValue={{
-        addNotification,
-        removeNotification: vi.fn(),
-        setLanguage,
-      }}
+      rootValue={{ addNotification, removeNotification: vi.fn() }}
     >
       <LanguageSwitcher setLanguage={setLanguage} language={language} />
-    </RootContextProvider>
+    </RootContextProvider>,
   );
+  return { addNotification, setLanguage, select: screen.getByRole("combobox") };
 }
 
 describe("LanguageSwitcher", () => {
-  test.each<{
-    currentLanguage: Language;
-    expectedNextLanguage: string;
-    expectedMessage: string;
-  }>([
-    {
-      currentLanguage: "system",
-      expectedNextLanguage: "en",
-      expectedMessage: "Switched to English",
-    },
-    {
-      currentLanguage: "en",
-      expectedNextLanguage: "sr",
-      expectedMessage: "Switched to Serbian",
-    },
-    {
-      currentLanguage: "sr",
-      expectedNextLanguage: "system",
-      expectedMessage: "Switched to system language",
-    },
-  ])(
-    "cycles from $currentLanguage to $expectedNextLanguage on click",
-    async ({ currentLanguage, expectedNextLanguage, expectedMessage }) => {
-      const addNotification = vi.fn();
-      const setLanguage = vi.fn();
+  test("lists each language by its code after the select's name", () => {
+    const { select } = renderSwitcher("en");
 
-      render(
-        <Wrapper
-          addNotification={addNotification}
-          setLanguage={setLanguage}
-          language={currentLanguage}
-        />,
-      );
+    expect(select).toHaveAccessibleName("Language");
+    expect(
+      screen.getAllByRole("option").map((option) => option.textContent),
+    ).toEqual([
+      "Language: System",
+      "Language: EN",
+      "Language: SR",
+      "Language: SQ",
+      "Language: MK",
+      "Language: SL",
+    ]);
+  });
 
-      const languageButton = screen.getByRole("button", {
-        name: /Toggle language/i,
-      });
+  test.each<Language>(["system", "en", "sr", "sq", "mk", "sl"])(
+    "shows %s as the current choice",
+    (language) => {
+      const { select } = renderSwitcher(language);
 
-      expect(languageButton).toBeInTheDocument();
-      await userEvent.click(languageButton);
-
-      expect(setLanguage).toHaveBeenCalledWith(expectedNextLanguage);
-      expect(addNotification).toHaveBeenCalledWith({
-        type: "info",
-        message: expectedMessage,
-      });
+      expect(select).toHaveValue(language);
     },
   );
 
-  test.each<{ language: Language; code: string; name: RegExp }>([
-    { language: "en", code: "EN", name: /English/i },
-    { language: "sr", code: "SR", name: /Serbian/i },
-  ])(
-    "shows $code as text for $language and names the language",
-    ({ language, code, name }) => {
-      render(
-        <Wrapper
-          addNotification={vi.fn()}
-          setLanguage={vi.fn()}
-          language={language}
-        />,
-      );
+  test.each<{ choice: Language; message: string }>([
+    { choice: "sr", message: "Switched to Serbian" },
+    { choice: "sq", message: "Switched to Albanian" },
+    { choice: "mk", message: "Switched to Macedonian" },
+    { choice: "sl", message: "Switched to Slovenian" },
+    { choice: "system", message: "Switched to system language" },
+  ])("sets $choice and announces it", async ({ choice, message }) => {
+    const { select, setLanguage, addNotification } = renderSwitcher("en");
 
-      const languageButton = screen.getByRole("button", { name });
+    await userEvent.selectOptions(select, choice);
 
-      expect(languageButton).toHaveTextContent(code);
-      expect(languageButton.querySelector("img")).toBeNull();
-    },
-  );
+    expect(setLanguage).toHaveBeenCalledWith(choice);
+    expect(addNotification).toHaveBeenCalledWith({ type: "info", message });
+  });
 });

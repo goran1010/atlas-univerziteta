@@ -10,6 +10,7 @@ import {
   targetTypeSchema,
   ownershipSchema,
   positiveIntegerSchema,
+  programLanguageSchema,
   studyCycleSchema,
 } from "./domain";
 
@@ -20,7 +21,11 @@ const acronymSchema = z.string().trim().min(1).max(20);
 const foundedYearSchema = z.string().trim().min(1).max(20);
 const addressSchema = z.string().trim().min(1).max(300);
 const phoneSchema = z.string().trim().min(1).max(50);
-const languageSchema = z.string().trim().min(1).max(100);
+const languagesSchema = z
+  .array(programLanguageSchema)
+  .refine((codes) => new Set(codes).size === codes.length, {
+    message: "Each language can be listed only once",
+  });
 const emailSchema = z.email().max(254);
 
 // http(s) only - bare z.url() accepts javascript: and data: URLs
@@ -61,7 +66,7 @@ const studyProgramCreateDataSchema = z.strictObject({
   cycle: studyCycleSchema,
   durationYears: durationYearsSchema.optional(),
   ects: ectsSchema.optional(),
-  language: languageSchema.optional(),
+  languages: languagesSchema.optional(),
 });
 
 function nonEmptyObject<T extends z.ZodRawShape>(shape: T) {
@@ -105,7 +110,7 @@ const studyProgramEditDataSchema = nonEmptyObject({
   cycle: studyCycleSchema.optional(),
   durationYears: durationYearsSchema.nullable().optional(),
   ects: ectsSchema.nullable().optional(),
-  language: languageSchema.nullable().optional(),
+  languages: languagesSchema.optional(),
 });
 
 const trackCreateDataSchema = z.strictObject({

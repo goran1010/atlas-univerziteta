@@ -33,12 +33,39 @@ describe("setInitialLanguage", () => {
     expect(setSystemLanguage()).toBe("sr");
   });
 
-  test.each(["bs", "bs-BA", "hr", "hr-HR", "cnr", "cnr-ME"])(
+  test.each(["bs", "bs-BA", "hr", "hr-HR", "cnr", "cnr-ME", "sh"])(
     "maps browser locale %s to the sr bundle",
     (locale) => {
       setNavigatorLanguages([locale]);
 
       expect(setSystemLanguage()).toBe("sr");
+    },
+  );
+
+  test.each(["sq", "sq-AL", "sq-XK", "sq-MK"])(
+    "maps browser locale %s to the sq bundle",
+    (locale) => {
+      setNavigatorLanguages([locale]);
+
+      expect(setSystemLanguage()).toBe("sq");
+    },
+  );
+
+  test.each(["mk", "mk-MK"])(
+    "maps browser locale %s to the mk bundle",
+    (locale) => {
+      setNavigatorLanguages([locale]);
+
+      expect(setSystemLanguage()).toBe("mk");
+    },
+  );
+
+  test.each(["sl", "sl-SI"])(
+    "maps browser locale %s to the sl bundle",
+    (locale) => {
+      setNavigatorLanguages([locale]);
+
+      expect(setSystemLanguage()).toBe("sl");
     },
   );
 

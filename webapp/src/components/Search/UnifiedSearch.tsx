@@ -63,6 +63,7 @@ function UnifiedSearch() {
 
       <Select
         name="country"
+        autoComplete="off"
         aria-label={t("universitiesPage.countryFilter")}
         value={countryFilter}
         onChange={(e) => {

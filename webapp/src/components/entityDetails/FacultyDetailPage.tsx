@@ -20,7 +20,7 @@ import { ResultGroup } from "../Search/ResultGroup";
 import { TrackList } from "../entityCards/TrackList";
 import { groupBy } from "../../utils/groupBy";
 import { byCycleDisplayOrder } from "../../utils/cycleOrder";
-import { tCount } from "../../utils/pluralize";
+import { programLanguageNames } from "../../utils/programLanguageNames";
 import { facultyDetailResponseSchema } from "../../schemas/university";
 import { useEntityDetail } from "../../customHooks/useEntityDetail";
 import { DetailPageStatus } from "./DetailPageStatus";
@@ -30,7 +30,7 @@ import { SITE_URL } from "../../utils/envConfig";
 function FacultyDetailPage() {
   const { id } = useParams<{ id: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { t } = use(RootContext);
+  const { t, tCount } = use(RootContext);
   const { state, retry } = useEntityDetail(
     `/api/v1/faculties/${id ?? ""}`,
     facultyDetailResponseSchema,
@@ -178,7 +178,6 @@ function FacultyDetailPage() {
                   {visiblePrograms.length}
                 </span>{" "}
                 {tCount(
-                  t,
                   "universitiesPage.studyProgramCount",
                   visiblePrograms.length,
                 )}
@@ -229,15 +228,14 @@ function FacultyDetailPage() {
                             <span>
                               <ClockIcon /> {sp.durationYears}{" "}
                               {tCount(
-                                t,
                                 "universitiesPage.durationYears",
                                 sp.durationYears,
                               )}
                             </span>
                           )}
-                          {sp.language && (
+                          {sp.languages.length > 0 && (
                             <span className="text-(--text-muted)">
-                              {sp.language}
+                              {programLanguageNames(t, sp.languages)}
                             </span>
                           )}
                           {sp.dataSourceUrl && (

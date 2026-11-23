@@ -665,6 +665,10 @@ describe("AddUniversityEntity", () => {
     await user.selectOptions(screen.getByLabelText(/Cycle/i), "FIRST");
     await user.type(screen.getByLabelText(/Duration/i), "3");
     await user.type(screen.getByLabelText(/ECTS credits/i), "180");
+    await user.click(screen.getByRole("checkbox", { name: "Bosnian" }));
+    await user.click(screen.getByRole("checkbox", { name: "Croatian" }));
+    await user.click(screen.getByRole("checkbox", { name: "English" }));
+    await user.click(screen.getByRole("checkbox", { name: "Croatian" }));
 
     await user.click(
       screen.getByRole("button", { name: /Submit Suggestion/i }),
@@ -684,6 +688,7 @@ describe("AddUniversityEntity", () => {
         cycle: "FIRST",
         durationYears: 3,
         ects: 180,
+        languages: ["bs", "en"],
       },
     });
     expect(Number(submission.body["parentId"])).toBe(3);

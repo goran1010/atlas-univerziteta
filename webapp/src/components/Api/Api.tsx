@@ -65,6 +65,17 @@ function Api() {
           </pre>
         </section>
         <section className="flex flex-col gap-4">
+          <h2 className="text-xl font-bold text-center">
+            {t("api.studyProgramObject")}
+          </h2>
+          <pre
+            tabIndex={0}
+            className="bg-(--surface-alt) rounded p-3 text-xs overflow-x-auto border border-(--border-color) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--focus-ring)"
+          >
+            {t("api.studyProgramObjectExample")}
+          </pre>
+        </section>
+        <section className="flex flex-col gap-4">
           <h2 className="text-xl font-bold text-center">{t("api.examples")}</h2>
           <pre
             tabIndex={0}

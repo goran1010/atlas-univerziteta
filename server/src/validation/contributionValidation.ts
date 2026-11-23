@@ -7,6 +7,7 @@ import {
   ENTITY_RULE_MESSAGE,
   entityFitsCountry,
 } from "./countries.js";
+import { PROGRAM_LANGUAGES } from "./languages.js";
 
 const targetTypeSchema = z.enum(
   ["UNIVERSITY", "FACULTY", "STUDY_PROGRAM", "TRACK"],
@@ -80,7 +81,15 @@ const foundedYearSchema = z.string().trim().min(1).max(20);
 const addressSchema = z.string().trim().min(1).max(300);
 const phoneSchema = z.string().trim().min(1).max(50);
 const emailSchema = z.email({ error: "Invalid email" }).max(254);
-const languageSchema = z.string().trim().min(1).max(100);
+const languagesSchema = z
+  .array(
+    z.enum(PROGRAM_LANGUAGES, {
+      error: `Invalid language - must be one of ${PROGRAM_LANGUAGES.join(", ")}`,
+    }),
+  )
+  .refine((codes) => new Set(codes).size === codes.length, {
+    error: "Each language can be listed only once",
+  });
 
 const commentSchema = z
   .string()
@@ -155,7 +164,7 @@ const studyProgramCreateDataSchema = z.strictObject({
 
   ects: ectsSchema.optional(),
 
-  language: languageSchema.optional(),
+  languages: languagesSchema.optional(),
 });
 
 const trackCreateDataSchema = z.strictObject({
@@ -424,7 +433,8 @@ const studyProgramEditDataSchema = z
 
     ects: ectsSchema.nullable().optional(),
 
-    language: languageSchema.nullable().optional(),
+    // an empty list clears the languages
+    languages: languagesSchema.optional(),
   })
   .refine((data) => Object.keys(data).length > 0, {
     error: "At least one field must be provided",
@@ -529,7 +539,7 @@ export {
   ectsSchema,
   emailSchema,
   foundedYearSchema,
-  languageSchema,
+  languagesSchema,
   nameSchema,
   phoneSchema,
   websiteSchema,

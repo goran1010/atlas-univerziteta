@@ -19,9 +19,6 @@ export {
   SearchIcon,
   XIcon,
   ChevronDownIcon,
-  SunIcon,
-  MoonIcon,
-  MonitorIcon,
   UploadIcon,
   AlertCircleIcon,
 } from "./ui";

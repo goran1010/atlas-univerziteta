@@ -25,7 +25,7 @@
           "name": "Menaxhim Biznesi (në Gjuhën Shqipe dhe Boshnjake)",
           "cycle": "FIRST",
           "ects": 180,
-          "language": "Shqip/Boshnjakisht",
+          "languages": ["sq", "bs"],
           "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
           "lastModified": "2026-11-20",
           "tracks": [
@@ -59,7 +59,7 @@
           "name": "Menaxhim Biznesi (në Gjuhën Shqipe dhe Boshnjake)",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Shqip/Boshnjakisht",
+          "languages": ["sq", "bs"],
           "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
           "lastModified": "2026-11-20",
           "tracks": [
@@ -108,7 +108,7 @@
           "name": "Menaxhim në Turizëm dhe Hotelieri (Gjuhë Shqipe dhe Gjuhë Boshnjake)",
           "cycle": "FIRST",
           "ects": 180,
-          "language": "Shqip/Boshnjakisht",
+          "languages": ["sq", "bs"],
           "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
           "lastModified": "2026-11-20"
         },
@@ -116,7 +116,7 @@
           "name": "Menaxhimi i Marketingut Turistik (gjuhe shqipe dhe gjuhe boshnjake)",
           "cycle": "SECOND",
           "ects": 120,
-          "language": "Shqip/Boshnjakisht",
+          "languages": ["sq", "bs"],
           "dataSourceUrl": "https://akreditimi.rks-gov.net/wp-content/uploads/Tabela-Programet-E-Akredituara-2026-V5.xlsx",
           "lastModified": "2026-11-20"
         },

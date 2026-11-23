@@ -18,7 +18,7 @@ function App() {
   const closeMenu = useCloseMenu();
 
   const { addNotification } = use(NotificationContext);
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage, t, tCount } = useLanguage();
 
   const { userData, setUserData } = useStatusCheck(addNotification, t);
 
@@ -30,6 +30,7 @@ function App() {
         language,
         setLanguage,
         t,
+        tCount,
         userData,
         setUserData,
       }}

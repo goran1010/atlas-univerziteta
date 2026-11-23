@@ -34,7 +34,11 @@ import { mapZodIssues } from "./utils/validateTreePayload";
 import { ValidationIssueList } from "./ValidationIssueList";
 import type { ValidationIssue } from "./utils/validateTreePayload";
 import type { TargetType, TypeOfChange } from "../../schemas/domain";
-import type { ContributionFormDraft, ContributionFormState } from "./types";
+import type {
+  ContributionFormDraft,
+  ContributionFormState,
+  DraftFieldValue,
+} from "./types";
 import type {
   FacultyDraft,
   StudyProgramDraft,
@@ -104,7 +108,7 @@ function AddUniversityEntity({
 
   function setDataField(
     field: keyof ContributionFormDraft,
-    value: string | number | undefined,
+    value: DraftFieldValue,
   ) {
     setFormState((prev) => ({
       ...prev,

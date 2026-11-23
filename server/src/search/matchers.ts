@@ -4,9 +4,14 @@ import {
   OWNERSHIPS,
   CYCLES,
 } from "./aliases.js";
+import { foldSearchText } from "./fold.js";
+import { LANGUAGE_NAMES } from "./languageNames.js";
+import { stemWord } from "./tokenize.js";
 import { ENTITIES } from "../validation/countries.js";
+import { PROGRAM_LANGUAGES } from "../validation/languages.js";
 
 import type { SearchToken } from "./tokenize.js";
+import type { ProgramLanguage } from "../validation/languages.js";
 
 type WhereClause = Record<string, unknown>;
 
@@ -28,6 +33,30 @@ function enumMatch(
     if (match) return [{ [field]: match }];
   }
   return [];
+}
+
+// Every folded language name and its stem, mapped to its language codes.
+// Tokens must equal one of these forms, like the enum aliases above: a
+// substring match would let English country names reach the languages they
+// prefix ("Croatia" would find every program taught in Croatian).
+const languageCodesByForm = new Map<string, Set<ProgramLanguage>>();
+for (const code of PROGRAM_LANGUAGES) {
+  for (const name of LANGUAGE_NAMES[code]) {
+    const folded = foldSearchText(name);
+    for (const form of [folded, stemWord(folded)]) {
+      const codes = languageCodesByForm.get(form) ?? new Set();
+      codes.add(code);
+      languageCodesByForm.set(form, codes);
+    }
+  }
+}
+
+function languageMatch(word: string, stem: string): WhereClause[] {
+  const codes = new Set([
+    ...(languageCodesByForm.get(word) ?? []),
+    ...(languageCodesByForm.get(stem) ?? []),
+  ]);
+  return codes.size > 0 ? [{ languages: { hasSome: [...codes] } }] : [];
 }
 
 function countryMatch(word: string, stem: string): WhereClause[] {
@@ -81,7 +110,7 @@ function studyProgramOwnMatch(token: SearchToken): WhereClause[] {
   if (token.kind !== "text") return numericMatch(token);
   return [
     foldedContains("searchName", token.stem),
-    foldedContains("searchLanguage", token.stem),
+    ...languageMatch(token.word, token.stem),
     ...enumMatch("cycle", CYCLES, token.word, token.stem),
   ];
 }

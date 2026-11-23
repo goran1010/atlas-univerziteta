@@ -77,6 +77,24 @@ describe("response schemas check types, not input rules", () => {
     ).toBe(true);
   });
 
+  test("university detail reads a program without languages as an empty list", () => {
+    const result = universityDetailResponseSchema.safeParse(detailResponse({}));
+
+    expect(result.data?.data.faculties[0]?.studyPrograms[0]?.languages).toEqual(
+      [],
+    );
+  });
+
+  test("university detail keeps a language code the webapp has no name for", () => {
+    const result = universityDetailResponseSchema.safeParse(
+      detailResponse({ languages: ["bs", "xx"] }),
+    );
+
+    expect(result.data?.data.faculties[0]?.studyPrograms[0]?.languages).toEqual(
+      ["bs", "xx"],
+    );
+  });
+
   test("university detail accepts a duration over 10 years", () => {
     const result = universityDetailResponseSchema.safeParse(
       detailResponse({ durationYears: 2010 }),

@@ -25,7 +25,7 @@ const faculty: UniversityDetailFaculty = {
       cycle: "FIRST",
       durationYears: undefined,
       ects: undefined,
-      language: undefined,
+      languages: [],
       dataSourceUrl: undefined,
       lastModified: undefined,
       tracks: [],
@@ -68,6 +68,20 @@ describe("FacultyRow", () => {
 
     await user.click(screen.getByRole("button", { name: /Collapse/i }));
     expect(screen.queryByText(/Computer Science/i)).not.toBeInTheDocument();
+  });
+
+  test("lists a program's languages, unknown codes as they are", async () => {
+    const program = faculty.studyPrograms[0];
+    if (!program) throw new Error("fixture has a study program");
+    const user = renderRow({
+      ...faculty,
+      studyPrograms: [{ ...program, languages: ["bs", "xx"] }],
+    });
+
+    await user.click(screen.getByRole("button", { name: /Expand/i }));
+    expect(
+      await screen.findByText("programLanguages.bs, xx"),
+    ).toBeInTheDocument();
   });
 
   test("offers no expand toggle without study programs", () => {
