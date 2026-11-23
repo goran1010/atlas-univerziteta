@@ -65,7 +65,7 @@ function renderPage(route = "/faculties/11") {
   const router = createMemoryRouter(
     [
       { path: "/faculties/:id", element: <FacultyDetailPage /> },
-      { path: "/", element: <div>Search page</div> },
+      { path: "/", element: <div>Home page</div> },
     ],
     { initialEntries: [route] },
   );
@@ -138,7 +138,7 @@ describe("FacultyDetailPage", () => {
     ).not.toBeInTheDocument();
   });
 
-  test("shows the not-found message with a search link on 404", async () => {
+  test("shows the not-found message with a home link on 404", async () => {
     server.use(
       http.get("*/api/v1/faculties/:id", () =>
         HttpResponse.json(
@@ -152,10 +152,9 @@ describe("FacultyDetailPage", () => {
     expect(
       await screen.findByText(/No faculties found\./i),
     ).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /Search/i })).toHaveAttribute(
-      "href",
-      "/",
-    );
+    expect(
+      screen.getByRole("link", { name: /Go to Home Page/i }),
+    ).toHaveAttribute("href", "/");
   });
 
   test("shows the error card with a retry button when the request fails", async () => {

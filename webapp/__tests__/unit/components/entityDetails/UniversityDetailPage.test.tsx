@@ -60,7 +60,7 @@ function renderPage(route = "/universities/1") {
   const router = createMemoryRouter(
     [
       { path: "/universities/:id", element: <UniversityDetailPage /> },
-      { path: "/", element: <div>Search page</div> },
+      { path: "/", element: <div>Home page</div> },
     ],
     { initialEntries: [route] },
   );
@@ -105,7 +105,7 @@ describe("UniversityDetailPage", () => {
     ).toBeInTheDocument();
 
     const breadcrumb = screen.getByRole("navigation", { name: /Breadcrumb/i });
-    expect(breadcrumb).toHaveTextContent("Search");
+    expect(breadcrumb).toHaveTextContent("Home");
     expect(breadcrumb).toHaveTextContent("University of Sarajevo");
 
     // city renders on the university and on its Sarajevo faculty row
@@ -133,7 +133,7 @@ describe("UniversityDetailPage", () => {
     expect(link).toHaveAttribute("href", "https://www.unsa.ba/o-univerzitetu");
   });
 
-  test("shows the not-found message with a search link on 404", async () => {
+  test("shows the not-found message with a home link on 404", async () => {
     server.use(
       http.get("*/api/v1/universities/:id", () =>
         HttpResponse.json(
@@ -147,10 +147,9 @@ describe("UniversityDetailPage", () => {
     expect(
       await screen.findByText(/No universities found\./i),
     ).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /Search/i })).toHaveAttribute(
-      "href",
-      "/",
-    );
+    expect(
+      screen.getByRole("link", { name: /Go to Home Page/i }),
+    ).toHaveAttribute("href", "/");
   });
 
   test("shows the error card with a working retry when the request fails", async () => {
