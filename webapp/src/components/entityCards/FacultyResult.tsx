@@ -6,10 +6,8 @@ import { NotificationContext } from "../../contextData/NotificationContext";
 import { ResultCard } from "./ResultCard";
 import { DetailsToggleButton } from "../sharedComponents/DetailsToggleButton";
 import { Button } from "../sharedComponents/Button";
-import { LinkButton } from "../sharedComponents/LinkButton";
-import { Dialog } from "../sharedComponents/Dialog";
+import { FacultyInfoDialog } from "./FacultyInfoDialog";
 import { ContactLinks } from "../entityDetails/ContactLinks";
-import { ShareButton } from "../entityDetails/ShareButton";
 import { StudyProgramRow } from "./StudyProgramRow";
 import { ResultGroup } from "../Search/ResultGroup";
 import { LEVEL_GUIDE } from "../../utils/levelColors";
@@ -132,43 +130,13 @@ function FacultyResult({
           />
         )}
       </div>
-      <Dialog
+      <FacultyInfoDialog
+        faculty={faculty}
         open={dialogOpen}
         onClose={() => {
           setDialogOpen(false);
         }}
-        title={faculty.name}
-        headerActions={
-          <ShareButton url={`/faculties/${faculty.id.toString()}`} />
-        }
-      >
-        <div className="flex flex-col gap-3">
-          {faculty.city && (
-            <p className="text-sm text-(--text-secondary)">
-              <MapPinIcon /> {faculty.city}
-            </p>
-          )}
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
-            <ContactLinks
-              website={faculty.website}
-              address={faculty.address}
-              phone={faculty.phone}
-              email={faculty.email}
-            />
-          </div>
-          <div className="flex justify-center">
-            <LinkButton
-              to={`/faculties/${faculty.id.toString()}`}
-              className="text-sm w-full sm:w-auto"
-              onClick={() => {
-                setDialogOpen(false);
-              }}
-            >
-              {t("universitiesPage.openFullPage")}
-            </LinkButton>
-          </div>
-        </div>
-      </Dialog>
+      />
       {expanded && detailData && (
         <div
           className="mt-3 border-t border-(--border-color) pt-3"

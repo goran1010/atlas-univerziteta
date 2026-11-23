@@ -3,6 +3,7 @@ import { MemoryRouter } from "react-router";
 import userEvent from "@testing-library/user-event";
 import { FacultyRow } from "../../../../src/components/entityCards/FacultyRow";
 import { RootContextProvider } from "../../../utils/rootContextProvider";
+import { server, http, HttpResponse } from "../../../utils/msw";
 
 import type { UniversityDetailFaculty } from "../../../../src/schemas/university";
 
@@ -93,6 +94,23 @@ describe("FacultyRow", () => {
   });
 
   test("opens the info dialog with a link to the full faculty page", async () => {
+    server.use(
+      http.get("*/api/v1/faculties/:id", () =>
+        HttpResponse.json({
+          message: "Faculty retrieved successfully.",
+          data: {
+            ...faculty,
+            university: {
+              id: 1,
+              name: "University of Sarajevo",
+              city: "Sarajevo",
+              country: "BIH",
+              ownership: "PUBLIC",
+            },
+          },
+        }),
+      ),
+    );
     const user = renderRow();
 
     await user.click(
@@ -100,9 +118,7 @@ describe("FacultyRow", () => {
     );
 
     expect(
-      await screen.findByRole("link", {
-        name: /universitiesPage.openFullPage/i,
-      }),
+      await screen.findByRole("link", { name: /Open full page/i }),
     ).toHaveAttribute("href", "/faculties/11");
   });
 });

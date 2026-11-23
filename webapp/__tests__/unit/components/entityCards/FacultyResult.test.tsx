@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import userEvent from "@testing-library/user-event";
 import { FacultyResult } from "../../../../src/components/entityCards/FacultyResult";
@@ -158,13 +158,20 @@ describe("FacultyResult", () => {
     ).toBeInTheDocument();
   });
 
-  test("opens the info dialog with a link to the full page", async () => {
+  test("opens the info dialog with the page's details and a link to it", async () => {
+    givenFacultyDetail();
     const user = renderResult();
 
     await user.click(screen.getByRole("button", { name: /View info/i }));
 
+    const dialog = await screen.findByRole("dialog");
     expect(
-      await screen.findByRole("link", { name: /Open full page/i }),
+      await within(dialog).findByRole("link", { name: /Open full page/i }),
     ).toHaveAttribute("href", "/faculties/11");
+    expect(
+      within(dialog).getByRole("link", { name: "University of Sarajevo" }),
+    ).toHaveAttribute("href", "/universities/1");
+    expect(within(dialog).getByText("Public")).toBeInTheDocument();
+    expect(dialog).toHaveTextContent(/2\s+study programs/i);
   });
 });

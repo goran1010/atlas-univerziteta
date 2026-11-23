@@ -60,11 +60,6 @@ function UniversityResult({
     }
   }
 
-  const countryLabel = t(`universitiesPage.countries.${university.country}`);
-  const entityLabel = university.entity
-    ? t(`universitiesPage.entities.${university.entity}`)
-    : undefined;
-
   // The university's own city first, the rest alphabetically. Grouped
   // display only kicks in when there is more than one city.
   function compareCityGroups(a: { key: string }, b: { key: string }) {
@@ -175,8 +170,6 @@ function UniversityResult({
           onClose={() => {
             setDialogOpen(false);
           }}
-          countryLabel={countryLabel}
-          entityLabel={entityLabel}
         />
       </div>
       {expanded && detailData && (
