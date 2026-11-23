@@ -10,6 +10,7 @@ describe("useLanguage", () => {
     ["sr", "sr-Latn"],
     ["en", "en"],
     ["sq", "sq"],
+    ["mk", "mk"],
   ])("sets <html lang> for the %s bundle to %s", (language, tag) => {
     localStorage.setItem("language", language);
 

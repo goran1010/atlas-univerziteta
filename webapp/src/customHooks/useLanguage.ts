@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import en from "../locales/en.json";
 import sr from "../locales/sr.json";
 import sq from "../locales/sq.json";
+import mk from "../locales/mk.json";
 import {
   LANGUAGE_TAGS,
   SYSTEM_LANGUAGES,
@@ -17,7 +18,7 @@ interface TranslationMap {
   [key: string]: TranslationValue;
 }
 
-const translations: Record<SystemLanguage, typeof en> = { en, sr, sq };
+const translations: Record<SystemLanguage, typeof en> = { en, sr, sq, mk };
 
 const SAVED_LANGUAGES: Language[] = ["system", ...SYSTEM_LANGUAGES];
 
