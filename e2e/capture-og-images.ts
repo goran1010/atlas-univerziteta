@@ -12,8 +12,13 @@ const OUT_DIR = join(
   "og-images",
 );
 
-const WIDTH = 1200;
-const HEIGHT = 630;
+const OG_WIDTH = 1200;
+const OG_HEIGHT = 630;
+// Tailwind's xl breakpoint, the narrowest width where the navbar shows the
+// site name; the scale still saves each file at twice the share size
+const VIEWPORT_WIDTH = 1280;
+const VIEWPORT_HEIGHT = (VIEWPORT_WIDTH * OG_HEIGHT) / OG_WIDTH;
+const SCALE = (2 * OG_WIDTH) / VIEWPORT_WIDTH;
 
 const PAGES: { path: string; name: string }[] = [
   { path: "/", name: "home" },
@@ -41,8 +46,8 @@ async function main() {
   const browser = await chromium.launch();
 
   const contextOptions = {
-    viewport: { width: WIDTH, height: HEIGHT },
-    deviceScaleFactor: 2,
+    viewport: { width: VIEWPORT_WIDTH, height: VIEWPORT_HEIGHT },
+    deviceScaleFactor: SCALE,
     colorScheme: "dark" as const,
   };
 
