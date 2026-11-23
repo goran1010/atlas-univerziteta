@@ -59,7 +59,7 @@ function UniversityDetailPage() {
             to="/"
             className="text-(--accent-text) underline underline-offset-2 mt-2 inline-block"
           >
-            {t("universitiesPage.search")}
+            {t("error.goHome")}
           </Link>
         }
       />
@@ -99,13 +99,13 @@ function UniversityDetailPage() {
       <div className="w-full mx-auto px-1 sm:px-4 py-4">
         <Breadcrumb
           items={[
-            { label: t("universitiesPage.search"), to: "/" },
+            { label: t("nav.home"), to: "/" },
             { label: university.name },
           ]}
         />
 
         <div className="flex flex-col gap-4">
-          <div>
+          <div className="flex flex-col gap-2">
             <div className="flex items-start justify-between gap-2">
               <h1 className="text-2xl font-bold text-(--text-primary)">
                 {university.name}
@@ -122,7 +122,7 @@ function UniversityDetailPage() {
               country={university.country}
               entity={university.entity}
               ownership={university.ownership}
-              className="gap-x-4 gap-y-1 mt-2"
+              className="gap-x-4 gap-y-1"
             >
               {university.foundedYear && (
                 <span>
@@ -130,7 +130,7 @@ function UniversityDetailPage() {
                 </span>
               )}
             </UniversityMetaRow>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted) mt-2">
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
               <ContactLinks
                 website={university.website}
                 address={university.address}

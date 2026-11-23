@@ -67,7 +67,7 @@ function FacultyDetailPage() {
             to="/"
             className="text-(--accent-text) underline underline-offset-2 mt-2 inline-block"
           >
-            {t("universitiesPage.search")}
+            {t("error.goHome")}
           </Link>
         }
       />
@@ -116,7 +116,7 @@ function FacultyDetailPage() {
       <div className="w-full mx-auto px-1 sm:px-4 py-4">
         <Breadcrumb
           items={[
-            { label: t("universitiesPage.search"), to: "/" },
+            { label: t("nav.home"), to: "/" },
             {
               label: faculty.university.name,
               to: `/universities/${faculty.university.id.toString()}`,
@@ -126,14 +126,14 @@ function FacultyDetailPage() {
         />
 
         <div className="flex flex-col gap-4">
-          <div>
+          <div className="flex flex-col gap-2">
             <div className="flex items-start justify-between gap-2">
               <h1 className="text-2xl font-bold text-(--text-primary)">
                 {faculty.name}
               </h1>
               <ShareButton url={`/faculties/${id ?? ""}`} />
             </div>
-            <p className="text-sm text-(--text-secondary) mt-1">
+            <p className="text-sm text-(--text-secondary)">
               <TextLink
                 to={`/universities/${faculty.university.id.toString()}`}
                 className="font-bold"
@@ -143,7 +143,7 @@ function FacultyDetailPage() {
                   ` (${faculty.university.acronym})`}
               </TextLink>
             </p>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm text-(--text-secondary)">
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-secondary)">
               {faculty.city && (
                 <span>
                   <MapPinIcon /> {faculty.city}
@@ -158,7 +158,7 @@ function FacultyDetailPage() {
                 </span>
               )}
             </div>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted) mt-2">
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--text-muted)">
               <ContactLinks
                 website={faculty.website}
                 address={faculty.address}

@@ -6,7 +6,7 @@ function ImproveDataLink() {
   const { userData, t } = use(RootContext);
 
   return (
-    <p className="text-sm text-(--text-muted) mt-2">
+    <p className="text-sm italic text-(--text-muted)">
       {t("universitiesPage.improvePrompt")}{" "}
       {userData ? (
         <TextLink to="/improve-data/add">
