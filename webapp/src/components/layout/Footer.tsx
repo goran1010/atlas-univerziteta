@@ -16,17 +16,19 @@ function Footer() {
 
   return (
     <footer className="w-full flex justify-between items-center font-bold px-3 py-2 text-(--text-primary) border-t border-(--border-color) backdrop-blur bg-(--surface-2)">
-      <address className="not-italic w-full flex flex-col sm:flex-row justify-between items-center gap-1">
+      {/* from sm up the outer columns share the free space equally, so the
+          middle link sits at the exact center whatever the sides' widths */}
+      <address className="not-italic w-full flex flex-col items-center gap-1 sm:grid sm:grid-cols-[1fr_auto_1fr]">
         <ExternalLink
           href="https://github.com/goran1010"
-          className="flex items-center gap-1.5 text-sm"
+          className="flex items-center gap-1.5 text-sm sm:justify-self-start"
         >
           <GitHubIcon />
           {t("footer.name")}
         </ExternalLink>
         <ExternalLink
           href={REPORT_ISSUE_URL}
-          className="flex items-center gap-1.5 text-sm"
+          className="flex items-center gap-1.5 text-sm sm:justify-self-center"
         >
           <AlertCircleIcon />
           {t("footer.reportIssue")}
@@ -34,7 +36,7 @@ function Footer() {
         <ExternalLink
           href={`mailto:${t("footer.email")}`}
           newTab={false}
-          className="flex items-center gap-1.5 text-sm"
+          className="flex items-center gap-1.5 text-sm sm:justify-self-end"
         >
           <EnvelopeIcon />
           {t("footer.email")}
