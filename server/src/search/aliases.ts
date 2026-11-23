@@ -1,24 +1,53 @@
 // Local terms and common synonyms mapped to enum values so search matches
 // in both English and the local languages. Words are keyed by their stem
 // or full form, whichever the tokenizer produces (javna/javni/javno ->
-// JAVN; prvi, master -> as-is). Tokens arrive diacritic-folded, so only
-// ASCII spellings are keyed.
+// JAVN; prvi, master -> as-is). Tokens arrive diacritic-folded and
+// transliterated from Cyrillic, so only ASCII spellings are keyed.
 const ENUM_ALIASES: Record<string, string> = {
   JAVN: "PUBLIC",
+  JAVEN: "PUBLIC",
+  PUBLIK: "PUBLIC",
   PRIVATN: "PRIVATE",
+  PRIVATEN: "PRIVATE",
+  PRIVAT: "PRIVATE",
+  JOPUBLIK: "PRIVATE",
+  ZASEBN: "PRIVATE",
   PRVI: "FIRST",
+  PRVA: "FIRST",
+  PRV: "FIRST",
+  PARE: "FIRST",
   BACHELOR: "FIRST",
+  DODIPLOMSK: "FIRST",
+  PRVOSTOPENJSK: "FIRST",
   DRUG: "SECOND",
   DRUGI: "SECOND",
+  VTOR: "SECOND",
+  DYTE: "SECOND",
   MASTER: "SECOND",
+  MAGISTERSK: "SECOND",
+  MAGISTRSK: "SECOND",
+  DRUGOSTOPENJSK: "SECOND",
   TREC: "THIRD",
   TRECI: "THIRD",
+  TRET: "THIRD",
+  TRETJ: "THIRD",
   DOCTORAL: "THIRD",
   PHD: "THIRD",
+  DOKTORSK: "THIRD",
+  DOKTORAT: "THIRD",
+  DOKTORATUR: "THIRD",
+  TRETJESTOPENJSK: "THIRD",
   INTEGRISAN: "INTEGRATED",
   INTEGRISANI: "INTEGRATED",
+  INTEGRIRAN: "INTEGRATED",
+  INTEGRUAR: "INTEGRATED",
+  ENOVIT: "INTEGRATED",
   STRUCN: "VOCATIONAL",
+  STROKOVN: "VOCATIONAL",
+  PROFESIONAL: "VOCATIONAL",
   SPECIJALISTICK: "SPECIALIST",
+  SPECIALIZ: "SPECIALIST",
+  SPECIALIZIM: "SPECIALIST",
 } as const;
 
 // Country aliases are resolved separately so short country codes (AND, FIN,

@@ -79,6 +79,24 @@ describe("tokenizeSearchTerm", () => {
     ]);
   });
 
+  test("pairs a number with an Albanian, Macedonian or Slovenian unit", () => {
+    for (const [term, value] of [
+      ["1 vit", 1],
+      ["3 vite", 3],
+      ["3 vjet", 3],
+      ["4 години", 4],
+      ["1 leto", 1],
+      ["2 leti", 2],
+      ["3 leta", 3],
+      ["5 let", 5],
+    ] as const) {
+      expect(tokenizeSearchTerm(term)).toEqual([{ kind: "duration", value }]);
+    }
+    expect(tokenizeSearchTerm("180 ЕКТС")).toEqual([
+      { kind: "ects", value: 180 },
+    ]);
+  });
+
   test("pairs a number with a Cyrillic unit", () => {
     expect(tokenizeSearchTerm("180 ЕСПБ")).toEqual([
       { kind: "ects", value: 180 },

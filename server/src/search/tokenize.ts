@@ -50,12 +50,20 @@ function stemWord(word: string): string {
   return lower;
 }
 
-const ECTS_UNITS = new Set(["ects", "espb"]);
+const ECTS_UNITS = new Set(["ects", "espb", "ekts"]);
 const DURATION_UNITS = new Set([
   "godina",
   "godine",
   "godinu",
+  "godini",
   "god",
+  "vit",
+  "vite",
+  "vjet",
+  "leto",
+  "leti",
+  "leta",
+  "let",
   "year",
   "years",
 ]);
