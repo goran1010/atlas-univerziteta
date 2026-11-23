@@ -44,16 +44,10 @@ function facultySearchFields(fields: {
   };
 }
 
-function studyProgramSearchFields(fields: {
-  name?: string | undefined;
-  language?: string | null | undefined;
-}) {
+function studyProgramSearchFields(fields: { name?: string | undefined }) {
   return {
     ...(fields.name !== undefined && {
       searchName: foldSearchText(fields.name),
-    }),
-    ...(fields.language !== undefined && {
-      searchLanguage: foldSearchTextOrNull(fields.language),
     }),
   };
 }

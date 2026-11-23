@@ -381,7 +381,7 @@
         {
           "name": "Computer Engineering and Technologies",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
           "lastModified": "2026-11-17"
         },
@@ -794,7 +794,7 @@
         {
           "name": "Farmacija na angliski jazik",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
           "lastModified": "2026-11-17"
         },
@@ -975,7 +975,7 @@
           "name": "Bussines Economic",
           "cycle": "FIRST",
           "durationYears": 3,
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
           "lastModified": "2026-11-17"
         },
@@ -1073,7 +1073,7 @@
         {
           "name": "International Law and international relations",
           "cycle": "FIRST",
-          "language": "Angliski",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.ugd.edu.mk/wp-content/uploads/2026/09/konkurs-2026-27-tret-upisen-rok.pdf",
           "lastModified": "2026-11-17"
         },

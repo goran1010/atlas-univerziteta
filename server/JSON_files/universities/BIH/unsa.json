@@ -30,7 +30,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/grafika/",
           "lastModified": "2026-08-23"
         },
@@ -39,7 +39,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/graficki-dizajn/",
           "lastModified": "2026-08-23"
         },
@@ -48,7 +48,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/interdisciplinarni-studijski-program-konzervacija-i-restauracija/",
           "lastModified": "2026-08-23"
         },
@@ -57,7 +57,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/kiparstvo-3/",
           "lastModified": "2026-08-23"
         },
@@ -66,7 +66,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/nastavnicki-odsjek/",
           "lastModified": "2026-08-23"
         },
@@ -75,7 +75,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/produkt-dizajn/",
           "lastModified": "2026-08-23"
         },
@@ -84,7 +84,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/slikarstvo/",
           "lastModified": "2026-08-23"
         },
@@ -93,7 +93,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -102,7 +102,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/grafika/",
           "lastModified": "2026-08-23"
         },
@@ -111,7 +111,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/graficki-dizajn/",
           "lastModified": "2026-08-23"
         },
@@ -120,7 +120,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/interdisciplinarni-studijski-program-konzervacija-i-restauracija/",
           "lastModified": "2026-08-23"
         },
@@ -129,7 +129,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/kiparstvo-3/",
           "lastModified": "2026-08-23"
         },
@@ -138,7 +138,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/nastavnicki-odsjek/",
           "lastModified": "2026-08-23"
         },
@@ -147,7 +147,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/produkt-dizajn/",
           "lastModified": "2026-08-23"
         },
@@ -156,7 +156,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://alu.unsa.ba/slikarstvo/",
           "lastModified": "2026-08-23"
         }
@@ -177,7 +177,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.asu.unsa.ba/index.php/en/departments-studies/department-of-directing",
           "tracks": [
             {
@@ -192,7 +192,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.asu.unsa.ba/index.php/en/departments-studies/department-of-dramaturgy",
           "lastModified": "2026-08-23"
         },
@@ -201,7 +201,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.asu.unsa.ba/index.php/en/departments-studies/department-of-acting",
           "lastModified": "2026-08-23"
         },
@@ -210,7 +210,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.asu.unsa.ba/index.php/en/departments-studies/department-of-production",
           "lastModified": "2026-08-23"
         },
@@ -219,7 +219,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.asu.unsa.ba/index.php/en/departments-studies/department-of-acting",
           "lastModified": "2026-08-23"
         },
@@ -228,7 +228,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.asu.unsa.ba/index.php/en/departments-studies/department-of-dramaturgy",
           "lastModified": "2026-08-23"
         },
@@ -237,7 +237,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.asu.unsa.ba/index.php/en/departments-studies/department-of-directing",
           "lastModified": "2026-08-23"
         },
@@ -246,7 +246,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.asu.unsa.ba/index.php/en/departments-studies/department-of-production",
           "lastModified": "2026-08-23"
         }
@@ -267,7 +267,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://af.unsa.ba/i-ciklus-bakalaureat/",
           "lastModified": "2026-08-23"
         },
@@ -276,7 +276,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://af.unsa.ba/ii-ciklus-master-studij/",
           "lastModified": "2026-08-23"
         },
@@ -285,7 +285,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://af.unsa.ba/iii-ciklus-doktorski-studij/",
           "lastModified": "2026-08-23"
         }
@@ -306,7 +306,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/ects_2015_3_1.pdf",
           "lastModified": "2026-08-23"
         },
@@ -315,7 +315,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/ects_2015_3_1.pdf",
           "lastModified": "2026-08-23"
         },
@@ -324,7 +324,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/ects_2015_3_1.pdf",
           "lastModified": "2026-08-23"
         },
@@ -333,14 +333,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/bachelor_in_business_studies_2015_web.pdf",
           "lastModified": "2026-08-23"
         },
         {
           "name": "Master program u saradnji sa Microsoftom",
           "cycle": "SECOND",
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/efsamicrosoftbih-mis.pdf",
           "ects": 120,
           "durationYears": 2,
@@ -351,7 +351,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/ects_2015_3_1.pdf",
           "lastModified": "2026-08-23"
         },
@@ -360,7 +360,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/ects_2015_3_1.pdf",
           "lastModified": "2026-08-23"
         },
@@ -369,14 +369,14 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/ljubljana_-_brosura_0.pdf",
           "lastModified": "2026-08-23"
         },
         {
           "name": "Zajednički master programi u saradnji sa Ekonomskim fakultetom Sveučilišta u Zagrebu",
           "cycle": "SECOND",
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.efsa.unsa.ba/ef/bs/programi-ii-ciklusa",
           "ects": null,
           "durationYears": null,
@@ -399,7 +399,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "http://www.efsa.unsa.ba/ef/sites/default/files/islamsko_bankarstvo_-_npp.pdf",
           "lastModified": "2026-08-23"
         },
@@ -408,7 +408,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/doktorski-course-catalogue_2012_0.pdf",
           "lastModified": "2026-08-23"
         },
@@ -417,7 +417,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.efsa.unsa.ba/ef/sites/default/files/doktorski-course-catalogue_2012_0.pdf",
           "lastModified": "2026-08-23"
         },
@@ -426,7 +426,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.efsa.unsa.ba/ef/bs/poslovanje-i-informacione-tehnologije",
           "lastModified": "2026-08-26"
         }
@@ -447,7 +447,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/prvi-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -463,7 +463,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/prvi-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -472,7 +472,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/prvi-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -481,7 +481,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/prvi-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -490,7 +490,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/drugi-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -499,7 +499,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/drugi-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -508,7 +508,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.etf.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -517,7 +517,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/drugi-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -534,7 +534,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/drugi-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -543,7 +543,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/treci-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -552,7 +552,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/treci-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -561,7 +561,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/treci-ciklus",
           "lastModified": "2026-08-23"
         },
@@ -570,7 +570,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://etf.unsa.ba/treci-ciklus",
           "lastModified": "2026-08-23"
         }
@@ -591,7 +591,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski",
+          "languages": ["bs"],
           "dataSourceUrl": "http://fin.unsa.ba/datoteke/2016/FIN-I_ciklus-revizija_NPP-2016.pdf",
           "lastModified": "2026-08-23"
         },
@@ -600,7 +600,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski",
+          "languages": ["bs"],
           "dataSourceUrl": "http://fin.unsa.ba/datoteke/2016/FIN-I_ciklus-revizija_NPP-2016.pdf",
           "lastModified": "2026-08-23"
         },
@@ -609,7 +609,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski",
+          "languages": ["bs"],
           "dataSourceUrl": "http://fin.unsa.ba/silabusi/dodiplomski/studij-za-imame-npp.pdf",
           "lastModified": "2026-08-23"
         },
@@ -618,7 +618,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "http://fin.unsa.ba/index.php/izdvojeno/4713-master-in-islamic-studies",
           "lastModified": "2026-08-23"
         },
@@ -627,7 +627,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski",
+          "languages": ["bs"],
           "dataSourceUrl": "http://fin.unsa.ba/datoteke/2016/FIN-II_ciklus-revizija_NPP-2016.pdf",
           "lastModified": "2026-08-23"
         },
@@ -636,7 +636,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://fin.unsa.ba/datoteke/2018/elaborat-master-imami.pdf",
           "lastModified": "2026-08-23"
         },
@@ -645,7 +645,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "http://fin.unsa.ba/datoteke/2018/Elaborat.pdf",
           "lastModified": "2026-08-23"
         },
@@ -654,7 +654,7 @@
           "cycle": "THIRD",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski",
+          "languages": ["bs"],
           "dataSourceUrl": "http://fin.unsa.ba/datoteke/doktorski/doktorske-studije-elaborat.pdf",
           "lastModified": "2026-08-23"
         }
@@ -675,7 +675,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/EZlEKhqsM4lPoluBFGOGSnMBUsZKoexwBgizUZpY6dJyvw?e=95rTbm",
           "lastModified": "2026-08-23"
         },
@@ -684,7 +684,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/EW0pvUZTk8NApYvUbxpkDsoBoebM-PagiKEPtEAbsHLkYg?e=tmhXEW",
           "lastModified": "2026-08-23"
         },
@@ -693,7 +693,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/ESHihufoP6tJjr4UxD30mbsBNBcZw3_FggCacFIHRGP_uQ?e=IUNSl7",
           "lastModified": "2026-08-23"
         },
@@ -702,7 +702,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/ESmzNkM2Em1MsK4cugQv8sgBdzyqCbZp7zGQSfhoqtu2DA?e=krVKNq",
           "lastModified": "2026-08-23"
         },
@@ -711,7 +711,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/EelAoqyzh9NOn5ilyWQuPY4B8Edx0t-MkVg5Z81SdoWd7w?e=1yNIqV",
           "lastModified": "2026-08-23"
         },
@@ -720,7 +720,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/ESQlTioA1zlMvTf6C3e5Qa8Bcq7SWWtr1agKUYFk3aRBmw?e=1FVgrG",
           "lastModified": "2026-08-23"
         },
@@ -729,7 +729,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/Edcfa0-6NkhLu32v_L-uz9UBZfZr6xgYufYPVTKflLDWPA?e=Owe6Tg",
           "lastModified": "2026-08-23"
         },
@@ -738,7 +738,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/ETzlvbV8ouNIhsHRu55lKSYBg1zAA-TuAIBI-Kkpa9HWRg?e=btLULf",
           "lastModified": "2026-08-23"
         },
@@ -747,7 +747,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/EZ6flL3PWTFElwa3irm_GfIBuiDZXB3eciPKnqgw2mifDw?e=yyTIlW",
           "lastModified": "2026-08-23"
         },
@@ -756,7 +756,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/EWdgN4ONVJBFpLzqiB9Ns70BYIZx9mgMLH_9PG6NnU-hFw?e=wdu1zE",
           "lastModified": "2026-08-23"
         },
@@ -765,7 +765,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/ETQePsNFQq9LlM4_pI1TGHEB6KgNnOywsLYmzNba35Iedg?e=Epd2UP",
           "lastModified": "2026-08-23"
         },
@@ -774,7 +774,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/EV52zXMmLYVHuI6ARAAbyRIBASHq_qA4r_eG2OTZ0pc5Bw?e=H8lqId",
           "lastModified": "2026-08-23"
         },
@@ -783,7 +783,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/EW7bt8Wp-TBOgoOnB8tq1_QBwVgETaQpnoDGgRn-AiR3gQ?e=fA8dwp",
           "lastModified": "2026-08-23"
         },
@@ -792,7 +792,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/EcV4FNW8AQNOg-wirbbXo2EBsxGbRR73U_IOK_Y97mPBKw?e=fbbHvc",
           "lastModified": "2026-08-23"
         },
@@ -801,7 +801,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/EW-e-xWmjYlLm-8qXPwXHh0B0UoJfLIz_JcbfkNqHLRPEQ?e=buyIKV",
           "lastModified": "2026-08-23"
         },
@@ -810,7 +810,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/ETV296wLBwhPsKDL2RiKyrUBf1QeHcar4LWgdhtFljtkag?e=Kc3LDw",
           "lastModified": "2026-08-23"
         },
@@ -819,7 +819,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fpnsarajevo-my.sharepoint.com/:b:/g/personal/web_administrator_fpn_unsa_ba/EcLFGKUaNg5Gl-XAmQIsf9QBFb4gH-N9HSEyAkZ8clfFfQ?e=0m8vD2",
           "lastModified": "2026-08-23"
         }
@@ -840,7 +840,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fasto.unsa.ba/menadzment-u-sportu-sportskom-turizmu-i-rekreaciji-i-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -849,7 +849,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fasto.unsa.ba/i-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -858,7 +858,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fasto.unsa.ba/menadzment-u-sportu-sportskom-turizmu-i-rekreaciji-ii-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -867,7 +867,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fasto.unsa.ba/ii-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -876,7 +876,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fasto.unsa.ba/doktorski-studij-iz-oblasti-kineziologije/",
           "lastModified": "2026-08-23"
         }
@@ -897,7 +897,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://docs.wixstatic.com/ugd/7e0f63_b8f4e8b1b1464650ae12fe4b0aa68e4d.pdf",
           "lastModified": "2026-08-23"
         },
@@ -906,7 +906,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://docs.wixstatic.com/ugd/7e0f63_b8f4e8b1b1464650ae12fe4b0aa68e4d.pdf",
           "lastModified": "2026-08-23"
         },
@@ -915,7 +915,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://docs.wixstatic.com/ugd/7e0f63_b8f4e8b1b1464650ae12fe4b0aa68e4d.pdf",
           "lastModified": "2026-08-23"
         },
@@ -924,7 +924,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -933,7 +933,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://brucoskivodic.fkn.unsa.ba/II-ciklus-studija/korporativna-sigurnost-i-zastita.php",
           "lastModified": "2026-08-23"
         },
@@ -942,7 +942,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://brucoskivodic.fkn.unsa.ba/II-ciklus-studija/kriminalistika.php",
           "lastModified": "2026-08-23"
         },
@@ -951,7 +951,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://brucoskivodic.fkn.unsa.ba/II-ciklus-studija/kriminologija.php",
           "lastModified": "2026-08-23"
         },
@@ -960,7 +960,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://brucoskivodic.fkn.unsa.ba/II-ciklus-studija/krizni-menadzment-u-sigurnosnom-sektoru.php",
           "lastModified": "2026-08-23"
         },
@@ -969,7 +969,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://brucoskivodic.fkn.unsa.ba/II-ciklus-studija/sigurnosne-studije.php",
           "lastModified": "2026-08-23"
         },
@@ -978,7 +978,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://brucoskivodic.fkn.unsa.ba/III-ciklus-studija/iii-ciklus-studija.php",
           "lastModified": "2026-08-23"
         },
@@ -987,7 +987,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://brucoskivodic.fkn.unsa.ba/III-ciklus-studija/iii-ciklus-studija.php",
           "lastModified": "2026-08-23"
         },
@@ -996,7 +996,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://brucoskivodic.fkn.unsa.ba/III-ciklus-studija/iii-ciklus-studija.php",
           "lastModified": "2026-08-23"
         }
@@ -1017,7 +1017,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fsk.unsa.ba/studij/",
           "tracks": [
             {
@@ -1037,7 +1037,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fsk.unsa.ba/studij/",
           "tracks": [
             {
@@ -1057,7 +1057,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fsk.unsa.ba/studij/",
           "tracks": [
             {
@@ -1077,7 +1077,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fsk.unsa.ba/studij/",
           "tracks": [
             {
@@ -1097,7 +1097,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fsk.unsa.ba/studij/",
           "lastModified": "2026-08-23"
         },
@@ -1106,7 +1106,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fsk.unsa.ba/studij/",
           "lastModified": "2026-08-23"
         },
@@ -1115,7 +1115,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fsk.unsa.ba/studij/",
           "lastModified": "2026-08-23"
         },
@@ -1124,7 +1124,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fsk.unsa.ba/studij/",
           "lastModified": "2026-08-23"
         },
@@ -1133,7 +1133,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fsk.unsa.ba/studij/",
           "lastModified": "2026-08-23"
         }
@@ -1154,7 +1154,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -1163,7 +1163,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fu.unsa.ba/predmeti/ciklusi/prvi-ciklus/smjer-uprava/predmeti/",
           "lastModified": "2026-08-23"
         },
@@ -1172,7 +1172,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fu.unsa.ba/predmeti/ciklusi/drugi-ciklus/magistar-uprave-smjer-javne-nabavke-u-upravi/predmeti/",
           "lastModified": "2026-08-23"
         },
@@ -1181,14 +1181,14 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fu.unsa.ba/predmeti/ciklusi/drugi-ciklus/smjer-poslovna-uprava/predmeti/",
           "lastModified": "2026-08-23"
         },
         {
           "name": "Uprava",
           "cycle": "SECOND",
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fu.unsa.ba/predmeti/ciklusi/drugi-ciklus/smjer-uprava-32-dvogodisnji-studij/predmeti/",
           "ects": null,
           "durationYears": null,
@@ -1211,7 +1211,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fu.unsa.ba/predmeti/ciklusi/drugi-ciklus/upravljanje-projektima-evropske/predmeti/",
           "lastModified": "2026-08-23"
         },
@@ -1220,7 +1220,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://fu.unsa.ba/predmeti/ciklusi/treci-ciklus-doktorski-studij/",
           "lastModified": "2026-08-23"
         }
@@ -1241,7 +1241,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/babicarstvo-primaljstvo-1-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1250,7 +1250,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/fizioterapija-1-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1259,7 +1259,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/laboratorijske-tehnologije-1-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1268,7 +1268,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/radioloske-tehnologije-1-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1277,7 +1277,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/sanitarno-inzinjerstvo-1-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1286,7 +1286,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/zdravstvena-njega-1-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1295,7 +1295,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/zdravstveni-nutricionizam-i-dijetetika-1-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1304,7 +1304,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/fizioterapija-2-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1313,7 +1313,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/laboratorijske-tehnologije-2-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1322,7 +1322,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/radioloske-tehnologije-2-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1331,7 +1331,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/sanitarno-inzinjerstvo-2-ciklus/",
           "lastModified": "2026-08-23"
         },
@@ -1340,7 +1340,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://www.fzs.unsa.ba/zdravstvena-njega-2-ciklus/",
           "lastModified": "2026-08-23"
         }
@@ -1361,7 +1361,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ffsa.unsa.ba/podaci/Nastava/I_II_ciklus/2024-2025/Nastavni_plan_i_program_2015-2016_katalog_predmeta.pdf",
           "lastModified": "2026-08-23"
         },
@@ -1370,7 +1370,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ffsa.unsa.ba/index.php/studij/iii-ciklus-studija-doktorski-studij/iii-ciklus-studija-doktorski-studij-dokumenti/nastavni-plan-i-program-2023-2024",
           "lastModified": "2026-08-23"
         }
@@ -1391,7 +1391,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i arapski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1400,7 +1400,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, arapski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1409,7 +1409,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i arapski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1418,7 +1418,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, arapski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1427,7 +1427,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i arapski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1436,7 +1436,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, arapski i perzijski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1445,7 +1445,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, arapski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1454,7 +1454,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1463,7 +1463,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1472,7 +1472,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1481,7 +1481,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1490,7 +1490,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/",
           "lastModified": "2026-08-23"
         },
@@ -1499,7 +1499,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -1508,7 +1508,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -1517,7 +1517,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -1526,7 +1526,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i njemački",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -1535,7 +1535,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1544,7 +1544,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i njemački",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1553,7 +1553,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i arapski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1562,7 +1562,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1571,7 +1571,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1580,7 +1580,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1589,7 +1589,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1598,7 +1598,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -1607,7 +1607,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1616,7 +1616,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, engleski i arapski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1625,7 +1625,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1634,7 +1634,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1643,7 +1643,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, engleski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1652,7 +1652,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, engleski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1661,7 +1661,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, engleski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1670,7 +1670,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, engleski i njemački",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1679,7 +1679,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1688,7 +1688,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, engleski i ruski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1697,7 +1697,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, engleski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1706,7 +1706,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "lastModified": "2026-08-23"
         },
@@ -1715,7 +1715,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "lastModified": "2026-08-23"
         },
@@ -1724,7 +1724,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "lastModified": "2026-08-23"
         },
@@ -1733,7 +1733,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "lastModified": "2026-08-23"
         },
@@ -1742,7 +1742,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i njemački",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "lastModified": "2026-08-23"
         },
@@ -1751,7 +1751,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "lastModified": "2026-08-23"
         },
@@ -1760,7 +1760,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, francuski i njemački",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1769,7 +1769,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, francuski i ruski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1778,7 +1778,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1787,7 +1787,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1796,7 +1796,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1805,7 +1805,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, francuski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1814,7 +1814,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, francuski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1823,7 +1823,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1832,7 +1832,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, francuski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1841,7 +1841,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/",
           "lastModified": "2026-08-23"
         },
@@ -1850,7 +1850,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/",
           "lastModified": "2026-08-23"
         },
@@ -1859,7 +1859,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/",
           "lastModified": "2026-08-23"
         },
@@ -1868,7 +1868,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/",
           "lastModified": "2026-08-23"
         },
@@ -1877,7 +1877,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/",
           "lastModified": "2026-08-23"
         },
@@ -1886,7 +1886,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i arapski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1895,7 +1895,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1904,7 +1904,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1913,7 +1913,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1922,7 +1922,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1931,7 +1931,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1940,7 +1940,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1949,7 +1949,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1958,7 +1958,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1967,7 +1967,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i ruski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1976,7 +1976,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "lastModified": "2026-08-23"
         },
@@ -1985,7 +1985,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -1994,7 +1994,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2003,7 +2003,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, italijanski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2012,7 +2012,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, italijanski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2021,7 +2021,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2030,7 +2030,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2039,7 +2039,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, italijanski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2048,7 +2048,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2057,7 +2057,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/",
           "lastModified": "2026-08-23"
         },
@@ -2066,7 +2066,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/",
           "lastModified": "2026-08-23"
         },
@@ -2075,7 +2075,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/",
           "tracks": [
             {
@@ -2089,7 +2089,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/",
           "lastModified": "2026-08-23"
         },
@@ -2098,7 +2098,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2107,7 +2107,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2116,7 +2116,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2125,7 +2125,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2134,7 +2134,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2143,7 +2143,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2152,7 +2152,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2161,7 +2161,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2170,7 +2170,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2179,7 +2179,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, latinski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2188,7 +2188,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, latinski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2197,7 +2197,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2206,7 +2206,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2215,7 +2215,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, latinski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2224,7 +2224,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2233,7 +2233,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, latinski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2242,7 +2242,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i njemački",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2251,7 +2251,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i njemački",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2260,7 +2260,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, njemački i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2269,7 +2269,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, njemački i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2278,7 +2278,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i njemački",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2287,7 +2287,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, njemački i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2296,7 +2296,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, njemački i ruski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2305,7 +2305,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, njemački i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2314,7 +2314,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/",
           "lastModified": "2026-08-23"
         },
@@ -2323,7 +2323,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/",
           "lastModified": "2026-08-23"
         },
@@ -2332,7 +2332,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/",
           "lastModified": "2026-08-23"
         },
@@ -2341,7 +2341,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/",
           "lastModified": "2026-08-23"
         },
@@ -2350,7 +2350,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/",
           "lastModified": "2026-08-23"
         },
@@ -2359,7 +2359,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/",
           "lastModified": "2026-08-23"
         },
@@ -2368,7 +2368,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/",
           "lastModified": "2026-08-23"
         },
@@ -2377,7 +2377,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i perzijski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2386,7 +2386,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, perzijski i arapski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2395,7 +2395,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, perzijski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2404,7 +2404,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i perzijski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2413,7 +2413,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, perzijski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2422,7 +2422,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-psihologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2431,7 +2431,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i ruski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-slavenske-jezike-knjizevnosti/",
           "lastModified": "2026-08-23"
         },
@@ -2440,7 +2440,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, ruski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-slavenske-jezike-knjizevnosti/",
           "lastModified": "2026-08-23"
         },
@@ -2449,7 +2449,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i ruski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-slavenske-jezike-knjizevnosti/",
           "lastModified": "2026-08-23"
         },
@@ -2458,7 +2458,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2467,7 +2467,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2476,7 +2476,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2485,7 +2485,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2494,7 +2494,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2503,7 +2503,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2512,7 +2512,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2521,7 +2521,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/",
           "lastModified": "2026-08-23"
         },
@@ -2530,7 +2530,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2539,7 +2539,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2548,7 +2548,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2557,7 +2557,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2566,7 +2566,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2575,7 +2575,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2584,7 +2584,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2593,7 +2593,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2602,7 +2602,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2611,7 +2611,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2620,7 +2620,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2629,7 +2629,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski, turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2638,7 +2638,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski, arapski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2647,7 +2647,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i arapski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "tracks": [
             {
@@ -2661,7 +2661,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2670,7 +2670,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2679,7 +2679,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/",
           "lastModified": "2026-08-23"
         },
@@ -2688,7 +2688,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2697,7 +2697,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2706,7 +2706,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2715,7 +2715,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -2724,7 +2724,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "lastModified": "2026-08-23"
         },
@@ -2733,7 +2733,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "tracks": [
             {
@@ -2747,7 +2747,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek/bhs/",
           "tracks": [
             {
@@ -2761,7 +2761,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-anglistiku/",
           "tracks": [
             {
@@ -2784,7 +2784,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-filozofiju/",
           "tracks": [
             {
@@ -2801,7 +2801,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i francuski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2810,7 +2810,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski, francuski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2819,7 +2819,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski, francuski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2828,7 +2828,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/",
           "tracks": [
             {
@@ -2848,7 +2848,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-historiju/",
           "lastModified": "2026-08-23"
         },
@@ -2857,7 +2857,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/katedra-za-historiju-umjetnosti/",
           "tracks": [
             {
@@ -2895,7 +2895,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2904,7 +2904,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2913,7 +2913,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/",
           "lastModified": "2026-08-23"
         },
@@ -2922,7 +2922,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/",
           "tracks": [
             {
@@ -2936,7 +2936,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-knjizevnosti-bih/",
           "tracks": [
             {
@@ -2950,7 +2950,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2959,7 +2959,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "lastModified": "2026-08-23"
         },
@@ -2968,7 +2968,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-komparativna-informacijske/",
           "tracks": [
             {
@@ -2985,7 +2985,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -2994,7 +2994,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski, latinski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -3003,7 +3003,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i latinski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-romanistiku/",
           "lastModified": "2026-08-23"
         },
@@ -3012,7 +3012,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i njemački",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-germanistiku/",
           "tracks": [
             {
@@ -3029,7 +3029,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/",
           "lastModified": "2026-08-23"
         },
@@ -3038,7 +3038,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-pedagogiju/",
           "lastModified": "2026-08-23"
         },
@@ -3047,7 +3047,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i perzijski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -3056,7 +3056,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-psihologiju/",
           "lastModified": "2026-08-23"
         },
@@ -3065,7 +3065,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i ruski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-slavenske-jezike-knjizevnosti/",
           "tracks": [
             {
@@ -3079,7 +3079,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-sociologiju/",
           "tracks": [
             {
@@ -3096,7 +3096,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski, turski i arapski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -3105,7 +3105,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski, turski i italijanski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "lastModified": "2026-08-23"
         },
@@ -3114,7 +3114,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i turski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-orijentalnu-filologiju/",
           "tracks": [
             {
@@ -3128,7 +3128,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -3137,7 +3137,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ff.unsa.ba/odsjek-za-arheologiju/",
           "lastModified": "2026-08-23"
         },
@@ -3146,7 +3146,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "tracks": [
             {
               "name": "Prostor Bosne i Hercegovine u kontekstu antičke Europe i Mediterana"
@@ -3169,7 +3169,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -3178,7 +3178,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -3195,7 +3195,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -3204,7 +3204,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "tracks": [
             {
               "name": "Teorije i istraživanja kreativnog odgoja i obrazovanja"
@@ -3218,7 +3218,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -3227,7 +3227,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i njemački",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -3236,7 +3236,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -3265,7 +3265,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -3274,7 +3274,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.gf.unsa.ba/?lokacija=nastava",
           "lastModified": "2026-08-23"
         },
@@ -3283,7 +3283,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://gf.unsa.ba/gradjevinarstvo-smjer-geotehnika/",
           "lastModified": "2026-08-23"
         },
@@ -3292,7 +3292,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -3301,7 +3301,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "tracks": [
             {
               "name": "Konstrukcije"
@@ -3318,7 +3318,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -3327,7 +3327,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         }
@@ -3348,7 +3348,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://kbf.unsa.ba/integrirani-filozofsko-teoloski-studij/",
           "lastModified": "2026-08-23"
         },
@@ -3357,7 +3357,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         }
@@ -3378,7 +3378,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/Energetika.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3387,7 +3387,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/IIM.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3396,7 +3396,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/KGH.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3405,7 +3405,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/Ma%C5%A1inskeKonstrukcije.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3414,7 +3414,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/MPI.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3423,7 +3423,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/MotoriIVozila.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3432,7 +3432,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/OdbrambeneTehnologije.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3441,7 +3441,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/ProcesnoInzinjerstvo.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3450,7 +3450,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/TehnologijeDrveta.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3459,7 +3459,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/Energetika_II.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3468,7 +3468,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/IIM_II.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3477,7 +3477,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/KGH_II.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3486,7 +3486,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/MasinskeKonstrukcije_II.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3495,7 +3495,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/MIV_II.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3504,7 +3504,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/OdbrambeneTehnologije_II.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3513,7 +3513,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/ProcesnoInzinjerstvo_II.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3522,7 +3522,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/ProizvodneTehnologijeAutomatizacijaRobotika.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3531,7 +3531,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/TehnologijeDrveta_II.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3540,7 +3540,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/IIM_III.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3549,7 +3549,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/Ma%C5%A1inskeKonstrukcije_III.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3558,7 +3558,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/MPI_III.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3567,7 +3567,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/Mehanika_III.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3576,7 +3576,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/Obnovljivi%20izvori%20energije%20i%20okolinske%20tehnologije_III.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3585,7 +3585,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/OdbrambeneTehnologije_III.aspx",
           "lastModified": "2026-08-23"
         },
@@ -3594,7 +3594,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mef.unsa.ba/programStudija/RazvojSavremenihMotoraIVozila_III.aspx",
           "lastModified": "2026-08-23"
         }
@@ -3615,7 +3615,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://mf.unsa.ba/studij/studiji-medicine/plan-i-program/",
           "lastModified": "2026-08-23"
         },
@@ -3624,7 +3624,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "https://mf.unsa.ba/medical-study-in-english/",
           "lastModified": "2026-08-23"
         },
@@ -3633,7 +3633,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://mf.unsa.ba/studij/treci-ciklus/plan-i-program/",
           "lastModified": "2026-08-23"
         }
@@ -3654,7 +3654,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/Nastavni%20plan%2C%20I%20ciklus%20studija.pdf",
           "tracks": [
             {
@@ -3671,7 +3671,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/Nastavni%20plan%2C%20I%20ciklus%20studija.pdf",
           "tracks": [
             {
@@ -3709,7 +3709,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/Nastavni%20plan%2C%20I%20ciklus%20studija.pdf",
           "tracks": [
             {
@@ -3735,7 +3735,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/Nastavni%20plan%2C%20I%20ciklus%20studija.pdf",
           "tracks": [
             {
@@ -3755,7 +3755,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/Nastavni%20plan%2C%20I%20ciklus%20studija.pdf",
           "lastModified": "2026-08-23"
         },
@@ -3764,7 +3764,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/Nastavni%20plan%2C%20I%20ciklus%20studija.pdf",
           "tracks": [
             {
@@ -3781,7 +3781,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/Nastavni%20plan%2C%20I%20ciklus%20studija.pdf",
           "lastModified": "2026-08-23"
         },
@@ -3790,7 +3790,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/Nastavni%20plan%2C%20I%20ciklus%20studija.pdf",
           "lastModified": "2026-08-23"
         },
@@ -3799,7 +3799,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/NASTAVNI%20PLANOVI%20NA%20II.%20CIKLUSU%20STUDIJA.pdf",
           "tracks": [
             {
@@ -3816,7 +3816,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/NASTAVNI%20PLANOVI%20NA%20II.%20CIKLUSU%20STUDIJA.pdf",
           "tracks": [
             {
@@ -3854,7 +3854,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/NASTAVNI%20PLANOVI%20NA%20II.%20CIKLUSU%20STUDIJA.pdf",
           "tracks": [
             {
@@ -3880,7 +3880,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/NASTAVNI%20PLANOVI%20NA%20II.%20CIKLUSU%20STUDIJA.pdf",
           "tracks": [
             {
@@ -3906,7 +3906,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/NASTAVNI%20PLANOVI%20NA%20II.%20CIKLUSU%20STUDIJA.pdf",
           "lastModified": "2026-08-23"
         },
@@ -3915,7 +3915,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/NASTAVNI%20PLANOVI%20NA%20II.%20CIKLUSU%20STUDIJA.pdf",
           "tracks": [
             {
@@ -3932,7 +3932,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/NASTAVNI%20PLANOVI%20NA%20II.%20CIKLUSU%20STUDIJA.pdf",
           "tracks": [
             {
@@ -3958,7 +3958,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/NASTAVNI%20PLANOVI%20NA%20II.%20CIKLUSU%20STUDIJA.pdf",
           "tracks": [
             {
@@ -3975,7 +3975,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/treciciklusstudija.pdf",
           "tracks": [
             {
@@ -3992,7 +3992,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/treciciklusstudija.pdf",
           "tracks": [
             {
@@ -4030,7 +4030,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/treciciklusstudija.pdf",
           "tracks": [
             {
@@ -4056,7 +4056,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/treciciklusstudija.pdf",
           "tracks": [
             {
@@ -4076,7 +4076,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/treciciklusstudija.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4085,7 +4085,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/treciciklusstudija.pdf",
           "tracks": [
             {
@@ -4102,7 +4102,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/treciciklusstudija.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4111,7 +4111,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.mas.unsa.ba/sites/default/files/dokumenti/treciciklusstudija.pdf",
           "lastModified": "2026-08-23"
         }
@@ -4132,7 +4132,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://pf.unsa.ba/images/dokumenti_PDF/NPP_edukacija_rehabilitacija.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4141,7 +4141,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://pf.unsa.ba/images/NPP/KZTO%20sa%20informatikom.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4150,7 +4150,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://pf.unsa.ba/images/NPP/programi%20PO%20PF%206-4-11.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4159,7 +4159,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://pf.unsa.ba/images/NPP/programi%20RN%20%20PF%206-4-11.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4168,7 +4168,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://pf.unsa.ba/images/dokumenti_PDF/NPP_edukacija_rehabilitacija.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4177,7 +4177,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://pf.unsa.ba/images/NPP/KZTO_diplomski_5_godina.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4186,7 +4186,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://pf.unsa.ba/images/NPP/PO_5_godina.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4195,7 +4195,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://pf.unsa.ba/images/NPP/RN_5_godina.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4204,7 +4204,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://pf.unsa.ba/images/dokumenti_PDF/20180115_NPP_III_ciklus.pdf",
           "lastModified": "2026-08-23"
         }
@@ -4225,7 +4225,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ppf.unsa.ba/uploads/Dokumenti/ZA%20WEB_studijski%20programi.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4234,7 +4234,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ppf.unsa.ba/uploads/Dokumenti/ZA%20WEB_studijski%20programi.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4243,7 +4243,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20EKONOMIKA%20AGROINDUSTRIJE_odsjek%20Ekonomika%20poljoprivrede%20i%20prehrambene%20industrije.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4252,7 +4252,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20PREHRAMBENE%20TEHNOLOGIJE_odsjek%20Prehrambene%20tehnologije.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4261,7 +4261,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20RATARSTVO%20i%20POVRTLARSTVO_%20odsjek%20Biljna%20proizvodnja.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4270,7 +4270,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20VOCARSTVO%20i%20VINOGRADARSTVO_odsjek%20Biljna%20proizvodnja.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4279,7 +4279,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20AKVAKULTURA-II%20ciklus-odsjek%20Zootehnika.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4288,7 +4288,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20ANIMALNA%20PROIZVODNJA-II%20ciklus%20studija-odsjek%20Zootehnika.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4297,7 +4297,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20EKONOMIKA%20AGROINDUSTRIJE-II%20ciklus-odsjek%20Ekonomika%20poljoprivrede%20i%20prehrambene%20industrije.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4306,7 +4306,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20FITOMEDICINA-II%20ciklus-odsjek%20Biljna%20proizvodnja.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4315,7 +4315,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20FLORISTIKA%20I%20PEJZASNO%20OBLIKOVANJE-II%20ciklus%20studija-odsjek%20Biljna%20proizvodnja.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4324,7 +4324,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20HRANA%20I%20ISHRANAZIVOTINJA-II%20ciklus%20studija-odsjek%20Zootehnika.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4333,7 +4333,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://ppf.unsa.ba/uploads/Silabusi/8.%20II%20KKHiP%20elaborat.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4342,7 +4342,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20ODRZIVO%20UPRAVLJANJE%20ZEMLJISTEM%20I%20RURALNIM%20PROSTOROM-II%20ciklus-odsjek%20Biljna%20proizvodnja.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4351,7 +4351,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20POVRTLARSTVO-II%20ciklus%20studija-odsjek%20Biljna%20proizvodnja.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4360,7 +4360,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20RATARSTVO-II%20ciklus-odsjek%20Biljna%20proizvodnja.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4369,7 +4369,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20PREHRAMBENE%20TEHNOLOGIJE%20ANIMALNOG%20PORIJEKLA-II%20ciklus-odsjek%20Prehrambene%20tehnologije.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4378,7 +4378,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20PREHRAMBENE%20TEHNOLOGIJE%20BILJNOG%20PORIJEKLA-II%20ciklus-odsjek%20Prehrambene%20tehnologije.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4387,7 +4387,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -4396,7 +4396,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/studijskiprogramIICIKLUS.php",
           "lastModified": "2026-08-23"
         },
@@ -4405,7 +4405,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://ppf.unsa.ba/uploads/Dokumenti/studijski%20program%20VOCARSTVO-II%20ciklus-odsjek%20Biljna%20PROIZVODNJA.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4414,7 +4414,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -4423,7 +4423,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         }
@@ -4444,7 +4444,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.pfsa.unsa.ba/pf/wp-content/uploads/2014/09/Nastavni-plan-i-program-1.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4453,7 +4453,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.pfsa.unsa.ba/pf/wp-content/uploads/2014/09/Nastavni-plan-i-program-II-ciklusa-studija.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4462,7 +4462,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.pfsa.unsa.ba/pf/wp-content/uploads/2014/09/NOVI-DOKTORSKI.pdf",
           "lastModified": "2026-08-23"
         }
@@ -4483,7 +4483,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://biologija.pmf.unsa.ba/prvi-ciklus-studija/",
           "tracks": [
             {
@@ -4513,7 +4513,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.pmf.unsa.ba/fizika/images/npp/I%20ciklus%20Opci%20smjer_41%20_F_.pdf",
           "tracks": [
             {
@@ -4529,7 +4529,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.pmf.unsa.ba/fizika/images/npp/I%20ciklus%20Fizika%20u%20obrazovanju_41%20_F_.pdf",
           "lastModified": "2026-08-23"
         },
@@ -4538,7 +4538,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://geografija.pmf.unsa.ba/prvi-ciklus-studija/nastavni-programi-2024-2025/prvi-ciklus-studija-nastavnicki-smjer/",
           "tracks": [
             {
@@ -4560,7 +4560,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://hemija.pmf.unsa.ba/prvi-ciklus-studija/kontrola-kvaliteta-i-zastita-okolisa-2021-2022/",
           "lastModified": "2026-08-23"
         },
@@ -4569,7 +4569,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://hemija.pmf.unsa.ba/prvi-ciklus-studija/nastavnicki-smjer-2021-2022/",
           "lastModified": "2026-08-23"
         },
@@ -4578,7 +4578,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://hemija.pmf.unsa.ba/prvi-ciklus-studija/opsti-smjer-2021-2022/",
           "lastModified": "2026-08-23"
         },
@@ -4587,7 +4587,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -4596,7 +4596,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://math.pmf.unsa.ba/prvi-ciklus-studija/nastavnicki-smjer-matematika/",
           "tracks": [
             {
@@ -4626,7 +4626,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://biologija.pmf.unsa.ba/drugi-ciklus-studija/",
           "tracks": [
             {
@@ -4656,14 +4656,14 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.pmf.unsa.ba/fizika/images/npp/II%20ciklus-Teorijska_fizika_41_F_.pdf",
           "lastModified": "2026-08-23"
         },
         {
           "name": "Fizika u obrazovanju",
           "cycle": "SECOND",
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "ects": 60,
           "durationYears": 1,
@@ -4674,7 +4674,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://geografija.pmf.unsa.ba/drugi-ciklus-studija/nastavni-programi-ii/smjer-nastavnicki/",
           "tracks": [
             {
@@ -4696,7 +4696,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://hemija.pmf.unsa.ba/drugi-ciklus-studija/nastavnicki-smjer-2021-2022/",
           "tracks": [
             {
@@ -4714,7 +4714,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://hemija.pmf.unsa.ba/drugi-ciklus-studija/kontrola-kvaliteta-i-zastita-okolisa-2021-2022/",
           "lastModified": "2026-08-23"
         },
@@ -4723,7 +4723,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         },
@@ -4732,7 +4732,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://math.pmf.unsa.ba/drugi-ciklus-studija/primijenjena-matematika/",
           "tracks": [
             {
@@ -4758,7 +4758,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://biologija.pmf.unsa.ba/treci-ciklus-studija/",
           "tracks": [
             {
@@ -4781,7 +4781,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://www.pmf.unsa.ba/fizika/images/IIIciklus/teorijska_fizika/Studijski%20program%20III%20CIKLUSA%20STUDIJA%20FIZIKE1.pdf",
           "tracks": [
             {
@@ -4795,7 +4795,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://geografija.pmf.unsa.ba/treci-ciklus-studija/nastavni-programi-iii/smjer-regionalno-i-prostorno-planiranje/",
           "tracks": [
             {
@@ -4813,7 +4813,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://hemija.pmf.unsa.ba/treci-ciklus-studija/doktorski-studij-hemijskih-nauka/",
           "lastModified": "2026-08-23"
         },
@@ -4822,7 +4822,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://math.pmf.unsa.ba/treci-ciklus-studija/matematicke-nauke-u-jugoistocnoj-evropi/",
           "lastModified": "2026-08-23",
           "tracks": [
@@ -4839,7 +4839,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://hemija.pmf.unsa.ba/treci-ciklus-studija/hemija-u-obrazovanju/",
           "tracks": [
             {
@@ -4868,7 +4868,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://pmf.unsa.ba/strucni-studij-it/",
           "lastModified": "2026-08-26"
         },
@@ -4909,7 +4909,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://sf.unsa.ba/integrirani-studij-i-i-ii-ciklusa/",
           "lastModified": "2026-08-23"
         },
@@ -4918,7 +4918,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://sf.unsa.ba/treci-ciklus-studija-doktorski-studij/",
           "lastModified": "2026-08-23"
         }
@@ -4939,7 +4939,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://sfsa.unsa.ba/studij/i-ciklus-bachelor/i-ciklus-hortikultura/",
           "lastModified": "2026-08-23"
         },
@@ -4948,7 +4948,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://sfsa.unsa.ba/studij/i-ciklus-bachelor/i-ciklus-sumarstvo/",
           "lastModified": "2026-08-23"
         },
@@ -4957,7 +4957,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://sfsa.unsa.ba/studij/ii-ciklus-master-studij/ii-ciklus-sumarstvo/",
           "lastModified": "2026-08-23"
         },
@@ -4966,7 +4966,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://sfsa.unsa.ba/studij/ii-ciklus-master-studij/ii-ciklus-hotikultura/",
           "lastModified": "2026-08-23"
         },
@@ -4975,7 +4975,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "http://registar.unsa.ba/",
           "lastModified": "2026-08-23"
         }
@@ -4996,7 +4996,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://vfs.unsa.ba/portal/nastavni-plan-i-program-integriranog-studija/",
           "lastModified": "2026-08-23"
         },
@@ -5005,7 +5005,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://vfs.unsa.ba/portal/doktorski-studij-opce-informacije/",
           "lastModified": "2026-08-23"
         }
@@ -5027,7 +5027,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "http://cis.unsa.ba/bs/erma-2/"
         },
         {
@@ -5035,7 +5035,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "http://cis.unsa.ba/bs/medunarodna-i-regionalna-sigurnost/"
         },
         {
@@ -5043,13 +5043,13 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "http://cis.unsa.ba/bs/zastita-od-prirodnih-katastrofa/"
         },
         {
           "name": "Master studij Evropske studije",
           "cycle": "SECOND",
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "https://cis.unsa.ba/bhs/programi/magistarski/evropske-studije/"
         },
         {
@@ -5057,7 +5057,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "https://cis.unsa.ba/bhs/programi/magistarski/jedinstveno-zdravlje/"
         },
         {
@@ -5065,7 +5065,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "http://cis.unsa.ba/bs/nutrition/"
         },
         {
@@ -5073,7 +5073,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "https://cis.unsa.ba/bhs/programi/magistarski/rodne-studije/"
         },
         {
@@ -5081,7 +5081,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "https://cis.unsa.ba/bhs/programi/magistarski/upravljanje-drzavom-i-nevladinim-organizacijama/"
         },
         {
@@ -5089,7 +5089,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://cis.unsa.ba/bhs/medunarodna-i-regionalna-sigurnost/"
         },
         {
@@ -5097,7 +5097,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski i engleski",
+          "languages": ["bs", "hr", "sr", "en"],
           "dataSourceUrl": "https://cis.unsa.ba/bhs/programi/doktorski/doktorski-studij-rodne-studije/"
         },
         {
@@ -5105,7 +5105,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Bosanski, hrvatski, srpski",
+          "languages": ["bs", "hr", "sr"],
           "dataSourceUrl": "https://cis.unsa.ba/bhs/programi/doktorski/doktorski-studij-globalne-studije/"
         }
       ],

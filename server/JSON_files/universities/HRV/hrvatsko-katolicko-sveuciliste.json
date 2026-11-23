@@ -24,14 +24,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Povijest",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -45,14 +45,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Psihologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -66,14 +66,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Sociologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -87,14 +87,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Komunikologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -108,21 +108,21 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Sestrinstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Primaljstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -136,7 +136,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -150,7 +150,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     }

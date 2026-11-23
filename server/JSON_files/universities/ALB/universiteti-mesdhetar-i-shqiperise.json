@@ -365,7 +365,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip/Anglisht",
+          "languages": ["sq", "en"],
           "dataSourceUrl": "https://www.umsh.edu.al/c/221/fakulteti-i-informatikes",
           "lastModified": "2026-11-22"
         },

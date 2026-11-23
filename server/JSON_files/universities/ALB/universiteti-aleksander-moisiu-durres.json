@@ -47,7 +47,7 @@
         {
           "name": "Financë Kontabilitet",
           "cycle": "FIRST",
-          "language": "Shqip/Anglisht",
+          "languages": ["sq", "en"],
           "dataSourceUrl": "https://www.uamd.edu.al//departamenti-i-finances-dhe-kontabilitetit/",
           "lastModified": "2026-11-22"
         },
@@ -64,7 +64,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://uamd.edu.al/bachelor-ne-international-business-management-program-i-perbashket-uamd-ipb/",
           "lastModified": "2026-11-22"
         },
@@ -616,7 +616,7 @@
           "name": "Maritime Environmental Protection and Management",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://uamd.edu.al/maritime-environmental-protection-and-management-program/",
           "lastModified": "2026-11-22"
         },

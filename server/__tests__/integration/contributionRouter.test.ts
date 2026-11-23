@@ -407,6 +407,74 @@ describe("Contribution Router - POST /users/contribution/universities", () => {
     expect(response.status).toBe(201);
   });
 
+  test("stores study program languages as codes", async () => {
+    const { agent } = await createLoggedInAgent();
+    const faculty = await createFaculty();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "STUDY_PROGRAM",
+      parentId: faculty.id,
+      data: {
+        name: "Suggested Bilingual Program",
+        cycle: "FIRST",
+        languages: ["bs", "en"],
+      },
+    });
+
+    expect(response.status).toBe(201);
+    const responseBody = getResponseObject(response.body);
+    const data = getResponseObject(responseBody["data"]);
+    const pendingChange = await prisma.pendingChange.findUnique({
+      where: { id: data["id"] as string },
+    });
+    expect(pendingChange?.data).toEqual(
+      expect.objectContaining({ languages: ["bs", "en"] }),
+    );
+  });
+
+  test("responds with status 400 for an unknown language code", async () => {
+    const { agent } = await createLoggedInAgent();
+    const faculty = await createFaculty();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "STUDY_PROGRAM",
+      parentId: faculty.id,
+      data: {
+        name: "Unknown Language Program",
+        cycle: "FIRST",
+        languages: ["xx"],
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, {
+      path: "data.languages.0",
+      code: "invalid_value",
+    });
+  });
+
+  test("responds with status 400 for a repeated language code", async () => {
+    const { agent } = await createLoggedInAgent();
+    const faculty = await createFaculty();
+
+    const response = await agent.post("/users/contribution/universities").send({
+      targetType: "STUDY_PROGRAM",
+      parentId: faculty.id,
+      data: {
+        name: "Repeated Language Program",
+        cycle: "FIRST",
+        languages: ["sq", "sq"],
+      },
+    });
+    const responseBody = getResponseObject(response.body);
+    const error = getResponseObject(responseBody["error"]);
+
+    expect(response.status).toBe(400);
+    expectValidationIssue(error, { path: "data.languages", code: "custom" });
+  });
+
   test("responds with status 201 and stores a track suggestion under a study program", async () => {
     const { agent, user } = await createLoggedInAgent();
     const studyProgram = await createStudyProgram();
@@ -885,6 +953,19 @@ describe("Contribution Router - PUT /users/contribution/universities", () => {
 
     expect(response.status).toBe(400);
     expectValidationIssue(error, { path: "targetId", code: "invalid_type" });
+  });
+
+  test("allows an empty list to clear study program languages", async () => {
+    const { agent } = await createLoggedInAgent();
+    const studyProgram = await createStudyProgram();
+
+    const response = await agent.put("/users/contribution/universities").send({
+      targetType: "STUDY_PROGRAM",
+      targetId: studyProgram.id,
+      data: { languages: [] },
+    });
+
+    expect(response.status).toBe(201);
   });
 
   test("allows null to clear an optional faculty city", async () => {

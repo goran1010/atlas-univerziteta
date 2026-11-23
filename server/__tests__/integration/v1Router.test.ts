@@ -720,6 +720,88 @@ describe("GET /api/v1/search - multi-word cities", () => {
   });
 });
 
+describe("GET /api/v1/search - program languages", () => {
+  test("language names in every site language find the program, country names do not", async () => {
+    const marker = "LangSearchTest";
+    const cleanup = async () => {
+      await prisma.studyProgram.deleteMany({
+        where: { name: { contains: marker } },
+      });
+      await prisma.faculty.deleteMany({
+        where: { name: { contains: marker } },
+      });
+      await prisma.university.deleteMany({
+        where: { name: { contains: marker } },
+      });
+    };
+    await cleanup();
+
+    await prisma.university.create({
+      data: foldUniversityFixture({
+        name: `Univerzitet ${marker}`,
+        city: "TestGrad",
+        entity: "FBIH",
+        ownership: "PUBLIC",
+        faculties: {
+          create: {
+            name: `Fakultet ${marker}`,
+            studyPrograms: {
+              create: [
+                {
+                  name: `Program ${marker} Hr`,
+                  cycle: "FIRST",
+                  languages: ["hr"],
+                },
+                {
+                  name: `Program ${marker} En`,
+                  cycle: "FIRST",
+                  languages: ["en"],
+                },
+              ],
+            },
+          },
+        },
+      }),
+    });
+
+    async function programNames(term: string) {
+      const response = await request(app).get(
+        `/api/v1/search?searchTerm=${encodeURIComponent(`${term} ${marker}`)}&type=studyProgram`,
+      );
+      expect(response.status).toBe(200);
+      const data = getResponseObject(getResponseObject(response.body)["data"]);
+      return getResponseArray(data["studyPrograms"]).map((sp) => sp["name"]);
+    }
+
+    for (const term of [
+      "English",
+      "engleski",
+      "anglisht",
+      "англиски",
+      "angleščina",
+    ]) {
+      expect(await programNames(term), term).toEqual([`Program ${marker} En`]);
+    }
+    expect(await programNames("hrvatski")).toEqual([`Program ${marker} Hr`]);
+    // the university is in BiH, so "Croatia" must not reach it through the language
+    expect(await programNames("Croatia")).toEqual([]);
+
+    const program = await prisma.studyProgram.findFirstOrThrow({
+      where: { name: `Program ${marker} Hr` },
+    });
+    const detail = await request(app).get(
+      `/api/v1/study-programs/${String(program.id)}`,
+    );
+    const detailData = getResponseObject(
+      getResponseObject(detail.body)["data"],
+    );
+    expect(detailData["languages"]).toEqual(["hr"]);
+    expect(detailData).not.toHaveProperty("language");
+
+    await cleanup();
+  });
+});
+
 describe("GET /api/v1/search - type filter", () => {
   test("returns only the requested entity types", async () => {
     const response = await request(app).get(

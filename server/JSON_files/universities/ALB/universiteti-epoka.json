@@ -28,7 +28,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-ECE/NDQ0/Overview",
           "lastModified": "2026-11-22"
         },
@@ -37,7 +37,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-CEN/NDM2/Overview",
           "lastModified": "2026-11-22"
         },
@@ -46,7 +46,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-CE/NDE4/Overview",
           "lastModified": "2026-11-22"
         },
@@ -55,7 +55,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-SWE/NDEw/Overview",
           "lastModified": "2026-11-22"
         },
@@ -64,7 +64,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-ARCH/NDE0/Overview",
           "lastModified": "2026-11-22"
         },
@@ -73,7 +73,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-AI-%26-DE/MTA1Nw==/Overview",
           "lastModified": "2026-11-22"
         },
@@ -82,7 +82,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-ECE/NDQ2/Overview",
           "lastModified": "2026-11-22"
         },
@@ -91,7 +91,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-CEN/NDQy/Overview",
           "lastModified": "2026-11-22"
         },
@@ -100,7 +100,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-CE/NDI0/Overview",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -126,7 +126,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PM-CE/NDIw/Overview",
           "lastModified": "2026-11-22"
         },
@@ -135,7 +135,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PM-DRM-%26-FSE/NDM0/Overview",
           "lastModified": "2026-11-22"
         },
@@ -144,7 +144,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-ID/MTA2MQ==/Overview",
           "lastModified": "2026-11-22"
         },
@@ -153,7 +153,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PICD-ARCH/NDEy/Overview",
           "lastModified": "2026-11-22"
         },
@@ -162,7 +162,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-ARCH/NDE2/Overview",
           "lastModified": "2026-11-22"
         },
@@ -171,7 +171,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-CEN/NDQw/Overview",
           "lastModified": "2026-11-22"
         },
@@ -180,7 +180,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-CE/NDIy/Overview",
           "lastModified": "2026-11-22"
         }
@@ -197,7 +197,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-BUS/Mzgy/Overview",
           "lastModified": "2026-11-22"
         },
@@ -206,7 +206,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-ECO/Mzc2/Overview",
           "lastModified": "2026-11-22"
         },
@@ -223,7 +223,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-BINF/Mzkw/Overview",
           "lastModified": "2026-11-22"
         },
@@ -232,7 +232,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-AFT/MTA1OQ==/Overview",
           "lastModified": "2026-11-22"
         },
@@ -241,7 +241,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-IML/Mzky/Overview",
           "lastModified": "2026-11-22"
         },
@@ -256,7 +256,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-BUS/Mzg0/Overview",
           "lastModified": "2026-11-22"
         },
@@ -265,7 +265,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-ECO/Mzc4/Overview",
           "lastModified": "2026-11-22"
         },
@@ -274,7 +274,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-BAF/NDA2/Overview",
           "lastModified": "2026-11-22"
         },
@@ -283,7 +283,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-FINT/MTAwNg==/Overview",
           "lastModified": "2026-11-22"
         },
@@ -292,7 +292,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-BIDS/MTAwNA==/Overview",
           "lastModified": "2026-11-22"
         },
@@ -301,7 +301,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-BUS/Mzg4/Overview",
           "lastModified": "2026-11-22"
         },
@@ -310,7 +310,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-ECO-ECO/Mzgw/Overview",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -334,7 +334,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/BA-PIR/Mzk2/Overview",
           "lastModified": "2026-11-22"
         },
@@ -343,7 +343,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/MSc-PIR/Mzk4/Overview",
           "lastModified": "2026-11-22"
         },
@@ -352,7 +352,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PM-PIR/NDAw/Overview",
           "lastModified": "2026-11-22"
         },
@@ -361,7 +361,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PICD-LAW/Mzk0/Overview",
           "lastModified": "2026-11-22"
         },
@@ -370,7 +370,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.epoka.edu.al/study-programs/en/PhD-PIR/NDAy/Overview",
           "lastModified": "2026-11-22"
         }

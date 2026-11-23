@@ -300,6 +300,7 @@ function TargetPicker({
         <Select
           id="pickerCountry"
           name="pickerCountry"
+          autoComplete="off"
           value={selCountry}
           required
           onChange={(e) => {

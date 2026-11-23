@@ -20,28 +20,28 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Poslovna ekonomija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Interna revizija i forenzika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Menadžment javnog sektora",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Danijelova 32, 11000 Beograd",
@@ -58,21 +58,21 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Turizam, hotelijerstvo i ekonomija hrane",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Poslovni sistemi u turizmu i hotelijerstvu",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Danijelova 32, 11000 Beograd",
@@ -89,49 +89,49 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Informacione tehnologije",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Računarske nauke",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Softversko i informaciono inženjerstvo",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Primenjena veštačka inteligencija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Engleski"
+          "languages": ["en"]
         },
         {
           "name": "Softversko i informaciono inženjerstvo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Nauka o podacima",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Danijelova 32, 11000 Beograd",
@@ -148,56 +148,56 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Elektrotehnika i računarstvo",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Životna sredina i održivi razvoj",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Inženjerski menadžment",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Elektrotehnika i računarstvo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Životna sredina i održivi razvoj",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Inteligentne elektroenergetske mreže",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Digitalni sistemi emitovanja i komunikacije",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Danijelova 32, 11000 Beograd",
@@ -214,14 +214,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Fizičko vaspitanje i sport",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Danijelova 32, 11000 Beograd",
@@ -238,42 +238,42 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Anglistika",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Međunarodni odnosi i diplomatija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Bezbednost",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Primenjena anglistika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Nacionalna i međunarodna bezbednost",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Karađorđeva 65, 11000 Beograd",
@@ -291,35 +291,35 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Farmacija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Međunarodni odnosi i diplomatija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Bezbednost",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Savremena psihologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ]
     }

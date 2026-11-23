@@ -25,7 +25,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://umt.edu.al/inteligjence-artificiale/",
           "lastModified": "2026-11-22"
         },
@@ -34,7 +34,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/inxhinieri-kompjuterike/",
           "lastModified": "2026-11-22"
         },
@@ -43,7 +43,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://umt.edu.al/inxhinieri-software/",
           "lastModified": "2026-11-22"
         },
@@ -52,7 +52,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://umt.edu.al/master-i-shkencave-ne-inteligjence-artificiale/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -73,7 +73,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/master-shkencor-inxhinieri-informatike/",
           "lastModified": "2026-11-22"
         },
@@ -82,7 +82,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://umt.edu.al/master-i-shkencave-inxhinieri-software/",
           "lastModified": "2026-11-22"
         },
@@ -97,7 +97,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/program-profesional-ne-dizajn-dhe-zhvillim-software/",
           "lastModified": "2026-11-22"
         }
@@ -114,7 +114,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/inxhinieri-elektrike/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -150,7 +150,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/inxhinieri-ndertimi/",
           "lastModified": "2026-11-22"
         },
@@ -159,7 +159,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/master-i-shkencave-inxhinieri-elektrike/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -180,7 +180,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/master-shkencor-inxhinieri-ndertimi/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -201,7 +201,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://umt.edu.al/master-i-shkencave-ne-renewable-energy-and-management/",
           "lastModified": "2026-11-22"
         },
@@ -210,7 +210,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/arkitekture/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -247,7 +247,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/program-profesional-ne-dizajn-grafik/",
           "lastModified": "2026-11-22"
         },
@@ -272,7 +272,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/administrim-biznesi/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -298,7 +298,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/finance/",
           "lastModified": "2026-11-22",
           "tracks": [
@@ -319,7 +319,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/informatike-ekonomike/",
           "lastModified": "2026-11-22"
         },
@@ -327,7 +327,7 @@
           "name": "Business Analitics and Artificial Intelligence",
           "cycle": "SECOND",
           "durationYears": 2,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://umt.edu.al/master-business-analytics-artificial-intelligence/",
           "lastModified": "2026-11-22"
         },
@@ -336,7 +336,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/master-shkencor-ekonomi-mba/",
           "lastModified": "2026-11-22"
         },
@@ -345,7 +345,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/master-shkencor-inxhinieri-financiare-dhe-menaxhim-risku/",
           "lastModified": "2026-11-22"
         },
@@ -354,7 +354,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/master-profesional-ne-digital-marketing/",
           "lastModified": "2026-11-22"
         },
@@ -363,7 +363,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/master-shkencor-menaxhim-ne-inxhinieri/",
           "lastModified": "2026-11-22"
         },
@@ -372,7 +372,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip",
+          "languages": ["sq"],
           "dataSourceUrl": "https://umt.edu.al/program-profesional-ne-menaxhim-turizem-hoteleri-dhe-evente/",
           "lastModified": "2026-11-22"
         }

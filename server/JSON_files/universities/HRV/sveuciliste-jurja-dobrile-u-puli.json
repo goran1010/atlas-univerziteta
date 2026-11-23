@@ -24,49 +24,49 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Kultura i turizam",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Poslovna ekonomija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Primijenjena ekonomija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Kultura i turizam",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Poslovna ekonomija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Međunarodni ekonomski odnosi i menadžment",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -80,14 +80,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Informatika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -101,7 +101,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -115,42 +115,42 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Rani i predškolski odgoj i obrazovanje (hrvatski)",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Rani i predškolski odgoj i obrazovanje (talijanski)",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Talijanski"
+          "languages": ["it"]
         },
         {
           "name": "Rani i predškolski odgoj i obrazovanje (hrvatski)",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Rani i predškolski odgoj i obrazovanje (talijanski)",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Talijanski"
+          "languages": ["it"]
         },
         {
           "name": "Nove paradigme obrazovanja",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -164,84 +164,84 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Engleski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Hrvatski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Japanski jezik i kultura",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Jezična i interkulturna medijacija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Latinski jezik i rimska književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Talijanski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Povijest",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Hrvatski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Japanologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Latinski jezik i rimska književnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Talijanski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -255,14 +255,14 @@
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Sestrinstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -276,28 +276,28 @@
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Računarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Računarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Strojarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -311,56 +311,56 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Klasična harmonika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Klavir",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Solo pjevanje",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Glazbena pedagogija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Klasična harmonika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Klavir",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Solo pjevanje",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -374,7 +374,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     }

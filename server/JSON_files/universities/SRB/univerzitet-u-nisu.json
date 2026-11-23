@@ -19,28 +19,28 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Voćarstvo i vinogradarstvo",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Stočarstvo",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Agronomija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.agrif.ni.ac.rs",
@@ -57,56 +57,56 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Muzička teorija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Slikarstvo",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Izvođačke umetnosti",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Grafički dizajn",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Muzička teorija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Slikarstvo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Izvođačke umetnosti",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.artf.ni.ac.rs",
@@ -123,56 +123,56 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Menadžer građevinskih projekata",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Građevinarstvo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Menadžer građevinskih projekata",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Inženjersko upravljanje rizicima od prirodnih katastrofa",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Arhitektura",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Građevinarstvo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Arhitektura",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.gaf.ni.ac.rs",
@@ -189,28 +189,28 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Napredna analitika podataka u poslovanju",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Ekonomija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Ekonomija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.eknfak.ni.ac.rs",
@@ -227,56 +227,56 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Veštačka inteligencija i mašinsko učenje",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Komunikacione i informacione tehnologije",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Računarstvo i informatika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Upravljački sistemi",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Elektroenergetika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Elektronika i mikrosistemi",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Elektrotehnika i računarstvo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.elfak.ni.ac.rs",
@@ -293,42 +293,42 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Pravo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Pravo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Pravo - unutrašnji poslovi",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Pravo i informacione tehnologije",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Pravo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.prafak.ni.ac.rs",
@@ -345,70 +345,70 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Mašinstvo",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Inženjerski menadžment",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Hidroenergetika, hidraulika i pneumatika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Mašinske konstrukcije, razvoj i inženjering",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Mehatronika i menadžment",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Proizvodne i informacione tehnologije",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Termotehnika, termoenergetika i procesno inženjerstvo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Saobraćajno inženjerstvo, transport i logistika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Mašinstvo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.masfak.ni.ac.rs",
@@ -425,63 +425,63 @@
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Medicinska sestra - tehničar",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Sanitarno-ekološki inženjer",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Medicina",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Stomatologija",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Farmacija",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Stomatologija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Medicina",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Farmacija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.medfak.ni.ac.rs",
@@ -498,70 +498,70 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Zaštita od požara",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Zaštita na radu",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Upravljanje vanrednim situacijama",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Inženjerstvo zaštite životne sredine",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Menadžment zaštite životne sredine",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Inženjerstvo zaštite od požara",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Inženjerstvo zaštite na radu",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Inženjerstvo zaštite životne sredine",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Inženjerstvo zaštite na radu",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.znrfak.ni.ac.rs",
@@ -578,238 +578,238 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Anglistika",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Francuski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Nemački jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Istorija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Novinarstvo",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Pedagogija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Filozofija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Psihologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Ruski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Srbistika",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Socijalna politika i socijalni rad",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Sociologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Komunikološke studije",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Engleski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Francuski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Istorija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Pedagogija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Filozofija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Psihologija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Ruski jezik i književnost",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Srbistika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Socijalni rad",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Sociolog u socijalnoj zaštiti",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Sociologija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Predmetna nastava",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Prevođenje",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Strana filologija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Istorija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Mediji i društvo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Pedagogija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Psihologija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Srbistika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Sociologija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.filfak.ni.ac.rs",
@@ -826,161 +826,161 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Hemija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Informatika",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Geografija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Matematika",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Fizika",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Primenjena hemija i menadžment",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Veštačka inteligencija i mašinsko učenje",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Biologija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Hemija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Informatika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Ekologija i zaštita životne sredine",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Geografija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Matematika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Fizika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Turizam",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Biologija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Hemija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Informatika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Doktorska škola matematike",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Geonauke",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Matematika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Fizika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.pmf.ni.ac.rs",
@@ -997,35 +997,35 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Sport",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Fizičko vaspitanje i sport",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Fizičko vaspitanje, fizička aktivnost i zdravlje",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Sportske nauke",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.fsfv.ni.ac.rs",
@@ -1042,21 +1042,21 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Tehnološko inženjerstvo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Tehnološko inženjerstvo",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.tf.ni.ac.rs",
@@ -1073,42 +1073,42 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Učitelj",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Vaspitač",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Učiteljsko obrazovanje",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Metodika nastave",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Učitelj za tehniku i informatiku",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "website": "https://www.pfvr.ni.ac.rs",

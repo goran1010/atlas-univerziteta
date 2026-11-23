@@ -20,21 +20,21 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Poslovna ekonomija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Regionalni razvoj i upravljanje projektima",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
@@ -51,14 +51,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Zaštita životne sredine",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
@@ -75,14 +75,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Ekološka poljoprivreda",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
@@ -99,14 +99,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Digitalna produkcija",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
@@ -123,14 +123,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Učitelj",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
@@ -147,14 +147,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Menadžment bezbednosti",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
@@ -171,21 +171,21 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Turizam",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Psihologija",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Vojvode Putnika 87, 21208 Sremska Kamenica",
@@ -203,21 +203,21 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Informatičko inženjerstvo",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Informatičko inženjerstvo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ]
     },
@@ -232,14 +232,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Projektni menadžment",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ]
     }

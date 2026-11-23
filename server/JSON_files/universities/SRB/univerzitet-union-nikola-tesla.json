@@ -19,28 +19,28 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Arhitektura i urbanizam",
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Opšte građevinarstvo",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Arhitektura i urbanizam",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Cara Dušana 62-64, 11000 Beograd",
@@ -57,14 +57,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Zaštita životne sredine",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Cara Dušana 62-64, 11000 Beograd",
@@ -81,14 +81,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Međunarodna politika i bezbednost",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Cara Dušana 62-64, 11000 Beograd",
@@ -105,7 +105,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Cara Dušana 62-64, 11000 Beograd",
@@ -122,14 +122,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Informatika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Cara Dušana 62-64, 11000 Beograd",
@@ -147,14 +147,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Finansije",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Cara Dušana 62-64, 11000 Beograd",
@@ -170,7 +170,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Cara Dušana 62-64, 11000 Beograd",
@@ -187,7 +187,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Cara Dušana 62-64, 11000 Beograd",
@@ -204,7 +204,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ],
       "address": "Jurija Gagarina 149a, 11070 Beograd",
@@ -223,21 +223,21 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Informatika",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Informatika",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ]
     },
@@ -252,14 +252,14 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         },
         {
           "name": "Diplomatija i bezbednost",
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ]
     },
@@ -274,7 +274,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Srpski"
+          "languages": ["sr"]
         }
       ]
     }

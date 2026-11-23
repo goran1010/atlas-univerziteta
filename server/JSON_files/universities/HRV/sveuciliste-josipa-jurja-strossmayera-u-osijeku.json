@@ -20,91 +20,91 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Bilinogojstvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Zootehnika",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Agrarno poduzetništvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Mehanizacija u poljoprivredi",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Agroekonomika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Bilinogojstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Ekološka poljoprivreda",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Mehanizacija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Povrćarstvo i cvjećarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Voćarstvo, vinogradarstvo i vinarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Zootehnika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Digital Agriculture",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "English"
+          "languages": ["en"]
         }
       ]
     },
@@ -118,28 +118,28 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Arhitektura i urbanizam",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Građevinarstvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Građevinarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -153,49 +153,49 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Računarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Elektrotehnika",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Računarstvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Elektrotehnika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Računarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Automobilsko računarstvo i komunikacije",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "English"
+          "languages": ["en"]
         }
       ]
     },
@@ -209,28 +209,28 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Prehrambeno inženjerstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Procesno inženjerstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Znanost o hrani i nutricionizam",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -244,42 +244,42 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Medicina (njemački)",
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "Njemački"
+          "languages": ["de"]
         },
         {
           "name": "Farmacija",
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Medicinsko laboratorijska dijagnostika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Medicinsko laboratorijska dijagnostika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Biotehnologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "English"
+          "languages": ["en"]
         }
       ]
     },
@@ -293,49 +293,49 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Sestrinstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Fizioterapija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Dentalna higijena",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Primaljstvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Sestrinstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Fizioterapija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -349,28 +349,28 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Biologija; smjer: znanstveni",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Biologija i kemija; smjer: nastavnički",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Zaštita prirode i okoliša",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -384,14 +384,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Kemija; smjer: istraživački",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -405,35 +405,35 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Matematika i računarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Matematika; modul: Financijska matematika i statistika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Matematika; modul: Matematika i računarstvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Matematika i informatika; smjer: nastavnički",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -447,14 +447,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Fizika i informatika; smjer: nastavnički",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -468,21 +468,21 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Poslovna ekonomija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Primijenjena ekonomija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -496,42 +496,42 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Rani i predškolski odgoj i obrazovanje",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Edukacijska rehabilitacija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Logopedija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Rani i predškolski odgoj i obrazovanje",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Edukacijska rehabilitacija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -545,182 +545,182 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Engleski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Njemački jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Filozofija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Povijest",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Pedagogija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Psihologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Sociologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Informatologija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Mađarski jezik i književnost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Povijest umjetnosti",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Hrvatski jezik i književnost; nastavnički smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Engleski jezik i književnost; nastavnički smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Engleski jezik i književnost; prevoditeljski smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Njemački jezik i književnost; nastavnički smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Njemački jezik i književnost; prevoditeljski smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Filozofija; nastavnički smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Povijest; nastavnički smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Povijest umjetnosti; nastavnički smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Pedagogija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Psihologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Sociologija; nastavnički smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Informatologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Informacijska tehnologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Nakladništvo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Mađarski jezik i književnost; komunikološki smjer",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -734,35 +734,35 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Socijalni rad",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Socijalni rad",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Upravni studij",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Javna uprava",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -776,7 +776,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 5,
           "ects": 300,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -790,182 +790,182 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Glazbena umjetnost i kultura",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Pjevanje",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Instrumentalni studiji",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Kompozicija s teorijom glazbe",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Gluma i lutkarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Dizajn za kazalište, film i televiziju",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Kultura, mediji i menadžment",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Likovna kultura",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Glazbena pedagogija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Pjevanje",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Gitarska pedagogija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Klavir",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Kompozicija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Tamburaško umijeće",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Teorija glazbe",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Gluma",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Dizajn za izvedbenu i medijsku umjetnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Lutkarska animacija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Suvremene izvedbene prakse",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Lutkarska režija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Mediji i odnosi s javnošću",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Menadžment u kulturi i kreativnim industrijama",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Likovna kultura",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Ilustracija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Vizualna umjetnost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -979,14 +979,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Kineziološka edukacija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -1000,28 +1000,28 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Enogastronomija",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Elektroničko poslovanje i programsko inženjerstvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Računovodstvo",
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     }

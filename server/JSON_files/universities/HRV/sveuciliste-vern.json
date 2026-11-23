@@ -24,42 +24,42 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Turizam - turistički i hotelski menadžment",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Menadžment održivog razvoja turizma",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Upravljanje ljudskim potencijalima",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Računovodstvo i financije",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Poduzetnički menadžment",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -73,28 +73,28 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Odnosi s javnošću i studij medija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Novinarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Upravljanje poslovnim komunikacijama",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -108,21 +108,21 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Filmsko, televizijsko i multimedijsko oblikovanje",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Filmska i televizijska režija i produkcija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     },
@@ -136,28 +136,28 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Poslovna informatika (POINT)",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "Tehnički menadžment",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         },
         {
           "name": "IT Menadžment",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski"
+          "languages": ["hr"]
         }
       ]
     }

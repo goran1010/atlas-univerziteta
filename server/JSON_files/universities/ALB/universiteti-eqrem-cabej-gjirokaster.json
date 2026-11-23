@@ -69,7 +69,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Shqip/Italisht",
+          "languages": ["sq", "it"],
           "dataSourceUrl": "https://uogj.edu.al/programe-dhe-diploma-te-dyfishta/",
           "lastModified": "2026-11-22"
         },
@@ -126,7 +126,7 @@
           "cycle": "SPECIALIST",
           "durationYears": 1,
           "ects": 60,
-          "language": "Shqip/Italisht/Anglisht",
+          "languages": ["sq", "it", "en"],
           "dataSourceUrl": "https://uogj.edu.al/programe-dhe-diploma-te-dyfishta/",
           "lastModified": "2026-11-22"
         },
@@ -173,7 +173,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht/Italisht/Shqip",
+          "languages": ["en", "it", "sq"],
           "dataSourceUrl": "https://uogj.edu.al/programe-dhe-diploma-te-dyfishta/",
           "lastModified": "2026-11-22"
         },
@@ -182,7 +182,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Shqip/Anglisht",
+          "languages": ["sq", "en"],
           "dataSourceUrl": "https://uogj.edu.al/programe-dhe-diploma-te-dyfishta/",
           "lastModified": "2026-11-22"
         },

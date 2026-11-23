@@ -20,42 +20,42 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Preduzetnička ekonomija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Statistika",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Engleski"
+          "languages": ["en"]
         },
         {
           "name": "Informacioni menadžment i aI u zdravstvu",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Engleski"
+          "languages": ["en"]
         },
         {
           "name": "Menadžment",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Međunarodna ekonomija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -69,28 +69,28 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Pravosuđe i javna uprava",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Međunarodno pravo",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Pravne nauke",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -104,21 +104,21 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Informacioni sistemi",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Informacione tehnologije",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -132,84 +132,84 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Bezbjednost",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Evropske studije",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Komunikologija i mediji",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Međunarodna politika i bezbjednost",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Rodne studije",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Komunikologija i mediji",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Politička teorija i politička analiza",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Međunarodni odnosi",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Međunarodna bezbjednost",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Politička teorija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Komunikologija",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -223,21 +223,21 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Teorija moderne i savremene umjetnosti",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Teorija savremene umjetnosti",
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -251,35 +251,35 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Upravljanje nekretninama",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Građevinarstvo i savremene tehnologije",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Arhitektura i dizajn",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Ekologija, urbanizam i prostorno planiranje",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -293,21 +293,21 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Fitnes i leisure menadžment",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Menadžment sportske organizacije kluba",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -321,21 +321,21 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Prehrambena tehnologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Sanitarni inženjering u sektoru hrane",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -349,14 +349,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Dizajn i multimedija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -370,35 +370,35 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Kineske studije",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Međunarodno hotelijerstvo i menadžment - Vatel",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Kultura i turizam",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Međunarodno hotelijerstvo i menadžment",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -412,35 +412,35 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Matematika",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Elektrotehnika i računarstvo",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Geodezija",
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Psihologija",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     },
@@ -454,14 +454,14 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         },
         {
           "name": "Engleski jezik",
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Crnogorski"
+          "languages": ["cnr"]
         }
       ]
     }

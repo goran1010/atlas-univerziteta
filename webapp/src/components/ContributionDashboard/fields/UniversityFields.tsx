@@ -57,6 +57,7 @@ function UniversityFields({
           </Label>
           <Select
             id="dataCountry"
+            autoComplete="off"
             value={data.country ?? ""}
             onChange={(e) => {
               const value = e.target.value;

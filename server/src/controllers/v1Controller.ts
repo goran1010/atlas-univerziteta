@@ -123,7 +123,7 @@ async function getStudyPrograms(req: Request, res: Response) {
         cycle: true,
         durationYears: true,
         ects: true,
-        language: true,
+        languages: true,
         faculty: {
           select: {
             id: true,

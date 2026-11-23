@@ -15,7 +15,7 @@ const prisma = new PrismaClient({
   omit: {
     university: { searchName: true, searchCity: true, searchAcronym: true },
     faculty: { searchName: true, searchCity: true },
-    studyProgram: { searchName: true, searchLanguage: true },
+    studyProgram: { searchName: true },
     track: { searchName: true },
   },
 });

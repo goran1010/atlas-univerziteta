@@ -32,7 +32,7 @@ beforeAll(async () => {
               cycle: "FIRST",
               durationYears: 3,
               ects: 180,
-              language: "Bosanski",
+              languages: ["bs"],
               tracks: {
                 create: {
                   name: "Test Enrich Track",
@@ -152,7 +152,7 @@ describe("enrichWithCurrentEntity", () => {
       cycle: "FIRST",
       durationYears: 3,
       ects: 180,
-      language: "Bosanski",
+      languages: ["bs"],
       trackCount: 1,
     });
     expect(programChange?.parentContext).toEqual([

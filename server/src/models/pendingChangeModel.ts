@@ -83,7 +83,7 @@ async function loadTargets(targetIds: Record<targetType, number[]>) {
             cycle: true,
             durationYears: true,
             ects: true,
-            language: true,
+            languages: true,
             faculty: {
               select: {
                 id: true,
@@ -179,7 +179,7 @@ function buildEntityMaps({
           cycle: sp.cycle,
           durationYears: sp.durationYears,
           ects: sp.ects,
-          language: sp.language,
+          languages: sp.languages,
           trackCount: sp._count.tracks,
         },
       ]),

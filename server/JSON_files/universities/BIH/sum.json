@@ -233,7 +233,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         }
@@ -422,7 +422,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -431,7 +431,7 @@
           "cycle": "VOCATIONAL",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -440,7 +440,7 @@
           "cycle": "FIRST",
           "durationYears": 4,
           "ects": 240,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -449,7 +449,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -458,7 +458,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -467,7 +467,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -476,7 +476,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -485,7 +485,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -494,7 +494,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -503,7 +503,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -512,7 +512,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -521,7 +521,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -530,7 +530,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -539,7 +539,7 @@
           "cycle": "SECOND",
           "durationYears": 1,
           "ects": 60,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -548,7 +548,7 @@
           "cycle": "SECOND",
           "durationYears": null,
           "ects": null,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26",
           "tracks": [
@@ -737,7 +737,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -746,7 +746,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -755,7 +755,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -764,7 +764,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -773,7 +773,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -782,7 +782,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         }
@@ -827,7 +827,7 @@
           "cycle": "THIRD",
           "durationYears": 3,
           "ects": 180,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         }
@@ -992,7 +992,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -1001,7 +1001,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -1010,7 +1010,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -1019,7 +1019,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -1028,7 +1028,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -1037,7 +1037,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -1046,7 +1046,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -1055,7 +1055,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         },
@@ -1064,7 +1064,7 @@
           "cycle": "SECOND",
           "durationYears": 2,
           "ects": 120,
-          "language": "Hrvatski",
+          "languages": ["hr"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "lastModified": "2026-08-26"
         }
@@ -1091,7 +1091,7 @@
         {
           "name": "Medical Studies in English",
           "cycle": "INTEGRATED",
-          "language": "Engleski",
+          "languages": ["en"],
           "dataSourceUrl": "https://web-admin.sum.ba/api/storage/Vodic-za-buduce-studente_2026-2027_web-verzija_1779953058_34.pdf",
           "ects": 360,
           "durationYears": 6,

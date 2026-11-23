@@ -21,7 +21,7 @@ function DataField(props: DataFieldProps) {
       <Label htmlFor={props.id} required={props.required}>
         {label}
       </Label>
-      <Input {...inputProps} />
+      <Input autoComplete="off" {...inputProps} />
     </div>
   );
 }

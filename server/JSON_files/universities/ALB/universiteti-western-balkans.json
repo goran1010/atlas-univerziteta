@@ -169,7 +169,7 @@
           "cycle": "INTEGRATED",
           "durationYears": 6,
           "ects": 360,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.wbu.edu.al/en/program/medicine",
           "lastModified": "2026-11-22"
         }
@@ -224,7 +224,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.wbu.edu.al/en/program/software-engineering",
           "lastModified": "2026-11-22"
         },
@@ -241,7 +241,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.wbu.edu.al/en/program/computer-sciences-and-ai",
           "lastModified": "2026-11-22"
         },
@@ -250,7 +250,7 @@
           "cycle": "FIRST",
           "durationYears": 3,
           "ects": 180,
-          "language": "Anglisht",
+          "languages": ["en"],
           "dataSourceUrl": "https://www.wbu.edu.al/en/program/cyber-security",
           "lastModified": "2026-11-22"
         },
