@@ -6,7 +6,7 @@
 - **Security headers:** Netlify serves a strict Content-Security-Policy (no `unsafe-inline`) and the other security headers from `webapp/netlify.toml`
 - **HTTPS:** Automatic via Let's Encrypt (Caddy) and Netlify
 - **Email:** Resend with a verified custom domain
-- **Error tracking:** Sentry, in the EU data region (see [Error tracking](#error-tracking))
+- **Error tracking and server logs:** Sentry, in the EU data region (see [Error tracking](#error-tracking))
 
 See `.env.production.example` for the VPS environment variable reference and `docker-compose.yml` for the container setup.
 
@@ -27,7 +27,11 @@ https://api.atlasuniverziteta.com/api/auth/callback/google
 
 ## Error tracking
 
-The webapp reports errors to [Sentry](https://sentry.io), in the EU data region. It reports only when `VITE_SENTRY_DSN` is set at build time, and only Netlify's Production context sets it, so local development and deploy previews send nothing.
+The webapp and the server report to [Sentry](https://sentry.io): one organization in the EU data region, with a project for each. Each reports only when its DSN is set, so local development, tests and deploy previews send nothing.
+
+### Webapp
+
+The webapp reports only when `VITE_SENTRY_DSN` is set at build time, and only Netlify's Production context sets it.
 
 These become Sentry issues:
 
@@ -46,6 +50,25 @@ IP addresses and user agents are sent. Visitors whose ad blocker blocks Sentry d
 
 The build publishes source maps next to the bundles, and Sentry fetches them from the site to show TypeScript files and lines in stack traces. An error from a tab opened before the latest deploy may stay minified, because Netlify no longer serves that deploy's files.
 
+### Server
+
+The server reports only when `SENTRY_DSN` is set on the VPS. It sends every log line to Sentry Logs, which keeps 30 days, so the history survives deploys (the local Docker log does not, see [Logs](#logs)).
+
+These become Sentry issues:
+
+- every error-level log line (`logger.error`), so use `logger.error` only for what needs fixing and `logger.warn` for expected failures
+- uncaught exceptions and unhandled promise rejections; their `fatal` log line goes to Sentry Logs only, so a crash is one issue
+- better-auth's errors that carry an exception. Its error lines without one, mostly client mistakes such as an invalid `callbackURL` and sometimes carrying the client's input, stay in the logs without opening an issue
+
+These are left out:
+
+- cookies
+- request and response bodies, incoming and outgoing: sign-in bodies carry passwords, the OAuth token exchange carries the client secret, and emails carry links with tokens
+- query strings: the SDK's name filter would not catch OAuth's `code` and `state`
+- the password-reset token in the path, replaced with `[redacted]` in event URLs and transaction names
+
+IP addresses, user agents and other request headers are sent; the SDK blanks headers with names such as `Authorization` or `Cookie`. Caddy's and Postgres's logs stay on the VPS.
+
 ### Setting up the webapp project
 
 1. Create a Sentry organization and choose the EU data region; the region is chosen when the organization is created
@@ -63,9 +86,21 @@ setTimeout(() => {
 });
 ```
 
+### Setting up the server project
+
+1. In the same organization, create a Node.js project (Express) and copy its DSN
+2. On the VPS, add `SENTRY_DSN=<the DSN>` to `.env`, then recreate the server container so it picks it up: `docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d`
+3. Add an alert rule that emails on every new issue
+
+To check it works, send a test error from the running container; it shows up in Sentry within a minute:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.prod.yml exec server node --input-type=module -e 'const Sentry = await import("@sentry/node"); Sentry.init({ dsn: process.env.SENTRY_DSN }); Sentry.captureException(new Error("Sentry test")); await Sentry.close(2000);'
+```
+
 ## Logs
 
-Each container on the VPS writes its logs to Docker, which keeps up to 50 MB per service (5 files of 10 MB, oldest dropped first) and deletes them with the container. Every deploy that ships a new server image recreates the server container, so its log starts over.
+Each container on the VPS writes its logs to Docker, which keeps up to 50 MB per service (5 files of 10 MB, oldest dropped first) and deletes them with the container. Every deploy that ships a new server image recreates the server container, so its local log starts over; with `SENTRY_DSN` set, the server's lines are also in Sentry Logs for 30 days (see [Error tracking](#error-tracking)).
 
 - **server:** pino JSON, one object per line - a `Request completed` line per request (method, path, status, duration, IP, user agent), plus warnings, errors, startup and shutdown. Paths never include the query string, and the password-reset token in the path is replaced with `[redacted]`. Successful health checks are not logged
 - **caddy:** no access log, since the server logs each request. Caddy logs only its own messages: startup, config reloads, certificate renewals, and errors such as a 502 while the server is down. A 502 line includes the full request URL with its query string; cookies and the `Authorization` header are redacted
