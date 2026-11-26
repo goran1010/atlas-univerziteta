@@ -40,4 +40,22 @@ describe("envConfig", () => {
 
     expect(PUBLIC_API_URL).toBe("https://example.com");
   });
+
+  test("should use VITE_SENTRY_DSN when set", async () => {
+    vi.stubEnv("VITE_API_URL", "https://example.com");
+    vi.stubEnv("VITE_SENTRY_DSN", "https://key@o1.ingest.de.sentry.io/2");
+
+    const { SENTRY_DSN } = await import("../../../src/utils/envConfig");
+
+    expect(SENTRY_DSN).toBe("https://key@o1.ingest.de.sentry.io/2");
+  });
+
+  test("should leave SENTRY_DSN undefined when VITE_SENTRY_DSN is empty", async () => {
+    vi.stubEnv("VITE_API_URL", "https://example.com");
+    vi.stubEnv("VITE_SENTRY_DSN", "");
+
+    const { SENTRY_DSN } = await import("../../../src/utils/envConfig");
+
+    expect(SENTRY_DSN).toBeUndefined();
+  });
 });
