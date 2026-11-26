@@ -6,6 +6,7 @@
 - **Security headers:** Netlify serves a strict Content-Security-Policy (no `unsafe-inline`) and the other security headers from `webapp/netlify.toml`
 - **HTTPS:** Automatic via Let's Encrypt (Caddy) and Netlify
 - **Email:** Resend with a verified custom domain
+- **Error tracking:** Sentry, in the EU data region (see [Error tracking](#error-tracking))
 
 See `.env.production.example` for the VPS environment variable reference and `docker-compose.yml` for the container setup.
 
@@ -22,6 +23,44 @@ OAuth callbacks go directly to the API domain (better-auth builds them from `SER
 ```text
 https://api.atlasuniverziteta.com/api/auth/callback/github
 https://api.atlasuniverziteta.com/api/auth/callback/google
+```
+
+## Error tracking
+
+The webapp reports errors to [Sentry](https://sentry.io), in the EU data region. It reports only when `VITE_SENTRY_DSN` is set at build time, and only Netlify's Production context sets it, so local development and deploy previews send nothing.
+
+These become Sentry issues:
+
+- uncaught errors and unhandled promise rejections
+- every `console.error` call, so use `console.error` only for what needs fixing and `console.warn` for expected failures
+- a route chunk that fails to load, for example in a tab opened before a deploy
+
+These are left out:
+
+- network failures (`Failed to fetch` and its Firefox and Safari wordings): the visitor's connection, not a bug
+- errors thrown by browser extensions
+- request bodies: sign-in and sign-up bodies carry passwords
+- query parameters with sensitive names such as `token`, which the SDK blanks; others, such as the search term `q`, are kept
+
+IP addresses and user agents are sent. Visitors whose ad blocker blocks Sentry do not report.
+
+The build publishes source maps next to the bundles, and Sentry fetches them from the site to show TypeScript files and lines in stack traces. An error from a tab opened before the latest deploy may stay minified, because Netlify no longer serves that deploy's files.
+
+### Setting up the webapp project
+
+1. Create a Sentry organization and choose the EU data region; the region is chosen when the organization is created
+2. Create a React project and copy its DSN
+3. In Netlify, add the `VITE_SENTRY_DSN` environment variable with the DSN, scoped to the Production context only, then trigger a deploy
+4. `connect-src` in the Content-Security-Policy in `webapp/netlify.toml` allows the organization's ingest host (`https://o<organization id>.ingest.de.sentry.io`, the host part of the DSN); a different organization needs it updated
+5. Add an alert rule that emails on every new issue
+6. In the project settings, keep "Prevent storing of IP addresses" off and JavaScript source fetching on (the default)
+
+To check it works, run this in the browser console on the live site; the error shows up in Sentry within a minute:
+
+```js
+setTimeout(() => {
+  throw new Error("Sentry test");
+});
 ```
 
 ## Seeding the database
