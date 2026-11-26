@@ -21,6 +21,12 @@ export default defineConfig(({ mode }) => {
       tailwindcss(),
     ],
 
+    // Public on purpose: Sentry fetches them from the site to show readable
+    // stack traces, and the source is open on GitHub anyway.
+    build: {
+      sourcemap: true,
+    },
+
     test: {
       globals: true,
       environment: "jsdom",
