@@ -18,7 +18,7 @@ describe("better-auth logger", () => {
     });
 
     expect(logger.error).toHaveBeenCalledWith(
-      { err: error, details: [{ provider: "github" }] },
+      { source: "better-auth", err: error, details: [{ provider: "github" }] },
       "Invalid callbackURL: x",
     );
   });
@@ -27,7 +27,7 @@ describe("better-auth logger", () => {
     auth.options.logger.log("warn", "Something to look at");
 
     expect(logger.warn).toHaveBeenCalledWith(
-      { err: undefined, details: undefined },
+      { source: "better-auth", err: undefined, details: undefined },
       "Something to look at",
     );
   });
