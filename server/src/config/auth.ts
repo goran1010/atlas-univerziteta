@@ -5,6 +5,7 @@ import { prisma } from "../db/prisma.js";
 import { env } from "./env.js";
 import { sendConfirmationEmail } from "../email/confirmationEmail.js";
 import { sendResetPasswordEmail } from "../email/resetPasswordEmail.js";
+import { logger } from "../utils/logger.js";
 
 const auth = betterAuth({
   database: prismaAdapter(prisma, { provider: "postgresql" }),
@@ -64,6 +65,23 @@ const auth = betterAuth({
       clientId: env.GOOGLE_CLIENT_ID,
       clientSecret: env.GOOGLE_CLIENT_SECRET,
       overrideUserInfoOnSignIn: true,
+    },
+  },
+  // better-auth's own warnings and errors, as pino JSON like the rest of the
+  // server's logs; pino only expands an Error when it sits under err. The
+  // source lets src/sentry.ts tell these lines apart.
+  logger: {
+    log: (level, message, ...args: unknown[]) => {
+      const err = args.find((arg) => arg instanceof Error);
+      const details = args.filter((arg) => arg !== err);
+      logger[level](
+        {
+          source: "better-auth",
+          err,
+          details: details.length > 0 ? details : undefined,
+        },
+        message,
+      );
     },
   },
 });

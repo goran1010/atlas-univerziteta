@@ -17,6 +17,7 @@
     "format:check": "prettier . --check"
   },
   "dependencies": {
+    "@sentry/react": "^11.16.0",
     "@tailwindcss/vite": "^4.3.0",
     "better-auth": "^1.7.6",
     "react": "^19.2.6",

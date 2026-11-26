@@ -51,6 +51,7 @@
   "dependencies": {
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
+    "@sentry/node": "^11.16.0",
     "better-auth": "^1.7.5",
     "compression": "^1.8.1",
     "cors": "^2.8.6",

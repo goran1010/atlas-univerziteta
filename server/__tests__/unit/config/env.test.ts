@@ -89,6 +89,22 @@ describe("env config", () => {
     expect(env.RESEND_FROM_EMAIL).toBe("noreply@atlasuniverziteta.com");
   });
 
+  test("uses SENTRY_DSN when set", async () => {
+    process.env["SENTRY_DSN"] = "https://key@o1.ingest.de.sentry.io/2";
+
+    const { env } = await import("../../../src/config/env.js");
+
+    expect(env.SENTRY_DSN).toBe("https://key@o1.ingest.de.sentry.io/2");
+  });
+
+  test("leaves SENTRY_DSN undefined when compose passes an empty value", async () => {
+    process.env["SENTRY_DSN"] = "";
+
+    const { env } = await import("../../../src/config/env.js");
+
+    expect(env.SENTRY_DSN).toBeUndefined();
+  });
+
   test("throws if NODE_ENV is invalid", async () => {
     process.env["NODE_ENV"] = "staging";
     vi.resetModules();

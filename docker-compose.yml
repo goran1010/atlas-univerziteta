@@ -67,6 +67,7 @@ services:
       - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
       - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
       - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - SENTRY_DSN=${SENTRY_DSN}
 
   # --- PostgreSQL database ---
   # Uses the official Postgres image. Data is stored in a named volume

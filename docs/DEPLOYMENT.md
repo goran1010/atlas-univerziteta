@@ -6,6 +6,7 @@
 - **Security headers:** Netlify serves a strict Content-Security-Policy (no `unsafe-inline`) and the other security headers from `webapp/netlify.toml`
 - **HTTPS:** Automatic via Let's Encrypt (Caddy) and Netlify
 - **Email:** Resend with a verified custom domain
+- **Error tracking and server logs:** Sentry, in the EU data region (see [Error tracking](#error-tracking))
 
 See `.env.production.example` for the VPS environment variable reference and `docker-compose.yml` for the container setup.
 
@@ -22,6 +23,119 @@ OAuth callbacks go directly to the API domain (better-auth builds them from `SER
 ```text
 https://api.atlasuniverziteta.com/api/auth/callback/github
 https://api.atlasuniverziteta.com/api/auth/callback/google
+```
+
+## Error tracking
+
+The webapp and the server report to [Sentry](https://sentry.io): one organization in the EU data region, with a project for each. Each reports only when its DSN is set, so local development, tests and deploy previews send nothing.
+
+### Webapp
+
+The webapp reports only when `VITE_SENTRY_DSN` is set at build time, and only Netlify's Production context sets it.
+
+These become Sentry issues:
+
+- uncaught errors and unhandled promise rejections
+- every `console.error` call, so use `console.error` only for what needs fixing and `console.warn` for expected failures
+- a route chunk that fails to load, for example in a tab opened before a deploy
+
+These are left out:
+
+- network failures (`Failed to fetch` and its Firefox and Safari wordings): the visitor's connection, not a bug
+- errors thrown by browser extensions
+- request bodies: sign-in and sign-up bodies carry passwords
+- query parameters with sensitive names such as `token`, which the SDK blanks; others, such as the search term `q`, are kept
+
+IP addresses and user agents are sent. Visitors whose ad blocker blocks Sentry do not report.
+
+The build publishes source maps next to the bundles, and Sentry fetches them from the site to show TypeScript files and lines in stack traces. An error from a tab opened before the latest deploy may stay minified, because Netlify no longer serves that deploy's files.
+
+### Server
+
+The server reports only when `SENTRY_DSN` is set on the VPS. It sends every log line to Sentry Logs, which keeps 30 days, so the history survives deploys (the local Docker log does not, see [Logs](#logs)).
+
+These become Sentry issues:
+
+- every error-level log line (`logger.error`), so use `logger.error` only for what needs fixing and `logger.warn` for expected failures
+- uncaught exceptions and unhandled promise rejections; their `fatal` log line goes to Sentry Logs only, so a crash is one issue
+- better-auth's errors that carry an exception. Its error lines without one, mostly client mistakes such as an invalid `callbackURL` and sometimes carrying the client's input, stay in the logs without opening an issue
+
+These are left out:
+
+- cookies
+- request and response bodies, incoming and outgoing: sign-in bodies carry passwords, the OAuth token exchange carries the client secret, and emails carry links with tokens
+- query strings: the SDK's name filter would not catch OAuth's `code` and `state`
+- the password-reset token in the path, replaced with `[redacted]` in event URLs and transaction names
+
+IP addresses, user agents and other request headers are sent; the SDK blanks headers with names such as `Authorization` or `Cookie`. Caddy's and Postgres's logs stay on the VPS.
+
+### Setting up the webapp project
+
+1. Create a Sentry organization and choose the EU data region; the region is chosen when the organization is created
+2. Create a React project and copy its DSN
+3. In Netlify, add the `VITE_SENTRY_DSN` environment variable with the DSN, scoped to the Production context only, then trigger a deploy
+4. `connect-src` in the Content-Security-Policy in `webapp/netlify.toml` allows the organization's ingest host (`https://o<organization id>.ingest.de.sentry.io`, the host part of the DSN); a different organization needs it updated
+5. Add an alert rule that emails on every new issue
+6. In the project settings, keep "Prevent storing of IP addresses" off and JavaScript source fetching on (the default)
+
+To check it works, run this in the browser console on the live site; the error shows up in Sentry within a minute:
+
+```js
+setTimeout(() => {
+  throw new Error("Sentry test");
+});
+```
+
+### Setting up the server project
+
+1. In the same organization, create a Node.js project (Express) and copy its DSN
+2. On the VPS, add `SENTRY_DSN=<the DSN>` to `.env`, then recreate the server container so it picks it up: `docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d`
+3. Add an alert rule that emails on every new issue
+
+To check it works, send a test error from the running container; it shows up in Sentry within a minute:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.prod.yml exec server node --input-type=module -e 'const Sentry = await import("@sentry/node"); Sentry.init({ dsn: process.env.SENTRY_DSN }); Sentry.captureException(new Error("Sentry test")); await Sentry.close(2000);'
+```
+
+### Uptime check
+
+An outside check on `https://api.atlasuniverziteta.com/health` catches what nothing else reports: when the server, Caddy or the whole VPS is down, the server cannot report, Caddy's 502s stay in its local log, and the webapp ignores network failures. It checks `/health` rather than `/` because `/health` also queries the database and answers 503 when Postgres is unreachable. Sentry opens an issue only after several failed checks in a row, so the few seconds of 502s during a deploy go unreported.
+
+To set it up, add an uptime monitor to the server project in Sentry (the free plan includes one) for `https://api.atlasuniverziteta.com/health`, checking every few minutes, and make sure its alert emails you. To see it alert, stop the server outside busy hours until the email arrives, then start it again:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.prod.yml stop server
+docker compose -f docker-compose.yml -f docker-compose.prod.yml start server
+```
+
+## Logs
+
+Each container on the VPS writes its logs to Docker, which keeps up to 50 MB per service (5 files of 10 MB, oldest dropped first) and deletes them with the container. Every deploy that ships a new server image recreates the server container, so its local log starts over; with `SENTRY_DSN` set, the server's lines are also in Sentry Logs for 30 days (see [Error tracking](#error-tracking)).
+
+- **server:** pino JSON, one object per line - a `Request completed` line per request (method, path, status, duration, IP, user agent), plus warnings, errors, startup and shutdown. Paths never include the query string, and the password-reset token in the path is replaced with `[redacted]`. Successful health checks are not logged
+- **caddy:** no access log, since the server logs each request. Caddy logs only its own messages: startup, config reloads, certificate renewals, and errors such as a 502 while the server is down. A 502 line includes the full request URL with its query string; cookies and the `Authorization` header are redacted
+- **db:** Postgres's own messages: startup, checkpoints, failed connections and SQL errors
+
+To read them on the VPS, set the compose files once in the shell profile, so plain `docker compose` works from any directory (the deploy job still passes both files explicitly):
+
+```bash
+echo 'export COMPOSE_FILE=/root/atlas-univerziteta/docker-compose.yml:/root/atlas-univerziteta/docker-compose.prod.yml' >> ~/.bashrc
+```
+
+Then:
+
+```bash
+docker compose logs -f server                # follow live
+docker compose logs --since 1h server        # the last hour
+docker compose logs --tail 200 server caddy  # the last 200 lines of each
+```
+
+`jq` makes the server's JSON lines readable and filterable, and passes other lines through unchanged (install it with the VPS's package manager if it is missing). pino's levels are 30 info, 40 warn, 50 error and 60 fatal:
+
+```bash
+docker compose logs --no-log-prefix server | jq -rR 'fromjson? // .'
+docker compose logs --no-log-prefix server | jq -R 'fromjson? | select(.level >= 50)'
 ```
 
 ## Seeding the database

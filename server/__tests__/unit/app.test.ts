@@ -61,4 +61,27 @@ describe("app", () => {
       },
     });
   });
+
+  test("logs requests the global rate limiter rejects", async () => {
+    vi.doMock("../../src/utils/rateLimiter.js", () => ({
+      global: vi.fn((_req: Request, res: Response) => {
+        res.status(429).end();
+      }),
+      api: vi.fn(),
+      auth: vi.fn(),
+      authGeneral: vi.fn(),
+      users: vi.fn(),
+    }));
+    const { app } = await import("../../src/app.js");
+    const { logger } = await import("../../src/utils/logger.js");
+
+    await request(app).get("/api");
+
+    await vi.waitFor(() => {
+      expect(logger.info).toHaveBeenCalledWith(
+        expect.objectContaining({ path: "/api", status: 429 }),
+        "Request completed",
+      );
+    });
+  });
 });

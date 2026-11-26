@@ -11,6 +11,7 @@ class Env {
   public readonly GITHUB_CLIENT_SECRET: string;
   public readonly GOOGLE_CLIENT_ID: string;
   public readonly GOOGLE_CLIENT_SECRET: string;
+  public readonly SENTRY_DSN: string | undefined;
   public TEST_DATABASE_URL?: string | undefined;
 
   constructor() {
@@ -35,6 +36,10 @@ class Env {
 
     this.GOOGLE_CLIENT_ID = Env.#getEnv("GOOGLE_CLIENT_ID");
     this.GOOGLE_CLIENT_SECRET = Env.#getEnv("GOOGLE_CLIENT_SECRET");
+
+    // optional: without it, nothing is sent to Sentry
+    // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing -- compose passes "" for unset vars, which ?? would keep
+    this.SENTRY_DSN = process.env["SENTRY_DSN"] || undefined;
 
     this.TEST_DATABASE_URL = Env.#getTestEnv("TEST_DATABASE_URL");
   }

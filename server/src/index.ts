@@ -1,3 +1,5 @@
+import "./sentry.js";
+import * as Sentry from "@sentry/node";
 import { app } from "./app.js";
 import { env } from "./config/env.js";
 import { logger } from "./utils/logger.js";
@@ -22,7 +24,9 @@ function gracefulShutdown(signal: GracefulShutdownSignal, exitCode = 0) {
 
   server.close(() => {
     logger.warn("Process terminated");
-    process.exit(exitCode);
+    // Sentry sends in the background; a crash report still queued would be
+    // lost on exit
+    void Sentry.close(2000).finally(() => process.exit(exitCode));
   });
 
   setTimeout(() => {
@@ -45,6 +49,6 @@ process.on("uncaughtException", (error) => {
 });
 
 process.on("unhandledRejection", (reason) => {
-  logger.fatal({ reason }, "Unhandled rejection");
+  logger.fatal({ err: reason }, "Unhandled rejection");
   gracefulShutdown("unhandledRejection", 1);
 });
