@@ -98,6 +98,17 @@ To check it works, send a test error from the running container; it shows up in 
 docker compose -f docker-compose.yml -f docker-compose.prod.yml exec server node --input-type=module -e 'const Sentry = await import("@sentry/node"); Sentry.init({ dsn: process.env.SENTRY_DSN }); Sentry.captureException(new Error("Sentry test")); await Sentry.close(2000);'
 ```
 
+### Uptime check
+
+An outside check on `https://api.atlasuniverziteta.com/health` catches what nothing else reports: when the server, Caddy or the whole VPS is down, the server cannot report, Caddy's 502s stay in its local log, and the webapp ignores network failures. It checks `/health` rather than `/` because `/health` also queries the database and answers 503 when Postgres is unreachable. Sentry opens an issue only after several failed checks in a row, so the few seconds of 502s during a deploy go unreported.
+
+To set it up, add an uptime monitor to the server project in Sentry (the free plan includes one) for `https://api.atlasuniverziteta.com/health`, checking every few minutes, and make sure its alert emails you. To see it alert, stop the server outside busy hours until the email arrives, then start it again:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.prod.yml stop server
+docker compose -f docker-compose.yml -f docker-compose.prod.yml start server
+```
+
 ## Logs
 
 Each container on the VPS writes its logs to Docker, which keeps up to 50 MB per service (5 files of 10 MB, oldest dropped first) and deletes them with the container. Every deploy that ships a new server image recreates the server container, so its local log starts over; with `SENTRY_DSN` set, the server's lines are also in Sentry Logs for 30 days (see [Error tracking](#error-tracking)).
