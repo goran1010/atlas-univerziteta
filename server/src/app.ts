@@ -20,6 +20,7 @@ import * as rateLimiter from "./utils/rateLimiter.js";
 import compression from "compression";
 
 import { logger } from "./utils/logger.js";
+import { loggablePath, requestLogger } from "./utils/requestLogger.js";
 
 import { sendError } from "./utils/response.js";
 
@@ -29,23 +30,13 @@ import { usersRouter } from "./routes/usersRouter.js";
 import { healthRouter } from "./routes/healthRouter.js";
 import { verifyOrigin } from "./auth/verifyOrigin.js";
 
-// The URL the client requested, minus the query string - auth URLs carry
-// tokens and OAuth codes there, which must stay out of the logs.
-function loggableUrl(req: Request) {
-  return req.originalUrl.replace(/\?.*$/, "");
-}
-
 // Trust first proxy (Caddy reverse proxy)
 app.set("trust proxy", 1);
 
-app.use(rateLimiter.global);
+// before the rate limiter, so rejected (429) requests are logged too
+app.use(requestLogger);
 
-app.use((req, _res, next) => {
-  logger.info(
-    `${req.method} method to ${loggableUrl(req)} from ${String(req.ip)}`,
-  );
-  next();
-});
+app.use(rateLimiter.global);
 
 app.use(helmet());
 app.use(compression());
@@ -100,7 +91,11 @@ function isClientHttpError(error: unknown): error is ClientHttpError {
 app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   if (error instanceof RequestValidationError) {
     logger.warn(
-      { issues: error.issues, method: req.method, url: loggableUrl(req) },
+      {
+        issues: error.issues,
+        method: req.method,
+        path: loggablePath(req.originalUrl),
+      },
       "Request validation failed.",
     );
     sendError(res, {
@@ -114,7 +109,7 @@ app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
 
   if (isClientHttpError(error)) {
     logger.warn(
-      { err: error, method: req.method, url: loggableUrl(req) },
+      { err: error, method: req.method, path: loggablePath(req.originalUrl) },
       "Request failed with a client error.",
     );
     sendError(res, {
@@ -126,7 +121,7 @@ app.use((error: unknown, req: Request, res: Response, _next: NextFunction) => {
   }
 
   logger.error(
-    { err: error, method: req.method, url: loggableUrl(req) },
+    { err: error, method: req.method, path: loggablePath(req.originalUrl) },
     "Unhandled error.",
   );
 
