@@ -63,6 +63,35 @@ setTimeout(() => {
 });
 ```
 
+## Logs
+
+Each container on the VPS writes its logs to Docker, which keeps up to 50 MB per service (5 files of 10 MB, oldest dropped first) and deletes them with the container. Every deploy that ships a new server image recreates the server container, so its log starts over.
+
+- **server:** pino JSON, one object per line - a `Request completed` line per request (method, path, status, duration, IP, user agent), plus warnings, errors, startup and shutdown. Paths never include the query string, and the password-reset token in the path is replaced with `[redacted]`. Successful health checks are not logged
+- **caddy:** no access log, since the server logs each request. Caddy logs only its own messages: startup, config reloads, certificate renewals, and errors such as a 502 while the server is down. A 502 line includes the full request URL with its query string; cookies and the `Authorization` header are redacted
+- **db:** Postgres's own messages: startup, checkpoints, failed connections and SQL errors
+
+To read them on the VPS, set the compose files once in the shell profile, so plain `docker compose` works from any directory (the deploy job still passes both files explicitly):
+
+```bash
+echo 'export COMPOSE_FILE=/root/atlas-univerziteta/docker-compose.yml:/root/atlas-univerziteta/docker-compose.prod.yml' >> ~/.bashrc
+```
+
+Then:
+
+```bash
+docker compose logs -f server                # follow live
+docker compose logs --since 1h server        # the last hour
+docker compose logs --tail 200 server caddy  # the last 200 lines of each
+```
+
+`jq` makes the server's JSON lines readable and filterable, and passes other lines through unchanged (install it with the VPS's package manager if it is missing). pino's levels are 30 info, 40 warn, 50 error and 60 fatal:
+
+```bash
+docker compose logs --no-log-prefix server | jq -rR 'fromjson? // .'
+docker compose logs --no-log-prefix server | jq -R 'fromjson? | select(.level >= 50)'
+```
+
 ## Seeding the database
 
 `npm run db:seed` reads JSON files from `server/JSON_files/universities/<COUNTRY>/` and syncs them into the database: new rows are created, existing rows are updated, and rows no longer in the JSON files are deleted (children cascade). `npm run db:reset` drops everything and reapplies the migrations, but does not seed - run `npm run db:seed` after it.
