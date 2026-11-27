@@ -19,7 +19,7 @@ docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
 The deploy job does this automatically. Note that explicit `-f` flags make compose ignore any `docker-compose.override.yml` - a VPS set up before `docker-compose.prod.yml` was committed can delete that file.
 
-Caddy reaches the server over `web`, an external Docker network shared by every app on the VPS and the vps-proxy stack. The server joins it under the alias `atlas-server`, since other apps' services on `web` may also be called `server`; Postgres stays on the project's own network. Compose does not create `web`, so `up` fails until it exists: on a new VPS, create it once with `docker network create web`, as the vps-proxy README describes.
+Caddy reaches the server over `web`, an external Docker network shared by every app on the VPS and the vps-proxy stack. The server joins it under the alias `atlas-server`, since other apps' services on `web` may also be called `server`; Postgres stays on the project's own network. Compose does not create `web`, so starting the server, including through the seed and refold scripts, fails until it exists: on a new VPS, create it once with `docker network create web`, as the vps-proxy README describes.
 
 OAuth callbacks go directly to the API domain (better-auth builds them from `SERVER_URL`). Register these redirect URIs in the GitHub and Google OAuth app settings:
 
@@ -120,10 +120,10 @@ Each container on the VPS writes its logs to Docker, which keeps up to 50 MB per
 - **caddy:** runs in the vps-proxy stack, so its logs are read from `/root/vps-proxy`. No access log, since the server logs each request. Caddy logs only its own messages: startup, config reloads, certificate renewals, and errors such as a 502 while the server is down. A 502 line includes the full request URL with its query string; cookies and the `Authorization` header are redacted
 - **db:** Postgres's own messages: startup, checkpoints, failed connections and SQL errors
 
-To read them on the VPS, add the compose files to the project's `.env` once, so plain `docker compose` works inside `/root/atlas-univerziteta` (the deploy job still passes both files explicitly):
+To read them on the VPS, add this line to `/root/atlas-univerziteta/.env` once, so plain `docker compose` works inside that directory (the deploy job still passes both files explicitly):
 
-```bash
-echo 'COMPOSE_FILE=docker-compose.yml:docker-compose.prod.yml' >> /root/atlas-univerziteta/.env
+```text
+COMPOSE_FILE=docker-compose.yml:docker-compose.prod.yml
 ```
 
 Compose reads `.env` from the directory it runs in, so the line does not reach `/root/vps-proxy` or other apps' directories. An exported `COMPOSE_FILE` in the shell profile would apply in every directory, so `docker compose` in the vps-proxy stack would act on this project.
