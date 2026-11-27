@@ -1,7 +1,8 @@
 # Deployment
 
 - **Webapp:** Netlify (auto-deploys on push to `main`), serves static files via CDN
-- **API + Database:** VPS with Docker Compose (Caddy, Node.js server, PostgreSQL)
+- **API + Database:** VPS with Docker Compose (Node.js server, PostgreSQL)
+- **Reverse proxy:** Caddy, shared by every app on the VPS, runs in its own stack from the [vps-proxy](https://github.com/goran1010/vps-proxy) repo
 - **API access:** the webapp calls `https://api.atlasuniverziteta.com` directly; the apex and the api subdomain are same-site, so session cookies flow without a proxy
 - **Security headers:** Netlify serves a strict Content-Security-Policy (no `unsafe-inline`) and the other security headers from `webapp/netlify.toml`
 - **HTTPS:** Automatic via Let's Encrypt (Caddy) and Netlify
@@ -17,6 +18,8 @@ docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
 The deploy job does this automatically. Note that explicit `-f` flags make compose ignore any `docker-compose.override.yml` - a VPS set up before `docker-compose.prod.yml` was committed can delete that file.
+
+Caddy reaches the server over `web`, an external Docker network shared by every app on the VPS and the vps-proxy stack. The server joins it under the alias `atlas-server`, since other apps' services on `web` may also be called `server`; Postgres stays on the project's own network. Compose does not create `web`, so `up` fails until it exists: on a new VPS, create it once with `docker network create web`, as the vps-proxy README describes.
 
 OAuth callbacks go directly to the API domain (better-auth builds them from `SERVER_URL`). Register these redirect URIs in the GitHub and Google OAuth app settings:
 
@@ -114,21 +117,29 @@ docker compose -f docker-compose.yml -f docker-compose.prod.yml start server
 Each container on the VPS writes its logs to Docker, which keeps up to 50 MB per service (5 files of 10 MB, oldest dropped first) and deletes them with the container. Every deploy that ships a new server image recreates the server container, so its local log starts over; with `SENTRY_DSN` set, the server's lines are also in Sentry Logs for 30 days (see [Error tracking](#error-tracking)).
 
 - **server:** pino JSON, one object per line - a `Request completed` line per request (method, path, status, duration, IP, user agent), plus warnings, errors, startup and shutdown. Paths never include the query string, and the password-reset token in the path is replaced with `[redacted]`. Successful health checks are not logged
-- **caddy:** no access log, since the server logs each request. Caddy logs only its own messages: startup, config reloads, certificate renewals, and errors such as a 502 while the server is down. A 502 line includes the full request URL with its query string; cookies and the `Authorization` header are redacted
+- **caddy:** runs in the vps-proxy stack, so its logs are read from `/root/vps-proxy`. No access log, since the server logs each request. Caddy logs only its own messages: startup, config reloads, certificate renewals, and errors such as a 502 while the server is down. A 502 line includes the full request URL with its query string; cookies and the `Authorization` header are redacted
 - **db:** Postgres's own messages: startup, checkpoints, failed connections and SQL errors
 
-To read them on the VPS, set the compose files once in the shell profile, so plain `docker compose` works from any directory (the deploy job still passes both files explicitly):
+To read them on the VPS, add the compose files to the project's `.env` once, so plain `docker compose` works inside `/root/atlas-univerziteta` (the deploy job still passes both files explicitly):
 
 ```bash
-echo 'export COMPOSE_FILE=/root/atlas-univerziteta/docker-compose.yml:/root/atlas-univerziteta/docker-compose.prod.yml' >> ~/.bashrc
+echo 'COMPOSE_FILE=docker-compose.yml:docker-compose.prod.yml' >> /root/atlas-univerziteta/.env
 ```
 
-Then:
+Compose reads `.env` from the directory it runs in, so the line does not reach `/root/vps-proxy` or other apps' directories. An exported `COMPOSE_FILE` in the shell profile would apply in every directory, so `docker compose` in the vps-proxy stack would act on this project.
+
+Then, in `/root/atlas-univerziteta`:
 
 ```bash
-docker compose logs -f server                # follow live
-docker compose logs --since 1h server        # the last hour
-docker compose logs --tail 200 server caddy  # the last 200 lines of each
+docker compose logs -f server             # follow live
+docker compose logs --since 1h server     # the last hour
+docker compose logs --tail 200 server db  # the last 200 lines of each
+```
+
+And Caddy's, in `/root/vps-proxy`:
+
+```bash
+docker compose logs --tail 200 caddy
 ```
 
 `jq` makes the server's JSON lines readable and filterable, and passes other lines through unchanged (install it with the VPS's package manager if it is missing). pino's levels are 30 info, 40 warn, 50 error and 60 fatal:
