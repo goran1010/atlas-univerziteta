@@ -1,37 +1,20 @@
 services:
-  # --- Caddy: reverse proxy + automatic HTTPS ---
-  # Caddy is the entry point for API traffic. It terminates TLS and
-  # forwards requests to the Node.js server container.
-  caddy:
-    image: caddy:2
-    restart: unless-stopped
-    depends_on:
-      server:
-        condition: service_healthy
-    # Docker keeps container logs forever by default; cap each service at
-    # 5 files of 10 MB, oldest dropped first
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "5"
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy_data:/data
-      - caddy_config:/config
-    environment:
-      - DOMAIN=${DOMAIN}
-
   # --- Server: the Node.js API ---
   # Built from the Dockerfile in ./server.
-  # Not exposed to the internet directly - only Caddy can reach it
-  # via the internal Docker network at hostname "server".
+  # Not exposed to the internet directly - the shared Caddy in the vps-proxy
+  # stack reaches it over the "web" network at hostname "atlas-server".
   server:
     build: ./server
     restart: unless-stopped
+    networks:
+      default:
+      # other apps' services on "web" may also be called "server", so Caddy
+      # addresses each app by an alias of its own
+      web:
+        aliases:
+          - atlas-server
+    # Docker keeps container logs forever by default; cap each service at
+    # 5 files of 10 MB, oldest dropped first
     logging:
       driver: json-file
       options:
@@ -92,7 +75,11 @@ services:
       timeout: 5s
       retries: 5
 
+networks:
+  # shared by every app on the VPS and the vps-proxy stack; created once with
+  # `docker network create web`
+  web:
+    external: true
+
 volumes:
   pgdata:
-  caddy_data:
-  caddy_config:
