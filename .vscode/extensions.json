@@ -9,7 +9,6 @@
     "ms-playwright.playwright",
     "streetsidesoftware.code-spell-checker",
     "redhat.vscode-yaml",
-    "github.vscode-github-actions",
-    "matthewpi.caddyfile-support"
+    "github.vscode-github-actions"
   ]
 }

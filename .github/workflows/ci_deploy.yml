@@ -36,7 +36,7 @@ jobs:
       - name: Check for deploy-relevant changes
         id: changes
         run: |
-          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -qE '^server/|^docker-compose(\.prod)?\.yml$|^Caddyfile$'; then
+          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -qE '^server/|^docker-compose(\.prod)?\.yml$'; then
             echo "should_deploy=true" >> "$GITHUB_OUTPUT"
           else
             echo "should_deploy=false" >> "$GITHUB_OUTPUT"
@@ -72,5 +72,4 @@ jobs:
             git pull --ff-only
             docker compose -f docker-compose.yml -f docker-compose.prod.yml pull server
             docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
-            docker compose -f docker-compose.yml -f docker-compose.prod.yml exec -T caddy caddy reload --config /etc/caddy/Caddyfile
             docker image prune -f
