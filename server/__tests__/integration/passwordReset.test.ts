@@ -126,4 +126,29 @@ describe("password reset round trip", () => {
     expect(response.status).toBe(400);
     expect(getResponseObject(response.body)["code"]).toBe("INVALID_TOKEN");
   });
+
+  test("signs out sessions that were signed in with the old password", async () => {
+    const otherDevice = request.agent(app);
+    const userData = await signUpVerifiedUser(otherDevice);
+    const otherSignIn = await signIn(
+      otherDevice,
+      userData.email,
+      userData.password,
+    );
+    expect(otherSignIn.status).toBe(200);
+
+    const before = await otherDevice.get("/api/auth/get-session");
+    expect(getResponseObject(before.body)["user"]).toBeDefined();
+
+    const agent = request.agent(app);
+    await requestReset(agent, userData.email);
+    const reset = await agent
+      .post("/api/auth/reset-password")
+      .set("Content-Type", "application/json")
+      .send({ newPassword: "NewPassword456", token: lastEmailedToken() });
+    expect(reset.status).toBe(200);
+
+    const after = await otherDevice.get("/api/auth/get-session");
+    expect(after.body).toBeNull();
+  });
 });
