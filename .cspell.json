@@ -14,6 +14,7 @@
     ".github/**/*.{yml,yaml,md}"
   ],
   "ignorePaths": [
+    ".github/**/*",
     "**/node_modules/**",
     "**/dist/**",
     "**/coverage/**",
@@ -203,8 +204,5 @@
     "@cspell/dict-hr-hr/cspell-ext.json",
     "@cspell/dict-sr-latn/cspell-ext.json"
   ],
-  "dictionaries": [
-    "hr-hr",
-    "sr-latn"
-  ]
+  "dictionaries": ["hr-hr", "sr-latn"]
 }
