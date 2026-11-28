@@ -14,7 +14,7 @@
     ".github/**/*.{yml,yaml,md}"
   ],
   "ignorePaths": [
-    ".github/**/*",
+    ".github/workflows/**",
     "**/node_modules/**",
     "**/dist/**",
     "**/coverage/**",
