@@ -48,5 +48,7 @@ USER node
 
 EXPOSE 3000
 
-# shell form (not exec form) so the && works
-CMD npx prisma migrate deploy && node dist/index.js
+# sh -c for the &&. exec makes node replace the shell as PID 1, so it gets
+# docker stop's SIGTERM and shuts down gracefully - the shell would not
+# forward it, and Docker kills the container after 10 seconds.
+CMD ["sh", "-c", "npx prisma migrate deploy && exec node dist/index.js"]
