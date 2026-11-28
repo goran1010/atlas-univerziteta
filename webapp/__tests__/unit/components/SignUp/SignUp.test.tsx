@@ -136,7 +136,9 @@ describe("SignUp Form Validation", () => {
     { field: "email", value: "test@mail.com", message: "" },
     { field: "password", value: "pass", message: /at least 8 characters/i },
     { field: "password", value: "password", message: /at least one number/i },
-    { field: "password", value: "Password!", message: /only contain/i },
+    { field: "password", value: " password1", message: /start or end/i },
+    { field: "password", value: "password1 ", message: /start or end/i },
+    { field: "password", value: "P@ss w0rd!", message: "" },
     { field: "password", value: "password1", message: "" },
   ] as const;
 

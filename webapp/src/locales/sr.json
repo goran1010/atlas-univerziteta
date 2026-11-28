@@ -309,7 +309,7 @@
     "password": {
       "minLength": "Lozinka mora imati najmanje 8 karaktera",
       "required": "Lozinka je obavezna",
-      "allowedCharacters": "Lozinka može sadržavati samo slova, brojeve, crtice ili donje crte",
+      "noLeadingOrTrailingSpaces": "Lozinka ne može počinjati niti se završavati razmakom",
       "requiresNumber": "Lozinka mora sadržavati najmanje jedan broj",
       "mustMatch": "Lozinka i potvrda lozinke moraju biti iste"
     }

@@ -2,21 +2,22 @@ import { z } from "zod";
 
 const emailSchema = z.string().trim().toLowerCase().pipe(z.email());
 
-const signupPasswordAllowedCharactersSchema = z
+// usually a stray space from copy-paste, which would then be needed at every
+// login
+const signupPasswordNoSurroundingSpacesSchema = z
   .string()
-  .trim()
-  .regex(/^[a-zA-Z0-9_-]+$/);
+  .refine((value) => value === value.trim());
 
 // BetterAuth rejects passwords under 8 characters server-side
-const signupPasswordMinLengthSchema = z.string().trim().min(8);
+const signupPasswordMinLengthSchema = z.string().min(8);
 
-const signupPasswordRequiresNumberSchema = z.string().trim().regex(/\d/);
+const signupPasswordRequiresNumberSchema = z.string().regex(/\d/);
 
 const loginPasswordSchema = z.string().trim().min(1);
 
 function getSignupPasswordValidationKey(password: string) {
-  if (!signupPasswordAllowedCharactersSchema.safeParse(password).success) {
-    return "validation.password.allowedCharacters";
+  if (!signupPasswordNoSurroundingSpacesSchema.safeParse(password).success) {
+    return "validation.password.noLeadingOrTrailingSpaces";
   }
 
   if (!signupPasswordMinLengthSchema.safeParse(password).success) {

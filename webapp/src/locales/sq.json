@@ -309,7 +309,7 @@
     "password": {
       "minLength": "Fjalëkalimi duhet të ketë të paktën 8 karaktere",
       "required": "Fjalëkalimi është i detyrueshëm",
-      "allowedCharacters": "Fjalëkalimi mund të përmbajë vetëm shkronja, numra, viza ose nënvizime",
+      "noLeadingOrTrailingSpaces": "Fjalëkalimi nuk mund të fillojë ose të përfundojë me hapësirë",
       "requiresNumber": "Fjalëkalimi duhet të përmbajë të paktën një numër",
       "mustMatch": "Fjalëkalimi dhe konfirmimi i tij duhet të përputhen"
     }

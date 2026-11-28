@@ -309,7 +309,7 @@
     "password": {
       "minLength": "Geslo mora imeti vsaj 8 znakov",
       "required": "Geslo je obvezno",
-      "allowedCharacters": "Geslo lahko vsebuje samo črke, številke, vezaje ali podčrtaje",
+      "noLeadingOrTrailingSpaces": "Geslo se ne sme začeti ali končati s presledkom",
       "requiresNumber": "Geslo mora vsebovati vsaj eno številko",
       "mustMatch": "Geslo in potrditev gesla se morata ujemati"
     }
