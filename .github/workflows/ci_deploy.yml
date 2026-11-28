@@ -5,6 +5,13 @@ on:
     branches:
       - main
 
+# A newer push cancels the older run, so two runs can't race to deploy and
+# leave the older image live. What the cancelled run would have deployed is
+# still deployed: the deploy check compares against the last successful run.
+concurrency:
+  group: ci-deploy-main
+  cancel-in-progress: true
+
 # the checks are the same reusable workflows the PR pipelines run
 jobs:
   lint_type_check:
@@ -26,6 +33,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Check if deploy is needed
     needs: [lint_type_check, test, e2e, spell_format, build]
+    permissions:
+      actions: read
+      contents: read
     outputs:
       should_deploy: ${{ steps.changes.outputs.should_deploy }}
     steps:
@@ -33,10 +43,19 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Compared against the last successful run, not the previous push: a
+      # failed or cancelled run never deployed, so its server changes still
+      # count. Without a run to compare against, it deploys rather than skips.
       - name: Check for deploy-relevant changes
         id: changes
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -qE '^server/|^docker-compose(\.prod)?\.yml$'; then
+          last_success=$(gh run list --workflow ci_deploy.yml --branch main --status success --limit 1 --json headSha --jq '.[0].headSha // empty')
+
+          if [ -z "$last_success" ] || ! changed=$(git diff --name-only "$last_success" "$GITHUB_SHA"); then
+            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
+          elif grep -qE '^server/|^docker-compose(\.prod)?\.yml$' <<< "$changed"; then
             echo "should_deploy=true" >> "$GITHUB_OUTPUT"
           else
             echo "should_deploy=false" >> "$GITHUB_OUTPUT"
@@ -71,5 +90,7 @@ jobs:
             cd /root/atlas-univerziteta
             git pull --ff-only
             docker compose -f docker-compose.yml -f docker-compose.prod.yml pull server
-            docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+            # fails the deploy if the server never passes its healthcheck; the
+            # healthcheck can take about two minutes to give up
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --wait --wait-timeout 180
             docker image prune -f
